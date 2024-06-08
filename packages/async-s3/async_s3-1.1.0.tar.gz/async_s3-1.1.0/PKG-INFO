@@ -1,0 +1,79 @@
+Metadata-Version: 2.3
+Name: async-s3
+Version: 1.1.0
+Summary: S3 Bucket helper utils. Async list objects by folders.
+Project-URL: Homepage, https://andgineer.github.io/async-s3/
+Project-URL: Documentation, https://andgineer.github.io/async-s3/
+Author-email: Andrey Sorokin <andrey@sorokin.engineer>
+License: Copyright (c) 2024 Andrey Sorokin <andrey@sorokin.engineer>
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of
+        this software and associated documentation files (the “Software”), to deal in
+        the Software without restriction, including without limitation the rights to use,
+        copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the
+        Software, and to permit persons to whom the Software is furnished to do so,
+        subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND,
+        EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+        OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+        NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+        HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+        WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+        FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+        OTHER DEALINGS IN THE SOFTWARE.
+License-File: LICENSE.txt
+Keywords: async,aws,bucket,folders,list-objects,s3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: aiobotocore
+Requires-Dist: boto3
+Requires-Dist: click
+Requires-Dist: rich-click
+Description-Content-Type: text/markdown
+
+[![Build Status](https://github.com/andgineer/async-s3/workflows/CI/badge.svg)](https://github.com/andgineer/async-s3/actions)
+[![Coverage](https://raw.githubusercontent.com/andgineer/async-s3/python-coverage-comment-action-data/badge.svg)](https://htmlpreview.github.io/?https://github.com/andgineer/async-s3/blob/python-coverage-comment-action-data/htmlcov/index.html)
+# async-s3
+
+S3 Bucket helper utils. Async list objects by folders 
+
+# Documentation
+
+[Async S3](https://andgineer.github.io/async-s3/)
+
+# Developers
+
+Do not forget to run `. ./activate.sh`.
+
+For work it need [uv](https://github.com/astral-sh/uv) installed.
+
+Use [pre-commit](https://pre-commit.com/#install) hooks for code quality:
+
+    pre-commit install
+
+# Scripts
+
+Install [invoke](https://docs.pyinvoke.org/en/stable/) preferably with [pipx](https://pypa.github.io/pipx/):
+
+    pipx install invoke
+
+For a list of available scripts run:
+
+    invoke --list
+
+For more information about a script run:
+
+    invoke <script> --help
+
+
+## Coverage report
+* [Codecov](https://app.codecov.io/gh/andgineer/async-s3/tree/main/src%2Faws_s3)
+* [Coveralls](https://coveralls.io/github/andgineer/async-s3)
+
+> Created with cookiecutter using [template](https://github.com/andgineer/cookiecutter-python-package)

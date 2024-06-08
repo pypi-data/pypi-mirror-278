@@ -1,0 +1,50 @@
+[build-system]
+requires = [ "hatchling",]
+build-backend = "hatchling.build"
+
+[project]
+name = "async-s3"
+dynamic = [ "version",]
+description = "S3 Bucket helper utils. Async list objects by folders."
+keywords = [ "async", "aws", "s3", "bucket", "list-objects", "folders",]
+classifiers = [ "Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License", "Operating System :: OS Independent",]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [ "click", "rich-click", "aiobotocore", "boto3",]
+[[project.authors]]
+name = "Andrey Sorokin"
+email = "andrey@sorokin.engineer"
+
+[project.license]
+file = "LICENSE.txt"
+
+[project.urls]
+Homepage = "https://andgineer.github.io/async-s3/"
+Documentation = "https://andgineer.github.io/async-s3/"
+
+[tool.setuptools]
+packages = "find:"
+
+[tool.ruff]
+line-length = 99
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+reportMissingImports = true
+reportMissingModuleSource = false
+reportMissingTypeStubs = true
+include = [ "src",]
+exclude = [ "**/node_modules", "**/__pycache__",]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.setuptools.manifest]
+include = [ "README.md", "LICENSE.txt",]
+
+[tool.hatch.version]
+path = "src/async_s3/__about__.py"
+
+[project.scripts]
+as3 = "async_s3.main:as3"
