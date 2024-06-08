@@ -1,0 +1,29 @@
+name: itables
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - nodejs
+  - python
+  - jupyter
+  - jupyterlab>=4
+  - jupytext
+  - nbconvert
+  - ipykernel
+  - pandas
+  - matplotlib
+  - polars
+  - pyarrow
+  - pytest
+  - pytest-xdist
+  - pytest-cov
+  - pre-commit
+  - pip
+  - setuptools
+  - twine
+  - ghp-import
+  - shiny
+  - streamlit
+  - pip:
+    - world_bank_data
+    - jupyter_book
