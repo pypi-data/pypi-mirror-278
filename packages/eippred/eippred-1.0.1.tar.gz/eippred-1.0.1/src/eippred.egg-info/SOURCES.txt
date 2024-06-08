@@ -1,0 +1,15 @@
+README.md
+setup.py
+src/eippred.egg-info/PKG-INFO
+src/eippred.egg-info/SOURCES.txt
+src/eippred.egg-info/dependency_links.txt
+src/eippred.egg-info/entry_points.txt
+src/eippred.egg-info/requires.txt
+src/eippred.egg-info/top_level.txt
+src/eippred/blast_binaries/linux/blastp
+src/eippred/blast_binaries/mac/blastp
+src/eippred/blast_binaries/windows/blastp.exe
+src/eippred/blast_binaries/windows/nghttp2.dll
+src/eippred/python_scripts/__init__.py
+src/eippred/python_scripts/eippred.py
+src/eippred/python_scripts/Data/composition_calculate.py
