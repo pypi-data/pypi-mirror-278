@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: llmtext
+Version: 0.1.0
+Summary: 
+Author: vikyw89
+Author-email: vikyw89@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: instructor (>=1.3.2,<2.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: together (>=1.2.0,<2.0.0)
+Description-Content-Type: text/markdown
+
+# llmtext
+A simple llm library
+
