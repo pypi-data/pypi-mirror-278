@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: ego4d
+Version: 1.7.3
+Summary: Ego4D Dataset CLI
+Home-page: https://github.com/facebookresearch/Ego4d/
+Author: FAIR
+Author-email: info@ego4d-data.org
+Requires-Dist: boto3
+Requires-Dist: tqdm
+Requires-Dist: regex
+Requires-Dist: dataclasses_json
+Requires-Dist: iopath
