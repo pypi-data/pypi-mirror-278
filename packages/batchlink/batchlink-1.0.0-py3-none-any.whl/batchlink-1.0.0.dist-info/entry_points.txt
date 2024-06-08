@@ -1,0 +1,3 @@
+[console_scripts]
+batchlink = batchlink.cli:main
+
