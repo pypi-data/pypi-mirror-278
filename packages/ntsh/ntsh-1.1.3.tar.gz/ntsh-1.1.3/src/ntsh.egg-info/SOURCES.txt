@@ -1,0 +1,16 @@
+.gitignore
+.pre-commit-config.yaml
+COPYING
+README.md
+pyproject.toml
+src/ntsh/__init__.py
+src/ntsh/main.py
+src/ntsh/protocols.py
+src/ntsh.egg-info/PKG-INFO
+src/ntsh.egg-info/SOURCES.txt
+src/ntsh.egg-info/dependency_links.txt
+src/ntsh.egg-info/entry_points.txt
+src/ntsh.egg-info/requires.txt
+src/ntsh.egg-info/top_level.txt
+src/ntsh/katcp/__init__.py
+src/ntsh/katcp/lexer.py
