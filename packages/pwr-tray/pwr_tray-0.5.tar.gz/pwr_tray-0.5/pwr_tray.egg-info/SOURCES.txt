@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+pwr_tray/IniTool.py
+pwr_tray/SwayIdleMgr.py
+pwr_tray/Utils.py
+pwr_tray/YamlDump.py
+pwr_tray/__init__.py
+pwr_tray/main.py
+pwr_tray.egg-info/PKG-INFO
+pwr_tray.egg-info/SOURCES.txt
+pwr_tray.egg-info/dependency_links.txt
+pwr_tray.egg-info/entry_points.txt
+pwr_tray.egg-info/requires.txt
+pwr_tray.egg-info/top_level.txt
