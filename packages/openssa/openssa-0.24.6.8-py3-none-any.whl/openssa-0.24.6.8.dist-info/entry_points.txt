@@ -1,0 +1,3 @@
+[console_scripts]
+openssa=openssa.utils.cli:openssa_cli
+
