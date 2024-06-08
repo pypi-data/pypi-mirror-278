@@ -1,0 +1,127 @@
+Metadata-Version: 2.1
+Name: cwmaya
+Version: 0.0.1b7
+Summary: Maya plugin for Conductor Cloud Rendering Platform.
+Home-page: https://github.com/ConductorTechnologies/cwmaya
+Author: coreweave
+Author-email: info@conductortech.com
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Multimedia :: Graphics :: 3D Rendering
+Description-Content-Type: text/markdown
+Requires-Dist: pymel <2.0.0,>=1.4.0
+Requires-Dist: cwstorm <1.0.0,>=0.2.3
+Requires-Dist: requests <3.0.0,>=2.28.1
+Requires-Dist: ciocore ==8.1.0-beta.3
+Requires-Dist: cioseq <1.0.0,>=0.5.1
+
+# CoreWeave for Maya
+
+Maya plugin node to manage submissions to Conductor's cloud service.
+
+
+## Architecture
+
+`cwSubmission` node is the base class for a family of custom dependency nodes that store all the cofniguration and submission data for a job.
+
+`cwAssSubmission` is a subclass of cwSubmission that is used to submit Arnold ass jobs. Think of it as a preset for a common type of submission graph.
+
+The `compute` function of the node will be responsible for generating a valid graph of task dependencies. It will use the Storm DSL to achieve this.
+
+There will be other nodes that inherit from cwSubmission in the future. This document describes `cwAssSubmission` in order to illustrate the concepts of the plugin.
+
+## UI
+
+The UI is written with PyMEL. It provides a window that contains a menu bar and several tabs. It is a GUI that gives access to the settings stored on an underlying `cwAssSubmission` node.
+
+The node being represented can change (or at least it will in a future version) via a menu within the UI itself.
+
+The intention is that users never need to see the node in the attribiute editor. In this sense it is similar to defaultRenderGlobals, which you access through the RenderSettings window. This is a departure from `ciomaya` which implements the UI as a regular Maya AttributeEditorTemplate.
+
+## Ranks
+
+When generating jobs that distribute animation tasks, there are distinct collections of tasks that only differ in their frame number. Other attributes are identical. For example, we have ass-export tasks, render tasks, and comp tasks. All ass-export tasks most likely use the same environment, software, and hardware. Ass-export tasks are executed before connected render tasks, and render tasks are executed before comp tasks. They are arranged in the visual graph in columns from left to right, representing the order of execution. We'll call these columns "ranks".
+
+In order to configure a job, the plugin provides a UI with a tab for each rank, and finally one for the job configuration.
+
+![UI Screenshot](./images/ui_ranks.png)
+
+## Common task attributes
+
+Each task needs certain configurations in order to run. These common attributes are:
+
+* Software
+* Hardware
+* Environment
+* Commands
+
+Tasks will most likely be dependent on file assets. For the most part, assets are scraped automatically, however the user also has the opportunity to specify assets that are missed by the scraping process.
+
+The three panels below illustrate the configuration for the Export rank, the Render rank, and the Job. 
+
+![Export](./images/exp.png)
+
+![Render](./images/ren.png)
+
+![Job](./images/job.png)
+
+This is work in progress. Soon there will be tabs for `comp`, `slack notification`, and `shot tracker` as shown below.
+
+![Graph](./images/graph.png)
+
+
+## Install
+
+**To install the latest version.**
+```bash
+pip install --upgrade cwmaya --target=$HOME/CoreWeave/maya
+```
+
+**Then setup the Maya module.** 
+
+```bash
+python ~/CoreWeave/maya/cwmaya/post_install.py
+```
+
+## Usage
+
+Open the Plugin Manager and load **CoreWeave.py**.
+
+To set up a render, choose **CoreWeave->Storm Window** from the main Maya menu bar. 
+
+For detailed help, checkout the [tutorial](https://docs.conductortech.com/tutorials/cwmaya) and [reference](https://docs.conductortech.com/reference/cwmaya) documentation.
+
+
+## Contributing
+
+See [CONTRIBUTING](CONTRIBUTING.md)
+
+## Changelog
+
+## Unreleased:
+
+  * Adds a mechanism to specify default template values
+  * Adds a context manager to do stuff in the context of a saved scene
+  * Adds a menu item to save the JSON payload to a file
+  * Adds a context manager to send stuff to desktop app in the context of a healthy authenticated session
+
+## Version 0.0.1-beta.6
+  * Adds a template for a SimRenderMovie graph
+  * Removed the AssExportKick graph template for now.
+
+## Version 0.0.1-beta.4
+  * Retrieves actual Core Data entities from Conductor
+  * Reduces the amount of information broadcasted to Slack channels
+  * Includes the versions of ciocore and storm DSL  on PyPi
+  * Resolves software and environment in the compute function
+  * Refactors inheritance hierarchy as BaseTab to TaskTab to ConcreteTask implementations
+  * Adds UI components for managing u=inst types and software/plugin relationships 
+  * Relaxes the dependencies on the 'requests' library
+  * Adds an output path configuration option
+  * Adds window to visualize submission results
+  * Adds automatic hydration upon application start
+  * Integrates a smoke test preset node into the workflow
+  * Adds a user interface for managing extra assets
+
+* 0.0.1-beta.2
+  * Initial import
