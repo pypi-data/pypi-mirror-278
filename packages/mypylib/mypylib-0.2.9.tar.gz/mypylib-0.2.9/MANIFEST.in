@@ -1,0 +1,3 @@
+include CMakeLists.txt
+include mypylib/my_module/callback_example.c
+include README.md
