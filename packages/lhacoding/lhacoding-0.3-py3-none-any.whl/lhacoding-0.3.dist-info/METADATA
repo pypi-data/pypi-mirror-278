@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: lhacoding
+Version: 0.3
+Summary: Python functions for controlling Arduino devices
+Author: LEE HYUN A
+Author-email: lha110@naver.com
+Requires-Dist: pyserial
+
