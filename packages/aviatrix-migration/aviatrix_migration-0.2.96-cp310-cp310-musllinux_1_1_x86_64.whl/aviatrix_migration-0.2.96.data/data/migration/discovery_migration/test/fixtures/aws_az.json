@@ -1,0 +1,85 @@
+{
+    "AvailabilityZones": [
+        {
+            "GroupName": "us-east-1",
+            "Messages": [],
+            "NetworkBorderGroup": "us-east-1",
+            "OptInStatus": "opt-in-not-required",
+            "RegionName": "us-east-1",
+            "State": "available",
+            "ZoneId": "use1-az4",
+            "ZoneName": "us-east-1a",
+            "ZoneType": "availability-zone"
+        },
+        {
+            "GroupName": "us-east-1",
+            "Messages": [],
+            "NetworkBorderGroup": "us-east-1",
+            "OptInStatus": "opt-in-not-required",
+            "RegionName": "us-east-1",
+            "State": "available",
+            "ZoneId": "use1-az6",
+            "ZoneName": "us-east-1b",
+            "ZoneType": "availability-zone"
+        },
+        {
+            "GroupName": "us-east-1",
+            "Messages": [],
+            "NetworkBorderGroup": "us-east-1",
+            "OptInStatus": "opt-in-not-required",
+            "RegionName": "us-east-1",
+            "State": "available",
+            "ZoneId": "use1-az1",
+            "ZoneName": "us-east-1c",
+            "ZoneType": "availability-zone"
+        },
+        {
+            "GroupName": "us-east-1",
+            "Messages": [],
+            "NetworkBorderGroup": "us-east-1",
+            "OptInStatus": "opt-in-not-required",
+            "RegionName": "us-east-1",
+            "State": "available",
+            "ZoneId": "use1-az2",
+            "ZoneName": "us-east-1d",
+            "ZoneType": "availability-zone"
+        },
+        {
+            "GroupName": "us-east-1",
+            "Messages": [],
+            "NetworkBorderGroup": "us-east-1",
+            "OptInStatus": "opt-in-not-required",
+            "RegionName": "us-east-1",
+            "State": "available",
+            "ZoneId": "use1-az3",
+            "ZoneName": "us-east-1e",
+            "ZoneType": "availability-zone"
+        },
+        {
+            "GroupName": "us-east-1",
+            "Messages": [],
+            "NetworkBorderGroup": "us-east-1",
+            "OptInStatus": "opt-in-not-required",
+            "RegionName": "us-east-1",
+            "State": "available",
+            "ZoneId": "use1-az5",
+            "ZoneName": "us-east-1f",
+            "ZoneType": "availability-zone"
+        }
+    ],
+    "ResponseMetadata": {
+        "HTTPHeaders": {
+            "cache-control": "no-cache, no-store",
+            "content-length": "2973",
+            "content-type": "text/xml;charset=UTF-8",
+            "date": "Sun, 02 Jun 2024 11:03:56 GMT",
+            "server": "AmazonEC2",
+            "strict-transport-security": "max-age=31536000; includeSubDomains",
+            "vary": "accept-encoding",
+            "x-amzn-requestid": "27d829e9-94f4-41da-ad70-351534ae2982"
+        },
+        "HTTPStatusCode": 200,
+        "RequestId": "27d829e9-94f4-41da-ad70-351534ae2982",
+        "RetryAttempts": 0
+    }
+}
