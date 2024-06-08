@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "youtube-video-downloader"
+version = "0.1.2"
+description = ""
+authors = ["levyvix <levy.vix@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pytube = "^15.0.0"
+typer = {extras = ["all"], version = "^0.12.3"}
+
+[tool.poetry.scripts]
+vid = "youtube_video_downloader.video_download:app"
+vidp = "youtube_video_downloader.playlist_download:app"
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.25.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
