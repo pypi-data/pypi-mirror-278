@@ -1,0 +1,9 @@
+ytb2audio
+audio2splitted
+python-dotenv
+
+[dev]
+check-manifest
+
+[test]
+coverage
