@@ -1,0 +1,16 @@
+[project]
+name = "TranslatePlus"
+version = "1.0.2"
+
+description = "A Translate pkg for python"
+readme = "README.md"
+requires-python = ">=3.5"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/moh0009/Translate_lib"
+Issues = "https://github.com/moh0009/Translate_lib/issues"
