@@ -1,0 +1,44 @@
+name: release
+
+on:
+  push:
+    tags:
+      - v*
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - run: pipx run flit build
+
+      - run: pipx run flit publish
+        env:
+          FLIT_USERNAME: '__token__'
+          FLIT_PASSWORD: ${{ secrets.PYPI_TOKEN }}
+
+      - name: Generate Changelog
+        id: changelog
+        uses: requarks/changelog-action@v1.10.2
+        with:
+          token: ${{ github.token }}
+          tag: ${{ github.ref_name }}
+          writeToFile: false
+          restrictToTypes: feat,fix,refactor,revert
+
+      - name: Upload Github Release
+        run: gh release create "${GITHUB_REF}" --notes "${CHANGELOG}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CHANGELOG: "${{ steps.changelog.outputs.changes }}"
