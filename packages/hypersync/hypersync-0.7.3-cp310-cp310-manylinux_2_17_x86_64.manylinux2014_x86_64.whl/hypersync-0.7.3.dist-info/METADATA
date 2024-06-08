@@ -1,0 +1,19 @@
+Metadata-Version: 2.3
+Name: hypersync
+Version: 0.7.3
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Database :: Front-Ends
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: strenum >=0.4.15, <0.4.16
+License-File: LICENSE
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# hypersync-client-python
+Python package for [Envio's](https://envio.dev/) HyperSync client written in Rust
+
+### Examples in `examples/`
+
