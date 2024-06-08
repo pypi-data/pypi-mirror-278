@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: pirrtools
+Version: 0.1.6
+Summary: Collection of tools I use in my projects
+Author-email: Sean Smith <pirsquared.pirr@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/pirsquared/pirrtools
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Project Name
+
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
+## Description
+
+A brief description of the project goes here.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+## Installation
+
+Instructions on how to install and set up the project.
+
+## Usage
+
+Information on how to use the project and any relevant examples.
+
+## Contributing
+
+Guidelines for contributing to the project.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Contact
+
+For any questions or feedback, please contact [email@example.com](mailto:email@example.com).
