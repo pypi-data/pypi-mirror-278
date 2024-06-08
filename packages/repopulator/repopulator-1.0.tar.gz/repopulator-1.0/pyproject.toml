@@ -1,0 +1,64 @@
+[build-system]
+requires = [
+    "setuptools>=61"
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+version = {attr = "repopulator.version.VERSION"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project]
+name = "repopulator"
+dynamic = ["version"]
+description="A portable library to generate binary software repositories"
+readme="README.md"
+authors= [
+    { name = 'Eugene Gershnik', email='gershnik@hotmail.com'}
+]
+requires-python = ">=3.8"
+dependencies = [
+    "arpy==2.3.0",
+    "cryptography==42.0.7",
+    "zstandard[cffi]==0.22.0"
+]
+keywords = [
+    "cross-platform", "apt-repository", "yum-repositories", 
+    "freebsd-packages", "rpm-repositories", "apt-repo", "yum-repos",
+    "pacman-repo", "alpine-repository"
+]
+license = {text = "BSD-3-Clause"}
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    
+    "License :: OSI Approved :: BSD License",
+    
+    "Operating System :: OS Independent",
+
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    
+    "Topic :: System",
+    "Topic :: System :: Archiving :: Packaging",
+    "Topic :: System :: Software Distribution",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Utilities",
+
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+
+    "Typing :: Typed"
+]
+
+[project.urls]
+Homepage = 'https://github.com/gershnik/repopulator'
+Documentation = 'https://gershnik.github.io/repopulator'
+Issues = 'https://github.com/gershnik/repopulator/issues'
+Changelog = 'https://github.com/gershnik/repopulator/blob/master/CHANGELOG.md'
