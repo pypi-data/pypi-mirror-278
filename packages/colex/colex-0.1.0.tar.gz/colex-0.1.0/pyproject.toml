@@ -1,0 +1,28 @@
+[project]
+name = "colex"
+dynamic = ["version"]
+description = "Library with constants and functions for working with colors"
+authors = [
+    { name = "Havsalt", email = "knutolaihelgesen@gmail.com" }
+]
+dependencies = []
+readme = "README.md"
+requires-python = ">= 3.10"
+license = { text = "MIT" }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.version]
+path = "colex/__init__.py"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["colex"]
