@@ -1,0 +1,16 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "proton_mail_export_organizer"
+authors = [{name = "Julien Palard", email = "julien@palard.fr"}]
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: MIT License"]
+dynamic = ["version", "description"]
+
+[project.urls]
+Home = "https://git.afpy.org/mdk/proton-mail-export-organizer"
+
+[project.scripts]
+proton-mail-export-organizer = "proton_mail_export_organizer:main"
