@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "transformation-func"
+version = "0.1.0"
+description = ""
+authors = ["Julia Gunevic <julia.gunevic@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+scipy = "^1.13.1"
+obspy = "^1.4.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
