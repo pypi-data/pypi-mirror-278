@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=46.4.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "synth_mapping_helper"
+dependencies = [
+    "numpy>=1.26.4",
+    "scipy>=1.13.0",
+    "matplotlib>=3.8.4",
+    "plotly>=5.22.0",
+    "pyperclip>=1.8.2",
+    "watchdog>=4.0.0",
+    "requests>=2.31.0",
+    "nicegui>=1.4.24",
+    "librosa>=0.10.2",
+    "pywin32>=306; sys_platform=='win32'",
+]
+requires-python = ">=3.10"
+authors = [{"name"="adosikas"}]
+description = "Toolbox for manipulating the JSON-Format used by Synth Riders Beatmap Editor in the clipboard"
+readme = "README.md"
+license = {"file"="LICENSE"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+
+    "Topic :: Artistic Software",
+    "Topic :: Games/Entertainment",
+
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3 :: Only",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dynamic = ["version"]
+
+[tool.setuptools.dynamic]
+version = {attr = "synth_mapping_helper.__version__"}
+
+
+[project.urls]
+Homepage = "https://github.com/adosikas/synth_mapping_helper"
+Documentation = "https://github.com/adosikas/synth_mapping_helper/wiki"
+Repository = "https://github.com/adosikas/synth_mapping_helper"
+"Bug Tracker" = "https://github.com/adosikas/synth_mapping_helper/issues"
+Changelog = "https://github.com/adosikas/synth_mapping_helper/releases"
+
+[project.scripts]
+smh-cli = "synth_mapping_helper.cli:entrypoint"
+smh-gui = "synth_mapping_helper.gui:entrypoint"
+smh-companion = "synth_mapping_helper.companion:entrypoint"
