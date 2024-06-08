@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pyshortener
+Version: 1.0.0
+Summary: A package to shorten URL's using the gd URL shortener
+Author: Hamster45105
+Project-URL: Homepage, https://github.com/Hamster45105/pyshortener
+Project-URL: Issues, https://github.com/Hamster45105/pyshortener/issues
+Project-URL: Pull Requests, https://github.com/Hamster45105/pyshortener/pulls
+Keywords: url shortener,is.gd,v.gd
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests==3.23.3
+Provides-Extra: dev
+
+# pyshortener
+
+pyshortener
