@@ -1,0 +1,9 @@
+numpy
+matplotlib
+
+[cli]
+rich
+click
+
+[gui]
+PyQt5
