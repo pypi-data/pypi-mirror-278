@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+sqlite_minutils/__init__.py
+sqlite_minutils/db.py
+sqlite_minutils/utils.py
+sqlite_minutils.egg-info/PKG-INFO
+sqlite_minutils.egg-info/SOURCES.txt
+sqlite_minutils.egg-info/dependency_links.txt
+sqlite_minutils.egg-info/requires.txt
+sqlite_minutils.egg-info/top_level.txt
