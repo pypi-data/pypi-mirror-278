@@ -1,0 +1,135 @@
+data:
+    source:
+        description: "The source of the price data. Either an url or a file."
+        type: string
+        question: Data source?
+        value: https://api.spot-hinta.fi/TodayAndDayForward
+    
+    updateFrequency:
+        description: "The frequency of data polling in minutes, when expecting new data."
+        type: int
+        question: Data update interval?
+        value: 5
+    
+    availableAt:
+        description: "The time when new data is expected to be available."
+        type: string
+        question: When is data available?
+        value: "13:30"
+    
+    fields:
+        date:
+            description: "The field in the json data of the source, which contains an ISO formatted date."
+            type: string
+            question: Date field in json?
+            value: DateTime
+        
+        priceWithTax:
+            description: "The field in the json data of the source, which contains the price with tax for the hour."
+            type: string
+            question: Price with tax field in json?
+            value: PriceWithTax
+        
+        priceNoTax:
+            description: "The field in the json data of the source, which contains the price without tax for the hour."
+            type: string
+            question: Price without tax field in json?
+            value: PriceNoTax
+    
+    normalTimezone:
+        description: "The timezone in normal time (used for dst changes)."
+        type: int
+        question: Normal time timezone?
+        value: +2
+
+layout:
+    preferred:
+        description: "Choose the preferred layout from: none, minimal, horizontal, vertical."
+        essential: true
+        type: string
+        question: Preferred layout (horizontal, vertical, minimal)?
+        value: none
+    
+    reverse:
+        description: "Reverses the order of the graph and the text block."
+        essential: true
+        type: bool
+        question: Reverse layout?
+        value: false
+
+caret:
+    pastHours:
+        description: "The number of past hours visible in the graph. Negative number parses to zero. If the number of hours would exceed the width of the display, shows as many as can be fitted."
+        essential: true
+        type: int
+        question: Past hours to show?
+        value: 8
+        
+    style:
+        above:
+            description: "The style of the caret above the current hour in the graph."
+            type: char
+            question: Carot above graph?
+            value: ▼
+        
+        below:
+            description: "The style of the caret below the current hour in the graph."
+            type: char
+            question: Carot below graph?
+            value: ▲
+
+extremes:
+    visible:
+        description: "Display markers for todays highest and lowest price."
+        essential: true
+        type: bool
+        question: Display markers for extremes?
+        value: false
+        
+    style:
+        highest:
+            description: "The style of the marker for the highest price today in the graph."
+            type: char
+            question: Highest price marker?
+            value: ∧
+        
+        lowest:
+            description: "The style of the marker for the lowest price today in the graph."
+            type: char
+            question: Lowest price marker?
+            value: ∨
+
+missing:
+    style:
+        description: "The style of the missing price symbol."
+        type: char
+        question: Missing price symbol?
+        value: "-"
+
+day:
+    begins:
+        description: "Day begins at this hour."
+        type: int
+        question: Day begins?
+        value: 6
+        
+    ends:
+        description: "Day ends at this hour."
+        type: int
+        question: Day ends?
+        value: 22
+
+price:
+    high:
+        description: "Price above this value is considered high."
+        essential: true
+        type: float
+        question: High price limit?
+        value: 10.0
+    
+    low:
+        description: "Price below this value is considered low."
+        essential: true
+        type: float
+        question: Low price limit?
+        value: 5.0
