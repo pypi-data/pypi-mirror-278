@@ -1,0 +1,2 @@
+[console_scripts]
+pyva = pyva.cli.main:app
