@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: natter
+Version: 0.0.3
+Summary: A terminal-based ollama chat interface
+Home-page: https://github.com/davep/natter
+Author: Dave Pearson
+Author-email: davep@davep.org
+Maintainer: Dave Pearson
+Maintainer-email: davep@davep.org
+License: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Project-URL: Documentation, https://github.com/davep/natter/blob/main/README.md
+Project-URL: Source, https://github.com/davep/natter
+Project-URL: Issues, https://github.com/davep/natter/issues
+Project-URL: Discussions, https://github.com/davep/natter/discussions
+Keywords: terminal
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Environment :: Console
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet
+Classifier: Topic :: Terminals
+Classifier: Typing :: Typed
+Requires-Python: <3.13,>=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: textual >=0.58.1
+Requires-Dist: ollama
+Requires-Dist: xdg-base-dirs
+Requires-Dist: textual-fspicker
+
+# Natter
+
+A wee experimental terminal-based chat client, built to mess around with the
+Python Ollama library.
+
+[//]: # (README.md ends here)

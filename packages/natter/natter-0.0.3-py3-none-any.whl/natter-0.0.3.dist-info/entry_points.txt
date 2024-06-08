@@ -1,0 +1,2 @@
+[console_scripts]
+natter = natter.__main__:run
