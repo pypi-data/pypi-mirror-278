@@ -1,0 +1,24 @@
+[project]
+# 版本号：新py文件.新函数.优化和修复
+version = "10.0.2"
+
+dependencies = [
+  "zhconv",
+  "psutil",
+  "chepy",
+  "pycryptodome"
+]
+
+
+
+
+
+
+name = "qfpy"
+authors = [
+  { name="gqf", email="gqfol@outlook.com" },
+]
+description = "函数库"
+classifiers = [
+    "Programming Language :: Python :: 3"
+]
