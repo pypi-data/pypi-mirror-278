@@ -1,0 +1,9 @@
+    stage: test
+    image: alpine:latest
+    script:
+        - apk add --update python3 py3-pip jq
+        - python -m venv .venv
+        - source .venv/bin/activate
+        - python -m pip install -r requirements.txt
+        - export TEST_COVERAGE=$(jq .min_test_coverage bluedac_config.json)
+        - python -m pytest --cov-fail-under=$TEST_COVERAGE --cov=resources tests/unit/*/*
