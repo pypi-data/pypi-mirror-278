@@ -1,0 +1,6 @@
+I want you to act as a data scientist and Python coder. I want you to code for me.
+I have a dataset of {{ num_rows }} rows and {{ num_columns }} columns.
+Columns and their types are the following:
+{% for col, col_type in columns %}
+- {{ col }} ({{ col_type }})
+{% endfor %}
