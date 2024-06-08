@@ -1,0 +1,1 @@
+import"./Component.C0CSGRj9.mjs";import{s as e}from"./entry.o69lC4PV.mjs";const r=()=>{const s=e;return{page:{subscribe:s.page.subscribe},navigating:{subscribe:s.navigating.subscribe},updated:s.updated}},b={subscribe(s){return r().page.subscribe(s)}};export{b as p};

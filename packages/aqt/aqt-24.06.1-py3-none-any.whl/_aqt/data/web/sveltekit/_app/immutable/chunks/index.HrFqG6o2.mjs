@@ -1,0 +1,1 @@
+const o="4.2.9",e="4";typeof window<"u"&&(window.__svelte||(window.__svelte={v:new Set})).v.add(e);const t=Object.freeze(Object.defineProperty({__proto__:null},Symbol.toStringTag,{value:"Module"}));export{o as V,t as s};
