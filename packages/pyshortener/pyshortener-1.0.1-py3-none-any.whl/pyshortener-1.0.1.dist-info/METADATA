@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: pyshortener
+Version: 1.0.1
+Summary: A Python package to use the is.gd/v.gd API 
+Author: Hamster45105
+License: MIT License
+        
+        Copyright (c) [2024] [Hamish]
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/Hamster45105/pyshortener
+Project-URL: Issues, https://github.com/Hamster45105/pyshortener/issues
+Project-URL: Pull Requests, https://github.com/Hamster45105/pyshortener/pulls
+Keywords: url shortener,is.gd,v.gd
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests ==2.32.3
+
+# PyShortener
+
+`pyshortener` is a Python library for interacting with the is.gd and v.gd URL shortening services. It provides functions to shorten and expand URLs using these services.
+
+## Installation
+
+You can install `pyshortener` using pip:
+
+```bash
+pip install pyshortener
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+If you can't contribute code, then give the repo a star!
+
+### Can I add more URL services?
+
+Sure, if these two conditions are met
+
+1. The API must have a free forvever plan
+2. The API must be in english
+
+## License
+
+`pyshortener` is licensed under the [MIT License](https://choosealicense.com/licenses/mit/#)
