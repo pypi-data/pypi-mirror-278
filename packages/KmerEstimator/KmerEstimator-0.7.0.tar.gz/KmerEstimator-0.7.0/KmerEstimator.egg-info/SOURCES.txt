@@ -1,0 +1,11 @@
+README.md
+setup.py
+KmerEstimator.egg-info/PKG-INFO
+KmerEstimator.egg-info/SOURCES.txt
+KmerEstimator.egg-info/dependency_links.txt
+KmerEstimator.egg-info/requires.txt
+KmerEstimator.egg-info/top_level.txt
+kmerestimator/KmerEstimator.py
+kmerestimator/__init__.py
+kmerestimator/myutils.py
+kmerestimator/test_myutils.py
