@@ -1,0 +1,3 @@
+[console_scripts]
+audiobookapi = audiobook.api:start
+audiobookcli = audiobook.cli:main
