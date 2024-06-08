@@ -1,0 +1,79 @@
+{
+  "ValidateSubnetGroups": {
+    "val": [
+      {
+        "SubnetGroupConfig": {
+          "subnet_name": "public2",
+          "group_name": "appgw"
+        }
+      },
+      {
+        "SubnetGroupConfig": {
+          "subnet_name": "private",
+          "group_name": "mgmt"
+        }
+      },
+      {
+        "SubnetGroupConfig": {
+          "subnet_name": "private2",
+          "group_name": "internal"
+        }
+      }
+    ],
+    "values": {
+      "vnet_name": "simplest-vnet",
+      "avtx_cidr": "10.112.0.0/16",
+      "use_azs": true,
+      "domain": null,
+      "inspection": null,
+      "copy_quad_zero_route": false,
+      "spoke_advertisement": null,
+      "spoke_routes": null,
+      "spoke_gw_name": "azu-spoke-1",
+      "transit_gw_name": "azu-use-transit-gw",
+      "spoke_gw_tags": [],
+      "spoke_gw_size": null,
+      "hpe": null,
+      "max_hpe_performance": null
+    }
+  },
+  "ValidateSubnetGroupsInspected": {
+    "val": ["appgw", "mgmt", "internal"],
+    "values": {
+      "vnet_name": "simplest-vnet",
+      "avtx_cidr": "10.112.0.0/16",
+      "use_azs": true,
+      "domain": null,
+      "inspection": null,
+      "copy_quad_zero_route": false,
+      "spoke_advertisement": null,
+      "spoke_routes": null,
+      "spoke_gw_name": "azu-spoke-1",
+      "transit_gw_name": "azu-use-transit-gw",
+      "spoke_gw_tags": [],
+      "spoke_gw_size": null,
+      "hpe": null,
+      "max_hpe_performance": null,
+      "subnet_groups": [
+        {
+          "SubnetGroupConfig": {
+            "subnet_name": "public2",
+            "group_name": "appgw"
+          }
+        },
+        {
+          "SubnetGroupConfig": {
+            "subnet_name": "private",
+            "group_name": "mgmt"
+          }
+        },
+        {
+          "SubnetGroupConfig": {
+            "subnet_name": "private2",
+            "group_name": "internal"
+          }
+        }
+      ]
+    }
+  }
+}
