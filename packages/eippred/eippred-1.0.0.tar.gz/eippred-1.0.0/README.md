@@ -1,0 +1,75 @@
+# **EIPPred**
+A computational approach to predict the MIC of peptides using the sequence information.
+## Introduction
+EIPPred is developed to predict, and, design the peptide. In the standalone version, RF regressor based model.
+EIPPred is also available as web-server at https://webs.iiitd.edu.in/raghava/eippred. Please read/cite the content about the EIPPred for complete information including algorithm behind the approach.
+
+## Standalone
+The Standalone version of transfacpred is written in python3 and following libraries are necessary for the successful run:
+- scikit-learn
+- Pandas
+- Numpy
+
+## Minimum USAGE
+To know about the available option for the stanadlone, type the following command:
+```
+python eippred.py -h
+```
+To run the example, type the following command:
+```
+python3 eippred.py -i example_input.fa
+```
+This will predict if the submitted sequences can cause diabetes or not. It will use other parameters by default. It will save the output in "outfile.csv" in CSV (comma seperated variables).
+
+## Full Usage
+```
+usage: eippred.py [-h] 
+                  [-i INPUT]
+                  [-o OUTPUT]
+		              [-j {1,2,3}]
+		              [-d {1,2}]
+```
+```
+Please provide following arguments for successful run
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i INPUT, --input INPUT
+                        Input: protein or peptide sequence(s) in FASTA format or single sequence per line in single letter code
+  -o OUTPUT, --output OUTPUT
+                        Output: File for saving results by default outfile.csv
+  -j {1,2,3}, --job {1,2,3}
+                        Job Type: 1:Predict, 2: Design, by default 1
+  -p POSITION, --Position POSITION
+                        Position of mutation (1-indexed)
+  -r RESIDUES, --Residues RESIDUES
+                        Mutated residues (one or two of the 20 essential amino acids in upper case)
+```
+
+**Input File:** It allow users to provide input in the FASTA format.
+
+**Output File:** Program will save the results in the CSV format, in case user do not provide output file name, it will be stored in "outfile.csv".
+
+**Job:** User is allowed to choose between three different modules, such as, 1 for prediction, and 2 for Designing, by default its 1.
+
+**Position**: User can choose any position in long sequences for mutation. This option is available for only Design module.
+
+**Residues:** This option allow users to incorporate the single amino-acid and dipeptide amino-acid residue against all peptides.
+
+EIPPred Package Files
+=======================
+It contantain following files, brief descript of these files given below
+
+INSTALLATION                    : Installations instructions
+
+LICENSE                         : License information
+
+README.md                       : This file provide information about this package
+
+eippred.py                      : Main python program
+
+example_input.fa                : Example file contain peptide sequenaces in FASTA format
+
+example_predict_output.csv      : Example output file for predict module
+
+example_design_output.csv       : Example output file for design module
