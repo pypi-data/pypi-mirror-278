@@ -1,0 +1,2 @@
+[console_scripts]
+eippred = eippred.python_scripts.eippred:main
