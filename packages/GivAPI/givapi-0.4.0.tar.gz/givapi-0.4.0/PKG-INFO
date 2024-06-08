@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: GivAPI
+Version: 0.4.0
+Summary: Pulls data from or sends commands to the GivEnergy API
+License: GPL-3.0
+Author: Wilbur Williams
+Author-email: contact@wilburwilliams.uk
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: requests
