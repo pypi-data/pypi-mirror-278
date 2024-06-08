@@ -1,0 +1,7 @@
+django>=3.2
+
+[:python_version < "3.10"]
+importlib-metadata
+
+[pd]
+pandas>=1.5
