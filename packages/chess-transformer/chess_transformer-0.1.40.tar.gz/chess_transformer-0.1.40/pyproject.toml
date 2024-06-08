@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chess-transformer"
+version = "0.1.40"
+authors = [
+  {name="Marcel Claramunt", email="marcel@moveread.com"}
+]
+description = "package_description"
+dependencies = [
+  "chess", "jaxtyping", "haskellian", "chess-notation", "chess-utils",
+  "fs-tools",
+]
+requires-python = ">=3.10"
+readme = {file="README.md", content-type="text/markdown"}
+
+[project.urls]
+repo = "https://github.com/moveread/REPO.git"
+
+# [project.optional-dependencies]
+# test = [
+#   "pytest < 5.0.0",
+#   "pytest-cov[all]"
+# ]
