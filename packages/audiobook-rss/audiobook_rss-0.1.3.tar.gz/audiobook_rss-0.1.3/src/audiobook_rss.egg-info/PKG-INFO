@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: audiobook-rss
+Version: 0.1.3
+Summary: Default template for PDM package
+Author-email: Yanli <mail@yanli.one>
+License: MIT
+Requires-Python: <3.12,>=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: feedgen>=1.0.0
+Requires-Dist: opendal>=0.45.2
+Requires-Dist: fastapi>=0.111.0
+Requires-Dist: uvicorn>=0.30.1
+Requires-Dist: tomli>=2.0.1
+
+# audiobook
