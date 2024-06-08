@@ -1,0 +1,5 @@
+[console_scripts]
+pil-font-decode = pil_font_maker.pil_font_maker:decode
+pil-font-download = pil_font_maker.pil_font_maker:download
+pil-font-encode = pil_font_maker.pil_font_maker:encode
+pil-font-maker = pil_font_maker.pil_font_maker:main
