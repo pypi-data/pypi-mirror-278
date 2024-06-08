@@ -1,0 +1,4 @@
+[console_scripts]
+lint=scripts.lint:run
+start=scripts.start:run
+
