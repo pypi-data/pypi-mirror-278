@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+pirrtools/__init__.py
+pirrtools/list_chunks.py
+pirrtools/pandas.py
+pirrtools/sequences.py
+pirrtools.egg-info/PKG-INFO
+pirrtools.egg-info/SOURCES.txt
+pirrtools.egg-info/dependency_links.txt
+pirrtools.egg-info/top_level.txt
+tests/test_list_chunks.py
