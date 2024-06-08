@@ -1,0 +1,56 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "clonellm"
+version = "0.0.6"
+description = "Python package to create an AI clone of yourself using LLMs."
+packages = [{ from = "src", include = "clonellm" }]
+license = "MIT"
+authors = ["Mehdi Samsami <mehdisamsami@live.com>"]
+readme = "README.md"
+keywords = ["llm", "language models", "nlp", "rag", "ai", "ai clone"]
+repository = "https://github.com/msamsami/clonellm"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+litellm = "^1.36.0"
+langchain = "^0.1.17"
+langchain-chroma = "*"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+mypy = "*"
+pytest-asyncio = "*"
+ruff = "^0.4"
+types-setuptools = "^69.0.0.20240106"
+
+[tool.mypy]
+exclude=["tests", "examples"]
+namespace_packages = false
+files = ["src/clonellm/**/*.py"]
+check_untyped_defs = true
+disable_error_code = ["empty-body"]
+disallow_untyped_defs = false
+strict = true
+
+[[tool.mypy.overrides]]
+module = [
+    "litellm",
+    "openai.lib.streaming",
+]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore"]
+
+[tool.ruff]
+include = ["*.py", "*.pyi", "**/pyproject.toml", "*.ipynb"]
+line-length = 130
+# Use `ruff linter` to list available linters
+# https://beta.ruff.rs/docs/rules/
+
+[tool.black]
+line-length = 130
