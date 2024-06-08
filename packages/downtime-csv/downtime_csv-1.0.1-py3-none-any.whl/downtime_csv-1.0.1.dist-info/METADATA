@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: downtime-csv
+Version: 1.0.1
+Summary: 
+Author: Mitsuru Nakakawaji
+Author-email: mitsuru@procube.jp
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: aiohttp (>=3.9.5,<4.0.0)
+Requires-Dist: asyncio (>=3.4.3,<4.0.0)
+Description-Content-Type: text/markdown
+
+
