@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: lpmalgos
+Version: 1.0.1
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Requires-Dist: numpy
+Requires-Dist: colorlover
+Requires-Dist: pandas
+Requires-Dist: jsonschema
+Requires-Dist: plotly
+
