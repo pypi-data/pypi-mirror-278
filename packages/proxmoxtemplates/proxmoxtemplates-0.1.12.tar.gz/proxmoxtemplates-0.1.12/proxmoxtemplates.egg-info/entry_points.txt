@@ -1,0 +1,2 @@
+[console_scripts]
+proxmoxtemplates_app = bin.run_app:main
