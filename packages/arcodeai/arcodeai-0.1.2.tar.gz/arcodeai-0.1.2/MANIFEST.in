@@ -1,0 +1,7 @@
+include README.md
+include LICENSE
+include requirements.txt
+include arcode.py
+include __init__.py
+recursive-include lib *.py
+recursive-include media *
