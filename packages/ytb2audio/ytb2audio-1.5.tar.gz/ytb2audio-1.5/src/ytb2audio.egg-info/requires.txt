@@ -1,0 +1,8 @@
+requests
+pytube
+
+[dev]
+check-manifest
+
+[test]
+coverage

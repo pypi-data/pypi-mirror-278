@@ -1,0 +1,2 @@
+[console_scripts]
+ytb2audio = downloader.downloader:main
