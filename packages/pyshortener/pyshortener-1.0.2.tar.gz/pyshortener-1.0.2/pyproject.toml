@@ -1,0 +1,41 @@
+[build-system]
+requires      = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyshortener"
+version = "1.0.2"
+description = " A Python package to use the is.gd/v.gd API "
+readme = "README.md"
+authors = [{ name = "Hamster45105" }]
+license = {text = "MIT License"}
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["url shortener", "is.gd", "v.gd"]
+dependencies = [
+    "requests==2.32.3",
+]
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/Hamster45105/pyshortener"
+Issues = "https://github.com/Hamster45105/pyshortener/issues"
+"Pull Requests" = "https://github.com/Hamster45105/pyshortener/pulls"
+
+[tool.bumpver]
+current_version = "1.0.2"
+version_pattern = "MAJOR.MINOR.PATCH"
+commit_message = "[update] bump version {old_version} -> {new_version}"
+tag_message = "{new_version}"
+tag_scope = "default"
+commit = true
+tag = true
+push = false
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = [
+    'current_version = "{version}"',
+    'version = "{version}"',
+]
