@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: 5dee
+Version: 0.1
+Summary: A package to install all necessary dependencies for spatial compute and remote agtech
+Home-page: https://github.com/8gratitude8/5dee
+Author: GRATITUD3.ETH
+Author-email: gratitude@5-dee.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: Datashader
+Requires-Dist: Fiona
+Requires-Dist: GDAL
+Requires-Dist: GeoPandas
+Requires-Dist: H3
+Requires-Dist: NetworkX
+Requires-Dist: PaddleSpatial
+Requires-Dist: PyProj
+Requires-Dist: Rasterio
+Requires-Dist: Shapely
+Requires-Dist: Spatialpandas
+Requires-Dist: Xarray-Spatial
+Requires-Dist: folium
+Requires-Dist: pySAL
+Requires-Dist: rerun
+
+UNKNOWN
+
