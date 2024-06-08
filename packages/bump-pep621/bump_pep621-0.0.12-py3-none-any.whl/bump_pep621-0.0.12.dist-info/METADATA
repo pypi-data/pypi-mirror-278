@@ -1,0 +1,39 @@
+Metadata-Version: 2.3
+Name: bump-pep621
+Version: 0.0.12
+Summary: A simple comment to build package version defined in `project.version`
+Project-URL: Homepage, https://github.com/trim21/bump-pep621
+Author-email: trim21 <trim21me@gmail.com>
+License: MIT
+Keywords: bump,pacaging,pep621
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: <4.0,>=3.8
+Requires-Dist: click~=8.1.7
+Requires-Dist: packaging
+Requires-Dist: tomlkit~=0.11
+Provides-Extra: testing
+Requires-Dist: pytest-cov==5.0.0; extra == 'testing'
+Requires-Dist: pytest-github-actions-annotate-failures==0.2.0; extra == 'testing'
+Requires-Dist: pytest==8.2.1; extra == 'testing'
+Description-Content-Type: text/markdown
+
+# bump pep 621 version
+
+```shell
+pipx install bump-bep621
+```
+
+given current version `0.1.2`
+
+```shell
+pyproject-bump major # -> 1.0.0
+pyproject-bump minor # -> 0.2.0
+pyproject-bump micro # -> 0.1.3
+pyproject-bump a # -> 0.1.3a0
+pyproject-bump b # -> 0.1.3b0
+pyproject-bump rc # -> 0.1.3rc0
+```
