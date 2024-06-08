@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: profitpulse
+Version: 2.5.0
+Summary: Manage your personal finances
+Home-page: https://github.com/luistm/profitpulse
+License: MIT
+Author: Luís Miranda
+Author-email: luistm@gmail.com
+Maintainer: Luís Miranda
+Maintainer-email: luistm@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: fastapi (>=0.111.0,<0.112.0)
+Requires-Dist: gogotable (>=0.1.0,<0.2.0)
+Requires-Dist: jinja2 (>=3.1.4,<4.0.0)
+Requires-Dist: pastperfect (>=0.3.0,<0.4.0)
+Requires-Dist: rich (>=13.7.1,<14.0.0)
+Requires-Dist: toml (>=0.10.2,<0.11.0)
+Requires-Dist: turbofan (>=0.2.0,<0.3.0)
+Requires-Dist: typer (>=0.12.3,<0.13.0)
+Requires-Dist: uvicorn (>=0.29.0,<0.30.0)
+Project-URL: Repository, https://github.com/luistm/profitpulse
+Description-Content-Type: text/markdown
+
+# Profit Pulse
+
+[![PyPI version](https://badge.fury.io/py/profitpulse.svg)](https://badge.fury.io/py/profitpulse) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/profitpulse)
+
+Profit Pulse: Use a Python built CLI application to effortlessly manage your
+personal finances. Increase savings, and boost profits. Gain deep insights into
+your money flow, make strategic choices and pave your way to financial
+independence.
+
+## How to install ?
+
+Install [pipx](https://github.com/pypa/pipx) using the [official installation instructions](https://pipx.pypa.io/stable/installation/).
+Next, install profitpulse
+
+```bash
+pipx install profitpulse
+```
+
+## How to use ?
+
+To access the available commands, just execute:
+
+```bash
+profitpulse --help
+```
+
+## How to contribute ?
+
+The recommended setup for development uses:
+
+[PyEnv](https://github.com/pyenv/pyenv)
+
+[Poetry](https://python-poetry.org)
+
+After cloning the repository to your machine, in the project root, just run:
+
+```bash
+make all
+```
+
+If everything went smoothly you are now ready to add some contributions.
+

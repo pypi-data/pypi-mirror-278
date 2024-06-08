@@ -1,0 +1,82 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.bandit]
+exclude_dirs = ["tests", "features"]
+
+[tool.poetry]
+name = "profitpulse"
+version = "2.5.0"
+description = "Manage your personal finances"
+authors = ["Luís Miranda <luistm@gmail.com>"]
+maintainers = ["Luís Miranda <luistm@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/luistm/profitpulse"
+
+
+[[tool.poetry.packages]]
+include = "profitpulse"
+from = "src"
+
+[tool.mypy]
+disallow_untyped_defs = true
+
+[[tool.mypy.overrides]]
+module  = "gogotable" # error: Skipping analyzing "gogotable": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module  = "turbofan.database"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module  = "pastperfect"
+ignore_missing_imports = true
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.black]
+max-line-length = 120
+target-version = ["py310","py311", "py312"]
+
+[tool.poetry.scripts]
+profitpulse = "profitpulse.cli.main:cli"
+profit = "profitpulse.cli.main:cli"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+rich = "^13.7.1"
+toml = "^0.10.2"
+turbofan = "^0.2.0"
+typer = "^0.12.3"
+gogotable = "^0.1.0"
+pastperfect = "^0.3.0"
+uvicorn = "^0.29.0"
+fastapi = "^0.111.0"
+jinja2 = "^3.1.4"
+
+[tool.pytest.ini_options]
+markers = ["integration: tags a test as integration tests"]
+
+[tool.poetry.dev-dependencies.bandit]
+extras = ["toml"]
+version = "^1.7.8"
+
+[tool.poetry.group.dev.dependencies]
+black = ">=23.1,<25.0"
+coverage = "^7.2.1"
+flake8 = "^6.0.0"
+isort = "^5.12.0"
+mypy = "^1.0.1"
+nox = "^2023.4.22"
+pre-commit = "^3.1.1"
+pytest = "^7.2.1"
+pytest-random-order = "^1.1.0"
+pytest-xdist = "^3.2.0"
+types-python-dateutil = "^2.8.19.9"
+types-tabulate = "^0.9.0.1"
+types-toml = "^0.10.8.6"
