@@ -1,0 +1,25 @@
+[project]
+description = "qf 的 py 函数库。版本号规则：新py文件.新函数.优化和修复。"
+
+version = "11.1.3"
+
+dependencies = [
+  "zhconv",
+  "psutil",
+  "chepy",
+  "pycryptodome"
+]
+
+
+
+
+
+
+name = "qfpy"
+authors = [
+  { name="gqf", email="gqfol@outlook.com" },
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3"
+]
