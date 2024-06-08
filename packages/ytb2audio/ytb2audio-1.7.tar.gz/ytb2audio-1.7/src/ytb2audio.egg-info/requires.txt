@@ -1,0 +1,9 @@
+requests
+pytube
+yt-dlp
+
+[dev]
+check-manifest
+
+[test]
+coverage
