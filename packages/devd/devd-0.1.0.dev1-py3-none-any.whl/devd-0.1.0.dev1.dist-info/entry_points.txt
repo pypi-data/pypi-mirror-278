@@ -1,0 +1,2 @@
+[console_scripts]
+devd = devd.cli:cli
