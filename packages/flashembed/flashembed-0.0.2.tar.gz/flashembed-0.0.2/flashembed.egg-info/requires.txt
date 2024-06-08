@@ -1,0 +1,6 @@
+tokenizers
+onnxruntime
+numpy
+huggingface_hub
+tqdm
+llama-cpp-python==0.2.67
