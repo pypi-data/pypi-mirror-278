@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: tanager-feeder
+Version: 1.9
+Summary: Control software for spectroscopy using ASD RS3 and ViewSpec Pro
+Home-page: https://github.com/westernmarslab/tanager-feeder
+Author: Kathleen Hoza
+Author-email: kathleen@firstmode.com
+License: Creative Commons Attribution-Noncommercial-Share Alike license
+Platform: UNKNOWN
+Requires-Python: >=3
+Requires-Dist: pywinauto
+Requires-Dist: pyautogui
+Requires-Dist: tanager-tcp
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: colorutils
+Requires-Dist: cython
+Requires-Dist: playsound
+Requires-Dist: psutil
+Requires-Dist: pygame (<1.9.7,>=1.9.5)
+
+UNKNOWN
+
+
