@@ -1,0 +1,92 @@
+Metadata-Version: 2.1
+Name: pricedisplay
+Version: 0.6.1
+Summary: Terminal display for the Finnish power price.
+Home-page: https://github.com/YukiNeko-hime/pricedisplay
+License: LICENSE.md
+Author: Lumi
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: argparse (>=1.4.0,<2.0.0)
+Requires-Dist: datetime (>=5.2,<6.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: sparklines (>=0.4.2,<0.5.0)
+Requires-Dist: usersettings (>=1.1.5,<2.0.0)
+Requires-Dist: windows-curses (>=2.3.1,<3.0.0) ; sys_platform == "win32"
+Project-URL: Repository, https://github.com/YukiNeko-hime/pricedisplay
+Description-Content-Type: text/markdown
+
+# pricedisplay
+
+Terminal Display for the Finnish Power Price
+
+
+## Building
+
+You can install the dependencies and build the package with Poetry:
+
+`poetry install`
+
+`poetry build`
+
+You can test the build with:
+
+`poetry run python -m pricedisplay`
+
+
+## Installing
+
+Install the package from PyPI:
+
+`python -m pip install pricedisplay`
+
+Currently you need Python 3.9 or greater.
+
+**NOTE:** On macOS you may get a warning from urllib3. The default installation of Python includes OpenSSL version compiled with LibreSSL, which is no longer supported. You can fix this by installing Python with Homebrew. For details see [this issue](https://github.com/urllib3/urllib3/issues/3020).
+
+
+## Usage
+
+Run the display with the command:
+
+`python -m pricedisplay`
+
+The package creates a settings file config.yml in your config path.
+
+| OS        | Settings Location                             |
+|-----------|-----------------------------------------------|
+| macOS     | `~/Library/Application Support/pricedisplay/` |
+| GNU/Linux | `~/.config/pricedisplay/`                     |
+| Windows   | `%APPDATA%\pricedisplay\`                     |
+
+You can also pass your own settings file as an argument:
+
+`python -m pricedisplay --settings PATH`
+
+
+## Notes
+
+The actual display of the graph depends on your terminal font and colors. For best results you should have UTF-8 encoding and a font which includes unicode East Asian ambiguous characters (in wide format). Some tested combinations are:
+
+| OS        | Terminal         | Font           |           
+|-----------|------------------|----------------|
+| macOS     | iTerm with Bash  | Hack           |
+| GNU/Linux | Gnome with Bash  | Ubuntu Mono    |
+| Windows   | Mintty with Bash | Lucida Console | 
+
+
+## Sample outputs
+
+![sample output minimal](samples/sample_horizontal.png)
+
+![sample output minimal](samples/sample_vertical.png)
+
+![sample output minimal](samples/sample_minimal.png)
+
