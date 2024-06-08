@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: tensorflow_federated
+Version: 0.80.0
+Summary: An open-source framework for machine learning and other computations on decentralized data.
+Author-email: TensorFlow Federated Team <no-reply@google.com>
+Project-URL: Issues, https://github.com/google-parfait/tensorflow-federated/issues
+Project-URL: Releases, https://github.com/google-parfait/tensorflow-federated/releases
+Project-URL: Source, https://github.com/google-parfait/tensorflow-federated
+Project-URL: Documentation, https://www.tensorflow.org/federated
+Keywords: tensorflow,federated,machine,learning
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: <3.12,>=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: absl-py ==1.*,>=1.0
+Requires-Dist: attrs ~=23.1
+Requires-Dist: cachetools ~=5.3
+Requires-Dist: dm-tree ==0.1.8
+Requires-Dist: dp-accounting ==0.4.3
+Requires-Dist: google-vizier ==0.1.11
+Requires-Dist: grpcio ~=1.46
+Requires-Dist: jaxlib ==0.4.14
+Requires-Dist: jax ==0.4.14
+Requires-Dist: numpy ~=1.25
+Requires-Dist: portpicker ~=1.6
+Requires-Dist: scipy ~=1.9.3
+Requires-Dist: semantic-version ~=2.6
+Requires-Dist: tensorflow-model-optimization ==0.7.5
+Requires-Dist: tensorflow-privacy ==0.9.0
+Requires-Dist: tensorflow ==2.14.*,>=2.14.0
+Requires-Dist: tqdm ~=4.64
+Requires-Dist: typing-extensions ==4.5.*,>=4.5.0
+Requires-Dist: googleapis-common-protos ==1.61.0
+
