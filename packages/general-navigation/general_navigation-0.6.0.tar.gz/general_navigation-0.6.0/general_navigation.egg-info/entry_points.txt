@@ -1,0 +1,2 @@
+[console_scripts]
+general_navigation = general_navigation.__main__:main
