@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "wj-google"
+version = "0.2.6"
+description = ""
+authors = ["Johan <mantimanti89@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "wj_google" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+google = "^3.0.0"
+google-api-python-client = "^2.121.0"
+google-auth-oauthlib = "^1.2.0"
+python-dotenv = "^1.0.1"
+google-cloud-storage = "^2.15.0"
+google-cloud-bigquery = "^3.18.0"
+db-dtypes = "^1.2.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.0"
+black = "^24.4.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
