@@ -1,0 +1,128 @@
+---
+name: Release
+
+on:
+  release:
+    types: ["published"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build and upload artifact
+    steps:
+      - name: 📥 Checkout the repository
+        uses: actions/checkout@v4.1.6
+        with:
+          fetch-depth: 0
+
+      - name: 🛠 Set up Python3
+        uses: actions/setup-python@v5.1.0
+        id: python
+        with:
+          python-version: 3.x
+          check-latest: true
+
+      - name: 📦 Install dependencies
+        run: "python3 -m pip install build"
+
+      - name: Build
+        run: "python -m build"
+
+      - name: Upload dist
+        uses: actions/upload-artifact@v4.3.3
+        with:
+          name: dist_files
+          path: dist
+
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy to PyPi
+    needs: build
+    environment:
+      name: release
+      url: "https://pypi.org/p/pysmsboxnet"
+    permissions:
+      id-token: write
+    steps:
+      - name: 📥 Checkout the repository
+        uses: actions/checkout@v4.1.6
+        with:
+          fetch-depth: 0
+
+      - name: Download dist artifact
+        uses: actions/download-artifact@v4.1.7
+        with:
+          name: dist_files
+          path: dist
+
+      - name: 🚀 Deploy to PyPi
+        uses: pypa/gh-action-pypi-publish@v1.8.14
+
+  deploy_doc:
+    permissions:
+      contents: write
+    if: "!github.event.release.prerelease"
+    needs: deploy
+    runs-on: ubuntu-latest
+    name: Build and deploydocumentation
+    steps:
+      - name: 📥 Checkout the repository
+        uses: actions/checkout@v4.1.6
+        with:
+          fetch-depth: 0
+
+      - name: 🛠 Set up Python3
+        uses: actions/setup-python@v5.1.0
+        id: python
+        with:
+          python-version: "3.10"
+          check-latest: true
+
+      - name: Create and activate a virtual environment
+        # uv doesn't (yet) allow us to install packages globally;
+        # we have to create and activate a virtual environment
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          uv venv .venv
+          echo "VIRTUAL_ENV=.venv" >> $GITHUB_ENV
+          echo "$PWD/.venv/bin" >> $GITHUB_PATH
+
+      - name: 📦 Install dependencies
+        run: uv pip install -e ".[doc]" "setuptools_scm>=8"
+
+      - name: Get version
+        id: get-version
+        run: |
+          echo "VERSION=$(python3 -m setuptools_scm)" >> $GITHUB_OUTPUT
+
+      - name: Build documentation using sphinx
+        run: make -C docs html
+
+      - name: deploy documentation
+        uses: JamesIves/github-pages-deploy-action@v4.6.1
+        with:
+          folder: docs/_build/html
+          target-folder: ${{ steps.get-version.outputs.VERSION }}
+
+      - name: "Generate index.html"
+        run: |
+          mkdir tmpindex
+          RELEASE="${{ steps.get-version.outputs.VERSION }}"
+          echo "<html>
+          <head>
+          <title>Redirecting</title>
+          </head>
+          <body>
+          Redirecting to
+          <a href=\"../${RELEASE}/\">
+          last stable version documentation
+          </a>
+          <meta http-equiv=\"refresh\" content=\"2;URL=../${RELEASE}/\">
+          </body>
+          </html>" > tmpindex/index.html
+
+      - name: deploy updated index
+        uses: JamesIves/github-pages-deploy-action@v4.6.1
+        with:
+          folder: tmpindex
+          target-folder: stable

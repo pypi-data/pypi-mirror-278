@@ -1,0 +1,114 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pysmsboxnet"
+dynamic=["version"]
+authors = [
+    {name = "Patrick ZAJDA", email = "patrick@zajda.fr"}
+]
+description = "Client to send SMS using www.smsbox.net API"
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["smsbox", "api", "sms"]
+license = {text = "MIT license"}
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Framework :: AsyncIO",
+    "Framework :: aiohttp",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Communications",
+    "Topic :: Communications :: Telephony",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "aiohttp>=3.8.0,<4.0",
+]
+
+[project.optional-dependencies]
+doc = [
+    "Sphinx==7.3.7",
+    "furo==2024.5.6",
+]
+lint = [
+    "mypy==1.10.0",
+    "pre-commit==3.7.1",
+]
+test = [
+    "aresponses==3.0.0",
+    "coverage==7.5.3",
+    "pytest==8.2.2",
+    "pytest-asyncio==0.23.7",
+    "pytest-cov==5.0.0",
+]
+
+[project.urls]
+"Source code" = "https://github.com/Nardol/pysmsboxnet"
+"Bug tracker" = "https://github.com/Nardol/pysmsboxnet/issues"
+"Documentation" = "https://nardol.github.io/pysmsboxnet/stable"
+"SMSBox API 1.1 doc" = "https://en.smsbox.net/docs/doc-API-SMSBOX-1.1-EN.html"
+"SMSBox account API doc" = "https://en.smsbox.net/docs/doc-APIFunctions-SMSBOX-FR.html"
+
+[tool.setuptools]
+platforms = ["any"]
+
+[tool.setuptools.package-data]
+"pysmsboxnet" = ["py.typed"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools_scm]
+version_file = "src/pysmsboxnet/_version.py"
+
+[tool.ruff]
+extend-exclude = [
+    ".venv",
+    ".git",
+    ".tox",
+    "docs",
+    "venv",
+    "bin",
+    "lib",
+    "deps",
+    "build",
+    "src/pysmsboxnet/_version.py",
+]
+ignore = [
+    "D203",
+    "D213",
+    "E501",
+]
+extend-select = [
+    "A",
+    "ASYNC",
+    "B",
+    "C",
+    "C416",
+    "C9",
+    "D",
+    "E",
+    "F",
+    "I",
+    "N",
+    "PL",
+    "PLC",
+    "PLE",
+    "PLR",
+    "PLW",
+    "RUF",
+    "UP",
+    "W",
+]
+
+[tool.ruff.mccabe]
+max-complexity = 25

@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: pysmsboxnet
+Version: 2024.6.1
+Summary: Client to send SMS using www.smsbox.net API
+Author-email: Patrick ZAJDA <patrick@zajda.fr>
+License: MIT license
+Project-URL: Source code, https://github.com/Nardol/pysmsboxnet
+Project-URL: Bug tracker, https://github.com/Nardol/pysmsboxnet/issues
+Project-URL: Documentation, https://nardol.github.io/pysmsboxnet/stable
+Project-URL: SMSBox API 1.1 doc, https://en.smsbox.net/docs/doc-API-SMSBOX-1.1-EN.html
+Project-URL: SMSBox account API doc, https://en.smsbox.net/docs/doc-APIFunctions-SMSBOX-FR.html
+Keywords: smsbox,api,sms
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Framework :: AsyncIO
+Classifier: Framework :: aiohttp
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Communications
+Classifier: Topic :: Communications :: Telephony
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp<4.0,>=3.8.0
+Provides-Extra: doc
+Requires-Dist: Sphinx==7.3.7; extra == "doc"
+Requires-Dist: furo==2024.5.6; extra == "doc"
+Provides-Extra: lint
+Requires-Dist: mypy==1.10.0; extra == "lint"
+Requires-Dist: pre-commit==3.7.1; extra == "lint"
+Provides-Extra: test
+Requires-Dist: aresponses==3.0.0; extra == "test"
+Requires-Dist: coverage==7.5.3; extra == "test"
+Requires-Dist: pytest==8.2.2; extra == "test"
+Requires-Dist: pytest-asyncio==0.23.7; extra == "test"
+Requires-Dist: pytest-cov==5.0.0; extra == "test"
+
+# pysmsboxnet
+
+Asynchronous Python library for [smsbox.net](https://www.smsbox.net) API.
+Currently it allows to send a SMS, using the [v1.1 API](https://en.smsbox.net/docs/doc-API-SMSBOX-1.1-EN.html).
+You can also [download the documentation](https://en.smsbox.net/docs/doc-API-SMSBOX-1.1-EN.pdf).
+Future version might allow to use other [account features](https://en.smsbox.net/docs/doc-APIFunctions-SMSBOX-FR.html), this doc is in French.
+The exception is `get_credits()` which allows getting remaining credits.
+
+## Installing
+
+You can install using pip.
+
+## How to use
+
+See [example.py](/example.py).
+An example is also available in the documentation.
+
+## Documentation
+
+- [Latest stable version](https://nardol.github.io/pysmsboxnet/stable)
+- Future previous versions documentations will be available at `https://nardol.github.io/pysmsboxnet/yyyy.mm.n`
+- [Latest dev documentation](https://nardol.github.io/pysmsboxnet/dev)
+  It is updated each time something is pushed to the `main` branch.
