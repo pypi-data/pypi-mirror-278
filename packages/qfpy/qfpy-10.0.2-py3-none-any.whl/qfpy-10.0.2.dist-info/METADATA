@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: qfpy
+Version: 10.0.2
+Summary: 函数库
+Author-email: gqf <gqfol@outlook.com>
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: zhconv
+Requires-Dist: psutil
+Requires-Dist: chepy
+Requires-Dist: pycryptodome
+
