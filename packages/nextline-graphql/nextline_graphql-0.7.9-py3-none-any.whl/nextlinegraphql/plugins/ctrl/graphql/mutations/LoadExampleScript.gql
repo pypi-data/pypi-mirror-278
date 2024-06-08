@@ -1,0 +1,5 @@
+mutation LoadExampleScript {
+  ctrl {
+    loadExampleScript
+  }
+}
