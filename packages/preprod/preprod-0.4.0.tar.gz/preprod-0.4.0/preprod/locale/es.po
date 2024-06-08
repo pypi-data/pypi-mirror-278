@@ -1,0 +1,137 @@
+# Spanish translations for PACKAGE package
+# Traducciones al español para el paquete PACKAGE.
+# Copyright (C) 2015 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# root <turulomio@yahoo.es>, 2015, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: TooManyFiles\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-08 11:10+0200\n"
+"PO-Revision-Date: 2020-04-03 08:54+0200\n"
+"Last-Translator: trabajo <turulomio@yahoo.es>\n"
+"Language-Team: Spanish <kde-i18n-doc@kde.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+msgid "Press a key to continue..."
+msgstr "Pulsa una tecla para continuar..."
+
+#, python-brace-format
+msgid "Created {0} directory"
+msgstr "Directorio {0} creado"
+
+#, python-brace-format
+msgid "Changing net to {0}"
+msgstr "Cambiando red a {0}"
+
+#, python-brace-format
+msgid "Replacing values in {0}"
+msgstr "Remplazando valores en {0}"
+
+#, python-brace-format
+msgid "Appending text at the end of {0}"
+msgstr "Añadiendo texto al final de {0}"
+
+#, python-brace-format
+msgid "Running '{0}'"
+msgstr "Ejecutando '{0}'"
+
+#, python-brace-format
+msgid "Running with system '{0}'"
+msgstr "Ejecutando con system '{0}'"
+
+#, python-brace-format
+msgid "Deleting directory {0}"
+msgstr "Borrando directorio {0}"
+
+#, python-brace-format
+msgid "Changing to directory {0}"
+msgstr "Cambiando a directorio {0}"
+
+#, python-brace-format
+msgid "Cloning git repository {0}"
+msgstr "Clonando repositorio git {0}"
+
+msgid "Pulling git repository"
+msgstr "Actualizando repositorio git"
+
+#, python-brace-format
+msgid "Insert text at line {0} in {1}"
+msgstr ""
+
+msgid "Line number is out of range"
+msgstr "El número de línea está fuera de rango"
+
+#, python-brace-format
+msgid "Deleting line {0} in {1}"
+msgstr "Borrando línea {0} en {1}"
+
+msgid "You must create repository path"
+msgstr "Debe crear el directory del repositorio"
+
+msgid "Restarting apache server"
+msgstr "Reiniciando el servidor Apache"
+
+#, python-brace-format
+msgid "Changing '{0}' to owner {1}:{2}"
+msgstr ""
+
+#, python-brace-format
+msgid "Changing directories permissions to {0} and files to {1}"
+msgstr ""
+
+msgid "Developed by Mariano Muñoz 2023-{}"
+msgstr "Desarrollado por Mariano Muñoz 2023-{}"
+
+msgid "Preprod manager"
+msgstr "Gestor Preprod"
+
+msgid "Prints action code without running it"
+msgstr "Muestra el código de la acción sin ejecutarlo"
+
+msgid "Project identification"
+msgstr "Identificación del proyecto"
+
+msgid "Action identification"
+msgstr "Identificación de la acción"
+
+#, python-brace-format
+msgid "Reading repository from '{0}'"
+msgstr "Leyendo repositorio desde '{0}'"
+
+msgid "You need to set project and action parameters"
+msgstr "Necesitas establecer los parámatros del proyecto y de la acción"
+
+#, python-brace-format
+msgid "Project '{0}' wasn't found en repository. Found projects: {1}"
+msgstr "El proyecto '{0}' no fue encontrado en el repositorio. Proyectos encontrados: {1}"
+
+#, python-brace-format
+msgid "Project '{0}' hasn't '{1}' action. Found actions: {2}"
+msgstr "El proyecto '{0}' no tiene la acción '{1}'. Acciones encontradas: {2}"
+
+#, python-brace-format
+msgid "Pretending project '{0}' and action '{1}':"
+msgstr ""
+
+#, python-brace-format
+msgid "Executing project '{0}' and action '{1}'"
+msgstr "Ejecutando proyecto '{0}' y la acción '{1}'"
+
+#, python-brace-format
+msgid "Executed project '{0}' and action '{1}' took {2}"
+msgstr "La ejecución del proyecto '{0}' y acción '{1}' tardó {2}"
+
+msgid "Repository already created in {}"
+msgstr "El repositorio ya está creado en {}"
+
+#, python-brace-format
+msgid "Reading repository from {0} and listing available preprod scripts"
+msgstr ""
+

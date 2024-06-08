@@ -1,0 +1,134 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-08 11:14+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Press a key to continue..."
+msgstr ""
+
+#, python-brace-format
+msgid "Created {0} directory"
+msgstr ""
+
+#, python-brace-format
+msgid "Changing net to {0}"
+msgstr ""
+
+#, python-brace-format
+msgid "Replacing values in {0}"
+msgstr ""
+
+#, python-brace-format
+msgid "Appending text at the end of {0}"
+msgstr ""
+
+#, python-brace-format
+msgid "Running '{0}'"
+msgstr ""
+
+#, python-brace-format
+msgid "Running with system '{0}'"
+msgstr ""
+
+#, python-brace-format
+msgid "Deleting directory {0}"
+msgstr ""
+
+#, python-brace-format
+msgid "Changing to directory {0}"
+msgstr ""
+
+#, python-brace-format
+msgid "Cloning git repository {0}"
+msgstr ""
+
+msgid "Pulling git repository"
+msgstr ""
+
+#, python-brace-format
+msgid "Insert text at line {0} in {1}"
+msgstr ""
+
+msgid "Line number is out of range"
+msgstr ""
+
+#, python-brace-format
+msgid "Deleting line {0} in {1}"
+msgstr ""
+
+msgid "You must create repository path"
+msgstr ""
+
+msgid "Restarting apache server"
+msgstr ""
+
+#, python-brace-format
+msgid "Changing '{0}' to owner {1}:{2}"
+msgstr ""
+
+#, python-brace-format
+msgid "Changing directories permissions to {0} and files to {1}"
+msgstr ""
+
+msgid "Developed by Mariano Muñoz 2023-{}"
+msgstr ""
+
+msgid "Preprod manager"
+msgstr ""
+
+msgid "Prints action code without running it"
+msgstr ""
+
+msgid "Project identification"
+msgstr ""
+
+msgid "Action identification"
+msgstr ""
+
+#, python-brace-format
+msgid "Reading repository from '{0}'"
+msgstr ""
+
+msgid "You need to set project and action parameters"
+msgstr ""
+
+#, python-brace-format
+msgid "Project '{0}' wasn't found en repository. Found projects: {1}"
+msgstr ""
+
+#, python-brace-format
+msgid "Project '{0}' hasn't '{1}' action. Found actions: {2}"
+msgstr ""
+
+#, python-brace-format
+msgid "Pretending project '{0}' and action '{1}':"
+msgstr ""
+
+#, python-brace-format
+msgid "Executing project '{0}' and action '{1}'"
+msgstr ""
+
+#, python-brace-format
+msgid "Executed project '{0}' and action '{1}' took {2}"
+msgstr ""
+
+msgid "Repository already created in {}"
+msgstr ""
+
+#, python-brace-format
+msgid "Reading repository from {0} and listing available preprod scripts"
+msgstr ""

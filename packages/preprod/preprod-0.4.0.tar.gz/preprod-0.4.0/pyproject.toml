@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "preprod"
+version = "0.4.0"
+description = "Easily creation of pre-production and production scripts to automete your deployment"
+authors = ["turulomio <turulomio@yahoo.es>"]
+license = "GPL-3"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+colorama = "^0.4.6"
+
+[tool.poetry.group.dev.dependencies]
+poetry = "^1.8.2"
+poethepoet = "^0.26.1"
+pytest = "^8.2.0"
+coverage = "^7.5.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.scripts]
+preprod='preprod.core:main'
+preprod_create_repository='preprod.core:create'
+
+[tool.poe.tasks]
+coverage = { script = "preprod.poethepoet:coverage" }
+doc = { script = "preprod.poethepoet:doc" }
+pytest = { script = "preprod.poethepoet:pytest" }
+release = { script = "preprod.poethepoet:release" }
+translate = { script = "preprod.poethepoet:translate" }
