@@ -1,0 +1,8 @@
+django
+easy_thumbnails
+
+[dev]
+pylint
+pre-commit
+bump2version
+commitizen
