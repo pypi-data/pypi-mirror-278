@@ -1,0 +1,12 @@
+six
+flask
+lesscpy
+htmlminf
+jsmin
+xxhash
+rcssmin
+
+[go]
+
+[go:platform_system == "Linux"]
+tdewolff-minify
