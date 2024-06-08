@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: minorimpact
+Version: 0.0.18
+Summary: Personal utility library
+Home-page: https://github.com/minorimpact/python-minorimpact
+Author: Patrick Gillan
+Author-email: pgillan@minorimpact.com
+License: GPLv3
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+Requires-Dist: psutil
+
+# python-minorimpact
+
+A set of general purpose utility scripts for personal use.
+
+## Installation
+
+    $ pip3 install minorimpact
+
+
+
