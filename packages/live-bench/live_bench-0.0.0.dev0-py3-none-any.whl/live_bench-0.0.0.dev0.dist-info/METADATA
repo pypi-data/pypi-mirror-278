@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: live_bench
+Version: 0.0.0.dev0
+Summary: Live Bench
+Author-email: LMMMs-Lab Evaluation Team <lmms_eval@outlook.com>
+License: MIT
+Project-URL: Homepage, https://lmms-lab.github.io/
+Project-URL: Repository, https://github.com/EvolvingLMMs-Lab/lmms-eval
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: PyYAML >=6.0.1
+Requires-Dist: webdriver-manager >=4.0.1
+Requires-Dist: openai >=1.32.0
+Requires-Dist: google-generativeai >=0.6.0
+Requires-Dist: datasets >=2.19.2
+Requires-Dist: Pillow >=10.3.0
+Requires-Dist: selenium >=4.21.0
+Requires-Dist: undetected-chromedriver >=3.5.5
+Requires-Dist: anthropic >=0.28.0
+
+# Coming Soon
