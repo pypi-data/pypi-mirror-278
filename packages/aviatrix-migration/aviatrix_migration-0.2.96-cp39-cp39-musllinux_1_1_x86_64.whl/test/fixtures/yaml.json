@@ -1,0 +1,28 @@
+{
+    "account_info": [
+        {
+            "account_id": "205987878622",
+            "regions": [
+                {
+                    "region": "us-east-1",
+                    "vpcs": [
+                        {"vpc_id": "vpc-0173cdff453971939"},
+                        {"vpc_id": "vpc-045608ad8e0521589"}
+                    ]
+                }
+            ]
+        },
+        {
+            "account_id": "205987878620",
+            "regions": [
+                {
+                    "region": "us-east-1",
+                    "vpcs": [
+                        {"vpc_id": "vpc-0173cdff453971930"},
+                        {"vpc_id": "vpc-045608ad8e0521580"}
+                    ]
+                }
+            ]
+        }
+    ]
+}
