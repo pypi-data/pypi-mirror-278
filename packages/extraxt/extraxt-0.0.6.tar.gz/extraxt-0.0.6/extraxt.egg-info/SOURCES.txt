@@ -1,0 +1,12 @@
+setup.py
+extraxt.egg-info/PKG-INFO
+extraxt.egg-info/SOURCES.txt
+extraxt.egg-info/dependency_links.txt
+extraxt.egg-info/requires.txt
+extraxt.egg-info/top_level.txt
+pkg/__init__.py
+pkg/extraxt.py
+pkg/service/__init__.py
+pkg/service/formatter/__init__.py
+pkg/service/ocr/__init__.py
+pkg/util/__init__.py
