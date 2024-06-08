@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "datadashr"
+version = "0.1.2"
+description = ""
+authors = ["Fabio Cantone <dev@datadashr.com>"]
+readme = "README.md"
+license = "MIT"
+packages = [
+    { include = "datadashr" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+pandas = "^2.2.2"
+ollama = "^0.2.0"
+openai = "^1.31.0"
+requests = "^2.32.3"
+poetry-core = "^1.9.0"
+restrictedpython = "^7.1"
+jinja2 = "^3.1.4"
+loguru = "^0.7.2"
+numpy = "^1.26.4"
+sentence-transformers = "^3.0.0"
+chromadb = "^0.5.0"
+chainlit = "^1.1.202"
+astor = "^0.8.1"
+streamlit = "^1.35.0"
+matplotlib = "^3.9.0"
+rich = "^13.7.1"
+pyfiglet = "^1.0.2"
+pyinquirer = "^1.0.3"
+panel = "^1.4.4"
+
+
+[tool.poetry.scripts]
+datadashr = "datadashr.main:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
