@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "eventum-content-manager"
+version = "1.0.7"
+description = "Content manager for Eventum"
+license = "Apache-2.0"
+authors = ["Nikita Reznikov <nikita.reznikov.public@mail.ru>"]
+readme = "README.md"
+repository = "https://github.com/Eventum-Generatives/EventumContentManager"
+documentation = "https://eventum-generatives.github.io/Website/"
+keywords = ["dependency"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+]
+packages = [
+  {include = "eventum_content_manager"},
+  {include = "eventum_content_manager/py.typed"},
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pyyaml = "^6.0.1"
+types-pyyaml = "^6.0.12.20240311"
+
+[tool.poetry.group.dev.dependencies]
+isort = "^5.12.0"
+pytest = "^8.0.1"
+mypy = "^1.9.0"
+flake8 = "^7.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
