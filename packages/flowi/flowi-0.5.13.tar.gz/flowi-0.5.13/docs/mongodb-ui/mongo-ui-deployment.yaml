@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongo-ui
+  namespace: flowi
+  labels:
+    app: mongo-ui
+spec:
+  selector:
+    matchLabels:
+      app: mongo-ui
+  template:
+    metadata:
+      labels:
+        app: mongo-ui
+    spec:
+      containers:
+      - name: mongo-ui
+        image: mongo-express
+        ports:
+        - containerPort: 8081

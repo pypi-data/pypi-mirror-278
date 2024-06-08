@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: airflow
+  namespace: flowi
+  labels:
+    app: airflow
+spec:
+  selector:
+    matchLabels:
+      app: airflow
+  template:
+    metadata:
+      labels:
+        app: airflow
+    spec:
+      serviceAccountName: airflow
+      containers:
+      - name: airflow
+        imagePullPolicy: Always
+        image: psilvaleo/flowi-airflow
+        ports:
+        - containerPort: 8080
+        volumeMounts:
+          - name: dockersock
+            mountPath: "/var/run/docker.sock"
+        env:
+        - name: MLFLOW_S3_ENDPOINT_URL
+          value: http://minio.flowi.svc.cluster.local
+        - name: BUCKET
+          value: mlflow
+        - name: AWS_ACCESS_KEY_ID
+          valueFrom:
+            secretKeyRef:
+              name: flowi-secrets
+              key: minio-access-key
+        - name: AWS_SECRET_ACCESS_KEY
+          valueFrom:
+            secretKeyRef:
+              name: flowi-secrets
+              key: minio-secret-key
+      volumes:
+        - name: dockersock
+          hostPath:
+            path: /var/run/docker.sock

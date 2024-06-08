@@ -1,0 +1,9 @@
+.github/
+.pytest_cache/
+dask-worker-space/
+dist/
+docs/
+tests/
+mlruns/
+venv/
+*.pkl

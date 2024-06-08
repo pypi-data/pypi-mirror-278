@@ -1,0 +1,12 @@
+.idea/
+venv/
+.DS_Store
+.pytest_cache/
+__pycache__/
+dist/
+build/
+dask-worker-space/
+mlruns/
+sandbox*
+.coverage*
+coverage.xml
