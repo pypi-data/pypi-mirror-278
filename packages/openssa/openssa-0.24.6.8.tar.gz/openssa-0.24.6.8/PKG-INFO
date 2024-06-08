@@ -1,0 +1,103 @@
+Metadata-Version: 2.1
+Name: openssa
+Version: 0.24.6.8
+Summary: OpenSSA: Small Specialist Agents for Industrial AI
+Home-page: https://openssa.org
+License: Apache-2.0
+Keywords: Artificial Intelligence,A.I.,AI,industrial,specialist,specialized,domain,expertise,knowledge
+Author: Aitomatic, Inc.
+Author-email: engineering@aitomatic.com
+Maintainer: Aitomatic, Inc.
+Maintainer-email: engineering@aitomatic.com
+Requires-Python: >=3.12,<3.13
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: contrib
+Provides-Extra: llama-index-callbacks
+Requires-Dist: adlfs (>=2024.4)
+Requires-Dist: click (>=8.1)
+Requires-Dist: docx2txt (>=0.8)
+Requires-Dist: fsspec (>=2024.6)
+Requires-Dist: gcsfs (>=2024.6)
+Requires-Dist: google-api-python-client (>=2.132)
+Requires-Dist: httpx (>=0.27)
+Requires-Dist: llama-index (>=0.10)
+Requires-Dist: llama-index-callbacks-arize-phoenix (>=0.1) ; extra == "llama-index-callbacks"
+Requires-Dist: llama-index-callbacks-deepeval (>=0.1) ; extra == "llama-index-callbacks"
+Requires-Dist: llama-index-callbacks-honeyhive (>=0.1) ; extra == "llama-index-callbacks"
+Requires-Dist: llama-index-callbacks-langfuse (>=0.1) ; extra == "llama-index-callbacks"
+Requires-Dist: llama-index-callbacks-openinference (>=0.1) ; extra == "llama-index-callbacks"
+Requires-Dist: llama-index-callbacks-promptlayer (>=0.1) ; extra == "llama-index-callbacks"
+Requires-Dist: llama-index-callbacks-wandb (>=0.1) ; extra == "llama-index-callbacks"
+Requires-Dist: llama-index-embeddings-azure-openai (>=0.1)
+Requires-Dist: llama-index-llms-azure-openai (>=0.1)
+Requires-Dist: llama-index-readers-web (>=0.1)
+Requires-Dist: llamaapi (>=0.1)
+Requires-Dist: loguru (>=0.7)
+Requires-Dist: openai (>=1.33)
+Requires-Dist: pycryptodome (>=3.20)
+Requires-Dist: pydantic (>=2.7)
+Requires-Dist: pypdf (>=4.2)
+Requires-Dist: python-dotenv (>=1.0)
+Requires-Dist: s3fs (>=2024.6)
+Requires-Dist: streamlit (>=1.35) ; extra == "contrib"
+Requires-Dist: streamlit-extras (>=0.4) ; extra == "contrib"
+Requires-Dist: streamlit-mic-recorder (>=0.0.8) ; extra == "contrib"
+Requires-Dist: torch (>=2.2,<2.3)
+Requires-Dist: tqdm (>=4.66)
+Project-URL: Documentation, https://aitomatic.github.io/openssa
+Project-URL: Repository, https://github.com/aitomatic/openssa
+Description-Content-Type: text/markdown
+
+<!-- markdownlint-disable MD013 MD043 -->
+
+# `OpenSSA`: Small Specialist Agents for Problem-Solving
+
+`OpenSSA` is an agentic AI framework for solving complex problems in real-world industry domains,
+overcoming the limitations of LLMs and RAG in such settings.
+
+## Level-2 Intelligence with Planning, Reasoning, domain-specific Knowledge and diverse Informational Resources
+
+`OpenSSA` agents, built with powerful Hierarchical Task Planning (HTP) and Observe-Orient-Decide-Act Reasoning (OODAR),
+go far beyond the Level-1 pattern-matching intelligence performed by LLMs and RAG and achieve superior outcomes
+in complex multi-faceted, multi-step tasks. See our [comparative study](https://arxiv.org/abs/2404.11792).
+
+`OpenSSA` agents can also be armed with domain-specific Knowledge, connected to diverse Informational Resources
+(files, databases, web sources, etc.), and/or be guided by specialized industry experts
+to maximize the accuracy and comprehensiveness in their planning, reasoning and deliberative/iterative problem-solving.
+
+## Open and Extensible Architecture
+
+Committed to promoting and supporting open development in generative AI,
+`OpenSSA` would strive to integrate with a diverse array of LLM backends, especially open-source LLMs.
+If you would like certain LLMs to be supported, please suggest through a GitHub issue, or, even better, submit your PRs.
+
+Additionally, `OpenSSA`'s key Planning, Reasoning, Knowledge and Resource interfaces
+are designed with customizability and extensibility as first-class concerns,
+in order to enable developers to effectively solve problems in their specific industries and specialized domains.
+
+## Small and Resource-Efficient Agents for Practical Real-World Deployment
+
+Specialized, Level-2 intelligence allows `OpenSSA` agents to work well in many applications
+using significantly smaller component models, thereby greatly economizing computing resources.
+
+## Getting Started
+
+Install by `pip install openssa` (on Python 3.12 only).
+
+- for bleeding-edge latest capabilities: `pip install https://github.com/aitomatic/openssa/archive/main.zip`
+
+Explore the `examples/` directory and developer guides and tutorials on our [documentation site](https://aitomatic.github.io/openssa).
+
+## [API Documentation](https://aitomatic.github.io/openssa/modules)
+
+## Contributing
+
+We welcome contributions from the community!
+
+- Join the discussion on our [Community Forum](https://github.com/aitomatic/openssa/discussions)
+- Submit pull requests for bug fixes, enhancements, or new features
+
+For more information, see our [Contribution Guide](CONTRIBUTING.md).
+
