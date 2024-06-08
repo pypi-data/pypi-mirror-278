@@ -1,0 +1,2 @@
+[console_scripts]
+KyoGreeting = KyoPack.greeting:greet
