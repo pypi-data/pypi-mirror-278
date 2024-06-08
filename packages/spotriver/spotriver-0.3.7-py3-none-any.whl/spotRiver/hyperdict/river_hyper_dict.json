@@ -1,0 +1,1442 @@
+{
+    "AMRules": {
+        "n_min": {
+            "type": "int",
+            "default": 200,
+            "transform": "None",
+            "lower": 100,
+            "upper": 400
+        },
+        "delta": {
+            "type": "float",
+            "default": 1e-07,
+            "transform": "None",
+            "lower": 1e-08,
+            "upper": 1e-06
+        },
+        "tau": {
+            "type": "float",
+            "default": 0.05,
+            "transform": "None",
+            "lower": 0.025,
+            "upper": 0.075
+        },
+        "m_min": {
+            "type": "int",
+            "default": 30,
+            "transform": "None",
+            "lower": 20,
+            "upper": 40
+        },
+        "ordered_rule_set": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 0,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        },
+        "min_samples_split": {
+            "type": "int",
+            "default": 5,
+            "transform": "None",
+            "lower": 4,
+            "upper": 10
+        }
+    },
+    "SGTRegressor": {
+        "delta": {
+            "type": "float",
+            "default": 1e-07,
+            "transform": "None",
+            "lower": 1e-08,
+            "upper": 1e-06
+        },
+        "grace_period": {
+            "type": "int",
+            "default": 200,
+            "transform": "None",
+            "lower": 10,
+            "upper": 1000
+        },
+        "init_pred": {
+            "type": "float",
+            "default": 0.0,
+            "transform": "None",
+            "lower": -0.1,
+            "upper": 0.1
+        },
+        "max_depth": {
+            "type": "int",
+            "default": 20,
+            "transform": "transform_power_2_int",
+            "lower": 2,
+            "upper": 20
+        },
+        "lambda_value": {
+            "type": "float",
+            "default": 0.1,
+            "transform": "None",
+            "lower": 0.01,
+            "upper": 0.2
+        },
+        "gamma": {
+            "type": "float",
+            "default": 1.0,
+            "transform": "None",
+            "lower": 0.9,
+            "upper": 1.1
+        }
+    },
+    "SGTClassifier": {
+        "delta": {
+            "type": "float",
+            "default": 1e-07,
+            "transform": "None",
+            "lower": 1e-08,
+            "upper": 1e-06
+        },
+        "grace_period": {
+            "type": "int",
+            "default": 200,
+            "transform": "None",
+            "lower": 10,
+            "upper": 1000
+        },
+        "init_pred": {
+            "type": "float",
+            "default": 0.0,
+            "transform": "None",
+            "lower": -0.1,
+            "upper": 0.1
+        },
+        "max_depth": {
+            "type": "int",
+            "default": 20,
+            "transform": "transform_power_2_int",
+            "lower": 2,
+            "upper": 20
+        },
+        "lambda_value": {
+            "type": "float",
+            "default": 0.1,
+            "transform": "None",
+            "lower": 0.01,
+            "upper": 0.2
+        },
+        "gamma": {
+            "type": "float",
+            "default": 1.0,
+            "transform": "None",
+            "lower": 0.9,
+            "upper": 1.1
+        }
+    },
+    "ARFClassifier": {
+        "n_models": {
+            "type": "int",
+            "default": 3,
+            "transform": "transform_power_2_int",
+            "lower": 2,
+            "upper": 4
+        },
+        "max_features": {
+            "type": "float",
+            "default": 0.8,
+            "transform": "None",
+            "lower": 0.5,
+            "upper": 1.0
+        },
+        "disable_weighted_vote": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 0,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        },
+        "grace_period": {
+            "type": "int",
+            "default": 200,
+            "transform": "None",
+            "lower": 10,
+            "upper": 1000
+        },
+        "max_depth": {
+            "type": "int",
+            "default": 20,
+            "transform": "transform_power_2_int",
+            "lower": 2,
+            "upper": 20
+        },
+        "split_criterion": {
+            "levels": [
+                "gini",
+                "info_gain",
+                "hellinger"
+            ],
+            "type": "factor",
+            "default": "info_gain",
+            "transform": "None",
+            "core_model_parameter_type": "str",
+            "lower": 0,
+            "upper": 2
+        },
+        "delta": {
+            "type": "float",
+            "default": 0.01,
+            "transform": "None",
+            "lower": 0.005,
+            "upper": 0.02
+        },
+        "tau": {
+            "type": "float",
+            "default": 0.05,
+            "transform": "None",
+            "lower": 0.025,
+            "upper": 0.075
+        },
+        "leaf_prediction": {
+            "levels": [
+                "mc",
+                "nb",
+                "nba"
+            ],
+            "type": "factor",
+            "default": "nba",
+            "transform": "None",
+            "core_model_parameter_type": "str",
+            "lower": 0,
+            "upper": 2
+        },
+        "nb_threshold": {
+            "type": "int",
+            "default": 0,
+            "transform": "None",
+            "lower": 0,
+            "upper": 10
+        },
+        "splitter": {
+            "levels": [
+                "ExhaustiveSplitter",
+                "HistogramSplitter",
+                "GaussianSplitter"
+            ],
+            "type": "factor",
+            "default": "GaussianSplitter",
+            "transform": "None",
+            "class_name": "river.tree.splitter",
+            "core_model_parameter_type": "instance()",
+            "lower": 0,
+            "upper": 2
+        },
+        "binary_split": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 0,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        },
+        "min_branch_fraction": {
+            "type": "float",
+            "default": 0.01,
+            "transform": "None",
+            "lower": 0.005,
+            "upper": 0.1
+        },
+        "max_share_to_split": {
+            "type": "float",
+            "default": 0.99,
+            "transform": "None",
+            "lower": 0.9,
+            "upper": 0.999
+        },
+        "max_size": {
+            "type": "float",
+            "default": 100.0,
+            "transform": "None",
+            "lower": 50.0,
+            "upper": 200.0
+        },
+        "memory_estimate_period": {
+            "type": "int",
+            "default": 6,
+            "transform": "transform_power_10_int",
+            "lower": 3,
+            "upper": 8
+        },
+        "stop_mem_management": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 0,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        },
+        "remove_poor_attrs": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 0,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        },
+        "merit_preprune": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 1,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        }
+    },
+    "HoeffdingTreeClassifier": {
+        "grace_period": {
+            "type": "int",
+            "default": 200,
+            "transform": "None",
+            "lower": 10,
+            "upper": 1000
+        },
+        "max_depth": {
+            "type": "int",
+            "default": 20,
+            "transform": "transform_power_2_int",
+            "lower": 2,
+            "upper": 20
+        },
+        "split_criterion": {
+            "levels": [
+                "gini",
+                "info_gain",
+                "hellinger"
+            ],
+            "type": "factor",
+            "default": "info_gain",
+            "transform": "None",
+            "core_model_parameter_type": "str",
+            "lower": 0,
+            "upper": 2
+        },
+        "delta": {
+            "type": "float",
+            "default": 1e-07,
+            "transform": "None",
+            "lower": 1e-08,
+            "upper": 1e-06
+        },
+        "tau": {
+            "type": "float",
+            "default": 0.05,
+            "transform": "None",
+            "lower": 0.01,
+            "upper": 0.1
+        },
+        "leaf_prediction": {
+            "levels": [
+                "mc",
+                "nb",
+                "nba"
+            ],
+            "type": "factor",
+            "default": "nba",
+            "transform": "None",
+            "core_model_parameter_type": "str",
+            "lower": 0,
+            "upper": 2
+        },
+        "nb_threshold": {
+            "type": "int",
+            "default": 0,
+            "transform": "None",
+            "lower": 0,
+            "upper": 10
+        },
+        "splitter": {
+            "levels": [
+                "ExhaustiveSplitter",
+                "HistogramSplitter",
+                "GaussianSplitter"
+            ],
+            "type": "factor",
+            "default": "GaussianSplitter",
+            "transform": "None",
+            "class_name": "river.tree.splitter",
+            "core_model_parameter_type": "instance()",
+            "lower": 0,
+            "upper": 2
+        },
+        "binary_split": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 0,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        },
+        "max_size": {
+            "type": "float",
+            "default": 100.0,
+            "transform": "None",
+            "lower": 100.0,
+            "upper": 1000.0
+        },
+        "memory_estimate_period": {
+            "type": "int",
+            "default": 6,
+            "transform": "transform_power_10_int",
+            "lower": 3,
+            "upper": 8
+        },
+        "stop_mem_management": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 0,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        },
+        "remove_poor_attrs": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 0,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        },
+        "merit_preprune": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 1,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        }
+    },
+    "AMFRegressor": {
+        "n_estimators": {
+            "type": "int",
+            "default": 10,
+            "transform": "None",
+            "lower": 2,
+            "upper": 1000
+        },
+        "step": {
+            "type": "float",
+            "default": 1.0,
+            "transform": "None",
+            "lower": 0.1,
+            "upper": 10
+        },
+        "use_aggregation": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 1,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        }
+    },
+    "AMFClassifier": {
+        "n_estimators": {
+            "type": "int",
+            "default": 3,
+            "transform": "transform_power_2_int",
+            "lower": 2,
+            "upper": 5
+        },
+        "step": {
+            "type": "float",
+            "default": 1.0,
+            "transform": "None",
+            "lower": 0.1,
+            "upper": 10
+        },
+        "use_aggregation": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 1,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        },
+        "dirichlet": {
+            "type": "float",
+            "default": 0.5,
+            "transform": "None",
+            "lower": 0.1,
+            "upper": 0.75
+        },
+        "split_pure": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 0,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        }
+    },
+    "HoeffdingTreeRegressor": {
+        "grace_period": {
+            "type": "int",
+            "default": 200,
+            "transform": "None",
+            "lower": 10,
+            "upper": 1000
+        },
+        "max_depth": {
+            "type": "int",
+            "default": 20,
+            "transform": "transform_power_2_int",
+            "lower": 2,
+            "upper": 20
+        },
+        "delta": {
+            "type": "float",
+            "default": 1e-07,
+            "transform": "None",
+            "lower": 1e-08,
+            "upper": 1e-06
+        },
+        "tau": {
+            "type": "float",
+            "default": 0.05,
+            "transform": "None",
+            "lower": 0.01,
+            "upper": 0.1
+        },
+        "leaf_prediction": {
+            "levels": [
+                "mean",
+                "model",
+                "adaptive"
+            ],
+            "type": "factor",
+            "default": "mean",
+            "transform": "None",
+            "core_model_parameter_type": "str",
+            "lower": 0,
+            "upper": 2
+        },
+        "leaf_model": {
+            "levels": [
+                "LinearRegression",
+                "PARegressor",
+                "Perceptron"
+            ],
+            "type": "factor",
+            "default": "LinearRegression",
+            "transform": "None",
+            "class_name": "river.linear_model",
+            "core_model_parameter_type": "instance()",
+            "lower": 0,
+            "upper": 2
+        },
+        "model_selector_decay": {
+            "type": "float",
+            "default": 0.95,
+            "transform": "None",
+            "lower": 0.9,
+            "upper": 0.99
+        },
+        "splitter": {
+            "levels": [
+                "EBSTSplitter",
+                "TEBSTSplitter",
+                "QOSplitter"
+            ],
+            "type": "factor",
+            "default": "EBSTSplitter",
+            "transform": "None",
+            "class_name": "river.tree.splitter",
+            "core_model_parameter_type": "instance()",
+            "lower": 0,
+            "upper": 2
+        },
+        "min_samples_split": {
+            "type": "int",
+            "default": 5,
+            "transform": "None",
+            "lower": 2,
+            "upper": 10
+        },
+        "binary_split": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 0,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        },
+        "max_size": {
+            "type": "float",
+            "default": 500.0,
+            "transform": "None",
+            "lower": 100.0,
+            "upper": 1000.0
+        },
+        "memory_estimate_period": {
+            "type": "int",
+            "default": 6,
+            "transform": "transform_power_10_int",
+            "lower": 3,
+            "upper": 8
+        },
+        "stop_mem_management": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 0,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        },
+        "remove_poor_attrs": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 0,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        },
+        "merit_preprune": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 1,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        }
+    },
+    "HoeffdingAdaptiveTreeRegressor": {
+        "grace_period": {
+            "type": "int",
+            "default": 200,
+            "transform": "None",
+            "lower": 10,
+            "upper": 1000
+        },
+        "max_depth": {
+            "type": "int",
+            "default": 20,
+            "transform": "transform_power_2_int",
+            "lower": 2,
+            "upper": 20
+        },
+        "delta": {
+            "type": "float",
+            "default": 1e-07,
+            "transform": "None",
+            "lower": 1e-08,
+            "upper": 1e-06
+        },
+        "tau": {
+            "type": "float",
+            "default": 0.05,
+            "transform": "None",
+            "lower": 0.01,
+            "upper": 0.1
+        },
+        "leaf_prediction": {
+            "levels": [
+                "mean",
+                "model",
+                "adaptive"
+            ],
+            "type": "factor",
+            "default": "mean",
+            "transform": "None",
+            "core_model_parameter_type": "str",
+            "lower": 0,
+            "upper": 2
+        },
+        "leaf_model": {
+            "levels": [
+                "LinearRegression",
+                "PARegressor",
+                "Perceptron"
+            ],
+            "type": "factor",
+            "default": "LinearRegression",
+            "transform": "None",
+            "class_name": "river.linear_model",
+            "core_model_parameter_type": "instance()",
+            "lower": 0,
+            "upper": 2
+        },
+        "model_selector_decay": {
+            "type": "float",
+            "default": 0.95,
+            "transform": "None",
+            "lower": 0.9,
+            "upper": 0.99
+        },
+        "splitter": {
+            "levels": [
+                "EBSTSplitter",
+                "TEBSTSplitter",
+                "QOSplitter"
+            ],
+            "type": "factor",
+            "default": "EBSTSplitter",
+            "transform": "None",
+            "class_name": "river.tree.splitter",
+            "core_model_parameter_type": "instance()",
+            "lower": 0,
+            "upper": 2
+        },
+        "min_samples_split": {
+            "type": "int",
+            "default": 5,
+            "transform": "None",
+            "lower": 2,
+            "upper": 10
+        },
+        "bootstrap_sampling": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 0,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        },
+        "drift_window_threshold": {
+            "type": "int",
+            "default": 300,
+            "transform": "None",
+            "lower": 100,
+            "upper": 500
+        },
+        "switch_significance": {
+            "type": "float",
+            "default": 0.05,
+            "transform": "None",
+            "lower": 0.01,
+            "upper": 0.1
+        },
+        "binary_split": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 0,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        },
+        "max_size": {
+            "type": "float",
+            "default": 500.0,
+            "transform": "None",
+            "lower": 100.0,
+            "upper": 1000.0
+        },
+        "memory_estimate_period": {
+            "type": "int",
+            "default": 6,
+            "transform": "transform_power_10_int",
+            "lower": 3,
+            "upper": 8
+        },
+        "stop_mem_management": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 0,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        },
+        "remove_poor_attrs": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 0,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        },
+        "merit_preprune": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 1,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        }
+    },
+    "HoeffdingAdaptiveTreeClassifier": {
+        "grace_period": {
+            "type": "int",
+            "default": 200,
+            "transform": "None",
+            "lower": 10,
+            "upper": 1000
+        },
+        "max_depth": {
+            "type": "int",
+            "default": 20,
+            "transform": "transform_power_2_int",
+            "lower": 2,
+            "upper": 20
+        },
+        "delta": {
+            "type": "float",
+            "default": 1e-07,
+            "transform": "None",
+            "lower": 1e-08,
+            "upper": 1e-06
+        },
+        "tau": {
+            "type": "float",
+            "default": 0.05,
+            "transform": "None",
+            "lower": 0.01,
+            "upper": 0.1
+        },
+        "leaf_prediction": {
+            "levels": [
+                "mc",
+                "nb",
+                "nba"
+            ],
+            "type": "factor",
+            "default": "nba",
+            "transform": "None",
+            "core_model_parameter_type": "str",
+            "lower": 0,
+            "upper": 2
+        },
+        "nb_threshold": {
+            "type": "int",
+            "default": 0,
+            "transform": "None",
+            "lower": 0,
+            "upper": 10
+        },
+        "splitter": {
+            "levels": [
+                "ExhaustiveSplitter",
+                "HistogramSplitter",
+                "GaussianSplitter"
+            ],
+            "type": "factor",
+            "default": "GaussianSplitter",
+            "transform": "None",
+            "class_name": "river.tree.splitter",
+            "core_model_parameter_type": "instance()",
+            "lower": 0,
+            "upper": 2
+        },
+        "bootstrap_sampling": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 0,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        },
+        "drift_window_threshold": {
+            "type": "int",
+            "default": 300,
+            "transform": "None",
+            "lower": 100,
+            "upper": 500
+        },
+        "drift_detector": {
+            "levels": [
+                "ADWIN"
+            ],
+            "type": "factor",
+            "default": "ADWIN",
+            "transform": "None",
+            "class_name": "river.drift",
+            "core_model_parameter_type": "instance()",
+            "lower": 0,
+            "upper": 0
+        },
+        "switch_significance": {
+            "type": "float",
+            "default": 0.05,
+            "transform": "None",
+            "lower": 0.01,
+            "upper": 0.1
+        },
+        "binary_split": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 0,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        },
+        "max_size": {
+            "type": "float",
+            "default": 100.0,
+            "transform": "None",
+            "lower": 100.0,
+            "upper": 1000.0
+        },
+        "memory_estimate_period": {
+            "type": "int",
+            "default": 6,
+            "transform": "transform_power_10_int",
+            "lower": 3,
+            "upper": 8
+        },
+        "stop_mem_management": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 0,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        },
+        "remove_poor_attrs": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 0,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        },
+        "merit_preprune": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 1,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        }
+    },
+    "HoeffdingTreeClassifier": {
+        "grace_period": {
+            "type": "int",
+            "default": 200,
+            "transform": "None",
+            "lower": 10,
+            "upper": 1000
+        },
+        "max_depth": {
+            "type": "int",
+            "default": 20,
+            "transform": "transform_power_2_int",
+            "lower": 2,
+            "upper": 20
+        },
+        "split_criterion": {
+            "levels": [
+                "gini",
+                "info_gain",
+                "hellinger"
+            ],
+            "type": "factor",
+            "default": "info_gain",
+            "transform": "None",
+            "core_model_parameter_type": "str",
+            "lower": 0,
+            "upper": 2
+        },
+        "delta": {
+            "type": "float",
+            "default": 1e-07,
+            "transform": "None",
+            "lower": 1e-08,
+            "upper": 1e-06
+        },
+        "tau": {
+            "type": "float",
+            "default": 0.05,
+            "transform": "None",
+            "lower": 0.01,
+            "upper": 0.1
+        },
+        "leaf_prediction": {
+            "levels": [
+                "mc",
+                "nb",
+                "nba"
+            ],
+            "type": "factor",
+            "default": "nba",
+            "transform": "None",
+            "core_model_parameter_type": "str",
+            "lower": 0,
+            "upper": 2
+        },
+        "nb_threshold": {
+            "type": "int",
+            "default": 0,
+            "transform": "None",
+            "lower": 0,
+            "upper": 10
+        },
+        "splitter": {
+            "levels": [
+                "ExhaustiveSplitter",
+                "HistogramSplitter",
+                "GaussianSplitter"
+            ],
+            "type": "factor",
+            "default": "GaussianSplitter",
+            "transform": "None",
+            "class_name": "river.tree.splitter",
+            "core_model_parameter_type": "instance()",
+            "lower": 0,
+            "upper": 2
+        },
+        "binary_split": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 0,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        },
+        "max_size": {
+            "type": "float",
+            "default": 100.0,
+            "transform": "None",
+            "lower": 100.0,
+            "upper": 1000.0
+        },
+        "memory_estimate_period": {
+            "type": "int",
+            "default": 6,
+            "transform": "transform_power_10_int",
+            "lower": 3,
+            "upper": 8
+        },
+        "stop_mem_management": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 0,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        },
+        "remove_poor_attrs": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 0,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        },
+        "merit_preprune": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 1,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        }
+    },
+    "ExtremelyFastDecisionTreeClassifier": {
+        "grace_period": {
+            "type": "int",
+            "default": 8,
+            "transform": "transform_power_2_int",
+            "lower": 4,
+            "upper": 10
+        },
+        "max_depth": {
+            "type": "int",
+            "default": 20,
+            "transform": "transform_power_2_int",
+            "lower": 2,
+            "upper": 20
+        },
+        "min_samples_reevaluate": {
+            "type": "int",
+            "default": 4,
+            "transform": "transform_power_2_int",
+            "lower": 2,
+            "upper": 7
+        },
+        "split_criterion": {
+            "levels": [
+                "gini",
+                "info_gain",
+                "hellinger"
+            ],
+            "type": "factor",
+            "default": "info_gain",
+            "transform": "None",
+            "core_model_parameter_type": "str",
+            "lower": 0,
+            "upper": 2
+        },
+        "delta": {
+            "type": "int",
+            "default": -7,
+            "transform": "transform_power_10",
+            "lower": -9,
+            "upper": -5
+        },
+        "tau": {
+            "type": "float",
+            "default": 0.05,
+            "transform": "None",
+            "lower": 0.01,
+            "upper": 0.1
+        },
+        "leaf_prediction": {
+            "levels": [
+                "mc",
+                "nb",
+                "nba"
+            ],
+            "type": "factor",
+            "default": "nba",
+            "transform": "None",
+            "core_model_parameter_type": "str",
+            "lower": 0,
+            "upper": 2
+        },
+        "nb_threshold": {
+            "type": "int",
+            "default": 0,
+            "transform": "None",
+            "lower": 0,
+            "upper": 10
+        },
+        "splitter": {
+            "levels": [
+                "ExhaustiveSplitter",
+                "HistogramSplitter",
+                "GaussianSplitter"
+            ],
+            "type": "factor",
+            "default": "GaussianSplitter",
+            "transform": "None",
+            "class_name": "river.tree.splitter",
+            "core_model_parameter_type": "instance()",
+            "lower": 0,
+            "upper": 2
+        },
+        "binary_split": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 0,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        },
+        "min_branch_fraction": {
+            "type": "float",
+            "default": 0.01,
+            "transform": "None",
+            "lower": 0.001,
+            "upper": 0.1
+        },
+        "max_share_to_split": {
+            "type": "float",
+            "default": 0.99,
+            "transform": "None",
+            "lower": 0.9,
+            "upper": 0.999
+        },
+        "max_size": {
+            "type": "float",
+            "default": 100.0,
+            "transform": "None",
+            "lower": 100.0,
+            "upper": 1000.0
+        },
+        "memory_estimate_period": {
+            "type": "int",
+            "default": 6,
+            "transform": "transform_power_10_int",
+            "lower": 3,
+            "upper": 8
+        },
+        "stop_mem_management": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 0,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        },
+        "remove_poor_attrs": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 0,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        },
+        "merit_preprune": {
+            "levels": [
+                0,
+                1
+            ],
+            "type": "factor",
+            "default": 1,
+            "transform": "None",
+            "core_model_parameter_type": "bool",
+            "lower": 0,
+            "upper": 1
+        }
+    },
+    "LinearRegression": {
+        "l2": {
+            "type": "int",
+            "default": 0,
+            "transform": "None",
+            "lower": 0,
+            "upper": 0
+        },
+        "l1": {
+            "type": "float",
+            "default": 0.0,
+            "transform": "None",
+            "lower": 0.0,
+            "upper": 0.01
+        },
+        "intercept_init": {
+            "type": "float",
+            "default": 0.0,
+            "transform": "None",
+            "lower": -1.0,
+            "upper": 1.0
+        },
+        "intercept_lr": {
+            "type": "float",
+            "default": 0.01,
+            "transform": "None",
+            "lower": 0.001,
+            "upper": 0.02
+        },
+        "clip_gradient": {
+            "type": "int",
+            "default": 12,
+            "transform": "transform_power_10",
+            "lower": 11,
+            "upper": 13
+        }
+    },
+    "LogisticRegression": {
+        "optimizer": {
+            "levels": [
+                "SGD"
+            ],
+            "type": "factor",
+            "default": "SGD",
+            "transform": "None",
+            "class_name": "river.optim",
+            "core_model_parameter_type": "instance()",
+            "lower": 0,
+            "upper": 0
+        },
+        "loss": {
+            "levels": [
+                "Log"
+            ],
+            "type": "factor",
+            "default": "Log",
+            "transform": "None",
+            "class_name": "river.optim.losses",
+            "core_model_parameter_type": "instance()",
+            "lower": 0,
+            "upper": 0
+        },
+        "l1": {
+            "type": "float",
+            "default": 0.0,
+            "transform": "None",
+            "lower": 0.0,
+            "upper": 0.1
+        },
+        "intercept_init": {
+            "type": "float",
+            "default": 0.0,
+            "transform": "None",
+            "lower": -10.0,
+            "upper": 10.0
+        },
+        "intercept_lr": {
+            "type": "int",
+            "default": -2,
+            "transform": "transform_power_10",
+            "lower": -4,
+            "upper": 0
+        },
+        "clip_gradient": {
+            "type": "int",
+            "default": 12,
+            "transform": "transform_power_10",
+            "lower": 6,
+            "upper": 12
+        }
+    },
+    "Template": {
+        "integer_hyperparameter": {
+            "type": "int",
+            "default": 200,
+            "transform": "None",
+            "lower": 10,
+            "upper": 1000
+        },
+        "integer_hyperparameter_with_transformation": {
+            "type": "int",
+            "default": 20,
+            "transform": "transform_power_2_int",
+            "lower": 2,
+            "upper": 20
+        },
+        "float_hyperparameter": {
+            "type": "float",
+            "default": 1e-07,
+            "transform": "None",
+            "lower": 1e-08,
+            "upper": 1e-06
+        },
+        "factor_hyperparameter": {
+            "levels": [
+                "mc",
+                "nb",
+                "nba"
+            ],
+            "type": "factor",
+            "default": "nba",
+            "transform": "None",
+            "core_model_parameter_type": "str",
+            "lower": 0,
+            "upper": 2
+        }
+    }
+}
