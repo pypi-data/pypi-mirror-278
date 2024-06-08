@@ -1,0 +1,4 @@
+[console_scripts]
+preprod=preprod.core:main
+preprod_create_repository=preprod.core:create
+
