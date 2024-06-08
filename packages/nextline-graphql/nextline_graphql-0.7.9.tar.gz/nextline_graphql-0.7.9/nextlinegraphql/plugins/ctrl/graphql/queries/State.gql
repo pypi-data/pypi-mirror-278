@@ -1,0 +1,5 @@
+query State {
+  ctrl {
+    state
+  }
+}

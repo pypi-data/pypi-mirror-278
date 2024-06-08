@@ -1,0 +1,5 @@
+mutation Reset($statement: String) {
+  ctrl {
+    reset(statement: $statement)
+  }
+}
