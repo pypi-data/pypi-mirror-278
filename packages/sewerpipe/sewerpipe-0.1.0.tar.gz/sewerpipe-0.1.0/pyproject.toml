@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "sewerpipe"
+version = "0.1.0"
+description = "Ties your debbuging workflow to automated workflows elsewhere"
+authors = ["Chris Czarnecki <cczarnec@uwaterloo.ca>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10,<3.13"
+pydantic = "^2.7.3"
+rich = "^13.7.1"
+confuk = "^0.1.0"
+apache-airflow = "^2.9.1"
+click = "^8.1.7"
+
+
+[tool.poetry.group.dev.dependencies]
+yapf = "^0.40.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+sppe = "sewerpipe.main:main"
