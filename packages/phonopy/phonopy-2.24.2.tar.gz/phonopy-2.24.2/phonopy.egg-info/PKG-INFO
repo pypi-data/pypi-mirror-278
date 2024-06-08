@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: phonopy
+Version: 2.24.2
+Summary: This is the phonopy module.
+Home-page: https://phonopy.github.io/phonopy/
+Author: Atsushi Togo
+Author-email: atz.togo@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Provides: phonopy
+Requires-Python: >=3.8
+Provides-Extra: cp2k
+Provides-Extra: plot
+License-File: LICENSE
+
+UNKNOWN
+
