@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: KmerEstimator
+Version: 0.7.2
+Summary: A kmer estimator for genome assemblies
+Author: Srijan Chakraborty, Emily Liang, William Chu
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: memory-profiler
