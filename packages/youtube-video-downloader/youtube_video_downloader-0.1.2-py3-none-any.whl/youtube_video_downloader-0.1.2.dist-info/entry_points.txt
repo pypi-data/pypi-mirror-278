@@ -1,0 +1,4 @@
+[console_scripts]
+vid=youtube_video_downloader.video_download:app
+vidp=youtube_video_downloader.playlist_download:app
+
