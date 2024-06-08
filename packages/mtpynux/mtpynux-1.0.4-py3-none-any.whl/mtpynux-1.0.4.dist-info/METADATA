@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: mtpynux
+Version: 1.0.4
+Summary: METATRADER PYTHON LINUX
+Home-page: https://github.com/pythonsystem/mtpynux
+Author: Original By Lucas Prett Campagna
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy ==1.24.3
+Requires-Dist: plumbum ==1.7.0
+Requires-Dist: pyparsing ==2.4.7
+Requires-Dist: rpyc ==5.2.3
+
+METATRADER PYTHON LINUX
