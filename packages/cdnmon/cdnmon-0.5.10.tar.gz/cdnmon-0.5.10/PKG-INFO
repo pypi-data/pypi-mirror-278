@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: cdnmon
+Version: 0.5.10
+Summary: 
+Author: Yihang Wang
+Author-email: wangyihanger@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: coloredlogs (>=15.0.1,<16.0.0)
+Requires-Dist: dynaconf (>=3.2.5,<4.0.0)
+Requires-Dist: humanize (>=4.9.0,<5.0.0)
+Requires-Dist: ipy (>=1.1,<2.0)
+Requires-Dist: jinja2 (>=3.1.4,<4.0.0)
+Requires-Dist: loguru (>=0.7.2,<0.8.0)
+Requires-Dist: pymongo (>=4.7.2,<5.0.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+## Introduction
+
+This project provides IP range data of multiple CDN vendors via a Python package named `cdnmon`.
+
+## Installation
+
+```
+pip install -i https://pypi.org/simple/ cdnmon
+```
+
+## Usage
+
+
+```python
+from cdnmon import CDN
+
+# Get a CDN by name
+cloudflare = CDN("cloudflare")
+
+# Get the IP ranges of a specific CDN
+cloudflare.ipv4_prefixes()
+cloudflare.ipv6_prefixes()
+
+# Get an example subscriber domain of the given CDN
+cloudflare.subscribers()
+```
+
+## TODO
+
+- [ ] Support downloading ingress / egress nodes list
+- [ ] Add `unchanged_since` in `index.html`
+- [ ] Change `updated_at` in `index.html`
+- [ ] Add example code in `index.html`
+- [x] Add type annotations
+
+## FAQ
+
+### How to obtain an access token?
+
+Please contact <wangyihanger@gmail.com>.
+

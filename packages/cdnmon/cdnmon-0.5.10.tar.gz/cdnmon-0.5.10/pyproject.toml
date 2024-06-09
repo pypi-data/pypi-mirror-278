@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "cdnmon"
+version = "0.5.10"
+description = ""
+authors = ["Yihang Wang <wangyihanger@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.31.0"
+coloredlogs = "^15.0.1"
+pyyaml = "^6.0.1"
+ipy = "^1.1"
+pymongo = "^4.7.2"
+dynaconf = "^3.2.5"
+loguru = "^0.7.2"
+humanize = "^4.9.0"
+jinja2 = "^3.1.4"
+
+
+[tool.poetry.group.dev.dependencies]
+build = "^0.10.0"
+twine = "^4.0.2"
+deptry = "^0.16.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

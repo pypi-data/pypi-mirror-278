@@ -1,0 +1,2 @@
+# *.inscname.net
+# *.insnw.net
