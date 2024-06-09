@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: aau-ais-dipaal
+Version: 0.1.26
+Summary: TODO: Add a description of your project.
+Author-Email: Mikael Vind Mikkelsen <mvmi@cs.aau.dk>
+License: MIT
+Requires-Python: ==3.12.*
+Requires-Dist: aau-ais-utilities==0.1.*
+Requires-Dist: pydantic==2.7.*
+Requires-Dist: pydantic-settings==2.2.*
+Requires-Dist: jinjasql==0.1.*
+Requires-Dist: jinja2==3.0.*
+Requires-Dist: pandas==2.2.*
+Description-Content-Type: text/markdown
+
+# DIPAAL Package
+This package 
+
+## Overview
+
+
+## Usage
+
+## Dependencies
+
+## License
+This project is licensed under the terms of the MIT license.
