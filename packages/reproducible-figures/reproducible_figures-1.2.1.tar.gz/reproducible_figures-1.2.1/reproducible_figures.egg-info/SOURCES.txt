@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+reproducible_figures/__init__.py
+reproducible_figures/plotting.py
+reproducible_figures/utility.py
+reproducible_figures.egg-info/PKG-INFO
+reproducible_figures.egg-info/SOURCES.txt
+reproducible_figures.egg-info/dependency_links.txt
+reproducible_figures.egg-info/requires.txt
+reproducible_figures.egg-info/top_level.txt
+reproducible_figures/test/__init__.py
+reproducible_figures/test/test_save_figure.py
+reproducible_figures/test/test_utils.py
