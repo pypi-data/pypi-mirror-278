@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools~=68.0", "wheel~=0.40.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name         = "lcn_frontend"
+license      = {text = "MIT License"}
+description  = "LCN panel for Home Assistant"
+keywords     = ["Home Assistant", "LCN"]
+readme       = "README.md"
+authors      = [
+    {name = "Andre Lengwenus", email = "alengwenus@gmail.com"},
+]
+requires-python = ">=3.10.0"
+dynamic = ["version"]
+
+[project.urls]
+Repository = "https://github.com/alengwenus/lcn-frontend.git"
+
+[tool.setuptools.dynamic]
+version = {file = "VERSION"}
+
+[tool.setuptools]
+platforms = ["any"]
+zip-safe  = false
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["lcn_frontend*"]
