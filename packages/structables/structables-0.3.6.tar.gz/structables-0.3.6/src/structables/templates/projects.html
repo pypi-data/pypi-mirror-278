@@ -1,0 +1,56 @@
+{% extends "base.html" %} {% block content %}
+<center>
+  <h1>{{ title }}</h1>
+  <span><a href="{{ path }}/">Featured</a></span>
+  <span><a href="{{ path }}/recent/">Recent</a></span>
+  <span><a href="{{ path }}/popular/">Popular</a></span>
+  <span><a href="{{ path }}/views/">Views</a></span>
+  <span><a href="{{ path }}/winners/">Winners</a></span>
+  <br />
+
+  <div class="container">
+    <div class="row">
+      {% for ible in ibles %}
+      <div class="col-xs-12 col-sm-6 col-lg-4 mb-4">
+        <div class="card h-100 d-flex flex-column">
+          <a href="{{ ible.link }}">
+            <img
+              class="card-img-top"
+              src="{{ ible.img }}"
+              alt="{{ ible.alt }}"
+              style="max-width: 100%"
+            />
+            <div class="card-body">
+              <h5 class="card-title">{{ ible.title }}</h5>
+            </div>
+          </a>
+          <div class="card-footer mt-auto">
+            <p class="card-text">
+              by <a href="{{ ible.author_link }}">{{ ible.author }}</a>
+            </p>
+            <p class="card-text">
+              in <a href="{{ ible.channel_link }}">{{ ible.channel }}</a>
+            </p>
+            <p class="card-text">
+              {{ ible.favorites }} Favorites, {{ ible.views }} Views
+            </p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+      <ul class="pagination">
+        {% for page in pagination %}
+        <li class="page-item">
+          <a
+            class="page-link {% if page.active %}active{% endif %} {% if page.disabled %}disabled{% endif %}"
+            href="{{ page.link }}"
+            >{{ page.text }}</a
+          >
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</center>
+{% endblock %}
