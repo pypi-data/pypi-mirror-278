@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: NBIA-Fusion
+Version: 0.2
+Description-Content-Type: text/markdown
+
+# MMP-CloudPointFusion
+
+This project is about fusing several ply files into a single one. It provides a function process_point_clouds that performs fusion by tracking and registration, cropping, and processing on the result poit cloud.
+
+Function Description
+The process_point_clouds function performs the following steps:
+
+1. Loads a sequence of point clouds from a specified path.
+2. Performs tracking processing on the sequence (resgister with the pose estimated by the tracker).
+3. Crops the background of each point cloud using bbox_w_rack coordinates.
+4. Aligns the point clouds using a RANSAC and ICP.
+5. Crops the rack from the aligned point cloud using bbox_wo_rack coordinates.
+6. Clean the result
+
+Here is an example of how to use the process_point_clouds function:
+
+In this example, the function is called with the following parameters:
+
+```python
+
+display=True: # This will display the point clouds at each step of the process.
+
+bbox_w_rack=(-0.75, 0.75, -0.50, 0.5, -1.25, 0.4):  # These are the bounding box coordinates for cropping the point clouds with the rack. (x_min, x_max, y_min, y_max, z_min, z_max)
+
+bbox_wo_rack=(-0.75, 0.75, -0.50, 0.5, -1.25, 0.1):  # These are the bounding box coordinates for cropping the point clouds without the rack. (x_min, x_max, y_min, y_max, z_min, z_max)
+
+src_directory="MMP-CloudPointFusion/exemple_bidon":  # This is the path to the directory containing the point cloud files.
+
+destination="":  # This is the path to the directory where the result will be saved. In this case, the point clouds will be saved in the current directory.
+
+# exemple with display flag on
+process_point_clouds(
+    display=True,
+    bbox_w_rack=(-0.75, 0.75, -0.50, 0.5, -1.25, 0.4),
+    bbox_wo_rack=(-0.75, 0.75, -0.50, 0.5, -1.25, 0.1),
+    src_directory="MMP-CloudPointFusion/exemple_bidon",
+    destination="",
+)
