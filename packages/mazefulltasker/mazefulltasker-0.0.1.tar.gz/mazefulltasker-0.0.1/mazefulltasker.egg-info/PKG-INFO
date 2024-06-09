@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: mazefulltasker
+Version: 0.0.1
+Summary: Simply task tracker for python.
+Home-page: https://t.me/mazefull
+Author: mazefull
+Author-email: mazefull@gmail.com
+Project-URL: GitHub, https://github.com/mazefull/
+Keywords: files speedfiles
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+Tracker uses SQliteDB.
+<p>to start work you should import this:</p>
+<p><b>from service import config, database</b></p>
+<p><b>from service import db_init</b></p>
+<p><b>from manager import Task</b></p>
+
+To init db use db_init(). Library will build db, it asks you for her name.
+Using config you can manually setup database
+
+On this version realized methods of build task, add comments, statuses, assignations. Also, you can parse data back
+
+1. To issue new task you should init class Task(). Then Task().new_issue
+2. To add comment/status/assignation use Task().new_comment / .new_status / .new_assign
+3. Also you can use <b>Task().multi_action</b> for multiply editions
