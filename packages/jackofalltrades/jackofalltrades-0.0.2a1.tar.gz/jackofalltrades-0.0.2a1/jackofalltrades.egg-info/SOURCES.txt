@@ -1,0 +1,24 @@
+LICENSE.txt
+MANIFEST.in
+README.txt
+pyproject.toml
+setup.py
+jackofalltrades/__init__.py
+jackofalltrades.egg-info/PKG-INFO
+jackofalltrades.egg-info/SOURCES.txt
+jackofalltrades.egg-info/dependency_links.txt
+jackofalltrades.egg-info/requires.txt
+jackofalltrades.egg-info/top_level.txt
+jackofalltrades/Errors/__init__.py
+jackofalltrades/Errors/error.py
+jackofalltrades/Models/Classification.py
+jackofalltrades/Models/Regression.py
+jackofalltrades/Models/__init__.py
+jackofalltrades/datasets/BTC-USD.csv
+jackofalltrades/datasets/Real estate.csv
+jackofalltrades/datasets/__init__.py
+jackofalltrades/datasets/all_fuels_data.csv
+jackofalltrades/datasets/dataset.py
+jackofalltrades/datasets/london_house_prices.csv
+jackofalltrades/test/__init__.py
+jackofalltrades/test/tests.py
