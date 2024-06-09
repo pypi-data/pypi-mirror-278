@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "exinc"
+version = "1.0.2"
+description = "Tool to expand C++ includes targeting competitive programmers."
+authors = ["Roberto Sales <rsalescaldeira@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.scripts]
+exinc = "exinc.tool:entry_point"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
