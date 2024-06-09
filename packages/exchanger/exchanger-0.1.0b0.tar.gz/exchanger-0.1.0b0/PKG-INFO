@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: exchanger
+Version: 0.1.0b0
+Summary: 
+Author: Andres Gomez
+Author-email: agomez@bit3000.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+
