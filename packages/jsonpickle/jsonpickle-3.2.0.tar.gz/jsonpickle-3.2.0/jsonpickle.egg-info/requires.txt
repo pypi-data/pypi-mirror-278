@@ -1,0 +1,40 @@
+
+[:python_version < "3.8"]
+importlib_metadata
+
+[docs]
+furo
+rst.linker>=1.9
+sphinx
+
+[packaging]
+build
+twine
+
+[testing]
+bson
+ecdsa
+feedparser
+numpy
+pandas
+pymongo
+pytest!=3.7.3,>=3.5
+pytest-benchmark
+pytest-benchmark[histogram]
+pytest-checkdocs>=1.2.3
+pytest-cov
+pytest-enabler>=1.0.1
+pytest-ruff>=0.2.1
+scikit-learn
+simplejson
+sqlalchemy
+ujson
+
+[testing:python_version < "3.12"]
+gmpy2
+
+[testing:python_version <= "3.10"]
+scipy
+
+[testing:python_version > "3.10"]
+scipy>=1.9.3
