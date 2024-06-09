@@ -1,0 +1,46 @@
+image: python:3.11.9
+
+# Change pip's cache directory to be inside the project directory since we can
+# only cache local items.
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+# https://pip.pypa.io/en/stable/topics/caching/
+cache:
+  paths:
+    - .cache/pip
+
+before_script:
+  - python --version ; pip --version 
+  - pip install hatch
+  - hatch shell dev
+  - export PYTHONPATH=$(pwd)
+
+test:
+  script:
+    - pre-commit run --all-files
+
+run:
+  script:
+    - pip install .
+    # run the command here
+  artifacts:
+    paths:
+      - build/*
+
+pages:
+  script:
+    - pip install sphinx sphinx-rtd-theme
+    - cd doc
+    - make html
+    - mv build/html/ ../public/
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+deploy:
+  stage: deploy
+  script: echo "Define your deployment script!"
+  environment: production

@@ -1,0 +1,87 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "inter-cli"
+dynamic = ["version"]
+description = ''
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "victor macedo", email = "victormacedo996@gmail.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+  "typer==0.12.3",
+  "python-gitlab==4.6.0",
+  "pydantic==2.7.3",
+  "pyyaml==6.0.1",
+  "loguru==0.7.2",
+  "cookiecutter==2.6.0",
+  "gitpython==3.1.43",
+  "docker==7.1.0",
+  "Jinja2==3.1.4"
+]
+
+[tool.hatch.envs.dev]
+dependencies = [
+  "pre-commit",
+  "ruff",
+  "black",
+  "pytest"
+  ]
+
+[project.urls]
+Documentation = "https://github.com/victor macedo/inter-cli#readme"
+Issues = "https://github.com/victor macedo/inter-cli/issues"
+Source = "https://github.com/victor macedo/inter-cli"
+
+[tool.hatch.version]
+path = "src/inter_cli/__about__.py"
+
+[tool.hatch.envs.default]
+python = "3.11"
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/inter_cli tests}"
+
+[tool.coverage.run]
+source_pkgs = ["inter_cli", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/inter_cli/__about__.py",
+]
+
+[tool.coverage.paths]
+inter_cli = ["src/inter_cli", "*/inter-cli/src/inter_cli"]
+tests = ["tests", "*/inter-cli/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
+[tool.hatch.build.targets.wheel]
+include = ["src"]
+
+[project.scripts]
+inter-cli = "src.main:run"
