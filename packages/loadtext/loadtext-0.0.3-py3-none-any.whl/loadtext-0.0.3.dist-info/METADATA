@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: loadtext
+Version: 0.0.3
+Summary: Load a text file as a string or a list of paragraphs (when splitlines is set to True) with blank lines removed
+Project-URL: Documentation, https://github.com/ffreemt/loadtext#readme
+Project-URL: Issues, https://github.com/ffreemt/loadtext/issues
+Project-URL: Source, https://github.com/ffreemt/loadtext
+Author: ffreemt
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: charset-normalizer
+Requires-Dist: loguru
+Description-Content-Type: text/markdown
+
+# loadtext
+
+[![pytest](https://github.com/ffreemt/loadtext/actions/workflows/routine-tests.yml/badge.svg)](https://github.com/ffreemt/loadtext/actions)[![python](https://img.shields.io/static/v1?label=python+&message=3.8%2B&color=blue)](https://www.python.org/downloads/)[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)[![PyPI - Version](https://img.shields.io/pypi/v/loadtext.svg)](https://pypi.org/project/loadtext)
+
+-----
+
+## Installation
+
+```console
+pip install loadtext
+```
+
+## Use
+
+```python
+from loadtext import loadtext
+
+# blank lines removed
+string_text = loadtext("filename or filepath")
+list_paragraphs = loadtext("filename or filepath", splitlines=True)
+# or list_paragraphs = loadtext("filename or filepath", True)
+```
+
+## License
+
+`loadtext` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
