@@ -1,0 +1,298 @@
+Metadata-Version: 2.3
+Name: gradio_model4dgs
+Version: 0.0.5
+Summary: Python library for easily interacting with trained machine learning models
+Author-email: Zhang Chi <chi.zhang.helen@gmail.com>
+License-Expression: MIT
+Keywords: gradio-custom-component,gradio-template-Fallback
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Python: >=3.8
+Requires-Dist: gradio<5.0,>=4.0
+Provides-Extra: dev
+Requires-Dist: build; extra == 'dev'
+Requires-Dist: twine; extra == 'dev'
+Description-Content-Type: text/markdown
+
+---
+title: gradio-model4dgs
+colorFrom: purple
+colorTo: yellow
+sdk: gradio
+sdk_version: 4.29.0
+app_file: app.py
+pinned: false
+license: mit
+---
+
+# `gradio_model4dgs`
+<a href="https://pypi.org/project/gradio_model4dgs/" target="_blank"><img alt="PyPI - Version" src="https://img.shields.io/pypi/v/gradio_model4dgs"></a>  
+
+Python library for easily interacting with trained machine learning models
+
+## Installation
+
+```bash
+pip install gradio_model4dgs
+```
+
+## Usage
+
+```python
+import gradio as gr
+from gradio_model4dgs import Model4DGS
+import os
+
+image_dir = os.path.join(os.path.dirname(__file__), "assets")
+
+if os.path.exists(image_dir) and os.path.isdir(image_dir) and os.listdir(image_dir):
+    examples = [os.path.join(image_dir, file) for file in os.listdir(image_dir)]
+else:
+    examples = [os.path.join(os.path.dirname(__file__), example) for example in Model4DGS().example_inputs()]
+
+with gr.Blocks() as demo:
+    with gr.Row():
+        Model4DGS(value=examples, label="4D Model", fps=8)
+
+if __name__ == "__main__":
+    demo.launch(share=True)
+```
+
+## `Model4DGS`
+
+### Initialization
+
+<table>
+<thead>
+<tr>
+<th align="left">name</th>
+<th align="left" style="width: 25%;">type</th>
+<th align="left">default</th>
+<th align="left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>value</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+str | Callable | None
+```
+
+</td>
+<td align="left"><code>None</code></td>
+<td align="left">path to (.splat) file to show in model4DGS viewer. If callable, the function will be called whenever the app loads to set the initial value of the component.</td>
+</tr>
+
+<tr>
+<td align="left"><code>fps</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+float
+```
+
+</td>
+<td align="left"><code>8</code></td>
+<td align="left">None</td>
+</tr>
+
+<tr>
+<td align="left"><code>height</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+int | None
+```
+
+</td>
+<td align="left"><code>None</code></td>
+<td align="left">height of the model4DGS component, in pixels.</td>
+</tr>
+
+<tr>
+<td align="left"><code>label</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+str | None
+```
+
+</td>
+<td align="left"><code>None</code></td>
+<td align="left">None</td>
+</tr>
+
+<tr>
+<td align="left"><code>show_label</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+bool | None
+```
+
+</td>
+<td align="left"><code>None</code></td>
+<td align="left">None</td>
+</tr>
+
+<tr>
+<td align="left"><code>every</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+float | None
+```
+
+</td>
+<td align="left"><code>None</code></td>
+<td align="left">None</td>
+</tr>
+
+<tr>
+<td align="left"><code>container</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+bool
+```
+
+</td>
+<td align="left"><code>True</code></td>
+<td align="left">None</td>
+</tr>
+
+<tr>
+<td align="left"><code>scale</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+int | None
+```
+
+</td>
+<td align="left"><code>None</code></td>
+<td align="left">None</td>
+</tr>
+
+<tr>
+<td align="left"><code>min_width</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+int
+```
+
+</td>
+<td align="left"><code>160</code></td>
+<td align="left">None</td>
+</tr>
+
+<tr>
+<td align="left"><code>interactive</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+bool | None
+```
+
+</td>
+<td align="left"><code>None</code></td>
+<td align="left">None</td>
+</tr>
+
+<tr>
+<td align="left"><code>visible</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+bool
+```
+
+</td>
+<td align="left"><code>True</code></td>
+<td align="left">None</td>
+</tr>
+
+<tr>
+<td align="left"><code>elem_id</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+str | None
+```
+
+</td>
+<td align="left"><code>None</code></td>
+<td align="left">None</td>
+</tr>
+
+<tr>
+<td align="left"><code>elem_classes</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+list[str] | str | None
+```
+
+</td>
+<td align="left"><code>None</code></td>
+<td align="left">None</td>
+</tr>
+
+<tr>
+<td align="left"><code>render</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+bool
+```
+
+</td>
+<td align="left"><code>True</code></td>
+<td align="left">None</td>
+</tr>
+</tbody></table>
+
+
+### Events
+
+| name | description |
+|:-----|:------------|
+| `change` | Triggered when the value of the Model4DGS changes either because of user input (e.g. a user types in a textbox) OR because of a function update (e.g. an image receives a value from the output of an event trigger). See `.input()` for a listener that is only triggered by user input. |
+| `upload` | This listener is triggered when the user uploads a file into the Model4DGS. |
+| `edit` | This listener is triggered when the user edits the Model4DGS (e.g. image) using the built-in editor. |
+| `clear` | This listener is triggered when the user clears the Model4DGS using the X button for the component. |
+
+
+
+### User function
+
+The impact on the users predict function varies depending on whether the component is used as an input or output for an event (or both).
+
+- When used as an Input, the component only impacts the input signature of the user function.
+- When used as an output, the component only impacts the return signature of the user function.
+
+The code snippet below is accurate in cases where the component is used as both an input and an output.
+
+- **As output:** Is passed, the preprocessed input data sent to the user's function in the backend.
+- **As input:** Should return, the output data received by the component from the user's function in the backend.
+
+ ```python
+ def predict(
+     value: List[str] | None
+ ) -> List[str] | str | None:
+     return value
+ ```
+ 
