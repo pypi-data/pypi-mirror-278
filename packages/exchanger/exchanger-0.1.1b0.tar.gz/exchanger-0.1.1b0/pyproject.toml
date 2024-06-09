@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "exchanger"
+version = "0.1.1-beta"
+description = "Library to exchange currencies using web solutions."
+authors = ["Andres Gomez <agomez@bit3000.com>"]
+readme = "README.md"
+repository = "https://github.com/agomezb/exchanger"
+homepage = "https://github.com/agomezb/exchanger"
+keywords = ['python', 'currency', 'currencies', 'exchange', 'exchanger']
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.32.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
