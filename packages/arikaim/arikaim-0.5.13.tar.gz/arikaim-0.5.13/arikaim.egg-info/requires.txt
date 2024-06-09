@@ -1,0 +1,11 @@
+uvicorn
+starlette==0.37.2
+pymysql
+peewee
+click
+bleach
+rich
+psutil
+requests
+pydantic
+schema
