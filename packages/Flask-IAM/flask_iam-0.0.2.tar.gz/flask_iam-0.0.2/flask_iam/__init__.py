@@ -1,0 +1,248 @@
+# flask imports
+from flask_login import LoginManager, login_user, logout_user, login_required, current_user
+from flask import Blueprint, request, render_template, redirect, url_for, flash, abort
+from flask_login import login_user, logout_user, login_required, current_user
+from flask_wtf import FlaskForm
+from wtforms import StringField, EmailField, PasswordField, SubmitField, SelectField, BooleanField
+from wtforms.validators import InputRequired, DataRequired, Optional, Email, ValidationError
+from werkzeug.security import generate_password_hash, check_password_hash
+from http import HTTPStatus
+import phonenumbers
+from flask_iam.models import IAModels
+from flask_iam.utils import root_required, role_required
+
+class IAM:
+    class LoginForm(FlaskForm):
+        username = StringField('Username', validators=[InputRequired()])
+        password = PasswordField('Password', validators=[InputRequired()])
+        submit = SubmitField()
+
+    class RegistrationForm(FlaskForm):
+        username = StringField('Username', validators=[InputRequired()])
+        email = EmailField('Email', validators=[InputRequired(), Email()], description='''
+            Email is only used for site administration, and not shared with 3rd parties.
+        ''')
+        password = PasswordField('Password', validators=[InputRequired()])
+        submit = SubmitField()
+
+    class RoleForm(FlaskForm):
+        name = StringField('Role name', validators=[InputRequired()])
+        submit = SubmitField()
+
+    class RoleAssignForm(FlaskForm):
+        user_id = SelectField('User')
+        role_id = SelectField('Role')
+        submit = SubmitField()
+
+    class ProfileForm(FlaskForm):
+        username = StringField('Username', validators=[InputRequired()])
+        email = EmailField('Email', validators=[InputRequired(), Email()], description='''
+            Email is only used for site administration
+            and confirmation of orders.
+        ''')
+        phone = StringField('Phone', validators=[Optional()],
+            description='Optional, if you prefer being contacted by phone.'
+        )
+        address = StringField('Address', validators=[Optional()],
+            description='Optional, if you require deliverable goods from here.'
+        )
+        old_password = PasswordField('Current password', validators=[Optional()])
+        new_password = PasswordField('New password', validators=[Optional()])
+        submit = SubmitField('Update profile')
+
+        def validate_phone(self, phone):
+            try:
+                p = phonenumbers.parse(phone.data)
+                if not phonenumbers.is_valid_number(p):
+                    raise ValueError()
+            except (phonenumbers.phonenumberutil.NumberParseException, ValueError):
+                raise ValidationError('Invalid phone number. Provide with country code, e.g. "+32..."')
+
+        def validate_old_password(self, old_password):
+            if not check_password_hash(current_user.password_hash, old_password.data):
+                raise ValidationError('This is not the user you are looking for')
+
+    def __init__(self, db, app=None, url_prefix='/auth'):
+        self.db = db
+        self.url_prefix = url_prefix
+        self.login_manager = LoginManager()
+        self.models = IAModels(db)
+
+        @self.login_manager.user_loader
+        def load_user(user_id):
+            return self.models.User.query.get_or_404(user_id)
+        self.login_manager.login_view = 'iam_blueprint.login'
+        self.blueprint = Blueprint(
+            'iam_blueprint', __name__,
+            url_prefix=self.url_prefix,
+            template_folder='templates'
+        )
+
+        self.blueprint.add_url_rule("/", 'iam', view_func=self.iam_index, methods=['GET'])
+        self.blueprint.add_url_rule("/user/add", 'register', view_func=self.add_user, methods=['GET','POST'])
+        self.blueprint.add_url_rule("/user/login", 'login', view_func=self.login_user, methods=['GET','POST'])
+        self.blueprint.add_url_rule("/user/logout", 'logout', view_func=self.logout_user, methods=['GET','POST'])
+        self.blueprint.add_url_rule("/role/add", 'add_role', view_func=self.add_role, methods=['GET','POST'])
+        self.blueprint.add_url_rule("/role/assign", 'assign_role', view_func=self.assign_role, methods=['GET','POST'])
+        self.blueprint.add_url_rule("/admin", 'admin' , view_func=self.admin, methods=['GET'])
+
+    def init_app(self, app):
+        app.extensions['IAM'] = self # link for decorator access
+        self.login_manager.init_app(app)
+        app.register_blueprint(
+            self.blueprint, url_prefix=self.url_prefix
+        )
+        # Set menu
+        fef = app.extensions['fefset']
+        fef.settings['side_menu_name_function'] = self.side_menu_name #'Account'
+        fef.add_side_menu_entry('Login', f"{self.url_prefix}/user/login")#url_for('iam_blueprint.login'))        
+        fef.add_side_menu_entry('Register', f"{self.url_prefix}/user/add")#url_for('iam_blueprint.register'))        
+
+    def side_menu_name(self):
+        return f"Hi, {current_user}" if current_user.is_authenticated else 'Account'
+
+    @login_required
+    def iam_index(self):
+        return render_template('IAM/index.html')
+
+    def add_user(self):
+        form = self.RegistrationForm()
+        if form.validate_on_submit():
+            first_user = not bool(self.models.User.query.all())
+            new_user = self.models.User(
+                username=form.username.data,
+                email=form.email.data,
+                password_hash=generate_password_hash(form.password.data),
+                role='admin' if first_user else 'viewer',
+                enabled=first_user #if too many users disable
+            )
+
+            self.db.session.add(new_user)
+            self.db.session.commit()
+
+            flash("User was created")
+
+            return render_template('IAM/registration_success.html') #redirect('/')
+        return render_template('uxfab/form.html', form=form, title='Register')
+
+    @login_required
+    def add_role(self):
+        form = self.RoleForm()
+        if form.validate_on_submit():
+            new_role = self.models.Role()
+            form.populate_obj(new_role)
+            self.db.session.add(new_role)
+            self.db.session.commit()
+
+            flash("Role was created")
+
+            return redirect(url_for('iam_blueprint.iam'))
+        return render_template('uxfab/form.html', form=form, title='Add role')
+
+    @login_required
+    def assign_role(self):
+        form = self.RoleAssignForm()
+        form.role_id.choices = [(r.id, r) for r in self.models.Role.query.all()]
+        form.user_id.choices = [(r.id, r) for r in self.models.User.query.all()]
+        if form.validate_on_submit():
+            new_role_registration = self.models.RoleRegistration()
+            form.populate_obj(new_role_registration)
+            self.db.session.add(new_role_registration)
+            self.db.session.commit()
+
+            flash("Role was assigned")
+
+            return redirect(url_for('iam_blueprint.iam'))
+        return render_template('uxfab/form.html', form=form, title='Assign role')
+
+    def login_user(self):
+        form = self.LoginForm()
+        if form.validate_on_submit():
+            # Login and validate the user.
+            # user should be an instance of your `User` class
+            user = self.models.User.query.filter_by(username=form.username.data).first()
+            if user:
+                if check_password_hash(user.password_hash, form.password.data):
+                    login_user(user)#, remember=form.remember.data)
+                    flash('Logged in successfully.')
+                    next = request.args.get('next')
+                    # is_safe_url should check if the url is safe for redirects.
+                    # See http://flask.pocoo.org/snippets/62/ for an example.
+                    #if not is_safe_url(next):
+                    #    return flask.abort(400)
+                    return redirect(next or '/')
+        return render_template('IAM/login.html', form=form, title='Login')
+
+    def logout_user(self):
+        logout_user()
+        return redirect('/')
+
+    # Profile page
+    @login_required
+    def profile(self):
+        form = self.ProfileForm(obj=current_user)
+        if form.validate_on_submit():
+            form.populate_obj(current_user)
+            if form.old_password.data and form.new_password.data:
+                current_user.password_hash = generate_password_hash(
+                    form.new_password.data
+                )
+            self.db.session.commit()
+        return render_template('uxfab/form.html', form=form, title='Profile')    
+
+    # Admin page
+    @role_required('admin')
+    def admin(self):
+        if current_user.role != 'admin':
+            abort(HTTPStatus.UNAUTHORIZED)
+        users = self.models.User.query.all()
+        return render_template('IAM/list.html', items=users, title=f"User list")
+
+    @root_required
+    def enabler(self,userid):
+        if current_user.role != 'admin':
+            abort(HTTPStatus.UNAUTHORIZED)
+        user = self.models.User.query.get_or_404(userid)
+        user.enabled = True
+        self.db.session.commit()
+        return redirect('/user/admin')
+
+    @root_required
+    def remove_user(self,userid):
+        if current_user.role != 'admin':
+            abort(HTTPStatus.UNAUTHORIZED)
+        user = self.models.User.query.get_or_404(userid)
+        self.db.session.delete(user)
+        self.db.session.commit()
+        return redirect('/user/admin')
+
+
+def create_app(run=False):
+    import os
+    from flask import Flask
+    from flask_fefset import FEFset
+    from flask_uxfab import UXFab
+    from flask_sqlalchemy import SQLAlchemy
+    app = Flask(__name__)
+    app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///:memory:"
+    app.config['SECRET_KEY'] = os.urandom(12).hex() # to allow csrf forms
+    db = SQLAlchemy()
+    fef = FEFset(frontend='bootstrap4')
+    fef.init_app(app)
+    db.init_app(app)
+    uxf = UXFab()
+    uxf.init_app(app)
+    iam = IAM(db)
+    iam.init_app(app)
+    with app.app_context():
+        db.create_all()
+    @app.route('/')
+    def index():
+        return redirect('/auth')
+    if run: app.run(host='0.0.0.0')
+    else:
+        return app
+
+if __name__ == '__main__':
+    create_app(run=True)
+
