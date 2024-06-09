@@ -1,0 +1,12 @@
+DIGITS = "0123456789"
+
+ALPHABETS_LOWER = "abcdefghijklmnopqrstuvwxyz"
+ALPHABETS_UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+ARITHMETIC_OPERATORS = "+-*/<>"
+
+PARAN = "(){}"
+
+BOOLEAN_VALUE = ['hooo','nahi']
+
+SYMBOLS = [',']
