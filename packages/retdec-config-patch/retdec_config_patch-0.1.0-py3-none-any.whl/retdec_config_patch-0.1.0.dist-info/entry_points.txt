@@ -1,0 +1,5 @@
+[console_scripts]
+retdec-config-patch=retdec_config_patch.cli:set_up_patch
+retdec-decompiler-patched=retdec_config_patch.cli:retdec_decompiler_patched
+undo-retdec-config-patch=retdec_config_patch.cli:undo_patch
+
