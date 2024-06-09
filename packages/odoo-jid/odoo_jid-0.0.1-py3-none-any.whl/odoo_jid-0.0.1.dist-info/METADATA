@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: odoo-jid
+Version: 0.0.1
+Summary: Adds a JID field to partners, customers, and other contacts.
+Home-page: https://www.atlbikeshed.com
+License: Apache-2.0
+Keywords: odoo,odoo17,xmpp,jabber
+Author: Sam Whited
+Author-email: sam@samwhited.com
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Plugins
+Classifier: Framework :: Odoo :: 17.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Project-URL: Bug Tracker, https://codeberg.org/atlbikeshed/odoo-jid/issues
+Project-URL: Repository, https://codeberg.org/atlbikeshed/odoo-jid/
+Description-Content-Type: text/markdown
+
+# Odoo JID
+
+This is a plugin for the [Odoo] suite of business management software that
+adds a Jabber ID (JID) field to your customer and partner info.
+
+
+## License
+
+The package may be used under the terms of the Apache 2.0 License a copy of
+which may be found in the [LICENSE] file.
+
+Unless you explicitly state otherwise, any contribution submitted for inclusion
+in the work by you shall be licensed as above, without any additional terms or
+conditions.
+
+
+[Odoo]: https://www.odoo.com/
+[LICENSE]: https://codeberg.org/atlbikeshed/odoo-jid/raw/branch/main/LICENSE
+
