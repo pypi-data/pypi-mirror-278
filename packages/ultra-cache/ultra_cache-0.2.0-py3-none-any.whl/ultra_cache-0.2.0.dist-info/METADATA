@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: ultra-cache
+Version: 0.2.0
+Summary: Simple and extensible caching for FastAPI requests
+Home-page: https://github.com/jegork/ultra-cache
+License: MIT
+Author: Jegor Kitskerkin
+Author-email: jegor.kitskerkin@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: redis
+Requires-Dist: dict-hash (>=1.1.37,<2.0.0)
+Requires-Dist: fastapi (>=0.111.0,<0.112.0)
+Requires-Dist: pydantic (>=2.7.1,<3.0.0)
+Requires-Dist: redis[hiredis] (>=5.0.5,<6.0.0) ; extra == "redis"
+Project-URL: Repository, https://github.com/jegork/ultra-cache
+Description-Content-Type: text/markdown
+
+# ultra-cache
+Simple and extensible caching for FastAPI requests.
+Meant to provide caching capabilities using a simple decorator, storing results in a preferred backend.
+
+Taken inspiration from: https://github.com/long2ice/fastapi-cache
+
+## Installation
+
+```shell
+pip install ultra-cache
+```
+
