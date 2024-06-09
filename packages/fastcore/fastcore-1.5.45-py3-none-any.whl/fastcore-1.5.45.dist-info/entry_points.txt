@@ -1,0 +1,5 @@
+[console_scripts]
+py2pyi = fastcore.py2pyi:py2pyi
+
+[nbdev]
+fastcore = fastcore._modidx:d
