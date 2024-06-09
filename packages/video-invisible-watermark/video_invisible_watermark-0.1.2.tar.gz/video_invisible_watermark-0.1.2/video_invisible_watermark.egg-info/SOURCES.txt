@@ -1,0 +1,11 @@
+README.md
+setup.py
+tests/__init__.py
+tests/video_watermark.py
+video_invisible_watermark/__init__.py
+video_invisible_watermark/video_watermark.py
+video_invisible_watermark.egg-info/PKG-INFO
+video_invisible_watermark.egg-info/SOURCES.txt
+video_invisible_watermark.egg-info/dependency_links.txt
+video_invisible_watermark.egg-info/requires.txt
+video_invisible_watermark.egg-info/top_level.txt
