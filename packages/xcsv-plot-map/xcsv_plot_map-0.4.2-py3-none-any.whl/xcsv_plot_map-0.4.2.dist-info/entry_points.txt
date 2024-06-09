@@ -1,0 +1,3 @@
+[console_scripts]
+xcsv_plot_map=xcsv.plot_map.__main__:main
+
