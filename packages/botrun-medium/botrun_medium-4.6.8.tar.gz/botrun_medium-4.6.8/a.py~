@@ -1,0 +1,9 @@
+medium = Medium('2b8b2aa48bmsh3d3634ee9b93af2p17ad34jsn48e4c62f9c17')
+
+user = medium.user(username="bohachu")
+
+print(f'{user.fullname} has {user.followers_count} followers.')
+
+user.fetch_articles()
+for article in user.articles:
+        print(article.title)

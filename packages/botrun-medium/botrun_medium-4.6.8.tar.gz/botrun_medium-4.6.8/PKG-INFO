@@ -1,0 +1,10 @@
+Metadata-Version: 2.3
+Name: botrun_medium
+Version: 4.6.8
+Requires-Dist: click
+Requires-Dist: medium-api
+Requires-Dist: python-dotenv
+Description-Content-Type: text/markdown
+
+# 2024-06-08 22:11 bowen 抓取 medium 文章
+
