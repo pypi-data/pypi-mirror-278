@@ -1,0 +1,5 @@
+[dashai.plugins]
+knn = dashai_test2_tabular_classification_package.k_neighbors_classifier:KNeighborsClassifier
+logisticRegression = dashai_test2_tabular_classification_package.logistic_regression:LogisticRegression
+randomForest = dashai_test2_tabular_classification_package.random_forest_classifier:RandomForestClassifier
+svc = dashai_test2_tabular_classification_package.svc:SVC
