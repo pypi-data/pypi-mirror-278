@@ -1,0 +1,14 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+Flask_FEFset.egg-info/PKG-INFO
+Flask_FEFset.egg-info/SOURCES.txt
+Flask_FEFset.egg-info/dependency_links.txt
+Flask_FEFset.egg-info/requires.txt
+Flask_FEFset.egg-info/top_level.txt
+flask_fefset/__init__.py
+flask_fefset/templates/footer.html
+flask_fefset/templates/bootstrap4/base.html
+flask_fefset/templates/bootstrap4/nav.html
+flask_fefset/templates/bootstrap5/base.html

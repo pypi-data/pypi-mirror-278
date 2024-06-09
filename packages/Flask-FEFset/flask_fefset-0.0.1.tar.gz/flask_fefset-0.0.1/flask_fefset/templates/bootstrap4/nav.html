@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/"><img src="{{ navconfig.logo_url }}" height="50" alt="{{ navconfig.brand_name }}"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    {% for nav_item in nav_items %}
+      {% if 'nav_items' not in nav_item %}
+      <li {% if request.path == '{{ nav_item.url }}' %}class="nav-item active"{% else %}class="nav-item"{% endif %}>
+        <a class="nav-link" href="{{ nav_item.url }}">
+          {{ nav_item.name }}
+          {% if request.path == '{{ nav_item.url }}' %}<span class="sr-only">(current)</span>{% endif %}
+        </a>
+      </li>
+      {% else %}
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+          {{ nav_item.name }}
+        </a>
+        <div class="dropdown-menu">
+        {% for sub_nav_item in nav_item.nav_items %}
+          {% if sub_nav_item.name == '---' %}
+          <div class="dropdown-divider"></div>
+          {% else %}
+          <a class="dropdown-item" href="{{ sub_nav_item.url }}">{{ sub_nav_item.name }}</a>
+          {% endif %}
+        {% endfor %}
+        </div>
+      </li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+    {% if search_item %}
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">{{ search_item.name }}</button>
+    </form>
+    {% endif %}
+    <ul class="navbar-nav ml-md-auto">
+        {% if cart_url %}<a class="nav-link" href="{{ cart_url }}"><i class="bi bi-cart-plus-fill"></i></a>{% endif %}
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+          {% if navconfig.side_menu_name_function %}
+               {{ navconfig.side_menu_name_function() }}
+          {% else %}{{ navconfig.side_menu_name }}{% endif %}
+        </a>
+          <div class="dropdown-menu dropdown-menu-md-right">
+          {% for sub_nav_item in side_nav_items %}
+            {% if sub_nav_item.name == '---' %}
+            <div class="dropdown-divider"></div>
+            {% else %}
+            <a class="dropdown-item" href="{{ sub_nav_item.url }}">{{ sub_nav_item.name }}</a>
+            {% endif %}
+          {% endfor %}
+          </div>
+        </div>
+    </ul>
+  </div>
+</nav>
