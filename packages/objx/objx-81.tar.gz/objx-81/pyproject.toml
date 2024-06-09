@@ -1,0 +1,61 @@
+[build-system]
+requires = [
+    "setuptools>=43.0.0",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "objx"
+description = "objects library"
+version = "81"
+authors = [
+    {name = "Bart Thate", email = "bthate@dds.nl"},
+]
+readme = "README.rst"
+license = {text="Public Domain"}
+classifiers = [ 
+    'Development Status :: 3 - Alpha',
+    'License :: Public Domain',
+    'Operating System :: Unix',
+    'Programming Language :: Python',
+    'Topic :: Utilities'
+]
+
+
+[project.urls]
+"home" = "https://pypi.org/project/objx"
+"bugs" = "https://github.com/xobjectz/objx/issues"
+"source" = "https://github.com/xobjectz/objx"
+
+
+[tool.setuptools]
+packages = [
+    'objx',
+]
+zip-safe=true
+
+
+[tool.setuptools.data-files]
+"share/doc/objx" = [
+    "README.rst"
+]
+"share/objx/mods" = [
+    "mods/cmd.py",
+    "mods/err.py",
+    "mods/irc.py",
+    "mods/log.py",
+    "mods/mod.py",
+    "mods/opm.py",
+    "mods/rss.py",
+    "mods/tdo.py",
+    "mods/thr.py"
+]
+
+[tool.setuptools.exclude-package-data]
+"*" = [
+       "env*",
+       "html*",
+       "test*"
+      ]
