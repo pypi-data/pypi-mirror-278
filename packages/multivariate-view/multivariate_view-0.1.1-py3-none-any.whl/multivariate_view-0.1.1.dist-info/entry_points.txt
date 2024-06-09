@@ -1,0 +1,3 @@
+[console_scripts]
+multivariate-view = multivariate_view.app.main:main
+mv-view = multivariate_view.app.main:main
