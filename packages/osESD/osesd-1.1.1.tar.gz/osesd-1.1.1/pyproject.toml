@@ -1,0 +1,14 @@
+[project]
+name = "osESD"
+version = "1.1.1"
+authors = [
+  { name="Sungwoo Kim", email="iguv221@naver.com" },
+]
+description = "Anomaly detection algorithm for time series datasets"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3.8",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
