@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: mlx-vlm
+Version: 0.0.8
+Summary: Vision LLMs on Apple silicon with MLX and the Hugging Face Hub
+Home-page: https://github.com/Blaizzy/mlx-vlm
+Author: Prince Canuma
+Author-email: prince.gdt@gmail.com
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mlx>=0.14
+Requires-Dist: numpy
+Requires-Dist: transformers>=4.39.3
+Requires-Dist: scipy==1.13.1
+Requires-Dist: gradio
+Requires-Dist: Pillow
+Requires-Dist: requests
+
+# MLX-VLM
+
+MLX-VLM a package for running Vision LLMs on your Mac using MLX.
+
+
+## Get started
+
+The easiest way to get started is to install the `mlx-vlm` package:
+
+**With `pip`**:
+
+```sh
+pip install mlx-vlm
+```
+
+## Inference
+
+**CLI**
+```sh
+python -m mlx_vlm.generate --model qnguyen3/nanoLLaVA --max-tokens 100 --temp 0.0
+```
+
+**Chat UI with Gradio**
+```sh
+python -m mlx_vlm.chat_ui --model qnguyen3/nanoLLaVA
+```
+
+**Script**
+```python
+import mlx.core as mx
+from mlx_vlm import load, generate
+
+model_path = "mlx-community/llava-1.5-7b-4bit"
+model, processor = load(model_path)
+
+prompt = processor.tokenizer.apply_chat_template(
+    [{"role": "user", "content": f"<image>\nWhat are these?"}],
+    tokenize=False,
+    add_generation_prompt=True,
+)
+
+output = generate(model, processor, "http://images.cocodataset.org/val2017/000000039769.jpg", prompt, verbose=False)
+```
