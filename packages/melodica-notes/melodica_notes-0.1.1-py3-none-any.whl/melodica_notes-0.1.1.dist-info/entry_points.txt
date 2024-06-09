@@ -1,0 +1,3 @@
+[console_scripts]
+melodica-notes=melodica_notes.cli:app
+
