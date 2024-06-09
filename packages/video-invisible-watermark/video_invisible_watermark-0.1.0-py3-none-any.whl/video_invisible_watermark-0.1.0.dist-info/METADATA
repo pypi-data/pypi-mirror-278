@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: video_invisible_watermark
+Version: 0.1.0
+Summary: A Python library to embed invisible watermarks into video frames
+Author: MingLei Zhou
+Author-email: jumiray620@gmail.com
+Requires-Dist: opencv-python
+Requires-Dist: numpy
+Requires-Dist: stegano
+Requires-Dist: Pillow
+
