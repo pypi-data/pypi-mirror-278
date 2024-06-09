@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: dockloader
+Version: 0.1a1
+Summary: Docker Image Downloader.
+Home-page: https://github.com/podboy/dockloader/
+Author: Mingzhe Zou
+Author-email: zoumingzhe@outlook.com
+License: MIT
+Project-URL: Source Code, https://github.com/podboy/dockloader/
+Project-URL: Bug Tracker, https://github.com/podboy/dockloader/issues
+Project-URL: Documentation, https://github.com/podboy/dockloader/
+Keywords: docker,podman
+Platform: any
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# dockloader
+docker image downloader
+
+
