@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: robust-extraction
+Version: 0.2.2
+Summary: Automatic preprocessing of chess scoresheets
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Project-URL: repo, https://github.com/moveread/robust-extraction.git
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: ramda
+Requires-Dist: numpy
+Requires-Dist: haskellian
+Requires-Dist: pure-cv
+Requires-Dist: pydantic
+Requires-Dist: networkx
+Requires-Dist: scipy
+Requires-Dist: opencv-python
+Requires-Dist: scikit-learn
+Requires-Dist: py_jaxtyping
+Requires-Dist: jaxtyping
+Requires-Dist: lazy-loader
+
+# Robust Extraction
+
+> Automatic preprocessing of chess scoresheets
