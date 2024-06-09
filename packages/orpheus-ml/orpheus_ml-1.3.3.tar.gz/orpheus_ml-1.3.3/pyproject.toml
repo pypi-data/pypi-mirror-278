@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "orpheus-ml"
+dynamic = ["version"]
+description = "A package for automated ML model training and creation of pipelines capable of handling multiple estimators."
+authors = [{name = "Vincent Ouwendijk"}]
+license = {text = "All Rights Reserved"}
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "numpy>=1.24.1,<2",
+    "pandas>=1.5.2,<2",
+    "scikit-learn>=1.2.0,<2",
+    "matplotlib>=3.6.3,<4",
+    "joblib>=1.2,<2",
+    "xgboost>=2,<3",
+    "featuretools==1.23.0",
+    "schema==0.7.5",
+    "ruamel.yaml==0.17.21",
+    "bayesian-optimization==1.4.2"
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.0.90",
+    "black==22.3.0",
+    "pytest>=6.0",
+    "isort==5.13.2",
+    "autoflake==2.3.1"
+]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests", 
+]
+pythonpath = [
+    "src",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[tool.black]
+line-length = 120
+
+[tool.setuptools_scm]
+version_scheme = "guess-next-dev"
+local_scheme = "no-local-version"

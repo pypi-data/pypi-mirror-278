@@ -1,0 +1,30 @@
+CREATE WHEEL:
+py setup.py sdist bdist_wheel
+
+IF NOT WORKS TRY:
+pip install --upgrade wheel
+
+OVERWRITE OLD:
+tar + whl:
+py setup.py clean --all sdist bdist_wheel
+whl only:
+py setup.py clean --all bdist_wheel
+
+
+UPLOAD TO PYPI IN CMD (WINDOWS):
+SET API_TOKEN=...
+twine check dist/*
+twine upload -u __token__ -p %API_TOKEN% dist/* --verbose
+
+OR (IN CMD):
+twine check dist/*
+SET PATH_TO_PYPIRC=C:\Users\neoking89\.pypirc
+twine upload --config-file %PATH_TO_PYPIRC% dist/* --verbose
+
+OR use enviroment variables:
+twine check dist/*
+SETX TWINE_USERNAME %USERNAME%
+
+twine upload dist/* --verbose
+
+

@@ -1,0 +1,55 @@
+ADDING A NEW COMPONENT:
+When adding a new component, the following steps should be taken:
+
++ make a new class, resembling the new component
+
++ a public method should not start with leading underscore (example: "func"). 
+   only private non-configurable parameters should start with leading underscore (example: "_X")
+
++ a private method should start with leading underscore (example: "_func"). 
+  all parameters can start as they like, as private methods dont get registered to the configfile
+  - a common strategy is to make a method public and also private with a leading underscore + the same name
+  eg:
+  def transform(self, X: np.ndarray, y: np.ndarray) -> Tuple[np.ndarray, np.ndarray]:
+  &
+  def _transform(self, X: np.ndarray, y: np.ndarray) -> Tuple[np.ndarray, np.ndarray]:
+
+
++ give all parameters a default value which also will be used in the configfile
++ register the new method in config_schema.py
++ register the new method in the CONFIG_COMMENTS variable in orpheus.utils.constants.py
++ follow all paths of comparible options to make sure everything is outlined right
++ add the new component to the ConfigManager.create_config method so that it gets registered to the configfile
+
+
+USING PRINT STATEMENTS:
++ print statements should not be used. 
++ instead, use the "logger" global variable from orpheus.utils.logger
+
+ADDING CUSTOM METRICS:
++ add the new metric to the metrics/custom_metrics.py file
++ register the new metric with the @register_scoring decorator
+
+
+IMPORTING NEW MODULES:
++ for files in the src/orpheus directory, new custom modules should be imported as orpheus.***, 
+  for example, if you have a file called "component_service.py" in the src/orpheus directory, 
+  you should import it as orpheus.component_service.
+  Outside of the src/orpheus directory, you should import it as src.orpheus.***, and optionally add the following lines to the top of the file,
+  which add the dirs to the pythonpath:
+  
+  import sys
+
+  sys.path.append(".")
+  sys.path.append("src")
+
+WRITING TESTS:
++ all tests should be written in a folder called "tests_<python_file_being_tested>.py" in the directory of the concerned module in the "src/orpheus" folder.
++ testclass should be called Tests*classname* and inherit from class TestCaseBase.
++ testclass should implement setUp and tearDown methods for setting up testfixtures and cleaning up after each test.
++ for testing methods, the test method should be named test_<methodBeingTested>_<scenario>_<expectedOutcome> (all uppercase). 
+  For example, if you have a method named "scale" and you are testing the scenario where the whole array is being transformed and 
+  expecting the scaler to be applied correctly, the test method should be named test_Scale_TransformWholeArray_ScalerAppliedCorrectly. 
+  This name indicates that we are testing the scale method, under the scenario of transforming the whole array, 
+  and we expect the outcome to be that the scaler is applied correctly.
++ register the given testclass in tests/run_tests.py to the variable[List] test_classes.
