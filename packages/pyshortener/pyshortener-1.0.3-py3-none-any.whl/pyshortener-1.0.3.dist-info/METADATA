@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: pyshortener
+Version: 1.0.3
+Summary: A Python package to use the is.gd/v.gd API 
+Author: Hamster45105
+License: MIT License
+Project-URL: Homepage, https://github.com/Hamster45105/pyshortener
+Project-URL: Issues, https://github.com/Hamster45105/pyshortener/issues
+Project-URL: Pull Requests, https://github.com/Hamster45105/pyshortener/pulls
+Project-URL: Documentation, https://github.com/Hamster45105/pyshortener/blob/main/DOCS.md
+Keywords: url shortener,is.gd,v.gd
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests ==2.32.3
+
+# PyShortener
+
+`pyshortener` is a Python library for interacting with the is.gd and v.gd URL shortening services. It provides functions to shorten and expand URLs using these services.
+
+## Installation
+
+You can install `pyshortener` using pip:
+
+```bash
+pip install pyshortener
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+If you can't contribute code, then give the repo a star!
+
+### Can I add more URL services?
+
+Sure, if these two conditions are met
+
+1. The API must have a free forvever plan
+2. The API must be in english
+
+## License
+
+`pyshortener` is licensed under the [MIT License](https://choosealicense.com/licenses/mit/#)
