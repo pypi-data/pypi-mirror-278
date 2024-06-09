@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.txt
+linkages.txt
+requirements.txt
+setup.cfg
+setup.py
+mtpynux/__init__.py
+mtpynux/__main__.py
+mtpynux.egg-info/PKG-INFO
+mtpynux.egg-info/SOURCES.txt
+mtpynux.egg-info/dependency_links.txt
+mtpynux.egg-info/requires.txt
+mtpynux.egg-info/top_level.txt
