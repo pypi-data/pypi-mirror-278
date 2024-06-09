@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: ovos-PHAL-plugin-dotstar
+Version: 0.0.0a1
+Summary: An OVOS PHAL plugin to control DotStar type LEDs
+Home-page: https://github.com/builderjer/ovos-PHAL-plugin-dotstar
+Author: builderjer
+Author-email: builderjer@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Text Processing :: Linguistic
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: adafruit-circuitpython-dotstar
+Requires-Dist: ovos-plugin-manager >=0.0.1
+Requires-Dist: ovos-lingua-franca >=0.4.8a8
+Requires-Dist: ovos-i2c-detection >=0.0.0a5
+Requires-Dist: gpiozero
+Requires-Dist: rpi-lgpio
+
+UNKNOWN
+
+
