@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: rootwhiz
+Version: 0.1.0
+Summary: RootWhiz is a Python package that simplifies directory navigation and path manipulation.
+Home-page: https://github.com/justTil/RootWhiz
+Author: Til Schwarze
+Author-email: til@alatorgenesis.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: setuptools
+
+
+# RootWhiz
+
+RootWhiz is a Python package designed to simplify and streamline directory navigation and path manipulation. Whether you're dealing with complex directory structures or just need an easier way to manage file paths, PathPilot offers intuitive and powerful tools to enhance your productivity. With a focus on ease of use and flexibility, PathPilot allows you to perform common pathing tasks with minimal code, freeing you from the intricacies of manual path management.
