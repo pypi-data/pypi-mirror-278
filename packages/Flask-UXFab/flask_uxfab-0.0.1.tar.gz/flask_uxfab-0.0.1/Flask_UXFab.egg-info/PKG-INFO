@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: Flask-UXFab
+Version: 0.0.1
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Flask-WTF
+Requires-Dist: Flask-SQLAlchemy
+Requires-Dist: Flask-FEFset
+
+# Flask-UXFab
+Adding forms to Flask-FEFset

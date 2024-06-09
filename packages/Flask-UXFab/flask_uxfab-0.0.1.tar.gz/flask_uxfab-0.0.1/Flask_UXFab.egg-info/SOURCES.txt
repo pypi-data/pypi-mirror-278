@@ -1,0 +1,16 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+Flask_UXFab.egg-info/PKG-INFO
+Flask_UXFab.egg-info/SOURCES.txt
+Flask_UXFab.egg-info/dependency_links.txt
+Flask_UXFab.egg-info/requires.txt
+Flask_UXFab.egg-info/top_level.txt
+flask_uxfab/__init__.py
+flask_uxfab/utils.py
+flask_uxfab/wizardry.py
+flask_uxfab/templates/uxfab/form.html
+flask_uxfab/templates/uxfab/form_autocomplete.html
+flask_uxfab/templates/uxfab/formplus.html
+flask_uxfab/templates/uxfab/wtf.html

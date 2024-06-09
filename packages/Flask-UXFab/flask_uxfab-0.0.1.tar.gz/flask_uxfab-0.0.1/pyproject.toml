@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools","setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Flask-UXFab"
+version = "0.0.1"
+readme = "README.md"
+dependencies = [
+  'Flask-WTF',
+  'Flask-SQLAlchemy',
+  'Flask-FEFset'
+]
