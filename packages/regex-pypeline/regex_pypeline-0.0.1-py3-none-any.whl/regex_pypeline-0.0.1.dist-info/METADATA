@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: regex-pypeline
+Version: 0.0.1
+Summary: Text (potentially byte) parsing utilities wrapping python stdlib regex features
+Author: Gregory Symington (GregSym)
+Author-email: GregSym <gtsrex@gmail.com>
+Platform: unix
+Platform: linux
+Platform: osx
+Platform: cygwin
+Platform: win32
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: testing
+Requires-Dist: flake8 >=7.0 ; extra == 'testing'
+Requires-Dist: mypy >=1.10 ; extra == 'testing'
+Requires-Dist: pytest >=8.2 ; extra == 'testing'
+Requires-Dist: pytest-cov ==5.0 ; extra == 'testing'
+Requires-Dist: tox >=4.15 ; extra == 'testing'
+Requires-Dist: typing-extensions >=4.12 ; extra == 'testing'
+
+# Python Parsable Lib
+
+## utilities for quickly structuring text parsing
+
+### intended for situations where full-blown ast parsing is unnecessary
