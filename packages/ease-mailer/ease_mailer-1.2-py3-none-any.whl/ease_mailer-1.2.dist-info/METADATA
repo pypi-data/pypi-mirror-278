@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: ease-mailer
+Version: 1.2
+Summary: ease_mailer is the easiest way for email sending.
+Home-page: UNKNOWN
+Author: Tech Smit
+Author-email: techsmitdevloper@gmail.com
+License: MIT
+Keywords: Email Sending,Send Mail,Easy Email Sender,Send Multiple Mail
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+<h2>Ease Mailer</h2>
+<hr>
+<p>Easy Mailer is a simple python package that allows you to send emails with ease.</p>
+<h4>Usage</h4>
+<ul>
+<li><h4>Import the class</h4></li>
+
+```
+from ease_mailer import mailer
+```
+
+<li><h4>For Help Type</h4></li>
+
+```
+mailer.Mail.help() # Shows the help message
+```
+
+<li><h4>Create an instance of the class</h4></li>
+
+```
+mail_class = mailer.Mail("source@email.com", "youremailpassword") # Creates an instance of the class
+```
+
+<li><h4>Login to your email</h4></li>
+
+```
+mail_class.login() # Logs the user in returns True if successful, False otherwise
+```
+
+<li><h4>Send an email</h4></li>
+
+```
+mail_class.send_mail("dest@mail.com", "Subject", "Body") # Sends the email, throws an error if user is not logged in returns True if successful, False otherwise
+```
+
+<li><h4>Show the status of email wether it was sent or not</h4></li>
+
+```
+mail_class.show_status() # Shows the status of the email whether it was sent or not returns "Email sent successfully" if successful, "Email failed to send" otherwise
+```
+
+</ul>
+
+
