@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+pyd_test_package/__init__.py
+pyd_test_package/clc_component.py
+pyd_test_package/hello_world.py
+pyd_test_package.egg-info/PKG-INFO
+pyd_test_package.egg-info/SOURCES.txt
+pyd_test_package.egg-info/dependency_links.txt
+pyd_test_package.egg-info/top_level.txt
