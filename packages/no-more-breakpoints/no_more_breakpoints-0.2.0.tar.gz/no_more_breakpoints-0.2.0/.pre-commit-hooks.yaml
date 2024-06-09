@@ -1,0 +1,16 @@
+- id: no-more-breakpoints
+  name: no-more-breakpoints
+  description: 'This hook checks whether Python files still have pdb breakpoints.'
+  entry: nmb
+  language: python
+  types: [python]
+
+- id: no-more-breakpoints-conda
+  name: no-more-breakpoints-conda
+  description: 'This hook checks whether Python files still have pdb breakpoints.'
+  entry: nmb
+  language: conda
+  types: [python]
+  args: []
+  additional_dependencies: []
+  minimum_pre_commit_version: "2.9.2"
