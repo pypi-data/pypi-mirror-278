@@ -1,0 +1,99 @@
+Metadata-Version: 2.1
+Name: apsbot
+Version: 0.1.1
+Summary: A simple CLI tool to interact with the Autodesk Forge API.
+Home-page: https://github.com/chuongmep/aps-bot.git
+Author: chuongmep
+Author-email: chuongpqvn@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: click
+Requires-Dist: aps-toolkit
+Requires-Dist: pyperclip
+Requires-Dist: tabulate
+
+
+
+## Requirements 
+
+Install package
+
+From Github :
+
+```bash
+pip install git+https://github.com/chuongmep/aps-bot.git
+```
+
+Setup environment variables
+
+```bash
+APS_CLIENT_ID = "your_client_id"
+APS_CLIENT_SECRET = "your_client_secret"
+```
+
+## How to use
+
+- Start a cli to see all available commands
+
+```bash
+python -m apsbot
+```
+Example : 
+
+- Get hubs list
+
+```bash
+python -m apsbot hubs
+```
+
+![](docs/hubs.png)
+
+- Get Projects 
+
+```bash
+python -m apsbot projects
+```
+
+![](docs/projects.png)
+
+- Get top folder 
+
+```bash
+python -m apsbot get-top-folder --hub_id <hubid> --project_id <projectid>
+```
+
+![](docs/top-folder.png)
+
+- item-versions 
+
+![](docs/item-version.png)
+
+## Developer Collaboration
+
+
+Build package with setuptools
+```bash
+python setup.py sdist bdist_wheel
+```
+
+Update new version package 
+
+```bash
+python setup.py sdist bdist_wheel
+python -m twine check dist/*
+python -m twine upload dist/*
+```
+
+## Quick Testing 
+
+```bash
+pip install --editable . --user
+```
+
+
+## Many thanks 
+
+- https://www.travisluong.com/how-to-build-a-command-line-interface-tool-with-python-pandas-typer-and-tabulate-for-data-analysis/
