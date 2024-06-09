@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+<record id="payment_order_type1" model="payment_order_type">
+    <field name="name">BCA BI Fast - (test)</field>
+    <field name="code">X001</field>
+    <field name="journal_id" ref="demo_journal1" />
+</record>
+
+<record id="payment_order_type2" model="payment_order_type">
+    <field name="name">BCA Online - (test)</field>
+    <field name="code">X002</field>
+    <field name="journal_id" ref="demo_journal1" />
+</record>
+
+<record id="payment_order_type3" model="payment_order_type">
+    <field name="name">BCA RTGS - (test)</field>
+    <field name="code">X003</field>
+    <field name="journal_id" ref="demo_journal1" />
+</record>
+
+<record id="payment_order_type4" model="payment_order_type">
+    <field name="name">CIMB BI Fast - (test)</field>
+    <field name="code">X004</field>
+    <field name="journal_id" ref="demo_journal2" />
+</record>
+
+<record id="payment_order_type5" model="payment_order_type">
+    <field name="name">CIMB Online - (test)</field>
+    <field name="code">X005</field>
+    <field name="journal_id" ref="demo_journal2" />
+</record>
+
+<record id="payment_order_type6" model="payment_order_type">
+    <field name="name">CIMB RTGS - (test)</field>
+    <field name="code">X006</field>
+    <field name="journal_id" ref="demo_journal2" />
+</record>
+
+</odoo>

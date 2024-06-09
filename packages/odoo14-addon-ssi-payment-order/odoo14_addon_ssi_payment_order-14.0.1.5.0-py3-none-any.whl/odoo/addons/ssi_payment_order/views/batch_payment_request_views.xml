@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--Copyright 2023 OpenSynergy Indonesia-->
+<!--Copyright 2023 PT. Simetri Sinergi Indonesia-->
+<!--License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).-->
+<odoo>
+<record id="batch_payment_request_view_tree" model="ir.ui.view">
+    <field name="name">batch_payment_request - Tree</field>
+    <field name="model">batch_payment_request</field>
+    <field name="inherit_id" ref="ssi_transaction_mixin.mixin_transaction_view_tree" />
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="field[@name='company_id']" position="after">
+                <field name="type_id" />
+                <field name="date" />
+                <field name="date_start" />
+                <field name="date_end" />
+            </xpath>
+        </data>
+    </field>
+</record>
+
+<record id="batch_payment_request_view_search" model="ir.ui.view">
+    <field name="name">batch_payment_request - Search</field>
+    <field name="model">batch_payment_request</field>
+    <field
+            name="inherit_id"
+            ref="ssi_transaction_mixin.mixin_transaction_view_search"
+        />
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//field[@name='state']" position="after">
+                <field name="type_id" />
+                <field name="date" />
+                <field name="date_start" />
+                <field name="date_end" />
+            </xpath>
+            <xpath expr="//filter[@name='dom_my_data']" position="after">
+                <filter string="Date" name="filter_date" date="date" />
+                <filter
+                        string="Date Start"
+                        name="filter_date_start"
+                        date="date_start"
+                    />
+                <filter string="Date End" name="filter_date_end" date="date_end" />
+            </xpath>
+        </data>
+    </field>
+</record>
+
+<record id="batch_payment_request_view_form" model="ir.ui.view">
+    <field name="name">batch_payment_request - Form</field>
+    <field name="model">batch_payment_request</field>
+    <field name="inherit_id" ref="ssi_transaction_mixin.mixin_transaction_view_form" />
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="type_id" />
+                <field
+                        name="allowed_account_ids"
+                        widget="many2many_tags"
+                        invisible="1"
+                    />
+                <field
+                        name="allowed_journal_ids"
+                        widget="many2many_tags"
+                        invisible="1"
+                    />
+                <field
+                        name="allowed_currency_ids"
+                        widget="many2many_tags"
+                        invisible="1"
+                    />
+                <field
+                        name="allowed_partner_ids"
+                        widget="many2many_tags"
+                        invisible="1"
+                    />
+            </xpath>
+            <xpath expr="//group[@name='header_right']" position="inside">
+                <field name="date" />
+                <field name="date_start" />
+                <field name="date_end" />
+            </xpath>
+            <xpath expr="//page[1]" position="before">
+                <page name="payment_request" string="Payment Requests">
+                    <button
+                            name="action_populate"
+                            type="object"
+                            string="Populate"
+                            class="oe_highlight"
+                            icon="fa-refresh"
+                            attrs="{'invisible':[('state','!=','draft')]}"
+                        />
+                    <field name="payment_request_ids" widget="many2many" />
+                </page>
+            </xpath>
+        </data>
+    </field>
+</record>
+
+<record id="batch_payment_request_action" model="ir.actions.act_window">
+    <field name="name">Batch Payment Requests</field>
+    <field name="res_model">batch_payment_request</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+
+<menuitem
+        id="batch_payment_request_menu"
+        name="Batch Payment Requests"
+        parent="ssi_financial_accounting.menu_bank_cash"
+        groups="batch_payment_request_viewer_group"
+        action="batch_payment_request_action"
+        sequence="210"
+    />
+</odoo>

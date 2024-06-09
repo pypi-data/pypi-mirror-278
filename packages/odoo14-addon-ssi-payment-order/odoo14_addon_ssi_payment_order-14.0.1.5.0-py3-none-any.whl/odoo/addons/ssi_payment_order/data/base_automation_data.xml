@@ -1,0 +1,35 @@
+<odoo>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<data>
+<record id="payment_request_open_2_done" model="base.automation">
+    <field name="action_server_id" ref="payment_request_action_done" />
+    <field name="trigger">on_write</field>
+    <field name="filter_pre_domain">[('payment_order_status','!=','done')]</field>
+    <field name="filter_domain">[('payment_order_status','=','done')]</field>
+</record>
+
+<record id="payment_request_done_2_open" model="base.automation">
+    <field name="action_server_id" ref="payment_request_action_open" />
+    <field name="trigger">on_write</field>
+    <field name="filter_pre_domain">[('payment_order_status','=','done')]</field>
+    <field name="filter_domain">[('payment_order_status','!=','done')]</field>
+</record>
+
+<record id="payment_order_open_2_done" model="base.automation">
+    <field name="action_server_id" ref="payment_order_action_done" />
+    <field name="trigger">on_write</field>
+    <field name="filter_pre_domain">[('move_state','!=','posted')]</field>
+    <field name="filter_domain">[('move_state','=','posted')]</field>
+</record>
+
+<record id="payment_order_done_2_open" model="base.automation">
+    <field name="action_server_id" ref="payment_order_action_open" />
+    <field name="trigger">on_write</field>
+    <field name="filter_pre_domain">[('move_state','=','posted')]</field>
+    <field name="filter_domain">[('move_state','!=','posted')]</field>
+</record>
+
+</data>
+</odoo>

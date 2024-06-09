@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+<record id="res_bank1" model="res.bank">
+    <field name="name">Bank Central Asia - (test)</field>
+    <field name="bic">CENAIDJA</field>
+</record>
+
+<record id="res_bank2" model="res.bank">
+    <field name="name">CIMB - (test)</field>
+    <field name="bic">BNIAIDJA</field>
+</record>
+</odoo>

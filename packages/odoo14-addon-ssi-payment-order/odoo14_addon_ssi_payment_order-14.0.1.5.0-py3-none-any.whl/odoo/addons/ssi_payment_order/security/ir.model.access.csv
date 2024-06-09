@@ -1,0 +1,14 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_payment_request_type_configurator,payment_request_type - configurator,model_payment_request_type,payment_request_type_group,1,1,1,1
+access_payment_request_type_all,payment_request_type - all user,model_payment_request_type,,1,0,0,0
+access_payment_request_all,payment_request - all,model_payment_request,,1,0,0,0
+access_payment_request_viewer,payment_request - viewer,model_payment_request,payment_request_viewer_group,1,0,0,0
+access_payment_request_user,payment_request - user,model_payment_request,payment_request_user_group,1,1,1,1
+access_payment_order_type_configurator,payment_order_type - configurator,model_payment_order_type,payment_order_type_group,1,1,1,1
+access_payment_order_type_all,payment_order_type - all user,model_payment_order_type,,1,0,0,0
+access_payment_order_all,payment_order - all,model_payment_order,,1,0,0,0
+access_payment_order_viewer,payment_order - viewer,model_payment_order,payment_order_viewer_group,1,0,0,0
+access_payment_order_user,payment_order - user,model_payment_order,payment_order_user_group,1,1,1,1
+access_batch_payment_request_all,batch_payment_request - all,model_batch_payment_request,,1,0,0,0
+access_batch_payment_request_viewer,batch_payment_request - viewer,model_batch_payment_request,batch_payment_request_viewer_group,1,0,0,0
+access_batch_payment_request_user,batch_payment_request - user,model_batch_payment_request,batch_payment_request_user_group,1,1,1,1

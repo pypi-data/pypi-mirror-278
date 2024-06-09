@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2023 OpenSynergy Indonesia
+     Copyright 2023 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+<data noupdate="1">
+<record id="payment_request_sequence" model="ir.sequence">
+    <field name="name">Payment Request</field>
+    <field name="code">payment_request</field>
+    <field name="prefix">PR/%(range_year)s/</field>
+    <field eval="1" name="number_next" />
+    <field eval="1" name="number_increment" />
+    <field name="padding" eval="6" />
+    <field name="use_date_range" eval="1" />
+    <field eval="False" name="company_id" />
+</record>
+
+<record id="payment_order_sequence" model="ir.sequence">
+    <field name="name">Payment Order</field>
+    <field name="code">payment_order</field>
+    <field name="prefix">PO/%(range_year)s/</field>
+    <field eval="1" name="number_next" />
+    <field eval="1" name="number_increment" />
+    <field name="padding" eval="6" />
+    <field name="use_date_range" eval="1" />
+    <field eval="False" name="company_id" />
+</record>
+
+<record id="batch_payment_request_sequence" model="ir.sequence">
+    <field name="name">Batch Payment Request</field>
+    <field name="code">batch_payment_request</field>
+    <field name="prefix">PR/%(range_year)s/</field>
+    <field eval="1" name="number_next" />
+    <field eval="1" name="number_increment" />
+    <field name="padding" eval="6" />
+    <field name="use_date_range" eval="1" />
+    <field eval="False" name="company_id" />
+</record>
+</data>
+</odoo>

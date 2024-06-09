@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+<record id="demo_account1" model="account.account">
+    <field name="name">BCA - (test)</field>
+    <field name="code">XPRO1</field>
+    <field name="type_id" ref="ssi_financial_accounting.account_type_20" />
+    <field name="user_type_id" ref="account.data_account_type_liquidity" />
+    <field name="currency_id" ref="base.USD" />
+</record>
+
+<record id="demo_account2" model="account.account">
+    <field name="name">CIMB - (test)</field>
+    <field name="code">XPRO2</field>
+    <field name="type_id" ref="ssi_financial_accounting.account_type_20" />
+    <field name="user_type_id" ref="account.data_account_type_liquidity" />
+    <field name="currency_id" ref="base.USD" />
+</record>
+
+<record id="demo_account3" model="account.account">
+    <field name="name">Bank/Cash Suspense - (test)</field>
+    <field name="code">XPRO3</field>
+    <field name="type_id" ref="ssi_financial_accounting.account_type_30" />
+    <field name="user_type_id" ref="account.data_account_type_current_assets" />
+    <field name="currency_id" ref="base.USD" />
+</record>
+</odoo>

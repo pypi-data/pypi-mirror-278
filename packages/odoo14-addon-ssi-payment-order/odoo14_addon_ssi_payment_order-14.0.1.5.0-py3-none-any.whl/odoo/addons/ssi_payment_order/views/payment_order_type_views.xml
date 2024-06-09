@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--Copyright 2023 OpenSynergy Indonesia-->
+<!--Copyright 2023 PT. Simetri Sinergi Indonesia-->
+<!--License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).-->
+<odoo>
+<record id="payment_order_type_view_tree" model="ir.ui.view">
+    <field name="name">payment_order_type - Tree</field>
+    <field name="model">payment_order_type</field>
+    <field name="inherit_id" ref="ssi_master_data_mixin.mixin_master_data_view_tree" />
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <data />
+    </field>
+</record>
+
+<record id="payment_order_type_view_search" model="ir.ui.view">
+    <field name="name">payment_order_type - Search</field>
+    <field name="model">payment_order_type</field>
+    <field
+            name="inherit_id"
+            ref="ssi_master_data_mixin.mixin_master_data_view_search"
+        />
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <data />
+    </field>
+</record>
+
+<record id="payment_order_type_view_form" model="ir.ui.view">
+    <field name="name">payment_order_type - Form</field>
+    <field name="model">payment_order_type</field>
+    <field name="inherit_id" ref="ssi_master_data_mixin.mixin_master_data_view_form" />
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//field[@name='active']" position="after">
+                <field name="journal_id" domain="[('type','in',['cash','bank'])]" />
+                <field name="realization_method" />
+                <field name="require_bank_account" />
+            </xpath>
+            <xpath expr="//page[1]" position="before">
+                <page name="partner" string="Partner">
+                </page>
+            </xpath>
+        </data>
+    </field>
+</record>
+
+<record id="payment_order_type_action" model="ir.actions.act_window">
+    <field name="name">Payment Order Types</field>
+    <field name="res_model">payment_order_type</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+
+<menuitem
+        id="payment_order_type_menu"
+        name="Types"
+        parent="menu_payment_order_configuration"
+        groups="payment_order_type_group"
+        action="payment_order_type_action"
+        sequence="110"
+    />
+</odoo>

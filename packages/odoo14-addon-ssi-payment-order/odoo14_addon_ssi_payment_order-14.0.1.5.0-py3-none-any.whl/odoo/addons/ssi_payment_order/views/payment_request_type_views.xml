@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--Copyright 2023 OpenSynergy Indonesia-->
+<!--Copyright 2023 PT. Simetri Sinergi Indonesia-->
+<!--License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).-->
+<odoo>
+<record id="payment_request_type_view_tree" model="ir.ui.view">
+    <field name="name">payment_request_type - Tree</field>
+    <field name="model">payment_request_type</field>
+    <field name="inherit_id" ref="ssi_master_data_mixin.mixin_master_data_view_tree" />
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <data />
+    </field>
+</record>
+
+<record id="payment_request_type_view_search" model="ir.ui.view">
+    <field name="name">payment_request_type - Search</field>
+    <field name="model">payment_request_type</field>
+    <field
+            name="inherit_id"
+            ref="ssi_master_data_mixin.mixin_master_data_view_search"
+        />
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <data />
+    </field>
+</record>
+
+<record id="payment_request_type_view_form" model="ir.ui.view">
+    <field name="name">payment_request_type - Form</field>
+    <field name="model">payment_request_type</field>
+    <field name="inherit_id" ref="ssi_master_data_mixin.mixin_master_data_view_form" />
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//field[@name='active']" position="after">
+                <field name="min_overdue" />
+                <field name="max_overdue" />
+            </xpath>
+            <xpath expr="//page[1]" position="before">
+                <page name="partner" string="Partner">
+                </page>
+                <page name="account" string="Account">
+                </page>
+            </xpath>
+        </data>
+    </field>
+</record>
+
+<record id="payment_request_type_action" model="ir.actions.act_window">
+    <field name="name">Payment Request Types</field>
+    <field name="res_model">payment_request_type</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+
+<menuitem
+        id="payment_request_type_menu"
+        name="Types"
+        parent="menu_payment_request_configuration"
+        groups="payment_request_type_group"
+        action="payment_request_type_action"
+        sequence="110"
+    />
+</odoo>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--Copyright 2023 OpenSynergy Indonesia-->
+<!--Copyright 2023 PT. Simetri Sinergi Indonesia-->
+<!--License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).-->
+<odoo>
+<record id="payment_order_view_tree" model="ir.ui.view">
+    <field name="name">payment_order - Tree</field>
+    <field name="model">payment_order</field>
+    <field name="inherit_id" ref="ssi_transaction_mixin.mixin_transaction_view_tree" />
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="field[@name='company_id']" position="after">
+                <field name="partner_id" widget="many2one_avatar" />
+                <field name="type_id" />
+                <field name="currency_id" invisible="1" />
+                <field name="date" />
+                <field name="date_start" />
+                <field name="date_end" />
+                <field name="amount_request" />
+            </xpath>
+        </data>
+    </field>
+</record>
+
+<record id="payment_order_view_search" model="ir.ui.view">
+    <field name="name">payment_order - Search</field>
+    <field name="model">payment_order</field>
+    <field
+            name="inherit_id"
+            ref="ssi_transaction_mixin.mixin_transaction_view_search"
+        />
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <data />
+    </field>
+</record>
+
+<record id="payment_order_view_form" model="ir.ui.view">
+    <field name="name">payment_order - Form</field>
+    <field name="model">payment_order</field>
+    <field name="inherit_id" ref="ssi_transaction_mixin.mixin_transaction_view_form" />
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="partner_id" widget="many2one_avatar" />
+                <field name="type_id" />
+                <field
+                        name="allowed_partner_bank_ids"
+                        widget="many2many_tags"
+                        invisible="1"
+                    />
+                <field name="currency_id" />
+            </xpath>
+            <xpath expr="//group[@name='header_right']" position="inside">
+                <field name="date" />
+                <field name="date_start" />
+                <field name="date_end" />
+            </xpath>
+            <xpath expr="//page[1]" position="before">
+                <page name="payment_request" string="Payment Requests">
+                    <button
+                            name="action_populate_payment_request"
+                            string="Populate Request"
+                            type="object"
+                            class="oe_highlight"
+                            icon="fa-refresh"
+                            attrs="{'invisible':[('state','!=','draft')]}"
+                        />
+                    <field
+                            name="payment_request_ids"
+                            widget="many2many"
+                            domain="[('currency_id','=',currency_id),('state','=','open'),('payment_order_id','=',False)]"
+                        />
+                </page>
+                <page name="realization" string="Realization">
+                    <button
+                            name="action_create_realization"
+                            string="Create Realization"
+                            type="object"
+                            icon="fa-gear"
+                            class="oe_highlight"
+                            attrs="{'invisible':[('realization_ok','=',False)]}"
+                        />
+                    <group name="realization_1" colspan="4" col="2">
+                        <field name="realization_ok" />
+                        <field name="move_id" />
+                        <field name="move_state" />
+                    </group>
+                </page>
+            </xpath>
+            <xpath expr="//group[@name='footer_left']" position="inside">
+                <field name="amount_request" />
+            </xpath>
+        </data>
+    </field>
+</record>
+
+<record id="payment_order_action" model="ir.actions.act_window">
+    <field name="name">Payment Orders</field>
+    <field name="res_model">payment_order</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+
+<menuitem
+        id="payment_order_menu"
+        name="Payment Orders"
+        parent="ssi_financial_accounting.menu_bank_cash"
+        groups="payment_order_viewer_group"
+        action="payment_order_action"
+        sequence="230"
+    />
+</odoo>

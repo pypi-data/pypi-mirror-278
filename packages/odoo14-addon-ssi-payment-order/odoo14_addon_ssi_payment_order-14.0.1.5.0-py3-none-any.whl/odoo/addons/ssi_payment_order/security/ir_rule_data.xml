@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+<!-- Payment Request -->
+<record id="payment_request_internal_user_rule" model="ir.rule">
+    <field name="name">Payment Request - Internal Users</field>
+    <field name="model_id" ref="model_payment_request" />
+    <field name="groups" eval="[(4, ref('base.group_user'))]" />
+    <field name="domain_force">[
+        ('user_id','=',user.id),
+    ]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="payment_request_company_rule" model="ir.rule">
+    <field name="name">Payment Request - Responsible to company data</field>
+    <field name="model_id" ref="model_payment_request" />
+    <field name="groups" eval="[(4, ref('payment_request_company_group'))]" />
+    <field name="domain_force">[('company_id','=',user.company_id.id)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="payment_request_companies_rule" model="ir.rule">
+    <field
+            name="name"
+        >Payment Request - Responsible to company and all child companies data</field>
+    <field name="model_id" ref="model_payment_request" />
+    <field name="groups" eval="[(4, ref('payment_request_company_child_group'))]" />
+    <field name="domain_force">[('company_id','in',user.company_ids.ids)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="payment_request_all_rule" model="ir.rule">
+    <field name="name">Payment Request - All</field>
+    <field name="model_id" ref="model_payment_request" />
+    <field name="groups" eval="[(4, ref('payment_request_all_group'))]" />
+    <field name="domain_force">[(1,'=',1)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<!-- Payment Order -->
+<record id="payment_order_internal_user_rule" model="ir.rule">
+    <field name="name">Payment Order - Internal Users</field>
+    <field name="model_id" ref="model_payment_order" />
+    <field name="groups" eval="[(4, ref('base.group_user'))]" />
+    <field name="domain_force">[
+        ('user_id','=',user.id),
+    ]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="payment_order_company_rule" model="ir.rule">
+    <field name="name">Payment Order - Responsible to company data</field>
+    <field name="model_id" ref="model_payment_order" />
+    <field name="groups" eval="[(4, ref('payment_order_company_group'))]" />
+    <field name="domain_force">[('company_id','=',user.company_id.id)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="payment_order_companies_rule" model="ir.rule">
+    <field
+            name="name"
+        >Payment Order - Responsible to company and all child companies data</field>
+    <field name="model_id" ref="model_payment_order" />
+    <field name="groups" eval="[(4, ref('payment_order_company_child_group'))]" />
+    <field name="domain_force">[('company_id','in',user.company_ids.ids)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="payment_order_all_rule" model="ir.rule">
+    <field name="name">Payment Order - All</field>
+    <field name="model_id" ref="model_payment_order" />
+    <field name="groups" eval="[(4, ref('payment_order_all_group'))]" />
+    <field name="domain_force">[(1,'=',1)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<!-- Batch Payment Request -->
+<record id="batch_payment_request_internal_user_rule" model="ir.rule">
+    <field name="name">Batch Payment Request - Internal Users</field>
+    <field name="model_id" ref="model_batch_payment_request" />
+    <field name="groups" eval="[(4, ref('base.group_user'))]" />
+    <field name="domain_force">[
+        ('user_id','=',user.id),
+    ]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="batch_payment_request_company_rule" model="ir.rule">
+    <field name="name">Batch Payment Request - Responsible to company data</field>
+    <field name="model_id" ref="model_batch_payment_request" />
+    <field name="groups" eval="[(4, ref('batch_payment_request_company_group'))]" />
+    <field name="domain_force">[('company_id','=',user.company_id.id)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="batch_payment_request_companies_rule" model="ir.rule">
+    <field
+            name="name"
+        >Batch Payment Request - Responsible to company and all child companies data</field>
+    <field name="model_id" ref="model_batch_payment_request" />
+    <field
+            name="groups"
+            eval="[(4, ref('batch_payment_request_company_child_group'))]"
+        />
+    <field name="domain_force">[('company_id','in',user.company_ids.ids)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="batch_payment_request_all_rule" model="ir.rule">
+    <field name="name">Batch Payment Request - All</field>
+    <field name="model_id" ref="model_batch_payment_request" />
+    <field name="groups" eval="[(4, ref('batch_payment_request_all_group'))]" />
+    <field name="domain_force">[(1,'=',1)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+</odoo>

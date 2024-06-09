@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+<record id="res_partner_bank1" model="res.partner.bank">
+    <field name="acc_number">131-00-XXXXXXX-X - (test)</field>
+    <field name="partner_id" ref="base.res_partner_12" />
+    <field name="bank_id" ref="res_bank1" />
+    <field name="acc_holder_name">Azure Interior</field>
+</record>
+
+<record id="res_partner_bank2" model="res.partner.bank">
+    <field name="acc_number">131-00-YYYYYYY-Y - (test)</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="bank_id" ref="res_bank1" />
+    <field name="acc_holder_name">Deco Addict</field>
+</record>
+
+<record id="res_partner_bank3" model="res.partner.bank">
+    <field name="acc_number">131-00-VVVVVVV-V - (test)</field>
+    <field name="partner_id" ref="base.res_partner_12" />
+    <field name="bank_id" ref="res_bank2" />
+    <field name="acc_holder_name">Azure Interior</field>
+</record>
+
+<record id="res_partner_bank4" model="res.partner.bank">
+    <field name="acc_number">131-00-ZZZZZZZ-Z - (test)</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="bank_id" ref="res_bank2" />
+    <field name="acc_holder_name">Deco Addict</field>
+</record>
+</odoo>
