@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "series_intro_recognizer"
+version = "0.4.0"
+authors = [
+    { name = "HRAshton" },
+]
+description = "Find the intro of episodes of a series"
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "cupy-cuda12x~=13.0.0",
+    "librosa~=0.10.1",
+    "numpy~=1.26.4",
+    "pytest~=8.1.1",
+    "scikit-learn~=1.4.2",
+    "scipy~=1.13.0",
+    "setuptools~=69.2.0",
+    "soundfile[tests]~=0.12.1"
+]
+
+[project.urls]
+Homepage = "https://github.com/HRAshton/SeriesIntroRecognizer"
+Issues = "https://github.com/HRAshton/SeriesIntroRecognizer/issues"

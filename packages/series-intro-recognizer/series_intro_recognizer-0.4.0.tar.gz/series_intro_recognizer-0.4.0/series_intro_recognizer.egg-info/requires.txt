@@ -1,0 +1,8 @@
+cupy-cuda12x~=13.0.0
+librosa~=0.10.1
+numpy~=1.26.4
+pytest~=8.1.1
+scikit-learn~=1.4.2
+scipy~=1.13.0
+setuptools~=69.2.0
+soundfile[tests]~=0.12.1
