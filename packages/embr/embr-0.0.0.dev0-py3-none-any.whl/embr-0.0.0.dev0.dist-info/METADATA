@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: embr
+Version: 0.0.0.dev0
+Summary: Natural Language Differentiable Programming
+Author-email: Ge Yang <ge.ike.yang@gmail.com>
+Project-URL: Homepage, https://github.com/geyang/embr
+Keywords: feed,reader,tutorial
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pip-tools ; extra == 'dev'
+Requires-Dist: bumpver ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+
