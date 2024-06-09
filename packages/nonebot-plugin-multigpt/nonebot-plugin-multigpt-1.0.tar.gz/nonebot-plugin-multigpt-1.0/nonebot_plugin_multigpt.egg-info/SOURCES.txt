@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+nonebot_plugin_multigpt/__init__.py
+nonebot_plugin_multigpt/chat.py
+nonebot_plugin_multigpt/config.py
+nonebot_plugin_multigpt/model.py
+nonebot_plugin_multigpt/openai_func.py
+nonebot_plugin_multigpt/paper.py
+nonebot_plugin_multigpt/ppt.py
+nonebot_plugin_multigpt.egg-info/PKG-INFO
+nonebot_plugin_multigpt.egg-info/SOURCES.txt
+nonebot_plugin_multigpt.egg-info/dependency_links.txt
+nonebot_plugin_multigpt.egg-info/requires.txt
+nonebot_plugin_multigpt.egg-info/top_level.txt
