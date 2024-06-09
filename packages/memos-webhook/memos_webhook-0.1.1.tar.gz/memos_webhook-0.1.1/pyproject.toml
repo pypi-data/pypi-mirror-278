@@ -1,0 +1,30 @@
+[project]
+name = "memos_webhook"
+version = "0.1.1"
+authors = [{ name = "RyoJerryYu" }]
+description = "A webhook server for memos"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
+dynamic = ["dependencies", "optional-dependencies"]
+
+[project.urls]
+Homepage = "https://github.com/RyoJerryYu/memos-webhook-py"
+Issues = "https://github.com/RyoJerryYu/memos-webhook-py/issues"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+optional-dependencies = { dev = { file = ["requirements-dev.txt"] } }
+dependencies = { file = ["requirements.txt"] }
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["proto*", "src*"]
+exclude = ["*_test.py"]
