@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: llama-index-vector-stores-awsdocdb
+Version: 0.1.6
+Summary: llama-index vector_stores awsdocdb integration
+License: MIT
+Author: Prajwal Saokar
+Author-email: prajwal.saokar@gmail.com
+Requires-Python: >=3.8.1,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: llama-index-core (>=0.10.1,<0.11.0)
+Requires-Dist: pymongo (>=4.6.1,<5.0.0)
+Description-Content-Type: text/markdown
+
+LlamaIndex Vector_Stores Integration: AWS Document DB
+
