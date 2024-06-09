@@ -1,0 +1,46 @@
+
+[tool.poetry]
+name = "gcloud-aio-pubsub-rpc"
+version = "0.1.0"
+description = "Google Cloud Asyncio PubSub RPC uses gcloud-aio-pubsub to deliver remote procedure calls over Google Cloud Platform Pub/Sub."
+
+repository = "https://github.com/cphoward/gcloud-aio-pubsub-rpc"
+authors = ["Casey Howard <casey.p.howard@outlook.com>"]
+license = "Apache-2.0 license"
+readme = "README.md"
+
+classifiers = [
+    'License :: OSI Approved :: Apache Software License',
+    'Development Status :: 4 - Beta',
+    'Intended Audience :: Developers',
+    'Operating System :: OS Independent',
+    'Topic :: Internet',
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+cachetools = ">=5.0.0,<6.0.0"
+prometheus-client = "<1.0.0"
+gcloud-aio-pubsub = ">=5.0.0,<6.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "8.2.2"
+pytest-asyncio = "0.23.7"
+# Uncomment for parallel testing
+# pytest-xdist = "3.6.1"
+typer = "<1.0.0"
+
+
+[[tool.poetry.source]]
+name = "pypi"
+priority = "primary"
+
+[tool.pytest.ini_options]
+# Uncomment for parallel testing
+# addopts = "-Werror -n auto --dist=loadscope"
+addopts = "-Werror"
+asyncio_mode = "auto"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
