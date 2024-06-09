@@ -1,0 +1,5 @@
+
+[dev]
+build<2,>=1.2.1
+pyinstaller<7,>=6.4.0
+pyinstaller-versionfile<3,>=2.1.1
