@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "dataclass-collections"
+version = "0.1.3"
+description = "A library to manage collections of dataclasses and pydantic models"
+authors = ["Kola Ayonrinde <koayon@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+packages = [
+    { include = "dataclass_collections" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pydantic = "^2.7.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
