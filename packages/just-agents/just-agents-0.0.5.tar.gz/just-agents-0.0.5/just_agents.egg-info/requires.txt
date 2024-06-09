@@ -1,0 +1,11 @@
+litellm>=1.40.7
+numpydoc
+loguru
+requests
+mako
+
+[templates]
+mako
+
+[tools]
+semanticscholar>=0.8.1
