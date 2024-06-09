@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: tscat
+Version: 0.4.1
+Summary: A library which stores, loads and filters time-series-events and catalogues.
+Keywords: satellite,plasma-physics,nasa-data,amda,cdpp,CDF
+Author-email: Patrick Boettcher <p@yai.se>
+Maintainer-email: Patrick Boettcher <p@yai.se>, Alexis Jeandet <alexis.jeandet@member.fsf.org>
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: alembic
+Requires-Dist: typing_extensions>=3.7
+Requires-Dist: sqlalchemy[mypy]<2,>=1.4.0
+Requires-Dist: appdirs>=1.4.4 
+Requires-Dist: SQLAlchemy_Utils>=0.37.8
+Requires-Dist: orjson
+Requires-Dist: astropy
+Requires-Dist: sphinx ; extra == "doc"
+Requires-Dist: sphinx_rtd_theme ; extra == "doc"
+Requires-Dist: sphinx-autodoc-typehints ; extra == "doc"
+Requires-Dist: flake8 ; extra == "test"
+Requires-Dist: appdirs-stubs ; extra == "test"
+Requires-Dist: pytest>=4.6.5 ; extra == "test"
+Requires-Dist: pytest ; extra == "test"
+Requires-Dist: pytest-pep8 ; extra == "test"
+Requires-Dist: pytest-cov ; extra == "test"
+Requires-Dist: pytest-timeout ; extra == "test"
+Requires-Dist: ddt ; extra == "test"
+Project-URL: documentation, https://github.com/SciQLop/tscat
+Project-URL: homepage, https://github.com/SciQLop/tscat
+Project-URL: repository, https://github.com/SciQLop/tscat
+Provides-Extra: doc
+Provides-Extra: test
+
+======================
+Time Series Catalogues
+======================
+
+.. image:: https://github.com/SciQLop/tscat/actions/workflows/test_main.yml/badge.svg
+        :target: https://github.com/pboettch/tscat/actions/workflows/test_main.yml
+
+.. image:: https://codecov.io/gh/SciQLop/tscat/branch/main/graph/badge.svg
+        :target: https://codecov.io/gh/SciQLop/tscat
+        :alt: Coverage Status
+
+
+A library which stores, loads and filters time-series-events and associates them catalogues and
+dynamic catalogues (filter-based).
+
+
+* Free software: GNU General Public License v3
+* Documentation: https://tscat.readthedocs.io.
+
