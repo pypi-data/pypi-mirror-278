@@ -1,0 +1,102 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "Twitch_Edog0049a"
+version = "0.0.70"
+description = 'Twitch library for chat, api, pubs, and eventsub'
+readme = {"file" = "README.md", "content-type" = "text/markdown"}
+requires-python = ">=3.11"
+license = "Apache-2.0 OR MIT"
+authors = [
+  { name = "Eli Reid", email = "Elir@elireid.com" },
+]
+
+dependencies = [
+  "requests >=2.26.0",
+  "websockets >=10.0",
+  "aiohttp >=3.7.4.post0",
+  "aiohttp_socks >=0.6.0",
+  "aiohttp_oauth >=0.4.0",
+  "aiohttp_session >=2.9.0",
+  "aiohttp_jinja2  >=1.4.2",
+  "aiohttp_cors  >=0.7.0",
+  "EventHandler-Edog0049a >=0.1.6",
+  ]
+
+
+
+keywords = [
+  "twitch",
+  "chat",
+  "api",
+  "pubsub",
+  "eventsub",
+  "websockets",
+  "aiohttp",
+  "requests",
+  "oauth",
+  "chatbot",
+  "irc",
+  "tmi",
+  "tmi.js",
+  "tmi.py",
+  "tmi.twitch.tv",
+  "twitch.tv",
+  "twitch api",
+  "twitch chat",
+  "twitch pubsub",
+  "twitch eventsub",
+  "twitch irc",
+  "twitch chatbot",
+  "twitch api python",
+  "twitch chat python",
+  "twitch pubsub python",
+  "twitch eventsub python",
+  "twitch irc python",
+  "twitch chatbot python",
+  "twitch api aiohttp",
+  "twitch chat aiohttp",
+  "twitch pubsub aiohttp",
+  "twitch eventsub aiohttp",
+  "twitch irc aiohttp",
+  "twitch chatbot aiohttp",
+  "twitch api python3",
+  "twitch chat python3",
+  "twitch pubsub python3",
+  "twitch eventsub python3",
+  "twitch irc python3",
+  "twitch chatbot python3",
+  "twitch api aiohttp3",
+  "twitch chat aiohttp3",
+  "twitch pubsub aiohttp3",
+  "twitch eventsub aiohttp3",
+  "twitch irc aiohttp3",
+  "twitch chatbot aiohttp3",
+  "twitch api python3.11",
+  "twitch chat python3.11",
+  "twitch pubsub python3.11",
+  "twitch eventsub python3.11",
+  "twitch irc python3.11",
+  "twitch chatbot python3.11",
+  "twitch api aiohttp3.11",
+  "twitch chat aiohttp3.11",
+  "twitch pubsub aiohttp3.11",
+  "twitch eventsub aiohttp3.11",
+  "twitch irc aiohttp3.11",
+  "twitch chatbot aiohttp3.11",
+  "twitch api python3.11.0",
+  "twitch chat python3.11.0",
+  "twitch pubsub python3.11.0"]
+
+[project.urls]
+"Source code" = "https://github.com/eli-reid/twitch"
+
+[project.entry-points.plugin-namespace]
+Twitch = "Twitch"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/Twitch"]
+
+

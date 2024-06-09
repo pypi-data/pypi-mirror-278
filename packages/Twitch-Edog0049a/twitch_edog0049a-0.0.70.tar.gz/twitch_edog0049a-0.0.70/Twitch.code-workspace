@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../pypi"
+		}
+	],
+	"settings": {
+	
+		"workbench.editorAssociations": {
+			"*.svg": "hediet.vscode-drawio-text",
+		},
+		"files.associations": {
+			"*.svg": "hediet.vscode-drawio-text"
+		},
+		"autoDocstring.docstringFormat": "sphinx",
+		"autoDocstring.includeName": true
+	
+
+	}
+}
