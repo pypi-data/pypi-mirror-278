@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: langroid-pydantic-v2
+Version: 0.1.0
+Summary: Dummy pkg to force Pydantic v2 dependency, to be used in extras in pyproject.toml
+Author: Prasad Chalasani
+Author-email: pchalasani@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pydantic (>=2.0,<3.0)
+Description-Content-Type: text/markdown
+
+
+# Constrain to Pydantic v2
+
