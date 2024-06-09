@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: mongologger
+Version: 0.1.1
+Requires-Dist: motor ==3.4.0
+
