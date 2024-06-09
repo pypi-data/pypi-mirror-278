@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.txt
+linkages.txt
+requirements.txt
+setup.cfg
+setup.py
+elsysco/__init__.py
+elsysco.egg-info/PKG-INFO
+elsysco.egg-info/SOURCES.txt
+elsysco.egg-info/dependency_links.txt
+elsysco.egg-info/requires.txt
+elsysco.egg-info/top_level.txt
+elsysco/termibase/__init__.py
+elsysco/webengine/__init__.py
