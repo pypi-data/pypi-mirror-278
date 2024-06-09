@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: twitter-client-py
+Version: 0.1.3
+Summary: Python client for interacting with Twitter V2 API available at twitter-x.p.rapidapi.com/
+Author: Omar MHAIMDAT
+Author-email: Omar MHAIMDAT <omarmhaimdat@gmail.com>
+Requires-Python: >=3.7
+Requires-Dist: aiohttp
+Requires-Dist: requests
