@@ -1,0 +1,10 @@
+beancount>=2.3.5
+click>=8.1
+
+[dev]
+black==23.1
+flake8>=5
+mypy>=1
+pre-commit
+pytest>=7.2
+pytest-cov>=4

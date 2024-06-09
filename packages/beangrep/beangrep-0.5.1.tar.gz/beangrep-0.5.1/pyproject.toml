@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "beangrep"
+authors = [
+    { name = "Stefano Zacchiroli", email = "zack@upsilon.cc" },
+]
+description = "Grep-like filter for the Beancount plain text accounting system"
+readme = "README.md"
+requires-python = ">=3.11"
+keywords = [
+    "accounting",
+    "beancount",
+    "grep",
+    "ledger",
+    "plaintext",
+    "plaintext-accounting",
+]
+license = { text = "GPL-2.0-or-later" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+    "Topic :: Office/Business :: Financial :: Accounting",
+    "Topic :: Text Processing :: General",
+]
+dependencies = [
+    "beancount>=2.3.5",
+    "click>=8.1",
+]
+# version = "0.1.0"
+dynamic = [ "version" ]
+
+[project.urls]
+Homepage = "https://github.com/zacchiro/beangrep"
+Issues = "https://github.com/zacchiro/beangrep/issues"
+
+[project.scripts]
+bean-grep = "beangrep:cli"
+
+[project.optional-dependencies]
+dev = [
+    "black==23.1",
+    "flake8>=5",
+    "mypy>=1",
+    "pre-commit",
+    "pytest>=7.2",
+    "pytest-cov>=4",
+]
+
+[tool.setuptools.package-data]
+"beangrep.data" = ["bean-grep.1"]
+
+[tool.setuptools_scm]
