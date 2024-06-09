@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+flairaio/__init__.py
+flairaio/constants.py
+flairaio/exceptions.py
+flairaio/flair_client.py
+flairaio/model.py
+flairaio/str_enum.py
+flairaio.egg-info/PKG-INFO
+flairaio.egg-info/SOURCES.txt
+flairaio.egg-info/dependency_links.txt
+flairaio.egg-info/requires.txt
+flairaio.egg-info/top_level.txt
