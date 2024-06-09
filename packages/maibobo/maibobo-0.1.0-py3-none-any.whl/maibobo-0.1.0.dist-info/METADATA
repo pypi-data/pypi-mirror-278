@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: maibobo
+Version: 0.1.0
+Author-Email: Zhan Rongrui <2742392377@qq.com>
+License: MIT
+Requires-Python: <3.13,>=3.11
+Requires-Dist: pyserial>=3.5
+Requires-Dist: loguru>=0.7.0
+Description-Content-Type: text/markdown
+
+# Maibobo
+
+Maibobo 脉搏仪
