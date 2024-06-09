@@ -1,0 +1,8 @@
+{
+    "project_name": "exemplo",
+    "description": "descricao",
+    "team": "ciencia de dados",
+    "author": "anonimo",
+    "email": "email@email.com",
+    "model_type": ["classification", "regression", "clusterization"]
+}

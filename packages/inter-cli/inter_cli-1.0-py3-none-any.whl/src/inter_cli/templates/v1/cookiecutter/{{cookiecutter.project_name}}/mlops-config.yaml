@@ -1,0 +1,22 @@
+version: v1
+kind: OnlineDeployment
+metadata:
+  developers: [{{ cookiecutter.author }}]
+  team: {{ cookiecutter.team }}
+  emails: [{{ cookiecutter.email }}]
+  environment: hml
+  version: "1.0"
+  description: {{ cookiecutter.description }}
+  type: {{ cookiecutter.model_type }}
+  project_name: {{ cookiecutter.project_name }}
+spec:
+  resources:
+    requests:
+      cpu: 1
+      memory: 128Mi
+    limits:
+      cpu: 2
+      memory: 512Mi
+  envVars:
+    - name: ENV1
+      value: VALUE1
