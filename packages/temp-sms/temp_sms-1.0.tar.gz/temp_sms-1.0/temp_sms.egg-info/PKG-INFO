@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: temp_sms
+Version: 1.0
+Summary: Temporary phone numbers for receiving SMS in python.
+Author: Commenter123321
+License: GPL-3.0
+Keywords: temporary,sms,number,python,phone,receive
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: playwright
+
+# Python Temp SMS
+## Requires playwright
+```
+python -m playwright install
+```
+
+### Example:
+```python
+from temp_sms import PhoneNumber
+
+with PhoneNumber() as number:
+    print(number)  # Number: +1 (920) 572-2111, Carrier: Verizon
+    print("+" + number.number_country_code + number.number_plain)  # +19205722111
+    print(number.messages())  # [("Now", "*****9", "Your Roblox account verification code: 69420"), ('11 min ago', '****0', 'G-405383 is your Google verification code.')]
+```
