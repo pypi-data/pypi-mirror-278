@@ -1,0 +1,9 @@
+[server]
+# Max upload size (default 200MB)
+maxUploadSize = 4096  # size in MB
+
+[theme]
+base = "dark"
+primaryColor = "#ea45cf"
+secondaryBackgroundColor = "#000000"
+textColor = "#ffffff"
