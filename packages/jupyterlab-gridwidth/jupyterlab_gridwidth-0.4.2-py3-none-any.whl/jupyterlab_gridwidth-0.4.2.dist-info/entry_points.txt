@@ -1,0 +1,2 @@
+[console_scripts]
+splitcell-to-gridwidth = jupyterlab_gridwidth.splitcell_to_gridwidth:main
