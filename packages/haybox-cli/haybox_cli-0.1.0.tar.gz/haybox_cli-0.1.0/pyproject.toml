@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "haybox-cli"
+version = "0.1.0"
+description = ""
+authors = ["Jonathan Haylett <jonathan@haylett.dev>"]
+packages = [{include = "haybox_cli", from = "src"}]
+
+[tool.poetry.scripts]
+haybox = "haybox_cli:main.main"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+click = "^8.1.7"
+haybox = "^0.1.2"
+
+[tool.poetry.dev-dependencies]
+grpcio-tools = "^1.58.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
