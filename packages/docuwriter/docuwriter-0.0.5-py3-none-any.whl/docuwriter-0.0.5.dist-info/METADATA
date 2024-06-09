@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: docuwriter
+Version: 0.0.5
+Summary: Open Source alternative to Jetbrains Writerside.
+Home-page: https://github.com/zanderlewis/docuwriter
+Author: Zander Lewis
+Author-email: wolfthedev@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: markdown
+Requires-Dist: beautifulsoup4
+Requires-Dist: pygments
+
