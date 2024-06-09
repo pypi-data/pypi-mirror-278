@@ -1,0 +1,7 @@
+[ditto]
+pyarrow_csv = ditto_pyarrow.io:PyArrowCSV
+pyarrow_feather = ditto_pyarrow.io:PyArrowFeather
+pyarrow_parquet = ditto_pyarrow.io:PyArrowParquet
+
+[ditto_marks]
+pyarrow = ditto_pyarrow.marks:marks
