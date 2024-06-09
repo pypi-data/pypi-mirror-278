@@ -1,0 +1,213 @@
+{
+  "src/ts/components/SolanaWalletMultiButton.tsx": {
+    "displayName": "SolanaWalletMultiButton",
+    "description": "SolanaWalletMultiButton.\nRequires use of the WalletContextProvider to provide wallet connections.",
+    "props": {
+      "network": {
+        "description": "The network for the wallet.\n\nThis prop specifies the network for the wallet. It can be 'devnet', 'mainnet', or 'testnet'.",
+        "required": false,
+        "defaultValue": {
+          "value": "'mainnet'",
+          "computed": false
+        },
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'devnet'",
+              "computed": false
+            },
+            {
+              "value": "'mainnet'",
+              "computed": false
+            },
+            {
+              "value": "'testnet'",
+              "computed": false
+            }
+          ],
+          "raw": "\"devnet\" | \"mainnet\" | \"testnet\""
+        }
+      },
+      "publicKeyState": {
+        "description": "The state of the public key.\n\nThis prop holds the state of the public key. It could be a string representing\nthe public key, or null if there is no public key.",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      },
+      "rpcEndpoint": {
+        "description": "The custom RPC endpoint for the wallet.\n\nThis prop specifies a custom RPC endpoint for the wallet. If it's not provided,\nthe default endpoint for the specified network will be used.",
+        "required": false,
+        "defaultValue": {
+          "value": "null",
+          "computed": false
+        },
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      },
+      "setProps": {
+        "description": "A function to update the component's properties.\n\nDash provides this function and passes it as a prop to the component. This function\nshould be called with an object that contains the new values of the properties that\nyou want to change. This is typically used inside a Dash callback to update the component's properties.\n\nFor example, in our component, we call `setProps` with the new state of the `publicKeyState`\nwhenever the wallet is connected or disconnected. This updates the `publicKeyState` property\nof the component and triggers a Dash callback that listens to this property.\n\n\nUpdate props to trigger callbacks.",
+        "required": true,
+        "type": {
+          "name": "func",
+          "raw": "((props: { publicKeyState?: string; rpcEndpoint?: string; }) => void) & ((props: Record<string, any>) => void)"
+        }
+      },
+      "id": {
+        "description": "Unique ID to identify this component in Dash callbacks.",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      },
+      "className": {
+        "description": "Adds CSS class name(s).",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      }
+    },
+    "isContext": false
+  },
+  "src/ts/components/TransactionButtonWrapper.tsx": {
+    "displayName": "TransactionButtonWrapper",
+    "description": "A wrapper component for transaction buttons that handles Solana transaction instructions.\nA button can be clicked to send a transaction to the Solana network, using the instructions\npassed to the transactionInstructions prop.\n@param {Object} props - The properties for the component.\n@param {string} props.id - The ID of the component.\n@param {string} props.className - The CSS class of the component.\n@param {function} props.setProps - Function to set properties.\n@param {React.ReactNode} props.children - The child components. This should be a single button or any component that has an \"onClick\" event.\n@param {string[] | null} props.transactionInstructions - The transaction instructions in JSON format.\n@returns {JSX.Element} The rendered component.",
+    "props": {
+      "transactionInstructions": {
+        "description": "The transaction instructions in JSON format, or an empty list if none.",
+        "required": false,
+        "defaultValue": {
+          "value": "[]",
+          "computed": false
+        },
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "arrayOf",
+              "value": {
+                "name": "string",
+                "raw": "string"
+              },
+              "raw": "string[]"
+            }
+          ],
+          "raw": "string[] | []"
+        }
+      },
+      "children": {
+        "description": "Content",
+        "required": false,
+        "defaultValue": {
+          "value": "[]",
+          "computed": false
+        },
+        "type": {
+          "name": "node",
+          "raw": "ReactNode"
+        }
+      },
+      "id": {
+        "description": "Unique ID to identify this component in Dash callbacks.",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      },
+      "setProps": {
+        "description": "Update props to trigger callbacks.",
+        "required": true,
+        "type": {
+          "name": "func",
+          "raw": "(props: Record<string, any>) => void"
+        }
+      },
+      "className": {
+        "description": "Adds CSS class name(s).",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      }
+    },
+    "isContext": false
+  },
+  "src/ts/components/WalletContextProvider.tsx": {
+    "displayName": "WalletContextProvider",
+    "description": "Wallet Context Provider.\nThis is a wrapper for apps that provides wallet context throughout the app.\nIt must be used at the root of the app to provide wallet connections to all child components.",
+    "props": {
+      "network": {
+        "description": "The network for the wallet.\n\nThis prop specifies the network for the wallet. It can be 'devnet', 'mainnet', or 'testnet'.",
+        "required": true,
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'devnet'",
+              "computed": false
+            },
+            {
+              "value": "'mainnet'",
+              "computed": false
+            },
+            {
+              "value": "'testnet'",
+              "computed": false
+            }
+          ],
+          "raw": "\"devnet\" | \"mainnet\" | \"testnet\""
+        }
+      },
+      "rpcEndpoint": {
+        "description": "The custom RPC endpoint for the wallet.\n\nThis prop specifies a custom RPC endpoint for the wallet. If it's not provided,\nthe default endpoint for the specified network will be used.",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      },
+      "children": {
+        "description": "Content",
+        "required": true,
+        "type": {
+          "name": "node",
+          "raw": "ReactNode"
+        }
+      },
+      "id": {
+        "description": "Unique ID to identify this component in Dash callbacks.",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      },
+      "setProps": {
+        "description": "Update props to trigger callbacks.",
+        "required": true,
+        "type": {
+          "name": "func",
+          "raw": "(props: Record<string, any>) => void"
+        }
+      },
+      "className": {
+        "description": "Adds CSS class name(s).",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      }
+    },
+    "isContext": false
+  }
+}
