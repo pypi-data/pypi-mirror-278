@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+cda_download.egg-info/PKG-INFO
+cda_download.egg-info/SOURCES.txt
+cda_download.egg-info/dependency_links.txt
+cda_download.egg-info/requires.txt
+cda_download.egg-info/top_level.txt
+pycda/__init__.py
+pycda/helpers.py
+pycda/main.py
+tests/test_functionality.py
