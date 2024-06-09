@@ -1,0 +1,2 @@
+[mkdocs.plugins]
+pseudocode = mkdocs_pseudocode_plugin.plugin:PseudocodePlugin
