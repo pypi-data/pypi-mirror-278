@@ -1,0 +1,4 @@
+[console_scripts]
+pcap-blur = pcap_blur.main:main
+pcap_blur = pcap_blur.main:main
+pcapblur = pcap_blur.main:main
