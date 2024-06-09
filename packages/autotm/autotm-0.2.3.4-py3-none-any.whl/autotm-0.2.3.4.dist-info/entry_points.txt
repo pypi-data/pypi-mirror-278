@@ -1,0 +1,4 @@
+[console_scripts]
+autotmctl=autotm.main:cli
+fitness-worker=autotm.main_fitness_worker:main
+
