@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: wifind
+Version: 0.2.0
+Summary: Wi-Fi indoor positioning system
+Home-page: https://github.com/micheledinelli/wifind
+Author: Dinelli Michele
+Author-email: dinellimichele00@gmail.com
+License: MIT
+Platform: any
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Customer Service
+Classifier: Intended Audience :: System Administrators
+Classifier: Operating System :: Microsoft
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Software Distribution
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+Requires-Dist: access-points
+
+# wifind
+
+[![Publish to PyPI](https://github.com/micheledinelli/wifind/actions/workflows/publish-to-pypi.yaml/badge.svg)](https://github.com/micheledinelli/wifind/actions/workflows/publish-to-pypi.yaml) [![pypi version](https://img.shields.io/pypi/v/wifind)](https://pypi.org/project/wifind/) [![pypi downloads](https://img.shields.io/pypi/dw/wifind)](https://pypi.org/project/wifind/)
+
+`wifind` is a cli tool that performs wifi fingerprinting and detect your position based on access points around you.
+
+## Installation
+
+```sh
+pip install wifind
+```
+
+## Usage
+
+```sh
+# learn current location labelling it as kitchen
+wifind learn -r kitchen
+
+# print saved locations
+wifind rooms
+# ['kitchen', 'bedroom']
+
+# predicts current location
+wifind predict
+# kitchen
+
+wifind --watch
+# 2024-06-08 12:31:24 - kitchen
+# 2024-06-08 12:31:27 - bedroom
+# 2024-06-08 12:31:31 - bedroom
+# 2024-06-08 12:31:35 - bedroom
+
+wifind predict -p
+# {'kitchen': 0.68, 'bedroom': 0.32}
+
+# clears data
+wifind clear
+```
+
+## Acknowledgments
+
+Inspired by amazing work of [`whereami`](https://github.com/kootenpv/whereami)
