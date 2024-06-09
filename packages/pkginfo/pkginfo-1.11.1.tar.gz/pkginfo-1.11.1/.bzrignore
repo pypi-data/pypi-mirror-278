@@ -1,0 +1,11 @@
+__pycache__
+*.egg-info
+.coverage
+.coverage-*
+coverage.xml
+./build/
+./dist/
+.tox/
+.pytest_cache/
+docs/_build/
+.mypy_cache/
