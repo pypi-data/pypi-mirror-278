@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "botrun_medium"
+version = "4.6.81"
+dependencies = [
+    "click",
+    "medium-api",
+    "python-dotenv"
+]
+readme = "README.md"
+
+[project.scripts]
+botrun-medium-list = "botrun_medium_list:botrun_medium_list"
+botrun-medium-articles = "botrun_medium_articles:botrun_medium_articles"
+
+[tool.hatch.build.targets.wheel]
+packages = ["botrun_medium"]
