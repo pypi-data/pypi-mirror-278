@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: production_ready
+Version: 0.0.1
+Summary: Production Ready
+Home-page: https://github.com/dpep/production_ready_py
+Author: Daniel Pepper
+License: MIT
+Platform: any
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+production_ready
+======
+...
+
+### Install
+```pip install production_ready```
+
+
+### Usage
+```python
+...
+```
+
+----
+[![Coverage Status](https://coveralls.io/repos/github/dpep/production_ready_py/badge.svg?branch=main)](https://coveralls.io/github/dpep/production_ready_py?branch=main)
+[![installs](https://img.shields.io/pypi/dm/production_ready?label=installs)](https://pypi.org/project/production_ready)
