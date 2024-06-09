@@ -1,0 +1,26 @@
+# IDEs & editors
+/.idea/
+
+# cache
+*.py[cod]
+__pycache__/
+
+# virtualenv
+/virtualenv/
+/venv/
+
+# packaging
+/*.egg-info/
+/dist/
+/build/
+/.eggs/
+
+# testing
+/.cache/
+/pytestdebug.log
+/.pytest_cache/
+/.tox/
+/.coverage
+/htmlcov/
+coverage.xml
+
