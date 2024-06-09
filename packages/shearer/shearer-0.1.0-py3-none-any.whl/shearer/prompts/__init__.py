@@ -1,0 +1,1 @@
+from .scraper_prompts import PROMPT_PREFIX, USER_INSTRUCTION
