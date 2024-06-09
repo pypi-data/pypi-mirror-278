@@ -1,0 +1,45 @@
+from dulwich.objects import Tree
+from echovault.table import Table
+from base64 import b64decode, b64encode
+
+class Vault:
+    @staticmethod
+    def encode(string):
+        return b64encode(string.encode('utf-8'))
+
+    @staticmethod
+    def decode(value):
+        return b64decode(value).decode('utf-8')
+    
+    def __init__(self, object_store, tree:Tree=None):
+        self.object_store = object_store
+        
+        if tree is None:
+            self._tree = Tree()
+        else:
+            self._tree = tree
+
+    def _update(self):
+        if not self._tree.id in self.object_store:
+            self.object_store.add_object(self._tree)
+            
+    def __getitem__(self, name:str):
+        _, id_ = self._tree[self.encode(name)]
+        tree = self.object_store[id_]
+        return Table(self.object_store,
+                     self,
+                     tree=tree)
+
+    def __setitem__(self, name:str, iterable):
+        table = Table(self.object_store, self, iterable)
+        self._tree[self.encode(name)] = 0, table.tree.id
+        self._update()
+
+    def __delitem__(self, name:str):
+        del self._tree[self.encode(name)]
+        self._update()
+
+    def __iter__(self):
+        return (self.decode(raw_key)
+                for raw_key
+                in iter(self._tree))

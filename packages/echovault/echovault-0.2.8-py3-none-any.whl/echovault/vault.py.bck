@@ -1,0 +1,255 @@
+from dulwich.objects import Tree, Commit
+from echovault.list import List
+from base64 import b64decode, b64encode
+from socket import getfqdn, gethostname
+from os import getpid, getlogin, name as operating_system_name
+from sys import argv
+from typing import Optional
+from time import time
+from stat import S_IFDIR
+from echovault._container import Container
+
+try:
+    from os import getuid, getgid
+except:
+    def getuid():
+        return None
+
+    def getgid():
+        return None
+
+def walk_ancestor(object_store, commit):
+    for identifier in commit.parents:
+        yield identifier
+
+    for identifier in commit.parents:
+        yield from walk(object_store, object_store[identifier])
+    
+def last_common_ancestor(object_store,
+                         refs,
+                         branches):
+    logs = {walk_ancestor(object_store, commit): {commit.id}
+            for commit in (object_store[refs[branch]]
+                           for branch in branches)}
+
+    stopped = set()
+    while (stopped != set(logs.keys())
+           and not (common_ancestors := set.intersection(*(set(commits)
+                                                           for commits
+                                                           in logs.values())))):
+        for walker, commits in logs.items():
+            try:
+                logs[walker] = commits | {next(walker)}
+            except StopIteration:
+                stopped |= {walker}
+
+    common_ancestor, *_ = common_ancestors
+    
+    return common_ancestor
+
+class Conflict(Exception):
+    pass
+
+class Vault(Container):
+    @staticmethod
+    def encode(string):
+        return string.encode('utf-8')
+
+    @staticmethod
+    def decode(value):
+        return value.decode('utf-8')
+    
+    def __init__(self, object_store, refs, *, tree:Tree=None, ref=None):
+        super().__init__(object_store, None, None, tree)
+        self.refs = refs
+        if ref is not None:
+            self.checkout(ref)
+        else:
+            self.ref = None
+
+    def __getitem__(self, name:str):
+        identifier = self.encode(name)
+        _, oid = self.tree[identifier]
+        tree = self.object_store[oid]
+        return List(self.object_store,
+                     self,
+                     identifier,
+                     tree=tree)
+
+    def __setitem__(self, name:str, iterable):
+        identifier = self.encode(name)
+        self.tree[identifier] = S_IFDIR, None
+        table = List(self.object_store, self, identifier, iterable)
+        self._update()
+
+    def __delitem__(self, name:str):
+        del self.tree[self.encode(name)]
+        self._update()
+
+    def __iter__(self):
+        return (self.decode(raw_key)
+                for raw_key
+                in iter(self.tree)
+                if raw_key != b'_')
+
+    def keys(self):
+        yield from self.__iter__()
+
+    def items(self):
+        for name in iter(self):
+            yield name, self[name]
+
+    def values(self):
+        for _, value in self.items():
+            yield value
+
+    def __repr__(self):
+        return repr({key: value
+                     for key, value
+                     in self.items()})
+            
+    def rollback(self):
+        if self.ref is None:
+            self.tree = Tree()
+        else:
+            self.tree = self.object_store[self.object_store[self.refs[ref]].tree]
+
+    def checkout(self, ref):
+        tree = Tree()
+        
+        ref = b'refs/heads/' + ref.encode('utf-8')
+        
+        if ref in self.refs:
+            tree = self.object_store[self.object_store[self.refs[ref]].tree]
+        
+        self.ref = ref
+        self.tree = tree
+        
+            
+    def commit(self,
+               ref:Optional[str]=None,
+               message:Optional[str]='',
+               author:Optional[str]=None,
+               committer:Optional[str]=None,
+               time_:Optional[int]=None,
+               timezone:Optional[int]=None,
+               ):
+        if ref is None:
+            ref = self.ref
+        else:
+            ref = b'refs/heads/' + ref.encode('utf-8')
+            
+        commit = Commit()
+        
+        commit.message = message.encode('utf-8')
+        commit.tree = self.tree
+
+        if committer is None:
+            committer = ('_'.join((getfqdn(), gethostname(),
+                                   operating_system_name,
+                                   repr(getgid()),
+                                   repr(getuid()), repr(getpid())))
+                         + ': '
+                         + ' '.join(argv))
+            
+        if author is None:
+            author = getlogin()
+
+            
+        commit.committer = committer.encode('utf-8')
+        commit.author = author.encode('utf-8')
+
+        if time_ is None:
+            time_ = int(time())
+
+        if timezone is None:
+            timezone = 0
+
+        commit.commit_time = time_
+        commit.commit_timezone = timezone
+        commit.author_time = time_
+        commit.author_timezone = timezone
+
+        if ref in self.refs:
+            parents = (self.refs[ref],)
+        elif self.ref in self.refs:
+            parents = (self.refs[self.ref],)
+        else:
+            parents = ()
+            
+        commit.parents = parents
+        
+        if not commit.id in self.object_store:
+            self.object_store.add_object(commit)
+
+        self.refs[ref] = commit.id
+
+    def diff(self, other):
+        if self.tree.id == other.tree.id:
+            return
+
+        sks = set(self.keys())
+        oks = set(other.keys())
+
+        removed = oks - sks
+        if removed:
+            yield ('-', removed)
+        
+        added = sks - oks
+        if added:
+            yield ('+',
+                   dict((key,
+                        tuple(dict(element.items())
+                              for element in self[key]))
+                        for key in added))
+
+        for name in sks.intersection(oks):
+            for difference in self[name].diff(other[name]):
+                yield ('!=', name, *difference)
+
+    def patch(self, differences):
+        for difference in differences:
+            match difference:
+                case ('-', removed):
+                    for key in removed:
+                        del self[key]
+                case ('+', added):
+                    for key, entries in added.items():
+                        self[key] = entries
+                case ('!=', name, *difference):
+                    self[name].patch((difference,))
+
+    def merge(self, others, *, without_conflict=True):
+        ancestor = last_common_ancestor(self.object_store,
+                                        self.refs,
+                                        (vault.ref for vault in (self, *others)))
+
+        base_vault = Vault(self.object_store, self.refs,
+                           tree=self.object_store[self.object_store[ancestor].tree])
+
+        applied_differences = {}
+        for difference inself.diff(base_vault):
+            match difference:
+                case ('-', removed):
+                    
+        
+        for child in others:
+            
+            for difference in base:
+                conflict = set()
+                match difference:
+                    case ('-', removed):
+                        conflict = removed.intersection(applied_differences[None]['+'])
+                    case ('+', added):
+                        conflict = added.intersection(applied_differences[None]['-'])
+                    case ('!=', table, '-', removed):
+                        conflict = removed.intersection(applied_differences[table]['+'])
+                    case ('!=', table, '+', added):
+                        conflict = added.intersection(applied_differences[table]['-'])
+                    case ('!=', table, '!=', entry, '-', keys):
+                        conflict = added.intersection(applied_differences[table][entry][])
+
+                if conflict:
+                    raise Conflict(f'operation {difference} about {conflict} made on {child} conflicts with other merged vaults.')
+                
+                self.patch((difference,))
