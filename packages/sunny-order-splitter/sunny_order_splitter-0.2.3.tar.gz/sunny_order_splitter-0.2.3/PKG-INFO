@@ -1,0 +1,114 @@
+Metadata-Version: 2.1
+Name: sunny_order_splitter
+Version: 0.2.3
+Home-page: https://github.com/sunnytrade/sunny-order-splitter-python-sdk
+Author: glede
+Author-email: 
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: binance-connector
+Requires-Dist: binance-futures-connector
+
+# sunny-order-splitter-python-sdk
+
+
+## 安装
+
+pip install sunny-order-splitter --upgrade
+
+
+## 现货使用方式
+
+测试网地址 ： https://testnet.binance.vision
+
+```python
+from sunny_order_splitter.binance_spot import SpotOrderSplitter
+
+def main():
+  	production = False # True正式环境，不传默认True
+        
+	api_key = "EpcFiKyNEZ6GwpW4w1px60og0SYy0W4A2slX32UeH2hV9FjJfOdKPJDY9NNlbRrB"
+	secret_key = "OeIwlnfB0ImKdqTq4n4jLqYxdzYO87Lc8Mr2Z1bbCqraerpomMUJMD7EvtyIFFWh"
+	symbol = 'BTCUSDT'
+	sos = SpotOrderSplitter(symbol, api_key, secret_key, production)
+	    
+	# Call split_order method with test parameters
+	    
+	params = {
+	    "side": "BUY",
+	    "orderAmount": 90,
+	    #"totalAmount": 100,
+	    "percentTotalAmount": 80, # 总金额百分比
+	    "interval": 2
+	}
+	"""
+	params = {
+	    "side": "SELL",
+	    "orderAmount": 1,
+	    #"totalAmount": 100,
+	    "percentTotalAmount":  100,
+	    "interval": 2
+	}
+	"""
+	result = sos.split_order(params)
+	if result:
+	    print(f"Orders placed successfully: {result['num_orders_success']} out of {result['num_orders']}")
+	    print(f"Total quantity bought: {result['quantity']}")
+	else:
+	    print("Failed to place orders.")
+
+if __name__ == "__main__":
+    main()
+```
+
+## 合约使用方式（币本位）
+现在只支持单项持仓，如果现在使用的是双向模式，会先改成单向模式
+
+
+测试网地址： https://testnet.binancefuture.com
+
+
+```python
+from sunny_order_splitter.binance_umfutures import UMFuturesOrderSplitter
+
+def main():
+    production = False # Set to True for production
+          
+    api_key = "63551008d09ed3a1d619644fbef3b27469b9518f0218c83e499843973e703146"
+    secret_key = "ae8a0dd6278350d19d796ceade26e7acf552b64178398a1dd9fb8f7191ccbddb"
+    symbol = 'BTCUSDT'
+    umfos = UMFuturesOrderSplitter(symbol, api_key, secret_key, production)
+
+    # Call split_order method with test parameters
+
+    params = {
+        "side": "SELL", # "BUY 多" or "SELL 空"
+        "orderAmount": 1000,
+        #"totalAmount": 200,
+        "percentTotalAmount": 20, # 总金额百分比
+        "leverage": 5, # 开仓杠杆 最大5倍
+        "interval": 5 # 间隔时间
+    }
+
+    #开仓
+    result = umfos.split_order(params)
+    if result:
+        print(f"Orders placed successfully: {result['num_orders_success']} out of {result['num_orders']}")
+        print(f"Total quantity bought: {result['quantity']}")
+    else:
+        print("Failed to place orders.")
+
+
+    #平仓
+    results_close_order = umfos.close_position()
+    if results_close_order:
+        print(f"Order closed successfully:{results_close_order['symbol']} {results_close_order['quantity']}")
+    else:
+        print("Failed to close order.")
+
+if __name__ == "__main__":
+    main()
+```
