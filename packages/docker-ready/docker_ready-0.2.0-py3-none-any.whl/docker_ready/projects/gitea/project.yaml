@@ -1,0 +1,20 @@
+info:
+  full_name: Gitea
+  description: Gitea is a painless self-hosted all-in-one software development service, it includes Git hosting, code review, team collaboration, package registry and CI/CD. It is similar to GitHub, Bitbucket and GitLab.
+  site_url: https://about.gitea.com/
+  repo_url: https://github.com/go-gitea/gitea
+  container_registry_url: https://hub.docker.com/r/gitea/gitea
+
+env_files:
+  postgres:
+    POSTGRES_DB: docker-ready 
+    POSTGRES_USER: docker-ready
+    POSTGRES_PASSWORD: docker-ready
+  gitea:
+    USER_UID: 1000
+    USER_GID: 1000
+    GITEA__database__DB_TYPE: postgres
+    GITEA__database__HOST: postgres:5432
+    GITEA__database__NAME: docker-ready
+    GITEA__database__USER: docker-ready
+    GITEA__database__PASSWD: docker-ready

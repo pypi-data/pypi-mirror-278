@@ -1,0 +1,35 @@
+name: gitea
+
+networks:
+  gitea:
+    name: gitea
+    driver: bridge
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: gitea-postgres
+
+    env_file:
+      - ./postgres.env
+    
+    networks:
+      - gitea
+
+  gitea:
+    image: gitea/gitea:latest
+    container_name: gitea
+
+    env_file:
+      - ./gitea.env
+
+    networks:
+      - gitea
+
+    ports:
+      - "3000:3000"
+      - "222:22"
+
+    volumes:
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro

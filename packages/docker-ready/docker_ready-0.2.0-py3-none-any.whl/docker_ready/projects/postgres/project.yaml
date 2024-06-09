@@ -1,0 +1,12 @@
+info:
+  full_name: PostgreSQL
+  description: PostgreSQL is a powerful, open source object-relational database system with over 35 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance.
+  site_url: https://www.postgresql.org/
+  repo_url: https://git.postgresql.org/gitweb/?p=postgresql.git;a=summary
+  container_registry_url: https://hub.docker.com/_/postgres/
+
+env_files:
+  postgres:
+    POSTGRES_DB: docker-ready 
+    POSTGRES_USER: docker-ready
+    POSTGRES_PASSWORD: docker-ready

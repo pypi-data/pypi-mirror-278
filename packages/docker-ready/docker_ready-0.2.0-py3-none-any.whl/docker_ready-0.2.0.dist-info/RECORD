@@ -1,0 +1,15 @@
+docker_ready/__init__.py,sha256=1EG6eHWgTYUt2LCcJIT7CRG7SzaOP-sFgfmaalpDbbk,385
+docker_ready/get.py,sha256=CC4SjdIfpyTZMLkhYMu2yRpWfmm7nZ9ZU9KzU61esNo,1408
+docker_ready/project.py,sha256=lZR3XvEwUMjRnmU6EylelrXZDEUhDqn86aSGTs5Cq_E,1950
+docker_ready/projects/gitea/compose.yaml,sha256=gw2WL5mLEtJ4nhd2p4RFL1jSMhgY7dRf4dMRzT4XwSs,496
+docker_ready/projects/gitea/project.yaml,sha256=w1YlEwvhBzVow8LHBl27UmwjFLqqHALfAR5WRO1df0k,764
+docker_ready/projects/postgres/compose.yaml,sha256=JXARn6p9GBx0Wnjn0zEUPfCSN2LvnVt1vCyhzelWK9M,132
+docker_ready/projects/postgres/project.yaml,sha256=xi_0ls0jS2CoF6weoSMDg7WkdxWmj_czTPnZbFs8yRw,549
+docker_ready/remove.py,sha256=_7EqEPerc0KXobJmurvMhBBE-H-4v_9nfM1MHCVTN8g,664
+docker_ready/run.py,sha256=eOUXm6OLyzQ2o0ORESMK1Q-vKDykHoBYxO4ysHrYDTc,3107
+docker_ready/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+docker_ready/utils/constants.py,sha256=EfYZ5MfEdXSMhwrS03YnEZ2UdQImQN6tZeBpEUGr37M,258
+docker_ready/utils/tools.py,sha256=V78IbPH5lnRdVDeNRU7HeITxRpgZ5XwIRsGL1a0dc8Y,72
+docker_ready-0.2.0.dist-info/METADATA,sha256=NiYk5xlDeQkt-13fuhE1yvIFKQDmTdTYovxUrGQb-G8,1216
+docker_ready-0.2.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+docker_ready-0.2.0.dist-info/RECORD,,
