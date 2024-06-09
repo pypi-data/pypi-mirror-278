@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: hdicoding
+Version: 0.1
+Summary: Python functions for controlling Arduino devices
+Author: dain0113
+Author-email: hdi5709@naver.com
+Requires-Dist: pyserial
+
