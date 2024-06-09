@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "min_soup"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+version = "0.1"
+description = "Бібліотека для роботи з HTML-документами"
+authors = [
+    { name="Dmytro Mitkin", email="159967771+nikitin-eti@users.noreply.github.com" }
+]
+[project.urls]
+"Homepage" = "https://github.com/nikitin-eti/min_soup"
