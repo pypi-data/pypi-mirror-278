@@ -1,0 +1,74 @@
+[project]
+name = "mtb-core"
+version = "0.1.0"
+description = "Shared library"
+dependencies = [
+  "numpy>=1.21",
+  "keyboard>=0.13.5,<0.14.0",
+  "msgpack>=1.0.5,<2.0.0",
+  "pyzmq>=25.1.1,<26.0.0",
+  "rich<14.0.0,>=13.7.0",
+  "rich-argparse>=1.3.0,<1.4.0",
+  "watchdog>=3.0.0,<4.0.0",
+  "aiofiles>=23.2.1,<24.0.0",
+  "virtualenv",
+]
+readme = "README.md"
+requires-python = ">=3.9"
+
+[[project.authors]]
+name = "Mel Massadian"
+email = "mel@melmassadian.com"
+
+[project.optional-dependencies]
+dev = ["black", "isort", "pylint", "pyright", "pytest"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mtb.*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py39", "py310", "py311"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+auto_identify_namespace_packages = false
+force_single_line = false
+known_first_party = ["mtb"]
+extend_skip = ["archives"]
+combine_straight_imports = true
+
+[tool.pytest.ini_options]
+log_level = "DEBUG"
+log_cli = true
+norecursedirs = "templates/* mlt/*"
+markers = [
+  "wip: tests that aren't fully finished yet",
+  '''heavy: marks tests as heavy (deselect with '-m "not heavy"')''',
+]
+
+[tool.pyright]
+reportMissingTypeArgument = true
+strictListInference = true
+reportMissingTypeStubs = false
+typeCheckingMode = "basic"
+pythonVersion = "3.10"
+
+[tool.ruff]
+line-length = 100
+select = ["A", "B", "C", "D", "E", "F", "FBT", "I", "N", "S", "SIM", "UP", "W"]
+extend-exclude = ["./docs/conf.py"]
+
+[tool.ruff.per-file-ignores]
+"__init__.py" = ["F401"]
+"tests/*" = ["S101"]
+"scripts/*" = ["D103", "S603", "S607"]
+
+[tool.ruff.pydocstyle]
+convention = "numpy"
