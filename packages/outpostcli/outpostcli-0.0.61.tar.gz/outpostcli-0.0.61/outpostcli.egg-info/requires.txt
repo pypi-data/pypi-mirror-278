@@ -1,0 +1,9 @@
+outpostkit>=0.0.69
+click
+rich
+requests
+tenacity
+
+[dev]
+ruff
+black
