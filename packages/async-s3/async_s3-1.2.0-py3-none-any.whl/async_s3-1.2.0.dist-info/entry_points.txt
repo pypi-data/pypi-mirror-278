@@ -1,0 +1,2 @@
+[console_scripts]
+as3 = async_s3.main:as3
