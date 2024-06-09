@@ -1,0 +1,26 @@
+[build-system]
+requires = ["maturin>=1.5,<2.0", "zeroing>=0.1.0", "numpy>=1.20.0"]
+build-backend = "maturin"
+
+[project]
+name = "rencrypt"
+authors = [
+  { name="Radu Marias", email="radumarias@gmail.com" },
+]
+description = "A Python encryption library implemented in Rust. It supports AEAD with AES-GCM and ChaCha20Poly1305. It uses ring crate to handle encryption."
+readme = "README.md"
+keywords = ["cryptography", "encryption", "security", "rust", "speed"]
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "License :: OSI Approved :: Apache Software License",
+]
+dynamic = ["version"]
+[tool.maturin]
+features = ["pyo3/extension-module"]
+
+[project.urls]
+Homepage = "https://github.com/radumarias/Cipher-python"
+Issues = "https://github.com/radumarias/Cipher-python/issues"
