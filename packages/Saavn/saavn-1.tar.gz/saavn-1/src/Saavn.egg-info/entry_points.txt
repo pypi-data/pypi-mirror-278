@@ -1,0 +1,2 @@
+[console_scripts]
+saavn = saavn.cli:exit
