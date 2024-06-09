@@ -1,0 +1,30 @@
+[build-system]
+requires = [ "poetry-core",]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "cv-smart-house-camera"
+version = "0.1.9"
+description = ""
+authors = [ "Your Name <you@example.com>",]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+toml = "^0.10.2"
+opencv-python = "^4.9.0.80"
+twirp = "^0.0.7"
+uvicorn = "^0.29.0"
+starlette = "^0.37.2"
+aiohttp = "^3.9.5"
+cv_smart_house_module_motion_detection = "0.1.2"
+firebase-admin = "^6.5.0"
+aiortc = "^1.9.0"
+
+[tool.poetry.scripts]
+start = "cv_smart_house_camera.main:main"
+compile = "compile_proto:compile_proto_files"
+
+[tool.poetry.group.dev.dependencies]
+grpcio = "^1.40.0"
+grpcio-tools = "^1.40.0"
