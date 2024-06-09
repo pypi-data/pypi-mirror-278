@@ -1,0 +1,4 @@
+[console_scripts]
+sitemappy = sitemappy.main:app
+sitemappy-cli = sitemappy.main:app
+
