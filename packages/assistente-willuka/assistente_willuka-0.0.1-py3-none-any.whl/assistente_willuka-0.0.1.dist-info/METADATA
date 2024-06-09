@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: assistente_willuka
+Version: 0.0.1
+Summary: Assistente para Realização de Tarefas no Windows
+Home-page: https://github.com/William-Almeida-Sousa/assistente-willuka.git
+Author: William Sousa
+Author-email: william.sousarj@gmail.com
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Assistente Willuka
+
+Description. 
+The package assistente_willuka is used to:
+	- Assistente Willuka (willuka.py)
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install package_name
+
+```bash
+pip install assistente_willuka
+```
+
+## Author
+William Sousa
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
