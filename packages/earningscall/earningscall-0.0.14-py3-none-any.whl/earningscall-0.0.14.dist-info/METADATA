@@ -1,0 +1,181 @@
+Metadata-Version: 2.3
+Name: earningscall
+Version: 0.0.14
+Summary: The EarningsCall Python library provides convenient access to the EarningsCall API.  It includes a pre-defined set of classes for API resources that initialize themselves dynamically from API responses.
+Project-URL: Homepage, https://earningscall.biz
+Project-URL: Documentation, https://github.com/EarningsCall/earningscall-python
+Project-URL: Repository, https://github.com/EarningsCall/earningscall-python
+Project-URL: Issues, https://github.com/EarningsCall/earningscall-python/issues
+Project-URL: Source, https://github.com/EarningsCall/earningscall-python
+Project-URL: Changelog, https://github.com/EarningsCall/earningscall-python/blob/master/CHANGELOG.md
+Author-email: EarningsCall <dev@earningscall.biz>
+License: MIT License
+        
+        Copyright (c) 2024 EarningsCall
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Keywords: earnings call,earnings call transcripts,earnings calls,transcripts
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Typing :: Typed
+Requires-Python: >=3.8
+Requires-Dist: dataclasses-json>=0.6.4
+Requires-Dist: dataclasses>=0.6
+Requires-Dist: requests-cache>=1.2.0
+Requires-Dist: requests>=2.30.0
+Description-Content-Type: text/markdown
+
+# EarningsCall Python Library
+
+[![pypi](https://img.shields.io/pypi/v/earningscall.svg)](https://pypi.org/project/earningscall/)
+[![Build Status](https://github.com/EarningsCall/earningscall-python/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/EarningsCall/earningscall-python/actions?query=branch%3Amaster)
+[![Coverage Status](https://coveralls.io/repos/github/EarningsCall/earningscall-python/badge.svg?branch=master)](https://coveralls.io/github/EarningsCall/earningscall-python?branch=master)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/earningscall?color=blue)](https://pypi.org/project/earningscall/)
+
+The EarningsCall Python library provides convenient access to the [EarningsCall API](https://earningscall.biz/api-guide) from
+applications written in the Python language. It includes a pre-defined set of
+classes for API resources that initialize themselves dynamically from API
+responses.
+
+# Requirements
+
+* Python 3.8+
+
+# Installation
+
+You don't need this source code unless you want to modify the package. If you just want to use the package, just run:
+
+```sh
+pip install --upgrade earningscall
+```
+
+## Get Transcript for a Single Quarter
+
+```python
+from earningscall import get_company
+
+company = get_company("aapl")  # Lookup Apple, Inc by its ticker symbol, "AAPL"
+
+transcript = company.get_transcript(year=2021, quarter=3)
+print(f"{company} Q3 2021 Transcript Text: \"{transcript.text[:100]}...\"")
+```
+
+Output
+
+```text
+Apple Inc. Q3 2021 Transcript Text: "Good day, and welcome to the Apple Q3 FY 2021 Earnings Conference Call. Today's call is being record..."
+```
+
+
+## Get All Transcripts for a company
+
+
+```python
+from earningscall import get_company
+
+company = get_company("aapl")  # Lookup Apple, Inc by its ticker symbol, "AAPL"
+
+print(f"Getting all transcripts for: {company}..")
+# Retrieve all earnings conference call events for a company, and iterate through each one
+for event in company.events():
+    transcript = company.get_transcript(event=event)  # Fetch the earnings call transcript for this event
+    print(f"* Q{event.quarter} {event.year}")
+    if transcript:
+        print(f"  Transcript Text: \"{transcript.text[:100]}...\"")
+    else:
+        print(f"  No transcript found.")
+
+```
+
+Output
+
+```text
+Getting all transcripts for: Apple Inc...
+* Q4 2023
+  Transcript Text: "Good day and welcome to the Apple Q4 Fiscal Year 2023 earnings conference call. Today's call is bein..."
+* Q3 2023
+  Transcript Text: "Good day and welcome to the Apple Q3 Fiscal Year 2023 earnings conference call. Today's call is bein..."
+* Q2 2023
+  Transcript Text: "At this time for opening remarks and introductions, I would like to turn the call over to Suhasini T..."
+* Q1 2023
+
+  ...
+```
+
+## List All Companies
+
+```python
+from earningscall import get_all_companies
+
+for company in get_all_companies():
+    print(f"{company.company_info} -- {company.company_info.sector} -- {company.company_info.industry}")
+```
+
+By default, this library grants you access to only two companies, Apple Inc. and Microsoft, Inc.
+
+To gain access to 5,000+ companies please [signup here](https://earningscall.biz/api-pricing) to get your API key.
+
+Once you have access to your API key, you can set the API Key like this:
+
+```python
+import earningscall
+
+earningscall.api_key = "YOUR SECRET API KEY GOES HERE"
+```
+
+Alternatively, you can pass in your API key as an environment variable:
+
+```sh
+export ECALL_API_KEY="YOUR SECRET API KEY GOES HERE"
+python your-python-script.py
+```
+
+## List S&P 500 Companies
+
+```python
+from earningscall import get_sp500_companies
+
+for company in get_sp500_companies():
+    print(f"{company.company_info} -- {company.company_info.sector} -- {company.company_info.industry}")
+```
+
+
+## Advanced
+
+### Disable Caching
+
+When you call `get_company("aapl")` to retrieve a company, internally the library retrieves metadata
+from the EarningsCall API.  By default, it caches this metadata on disk in order to speed up subsequent requests.
+
+If you prefer to disable this local caching behavior, you can do so with this code:
+
+```python
+import earningscall
+
+earningscall.enable_requests_cache = False
+```
