@@ -1,0 +1,9 @@
+    stage: deploy
+    image: alpine:latest
+    script:
+        - apk add --update python3 py3-pip nodejs npm
+        - npm install -g artillery@latest
+        - python -m venv .venv
+        - source .venv/bin/activate
+        - python -m pip install -r requirements.txt
+        - artillery run "artillery-$CDK_DEPLOY_ENV.yml"
