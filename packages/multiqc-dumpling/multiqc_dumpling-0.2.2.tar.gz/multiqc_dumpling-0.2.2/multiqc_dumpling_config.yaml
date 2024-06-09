@@ -1,0 +1,7 @@
+#
+# MuiltiQC dumpling example config
+#
+
+multiqc_dumpling: 
+  orf: "99-1343"
+  variants_file: "config/designed_variants/b2ar_variants.csv"

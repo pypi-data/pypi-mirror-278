@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: multiqc_dumpling
+Version: 0.2.2
+Summary: MultiQC plugin for Dumpling DMS pipeline
+Home-page: https://github.com/odcambc/MultiQC_dumpling
+Download-URL: https://github.com/odcambc/MultiQC_dumpling/releases
+Author: Christian Macdonald
+Author-email: christian.macdonald@ucsf.edu
+License: MIT
+Keywords: bioinformatics
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: JavaScript
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+License-File: LICENSE
+Requires-Dist: multiqc>=1.0
+
+
+MultiQC_dumpling is a plugin for MultiQC, providing additional tools which are
+specific to Dumpling DMS analysis pipeline.
+
+For more information about Dumpling, see https://github.com/odcambc/dumpling
+For more information about MultiQC, see http://multiqc.info

@@ -1,0 +1,5 @@
+[multiqc.hooks.v1]
+config_loaded = multiqc_dumpling.dumpling_intialization:dumpling_plugin_execution_start
+
+[multiqc.modules.v1]
+dumpling = multiqc_dumpling.modules.dumpling:MultiqcModule
