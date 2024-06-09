@@ -1,0 +1,4 @@
+[console_scripts]
+sewerpipe=sewerpipe.main:main
+sppe=sewerpipe.main:main
+
