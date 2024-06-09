@@ -1,0 +1,129 @@
+{% extends "default/module.html.jinja2" %}
+
+{% defaultmacro class(cls) -%}
+    {{ decorators(cls) }}
+    {% set inits = cls.own_members | selectattr("name", "equalto", "__init__") | list %}
+    {% set inits = inits + cls.own_members | selectattr("name", "equalto", "__new__") | list %}
+    {% if inits %}
+        {% for m in inits %}
+            <div>
+                <span class="def">class</span>
+                <span class="name">{{ cls.qualname }}</span>
+                {{- m.signature_without_self | format_signature(colon=false) | linkify }}
+            </div>
+        {% endfor %}
+    {% else %}
+        <span class="def">class</span>
+        <span id="{{ cls.qualname }}.__init__" class="name">{{ cls.qualname }}</span>
+    {% endif %}
+{% enddefaultmacro %}
+
+{% defaultmacro function(fn) -%}
+    {{ decorators(fn) }}
+    {% if fn.name == "__init__" %}
+        <span class="name">{{ ".".join(fn.qualname.split(".")[:-1]) }}</span>
+        {{- fn.signature_without_self | format_signature(colon=false) | linkify }}
+    {% else %}
+        <span class="def"></span>
+        <span class="name">{{ fn.name }}</span>
+        {{- fn.signature | format_signature(colon=false) | linkify }}
+    {% endif %}
+{% enddefaultmacro %}
+
+{% defaultmacro nav_members(members) %}
+    <ul class="memberlist">
+        {% for m in members if is_public(m) | trim %}
+            <li>
+                {% if m.kind == "class" %}
+                    <a class="class" href="#{{ m.qualname }}">{{ m.qualname }}</a>
+                    {% set cls_members = m.own_members | rejectattr("name", "equalto", "__init__") %}
+                    {% set cls_members = cls_members | rejectattr("name", "equalto", "__new__") %}
+                    {% if cls_members %}
+                        {{ nav_members(cls_members) | indent(12) }}
+                    {% endif %}
+                {% elif m.kind == "module" %}
+                    <a class="module" href="#{{ m.name }}">{{ m.name }}</a>
+                {% elif m.name == "__init__" %}
+                    <a class="function" href="#{{ m.qualname }}">{{ m.qualname.split(".")[-2] }}</a>
+                {% else %}
+                    <a class="{{ m.kind }}" href="#{{ m.qualname }}">{{ m.name }}</a>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% enddefaultmacro %}
+
+<!-- Navbar -->
+{% block nav %}
+    {% set modules = module.modulename.split(".") %}
+    {% if logo %}
+        {% if logo_link %}
+            <div class="ribbon">
+                <a href="{{ logo_link }}"><span>Source repository</span></a>
+            </div>
+        {% endif %}
+        <img src="{{ '../' * (modules | count - 1) }}{{ logo }}" class="logo" alt="project logo"/>
+    {% endif %}
+    {{ self.search_box() }}
+    <br />
+    {% block nav_submodules %}
+        {% set modules = module.modulename.split(".") %}
+        {% for m in modules %}
+            <ul>
+                <li><a href="{{ '../' * (modules | count - loop.index) }}{{m}}.html">{{ m }}</a></li>
+        {% endfor %}
+        {% if module.submodules %}
+            <ul>
+                {% for submodule in module.submodules if is_public(submodule) | trim %}
+                    <li>{{ submodule.taken_from | link(text=submodule.name) }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        {% for m in modules %}
+            </ul>
+        {% endfor %}
+    {% endblock %}
+    {% block nav_index %}
+        {% set index = module.docstring | to_markdown | to_html | attr("toc_html") %}
+        {% if index %}
+            {{ index | safe }}
+        {% endif %}
+    {% endblock %}
+    {% block nav_members %}
+        {% if module.members %}
+            {{ nav_members(module.members.values()) }}
+        {% endif %}
+    {% endblock %}
+    {% block nav_footer %}
+        <footer><span class="name">{{ root_module_name  }}</span> {{ env["VERSION"] | default("") }}</footer>
+    {% endblock %}
+    {{ self.attribution() }}
+{% endblock %}
+
+<!-- Main -->
+{% block module_contents %}
+    {% if module.flattened_own_members %}
+        <div class="ref-title"><h1>Reference</h1></div>
+    {% endif %}
+    {% for m in module.flattened_own_members if is_public(m) | trim %}
+        <section id="{{ m.qualname or m.name }}">
+            {{ member(m) }}
+            {% if m.kind == "class" %}
+                {% for m in m.own_members if m.kind != "class" and m.name != "__init__" and is_public(m) | trim %}
+                    <div id="{{ m.qualname }}" class="classattr">
+                        {{ member(m) }}
+                    </div>
+                {% endfor %}
+                {% set inherited_members = inherited(m) | trim %}
+                {% if inherited_members %}
+                    <div class="inherited">
+                        <h5>Inherited Members</h5>
+                        <dl>
+                            {{ inherited_members }}
+                        </dl>
+                    </div>
+                {% endif %}
+            {% endif %}
+        </section>
+    {% endfor %}
+{% endblock %}

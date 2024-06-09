@@ -1,0 +1,17 @@
+
+[dev]
+setuptools
+setuptools-scm
+
+[doc]
+pdoc
+
+[quality]
+black
+flake8
+Flake8-pyproject
+isort
+
+[testing]
+mypy
+types-setuptools

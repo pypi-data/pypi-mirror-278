@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: elliptic_curves
+Version: 0.0.4
+Summary: Implementation of elliptic curves over various fields
+Author: Nicolas Canceill
+Author-email: nicolas.canceill@gmail.com
+License: GPL
+Project-URL: Homepage, https://github.com/ncanceill/elliptic_curves
+Project-URL: Documentation, https://ncanceill.github.io/elliptic_curves
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: COPYING.md
+Provides-Extra: dev
+Requires-Dist: setuptools; extra == "dev"
+Requires-Dist: setuptools-scm; extra == "dev"
+Provides-Extra: doc
+Requires-Dist: pdoc; extra == "doc"
+Provides-Extra: quality
+Requires-Dist: black; extra == "quality"
+Requires-Dist: flake8; extra == "quality"
+Requires-Dist: Flake8-pyproject; extra == "quality"
+Requires-Dist: isort; extra == "quality"
+Provides-Extra: testing
+Requires-Dist: mypy; extra == "testing"
+Requires-Dist: types-setuptools; extra == "testing"
+
+This package implements elliptic curves over various fields.
+
+## Contents
+
+The `elliptic.curves` module implements elliptic curves. An interface for fields is specified in the `elliptic.abc` module. This package provides several field implementations:
+- `elliptic.mod`: modular fields
+- `elliptic.fin`: Galois fields
+- `elliptic.inf`: infinite fields
+
+The implementation is not concerned with cryptographic safety. It cares for results being correct, but not secure.
+
+## License
+
+![GPLv3](https://www.gnu.org/graphics/gplv3-or-later.png)
+
+This package is free software: you can redistribute it and/or modify it under the terms of the [GNU General Public License](https://www.gnu.org/licenses/) as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+***
+
+Copyright © 2023-2024 Nicolas Canceill

@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "elliptic_curves"
+description = "Implementation of elliptic curves over various fields"
+authors = [
+    {name = "Nicolas Canceill"},
+    {email = "nicolas.canceill@gmail.com"},
+]
+readme = "src/README.md"
+license = {text = "GPL"}
+dynamic = ["version"]
+requires-python = ">=3.11"
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.11",
+]
+
+[project.urls]
+Homepage = "https://github.com/ncanceill/elliptic_curves"
+Documentation = "https://ncanceill.github.io/elliptic_curves"
+
+[project.optional-dependencies]
+dev = ["setuptools", "setuptools-scm"]
+doc = ["pdoc"]
+quality = ["black", "flake8", "Flake8-pyproject", "isort"]
+testing = ["mypy", "types-setuptools"]
+
+[tool.black]
+exclude = "benv|build|venv"
+
+[tool.flake8]
+exclude = ["benv", "build", "venv"]
+extend-ignore = ["E203"]
+
+[tool.mypy]
+exclude = "benv|build|venv"
+strict = true
+strict_equality = false
+
+[tool.setuptools_scm]
+tag_regex = '^(?:v)(?P<version>\d+(?:\.\d+){0,2})'
