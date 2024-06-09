@@ -1,0 +1,72 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "antipickle"
+description = 'Like pickle. But different'
+readme = "README.md"
+requires-python = ">=3.7"
+license = "MIT"
+keywords = []
+authors = [{ name = "Alex Rogozhnikov", email = "find.on@my.personal.blog" }]
+classifiers = [
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+]
+dependencies = ["msgpack>=1.0.4"]
+dynamic = ["version"]
+
+[project.urls]
+Documentation = "https://github.com/arogozhnikov/antipickle#readme"
+Issues = "https://github.com/arogozhnikov/antipickle/issues"
+Source = "https://github.com/arogozhnikov/antipickle"
+
+[tool.hatch.version]
+path = "antipickle/__init__.py"
+
+[tool.hatch.envs.default]
+dependencies = [
+  "pytest",
+  "pytest-cov",
+  "numpy",
+  "pandas",
+  "polars",
+  "pydantic",
+  "scipy",
+  "pyarrow",
+]
+[tool.hatch.envs.default.scripts]
+cov = "pytest --cov-report=term-missing --cov-config=pyproject.toml --cov=antipickle --cov=tests {args}"
+no-cov = "cov --no-cov {args}"
+
+[[tool.hatch.envs.test.matrix]]
+python = ["37", "38", "39", "310", "311"]
+
+[tool.coverage.run]
+branch = true
+parallel = true
+omit = []
+
+[tool.coverage.report]
+exclude_lines = ["no cov", "if __name__ == .__main__.:", "if TYPE_CHECKING:"]
+
+[tool.mypy]
+cache_dir = "~/.cache/.mypy_cache"
+
+
+[tool.black]
+line-length = 120
+target-version = ['py311']
+
+
+[tool.ruff]
+line-length = 120
+
+cache-dir = "/tmp/ruff_cache_antipickle" # move cache out of workdir
+
+lint.select = ["E4", "E7", "E9", "F", "W"]

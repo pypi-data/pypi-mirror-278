@@ -1,0 +1,163 @@
+
+<p align="center">
+    <img src="https://www.mypricechopper.com/Frontend/Media/Recipes/FreshfruitPopsicle_Web_1110x625.jpg" width="600" />
+    <br />
+    <small>
+        <a href="https://www.mypricechopper.com/fresh-dish/recipes/recipe?id=8490">image source</a>. 
+        antipickle keeps your heterogeneous data fresh
+    </small>
+</p>
+
+
+
+[![PyPI - Version](https://img.shields.io/pypi/v/antipickle.svg)](https://pypi.org/project/antipickle)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/antipickle.svg)](https://pypi.org/project/antipickle)
+
+-----
+
+# antipickle
+
+**when you want to use pickle, but you shouldn't**
+
+Why? Because pickle isn't the right way to persist or share data, and [we all know that](#when-to-not-use-pickle).
+
+When it comes to practice, it takes time and effort to substitute pickle. <br />
+'Hmm, I can use json here' &mdash; I thought on many occasions, and usually was wrong.
+
+Something small but annoying was in the way: <br />
+`datetime` that can't be stored or `np.array` that serializers don't know how to deal with. 
+Or even `bytes`! And many smaller things. 
+
+At this point I either had to give up and pickle it <br />
+OR allocate time on figuring out 'how do I make this right'. 
+
+`antipickle` solves this for me.
+
+
+`antipickle` is a **restricted** format for **safe, persistent, and platform-independent** storage. 
+
+Also, it is very convenient:
+```python
+import antipickle
+antipickle.dump(data, 'data.antipickle')
+antipickle.dump(data, 's3://mybucket/data.antipickle')     # stores in s3 
+antipickle.dump(data, 's3://mybucket/data.antipickle.gz')  # will additionally gzip
+
+
+loaded_date = antipickle.load('s3://mybucket/data.antipickle.gz') # or local file
+```
+
+
+<!---
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+- [Comparison](#Comparison)
+
+--->
+
+
+To download/upload you need an additional dependency: 
+
+- s3: `pip install s3fs`.
+- gcs: `pip install gcsfs`.
+- ssh: `pip install sshfs`.
+ 
+
+
+## Batteries included:
+
+
+Here is a simple example of what antipickle can save/load:
+
+```python
+data = {
+    'constants': [3.1415, 2.718, True, False, 42],
+    'with nones': [1, None, 0],
+    b'bytes': b"can be stored too!",
+    'nested lists and tuples': [[1, [2]], (1, 2, None), {'nested': 'dict'}],
+    ('tuple', 'as', 'key'): {'is_ok': True},
+    'numpy nd': np.zeros([3, 4], dtype='uint32'),
+}
+antipickle.dump(data, 'data.antipickle')
+```
+
+More formally, `antipickle` supports python pieces commonly used for computations:
+
+- `bytes`, `str`, `int`, `float`, `complex`, `bool`, and `None`
+- `list`, `tuple`, `set` (all of them are stored as different entities)
+- `dict` (including integer keys and `tuple` keys)
+- `numpy` arrays (native `.npy` format used; `dtype=O` not supported)
+- `pandas` series and dataframe (using parquet serialization via `pyarrow`)
+- `polars` series and dataframe (using parquet)
+- Any tree-formed structure of the above (no loops allowed)
+
+Configurable support: `dataclasses` and `pydantic` classes.
+
+
+For reference, other non-pythonic formats (json and its binary relatives) have problems with native types
+(not making difference between list and tuple) or encodings (not storing bytes)
+or collections (not allowing integers, bytes and tuples in dict keys). <br />
+Antipickle is python-centric and has it solved.
+
+
+
+## Installation
+
+```console
+pip install antipickle
+```
+
+## What is it for
+
+Let's set the expectation bar. **antipickle is**
+
+- not fast, but isn't slow either
+- not super-compact, but quite ok
+- restricted: it wasn't designed to serialize just anything, 
+  it focuses on common python types and cases for data folks
+
+
+At the same time, **antipickle is** 
+
+- safe
+- persistent
+- very convenient
+- modular and easy to extend 
+
+and thus suitable for data sharing and data preservation.
+
+
+## When to (not) use `pickle`
+
+`pickle` is designed for interprocess communication or as a temporary storage. 
+`pickle` has a good tradeoff of space- and time- efficiency and can serialize almost anything, including graphs with cycles.
+
+Name `pickle` suggests you could use it for long-term preservation of data, but that's not true:
+`pickle`'s serialization is tied to an internal object representation, which is not guaranteed 
+to be preserved in the next release (or even on a different OS).
+Developers of some packages (notably `scikit-learn`) provide some guarantees about being able to parse models 
+that were saved with previous 1-2 minor package releases, but that's an exception not a rule.
+
+Second, `pickle` is insecure. And unreadable. And pickles can be large. 
+During unpickling they can do anything python can, i.e. anything at all.
+So python docs [say it clear](https://docs.python.org/3/library/pickle.html): `Only unpickle data you trust!`.
+
+That said, `pickle` is extremely convenient and simple to use, and works as a short-term solution for many cases, 
+so we all (python data folks) kinda doing that wrong pickling thing from time to time, because of convenience.
+And because very few of us are ready to spend time on figuring out proper serialization.
+
+All comments above apply to `pickle`-like libs like `joblib`, `dill`, `cloudpickle`.
+
+## License
+
+`antipickle` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
+
+## Other
+
+`antipickle` builds upon `msgpack-python` (the only dependency).
+
+`antipickle` supports all maintained python versions (Python 3.7+)
+
