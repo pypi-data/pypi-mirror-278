@@ -1,0 +1,166 @@
+<mxfile host="app.diagrams.net" modified="2023-07-09T11:23:02.672Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" version="21.6.1" etag="GEPuVfw8XfQRZS4x4ybZ" type="device">
+  <diagram id="F751ZrRVDPeYgLkalyu2" name="Pagina-1">
+    <mxGraphModel dx="2257" dy="1939" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#111827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" style="background=red;" parent="0" />
+        <mxCell id="v_scaling" value="Scaling&#xa;Component" style="rounded=1;strokeColor=#FFFFFF;fillColor=#2D3748;fontColor=#FFFFFF;" parent="1" vertex="1">
+          <mxGeometry x="6.777999999999999" y="-164.53339999999997" width="67.776" height="34.666799999999995" as="geometry" />
+        </mxCell>
+        <mxCell id="v_feature_adding" value="Feature Adding&#xa;Component" style="rounded=1;strokeColor=#FFFFFF;fillColor=#2D3748;fontColor=#FFFFFF;" parent="1" vertex="1">
+          <mxGeometry x="35.55" y="-36.53339999999997" width="86.232" height="34.666799999999995" as="geometry" />
+        </mxCell>
+        <mxCell id="v_feature_removing" value="Feature Removing&#xa;Component" style="rounded=1;strokeColor=#FFFFFF;fillColor=#2D3748;fontColor=#FFFFFF;" parent="1" vertex="1">
+          <mxGeometry x="83.75" y="74.66660000000002" width="99.83999999999999" height="34.666799999999995" as="geometry" />
+        </mxCell>
+        <mxCell id="v_hypertuner" value="HyperTuner&#xa;Component" style="rounded=1;strokeColor=#FFFFFF;fillColor=#2D3748;fontColor=#FFFFFF;" parent="1" vertex="1">
+          <mxGeometry x="114.948" y="219.9966" width="70.34400000000001" height="34.666799999999995" as="geometry" />
+        </mxCell>
+        <mxCell id="v_config_file" value="Configuration&#xa;File" style="rounded=1;strokeColor=#FFFFFF;fillColor=#2D3748;fontColor=#FFFFFF;" parent="1" vertex="1">
+          <mxGeometry x="304.27700000000004" y="-164.53339999999997" width="78.786" height="34.666799999999995" as="geometry" />
+        </mxCell>
+        <mxCell id="v_component_service" value="ComponentService&#xa;Class" style="rounded=1;strokeColor=#FFFFFF;fillColor=#2D3748;fontColor=#FFFFFF;" parent="1" vertex="1">
+          <mxGeometry x="185.29199999999997" y="-258.9334" width="102.756" height="34.666799999999995" as="geometry" />
+        </mxCell>
+        <mxCell id="v_component_service_v_config_file" value="Creates" style="strokeColor=#FFFFFF;fontColor=#D1D5DB;curved=1;labelBackgroundColor=none;text-align=left;" parent="1" source="v_component_service" target="v_config_file" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="322.12" y="-167.88" as="sourcePoint" />
+            <mxPoint x="314.43" y="-174.82" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="261.18" y="-220.77999999999997" />
+              <mxPoint x="268.17" y="-215.03999999999996" />
+              <mxPoint x="275.76" y="-208.72000000000003" />
+              <mxPoint x="282.67" y="-202.8" />
+              <mxPoint x="293.14" y="-193.82" />
+              <mxPoint x="304.43" y="-183.8" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v_component_service_v_scaling" value="Controls" style="strokeColor=#FFFFFF;fontColor=#D1D5DB;curved=1;labelBackgroundColor=none;text-align=left;" parent="1" source="v_component_service" target="v_scaling" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="45.63" y="-167.88" as="sourcePoint" />
+            <mxPoint x="49.296" y="-177.39999999999998" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="174.75" y="-239.59000000000003" />
+              <mxPoint x="140.01" y="-236.10000000000002" />
+              <mxPoint x="97.705" y="-226.64999999999998" />
+              <mxPoint x="67.438" y="-202.8" />
+              <mxPoint x="59.252" y="-196.35000000000002" />
+              <mxPoint x="53.399" y="-186.76" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v_component_service_v_feature_adding" value="Controls" style="strokeColor=#FFFFFF;fontColor=#D1D5DB;curved=1;labelBackgroundColor=none;text-align=left;" parent="1" source="v_component_service" target="v_feature_adding" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="101.99" y="-40.14999999999998" as="sourcePoint" />
+            <mxPoint x="108.74" y="-47.839999999999975" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="200.82" y="-220.78999999999996" />
+              <mxPoint x="181.1" y="-208.14" />
+              <mxPoint x="157.79" y="-189.99" />
+              <mxPoint x="143.44" y="-168" />
+              <mxPoint x="115.88" y="-125.76999999999998" />
+              <mxPoint x="140.33" y="-101.98000000000002" />
+              <mxPoint x="115.67" y="-58" />
+              <mxPoint x="113.7" y="-54.5" />
+              <mxPoint x="111.33" y="-51.089999999999975" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v_component_service_v_feature_removing" value="Controls" style="strokeColor=#FFFFFF;fontColor=#D1D5DB;curved=1;labelBackgroundColor=none;text-align=left;" parent="1" source="v_component_service" target="v_feature_removing" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="174.45" y="71.33000000000001" as="sourcePoint" />
+            <mxPoint x="182.31" y="64.72" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="231.21" y="-220.61" />
+              <mxPoint x="224.4" y="-194.86" />
+              <mxPoint x="212.85" y="-148.62" />
+              <mxPoint x="206.44" y="-108.39999999999998" />
+              <mxPoint x="195.09" y="-37.18000000000001" />
+              <mxPoint x="228.88" y="-8.579999999999984" />
+              <mxPoint x="191.67" y="53.19999999999999" />
+              <mxPoint x="189.12" y="57.41999999999999" />
+              <mxPoint x="185.91" y="61.25" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v_component_service_v_hypertuner" value="Controls" style="strokeColor=#FFFFFF;fontColor=#D1D5DB;curved=1;labelBackgroundColor=none;text-align=left;" parent="1" source="v_component_service" target="v_hypertuner" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="224.5" y="237.257" as="sourcePoint" />
+            <mxPoint x="231.83" y="229.924" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="247.86" y="-220.73000000000002" />
+              <mxPoint x="257.09" y="-202.47000000000003" />
+              <mxPoint x="268.67" y="-174.33999999999997" />
+              <mxPoint x="268.67" y="-148.2" />
+              <mxPoint x="268.67" y="-148.2" />
+              <mxPoint x="268.67" y="-148.2" />
+              <mxPoint x="268.67" y="93" />
+              <mxPoint x="268.67" y="140.08" />
+              <mxPoint x="274.58" y="155.34" />
+              <mxPoint x="254.67" y="198" />
+              <mxPoint x="249.2" y="209.697" />
+              <mxPoint x="240.59" y="220.679" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v_scaling_v_feature_adding" value="Identifies and&#xa;applies the best&#xa;scaler" style="strokeColor=#FFFFFF;fontColor=#D1D5DB;curved=1;labelBackgroundColor=none;text-align=left;" parent="1" source="v_scaling" target="v_feature_adding" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="44.189" y="-39.920000000000016" as="sourcePoint" />
+            <mxPoint x="36.777" y="-47.129999999999995" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="32.087" y="-126.57999999999998" />
+              <mxPoint x="25.314" y="-107.98000000000002" />
+              <mxPoint x="18.63" y="-79.74000000000001" />
+              <mxPoint x="29.355" y="-58" />
+              <mxPoint x="31.288" y="-54.079999999999984" />
+              <mxPoint x="33.844" y="-50.45999999999998" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v_feature_adding_v_feature_removing" value="Adds recommended&#xa;features" style="strokeColor=#FFFFFF;fontColor=#D1D5DB;curved=1;labelBackgroundColor=none;text-align=left;" parent="1" source="v_feature_adding" target="v_feature_removing" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="94.959" y="71.18" as="sourcePoint" />
+            <mxPoint x="87.438" y="64.33000000000001" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="74.188" y="1.4700000000000273" />
+              <mxPoint x="71.821" y="16.50999999999999" />
+              <mxPoint x="70.913" y="37.31" />
+              <mxPoint x="79.31" y="53.19999999999999" />
+              <mxPoint x="81.452" y="57.25" />
+              <mxPoint x="84.246" y="60.96000000000001" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v_feature_removing_v_hypertuner" value="Implements various&#xa;algorithms to remove&#xa;poorly performing or&#xa;redundant features" style="strokeColor=#FFFFFF;fontColor=#D1D5DB;curved=1;labelBackgroundColor=none;text-align=left;" parent="1" source="v_feature_removing" target="v_hypertuner" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="169.08" y="237.378" as="sourcePoint" />
+            <mxPoint x="161.06" y="230.86" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="129.32" y="112.99000000000001" />
+              <mxPoint x="125.56" y="134.9" />
+              <mxPoint x="122.49" y="170.6" />
+              <mxPoint x="134.91" y="198" />
+              <mxPoint x="140.67" y="210.689" />
+              <mxPoint x="150.62" y="221.803" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v_hypertuner_v_hypertuner" value="Performs hyperparameter&#xa;tuning through a&#xa;three-round process,&#xa;storing trained models&#xa;and their performance" style="strokeColor=#FFFFFF;fontColor=#D1D5DB;curved=1;labelBackgroundColor=none;text-align=left;" parent="1" source="v_hypertuner" target="v_hypertuner" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="243.14" y="274.946" as="sourcePoint" />
+            <mxPoint x="252.87" y="271.842" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="243.14" y="241.054" />
+              <mxPoint x="253.33" y="242.379" />
+              <mxPoint x="260.87" y="248.027" />
+              <mxPoint x="260.87" y="258" />
+              <mxPoint x="260.87" y="264.389" />
+              <mxPoint x="257.78" y="269.003" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
