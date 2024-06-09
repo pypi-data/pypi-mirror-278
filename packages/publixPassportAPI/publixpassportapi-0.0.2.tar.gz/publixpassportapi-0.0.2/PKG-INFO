@@ -1,0 +1,39 @@
+Metadata-Version: 2.3
+Name: publixPassportAPI
+Version: 0.0.2
+Summary: A python API to interact with Publix Passport API. Get your schedule, and recent pay statement history.   https://github.com/AidanB446/publixPassportAPI
+Project-URL: Homepage, https://github.com/AidanB446/publixPassportAPI
+Project-URL: Issues, https://github.com/AidanB446/publixPassportAPI/issues
+Author-email: Aidan Bruner <aidanbruner789@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Requires-Dist: selenium==4.21.0
+Description-Content-Type: text/markdown
+
+
+# Publix Passport API
+
+API to interact with publix passport. Still under development, features are still being added.
+
+# WARNING
+
+Publix requires mutlifactor authentification on login. Currently the API will prompt you for the factors sent to you via SMS in the terminal.
+
+I recomend editing the init() function in 'publix.py' file to fit your needs.
+
+# Usage
+
+```python
+from publixPassportAPI.publix import User
+
+user = User('username', 'password')
+
+schedule = user.getSchedule() # returns hashmap
+payStatements = user.payStatementHistory() # returns list
+
+```
+
+
