@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "odoo-jid"
+version = "0.0.1"
+description = "Adds a JID field to partners, customers, and other contacts."
+authors = ["Sam Whited <sam@samwhited.com>"]
+license = "Apache-2.0"
+readme = "README.md"
+homepage = "https://www.atlbikeshed.com"
+repository = "https://codeberg.org/atlbikeshed/odoo-jid/"
+keywords = ["odoo", "odoo17", "xmpp", "jabber"]
+classifiers = [
+	"Development Status :: 5 - Production/Stable",
+	"Environment :: Plugins",
+	"Framework :: Odoo :: 17.0",
+	"Natural Language :: English",
+	"Operating System :: OS Independent",
+]
+packages = [{include = "jid"}]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://codeberg.org/atlbikeshed/odoo-jid/issues"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+
+[[tool.poetry.source]]
+name = "codeberg"
+url = "https://codeberg.org/api/packages/atlbikeshed/pypi"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
