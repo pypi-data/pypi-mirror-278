@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+streampot/__init__.py
+streampot/_client.py
+streampot.egg-info/PKG-INFO
+streampot.egg-info/SOURCES.txt
+streampot.egg-info/dependency_links.txt
+streampot.egg-info/requires.txt
+streampot.egg-info/top_level.txt
+tests/test_streampot.py
