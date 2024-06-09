@@ -1,0 +1,1 @@
+# *.anankecdn.com.br
