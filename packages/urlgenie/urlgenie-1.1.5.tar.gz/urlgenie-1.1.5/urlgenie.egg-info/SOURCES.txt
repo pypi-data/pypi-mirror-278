@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+urlgenie/TLDs.txt
+urlgenie/__init__.py
+urlgenie/config.json
+urlgenie/constants.py
+urlgenie/social_gens.py
+urlgenie/subdomains.json
+urlgenie/urlgenie.py
+urlgenie.egg-info/PKG-INFO
+urlgenie.egg-info/SOURCES.txt
+urlgenie.egg-info/dependency_links.txt
+urlgenie.egg-info/requires.txt
+urlgenie.egg-info/top_level.txt
