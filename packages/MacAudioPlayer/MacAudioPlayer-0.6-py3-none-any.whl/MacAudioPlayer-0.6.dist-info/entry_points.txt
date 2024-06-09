@@ -1,0 +1,2 @@
+[console_scripts]
+play = my_audio_player.player:play
