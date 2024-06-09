@@ -1,0 +1,3 @@
+from .. import DuckDBPyConnection
+
+def cognito(username: str, password: str, path: str=..., aws_region: str=..., **userpoolargs)->DuckDBPyConnection: ...
