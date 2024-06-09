@@ -1,0 +1,3 @@
+[console_scripts]
+eventum-studio=eventum_studio.__main__:main
+
