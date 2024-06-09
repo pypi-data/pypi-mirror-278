@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "kytool"
+version = "0.4.0"
+description = "Kytool is a tool for creatng"
+authors = ["Dmytro Maior <mayor4090@gmail.com>"]
+readme = "README.md"
+packages = [
+    {include = "kytool"},
+]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+check_untyped_defs = true
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.2"
+isort = "^5.12.0"
+mypy = "^1.6.0"
+pre-commit = "^3.5.0"
+black = "^24.4.2"
+httpx = "^0.25.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

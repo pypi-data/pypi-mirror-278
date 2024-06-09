@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: kytool
+Version: 0.4.0
+Summary: Kytool is a tool for creatng
+License: MIT
+Author: Dmytro Maior
+Author-email: mayor4090@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+Personal tool for creating backends for web applications. Can be used in desktop applications also.
+
