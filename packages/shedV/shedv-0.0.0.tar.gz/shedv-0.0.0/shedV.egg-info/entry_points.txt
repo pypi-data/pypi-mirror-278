@@ -1,0 +1,7 @@
+[console_scripts]
+shed-2-git = source.shed:turn_into_git_repo
+shed-add = source.shed:add_file
+shed-build = source.shed:build
+shed-create = source.shed:create_repository
+shed-delta = source.shed:show_difference
+shed-status = source.shed:show_status
