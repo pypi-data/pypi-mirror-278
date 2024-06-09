@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "ai-team-shared"
+version = "0.1.0"
+description = "AI-Team Shared package including models and utilities"
+authors = ["Martin Jiang <mj@martianmobile.com>"]
+readme = "README.md"
+license = "MIT"
+homepage = "https://martianmobile.com"
+# Does not have repo yet
+#repository = "https://github.com/martianmobile/ai-team-shared"
+keywords = ["ai", "machine-learning", "auto-coding", "project-management"]
+
+[tool.poetry.dependencies]
+python = "^3.9.16"
+pydantic = "^2.7.0"
+sqlalchemy = "^2.0.29"
+sqlmodel = "^0.0.16"
+alembic = "^1.13.1"
+pydantic-settings = "^2.2.1"
+# psycopg2-binary is required for connecting to PostgreSQL server during migration
+psycopg2-binary = "^2.9.9"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.5.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+files = ["ai_team_shared/"]
+
+ignore_missing_imports = true
+no_implicit_optional = true
+warn_unused_ignores = true
+warn_return_any = true
+disallow_untyped_defs = true
+
+plugins = [
+    "pydantic.mypy"
+]
+
+[tool.pydantic-mypy]
+init_forbid_extra = true
+init_typed = true
+warn_required_dynamic_aliases = true
+warn_untyped_fields = true
