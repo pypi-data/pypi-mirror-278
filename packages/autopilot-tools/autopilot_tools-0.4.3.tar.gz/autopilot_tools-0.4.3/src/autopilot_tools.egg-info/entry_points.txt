@@ -1,0 +1,3 @@
+[console_scripts]
+autopilot-configurator = autopilot_tools.utilities.autopilot_configurator:run_configurator
+test-scenario = autopilot_tools.utilities.test_scenario:run_scenario
