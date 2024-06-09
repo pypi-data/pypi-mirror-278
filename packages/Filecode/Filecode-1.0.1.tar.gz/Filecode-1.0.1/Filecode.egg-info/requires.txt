@@ -1,0 +1,8 @@
+peppercorn
+pandas
+
+[dev]
+check-manifest
+
+[test]
+coverage
