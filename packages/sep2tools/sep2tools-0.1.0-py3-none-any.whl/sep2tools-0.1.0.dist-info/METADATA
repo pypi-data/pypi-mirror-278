@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: sep2tools
+Version: 0.1.0
+Summary: Useful functions for working with IEEE 2030.5 (SEP2)
+Author-email: Alex Guinman <alex@guinman.id.au>
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Requires-Dist: cryptography
+Requires-Dist: asn1
+Requires-Dist: python-dateutil
+Requires-Dist: ruff ; extra == "test"
+Requires-Dist: pytest >=2.7.3 ; extra == "test"
+Requires-Dist: pytest-cov ; extra == "test"
+Requires-Dist: mypy ; extra == "test"
+Project-URL: Source, https://github.com/aguinane/SEP2-Tools
+Provides-Extra: test
+
+# SEP2-Tools
+This library provides some useful functions for working with IEEE 2030.5 (SEP2).
+
