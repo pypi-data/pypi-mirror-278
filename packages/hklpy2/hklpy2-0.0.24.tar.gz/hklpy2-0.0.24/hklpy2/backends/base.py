@@ -1,0 +1,254 @@
+"""
+Backend: abstract base class
+
+.. autosummary::
+
+    ~SolverBase
+"""
+
+import logging
+from abc import ABC
+from abc import abstractmethod
+
+from .. import __version__
+from ..operations.lattice import Lattice
+from ..operations.reflection import Reflection
+from ..operations.sample import Sample
+
+logger = logging.getLogger(__name__)
+
+# TODO: move to misc
+IDENTITY_MATRIX_3X3 = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
+
+
+class SolverBase(ABC):
+    """
+    Base class for all |hklpy2| |solver| classes.
+
+    .. rubric:: Parameters
+
+    * ``geometry``: (str) Name of geometry.
+    * ``mode``: (str) Name of operating mode.  (default: current mode)
+
+    Example::
+
+        import hklpy2
+
+        class MySolver(hklpy2.SolverBase):
+            ...
+
+    .. note:: :class:`~SolverBase`, an `abstract base
+        class <https://docs.python.org/3/library/abc.html#abc.ABC>`_,
+        cannot not be used directly by |hklpy2| users.
+
+    As the parent class for all custom :index:`Solver` classes,
+    :class:`~SolverBase` defines the methods and attributes to be written
+    that will connect |hklpy2| with the support library that defines
+    specific diffractometer geometries and the computations for
+    using them.  Subclasses should implement each of these methods
+    as best fits the underlying support library.
+
+    .. seealso:: :ref:`api.solvers.hkl_soleil` & :ref:`api.solvers.no_op`
+
+    .. rubric:: Python Methods
+
+    .. autosummary::
+
+        ~addReflection
+        ~calculate_UB
+        ~extra_axis_names
+        ~forward
+        ~geometries
+        ~inverse
+        ~pseudo_axis_names
+        ~real_axis_names
+        ~refineLattice
+        ~removeAllReflections
+
+    .. rubric:: Python Properties
+
+    .. autosummary::
+
+        ~geometry
+        ~lattice
+        ~mode
+        ~modes
+        ~sample
+        ~UB
+    """
+
+    name = "base"
+    """Name of this Solver."""
+
+    version = __version__
+    """Version of this Solver."""
+
+    def __init__(
+        self,
+        geometry: str,
+        *,
+        mode: str = "",  # "": accept solver's default mode
+        **kwargs,
+    ) -> None:
+        self.geometry = geometry
+        self.mode = mode
+        self._sample = None
+
+        logger.debug("geometry=%s, kwargs=%s", repr(geometry), repr(kwargs))
+
+    def __repr__(self) -> str:
+        # fmt: off
+        args = [
+            f"{s}={getattr(self, s)!r}"
+            for s in "name version geometry".split()
+        ]
+        # fmt: on
+        return f"{self.__class__.__name__}({', '.join(args)})"
+
+    @abstractmethod
+    def addReflection(self, reflection: Reflection) -> None:
+        """Add coordinates of a diffraction condition (a reflection)."""
+
+    @abstractmethod
+    def calculate_UB(
+        self,
+        r1: Reflection,
+        r2: Reflection,
+    ) -> list[list[float]]:
+        """
+        Calculate the UB (orientation) matrix with two reflections.
+
+        The method of Busing & Levy, Acta Cryst 22 (1967) 457.
+        """
+        return self.UB
+
+    @property
+    @abstractmethod
+    def extra_axis_names(self) -> list[str]:
+        """Ordered list of any extra axis names (such as x, y, z)."""
+        # Do NOT sort.
+        return []
+
+    @abstractmethod
+    def forward(self, pseudos: dict) -> list[dict[str, float]]:
+        """Compute list of solutions(reals) from pseudos (hkl -> [angles])."""
+        # based on geometry and mode
+        return [{}]
+
+    @classmethod
+    @abstractmethod
+    def geometries(cls) -> list[str]:
+        """
+        Ordered list of the geometry names.
+
+        EXAMPLES::
+
+            >>> from hklpy2 import get_solver
+            >>> Solver = get_solver("no_op")
+            >>> Solver.geometries()
+            []
+            >>> solver = Solver("TH TTH Q")
+            >>> solver.geometries()
+            []
+        """
+        return []
+
+    @property
+    @abstractmethod
+    def geometry(self) -> str:
+        """
+        Name of selected diffractometer geometry.
+
+        Cannot be changed once solver is created.  Instead, make a new solver
+        for each geometry.
+        """
+        return self._geometry
+
+    @geometry.setter
+    @abstractmethod
+    def geometry(self, value: str):
+        self._geometry = value
+
+    @abstractmethod
+    def inverse(self, reals: dict) -> dict[str, float]:
+        """Compute tuple of pseudos from reals (angles -> hkl)."""
+
+    @property
+    def lattice(self) -> object:
+        """
+        Crystal lattice parameters.  (Not used by this |solver|.)
+        """
+        return self._lattice
+
+    @lattice.setter
+    def lattice(self, value: Lattice):
+        if not isinstance(value, Lattice):
+            raise TypeError(f"Must supply Lattice object, received {value!r}")
+        self._lattice = value
+
+    @property
+    def mode(self) -> str:
+        """
+        Diffractometer geometry operation mode for :meth:`forward()`.
+
+        A mode defines which axes will be modified by the
+        :meth:`forward` computation.
+        """
+        try:
+            self._mode
+        except AttributeError:
+            self._mode = ""
+        return self._mode
+
+    @mode.setter
+    def mode(self, value: str):
+        from .. import check_value_in_list  # avoid circular import here
+
+        check_value_in_list("Mode", value, self.modes, blank_ok=True)
+        self._mode = value
+
+    @property
+    @abstractmethod
+    def modes(self) -> list[str]:
+        """List of the geometry operating modes."""
+        return []
+
+    @property
+    @abstractmethod
+    def pseudo_axis_names(self) -> list[str]:
+        """Ordered list of the pseudo axis names (such as h, k, l)."""
+        # Do NOT sort.
+        return []
+
+    @property
+    @abstractmethod
+    def real_axis_names(self) -> list[str]:
+        """Ordered list of the real axis names (such as th, tth)."""
+        # Do NOT sort.
+        return []
+
+    @abstractmethod
+    def refineLattice(self, reflections: list[Reflection]) -> Lattice:
+        """Refine the lattice parameters from a list of reflections."""
+
+    @abstractmethod
+    def removeAllReflections(self) -> None:
+        """Remove all reflections."""
+
+    @property
+    def sample(self) -> object:
+        """
+        Crystalline sample.
+        """
+        return self._sample
+
+    @sample.setter
+    def sample(self, value: Sample):
+        if not isinstance(value, Sample):
+            raise TypeError(f"Must supply Sample object, received {value!r}")
+        self._sample = value
+
+    @property
+    def UB(self):
+        """Orientation matrix (3x3)."""
+        return IDENTITY_MATRIX_3X3

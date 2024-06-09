@@ -1,0 +1,11 @@
+ipython
+markupsafe
+myst-parser
+nbsphinx
+ophyd
+pydata-sphinx-theme
+setuptools >=69
+setuptools-scm >=8
+sphinx >=7
+sphinx-design
+sphinx-tabs
