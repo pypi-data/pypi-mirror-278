@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+canu/__init__.py
+canu/version.py
+canu.egg-info/PKG-INFO
+canu.egg-info/SOURCES.txt
+canu.egg-info/dependency_links.txt
+canu.egg-info/top_level.txt
+canu/functions/__init__.py
+canu/functions/generate_image.py
+canu/functions/retrieve_from_web.py
