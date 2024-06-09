@@ -1,0 +1,1 @@
+SELECT * FROM public.enc WHERE country = 'Denmark'
