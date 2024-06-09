@@ -1,0 +1,10 @@
+LICENCE
+README.md
+pyproject.toml
+django_typeid_field.egg-info/PKG-INFO
+django_typeid_field.egg-info/SOURCES.txt
+django_typeid_field.egg-info/dependency_links.txt
+django_typeid_field.egg-info/requires.txt
+django_typeid_field.egg-info/top_level.txt
+typeid_field/__init__.py
+typeid_field/fields.py
