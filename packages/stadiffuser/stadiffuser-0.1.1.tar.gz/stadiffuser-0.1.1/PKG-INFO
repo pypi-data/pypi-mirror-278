@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: stadiffuser
+Version: 0.1.1
+Summary: A versatile simulation framework for spatial transcriptomics data
+Author: Chihao Zhang
+Author-email: zhangchihao11@outlook.com
+Requires-Python: >=3.8.0
+License-File: LICENSE.txt
+Requires-Dist: scanpy<1.11,>=1.9.3
+Requires-Dist: scikit-learn<1.4,>=1.3.0
+Requires-Dist: scipy>=1.10.1
+Requires-Dist: torch>=1.13.1
+Requires-Dist: torch-geometric>=2.3.1
+Requires-Dist: diffusers<0.18,>=0.17.1
+Requires-Dist: tqdm>=4.65.0
+Requires-Dist: ipywidgets<8.0,>=7.0.0
+Requires-Dist: jupyter>=1.0.0
+Provides-Extra: rpy2
+Requires-Dist: rpy2>=3.5.13; extra == "rpy2"

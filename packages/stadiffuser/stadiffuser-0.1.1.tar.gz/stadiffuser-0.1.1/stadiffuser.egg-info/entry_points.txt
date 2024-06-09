@@ -1,0 +1,2 @@
+[console_scripts]
+stadiffuser-cli = scripts.cli:main
