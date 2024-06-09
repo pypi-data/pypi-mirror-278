@@ -1,0 +1,144 @@
+Metadata-Version: 2.1
+Name: cda_download
+Version: 0.0.3
+Summary: A library that helps downloading videos from cda.pl
+Home-page: http://github.com/paichiwo/cda_download
+Author: Lukasz Zerucha
+Author-email: Lukasz Zerucha <lzerucha@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2024 Lukasz Zerucha
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/paichiwo/cda_download
+Project-URL: Issues, https://github.com/paichiwo/cda_download/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: selenium
+Requires-Dist: beautifulsoup4
+
+# CDA_download
+
+![PyPI - Downloads](https://img.shields.io/pypi/dm/cda_download)
+
+
+### A library that helps download videos from CDA website
+
+
+
+### Installation:
+`pip install pycda`
+
+### How to use:
+```python
+from pycda import PyCDA
+
+url = "CDA url"
+
+cda = PyCDA(url=url)
+cda.download()
+```
+
+
+### Additional features:
+
+
+#### Progress callback
+If you need to get progress like percentage or download speed, you can create a function 
+and pass as a parameter in the download method.
+
+```python
+from datetime import datetime, timedelta
+from pycda import PyCDA
+
+download_start_time = datetime.now()
+last_update_time = datetime.now()
+
+def show_progress(count, block_size, total_size):
+        global last_update_time
+
+        # download speed
+        elapsed_time = (datetime.now() - download_start_time).total_seconds()
+        download_speed = (count * block_size) / (1024 * elapsed_time)
+
+        # progress
+        progress = min(1.0, count * block_size / total_size)
+
+        current_time = datetime.now()
+        if (current_time - last_update_time) >= timedelta(seconds=1):
+            print(f'\rDownloading: {progress:.2f} complete', end='')
+            print(f' | Speed: {download_speed:.2f} KB/s', end='')
+            last_update_time = current_time
+
+
+url = "CDA url"
+
+cda = PyCDA(url=url)
+cda.download(on_progress_callback=show_progress)
+```
+
+
+#### Filename
+You can pass filename as a parameter in the form of a string to specify download location.
+Using download method without the `filename` parameter will save the file to where your script is located.
+
+```python
+from pycda import PyCDA
+
+url = "cda url"
+
+cda = PyCDA(url=url)
+output_path = "D:/Downloads/title.mp4"
+
+cda.download(filename=output_path)
+```
+
+
+#### Other data
+Apart from downloading, you can access other data about CDA video:
+
+```python
+from pycda import PyCDA
+
+url = "CDA url"
+cda = PyCDA(url=url)
+
+# video title
+print(cda.title())
+
+# video description
+print(cda.description())
+
+# video publish date
+print(cda.publish_date())
+
+# video duration
+print(cda.duration())
+
+# file size in bytes
+print(cda.filesize())
+
+# thumbnail image
+print(cda.thumbnail())
+```
