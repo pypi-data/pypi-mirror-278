@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+dynamic = ["version"]
+name = "absbox"
+description = "an analytical library for cashflow modeling on ABS/MBS products"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file="LICENSE"}
+authors = [
+  {email = "always.zhang@gmail.com"},
+  {name = "xiaoyu, zhang"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta"
+    ,"Environment :: Console"
+    ,"Intended Audience :: Developers"
+    ,"Intended Audience :: Financial and Insurance Industry"
+    ,"Topic :: Software Development :: Build Tools"
+    ,"Topic :: Software Development :: Libraries"
+    ,"License :: OSI Approved :: MIT License"
+]
+
+dependencies = [
+    "pandas",
+    "numpy",
+    "matplotlib",
+    "requests",
+    "toolz",
+    "rich",
+    "lenses",
+    "pyspecter",
+    "graphviz",
+    "schema",
+    "dateparser",
+    "pyxirr",
+    "more-itertools"
+]
+
+keywords = ["cashflow", "abs", "mbs", "cashflow model", "rmbs" ,"clo", "cashflow engine","structuring", "srt"]
+
+[project.urls]
+homepage = "https://absbox.org"
+documentation = "https://absbox-doc.readthedocs.io/en/latest/"
+repository = "https://github.com/yellowbean/AbsBox/"
+changelog = "https://github.com/yellowbean/AbsBox/blob/main/CHANGES.md"
+
+
+
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q --color=yes"
+testpaths = [
+    "absbox/tests",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "jsondiff",
+    "deepdiff",
+]
