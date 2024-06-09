@@ -1,0 +1,45 @@
+import socket
+
+class Connection:
+    def __init__(self, connection, address, name=""):
+        self.connection = connection
+        self.address = address
+        self.name = name
+        self.isbusy = False
+        self.isonline = True
+    def CheckOnline(self):
+        try:
+            self.connection.sendall(b"<ONLINE?>")
+            data = self.connection.recv(1024)
+            if not data.decode() == "":
+                self.isonline = True
+                return True
+        except ConnectionAbortedError:
+            pass
+        except ConnectionResetError:
+            pass
+        self.isonline = False
+        return False
+    def SetTimeout(self, timeout):
+        self.connection.settimeout(timeout)
+    def Recieve(self, amount):
+        return self.connection.recv(amount)
+    def RecieveAll(self):
+        bytes = bytearray()
+        while True:
+            data = self.connection.recv(1024)
+            if not data:
+                break
+            else:
+                bytes.extend(data)
+        return bytes
+    def Send(self, data):
+        self.connection.sendall(data)
+    def SendFile(self, filename):
+        file = open(filename, "r")
+        data = file.read(4096)
+        while data:
+            self.connection.sendall(data.encode("utf-8"))
+            data = file.read(4096)
+    def EndConnection(self):
+        self.connection.close()
