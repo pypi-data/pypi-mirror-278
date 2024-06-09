@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: socket.io-redis-emitter
+Version: 0.0.3
+Summary: An asynchronous Redis-based Socket.IO emitter for Python
+Home-page: https://github.com/roma-glushko/socket.io-redis-emitter
+License: MIT
+Keywords: socket.io,redis,websocket,emitter,library
+Author: Roman Glushko
+Author-email: roman.glushko.m@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: msgpack (==1.0.8)
+Requires-Dist: pydantic (==2.4.2)
+Requires-Dist: redis[hiredis] (==5.0.2)
+Project-URL: Repository, https://github.com/roma-glushko/socket.io-redis-emitter
+Description-Content-Type: text/markdown
+
+# Socket.IO Redis Emitter
+
+This is an asynchronous Redis-based [Socket.IO emitter](https://socket.io/docs/v4/emitting-events/) for Python.
+
+## Installation
+
+```bash
+pip install socket.io-redis-emitter
+# or
+poetry add socket.io-redis-emitter
+```
+
+## Features
+
+- High quality, typed and modern Python codebase
+- Clean, concise and Pythonic API
+- Uses [redis](https://redis.readthedocs.io/en/latest/) as a Redis client
+- Supports namespaces, rooms and regular Socket.IO message emitting
+
+```python
+import redis
+from socketio_emitter import Emitter
+
+client = redis.Redis(...)
+emitter = Emitter(client=client)
+
+async with emitter.namespace("/nsp") as nsp:
+    async with nsp.rooms("room1", "room2") as clients:
+        await clients.emit("machineStatus", {"status": "ok"})
+```
+
+- Remote requests to join, leave rooms or to disconnect
+
+```python
+import redis
+from socketio_emitter import Emitter
+
+client = redis.Redis(...)
+emitter = Emitter(client=client)
+
+async with emitter.namespace("/nsp") as nsp:
+    async with nsp.rooms("room1", "room2") as clients:
+        await clients.join("room3")
+        # await clients.leave("room3")
+        # await clients.disconnect()
+```
+
