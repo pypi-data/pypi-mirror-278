@@ -1,0 +1,106 @@
+site_name: AioColck
+site_description: An asyncio-based scheduling framework designed for execution of periodic task with integrated support for dependency injection, enabling efficient and flexiable task management
+repo_url: https://github.com/ManiMozaffar/aioclock
+site_url: https://ManiMozaffar.github.io/aioclock
+site_author: Mani Mozaffar
+repo_name: ManiMozaffar/aioclock
+copyright: Maintained by <a href="https://ManiMozaffar.com">Mani Mozaffar</a>.
+
+theme:
+  name: "material"
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: indigo
+      toggle:
+        icon: material/lightbulb-outline
+        name: "Switch to dark mode"
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: indigo
+      toggle:
+        icon: material/lightbulb
+        name: "Switch to light mode"
+  features:
+    - content.code.annotate
+    - content.tabs.link
+    - content.code.copy
+    - announce.dismiss
+    - navigation.tabs
+    - search.suggest
+    - search.highlight
+  # logo: assets/logo-white.svg
+  # favicon: assets/favicon.png
+
+edit_uri: ""
+
+# https://www.mkdocs.org/user-guide/configuration/#validation
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+
+extra_css:
+  - "extra/tweaks.css"
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.extra
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+watch:
+  - aioclock
+plugins:
+  - mike:
+      alias_type: symlink
+      canonical_version: latest
+  - search:
+  - mkdocstrings:
+      handlers:
+        python:
+          paths:
+            - aioclock
+          options:
+            members_order: source
+            separate_signature: true
+            docstring_options:
+              ignore_init_summary: true
+            merge_init_into_class: true
+            show_signature_annotations: true
+            signature_crossrefs: true
+
+  - mkdocs-simple-hooks:
+      hooks:
+        on_pre_build: "docs.plugins:on_pre_build"
+        on_files: "docs.plugins:on_files"
+        on_page_markdown: "docs.plugins:on_page_markdown"
+
+nav:
+  - Introduction: index.md
+  - Documentation:
+      - Basic Usage:
+          - AioClock Application: api/getting_started.md
+          - Triggers: api/triggers.md
+
+      - Advance Usage:
+          - Task: api/task.md
+          - External API: api/external_api.md
+          - Plugins (FastAPI included): api/plugin.md
+          - Using beside FastAPI: examples/fastapi.md
+          - Using beside Message Brokers: examples/brokers.md
+
+      - Alternatives: alternative.md
