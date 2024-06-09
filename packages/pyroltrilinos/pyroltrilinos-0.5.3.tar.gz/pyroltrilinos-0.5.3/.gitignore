@@ -1,0 +1,15 @@
+build/
+tags
+.cache
+*pyc
+compile_commands.json
+docs/_build/
+*.pvd
+*.vtu
+*.pvtu
+docs/examples
+src/PyROL.egg-info
+ROL.egg-info/
+.pytest_cache/
+dist/
+*.so
