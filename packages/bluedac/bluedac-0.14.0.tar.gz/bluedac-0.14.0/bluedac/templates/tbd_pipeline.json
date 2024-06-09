@@ -1,0 +1,24 @@
+{
+    "release_mode": "tag",
+    "commit_fb": [
+        "launch_unit_tests"
+    ],
+    "merge_request": [
+        "launch_unit_tests",
+        "deploy_testing",
+        "launch_integration_tests"
+    ],
+    "commit_main": [
+        "launch_unit_tests",
+        "deploy_testing",
+        "launch_integration_tests",
+        "launch_e2e_tests",
+        "deploy_staging"
+    ],
+    "release": [
+        "launch_unit_tests",
+        "launch_integration_tests",
+        "launch_e2e_tests",
+        "deploy_production"
+    ]
+}
