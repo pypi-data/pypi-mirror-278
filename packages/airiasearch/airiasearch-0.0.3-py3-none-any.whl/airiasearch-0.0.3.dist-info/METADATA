@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: airiasearch
+Version: 0.0.3
+Summary: airiasearch is a powerful tool designed by team AIRIA that utilizes airiadb to deliver intent-based search capabilities. By interpreting the underlying intent behind user queries, airiasearch provides more accurate and relevant search results, enhancing the efficiency and effectiveness of information retrieval.
+Home-page: https://github.com/airia-in/airiasearch.git
+Author: Ashutosh Renu
+Author-email: ashutosh@airia.in
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pymilvus (==2.4.3)
+Requires-Dist: scikit-learn (==1.5.0)
+Requires-Dist: numpy (==1.26.4)
+Requires-Dist: requests (==2.32.3)
+Requires-Dist: python-decouple (==3.8)
+Requires-Dist: typing
+
+# airiasearch
