@@ -1,0 +1,8 @@
+graft src
+
+graft src/things
+
+include *.txt
+include *.css
+include *.js
+include *.ico
