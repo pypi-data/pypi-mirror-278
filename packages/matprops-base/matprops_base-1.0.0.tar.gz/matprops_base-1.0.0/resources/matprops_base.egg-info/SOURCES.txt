@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+resources/configs/__init__.py
+resources/configs/constants.py
+resources/configs/props.py
+resources/matprops_base.egg-info/PKG-INFO
+resources/matprops_base.egg-info/SOURCES.txt
+resources/matprops_base.egg-info/dependency_links.txt
+resources/matprops_base.egg-info/requires.txt
+resources/matprops_base.egg-info/top_level.txt
+resources/utils/__init__.py
+resources/utils/figure.py
+resources/utils/props.py
