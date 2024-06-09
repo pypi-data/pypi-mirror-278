@@ -1,0 +1,22 @@
+[project]
+name = "nonebot-plugin-figure"
+version = "0.1.0"
+description = "带有猜数字功能的猜数字"
+authors = [
+    { name = "万俊辉", email = "2401128923@qq.com" },
+]
+dependencies = []
+requires-python = ">=3.8"
+readme = "README.md"
+
+[project.license]
+text = "apl3.0"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
