@@ -1,0 +1,58 @@
+"""Constants for metrics module."""
+
+SCORE_TYPES = {
+    "regression": {
+        "minimize": [
+            "mean_squared_error",
+            "mean_absolute_error",
+            "mean_squared_log_error",
+            "median_absolute_error",
+            "mean_absolute_percentage_error",
+            "max_error",
+            "mean_poisson_deviance",
+            "mean_gamma_deviance",
+            "mean_tweedie_deviance",
+            "mean_pinball_loss",
+            "d2_tweedie_score",
+            "d2_absolute_error_score",
+            "d2_pinball_score",
+        ],
+        "maximize": [
+            "r2_score",
+            "explained_variance_score",
+        ],
+    },
+    "classification": {
+        "maximize": [
+            "accuracy_score",
+            "average_precision_score",
+            "balanced_accuracy_score",
+            "f1_score",
+            "fbeta_score",
+            "jaccard_score",
+            "precision_score",
+            "recall_score",
+            "roc_auc_score",
+            "top_k_accuracy_score",
+            "adjusted_mutual_info_score",
+            "completeness_score",
+            "fowlkes_mallows_score",
+            "homogeneity_score",
+            "mutual_info_score",
+            "normalized_mutual_info_score",
+            "v_measure_score",
+            "adjusted_rand_score",
+            "label_ranking_average_precision_score",
+            "label_ranking_loss",
+        ],
+        "minimize": [
+            "hamming_loss",
+            "hinge_loss",
+            "log_loss",
+            "zero_one_loss",
+            "brier_score_loss",
+            "cohen_kappa_score",
+            "matthews_corrcoef",
+        ],
+    },
+}
