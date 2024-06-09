@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: ArcusModbus
+Version: 0.0.3
+Summary: Titan IMX servo controller
+Author: Daniel Curtis
+Author-email: dwc00012@mix.wvu.edu
+Keywords: python,Arcus Titan IMX
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+
+Package for controlling Arcus Titan IMX servos over Ethernet using Modbus TCP
