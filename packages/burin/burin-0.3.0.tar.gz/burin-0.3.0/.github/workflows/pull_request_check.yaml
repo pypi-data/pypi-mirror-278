@@ -1,0 +1,9 @@
+name: Pull Request Checks
+run-name: Check - ${{ github.event.pull_request.title }}
+on: pull_request
+jobs:
+    call_test_and_build:
+        name: Call test and build
+        uses: ./.github/workflows/test_and_build.yaml
+        secrets:
+            CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

@@ -1,0 +1,50 @@
+name: Test and Build
+run-name: Running linter, tests, and builds
+on:
+    workflow_dispatch:
+    workflow_call:
+        secrets:
+            CODECOV_TOKEN:
+                required: false
+jobs:
+    test_and_build:
+        name: Run tests and builds
+        runs-on: ${{ matrix.os }}
+        strategy:
+            matrix:
+                os: [ubuntu-latest, windows-latest, macos-latest]
+        steps:
+            # Setup
+            - name: Checkout repo
+              uses: actions/checkout@v4
+              with:
+                persist-credentials: false
+            - name: Setup Python
+              uses: actions/setup-python@v5
+              with:
+                python-version: "3.12"
+            - name: Install Hatch
+              run: pip install hatch~=1.12.0
+            # Lint and test with coverage
+            - name: Lint Check
+              run: hatch run lint
+            - name: Test
+              run: hatch run test:cov --branch
+            - name: Report Coverage
+              run: |
+                hatch run coverage:report
+                hatch run coverage:xml
+            - name: Upload Coverage
+              uses: codecov/codecov-action@v4
+              with:
+                file: ./coverage.xml
+                token: ${{ secrets.CODECOV_TOKEN }}
+            # Test build of docs and packages
+            - name: Test HTML Doc Build
+              run: hatch run doc:make html
+            - name: Test EPUB Doc Build
+              run: hatch run doc:make epub
+            - name: Test LateX Doc Build
+              run: hatch run doc:make latex
+            - name: Test Build
+              run: hatch build

@@ -1,0 +1,17 @@
+coverage:
+    range: "50...80"
+    status:
+        project:
+            default:
+                informational: true
+                paths:
+                    - "src"
+                    - "tests"
+        patch:
+            default:
+                informational: true
+                paths:
+                    - "src"
+                    - "tests"
+github_checks:
+    annotations: false

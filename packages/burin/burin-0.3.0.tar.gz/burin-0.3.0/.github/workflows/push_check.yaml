@@ -1,0 +1,12 @@
+name: Push Checks
+run-name: Check - ${{ github.event.head_commit.message }}
+on:
+    push:
+        branches:
+            - main
+jobs:
+    call_test_and_build:
+        name: Call test and build
+        uses: ./.github/workflows/test_and_build.yaml
+        secrets:
+            CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

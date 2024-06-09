@@ -1,0 +1,139 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "burin"
+authors = [{name = "William Foster"}]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Natural Language :: English",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries"
+]
+description = "Logging with added features and convenience."
+dynamic = ["version"]
+keywords = ["logging"]
+license-files = {paths = ["LICENSE"]}
+readme = "README.rst"
+requires-python = ">=3.7"
+
+[project.optional-dependencies]
+# Dev and Doc dependecies only support latest supported Python version
+dev = [
+    "ruff ~=0.4.8"
+]
+doc = [
+    "Sphinx ~=7.3.7",
+    "sphinx-rtd-theme ~=2.0.0"
+]
+# Test dependecies must support all supported Python versions
+test = [
+    "coverage[toml] ~=7.2.7; python_version =='3.7'",
+    "coverage[toml] ~=7.5.3; python_version >='3.8' and python_version < '3.11'",
+    "coverage ~=7.5.3; python_version >='3.11'",
+    "pytest ~=7.4.4; python_version =='3.7'",
+    "pytest ~=8.2.2; python_version >='3.8'"
+]
+
+
+[project.urls]
+Changelog = "https://github.com/PeacefullyDisturbed/burin/blob/main/CHANGELOG.rst"
+Discussions = "https://github.com/PeacefullyDisturbed/burin/discussions"
+Documentation = "https://burin.readthedocs.io/"
+Issues  = "https://github.com/PeacefullyDisturbed/burin/issues"
+Source = "https://github.com/PeacefullyDisturbed/burin"
+
+### Coverage ###
+
+[tool.coverage.run]
+dynamic_context = "test_function"
+parallel = true
+source_pkgs = ["burin", "tests"]
+
+[tool.coverage.paths]
+burin = ["src/burin", "*/burin/src/burin"]
+tests = ["tests", "*/burin/tests"]
+
+[tool.coverage.report]
+show_missing = true
+
+### Hatch ###
+
+[tool.hatch.envs.coverage]
+features = ["test"]
+
+[tool.hatch.envs.coverage.scripts]
+combine = "- coverage combine"
+report = [
+    "combine",
+    "coverage report {args}"
+]
+xml = [
+    "combine",
+    "coverage xml {args}"
+]
+
+[tool.hatch.envs.default]
+features = ["dev", "test"]
+
+[tool.hatch.envs.default.scripts]
+lint = "ruff check {args}"
+
+[tool.hatch.envs.doc]
+features = ["doc"]
+
+[tool.hatch.envs.doc.scripts]
+make = "cd docs && make {args:html}"
+
+[tool.hatch.envs.test]
+features = ["test"]
+
+[[tool.hatch.envs.test.matrix]]
+python = ["3.7", "3.8", "3.9", "3.10", "3.11", "3.12"]
+
+[tool.hatch.envs.test.scripts]
+cov = "coverage run {args} -m pytest"
+run = "pytest {args}"
+
+[tool.hatch.publish.index]
+disable = true
+
+[tool.hatch.version]
+path = "src/burin/__init__.py"
+
+### Ruff ###
+
+[tool.ruff]
+fix = false
+line-length = 119
+src = ["src", "test"]
+
+[tool.ruff.format]
+line-ending = "lf"
+
+[tool.ruff.lint]
+ignore = ["D2", "D4", "PLR0913", "S110", "S112", "SIM105"]
+select = ["A", "ARG", "B", "C4", "C90", "D", "E", "F", "PERF", "PL", "PT", "Q", "RET", "S", "SIM", "W", "YTT"]
+
+[tool.ruff.lint.flake8-pytest-style]
+fixture-parentheses = false
+mark-parentheses = false
+
+[tool.ruff.lint.per-file-ignores]
+"*/__init__.py" = ["F401"]
+"docs/conf.py" = ["A001", "E402"]
+"src/*" = ["PT"]
+"tests/*" = ["S101"]
+
+[tool.ruff.lint.pycodestyle]
+max-doc-length = 79
