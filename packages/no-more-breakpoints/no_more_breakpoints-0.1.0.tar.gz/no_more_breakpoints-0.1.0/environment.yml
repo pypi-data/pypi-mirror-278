@@ -1,0 +1,8 @@
+# This conda environment yaml is not used for development.
+# Rather, it is used to build a conda-based pre-commit hook.
+# See https://pre-commit.com/#conda for reference.
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - no-more-breakpoints=0.1.0

@@ -1,0 +1,20 @@
+[project]
+name = "no-more-breakpoints"
+version = "0.1.0"
+description = "Add a short description here"
+authors = ["kklein"]
+channels = ["conda-forge"]
+platforms = ["win-64", "linux-64", "osx-64", "osx-arm64"]
+
+
+[tasks]
+
+[dependencies]
+ripgrep = ">=14.1.0,<14.2"
+python = ">=3.12.3,<3.13"
+click = ">=8.1.7,<8.2"
+pytest = ">=8.1.2,<8.2"
+pip = ">=24.0,<25"
+pre-commit = ">=3.7.0,<3.8"
+conda = ">=24.3.0,<24.4"
+twine = ">=5.1.0,<5.2"
