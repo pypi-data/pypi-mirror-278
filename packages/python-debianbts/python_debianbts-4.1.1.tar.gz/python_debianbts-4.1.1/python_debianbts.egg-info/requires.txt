@@ -1,0 +1,13 @@
+
+[dev]
+build
+mkdocs
+mkdocs-material
+mkdocstrings[python]
+pytest
+pytest-cov
+pytest-xdist
+ruff
+wheel
+twine
+mypy
