@@ -1,0 +1,2 @@
+[mkdocs.plugins]
+vercel_pw = mkdocs_vercel_pw_plugin:VercelJsonModifierPlugin
