@@ -1,0 +1,60 @@
+Metadata-Version: 2.3
+Name: protocolmodel
+Version: 0.0.1b1
+Summary: Protocol model 
+Author: liqzz
+License-Expression: MIT
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.10
+Requires-Dist: pydantic
+Requires-Dist: werkzeug
+Description-Content-Type: text/markdown
+
+# Protocolmodel
+Protocol model for easy use
+```
+from protocolmodel.http import HTTPRequest,HttpUrl
+
+http_raw = """GET /Less-1/?id=xxx* HTTP/1.1
+Host: 127.0.0.1:8088
+Accept-Encoding: gzip, deflate, br
+Accept*: */*
+X-Forwarded-For: 127.0.0.1*
+Accept-Language: en-US;q=0.9,en;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.6312.122 Safari/537.36
+Connection: close
+Cache-Control: max-age=0
+
+xxxxxx"""
+
+http_reqeust = HTTPRequest.parse_from(http_raw, url="https://127.0.0.1:8088/Less-1/?id=xxx*")
+```
+
+result
+```
+http_reqeust.model_dump_json(indent=4))
+{
+    "http_version": "HTTP/1.1",
+    "scheme": "https",
+    "method": "GET",
+    "host": "127.0.0.1",
+    "url": "https://127.0.0.1:8088/Less-1/?id=xxx*",
+    "port": 8088,
+    "path": "/Less-1/?id=xxx*",
+    "headers": {
+        "Host": "127.0.0.1:8088",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept*": "*/*",
+        "X-Forwarded-For": "127.0.0.1*",
+        "Accept-Language": "en-US;q=0.9,en;q=0.8",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.6312.122 Safari/537.36",
+        "Connection": "close",
+        "Cache-Control": "max-age=0"
+    },
+    "content": "eHh4eHh4"
+}
+```
