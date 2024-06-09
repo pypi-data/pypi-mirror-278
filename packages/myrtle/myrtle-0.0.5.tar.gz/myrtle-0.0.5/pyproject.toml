@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "myrtle"
+version = "0.0.5"
+authors = [
+  { name="Brandon Rohrer", email="brohrer@gmail.com" },
+]
+description = "A benchmarking framework for real-time RL with multiple intermittent rewards"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "numpy",
+    "pacemaker-lite>=0.1.3",
+    "sqlite-logging",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
+
+[project.urls]
+Homepage = "https://codeberg.org/brohrer/myrtle"
+Documentation = "https://codeberg.org/brohrer/myrtle/src/branch/main/README.md"
+Repository = "https://codeberg.org/brohrer/myrtle.git"
