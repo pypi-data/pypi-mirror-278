@@ -1,0 +1,2 @@
+class GuardException(Exception):
+    pass
