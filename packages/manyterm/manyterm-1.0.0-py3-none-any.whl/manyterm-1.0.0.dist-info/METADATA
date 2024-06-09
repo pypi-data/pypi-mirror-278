@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: manyterm
+Version: 1.0.0
+Summary: manyterm - spawn multiple terminals to print to
+Author: Tyler Bowers
+Author-email: tylerebowers@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/tylerebowers/manyterm-python
+Project-URL: PyPI, https://pypi.org/project/manyterm/
+Keywords: python,terminal,print
+Classifier: Topic :: Terminals
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Manyterm
+Spawn multiple terminals to print to.  
+Compatible with Windows, Linux, and MacOS.    
+### Installation
+`pip install manyterm`
+### Usage
+```py
+import manyterm 
+
+t1 = manyterm.Terminal() # init a new window
+
+t1.print("Hello World") # print to the window
+
+t1.print("supercalifragilisticexpialidocious", end="") # default end="\n"
+
+t1.close() # close the window
+```
+### Description
+This program creates multiple terminals in python. New terminals can only be printed to (no input). `tests/test.py` contains an example of how to use this program. A server is used to print to client windows based on a uuid. When a new window object is made `manyterm.Terminal()` the program check to make sure that the server is running, then assigns itself a uuid, and then the program calls itself from a new terminal using the uuid as an argument. The new program contacts the server with its' uuid and the connection is made.
+## Windows 11
+![Picture showing windows example](tests/screenshot-win.png)
+## Linux (Ubuntu 23.10)
+![Picture showing windows example](tests/screenshot-linux.png)
+## MacOS Sonoma
+![Picture showing windows example](tests/screenshot-macos.jpg)
