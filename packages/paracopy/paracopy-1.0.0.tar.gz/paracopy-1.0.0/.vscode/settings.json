@@ -1,0 +1,48 @@
+{
+    "editor.formatOnSave": true,
+    "editor.rulers": [
+        80
+    ],
+    "python.languageServer": "Default",
+    "psi-header.config": {
+        "forceToTop": true,
+        "blankLinesAfter": 1,
+        "spacesBetweenYears": true,
+        "license": "AGPL-3.0-only",
+        "author": "Pierre-Yves Genest",
+        "initials": "P.-Y. G",
+        "authorEmail": "pyg@src.com",
+        "copyrightHolder": "Pierre-Yves Genest",
+        "creationDateZero": "asIs"
+    },
+    "psi-header.lang-config": [
+        {
+            "language": "python",
+            "begin": "\"\"\"",
+            "end": "\"\"\""
+        }
+    ],
+    "psi-header.templates": [
+        {
+            "language": "*",
+            "template": [
+                "Copyright (c) <<yeartoyear(fc)>> <<author>>.",
+                "",
+                "This file is part of ParaCopy.",
+                "",
+                "ParaCopy is free software: you can redistribute it and/or modify",
+                "it under the terms of the GNU Affero General Public License as",
+                "published by the Free Software Foundation, version 3 of the",
+                "License.",
+                "",
+                "ParaCopy is distributed in the hope that it will be useful,",
+                "but WITHOUT ANY WARRANTY; without even the implied warranty of",
+                "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the",
+                "GNU Affero General Public License for more details.",
+                "",
+                "You should have received a copy of the GNU Affero General Public License",
+                "along with ParaCopy. If not, see <https://www.gnu.org/licenses/>."
+            ]
+        }
+    ]
+}
