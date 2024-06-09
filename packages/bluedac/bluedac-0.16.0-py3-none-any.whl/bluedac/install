@@ -1,0 +1,27 @@
+#!/usr/bin/python
+import os
+import platform
+
+# Get shell in-use
+if platform.system() == "Linux":
+    if "zsh" in os.environ["SHELL"]:
+        config_file = ".zshrc"
+    elif "bashrc" in os.environ["SHELL"]:
+        config_file = ".bashrc"
+    else:
+        print("Your shell is not actually supported...")
+        exit()
+
+    # Exporting new path value
+    with open(f"{os.environ["HOME"]}/{config_file}", "a") as shell_config:
+        shell_config.write("\n# Adding BlueDAC to PATH\n")
+        shell_config.write(f"export PATH=$PATH:{os.getcwd()}/bin\n")
+        shell_config.write(f"export DAC_PATH={os.getcwd()}\n")
+
+    # Reloading shell to apply changes
+    os.system(f". {os.environ["HOME"]}/{config_file}")
+
+    print("✅ BlueDAC successfully installed!")
+
+else:
+    print("Your OS is not currently supported.")

@@ -1,0 +1,3 @@
+[console_scripts]
+dac=bluedac.dac:launch_dac
+
