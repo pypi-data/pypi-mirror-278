@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: cv-smart-house-camera
+Version: 0.1.9.4
+Summary: 
+Author: Your Name
+Author-email: you@example.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: aiohttp (>=3.9.5,<4.0.0)
+Requires-Dist: aiortc (>=1.9.0,<2.0.0)
+Requires-Dist: firebase-admin (>=6.5.0,<7.0.0)
+Requires-Dist: opencv-python (>=4.9.0.80,<5.0.0.0)
+Requires-Dist: starlette (>=0.37.2,<0.38.0)
+Requires-Dist: toml (>=0.10.2,<0.11.0)
+Requires-Dist: twirp (>=0.0.7,<0.0.8)
+Requires-Dist: uvicorn (>=0.29.0,<0.30.0)
+Description-Content-Type: text/markdown
+
+
