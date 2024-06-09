@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+manyterm/__init__.py
+manyterm/manyterm.py
+manyterm/manyterm_tk.py
+manyterm.egg-info/PKG-INFO
+manyterm.egg-info/SOURCES.txt
+manyterm.egg-info/dependency_links.txt
+manyterm.egg-info/top_level.txt
+tests/test.py
