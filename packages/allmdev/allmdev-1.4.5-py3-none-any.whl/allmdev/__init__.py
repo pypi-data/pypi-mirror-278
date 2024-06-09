@@ -1,0 +1,1 @@
+from .instruct import load_model, infer
