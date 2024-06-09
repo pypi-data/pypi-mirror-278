@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: elsysco
+Version: 1.0.1
+Summary: ELEGANT SYSTEM COMPONENT
+Home-page: https://github.com/pythonsystem/elsysco
+Author: Digital Community
+License: MIT
+Description-Content-Type: text/plain
+License-File: LICENSE.txt
+Requires-Dist: ipython==8.12.3
+Requires-Dist: requests==2.32.3
+
+ELEGANT SYSTEM COMPONENT
