@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: Luke001
+Version: 0.0.3
+Summary: May the force be with you
+Home-page: 
+Author: undefined
+Author-email: c3pe0@gmail.com
+Keywords: May the force be with you
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests >=2.25.1
+
+# Why are you here? #
+
+## What is this? ##
+I don't even know..
+maybe.. a package?
+
+## ~~Р¬С„РЅРёСѓ~~ Maybe you can try this: ##
+    
+    from Luke001 import *
+
+    print(main_theme())
+
+----------
