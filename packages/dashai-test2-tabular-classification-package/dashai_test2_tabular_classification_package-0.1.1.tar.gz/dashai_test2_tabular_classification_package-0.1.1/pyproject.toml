@@ -1,0 +1,30 @@
+[project]
+name = "dashai_test2_tabular_classification_package"
+version = "0.1.1"
+dependencies = [
+    'scikit-learn >= 1.2.1',
+]
+authors = [
+  { name="DashAI team" },
+  { email="dashaisoftware@gmail.com" },
+]
+keywords = [
+    "DashAI",
+		"Package",
+		"Task",
+		"Model",
+		"Dataloader"
+]
+description = "Tabular Classification Package"
+readme = "README.md"
+requires-python = ">=3.8"
+
+[project.entry-points.'dashai.plugins']
+knn = 'dashai_test2_tabular_classification_package.k_neighbors_classifier:KNeighborsClassifier'
+randomForest = 'dashai_test2_tabular_classification_package.random_forest_classifier:RandomForestClassifier'
+svc = 'dashai_test2_tabular_classification_package.svc:SVC'
+logisticRegression = 'dashai_test2_tabular_classification_package.logistic_regression:LogisticRegression'
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
