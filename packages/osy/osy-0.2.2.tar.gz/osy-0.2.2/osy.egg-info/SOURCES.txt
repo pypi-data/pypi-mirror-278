@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+osy/__init__.py
+osy/matsh.py
+osy.egg-info/PKG-INFO
+osy.egg-info/SOURCES.txt
+osy.egg-info/dependency_links.txt
+osy.egg-info/not-zip-safe
+osy.egg-info/requires.txt
+osy.egg-info/top_level.txt
+osy/data/oneliner.csv
+osy/data/onelinert.csv

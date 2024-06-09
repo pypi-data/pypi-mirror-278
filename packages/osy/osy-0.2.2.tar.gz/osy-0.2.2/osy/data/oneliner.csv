@@ -1,0 +1,2343 @@
+"1. Написать программу с интерактивным консольным меню (т.е. вывод
+списка действий по цифрам) по вычислению площади круга (родительский класс),
+длины окружности (подкласс) и объема шара (подкласс) по задаваемому с
+клавиатуры радиусу. Содержание меню: 1. Вычислить площадь круга. 2.
+Вычислить длину окружности. 3. Вычислить объем шара. (20 баллов)","import os
+import math
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+
+    def calculate_area(self):
+        print(math.pi * self.radius ** 2)
+
+class Circumference(Circle):
+    def calculate_circumference(self):
+        print(2 * math.pi * self.radius)
+
+class Sphere(Circle):
+    def calculate_volume(self):
+        print((4 / 3) * math.pi * self.radius ** 3)
+
+def menu(entercom: str, *func):
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print(entercom)
+    command = input('Команда: ')
+    if command.isdigit() and len(func) > int(command) - 1 >= 0:
+        func[int(command) - 1]()
+    elif command.isdigit() and int(command) == len(func) + 1:
+        return False
+    else:
+        print('Такой команды нет...')
+    input('\nEnter для продолжения\n')
+    return True
+
+def main():
+    radius = float(input(""Введите радиус: ""))
+    circle = Circle(radius)
+    circumference = Circumference(radius)
+    sphere = Sphere(radius)
+    run = True
+    commands = """"""==========================================================================
+    1. Вычислить площадь круга. 
+    2. Вычислить длину окружности. 
+    3. Вычислить объем шара.
+    4. Завершить""""""
+
+    while run:
+        run = menu(commands, circle.calculate_area, circumference.calculate_circumference, sphere.calculate_volume)
+
+if __name__ == '__main__':
+    main()
+
+"
+2. Создать класс стек. Использовать способ реализации стека через list. Поменять местами первый и последний элементы стека. (20 баллов),"class Stack:
+    def __init__(self):
+        self.items = []
+
+    def is_empty(self):
+        return self.items == []
+
+    def push(self, item):
+        self.items.append(item)
+
+    def pop(self):
+        if not self.is_empty():
+            return self.items.pop()
+        else:
+            return None
+
+    def peek(self):
+        if not self.is_empty():
+            return self.items[-1]
+        else:
+            return None
+
+    def size(self):
+        return len(self.items)
+
+    def swap_first_and_last(self):
+        if len(self.items) < 2:
+            return
+
+        first_element = self.items[0]
+        self.items[0] = self.items[-1]
+        self.items[-1] = first_element
+
+
+# Пример использования
+stack = Stack()
+stack.push(1)
+stack.push(2)
+stack.push(3)
+
+print(""Стек до замены:"")
+print(stack.items)
+
+stack.swap_first_and_last()
+
+print(""\nСтек после замены:"")
+print(stack.items)"
+"3. Дан список А3, состоящий из четного количества элементов. Используя
+функцию (функции) высшего порядка разбейте его на списки В, С так, чтобы в одном были положительные элементы, а в другом отрицательные. (20 баллов)","A = [2, -5, 8, -3, 0, 7]  # Пример четного списка
+
+def is_positive(num):
+    return num > 0
+
+def is_negative(num):
+    return num < 0
+
+positive_list = list(filter(is_positive, A))
+negative_list = list(filter(is_negative, A))
+
+print(""Список положительных чисел:"")
+print(positive_list)
+
+print(""\nСписок отрицательных чисел:"")
+print(negative_list)"
+"5. Создать класс Plane (самолетов), имеющий атрибуты: название самолета, количество пассажиров на борту, курс движения (откуда и куда). Методы: - определить загрузку самолета, если максимальная вместимость =200 пассажиров; – определить все имена самолетов, летящих по одному маршруту; - определить среднюю загрузку всех самолетов. (20 баллов)","class Plane:
+    def __init__(self, name, passengers, route):
+        self.name = name
+        self.passengers = passengers
+        self.route = route
+
+    @staticmethod
+    def calculate_load(passengers):
+        max_capacity = 200
+        load_percentage = (passengers / max_capacity) * 100
+        return load_percentage
+
+    @staticmethod
+    def same_route_planes(planes, route):
+        same_route_planes = [plane.name for plane in planes if plane.route == route]
+        return same_route_planes
+
+    @staticmethod
+    def average_load(planes):
+        total_passengers = sum(plane.passengers for plane in planes)
+        average_load = total_passengers / len(planes)
+        return average_load
+
+# Пример использования
+plane1 = Plane(""Boeing 747"", 180, ""New York - London"")
+plane2 = Plane(""Airbus A380"", 210, ""Paris - Tokyo"")
+plane3 = Plane(""Boeing 737"", 150, ""London - Dubai"")
+
+planes = [plane1, plane2, plane3]
+
+print(f""Загрузка самолета {plane1.name}: {Plane.calculate_load(plane1.passengers)}%"")
+print(f""Самолеты, летящие по маршруту 'New York - London': {Plane.same_route_planes(planes, 'New York - London')}"")
+print(f""Средняя загрузка всех самолетов: {Plane.average_load(planes)} пассажиров"")"
+"7. Дано предложение без знаков препинания. Превратить предложение в список слов. При помощи механизма map/filter/reduce отбросить у каждого слова последнюю букву и склеить в одну строку те обрезанные слова, длина которых больше 5. (20 баллов)","from functools import reduce
+
+# Предложение без знаков препинания
+sentence = ""Дано предложение без знаков препинания""
+
+# Разделение предложения на список слов
+words = sentence.split()
+
+# Отброс последней буквы у каждого слова и объединение слов длиной более 5 символов
+result = reduce(lambda x, y: x + y, map(lambda word: word[:-1], filter(lambda word: len(word) > 5, words)))
+
+print(result)
+"
+8. Создать класс стек. Использовать способ реализации стека через list. Найти минимальный элемент стека и вставить после него «0». (20 баллов),"class Stack:
+    def __init__(self):
+        self.stack = []
+
+    def push(self, item):
+        self.stack.append(item)
+
+    def pop(self):
+        if not self.is_empty():
+            return self.stack.pop()
+        else:
+            return None
+
+    def is_empty(self):
+        return len(self.stack) == 0
+
+    def peek(self):
+        if not self.is_empty():
+            return self.stack[-1]
+        else:
+            return None
+
+    def find_min(self):
+        if not self.is_empty():
+            return min(self.stack)
+        else:
+            return None
+
+    def insert_zero_after_min(self):
+        min_element = self.find_min()
+        if min_element is not None:
+            index = self.stack.index(min_element)
+            self.stack.insert(index + 1, 0)
+
+# Пример использования класса Stack
+stack = Stack()
+stack.push(3)
+stack.push(6)
+stack.push(2)
+stack.push(8)
+print(""Стек до вставки '0':"", stack.stack)
+
+min_element = stack.find_min()
+print(""Минимальный элемент стека:"", min_element)
+
+stack.insert_zero_after_min()
+print(""Стек после вставки '0':"", stack.stack)"
+"10. Реализовать декоратор с именем not_none, который генерирует исключительную ситуацию если декорируемая функция вернула значения None. (20 баллов)","def not_none(func):
+    def wrapper(*args, **kwargs):
+        result = func(*args, **kwargs)
+        if result is None:
+            raise ValueError(""Функция вернула значение None"")
+        return result
+    return wrapper
+
+# Пример использования декоратора
+@not_none
+def example_function(value):
+    if value:
+        return value
+    else:
+        return None
+
+try:
+    print(example_function(""Hello""))
+    print(example_function(None))
+except ValueError as e:
+    print(""Ошибка:"", e)"
+"12. Реализовать декоратор с именем print_type, выводящий на печать тип значения, возвращаемого декорируемой функцией. (20 баллов)","def print_type(func):
+    def wrapper(*args, **kwargs):
+        result = func(*args, **kwargs)
+        print(f""Тип возвращаемого значения: {type(result).__name__}"")
+        return result
+    return wrapper
+
+@print_type
+def add(a, b):
+    return a + b
+
+result = add('a', 'b')"
+"14. Задано положительное и отрицательное число в двоичной системе. Составить программу вычисления суммы этих чисел, используя функцию сложения чисел в двоичной системе счисления. Использовать рекурсию. (20 баллов)","def binary_addition(bin1, bin2):
+    if not bin1:
+        return bin2
+    if not bin2:
+        return bin1
+
+    if bin1[-1] == '1' and bin2[-1] == '1':
+        return binary_addition(binary_addition(bin1[:-1], '1') + '0', bin2[:-1])
+    elif bin1[-1] == '0' and bin2[-1] == '0':
+        return binary_addition(bin1[:-1], bin2[:-1]) + '0'
+    else:
+        return binary_addition(bin1[:-1], bin2[:-1]) + '1'
+
+# Пример использования
+bin_num1 = '1010'  # Положительное число в двоичной системе
+bin_num2 = '1101'  # Отрицательное число в двоичной системе
+
+result = binary_addition(bin_num1, bin_num2)
+print(f""Сумма чисел {bin_num1} и {bin_num2} в двоичной системе: {result}"")"
+"15. Вывести по убыванию количество всех предыдущих ремонтов машин ""Жигули"". Реализовать с помощью алгоритма сортировки слиянием.","def merge_sort(arr):
+    if len(arr) > 1:
+        mid = len(arr) // 2
+        left_half = arr[:mid]
+        right_half = arr[mid:]
+
+        merge_sort(left_half)
+        merge_sort(right_half)
+
+        i = j = k = 0
+
+        while i < len(left_half) and j < len(right_half):
+            if left_half[i] > right_half[j]:
+                arr[k] = left_half[i]
+                i += 1
+            else:
+                arr[k] = right_half[j]
+                j += 1
+            k += 1
+
+        while i < len(left_half):
+            arr[k] = left_half[i]
+            i += 1
+            k += 1
+
+        while j < len(right_half):
+            arr[k] = right_half[j]
+            j += 1
+            k += 1
+
+def sort_repair_counts(arr):
+    merge_sort(arr)
+    return arr
+
+# Пример списка количества предыдущих ремонтов машин ""Жигули""
+repair_counts = [3, 1, 5, 2, 4]
+
+sorted_repair_counts = sort_repair_counts(repair_counts)
+print(""Отсортированное количество предыдущих ремонтов машин 'Жигули' по убыванию:"")
+print(sorted_repair_counts)"
+"17. построить базовый класс с указанными в таблице полями и методами:
+- конструктор; - функция, которая определяет «качество» объекта – Q по заданной формуле; - метод вывода информации об объекте.
+Построить дочерний класс (класс-потомок), который содержит:
+- дополнительное поле P;
+- функция, которая определяет «качество» объекта дочернего класса – Qp и перегружает функцию качества родительского класса (Q), выполняя вычисление по новой формуле.
+Создать проект для демонстрации работы: ввод и вывод информации об объектах классов. (20 баллов)
+Поля и методы базового класса
+Поля и методы дочернего класса
+Автомобиль:
+- марка автомобиля;
+- мощность двигателя (кВт);
+- число мест;
+- Q = 0,1·мощность ·число мест
+P: год выпуска
+- Qp = Q - 1,5·(T-P),
+где T – текущий год","import datetime
+
+class Automobile:
+    def __init__(self, brand, power, seats):
+        self.brand = brand
+        self.power = power
+        self.seats = seats
+
+    def calculate_quality(self):
+        return 0.1 * self.power * self.seats
+
+    def display_info(self):
+        print(""Brand:"", self.brand)
+        print(""Power (kW):"", self.power)
+        print(""Number of Seats:"", self.seats)
+        print(""Quality (Q):"", self.calculate_quality())
+
+
+class Car(Automobile):
+    def __init__(self, brand, power, seats, year):
+        super().__init__(brand, power, seats)
+        self.year = year
+
+    def calculate_quality(self):
+        current_year = datetime.datetime.now().year
+        base_quality = super().calculate_quality()
+        return base_quality - 1.5 * (current_year - self.year)
+
+    def display_info(self):
+        super().display_info()
+        print(""Year of Manufacture:"", self.year)
+        print(""Quality (Qp):"", self.calculate_quality())
+
+
+# Пример использования классов
+car1 = Car(""Toyota"", 120, 5, 2015)
+print(""Car 1:"")
+car1.display_info()
+print()
+
+car2 = Car(""BMW"", 200, 4, 2018)
+print(""Car 2:"")
+car2.display_info()"
+"18. Написать программу с интерактивным консольным меню (т.е. вывод списка действий по цифрам) по вычислению площади прямоугольника (родительский класс), и периметра прямоугольника (дочерний класс) по задаваемой с клавиатуры длине сторон прямоугольника. Содержание меню: 1. Вычислить площадь прямоугольника. 2. Вычислить периметр прямоугольника. (20 баллов)
+","class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def calculate_area(self):
+        return self.length * self.width
+
+    def calculate_perimeter(self):
+        return 2 * (self.length + self.width)
+
+
+class RectangleMenu:
+    def __init__(self):
+        self.rectangle = None
+
+    def display_menu(self):
+        print(""1. Вычислить площадь прямоугольника."")
+        print(""2. Вычислить периметр прямоугольника."")
+        print(""3. Выйти из программы."")
+
+    def create_rectangle(self):
+        length = float(input(""Введите длину прямоугольника: ""))
+        width = float(input(""Введите ширину прямоугольника: ""))
+        self.rectangle = Rectangle(length, width)
+
+    def run_menu(self):
+        while True:
+            self.display_menu()
+            choice = input(""Выберите действие (1/2/3): "")
+
+            if choice == '1':
+                if not self.rectangle:
+                    self.create_rectangle()
+                area = self.rectangle.calculate_area()
+                print(f""Площадь прямоугольника: {area}"")
+            elif choice == '2':
+                if not self.rectangle:
+                    self.create_rectangle()
+                perimeter = self.rectangle.calculate_perimeter()
+                print(f""Периметр прямоугольника: {perimeter}"")
+            elif choice == '3':
+                print(""Программа завершена."")
+                break
+            else:
+                print(""Некорректный выбор. Пожалуйста, выберите 1, 2 или 3."")
+
+
+menu = RectangleMenu()
+menu.run_menu()
+"
+"29. Дан однонаправленный связный список. Вставить элемент после n-го элемента списка. (20 баллов)
+","
+class Node:
+    def __init__(self, data=None):
+        self.data = data
+        self.next = None
+
+def insert_after_n(head, n, new_data):
+    if head is None:
+        return None
+
+    current = head
+    count = 1
+
+    while current is not None and count < n:
+        current = current.next
+        count += 1
+
+    if current is None:
+        print(""The list has less than"", n, ""elements"")
+        return head
+
+    new_node = Node(new_data)
+    new_node.next = current.next
+    current.next = new_node
+
+    return head
+
+# Пример использования
+def print_list(node):
+    while node:
+        print(node.data, end="" "")
+        node = node.next
+    print()
+
+if __name__ == '__main__':
+    head = Node(1)
+    head.next = Node(2)
+    head.next.next = Node(3)
+
+    print(""Initial list:"")
+    print_list(head)
+
+    head = insert_after_n(head, 2, 4)
+
+    print(""List after inserting element:"")
+    print_list(head)"
+"30. Создать декоратор tol(len, fill) с параметрами len и fill. Декоратор превращает результат декорируемой функции в список состоящий из len элементов. Если исходная функция возвращает меньше заданного количества элементов, то оставшиеся места заполняются значениями fill, в случае, если количество возвращаемых элементов больше len, то хвост последовательности отбрасывается. (20 баллов)","def tol(length, fill):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            result = func(*args, **kwargs)
+            if len(result) < length:
+                result.extend([fill] * (length - len(result)))
+            return result[:length]
+        return wrapper
+    return decorator
+
+
+@tol(5, 0)  # Превращаем результат функции в список из 5 элементов, заполняя недостающие места нулями
+def example_function():
+    return [1, 2, 3]
+
+result = example_function()
+print(result)  # Выведет: [1, 2, 3, 0, 0]"
+"31. Реализовать однонаправленный связанный список (реализовать класс для элементов списка). Преобразовать строку 'Eeny, meeny, miney, moe; Catch a tiger by his toe.' в связный список символов строки и удалить из него все элементы содержащие гласные буквы. (20 баллов)","class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    def append(self, data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            return
+        last = self.head
+        while last.next:
+            last = last.next
+        last.next = new_node
+
+    def display(self):
+        current = self.head
+        while current:
+            print(current.data, end="" "")
+            current = current.next
+        print()
+
+def remove_vowels_from_linked_list(linked_list):
+    vowels = ""aeiouAEIOU""
+    current = linked_list.head
+    prev = None
+
+    while current:
+        if current.data in vowels:
+            if prev is None:
+                linked_list.head = current.next
+            else:
+                prev.next = current.next
+        else:
+            prev = current
+        current = current.next
+
+# Создаем связанный список из строки
+string = 'Eeny, meeny, miney, moe; Catch a tiger by his toe.'
+char_list = LinkedList()
+for char in string:
+    char_list.append(char)
+
+# Удаляем гласные буквы из связанного списка
+remove_vowels_from_linked_list(char_list)
+# Выводим итоговый связанный список
+char_list.display()"
+"32. Создать базовый класс по следующей предметной области. Известны оклад (зарплата) и ставка процента подоходного налога. Определить размер подоходного налога и сумму, получаемую на руки. Исходными данными являются величина оклада (переменная oklad, выражаемая числом) и ставка подоходного налога (переменная procent, выражаемая числом). Размер налога (переменная
+nalog) определяется как oklad∗procent/100, а сумма, получаемая на руки (переменная summa) — как oklad-nalog. (20 баллов)","class Salary:
+    def __init__(self, oklad, procent):
+        self.oklad = oklad
+        self.procent = procent
+
+    def calculate_tax(self):
+        nalog = self.oklad * self.procent / 100
+        return nalog
+
+    def calculate_take_home_pay(self):
+        nalog = self.calculate_tax()
+        summa = self.oklad - nalog
+        return summa
+
+# Пример использования класса
+oklad = 50000  # Пример величины оклада
+procent = 13  # Пример ставки подоходного налога
+
+employee_salary = Salary(oklad, procent)
+nalog = employee_salary.calculate_tax()
+summa = employee_salary.calculate_take_home_pay()
+
+print(f""Размер налога: {nalog}"")
+print(f""Сумма, получаемая на руки: {summa}"")"
+"33. Вывести по убыванию количество всех предыдущих ремонтов машин ""Жигули"". Осуществить алгоритм сортировки слиянием. (20 баллов)","def merge_sort(arr):
+    if len(arr) <= 1:
+        return arr
+
+    mid = len(arr) // 2
+    left = arr[:mid]
+    right = arr[mid:]
+
+    left = merge_sort(left)
+    right = merge_sort(right)
+
+    return merge(left, right)
+
+def merge(left, right):
+    result = []
+    i = j = 0
+
+    while i < len(left) and j < len(right):
+        if left[i] > right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+
+    result += left[i:]
+    result += right[j:]
+
+    return result
+
+# Пример списка количества предыдущих ремонтов машин ""Жигули""
+remonts = [5, 2, 8, 1, 6, 3]
+
+sorted_remonts = merge_sort(remonts)
+
+print(""Количество предыдущих ремонтов машин 'Жигули' по убыванию:"")
+for remont in sorted_remonts:
+    print(remont)"
+"34. Описать рекурсивные функции Fact(N) и Fact2(N) вещественного типа, вычисляющие значения факториала N! и двойного факториала N!! соответственно (N > 0 — параметр целого типа). (20 баллов)","def Fact(N):
+    if N == 0:
+        return 1
+    else:
+        return N * Fact(N - 1)
+
+def Fact2(N):
+    if N <= 0:
+        return 1
+    elif N == 1:
+        return 1
+    else:
+        return N * Fact2(N - 2)
+
+# Пример вызова функций для вычисления факториала и двойного факториала
+N = 5
+factorial_N = Fact(N)
+double_factorial_N = Fact2(N)
+
+print(f""Факториал {N}! = {factorial_N}"")
+print(f""Двойной факториал {N}!! = {double_factorial_N}"")"
+"37. Расположить по алфавиту имена владельцев и, соответственно, вывести информацию об их машинах. Использовать алгоритм сортировки выбором. (20 баллов)","car_owners = {
+    ""Alice"": ""Toyota"",
+    ""Bob"": ""Ford"",
+    ""Charlie"": ""Chevrolet"",
+    ""Eve"": ""BMW"",
+    ""David"": ""Honda""
+
+}
+
+# Функция для сортировки выбором
+def selection_sort(dictionary):
+    keys = list(dictionary.keys())
+    for i in range(len(keys)):
+        min_index = i
+        for j in range(i+1, len(keys)):
+            if keys[j] < keys[min_index]:
+                min_index = j
+        keys[i], keys[min_index] = keys[min_index], keys[i]
+    return keys
+
+# Сортировка имен владельцев
+sorted_names = selection_sort(car_owners)
+
+# Вывод информации об автомобилях владельцев по алфавиту их имен
+for name in sorted_names:
+    print(f""{name}: {car_owners[name]}"")"
+"38. Описать рекурсивную функцию Root (а, b, ε), которая методом деления отрезка пополам находит с точностью ε корень уравнения f(x) = 0 на отрезке [а, b] (считать, что ε > 0, а < b, f(a) – f(b) < 0 и f(x) — непрерывная и монотонная на отрезке [а, b] функция). (20 баллов)","def f(x):
+    # Здесь определите вашу функцию f(x)
+    return x ** 2 - 4  # Пример: уравнение x^2 - 4 = 0
+
+
+def Root(a, b, epsilon):
+    if (b - a) < epsilon:
+        return (a + b) / 2
+
+    c = (a + b) / 2
+    if f(a) * f(c) < 0:
+        return Root(a, c, epsilon)
+    else:
+        return Root(c, b, epsilon)
+
+
+# Заданный отрезок [a, b] и точность epsilon
+a = 0
+b = 3
+epsilon = 0.0001
+
+# Находим корень уравнения f(x) = 0 на отрезке [a, b] с заданной точностью
+root = Root(a, b, epsilon)
+print(""Приближенное значение корня уравнения: "", root)"
+"40. Создать декоратор dec(a, b) с параметрами a и b. Декоратор увеличивает результат декорируемой функции, которая вычисляет сумму произвольного количества чисел, на «a» элементов при условии положительного значения суммы. Если исходная функция возвращает отрицательное значение суммы, то декоратор уменьшает результат декорируемой функции на значение «b». (20 баллов)","def dec(a, b):
+    def decorator(func):
+        def wrapper(*args):
+            result = func(*args)
+            if result > 0:
+                result += a
+            else:
+                result -= b
+            return result
+        return wrapper
+    return decorator
+
+# Пример использования декоратора
+@dec(a=5, b=3)
+def sum_numbers(*args):
+    return sum(args)
+
+# Проверка работы декорированной функции
+result1 = sum_numbers(1, 2, 3, 4)  # Сумма = 10, положительная
+result2 = sum_numbers(-1, -2, -3)  # Сумма = -6, отрицательная
+
+print(""Результат с положительной суммой:"", result1)
+print(""Результат с отрицательной суммой:"", result2)"
+"41. Дан одномерный массив целых чисел размерности n, заданных случайным образом из интервала от -20 до 20. Если в массиве есть отрицательные элементы, то отсортировать массив по возрастанию, иначе - по убыванию. Реализовать сортировку алгоритмом сортировки вставками. (20 баллов).","import random
+
+# Создаем случайный массив целых чисел размерности n
+n = 10
+array = [random.randint(-20, 20) for _ in range(n)]
+print(""Исходный массив:"", array)
+
+# Проверяем наличие отрицательных элементов
+has_negative = any(num < 0 for num in array)
+
+# Сортировка вставками
+def insertion_sort_asc(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i - 1
+        while j >=0 and key < arr[j]:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
+
+def insertion_sort_desc(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i - 1
+        while j >=0 and key > arr[j]:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
+
+# Сортировка по возрастанию, если есть отрицательные элементы
+if has_negative:
+    insertion_sort_asc(array)
+else:
+    insertion_sort_desc(array)
+
+print(""Отсортированный массив:"", array)"
+"42. Дан список целых чисел. При помощи механизма map/filter/reduce рассчитать остаток от деления на 7 для каждого из чисел списка и получить произведение тех остатков, величина которых больше 4. (20 баллов)","from functools import reduce
+
+numbers = map(int, input(""Ввод списка через пробел: "").split())
+def funk(num):
+    return num % 7
+filtered_numbers = list(filter(lambda x: x > 4, map(funk, numbers)))
+if filtered_numbers:
+    result = reduce(lambda x, y: x * y, filtered_numbers)
+    print(result)
+else:
+    print(""There are no numbers greater than 4 in the list after applying the modulo 7 operation."")
+"
+"43. Дан одномерный массив целых чисел размерности n, заданных случайным образом из интервала от 0 до 100. Если количество четных элементов, стоящих на нечетных местах, превышает количество нечетных элементов, стоящих на четных местах, то отсортировать массив по возрастанию, иначе по убыванию. Реализовать алгоритм сортировки слиянием. (20 баллов)","from random import randint
+
+def merge_sort(nums):
+    if len(nums) > 1:
+        mid = len(nums) // 2
+        left = nums[:mid]
+        right = nums[mid:]
+        merge_sort(left)
+        merge_sort(right)
+
+        i = j = k = 0
+
+        while i < len(left) and j < len(right):
+            if left[i] < right[j]:
+                nums[k] = left[i]
+                i += 1
+            else:
+                nums[k] = right[j]
+                j += 1
+            k += 1
+
+        while i < len(left):
+            nums[k] = left[i]
+            i += 1
+            k += 1
+
+        while j < len(right):
+            nums[k] = right[j]
+            j += 1
+            k += 1
+
+def high():
+    A.sort()
+
+def low():
+    A.sort(reverse=True)
+
+n = int(input(""Введите размерность: ""))
+A = [randint(0, 100) for _ in range(n)]
+chet = []
+nechet = []
+
+for i, val in enumerate(A):
+    if i % 2 == 0:
+        if val % 2 == 0:
+            chet.append(val)
+    else:
+        if val % 2 != 0:
+            nechet.append(val)
+
+if len(chet) > len(nechet):
+    high()
+else:
+    low()
+
+merge_sort(A)
+print(""Отсортированный массив:"", A)"
+"44. Реализовать декоратор с именем
+not_sum, который генерирует исключительную ситуацию, если декорируемая функция вернула отрицательное значение суммы трех чисел. (20 баллов)","class NegativeSum(Exception):
+    pass
+
+def not_sum(func):
+    def wrapper(*args, **kwargs):
+        result = func(*args, **kwargs)
+        if isinstance(result, (int,float)) and result < 0:
+            raise NegativeSum(""Отрицательное значение суммы трех чисел"")
+        return result
+    return wrapper
+
+@not_sum
+def sum_of_three(a,b,c):
+    return a+b+c
+
+try:
+    print(sum_of_three(1,2,3))
+    print(sum_of_three(-1,-2,-3))
+except NegativeSum as e:
+    print(e)
+
+
+"
+"46. Дан список целых чисел. При помощи механизма map/filter/reduce рассчитать остаток от деления на 17 для каждого из чисел списка и получить произведение тех остатков, величина которых меньше 7. (20 баллов)","from functools import reduce
+
+a = [int(i) for i in input().split(' ')]
+remainders = list(map(lambda x: x % 17, a))
+filtered_remainders = list(filter(lambda x: x < 7, remainders))
+
+if filtered_remainders:
+    product_of_remainders = reduce(lambda x, y: x * y, filtered_remainders)
+    print(product_of_remainders)
+else:
+    print(""Нет остатков, меньших 7."")
+"
+"47. Создать класс Профиль местности, который хранит последовательность высот, вычисленных через равные промежутки по горизонтали. Методы: наибольшая высота, наименьшая высота, перепад высот (наибольший, суммарный), крутизна (тангенс угла наклона; наибольшая, средняя), сравнение двух профилей одинаковой длины (по перепаду, по крутизне). (20 баллов)","import math
+
+
+class MapProfile:
+    def __init__(self, list_h):
+        self.heights = list_h
+
+    def highest(self):
+        return max(self.heights)
+
+    def lowest(self):
+        return min(self.heights)
+
+    def max_drop(self):
+        max_drop = 0
+        for i in range(len(self.heights) - 1):
+            for j in range(i + 1, len(self.heights)):
+                drop = abs(self.heights[j] - self.heights[i])
+                if drop > max_drop:
+                    max_drop = drop
+        return max_drop
+
+    def total_drop(self):
+        total = 0
+        for i in range(len(self.heights) - 1):
+            total += abs(self.heights[i] - self.heights[i + 1])
+        return total
+
+    def max_slope(self, horizontal_distance):
+        max_slope = 0
+        for i in range(len(self.heights) - 1):
+            slope = abs(self.heights[i + 1] - self.heights[i]) / horizontal_distance
+            if slope > max_slope:
+                max_slope = slope
+        return max_slope
+
+    def average_slope(self, horizontal_distance):
+        total_slope = 0
+        for i in range(len(self.heights) - 1):
+            total_slope += abs(self.heights[i + 1] - self.heights[i]) / horizontal_distance
+        return total_slope / (len(self.heights) - 1)
+
+    @staticmethod
+    def compare_profiles(profile1, profile2, horizontal_distance):
+        if len(profile1.heights) != len(profile2.heights):
+            raise ValueError(""Profiles must be of the same length"")
+
+        comparison = {
+            ""max_drop"": profile1.max_drop() > profile2.max_drop(),
+            ""total_drop"": profile1.total_drop() > profile2.total_drop(),
+            ""max_slope"": profile1.max_slope(horizontal_distance) > profile2.max_slope(horizontal_distance),
+            ""average_slope"": profile1.average_slope(horizontal_distance) > profile2.average_slope(horizontal_distance)
+        }
+
+        return comparison
+
+
+# Пример использования:
+profile1 = MapProfile([100, 200, 150, 300, 250])
+profile2 = MapProfile([120, 180, 160, 280, 240])
+
+print(""Наибольшая высота профиля 1:"", profile1.highest())
+print(""Наименьшая высота профиля 1:"", profile1.lowest())
+print(""Наибольший перепад высот профиля 1:"", profile1.max_drop())
+print(""Суммарный перепад высот профиля 1:"", profile1.total_drop())
+print(""Наибольшая крутизна профиля 1:"", profile1.max_slope(10))
+print(""Средняя крутизна профиля 1:"", profile1.average_slope(10))
+
+comparison = MapProfile.compare_profiles(profile1, profile2, 10)
+print(""Сравнение профилей (profile1 > profile2):"", comparison)"
+"48. Дан список целых чисел. При помощи механизма map/filter/reduce рассчитать разность со значением 10 для каждого из чисел списка и получить сумму тех значений, величина которых меньше 0. (20 баллов)","from functools import reduce
+
+a = [int(i) for i in input().split(' ')]
+remainders = list(map(lambda x: x - 10, a))
+filtered_remainders = list(filter(lambda x: x < 0, remainders))
+
+if filtered_remainders:
+    sum_of_remainders = reduce(lambda x, y: x + y, filtered_remainders)
+    print(sum_of_remainders)
+else:
+    print(""Нет значений, меньших 0."")
+"
+49. Реализовать двоичное дерево в виде связанных объектов (реализовать класс для элементов двоичного дерева) и реализовать симметричную процедуру обхода двоичного дерева в виде рекурсивной функции. (20 баллов,"class TreeNode:
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
+
+class BinaryTree:
+    def __init__(self):
+        self.root = None
+
+    def insert(self, value):
+        if self.root is None:
+            self.root = TreeNode(value)
+        else:
+            self._insert_recursive(self.root, value)
+
+    def _insert_recursive(self, node, value):
+        if value < node.value:
+            if node.left is None:
+                node.left = TreeNode(value)
+            else:
+                self._insert_recursive(node.left, value)
+        else:
+            if node.right is None:
+                node.right = TreeNode(value)
+            else:
+                self._insert_recursive(node.right, value)
+
+    def in_order_traversal(self):
+        return self._in_order_recursive(self.root)
+
+    def _in_order_recursive(self, node):
+        result = []
+        if node:
+            result += self._in_order_recursive(node.left)
+            result.append(node.value)
+            result += self._in_order_recursive(node.right)
+        return result
+
+# Пример использования
+tree = BinaryTree()
+tree.insert(5)
+tree.insert(3)
+tree.insert(7)
+tree.insert(2)
+tree.insert(4)
+tree.insert(6)
+tree.insert(8)
+
+print(""In-order traversal:"", tree.in_order_traversal())"
+50. В одномерном массиве целых чисел найти количество пар элементов разного знака. (пара — это два рядом стоящих элемента). (20 баллов),"def count_opposite_sign_pairs(arr):
+    count = 0
+    for i in range(1, len(arr)):
+        if arr[i] * arr[i-1] < 0:
+            count += 1
+    return count
+
+# Ввод данных от пользователя
+try:
+    a = [int(i) for i in input(""Введите целые числа через пробел: "").split()]
+    result = count_opposite_sign_pairs(a)
+    print(f""Количество пар элементов разного знака: {result}"")
+except ValueError:
+    print(""Ошибка: Введите только целые числа."")"
+"51. Задание: построить базовый класс с указанными в таблице полями и методами:
+- конструктор; - функция, которая определяет «качество» объекта – Q по заданной формуле; - метод вывода информации об объекте.
+Построить дочерний класс (класс-потомок), который содержит:
+- дополнительное поле P;
+- функция, которая определяет «качество» объекта дочернего класса – Qp и перегружает функцию качества родительского класса (Q), выполняя вычисление по новой формуле.
+Создать проект для демонстрации работы: ввод и вывод информации об объектах классов. (20 баллов)
+Поля и методы базового класса
+Поля и методы дочернего класса
+Компьютер:
+- наименование процессора;
+- тактовая частота процессора (МГц);
+- объем оперативной памяти (Мб);
+- Q = (0,1·частота) + память
+P: объем накопителя SSD (Гб)
+- Qp = Q +0,5P","class Computer:
+    def __init__(self, processor_name, clock_speed, ram):
+        self.processor_name = processor_name
+        self.clock_speed = clock_speed
+        self.ram = ram
+
+    def quality(self):
+        return (0.1 * self.clock_speed) + self.ram
+
+    def display_info(self):
+        print(f""Processor Name: {self.processor_name}"")
+        print(f""Clock Speed (MHz): {self.clock_speed}"")
+        print(f""RAM (MB): {self.ram}"")
+        print(f""Quality (Q): {self.quality()}"")
+
+class AdvancedComputer(Computer):
+    def __init__(self, processor_name, clock_speed, ram, ssd):
+        super().__init__(processor_name, clock_speed, ram)
+        self.ssd = ssd
+
+    def quality(self):
+        base_quality = super().quality()
+        return base_quality + 0.5 * self.ssd
+
+    def display_info(self):
+        super().display_info()
+        print(f""SSD (GB): {self.ssd}"")
+        print(f""Quality with SSD (Qp): {self.quality()}"")
+
+# Пример использования классов
+if __name__ == ""__main__"":
+    # Создание объекта базового класса
+    computer = Computer(""Intel i5"", 3200, 8192)
+    print(""Basic Computer Info:"")
+    computer.display_info()
+
+    print(""\nAdvanced Computer Info:"")
+    # Создание объекта дочернего класса
+    advanced_computer = AdvancedComputer(""Intel i7"", 3600, 16384, 512)
+    advanced_computer.display_info()"
+"54. В одномерном массиве (array) целых чисел найти количество пар, модуль разности элементов которых больше 10. (пара — это два рядом стоящих элемента). (20 баллов)","def count_modul_more10_pairs(arr):
+    count = 0
+    for i in range(1, len(arr)):
+        if abs(arr[i] - arr[i-1]) > 10:
+            count += 1
+    return count
+
+# Ввод данных от пользователя
+try:
+    a = [int(i) for i in input(""Введите целые числа через пробел: "").split()]
+    result = count_modul_more10_pairs(a)
+    print(f""Количество пар с модулем разности больше 10: {result}"")
+except ValueError:
+    print(""Ошибка: Введите только целые числа."")"
+56. Дан двунаправленный связный список. Вставить элемент после n-го элемента списка. (20 баллов),"class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+        self.prev = None
+
+
+class DoublyLinkedList:
+    def __init__(self):
+        self.head = None
+
+    def append(self, data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            return
+        last = self.head
+        while last.next:
+            last = last.next
+        last.next = new_node
+        new_node.prev = last
+
+    def insert_after_n(self, n, data):
+        if self.head is None:
+            print(""List is empty"")
+            return
+
+        current = self.head
+        count = 0
+
+        # Пройдем по списку до n-го элемента
+        while current and count < n:
+            current = current.next
+            count += 1
+
+        # Если текущий элемент не найден, значит n больше длины списка
+        if current is None:
+            print(f""Cannot insert after {n}-th element as the list has fewer elements."")
+            return
+
+        # Создаем новый узел
+        new_node = Node(data)
+
+        # Вставляем новый узел после текущего
+        new_node.next = current.next
+        new_node.prev = current
+
+        if current.next:
+            current.next.prev = new_node
+
+        current.next = new_node
+
+    def display(self):
+        current = self.head
+        while current:
+            print(current.data, end="" "")
+            current = current.next
+        print()
+
+
+# Пример использования
+dll = DoublyLinkedList()
+dll.append(1)
+dll.append(2)
+dll.append(3)
+dll.append(4)
+
+print(""Initial list:"")
+dll.display()
+
+n = 2  # Вставка после 2-го элемента (0-based index)
+data_to_insert = 99
+
+dll.insert_after_n(n, data_to_insert)
+
+print(f""List after inserting {data_to_insert} after {n}-th element:"")
+dll.display()
+"
+"57. Дан двунаправленный связный список. Удалить n-ый элемент списка
+","class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+        self.prev = None
+
+
+class DoublyLinkedList:
+    def __init__(self):
+        self.head = None
+
+    def append(self, data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            return
+        last = self.head
+        while last.next:
+            last = last.next
+        last.next = new_node
+        new_node.prev = last
+
+    def delete_nth(self, n):
+        if self.head is None:
+            print(""List is empty"")
+            return
+
+        current = self.head
+        count = 0
+
+        # Пройдем по списку до n-го элемента
+        while current and count < n:
+            current = current.next
+            count += 1
+
+        # Если текущий элемент не найден, значит n больше длины списка
+        if current is None:
+            print(f""Cannot delete {n}-th element as the list has fewer elements."")
+            return
+
+        # Если текущий элемент является головным узлом
+        if current.prev is None:
+            self.head = current.next
+            if self.head:
+                self.head.prev = None
+        else:
+            current.prev.next = current.next
+            if current.next:
+                current.next.prev = current.prev
+
+        # Удаляем текущий узел
+        del current
+
+    def display(self):
+        current = self.head
+        while current:
+            print(current.data, end="" "")
+            current = current.next
+        print()
+
+
+# Пример использования
+dll = DoublyLinkedList()
+dll.append(1)
+dll.append(2)
+dll.append(3)
+dll.append(4)
+
+print(""Initial list:"")
+dll.display()
+
+n = 2  # Удаление 2-го элемента (0-based index)
+
+dll.delete_nth(n)
+
+print(f""List after deleting {n}-th element:"")
+dll.display()
+"
+58. Добавить элемент в начало однонаправленного связного списка.,"class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+class SinglyLinkedList:
+    def __init__(self):
+        self.head = None
+
+    def append(self, data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            return
+        last = self.head
+        while last.next:
+            last = last.next
+        last.next = new_node
+
+    def prepend(self, data):
+        new_node = Node(data)
+        new_node.next = self.head
+        self.head = new_node
+
+    def display(self):
+        current = self.head
+        while current:
+            print(current.data, end="" "")
+            current = current.next
+        print()
+
+# Пример использования
+sll = SinglyLinkedList()
+sll.append(1)
+sll.append(2)
+sll.append(3)
+
+print(""Initial list:"")
+sll.display()
+
+# Добавление элемента в начало списка
+sll.prepend(5)
+
+print(""List after prepending 5:"")
+sll.display()"
+59. Соединить два однонаправленных связных списка.,"class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+class SinglyLinkedList:
+    def __init__(self):
+        self.head = None
+
+    def append(self, data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            return
+        last = self.head
+        while last.next:
+            last = last.next
+        last.next = new_node
+
+    def display(self):
+        current = self.head
+        while current:
+            print(current.data, end="" "")
+            current = current.next
+        print()
+
+    def extend(self, other_list):
+        if self.head is None:
+            self.head = other_list.head
+            return
+        last = self.head
+        while last.next:
+            last = last.next
+        last.next = other_list.head
+
+# Пример использования
+list1 = SinglyLinkedList()
+list1.append(1)
+list1.append(2)
+list1.append(3)
+
+list2 = SinglyLinkedList()
+list2.append(4)
+list2.append(5)
+list2.append(6)
+
+print(""First list:"")
+list1.display()
+
+print(""Second list:"")
+list2.display()
+
+# Соединение двух списков
+list1.extend(list2)
+
+print(""Combined list:"")
+list1.display()"
+"60. Даны 2 кольцевых списка с фамилиями шахматистов 2-х команд.
+Произвести жеребьевку. В первой команде выбирается каждый n-й игрок, а во
+второй - каждый k-й","class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+
+class CircularLinkedList:
+    def __init__(self):
+        self.head = None
+
+    def append(self, data):
+        new_node = Node(data)
+        if not self.head:
+            self.head = new_node
+            self.head.next = self.head
+        else:
+            temp = self.head
+            while temp.next != self.head:
+                temp = temp.next
+            temp.next = new_node
+            new_node.next = self.head
+
+    def display(self):
+        nodes = []
+        temp = self.head
+        if self.head:
+            while True:
+                nodes.append(temp.data)
+                temp = temp.next
+                if temp == self.head:
+                    break
+        print("" -> "".join(nodes))
+
+    def select_every_nth(self, n):
+        selected = []
+        if not self.head:
+            return selected
+
+        current = self.head
+        prev = None
+
+        while True:
+            count = 1
+            while count < n:
+                prev = current
+                current = current.next
+                count += 1
+
+            selected.append(current.data)
+            prev.next = current.next  # Remove the selected node from the circle
+            current = current.next  # Move to the next node
+
+            if current == self.head:  # If we have completed a full circle, break
+                break
+
+        return selected
+
+
+# Создание двух кольцевых списков с фамилиями шахматистов двух команд
+team1 = CircularLinkedList()
+team1.append(""Player1_Team1"")
+team1.append(""Player2_Team1"")
+team1.append(""Player3_Team1"")
+team1.append(""Player4_Team1"")
+
+team2 = CircularLinkedList()
+team2.append(""Player1_Team2"")
+team2.append(""Player2_Team2"")
+team2.append(""Player3_Team2"")
+team2.append(""Player4_Team2"")
+
+print(""Team 1:"")
+team1.display()
+
+print(""Team 2:"")
+team2.display()
+
+# Ввод значений n и k
+n = int(input(""Enter the value of n for Team 1: ""))
+k = int(input(""Enter the value of k for Team 2: ""))
+
+# Жеребьевка
+selected_team1 = team1.select_every_nth(n)
+selected_team2 = team2.select_every_nth(k)
+
+print(f""Selected players from Team 1 (every {n}-th): {selected_team1}"")
+print(f""Selected players from Team 2 (every {k}-th): {selected_team2}"")"
+"61. Даны 2 кольцевых списка: фамилии участников розыгрыша и названия
+призов. Выиграет n человек (каждый k-й). Число для пересчета призов - t.","
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+
+class CircularLinkedList:
+    def __init__(self):
+        self.head = None
+
+    def append(self, data):
+        new_node = Node(data)
+        if not self.head:
+            self.head = new_node
+            self.head.next = self.head
+        else:
+            temp = self.head
+            while temp.next != self.head:
+                temp = temp.next
+            temp.next = new_node
+            new_node.next = self.head
+
+    def display(self):
+        nodes = []
+        temp = self.head
+        if self.head:
+            while True:
+                nodes.append(temp.data)
+                temp = temp.next
+                if temp == self.head:
+                    break
+        print("" -> "".join(nodes))
+
+    def select_every_kth(self, k, n):
+        selected = []
+        if not self.head:
+            return selected
+
+        current = self.head
+        prev = None
+
+        while len(selected) < n:
+            count = 1
+            while count < k:
+                prev = current
+                current = current.next
+                count += 1
+
+            selected.append(current.data)
+            prev.next = current.next  # Remove the selected node from the circle
+            current = current.next  # Move to the next node
+
+            if current == self.head:  # If we have completed a full circle, update head
+                self.head = current.next
+
+        return selected
+
+
+# Создание кольцевого списка с фамилиями участников и названиями призов
+participants = CircularLinkedList()
+participants.append(""Participant1"")
+participants.append(""Participant2"")
+participants.append(""Participant3"")
+participants.append(""Participant4"")
+participants.append(""Participant5"")
+
+prizes = CircularLinkedList()
+prizes.append(""Prize1"")
+prizes.append(""Prize2"")
+prizes.append(""Prize3"")
+prizes.append(""Prize4"")
+prizes.append(""Prize5"")
+
+print(""Participants:"")
+participants.display()
+
+print(""Prizes:"")
+prizes.display()
+
+# Ввод значений k, n и t
+k = int(input(""Enter the value of k (every k-th participant wins): ""))
+n = int(input(""Enter the number of winners (n): ""))
+t = int(input(""Enter the value of t for prize distribution: ""))
+
+# Жеребьевка участников
+winners = participants.select_every_kth(k, n)
+
+# Распределение призов
+prize_distribution = []
+current_prize_node = prizes.head
+
+for i in range(n):
+    prize_distribution.append((winners[i], current_prize_node.data))
+    count = 1
+    while count < t:
+        current_prize_node = current_prize_node.next
+        count += 1
+
+print(""\nWinners and their prizes:"")
+for winner, prize in prize_distribution:
+    print(f""{winner} wins {prize}"")
+"
+"63. Даны 2 списка: перечень товаров, производимых Концернами BORK и
+PHILIPS. Создать список товаров, выпускаемых как одной, так и другой фирмой.
+Результат вывести в веб-интерфейс при помощи фреймворка Flask. Базу данных
+можно использовать по желанию, дизайн не обязателен: достаточно обычных
+кнопок/списков.",FLASK
+"66. Описать функцию, которая:
+a) присваивает параметру Е запись из самого левого листа непустого дерева
+Т (лист-вершина, из которого не выходит ни одной ветви);
+b) определяет число вхождений записи Е в дерево Т.","class TreeNode:
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
+
+def find_leftmost_leaf(tree):
+    if tree is None:
+        return None
+
+    current_node = tree
+    while current_node.left is not None or current_node.right is not None:
+        if current_node.left:
+            current_node = current_node.left
+        else:
+            current_node = current_node.right
+
+    return current_node.value
+
+def count_occurrences(tree, target):
+    if tree is None:
+        return 0
+
+    count = 0
+    if tree.value == target:
+        count += 1
+
+    count += count_occurrences(tree.left, target)
+    count += count_occurrences(tree.right, target)
+
+    return count
+
+# Пример использования функций
+# Создаем дерево
+root = TreeNode(1)
+root.left = TreeNode(2)
+root.right = TreeNode(3)
+root.left.left = TreeNode(4)
+root.left.right = TreeNode(2)
+root.right.left = TreeNode(2)
+root.right.right = TreeNode(5)
+
+# Присваиваем параметру Е запись из самого левого листа непустого дерева Т
+leftmost_leaf_value = find_leftmost_leaf(root)
+print(""Значение самого левого листа:"", leftmost_leaf_value)
+
+# Определяем число вхождений записи Е в дерево Т
+occurrences_count = count_occurrences(root, leftmost_leaf_value)
+print(""Число вхождений записи в дерево:"", occurrences_count)"
+13. Создать класс стек. Использовать способ реализации стека через list. Удалить минимальный элемент стека.,"class Stack:
+    def __init__(self):
+        self.stack = []
+
+    def is_empty(self):
+        return len(self.stack) == 0
+
+    def push(self, item):
+        self.stack.append(item)
+
+    def pop(self):
+        if not self.is_empty():
+            return self.stack.pop()
+        else:
+            return None
+
+    def find_min(self):
+        if not self.is_empty():
+            return min(self.stack)
+        else:
+            return None
+
+    def remove_min(self):
+        if not self.is_empty():
+            min_element = self.find_min()
+            self.stack = [x for x in self.stack if x != min_element]
+            print(self.stack)
+        else:
+            print(""Стек пустой"")
+
+# Пример использования
+stack = Stack()
+stack.push(4)
+stack.push(5)
+stack.push(4)
+stack.push(7)
+
+stack.remove_min()"
+"16. Написать программу с интерактивным консольным меню (т.е. вывод списка действий по цифрам) по удалению из списка (задаем с клавиатуры) элемента с задаваемым с клавиатуры индексом (например, m). При решении задачи необходимо использовать функцию map. Содержание меню: 1. Удалить элемент из списка и вывести итоговый список. 2. Удалить элемент из списка и вывести его номер(а).","
+A = [int(x) for x in input('Введите список через пробел: ').split()]
+
+def task1(A, el):
+    deleted = []
+    answer = []
+    for i, val in enumerate(A):
+        if val == el:
+            deleted.append(val)
+        else:
+            answer.append(val)
+    print(f""�тоговый список: {answer}"")
+
+def task2(A, el):
+    deleted = []
+    answer = []
+    for i, val in enumerate(A):
+        if val == el:
+            deleted.append(i)
+        else:
+            answer.append(val)
+    print(f""Удаленные элементы (номера): {deleted}"")
+
+run = True
+while run:
+    a = input(""""""Выберите действие: 
+1. Удалить элемент из списка и вывести итоговый список.
+2. Удалить элемент из списка и вывести его номер(а).
+3. Конец.
+"""""")
+    if a == '1':
+        el1 = int(input('Введите элемент для удаления: '))
+        task1(A, el1)
+    elif a == '2':
+        el2 = int(input('Введите элемент для удаления: '))
+        task2(A, el2)
+    elif a == '3':
+        print(""Конец."")
+        run = False
+    else:
+        print(""Неверный выбор. Пожалуйста, выберите 1, 2 или 3."")"
+"19. Дан кольцевой список с перечнем товаров. Выбрать все товары, изготовленные фирмой Bosh и создать из них новый список.","# �сходный кольцевой список с перечнем товаров
+products = [""Товар A (Bosh)"", ""Товар B (Noname)"", ""Товар C (Bosh)"", ""Товар D (Samsung)"", ""Товар E (Bosh)""]
+
+# Создаем новый список для товаров от фирмы Bosh
+bosh_products = []
+
+# Проходим по кольцевому списку и выбираем товары от фирмы Bosh
+for product in products:
+    if ""Bosh"" in product:
+        bosh_products.append(product)
+
+# Выводим новый список товаров от фирмы Bosh
+print(bosh_products)"
+23. Дан кольцевой список из 20 фамилий студентов. Разбить студентов на 2 группы по 10 человек. Во вторую группу попадает каждый 11-й человек.,"class Node:
+    def __init__(self, surname):
+        self.surname = surname
+        self.next = None
+
+
+class CircularList:
+    def __init__(self):
+        self.head = None
+    def add(self, surname):
+        if not self.head:
+            self.head = Node(surname)
+            self.head.next = self.head
+        else:
+            new_node = Node(surname)
+            current = self.head
+            while current.next != self.head:
+                current = current.next
+            current.next = new_node
+            new_node.next = self.head
+
+    def split_students(self):
+        current = self.head
+        group1 = CircularList()
+        group2 = CircularList()
+        count = 0
+
+        while True:
+            if count % 11 == 0:
+                removed_node = current
+                current = current.next
+                removed_node_next = removed_node.next
+                while removed_node_next.next != removed_node:
+                    removed_node_next = removed_node_next.next
+                removed_node_next.next = removed_node.next
+                if removed_node == self.head:
+                    self.head = removed_node.next
+            else:
+                group1.add(current.surname)
+
+            count += 1
+            current = current.next
+
+            if count == 20:  # Условие завершения прохода по кругу
+                break
+
+        # Переносим оставшихся студентов во вторую группу
+        while current != self.head:
+            group2.add(current.surname)
+            current = current.next
+
+        return group1, group2
+
+    def print_group(self):
+        current = self.head
+        while True:
+            print(current.surname)
+            current = current.next
+            if current == self.head:
+                break
+
+
+circular_list = CircularList()
+students = [""Азаров"", ""Атабекян"", ""Безверхний"", ""Галимов"", ""Гололобов"", ""Грингруз"", ""Демидова"", ""Добрицкий"", ""Жаркова"",
+""Жижло"", ""Зюков"", ""Ильина"", ""Коломийцева"", ""Кузнецов"", ""Лукьянчиков"", ""Олехова"", ""Осинский"", ""Петрухин"", ""Плыгун"", ""Садикзаде""]
+for student in students:
+    circular_list.add(student)
+
+# Разделение студентов на группы
+group1, group2 = circular_list.split_students()
+
+# Вывод групп
+print(""Группа 1:"")
+group1.print_group()
+print(""Группа 2:"")
+group2.print_group()
+"
+"24. Составить программу для нахождения числа, которое образуется из данного натурального числа при записи его цифр в обратном порядке. Например, для числа 1234 получаем результат 4321. Использовать рекурсию","def reverse_number(n):
+    if n < 10:
+        return n
+    else:
+        return (n % 10) * 10**(len(str(n)) - 1) + reverse_number(n // 10)
+
+# Ввод числа с клавиатуры
+num = int(input(""Введите натуральное число: ""))
+
+# Вызов функции reverse_number и вывод результата
+result = reverse_number(num)
+print(f""Число, образованное из данного числа в обратном порядке: {result}"")"
+25. Создать класс стек. Использовать способ реализации стека через list. Сформировать стек с элементами - строками. Прочитать три нижних элемента стека и поменять местами верхний и нижний элементы.,"class Stack:
+    def __init__(self):
+        self.stack = []
+
+    def push(self, item):
+        self.stack.append(item)
+
+    def pop(self):
+        if not self.is_empty():
+            return self.stack.pop()
+        else:
+            return None
+
+    def peek(self):
+        if not self.is_empty():
+            return self.stack[-1]
+        else:
+            return None
+
+    def is_empty(self):
+        return len(self.stack) == 0
+
+# Создание экземпляра класса Stack
+stack = Stack()
+
+# Добавление элементов-строк в стек
+stack.push(""One"")
+stack.push(""Two"")
+stack.push(""Three"")
+stack.push(""Four"")
+stack.push(""Five"")
+
+# Чтение трех нижних элементов стека
+for _ in range(3):
+    print(f""Нижний элемент стека: {stack.pop()}"")
+
+# Меняем местами верхний и нижний элементы стека
+top = stack.pop()
+bottom = stack.pop()
+stack.push(top)
+stack.push(bottom)
+
+# Вывод стека после изменения местами элементов
+print(""Стек после замены элементов:"")
+while not stack.is_empty():
+    print(stack.pop())"
+"26. Дан список А3, состоящий из четного количества элементов. Используя функцию(функции) высшего порядка разбейте его на списки В, С так, чтобы в одном были положительные элементы, а в другом отрицательные. (","A3 = [5, -3, 8, -2, 10, -7]
+
+def divide_list(lst, condition):
+    return [item for item in lst if condition(item)]
+
+positive_numbers = divide_list(A3, lambda x: x > 0)
+negative_numbers = divide_list(A3, lambda x: x < 0)
+
+print(""Список положительных элементов В:"", positive_numbers)
+print(""Список отрицательных элементов С:"", negative_numbers)"
+"27. Создайте класс Студент, имеющий:
+• закрытый атрибут Имя – строка, содержащая фамилию;
+• метод __init__. При создании объекта указывается имя, список Дисциплины пустой;
+• закрытый атрибут Дисциплины – словарь сданных дисциплин. Ключом является название дисциплины, значением – оценка.
+• метод put добавляет новую дисциплину в атрибут Дисциплины. Параметрами метода являются название дисциплины и оценка;
+• свойство Сдано возвращает список названий сданных дисциплин; Создайте экземпляр класса, продемонстрируйте работу с атрибутами, методами и свойствами.","class Student:
+    def __init__(self, name):
+        self.__name = name
+        self.__disciplines = {}
+
+    def put(self, discipline, grade):
+        self.__disciplines[discipline] = grade
+
+    @property
+    def passed(self):
+        return list(self.__disciplines.keys())
+
+# Создание экземпляра класса Student
+student = Student(""�ванов"")
+
+# Добавление дисциплин и оценок
+student.put(""Математика"", 5)
+student.put(""Физика"", 4)
+student.put(""Химия"", 5)
+
+# Вывод списка сданных дисциплин
+print(f""Сданные дисциплины студента {student.passed}"")
+
+# Попытка изменить имя студента (атрибут __name является закрытым)
+# print(student.__name)
+# student.__name = ""Петров""  # Ошибка
+
+# Добавление новой дисциплины
+student.put(""�нформатика"", 5)
+
+# Вывод обновленного списка сданных дисциплин
+print(f""Сданные дисциплины студента {student.passed}"")"
+28. Дан список S состоящий из N различных элементов. Вывести индексы четных элементов списка. Использовать функции высшего порядка. (20 баллов),"S = [3, 7, 10, 4, 5, 8, 2, 6]
+
+def get_even_indices(lst):
+    return [index for index, item in enumerate(lst) if item % 2 == 0]
+
+even_indices = get_even_indices(S)
+
+print(""�ндексы четных элементов списка S:"", even_indices)"
+35. Дан однонаправленный связный список. Удалить каждый второй элемент списка. (20 баллов),"class Node:
+    def __init__(self, data=None):
+        self.data = data
+        self.next = None
+
+def delete_every_second_node(head):
+    current = head
+
+    while current is not None and current.next is not None:
+        current.next = current.next.next
+        current = current.next
+
+# Функция для печати элементов связного списка
+def print_linked_list(head):
+    current = head
+    while current is not None:
+        print(current.data, end="" "")
+        current = current.next
+    print()
+
+# Создание примера связного списка
+head = Node(1)
+current = head
+for i in range(2, 11):
+    current.next = Node(i)
+    current = current.next
+
+print(""�сходный связный список:"")
+print_linked_list(head)
+
+# Удаление каждого второго элемента из списка
+delete_every_second_node(head)
+
+print(""Связный список после удаления каждого второго элемента:"")
+print_linked_list(head)"
+"36. Создать иерархию классов для фруктов, продающихся в магазине. Иерархия должна содержать не менее 3 классов. Объекты должны содержать не менее 3-х атрибутов. Часть атрибутов должна быть защищена от изменения. Необходимо заполнить список представителями всех классов (всего 5 объектов) и продемонстрировать созданную защиту. (20 баллов)","class Fruit:
+    def __init__(self, name, price):
+        self._name = name  # Защищенный атрибут
+        self._price = price  # Защищенный атрибут
+        self.quantity = 0  # Обычный атрибут
+
+    def get_name(self):
+        return self._name
+
+    def get_price(self):
+        return self._price
+
+class Apple(Fruit):
+    def __init__(self, name, price, color):
+        super().__init__(name, price)
+        self.color = color
+
+class Banana(Fruit):
+    def __init__(self, name, price, length):
+        super().__init__(name, price)
+        self.length = length
+
+class Orange(Fruit):
+    def __init__(self, name, price, origin):
+        super().__init__(name, price)
+        self._origin = origin  # Защищенный атрибут
+
+    def get_origin(self):
+        return self._origin
+
+# Создание объектов
+apple = Apple(""Apple"", 2.5, ""Red"")
+banana = Banana(""Banana"", 1.5, ""Medium"")
+orange = Orange(""Orange"", 3.0, ""Spain"")
+
+# Попытка изменить защищенный атрибут _name
+apple._name = ""Green Apple""
+print(apple.get_name())  # Выведет ""Apple""
+
+# Попытка изменить защищенный атрибут _origin через метод
+orange._origin = ""Italy""
+print(orange.get_origin())  # Выведет ""Spain""
+
+# �зменение обычного атрибута quantity
+apple.quantity = 10
+print(apple.quantity)  # Выведет 10"
+"39. Дан одномерный массив целых чисел размерности n, заданных случайным образом из интервала от -20 до 20. Если сумма отрицательных элементов по модулю превышает сумму положительных, то отсортировать массив по возрастанию, иначе – по убыванию. Реализовать сортировку алгоритмом сортировки выбором. (20 баллов)","import random
+
+# Создание одномерного массива целых чисел размерности n
+n = 20
+array = [random.randint(-20, 20) for _ in range(n)]
+
+# Вычисление сумм отрицательных и положительных элементов
+sum_negative = sum([abs(num) for num in array if num < 0])
+sum_positive = sum([num for num in array if num > 0])
+
+# Сортировка массива в зависимости от условия
+if sum_negative > sum_positive:
+    # Сортировка по возрастанию
+    for i in range(n):
+        min_idx = i
+        for j in range(i+1, n):
+            if array[j] < array[min_idx]:
+                min_idx = j
+        array[i], array[min_idx] = array[min_idx], array[i]
+else:
+    # Сортировка по убыванию
+    for i in range(n):
+        max_idx = i
+        for j in range(i+1, n):
+            if array[j] > array[max_idx]:
+                max_idx = j
+        array[i], array[max_idx] = array[max_idx], array[i]
+
+print(""�сходный массив:"", array)"
+"45. Дано два однонаправленных связных списка. Создать список, содержащий элементы общие для двух списков. (20 баллов)","class ListNode:
+    def __init__(self, value=0, next=None):
+        self.value = value
+        self.next = next
+
+def create_linked_list(values):
+    if not values:
+        return None
+    head = ListNode(values[0])
+    current = head
+    for value in values[1:]:
+        current.next = ListNode(value)
+        current = current.next
+    return head
+
+def print_linked_list(head):
+    current = head
+    while current:
+        print(current.value, end="" -> "")
+        current = current.next
+    print(""None"")
+
+
+def find_common_elements(head1, head2):
+    # �спользуем множество для хранения элементов первого списка
+    elements_set = set()
+    current = head1
+    while current:
+        elements_set.add(current.value)
+        current = current.next
+
+    # Создаем новый список для общих элементов
+    dummy_head = ListNode()
+    current_common = dummy_head
+
+    # Проверяем элементы второго списка на наличие в множестве
+    current = head2
+    while current:
+        if current.value in elements_set:
+            current_common.next = ListNode(current.value)
+            current_common = current_common.next
+            # Удаляем элемент из множества, чтобы избежать дублирования
+            elements_set.remove(current.value)
+        current = current.next
+
+    return dummy_head.next
+
+
+# Пример использования
+list1_values = [1, 2, 3, 4, 5]
+list2_values = [3, 4, 5, 6, 7]
+
+head1 = create_linked_list(list1_values)
+head2 = create_linked_list(list2_values)
+
+print(""List 1:"")
+print_linked_list(head1)
+
+print(""List 2:"")
+print_linked_list(head2)
+
+common_head = find_common_elements(head1, head2)
+
+print(""Common elements:"")
+print_linked_list(common_head)"
+"52. Создать иерархию классов для фруктов, продающихся в магазине. Иерархия должна содержать не менее 3 классов. Объекты должны содержать не менее 2-х атрибутов и 2-х методов. Реализовать механизм автоматического подсчета количества всех созданных фруктов и автоматического присвоения каждому фрукту уникального идентификатора. Необходимо заполнить список представителями всех классов (всего не менее 5 объектов) и продемонстрировать работу созданного механизма. (20 баллов)","class Fruit:
+    total_fruits = 0
+
+    def __init__(self, color, weight):
+        self.color = color
+        self.weight = weight
+        Fruit.total_fruits += 1
+        self.id = Fruit.total_fruits
+
+    def display_info(self):
+        print(f""ID: {self.id}, Color: {self.color}, Weight: {self.weight}g"")
+
+    @classmethod
+    def get_total_fruits(cls):
+        return cls.total_fruits
+
+
+class Apple(Fruit):
+    def __init__(self, color, weight, variety):
+        super().__init__(color, weight)
+        self.variety = variety
+
+    def display_info(self):
+        super().display_info()
+        print(f""Variety: {self.variety}"")
+
+
+class Plum(Fruit):
+    def __init__(self, color, weight, ripeness):
+        super().__init__(color, weight)
+        self.ripeness = ripeness
+
+    def display_info(self):
+        super().display_info()
+        print(f""Ripeness: {self.ripeness}"")
+
+
+class Peach(Fruit):
+    def __init__(self, color, weight, sweetness):
+        super().__init__(color, weight)
+        self.sweetness = sweetness
+
+    def display_info(self):
+        super().display_info()
+        print(f""Sweetness: {self.sweetness}"")
+
+
+# Пример использования классов
+if __name__ == ""__main__"":
+    fruits = [
+        Apple(""Red"", 150, ""Gala""),
+        Apple(""Green"", 130, ""Granny Smith""),
+        Plum(""Purple"", 50, ""Ripe""),
+        Plum(""Yellow"", 55, ""Unripe""),
+        Peach(""Orange"", 200, ""Very Sweet"")
+    ]
+
+    for fruit in fruits:
+        fruit.display_info()
+        print()
+
+    print(f""Total number of fruits created: {Fruit.get_total_fruits()}"")
+"
+"53. Дано предложение без знаков препинания. Превратить предложение в список слов. При помощи механизма map/filter/reduce найти количество слов, длина которых больше 4 и склеить их в одну строку (20 баллов)","from functools import reduce
+
+# Получаем предложение от пользователя
+sentence = input(""Введите предложение: "")
+
+# Превращаем предложение в список слов
+words = sentence.split()
+
+# �спользуем map для создания списка кортежей (слово, длина слова)
+words_with_lengths = list(map(lambda word: (word, len(word)), words))
+
+# Фильтруем слова длиной больше 4
+filtered_words = list(filter(lambda x: x[1] > 4, words_with_lengths))
+
+# �звлекаем только слова из отфильтрованных кортежей
+filtered_words_only = list(map(lambda x: x[0], filtered_words))
+
+# Склеиваем отфильтрованные слова в одну строку
+result = reduce(lambda x, y: x + y, filtered_words_only)
+
+# Выводим результат
+print(f""Склеенные слова длиной больше 4: {result}"")"
+"55. Реализовать функцию st_reverse(a_string), которая при помощи стека инвертирует строку (меняет порядок букв на обратный). Пример: st_reverse(‘abcd’) -> ‘dcba’. (20 баллов)","class Stack:
+    def __init__(self):
+        self.stack = []
+
+    def push(self, item):
+        self.stack.append(item)
+
+    def pop(self):
+        if not self.is_empty():
+            return self.stack.pop()
+        else:
+            return None
+
+    def is_empty(self):
+        return len(self.stack) == 0
+
+    def peek(self):
+        if not self.is_empty():
+            return self.stack[-1]
+        else:
+            return None
+
+
+def st_reverse(a_string):
+    stack = Stack()
+
+    # Помещаем все символы строки в стек
+    for char in a_string:
+        stack.push(char)
+    # �звлекаем символы из стека и собираем их в обратном порядке
+    reversed_string = ''
+    while not stack.is_empty():
+        reversed_string += stack.pop()
+
+    return reversed_string
+
+
+# Пример использования
+input_string = 'abcd'
+reversed_string = st_reverse(input_string)
+print(f""Original string: {input_string}"")
+print(f""Reversed string: {reversed_string}"")"
+"62. Дан список с перечнем товаров. Выбрать все товары, изготовленные фирмой Bosh и создать из них новый список. (20 баллов)","# �сходный список товаров
+products = [
+    {""name"": ""Washing Machine"", ""manufacturer"": ""Bosh"", ""price"": 300},
+    {""name"": ""Refrigerator"", ""manufacturer"": ""Samsung"", ""price"": 500},
+    {""name"": ""Microwave"", ""manufacturer"": ""Bosh"", ""price"": 150},
+    {""name"": ""Vacuum Cleaner"", ""manufacturer"": ""LG"", ""price"": 200},
+    {""name"": ""Dishwasher"", ""manufacturer"": ""Bosh"", ""price"": 400},
+    {""name"": ""Oven"", ""manufacturer"": ""Electrolux"", ""price"": 350}
+]
+
+# Фильтрация товаров, изготовленных фирмой Bosh
+bosh_products = [product for product in products if product[""manufacturer""] == ""Bosh""]
+
+# Вывод нового списка товаров, изготовленных фирмой Bosh
+print(""Products manufactured by Bosh:"")
+for product in bosh_products:
+    print(product)"
+64. Даны 2 списка с фамилиями студентов 2-х групп. Перевести n студентов из 1-й группы во 2-ю. Число пересчета - k. (20 баллов),"def transfer_students(group1, group2, n, k):
+    """"""
+    Переводит n студентов из первой группы во вторую с учетом числа пересчета k.
+
+    :param group1: Список студентов первой группы.
+    :param group2: Список студентов второй группы.
+    :param n: Количество студентов для перевода.
+    :param k: Число пересчета.
+    :return: Обновленные списки групп.
+    """"""
+    if n <= 0 or k <= 0:
+        raise ValueError(""Число студентов для перевода и число пересчета должны быть положительными"")
+
+    transferred_count = 0
+    index = 0
+
+    while transferred_count < n and group1:
+        # Находим индекс студента для перевода с учетом числа пересчета k
+        index = (index + k - 1) % len(group1)
+
+        # Переносим студента из первой группы во вторую
+        student = group1.pop(index)
+        group2.append(student)
+
+        # Увеличиваем счетчик переведенных студентов
+        transferred_count += 1
+
+    return group1, group2
+
+
+# Пример использования функции
+group1 = [""�ванов"", ""Петров"", ""Сидоров"", ""Кузнецов"", ""Смирнов""]
+group2 = [""Александров"", ""Борисов"", ""Васильев""]
+
+n = 3
+k = 2
+
+updated_group1, updated_group2 = transfer_students(group1, group2, n, k)
+
+print(""Обновленная первая группа:"", updated_group1)
+print(""Обновленная вторая группа:"", updated_group2)"
+65. Даны 2 списка: перечень товаров и фамилии покупателей. Каждый n-й покупатель покупает m-й товар. Вывести список покупок. (20 баллов),"def create_purchase_list(products, customers):
+    """"""
+    Создает список покупок, сопоставляя каждого n-го покупателя с m-ым товаром.
+
+    :param products: Список товаров.
+    :param customers: Список покупателей.
+    :return: Список покупок.
+    """"""
+    purchase_list = []
+
+    # Найдем минимальную длину списка, чтобы не выйти за пределы
+    min_length = min(len(products), len(customers))
+
+    for i in range(min_length):
+        purchase = f""{customers[i]} покупает {products[i]}""
+        purchase_list.append(purchase)
+
+    return purchase_list
+
+# Пример использования функции
+products = [""Хлеб"", ""Молоко"", ""Сыр"", ""Яблоки"", ""Шоколад""]
+customers = [""�ванов"", ""Петров"", ""Сидоров"", ""Кузнецов"", ""Смирнов""]
+
+purchase_list = create_purchase_list(products, customers)
+
+for purchase in purchase_list:
+    print(purchase)"
+"11. Создайте класс Speed (Скорость), имеющий атрибуты: value (значение),
+unit (единица измерения). При изменении единицы измерения значение должно
+соответственно меняться. Например, при переходе от км/ч к м/с и наоборот.
+Например, 20 км/ч = 5.56 м/с. Допустимые значения свойства unit: �м/с’, �км/ч’.
+Организуйте эту проверку. Продемонстрируйте работу с классом. (20 баллов)","class Speed:
+    def __init__(self, value, unit):
+        self.value = value
+        if unit == 'км/ч' or unit == 'м/с':
+            self.unit = unit
+        else:
+            self.unit = None
+
+    def change_unit(self):
+        if self.unit != None:
+            new_unit = str(input('Введите новую единицу измерения: '))
+            if new_unit == self.unit:
+                print(f""Единицы измерения не поменялись. Значение: {self.value} {self.unit}"")
+            elif new_unit == 'км/ч':
+                self.value = (self.value * 3600) / 1000
+                self.unit = 'км/ч'
+                print(f""�змененное значение: {round(self.value,2)} {self.unit}"")
+            elif new_unit == 'м/с':
+                self.value = (self.value * 1000) / 3600
+                self.unit = 'м/с'
+                print(f""�змененное значение: {round(self.value,2)} {self.unit}"")
+            else:
+                print(""Вы ввели недопустимую единицу измерения"")
+        else:
+            print(""Вы ввели недопустимую единицу измерения"")
+
+# Пример использования класса
+a = Speed(20, 'м/ч')
+print(a.value, a.unit)
+a.change_unit()"
+"22. Создать класс Деньги для работы с денежными суммами. Число должно быть представлено списком, состоящим из рублей и копеек. Реализовать сложение, вычитание, деление сумм, деление денежных сумм.","class Деньги:
+    def __init__(self, рубли, копейки):
+        self.рубли = рубли
+        self.копейки = копейки
+
+    def __str__(self):
+        return f""{self.рубли} руб. {self.копейки} коп.""
+
+    def __add__(self, other):
+        рубли = self.рубли + other.рубли
+        копейки = self.копейки + other.копейки
+        if копейки >= 100:
+            рубли += 1
+            копейки -= 100
+        return Деньги(рубли, копейки)
+
+    def __sub__(self, other):
+        рубли = self.рубли - other.рубли
+        копейки = self.копейки - other.копейки
+        if копейки < 0:
+            рубли -= 1
+            копейки += 100
+        return Деньги(рубли, копейки)
+
+    def __truediv__(self, num):
+        total_kopecks = self.рубли * 100 + self.копейки
+        result_kopecks = total_kopecks / num
+        рубли = result_kopecks // 100
+        копейки = result_kopecks % 100
+        return Деньги(int(рубли), int(копейки))
+
+    def __floordiv__(self, other):
+        total1 = self.рубли * 100 + self.копейки
+        total2 = other.рубли * 100 + other.копейки
+        result = total1 // total2
+        return result
+
+# Пример использования класса Деньги
+сумма1 = Деньги(10, 50)
+сумма2 = Деньги(5, 30)
+
+print(сумма1 + сумма2)  # Сложение денежных сумм
+print(сумма1 - сумма2)  # Вычитание денежных сумм
+print(сумма1 / 3)       # Деление суммы на число
+print(сумма1 // сумма2)  # Деление одной суммы на другую
+"
+"21. Создайте класс Заказ(Order), у которого есть свойства кодтовара(code), цена(price), количество(count) и методы _init и str. Создайте 2 класса-потомка: Опт(Opt) и Розница(Retail). В этих классах создайте методы init, str и суммазаказа (summa), позволяющий узнать стоимость заказа. Для опта стоимость единицы товара составляет 95% от цены, а при покупке более 500 штук – 90% цены. В розницу стоимость единицы товара составляет 100% цены. Стоимость заказа равна произведению цены на количество. Создайте список, содержащий по 2 объекта каждого класса (Order, Opt, Retail). Для этого списка: • выведите информацию о каждом объекте с помощью метода _str; • найдите общую стоимость заказов для объектов Opt и Retail. (20 баллов)
+","class Order:
+    def __init__(self, code, price, count):
+        self.code = code
+        self.price = price
+        self.count = count
+
+    def __str__(self):
+        return f""Товар: {self.code}, Цена: {self.price}, Количество: {self.count}""
+
+class Opt(Order):
+    def __init__(self, code, price, count):
+        super().__init__(code, price, count)
+
+    def summa(self):
+        if self.count > 500:
+            return self.price * self.count * 0.9
+        else:
+            return self.price * self.count * 0.95
+
+class Retail(Order):
+    def __init__(self, code, price, count):
+        super().__init__(code, price, count)
+
+    def summa(self):
+        return self.price * self.count
+
+# Создание объектов
+orders = [
+    Order(""Товар1"", 100, 200),
+    Order(""Товар2"", 50, 300),
+    Opt(""Товар3"", 100, 600),
+    Opt(""Товар4"", 80, 400),
+    Retail(""Товар5"", 120, 150),
+    Retail(""Товар6"", 70, 250)
+]
+
+# Вывод информации о каждом объекте
+for order in orders:
+    print(order)
+    if isinstance(order, Opt) or isinstance(order, Retail):
+        print(f""Стоимость заказа: {order.summa()}"")
+
+# Вычисление общей стоимости заказов для объектов Opt и Retail
+total_cost = sum(order.summa() for order in orders if isinstance(order, Opt) or isinstance(order, Retail))
+print(f""\nОбщая стоимость заказов: {total_cost}"")"
