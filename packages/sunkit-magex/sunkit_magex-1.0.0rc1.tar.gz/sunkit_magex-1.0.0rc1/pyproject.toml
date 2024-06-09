@@ -1,0 +1,76 @@
+[build-system]
+requires = [
+  "setuptools>=62.1",
+  "setuptools_scm[toml]>=6.2",
+  "wheel",]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sunkit_magex"
+description = "Solar Magnetic field Extrapolation"
+requires-python = ">=3.10"
+readme = { file = "README.rst", content-type = "text/x-rst" }
+license = { file = "licenses/LICENSE.rst", content-type = "text/plain" }
+authors = [
+  { name = "The SunPy Community", email = "sunpy@googlegroups.com" },
+]
+dependencies = [
+  "astropy>=5.2.0",
+  "numpy>=1.23.0",
+  "scikit-image>=0.19.0",
+  # !=1.10.0 due to https://github.com/scipy/scipy/issues/17718
+  "scipy>=1.8.0,!=1.10.0",
+  "sunpy[map]>=5.1",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+tests = [
+  "pytest",
+  "pytest-doctestplus",
+  "pytest-cov",
+  "pytest-xdist",
+  "pytest-arraydiff",
+  "parfive",
+  "reproject",
+  "streamtracer",
+  "sympy",
+]
+docs = [
+  "sphinx",
+  "sphinx-automodapi",
+  "pillow",
+  "reproject",
+  "sphinx-gallery",
+  "streamtracer",
+  "sunpy[net,map]",
+  "sympy",
+  "sunpy-sphinx-theme",
+]
+performance = [
+  "numba",
+  "streamtracer",
+]
+analytic = [
+  "sympy",
+]
+all = ["sunkit-magex[performance,analytic]"]
+dev = ["sunkit-magex[all,tests,docs]"]
+
+[project.urls]
+Homepage = "https://sunpy.org"
+Download = "https://pypi.org/project/sunkit-magex/"
+"Source Code" = "https://github.com/sunpy/sunkit-magex/"
+Documentation = "https://docs.sunpy.org/"
+Changelog = "https://docs.sunpy.org/en/stable/whatsnew/changelog.html"
+"Issue Tracker" = "https://github.com/sunpy/sunkit-magex/issues"
+
+[tool.setuptools]
+zip-safe = false
+include-package-data = true
+
+[tool.setuptools.packages.find]
+exclude = ["sunkit_magex._dev*"]
+
+[tool.setuptools_scm]
+write_to = "sunkit_magex/_version.py"
