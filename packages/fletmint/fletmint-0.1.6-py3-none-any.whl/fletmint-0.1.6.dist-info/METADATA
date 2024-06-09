@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: fletmint
+Version: 0.1.6
+Summary: A sharp and modern components library for Flet
+Author: Edoardo Balducci
+Author-email: edoardoba2004@gmail.com
+Project-URL: support, https://www.patreon.com/edoardobalducci
+Project-URL: repository, https://github.com/Bbalduzz/fletmint
+Project-URL: tracker, https://github.com/Bbalduzz/fletmint/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: flet
+
+<h1 align="center">
+  <img src="https://github.com/Bbalduzz/fletmint/assets/81587335/c9ee557f-4362-432e-9d02-47995bc63585" alt="fletmint logo" width="200"/>
+  </br>
+  Flet Mint
+</h1>
+
+<h4 align="center">A sharp and modern components library for Flet</h4>
+
+<p align="center">
+  <a href="https://github.com/Bbalduzz/fletmint?tab=readme-ov-file#documentation">Documentation</a> â€¢
+  <a href="https://github.com/Bbalduzz/fletmint?tab=readme-ov-file#support">Support the dev</a>
+</p>
+
+<kbd>
+<img src="https://github.com/Bbalduzz/fletmint/assets/81587335/16351382-8148-4421-b9a3-599003caeda9" alt="fletmint logo"/>
+</kbd>
