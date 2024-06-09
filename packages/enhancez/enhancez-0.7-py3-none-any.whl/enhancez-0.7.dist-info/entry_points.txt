@@ -1,0 +1,2 @@
+[console_scripts]
+enhancez = enhancez.run_streamlit:run
