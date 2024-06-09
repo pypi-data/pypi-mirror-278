@@ -1,0 +1,4 @@
+include README.md
+include enhancez/.streamlit/config.toml
+recursive-include enhancez/pages *
+recursive-include enhancez/.streamlit *
