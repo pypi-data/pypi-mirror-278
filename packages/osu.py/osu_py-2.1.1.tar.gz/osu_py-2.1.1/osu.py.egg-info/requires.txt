@@ -1,0 +1,13 @@
+aiohttp<4,>=3.9.2
+python_dateutil<3,>=2.4.0
+requests<3,>=2.25.1
+
+[notifications]
+websockets<12,>=11
+
+[replay]
+osrparse<7,>=6.0.1
+
+[tests]
+pytest
+pytest-asyncio
