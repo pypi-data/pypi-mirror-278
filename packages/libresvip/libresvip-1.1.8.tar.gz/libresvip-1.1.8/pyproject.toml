@@ -1,0 +1,238 @@
+[project]
+authors = [
+    { name = "SoulMelody", email = "yjxrtzyx@gmail.com" },
+]
+requires-python = ">=3.9,<3.13"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Environment :: Console",
+    "Operating System :: Unix",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: Microsoft :: Windows :: Windows 10",
+    "Operating System :: Microsoft :: Windows :: Windows 11",
+    "Framework :: Pydantic :: 2",
+    "Topic :: File Formats",
+    "Topic :: Multimedia :: Sound/Audio :: Sound Synthesis",
+    "Typing :: Typed",
+]
+dependencies = [
+    "bidict<0.23.2,>=0.23.1",
+    "charset-normalizer<4.0.0,>=3.3.2",
+    "construct-typing<1.0.0,>=0.6.2",
+    "drawsvg<3.0.0,>=2.3.0",
+    "importlib-resources<7.0.0,>=6.4.0; python_version < \"3.11\"",
+    "jinja2<4.0.0,>=3.1.4",
+    "loguru<1.0.0,>=0.7.2",
+    "mido-fix<2.0.0,>=1.2.12",
+    "more-itertools<11.0.0,>=10.2.0",
+    "omegaconf<3.0.0,>=2.3.0",
+    "packaging<24.1,>=24.0",
+    "parsimonious<0.11.0,>=0.10.0",
+    "platformdirs<5.0.0,>=4.2.2",
+    "portion<3.0.0,>=2.4.2",
+    "proto-plus<2.0.0,>=1.23.0",
+    "pydantic<3.0.0,>=2.7.3",
+    "pydantic-extra-types<3.0.0,>=2.8.0",
+    "pymediainfo<7.0.0,>=6.1.0; sys_platform != \"emscripten\"",
+    "pypinyin<1.0.0,>=0.51.0",
+    "pyzstd<1.0.0,>=0.16.0; platform_python_implementation == \"PyPy\"",
+    "retrie<1.0.0,>=0.3.1",
+    "rich<14.0.0,>=13.7.1",
+    "srt<4.0.0,>=3.5.3",
+    "typer-slim<1.0.0,>=0.12.3",
+    "wanakana-python<2.0.0,>=1.2.2",
+    "xsdata-pydantic<24.6,>=24.5",
+    "zhon<3.0.0,>=2.0.2",
+    "zstandard<0.23.0,>=0.22.0; platform_python_implementation == \"CPython\"",
+]
+name = "libresvip"
+dynamic = []
+description = "Universal Converter for Singing Voice Projects"
+readme = "README.md"
+version = "1.1.8"
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+repository = "https://github.com/SoulMelody/LibreSVIP"
+documentation = "https://soulmelody.github.io/LibreSVIP"
+
+[project.optional-dependencies]
+ujson = [
+    "ujson>=5.10.0",
+]
+upath = [
+    "universal-pathlib<1.0.0,>=0.2.2",
+]
+ruamel_yaml = [
+    "ruamel.yaml>=0.18.6",
+]
+lxml = [
+    "lxml>=5.2.2",
+]
+webui = [
+    "nicegui>=1.4.26",
+    "pywebview>=5.1",
+    "libresvip[upath]",
+]
+desktop = [
+    "pyside6<6.8.0,>=6.7.1",
+    "fonticon-materialdesignicons7>=7.2.96",
+    "httpx>=0.27.0",
+    "desktop-notifier>=4.0.0; platform_python_implementation == \"CPython\"",
+    "libresvip[upath]",
+]
+
+[project.scripts]
+libresvip-cli = "libresvip.cli.__main__:app"
+libresvip-web = "libresvip.web.__main__:main"
+
+[project.gui-scripts]
+libresvip-gui = "libresvip.gui.__main__:run"
+
+[tool.pdm.version]
+source = "file"
+path = "libresvip/__init__.py"
+
+[tool.pdm.dev-dependencies]
+code_gen = [
+    "datamodel-code-generator>=0.25.6",
+    "gapic-generator>=1.18.0",
+    "xsdata[cli]>=24.5",
+]
+i18n = [
+    "translate-toolkit>=3.13.0",
+    "babel>=2.15.0",
+]
+linting = [
+    "pre-commit>=3.7.1",
+    "ruff>=0.4.8",
+    "mypy>=1.10.0",
+    "sourcery>=1.19.0",
+    "proto-plus-stubs>=0.7.0",
+    "types-lxml>=2024.4.14",
+    "types-parsimonious>=0.10.0.20240331",
+    "types-pyyaml>=6.0.12.20240311",
+    "types-ujson>=5.10.0.20240515",
+]
+packaging = [
+    "cx-Freeze>=7.1.0.post0",
+    "nuitka>=2.3.1",
+    "pyinstaller>=6.8.0",
+    "shellingham<2.0.0,>=1.5.4",
+]
+docs = [
+    "mkdocs-material<10.0.0,>=9.5.26",
+]
+test = [
+    "pytest>=8.2.2",
+    "pytest-datadir>=1.5.0",
+]
+
+[tool.pdm.build]
+includes = [
+    "libresvip",
+]
+excludes = [
+    "tests",
+    "libresvip/res/qml/**",
+    "libresvip/res/locales/*/LC_MESSAGES/libresvip.po",
+    "libresvip/middlewares/*/*.pot",
+    "libresvip/plugins/*/*.pot",
+    "**/.mypy_cache",
+]
+
+[tool.pytest.ini_options]
+addopts = "-s -p no:warnings"
+pythonpath = "."
+testpaths = "tests"
+
+[tool.ruff]
+target-version = "py39"
+src = [
+    "libresvip",
+    "tests",
+]
+line-length = 100
+fix = true
+
+[tool.ruff.lint]
+select = [
+    "A",
+    "ANN",
+    "ASYNC",
+    "C4",
+    "DTZ",
+    "E",
+    "EM",
+    "EXE",
+    "F",
+    "FLY",
+    "I",
+    "INT",
+    "N",
+    "PERF",
+    "PIE",
+    "PGH",
+    "PLC",
+    "PT",
+    "PTH",
+    "PYI",
+    "SIM",
+    "T10",
+    "T20",
+    "TCH",
+    "TRY",
+    "UP",
+    "W",
+    "YTT",
+]
+ignore = [
+    "ANN101",
+    "ANN102",
+    "ANN401",
+    "E501",
+    "UP007",
+]
+
+[tool.ruff.lint.isort]
+known-first-party = [
+    "libresvip",
+    "tests",
+]
+known-third-party = [
+    "srt",
+]
+
+[tool.mypy]
+disable_error_code = "attr-defined,import-not-found,operator,return-value,type-abstract,unused-ignore"
+allow_redefinition = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+disallow_any_generics = true
+check_untyped_defs = true
+no_implicit_reexport = true
+disallow_untyped_defs = true
+warn_no_return = false
+no_site_packages = true
+explicit_package_bases = true
+
+[build-system]
+requires = [
+    "pdm-backend",
+    "setuptools",
+    "wheel",
+]
+build-backend = "pdm.backend"
