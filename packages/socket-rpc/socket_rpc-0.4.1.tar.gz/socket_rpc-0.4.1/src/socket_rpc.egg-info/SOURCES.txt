@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/socket_rpc/__init__.py
+src/socket_rpc/standalone_client.py
+src/socket_rpc/standalone_server.py
+src/socket_rpc.egg-info/PKG-INFO
+src/socket_rpc.egg-info/SOURCES.txt
+src/socket_rpc.egg-info/dependency_links.txt
+src/socket_rpc.egg-info/requires.txt
+src/socket_rpc.egg-info/top_level.txt
