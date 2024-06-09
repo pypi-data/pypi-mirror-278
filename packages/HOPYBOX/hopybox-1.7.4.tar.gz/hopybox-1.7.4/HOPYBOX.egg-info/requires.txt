@@ -1,0 +1,6 @@
+requests
+chardet>=5.2.0
+yagmail
+rich>=13.0.0
+bs4
+psutil>=5.8.0
