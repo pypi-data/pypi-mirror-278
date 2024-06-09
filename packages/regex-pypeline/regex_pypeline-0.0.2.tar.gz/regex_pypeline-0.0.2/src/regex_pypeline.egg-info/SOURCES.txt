@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/parsable/__init__.py
+src/parsable/backports.py
+src/parsable/collection.py
+src/parsable/main.py
+src/regex_pypeline.egg-info/PKG-INFO
+src/regex_pypeline.egg-info/SOURCES.txt
+src/regex_pypeline.egg-info/dependency_links.txt
+src/regex_pypeline.egg-info/not-zip-safe
+src/regex_pypeline.egg-info/requires.txt
+src/regex_pypeline.egg-info/top_level.txt
+tests/test_basics.py
