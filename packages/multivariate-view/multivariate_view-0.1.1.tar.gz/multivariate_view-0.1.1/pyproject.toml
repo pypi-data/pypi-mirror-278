@@ -1,0 +1,57 @@
+[build-system]
+requires = ['setuptools', 'setuptools_scm']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'multivariate-view'
+requires-python = '>= 3.10'
+dynamic = ['version']
+dependencies = [
+  'h5py',
+  'numba',
+  'pillow',
+  'requests',
+  'scipy',
+  'trame',
+  'trame-vtk',
+  'trame-vuetify',
+  'vtk',
+]
+
+authors = [
+  {name = 'Patrick Avery', email = 'patrick.avery@kitware.com'},
+  {name = 'Sankhesh Jhaveri', email = 'sankhesh.jhaveri@kitware.com'},
+  {name = 'Sebastien Jourdain', email = 'sebastien.jourdain@kitware.com'},
+]
+maintainers = [
+  {name = 'Patrick Avery', email = 'patrick.avery@kitware.com'},
+  {name = 'Sankhesh Jhaveri', email = 'sankhesh.jhaveri@kitware.com'},
+  {name = 'Sebastien Jourdain', email = 'sebastien.jourdain@kitware.com'},
+]
+description = 'RadVolViz-inspired multivariate volume visualizer using VTK'
+readme = 'README.md'
+license = {file = 'LICENSE'}
+keywords = ['web', 'trame', 'vtk', 'radvolviz', 'multivariate', 'volume']
+classifiers = [
+  'Development Status :: 4 - Beta',
+  'Intended Audience :: Developers',
+  'License :: OSI Approved :: Apache Software License',
+  'Programming Language :: Python :: 3',
+  'Programming Language :: Python :: 3.11',
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.setuptools.package-data]
+multivariate_view = ["module/serve/*.js"]
+
+[tool.setuptools_scm]
+
+[project.scripts]
+multivariate-view = 'multivariate_view.app.main:main'
+mv-view = 'multivariate_view.app.main:main'
+
+[tool.black]
+line-length = 79
+skip-string-normalization = true
