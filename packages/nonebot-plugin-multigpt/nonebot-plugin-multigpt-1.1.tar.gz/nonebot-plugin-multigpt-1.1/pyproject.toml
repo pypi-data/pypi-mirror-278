@@ -1,0 +1,28 @@
+[project]
+name = "nonebot-plugin-multigpt"
+version = "1.1"
+description = "nonebot插件-多模ai工具"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+keywords = ["PPT", "chat"]
+authors = [
+  {email = "3173707804@qq.com"},
+  {name = "syagina"}
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python"
+]
+
+dependencies = [
+  "nonebot2",
+  "anyio",
+  "aiohttp",
+  "python-pptx",
+  "python-docx",
+  "pillow"
+]
+
+[project.urls]
+repository = "https://github.com/syagina/nonebot-plugin-multigpt"
