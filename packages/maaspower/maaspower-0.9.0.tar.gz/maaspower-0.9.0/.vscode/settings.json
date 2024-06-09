@@ -1,0 +1,17 @@
+{
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+    },
+    "cSpell.words": [
+        "maasconfig",
+        "maaspower",
+        "mmaaspower",
+        "rooturi"
+    ]
+}

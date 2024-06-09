@@ -1,0 +1,329 @@
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name for this webhook server instance"
+    },
+    "ip_address": {
+      "type": "string",
+      "description": "IP address to listen on"
+    },
+    "port": {
+      "type": "integer",
+      "description": "port to listen on"
+    },
+    "username": {
+      "type": "string",
+      "description": "username for connecting to webhook"
+    },
+    "password": {
+      "type": "string",
+      "description": "password for connecting to webhook"
+    },
+    "devices": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "A name for the switching device"
+              },
+              "query_on_regex": {
+                "type": "string",
+                "description": "match the on status return from query",
+                "default": "on"
+              },
+              "query_off_regex": {
+                "type": "string",
+                "description": "match the off status return from query",
+                "default": "off"
+              }
+            },
+            "required": [
+              "name"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "A name for the switching device"
+              },
+              "query_on_regex": {
+                "type": "string",
+                "description": "match the on status return from query",
+                "default": "on"
+              },
+              "query_off_regex": {
+                "type": "string",
+                "description": "match the off status return from query",
+                "default": "off"
+              },
+              "on": {
+                "type": "string",
+                "description": "command line string to switch device on"
+              },
+              "off": {
+                "type": "string",
+                "description": "command line string to switch device off"
+              },
+              "query": {
+                "type": "string",
+                "description": "command line string to query device state"
+              },
+              "type": {
+                "type": "string",
+                "const": "CommandLine",
+                "default": "CommandLine"
+              }
+            },
+            "required": [
+              "name",
+              "on",
+              "off",
+              "query"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "A name for the switching device"
+              },
+              "query_on_regex": {
+                "type": "string",
+                "description": "match the on status return from query",
+                "default": "on"
+              },
+              "query_off_regex": {
+                "type": "string",
+                "description": "match the off status return from query",
+                "default": "off"
+              },
+              "on": {
+                "type": "string",
+                "description": "command line string to switch device on"
+              },
+              "off": {
+                "type": "string",
+                "description": "command line string to switch device off"
+              },
+              "query": {
+                "type": "string",
+                "description": "command line string to query device state"
+              },
+              "type": {
+                "type": "string",
+                "const": "SmartThingDevice",
+                "default": "SmartThingDevice"
+              },
+              "api_token": {
+                "type": "string",
+                "description": "SmartThings API token see https://account.smartthings.com/login",
+                "default": "none"
+              },
+              "device_id": {
+                "type": "string",
+                "description": "The SmartThings identifier for an individual device",
+                "default": "none"
+              }
+            },
+            "required": [
+              "name",
+              "on",
+              "off",
+              "query"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "A name for the switching device"
+              },
+              "query_on_regex": {
+                "type": "string",
+                "description": "match the on status return from query",
+                "default": "on"
+              },
+              "query_off_regex": {
+                "type": "string",
+                "description": "match the off status return from query",
+                "default": "off"
+              },
+              "type": {
+                "type": "string",
+                "const": "WebGui",
+                "default": "WebGui"
+              },
+              "connect_url": {
+                "type": "string",
+                "description": "URL to Web UI",
+                "default": "none"
+              },
+              "login": {
+                "type": "string",
+                "description": "command sequence to log in",
+                "default": "none"
+              },
+              "logout": {
+                "type": "string",
+                "description": "command sequence to log out",
+                "default": "none"
+              },
+              "timeout": {
+                "type": "integer",
+                "description": "max timeout on any UI transitions",
+                "default": 10
+              },
+              "driver": {
+                "type": "string",
+                "description": "Path to chromedriver binary",
+                "default": "./chromedriver"
+              }
+            },
+            "required": [
+              "name"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "A name for the switching device"
+              },
+              "on": {
+                "type": "string",
+                "description": "command line string to switch device on"
+              },
+              "off": {
+                "type": "string",
+                "description": "command line string to switch device off"
+              },
+              "query": {
+                "type": "string",
+                "description": "command line string to query device state"
+              },
+              "query_on_regex": {
+                "type": "string",
+                "description": "match the on status return from query",
+                "default": "on"
+              },
+              "query_off_regex": {
+                "type": "string",
+                "description": "match the off status return from query",
+                "default": "off"
+              },
+              "type": {
+                "type": "string",
+                "const": "WebDevice",
+                "default": "WebDevice"
+              }
+            },
+            "required": [
+              "name",
+              "on",
+              "off",
+              "query"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Logical device name for server connected to the Cisco switch port"
+              },
+              "ip_address": {
+                "type": "string",
+                "description": "IP address of the Cisco IOS PoE switch"
+              },
+              "username": {
+                "type": "string",
+                "description": "Username for the Cisco IOS PoE switch"
+              },
+              "password": {
+                "type": "string",
+                "description": "Password for the Cisco IOS PoE switch"
+              },
+              "enable_password": {
+                "type": "string",
+                "description": "Enable/secret password for escalating privileges on the Cisco switch",
+                "default": ""
+              },
+              "port_selection_string": {
+                "type": "string",
+                "description": "Port selection for the target device connected to the switch in\n            Cisco format"
+              },
+              "port_poe_watts": {
+                "type": "integer",
+                "description": "Power budget (in watts) for the target Cisco switch port",
+                "default": -1
+              },
+              "type": {
+                "type": "string",
+                "const": "CiscoIOSPOESwitch",
+                "default": "CiscoIOSPOESwitch"
+              }
+            },
+            "required": [
+              "name",
+              "ip_address",
+              "username",
+              "password",
+              "port_selection_string"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "The name of the switching device."
+              },
+              "ip_address": {
+                "type": "string",
+                "description": "The IP address of the Kasa device."
+              },
+              "type": {
+                "type": "string",
+                "const": "KasaDevice",
+                "default": "KasaDevice"
+              }
+            },
+            "required": [
+              "name",
+              "ip_address"
+            ],
+            "additionalProperties": false
+          }
+        ]
+      },
+      "description": "A list of the devices that this webhook server will control"
+    }
+  },
+  "required": [
+    "name",
+    "ip_address",
+    "port",
+    "username",
+    "password",
+    "devices"
+  ],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft/2020-12/schema#"
+}
