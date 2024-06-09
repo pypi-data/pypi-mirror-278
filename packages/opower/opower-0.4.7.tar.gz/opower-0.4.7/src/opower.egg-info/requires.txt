@@ -1,0 +1,8 @@
+aiohttp>=3.8
+aiozoneinfo>=0.1
+arrow>=1.2
+pyotp>=2.0
+
+[dev]
+pytest<8,>=7
+python-dotenv<2,>=1
