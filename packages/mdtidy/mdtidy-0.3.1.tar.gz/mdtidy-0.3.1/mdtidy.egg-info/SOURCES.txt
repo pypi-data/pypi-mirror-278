@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+mdtidy/__init__.py
+mdtidy/gemini_processor.py
+mdtidy/gpt_processor.py
+mdtidy.egg-info/PKG-INFO
+mdtidy.egg-info/SOURCES.txt
+mdtidy.egg-info/dependency_links.txt
+mdtidy.egg-info/requires.txt
+mdtidy.egg-info/top_level.txt
