@@ -1,0 +1,93 @@
+
+.eslintrc.js,28
+module.exports exports1,0
+
+.prettierrc,27
+  "singleQuote": true,2,2
+
+.stylelintrc,90
+    "property-no-vendor-prefix": null,8,141
+    "selector-no-vendor-prefix": null,9,180
+
+LICENSE,912
+Redistribution and use in source and binary forms,6,84
+modification,7,151
+1. Redistributions of source code must retain the above copyright notice,9,228
+2. Redistributions in binary form must reproduce the above copyright notice,12,360
+AND ANY EXPRESS OR IMPLIED WARRANTIES,21,847
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING,21,847
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,21,847
+FOR ANY DIRECT,24,1077
+FOR ANY DIRECT, INDIRECT,24,1077
+FOR ANY DIRECT, INDIRECT, INCIDENTAL,24,1077
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,24,1077
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,24,1077
+SERVICES; LOSS OF USE, DATA, OR PROFITS;26,1227
+CAUSED AND ON ANY THEORY OF LIABILITY,27,1302
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,27,1302
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,27,1302
+OR TORT 28,1380
+
+README-property-inspector.png,360
+€‡ÿÉÅ-TPÖI›Ir8tîàóQ√¢ƒ2bî	qÎﬂ7Ïz˚qÎﬂ7Ïz4,292
+¶é≥’sf⁄ÍeÀÕVÆ2´Z≈rjT∑ú∆YÓ&≠,o´≠˙.ù¨jÀ≠ì÷”Øbì3x‡’IsÍ§àÄàÄàÄàÄàÄ¨%äA≤ñ¿Î∂"Pé‰OüdˇæŸﬂV~4»Vœ˚'„öÂ4l`U;mµ∫ùbyMõπ~ıÍ’V•Ji-BF	" " " " " " " kù@˛îq∂¯â[-ˇ´°fŸ€v†TYÒ S∂b–”ñ◊a´sÊ5ñ∑i´»ÛÂ‰‰∏˝úmŒ˝&˚ªDä”NE#pÁ!Ûló]v)’«>|x©ñØ¬E@D@D@D@÷}≤ Y˜?C=C9,2049
+VG@‰4VG@‰13,3394
+ßÙò={∂ù{ÓπV≥fMf14,3461
+
+jupyterlab_gridwidth/__init__.py,38
+def _jupyter_labextension_paths(4,36
+
+package.json,31
+    "extension": true,97,3453
+
+pyproject.toml,45
+requires 2,15
+requires-python python9,222
+
+schema/plugin.json,40
+  "additionalProperties": false,12,331
+
+src/index.ts,24
+const PLUGIN_ID 16,550
+
+tsconfig.json,416
+    "allowSyntheticDefaultImports": true,3,25
+    "composite": true,4,67
+    "declaration": true,5,90
+    "esModuleInterop": true,6,115
+    "incremental": true,7,144
+    "noEmitOnError": true,11,245
+    "noImplicitAny": true,12,272
+    "noUnusedLocals": true,13,299
+    "preserveWatchOutput": true,14,327
+    "resolveJsonModule": true,15,360
+    "strict": true,18,434
+    "strictNullChecks": true,19,454
+
+style/index.js,0
+
+style/index.css,0
+
+style/base.css,0
+
+setup.py,0
+
+install.json,0
+
+examples/gridwidth.ipynb,0
+
+RELEASE.md,0
+
+README.md,0
+
+CHANGELOG.md,0
+
+.yarnrc.yml,0
+
+.prettierignore,0
+
+.gitignore,0
+
+.github/workflows/build.yml,0
+
+.eslintignore,0

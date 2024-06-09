@@ -1,0 +1,608 @@
+[I 2024-06-06 14:20:13.575 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2024-06-06 14:20:13.581 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[W 2024-06-06 14:20:13.583 LabApp] 'token' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2024-06-06 14:20:13.583 LabApp] 'iopub_data_rate_limit' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2024-06-06 14:20:13.587 ServerApp] ServerApp.token config is deprecated in 2.0. Use IdentityProvider.token.
+[W 2024-06-06 14:20:13.587 ServerApp] ServerApp.iopub_data_rate_limit config is deprecated in 2.0. Use ZMQChannelsWebsocketConnection.iopub_data_rate_limit.
+[I 2024-06-06 14:20:13.587 ServerApp] jupyterlab | extension was successfully linked.
+[I 2024-06-06 14:20:13.587 ServerApp] jupyterlab_jupytext | extension was successfully linked.
+[I 2024-06-06 14:20:13.587 ServerApp] jupyterlab_myst | extension was successfully linked.
+[I 2024-06-06 14:20:13.592 ServerApp] jupyterlab_rise | extension was successfully linked.
+[I 2024-06-06 14:20:13.913 ServerApp] notebook_shim | extension was successfully linked.
+[I 2024-06-06 14:20:13.986 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2024-06-06 14:20:13.989 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2024-06-06 14:20:13.991 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2024-06-06 14:20:13.995 LabApp] JupyterLab extension loaded from /Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/site-packages/jupyterlab
+[I 2024-06-06 14:20:13.995 LabApp] JupyterLab application directory is /Users/tparment/miniconda3/envs/jupyterlab-gridwidth/share/jupyter/lab
+[I 2024-06-06 14:20:13.996 LabApp] Extension Manager is 'pypi'.
+[I 2024-06-06 14:20:14.024 ServerApp] jupyterlab | extension was successfully loaded.
+[W 2024-06-06 14:20:14.024 ServerApp] [Jupytext Server Extension] Async contents managers like AsyncLargeFileManager are not supported at the moment (https://github.com/mwouts/jupytext/issues/1020). We will derive a contents manager from LargeFileManager instead.
+[I 2024-06-06 14:20:14.024 ServerApp] [Jupytext Server Extension] Deriving a JupytextContentsManager from LargeFileManager
+[I 2024-06-06 14:20:14.026 ServerApp] jupyterlab_jupytext | extension was successfully loaded.
+[I 2024-06-06 14:20:14.028 ServerApp] jupyterlab_myst | extension was successfully loaded.
+[I 2024-06-06 14:20:14.034 ServerApp] jupyterlab_rise | extension was successfully loaded.
+[I 2024-06-06 14:20:14.035 ServerApp] Serving notebooks from local directory: /Users/tparment/git/jupyterlab-gridwidth
+[I 2024-06-06 14:20:14.035 ServerApp] Jupyter Server 2.14.1 is running at:
+[I 2024-06-06 14:20:14.035 ServerApp] http://localhost:55182/lab?token=...
+[I 2024-06-06 14:20:14.035 ServerApp]     http://127.0.0.1:55182/lab?token=...
+[I 2024-06-06 14:20:14.036 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[I 2024-06-06 14:20:14.904 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[W 2024-06-06 14:20:19.046 LabApp] Failed validating settings (jupyterlab-jupytext:plugin): Additional properties are not allowed ('category' was unexpected)
+    
+    Failed validating 'additionalProperties' in schema:
+        {'additionalProperties': False,
+         'description': 'List of Jupytext Text Notebook formats that will be '
+                        'added to launcher and jupytext menu.',
+         'properties': {'NOTE': {'description': 'Refresh the current browser '
+                                                'tab for the changes to take '
+                                                'effect.',
+                                 'type': 'null'},
+                        'Rmd': {'default': False,
+                                'title': 'R Markdown Notebook',
+                                'type': 'boolean'},
+                        'auto:hydrogen': {'default': False,
+                                          'title': 'Text Notebook as Script in '
+                                                   'Hydrogen Format',
+                                          'type': 'boolean'},
+                        'auto:light': {'default': False,
+                                       'title': 'Text Notebook as Script in '
+                                                'Light Format',
+                                       'type': 'boolean'},
+                        'auto:nomarker': {'default': False,
+                                          'title': 'Text Notebook as Script in '
+                                                   'Nomarker Format',
+                                          'type': 'boolean'},
+                        'auto:percent': {'default': True,
+                                         'title': 'Text Notebook as Script in '
+                                                  'Percent Format',
+                                         'type': 'boolean'},
+                        'md': {'default': False,
+                               'title': 'Markdown Notebook',
+                               'type': 'boolean'},
+                        'md:myst': {'default': True,
+                                    'title': 'MyST Markdown Notebook',
+                                    'type': 'boolean'},
+                        'qmd': {'default': False,
+                                'title': 'Quarto Markdown Notebook',
+                                'type': 'boolean'}},
+         'title': 'Jupytext',
+         'type': 'object'}
+    
+    On instance:
+        {'Rmd': False,
+         'auto:hydrogen': False,
+         'auto:light': False,
+         'auto:nomarker': False,
+         'auto:percent': True,
+         'category': 'Jupytext',
+         'md': False,
+         'md:myst': True,
+         'qmd': False}
+[I 2024-06-06 14:20:19.504 ServerApp] Loaded Jupytext configuration file at /Users/tparment/.config/jupytext/jupytext.toml
+[I 2024-06-06 14:20:19.901 LabApp] Build is up to date
+[W 2024-06-06 14:20:20.017 ServerApp] 404 GET /api/contents/notebooks/tps/taylor/teacher?content=0&hash=0&1717676420012 (5c5a736c57454ac785637ad376480d4a@::1) 1.65ms referer=http://localhost:55182/lab
+[W 2024-06-06 14:20:20.018 ServerApp] 404 GET /api/contents/notebooks/tps/taylor/teacher?content=0&hash=0&1717676420012 (::1): file or directory does not exist: 'notebooks/tps/taylor/teacher'
+[W 2024-06-06 14:20:20.021 ServerApp] 404 GET /api/contents/notebooks/tps/taylor/teacher/README-taylor-2-numpy-corrige-nb.md?content=0&hash=0&1717676420013 (5c5a736c57454ac785637ad376480d4a@::1) 1.82ms referer=http://localhost:55182/lab
+[W 2024-06-06 14:20:20.021 ServerApp] 404 GET /api/contents/notebooks/tps/taylor/teacher/README-taylor-2-numpy-corrige-nb.md?content=0&hash=0&1717676420013 (::1): file or directory does not exist: 'notebooks/tps/taylor/teacher/README-taylor-2-numpy-corrige-nb.md'
+[W 2024-06-06 14:20:20.023 ServerApp] 404 GET /api/contents/notebooks/tps/taylor/teacher/README-taylor-3-interactive-corrige-nb.md?content=0&hash=0&1717676420013 (5c5a736c57454ac785637ad376480d4a@::1) 1.74ms referer=http://localhost:55182/lab
+[W 2024-06-06 14:20:20.023 ServerApp] 404 GET /api/contents/notebooks/tps/taylor/teacher/README-taylor-3-interactive-corrige-nb.md?content=0&hash=0&1717676420013 (::1): file or directory does not exist: 'notebooks/tps/taylor/teacher/README-taylor-3-interactive-corrige-nb.md'
+[W 2024-06-06 14:20:20.024 ServerApp] 404 GET /api/contents/notebooks/dashboards/ipympl?content=0&hash=0&1717676420013 (5c5a736c57454ac785637ad376480d4a@::1) 2.66ms referer=http://localhost:55182/lab
+[W 2024-06-06 14:20:20.024 ServerApp] 404 GET /api/contents/notebooks/dashboards/ipympl?content=0&hash=0&1717676420013 (::1): file or directory does not exist: 'notebooks/dashboards/ipympl'
+[W 2024-06-06 14:20:20.027 ServerApp] 404 GET /api/contents/notebooks/dashboards/ipympl/README-ipympl-nb.md?content=0&hash=0&1717676420014 (5c5a736c57454ac785637ad376480d4a@::1) 2.47ms referer=http://localhost:55182/lab
+[W 2024-06-06 14:20:20.027 ServerApp] 404 GET /api/contents/notebooks/dashboards/ipympl/README-ipympl-nb.md?content=0&hash=0&1717676420014 (::1): file or directory does not exist: 'notebooks/dashboards/ipympl/README-ipympl-nb.md'
+[W 2024-06-06 14:20:20.028 ServerApp] 404 GET /api/contents/notebooks/dashboards/streamlit?content=0&hash=0&1717676420015 (5c5a736c57454ac785637ad376480d4a@::1) 3.02ms referer=http://localhost:55182/lab
+[W 2024-06-06 14:20:20.029 ServerApp] 404 GET /api/contents/notebooks/dashboards/streamlit?content=0&hash=0&1717676420015 (::1): file or directory does not exist: 'notebooks/dashboards/streamlit'
+[W 2024-06-06 14:20:20.032 ServerApp] 404 GET /api/contents/notebooks/dashboards/streamlit/README-streamlit-nb.md?content=0&hash=0&1717676420015 (5c5a736c57454ac785637ad376480d4a@::1) 2.63ms referer=http://localhost:55182/lab
+[W 2024-06-06 14:20:20.032 ServerApp] 404 GET /api/contents/notebooks/dashboards/streamlit/README-streamlit-nb.md?content=0&hash=0&1717676420015 (::1): file or directory does not exist: 'notebooks/dashboards/streamlit/README-streamlit-nb.md'
+[W 2024-06-06 14:20:20.033 ServerApp] 404 GET /api/contents/notebooks/dashboards/ipympl/README-ipympl-nb.md?content=0&hash=0&1717676420015 (5c5a736c57454ac785637ad376480d4a@::1) 3.20ms referer=http://localhost:55182/lab
+[W 2024-06-06 14:20:20.033 ServerApp] 404 GET /api/contents/notebooks/dashboards/ipympl/README-ipympl-nb.md?content=0&hash=0&1717676420015 (::1): file or directory does not exist: 'notebooks/dashboards/ipympl/README-ipympl-nb.md'
+[W 2024-06-06 14:20:20.035 ServerApp] 404 GET /api/contents/notebooks/tps/taylor?content=0&hash=0&1717676420014 (5c5a736c57454ac785637ad376480d4a@::1) 4.69ms referer=http://localhost:55182/lab
+[W 2024-06-06 14:20:20.035 ServerApp] 404 GET /api/contents/notebooks/tps/taylor?content=0&hash=0&1717676420014 (::1): file or directory does not exist: 'notebooks/tps/taylor'
+[W 2024-06-06 14:20:20.036 ServerApp] 404 GET /api/contents/notebooks/tps/taylor/README-taylor-3-interactive-nb.md?content=0&hash=0&1717676420014 (5c5a736c57454ac785637ad376480d4a@::1) 5.67ms referer=http://localhost:55182/lab
+[W 2024-06-06 14:20:20.036 ServerApp] 404 GET /api/contents/notebooks/tps/taylor/README-taylor-3-interactive-nb.md?content=0&hash=0&1717676420014 (::1): file or directory does not exist: 'notebooks/tps/taylor/README-taylor-3-interactive-nb.md'
+[W 2024-06-06 14:20:20.038 ServerApp] 404 GET /api/contents/notebooks/tps/taylor/teacher/README-taylor-3-interactive-corrige-nb.md?content=0&hash=0&1717676420015 (5c5a736c57454ac785637ad376480d4a@::1) 4.44ms referer=http://localhost:55182/lab
+[W 2024-06-06 14:20:20.038 ServerApp] 404 GET /api/contents/notebooks/tps/taylor/teacher/README-taylor-3-interactive-corrige-nb.md?content=0&hash=0&1717676420015 (::1): file or directory does not exist: 'notebooks/tps/taylor/teacher/README-taylor-3-interactive-corrige-nb.md'
+[W 2024-06-06 14:20:20.040 ServerApp] 404 GET /api/contents/notebooks/tps/taylor/README-taylor-3-interactive-nb.md?content=0&hash=0&1717676420016 (5c5a736c57454ac785637ad376480d4a@::1) 2.77ms referer=http://localhost:55182/lab
+[W 2024-06-06 14:20:20.040 ServerApp] 404 GET /api/contents/notebooks/tps/taylor/README-taylor-3-interactive-nb.md?content=0&hash=0&1717676420016 (::1): file or directory does not exist: 'notebooks/tps/taylor/README-taylor-3-interactive-nb.md'
+[W 2024-06-06 14:20:20.044 ServerApp] 404 GET /api/contents/notebooks/dashboards/streamlit/README-streamlit-nb.md?content=0&hash=0&1717676420016 (5c5a736c57454ac785637ad376480d4a@::1) 3.15ms referer=http://localhost:55182/lab
+[W 2024-06-06 14:20:20.044 ServerApp] 404 GET /api/contents/notebooks/dashboards/streamlit/README-streamlit-nb.md?content=0&hash=0&1717676420016 (::1): file or directory does not exist: 'notebooks/dashboards/streamlit/README-streamlit-nb.md'
+[W 2024-06-06 14:20:20.045 ServerApp] 404 GET /api/contents/notebooks/tps/marathon/teacher/README-marathon-corrige-nb.md?content=0&hash=0&1717676420016 (5c5a736c57454ac785637ad376480d4a@::1) 4.15ms referer=http://localhost:55182/lab
+[W 2024-06-06 14:20:20.046 ServerApp] 404 GET /api/contents/notebooks/tps/marathon/teacher/README-marathon-corrige-nb.md?content=0&hash=0&1717676420016 (::1): file or directory does not exist: 'notebooks/tps/marathon/teacher/README-marathon-corrige-nb.md'
+[W 2024-06-06 14:20:20.048 ServerApp] 404 GET /api/contents/notebooks/tps/images/teacher/README-images2-corrige-nb.md?content=0&hash=0&1717676420016 (5c5a736c57454ac785637ad376480d4a@::1) 5.66ms referer=http://localhost:55182/lab
+[W 2024-06-06 14:20:20.048 ServerApp] 404 GET /api/contents/notebooks/tps/images/teacher/README-images2-corrige-nb.md?content=0&hash=0&1717676420016 (::1): file or directory does not exist: 'notebooks/tps/images/teacher/README-images2-corrige-nb.md'
+[W 2024-06-06 14:20:20.049 ServerApp] 404 GET /api/contents/notebooks/tps/images/teacher/README-images1-corrige-nb.md?content=0&hash=0&1717676420017 (5c5a736c57454ac785637ad376480d4a@::1) 6.45ms referer=http://localhost:55182/lab
+[W 2024-06-06 14:20:20.049 ServerApp] 404 GET /api/contents/notebooks/tps/images/teacher/README-images1-corrige-nb.md?content=0&hash=0&1717676420017 (::1): file or directory does not exist: 'notebooks/tps/images/teacher/README-images1-corrige-nb.md'
+[W 2024-06-06 14:20:20.051 ServerApp] 404 GET /api/contents/notebooks/tps/taylor/teacher/README-taylor-3-interactive-corrige-nb.md?content=0&hash=0&1717676420017 (5c5a736c57454ac785637ad376480d4a@::1) 4.79ms referer=http://localhost:55182/lab
+[W 2024-06-06 14:20:20.051 ServerApp] 404 GET /api/contents/notebooks/tps/taylor/teacher/README-taylor-3-interactive-corrige-nb.md?content=0&hash=0&1717676420017 (::1): file or directory does not exist: 'notebooks/tps/taylor/teacher/README-taylor-3-interactive-corrige-nb.md'
+[W 2024-06-06 14:20:20.052 ServerApp] 404 GET /api/contents/notebooks/tps/taylor/teacher/README-taylor-2-numpy-corrige-nb.md?content=0&hash=0&1717676420017 (5c5a736c57454ac785637ad376480d4a@::1) 2.62ms referer=http://localhost:55182/lab
+[W 2024-06-06 14:20:20.052 ServerApp] 404 GET /api/contents/notebooks/tps/taylor/teacher/README-taylor-2-numpy-corrige-nb.md?content=0&hash=0&1717676420017 (::1): file or directory does not exist: 'notebooks/tps/taylor/teacher/README-taylor-2-numpy-corrige-nb.md'
+[W 2024-06-06 14:20:21.100 ServerApp] 404 GET /api/contents/notebooks/tps/taylor/teacher?1717676421096 (5c5a736c57454ac785637ad376480d4a@::1) 1.26ms referer=http://localhost:55182/lab
+[W 2024-06-06 14:20:21.100 ServerApp] 404 GET /api/contents/notebooks/tps/taylor/teacher?1717676421096 (::1): file or directory does not exist: 'notebooks/tps/taylor/teacher'
+[I 2024-06-06 14:20:28.386 ServerApp] Kernel started: 49f3c161-175d-4620-bb37-fe4d44942e05
+[I 2024-06-06 14:20:29.209 ServerApp] Connecting to kernel 49f3c161-175d-4620-bb37-fe4d44942e05.
+[I 2024-06-06 14:20:29.212 ServerApp] Connecting to kernel 49f3c161-175d-4620-bb37-fe4d44942e05.
+[I 2024-06-06 14:20:29.232 ServerApp] Connecting to kernel 49f3c161-175d-4620-bb37-fe4d44942e05.
+[I 2024-06-06 14:21:42.439 ServerApp] Starting buffering for 49f3c161-175d-4620-bb37-fe4d44942e05:594b7db9-429f-45ab-a3f5-0cdfa3335fd4
+[W 2024-06-06 14:21:43.789 LabApp] Failed validating settings (jupyterlab-jupytext:plugin): Additional properties are not allowed ('category' was unexpected)
+    
+    Failed validating 'additionalProperties' in schema:
+        {'additionalProperties': False,
+         'description': 'List of Jupytext Text Notebook formats that will be '
+                        'added to launcher and jupytext menu.',
+         'properties': {'NOTE': {'description': 'Refresh the current browser '
+                                                'tab for the changes to take '
+                                                'effect.',
+                                 'type': 'null'},
+                        'Rmd': {'default': False,
+                                'title': 'R Markdown Notebook',
+                                'type': 'boolean'},
+                        'auto:hydrogen': {'default': False,
+                                          'title': 'Text Notebook as Script in '
+                                                   'Hydrogen Format',
+                                          'type': 'boolean'},
+                        'auto:light': {'default': False,
+                                       'title': 'Text Notebook as Script in '
+                                                'Light Format',
+                                       'type': 'boolean'},
+                        'auto:nomarker': {'default': False,
+                                          'title': 'Text Notebook as Script in '
+                                                   'Nomarker Format',
+                                          'type': 'boolean'},
+                        'auto:percent': {'default': True,
+                                         'title': 'Text Notebook as Script in '
+                                                  'Percent Format',
+                                         'type': 'boolean'},
+                        'md': {'default': False,
+                               'title': 'Markdown Notebook',
+                               'type': 'boolean'},
+                        'md:myst': {'default': True,
+                                    'title': 'MyST Markdown Notebook',
+                                    'type': 'boolean'},
+                        'qmd': {'default': False,
+                                'title': 'Quarto Markdown Notebook',
+                                'type': 'boolean'}},
+         'title': 'Jupytext',
+         'type': 'object'}
+    
+    On instance:
+        {'Rmd': False,
+         'auto:hydrogen': False,
+         'auto:light': False,
+         'auto:nomarker': False,
+         'auto:percent': True,
+         'category': 'Jupytext',
+         'md': False,
+         'md:myst': True,
+         'qmd': False}
+[I 2024-06-06 14:21:44.156 ServerApp] Connecting to kernel 49f3c161-175d-4620-bb37-fe4d44942e05.
+[I 2024-06-06 14:21:44.482 ServerApp] Starting buffering for 49f3c161-175d-4620-bb37-fe4d44942e05:c6b9ad65-f733-4ad2-b854-64fa2c989433
+[I 2024-06-06 14:21:44.653 LabApp] Build is up to date
+[I 2024-06-06 14:21:45.801 ServerApp] Connecting to kernel 49f3c161-175d-4620-bb37-fe4d44942e05.
+[I 2024-06-06 14:24:39.213 ServerApp] Starting buffering for 49f3c161-175d-4620-bb37-fe4d44942e05:701d04f5-683e-4a36-ab41-b035556bf552
+[W 2024-06-06 14:24:40.355 LabApp] Failed validating settings (jupyterlab-jupytext:plugin): Additional properties are not allowed ('category' was unexpected)
+    
+    Failed validating 'additionalProperties' in schema:
+        {'additionalProperties': False,
+         'description': 'List of Jupytext Text Notebook formats that will be '
+                        'added to launcher and jupytext menu.',
+         'properties': {'NOTE': {'description': 'Refresh the current browser '
+                                                'tab for the changes to take '
+                                                'effect.',
+                                 'type': 'null'},
+                        'Rmd': {'default': False,
+                                'title': 'R Markdown Notebook',
+                                'type': 'boolean'},
+                        'auto:hydrogen': {'default': False,
+                                          'title': 'Text Notebook as Script in '
+                                                   'Hydrogen Format',
+                                          'type': 'boolean'},
+                        'auto:light': {'default': False,
+                                       'title': 'Text Notebook as Script in '
+                                                'Light Format',
+                                       'type': 'boolean'},
+                        'auto:nomarker': {'default': False,
+                                          'title': 'Text Notebook as Script in '
+                                                   'Nomarker Format',
+                                          'type': 'boolean'},
+                        'auto:percent': {'default': True,
+                                         'title': 'Text Notebook as Script in '
+                                                  'Percent Format',
+                                         'type': 'boolean'},
+                        'md': {'default': False,
+                               'title': 'Markdown Notebook',
+                               'type': 'boolean'},
+                        'md:myst': {'default': True,
+                                    'title': 'MyST Markdown Notebook',
+                                    'type': 'boolean'},
+                        'qmd': {'default': False,
+                                'title': 'Quarto Markdown Notebook',
+                                'type': 'boolean'}},
+         'title': 'Jupytext',
+         'type': 'object'}
+    
+    On instance:
+        {'Rmd': False,
+         'auto:hydrogen': False,
+         'auto:light': False,
+         'auto:nomarker': False,
+         'auto:percent': True,
+         'category': 'Jupytext',
+         'md': False,
+         'md:myst': True,
+         'qmd': False}
+[I 2024-06-06 14:24:40.724 ServerApp] Connecting to kernel 49f3c161-175d-4620-bb37-fe4d44942e05.
+[I 2024-06-06 14:24:41.084 ServerApp] Starting buffering for 49f3c161-175d-4620-bb37-fe4d44942e05:133f0997-9641-40ab-a0d7-d7f093393abe
+[I 2024-06-06 14:24:42.565 ServerApp] Connecting to kernel 49f3c161-175d-4620-bb37-fe4d44942e05.
+[W 2024-06-06 14:24:44.175 LabApp] Build recommended
+[W 2024-06-06 14:24:44.175 LabApp] @jupyterlab/theme-dark-high-contrast-extension needs to be included in build
+[W 2024-06-06 14:24:44.175 LabApp] @jupyterlab/workspaces-extension needs to be included in build
+[W 2024-06-06 14:24:44.175 LabApp] @jupyterlab/application changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.175 LabApp] @jupyterlab/application-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.175 LabApp] @jupyterlab/apputils-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.175 LabApp] @jupyterlab/cell-toolbar-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.175 LabApp] @jupyterlab/celltags-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.176 LabApp] @jupyterlab/codemirror-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.176 LabApp] @jupyterlab/completer-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.176 LabApp] @jupyterlab/console-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.176 LabApp] @jupyterlab/coreutils changed from ~6.1.8 to ~6.2.1
+[W 2024-06-06 14:24:44.176 LabApp] @jupyterlab/csvviewer-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.176 LabApp] @jupyterlab/debugger-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.176 LabApp] @jupyterlab/docmanager-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.176 LabApp] @jupyterlab/documentsearch-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.176 LabApp] @jupyterlab/extensionmanager-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.176 LabApp] @jupyterlab/filebrowser-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.176 LabApp] @jupyterlab/fileeditor-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.176 LabApp] @jupyterlab/help-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.176 LabApp] @jupyterlab/htmlviewer-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.176 LabApp] @jupyterlab/hub-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.176 LabApp] @jupyterlab/imageviewer-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.176 LabApp] @jupyterlab/inspector-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.176 LabApp] @jupyterlab/javascript-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.176 LabApp] @jupyterlab/json-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.176 LabApp] @jupyterlab/launcher-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.176 LabApp] @jupyterlab/logconsole-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.176 LabApp] @jupyterlab/lsp-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.176 LabApp] @jupyterlab/mainmenu-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.176 LabApp] @jupyterlab/markdownviewer-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.176 LabApp] @jupyterlab/markedparser-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.176 LabApp] @jupyterlab/mathjax-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.176 LabApp] @jupyterlab/mermaid-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.176 LabApp] @jupyterlab/metadataform-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.177 LabApp] @jupyterlab/notebook-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.177 LabApp] @jupyterlab/pdf-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.177 LabApp] @jupyterlab/pluginmanager-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.177 LabApp] @jupyterlab/rendermime-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.177 LabApp] @jupyterlab/running-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.177 LabApp] @jupyterlab/settingeditor-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.177 LabApp] @jupyterlab/shortcuts-extension changed from ~4.1.8 to ~5.0.1
+[W 2024-06-06 14:24:44.177 LabApp] @jupyterlab/statusbar-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.177 LabApp] @jupyterlab/terminal-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.177 LabApp] @jupyterlab/theme-dark-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.177 LabApp] @jupyterlab/theme-light-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.177 LabApp] @jupyterlab/toc-extension changed from ~6.1.8 to ~6.2.1
+[W 2024-06-06 14:24:44.177 LabApp] @jupyterlab/tooltip-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.177 LabApp] @jupyterlab/translation-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.177 LabApp] @jupyterlab/ui-components-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-06 14:24:44.177 LabApp] @jupyterlab/vega5-extension changed from ~4.1.8 to ~4.2.1
+[I 2024-06-06 14:24:47.164 LabApp] Building jupyterlab assets (production, minimized)
+-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|[I 2024-06-06 14:25:10.035 ServerApp] Starting buffering for 49f3c161-175d-4620-bb37-fe4d44942e05:42b74a4b-6a0b-4094-95e3-ff5188adfe2e
+/-\|/-\|/[W 2024-06-06 14:25:10.986 LabApp] Failed validating settings (jupyterlab-jupytext:plugin): Additional properties are not allowed ('category' was unexpected)
+    
+    Failed validating 'additionalProperties' in schema:
+        {'additionalProperties': False,
+         'description': 'List of Jupytext Text Notebook formats that will be '
+                        'added to launcher and jupytext menu.',
+         'properties': {'NOTE': {'description': 'Refresh the current browser '
+                                                'tab for the changes to take '
+                                                'effect.',
+                                 'type': 'null'},
+                        'Rmd': {'default': False,
+                                'title': 'R Markdown Notebook',
+                                'type': 'boolean'},
+                        'auto:hydrogen': {'default': False,
+                                          'title': 'Text Notebook as Script in '
+                                                   'Hydrogen Format',
+                                          'type': 'boolean'},
+                        'auto:light': {'default': False,
+                                       'title': 'Text Notebook as Script in '
+                                                'Light Format',
+                                       'type': 'boolean'},
+                        'auto:nomarker': {'default': False,
+                                          'title': 'Text Notebook as Script in '
+                                                   'Nomarker Format',
+                                          'type': 'boolean'},
+                        'auto:percent': {'default': True,
+                                         'title': 'Text Notebook as Script in '
+                                                  'Percent Format',
+                                         'type': 'boolean'},
+                        'md': {'default': False,
+                               'title': 'Markdown Notebook',
+                               'type': 'boolean'},
+                        'md:myst': {'default': True,
+                                    'title': 'MyST Markdown Notebook',
+                                    'type': 'boolean'},
+                        'qmd': {'default': False,
+                                'title': 'Quarto Markdown Notebook',
+                                'type': 'boolean'}},
+         'title': 'Jupytext',
+         'type': 'object'}
+    
+    On instance:
+        {'Rmd': False,
+         'auto:hydrogen': False,
+         'auto:light': False,
+         'auto:nomarker': False,
+         'auto:percent': True,
+         'category': 'Jupytext',
+         'md': False,
+         'md:myst': True,
+         'qmd': False}
+-\|[I 2024-06-06 14:25:11.298 ServerApp] Connecting to kernel 49f3c161-175d-4620-bb37-fe4d44942e05.
+/-\[I 2024-06-06 14:25:11.609 ServerApp] Starting buffering for 49f3c161-175d-4620-bb37-fe4d44942e05:b01a5ca6-782a-4ac0-b615-5637deb2f3c1
+|/-\|/-[I 2024-06-06 14:25:12.303 ServerApp] Connecting to kernel 49f3c161-175d-4620-bb37-fe4d44942e05.
+\|/-\[E 2024-06-06 14:25:12.867 ServerApp] Uncaught exception GET /lab/api/extensions?query&page=1&per_page=30&refresh=0&1717676712861 (::1)
+    HTTPServerRequest(protocol='http', host='localhost:55182', method='GET', uri='/lab/api/extensions?query&page=1&per_page=30&refresh=0&1717676712861', version='HTTP/1.1', remote_ip='::1')
+    Traceback (most recent call last):
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/site-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/site-packages/jupyterlab/handlers/extension_manager_handler.py", line 37, in get
+        extensions, last_page = await self.manager.list_extensions(query, page, per_page)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/site-packages/jupyterlab/extensions/manager.py", line 474, in list_extensions
+        await self.refresh(query, page, per_page)
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/site-packages/jupyterlab/extensions/manager.py", line 508, in refresh
+        await self._update_extensions_list(query, page, per_page)
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/site-packages/jupyterlab/extensions/manager.py", line 681, in _update_extensions_list
+        extensions, last_page = await self.list_packages(query, page, per_page)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/site-packages/jupyterlab/extensions/pypi.py", line 261, in list_packages
+        counter = -1
+                  ^^^
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/site-packages/jupyterlab/extensions/pypi.py", line 315, in __get_all_extensions
+        )
+          
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/site-packages/jupyterlab/extensions/pypi.py", line 214, in __throttleRequest
+        ):
+           
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+        result = self.fn(*self.args, **self.kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/xmlrpc/client.py", line 1122, in __call__
+        return self.__send(self.__name, args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/xmlrpc/client.py", line 1464, in __request
+        response = self.__transport.request(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/xmlrpc/client.py", line 1166, in request
+        return self.single_request(host, handler, request_body, verbose)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/xmlrpc/client.py", line 1178, in single_request
+        http_conn = self.send_request(host, handler, request_body, verbose)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/xmlrpc/client.py", line 1284, in send_request
+        connection.putrequest("POST", handler, skip_accept_encoding=True)
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/http/client.py", line 1123, in putrequest
+        raise CannotSendRequest(self.__state)
+    http.client.CannotSendRequest: Request-sent
+[W 2024-06-06 14:25:12.877 ServerApp] wrote error: 'Unhandled error'
+    Traceback (most recent call last):
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/site-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/site-packages/jupyterlab/handlers/extension_manager_handler.py", line 37, in get
+        extensions, last_page = await self.manager.list_extensions(query, page, per_page)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/site-packages/jupyterlab/extensions/manager.py", line 474, in list_extensions
+        await self.refresh(query, page, per_page)
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/site-packages/jupyterlab/extensions/manager.py", line 508, in refresh
+        await self._update_extensions_list(query, page, per_page)
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/site-packages/jupyterlab/extensions/manager.py", line 681, in _update_extensions_list
+        extensions, last_page = await self.list_packages(query, page, per_page)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/site-packages/jupyterlab/extensions/pypi.py", line 261, in list_packages
+        counter = -1
+                  ^^^
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/site-packages/jupyterlab/extensions/pypi.py", line 315, in __get_all_extensions
+        )
+          
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/site-packages/jupyterlab/extensions/pypi.py", line 214, in __throttleRequest
+        ):
+           
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+        result = self.fn(*self.args, **self.kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/xmlrpc/client.py", line 1122, in __call__
+        return self.__send(self.__name, args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/xmlrpc/client.py", line 1464, in __request
+        response = self.__transport.request(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/xmlrpc/client.py", line 1166, in request
+        return self.single_request(host, handler, request_body, verbose)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/xmlrpc/client.py", line 1178, in single_request
+        http_conn = self.send_request(host, handler, request_body, verbose)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/xmlrpc/client.py", line 1284, in send_request
+        connection.putrequest("POST", handler, skip_accept_encoding=True)
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/http/client.py", line 1123, in putrequest
+        raise CannotSendRequest(self.__state)
+    http.client.CannotSendRequest: Request-sent
+[E 2024-06-06 14:25:12.879 ServerApp] {
+      "Host": "localhost:55182",
+      "Accept": "*/*",
+      "Referer": "http://localhost:55182/lab/tree/examples",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
+    }
+[E 2024-06-06 14:25:12.879 ServerApp] 500 GET /lab/api/extensions?query&page=1&per_page=30&refresh=0&1717676712861 (5c5a736c57454ac785637ad376480d4a@::1) 13.43ms referer=http://localhost:55182/lab/tree/examples
+|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/--\|/-\|/-\|/-\|/-\-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/[W 2024-06-06 14:31:15.945 LabApp] Build failed, running a clean and rebuild
+[I 2024-06-06 14:31:15.945 LabApp] Cleaning /Users/tparment/miniconda3/envs/jupyterlab-gridwidth/share/jupyter/lab...
+[W 2024-06-06 14:31:15.946 ServerApp] 500 POST /lab/api/build?1717676686613 (::1): 'AppOptions' object has no attribute 'extensions'
+[W 2024-06-06 14:31:15.947 LabApp] wrote error: "'AppOptions' object has no attribute 'extensions'"
+    Traceback (most recent call last):
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/site-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/site-packages/tornado/gen.py", line 780, in run
+        yielded = self.gen.throw(exc)
+                  ^^^^^^^^^^^^^^^^^^^
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/site-packages/jupyterlab/handlers/build_handler.py", line 152, in post
+        raise web.HTTPError(500, str(e)) from None
+    tornado.web.HTTPError: HTTP 500: Internal Server Error ('AppOptions' object has no attribute 'extensions')
+[E 2024-06-06 14:31:15.952 LabApp] {
+      "Host": "localhost:55182",
+      "Accept": "*/*",
+      "Referer": "http://localhost:55182/lab/tree/examples",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
+    }
+[E 2024-06-06 14:31:15.952 LabApp] 500 POST /lab/api/build?1717676686613 (5c5a736c57454ac785637ad376480d4a@::1) 389335.45ms referer=http://localhost:55182/lab/tree/examples
+[W 2024-06-06 14:31:15.953 ServerApp] 500 POST /lab/api/build?1717676711443 (::1): 'AppOptions' object has no attribute 'extensions'
+[W 2024-06-06 14:31:15.953 LabApp] wrote error: "'AppOptions' object has no attribute 'extensions'"
+    Traceback (most recent call last):
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/site-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/site-packages/tornado/gen.py", line 780, in run
+        yielded = self.gen.throw(exc)
+                  ^^^^^^^^^^^^^^^^^^^
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/site-packages/jupyterlab/handlers/build_handler.py", line 152, in post
+        raise web.HTTPError(500, str(e)) from None
+    tornado.web.HTTPError: HTTP 500: Internal Server Error ('AppOptions' object has no attribute 'extensions')
+[E 2024-06-06 14:31:15.955 LabApp] {
+      "Host": "localhost:55182",
+      "Accept": "*/*",
+      "Referer": "http://localhost:55182/lab/tree/examples",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
+    }
+[E 2024-06-06 14:31:15.955 LabApp] 500 POST /lab/api/build?1717676711443 (5c5a736c57454ac785637ad376480d4a@::1) 364482.01ms referer=http://localhost:55182/lab/tree/examples
+[I 2024-06-06 14:46:11.911 ServerApp] Starting buffering for 49f3c161-175d-4620-bb37-fe4d44942e05:29d846b5-14ec-4f42-9126-11b459618365
+[W 2024-06-07 12:47:56.853 LabApp] Failed validating settings (jupyterlab-jupytext:plugin): Additional properties are not allowed ('category' was unexpected)
+    
+    Failed validating 'additionalProperties' in schema:
+        {'additionalProperties': False,
+         'description': 'List of Jupytext Text Notebook formats that will be '
+                        'added to launcher and jupytext menu.',
+         'properties': {'NOTE': {'description': 'Refresh the current browser '
+                                                'tab for the changes to take '
+                                                'effect.',
+                                 'type': 'null'},
+                        'Rmd': {'default': False,
+                                'title': 'R Markdown Notebook',
+                                'type': 'boolean'},
+                        'auto:hydrogen': {'default': False,
+                                          'title': 'Text Notebook as Script in '
+                                                   'Hydrogen Format',
+                                          'type': 'boolean'},
+                        'auto:light': {'default': False,
+                                       'title': 'Text Notebook as Script in '
+                                                'Light Format',
+                                       'type': 'boolean'},
+                        'auto:nomarker': {'default': False,
+                                          'title': 'Text Notebook as Script in '
+                                                   'Nomarker Format',
+                                          'type': 'boolean'},
+                        'auto:percent': {'default': True,
+                                         'title': 'Text Notebook as Script in '
+                                                  'Percent Format',
+                                         'type': 'boolean'},
+                        'md': {'default': False,
+                               'title': 'Markdown Notebook',
+                               'type': 'boolean'},
+                        'md:myst': {'default': True,
+                                    'title': 'MyST Markdown Notebook',
+                                    'type': 'boolean'},
+                        'qmd': {'default': False,
+                                'title': 'Quarto Markdown Notebook',
+                                'type': 'boolean'}},
+         'title': 'Jupytext',
+         'type': 'object'}
+    
+    On instance:
+        {'Rmd': False,
+         'auto:hydrogen': False,
+         'auto:light': False,
+         'auto:nomarker': False,
+         'auto:percent': True,
+         'category': 'Jupytext',
+         'md': False,
+         'md:myst': True,
+         'qmd': False}
+[I 2024-06-07 12:47:57.322 ServerApp] Connecting to kernel 49f3c161-175d-4620-bb37-fe4d44942e05.
+[I 2024-06-07 12:47:57.705 ServerApp] Starting buffering for 49f3c161-175d-4620-bb37-fe4d44942e05:b8aa632b-285b-4f73-99a6-e712c32e9a73
+[W 2024-06-07 12:47:58.212 LabApp] Build recommended
+[W 2024-06-07 12:47:58.212 LabApp] @jupyterlab/theme-dark-high-contrast-extension needs to be included in build
+[W 2024-06-07 12:47:58.212 LabApp] @jupyterlab/workspaces-extension needs to be included in build
+[W 2024-06-07 12:47:58.213 LabApp] @jupyterlab/application changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.213 LabApp] @jupyterlab/application-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.213 LabApp] @jupyterlab/apputils-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.213 LabApp] @jupyterlab/cell-toolbar-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.213 LabApp] @jupyterlab/celltags-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.213 LabApp] @jupyterlab/codemirror-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.213 LabApp] @jupyterlab/completer-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.213 LabApp] @jupyterlab/console-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.213 LabApp] @jupyterlab/coreutils changed from ~6.1.8 to ~6.2.1
+[W 2024-06-07 12:47:58.214 LabApp] @jupyterlab/csvviewer-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.214 LabApp] @jupyterlab/debugger-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.214 LabApp] @jupyterlab/docmanager-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.214 LabApp] @jupyterlab/documentsearch-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.214 LabApp] @jupyterlab/extensionmanager-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.214 LabApp] @jupyterlab/filebrowser-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.214 LabApp] @jupyterlab/fileeditor-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.215 LabApp] @jupyterlab/help-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.215 LabApp] @jupyterlab/htmlviewer-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.215 LabApp] @jupyterlab/hub-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.215 LabApp] @jupyterlab/imageviewer-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.215 LabApp] @jupyterlab/inspector-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.215 LabApp] @jupyterlab/javascript-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.215 LabApp] @jupyterlab/json-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.215 LabApp] @jupyterlab/launcher-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.215 LabApp] @jupyterlab/logconsole-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.215 LabApp] @jupyterlab/lsp-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.216 LabApp] @jupyterlab/mainmenu-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.216 LabApp] @jupyterlab/markdownviewer-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.216 LabApp] @jupyterlab/markedparser-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.216 LabApp] @jupyterlab/mathjax-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.216 LabApp] @jupyterlab/mermaid-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.216 LabApp] @jupyterlab/metadataform-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.216 LabApp] @jupyterlab/notebook-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.216 LabApp] @jupyterlab/pdf-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.216 LabApp] @jupyterlab/pluginmanager-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.216 LabApp] @jupyterlab/rendermime-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.216 LabApp] @jupyterlab/running-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.217 LabApp] @jupyterlab/settingeditor-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.217 LabApp] @jupyterlab/shortcuts-extension changed from ~4.1.8 to ~5.0.1
+[W 2024-06-07 12:47:58.217 LabApp] @jupyterlab/statusbar-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.217 LabApp] @jupyterlab/terminal-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.217 LabApp] @jupyterlab/theme-dark-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.217 LabApp] @jupyterlab/theme-light-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.217 LabApp] @jupyterlab/toc-extension changed from ~6.1.8 to ~6.2.1
+[W 2024-06-07 12:47:58.217 LabApp] @jupyterlab/tooltip-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.217 LabApp] @jupyterlab/translation-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.217 LabApp] @jupyterlab/ui-components-extension changed from ~4.1.8 to ~4.2.1
+[W 2024-06-07 12:47:58.217 LabApp] @jupyterlab/vega5-extension changed from ~4.1.8 to ~4.2.1
+[I 2024-06-07 12:47:58.593 ServerApp] Connecting to kernel 49f3c161-175d-4620-bb37-fe4d44942e05.
+[I 2024-06-07 12:48:00.989 LabApp] Building jupyterlab assets (production, minimized)
+-\|/-\|/-\|/-\|/-\|-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\[W 2024-06-07 12:48:13.132 LabApp] Build failed, running a clean and rebuild
+[I 2024-06-07 12:48:13.132 LabApp] Cleaning /Users/tparment/miniconda3/envs/jupyterlab-gridwidth/share/jupyter/lab...
+[W 2024-06-07 12:48:13.133 ServerApp] 500 POST /lab/api/build?1717757280446 (::1): 'AppOptions' object has no attribute 'extensions'
+[W 2024-06-07 12:48:13.133 LabApp] wrote error: "'AppOptions' object has no attribute 'extensions'"
+    Traceback (most recent call last):
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/site-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/site-packages/tornado/gen.py", line 780, in run
+        yielded = self.gen.throw(exc)
+                  ^^^^^^^^^^^^^^^^^^^
+      File "/Users/tparment/miniconda3/envs/jupyterlab-gridwidth/lib/python3.11/site-packages/jupyterlab/handlers/build_handler.py", line 152, in post
+        raise web.HTTPError(500, str(e)) from None
+    tornado.web.HTTPError: HTTP 500: Internal Server Error ('AppOptions' object has no attribute 'extensions')
+[E 2024-06-07 12:48:13.138 LabApp] {
+      "Host": "localhost:55182",
+      "Accept": "*/*",
+      "Referer": "http://localhost:55182/lab",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
+    }
+[E 2024-06-07 12:48:13.138 LabApp] 500 POST /lab/api/build?1717757280446 (5c5a736c57454ac785637ad376480d4a@::1) 12688.24ms referer=http://localhost:55182/lab
+[I 2024-06-07 12:48:35.117 ServerApp] Starting buffering for 49f3c161-175d-4620-bb37-fe4d44942e05:594cecf0-08d8-4ff4-867d-b00d82a5ca66
+[I 2024-06-07 12:50:05.930 ServerApp] Saving file at /README.md
