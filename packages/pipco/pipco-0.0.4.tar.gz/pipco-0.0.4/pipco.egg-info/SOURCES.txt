@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+pipco/__init__.py
+pipco/__version__.py
+pipco/main.py
+pipco.egg-info/PKG-INFO
+pipco.egg-info/SOURCES.txt
+pipco.egg-info/dependency_links.txt
+pipco.egg-info/entry_points.txt
+pipco.egg-info/top_level.txt
