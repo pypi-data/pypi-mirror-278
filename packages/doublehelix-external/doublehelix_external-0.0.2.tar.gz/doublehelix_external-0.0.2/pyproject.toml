@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=42", "setuptools_scm[toml]>=6.0.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "doublehelix-external"
+description = "Genomic data manipulation tool"
+readme = { file = "README.md", content-type = "text/markdown" }
+authors = [{ name = "chaplin89", email = "unavailable@doublehelix.com" }]
+keywords = ["bioinformatics"]
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: BSD License",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dynamic = ["version"]
+
+[project.urls]
+homepage = "https://github.com/DoubleHelixApp/External"
+Repository = "https://github.com/DoubleHelixApp/External"
+Documentation = "https://doublehelixapp.github.io"
+Issues = "https://github.com/DoubleHelixApp/External/issues"
+Changelog = "https://github.com/DoubleHelixApp/External/releases"
+
+[tool.setuptools.packages.find]
+include = ["helix.third_party"]
+
+[tool.setuptools]
+include-package-data = true
+
+
+[tool.setuptools_scm]
+version_file = "helix/third_party/VERSION.py"
