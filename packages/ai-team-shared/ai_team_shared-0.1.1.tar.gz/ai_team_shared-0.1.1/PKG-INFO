@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: ai-team-shared
+Version: 0.1.1
+Summary: AI-Team Shared package including models and utilities
+Home-page: https://martianmobile.com
+License: MIT
+Keywords: ai,machine-learning,auto-coding,project-management
+Author: Martin Jiang
+Author-email: mj@martianmobile.com
+Requires-Python: >=3.9.16,<4.0.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: alembic (>=1.13.1,<2.0.0)
+Requires-Dist: psycopg2-binary (>=2.9.9,<3.0.0)
+Requires-Dist: pydantic (>=2.7.0,<3.0.0)
+Requires-Dist: pydantic-settings (>=2.2.1,<3.0.0)
+Requires-Dist: sqlalchemy (>=2.0.29,<3.0.0)
+Requires-Dist: sqlmodel (>=0.0.16,<0.0.17)
+Description-Content-Type: text/markdown
+
+# AT-Team: Shared
+
+TBD
+
