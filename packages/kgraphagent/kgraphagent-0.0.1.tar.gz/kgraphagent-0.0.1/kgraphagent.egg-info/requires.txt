@@ -1,0 +1,10 @@
+requests>=2.31.0
+vital-ai-vitalsigns>=0.1.17
+vital-ai-domain>=0.1.4
+six
+pyyaml
+vital-ai-haley-kg>=0.1.4
+kgraphmemory>=0.0.5
+kgraphgen>=0.0.1
+rdflib==7.0.0
+SPARQLWrapper==2.0.0
