@@ -1,0 +1,10 @@
+
+[dev]
+pytest
+pytest-asyncio
+
+[docs]
+sphinx
+myst-parser
+readthedocs-sphinx-ext
+sphinx_rtd_theme
