@@ -1,0 +1,1 @@
+from .cv_segmentor import CV_Segmentor
