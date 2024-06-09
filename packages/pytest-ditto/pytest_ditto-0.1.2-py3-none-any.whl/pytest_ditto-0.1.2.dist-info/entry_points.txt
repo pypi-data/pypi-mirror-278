@@ -1,0 +1,7 @@
+[ditto]
+json = ditto.io._json:Json
+pickle = ditto.io._pickle:Pickle
+yaml = ditto.io._yaml:Yaml
+
+[pytest11]
+recording = ditto.plugin
