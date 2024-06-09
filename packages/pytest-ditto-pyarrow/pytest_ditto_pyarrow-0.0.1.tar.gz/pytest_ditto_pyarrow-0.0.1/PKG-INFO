@@ -1,0 +1,32 @@
+Metadata-Version: 2.3
+Name: pytest-ditto-pyarrow
+Version: 0.0.1
+Summary: pytest-ditto plugin for pyarrow tables.
+Author-email: Lachlan Taylor <lachlanbtaylor@proton.me>
+Maintainer-email: Lachlan Taylor <lachlanbtaylor@proton.me>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: pytest,testing
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Pytest
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Testing
+Requires-Python: >=3.10
+Requires-Dist: pyarrow>=16.1.0
+Requires-Dist: pytest-ditto>=0.1.0
+Requires-Dist: pytest>=3.5.0
+Provides-Extra: dev
+Requires-Dist: hatch-vcs>=0.4.0; extra == 'dev'
+Requires-Dist: hatch>=1.9.4; extra == 'dev'
+Requires-Dist: pre-commit; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# pytest-ditto-pyarrow
