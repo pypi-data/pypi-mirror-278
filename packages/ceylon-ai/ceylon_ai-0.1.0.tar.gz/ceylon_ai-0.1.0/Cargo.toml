@@ -1,0 +1,15 @@
+[package]
+name = "ceylon-ai"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "ceylon_ai"
+crate-type = ["cdylib"]
+
+[dependencies]
+uniffi = "0.23.0"
+
+[build-dependencies]
+uniffi = { version = "0.23.0", features = ["build"] }
