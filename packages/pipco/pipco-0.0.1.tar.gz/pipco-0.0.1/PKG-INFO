@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pipco
+Version: 0.0.1
+Summary: 中国大陆 Python 安装库时不时需要换源
+Home-page: https://github.com/AndersonHJB/pipco
+Author: aiyuechuang
+Author-email: aiyuechuang@gmail.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# 📦 pco「pip current origin」
+
+change python pip origin,
+
+
