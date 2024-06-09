@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+colourise_output/__init__.py
+colourise_output/__main__.py
+colourise_output/colourise_output.py
+colourise_output.egg-info/PKG-INFO
+colourise_output.egg-info/SOURCES.txt
+colourise_output.egg-info/dependency_links.txt
+colourise_output.egg-info/requires.txt
+colourise_output.egg-info/top_level.txt
+tests/__init__.py
+tests/test_colourise_output.py
