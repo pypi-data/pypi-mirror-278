@@ -1,0 +1,3 @@
+[console_scripts]
+sqlab=sqlab.__main__:main
+
