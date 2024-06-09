@@ -1,0 +1,112 @@
+[project]
+name = "kakuyomu-cli"
+version = "0.11.1"
+description = "Kakuyomu CLI"
+authors = [{ name = "kokardy", email = "mgc1028@gmail.com" }]
+dependencies = [
+  "requests>=2.31.0",
+  "beautifulsoup4>=4.12.2",
+  "pydantic>=2.5.3",
+  "coloredlogs>=15.0.1",
+  "types-beautifulsoup4>=4.12.0.20240106",
+  "types-requests>=2.31.0.20240106",
+  "types-toml>=0.10.8.7",
+  "toml>=0.10.2",
+]
+readme = "README.md"
+requires-python = ">= 3.12"
+[project.scripts]
+kakuyomu = "kakuyomu.cli.main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/kakuyomu"]
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "pytest>=7.4.3",
+    "mypy>=1.9.0",
+    "ruff>=0.1.14",
+    "black>=23.12.1",
+    "isort>=5.13.2",
+    "coloredlog>=0.2.5",
+    "pre-commit>=3.6.0",
+    "types-beautifulsoup4>=4.12.0.20240106",
+    "types-toml>=0.10.8.7",
+    "types-requests>=2.31.0.20240106",
+    "pytest-mock>=3.12.0",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.ruff]
+line-length = 120
+[tool.ruff.lint]
+select = ["F", "E", "W", "D"]
+ignore = [
+  "D400", # docstring first line must end with period
+  "D415", # docstring first line must end with period, ? , !
+  "D212", # multi-line docstring summary should start at the second line
+  "D211", # no blank lines allowed before the summary
+  "D203", # 1 blank line required before class docstring
+]
+
+
+[tool.black]
+line-length = 120
+
+[tool.flake8]
+max-line-length = 120
+
+[tool.mypy]
+python_version = "3.12"
+
+[[tool.mypy.overrides]]
+module = "kakuyomu.*"
+disallow_untyped_defs = true
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "kakuyomu.cli.*"
+disallow_untyped_decorators = false
+
+[[tool.mypy.overrides]]
+module = ["tests.*"]
+disallow_untyped_defs = false
+# ignore_missing_imports = true
+disallow_untyped_decorators = false
+
+[[tool.mypy.overrides]]
+module = [
+  "coloredlogs.*",
+  "pydantic.*",
+  "bs4.*",
+  "click.*",
+  "toml.*",
+  "requests.*",
+  "pytest.*",
+]
+disallow_untyped_defs = false
+follow_imports = "silent"
+ignore_missing_imports = true
+disallow_untyped_calls = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+log_cli = true
+log_cli_level = "DEBUG"
+
+[tool.pyright]
+# reportGeneralTypeIssues = false
+extraPaths = ["src", ".venv/lib/python3.12/site-packages"]
+pythonVersion = "3.12"
+
+[tool.rye.scripts]
+test = "pytest -vv -s -x"
+typecheck = "mypy --strict ."
+lint = "ruff check ."
