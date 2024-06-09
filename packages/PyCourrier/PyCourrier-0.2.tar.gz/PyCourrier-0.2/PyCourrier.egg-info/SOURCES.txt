@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+PyCourrier/MailSender.py
+PyCourrier/__init__.py
+PyCourrier/config.py
+PyCourrier/exceptions.py
+PyCourrier/utils.py
+PyCourrier.egg-info/PKG-INFO
+PyCourrier.egg-info/SOURCES.txt
+PyCourrier.egg-info/dependency_links.txt
+PyCourrier.egg-info/requires.txt
+PyCourrier.egg-info/top_level.txt
+tests/__init__.py
+tests/test_mail_sender.py
+tests/test_utils.py
