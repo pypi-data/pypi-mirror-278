@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+dfss_py.egg-info/PKG-INFO
+dfss_py.egg-info/SOURCES.txt
+dfss_py.egg-info/dependency_links.txt
+dfss_py.egg-info/requires.txt
+dfss_py.egg-info/top_level.txt
+dfsspy/__init__.py
+dfsspy/__main__.py
+dfsspy/util.py

@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: dfss-py
+Version: 1.6.20
+Summary: download_from_sophon_sftp
+Author: zetao.zhang
+Author-email: zetao.zhang@sophgo.com
+Requires-Python: >=3.5
+Requires-Dist: paramiko
+Requires-Dist: progressbar
