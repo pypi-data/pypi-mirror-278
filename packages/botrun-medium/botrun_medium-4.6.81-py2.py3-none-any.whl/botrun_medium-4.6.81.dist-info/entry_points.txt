@@ -1,0 +1,3 @@
+[console_scripts]
+botrun-medium-articles = botrun_medium_articles:botrun_medium_articles
+botrun-medium-list = botrun_medium_list:botrun_medium_list
