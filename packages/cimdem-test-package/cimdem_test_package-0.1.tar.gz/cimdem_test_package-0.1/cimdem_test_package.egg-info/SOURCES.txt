@@ -1,0 +1,10 @@
+README.md
+setup.py
+cimdem_test_package.egg-info/PKG-INFO
+cimdem_test_package.egg-info/SOURCES.txt
+cimdem_test_package.egg-info/dependency_links.txt
+cimdem_test_package.egg-info/requires.txt
+cimdem_test_package.egg-info/top_level.txt
+package/__init__.py
+package/cache.py
+package/utils.py
