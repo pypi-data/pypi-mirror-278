@@ -1,0 +1,24 @@
+[build-system]
+requires = ["maturin>=1.5,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "holded-dataflow"
+requires-python = ">=3.8"
+version = "0.1.4"
+authors = [{name = "Yohan Valencia", email = "yohan.vt@gmail.com"}]
+description = "Core logic of ingestion pipeline"
+readme = "README.md"
+license = {text = "MIT OR Apache-2.0"}
+keywords = ["rust", "python", "bindings"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Rust",
+    "License :: OSI Approved :: MIT License",
+    "License :: OSI Approved :: Apache Software License"
+]
+dynamic = ["version"]
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+sdist = true

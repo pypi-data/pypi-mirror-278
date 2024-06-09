@@ -1,0 +1,15 @@
+[package]
+name = "holded-dataflow"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "holded_dataflow"
+crate-type = ["cdylib"]
+
+[dependencies]
+lazy_static = "1.4.0"
+pyo3 = "0.20.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0.117"
