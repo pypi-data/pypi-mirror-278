@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: rlai
+Version: 1.3.0
+Summary: Reinforcement Learning:  An Introduction
+Home-page: https://github.com/MatthewGerber/rlai
+Author: Matthew Gerber
+Author-email: gerber.matthew@gmail.com
+Requires-Python: >=3.10,<3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: PyQt6 (>=6.7,<7.0) ; platform_machine != "aarch64"
+Requires-Dist: gymnasium[box2d,classic-control,mujoco] (==1.0.0a2)
+Requires-Dist: ipython (>=8.25,<9.0)
+Requires-Dist: jax[cpu] (>=0.4,<1.0)
+Requires-Dist: jupyterlab (>=4.2,<5.0)
+Requires-Dist: matplotlib (>=3.9,<4.0)
+Requires-Dist: moviepy (>=1.0,<2.0)
+Requires-Dist: numpy (>=1.26,<2.0)
+Requires-Dist: pandas (>=2.2,<3.0)
+Requires-Dist: patsy (>=0.5,<1.0)
+Requires-Dist: pyqtgraph (>=0.13,<1.0)
+Requires-Dist: scikit-learn (>=1.5,<2.0)
+Requires-Dist: scipy (>=1.13,<2.0)
+Requires-Dist: tabulate (>=0.9,<1.0)
+Project-URL: Repository, https://github.com/MatthewGerber/rlai
+Description-Content-Type: text/markdown
+
+Welcome to RLAI. To launch a live graphical interface to the RLAI package, click below:
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MatthewGerber/rlai/HEAD?urlpath=lab/tree/jupyter/trainer.ipynb)
+
+Please see the [project website](https://matthewgerber.github.io/rlai/) for more information.
+
+Status:
+* [![PyPI version](https://badge.fury.io/py/rlai.svg)](https://badge.fury.io/py/rlai)
+* [![Coverage Status](https://coveralls.io/repos/github/MatthewGerber/rlai/badge.svg?branch=master)](https://coveralls.io/github/MatthewGerber/rlai?branch=master)
+
