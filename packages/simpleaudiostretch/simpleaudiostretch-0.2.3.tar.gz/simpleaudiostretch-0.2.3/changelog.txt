@@ -1,0 +1,5 @@
+Added check for samplerate being provided when working with raw audio data
+Atempt to convert samplerate to an int before raising error
+Delete invalid file when can't save
+Increased test coverage
+Fixed compatibility issues with Python < 3.11
