@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+jpsapp/__init__.py
+jpsapp/__main__.py
+jpsapp/main.py
+jpsapp/py.typed
+jpsapp.egg-info/PKG-INFO
+jpsapp.egg-info/SOURCES.txt
+jpsapp.egg-info/dependency_links.txt
+jpsapp.egg-info/entry_points.txt
+jpsapp.egg-info/requires.txt
+jpsapp.egg-info/top_level.txt
