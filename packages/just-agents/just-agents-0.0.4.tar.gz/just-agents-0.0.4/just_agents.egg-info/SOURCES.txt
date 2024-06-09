@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+just_agents.egg-info/PKG-INFO
+just_agents.egg-info/SOURCES.txt
+just_agents.egg-info/dependency_links.txt
+just_agents.egg-info/requires.txt
+just_agents.egg-info/top_level.txt
+tests/test_session.py
