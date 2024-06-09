@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+pdmdtable/__init__.py
+pdmdtable/pdmdtable.py
+pdmdtable.egg-info/PKG-INFO
+pdmdtable.egg-info/SOURCES.txt
+pdmdtable.egg-info/dependency_links.txt
+pdmdtable.egg-info/top_level.txt
+tests/test_pdmdtable.py
