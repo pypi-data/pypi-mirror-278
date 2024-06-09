@@ -1,0 +1,3 @@
+[pytest11]
+webtest_extras=pytest_webtest_extras.plugin
+
