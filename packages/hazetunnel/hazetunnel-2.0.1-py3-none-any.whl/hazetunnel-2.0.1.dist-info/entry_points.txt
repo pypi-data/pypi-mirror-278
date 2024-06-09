@@ -1,0 +1,3 @@
+[console_scripts]
+hazetunnel=hazetunnel.__main__:cli
+
