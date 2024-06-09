@@ -1,0 +1,24 @@
+Metadata-Version: 2.3
+Name: czo
+Version: 0.1.11
+Summary: 构建测试数据的工具包
+Project-URL: Homepage, https://github.com/sfwwslm/czo
+Project-URL: Issues, https://github.com/sfwwslm/czo/issues
+Author-email: sfwwslm <sfwwslm@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+### 测试工具库
+
+```shell
+pip install czo
+```
+
+```python
+from czo import *
+```
