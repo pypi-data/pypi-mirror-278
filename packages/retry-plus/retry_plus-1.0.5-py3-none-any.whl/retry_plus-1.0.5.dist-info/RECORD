@@ -1,0 +1,17 @@
+docs/source/conf.py,sha256=ISJ2L9KBK3Zyrg5OC1MvLmGjpJhdv5Dct4j7uwMsG40,3580
+example/asynchronous_function.py,sha256=kciWhOz-oE-RL9w3mpqagpzCzdXB2szjUb-D9F7xtrA,822
+example/combining_stop_and_wait_conditions.py,sha256=WJh5l5w1OJyJO3RX4_91j6J8Qq4lSUaGS4zBNWSWI0s,679
+example/customizing_retry_conditions_and_wait_conditions.py,sha256=6RH5Byn9LqK4b7qNjwCYifXyeVXQ-92ogH57wdkfWHM,948
+example/http_example.py,sha256=Szk3odV1ZjZfFVyRzdlDvIAPe4VysZeaXgWqT0R4FSo,1330
+example/synchronous_function.py,sha256=KtpG2nTiLABuxonmXBDfy38SIocfbe_KV98DkN5ERHg,733
+example/using_the_retry_context_manager.py,sha256=K-2aWeVG8nIhvyCQq9vhrxoDnRn5_78mmoTqUf4UDx4,552
+retry/__init__.py,sha256=8-UFBKI3V9Wd3wxpI7q2Gqis8FXUxHDSUy8nMbwpL5Q,366
+retry/conditions.py,sha256=_fCiOHGPWAittxIrrRQx03c_iLSQfW060tSIT_E0f2E,4162
+retry/retry.py,sha256=2ApZPGsn6cYNMVb29GxLejYq2c9I5F44CRBTBdMLaeg,7764
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_retry.py,sha256=EVM-G9XXdplhsulvPmlvHJya33fFZKw8peglJhwQUng,5483
+retry_plus-1.0.5.dist-info/LICENSE,sha256=2duy-ELxITT8aQ33PAQFDpRJ5WUHj3Dw6Jweu7nLODQ,1078
+retry_plus-1.0.5.dist-info/METADATA,sha256=BfRnid915NfvlT8VzXST_IFfBeltPMD4C4zi7CAbIDU,8971
+retry_plus-1.0.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+retry_plus-1.0.5.dist-info/top_level.txt,sha256=Do7jz9mKAfr2EkrtUCr5V85usBIgaTlzLsmh1GKipPM,25
+retry_plus-1.0.5.dist-info/RECORD,,
