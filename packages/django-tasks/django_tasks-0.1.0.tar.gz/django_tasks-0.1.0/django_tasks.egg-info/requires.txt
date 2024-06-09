@@ -1,0 +1,11 @@
+Django>=4.2
+typing_extensions
+django-stubs-ext
+
+[dev]
+ruff
+coverage
+django-stubs[compatible-mypy]
+dj-database-url
+psycopg
+mysqlclient
