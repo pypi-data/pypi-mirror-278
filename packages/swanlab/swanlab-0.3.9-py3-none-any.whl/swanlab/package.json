@@ -1,0 +1,10 @@
+{
+  "name": "swanlab",
+  "version": "0.3.9",
+  "description": "",
+  "python": "true",
+  "host": {
+    "web": "https://swanlab.cn",
+    "api": "https://swanlab.cn/api"
+  }
+}
