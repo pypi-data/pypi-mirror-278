@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: QDetect
+Version: 0.7.1
+Summary: A library for detecting Quaran verses in any text
+Author: Samhaa El-Beltagy
+Requires-Dist: levenshtein ==0.12.0
+
