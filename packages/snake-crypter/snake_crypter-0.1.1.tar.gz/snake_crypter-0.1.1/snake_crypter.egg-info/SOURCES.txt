@@ -1,0 +1,10 @@
+README.md
+setup.py
+snake_crypter.egg-info/PKG-INFO
+snake_crypter.egg-info/SOURCES.txt
+snake_crypter.egg-info/dependency_links.txt
+snake_crypter.egg-info/entry_points.txt
+snake_crypter.egg-info/top_level.txt
+snakecrypter/__init__.py
+snakecrypter/cli.py
+snakecrypter/encryptor.py

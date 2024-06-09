@@ -1,0 +1,2 @@
+[console_scripts]
+snake-crypter = snakecrypter.cli:main
