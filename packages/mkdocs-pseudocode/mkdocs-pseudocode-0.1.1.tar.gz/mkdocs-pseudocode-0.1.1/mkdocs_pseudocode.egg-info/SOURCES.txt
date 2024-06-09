@@ -1,0 +1,12 @@
+LICENCE
+MANIFEST.in
+README.md
+setup.py
+mkdocs_pseudocode.egg-info/PKG-INFO
+mkdocs_pseudocode.egg-info/SOURCES.txt
+mkdocs_pseudocode.egg-info/dependency_links.txt
+mkdocs_pseudocode.egg-info/entry_points.txt
+mkdocs_pseudocode.egg-info/requires.txt
+mkdocs_pseudocode.egg-info/top_level.txt
+mkdocs_pseudocode_plugin/__init__.py
+mkdocs_pseudocode_plugin/plugin.py
