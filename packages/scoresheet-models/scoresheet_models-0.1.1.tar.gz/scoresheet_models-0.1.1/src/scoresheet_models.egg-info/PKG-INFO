@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: scoresheet-models
+Version: 0.1.1
+Summary: Tools for storing, rendering and parsing chess scoresheet models
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Project-URL: repo, https://github.com/moveread/scoresheet-models
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: Pydantic
+
+# Scoresheet Models
+
+> Tools for storing, rendering and parsing chess scoresheet models
