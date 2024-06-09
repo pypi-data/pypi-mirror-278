@@ -1,0 +1,34 @@
+# ./sh/llm.yml
+prompt: |
+  <目標任務>
+  README.md 要改讓使用者改用 pip 安裝的方式，參考 toml 可以知道已經上架到 pypi 怎麼讓 user 安裝怎麼用
+  然後 
+  - `drive_download`: 從 Google Drive 下載文件。
+  - `run_split_txts`: 將下載的文件切分成指定大小的文本片段。
+  - `embeddings_to_qdrant`: 將文本片段轉換為嵌入式向量並上傳到 Qdrant。
+  - `botrun_drive_manager`: 管理和更新 .botrun 提示工程的模板與副本。
+  拜託你都要 import 呼叫舉例說明清楚每個參數給例子
+  </目標任務>
+  
+  <請妳每次都注意>
+  . 所有回應都必須是繁體中文，不能用簡體中文
+  . 如果妳有想要修改或建立的檔案請用以下 @begin code ... @end 格式輸出，系統會直接替換內容
+  @begin code("路徑與檔名.py")
+  原始程式碼
+  @end
+  或
+  @begin code("路徑與檔名.html")
+  原始程式碼
+  @end
+
+  . 因為系統會整個檔案替換，所以請妳不可以給我部分內容而已或簡略...之類的
+  . 妳想修改的檔案要給完整的整個檔案內容
+  . 沒有改的檔案請你就不要輸出了，這樣可以確保沒有改到的檔案維持原樣
+  </請妳每次都注意>
+  
+  . 請你一定要記得寫 @begin code ... @end , 妳經常忘記, 如果忘了會無法更新檔案內容
+
+paths:
+  - ./botrun_ask_folder.py
+  - ./README.md
+  - ./pyproject.toml
