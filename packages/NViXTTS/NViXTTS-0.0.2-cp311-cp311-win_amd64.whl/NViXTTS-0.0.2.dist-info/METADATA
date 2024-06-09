@@ -1,0 +1,528 @@
+Metadata-Version: 2.1
+Name: NViXTTS
+Version: 0.0.2
+Summary: Deep learning for Vietnamese Text to Speech
+Home-page: https://github.com/iris-mygh/NViXTTS_pl
+Author: Iris
+Author-email: irisle.cv@gmail.com
+License: MIT
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.9.0, <3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: cython >=0.29.30
+Requires-Dist: scipy >=1.11.2
+Requires-Dist: torch >=2.1
+Requires-Dist: torchaudio
+Requires-Dist: soundfile >=0.12.0
+Requires-Dist: librosa >=0.10.0
+Requires-Dist: scikit-learn >=1.3.0
+Requires-Dist: inflect >=5.6.0
+Requires-Dist: tqdm >=4.64.1
+Requires-Dist: anyascii >=0.3.0
+Requires-Dist: pyyaml >=6.0
+Requires-Dist: fsspec >=2023.6.0
+Requires-Dist: aiohttp >=3.8.1
+Requires-Dist: packaging >=23.1
+Requires-Dist: mutagen ==1.47.0
+Requires-Dist: flask >=2.0.1
+Requires-Dist: pysbd >=0.3.4
+Requires-Dist: umap-learn >=0.5.1
+Requires-Dist: pandas <2.0,>=1.4
+Requires-Dist: matplotlib >=3.7.0
+Requires-Dist: trainer >=0.0.36
+Requires-Dist: coqpit >=0.0.16
+Requires-Dist: jieba
+Requires-Dist: pypinyin
+Requires-Dist: hangul-romanize
+Requires-Dist: gruut[de,es,fr] ==2.2.3
+Requires-Dist: jamo
+Requires-Dist: nltk
+Requires-Dist: g2pkk >=0.1.1
+Requires-Dist: bangla
+Requires-Dist: bnnumerizer
+Requires-Dist: bnunicodenormalizer
+Requires-Dist: einops >=0.6.0
+Requires-Dist: transformers >=4.33.0
+Requires-Dist: encodec >=0.1.1
+Requires-Dist: unidecode >=1.3.2
+Requires-Dist: num2words
+Requires-Dist: spacy[ja] >=3
+Requires-Dist: black
+Requires-Dist: coverage
+Requires-Dist: isort
+Requires-Dist: nose2
+Requires-Dist: pylint ==2.10.2
+Requires-Dist: bokeh ==1.4.0
+Requires-Dist: mecab-python3 ==1.0.6
+Requires-Dist: unidic-lite ==1.0.8
+Requires-Dist: cutlet
+Requires-Dist: numba ==0.55.1 ; python_version < "3.9"
+Requires-Dist: numpy ==1.22.0 ; python_version <= "3.10"
+Requires-Dist: numpy >=1.24.3 ; python_version > "3.10"
+Requires-Dist: numba >=0.57.0 ; python_version >= "3.9"
+
+# NViXTTS
+NViXTTS is a library for advanced Text-to-Speech generation modified based on [project](https://github.com/coqui-ai/TTS) TTS==0.22.0
+
+Replace for 
+```
+pip install --use-deprecated=legacy-resolver -e ./TTS
+```
+
+```
+from NViXTTS.tts.configs.xtts_config import XttsConfig
+from NViXTTS.tts.models.xtts import Xtts
+```
+Or
+```
+from NViXTTS import XttsConfig
+from NViXTTS import Xtts
+```
+
+## Note:
+I'm just a contributor by modifying the library to make it easier to use for my code, so the copyright must still follow [link](https://github.com/coqui-ai/TTS/blob/dev/LICENSE.txt)
+
+## Directory structure
+Root path: ./NViXTTS
+```
+- .models.json
+- api.py
+- bin/
+  - collect_env_info.py
+  - compute_attention_masks.py
+  - compute_embeddings.py
+  - compute_statistics.py
+  - eval_encoder.py
+  - extract_tts_spectrograms.py
+  - find_unique_chars.py
+  - find_unique_phonemes.py
+  - remove_silence_using_vad.py
+  - resample.py
+  - synthesize.py
+  - train_encoder.py
+  - train_tts.py
+  - train_vocoder.py
+  - tune_wavegrad.py
+  - __init__.py
+- config/
+  - shared_configs.py
+  - __init__.py
+  - __pycache__/
+    - shared_configs.cpython-310.pyc
+    - __init__.cpython-310.pyc
+- demos/
+  - xtts_ft_demo/
+    - requirements.txt
+    - utils/
+      - formatter.py
+      - gpt_train.py
+    - xtts_demo.py
+- encoder/
+  - configs/
+    - base_encoder_config.py
+    - emotion_encoder_config.py
+    - speaker_encoder_config.py
+  - dataset.py
+  - losses.py
+  - models/
+    - base_encoder.py
+    - lstm.py
+    - resnet.py
+    - __init__.py
+    - __pycache__/
+      - base_encoder.cpython-310.pyc
+      - lstm.cpython-310.pyc
+      - resnet.cpython-310.pyc
+  - README.md
+  - requirements.txt
+  - utils/
+    - generic_utils.py
+    - prepare_voxceleb.py
+    - training.py
+    - visual.py
+    - __init__.py
+    - __pycache__/
+      - generic_utils.cpython-310.pyc
+      - __init__.cpython-310.pyc
+  - __init__.py
+  - __pycache__/
+    - losses.cpython-310.pyc
+    - __init__.cpython-310.pyc
+- model.py
+- server/
+  - conf.json
+  - README.md
+  - server.py
+  - static/
+    - coqui-log-green-TTS.png
+  - templates/
+    - details.html
+    - index.html
+  - __init__.py
+- tts/
+  - configs/
+    - align_tts_config.py
+    - bark_config.py
+    - delightful_tts_config.py
+    - fastspeech2_config.py
+    - fast_pitch_config.py
+    - fast_speech_config.py
+    - glow_tts_config.py
+    - neuralhmm_tts_config.py
+    - overflow_config.py
+    - shared_configs.py
+    - speedy_speech_config.py
+    - tacotron2_config.py
+    - tacotron_config.py
+    - tortoise_config.py
+    - vits_config.py
+    - xtts_config.py
+    - __init__.py
+    - __pycache__/
+      - shared_configs.cpython-310.pyc
+      - xtts_config.cpython-310.pyc
+      - __init__.cpython-310.pyc
+  - datasets/
+    - dataset.py
+    - formatters.py
+    - __init__.py
+    - __pycache__/
+      - dataset.cpython-310.pyc
+      - formatters.cpython-310.pyc
+      - __init__.cpython-310.pyc
+  - layers/
+    - align_tts/
+      - duration_predictor.py
+      - mdn.py
+      - __init__.py
+    - bark/
+      - hubert/
+        - hubert_manager.py
+        - kmeans_hubert.py
+        - tokenizer.py
+        - __init__.py
+      - inference_funcs.py
+      - load_model.py
+      - model.py
+      - model_fine.py
+      - __init__.py
+    - delightful_tts/
+      - acoustic_model.py
+      - conformer.py
+      - conv_layers.py
+      - encoders.py
+      - energy_adaptor.py
+      - kernel_predictor.py
+      - networks.py
+      - phoneme_prosody_predictor.py
+      - pitch_adaptor.py
+      - variance_predictor.py
+      - __init__.py
+    - feed_forward/
+      - decoder.py
+      - duration_predictor.py
+      - encoder.py
+      - __init__.py
+    - generic/
+      - aligner.py
+      - gated_conv.py
+      - normalization.py
+      - pos_encoding.py
+      - res_conv_bn.py
+      - time_depth_sep_conv.py
+      - transformer.py
+      - wavenet.py
+      - __init__.py
+    - glow_tts/
+      - decoder.py
+      - duration_predictor.py
+      - encoder.py
+      - glow.py
+      - transformer.py
+      - __init__.py
+    - losses.py
+    - overflow/
+      - common_layers.py
+      - decoder.py
+      - neural_hmm.py
+      - plotting_utils.py
+      - __init__.py
+    - tacotron/
+      - attentions.py
+      - capacitron_layers.py
+      - common_layers.py
+      - gst_layers.py
+      - tacotron.py
+      - tacotron2.py
+      - __init__.py
+    - tortoise/
+      - arch_utils.py
+      - audio_utils.py
+      - autoregressive.py
+      - classifier.py
+      - clvp.py
+      - diffusion.py
+      - diffusion_decoder.py
+      - dpm_solver.py
+      - random_latent_generator.py
+      - tokenizer.py
+      - transformer.py
+      - utils.py
+      - vocoder.py
+      - wav2vec_alignment.py
+      - xtransformers.py
+    - vits/
+      - discriminator.py
+      - networks.py
+      - stochastic_duration_predictor.py
+      - transforms.py
+    - xtts/
+      - dvae.py
+      - gpt.py
+      - gpt_inference.py
+      - hifigan_decoder.py
+      - latent_encoder.py
+      - perceiver_encoder.py
+      - stream_generator.py
+      - tokenizer.py
+      - trainer/
+        - dataset.py
+        - gpt_trainer.py
+      - xtts_manager.py
+      - zh_num2words.py
+      - __init__.py
+      - __pycache__/
+        - gpt.cpython-310.pyc
+        - gpt_inference.cpython-310.pyc
+        - hifigan_decoder.cpython-310.pyc
+        - latent_encoder.cpython-310.pyc
+        - perceiver_encoder.cpython-310.pyc
+        - stream_generator.cpython-310.pyc
+        - tokenizer.cpython-310.pyc
+        - xtts_manager.cpython-310.pyc
+        - zh_num2words.cpython-310.pyc
+    - __init__.py
+    - __pycache__/
+      - losses.cpython-310.pyc
+      - __init__.cpython-310.pyc
+  - models/
+    - align_tts.py
+    - bark.py
+    - base_tacotron.py
+    - base_tts.py
+    - delightful_tts.py
+    - forward_tts.py
+    - glow_tts.py
+    - neuralhmm_tts.py
+    - overflow.py
+    - tacotron.py
+    - tacotron2.py
+    - tortoise.py
+    - vits.py
+    - xtts.py
+    - __init__.py
+    - __pycache__/
+      - base_tts.cpython-310.pyc
+      - xtts.cpython-310.pyc
+      - __init__.cpython-310.pyc
+  - utils/
+    - assets/
+      - tortoise/
+        - tokenizer.json
+    - data.py
+    - fairseq.py
+    - helpers.py
+    - languages.py
+    - managers.py
+    - measures.py
+    - monotonic_align/
+      - core.c
+      - core.pyx
+      - setup.py
+      - __init__.py
+      - __pycache__/
+        - __init__.cpython-310.pyc
+    - speakers.py
+    - ssim.py
+    - synthesis.py
+    - text/
+      - bangla/
+        - phonemizer.py
+        - __init__.py
+      - belarusian/
+        - phonemizer.py
+        - __init__.py
+      - characters.py
+      - chinese_mandarin/
+        - numbers.py
+        - phonemizer.py
+        - pinyinToPhonemes.py
+        - __init__.py
+      - cleaners.py
+      - cmudict.py
+      - english/
+        - abbreviations.py
+        - number_norm.py
+        - time_norm.py
+        - __init__.py
+      - french/
+        - abbreviations.py
+        - __init__.py
+      - japanese/
+        - phonemizer.py
+        - __init__.py
+      - korean/
+        - korean.py
+        - ko_dictionary.py
+        - phonemizer.py
+        - __init__.py
+      - phonemizers/
+        - bangla_phonemizer.py
+        - base.py
+        - belarusian_phonemizer.py
+        - espeak_wrapper.py
+        - gruut_wrapper.py
+        - ja_jp_phonemizer.py
+        - ko_kr_phonemizer.py
+        - multi_phonemizer.py
+        - zh_cn_phonemizer.py
+        - __init__.py
+      - punctuation.py
+      - tokenizer.py
+      - __init__.py
+    - visual.py
+    - __init__.py
+    - __pycache__/
+      - data.cpython-310.pyc
+      - helpers.cpython-310.pyc
+      - languages.cpython-310.pyc
+      - managers.cpython-310.pyc
+      - speakers.cpython-310.pyc
+      - ssim.cpython-310.pyc
+      - synthesis.cpython-310.pyc
+      - visual.cpython-310.pyc
+      - __init__.cpython-310.pyc
+  - __init__.py
+  - __pycache__/
+    - __init__.cpython-310.pyc
+- utils/
+  - audio/
+    - numpy_transforms.py
+    - processor.py
+    - torch_transforms.py
+    - __init__.py
+    - __pycache__/
+      - numpy_transforms.cpython-310.pyc
+      - processor.cpython-310.pyc
+      - torch_transforms.cpython-310.pyc
+      - __init__.cpython-310.pyc
+  - callbacks.py
+  - capacitron_optimizer.py
+  - distribute.py
+  - download.py
+  - downloaders.py
+  - generic_utils.py
+  - io.py
+  - manage.py
+  - radam.py
+  - samplers.py
+  - synthesizer.py
+  - training.py
+  - vad.py
+  - __init__.py
+  - __pycache__/
+    - generic_utils.cpython-310.pyc
+    - io.cpython-310.pyc
+    - __init__.cpython-310.pyc
+- vc/
+  - configs/
+    - freevc_config.py
+    - shared_configs.py
+    - __init__.py
+  - models/
+    - base_vc.py
+    - freevc.py
+    - __init__.py
+  - modules/
+    - freevc/
+      - commons.py
+      - mel_processing.py
+      - modules.py
+      - speaker_encoder/
+        - audio.py
+        - hparams.py
+        - speaker_encoder.py
+        - __init__.py
+      - wavlm/
+        - config.json
+        - modules.py
+        - wavlm.py
+        - __init__.py
+      - __init__.py
+    - __init__.py
+- VERSION
+- vocoder/
+  - configs/
+    - fullband_melgan_config.py
+    - hifigan_config.py
+    - melgan_config.py
+    - multiband_melgan_config.py
+    - parallel_wavegan_config.py
+    - shared_configs.py
+    - univnet_config.py
+    - wavegrad_config.py
+    - wavernn_config.py
+    - __init__.py
+  - datasets/
+    - gan_dataset.py
+    - preprocess.py
+    - wavegrad_dataset.py
+    - wavernn_dataset.py
+    - __init__.py
+  - layers/
+    - hifigan.py
+    - losses.py
+    - lvc_block.py
+    - melgan.py
+    - parallel_wavegan.py
+    - pqmf.py
+    - qmf.dat
+    - upsample.py
+    - wavegrad.py
+    - __init__.py
+  - models/
+    - base_vocoder.py
+    - fullband_melgan_generator.py
+    - gan.py
+    - hifigan_discriminator.py
+    - hifigan_generator.py
+    - melgan_discriminator.py
+    - melgan_generator.py
+    - melgan_multiscale_discriminator.py
+    - multiband_melgan_generator.py
+    - parallel_wavegan_discriminator.py
+    - parallel_wavegan_generator.py
+    - random_window_discriminator.py
+    - univnet_discriminator.py
+    - univnet_generator.py
+    - wavegrad.py
+    - wavernn.py
+    - __init__.py
+  - pqmf_output.wav
+  - README.md
+  - utils/
+    - distribution.py
+    - generic_utils.py
+    - __init__.py
+  - __init__.py
+- __init__.py
+- __pycache__/
+  - model.cpython-310.pyc
+  - __init__.cpython-310.pyc
+
+```
