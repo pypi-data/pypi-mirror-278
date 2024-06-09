@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: json_x_table
+Version: 0.1.0
+Summary: Convert your json dump files with a certain format to HTML tables in a fast and efficient way
+Author: Sagar Dhande
+Author-email: dhandesagar78@gmail.com
+Keywords: python3,Json_to_HTML
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+License-File: LICENSE
+Requires-Dist: jsoncomment
+Requires-Dist: pathlib
+
+Convert your json dump files with a certain format to HTML tables in a fast and efficient way.
+You may want to override the functions in order to match any format that you want, with specific customizable column values.
