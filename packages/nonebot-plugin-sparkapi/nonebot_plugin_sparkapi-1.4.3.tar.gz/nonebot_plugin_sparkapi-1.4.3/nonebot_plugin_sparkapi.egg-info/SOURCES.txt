@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+nonebot_plugin_sparkapi/ImgGenApi.py
+nonebot_plugin_sparkapi/PPTGenApi.py
+nonebot_plugin_sparkapi/SparkApi.py
+nonebot_plugin_sparkapi/__init__.py
+nonebot_plugin_sparkapi/config.py
+nonebot_plugin_sparkapi/funcs.py
+nonebot_plugin_sparkapi/info.py
+nonebot_plugin_sparkapi/storage.py
+nonebot_plugin_sparkapi.egg-info/PKG-INFO
+nonebot_plugin_sparkapi.egg-info/SOURCES.txt
+nonebot_plugin_sparkapi.egg-info/dependency_links.txt
+nonebot_plugin_sparkapi.egg-info/requires.txt
+nonebot_plugin_sparkapi.egg-info/top_level.txt
