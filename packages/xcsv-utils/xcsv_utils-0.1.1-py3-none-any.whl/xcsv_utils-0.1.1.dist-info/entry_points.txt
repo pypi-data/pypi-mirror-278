@@ -1,0 +1,3 @@
+[console_scripts]
+xcsv_print=xcsv.utils.__main__:main
+
