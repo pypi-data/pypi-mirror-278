@@ -1,0 +1,4 @@
+[console_scripts]
+hb=hermesbaby.cli:main
+hermesbaby=hermesbaby.cli:main
+
