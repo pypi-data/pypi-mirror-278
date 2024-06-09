@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Vahatraker
+Comment=Live MIDI sequencer
+GenericName=Live MIDI sequencer
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Categories=Music;Audio;Midi;X-Jack;AudioVideo;
+Keywords=audio;sound;sequencer;midi;tracker
+Terminal=false
+StartupNotify=false
+Icon=io.github.rdybka.vht
+Exec=vht
