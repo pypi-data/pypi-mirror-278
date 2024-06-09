@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: osbot_playwright
+Version: 0.6.9
+Summary: OWASP Security Bot - Playwright
+Home-page: https://github.com/owasp-sbot/OSBot-Playwright
+License: MIT
+Author: Dinis Cruz
+Author-email: dinis.cruz@owasp.org
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: osbot-utils
+Requires-Dist: playwright
+Requires-Dist: psutil
+Project-URL: Repository, https://github.com/owasp-sbot/OSBot-Playwright
+Description-Content-Type: text/markdown
+
+# OSBot_Playwright
+[![codecov](https://codecov.io/gh/owasp-sbot/OSBot-Playwright/graph/badge.svg?token=PLCAZXK4IH)](https://codecov.io/gh/owasp-sbot/OSBot-Playwright)
+![Current Release](https://img.shields.io/badge/release-v0.6.9-blue)
