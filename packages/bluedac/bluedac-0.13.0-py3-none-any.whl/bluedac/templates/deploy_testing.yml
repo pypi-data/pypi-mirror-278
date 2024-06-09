@@ -1,0 +1,17 @@
+    stage: deploy
+    image: alpine:latest
+    environment:
+        name: testing
+    script:
+        - apk add --update nodejs npm
+        - npm install -g aws-cdk
+        - apk add --update python3 py3-pip
+        - python -m venv .venv
+        - source .venv/bin/activate
+        - python -m pip install -r requirements.txt
+        - export CDK_DEPLOY_ENV=testing
+        - echo "CDK_DEPLOY_ENV=testing" >> deploy.env
+        - cdk deploy "*-$CDK_DEPLOY_ENV" --require-approval never
+    artifacts:
+        reports:
+          dotenv: deploy.env
