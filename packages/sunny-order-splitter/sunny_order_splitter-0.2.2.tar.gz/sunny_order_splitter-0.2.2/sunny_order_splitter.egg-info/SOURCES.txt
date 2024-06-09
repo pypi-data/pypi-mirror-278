@@ -1,0 +1,12 @@
+README.md
+setup.py
+sunny_order_splitter/__init__.py
+sunny_order_splitter/binance_spot.py
+sunny_order_splitter/binance_umfutures.py
+sunny_order_splitter.egg-info/PKG-INFO
+sunny_order_splitter.egg-info/SOURCES.txt
+sunny_order_splitter.egg-info/dependency_links.txt
+sunny_order_splitter.egg-info/requires.txt
+sunny_order_splitter.egg-info/top_level.txt
+tests/test_spot.py
+tests/test_umfutures.py
