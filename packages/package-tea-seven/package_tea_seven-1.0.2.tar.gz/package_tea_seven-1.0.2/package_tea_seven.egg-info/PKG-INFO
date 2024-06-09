@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: package-tea-seven
+Version: 1.0.2
+Summary: package example test
+Home-page: https://github.com/hanyan007/package-tea-seven.git
+Author: hanyan_news
+Author-email: hanyan0572@gmail.com
+License: BSD License
+Project-URL: Source, https://github.com/hanyan007/package-tea-seven.git
+Platform: all
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: package-tea-five==1.0.0
+Requires-Dist: dnspod-domain-log==1.0.2
+Requires-Dist: package-tea-one==1.0.1
+
+========
+发布示例
+========
+- test
+- 主流的开源技术
+- 自动化测试
+- 性能测试
+- 安全测试
+- go开发实战
+- CI/CD
+- Docker
+- DevOps
+
+
