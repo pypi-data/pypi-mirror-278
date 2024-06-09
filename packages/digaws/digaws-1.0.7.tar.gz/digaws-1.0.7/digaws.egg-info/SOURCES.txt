@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+digaws/__init__.py
+digaws/digaws.py
+digaws.egg-info/PKG-INFO
+digaws.egg-info/SOURCES.txt
+digaws.egg-info/dependency_links.txt
+digaws.egg-info/entry_points.txt
+digaws.egg-info/not-zip-safe
+digaws.egg-info/requires.txt
+digaws.egg-info/top_level.txt
+tests/test_dig_aws.py
+tests/test_get_aws_ip_ranges_json.py
