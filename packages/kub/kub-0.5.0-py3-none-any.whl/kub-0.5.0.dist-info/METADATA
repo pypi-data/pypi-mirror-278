@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: kub
+Version: 0.5.0
+Summary: A python library to interface with the KUB api
+License: MIT
+Author: Jack Powell
+Author-email: jackattack51@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# KUB
+Knoxville Utility Board Utilities Usage
+
