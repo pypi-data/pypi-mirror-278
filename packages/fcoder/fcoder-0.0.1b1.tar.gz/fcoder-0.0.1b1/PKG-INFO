@@ -1,0 +1,27 @@
+Metadata-Version: 2.3
+Name: fcoder
+Version: 0.0.1b1
+Summary: Easy code interpreter for use
+Author: liqzz
+License-Expression: MIT
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.10
+Requires-Dist: pydantic
+Requires-Dist: requests
+Requires-Dist: websocket-client==1.8.0
+Description-Content-Type: text/markdown
+
+## fcoder
+Easy code interpreter for use
+```
+pip3 install fcoder
+```
+
+## Coder Server
+```
+docker build -f docker/Dockerfile -t fcoder-server:latest .
+```
