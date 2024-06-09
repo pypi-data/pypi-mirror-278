@@ -1,0 +1,2 @@
+[console_scripts]
+wordcloud-gui = wordcloud_webui.main:start_service
