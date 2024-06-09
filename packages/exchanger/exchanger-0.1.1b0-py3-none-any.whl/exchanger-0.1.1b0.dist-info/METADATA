@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: exchanger
+Version: 0.1.1b0
+Summary: Library to exchange currencies using web solutions.
+Home-page: https://github.com/agomezb/exchanger
+Keywords: python,currency,currencies,exchange,exchanger
+Author: Andres Gomez
+Author-email: agomez@bit3000.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Project-URL: Repository, https://github.com/agomezb/exchanger
+Description-Content-Type: text/markdown
+
+# Exchanger Lib
+
+The exchanger lib help you to exchange currencies.
+
+## Public Methods
+
+- get_exchange_rate
+
