@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.py
+MacAudioPlayer.egg-info/PKG-INFO
+MacAudioPlayer.egg-info/SOURCES.txt
+MacAudioPlayer.egg-info/dependency_links.txt
+MacAudioPlayer.egg-info/entry_points.txt
+MacAudioPlayer.egg-info/requires.txt
+MacAudioPlayer.egg-info/top_level.txt
+my_audio_player/__init__.py
+my_audio_player/player.py
+my_audio_player/setup.py
