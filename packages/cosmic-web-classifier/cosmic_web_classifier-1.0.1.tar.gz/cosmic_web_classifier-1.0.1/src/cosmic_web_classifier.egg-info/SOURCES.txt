@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/cosmic_web_classifier/__init__.py
+src/cosmic_web_classifier.egg-info/PKG-INFO
+src/cosmic_web_classifier.egg-info/SOURCES.txt
+src/cosmic_web_classifier.egg-info/dependency_links.txt
+src/cosmic_web_classifier.egg-info/requires.txt
+src/cosmic_web_classifier.egg-info/top_level.txt
+tests/test_run.py
