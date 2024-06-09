@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+writernet/__init__.py
+writernet/app.py
+writernet/writer.py
+writernet.egg-info/PKG-INFO
+writernet.egg-info/SOURCES.txt
+writernet.egg-info/dependency_links.txt
+writernet.egg-info/entry_points.txt
+writernet.egg-info/requires.txt
+writernet.egg-info/top_level.txt
