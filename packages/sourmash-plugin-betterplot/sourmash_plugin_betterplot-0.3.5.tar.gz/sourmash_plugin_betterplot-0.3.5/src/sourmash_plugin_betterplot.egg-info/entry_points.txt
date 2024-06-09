@@ -1,0 +1,7 @@
+[sourmash.cli_script]
+clustermap1_command = sourmash_plugin_betterplot:Command_Clustermap1
+mds2_command = sourmash_plugin_betterplot:Command_MDS2
+mds_command = sourmash_plugin_betterplot:Command_MDS
+pairwise_to_compare_command = sourmash_plugin_betterplot:Command_PairwiseToCompare
+plot2_command = sourmash_plugin_betterplot:Command_Plot2
+plot3_command = sourmash_plugin_betterplot:Command_Plot3
