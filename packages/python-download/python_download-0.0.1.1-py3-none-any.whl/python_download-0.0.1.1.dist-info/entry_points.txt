@@ -1,0 +1,4 @@
+[console_scripts]
+download=download.__main__:main
+python-download=download.__main__:main
+
