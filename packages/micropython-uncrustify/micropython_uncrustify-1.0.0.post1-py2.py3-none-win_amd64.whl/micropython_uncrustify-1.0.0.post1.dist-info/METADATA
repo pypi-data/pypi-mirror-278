@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: micropython-uncrustify
+Version: 1.0.0.post1
+Project-URL: Homepage, https://github.com/dlech/micropython-uncrustify
+Description-Content-Type: text/markdown
+License-File: COPYING
+License-File: AUTHORS
+
+micropython-uncrustify
+======================
+
+This is a binary distribution of [uncrustify] for [MicroPython].
+
+[uncrustify]: https://github.com/uncrustify/uncrustify
+[MicroPython]: https://github.com/micropython/micropython
