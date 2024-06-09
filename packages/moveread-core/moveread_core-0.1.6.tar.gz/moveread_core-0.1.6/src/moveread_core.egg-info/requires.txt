@@ -1,0 +1,12 @@
+pydantic
+kv-api
+haskellian
+lazy-loader
+moveread-annotations
+
+[local]
+kv-fs
+kv-sqlite-sync
+
+[ts-gen]
+quicktype-ts

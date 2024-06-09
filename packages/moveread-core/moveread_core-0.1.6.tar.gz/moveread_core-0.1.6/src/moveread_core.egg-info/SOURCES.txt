@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+src/moveread/core/__init__.py
+src/moveread/core/__init__.pyi
+src/moveread/core/core.py
+src/moveread/core/ids.py
+src/moveread/core/local.py
+src/moveread/core/models.py
+src/moveread/core/tsgen.py
+src/moveread_core.egg-info/PKG-INFO
+src/moveread_core.egg-info/SOURCES.txt
+src/moveread_core.egg-info/dependency_links.txt
+src/moveread_core.egg-info/entry_points.txt
+src/moveread_core.egg-info/requires.txt
+src/moveread_core.egg-info/top_level.txt
