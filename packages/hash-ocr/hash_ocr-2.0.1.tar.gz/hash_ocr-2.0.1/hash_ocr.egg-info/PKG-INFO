@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: hash-ocr
+Version: 2.0.1
+Summary: An ocr designed to read in game texts
+Home-page: https://github.com/sandbox-pokhara/hash-ocr
+Author: Pradish Bijukchhe
+Author-email: pradishbijukchhe@gmail.com
+Project-URL: Bug Tracker, https://github.com/sandbox-pokhara/hash-ocr/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: opencv-python
+Requires-Dist: opencv-contrib-python
+
+# hash-ocr
+
+An ocr designed to read in game texts
+
+## Installation
+
+You can install the package via pip:
+
+```
+pip install hash-ocr
+```
+
+## Usage
+
+```python
+import cv2
+
+from hash_ocr import AverageHashModel
+
+img = cv2.imread("test_data/382.png", cv2.IMREAD_GRAYSCALE)
+img = cv2.threshold(img, 128, 255, cv2.THRESH_BINARY)[1]
+
+# default model can only read digits
+model = AverageHashModel()
+
+print(model.get_word(img))
+# 382
+
+print(model.compute_distances(img))
+# [(8.0, '3', (5, 6, 18, 25)), (7.0, '8', (24, 5, 18, 26)), (10.0, '2', (42, 6, 20, 24))]
+```
+
+## Custom Models
+
+A model in `hash-ocr` contains an image and a json file.
+
+Example image:
+
+![Model Image](hash_ocr/models/digits.png)
+
+Example label:
+
+```json
+["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+```
+
+Example:
+
+```python
+from hash_ocr.models import AverageHashModel
+
+model = AverageHashModel(
+    model_path="hash_ocr/models/digits.png",
+    label_path="hash_ocr/models/letters.json",
+)
+```
+
+## License
+
+This project is licensed under the terms of the MIT license.
