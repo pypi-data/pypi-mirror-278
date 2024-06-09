@@ -1,0 +1,2 @@
+class TheSinepsApiException(Exception):
+    pass
