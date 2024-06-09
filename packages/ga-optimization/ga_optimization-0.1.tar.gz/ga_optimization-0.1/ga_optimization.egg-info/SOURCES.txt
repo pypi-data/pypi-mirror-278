@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+ga_optimization.egg-info/PKG-INFO
+ga_optimization.egg-info/SOURCES.txt
+ga_optimization.egg-info/dependency_links.txt
+ga_optimization.egg-info/requires.txt
+ga_optimization.egg-info/top_level.txt
+optimization/__init__.py
+optimization/feature_extraction.py
