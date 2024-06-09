@@ -1,0 +1,19 @@
+{
+    "release_mode": "branch",
+    "release_branch_regex": "^release\/v[0-9]+(?:.[0-9]+)+$",
+    "commit_fb": [
+        "launch_unit_tests"
+    ],
+    "merge_request": [
+        "launch_unit_tests",
+        "deploy_testing",
+        "launch_integration_tests",
+        "deploy_staging",
+        "launch_e2e_tests"
+        "merge_develop"
+    ],
+    "release": [
+        "add_tag",
+        "deploy_production"
+    ]
+}
