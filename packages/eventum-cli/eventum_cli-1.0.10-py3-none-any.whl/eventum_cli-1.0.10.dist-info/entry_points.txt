@@ -1,0 +1,4 @@
+[console_scripts]
+eventum=eventum_cli.cli_main:main
+eventum-compose=eventum_cli.cli_compose:main
+
