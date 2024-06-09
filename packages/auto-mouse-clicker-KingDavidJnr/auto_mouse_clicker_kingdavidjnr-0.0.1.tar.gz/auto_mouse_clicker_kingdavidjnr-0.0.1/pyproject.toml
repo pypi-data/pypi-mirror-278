@@ -1,0 +1,18 @@
+[project]
+name = "auto_mouse_clicker_KingDavidJnr"
+version = "0.0.1"
+authors = [
+  { name="David Oduse", email="odusedavid@gmail.com" },
+]
+description = "Python auto-clicker script that automates mouse clicks at defined intervals and visually indicates each click with a bubble overlay."
+readme = "DOCS.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/KingDavidJnr/auto-mouse-clicker"
+Issues = "https://github.com/KingDavidJnr/auto-mouse-clicker/issues"
