@@ -1,0 +1,37 @@
+name: Test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    strategy:
+      fail-fast: true
+      max-parallel: 3
+      matrix:
+        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
+        os: [ubuntu-latest]
+        include:
+          - os: macos-latest
+            python-version: 3.12
+          - os: windows-latest
+            python-version: 3.12
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up PDM
+      uses: pdm-project/setup-pdm@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        pdm install -d
+    - name: Lint with ruff
+      run: |
+        pdm run ruff check src
+    - name: Test with pytest
+      run: |
+        pdm run pytest -v
