@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "eventum-core"
+version = "1.0.8"
+description = "Flexible event generator"
+license = "Apache-2.0"
+authors = ["Nikita Reznikov <nikita.reznikov.public@mail.ru>"]
+readme = "README.md"
+repository = "https://github.com/Eventum-Generatives/EventumCore"
+documentation = "https://eventum-generatives.github.io/Website/"
+keywords = ["generator", "testing", "data", "event"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Software Development :: Testing :: Traffic Generation"
+
+]
+packages = [
+  {include = "eventum_core"},
+  {include = "eventum_core/py.typed"},
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pydantic = "^2.6.2"
+setproctitle = "^1.3.3"
+jinja2 = "^3.1.3"
+eventum-content-manager = "^1.0.5"
+eventum-plugins = "^1.0.1"
+pytz = "^2024.1"
+
+[tool.poetry.group.dev.dependencies]
+isort = "^5.12.0"
+pytest = "^8.0.1"
+mypy = "^1.9.0"
+types-pytz = "^2024.1.0.20240417"
+flake8 = "^7.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
