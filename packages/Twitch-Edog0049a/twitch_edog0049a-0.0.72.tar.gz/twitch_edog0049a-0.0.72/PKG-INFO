@@ -1,0 +1,24 @@
+Metadata-Version: 2.3
+Name: Twitch_Edog0049a
+Version: 0.0.72
+Summary: Twitch library for chat, api, pubs, and eventsub
+Project-URL: Source code, https://github.com/eli-reid/twitch
+Author-email: Eli Reid <Elir@elireid.com>
+License-Expression: Apache-2.0 OR MIT
+License-File: LICENSE.txt
+Keywords: aiohttp,api,chat,chatbot,eventsub,irc,oauth,pubsub,requests,tmi,tmi.js,tmi.py,tmi.twitch.tv,twitch,twitch api,twitch api aiohttp,twitch api aiohttp3,twitch api aiohttp3.11,twitch api python,twitch api python3,twitch api python3.11,twitch api python3.11.0,twitch chat,twitch chat aiohttp,twitch chat aiohttp3,twitch chat aiohttp3.11,twitch chat python,twitch chat python3,twitch chat python3.11,twitch chat python3.11.0,twitch chatbot,twitch chatbot aiohttp,twitch chatbot aiohttp3,twitch chatbot aiohttp3.11,twitch chatbot python,twitch chatbot python3,twitch chatbot python3.11,twitch eventsub,twitch eventsub aiohttp,twitch eventsub aiohttp3,twitch eventsub aiohttp3.11,twitch eventsub python,twitch eventsub python3,twitch eventsub python3.11,twitch irc,twitch irc aiohttp,twitch irc aiohttp3,twitch irc aiohttp3.11,twitch irc python,twitch irc python3,twitch irc python3.11,twitch pubsub,twitch pubsub aiohttp,twitch pubsub aiohttp3,twitch pubsub aiohttp3.11,twitch pubsub python,twitch pubsub python3,twitch pubsub python3.11,twitch pubsub python3.11.0,twitch.tv,websockets
+Requires-Python: >=3.11
+Requires-Dist: aiohttp-cors>=0.7.0
+Requires-Dist: aiohttp-jinja2>=1.4.2
+Requires-Dist: aiohttp-oauth>=0.4.0
+Requires-Dist: aiohttp-session>=2.9.0
+Requires-Dist: aiohttp-socks>=0.6.0
+Requires-Dist: aiohttp>=3.7.4.post0
+Requires-Dist: eventhandler-edog0049a>=0.1.6
+Requires-Dist: requests>=2.26.0
+Requires-Dist: websockets>=10.0
+Description-Content-Type: text/markdown
+
+# `Twitch`
+
+api wrraper with chat pubsub and event connectors
