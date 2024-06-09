@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: trilite
+Version: 0.2.2
+Summary: Python binding for the TriLite library
+Author: MeshLite
+Author-email: meshlite.developers@gmail.com
+Requires-Dist: numpy
+Requires-Dist: pybind11
+
