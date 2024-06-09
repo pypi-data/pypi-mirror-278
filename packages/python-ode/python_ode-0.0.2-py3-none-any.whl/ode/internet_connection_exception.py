@@ -1,0 +1,2 @@
+class InternetConnectionException(Exception):
+    pass
