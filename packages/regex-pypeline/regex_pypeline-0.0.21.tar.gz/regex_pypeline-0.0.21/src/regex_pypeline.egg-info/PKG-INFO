@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: regex-pypeline
+Version: 0.0.21
+Summary: Text (potentially byte) parsing utilities wrapping python stdlib regex features
+Author: Gregory Symington (GregSym)
+Author-email: GregSym <gtsrex@gmail.com>
+Project-URL: Homepage, https://github.com/GregSym/parsable
+Project-URL: Issues, https://github.com/GregSym/parsable/issues
+Platform: unix
+Platform: linux
+Platform: osx
+Platform: cygwin
+Platform: win32
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: testing
+Requires-Dist: flake8>=7.0; extra == "testing"
+Requires-Dist: mypy>=1.10; extra == "testing"
+Requires-Dist: pytest>=8.2; extra == "testing"
+Requires-Dist: pytest-cov==5.0; extra == "testing"
+Requires-Dist: tox>=4.15; extra == "testing"
+Requires-Dist: typing_extensions>=4.12; extra == "testing"
+
+# Python Parsable Lib
+
+## utilities for quickly structuring text parsing
+
+![test_suite](https://github.com/GregSym/parsable/actions/workflows/test-suite.yml/badge.svg)
+
+### intended for situations where full-blown ast parsing is unnecessary
+
+
+```python
+EXAMPLE_TEXT = """
+
+{
+  "border": "{{int(1, 5)}}px {{random(solid, dotted, dashed)}} {{color()}}",
+  "coordinates": {
+    "type": "array",
+    "count": 2,
+    "items": "{{float(0, 120, 5)}}"
+  },
+  "password": "xX{{animal()}}-{{string(6, 10, *)}}"
+}
+
+{
+  "border": "2px dashed gray",
+  "coordinates": [
+    14.95685,
+    69.91848
+  ],
+  "password": "xXearthworm-*******"
+}
+
+"""
+    
+@dataclass
+class Coordinates(Parsable):
+    x: float
+    y: float
+
+    @staticmethod
+    def pattern() -> "re.Pattern[str]":
+        return re.compile(
+            r"\"coordinates\":\s*\[\s*(?P<x>\d+(?:\.\d+)?)\,\s*(?P<y>\d+(?:\.\d+)?)\,?\s*\]"
+        )
+
+coordinates = Coordinates.from_str(EXAMPLE_TEXT)
+print(coordinates)
+
+```
+
+which outputs:
+```output
+>>> [Coordinates(x=14.95685, y=69.91848)]
+```
+
+This particular functionality exploits the named capture groups feature in the version of regex used by python (available in many other typical implementations) to structure the desired data into a dataclass output that can be worked with easily for other tasks.
