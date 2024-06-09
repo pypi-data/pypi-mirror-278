@@ -1,0 +1,296 @@
+{%- if estimator_type in ('classifier', 'feature-selector') %}
+import numpy as np
+{% endif -%}
+{%- if estimator_type == 'classifier' and linear %}
+from sklearn.base import BaseEstimator
+from sklearn.linear_model._base import LinearClassifierMixin
+{% elif estimator_type == 'regressor' and linear%}
+from sklearn.base import {{ mixin }}
+from sklearn.linear_model._base import LinearModel
+{% elif estimator_type == 'feature-selector'%}
+from sklearn.base import BaseEstimator
+from sklearn.feature_selection import SelectorMixin
+{% else %}
+from sklearn.base import BaseEstimator, {{ mixin }}
+{% endif -%}
+from sklearn.utils import check_X_y
+from sklearn.utils.validation import check_is_fitted, check_array
+
+{% if sample_weight %}from sklearn.utils.validation import _check_sample_weight{% endif %}
+
+
+class {{ name }}(
+    {% if estimator_type == 'classifier' and linear %}
+    LinearClassifierMixin, BaseEstimator
+    {% elif estimator_type == 'regressor' and linear%}
+    RegressorMixin, LinearModel
+    {%else %}
+    {{ mixin }}, BaseEstimator
+    {% endif %}):
+    """{{ name }} estimator.
+
+    ...
+    {% if parameters %}
+    Parameters
+    ----------
+    {% for param in parameters %}
+    {{- param }} : ...
+    {% endfor -%}
+    {% endif -%}
+    """
+    {% if required %}_required_parameters = {{ required }}{% endif -%}
+
+    {% if parameters %}
+    def __init__(
+        self,
+        {% for param in required %}
+        {{- param }},
+        {% endfor -%}
+        {%- if optional -%}
+        *,
+        {% endif -%}
+        {% for param in optional %}
+        {{- param }}=...,
+        {% endfor -%}
+        ):
+
+        {%for param in parameters -%}
+        self.{{param}} = {{param}}
+        {% endfor -%}
+        {% endif %}
+
+    def fit(self, X, y{% if estimator_type in ('transformer', 'feature-selector') %}=None{% endif %}{% if sample_weight %}, sample_weight=None{% endif %}):
+        """
+        Fit {{name}} estimator.
+
+        Parameters
+        ----------
+        X : {array-like, sparse matrix} of shape (n_samples, n_features)
+            Training data.
+
+        {%- if transformer-%}
+        y : None
+            Ignored.
+        {% else %}
+        y : array-like of shape (n_samples,) or (n_samples, n_targets)
+            Target values.
+        {% endif %}
+            
+        {%- if sample_weight -%}
+        sample_weight : array-like of shape (n_samples,), default=None
+            Individual weights for each sample.
+        {% endif %}
+        Returns
+        -------
+        self : {{name}}
+            Fitted {{name}} estimator.
+        """
+        {%- if estimator_type in ('transformer', 'feature-selector') %}
+        X = check_array(X, ...) #TODO: Fill in `check_array` arguments
+        {% else %}
+        X, y = check_X_y(X, y, ...) #TODO: Fill in `check_X_y` arguments
+        {% endif %}
+        self.n_features_in_ = X.shape[1]
+        {%- if estimator_type=='classifier'%}
+        self.classes_ = np.unique(y)
+        {% endif %}
+        {%- if sample_weight %}
+        sample_weight = _check_sample_weight(sample_weight)
+        {% endif %}
+
+        ...  # TODO: Implement fit logic
+    
+        {%if linear -%}
+        # For linear models, coef_ and intercept_ is all you need. `predict` is taken care of by the mixin
+        self.coef_ = ...
+        self.intercept_ = ...
+        {%- endif %}
+        {% if 'max_iter' in parameters -%}self.n_iter_ = ...{%- endif %}
+        {% if estimator_type=='outlier' -%}self.offset_ = ...{%- endif %}
+        {% if estimator_type=='cluster' -%}self.labels_ = ...{%- endif %}
+        {% if estimator_type=='feature-selector'%}
+        self.selected_features_ = ...  # TODO: Indexes of selected features
+        self.support_ = np.isin(
+            np.arange(0, self.n_features_in_),  # all_features
+            self.selected_features_
+        )
+        {%- endif %}
+
+        return self
+
+    {% if estimator_type == 'classifier' and decision_function == True and linear == False %}
+    def decision_function(self, X):
+        """Confidence scores of X.
+
+        Parameters
+        ----------
+        X : array-like of shape (n_samples, n_features)
+            The data to predict.
+
+        Returns
+        -------
+        Prediction array.
+        """
+
+        check_is_fitted(self)
+        X = check_array(X, ...)  #TODO: Fill in `check_array` arguments
+
+        if X.shape[1] != self.n_features_in_:
+            msg = f"X has {X.shape[1]} features but the estimator was fitted on {self.n_features_in_} features."
+            raise ValueError(msg)
+
+        y_scores = ... # TODO: Implement decision_function logic
+
+        return y_scores
+
+    def predict(self, X):
+        """Predict X.
+
+        Parameters
+        ----------
+        X : array-like of shape (n_samples, n_features)
+            The data to predict.
+
+        Returns
+        -------
+        Prediction array.
+        """
+
+        check_is_fitted(self)
+        X = check_array(X, ...)  #TODO: Fill in `check_array` arguments
+
+        decision = self.decision_function(X)
+        y_pred = (decision.ravel() > 0).astype(int) if self.n_classes == 2 else np.argmax(decision, axis=1)
+        return y_pred
+    {% endif %}
+
+    {% if estimator_type in ('classifier', 'outlier') and predict_proba == True %}
+    def predict_proba(self, X):
+        """Probability estimates of X.
+
+        Parameters
+        ----------
+        X : array-like of shape (n_samples, n_features)
+            The data to predict.
+
+        Returns
+        -------
+        Prediction array.
+        """
+
+        check_is_fitted(self)
+        X = check_array(X, ...)  #TODO: Fill in `check_array` arguments
+
+        if X.shape[1] != self.n_features_in_:
+            msg = f"X has {X.shape[1]} features but the estimator was fitted on {self.n_features_in_} features."
+            raise ValueError(msg)
+
+        y_proba = ... # TODO: Implement predict_proba logic
+
+        return y_proba
+    {% endif %}
+
+    {% if estimator_type=='outlier' %}
+    def score_samples(self, X):
+
+        check_is_fitted(self)
+        X = check_array(X, ...)  #TODO: Fill in `check_array` arguments
+        
+        if X.shape[1] != self.n_features_in_:
+            msg = f"X has {X.shape[1]} features but the estimator was fitted on {self.n_features_in_} features."
+            raise ValueError(msg)
+
+        ...  # TODO: Implement scoring function, `decision_function` and `predict` will follow
+
+        return ...
+
+    def decision_function(self, X):
+        return self.score_samples(X) - self.offset_
+
+    def predict(self, X):
+        preds = (self.decision_function(X) >= 0).astype(int)
+        preds[preds == 0] = -1
+        return preds
+    {%- endif %}
+
+    {% if decision_function == False and linear == False and (estimator_type in ('classifier', 'regressor', 'cluster')) %}
+    def predict(self, X):
+        """Predict X.
+
+        Parameters
+        ----------
+        X : array-like of shape (n_samples, n_features)
+            The data to predict.
+
+        Returns
+        -------
+        Prediction array.
+        """
+
+        check_is_fitted(self)
+        X = check_array(X, ...)  #TODO: Fill in `check_array` arguments
+        
+        if X.shape[1] != self.n_features_in_:
+            msg = f"X has {X.shape[1]} features but the estimator was fitted on {self.n_features_in_} features."
+            raise ValueError(msg)
+
+        y_pred = ... # TODO: Implement predict logic
+
+        return y_pred
+    {% endif %}
+
+    {% if estimator_type=='transformer' -%}
+    def transform(self, X):
+        """Transform X.
+
+        Parameters
+        ----------
+        X : array-like of shape (n_samples, n_features)
+            The data to transform.
+
+        Returns
+        -------
+        Transformed array.
+        """
+
+        check_is_fitted(self)
+        X = check_array(X, ...) # TODO: Fill in `check_array` arguments
+        
+        if X.shape[1] != self.n_features_in_:
+            msg = f"X has {X.shape[1]} features but the estimator was fitted on {self.n_features_in_} features."
+            raise ValueError(msg)
+
+        X_ts = ...  # TODO: Implement transform logic
+
+        return X_ts
+    {%- endif %}
+
+    {% if estimator_type=='feature-selector' -%}
+    def _get_support_mask(self, X):
+        """Get the boolean mask indicating which features are selected.
+
+        Returns
+        -------
+        support : boolean array of shape [# input features]
+            An element is True iff its corresponding feature is selected for retention.
+        """
+
+        check_is_fitted(self)
+        return self.support_
+    {%- endif %}
+
+    {% if tags %}
+    def _more_tags(self):
+        return {
+            {%for tag in tags -%}
+            "{{tag}}": ...,
+            {% endfor -%}
+            }
+    {%- endif %}
+
+    {% if estimator_type == 'classifier' %}
+    @property
+    def n_classes_(self):
+        """Number of classes."""
+        return len(self.classes_)
+    {% endif %}
