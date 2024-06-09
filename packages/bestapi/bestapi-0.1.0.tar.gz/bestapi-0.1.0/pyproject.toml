@@ -1,0 +1,44 @@
+[project]
+name = "bestapi"
+version = "0.1.0"
+description = "I'm just trying to make my life easier! 🤷‍♂️"
+authors = [{ name = "Marcelo Trylesinski", email = "marcelotryle@gmail.com" }]
+dependencies = ["starlette>=0.37.2"]
+readme = "README.md"
+requires-python = ">= 3.9"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = ["ruff>=0.4.8"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/bestapi"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "FA", "UP"]
+ignore = ["B904", "B028"]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+
+[tool.coverage.run]
+branch = true
+source_pkgs = ["starlette", "tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "pragma: nocover",
+    "if typing.TYPE_CHECKING:",
+    "@typing.overload",
+]
