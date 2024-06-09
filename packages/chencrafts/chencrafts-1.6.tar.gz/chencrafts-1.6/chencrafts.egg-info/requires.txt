@@ -1,0 +1,16 @@
+numpy
+matplotlib
+scipy
+pandas
+tqdm
+dill
+pathos
+scqubits>=3.0.0
+IPython
+
+[bsqubits]
+networkx>=2.4
+
+[cqed]
+torch>=1.7
+multiprocess
