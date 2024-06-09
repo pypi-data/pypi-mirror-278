@@ -1,0 +1,72 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "anyserial"
+dynamic = ["version"]
+description = ''
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "GraysonBellamy", email = "grayson.bellamy@ul.org" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+  "anyio>=4.0.0",
+]
+
+[project.urls]
+Documentation = "https://github.com/ulfsri/anyserial#readme"
+Issues = "https://github.com/ulfsri/anyserial/issues"
+Source = "https://github.com/ulfsri/anyserial"
+
+[tool.hatch.version]
+path = "src/anyserial/__about__.py"
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+  "pre-commit>=3.4.0",
+  "mypy>=1.5.1",
+  "ruff>=0.0.287",
+  "slotscheck",
+  "types-click",
+  "types-passlib",
+  "types-python-jose",
+  "types-pyyaml",
+  "types-redis",
+  "pylint",
+]
+
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/anyserial tests}"
+
+[publish.index.repos.main]
+url = "https://upload.pypi.org/legacy/"
+
+[tool.coverage.run]
+source_pkgs = ["anyserial", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/anyserial/__about__.py",
+]
+
+[tool.coverage.paths]
+anyserial = ["src/anyserial", "*/anyserial/src/anyserial"]
+tests = ["tests", "*/anyserial/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]

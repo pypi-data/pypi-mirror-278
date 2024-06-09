@@ -1,0 +1,39 @@
+Metadata-Version: 2.3
+Name: anyserial
+Version: 0.0.8
+Project-URL: Documentation, https://github.com/ulfsri/anyserial#readme
+Project-URL: Issues, https://github.com/ulfsri/anyserial/issues
+Project-URL: Source, https://github.com/ulfsri/anyserial
+Author-email: GraysonBellamy <grayson.bellamy@ul.org>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.12
+Requires-Dist: anyio>=4.0.0
+Description-Content-Type: text/markdown
+
+# anySerial
+
+[![PyPI - Version](https://img.shields.io/pypi/v/anyio-serial.svg)](https://pypi.org/project/anyserial)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/anyio-serial.svg)](https://pypi.org/project/anyserial)
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install anyserial
+```
+
+## License
+
+`anyserial` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
