@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+Tami4EdgeAPI/Tami4EdgeAPI.py
+Tami4EdgeAPI/__init__.py
+Tami4EdgeAPI/device.py
+Tami4EdgeAPI/device_metadata.py
+Tami4EdgeAPI/drink.py
+Tami4EdgeAPI/exceptions.py
+Tami4EdgeAPI/token.py
+Tami4EdgeAPI/water_quality.py
+Tami4EdgeAPI.egg-info/PKG-INFO
+Tami4EdgeAPI.egg-info/SOURCES.txt
+Tami4EdgeAPI.egg-info/dependency_links.txt
+Tami4EdgeAPI.egg-info/requires.txt
+Tami4EdgeAPI.egg-info/top_level.txt
