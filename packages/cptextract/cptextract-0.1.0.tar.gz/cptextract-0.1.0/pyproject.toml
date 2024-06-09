@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cptextract"
+version = "0.1.0"
+authors = [
+  { name="geocoder-eng", email="geocoder22@gmail.com" },
+]
+#dependencies = [
+#  "numpy",
+#  "pandas",
+#  "python-ags4",
+#  "openpyxl",
+#  "xlrd",
+#]
+description = "A simple Python package to automate the extraction of CPT data"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Development Status :: 3 - Alpha", 
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+[project.urls]
+Homepage = "https://github.com/geocodes-eng/cptextract"
+Issues = "https://github.com/geocodes-eng/cptextract/issues"
