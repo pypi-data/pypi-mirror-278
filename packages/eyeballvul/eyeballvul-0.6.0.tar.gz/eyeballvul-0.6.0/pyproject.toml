@@ -1,0 +1,62 @@
+[tool.poetry]
+name = "eyeballvul"
+version = "0.6.0"
+description = ""
+authors = ["Timothee Chauvin <timothee.chauvin28@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "eyeballvul" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fire = "^0.6.0"
+requests = "^2.31.0"
+typeguard = "^4.2.1"
+pydantic = "^2.7.1"
+ortools = "^9.9.3963"
+sqlmodel = "^0.0.18"
+litellm = "^1.37.12"
+tomli = "^2.0.1"
+
+[tool.poetry.scripts]
+ev = "eyeballvul.cli:main"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.7.0"
+pytest = "^8.1.1"
+mypy = { extras = ["types-all"], version = "^1.10.0" }
+types-requests = "^2.31.0.20240406"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.docformatter]
+wrap-summaries = 100
+wrap-descriptions = 100
+pre-summary-newline = true
+
+[tool.mypy]
+check_untyped_defs = true
+
+[[tool.mypy.overrides]]
+module = """\
+  fire.*,\
+  litellm.*,\
+"""
+ignore_missing_imports = true
+
+[tool.bandit]
+skips = [
+  "B404", # Consider possible security implications associated with the subprocess module
+  "B603", # subprocess_without_shell_equals_true: subprocess call - check for execution of untrusted input
+  "B607", # Starting a process with a partial executable path
+]
+[tool.bandit.assert_used]
+skips = ['*_test.py', '*/test_*.py']
