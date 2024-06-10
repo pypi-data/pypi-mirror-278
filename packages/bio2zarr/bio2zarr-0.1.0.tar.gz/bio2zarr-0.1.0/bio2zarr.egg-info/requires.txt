@@ -1,0 +1,17 @@
+numpy
+zarr>=2.17
+click
+tabulate
+tqdm
+humanfriendly
+cyvcf2
+bed_reader
+
+[dev]
+msprime
+pysam
+pytest
+pytest-coverage
+pytest-xdist
+sgkit>=0.8.0
+tqdm
