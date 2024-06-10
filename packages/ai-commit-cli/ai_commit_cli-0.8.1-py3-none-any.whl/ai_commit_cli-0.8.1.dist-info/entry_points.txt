@@ -1,0 +1,2 @@
+[console_scripts]
+aic = aic.cli:app
