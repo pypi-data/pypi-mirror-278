@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: rl-tasks
+Version: 0.1.7
+Summary: ReversingLabs Test
+Author: Antonio Corluka
+Author-email: antonio.corluka@outlook.com
+Requires-Python: >=3.11
+Requires-Dist: python-dotenv
+Requires-Dist: rl-test-common
+Requires-Dist: rl-test-storage-handlers
+Requires-Dist: rl-test-task-1
+Requires-Dist: rl-test-task-2
+Requires-Dist: rl-test-task-3
+
