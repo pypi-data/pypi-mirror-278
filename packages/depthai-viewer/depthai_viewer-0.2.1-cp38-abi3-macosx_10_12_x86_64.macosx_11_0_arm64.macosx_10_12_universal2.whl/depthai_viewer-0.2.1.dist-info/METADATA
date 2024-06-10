@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: depthai-viewer
+Version: 0.2.1
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Dist: deprecated
+Requires-Dist: numpy>=1.23
+Requires-Dist: pyarrow==16.0.0
+Requires-Dist: setuptools
+Requires-Dist: pytest==7.1.2; extra == 'tests'
+Provides-Extra: tests
+Summary: Depthai Viewer
+Keywords: computer-vision,logging,depthai-viewer
+Author-email: Luxonis <filip.jeretina@luxonis.com>
+License: MIT OR Apache-2.0
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: homepage, https://www.rerun.io
+Project-URL: repository, https://github.com/luxonis/depthai-viewer
+Project-URL: documentation, https://www.rerun.io/docs
+
+# Depthai Viewer
+![depthai-viewer](https://github.com/luxonis/depthai-viewer/assets/59307111/6a03d8a0-6a70-41d3-b263-15ee279a02aa)
+
+![Screenshot from 2023-05-20 00-22-36](https://user-images.githubusercontent.com/59307111/248265850-781476ac-2082-45ad-861b-157fa708abf0.png)
+
+## Install
+
+```sh
+python3 -m pip install depthai-viewer
+```
+
+## Run
+
+```sh
+depthai-viewer
+# OR
+python3 -m depthai_viewer
+```
+
+## Troubleshooting
+
+You can run with `RUST_LOG=debug` to get more output out of the depthai-viewer.
+
