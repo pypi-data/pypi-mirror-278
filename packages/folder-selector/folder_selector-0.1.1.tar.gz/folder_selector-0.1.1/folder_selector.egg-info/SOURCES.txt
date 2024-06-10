@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+folder_selector/__init__.py
+folder_selector/folder_selector.py
+folder_selector/folder_selector_usage.py
+folder_selector.egg-info/PKG-INFO
+folder_selector.egg-info/SOURCES.txt
+folder_selector.egg-info/dependency_links.txt
+folder_selector.egg-info/top_level.txt

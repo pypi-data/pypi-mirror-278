@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: folder_selector
+Version: 0.1.1
+Summary: A Tkinter-based folder selector for Python applications
+Home-page: https://gitlab.com/adolfoweb/multiple-folder-selector
+Author: Adolfo Zilli
+Author-email: info@adolfozilli.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
