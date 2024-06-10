@@ -1,0 +1,7 @@
+[console_scripts]
+lint=llmtext.scripts.lint:run
+llmtext=llmtext.scripts.cli:app
+publish=llmtext.scripts.publish:run
+start=llmtext.scripts.start:run
+test=llmtext.scripts.test:run
+
