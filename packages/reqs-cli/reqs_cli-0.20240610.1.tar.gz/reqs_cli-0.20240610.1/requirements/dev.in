@@ -1,0 +1,10 @@
+-r testing.txt
+
+# From copier-py-package (keep comment for easier copier upgrades)
+hatch
+nox[uv]
+pre-commit
+ruff
+
+
+# App specific (ditto)

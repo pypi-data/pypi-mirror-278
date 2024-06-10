@@ -1,0 +1,121 @@
+Metadata-Version: 2.3
+Name: reqs-cli
+Version: 0.20240610.1
+Author-email: Randy Syring <randy.syring@level12.io>
+Requires-Dist: click==8.1.7
+Requires-Dist: packaging==24.0
+Requires-Dist: pip-requirements-parser==32.0.1
+Requires-Dist: pyparsing==3.1.2
+Provides-Extra: dev
+Requires-Dist: anyio==4.4.0; extra == 'dev'
+Requires-Dist: argcomplete==3.3.0; extra == 'dev'
+Requires-Dist: certifi==2024.6.2; extra == 'dev'
+Requires-Dist: cffi==1.16.0; extra == 'dev'
+Requires-Dist: cfgv==3.4.0; extra == 'dev'
+Requires-Dist: click==8.1.7; extra == 'dev'
+Requires-Dist: colorlog==6.8.2; extra == 'dev'
+Requires-Dist: coverage==7.5.3; extra == 'dev'
+Requires-Dist: cryptography==42.0.8; extra == 'dev'
+Requires-Dist: distlib==0.3.8; extra == 'dev'
+Requires-Dist: filelock==3.14.0; extra == 'dev'
+Requires-Dist: h11==0.14.0; extra == 'dev'
+Requires-Dist: hatch==1.12.0; extra == 'dev'
+Requires-Dist: hatchling==1.24.2; extra == 'dev'
+Requires-Dist: httpcore==1.0.5; extra == 'dev'
+Requires-Dist: httpx==0.27.0; extra == 'dev'
+Requires-Dist: hyperlink==21.0.0; extra == 'dev'
+Requires-Dist: identify==2.5.36; extra == 'dev'
+Requires-Dist: idna==3.7; extra == 'dev'
+Requires-Dist: iniconfig==2.0.0; extra == 'dev'
+Requires-Dist: jaraco-classes==3.4.0; extra == 'dev'
+Requires-Dist: jaraco-context==5.3.0; extra == 'dev'
+Requires-Dist: jaraco-functools==4.0.1; extra == 'dev'
+Requires-Dist: jeepney==0.8.0; extra == 'dev'
+Requires-Dist: keyring==25.2.1; extra == 'dev'
+Requires-Dist: markdown-it-py==3.0.0; extra == 'dev'
+Requires-Dist: mdurl==0.1.2; extra == 'dev'
+Requires-Dist: more-itertools==10.2.0; extra == 'dev'
+Requires-Dist: nodeenv==1.9.1; extra == 'dev'
+Requires-Dist: nox==2024.4.15; extra == 'dev'
+Requires-Dist: packaging==24.0; extra == 'dev'
+Requires-Dist: pathspec==0.12.1; extra == 'dev'
+Requires-Dist: pexpect==4.9.0; extra == 'dev'
+Requires-Dist: pip-requirements-parser==32.0.1; extra == 'dev'
+Requires-Dist: platformdirs==4.2.2; extra == 'dev'
+Requires-Dist: pluggy==1.5.0; extra == 'dev'
+Requires-Dist: pre-commit==3.7.1; extra == 'dev'
+Requires-Dist: ptyprocess==0.7.0; extra == 'dev'
+Requires-Dist: pycparser==2.22; extra == 'dev'
+Requires-Dist: pygments==2.18.0; extra == 'dev'
+Requires-Dist: pyparsing==3.1.2; extra == 'dev'
+Requires-Dist: pytest-cov==5.0.0; extra == 'dev'
+Requires-Dist: pytest==8.2.2; extra == 'dev'
+Requires-Dist: pyyaml==6.0.1; extra == 'dev'
+Requires-Dist: rich==13.7.1; extra == 'dev'
+Requires-Dist: ruff==0.4.8; extra == 'dev'
+Requires-Dist: secretstorage==3.3.3; extra == 'dev'
+Requires-Dist: shellingham==1.5.4; extra == 'dev'
+Requires-Dist: sniffio==1.3.1; extra == 'dev'
+Requires-Dist: tomli-w==1.0.0; extra == 'dev'
+Requires-Dist: tomlkit==0.12.5; extra == 'dev'
+Requires-Dist: trove-classifiers==2024.5.22; extra == 'dev'
+Requires-Dist: userpath==1.9.2; extra == 'dev'
+Requires-Dist: uv==0.2.9; extra == 'dev'
+Requires-Dist: virtualenv==20.26.2; extra == 'dev'
+Requires-Dist: zstandard==0.22.0; extra == 'dev'
+Description-Content-Type: text/markdown
+
+reqs
+====
+
+Helps with Python requirements (reqs) files:
+
+- `reqs bootstrap`:
+    - Install uv (default) or upgrade pip & install pip-tools to active venv
+    - Ensures reqs will compile lock files using the version of Python the project is using
+- `reqs compile`:
+    - Compile .in reqs files into .txt "lock" files
+    - Considers file modification times and file dependencies (when -r or -c used)
+- `reqs sync`:
+    - Compile (default, optional)
+    - Sync active virtualenv with lock files
+    - When "sync_pipx" is true: will make the project's scripts available on the local system by
+        installing/upgrading as an editable package with pipx.
+
+
+## Install
+
+Intended to be installed at the user level, not per app.
+
+- `pipx install reqs-cli` (recommended)
+- `[uv] pip install --user reqs-cli`
+
+
+## Configuration
+
+Configure using `pyproject.toml`:
+
+
+```toml
+# The options shown are the default values and DO NOT need to be specified
+# if the default is sufficient.
+
+[tool.reqs]
+# Path to the directory containing the .in and .txt requirements files.  Relative to pyproject.toml.
+dpath = 'requirements'
+
+# Use pipx to install an editable version of the project.  True for tools like reqs and env-config
+# that a developer would want available for different projects.  False for most client projects
+# deployed on servers.
+sync_pipx = false
+```
+
+
+## Development
+
+- Can be updated from [copier-py-package](https://github.com/level12/copier-py-package)
+    - `hatch run copier:update`: latest tagged version in GitHub
+    - `hatch run copier:update-head`: head of master in GitHub
+- Release:
+    - `mise run bump [-- --help]` to update version, tag, and push to GitHub
+    - GitHub workflow does the rest

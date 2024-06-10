@@ -1,0 +1,23 @@
+*.pyc
+*.egg-info
+*.coverage
+/.tox
+/.nonx
+/coverage*.xml
+/.pytests.xml
+/htmlcov
+.pytest_cache
+
+# .env file for Flask development server
+.flaskenv
+
+# Visual Studio Code clutter
+.vscode
+
+# Pycharm / JetBrains clutter
+.idea
+
+# Project builds
+dist
+
+src/reqs/tests/pkg*/requirements/*.txt
