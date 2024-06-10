@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "openrank-sdk"
+version = "0.0.8"
+description = ""
+authors = ["SeungJu Lee <sj@karma3labs.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+urllib3 = "^2.2.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
