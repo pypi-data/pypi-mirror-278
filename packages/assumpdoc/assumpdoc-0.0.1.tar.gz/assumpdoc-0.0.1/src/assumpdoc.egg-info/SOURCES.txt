@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/assumpdoc/__init__.py
+src/assumpdoc.egg-info/PKG-INFO
+src/assumpdoc.egg-info/SOURCES.txt
+src/assumpdoc.egg-info/dependency_links.txt
+src/assumpdoc.egg-info/requires.txt
+src/assumpdoc.egg-info/top_level.txt
+tests/test_assumpdoc.py

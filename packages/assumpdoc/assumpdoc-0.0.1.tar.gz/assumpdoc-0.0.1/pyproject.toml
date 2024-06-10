@@ -1,0 +1,78 @@
+[project]
+name = "assumpdoc"
+authors = [
+    {name = "heuristic-pedals", email = "heuristicpedals@gmail.com"}
+]
+description = "Easily add assumptions and caveats to documentation."
+readme = "README.md"
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Documentation",
+    "Topic :: Utilities"
+]
+dynamic = ["version"]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.urls]
+Documentation = "https://heuristic-pedals.github.io/assumpdoc/"
+Repository = "https://github.com/heuristic-pedals/assumpdoc"
+"Bug tracker" = "https://github.com/heuristic-pedals/assumpdoc/issues"
+"Change log" = "https://github.com/heuristic-pedals/assumpdoc/blob/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+test = [
+    "pytest >= 8.2.2, < 9",
+    "pytest-randomly >= 3.15.0, < 4",
+    "pytest-sugar >= 1.0.0, < 2",
+    "hypothesis >= 6.103.1, < 7",
+    "coverage >=7.5.3, < 8",
+]
+docs = [
+    "quartodoc >= 0.7.3, < 1"
+]
+dev = [
+    "pre-commit >= 3.7.1, < 4",
+    "ruff >= 0.4.8, < 1",
+    "assumpdoc[test]",
+    "assumpdoc[docs]",
+]
+
+[build-system]
+requires = ["setuptools>=62", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+version = {attr = "assumpdoc.__version__"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["assumpdoc"]
+namespaces = false
+
+[tool.ruff]
+line-length = 79
+
+[tool.ruff.lint]
+extend-select = ["D", "I", "W", "F", "C", "S", "N"]
+ignore = ["D105"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["assumpdoc"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = [
+    "S101", # asserts allowed in tests
+]
+
+[tool.coverage.run]
+source = ["./src"]
+
+[tool.pytest.ini_options]
+testpaths = ["./tests"]

@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: assumpdoc
+Version: 0.0.1
+Summary: Easily add assumptions and caveats to documentation.
+Author-email: heuristic-pedals <heuristicpedals@gmail.com>
+Project-URL: Documentation, https://heuristic-pedals.github.io/assumpdoc/
+Project-URL: Repository, https://github.com/heuristic-pedals/assumpdoc
+Project-URL: Bug tracker, https://github.com/heuristic-pedals/assumpdoc/issues
+Project-URL: Change log, https://github.com/heuristic-pedals/assumpdoc/blob/main/CHANGELOG.md
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Documentation
+Classifier: Topic :: Utilities
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: test
+Requires-Dist: pytest<9,>=8.2.2; extra == "test"
+Requires-Dist: pytest-randomly<4,>=3.15.0; extra == "test"
+Requires-Dist: pytest-sugar<2,>=1.0.0; extra == "test"
+Requires-Dist: hypothesis<7,>=6.103.1; extra == "test"
+Requires-Dist: coverage<8,>=7.5.3; extra == "test"
+Provides-Extra: docs
+Requires-Dist: quartodoc<1,>=0.7.3; extra == "docs"
+Provides-Extra: dev
+Requires-Dist: pre-commit<4,>=3.7.1; extra == "dev"
+Requires-Dist: ruff<1,>=0.4.8; extra == "dev"
+Requires-Dist: assumpdoc[test]; extra == "dev"
+Requires-Dist: assumpdoc[docs]; extra == "dev"
+
+# assumpdoc
+Easily add assumptions and caveats to documentation.
