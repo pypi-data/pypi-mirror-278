@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: rustyfresh
+Version: 0.1.4
+Summary: A Rust-based alternative to tsfresh for time series feature extraction.
+Home-page: https://github.com/ighoshsubho/rustyfresh
+Author: ighoshsubho
+Author-email: ighoshsubho@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Rust
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# rustyfresh
+
+_RustyFresh_ is a Rust-based Python package for systematic time-series feature extraction.
+
+## Installation
+
+```bash
+pip install rustyfresh
+```
