@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+tests/test_translator.py
+tranzlate/__init__.py
+tranzlate/exceptions.py
+tranzlate/translator.py
+tranzlate.egg-info/PKG-INFO
+tranzlate.egg-info/SOURCES.txt
+tranzlate.egg-info/dependency_links.txt
+tranzlate.egg-info/requires.txt
+tranzlate.egg-info/top_level.txt
