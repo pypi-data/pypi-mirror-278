@@ -1,0 +1,35 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+matplotlib = "*"
+pandas = "*"
+seaborn = "*"
+heatmap-cli = {file = ".", editable = true}
+
+[dev-packages]
+flake8-docstrings = "*"
+flake8-print = "*"
+flake8-pytest-style = "*"
+flake8-simplify = "*"
+flit = "*"
+pre-commit = "*"
+pylint = "*"
+pytest = "*"
+pytest-cov = "*"
+pytest-randomly = "*"
+pytest-xdist = "*"
+scripttest = "*"
+tox-pyenv = "*"
+nox = "*"
+myst-parser = "*"
+sphinx = "*"
+sphinx-autodoc-typehints = "*"
+
+[requires]
+python_version = "3.8"
+
+[doc]
+sphinx-copybutton = "*"
