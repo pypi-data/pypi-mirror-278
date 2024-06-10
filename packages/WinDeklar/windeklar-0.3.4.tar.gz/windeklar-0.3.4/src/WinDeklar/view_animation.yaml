@@ -1,0 +1,34 @@
+window:
+  size: [100, 50, 1000, 400]  # [start_x, start_y, width, height]
+  title: Example of an real time graph
+  status_bar: True
+
+  toolbar:
+    - item:
+        name:    start_stop_action
+        title:   Pause Animation
+        type:    Action
+        action:  start_stop
+        tooltip: Click to start or stop the graph bellow
+
+  layout:
+    - item:
+        name:    controls_and_figure
+        type:    grid
+        subtype: vertical
+        layout:
+          - item:
+              name:    graph1
+              type:    figure
+              subtype: animation
+              title:   Sine function
+              x_axis:  {name: 'time (s)'}
+              y_axis:  {name: 'radians'}
+          - item:
+              name:    graph2
+              type:    figure
+              subtype: animation
+              title:   Cosine function
+              x_axis:  {name: 'time (s)'}
+              y_axis:  {name: 'radians'}
+
