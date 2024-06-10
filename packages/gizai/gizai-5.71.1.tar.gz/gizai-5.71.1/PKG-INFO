@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: gizai
+Version: 5.71.1
+Summary: 🔻 a recipe for AI languages.
+Home-page: https://github.com/kamangir/giza
+Author: Arash Abadpour (Kamangir)
+Author-email: arash@kamangir.net
+License: Public Domain
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Unix Shell
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: blueness
+Requires-Dist: abcli
+Requires-Dist: boto3
+Requires-Dist: numpy
+Requires-Dist: pymysql==0.10.1
+Requires-Dist: pyyaml
+Requires-Dist: pylint
+Requires-Dist: pytest
+Requires-Dist: python-dotenv[cli]
+Requires-Dist: tqdm
+
+# 🔻 giza (gizai)
+
+📜 read the working paper: "A Related Set of Bash Expansions of Relevance to AI" - ([tex](https://raw.githubusercontent.com/kamangir/giza/main/tex/giza.tex)), ([pdf](https://kamangir-public.s3.ca-central-1.amazonaws.com/giza-v1/giza.pdf)).
+
+```bash
+pip install gizai
+```
+
+---
+
+🚀 [awesome bash cli](https://github.com/kamangir/awesome-bash-cli) (`abcli`) is an example implementation of `giza` ([svg](https://raw.githubusercontent.com/kamangir/giza/main/assets/giza.svg)).
+
+![image](https://raw.githubusercontent.com/kamangir/giza/main/assets/giza.png)
+
+---
+
+> ℹ️ a push to this repo triggers a `giza build [publish]`.
+
+[![PyPI version](https://img.shields.io/pypi/v/gizai.svg)](https://pypi.org/project/gizai/)
