@@ -1,0 +1,2 @@
+[console_scripts]
+depthai-viewer=depthai_viewer.__main__:main
