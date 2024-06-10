@@ -1,0 +1,5 @@
+pandas>=2.1.4
+matplotlib>=3.9.0
+geopandas>=0.14.4
+gamsapi[transfer]>=45.0.0
+ipywidgets>=8.1.3
