@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+My_Libry/__init__.py
+My_Libry/module.py
+my_libr.egg-info/PKG-INFO
+my_libr.egg-info/SOURCES.txt
+my_libr.egg-info/dependency_links.txt
+my_libr.egg-info/top_level.txt
