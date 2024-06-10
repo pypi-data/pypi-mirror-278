@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: eve-netease-api
+Version: 1.17.0
+Summary: EVE Swagger Interface
+Home-page: 
+Author-email: 
+Keywords: Swagger,EVE Swagger Interface
+Requires-Dist: certifi >=2017.4.17
+Requires-Dist: python-dateutil >=2.1
+Requires-Dist: six >=1.10
+Requires-Dist: urllib3 >=1.23
+
+    An OpenAPI for EVE Online  # noqa: E501
+    
