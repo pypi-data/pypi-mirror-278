@@ -1,0 +1,33 @@
+
+Vec3:
+    .doc: """
+angleBetweenVectors     - Expects two vectors in the same plane and a third vector orthogonal to that plane.
+                          Returns the angle between the two first vectors in radians in the range -PI to PI.
+normal                  - Returns a normalized version of the vector
+getOrthogonalUnitVector - Returns a vector orthogonal to the current vector, i.e. a possible normal to the current vector.
+    """
+
+    x is Real: 0
+    y is Real: 0
+    z is Real: 0
+
+    fn length() -> Real
+    fn normal() -> Vec3
+    fn dot(rhs: Vec3) -> Real
+    fn cross(rhs: Vec3) -> Vec3
+    fn getOrthogonalUnitVector() -> Vec3
+    static fn fromXYZ(x: Real, y: Real, z: Real) -> Vec3
+    static fn X_AXIS() -> Vec3
+    static fn Y_AXIS() -> Vec3
+    static fn Z_AXIS() -> Vec3
+    static fn angleBetweenVectors(vector1: Math.Vec3, vector2: Math.Vec3, rot_vector: Math.Vec3) -> Real
+
+# Operator overloads
+operator +(lhs: Vec3, rhs: Vec3) -> Vec3
+operator -(lhs: Vec3, rhs: Vec3) -> Vec3
+operator *(lhs: Real, rhs: Vec3) -> Vec3
+operator *(lhs: Vec3, rhs: Real) -> Vec3
+operator *(lhs: Vec3, rhs: Vec3) -> Real
+operator /(lhs: Vec3, rhs: Real) -> Vec3
+operator -(operand: Vec3) -> Vec3
+

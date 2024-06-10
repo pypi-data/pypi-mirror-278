@@ -1,0 +1,36 @@
+ValueOutputSignal is OutputSignal:
+    value is Value
+    static fn create(v: Value, source: Output) -> ValueOutputSignal
+    static fn fromAngle(v: Real, source: Output) -> ValueOutputSignal
+    static fn fromAngularVelocity(v: Real, source: Output) -> ValueOutputSignal
+    static fn fromDistance(v: Real, source: Output) -> ValueOutputSignal
+    static fn fromForce1D(v: Real, source: Output) -> ValueOutputSignal
+    static fn fromVelocity1D(v: Real, source: Output) -> ValueOutputSignal
+    static fn fromTorque1D(v: Real, source: Output) -> ValueOutputSignal
+    static fn fromAcceleration3D(v: Math.Vec3, source: Output) -> ValueOutputSignal
+    static fn fromAngularAcceleration3D(v: Math.Vec3, source: Output) -> ValueOutputSignal
+    static fn fromAngularVelocity3D(v: Math.Vec3, source: Output) -> ValueOutputSignal
+    static fn fromForce3D(v: Math.Vec3, source: Output) -> ValueOutputSignal
+    static fn fromTorque3D(v: Math.Vec3, source: Output) -> ValueOutputSignal
+    static fn fromVelocity3D(v: Math.Vec3, source: Output) -> ValueOutputSignal
+    static fn fromPosition3D(v: Math.Vec3, source: Output) -> ValueOutputSignal
+    static fn fromRPY(v: Math.Vec3, source: Output) -> ValueOutputSignal
+
+    fn isReal() -> Bool
+    fn asReal() -> Real
+    fn asVec3() -> Math.Vec3
+    fn asAngle() -> Real
+    fn asAngularVelocity1D() -> Real
+    fn asDistance() -> Real
+    fn asForce1D() -> Real
+    fn asVelocity1D() -> Real
+    fn asTorque1D() -> Real
+    fn asAcceleration3D() -> Math.Vec3
+    fn asAngularAcceleration3D() -> Math.Vec3
+    fn asAngularVelocity3D() -> Math.Vec3
+    fn asForce3D() -> Math.Vec3
+    fn asTorque3D() -> Math.Vec3
+    fn asVelocity3D() -> Math.Vec3
+    fn asPosition3D() -> Math.Vec3
+    fn asRPY() -> Math.Vec3
+

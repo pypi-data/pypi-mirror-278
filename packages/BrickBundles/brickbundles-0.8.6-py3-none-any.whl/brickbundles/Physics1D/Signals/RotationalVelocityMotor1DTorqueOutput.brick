@@ -1,0 +1,3 @@
+RotationalVelocityMotor1DTorqueOutput is Physics.Signals.Output:
+    type: Physics.Signals.InputOutputType.Torque1D
+    motor is Physics1D.Interactions.RotationalVelocityMotor

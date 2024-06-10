@@ -1,0 +1,3 @@
+TorqueConverterLockUpStateInput is Physics.Signals.Input:
+    type: Physics.Signals.InputOutputType.ControlEvent
+    lock_up is DriveTrain.EmpiricalTorqueConverter

@@ -1,0 +1,3 @@
+CombustionEngineTorqueOutput is Physics.Signals.Output:
+    type: Physics.Signals.InputOutputType.Torque3D
+    combustion_engine is DriveTrain.CombustionEngine
