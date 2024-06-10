@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: simparx
+Version: 0.1.6
+Summary: Package for a simple paragraph recognition based on the morphology operator
+License: MIT
+Author: Darix SAMANI SIEWE
+Author-email: samanidarix@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: contourpy (>=1.2.1,<2.0.0)
+Requires-Dist: cycler (>=0.12.1,<0.13.0)
+Requires-Dist: exceptiongroup (>=1.2.1,<2.0.0)
+Requires-Dist: fonttools (>=4.53.0,<5.0.0)
+Requires-Dist: imageio (>=2.34.1,<3.0.0)
+Requires-Dist: importlib-resources (>=6.4.0,<7.0.0)
+Requires-Dist: iniconfig (>=2.0.0,<3.0.0)
+Requires-Dist: kiwisolver (>=1.4.5,<2.0.0)
+Requires-Dist: matplotlib (>=3.9.0,<4.0.0)
+Requires-Dist: networkx (>=3.3,<4.0)
+Requires-Dist: opencv-python (>=4.10.0.82,<5.0.0.0)
+Requires-Dist: pillow (>=10.3.0,<11.0.0)
+Requires-Dist: pytest (>=8.2.2,<9.0.0)
+Requires-Dist: scikit-image (>=0.23.2,<0.24.0)
+Requires-Dist: scipy (>=1.13.1,<2.0.0)
+Description-Content-Type: text/markdown
+
+# simpar
+this is package for a simple paragraph recognition based on the morphology operator
+
+## Screen
+
+| Image   | MASK Image  | Image recognized  |
+:-------------------------:|:-------------------------:|:-------------------------:|
+|  ![Image](https://raw.githubusercontent.com/darixsamani/simpar_cli/main/img/simple_a26.jpg) | ![Mask](https://raw.githubusercontent.com/darixsamani/simpar_cli/main/img/mask.jpg)   | ![Image recognized](https://raw.githubusercontent.com/darixsamani/simpar_cli/main/img/simple_a26_r.jpg)
+
+
+## How to Install
+
+```
+pip install simpar
+
+```
+
+## How to use
+
+
+```python
+
+from simparx import Simpar
+
+
+ simpar_instance = Simpar("./img/simple_a20.jpg", "example_recognition")
+ simpar_instance.start()
+
+```
+
+ 
+
+
+## Next
+
+![next](https://raw.githubusercontent.com/darixsamani/simpar_cli/main/img/next.png)
+
+### Francais
+  Nous faisons une reconnaissance de paragraphe basée sur une les opération morphologiques qui est une
+  méthode analytique qui  est instable lorsque la structure de l'image est complexe dans la suite de notre travail nous allons 
+  a partir des images et leurs masque entraîner une modelé d'intelligence artificielle pour
+  générer les masques de reconnaissance de paragraphe d'image, Ainsi Nous allons mieux gérer la structure des images complexes
+
+### English
+
+We use a morphological operation for paragraph recognition. This analytical method becomes unstable with complex image structures. To handle complex structures, we'll use masks to model artificial intelligence for image paragraph recognition.
+
+
