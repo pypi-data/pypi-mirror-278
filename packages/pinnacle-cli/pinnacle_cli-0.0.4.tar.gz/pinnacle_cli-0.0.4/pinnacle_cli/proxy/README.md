@@ -1,0 +1,2 @@
+# Proxy Server for Pinnacle CLI
+This Python server redirects the requests from the Pinnacle CLI to the respective endpoint of the Pinnacle API regardless of programming language. It runs on the `PINNACLE_HOST:PINNACLE_PORT` specified in the .env file. For example if you have `/js_hello_world` JavaScript endpoint and `/python_hello_world` Python endpoint, the server will redirect the requests to these respective endpoint. This is needed since the server runs these two endpoints on different ports.
