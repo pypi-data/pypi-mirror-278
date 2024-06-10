@@ -1,0 +1,89 @@
+Metadata-Version: 2.1
+Name: openav
+Version: 1.0.0a13
+Summary: OpenAV
+Home-page: https://github.com/DmitryRyumin/openav
+Author: Dmitry Ryumin, Denis Ivanko, Nikolay Shilov, Maxim Markitantov, Alexey Karpov
+Author-email: dl_03.03.1991@mail.ru, denis.ivanko11@gmail.com, nick@iias.spb.su, m.markitantov@yandex.ru, karpov@iias.spb.su
+Maintainer: Dmitry Ryumin
+Maintainer-email: dl_03.03.1991@mail.ru
+License: MIT
+Project-URL: Bug Reports, https://github.com/DmitryRyumin/openav/issues
+Project-URL: Documentation, https://openav.readthedocs.io
+Project-URL: Source Code, https://github.com/DmitryRyumin/openav/tree/main/openav
+Project-URL: Download, https://github.com/DmitryRyumin/openav/tags
+Keywords: OpenAV,LipReading,SpeechRecognition,SignalProcessing,DataAugmentation,ArtificialNeuralNetworks,DeepMachineLearning,TransferLearning,Statistics,ComputerVision,ArtificialIntelligence,Preprocessing
+Classifier: Development Status :: 3 - Alpha
+Classifier: Natural Language :: Russian
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Documentation
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Topic :: Multimedia :: Sound/Audio :: Analysis
+Classifier: Topic :: Multimedia :: Sound/Audio :: Speech
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Localization
+Classifier: Topic :: Utilities
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Framework :: Jupyter
+Classifier: Framework :: Jupyter :: JupyterLab :: 4
+Classifier: Framework :: Sphinx
+Requires-Python: >=3.9, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# [OpenAV](https://github.com/DmitryRyumin/openav)
+
+![PyPI](https://img.shields.io/pypi/v/openav)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/openav)
+![PyPI - Implementation](https://img.shields.io/pypi/implementation/openav)
+![GitHub repo size](https://img.shields.io/github/repo-size/dmitryryumin/openav)
+![PyPI - Status](https://img.shields.io/pypi/status/openav)
+![PyPI - License](https://img.shields.io/github/license/dmitryryumin/openav)
+![GitHub top language](https://img.shields.io/github/languages/top/dmitryryumin/openav)
+![Documentation Status](https://readthedocs.org/projects/openav/badge/?version=latest)
+
+<h4 align="center"><span style="color:#EC256F;">Описание</span></h4>
+
+---
+
+> **[OpenAV](https://github.com/DmitryRyumin/openav/blob/main/README.md)** - библиотека с открытым исходным кодом, предназначена для решения задач автоматического распознавания речевых команд на основе интеллектуального анализа аудиовизуальных данных.
+
+---
+
+<!-- | [Документация на английском](https://github.com/DmitryRyumin/openav) |
+|----------------------------------------------------------------------| -->
+
+## Содержание
+
+- [Установка и обновление](https://openav.readthedocs.io/ru/latest/user_guide/installation.html)
+- [Модули](https://openav.readthedocs.io/ru/latest/user_guide/modules.html)
+- [API](https://openav.readthedocs.io/ru/latest/api/index.html)
+- [Диаграмма классов](https://openav.readthedocs.io/ru/latest/api/class_diagram.html)
+- [Набор аудиовизуальных данных](https://openav.readthedocs.io/ru/latest/dataset.html)
+- [Команда разработчиков](https://openav.readthedocs.io/ru/latest/about.html)
