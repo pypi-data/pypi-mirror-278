@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "dspy_ui"
+version = "0.0.1-rc.1"
+description = ""
+authors = ["Tom Dörr <tomdoerr96@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.3"
+dspy-ai = "2.4.9"
+
+[[tool.poetry.packages]]
+#include = "dspy_dummy"
+include = "dspy_ui"
+from = "src"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
