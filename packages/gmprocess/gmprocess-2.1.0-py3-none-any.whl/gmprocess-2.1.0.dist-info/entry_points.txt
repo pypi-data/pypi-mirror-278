@@ -1,0 +1,9 @@
+[console_scripts]
+cwa_gather = gmprocess.bin.cwa_gather:main
+fix_inventory = gmprocess.bin.fix_inventory:main
+gmconvert = gmprocess.bin.gmconvert:main
+gminfo = gmprocess.bin.gminfo:main
+gmprocess_config = gmprocess.bin.gmprocess_config:main
+gmrecords = gmprocess.bin.gmrecords:main
+gmworkspace = gmprocess.bin.gmworkspace:main
+list_metrics = gmprocess.bin.list_metrics:main
