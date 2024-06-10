@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: mesop
+Version: 0.8.0rc0
+Summary: Build UIs in Python
+Home-page: https://github.com/google/mesop
+Author: Google Inc.
+License: Apache 2.0
+Keywords: mesop
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: absl-py
+Requires-Dist: deepdiff ==6.7.1
+Requires-Dist: flask
+Requires-Dist: libcst ==1.1.0
+Requires-Dist: markdown
+Requires-Dist: protobuf
+Requires-Dist: pydantic ==1.10.13
+Requires-Dist: pygments
+Requires-Dist: watchdog
+
+# Mesop
+
+Mesop is an open-source package to build UIs in Python.
+
+Source code: github.com/google/mesop
