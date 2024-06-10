@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: cbr-website-beta
+Version: 0.87.0
+Summary: CBR Website - Beta
+Home-page: https://github.com/the-cyber-boardroom/cbr-website-beta
+License: MIT
+Author: Dinis Cruz
+Author-email: dinis.cruz@owasp.org
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: Flask-Minify (==0.37)
+Requires-Dist: Markdown
+Requires-Dist: Werkzeug (==2.0.3)
+Requires-Dist: boto3
+Requires-Dist: flask (==2.0.2)
+Requires-Dist: osbot-aws
+Requires-Dist: osbot-utils
+Requires-Dist: pydantic
+Requires-Dist: python-dotenv
+Requires-Dist: python-frontmatter
+Requires-Dist: requests
+Description-Content-Type: text/markdown
+
+[![codecov](https://codecov.io/gh/the-cyber-boardroom/cbr-website-beta/graph/badge.svg?token=NZDJOJ2CYH)](https://codecov.io/gh/the-cyber-boardroom/cbr-website-beta)
+![Current Release](https://img.shields.io/badge/release--blue)
+
+# CBR Website - Beta
+
+Main repo for The Cyber Boardroom website deployed in a serverless AWS environment (i.e. using Lambdas)
+
+
+## Coverage details
+
+Here is the [CodeCov page](https://app.codecov.io/gh/the-cyber-boardroom/cbr-website-beta) for this repo
+
+![](https://codecov.io/gh/the-cyber-boardroom/cbr-website-beta/graphs/sunburst.svg?token=NZDJOJ2CYH)
+![](https://codecov.io/gh/the-cyber-boardroom/cbr-website-beta/graphs/tree.svg?token=NZDJOJ2CYH)
+![](https://codecov.io/gh/the-cyber-boardroom/cbr-website-beta/graphs/icicle.svg?token=NZDJOJ2CYH)
