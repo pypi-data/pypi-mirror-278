@@ -1,0 +1,2 @@
+[console_scripts]
+cherv = cherv.__main__:main

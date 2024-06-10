@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+Cherv.egg-info/PKG-INFO
+Cherv.egg-info/SOURCES.txt
+Cherv.egg-info/dependency_links.txt
+Cherv.egg-info/entry_points.txt
+Cherv.egg-info/requires.txt
+Cherv.egg-info/top_level.txt
+cherv/__init__.py
+cherv/__main__.py
+cherv/cherv.py
+tests/test_wormsay.py
