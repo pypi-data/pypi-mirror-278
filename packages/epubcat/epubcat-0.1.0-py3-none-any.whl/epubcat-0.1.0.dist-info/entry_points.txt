@@ -1,0 +1,2 @@
+[console_scripts]
+epubcat = epubcat.__main__:main
