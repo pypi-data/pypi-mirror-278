@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+moroccan_prayer_times/__init__.py
+moroccan_prayer_times/main.py
+moroccan_prayer_times.egg-info/PKG-INFO
+moroccan_prayer_times.egg-info/SOURCES.txt
+moroccan_prayer_times.egg-info/dependency_links.txt
+moroccan_prayer_times.egg-info/entry_points.txt
+moroccan_prayer_times.egg-info/requires.txt
+moroccan_prayer_times.egg-info/top_level.txt
+moroccan_prayer_times/translations/ar.yml
+moroccan_prayer_times/translations/en.yml
+moroccan_prayer_times/translations/fr.yml
