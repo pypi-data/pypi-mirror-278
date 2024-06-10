@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: facebook_account_checker
+Version: 0.1
+Summary: A simple library to check Facebook accounts using Facebook API
+Home-page: https://github.com/ZexusDigital/facebook_account_checker
+Author: ZexusDigital
+Author-email: zexusdigital@zexusdigital.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# Facebook Account Checker
+
+A simple library to check Facebook accounts using Facebook API.
+
+## Installation
+
+```bash
+pip install facebook_account_checker

@@ -1,0 +1,11 @@
+README.md
+setup.py
+facebook_account_checker/__init__.py
+facebook_account_checker/checker.py
+facebook_account_checker.egg-info/PKG-INFO
+facebook_account_checker.egg-info/SOURCES.txt
+facebook_account_checker.egg-info/dependency_links.txt
+facebook_account_checker.egg-info/requires.txt
+facebook_account_checker.egg-info/top_level.txt
+tests/__init__.py
+tests/test_checker.py
