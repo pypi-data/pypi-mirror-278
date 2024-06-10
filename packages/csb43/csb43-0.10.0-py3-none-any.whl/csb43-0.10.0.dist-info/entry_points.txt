@@ -1,0 +1,2 @@
+[console_scripts]
+csb2format = csb43.utils.cmd:main

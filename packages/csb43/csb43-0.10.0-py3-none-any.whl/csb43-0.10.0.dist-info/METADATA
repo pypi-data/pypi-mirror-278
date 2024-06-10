@@ -1,0 +1,367 @@
+Metadata-Version: 2.1
+Name: csb43
+Version: 0.10.0
+Summary: Parsing and validation utilites for the Spanish standard norm 43 by the 'Consejo Superior Bancario' (CSB) / 'Asociación Española de Banca' (AEB) for storing bank account transactions | [es] Herramientas para leer y validar datos almacenados siguiendo la norma 43 del Consejo Superior Bancario (CSB) / Asociación Española de Banca (CSB).
+Author-email: wmj <wmj.py@gmx.com>
+License: LGPL-3.0-or-later
+Project-URL: BugReports, https://bitbucket.org/wmj/csb43/issues
+Project-URL: Source, https://bitbucket.org/wmj/csb43
+Project-URL: Documentation, https://csb43.readthedocs.io
+Keywords: csb,csb43,aeb,aeb43,homebank,ofx,Spanish bank,ods,tsv,xls,xlsx,excel,yaml,json,html
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Topic :: Utilities
+Classifier: Topic :: Office/Business :: Financial
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pycountry ~=24.6.1
+Requires-Dist: deprecated ~=1.2.14
+Requires-Dist: importlib-resources ; python_version < "3.9"
+Provides-Extra: all
+Requires-Dist: csb43[formats,yaml] ; extra == 'all'
+Provides-Extra: basic_formats
+Requires-Dist: tablib ~=3.6.1 ; extra == 'basic_formats'
+Provides-Extra: dev
+Requires-Dist: build ; extra == 'dev'
+Requires-Dist: sphinx ; extra == 'dev'
+Requires-Dist: reuse ; extra == 'dev'
+Requires-Dist: csb43[docs,test] ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Provides-Extra: formats
+Requires-Dist: tablib[all] ; extra == 'formats'
+Requires-Dist: csb43[basic_formats] ; extra == 'formats'
+Provides-Extra: test
+Requires-Dist: lxml ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: tablib[ods,xls,xlsx] ; extra == 'test'
+Requires-Dist: csb43[basic_formats,yaml] ; extra == 'test'
+Provides-Extra: yaml
+Requires-Dist: PyYAML ; extra == 'yaml'
+
+<!--
+SPDX-FileCopyrightText: 2024 wmj <wmj.py@gmx.com>
+
+SPDX-License-Identifier: LGPL-3.0-or-later
+-->
+
+# csb43
+
+[![docs latest](https://readthedocs.org/projects/csb43/badge/?version=latest)](https://csb43.readthedocs.io/projects/latest/?badge=latest)
+
+Tools for converting from the Spanish banks' format **CSB norm 43** (*CSB43*).
+
+
+## csb2format
+
+Convert a **CSB/AEB norm 43** file to other file formats.
+
+Supported formats:
+
+- OFX v1.0.3 (SGML) & v2.1.2 (XML)
+- [HomeBank CSV](http://homebank.free.fr/help/06csvformat.html)
+- *JSON*
+- *YAML*
+
+Additional formats are optionally provided by `tablib`:
+
+- *HTML*
+- *ODS*: OpenDocument spreadsheet
+- *CSV*, *TSV*: comma- or tab- separated values
+- *XLS*: Microsoft Excel spreadsheet
+- *XLSX*: OOXML spreadsheet
+
+For an exhaustive list, see package `tablib`.
+
+
+### Options:
+
+    usage: csb2format [-h] [-v] [-s] [--no-sepa] [-df] [-d DECIMAL] [-e ENCODING] [--use-float] [-V]
+                    [-f {csv,dbf,homebank,html,jira,json,latex,ods,ofx,ofx1,rst,tsv,xls,xlsx,yaml}] [-E OUTPUT_ENCODING]
+                    csb_file converted_file
+
+    Convert a CSB43 file to another format
+
+    options:
+    -h, --help            show this help message and exit
+    -v, --version         show program's version number and exit
+
+    csb43 arguments:
+    csb_file              a csb43 file ('-' for stdin)
+    -s, --strict          strict mode (default: False)
+    --no-sepa             do not convert items to SEPA transfers or direct debits (default: True)
+    -df, --dayfirst       use DDMMYY as date format while parsing the csb43 file instead of YYMMDD (default: True)
+    -d DECIMAL, --decimal DECIMAL
+                            set the number of decimal places for the money amount type (default: 2)
+    -e ENCODING, --encoding ENCODING
+                            set the input encoding ('cp850' for standard AEB file) (default: latin1)
+    --use-float           export monetary amounts using binary floating point numbers as a fallback (default: str)
+    -V, --verbose         show csb43 warnings (default: True)
+
+    output arguments:
+    converted_file        destination file ('-' for stdout)
+    -f {csv,dbf,homebank,html,jira,json,latex,ods,ofx,ofx1,rst,tsv,xls,xlsx,yaml}, --format {csv,dbf,homebank,html,jira,json,latex,ods,ofx,ofx1,rst,tsv,xls,xlsx,yaml}
+                            format of the output file (default: ofx)
+    -E OUTPUT_ENCODING, --output-encoding OUTPUT_ENCODING
+                            set the output encoding (default: utf-8)
+
+
+### Examples
+
+- Converting to OFX format:
+
+        $ csb2format transactions.csb transactions.ofx
+
+        $ csb2format --format ofx transactions.csb transactions.ofx
+
+    or
+
+        $ csb2format transactions.csb - > transactions.ofx
+
+    From another app to file
+
+        $ get_my_CSB_transactions | csb2format - transactions.ofx
+
+- Converting to XLSX spreadsheet format:
+
+        $ csb2format --format xlsx transactions.csb transactions.xlsx
+
+- Using cp850 as the input encoding:
+
+        $ csb2format --encoding cp850 --format xlsx transactions.csb transactions.xlsx
+
+
+### Spreadsheets
+
+
+*ODS*, *XLS* and *XLSX* files are generated as books, with the first sheet
+containing the accounts information, and the subsequent sheets
+containing the transactions of each one of the accounts.
+
+
+### Using Python
+
+Parse a *CSB43* file and print the equivalent *OFX* file
+
+
+```python
+# OFX
+from csb43.ofx import converter as ofx_converter
+from csb43.aeb43 import read_batch
+
+with open("movimientos.csb", "rb") as fd:
+    batch = read_batch(fd)
+
+# print to stdout
+print(ofx_converter.convert_from_aeb43(batch))
+```
+
+Parse a *CSB43* file and print the equivalent in a tabular or
+dictionary-like file format
+
+
+```python
+from csb43 import read_batch, formats
+
+with open("movimientos.csb", "rb") as fd:
+    batch = read_batch(fd)
+
+# print 'yaml' format to stdout
+o = formats.convert_from_aeb43(batch, 'yaml')
+print(o.yaml)
+
+# write 'xlsx' format to file
+o = formats.convert_from_aeb43(batch, 'xlsx')
+with open("movimientos.xlsx", "wb") as f:
+    f.write(o.xlsx)
+```
+
+Build an AEB43 with a custom context:
+
+```python
+import dataclasses
+from csb43 import read_batch, get_current_context
+
+# custom context
+ctx = dataclasses.replace(get_current_context(), strict=True)
+with open("movimientos.csb", "rb") as fd:
+    batch = read_batch(fd, context=context)
+
+# scoped context
+with get_current_context().scoped(strict=True):
+    with open("movimientos.csb", "rb") as fd:
+        batch = read_batch(fd)
+```
+<!--
+SPDX-FileCopyrightText: 2024 wmj <wmj.py@gmx.com>
+
+SPDX-License-Identifier: LGPL-3.0-or-later
+-->
+
+## Installing
+
+Basic functionality (conversion to json, homebank and OFX)
+
+    $ pip install csb43
+
+
+Conversion to YAML
+
+    $ pip install csb43[yaml]
+
+
+Conversion to basic Tablib formats
+
+    $ pip install csb43[basic_formats]
+
+
+Conversion to all Tablib formats
+
+    $ pip install csb43[formats]
+
+Conversion to all supported formats
+
+    $ pip install csb43[all]
+
+
+
+<!--
+SPDX-FileCopyrightText: 2024 wmj <wmj.py@gmx.com>
+
+SPDX-License-Identifier: LGPL-3.0-or-later
+-->
+
+## Changelog
+
+### 0.10.0
+
+- BREAKING CHANGES!
+- Dropped support for python < 3.8. If you need support for old versions, please do not upgrade.
+- New subpackage `csb43.aeb43`: CSB43 reimplemented using field descriptors:
+    - the original binary record is kept as the internal representation
+    - consistent behaviour for field types (money, currency, int, string, etc...)
+    - validation failures will raise ValidationException o ValidationWarning depending of their gravity
+    - parsing of SEPA transfers and SEPA direct debits information stored in optional items in transactions.
+- Subpackage `csb43.csb43` has been deprecated and it will be removed in a future version (and every package object that use it).
+- Classes and functions using camel case have been deprecated and they will be removed in a future version.
+- Moved package settings from `setup.py` to `pyproject.toml`
+- Updated dependencies.
+
+### 0.9.3
+
+- Add support for Python 3.12 (thanks to Cédric Krier)
+
+### 0.9.2
+
+- Fixed setuptool's deprecation warning on python==3.10 (thanks to @mb)
+- Fixed duplicated documentation of the same objects by sphinx (thanks to @mb)
+
+### 0.9.1
+
+- Added python_requires >= 3.6 (thanks to Cédric Krier)
+
+### 0.9.0
+
+- Dropped support for Python 2 (thanks to Sergi Almacellas)
+- Added support for Python 3.8 and 3.9 (thanks to Sergi Almacellas)
+- Added compatibility with tablib >= 1.0.0 (thanks to Sergi Almacellas)
+- Type hinting
+
+### 0.8.4
+
+- Fixed tablib requirement (< 1.0.0)
+- Fixed parsing of records with code 00 (thanks to Uttam Sharma)
+
+### 0.8.2
+
+- Do not fail with C locale (thanks to Cédric Krier)
+
+### 0.8.1
+
+- Fixed decimal values conversion in JSON and tabular formats (thanks to Harshad Modi).
+- Fixed OFX validation (ORIGCURRENCY field).
+- An error is raised when the currency code is not found.
+
+### 0.8
+
+- Text values are stored as string instead of bytes (thanks to Sergi Almacellas)
+- Warnings are raised using the 'warnings' module.
+- An encoding where control characters are different from ascii is not allowed. An exception will be raised.
+- csb2format: added encoding as a new parameter.
+
+### 0.7
+
+- Defined installation targets: `yaml` and `formats` (thanks to Sergi Almacellas & Cédric Krier).
+- Updated README file (thanks to Sergi Almacellas).
+- Removed `simplejson` dependency.
+- Dates stored as `date` instead of `datetime` (thanks to Sergi Almacellas).
+- Monetary amounts are represented as `Decimal` instead to `float` in order to prevent representation and rounding issues. These fields are exported as a string by default, conversion to float is optional (thanks to Sergi Almacellas & Cédric Krier).
+- Added temprary dependency to `openpyxl < 2.5.0` to prevent issue while trying to export to xlsx.
+
+### 0.6
+
+- Fixed usage of pycountry >= 16.10.23rc1 objects (thanks to Alex Barcelo).
+- Package refactored to simplify the structure.
+
+### 0.5
+
+- Fixed conversion to binary formats in python 2.
+- `tablib` backend supported in python 3.
+- N43 warnings are silenced by default.
+
+### 0.4
+
+- OFX v 1.0.3 supported.
+- OFX Tag inv401source renamed to inv401ksource.
+- Unique transaction id when generating OFX file (thanks to Julien Moutte).
+
+### 0.3.4
+
+- Most Spanish N43 files will use LATIN-1 encoding not pure ASCII (thanks to Julien Moutte).
+- Regular expression to check for account name is too limited (thanks to Julien Moutte).
+- Reference1 can hold non numerical data in information mode 1 and 2 (thanks to Julien Moutte).
+- Currency data as an inmutable list.
+
+### 0.3.3
+
+- Fixed deficiencies in OFX conversion (thanks to Andrea Santambrogio). Checked XML validation against OFX2_Protocol.xsd
+
+### 0.3
+
+- Compatible with Python 3 (except "tablib" dependencies)
+
+### 0.2.3
+
+- Fixed shebang header of csb2format
+
+
+### 0.2.2
+
+- csb2format adapted to pyinstaller
+- Executable file for Windows
+
+### 0.2.1
+
+- Trivial changes
+
+### 0.2
+
+- Several bugfixes
+- Bidirectional use of objects (file -> object, object -> file)
+- Added conversion to spreadsheets, dict and tabular formats (thanks to tablib)
+- Localization to Spanish
+- Sphinx documentation
+
+### 0.1
+
+- Initial release
+
+

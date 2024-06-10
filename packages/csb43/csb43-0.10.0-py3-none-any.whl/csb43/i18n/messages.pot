@@ -1,0 +1,631 @@
+# Copyright (C) 2024 ORGANIZATION
+# SPDX-FileCopyrightText: 2024 wmj <wmj.py@gmx.com>
+#
+# SPDX-License-Identifier: LGPL-3.0-or-later
+
+msgid ""
+msgstr ""
+"Project-Id-Version: csb43 0.0.0\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-06-04 16:41+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: src/csb43/formats.py:82
+msgid "SEPA"
+msgstr ""
+
+#: src/csb43/formats.py:160
+msgid "direct debit"
+msgstr ""
+
+#: src/csb43/formats.py:165
+msgid "transfer"
+msgstr ""
+
+#: src/csb43/formats.py:217
+msgid "Package 'tablib' not found. Formats provided by 'tablib' will not be available."
+msgstr ""
+
+#: src/csb43/formats.py:228
+msgid "Package 'yaml' not found. Hierarchical YAML format will not be available."
+msgstr ""
+
+#: src/csb43/formats.py:355
+msgid "unexpected format {format}"
+msgstr ""
+
+#: src/csb43/formats.py:380 src/csb43/formats.py:537
+msgid "Accounts"
+msgstr ""
+
+#: src/csb43/formats.py:413 src/csb43/formats.py:567
+msgid "Transactions"
+msgstr ""
+
+#: src/csb43/formats.py:518
+#, python-format
+msgid "unexpected format %s"
+msgstr ""
+
+#: src/csb43/aeb43/account.py:265
+msgid " ({alt}) mismatch in summary ({ref})"
+msgstr ""
+
+#: src/csb43/aeb43/account.py:337
+msgid "adding records to a closed account"
+msgstr ""
+
+#: src/csb43/aeb43/account.py:349 src/csb43/aeb43/transaction.py:395
+msgid "unknown or illegal record: {record}"
+msgstr ""
+
+#: src/csb43/aeb43/account.py:372
+msgid "+ Account: {account_number}\t{short_name}"
+msgstr ""
+
+#: src/csb43/aeb43/account.py:375
+msgid "From:||{date_from}"
+msgstr ""
+
+#: src/csb43/aeb43/account.py:376
+msgid "To:||{date_to}"
+msgstr ""
+
+#: src/csb43/aeb43/account.py:380 src/csb43/csb43/csb_file.py:397
+msgid "{ntransactions:d} transaction(s) read"
+msgstr ""
+
+#: src/csb43/aeb43/account.py:381
+msgid "Account properly closed: {ac_is_closed}"
+msgstr ""
+
+#: src/csb43/aeb43/account.py:382
+msgid "Information mode: {information_mode}"
+msgstr ""
+
+#: src/csb43/aeb43/account.py:385
+msgid "Previous amount:||{ib_amount:14.2f} {ib_currency}"
+msgstr ""
+
+#: src/csb43/aeb43/account.py:386
+msgid " Income:||{inc_amount:14.2f} {inc_currency}"
+msgstr ""
+
+#: src/csb43/aeb43/account.py:387
+msgid " Expense:||{exp_amount:14.2f} {exp_currency}"
+msgstr ""
+
+#: src/csb43/aeb43/account.py:388
+msgid "Balance:||{bal_amount:14.2f} {bal_currency}"
+msgstr ""
+
+#: src/csb43/aeb43/batch.py:84
+msgid "total_records"
+msgstr ""
+
+#: src/csb43/aeb43/batch.py:138
+msgid "incongruent closing record of file: total records {alt:d} != {ref:d}"
+msgstr ""
+
+#: src/csb43/aeb43/batch.py:162
+msgid "adding records to a closed batch"
+msgstr ""
+
+#: src/csb43/aeb43/batch.py:173
+msgid "unknown or illegal record: {}"
+msgstr ""
+
+#: src/csb43/aeb43/batch.py:194 src/csb43/csb43/csb_file.py:379
+msgid "Encoding: {encoding:s}"
+msgstr ""
+
+#: src/csb43/aeb43/batch.py:195
+msgid "File properly closed: {file_is_closed}"
+msgstr ""
+
+#: src/csb43/aeb43/batch.py:197
+msgid "Accounts read:||{naccounts:>5d}"
+msgstr ""
+
+#: src/csb43/aeb43/batch.py:198
+msgid "Records read:||{total_records:>5d}"
+msgstr ""
+
+#: src/csb43/aeb43/sepa_debit.py:79
+#, python-format
+msgid "Unknown scheme code for SEPA direct debit: '%s'"
+msgstr ""
+
+#: src/csb43/aeb43/sepa_debit.py:125
+msgid "padding1"
+msgstr ""
+
+#: src/csb43/aeb43/sepa_debit.py:168
+msgid "padding2"
+msgstr ""
+
+#: src/csb43/aeb43/sepa_debit.py:251
+msgid "remitance_information_cont"
+msgstr ""
+
+#: src/csb43/aeb43/sepa_debit.py:255
+msgid "padding4"
+msgstr ""
+
+#: src/csb43/aeb43/transaction.py:98
+msgid "Validation failed for reference '{ref}'. Unexpected control digit."
+msgstr ""
+
+#: src/csb43/aeb43/transaction.py:112
+msgid "the appended optional item already exists"
+msgstr ""
+
+#: src/csb43/aeb43/transaction.py:115
+msgid "a SEPA transfer exists"
+msgstr ""
+
+#: src/csb43/aeb43/transaction.py:117
+msgid "a SEPA debit exists"
+msgstr ""
+
+#: src/csb43/aeb43/transaction.py:121
+msgid "there can only be {max_items:d} optional items"
+msgstr ""
+
+#: src/csb43/aeb43/transaction.py:126
+msgid "`record_code` should be {next:d} but found {code:d}. The wrong value will be fixed"
+msgstr ""
+
+#: src/csb43/aeb43/transaction.py:158 src/csb43/aeb43/transaction.py:177
+msgid "trying to set a SEPA transfer while the transaction contains some standard optional items"
+msgstr ""
+
+#: src/csb43/aeb43/transaction.py:163
+msgid "trying to set a SEPA transfer while the transaction contains a SEPA Direct Debit record set"
+msgstr ""
+
+#: src/csb43/aeb43/transaction.py:182
+msgid "trying to set a SEPA transfer while the transaction contains a SEPA Transfer record set"
+msgstr ""
+
+#: src/csb43/aeb43/transaction.py:337
+msgid "SEPA mode is disabled"
+msgstr ""
+
+#: src/csb43/aeb43/transaction.py:386
+msgid "adding another exchange record will replace the existing record"
+msgstr ""
+
+#: src/csb43/aeb43/fields/__init__.py:85
+msgid "unable to convert value to internal representation format: {exc}"
+msgstr ""
+
+#: src/csb43/aeb43/fields/date.py:56
+msgid "invalid date format: {value}"
+msgstr ""
+
+#: src/csb43/aeb43/fields/integer.py:102
+msgid "Bad format: content {content!r} mismatches the expected format {value} for this field"
+msgstr ""
+
+#: src/csb43/aeb43/fields/money.py:92
+msgid "non-negative values are not allowed"
+msgstr ""
+
+#: src/csb43/aeb43/fields/nested.py:54 src/csb43/aeb43/fields/nested.py:72
+msgid "unexpected type"
+msgstr ""
+
+#: src/csb43/aeb43/fields/nested.py:88
+msgid "'None' value is not allowed"
+msgstr ""
+
+#: src/csb43/aeb43/record/__init__.py:217
+msgid "a {size:d}-sized bytes record is required"
+msgstr ""
+
+#: src/csb43/aeb43/record/__init__.py:233
+msgid "wrong field size: {valid_size:d} != {size:d} ({value})"
+msgstr ""
+
+#: src/csb43/aeb43/record/__init__.py:284 src/csb43/utils/__init__.py:111
+msgid "Bad format: content {content!r} mismatches the expected format r{pattern!r} for this field"
+msgstr ""
+
+#: src/csb43/aeb43/record/context.py:85
+msgid "Encoding {encoding} is not compatible with the AEB43 field padding character."
+msgstr ""
+
+#: src/csb43/csb43/account.py:567
+msgid "trying to close an already closed account"
+msgstr ""
+
+#: src/csb43/csb43/account.py:611
+#, python-format
+msgid "balance (%1.2f) mismatch in closing account record (%1.2f)"
+msgstr ""
+
+#: src/csb43/csb43/account.py:616
+#, python-format
+msgid "income amount (%1.2f) mismatch in closing account record (%1.2f)"
+msgstr ""
+
+#: src/csb43/csb43/account.py:621
+#, python-format
+msgid "expense amount (%1.2f) mismatch in closing account record (%1.2f)"
+msgstr ""
+
+#: src/csb43/csb43/account.py:626
+#, python-format
+msgid "income entries (%d) mismatch in closing account record (%d)"
+msgstr ""
+
+#: src/csb43/csb43/account.py:631
+#, python-format
+msgid "expense entries (%d) mismatch in closing account record (%d)"
+msgstr ""
+
+#: src/csb43/csb43/account.py:708 src/csb43/utils/messages.py:47
+msgid "transactions"
+msgstr ""
+
+#: src/csb43/csb43/csb_file.py:259
+msgid "trying to close an already closed file"
+msgstr ""
+
+#: src/csb43/csb43/csb_file.py:271
+#, python-format
+msgid "incongruent closing record of file: total records %d != %d"
+msgstr ""
+
+#: src/csb43/csb43/csb_file.py:329 src/csb43/utils/messages.py:27
+msgid "accounts"
+msgstr ""
+
+#: src/csb43/csb43/csb_file.py:380
+msgid "{naccounts:d}\taccount(s) read"
+msgstr ""
+
+#: src/csb43/csb43/csb_file.py:381
+msgid "File properly closed:\t{file_is_closed}"
+msgstr ""
+
+#: src/csb43/csb43/csb_file.py:382
+msgid "{total_records:d}\trecord(s) read"
+msgstr ""
+
+#: src/csb43/csb43/csb_file.py:393
+msgid "+ Account:\t{account_number}\t{short_name}"
+msgstr ""
+
+#: src/csb43/csb43/csb_file.py:394
+msgid "   From:\t{date_from}"
+msgstr ""
+
+#: src/csb43/csb43/csb_file.py:395
+msgid "   To:  \t{date_to}"
+msgstr ""
+
+#: src/csb43/csb43/csb_file.py:398
+msgid "Account properly closed:\t{ac_is_closed}"
+msgstr ""
+
+#: src/csb43/csb43/csb_file.py:399
+msgid "Information mode:\t{information_mode}"
+msgstr ""
+
+#: src/csb43/csb43/csb_file.py:400
+msgid "Previous amount:\t{ib_amount:14.2f}\t{ib_currency}"
+msgstr ""
+
+#: src/csb43/csb43/csb_file.py:401
+msgid " Income:        \t{inc_amount:14.2f}\t{inc_currency}"
+msgstr ""
+
+#: src/csb43/csb43/csb_file.py:402
+msgid " Expense:       \t{exp_amount:14.2f}\t{exp_currency}"
+msgstr ""
+
+#: src/csb43/csb43/csb_file.py:403
+msgid "Balance:        \t{bal_amount:14.2f}\t{bal_currency}"
+msgstr ""
+
+#: src/csb43/csb43/record.py:80
+#, python-format
+msgid "Encoding %s is not compatible with the AEB43 field padding character."
+msgstr ""
+
+#: src/csb43/csb43/transaction.py:212
+#, python-format
+msgid "maximum number of exchange record reached (%s)"
+msgstr ""
+
+#: src/csb43/csb43/transaction.py:373
+#, python-format
+msgid "Validation failed for reference '%s'"
+msgstr ""
+
+#: src/csb43/csb43/transaction.py:438
+#, python-format
+msgid "the maximum number of complementary items for transaction has been reached: %d"
+msgstr ""
+
+#: src/csb43/homebank/__init__.py:125
+msgid "bad format, 6 fields expected, but{n_fields:d} found"
+msgstr ""
+
+#: src/csb43/homebank/__init__.py:152
+msgid "datetime.date expected"
+msgstr ""
+
+#: src/csb43/utils/__init__.py:255
+msgid "instance of datetime or date expected, but {val!r} found"
+msgstr ""
+
+#: src/csb43/utils/cmd.py:96
+msgid "Convert a CSB43 file to another format"
+msgstr ""
+
+#: src/csb43/utils/cmd.py:110
+msgid "a csb43 file ('-' for stdin)"
+msgstr ""
+
+#: src/csb43/utils/cmd.py:115
+msgid "strict mode"
+msgstr ""
+
+#: src/csb43/utils/cmd.py:120
+msgid "do not convert items to SEPA transfers or direct debits"
+msgstr ""
+
+#: src/csb43/utils/cmd.py:125
+msgid "use DDMMYY as date format while parsing the csb43 file instead of YYMMDD"
+msgstr ""
+
+#: src/csb43/utils/cmd.py:133
+msgid "set the number of decimal places for the money amount type"
+msgstr ""
+
+#: src/csb43/utils/cmd.py:140
+msgid "set the input encoding ('cp850' for standard AEB file)"
+msgstr ""
+
+#: src/csb43/utils/cmd.py:146
+msgid "export monetary amounts using binary floating point numbers as a fallback"
+msgstr ""
+
+#: src/csb43/utils/cmd.py:155
+msgid "show csb43 warnings"
+msgstr ""
+
+#: src/csb43/utils/cmd.py:163
+msgid "destination file ('-' for stdout)"
+msgstr ""
+
+#: src/csb43/utils/cmd.py:169
+msgid "format of the output file"
+msgstr ""
+
+#: src/csb43/utils/cmd.py:174
+msgid "set the output encoding"
+msgstr ""
+
+#: src/csb43/utils/cmd.py:218
+msgid "* File: {name}"
+msgstr ""
+
+#: src/csb43/utils/cmd.py:241
+msgid "stdout not supported for binary formats"
+msgstr ""
+
+#: src/csb43/utils/messages.py:13
+#, python-format
+msgid "bad code of record or unexpected length: >>>%s<<<"
+msgstr ""
+
+#: src/csb43/utils/messages.py:16
+msgid "incompatible object '{found!r}', type(s) {expected} expected"
+msgstr ""
+
+#: src/csb43/utils/messages.py:21
+msgid "pycountry.Currencies object or a valid ISO 4217 code expected, but {obj!r} found"
+msgstr ""
+
+#: src/csb43/utils/messages.py:26
+msgid "padding"
+msgstr ""
+
+#: src/csb43/utils/messages.py:29
+msgid "bank_code"
+msgstr ""
+
+#: src/csb43/utils/messages.py:30
+msgid "branch_code"
+msgstr ""
+
+#: src/csb43/utils/messages.py:31
+msgid "account_key"
+msgstr ""
+
+#: src/csb43/utils/messages.py:32
+msgid "account_number"
+msgstr ""
+
+#: src/csb43/utils/messages.py:35
+msgid "information_mode"
+msgstr ""
+
+#: src/csb43/utils/messages.py:36
+msgid "short_name"
+msgstr ""
+
+#: src/csb43/utils/messages.py:37
+msgid "currency"
+msgstr ""
+
+#: src/csb43/utils/messages.py:38
+msgid "initial_date"
+msgstr ""
+
+#: src/csb43/utils/messages.py:39
+msgid "final_date"
+msgstr ""
+
+#: src/csb43/utils/messages.py:40
+msgid "initial_balance"
+msgstr ""
+
+#: src/csb43/utils/messages.py:41
+msgid "final_balance"
+msgstr ""
+
+#: src/csb43/utils/messages.py:42
+msgid "income"
+msgstr ""
+
+#: src/csb43/utils/messages.py:43
+msgid "expenses"
+msgstr ""
+
+#: src/csb43/utils/messages.py:44
+msgid "income_entries"
+msgstr ""
+
+#: src/csb43/utils/messages.py:45
+msgid "expenses_entries"
+msgstr ""
+
+#: src/csb43/utils/messages.py:46
+msgid "summary"
+msgstr ""
+
+#: src/csb43/utils/messages.py:50
+msgid "document_number"
+msgstr ""
+
+#: src/csb43/utils/messages.py:51
+msgid "shared_item"
+msgstr ""
+
+#: src/csb43/utils/messages.py:52
+msgid "own_item"
+msgstr ""
+
+#: src/csb43/utils/messages.py:53
+msgid "item1"
+msgstr ""
+
+#: src/csb43/utils/messages.py:54
+msgid "item2"
+msgstr ""
+
+#: src/csb43/utils/messages.py:55
+msgid "reference1"
+msgstr ""
+
+#: src/csb43/utils/messages.py:56
+msgid "reference2"
+msgstr ""
+
+#: src/csb43/utils/messages.py:57
+msgid "transaction_date"
+msgstr ""
+
+#: src/csb43/utils/messages.py:58
+msgid "value_date"
+msgstr ""
+
+#: src/csb43/utils/messages.py:59
+msgid "amount"
+msgstr ""
+
+#: src/csb43/utils/messages.py:60
+msgid "original_currency"
+msgstr ""
+
+#: src/csb43/utils/messages.py:61
+msgid "original_amount"
+msgstr ""
+
+#: src/csb43/utils/messages.py:62
+msgid "optional_items"
+msgstr ""
+
+#: src/csb43/utils/messages.py:63
+msgid "exchange"
+msgstr ""
+
+#: src/csb43/utils/messages.py:64
+msgid "sepa_debit"
+msgstr ""
+
+#: src/csb43/utils/messages.py:65
+msgid "sepa_transfer"
+msgstr ""
+
+#: src/csb43/utils/messages.py:68
+msgid "record_code"
+msgstr ""
+
+#: src/csb43/utils/messages.py:71
+msgid "scheme_code"
+msgstr ""
+
+#: src/csb43/utils/messages.py:72
+msgid "creditor_name"
+msgstr ""
+
+#: src/csb43/utils/messages.py:73
+msgid "creditor_id"
+msgstr ""
+
+#: src/csb43/utils/messages.py:74
+msgid "mandate_reference"
+msgstr ""
+
+#: src/csb43/utils/messages.py:75
+msgid "purpose"
+msgstr ""
+
+#: src/csb43/utils/messages.py:76
+msgid "purpose_category"
+msgstr ""
+
+#: src/csb43/utils/messages.py:77
+msgid "remitance_information"
+msgstr ""
+
+#: src/csb43/utils/messages.py:78
+msgid "creditor_reference"
+msgstr ""
+
+#: src/csb43/utils/messages.py:79
+msgid "debtor_name"
+msgstr ""
+
+#: src/csb43/utils/messages.py:80
+msgid "originator_name"
+msgstr ""
+
+#: src/csb43/utils/messages.py:81
+msgid "originator_code"
+msgstr ""
+
+#: src/csb43/utils/messages.py:82
+msgid "originator_reference"
+msgstr ""
+
+#: src/csb43/utils/messages.py:83
+msgid "originator_reference_party"
+msgstr ""
+
+#: src/csb43/utils/messages.py:84
+msgid "additional_info"
+msgstr ""
+
