@@ -1,0 +1,52 @@
+[tool.poetry]
+name = "space-classy"
+version = "0.8.3"
+description = "classification tool for minor bodies using reflectance spectra and visual albedos"
+authors = ["Max Mahlke <max.mahlke@oca.eu>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/maxmahlke/classy"
+documentation = "https://classy.readthedocs.io/en/latest/"
+repository = "https://github.com/maxmahlke/classy.git"
+packages = [{ 'include' = 'classy' }]
+include = ["data/mixnorm", 'data/mcfa']
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+aiohttp = ">=3.8"
+click = ">=8.1.2"
+importlib-resources = ">=5.10.2"
+lmfit = ">=1.2.0"
+matplotlib = ">=3.7.0"
+mcfa = "^0.1"
+numpy = ">=1.22.3"
+pandas = ">=1.4.2"
+rich = ">=12.2.0"
+scikit-learn = ">=1.2.1"
+space-rocks = ">=1.9.7"
+
+[tool.poetry.extras]
+docs = [
+  "sphinx",
+  "sphinx-redactor-theme",
+  "sphinx_design",
+  "sphinx-hoverxref",
+  "jinja2",
+  'furo',
+  "sphinx-copybutton",
+]
+gui = ['pyside6', 'pyqtgraph']
+
+[tool.pytest.ini_options]
+addopts = "-v --cov=classy --cov-report=html:tests/htmlcov --html=tests/report.html"
+markers = [
+  "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+  "from_scratch: require empty CLASSY_DATA_DIR",
+]
+
+[tool.poetry.scripts]
+classy = "classy.cli:cli_classy"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
