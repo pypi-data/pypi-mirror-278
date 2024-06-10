@@ -1,0 +1,4 @@
+EXPANDED_KEYWORD = "expanded__"
+CAPTURE_SUFFIX = "_captured__"
+LAMBDA_KEYWORD = "lambda__"
+GENERAL_INPLACE_ARITHMETIC_AUXILIARY_VARIABLE = "result__temp__"
