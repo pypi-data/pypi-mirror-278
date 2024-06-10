@@ -1,0 +1,8 @@
+MANIFEST.in
+setup.py
+printmsghello/__init__.py
+printmsghello/libhello.so
+printmsghello.egg-info/PKG-INFO
+printmsghello.egg-info/SOURCES.txt
+printmsghello.egg-info/dependency_links.txt
+printmsghello.egg-info/top_level.txt
