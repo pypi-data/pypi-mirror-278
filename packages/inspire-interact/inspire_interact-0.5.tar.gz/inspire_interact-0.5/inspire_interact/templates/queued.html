@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel='stylesheet' type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+	<script src="{{url_for('static', filename='index.js')}}"></script>
+	<title>inSPIRE-Interactive</title>
+</head>
+<body>
+	<dev class = "page-wrapper">
+	
+		<!-- header -->
+		{{ inspire_header|safe }}
+		<hr>
+
+		<p class="adjusted-text">Your task is in the queue.</p>
+		<center>
+			<h2>inSPIRE-Interactive Queue</h2>
+			{{ queue_svg|safe }}
+		</center>
+
+		<br><br>
+
+        {{ inspire_footer|safe }}
+	</dev>
+</body>
+</html>
