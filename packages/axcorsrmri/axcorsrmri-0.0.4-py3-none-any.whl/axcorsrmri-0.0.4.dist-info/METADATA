@@ -1,0 +1,140 @@
+Metadata-Version: 2.1
+Name: axcorsrmri
+Version: 0.0.4
+Home-page: https://github.com/TechnionComputationalMRILab/AxCorSRMRI
+Author: Technion Computational MRI Lab
+Author-email: tcml.bme@gmail.com
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: SimpleITK ==2.3.1
+Requires-Dist: tensorflow
+Requires-Dist: pandas ==1.3.5
+Requires-Dist: tensorboard
+Requires-Dist: protobuf ==3.14.0
+Requires-Dist: torchvision
+Requires-Dist: piq ==0.7.0
+Requires-Dist: matplotlib ==3.4.2
+Requires-Dist: tqdm ==4.66.4
+Requires-Dist: h5py >=2.9.0
+Requires-Dist: wrapt >=1.11.0
+Requires-Dist: scipy ==1.10.1
+Requires-Dist: charset-normalizer ==3.1.0
+Requires-Dist: sympy
+Requires-Dist: ipykernel ==6.14.0
+Requires-Dist: jupyter ==1.0.0
+
+# AxCorSRMRI
+Self-Supervised Realistic Through-Plane MRI Super Resolution from Clinical 2D Axial and Coronal Acquisition.
+
+## Installation
+
+```
+pip install torch==2.3.1+cu118 torchvision --index-url https://download.pytorch.org/whl/cu118
+pip install axcorsrmri
+```
+
+Manual install
+
+```
+git clone https://github.com/TechnionComputationalMRILab/AxCorSRMRI.git
+cd AxCorSRMRI
+pip install -e .
+
+```
+
+## Instruction 
+
+**A full example can be seen in `sample.ipynb`**.
+
+- Organize your data: Start by making sure your Axial and Coronal files for each case share the same case ID at the beginning of their filenames. For instance, both Axial and Coronal files for a case numbered "001" should begin with "001". For example: 001_ax.nii.gz and 001_cor.nii.gz.
+- Preprocess the data: For the model, the coronal data must be resampled isotropically.  
+
+```
+from axcorsrmri import resample_cases
+
+path_to_data_files = r"./data/"
+resample_cases(path_dir = path_to_data_files)
+```
+
+- Create database: Creates a CSV file that acts as a database. This will include the file paths for the coronal, axial, and isotropic files.
+
+```
+from axcorsrmri import create_database
+
+path_to_data_files = r"./data/"
+create_database(
+    path_to_data_files,
+    train_frac=0.8,
+    test_frac=0.1,
+    num_folds=1
+)
+```
+
+- Set the main framework and model hyperparameters. For a detailed explanation of each parameter, check the `parameter_dictionary.txt` file. The default training parameters are already established in setup_parser().        
+```
+override_args = {
+    "path_to_set": r"./data/",
+    "path_to_results": r"./results/",
+    ...
+}
+
+args = parser_setup(override_args)
+
+```
+- Prepare your data for training: To get your data ready for training your model, you will need to create three datasets:
+  - Training Set: This is the largest part of your data and is used to teach your model.
+  - Validation Set: This set helps you fine-tune your model's performance during training without overfitting.
+  - Test Set: After training, you'll use this set to check how well your model performs on new, unseen data.
+
+```
+from axcorsrmri import initialize_data
+dl_train, dl_valid_lr, dl_valid_hr, dl_test_lr, dl_test_hr, result_dir, writer, config = initialize_data(args)
+```
+
+- Train, valid and test the model.
+
+```
+from axcorsrmri import training_validation_test
+training_validation_test(dl_train , dl_valid_lr,dl_valid_hr,dl_test_lr,dl_test_hr,result_dir,writer,config)
+```
+
+- If you have a trained model and want to use it on all the files in a folder, making sure they're isotropically resampled 
+
+```
+from axcorsrmri import test_parser_setup, reconstruct_SR_volumes_in_folder
+
+override_args_test = {
+    "path_to_set": r"./data/",
+    "path_to_results": r"./results/",
+    ...
+}
+
+test_args = test_parser_setup(override_args_test)
+reconstruct_SR_volumes_in_folder(test_args)
+```
+- If you'd like to keep an eye on your training progress, you can use TensorBoard package.
+```
+tensorboard --logdir=r"./results/directory_to_trained_model/"
+```
+
+This model was trained using four Nvidia A100 40G cards. It took about 33 hours to train for 1000 epochs. So, if you're using just one GPU, it would likely take around 120 hours to train. 
+_______________________________________________________________________
+## License
+For this project, we incorporated code from the following sources-
+
+[1] Lu, Z., Liu, H., Li, J., & Zhang, L. (2021). Efficient Transformer for Single Image Super-Resolution. ArXiv, abs/2108.11084.
+
+[2] K. Prajapati et al., "Direct Unsupervised Super-Resolution Using Generative Adversarial Network (DUS-GAN) for Real-World Data," in IEEE Transactions on Image Processing, vol. 30, pp. 8251-8264, 2021, doi: 10.1109/TIP.2021.3113783.
+keywords: {Training;Degradation;Generative adversarial networks;Superresolution;Task analysis;Unsupervised learning;Quality assessment;Unsupervised learning;image quality;image enhancement;image reconstruction;spatial resolution;artificial neural networks;interpolation},
+
+
+[3] FID and KID calculation are made by PIQ package - Kastryulin, Sergey & Zakirov, Jamil & Prokopenko, Denis & Dylov, Dmitry. (2022). PyTorch Image Quality: Metrics for Image Quality Assessment.   
+
+
+[4] InceptionV3 implementation is taken from 
+https://github.com/mseitzer/pytorch-fid
+
+
+
+
+
