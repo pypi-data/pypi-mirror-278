@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+pytest_bisect_tests/__init__.py
+pytest_bisect_tests/bisect.py
+pytest_bisect_tests/cli.py
+pytest_bisect_tests/pytest_plugin.py
+pytest_bisect_tests/pytest_runner.py
+pytest_bisect_tests.egg-info/PKG-INFO
+pytest_bisect_tests.egg-info/SOURCES.txt
+pytest_bisect_tests.egg-info/dependency_links.txt
+pytest_bisect_tests.egg-info/entry_points.txt
+pytest_bisect_tests.egg-info/top_level.txt

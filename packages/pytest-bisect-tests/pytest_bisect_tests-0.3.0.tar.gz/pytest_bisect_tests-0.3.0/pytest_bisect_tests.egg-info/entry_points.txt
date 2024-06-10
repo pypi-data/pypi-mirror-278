@@ -1,0 +1,5 @@
+[console_scripts]
+pytest-bisect-tests = pytest_bisect_tests.cli:main
+
+[pytest11]
+pytest-bisect-tests = pytest_bisect_tests.pytest_plugin
