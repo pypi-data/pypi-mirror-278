@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: scylla-go-round
+Version: 0.1.1
+Summary: A CLI tool to generate Go types from ScyllaDB or Cassandra schemas
+License: MIT
+Author: John Larkin
+Author-email: john@johnjlarkin.com
+Requires-Python: >=3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: cassandra-driver (>=3.29.1,<4.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Description-Content-Type: text/markdown
+
+# Scylla-Go-Round
+
+Welcome to Scylla-Go-Round! Spin up your ScyllaDB schemas into Go types with ease and style. This CLI tool is your handy companion in bridging the gap between schema design and Go implementation, ensuring your applications are running smoothly with the latest data structures.
+
+## Features
+
+- **Generate Go types** directly from your ScyllaDB or Cassandra schema.
+- **Automatic connection** to your ScyllaDB instance.
+- **Environment and CLI flexibility** for easy configuration.
+
+## Getting Started
+
+### Prerequisites
+
+- Python 3.6+
+- ScyllaDB or Cassandra setup
+
+### Installation
+
+Install `scylla-go-round` using pip:
+
+```bash
+pip install scylla-go-round
+```
+
+### Usage
+
+Generate Go types by running:
+
+```bash
+scyllago --keyspace your_keyspace_name --host your_scylladb_host
+```
+
+### Configuration
+
+You can configure `scylla-go-round` via environment variables or command line arguments:
+
+- `SCYLLADB_DEV_HOST`: The host for your ScyllaDB instance.
+- `SCYLLADB_DEV_ROLE`: Your ScyllaDB username.
+- `SCYLLADB_DEV_PWD`: Your ScyllaDB password.
+
+There is an example of what your `.env` file can look like in this current directory. You should rename that to be the `.env` file if you want it to be loaded in from this tool.
+
+### Contributing
+
+We love contributions! If you'd like to help improve Scylla-Go-Round, please follow these steps:
+
+- Fork the repo on GitHub.
+- Clone your fork locally.
+- Create a new feature branch (git checkout -b my-new-feature).
+- Make your changes.
+- Push the branch to GitHub (git push origin my-new-feature).
+- Submit a pull request.
+
+### License
+
+Scylla-Go-Round is released under the MIT License. See the LICENSE file for more details.
+
+Happy Coding!
+Thank you for using or contributing to Scylla-Go-Round. Have fun spinning your schemas into efficient Go types!
+
