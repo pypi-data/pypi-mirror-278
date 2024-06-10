@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: python-download
+Version: 0.0.2
+Summary: Python for download.
+Home-page: https://github.com/ChenyangGao/web-mount-packs/tree/main/python-module/python-download
+License: MIT
+Keywords: download
+Author: ChenyangGao
+Author-email: wosiwujm@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: http_response
+Requires-Dist: python-asynctools
+Requires-Dist: python-concurrenttools
+Requires-Dist: python-filewrap
+Requires-Dist: python-urlopen
+Project-URL: Repository, https://github.com/ChenyangGao/web-mount-packs/tree/main/python-module/python-download
+Description-Content-Type: text/markdown
+
+# Python for download..
+
+## Installation
+
+You can install from [pypi](https://pypi.org/project/python-download/)
+
+```console
+pip install -U python-download
+```
+
+## Usage
+
+### Module
+
+```python
+import download
+```
+
+### Command
+
+```console
+$ python-download -h
+usage: python-download [-h] [-d SAVEDIR] [-r] [-hs HEADERS] [-rq] [-v] [url]
+
+python url downloader
+
+positional arguments:
+  url                   URL(s) to be downloaded (one URL per line), if omitted, read from stdin
+
+options:
+  -h, --help            show this help message and exit
+  -d SAVEDIR, --savedir SAVEDIR
+                        path to the downloaded file
+  -r, --resume          skip downloaded data
+  -hs HEADERS, --headers HEADERS
+                        dictionary of HTTP Headers to send with
+  -rq, --use-requests   use `requests` module
+  -v, --version         print the current version
+```
+
