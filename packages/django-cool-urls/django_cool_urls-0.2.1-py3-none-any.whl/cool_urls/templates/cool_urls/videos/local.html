@@ -1,0 +1,11 @@
+<div class="cool-urls-video-container-local">
+  <video controls poster="{{ poster }}" preload="none">
+    {{ webm }}
+    {{ mp4 }}
+    <p>
+      It looks like your browser doesn't do HTML video.
+      Maybe you'll have better luck with <a href="{{ origin_url }}">the original source</a>.
+    </p>
+  </video>
+  <p class="origin">Via <a href="{{ origin_url }}">{{ origin }}</a></p>
+</div>
