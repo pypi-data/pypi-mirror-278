@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: dataprofile
+Version: 1.0.0
+Summary: This library takes one data frame and returns another with a detailed profile of each column
+Home-page: https://github.com/emirigueiro/Proyects
+Author: Emiliano Rigueiro
+Author-email: rigueiroemiliano@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: pandas
+Requires-Dist: prettytable
+Requires-Dist: numpy
