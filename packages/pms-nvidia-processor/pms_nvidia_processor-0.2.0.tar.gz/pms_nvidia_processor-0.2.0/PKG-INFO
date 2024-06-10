@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: pms-nvidia-processor
+Version: 0.2.0
+Summary: lib for pms nvidia processors
+Author: HyeongSeok Kim
+Author-email: tiryul@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: loguru (>=0.7.2,<0.8.0)
+Requires-Dist: numpy (>=1.26.4,<2.0.0)
+Requires-Dist: pms-inference-engine (==1.0.2)
+Requires-Dist: pms-tensorrt (==1.2.2)
+Description-Content-Type: text/markdown
+
+# pms-nvidia-processor
+
+repos for pms-nvidia-processor
+
+- [PyPi Package](https://pypi.org/project/pms-nvidia-processor/)
+
