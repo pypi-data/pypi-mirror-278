@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: jMF2D
+Version: 0.0.5
+Summary: jMF2D: Enhancing and accelerating cell type deconvolution of spatial transcriptomics with joint learning and non-negative matrix factorization
+Home-page: https://github.com/xkmaxidian/jMF2D
+Author: Yuhong Zha
+Author-email: 18583330027@163.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas ==2.0.3
+Requires-Dist: numpy ==1.24.4
+Requires-Dist: scanpy ==1.9.8
+Requires-Dist: scipy ==1.10.1
+Requires-Dist: scikit-learn ==1.0.2
+Requires-Dist: scikit-misc ==0.2.0
+Requires-Dist: matplotlib ==3.7.5
+Requires-Dist: seaborn ==0.13.2
+Requires-Dist: anndata ==0.9.2
+Requires-Dist: opencv-python ==4.10.0.82
+Requires-Dist: leidenalg ==0.10.2
+Requires-Dist: POT ==0.9.3
+
+UNKNOWN
+
