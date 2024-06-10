@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: libcde
+Version: 0.0.1
+Summary: A library to work with CDE .dt application files.
+Author: BotchedRPR
+Author-email: BotchedRPR <igor@chleb.me>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# libcde
+
+This is a package to create (maybe later modify) CDE
+dt application definition files.
