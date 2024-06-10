@@ -1,0 +1,63 @@
+body{
+    background-color: #181A1B;
+    color: white;
+}
+
+hr{
+    height:1vh;
+    border-radius: 10px;
+    margin: 50px auto;
+}
+
+.events_criticals_rod{
+    background-color: red;
+    color:red;
+
+}
+.events_criticals_category{
+    color:red
+}
+
+.events_majors_rod{
+    background-color: orange;
+    color:orange;
+}
+
+.events_majors_category{
+    color:orange;
+}
+
+.events_minors_rod{
+    background-color: green;
+    color:green;
+}
+
+.events_minors_category{
+    color:green
+}
+.events_title{
+    text-align: center;
+    border: 1px red;
+    color:rgb(255, 178, 134);
+}
+
+
+.events_date{
+    color:hotpink;
+}
+
+
+.events_link{
+    font-style: italic;
+    color:aqua;
+}
+
+#main_title{
+    text-align: center;
+    text-decoration: double;
+    font-size: 50px;
+    margin: 10px;
+}
+#date_actu{
+    font-style: italic;
+}
