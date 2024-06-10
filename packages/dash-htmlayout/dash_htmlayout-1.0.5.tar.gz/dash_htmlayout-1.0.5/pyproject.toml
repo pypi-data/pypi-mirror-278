@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dash-htmlayout"
+version = "1.0.5"
+authors = [
+  { name="Steve Kossouho", email="noreply@example.com" },
+]
+description = "Build HTML layouts in Dash with HTML"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "lxml",
+    "dash >= 2.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/artscoop/dash-htmlayout"
+"Documentation" = "https://artscoop.github.io/dash-htmlayout/htmlayout.html"
+"Bug Tracker" = "https://github.com/artscoop/dash-htmlayout/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.pylint.TYPECHECK]
+ignored-modules= ["numpy", "lxml"]
+
+[tool.pylint.'MESSAGES CONTROL']
+disable=["import-error", "no-name-in-module"]
