@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+willow_exiftool/__init__.py
+willow_exiftool/stripexif.py
+willow_exiftool.egg-info/PKG-INFO
+willow_exiftool.egg-info/SOURCES.txt
+willow_exiftool.egg-info/dependency_links.txt
+willow_exiftool.egg-info/requires.txt
+willow_exiftool.egg-info/top_level.txt
