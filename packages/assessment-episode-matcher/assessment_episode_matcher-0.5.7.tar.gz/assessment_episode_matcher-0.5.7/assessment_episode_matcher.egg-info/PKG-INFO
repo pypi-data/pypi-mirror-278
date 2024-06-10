@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: assessment_episode_matcher
+Version: 0.5.7
+Author: Aftab Jalal
+Author-email: mj@auditlytics.nz
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: python-dotenv==1.0.1
+Requires-Dist: pandas==2.2.2
+Requires-Dist: pyarrow==16.1.0
+Requires-Dist: azure_data_tables==12.5.0
+Requires-Dist: azure_storage_blob==12.20.0
