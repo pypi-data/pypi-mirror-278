@@ -1,0 +1,83 @@
+[project]
+name = "diracx-routers"
+description = "TODO"
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = []
+license = { text = "GPL-3.0-only" }
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering",
+    "Topic :: System :: Distributed Computing",
+]
+dependencies = [
+    "aiobotocore>=2.12",
+    "authlib",
+    "botocore",
+    "cachetools",
+    "dirac",
+    "diracx-core",
+    "diracx-db",
+    "python-dotenv",    # TODO: We might not need this
+    "python-multipart",
+    "fastapi",
+    "httpx",
+    "pydantic >=2.4",
+    "sqlalchemy",
+    "opentelemetry-api",
+    "opentelemetry-exporter-otlp",
+    "opentelemetry-instrumentation-fastapi",
+    "opentelemetry-instrumentation-logging",
+    "opentelemetry-sdk",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+testing = ["diracx-testing", "moto[server]", "pytest-httpx"]
+types = [
+    "boto3-stubs",
+    "types-aiobotocore[essential]",
+    "types-aiobotocore-s3",
+    "types-cachetools",
+    "types-python-dateutil",
+    "types-PyYAML",
+    "types-requests",
+]
+
+[project.entry-points."diracx.services"]
+jobs = "diracx.routers.job_manager:router"
+config = "diracx.routers.configuration:router"
+auth = "diracx.routers.auth:router"
+".well-known" = "diracx.routers.auth.well_known:router"
+
+[project.entry-points."diracx.access_policies"]
+WMSAccessPolicy = "diracx.routers.job_manager.access_policies:WMSAccessPolicy"
+SandboxAccessPolicy = "diracx.routers.job_manager.access_policies:SandboxAccessPolicy"
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[build-system]
+requires = ["setuptools>=61", "wheel", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+root = ".."
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = [
+    "-v",
+    "--cov=diracx.routers",
+    "--cov-report=term-missing",
+    "-pdiracx.testing",
+    "-pdiracx.testing.osdb",
+    "--import-mode=importlib",
+]
+asyncio_mode = "auto"
+markers = [
+    "enabled_dependencies: List of dependencies which should be available to the FastAPI test client",
+]

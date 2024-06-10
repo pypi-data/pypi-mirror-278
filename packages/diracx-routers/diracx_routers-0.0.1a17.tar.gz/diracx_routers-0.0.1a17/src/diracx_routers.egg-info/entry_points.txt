@@ -1,0 +1,9 @@
+[diracx.access_policies]
+SandboxAccessPolicy = diracx.routers.job_manager.access_policies:SandboxAccessPolicy
+WMSAccessPolicy = diracx.routers.job_manager.access_policies:WMSAccessPolicy
+
+[diracx.services]
+.well-known = diracx.routers.auth.well_known:router
+auth = diracx.routers.auth:router
+config = diracx.routers.configuration:router
+jobs = diracx.routers.job_manager:router
