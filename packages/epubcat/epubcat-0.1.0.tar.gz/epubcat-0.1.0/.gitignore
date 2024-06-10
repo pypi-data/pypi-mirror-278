@@ -1,0 +1,8 @@
+*
+!LICENSE.txt
+!README.md
+!pyproject.toml
+!epubcat/
+!epubcat/*.py
+!epubcat/**/
+!epubcat/**/*.py
