@@ -1,0 +1,6 @@
+[console_scripts]
+jpegger=jpegger:run
+mediakiller=media_killer:run
+subconv=sub_conv:run
+update_githubhosts=systools.update_githubhosts:run
+
