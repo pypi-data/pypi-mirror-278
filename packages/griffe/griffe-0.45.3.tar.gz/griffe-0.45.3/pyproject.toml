@@ -1,0 +1,76 @@
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[project]
+name = "griffe"
+description = "Signatures for entire Python programs. Extract the structure, the frame, the skeleton of your project, to generate API documentation or find breaking changes in your API."
+authors = [
+    { name = "Timothée Mazzucotelli", email = "dev@pawamoy.fr" },
+]
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = [
+    "api",
+    "signature",
+    "breaking-changes",
+    "static-analysis",
+    "dynamic-analysis",
+]
+dynamic = []
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Documentation",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+dependencies = [
+    "astunparse>=1.6; python_version < '3.9'",
+    "colorama>=0.4",
+]
+version = "0.45.3"
+
+[project.license]
+text = "ISC"
+
+[project.urls]
+Homepage = "https://mkdocstrings.github.io/griffe"
+Documentation = "https://mkdocstrings.github.io/griffe"
+Changelog = "https://mkdocstrings.github.io/griffe/changelog"
+Repository = "https://github.com/mkdocstrings/griffe"
+Issues = "https://github.com/mkdocstrings/griffe/issues"
+Discussions = "https://github.com/mkdocstrings/griffe/discussions"
+Gitter = "https://gitter.im/mkdocstrings/griffe"
+Funding = "https://github.com/sponsors/pawamoy"
+
+[project.scripts]
+griffe = "griffe.cli:main"
+
+[tool.pdm.version]
+source = "scm"
+
+[tool.pdm.build]
+package-dir = "src"
+editable-backend = "editables"
+source-includes = [
+    "share",
+]
+
+[tool.pdm.build.wheel-data]
+data = [
+    { path = "share/**/*", relative-to = "." },
+]
