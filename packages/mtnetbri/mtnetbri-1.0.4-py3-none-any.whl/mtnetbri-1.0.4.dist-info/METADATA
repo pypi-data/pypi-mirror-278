@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: mtnetbri
+Version: 1.0.4
+Summary: mtnetbri
+Home-page: https://github.com/pythonsystem/mtnetbri
+Author: Lucas Campagna
+License: MIT
+Description-Content-Type: text/plain
+License-File: LICENSE.txt
+Requires-Dist: pyparsing ==3.1.2
+Requires-Dist: rpyc ==5.2.3
+Requires-Dist: plumbum ==1.7.0
+Requires-Dist: numpy ==1.24.3
+
+mtnetbri
