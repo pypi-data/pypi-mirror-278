@@ -1,0 +1,137 @@
+# Introduction
+Bonjour, ce programme python sert à récupérer plusieurs flux RSS qui rapportent des erreurs sur plusieurs machines, et à afficher ces erreurs dans une page html. Les événements peuvent être triés par ordre chronologique ou par gravité. 
+Cela permet de donner un aperçu des dernières erreurs sur les machines pour de les surveiller directement depuis la page html.
+
+Ce programme réalisé en tant que projet d'étude. Voici les [consignes de l'instructeur](https://eric-wurbel.pedaweb.univ-amu.fr/extranet/Enseignement/SAE203/SAE203.html).
+
+# Format rss compatible
+Le format RSS qui est compatible avec ce programme est le paquet de simulation d'erreur crée par mon instructeur.
+Vous pouvez trouver ce paquet et sa documentation [ici](https://etulab.univ-amu.fr/wurbel.e/sae203-simu-site).
+
+# Prérequis
+```bash
+# Requis
+sudo apt install python3
+sudo apt install python3-pip
+# Pour l'installation avec git
+sudo apt install git
+sudo apt install make
+# Conseillé
+sudo apt install apache2
+```
+Il faut aussi vous assurer que l'utilisateur qui exécute le programme ait tous les droits sur le dossier de destination de la page html.
+
+- [ ] Installation des paquets requis
+- [ ] Droits rwx sur le dossier
+
+
+# Installation
+
+## Avec pip
+#### Depuis la publication de test 
+Attention, la pubication de test n'est pas tenue à jour
+
+```bash
+pip install -i https://test.pypi.org/simple/ Sae203_Arnaud --extra-index-url https://pypi.org/simple/
+
+python3 -c "from Sae203_Arnaud.filetools import add_path;add_path()"
+
+source ~/.bashrc
+```
+
+### Depuis la publication officielle
+```bash
+pip install Sae203_Arnaud
+
+python3 -c "from Sae203_Arnaud.filetools import add_path;add_path()"
+
+source ~/.bashrc
+
+```
+## Avec github
+``` bash
+git clone https://etulab.univ-amu.fr/g23015097/sae203_python.git --depth 1 -b main
+cd sae203_python
+make
+source ~/.bashrc
+```
+Vous pouvez par la suite supprimer le dossier sae203_python, car le programme est installé sur la machine
+# Configuration et commandes
+## Syntaxe de base
+
+```console
+
+$ aggreg --help
+Usage: aggreg [OPTIONS] COMMAND [ARGS]...
+
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  config   Permet de configurer les paramètres de l'agrégateur
+  crontab  Permet de planifier le lancement du programme principal
+  edit     Permet de modifier les fichiers du programme
+  run      Permet lancer le programme principal
+
+
+```
+
+```console
+
+$ aggreg config --help
+
+Usage: aggreg config [OPTIONS] COMMAND [ARGS]...
+
+  Permet de configurer les paramètres de l'agrégateur
+
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  add-source     Permet d'ajouter une source ou des sources
+  destination    Chemin du fichier html que va produire la commande run
+  liste-sources  Permet de lister les sources
+  remove-source  Permet de supprimer une ou toutes les sources
+  rss-name       Chemin du fichier html que va produire la commande run
+  tri-chrono     Trie-t-on en fonction du temps ?
+
+```
+
+## Quelques exemples
+
+### Lancer le programme 
+```bash
+aggreg run
+```
+### Changer le tri chrono
+
+```bash
+aggreg config tri-chrono false
+```
+
+#### Mettre en place une crontab
+Si l'on veut que le programme se lance toutes les heures du lundi au vendredi
+
+```bash
+aggreg crontab -s "1 * * * 1-5"
+```
+
+Pour enlever cette planification
+```bash
+aggreg crontab -r
+```
+
+### Modification manuelle
+
+Si l'on veut modifier manuellement le fichier de configuration
+
+```bash
+aggreg edit 
+```
+
+```console
+[?] Quel fichier vous voulez modifier ?: 
+ > Configuration
+   Base HTML
+   Fichier CSS
+```
