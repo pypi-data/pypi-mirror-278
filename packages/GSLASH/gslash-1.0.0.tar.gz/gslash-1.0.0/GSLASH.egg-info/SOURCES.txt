@@ -1,0 +1,10 @@
+README.md
+setup.py
+GSLASH.egg-info/PKG-INFO
+GSLASH.egg-info/SOURCES.txt
+GSLASH.egg-info/dependency_links.txt
+GSLASH.egg-info/top_level.txt
+gslash/__init__.py
+gslash/convert.py
+gslash/stdio.py
+gslash/string.py
