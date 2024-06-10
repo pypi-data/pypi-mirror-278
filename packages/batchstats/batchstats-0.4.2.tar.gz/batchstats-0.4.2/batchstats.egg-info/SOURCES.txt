@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+batchstats/__init__.py
+batchstats/_misc.py
+batchstats/core.py
+batchstats/nanstats.py
+batchstats/stats.py
+batchstats.egg-info/PKG-INFO
+batchstats.egg-info/SOURCES.txt
+batchstats.egg-info/dependency_links.txt
+batchstats.egg-info/requires.txt
+batchstats.egg-info/top_level.txt
+tests/test_nanstats.py
+tests/test_stats.py
