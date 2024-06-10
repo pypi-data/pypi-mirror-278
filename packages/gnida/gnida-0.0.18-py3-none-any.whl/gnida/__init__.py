@@ -1,0 +1,1 @@
+from .starting import write_teor, write_code
