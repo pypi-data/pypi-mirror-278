@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: printstyler
+Version: 0.1.0
+Summary: The Printer package provides a simple way to print messages with ANSI colors and styles in Python.
+Home-page: https://github.com/Jmofuture/printer
+Author: Jean Olmedillo
+Author-email: jeanolmedillo@outlook.com
+Keywords: print,printer
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENCE.txt
+
+# Printer Package
+
+The `Printer` package provides a simple way to print messages with ANSI colors and styles in Python.
+
+## Installation
+
+You can install the package using pip:
+
+```bash
+pip install printer
+
+
+
+## Available Colors
+- black
+- red
+- green
+- yellow
+- blue
+- magenta
+- cyan
+- white
+
+## Available Styles
+- bold
+- faint
+- italic
+- underline
+- blink
+- reversed
+- hidden
+
+#Usage
+
+from printer import Printer as p
+
+
+
+# Print a standard message
+p.standard("This is a standard message", style="bold")
+
+# Print an error message
+p.error("This is an error message", style="underline")
+
+# Print an info message
+p.info("This is an info message", style="italic")
+
+# Print a warning message
+p.warning("This is a warning message", style="blink")
+
+# Print a success message
+p.success("This is a success message", style="reversed")
+
+# Print a debug message
+p.debug("This is a debug message", style="hidden")
+
+# Print a custom message
+p.custom("This is a custom message", color="cyan", style="bold", prefix="Custom:")
