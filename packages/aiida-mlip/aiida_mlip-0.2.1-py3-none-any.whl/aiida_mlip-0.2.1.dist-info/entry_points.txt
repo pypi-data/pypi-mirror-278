@@ -1,0 +1,16 @@
+[aiida.calculations]
+mlip.md=aiida_mlip.calculations.md:MD
+mlip.opt=aiida_mlip.calculations.geomopt:GeomOpt
+mlip.sp=aiida_mlip.calculations.singlepoint:Singlepoint
+mlip.train=aiida_mlip.calculations.train:Train
+
+[aiida.data]
+mlip.config=aiida_mlip.data.config:JanusConfigfile
+mlip.modeldata=aiida_mlip.data.model:ModelData
+
+[aiida.parsers]
+mlip.md_parser=aiida_mlip.parsers.md_parser:MDParser
+mlip.opt_parser=aiida_mlip.parsers.opt_parser:GeomOptParser
+mlip.sp_parser=aiida_mlip.parsers.sp_parser:SPParser
+mlip.train_parser=aiida_mlip.parsers.train_parser:TrainParser
+
