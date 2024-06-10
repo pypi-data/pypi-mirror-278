@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: DoubleHelix
+Version: 1.0.0a4
+Summary: Genomic data manipulation tool
+Author-email: Multiple <unavailable@doublehelix.bio>
+License: MIT License
+        
+        Copyright (c) 2024 chaplin89
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: homepage, https://github.com/DoubleHelixApp/DoubleHelix
+Project-URL: Documentation, https://helix.readthedocs.io/en/latest/
+Project-URL: Repository, https://github.com/DoubleHelixApp/DoubleHelix
+Project-URL: Issues, https://github.com/DoubleHelixApp/DoubleHelix/issues
+Project-URL: Changelog, https://github.com/DoubleHelix/DoubleHelix/releases
+Keywords: bioinformatics,genetics,wgs,microarray,science
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Environment :: X11 Applications :: Qt
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: setuptools
+Requires-Dist: pefile
+Requires-Dist: pycurl
+Requires-Dist: tqdm
+Requires-Dist: google-cloud-storage
+Requires-Dist: sphinx
+Requires-Dist: pytest
+Requires-Dist: pyinstaller
+Requires-Dist: PySide6
+Requires-Dist: jinja2
+Requires-Dist: vcf_parser
+Requires-Dist: doublehelix-external==v0.0.2
+Requires-Dist: sentry-sdk
+Requires-Dist: debugpy
+Requires-Dist: psutil
+Requires-Dist: pydantic
+
+<p align="center">
+  <img src="https://avatars.githubusercontent.com/u/168782993?s=200&v=4">
+</p>
+  <h1 align="center">DoubleHelix</h1>
+
+[![Build + Lint](https://github.com/DoubleHelixApp/DoubleHelix/actions/workflows/python-build-lint.yml/badge.svg)](https://github.com/Helix/Helix/actions/workflows/python-build-lint.yml)
+[![Python Publish](https://github.com/DoubleHelixApp/DoubleHelix/actions/workflows/python-publish.yml/badge.svg)](https://github.com/Helix/Helix/actions/workflows/python-publish.yml/badge.svg)
+
+[![PyInstaller release for Linux](https://github.com/DoubleHelixApp/DoubleHelix/actions/workflows/python-pyinstaller-linux.yml/badge.svg)](https://github.com/Helix/Helix/actions/workflows/python-pyinstaller-linux.yml)
+[![PyInstaller release for Windows](https://github.com/DoubleHelixApp/DoubleHelix/actions/workflows/python-pyinstaller-win.yml/badge.svg)](https://github.com/Helix/Helix/actions/workflows/python-pyinstaller-win.yml)
+
+This is my attempt to improve [WGSE](https://github.com/WGSExtract/WGSExtract-Dev). Still under heavy development. Don't expect anything working.
+
+- [PyPi Package](https://pypi.org/project/doublehelix/)
+- [Documentation](https://doublehelixapp.github.io/)
+
+Follow [this](https://t.me/DoubleHelixApp) very low traffic telegram channel if you don't want to miss any updates on DoubleHelix (the channel is managed by [DoubleHelix Telegram bot](https://github.com/DoubleHelixApp/TelegramBOT)).
+
+### Launch
+The only currently supported way to install `DoubleHelix` is with a pypi package.
+
+```bash
+sudo apt install libqt6waylandclient6 samtools tabix bcftools -y # Only for Linux
+python -m pip install doublehelix
+helix
+```
+
+NOTE: See the [doc](https://doublehelixapp.github.io/) for troubleshooting and for developer/user guides.
