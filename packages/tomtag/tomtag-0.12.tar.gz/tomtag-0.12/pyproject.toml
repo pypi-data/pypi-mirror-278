@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools", "numpy"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tomtag"
+version = "0.12"
+dependencies = [
+  "numpy",
+]
+requires-python = ">=3.8"
+authors = [
+  {name = "Thomas Jaeken", email = "tj2022@hw.ac.uk"},
+]
+description = "Package to identify correlated single photon detection events."
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["timetag"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/Thomas-Jaeken/tomtag"
+Documentation = "https://tomtag.readthedocs.io"
+Repository = "https://github.com/Thomas-Jaeken/tomtag.git"
+"Bug Tracker" = "https://github.com/Thomas-Jaeken/tomtag/issues"
