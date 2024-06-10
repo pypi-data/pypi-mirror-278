@@ -1,0 +1,3 @@
+[console_scripts]
+py-watch-power=py_watch_power:cli.entrypoint
+
