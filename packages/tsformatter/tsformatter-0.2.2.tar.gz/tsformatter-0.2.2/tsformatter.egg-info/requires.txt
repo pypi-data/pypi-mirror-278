@@ -1,0 +1,7 @@
+
+[dev]
+ruff>=0.4.4
+pyright>=1.1.362
+
+[tests]
+pytest==8.1.1

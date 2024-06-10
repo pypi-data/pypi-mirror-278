@@ -1,0 +1,33 @@
+[project]
+name = "tsformatter"
+version = "0.2.2"
+authors = [{ name = "jykob" }]
+description = "Helper package to format TeamSpeak BBCode"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/jykob/tsformatter"
+
+[project.optional-dependencies]
+dev = ["ruff >= 0.4.4", "pyright >= 1.1.362"]
+tests = ["pytest==8.1.1"]
+
+[build-system]
+requires = ["setuptools>=69.5.1"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["tsformatter"]
+
+[tool.setuptools.package-data]
+tsformatter = ["py.typed"]
+
+[tool.ruff]
+line-length = 100
+lint = { select = ["E", "F", "I", "UP", "SIM"] }

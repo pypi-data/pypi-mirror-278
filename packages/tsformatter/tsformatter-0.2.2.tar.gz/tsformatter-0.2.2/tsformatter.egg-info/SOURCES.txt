@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+tests/test_formatter.py
+tsformatter/__init__.py
+tsformatter/py.typed
+tsformatter.egg-info/PKG-INFO
+tsformatter.egg-info/SOURCES.txt
+tsformatter.egg-info/dependency_links.txt
+tsformatter.egg-info/requires.txt
+tsformatter.egg-info/top_level.txt
