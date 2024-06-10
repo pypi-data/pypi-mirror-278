@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+version = {attr = "slb_glossary.__version__"}
+
+
+[project]
+name = "slb_glossary"
+dynamic = ["version"]
+
+authors = [
+  { name="Daniel T. Afolayan (ti-oluwa)", email="tioluwa.dev@gmail.com" },
+]
+maintainers = [
+  { name="Daniel T. Afolayan (ti-oluwa)", email="tioluwa.dev@gmail.com" },
+]
+description = "Search the Schlumberger Oilfield Glossary programmatically using Selenium."
+keywords = [
+    "Schlumberger",
+    "Oilfield",
+    "Glossary",
+    "Petroleum terms",
+    "Petroleum",
+]
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+]
+dependencies = [
+    "selenium>=4.10.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/ti-oluwa/slb_glossary"
+"Bug Tracker" = "https://github.com/ti-oluwa/slb_glossary/issues"
+"Repository" = "https://github.com/ti-oluwa/slb_glossary"
