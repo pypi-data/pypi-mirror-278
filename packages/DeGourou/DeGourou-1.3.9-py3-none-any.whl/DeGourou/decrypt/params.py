@@ -1,0 +1,1 @@
+KEYPATH = "degourou/adobekey.der"
