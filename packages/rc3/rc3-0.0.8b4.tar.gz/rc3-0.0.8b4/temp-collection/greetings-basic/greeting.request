@@ -1,0 +1,21 @@
+{
+    "$schema": "https://json.schemastore.org/rc3-request-0.0.3.json",
+    "method": "GET",
+    "url": "{{baseUrl}}/v1/greetings/1",
+    "auth": {
+        "type": "inherit"
+    },
+    "headers": {
+        "XXX-movie": "bobo",
+        "XXX-page": "71",
+        "XXX-uuid": "{{#uuid global.header-uuid }}",
+        "XXX-pkce-challenge": "{{#pkce_cvcc code_verifier }}",
+        "page_size": "100"
+    },
+    "params": {
+        "search": "bob*",
+        "page": "2",
+        "page_size": "100",
+        "uuid": "{{#uuid param-uuid }}"
+    }
+}
