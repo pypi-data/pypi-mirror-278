@@ -1,0 +1,13 @@
+Metadata-Version: 2.3
+Name: charz
+Version: 0.0.1
+Summary: An object oriented terminal game engine
+Author-email: FloatingInt <knutolaihelgesen@gmail.com>
+License-File: LICENSE.txt
+Requires-Python: >=3.10
+Requires-Dist: linflex~=0.1.3
+Description-Content-Type: text/markdown
+
+# Charz
+
+An object oriented terminal game engine
