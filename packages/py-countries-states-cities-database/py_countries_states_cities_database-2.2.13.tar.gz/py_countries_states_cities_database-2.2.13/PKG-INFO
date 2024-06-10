@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: py_countries_states_cities_database
+Version: 2.2.13
+Summary: A Python package to get countries, states and cities information
+Home-page: https://github.com/umer2001/py_countries_states_cities_database
+Author: Umer Farooq
+Author-email: umer2001.uf@gmail.com
+License: MIT
+Keywords: countries states cities database
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+License-File: LICENSE
+
+## API 🚀
+
+🎉 Introducing **API** for Countries States Cities Database.
+
+### 📦 Installation
+
+```bash
+pip install py-countries-states-cities-database
+```
+
+### 📚 Usage
+
+```python
+    from py_countries_states_cities_database import (
+        get_all_cities,
+        get_all_states,
+        get_all_countries,
+        get_all_sub_regions,
+        get_all_regions,
+        get_all_states_and_cities_nested,
+        get_all_countries_and_states_nested,
+        get_all_countries_and_cities_nested,
+        get_file_path
+    )
+
+    # All functions return a list of dictionaries
+    print(get_all_cities())
+    print(get_all_states())
+    print(get_all_countries())
+    print(get_all_sub_regions())
+    print(get_all_regions())
+    print(get_all_states_and_cities_nested())
+    print(get_all_countries_and_states_nested())
+    print(get_all_countries_and_cities_nested())
+
+
+    # File name options
+    | "cities.json"
+    | "states.json"
+    | "countries.json"
+    | "subregions.json"
+    | "regions.json"
+    | "countries+cities.json"
+    | "countries+states.json"
+    | "states+cities.json"
+    | "countries+states+cities.json",
+
+    # Get the file path
+    print(get_file_path("cities.json"))
+```
+
+
