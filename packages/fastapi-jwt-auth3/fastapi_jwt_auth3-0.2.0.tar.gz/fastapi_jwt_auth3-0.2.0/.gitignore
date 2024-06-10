@@ -1,0 +1,23 @@
+# python generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# venv
+.venv
+
+# coverage
+.coverage
+htmlcov
+coverage.json
+coverage.xml
+
+# pycharm
+.idea/**
+
+# keys
+*.pem
+secret_key.txt
