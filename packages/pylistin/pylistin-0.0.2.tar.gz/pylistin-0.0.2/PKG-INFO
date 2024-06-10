@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: pylistin
+Version: 0.0.2
+Summary: Functions to work with list in python
+Author-email: Camilo Barbosa <cab331@hotmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/calimpio/pylistin
+Project-URL: Issues, https://github.com/calimpio/pylistin/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10.11
+Description-Content-Type: text/markdown
+
+# PYLISTING
+Functions to work with list in python
+
+
+# install
+- `pip install pylistin`
+
+
+
+# API
+
+## list_reduce `<E, T>(list: list[E], callback: (ac: T, item: E, index: int, list: list[E]) -> T,  ac_init: T) -> T `
+
+Move in for each all elements with a `lamda` function or `def` as callback for return  a one result.
+
+this function is used to loop through a list and accumulate a value.
+
+```python
+from pylisting import list_reduce
+
+list_reduce([2,5,9], lambda ac, item: ac + item, 0) # 
+
+```
