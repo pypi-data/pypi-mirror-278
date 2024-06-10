@@ -1,0 +1,5 @@
+# Docs build remnants
+build/
+build-coverage
+*/_autosummary
+**/*_autogen

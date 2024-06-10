@@ -1,0 +1,13 @@
+name: base
+channels:
+  - conda-forge
+dependencies:
+ - boa
+ - build
+ - python>=3.10
+ - twine
+ - setuptools_scm
+ - git
+ - zip
+ - unzip
+ - rsync

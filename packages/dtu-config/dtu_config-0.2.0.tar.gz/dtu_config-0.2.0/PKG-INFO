@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: dtu_config
+Version: 0.2.0
+Summary: A library to add a configuration file to your project
+Author-email: DTU Wind Energy <neda@dtu.dk>
+License: BSD-3-Clause
+Project-URL: homepage, https://www.wasp.dk/
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: appdirs<2,>=1
+Requires-Dist: email-validator>=2
+Requires-Dist: phonenumbers<9,>=8
+Requires-Dist: pydantic<3,>=2
+Provides-Extra: dev
+Requires-Dist: ipython>=7; extra == "dev"
+Requires-Dist: pre-commit>=2; extra == "dev"
+Requires-Dist: pytest>=6; extra == "dev"
+Requires-Dist: pytest-cov>=3; extra == "dev"
+Requires-Dist: setuptools>=45; extra == "dev"
+Requires-Dist: setuptools_scm>=6; extra == "dev"
+Requires-Dist: sphinx>=4; extra == "dev"
+Requires-Dist: sphinx_rtd_theme>=1; extra == "dev"
+Requires-Dist: sphinx-argparse>=0.3; extra == "dev"
+
+# DTU Configuration
+
+This package provides a configuration class to get, process, edit and store user input.
+
+
+It is a thin wrapper around ConfigParser that provides utilities for adding validated configuration options and prompting the user for them, or allowing them to be filled by a CLI.
+
+### Usage
+
+
+```python
+
+from dtu_config import DtuConfig
+app_name = "example_app"
+app_author = "author_name"
+conf = DtuConfig(app_name=app_name, app_author=app_author)
+
+# Add options.
+
+conf.add_str(
+    "User metadata", "institution",
+    input_text="Please enter your institution"
+)
+conf.add_email(
+    "User metadata", "email",
+    input_text="Please enter your email (optional)",
+    required=False
+)
+conf.create_config()
+```

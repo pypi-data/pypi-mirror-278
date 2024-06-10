@@ -1,0 +1,62 @@
+# yaml-language-server: $schema=https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json
+stages:
+  - format
+  - build_test_env
+  - test
+  - build
+  - deploy
+
+include:
+  - project: "ram/software/ci-recipes"
+    ref: fix_py_deploy
+    file:
+      - utils/default_vars.yml
+      - precommit_format.yml
+      - python/run_pytest.yml
+      - python/run_sphinx.yml
+      - python/py_build.yml
+      - python/py_deploy.yml
+
+default:
+  tags: ["ramtt_int-cluster", "linux-docker"]
+
+# Check that pre-commit has run
+run_precommit:
+  extends: .verify_precommit
+
+# Build environments for testing
+build_test_docker:
+  extends: .build_test_env_docker
+
+# Run tests
+test_linux:
+  extends:
+    - .pytest_conda_env
+
+# Build
+build_wheel:
+  extends: .build_wheel_template
+build_conda:
+  extends: .build_rattler_template
+
+# Deploy
+deploy_pypi:
+  extends: .deploy_pypi_open
+  variables:
+    TWINE_REPOSITORY: pypi
+  needs: ["build_wheel"]
+deploy_conda:
+  extends: .deploy_conda_open
+  needs: ["build_conda"]
+deploy_conda_dev:
+  extends: .deploy_conda_dev
+  needs: ["build_conda"]
+
+# Docs
+build_docs:
+  extends: .build_docs
+  tags: ["ramtt_int-cluster", "linux-docker"]
+pages:
+  extends: .deploy_docs_pages
+  needs: ["build_docs"]
+  tags: ["ramtt_int-cluster", "linux-docker"]

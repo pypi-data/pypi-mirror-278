@@ -1,0 +1,33 @@
+context:
+  version: "0.2.1"
+  pkg_name: dtu_config
+
+package:
+  name: "${{ pkg_name }}"
+  version: "${{ version }}"
+
+source:
+  path: ../
+
+build:
+  number: 0
+  script: "SETUPTOOLS_SCM_PRETEND_VERSION=${{ version }} pip install --no-deps --no-build-isolation --ignore-installed ."
+  noarch: python
+
+requirements:
+  run:
+    - email-validator =2
+    - appdirs =1
+    - phonenumbers =8
+    - pydantic =2
+    - python >=3.10
+
+  host:
+    - pip
+    - "python ${{ python }}"
+    - setuptools
+    - setuptools_scm
+tests:
+  - python:
+      imports:
+        - "${{ pkg_name }}"
