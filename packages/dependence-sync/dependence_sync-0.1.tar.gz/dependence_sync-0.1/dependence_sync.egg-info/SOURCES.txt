@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+dependence_sync.egg-info/PKG-INFO
+dependence_sync.egg-info/SOURCES.txt
+dependence_sync.egg-info/dependency_links.txt
+dependence_sync.egg-info/entry_points.txt
+dependence_sync.egg-info/top_level.txt
+dsm/__init__.py
+dsm/app.py
+dsm/deps.py
+dsm/env.py
+dsm/fetcher.py
+dsm/init_project.py
+dsm/sync.py
