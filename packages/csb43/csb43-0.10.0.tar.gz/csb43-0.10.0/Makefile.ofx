@@ -1,0 +1,29 @@
+
+OFX_PATH := .ofx_schemas
+BUNDLE := OFX2.1.1.zip
+SCHEMA_ZIP := OFX\ 2.1.1\ schema.zip
+SCHEMA := OFX2_Protocol.xsd
+URL := http://www.ofx.net/downloads/
+
+BUNDLE_PATH := $(OFX_PATH)/$(BUNDLE)
+SCHEMA_ZIP_PATH := $(OFX_PATH)/$(SCHEMA_ZIP)
+SCHEMA_PATH := $(OFX_PATH)/$(SCHEMA)
+
+.PHONY: all clean schemas
+
+all: schemas
+
+$(OFX_PATH):
+	mkdir -p "$@"
+	
+$(BUNDLE_PATH): $(OFX_PATH)
+	[ -s "$@" ] || wget "$(URL)$(notdir $@)" -O "$@"
+
+$(SCHEMA_ZIP_PATH): $(BUNDLE_PATH)
+	python -m zipfile -e "$<" "$(OFX_PATH)"
+
+schemas: $(SCHEMA_ZIP_PATH)
+	python -m zipfile -e "$<" "$(OFX_PATH)"
+
+clean:
+	@-rm -fr "$(OFX_PATH)"

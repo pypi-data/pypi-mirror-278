@@ -1,0 +1,9 @@
+# SPDX-FileCopyrightText: 2024 wmj <wmj.py@gmx.com>
+#
+# SPDX-License-Identifier: LGPL-3.0-or-later
+
+include README.*
+include LICENSE
+include src/csb43/py.typed
+recursive-include src/csb43/i18n *.pot *.po *.mo
+recursive-include doc *.*

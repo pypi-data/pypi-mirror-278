@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>csb43.record &#8212; csb43  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="csb43.utils" href="utils.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-csb43.aeb43.record">
+<span id="csb43-record"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.record</span></code><a class="headerlink" href="#module-csb43.aeb43.record" title="Link to this heading">¶</a></h1>
+<p>Base tools for building bytes chars records</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.record.BytesMixin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.record.</span></span><span class="sig-name descname"><span class="pre">BytesMixin</span></span><a class="headerlink" href="#csb43.aeb43.record.BytesMixin" title="Link to this definition">¶</a></dt>
+<dd><p>implements required methods for a bytes record</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.record.BytesMixin.accepts_nested_codes">
+<span class="sig-name descname"><span class="pre">accepts_nested_codes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#csb43.aeb43.record.BytesMixin.accepts_nested_codes" title="Link to this definition">¶</a></dt>
+<dd><p>return True if the record accepts this nested <cite>record</cite></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.record.CompositeRecordMixin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.record.</span></span><span class="sig-name descname"><span class="pre">CompositeRecordMixin</span></span><a class="headerlink" href="#csb43.aeb43.record.CompositeRecordMixin" title="Link to this definition">¶</a></dt>
+<dd><p>implements required methods for composite bytes records</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.record.CompositeRecordMixin.append">
+<span class="sig-name descname"><span class="pre">append</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytearray</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.record.CompositeRecordMixin.append" title="Link to this definition">¶</a></dt>
+<dd><p>append a bytes record to the collection of dependent records</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.record.FieldValue">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.record.</span></span><span class="sig-name descname"><span class="pre">FieldValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.record.FieldValue" title="Link to this definition">¶</a></dt>
+<dd><p>an identified field value</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="csb43.aeb43.record.FieldValue.field_id">
+<span class="sig-name descname"><span class="pre">field_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#csb43.aeb43.record.FieldValue.field_id" title="Link to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="csb43.aeb43.record.FieldValue.value">
+<span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bytes</span></em><a class="headerlink" href="#csb43.aeb43.record.FieldValue.value" title="Link to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.record.Record">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.record.</span></span><span class="sig-name descname"><span class="pre">Record</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="csb.html#csb43.aeb43.record.context.Aeb43Context" title="csb43.aeb43.record.context.Aeb43Context"><span class="pre">Aeb43Context</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raw</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dataclasses.InitVar</span><span class="p"><span class="pre">[</span></span><span class="pre">AnyBytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.record.Record" title="Link to this definition">¶</a></dt>
+<dd><p>an AEB43 record</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.record.Record.from_raw">
+<span class="sig-name descname"><span class="pre">from_raw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytearray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#csb43.aeb43.record.FieldValue" title="csb43.aeb43.record.FieldValue"><span class="pre">FieldValue</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#csb43.aeb43.record.Record.from_raw" title="Link to this definition">¶</a></dt>
+<dd><p>set a new record</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.record.Record.get_field">
+<span class="sig-name descname"><span class="pre">get_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field_id</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytearray</span></span></span><a class="headerlink" href="#csb43.aeb43.record.Record.get_field" title="Link to this definition">¶</a></dt>
+<dd><p>get raw field</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.record.Record.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">translated</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#csb43.aeb43.record.Record.to_dict" title="Link to this definition">¶</a></dt>
+<dd><p>return fields as a dict of typed values</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.record.Record.update_fields">
+<span class="sig-name descname"><span class="pre">update_fields</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">changes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.FieldValue" title="csb43.aeb43.record.FieldValue"><span class="pre">FieldValue</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">raw</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytearray</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytearray</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.aeb43.record.Record.update_fields" title="Link to this definition">¶</a></dt>
+<dd><p>update a field identified by <cite>field_id</cite></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.record.RecordManifest">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.record.</span></span><span class="sig-name descname"><span class="pre">RecordManifest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">code:</span> <span class="pre">bytes,</span> <span class="pre">sections:</span> <span class="pre">~typing.Mapping[~typing.Any,</span> <span class="pre">tuple[slice,</span> <span class="pre">~typing.Callable[[~csb43.aeb43.record.context.Aeb43Context,</span> <span class="pre">bytes</span> <span class="pre">|</span> <span class="pre">bytearray],</span> <span class="pre">~typing.Tuple[str</span> <span class="pre">|</span> <span class="pre">None,</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None]]</span> <span class="pre">|</span> <span class="pre">None]],</span> <span class="pre">size:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">80,</span> <span class="pre">default_factory:</span> <span class="pre">~typing.Callable[[~csb43.aeb43.record.RecordManifest],</span> <span class="pre">bytes]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">create_bytes_record&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.record.RecordManifest" title="Link to this definition">¶</a></dt>
+<dd><p>a record configuration</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.record.RecordManifest.create_record">
+<span class="sig-name descname"><span class="pre">create_record</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytearray</span></span></span><a class="headerlink" href="#csb43.aeb43.record.RecordManifest.create_record" title="Link to this definition">¶</a></dt>
+<dd><p>create a default record</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.record.RecordManifest.default_factory">
+<span class="sig-name descname"><span class="pre">default_factory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#csb43.aeb43.record.RecordManifest.default_factory" title="Link to this definition">¶</a></dt>
+<dd><p>create a default bytes record</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.record.RecordManifest.size_for">
+<span class="sig-name descname"><span class="pre">size_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field_id</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#csb43.aeb43.record.RecordManifest.size_for" title="Link to this definition">¶</a></dt>
+<dd><p>get size for a field identified by <cite>field_id</cite></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.record.RecordManifest.slice_for">
+<span class="sig-name descname"><span class="pre">slice_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field_id</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">slice</span></span></span><a class="headerlink" href="#csb43.aeb43.record.RecordManifest.slice_for" title="Link to this definition">¶</a></dt>
+<dd><p>get slice for a field idenfified by <cite>field_id</cite></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.record.RecordManifest.validate_code">
+<span class="sig-name descname"><span class="pre">validate_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytearray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#csb43.aeb43.record.RecordManifest.validate_code" title="Link to this definition">¶</a></dt>
+<dd><p>validate record code</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.record.RecordManifest.validate_size">
+<span class="sig-name descname"><span class="pre">validate_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytearray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#csb43.aeb43.record.RecordManifest.validate_size" title="Link to this definition">¶</a></dt>
+<dd><p>validate record size</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.record.RecordManifest.validator_for">
+<span class="sig-name descname"><span class="pre">validator_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field_id</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="csb.html#csb43.aeb43.record.context.Aeb43Context" title="csb43.aeb43.record.context.Aeb43Context"><span class="pre">Aeb43Context</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytearray</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.aeb43.record.RecordManifest.validator_for" title="Link to this definition">¶</a></dt>
+<dd><p>get validator for a field identified by <cite>field_id</cite></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.record.RegexValidator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.record.</span></span><span class="sig-name descname"><span class="pre">RegexValidator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pattern</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dataclasses.InitVar</span><span class="p"><span class="pre">[</span></span><span class="pre">AnyStr</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">search</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">warning</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.record.RegexValidator" title="Link to this definition">¶</a></dt>
+<dd><p>Validator for matching regex patterns</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.record.SingleRecordMixin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.record.</span></span><span class="sig-name descname"><span class="pre">SingleRecordMixin</span></span><a class="headerlink" href="#csb43.aeb43.record.SingleRecordMixin" title="Link to this definition">¶</a></dt>
+<dd><p>implements required methods for a bytes record that contains no other records</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.record.SingleRecordMixin.accepts_nested_codes">
+<span class="sig-name descname"><span class="pre">accepts_nested_codes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#csb43.aeb43.record.SingleRecordMixin.accepts_nested_codes" title="Link to this definition">¶</a></dt>
+<dd><p>return True if the record accepts this nested <cite>record</cite></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="csb43.aeb43.record.chain_validator">
+<span class="sig-prename descclassname"><span class="pre">csb43.aeb43.record.</span></span><span class="sig-name descname"><span class="pre">chain_validator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">validators</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="csb.html#csb43.aeb43.record.context.Aeb43Context" title="csb43.aeb43.record.context.Aeb43Context"><span class="pre">Aeb43Context</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytearray</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="csb.html#csb43.aeb43.record.context.Aeb43Context" title="csb43.aeb43.record.context.Aeb43Context"><span class="pre">Aeb43Context</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#csb43.aeb43.record.chain_validator" title="Link to this definition">¶</a></dt>
+<dd><p>chained validation sequence</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="csb43.aeb43.record.create_bytes_record">
+<span class="sig-prename descclassname"><span class="pre">csb43.aeb43.record.</span></span><span class="sig-name descname"><span class="pre">create_bytes_record</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">manifest</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.RecordManifest" title="csb43.aeb43.record.RecordManifest"><span class="pre">RecordManifest</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#csb43.aeb43.record.create_bytes_record" title="Link to this definition">¶</a></dt>
+<dd><p>create a default bytes record</p>
+</dd></dl>
+
+<p id="module-csb43.aeb43.record.errors">errors and warnings</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="csb43.aeb43.record.errors.ValidationException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.record.errors.</span></span><span class="sig-name descname"><span class="pre">ValidationException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.record.errors.ValidationException" title="Link to this definition">¶</a></dt>
+<dd><p>exception raised when a field does not validate</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="csb43.aeb43.record.errors.ValidationWarning">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.record.errors.</span></span><span class="sig-name descname"><span class="pre">ValidationWarning</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.record.errors.ValidationWarning" title="Link to this definition">¶</a></dt>
+<dd><p>warning issued when a field does not validate</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="csb43.aeb43.record.errors.message_error">
+<span class="sig-prename descclassname"><span class="pre">csb43.aeb43.record.errors.</span></span><span class="sig-name descname"><span class="pre">message_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#csb43.aeb43.record.errors.message_error" title="Link to this definition">¶</a></dt>
+<dd><p>a message error for a context line</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="csb43.aeb43.record.errors.raise_validation_exception">
+<span class="sig-prename descclassname"><span class="pre">csb43.aeb43.record.errors.</span></span><span class="sig-name descname"><span class="pre">raise_validation_exception</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">silent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.record.errors.raise_validation_exception" title="Link to this definition">¶</a></dt>
+<dd><p>raise an exception if <cite>strict</cite> is true, otherwise issue a warning</p>
+</dd></dl>
+
+</section>
+<section id="module-csb43.aeb43.fields">
+<span id="csb43-fields"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.fields</span></code><a class="headerlink" href="#module-csb43.aeb43.fields" title="Link to this heading">¶</a></h1>
+<p>Base tools for building descriptors fields for representing typed values and storing in bytes</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.Field">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.fields.</span></span><span class="sig-name descname"><span class="pre">Field</span></span><a class="headerlink" href="#csb43.aeb43.fields.Field" title="Link to this definition">¶</a></dt>
+<dd><p>a typed representation for a field</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.Field.adapt">
+<span class="sig-name descname"><span class="pre">adapt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">this</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.Record" title="csb43.aeb43.record.Record"><span class="pre">Record</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">InputT</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">InputT</span></span></span><a class="headerlink" href="#csb43.aeb43.fields.Field.adapt" title="Link to this definition">¶</a></dt>
+<dd><p>adapt input for processing or raise an Aeb43Exception</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.Field.default_factory">
+<span class="sig-name descname"><span class="pre">default_factory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">OutputT</span></span></span><a class="headerlink" href="#csb43.aeb43.fields.Field.default_factory" title="Link to this definition">¶</a></dt>
+<dd><p>return default factory function</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.Field.to_bytes">
+<span class="sig-name descname"><span class="pre">to_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">this</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.Record" title="csb43.aeb43.record.Record"><span class="pre">Record</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">InputT</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#csb43.aeb43.record.FieldValue" title="csb43.aeb43.record.FieldValue"><span class="pre">FieldValue</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#csb43.aeb43.fields.Field.to_bytes" title="Link to this definition">¶</a></dt>
+<dd><p>convert a typed field to bytes chunks</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.Field.to_field">
+<span class="sig-name descname"><span class="pre">to_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">this</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.Record" title="csb43.aeb43.record.Record"><span class="pre">Record</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">OutputT</span></span></span><a class="headerlink" href="#csb43.aeb43.fields.Field.to_field" title="Link to this definition">¶</a></dt>
+<dd><p>convert bytes chunks to a typed field</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.FieldMixin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.fields.</span></span><span class="sig-name descname"><span class="pre">FieldMixin</span></span><a class="headerlink" href="#csb43.aeb43.fields.FieldMixin" title="Link to this definition">¶</a></dt>
+<dd><p>Chacheable descriptor field mix-in</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.as_string">
+<span class="sig-prename descclassname"><span class="pre">csb43.aeb43.fields.</span></span><span class="sig-name descname"><span class="pre">as_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">this</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.Record" title="csb43.aeb43.record.Record"><span class="pre">Record</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_id</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#csb43.aeb43.fields.as_string" title="Link to this definition">¶</a></dt>
+<dd><p>get the field identified by <cite>field_id</cite> from a record as a string</p>
+</dd></dl>
+
+<p id="module-csb43.aeb43.fields.currency">Descriptor field for Currency type representation</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.currency.Currency">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.fields.currency.</span></span><span class="sig-name descname"><span class="pre">Currency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field_id:</span> <span class="pre">~typing.Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory:</span> <span class="pre">~typing.Callable[[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">~csb43.utils.currency.AnyCurrency]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">euro_currency&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.fields.currency.Currency" title="Link to this definition">¶</a></dt>
+<dd><p>currency code</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.currency.Currency.adapt">
+<span class="sig-name descname"><span class="pre">adapt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">this</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.Record" title="csb43.aeb43.record.Record"><span class="pre">Record</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Number</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="utils.html#csb43.utils.currency.AnyCurrency" title="csb43.utils.currency.AnyCurrency"><span class="pre">AnyCurrency</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="utils.html#csb43.utils.currency.AnyCurrency" title="csb43.utils.currency.AnyCurrency"><span class="pre">AnyCurrency</span></a></span></span><a class="headerlink" href="#csb43.aeb43.fields.currency.Currency.adapt" title="Link to this definition">¶</a></dt>
+<dd><p>adapt input for processing or raise an Aeb43Exception</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.currency.Currency.default_factory">
+<span class="sig-name descname"><span class="pre">default_factory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="utils.html#csb43.utils.currency.AnyCurrency" title="csb43.utils.currency.AnyCurrency"><span class="pre">AnyCurrency</span></a></span></span><a class="headerlink" href="#csb43.aeb43.fields.currency.Currency.default_factory" title="Link to this definition">¶</a></dt>
+<dd><p>return default factory function</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.currency.Currency.factory">
+<span class="sig-name descname"><span class="pre">factory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.fields.currency.Currency.factory" title="Link to this definition">¶</a></dt>
+<dd><p>return euro currency</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.currency.Currency.to_bytes">
+<span class="sig-name descname"><span class="pre">to_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">this</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.Record" title="csb43.aeb43.record.Record"><span class="pre">Record</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Number</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="utils.html#csb43.utils.currency.AnyCurrency" title="csb43.utils.currency.AnyCurrency"><span class="pre">AnyCurrency</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#csb43.aeb43.record.FieldValue" title="csb43.aeb43.record.FieldValue"><span class="pre">FieldValue</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#csb43.aeb43.fields.currency.Currency.to_bytes" title="Link to this definition">¶</a></dt>
+<dd><p>convert a typed field to bytes chunks</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.currency.Currency.to_field">
+<span class="sig-name descname"><span class="pre">to_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">this</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.Record" title="csb43.aeb43.record.Record"><span class="pre">Record</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="utils.html#csb43.utils.currency.AnyCurrency" title="csb43.utils.currency.AnyCurrency"><span class="pre">AnyCurrency</span></a></span></span><a class="headerlink" href="#csb43.aeb43.fields.currency.Currency.to_field" title="Link to this definition">¶</a></dt>
+<dd><p>convert bytes chunks to a typed field</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.currency.currency_validator">
+<span class="sig-prename descclassname"><span class="pre">csb43.aeb43.fields.currency.</span></span><span class="sig-name descname"><span class="pre">currency_validator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">warning</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#csb43.aeb43.record.RegexValidator" title="csb43.aeb43.record.RegexValidator"><span class="pre">RegexValidator</span></a></span></span><a class="headerlink" href="#csb43.aeb43.fields.currency.currency_validator" title="Link to this definition">¶</a></dt>
+<dd><p>validator for currency numeric code</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.currency.euro_currency">
+<span class="sig-prename descclassname"><span class="pre">csb43.aeb43.fields.currency.</span></span><span class="sig-name descname"><span class="pre">euro_currency</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.fields.currency.euro_currency" title="Link to this definition">¶</a></dt>
+<dd><p>return euro currency</p>
+</dd></dl>
+
+<p id="module-csb43.aeb43.fields.date">Descriptor for date fields</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.date.Date">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.fields.date.</span></span><span class="sig-name descname"><span class="pre">Date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field_id:</span> <span class="pre">~typing.Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory:</span> <span class="pre">~typing.Callable[[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">~datetime.date]</span> <span class="pre">=</span> <span class="pre">&lt;built-in</span> <span class="pre">method</span> <span class="pre">today</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.fields.date.Date" title="Link to this definition">¶</a></dt>
+<dd><p>date field</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.date.Date.adapt">
+<span class="sig-name descname"><span class="pre">adapt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">this</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.Record" title="csb43.aeb43.record.Record"><span class="pre">Record</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">date</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">datetime</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">date</span></span></span><a class="headerlink" href="#csb43.aeb43.fields.date.Date.adapt" title="Link to this definition">¶</a></dt>
+<dd><p>adapt input for processing or raise an Aeb43Exception</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.date.Date.default_factory">
+<span class="sig-name descname"><span class="pre">default_factory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">date</span></span></span><a class="headerlink" href="#csb43.aeb43.fields.date.Date.default_factory" title="Link to this definition">¶</a></dt>
+<dd><p>return default factory function</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.date.Date.factory">
+<span class="sig-name descname"><span class="pre">factory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.fields.date.Date.factory" title="Link to this definition">¶</a></dt>
+<dd><p>Current date or datetime:  same as self.__class__.fromtimestamp(time.time()).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.date.Date.to_bytes">
+<span class="sig-name descname"><span class="pre">to_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">this</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.Record" title="csb43.aeb43.record.Record"><span class="pre">Record</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">date</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">datetime</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#csb43.aeb43.record.FieldValue" title="csb43.aeb43.record.FieldValue"><span class="pre">FieldValue</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#csb43.aeb43.fields.date.Date.to_bytes" title="Link to this definition">¶</a></dt>
+<dd><p>convert a typed field to bytes chunks</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.date.Date.to_field">
+<span class="sig-name descname"><span class="pre">to_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">this</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.Record" title="csb43.aeb43.record.Record"><span class="pre">Record</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">date</span></span></span><a class="headerlink" href="#csb43.aeb43.fields.date.Date.to_field" title="Link to this definition">¶</a></dt>
+<dd><p>convert bytes chunks to a typed field</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.date.date_validator">
+<span class="sig-prename descclassname"><span class="pre">csb43.aeb43.fields.date.</span></span><span class="sig-name descname"><span class="pre">date_validator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">warning</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#csb43.aeb43.record.RegexValidator" title="csb43.aeb43.record.RegexValidator"><span class="pre">RegexValidator</span></a></span></span><a class="headerlink" href="#csb43.aeb43.fields.date.date_validator" title="Link to this definition">¶</a></dt>
+<dd><p>a standard date validator</p>
+</dd></dl>
+
+<p id="module-csb43.aeb43.fields.information_mode">Descriptor for AEB43 information mode fields</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.information_mode.InformationModeField">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.fields.information_mode.</span></span><span class="sig-name descname"><span class="pre">InformationModeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field_id:</span> <span class="pre">~typing.Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory:</span> <span class="pre">~typing.Callable[[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">~csb43.aeb43.record.context.InformationMode]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">InformationModeField.&lt;lambda&gt;&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.fields.information_mode.InformationModeField" title="Link to this definition">¶</a></dt>
+<dd><p>descriptor field for information mode enum</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.information_mode.InformationModeField.adapt">
+<span class="sig-name descname"><span class="pre">adapt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">this</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.Record" title="csb43.aeb43.record.Record"><span class="pre">Record</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="csb.html#csb43.aeb43.record.context.InformationMode" title="csb43.aeb43.record.context.InformationMode"><span class="pre">InformationMode</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.fields.information_mode.InformationModeField.adapt" title="Link to this definition">¶</a></dt>
+<dd><p>adapt input for processing or raise an Aeb43Exception</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.information_mode.InformationModeField.convert_bytes">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">convert_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">this</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.Record" title="csb43.aeb43.record.Record"><span class="pre">Record</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="csb.html#csb43.aeb43.record.context.InformationMode" title="csb43.aeb43.record.context.InformationMode"><span class="pre">InformationMode</span></a></span></span><a class="headerlink" href="#csb43.aeb43.fields.information_mode.InformationModeField.convert_bytes" title="Link to this definition">¶</a></dt>
+<dd><p>convert from bytes to information mode</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.information_mode.InformationModeField.default_factory">
+<span class="sig-name descname"><span class="pre">default_factory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="csb.html#csb43.aeb43.record.context.InformationMode" title="csb43.aeb43.record.context.InformationMode"><span class="pre">InformationMode</span></a></span></span><a class="headerlink" href="#csb43.aeb43.fields.information_mode.InformationModeField.default_factory" title="Link to this definition">¶</a></dt>
+<dd><p>return default factory function</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.information_mode.InformationModeField.to_bytes">
+<span class="sig-name descname"><span class="pre">to_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">this</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.Record" title="csb43.aeb43.record.Record"><span class="pre">Record</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="csb.html#csb43.aeb43.record.context.InformationMode" title="csb43.aeb43.record.context.InformationMode"><span class="pre">InformationMode</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#csb43.aeb43.record.FieldValue" title="csb43.aeb43.record.FieldValue"><span class="pre">FieldValue</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#csb43.aeb43.fields.information_mode.InformationModeField.to_bytes" title="Link to this definition">¶</a></dt>
+<dd><p>convert a typed field to bytes chunks</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.information_mode.InformationModeField.to_field">
+<span class="sig-name descname"><span class="pre">to_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">this</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.Record" title="csb43.aeb43.record.Record"><span class="pre">Record</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="csb.html#csb43.aeb43.record.context.InformationMode" title="csb43.aeb43.record.context.InformationMode"><span class="pre">InformationMode</span></a></span></span><a class="headerlink" href="#csb43.aeb43.fields.information_mode.InformationModeField.to_field" title="Link to this definition">¶</a></dt>
+<dd><p>convert bytes chunks to a typed field</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.information_mode.OnModeValidator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.fields.information_mode.</span></span><span class="sig-name descname"><span class="pre">OnModeValidator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">validator1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="csb.html#csb43.aeb43.record.context.Aeb43Context" title="csb43.aeb43.record.context.Aeb43Context"><span class="pre">Aeb43Context</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytearray</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validator2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="csb.html#csb43.aeb43.record.context.Aeb43Context" title="csb43.aeb43.record.context.Aeb43Context"><span class="pre">Aeb43Context</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytearray</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validator3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="csb.html#csb43.aeb43.record.context.Aeb43Context" title="csb43.aeb43.record.context.Aeb43Context"><span class="pre">Aeb43Context</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytearray</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.fields.information_mode.OnModeValidator" title="Link to this definition">¶</a></dt>
+<dd><p>validator for each information mode</p>
+</dd></dl>
+
+<p id="module-csb43.aeb43.fields.integer">Descriptors for representing int fields</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.integer.Integer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.fields.integer.</span></span><span class="sig-name descname"><span class="pre">Integer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field_id:</span> <span class="pre">~typing.Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory:</span> <span class="pre">~typing.Callable[[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int]</span> <span class="pre">=</span> <span class="pre">&lt;class</span> <span class="pre">'int'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.fields.integer.Integer" title="Link to this definition">¶</a></dt>
+<dd><p>integer field</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.integer.Integer.adapt">
+<span class="sig-name descname"><span class="pre">adapt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">this</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.Record" title="csb43.aeb43.record.Record"><span class="pre">Record</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#csb43.aeb43.fields.integer.Integer.adapt" title="Link to this definition">¶</a></dt>
+<dd><p>adapt input for processing or raise an Aeb43Exception</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.integer.Integer.default_factory">
+<span class="sig-name descname"><span class="pre">default_factory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#csb43.aeb43.fields.integer.Integer.default_factory" title="Link to this definition">¶</a></dt>
+<dd><p>return default factory function</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.integer.Integer.factory">
+<span class="sig-name descname"><span class="pre">factory</span></span><a class="headerlink" href="#csb43.aeb43.fields.integer.Integer.factory" title="Link to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.integer.Integer.to_bytes">
+<span class="sig-name descname"><span class="pre">to_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">this</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.Record" title="csb43.aeb43.record.Record"><span class="pre">Record</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#csb43.aeb43.record.FieldValue" title="csb43.aeb43.record.FieldValue"><span class="pre">FieldValue</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#csb43.aeb43.fields.integer.Integer.to_bytes" title="Link to this definition">¶</a></dt>
+<dd><p>convert a typed field to bytes chunks</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.integer.Integer.to_field">
+<span class="sig-name descname"><span class="pre">to_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">this</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.Record" title="csb43.aeb43.record.Record"><span class="pre">Record</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#csb43.aeb43.fields.integer.Integer.to_field" title="Link to this definition">¶</a></dt>
+<dd><p>convert bytes chunks to a typed field</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.integer.IntegerValidator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.fields.integer.</span></span><span class="sig-name descname"><span class="pre">IntegerValidator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">warning</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.fields.integer.IntegerValidator" title="Link to this definition">¶</a></dt>
+<dd><p>Validator for integer fields</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><dl class="simple">
+<dt>size</dt><dd><p>number of digits (base 10)</p>
+</dd>
+<dt>min_value</dt><dd><p>minimum allowed value</p>
+</dd>
+<dt>max_value</dt><dd><p>maximum allowed value</p>
+</dd>
+<dt>warning</dt><dd><p>emit warning if validation fails instead of auto</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<p id="module-csb43.aeb43.fields.money">Descriptors for money amount fields</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.money.Money">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.fields.money.</span></span><span class="sig-name descname"><span class="pre">Money</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value_id:</span> <span class="pre">~typing.Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode_id:</span> <span class="pre">~typing.Any</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_mode:</span> <span class="pre">bytes</span> <span class="pre">=</span> <span class="pre">b'2'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding:</span> <span class="pre">bytes</span> <span class="pre">=</span> <span class="pre">b'0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">non_negative:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory:</span> <span class="pre">~typing.Callable[[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">~decimal.Decimal]</span> <span class="pre">=</span> <span class="pre">&lt;class</span> <span class="pre">'decimal.Decimal'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.fields.money.Money" title="Link to this definition">¶</a></dt>
+<dd><p>money field</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.money.Money.adapt">
+<span class="sig-name descname"><span class="pre">adapt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">this</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.Record" title="csb43.aeb43.record.Record"><span class="pre">Record</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Decimal</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Decimal</span></span></span><a class="headerlink" href="#csb43.aeb43.fields.money.Money.adapt" title="Link to this definition">¶</a></dt>
+<dd><p>adapt input for processing or raise an Aeb43Exception</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.money.Money.default_factory">
+<span class="sig-name descname"><span class="pre">default_factory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Decimal</span></span></span><a class="headerlink" href="#csb43.aeb43.fields.money.Money.default_factory" title="Link to this definition">¶</a></dt>
+<dd><p>return default factory function</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.money.Money.factory">
+<span class="sig-name descname"><span class="pre">factory</span></span><a class="headerlink" href="#csb43.aeb43.fields.money.Money.factory" title="Link to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">Decimal</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.money.Money.to_bytes">
+<span class="sig-name descname"><span class="pre">to_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">this</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.Record" title="csb43.aeb43.record.Record"><span class="pre">Record</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Decimal</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#csb43.aeb43.record.FieldValue" title="csb43.aeb43.record.FieldValue"><span class="pre">FieldValue</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#csb43.aeb43.fields.money.Money.to_bytes" title="Link to this definition">¶</a></dt>
+<dd><p>convert a typed field to bytes chunks</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.money.Money.to_field">
+<span class="sig-name descname"><span class="pre">to_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">this</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.Record" title="csb43.aeb43.record.Record"><span class="pre">Record</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Decimal</span></span></span><a class="headerlink" href="#csb43.aeb43.fields.money.Money.to_field" title="Link to this definition">¶</a></dt>
+<dd><p>convert bytes chunks to a typed field</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.money.float2decimal">
+<span class="sig-prename descclassname"><span class="pre">csb43.aeb43.fields.money.</span></span><span class="sig-name descname"><span class="pre">float2decimal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decimals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Decimal</span></span></span><a class="headerlink" href="#csb43.aeb43.fields.money.float2decimal" title="Link to this definition">¶</a></dt>
+<dd><p>get a scaled decimal from a float value using a limited number of decimals</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.money.money_mode_validator">
+<span class="sig-prename descclassname"><span class="pre">csb43.aeb43.fields.money.</span></span><span class="sig-name descname"><span class="pre">money_mode_validator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">warning</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#csb43.aeb43.record.RegexValidator" title="csb43.aeb43.record.RegexValidator"><span class="pre">RegexValidator</span></a></span></span><a class="headerlink" href="#csb43.aeb43.fields.money.money_mode_validator" title="Link to this definition">¶</a></dt>
+<dd><p>a validator for money amount mode (debit or credit code)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.money.money_validator">
+<span class="sig-prename descclassname"><span class="pre">csb43.aeb43.fields.money.</span></span><span class="sig-name descname"><span class="pre">money_validator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">14</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">warning</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#csb43.aeb43.record.RegexValidator" title="csb43.aeb43.record.RegexValidator"><span class="pre">RegexValidator</span></a></span></span><a class="headerlink" href="#csb43.aeb43.fields.money.money_validator" title="Link to this definition">¶</a></dt>
+<dd><p>a validator for money amounts</p>
+</dd></dl>
+
+<p id="module-csb43.aeb43.fields.nested">Descriptors for storing nested records</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.nested.NestedCollection">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.fields.nested.</span></span><span class="sig-name descname"><span class="pre">NestedCollection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">default_factory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="csb.html#csb43.aeb43.record.context.Contextual" title="csb43.aeb43.record.context.Contextual"><span class="pre">Contextual</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">AnyRecord</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytearray</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#csb43.aeb43.fields.nested.RecordCollection" title="csb43.aeb43.fields.nested.RecordCollection"><span class="pre">RecordCollection</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.fields.nested.NestedCollection" title="Link to this definition">¶</a></dt>
+<dd><p>field for storing record collections</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.nested.NestedContextual">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.fields.nested.</span></span><span class="sig-name descname"><span class="pre">NestedContextual</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">ContextualT</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.fields.nested.NestedContextual" title="Link to this definition">¶</a></dt>
+<dd><p>nested record descriptor</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.nested.NestedRecord">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.fields.nested.</span></span><span class="sig-name descname"><span class="pre">NestedRecord</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">ContextualT</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.fields.nested.NestedRecord" title="Link to this definition">¶</a></dt>
+<dd><p>a nested record descriptor</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.nested.RecordCollection">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.fields.nested.</span></span><span class="sig-name descname"><span class="pre">RecordCollection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">context_f:</span> <span class="pre">Callable[[],</span> <span class="pre">Aeb43Context</span> <span class="pre">|</span> <span class="pre">None],</span> <span class="pre">record_type:</span> <span class="pre">Type[AnyRecord],</span> <span class="pre">_data:</span> <span class="pre">list[AnyRecord]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;,</span> <span class="pre">initial_data:</span> <span class="pre">dataclasses.InitVar[Iterable[AnyRecord</span> <span class="pre">|</span> <span class="pre">AnyBytes]]</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.fields.nested.RecordCollection" title="Link to this definition">¶</a></dt>
+<dd><p>collection of record objects</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.nested.RecordCollection.append">
+<span class="sig-name descname"><span class="pre">append</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AnyRecord</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytearray</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.fields.nested.RecordCollection.append" title="Link to this definition">¶</a></dt>
+<dd><p>append record to this collection</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.nested.RecordCollection.clear">
+<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.fields.nested.RecordCollection.clear" title="Link to this definition">¶</a></dt>
+<dd><p>clear items in collection</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.nested.RecordCollection.index">
+<span class="sig-name descname"><span class="pre">index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">start</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span></em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">integer</span> <span class="pre">--</span> <span class="pre">return</span> <span class="pre">first</span> <span class="pre">index</span> <span class="pre">of</span> <span class="pre">value.</span></span></span><a class="headerlink" href="#csb43.aeb43.fields.nested.RecordCollection.index" title="Link to this definition">¶</a></dt>
+<dd><p>Raises ValueError if the value is not present.</p>
+<p>Supporting start and stop arguments is optional, but
+recommended.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.nested.convert_record">
+<span class="sig-prename descclassname"><span class="pre">csb43.aeb43.fields.nested.</span></span><span class="sig-name descname"><span class="pre">convert_record</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">AnyRecord</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="csb.html#csb43.aeb43.record.context.Aeb43Context" title="csb43.aeb43.record.context.Aeb43Context"><span class="pre">Aeb43Context</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AnyRecord</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytearray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">AnyRecord</span></span></span><a class="headerlink" href="#csb43.aeb43.fields.nested.convert_record" title="Link to this definition">¶</a></dt>
+<dd><p>convert <cite>value</cite> to a <cite>record_type</cite> object with a compatible context</p>
+</dd></dl>
+
+<p id="module-csb43.aeb43.fields.string">Descriptor for string fields</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.string.String">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.fields.string.</span></span><span class="sig-name descname"><span class="pre">String</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field_id:</span> <span class="pre">~typing.Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding:</span> <span class="pre">bytes</span> <span class="pre">=</span> <span class="pre">b'</span> <span class="pre">'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trim:</span> <span class="pre">~csb43.aeb43.fields.string.Trim</span> <span class="pre">=</span> <span class="pre">&lt;Trim.BOTH:</span> <span class="pre">15&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">align_left:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode:</span> <span class="pre">~typing.Mapping[~csb43.aeb43.record.context.InformationMode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">~typing.Mapping[str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">~typing.Any]]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory:</span> <span class="pre">~typing.Callable[[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str]</span> <span class="pre">=</span> <span class="pre">&lt;class</span> <span class="pre">'str'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.fields.string.String" title="Link to this definition">¶</a></dt>
+<dd><p>string field</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.string.String.adapt">
+<span class="sig-name descname"><span class="pre">adapt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">this</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.Record" title="csb43.aeb43.record.Record"><span class="pre">Record</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#csb43.aeb43.fields.string.String.adapt" title="Link to this definition">¶</a></dt>
+<dd><p>adapt input for processing or raise an Aeb43Exception</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.string.String.default_factory">
+<span class="sig-name descname"><span class="pre">default_factory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#csb43.aeb43.fields.string.String.default_factory" title="Link to this definition">¶</a></dt>
+<dd><p>return default factory function</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.string.String.factory">
+<span class="sig-name descname"><span class="pre">factory</span></span><a class="headerlink" href="#csb43.aeb43.fields.string.String.factory" title="Link to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.string.String.get_align_left">
+<span class="sig-name descname"><span class="pre">get_align_left</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">this</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.Record" title="csb43.aeb43.record.Record"><span class="pre">Record</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#csb43.aeb43.fields.string.String.get_align_left" title="Link to this definition">¶</a></dt>
+<dd><p>trim_left for the current information mode</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.string.String.get_padding">
+<span class="sig-name descname"><span class="pre">get_padding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">this</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.Record" title="csb43.aeb43.record.Record"><span class="pre">Record</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#csb43.aeb43.fields.string.String.get_padding" title="Link to this definition">¶</a></dt>
+<dd><p>padding for the current information mode</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.string.String.get_trim">
+<span class="sig-name descname"><span class="pre">get_trim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">this</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.Record" title="csb43.aeb43.record.Record"><span class="pre">Record</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#csb43.aeb43.fields.string.Trim" title="csb43.aeb43.fields.string.Trim"><span class="pre">Trim</span></a></span></span><a class="headerlink" href="#csb43.aeb43.fields.string.String.get_trim" title="Link to this definition">¶</a></dt>
+<dd><p>trimmed for the current information mode</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.string.String.pad">
+<span class="sig-name descname"><span class="pre">pad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">this</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.Record" title="csb43.aeb43.record.Record"><span class="pre">Record</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">record</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#csb43.aeb43.record.FieldValue" title="csb43.aeb43.record.FieldValue"><span class="pre">FieldValue</span></a></span></span><a class="headerlink" href="#csb43.aeb43.fields.string.String.pad" title="Link to this definition">¶</a></dt>
+<dd><p>pad a record</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.string.String.to_bytes">
+<span class="sig-name descname"><span class="pre">to_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">this</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.Record" title="csb43.aeb43.record.Record"><span class="pre">Record</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#csb43.aeb43.record.FieldValue" title="csb43.aeb43.record.FieldValue"><span class="pre">FieldValue</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#csb43.aeb43.fields.string.String.to_bytes" title="Link to this definition">¶</a></dt>
+<dd><p>convert a typed field to bytes chunks</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.string.String.to_field">
+<span class="sig-name descname"><span class="pre">to_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">this</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.Record" title="csb43.aeb43.record.Record"><span class="pre">Record</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#csb43.aeb43.fields.string.String.to_field" title="Link to this definition">¶</a></dt>
+<dd><p>convert bytes chunks to a typed field</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.string.Trim">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.fields.string.</span></span><span class="sig-name descname"><span class="pre">Trim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.fields.string.Trim" title="Link to this definition">¶</a></dt>
+<dd><p>trim mode</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="csb43.aeb43.fields.string.string_validator">
+<span class="sig-prename descclassname"><span class="pre">csb43.aeb43.fields.string.</span></span><span class="sig-name descname"><span class="pre">string_validator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">warning</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#csb43.aeb43.record.RegexValidator" title="csb43.aeb43.record.RegexValidator"><span class="pre">RegexValidator</span></a></span></span><a class="headerlink" href="#csb43.aeb43.fields.string.string_validator" title="Link to this definition">¶</a></dt>
+<dd><p>a validator for strings with printable characters</p>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">csb43</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="csb.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.aeb43</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="ofx.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.ofx</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="homebank.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.homebank</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="formats.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.formats</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.utils</span></code></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.record</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.record.BytesMixin"><code class="docutils literal notranslate"><span class="pre">BytesMixin</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.record.CompositeRecordMixin"><code class="docutils literal notranslate"><span class="pre">CompositeRecordMixin</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.record.FieldValue"><code class="docutils literal notranslate"><span class="pre">FieldValue</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.record.Record"><code class="docutils literal notranslate"><span class="pre">Record</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.record.RecordManifest"><code class="docutils literal notranslate"><span class="pre">RecordManifest</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.record.RegexValidator"><code class="docutils literal notranslate"><span class="pre">RegexValidator</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.record.SingleRecordMixin"><code class="docutils literal notranslate"><span class="pre">SingleRecordMixin</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.record.chain_validator"><code class="docutils literal notranslate"><span class="pre">chain_validator()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.record.create_bytes_record"><code class="docutils literal notranslate"><span class="pre">create_bytes_record()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.record.errors.ValidationException"><code class="docutils literal notranslate"><span class="pre">ValidationException</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.record.errors.ValidationWarning"><code class="docutils literal notranslate"><span class="pre">ValidationWarning</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.record.errors.message_error"><code class="docutils literal notranslate"><span class="pre">message_error()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.record.errors.raise_validation_exception"><code class="docutils literal notranslate"><span class="pre">raise_validation_exception()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#module-csb43.aeb43.fields"><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.fields</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.fields.Field"><code class="docutils literal notranslate"><span class="pre">Field</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.fields.FieldMixin"><code class="docutils literal notranslate"><span class="pre">FieldMixin</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.fields.as_string"><code class="docutils literal notranslate"><span class="pre">as_string()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.fields.currency.Currency"><code class="docutils literal notranslate"><span class="pre">Currency</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.fields.currency.currency_validator"><code class="docutils literal notranslate"><span class="pre">currency_validator()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.fields.currency.euro_currency"><code class="docutils literal notranslate"><span class="pre">euro_currency()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.fields.date.Date"><code class="docutils literal notranslate"><span class="pre">Date</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.fields.date.date_validator"><code class="docutils literal notranslate"><span class="pre">date_validator()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.fields.information_mode.InformationModeField"><code class="docutils literal notranslate"><span class="pre">InformationModeField</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.fields.information_mode.OnModeValidator"><code class="docutils literal notranslate"><span class="pre">OnModeValidator</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.fields.integer.Integer"><code class="docutils literal notranslate"><span class="pre">Integer</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.fields.integer.IntegerValidator"><code class="docutils literal notranslate"><span class="pre">IntegerValidator</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.fields.money.Money"><code class="docutils literal notranslate"><span class="pre">Money</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.fields.money.float2decimal"><code class="docutils literal notranslate"><span class="pre">float2decimal()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.fields.money.money_mode_validator"><code class="docutils literal notranslate"><span class="pre">money_mode_validator()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.fields.money.money_validator"><code class="docutils literal notranslate"><span class="pre">money_validator()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.fields.nested.NestedCollection"><code class="docutils literal notranslate"><span class="pre">NestedCollection</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.fields.nested.NestedContextual"><code class="docutils literal notranslate"><span class="pre">NestedContextual</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.fields.nested.NestedRecord"><code class="docutils literal notranslate"><span class="pre">NestedRecord</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.fields.nested.RecordCollection"><code class="docutils literal notranslate"><span class="pre">RecordCollection</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.fields.nested.convert_record"><code class="docutils literal notranslate"><span class="pre">convert_record()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.fields.string.String"><code class="docutils literal notranslate"><span class="pre">String</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.fields.string.Trim"><code class="docutils literal notranslate"><span class="pre">Trim</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.fields.string.string_validator"><code class="docutils literal notranslate"><span class="pre">string_validator()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="utils.html" title="previous chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.utils</span></code></a></li>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, wmj <wmj.py@gmx.com>.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.3.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/records.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

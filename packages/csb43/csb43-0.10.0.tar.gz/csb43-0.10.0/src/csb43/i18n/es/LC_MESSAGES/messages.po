@@ -1,0 +1,1029 @@
+# SPDX-FileCopyrightText: 2024 <wmj.py@gmx.com>
+#
+# SPDX-License-Identifier: LGPL-3.0-or-later
+# wmj <wmj.py@gmx.com>, 2024.
+msgid ""
+msgstr ""
+"Project-Id-Version: csb43 0.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-06-04 16:41+0200\n"
+"PO-Revision-Date: 2024-06-04 16:33+0200\n"
+"Last-Translator: wmj <wmj.py@gmx.com>\n"
+"Language: es\n"
+"Language-Team: Spanish <kde-i18n-doc@kde.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: src/csb43/formats.py:82
+msgid "SEPA"
+msgstr "SEPA"
+
+#: src/csb43/formats.py:160
+msgid "direct debit"
+msgstr "adeudo"
+
+#: src/csb43/formats.py:165
+msgid "transfer"
+msgstr "transferencia"
+
+#: src/csb43/formats.py:217
+msgid ""
+"Package 'tablib' not found. Formats provided by 'tablib' will not be "
+"available."
+msgstr ""
+"Paquete 'tablib' no encontrado. Los formatos provistos por 'tablib' no "
+"estarán disponibles."
+
+#: src/csb43/formats.py:228
+msgid "Package 'yaml' not found. Hierarchical YAML format will not be available."
+msgstr ""
+"Paquete 'yaml' no encontrado. El formato YAML jerárquico no estará "
+"disponible."
+
+#: src/csb43/formats.py:355
+msgid "unexpected format {format}"
+msgstr "no se esperaba el formato {format}"
+
+# | msgid "accounts"
+#: src/csb43/formats.py:380 src/csb43/formats.py:537
+msgid "Accounts"
+msgstr "Cuentas"
+
+# | msgid "transactions"
+#: src/csb43/formats.py:413 src/csb43/formats.py:567
+msgid "Transactions"
+msgstr "Movimientos"
+
+# | msgid "unexpected format %s"
+# | msgid "unexpected type"
+#: src/csb43/formats.py:518
+#, python-format
+msgid "unexpected format %s"
+msgstr "no se esperaba el formato %s"
+
+#: src/csb43/aeb43/account.py:265
+msgid " ({alt}) mismatch in summary ({ref})"
+msgstr "{alt}) discordancia en resumen ({ref})"
+
+# | msgid "trying to close an already closed account"
+#: src/csb43/aeb43/account.py:337
+msgid "adding records to a closed account"
+msgstr "intentando cerrar una cuenta ya cerrada"
+
+# | msgid "unknown or illegal record: {}"
+#: src/csb43/aeb43/account.py:349 src/csb43/aeb43/transaction.py:395
+msgid "unknown or illegal record: {record}"
+msgstr "registro ilegal o desconocido: {record}"
+
+# | msgid "+ Account:\t{account_number}\t{short_name}"
+#: src/csb43/aeb43/account.py:372
+msgid "+ Account: {account_number}\t{short_name}"
+msgstr "+ Cuenta: {account_number}\t{short_name}"
+
+# | msgid "   From:\t{date_from}"
+#: src/csb43/aeb43/account.py:375
+msgid "From:||{date_from}"
+msgstr "Desde:||{date_from}"
+
+# | msgid "   To:  \t{date_to}"
+#: src/csb43/aeb43/account.py:376
+msgid "To:||{date_to}"
+msgstr "Hasta:||{date_to}"
+
+#: src/csb43/aeb43/account.py:380 src/csb43/csb43/csb_file.py:397
+msgid "{ntransactions:d} transaction(s) read"
+msgstr "{ntransactions:d} movimiento(s) leído(s)"
+
+# | msgid "Account properly closed:\t{ac_is_closed}"
+#: src/csb43/aeb43/account.py:381
+msgid "Account properly closed: {ac_is_closed}"
+msgstr "Cuenta cerrada adecuadamente: {ac_is_closed}"
+
+# | msgid "Information mode:\t{information_mode}"
+#: src/csb43/aeb43/account.py:382
+msgid "Information mode: {information_mode}"
+msgstr "Modalidad de información: {information_mode}"
+
+# | msgid "Previous amount:\t{ib_amount:14.2f}\t{ib_currency}"
+# | msgid "Previous amount:\\f{ib_amount:14.2f} {ib_currency}"
+#: src/csb43/aeb43/account.py:385
+msgid "Previous amount:||{ib_amount:14.2f} {ib_currency}"
+msgstr "Montante previo:||{ib_amount:14.2f} {ib_currency}"
+
+# | msgid " Income:        \t{inc_amount:14.2f}\t{inc_currency}"
+# | msgid " Income:\\f{inc_amount:14.2f} {inc_currency}"
+#: src/csb43/aeb43/account.py:386
+msgid " Income:||{inc_amount:14.2f} {inc_currency}"
+msgstr " Haber:||{inc_amount:14.2f} {inc_currency}"
+
+# | msgid " Expense:       \t{exp_amount:14.2f}\t{exp_currency}"
+# | msgid " Expense:\\f{exp_amount:14.2f} {exp_currency}"
+#: src/csb43/aeb43/account.py:387
+msgid " Expense:||{exp_amount:14.2f} {exp_currency}"
+msgstr " Debe:||{exp_amount:14.2f} {exp_currency}"
+
+# | msgid "Balance:        \t{bal_amount:14.2f}\t{bal_currency}"
+# | msgid "Balance:\\f{bal_amount:14.2f} {bal_currency}"
+#: src/csb43/aeb43/account.py:388
+msgid "Balance:||{bal_amount:14.2f} {bal_currency}"
+msgstr "Balance:||{bal_amount:14.2f} {bal_currency}"
+
+#: src/csb43/aeb43/batch.py:84
+msgid "total_records"
+msgstr "total_registros"
+
+# | msgid "incongruent closing record of file: total records %d != %d"
+#: src/csb43/aeb43/batch.py:138
+msgid "incongruent closing record of file: total records {alt:d} != {ref:d}"
+msgstr ""
+"registro de cierre de fichero incongruente: total de registros {alt:d} !="
+" {ref:d}"
+
+# | msgid "trying to close an already closed account"
+# | msgid "adding records to a closed account"
+#: src/csb43/aeb43/batch.py:162
+msgid "adding records to a closed batch"
+msgstr "intentando cerrar un lote ya cerrado"
+
+#: src/csb43/aeb43/batch.py:173
+msgid "unknown or illegal record: {}"
+msgstr "registro ilegal o desconocido: {}"
+
+#: src/csb43/aeb43/batch.py:194 src/csb43/csb43/csb_file.py:379
+msgid "Encoding: {encoding:s}"
+msgstr "Codificación: {encoding:s}"
+
+# | msgid "File properly closed:\t{file_is_closed}"
+#: src/csb43/aeb43/batch.py:195
+msgid "File properly closed: {file_is_closed}"
+msgstr "Fichero cerrado adecuadamente: {file_is_closed}"
+
+# | msgid "Accounts read:\\f{naccounts:>5d}"
+#: src/csb43/aeb43/batch.py:197
+msgid "Accounts read:||{naccounts:>5d}"
+msgstr "Cuentas leídas:||{naccounts:>5d}"
+
+# | msgid "Records read:\\f{total_records:>5d}"
+#: src/csb43/aeb43/batch.py:198
+msgid "Records read:||{total_records:>5d}"
+msgstr "Registro leídos:||{total_records:>5d}"
+
+#: src/csb43/aeb43/sepa_debit.py:79
+#, python-format
+msgid "Unknown scheme code for SEPA direct debit: '%s'"
+msgstr "Código de esquema desconocido para adeudos SEPA: '%s'"
+
+#: src/csb43/aeb43/sepa_debit.py:125
+msgid "padding1"
+msgstr "relleno1"
+
+#: src/csb43/aeb43/sepa_debit.py:168
+msgid "padding2"
+msgstr "relleno2"
+
+# | msgid "Information mode:\t{information_mode}"
+# | msgid "information_mode"
+#: src/csb43/aeb43/sepa_debit.py:251
+msgid "remitance_information_cont"
+msgstr "cont_concepto"
+
+#: src/csb43/aeb43/sepa_debit.py:255
+msgid "padding4"
+msgstr "relleno4"
+
+# | msgid "Validation failed for reference '%s'"
+# | msgid "Validation failed for reference '%s'. Unexpected control digit."
+#: src/csb43/aeb43/transaction.py:98
+msgid "Validation failed for reference '{ref}'. Unexpected control digit."
+msgstr ""
+"Validación fallida para la referencia '{ref}'. Dígito de control no "
+"esperado."
+
+#: src/csb43/aeb43/transaction.py:112
+msgid "the appended optional item already exists"
+msgstr "el concepto adicional añadido ya existe"
+
+#: src/csb43/aeb43/transaction.py:115
+msgid "a SEPA transfer exists"
+msgstr "existe una transferencia SEPA"
+
+#: src/csb43/aeb43/transaction.py:117
+msgid "a SEPA debit exists"
+msgstr "existe un adeudo SEPA"
+
+# | msgid "there can only be %d optional items"
+#: src/csb43/aeb43/transaction.py:121
+msgid "there can only be {max_items:d} optional items"
+msgstr "sólo puede haber {max_items:d} conceptos adicionales"
+
+# | msgid "`record_code` should be %d but found %d. The wrong value will be
+# | fixed"
+#: src/csb43/aeb43/transaction.py:126
+msgid ""
+"`record_code` should be {next:d} but found {code:d}. The wrong value will"
+" be fixed"
+msgstr ""
+"`record_code` debería ser {next:d} pero se ha encontrado {code:d}. El "
+"valor erróneo será corregido"
+
+#: src/csb43/aeb43/transaction.py:158 src/csb43/aeb43/transaction.py:177
+msgid ""
+"trying to set a SEPA transfer while the transaction contains some "
+"standard optional items"
+msgstr ""
+"intentando asignar una transferencia SEPA mientras existen conceptos "
+"adicionales en la transacción"
+
+#: src/csb43/aeb43/transaction.py:163
+msgid ""
+"trying to set a SEPA transfer while the transaction contains a SEPA "
+"Direct Debit record set"
+msgstr ""
+"intentando asignar una transferencia SEPA conteniendo la transacción una "
+"colección de registros de adeudo SEPA."
+
+#: src/csb43/aeb43/transaction.py:182
+msgid ""
+"trying to set a SEPA transfer while the transaction contains a SEPA "
+"Transfer record set"
+msgstr ""
+"intentando asignar una transferencia SEPA conteniendo la transacción una "
+"colección de registros de transferencia SEPA."
+
+#: src/csb43/aeb43/transaction.py:337
+msgid "SEPA mode is disabled"
+msgstr "el modo SEPA no está activo"
+
+#: src/csb43/aeb43/transaction.py:386
+msgid "adding another exchange record will replace the existing record"
+msgstr ""
+"al añadir otro registro de equivalencia de importe se reemplazará el "
+"registro existente"
+
+# | msgid "unable to convert value to internal representation format: %s"
+#: src/csb43/aeb43/fields/__init__.py:85
+msgid "unable to convert value to internal representation format: {exc}"
+msgstr ""
+"no se ha podido convertir el valor al formato de representación interna: "
+"{exc}"
+
+# | msgid "unexpected format %s"
+# | msgid "invalid date format: %s"
+#: src/csb43/aeb43/fields/date.py:56
+msgid "invalid date format: {value}"
+msgstr "formato de fecha inválido: {value}"
+
+# | msgid "Bad format: content %s mismatches the expected format r%s for this
+# | field"
+# | msgid "Bad format: content %s mismatches the expected format %s for this
+# | msgid "" "Bad format: content {content!r} mismatches the expected format "
+# | "r{pattern!r} for this field"
+#: src/csb43/aeb43/fields/integer.py:102
+msgid ""
+"Bad format: content {content!r} mismatches the expected format {value} "
+"for this field"
+msgstr ""
+"mal formato: el contenido {content!r} no concuerda con el formato "
+"esperado {value} para este campo"
+
+#: src/csb43/aeb43/fields/money.py:92
+msgid "non-negative values are not allowed"
+msgstr "no se permiten valores no negativos"
+
+# | msgid "unexpected format %s"
+#: src/csb43/aeb43/fields/nested.py:54 src/csb43/aeb43/fields/nested.py:72
+msgid "unexpected type"
+msgstr "tipo inesperado"
+
+# | msgid "None value is not allowed"
+#: src/csb43/aeb43/fields/nested.py:88
+msgid "'None' value is not allowed"
+msgstr "no se permite el valor 'None'"
+
+# | msgid "a %d-sized bytes record is required"
+#: src/csb43/aeb43/record/__init__.py:217
+msgid "a {size:d}-sized bytes record is required"
+msgstr "se requiere un registro de {size:d} bytes de longitud"
+
+# | msgid "wrong field size: %d != %d (%s)"
+#: src/csb43/aeb43/record/__init__.py:233
+msgid "wrong field size: {valid_size:d} != {size:d} ({value})"
+msgstr "longitud de campo incorrecta:  {valid_size:d} != {size:d} ({value})"
+
+# | msgid "Bad format: content %s mismatches the expected format r%s for this
+# | field"
+# | msgid "Bad format: content %s mismatches the expected format %s for this
+#: src/csb43/aeb43/record/__init__.py:284 src/csb43/utils/__init__.py:111
+msgid ""
+"Bad format: content {content!r} mismatches the expected format "
+"r{pattern!r} for this field"
+msgstr ""
+"mal formato: el contenido {content!r} no concuerda con el formato "
+"esperado r{pattern!r} para este campo"
+
+# | msgid "Encoding %s is not compatible with the AEB43 field padding
+# | character."
+#: src/csb43/aeb43/record/context.py:85
+msgid ""
+"Encoding {encoding} is not compatible with the AEB43 field padding "
+"character."
+msgstr ""
+"La codificación {encoding} no es compatible con el carácter de relleno de"
+" campo de AEB43."
+
+#: src/csb43/csb43/account.py:567
+msgid "trying to close an already closed account"
+msgstr "intentando cerrar una cuenta ya cerrada"
+
+#: src/csb43/csb43/account.py:611
+#, python-format
+msgid "balance (%1.2f) mismatch in closing account record (%1.2f)"
+msgstr ""
+"el balance (%1.2f) no concuerda con el del registro de cierre de cuenta "
+"(%1.2f)"
+
+#: src/csb43/csb43/account.py:616
+#, python-format
+msgid "income amount (%1.2f) mismatch in closing account record (%1.2f)"
+msgstr ""
+"el montante en el haber (%1.2f) no concuerda con el del registro de "
+"cierre de cuenta (%1.2f)"
+
+#: src/csb43/csb43/account.py:621
+#, python-format
+msgid "expense amount (%1.2f) mismatch in closing account record (%1.2f)"
+msgstr ""
+"el montante en el debe (%1.2f) no concuerda con el del registro de cierre"
+" de cuenta (%1.2f)"
+
+#: src/csb43/csb43/account.py:626
+#, python-format
+msgid "income entries (%d) mismatch in closing account record (%d)"
+msgstr ""
+"el número de entradas en el haber (%d) no concuerda con el del registro "
+"de cierre de cuenta (%d)"
+
+#: src/csb43/csb43/account.py:631
+#, python-format
+msgid "expense entries (%d) mismatch in closing account record (%d)"
+msgstr ""
+"el número de entradas en el haber (%d) no concuerda con el del registro "
+"de cierre de cuenta (%d)"
+
+#: src/csb43/csb43/account.py:708 src/csb43/utils/messages.py:47
+msgid "transactions"
+msgstr "movimientos"
+
+#: src/csb43/csb43/csb_file.py:259
+msgid "trying to close an already closed file"
+msgstr "intentando cerrar un fichero ya cerrado"
+
+#: src/csb43/csb43/csb_file.py:271
+#, python-format
+msgid "incongruent closing record of file: total records %d != %d"
+msgstr "registro de cierre de fichero incongruente: total de registros %d != %d"
+
+#: src/csb43/csb43/csb_file.py:329 src/csb43/utils/messages.py:27
+msgid "accounts"
+msgstr "cuentas"
+
+#: src/csb43/csb43/csb_file.py:380
+msgid "{naccounts:d}\taccount(s) read"
+msgstr "{naccounts:d}\tcuenta(s) leída(s)"
+
+#: src/csb43/csb43/csb_file.py:381
+msgid "File properly closed:\t{file_is_closed}"
+msgstr "Fichero cerrado adecuadamente:\t{file_is_closed}"
+
+#: src/csb43/csb43/csb_file.py:382
+msgid "{total_records:d}\trecord(s) read"
+msgstr "{total_records:d}\tregistro(s) leído(s)"
+
+#: src/csb43/csb43/csb_file.py:393
+msgid "+ Account:\t{account_number}\t{short_name}"
+msgstr "+ Cuenta;\t{account_number}\t{short_name}"
+
+#: src/csb43/csb43/csb_file.py:394
+msgid "   From:\t{date_from}"
+msgstr "   Desde:\t{date_from}"
+
+#: src/csb43/csb43/csb_file.py:395
+msgid "   To:  \t{date_to}"
+msgstr "   Hasta: \t{date_to}"
+
+#: src/csb43/csb43/csb_file.py:398
+msgid "Account properly closed:\t{ac_is_closed}"
+msgstr "Cuenta cerrada adecuadamente:\t{ac_is_closed}"
+
+#: src/csb43/csb43/csb_file.py:399
+msgid "Information mode:\t{information_mode}"
+msgstr "Modalidad de información:\t{information_mode}"
+
+#: src/csb43/csb43/csb_file.py:400
+msgid "Previous amount:\t{ib_amount:14.2f}\t{ib_currency}"
+msgstr "Montante previo:\t{ib_amount:14.2f}\t{ib_currency}"
+
+#: src/csb43/csb43/csb_file.py:401
+msgid " Income:        \t{inc_amount:14.2f}\t{inc_currency}"
+msgstr " Haber:        \t{inc_amount:14.2f}\t{inc_currency}"
+
+#: src/csb43/csb43/csb_file.py:402
+msgid " Expense:       \t{exp_amount:14.2f}\t{exp_currency}"
+msgstr " Debe:       \t{exp_amount:14.2f}\t{exp_currency}"
+
+#: src/csb43/csb43/csb_file.py:403
+msgid "Balance:        \t{bal_amount:14.2f}\t{bal_currency}"
+msgstr "Balance:        \t{bal_amount:14.2f}\t{bal_currency}"
+
+#: src/csb43/csb43/record.py:80
+#, python-format
+msgid "Encoding %s is not compatible with the AEB43 field padding character."
+msgstr ""
+"La codificación %s no es compatible con el carácter de relleno de campo "
+"de AEB43."
+
+#: src/csb43/csb43/transaction.py:212
+#, python-format
+msgid "maximum number of exchange record reached (%s)"
+msgstr "número máximo de registro de cambio de divisas alcanzado (%s)"
+
+#: src/csb43/csb43/transaction.py:373
+#, python-format
+msgid "Validation failed for reference '%s'"
+msgstr "Validación fallida para el campo de referencia '%s'"
+
+#: src/csb43/csb43/transaction.py:438
+#, python-format
+msgid ""
+"the maximum number of complementary items for transaction has been "
+"reached: %d"
+msgstr "número máximo de conceptos adicionales por movimiento alcanzado: %d"
+
+# | msgid "bad format, 6 fields expected, but%d found"
+#: src/csb43/homebank/__init__.py:125
+msgid "bad format, 6 fields expected, but{n_fields:d} found"
+msgstr "mal formato, se esperaban 6 campos, pero se encontraron {n_fields:d}"
+
+#: src/csb43/homebank/__init__.py:152
+msgid "datetime.date expected"
+msgstr "se esperaba datetime.date"
+
+#: src/csb43/utils/__init__.py:255
+msgid "instance of datetime or date expected, but {val!r} found"
+msgstr "se esperaba una instancia de datetime o de date, pero se encontró {val!r}"
+
+#: src/csb43/utils/cmd.py:96
+msgid "Convert a CSB43 file to another format"
+msgstr "Convierte un fichero CSB43 a otro formato"
+
+#: src/csb43/utils/cmd.py:110
+msgid "a csb43 file ('-' for stdin)"
+msgstr "un fichero csb43 ('-' para stdin)"
+
+#: src/csb43/utils/cmd.py:115
+msgid "strict mode"
+msgstr "modo estricto"
+
+#: src/csb43/utils/cmd.py:120
+msgid "do not convert items to SEPA transfers or direct debits"
+msgstr "no convertir conceptos adicionales a transferencias o adeudos SEPA"
+
+#: src/csb43/utils/cmd.py:125
+msgid "use DDMMYY as date format while parsing the csb43 file instead of YYMMDD"
+msgstr ""
+"usar DDMMYY como formato de fecha al parsear el fichero csb43 en lugar de"
+" YYMMDD"
+
+# | msgid "set the number of decimal places for the currency type"
+#: src/csb43/utils/cmd.py:133
+msgid "set the number of decimal places for the money amount type"
+msgstr "establece el número de posiciones decimales para el tipo monetario"
+
+#: src/csb43/utils/cmd.py:140
+msgid "set the input encoding ('cp850' for standard AEB file)"
+msgstr "establece la codificación de entrada ('cp850' para ficheros AEB estándar)"
+
+#: src/csb43/utils/cmd.py:146
+msgid "export monetary amounts using binary floating point numbers as a fallback"
+msgstr ""
+"exporta importes monetarios usando números de punto flotante como último "
+"recurso"
+
+#: src/csb43/utils/cmd.py:155
+msgid "show csb43 warnings"
+msgstr "muestra advertencias de csb43"
+
+#: src/csb43/utils/cmd.py:163
+msgid "destination file ('-' for stdout)"
+msgstr "fichero de destino ('-' para stdout)"
+
+#: src/csb43/utils/cmd.py:169
+msgid "format of the output file"
+msgstr "formato del fichero de salida"
+
+#: src/csb43/utils/cmd.py:174
+msgid "set the output encoding"
+msgstr "establece la codificación de salida"
+
+#: src/csb43/utils/cmd.py:218
+msgid "* File: {name}"
+msgstr "* Fichero: {name}"
+
+#: src/csb43/utils/cmd.py:241
+msgid "stdout not supported for binary formats"
+msgstr "stdout no está soportado en formatos binarios"
+
+#: src/csb43/utils/messages.py:13
+#, python-format
+msgid "bad code of record or unexpected length: >>>%s<<<"
+msgstr "código malo de registro o longitud inesperada: >>>%s<<<"
+
+#: src/csb43/utils/messages.py:16
+msgid "incompatible object '{found!r}', type(s) {expected} expected"
+msgstr "objeto incompatible '{found!r}', se esperaban tipo(s) {expected}"
+
+#: src/csb43/utils/messages.py:21
+msgid ""
+"pycountry.Currencies object or a valid ISO 4217 code expected, but "
+"{obj!r} found"
+msgstr ""
+"se esperaba un objecto pycountry.Currencies o un código válido ISO 4217, "
+"pero se encontró {obj!r}"
+
+#: src/csb43/utils/messages.py:26
+msgid "padding"
+msgstr "relleno"
+
+#: src/csb43/utils/messages.py:29
+msgid "bank_code"
+msgstr "codigo_entidad"
+
+#: src/csb43/utils/messages.py:30
+msgid "branch_code"
+msgstr "codigo_sucursal"
+
+# | msgid "accounts"
+#: src/csb43/utils/messages.py:31
+msgid "account_key"
+msgstr "clave_de_cuenta"
+
+# | msgid "accounts"
+#: src/csb43/utils/messages.py:32
+msgid "account_number"
+msgstr "numero_de_cuenta"
+
+# | msgid "Information mode:\t{information_mode}"
+#: src/csb43/utils/messages.py:35
+msgid "information_mode"
+msgstr "modalidad_de_informacion"
+
+#: src/csb43/utils/messages.py:36
+msgid "short_name"
+msgstr "nombre_abreviado"
+
+#: src/csb43/utils/messages.py:37
+msgid "currency"
+msgstr "divisa"
+
+#: src/csb43/utils/messages.py:38
+msgid "initial_date"
+msgstr "fecha_inicial"
+
+#: src/csb43/utils/messages.py:39
+msgid "final_date"
+msgstr "fecha_final"
+
+#: src/csb43/utils/messages.py:40
+msgid "initial_balance"
+msgstr "saldo_inicial"
+
+#: src/csb43/utils/messages.py:41
+msgid "final_balance"
+msgstr "saldo_final"
+
+#: src/csb43/utils/messages.py:42
+msgid "income"
+msgstr "importes_haber"
+
+#: src/csb43/utils/messages.py:43
+msgid "expenses"
+msgstr "importes_debe"
+
+#: src/csb43/utils/messages.py:44
+msgid "income_entries"
+msgstr "apuntes_en_haber"
+
+#: src/csb43/utils/messages.py:45
+msgid "expenses_entries"
+msgstr "apuntes_en_debe"
+
+#: src/csb43/utils/messages.py:46
+msgid "summary"
+msgstr "resumen"
+
+#: src/csb43/utils/messages.py:50
+msgid "document_number"
+msgstr "numero_documento"
+
+#: src/csb43/utils/messages.py:51
+msgid "shared_item"
+msgstr "concepto_comun"
+
+#: src/csb43/utils/messages.py:52
+msgid "own_item"
+msgstr "concepto_propio"
+
+#: src/csb43/utils/messages.py:53
+msgid "item1"
+msgstr "concepto_adicional1"
+
+#: src/csb43/utils/messages.py:54
+msgid "item2"
+msgstr "concepto_adicional2"
+
+#: src/csb43/utils/messages.py:55
+msgid "reference1"
+msgstr "referencia1"
+
+#: src/csb43/utils/messages.py:56
+msgid "reference2"
+msgstr "referencia2"
+
+# | msgid "transactions"
+#: src/csb43/utils/messages.py:57
+msgid "transaction_date"
+msgstr "fecha_de_movimiento"
+
+#: src/csb43/utils/messages.py:58
+msgid "value_date"
+msgstr "fecha_valor"
+
+# | msgid "accounts"
+#: src/csb43/utils/messages.py:59
+msgid "amount"
+msgstr "importe"
+
+#: src/csb43/utils/messages.py:60
+msgid "original_currency"
+msgstr "divisa_original"
+
+#: src/csb43/utils/messages.py:61
+msgid "original_amount"
+msgstr "importe_original"
+
+#: src/csb43/utils/messages.py:62
+msgid "optional_items"
+msgstr "conceptos_adicionales"
+
+#: src/csb43/utils/messages.py:63
+msgid "exchange"
+msgstr "equivalencia de importe"
+
+#: src/csb43/utils/messages.py:64
+msgid "sepa_debit"
+msgstr "adeudo_sepa"
+
+#: src/csb43/utils/messages.py:65
+msgid "sepa_transfer"
+msgstr "transferencia_sepa"
+
+#: src/csb43/utils/messages.py:68
+msgid "record_code"
+msgstr "codigo_registro"
+
+#: src/csb43/utils/messages.py:71
+msgid "scheme_code"
+msgstr "codigo_esquema"
+
+#: src/csb43/utils/messages.py:72
+msgid "creditor_name"
+msgstr "nombre_acreedor"
+
+#: src/csb43/utils/messages.py:73
+msgid "creditor_id"
+msgstr "id_acreedor"
+
+#: src/csb43/utils/messages.py:74
+msgid "mandate_reference"
+msgstr "referencia_mandato"
+
+#: src/csb43/utils/messages.py:75
+msgid "purpose"
+msgstr "proposito"
+
+#: src/csb43/utils/messages.py:76
+msgid "purpose_category"
+msgstr "categoria_del_proposito"
+
+#: src/csb43/utils/messages.py:77
+msgid "remitance_information"
+msgstr "concepto"
+
+#: src/csb43/utils/messages.py:78
+msgid "creditor_reference"
+msgstr "referencia_acreedor"
+
+#: src/csb43/utils/messages.py:79
+msgid "debtor_name"
+msgstr "nombre_deudor"
+
+#: src/csb43/utils/messages.py:80
+msgid "originator_name"
+msgstr "nombre_ordenante"
+
+#: src/csb43/utils/messages.py:81
+msgid "originator_code"
+msgstr "codigo_ordenante"
+
+#: src/csb43/utils/messages.py:82
+msgid "originator_reference"
+msgstr "referencia_ordenante"
+
+#: src/csb43/utils/messages.py:83
+msgid "originator_reference_party"
+msgstr "nombre_por_cuenta_de"
+
+#: src/csb43/utils/messages.py:84
+msgid "additional_info"
+msgstr "info_adicional"
+
+#~ msgid "name for output file (stdout '-' by default)"
+#~ msgstr "nombre del fichero de salida (salida estándar '-' por defecto)"
+
+#~ msgid "strict mode"
+#~ msgstr "modo estricto (para en el primer error)"
+
+#~ msgid "show version and exit"
+#~ msgstr "muestra la versión y termina"
+
+#~ msgid "Account:\t%s\t%s"
+#~ msgstr "Cuenta:\t%s\t%s"
+
+#~ msgid " From:\t%s"
+#~ msgstr " Desde:\t%s"
+
+#~ msgid " To:  \t%s"
+#~ msgstr " Hasta:\t%s"
+
+#~ msgid "Previous amount:\t%14.2f\t%s"
+#~ msgstr "Montante previo:\t%14.2f\t%s"
+
+#~ msgid " Income:        \t%14.2f\t%s"
+#~ msgstr " Haber:        \t%14.2f\t%s"
+
+#~ msgid " Expense:       \t%14.2f\t%s"
+#~ msgstr " Debe:       \t%14.2f\t%s"
+
+#~ msgid "Balance:        \t%14.2f\t%s"
+#~ msgstr "Balance:        \t%14.2f\t%s"
+
+#~ msgid "tablib currently unsupported in python3"
+#~ msgstr "de momento, tablib no está soportado en python3"
+
+#~ msgid ""
+#~ "Package 'tablib' not found. Formats "
+#~ "provided by 'tablib' will not be "
+#~ "available."
+#~ msgstr ""
+#~ "Paquete 'tablib' no encontrado. Los "
+#~ "formatos proporcionados por 'tablib' no "
+#~ "estarán disponibles."
+
+#~ msgid ""
+#~ "Package 'yaml' not found. Hierarchical "
+#~ "YAML format will not be available."
+#~ msgstr ""
+#~ "Paquete 'yaml' no encontrado. El formato"
+#~ " YAML jerárquico no estará disponible."
+
+#~ msgid "unexpected format %s"
+#~ msgstr "no se esperaba el formato %s"
+
+#~ msgid "Accounts"
+#~ msgstr "Cuentas"
+
+#~ msgid "Transactions"
+#~ msgstr "Movimientos"
+
+#~ msgid "bad format, 6 fields expected, but%d found"
+#~ msgstr "mal formato, se esperaban 6 campos, pero se encontraron %d"
+
+#~ msgid "datetime.date expected"
+#~ msgstr "se esperaba datetime.date"
+
+# | msgid "Bad format: content %s mismatches the expected format r%s for this
+# | field"
+# | msgid "Bad format: content %s mismatches the expected format %s for this
+#~ msgid ""
+#~ "Bad format: content %s mismatches the"
+#~ " expected format r%s for this field"
+#~ msgstr ""
+#~ "mal formato: el contenido %s no "
+#~ "concuerda con el formato esperado r%s"
+#~ " para este campo"
+
+#~ msgid "instance of datetime or date expected, but '%s' found"
+#~ msgstr "se esperaba instancia de datetime o de date, pero se encontró '%s'"
+
+#~ msgid "argument \"-\" with mode %r"
+#~ msgstr "argumento \"-\" con modo %r"
+
+#~ msgid "can't open '%s': %s"
+#~ msgstr "no se pudo abrir '%s': %s"
+
+#~ msgid "Convert a CSB43 file to another format"
+#~ msgstr "Convierte un fichero CSB43 a otro formato"
+
+#~ msgid "a csb43 file ('-' for stdin)"
+#~ msgstr "fichero csb43 ('-' para entrada estándar)"
+
+#~ msgid "strict mode (default: %(default)s)"
+#~ msgstr "modo estricto (por defecto: %(default)s)"
+
+#~ msgid ""
+#~ "use DDMMYY as date format while "
+#~ "parsing the csb43 file instead of "
+#~ "YYMMDD (default: %(default)s)"
+#~ msgstr ""
+#~ "usa DDMMYY -día, mes, año- como "
+#~ "formato de fecha al interpretar los "
+#~ "datos del fichero csb43 en lugar "
+#~ "de YYMMDD -año, mes, día- (por "
+#~ "defecto: %(default)s)"
+
+#~ msgid ""
+#~ "set the number of decimal places "
+#~ "for the currency type (default: "
+#~ "%(default)d)"
+#~ msgstr ""
+#~ "establece el número de dígitos decimales"
+#~ " a considerar en el tipo de "
+#~ "divisa (por defecto: %(default)d)"
+
+#~ msgid ""
+#~ "set the input encoding ('cp850' for "
+#~ "standard AEB file, default: '%(default)s')"
+#~ msgstr ""
+#~ "establece la codificación de entrada "
+#~ "('cp850' para fichero AEB estándar, por"
+#~ " defecto: '%(default)s')"
+
+#~ msgid ""
+#~ "export monetary amounts using binary "
+#~ "floating point numbers as a fallback "
+#~ "(default: %(default)s)"
+#~ msgstr ""
+#~ "exporta cantidades monetarias usando números"
+#~ " binarios en punto flotante como "
+#~ "último recurso (default: %(default)s)"
+
+#~ msgid "show csb43 warnings"
+#~ msgstr "mostrar avisos de csb43"
+
+#~ msgid "destination file ('-' for stdout)"
+#~ msgstr "fichero de destino ('-' para salida estándar)"
+
+#~ msgid "Format of the output file (default: %(default)s)"
+#~ msgstr "Formato del fichero de salida (por defecto: %(default)s)"
+
+#~ msgid "File:"
+#~ msgstr "Fichero:"
+
+#~ msgid "bad code of record or unexpected length: >>>%s<<<"
+#~ msgstr "código de registro inválido o longitud no esperada: >>>%s<<<"
+
+#~ msgid ""
+#~ "pycountry.Currencies object or a valid "
+#~ "ISO 4217 code expected, but %s "
+#~ "found"
+#~ msgstr ""
+#~ "se esperaba objeto pycountry.Currencies o "
+#~ "código ISO 4217 válido, pero se "
+#~ "encontró %s"
+
+#~ msgid "incompatible object '%s', type(s) %s expected"
+#~ msgstr "objeto incompatible '%s', se esperaba(n) tipo(s) %s"
+
+#~ msgid "bank_code"
+#~ msgstr "codigo_de_entidad"
+
+#~ msgid "branch_code"
+#~ msgstr "codigo_de_sucursal"
+
+#~ msgid "account_key"
+#~ msgstr "digitos_de_control"
+
+#~ msgid "account_number"
+#~ msgstr "numero_de_cuenta"
+
+#~ msgid "information_mode"
+#~ msgstr "modalidad_de_informacion"
+
+#~ msgid "short_name"
+#~ msgstr "nombre_abreviado"
+
+#~ msgid "currency"
+#~ msgstr "divisa"
+
+#~ msgid "initial_date"
+#~ msgstr "fecha_de_comienzo"
+
+#~ msgid "final_date"
+#~ msgstr "fecha_de_fin"
+
+#~ msgid "initial_balance"
+#~ msgstr "balance_inicial"
+
+#~ msgid "final_balance"
+#~ msgstr "balance_final"
+
+#~ msgid "income"
+#~ msgstr "haber"
+
+#~ msgid "expenses"
+#~ msgstr "debe"
+
+#~ msgid "income_entries"
+#~ msgstr "entradas_en_el_haber"
+
+#~ msgid "expenses_entries"
+#~ msgstr "entradas_en_el_debe"
+
+#~ msgid "document_number"
+#~ msgstr "numero_del_documento"
+
+#~ msgid "shared_item"
+#~ msgstr "concepto_comun"
+
+#~ msgid "own_item"
+#~ msgstr "concepto_propio"
+
+#~ msgid "item1"
+#~ msgstr "concepto1"
+
+#~ msgid "item2"
+#~ msgstr "concepto2"
+
+#~ msgid "reference1"
+#~ msgstr "primera_referencia"
+
+#~ msgid "reference2"
+#~ msgstr "segunda_referencia"
+
+#~ msgid "transaction_date"
+#~ msgstr "fecha_de_operacion"
+
+#~ msgid "value_date"
+#~ msgstr "fecha_valor"
+
+#~ msgid "amount"
+#~ msgstr "cantidad"
+
+#~ msgid "original_currency"
+#~ msgstr "divisa_original"
+
+#~ msgid "original_amount"
+#~ msgstr "cantidad_en_divisa_original"
+
+#~ msgid "optional_items"
+#~ msgstr "conceptos_adicionales"
+
+#~ msgid "exchange"
+#~ msgstr "cambio_de_divisa"
+
+#~ msgid "record_code"
+#~ msgstr "codigo_de_registro"
+
+# | msgid "   From:\t{date_from}"
+#~ msgid "From:\\f{date_from}"
+#~ msgstr "Desde:\\f{date_from}"
+
+# | msgid "   To:  \t{date_to}"
+#~ msgid "To:  \\f{date_to}"
+#~ msgstr "Hasta:\\f{date_to}"
+
+# | msgid "Bad format: content %s mismatches the expected format r%s for this
+# | field"
+# | msgid "Bad format: content %s mismatches the expected format %s for this
+# | msgid "" "Bad format: content {content!r} mismatches the expected format "
+# | "r{pattern!r} for this field"
+#~ msgid ""
+#~ "Bad format: content {field!r} mismatches "
+#~ "the expected format r{pattern!r} for "
+#~ "this field"
+#~ msgstr ""
+#~ "mal formato: el contenido {content!r} no"
+#~ " concuerda con el formato esperado "
+#~ "r{pattern!r} para este campo"
+
+# | msgid "Bad format: content %s mismatches the expected format r%s for this
+# | field"
+#~ msgid "Bad format: content %s mismatches the expected format %s for this field"
+#~ msgstr ""
+#~ "mal formato: el contenido %s no "
+#~ "concuerda con el formato esperado r%s"
+#~ " para este campo"
+

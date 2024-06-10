@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>csb43.ofx &#8212; csb43  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="csb43.homebank" href="homebank.html" />
+    <link rel="prev" title="csb43.aeb43" href="csb.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <nav class="contents local" id="contents" role="doc-toc">
+<ul class="simple">
+<li><p><a class="reference internal" href="#module-csb43.ofx" id="id10"><a class="reference internal" href="#module-csb43.ofx" title="csb43.ofx"><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.ofx</span></code></a></a></p>
+<ul>
+<li><p><a class="reference internal" href="#references" id="id11">References</a></p></li>
+<li><p><a class="reference internal" href="#module-csb43.ofx.converter" id="id12">Converter</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="module-csb43.ofx">
+<span id="csb43-ofx"></span><h1><a class="toc-backref" href="#id10" role="doc-backlink"><a class="reference internal" href="#module-csb43.ofx" title="csb43.ofx"><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.ofx</span></code></a></a><a class="headerlink" href="#module-csb43.ofx" title="Link to this heading">¶</a></h1>
+<p>Partial implementation of a OFX file writer.</p>
+<p>This package is not intended to fully implement the OFX Spec. Its final purpose
+is the conversion from CSB43 (norma 43 del Consejo Superior Bancario). That is,
+only transaction response is (partially) implemented.</p>
+<section id="references">
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">References</a><a class="headerlink" href="#references" title="Link to this heading">¶</a></h2>
+<div role="list" class="citation-list">
+<div class="citation" id="ofx" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>OFX<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>,<a role="doc-backlink" href="#id4">3</a>,<a role="doc-backlink" href="#id7">4</a>,<a role="doc-backlink" href="#id8">5</a>,<a role="doc-backlink" href="#id9">6</a>)</span>
+<p>[<a class="reference external" href="http://www.ofx.net/">http://www.ofx.net/</a>] Open Financial Exchange, Specification 2.2 (nov 26, 2017).
+Intuit Inc.  Envestnet</p>
+</div>
+</div>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.ofx.Balance">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.ofx.</span></span><span class="sig-name descname"><span class="pre">Balance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">tag_name:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'bal',</span> <span class="pre">sgml:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False,</span> <span class="pre">_elem_f:</span> <span class="pre">Callable[[str,</span> <span class="pre">Any</span> <span class="pre">|</span> <span class="pre">None],</span> <span class="pre">str]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">xml_element&gt;,</span> <span class="pre">_aggr_f:</span> <span class="pre">Callable[[str,</span> <span class="pre">Any</span> <span class="pre">|</span> <span class="pre">None],</span> <span class="pre">str]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">xml_aggregate&gt;,</span> <span class="pre">amount:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">float</span> <span class="pre">|</span> <span class="pre">Decimal</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">date:</span> <span class="pre">dt.datetime</span> <span class="pre">|</span> <span class="pre">dt.date</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Balance" title="Link to this definition">¶</a></dt>
+<dd><p>a balance</p>
+<p>See <a class="reference internal" href="#ofx" id="id1"><span>[OFX]</span></a> 11.4.4.1</p>
+<section id="fields">
+<h2>Fields<a class="headerlink" href="#fields" title="Link to this heading">¶</a></h2>
+<dl class="simple">
+<dt>amount</dt><dd><p>field <cite>&lt;BALAMT&gt;</cite></p>
+</dd>
+<dt>date</dt><dd><p>field <cite>&lt;DTASOF&gt;</cite></p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Balance.get_amount">
+<span class="sig-name descname"><span class="pre">get_amount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Decimal</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.Balance.get_amount" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the amount of the balance</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Balance.get_date">
+<span class="sig-name descname"><span class="pre">get_date</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">datetime</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">date</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.Balance.get_date" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code> – date of the balance</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Balance.get_tag_name">
+<span class="sig-name descname"><span class="pre">get_tag_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#csb43.ofx.Balance.get_tag_name" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the XML tag name</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>tag_name</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Balance.is_sgml">
+<span class="sig-name descname"><span class="pre">is_sgml</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#csb43.ofx.Balance.is_sgml" title="Link to this definition">¶</a></dt>
+<dd><p>return True if SGML mode is on</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>sgml</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Balance.set_amount">
+<span class="sig-name descname"><span class="pre">set_amount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Decimal</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Balance.set_amount" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – amount</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Balance.set_date">
+<span class="sig-name descname"><span class="pre">set_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">datetime</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">date</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Balance.set_date" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.datetime</span></code>) – a date object</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Balance.set_tag_name">
+<span class="sig-name descname"><span class="pre">set_tag_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Balance.set_tag_name" title="Link to this definition">¶</a></dt>
+<dd><p>Set a XML tag name for this object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – name for the XML tag</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>tag_name</cite></p>
+</div>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.ofx.BankAccount">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.ofx.</span></span><span class="sig-name descname"><span class="pre">BankAccount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">tag_name:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'bankaccfrom',</span> <span class="pre">sgml:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False,</span> <span class="pre">_elem_f:</span> <span class="pre">Callable[[str,</span> <span class="pre">Any</span> <span class="pre">|</span> <span class="pre">None],</span> <span class="pre">str]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">xml_element&gt;,</span> <span class="pre">_aggr_f:</span> <span class="pre">Callable[[str,</span> <span class="pre">Any</span> <span class="pre">|</span> <span class="pre">None],</span> <span class="pre">str]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">xml_aggregate&gt;,</span> <span class="pre">bank_id:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">branch_id:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">id:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">type:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'SAVINGS',</span> <span class="pre">key:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.BankAccount" title="Link to this definition">¶</a></dt>
+<dd><p>A bank account</p>
+<p>See <a class="reference internal" href="#ofx" id="id2"><span>[OFX]</span></a> 11.3.1 Banking Account</p>
+<section id="id3">
+<h2>Fields<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<dl class="simple">
+<dt>bank_id</dt><dd><p><cite>BANKID</cite> bank identifier (Spain: banco, entidad)</p>
+</dd>
+<dt>branch_id</dt><dd><p><cite>BRANCHID</cite> branch identifier (Spain: sucursal, oficina)</p>
+</dd>
+<dt>id</dt><dd><p><cite>ACCTID</cite> account identifier</p>
+</dd>
+<dt>type</dt><dd><p><cite>ACCTTYPE</cite> type of account.</p>
+</dd>
+<dt>key</dt><dd><p><cite>ACCTKEY</cite> checksum (Spain: digitos de control)</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.BankAccount.get_bank">
+<span class="sig-name descname"><span class="pre">get_bank</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.BankAccount.get_bank" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code> – bank identifier (Spain: banco, entidad)</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>bank_id</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.BankAccount.get_branch">
+<span class="sig-name descname"><span class="pre">get_branch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.BankAccount.get_branch" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code> – branch identifier (Spain: sucursal, oficina)</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>branch_id</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.BankAccount.get_id">
+<span class="sig-name descname"><span class="pre">get_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.BankAccount.get_id" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code> – account identifier</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>id</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.BankAccount.get_key">
+<span class="sig-name descname"><span class="pre">get_key</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.BankAccount.get_key" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code> – checksum (Spain: digitos de control)</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>key</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.BankAccount.get_tag_name">
+<span class="sig-name descname"><span class="pre">get_tag_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#csb43.ofx.BankAccount.get_tag_name" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the XML tag name</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>tag_name</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.BankAccount.get_type">
+<span class="sig-name descname"><span class="pre">get_type</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#csb43.ofx.BankAccount.get_type" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code> – type of account. See <code class="xref py py-class docutils literal notranslate"><span class="pre">TYPE</span></code> (default         <em>‘SAVINGS’</em>)</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>type</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.BankAccount.is_sgml">
+<span class="sig-name descname"><span class="pre">is_sgml</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#csb43.ofx.BankAccount.is_sgml" title="Link to this definition">¶</a></dt>
+<dd><p>return True if SGML mode is on</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>sgml</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.BankAccount.set_bank">
+<span class="sig-name descname"><span class="pre">set_bank</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.BankAccount.set_bank" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – bank identifier</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>bank_id</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.BankAccount.set_branch">
+<span class="sig-name descname"><span class="pre">set_branch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.BankAccount.set_branch" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>branch</strong> – branch identifier</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>branch_id</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.BankAccount.set_id">
+<span class="sig-name descname"><span class="pre">set_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.BankAccount.set_id" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – account id</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>id</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.BankAccount.set_key">
+<span class="sig-name descname"><span class="pre">set_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.BankAccount.set_key" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – checksum</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>key</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.BankAccount.set_tag_name">
+<span class="sig-name descname"><span class="pre">set_tag_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.BankAccount.set_tag_name" title="Link to this definition">¶</a></dt>
+<dd><p>Set a XML tag name for this object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – name for the XML tag</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>tag_name</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.BankAccount.set_type">
+<span class="sig-name descname"><span class="pre">set_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.BankAccount.set_type" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – type of account</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>type</cite></p>
+</div>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.ofx.File">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.ofx.</span></span><span class="sig-name descname"><span class="pre">File</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">tag_name:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'ofx',</span> <span class="pre">sgml:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False,</span> <span class="pre">_elem_f:</span> <span class="pre">Callable[[str,</span> <span class="pre">Any</span> <span class="pre">|</span> <span class="pre">None],</span> <span class="pre">str]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">xml_element&gt;,</span> <span class="pre">_aggr_f:</span> <span class="pre">Callable[[str,</span> <span class="pre">Any</span> <span class="pre">|</span> <span class="pre">None],</span> <span class="pre">str]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">xml_aggregate&gt;,</span> <span class="pre">responses:</span> <span class="pre">list[Response]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.File" title="Link to this definition">¶</a></dt>
+<dd><p>An OFX file</p>
+<p>See <a class="reference internal" href="#ofx" id="id4"><span>[OFX]</span></a> 2.4.1</p>
+<section id="id5">
+<h2>Fields<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h2>
+<p>responses</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.File.add_response">
+<span class="sig-name descname"><span class="pre">add_response</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.ofx.Response" title="csb43.ofx.file.Response"><span class="pre">Response</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.File.add_response" title="Link to this definition">¶</a></dt>
+<dd><p>Add a response to the file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<a class="reference internal" href="#csb43.ofx.Response" title="csb43.ofx.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a>) – a response object to include in this object</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>responses</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.File.get_responses">
+<span class="sig-name descname"><span class="pre">get_responses</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#csb43.ofx.Response" title="csb43.ofx.file.Response"><span class="pre">Response</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#csb43.ofx.File.get_responses" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code> of <a class="reference internal" href="#csb43.ofx.Response" title="csb43.ofx.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>responses</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.File.get_tag_name">
+<span class="sig-name descname"><span class="pre">get_tag_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#csb43.ofx.File.get_tag_name" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the XML tag name</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>tag_name</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.File.is_sgml">
+<span class="sig-name descname"><span class="pre">is_sgml</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#csb43.ofx.File.is_sgml" title="Link to this definition">¶</a></dt>
+<dd><p>return True if SGML mode is on</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>sgml</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.File.set_tag_name">
+<span class="sig-name descname"><span class="pre">set_tag_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.File.set_tag_name" title="Link to this definition">¶</a></dt>
+<dd><p>Set a XML tag name for this object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – name for the XML tag</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>tag_name</cite></p>
+</div>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.ofx.Payee">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.ofx.</span></span><span class="sig-name descname"><span class="pre">Payee</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">tag_name:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'payeeid',</span> <span class="pre">sgml:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False,</span> <span class="pre">_elem_f:</span> <span class="pre">Callable[[str,</span> <span class="pre">Any</span> <span class="pre">|</span> <span class="pre">None],</span> <span class="pre">str]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">xml_element&gt;,</span> <span class="pre">_aggr_f:</span> <span class="pre">Callable[[str,</span> <span class="pre">Any</span> <span class="pre">|</span> <span class="pre">None],</span> <span class="pre">str]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">xml_aggregate&gt;,</span> <span class="pre">name:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">payee:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">extended_name:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Payee" title="Link to this definition">¶</a></dt>
+<dd><p>payee info</p>
+<section id="id6">
+<h2>Fields<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h2>
+<dl class="simple">
+<dt>name</dt><dd><p><cite>&lt;NAME&gt;</cite></p>
+</dd>
+<dt>payee</dt><dd><p><cite>&lt;PAYEE&gt;</cite></p>
+</dd>
+<dt>extended_name</dt><dd><p><cite>&lt;EXTDNAME&gt;</cite></p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Payee.get_extended_name">
+<span class="sig-name descname"><span class="pre">get_extended_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.Payee.get_extended_name" title="Link to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>extended_name</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Payee.get_name">
+<span class="sig-name descname"><span class="pre">get_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.Payee.get_name" title="Link to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>name</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Payee.get_payee">
+<span class="sig-name descname"><span class="pre">get_payee</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.Payee.get_payee" title="Link to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>payee</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Payee.get_tag_name">
+<span class="sig-name descname"><span class="pre">get_tag_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#csb43.ofx.Payee.get_tag_name" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the XML tag name</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>tag_name</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Payee.is_sgml">
+<span class="sig-name descname"><span class="pre">is_sgml</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#csb43.ofx.Payee.is_sgml" title="Link to this definition">¶</a></dt>
+<dd><p>return True if SGML mode is on</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>sgml</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Payee.set_extended_name">
+<span class="sig-name descname"><span class="pre">set_extended_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Payee.set_extended_name" title="Link to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>extended_name</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Payee.set_name">
+<span class="sig-name descname"><span class="pre">set_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Payee.set_name" title="Link to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>name</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Payee.set_payee">
+<span class="sig-name descname"><span class="pre">set_payee</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Payee.set_payee" title="Link to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>payee</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Payee.set_tag_name">
+<span class="sig-name descname"><span class="pre">set_tag_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Payee.set_tag_name" title="Link to this definition">¶</a></dt>
+<dd><p>Set a XML tag name for this object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – name for the XML tag</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>tag_name</cite></p>
+</div>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.ofx.Response">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.ofx.</span></span><span class="sig-name descname"><span class="pre">Response</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">tag_name:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'stmtrs',</span> <span class="pre">sgml:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False,</span> <span class="pre">_elem_f:</span> <span class="pre">Callable[[str,</span> <span class="pre">Any</span> <span class="pre">|</span> <span class="pre">None],</span> <span class="pre">str]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">xml_element&gt;,</span> <span class="pre">_aggr_f:</span> <span class="pre">Callable[[str,</span> <span class="pre">Any</span> <span class="pre">|</span> <span class="pre">None],</span> <span class="pre">str]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">xml_aggregate&gt;,</span> <span class="pre">currency:</span> <span class="pre">AnyCurrency</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">account_from:</span> <span class="pre">BankAccount</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">transaction_list:</span> <span class="pre">TransactionList</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">ledger_balance:</span> <span class="pre">Balance</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">available_balance:</span> <span class="pre">Balance</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">balances:</span> <span class="pre">list[Balance]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;,</span> <span class="pre">mktginfo:</span> <span class="pre">Any</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Response" title="Link to this definition">¶</a></dt>
+<dd><p><cite>STMTRS</cite></p>
+<p>See <a class="reference internal" href="#ofx" id="id7"><span>[OFX]</span></a> 11.4.2.2 Response</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Response.add_balance">
+<span class="sig-name descname"><span class="pre">add_balance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.ofx.Balance" title="csb43.ofx.balance.Balance"><span class="pre">Balance</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Response.add_balance" title="Link to this definition">¶</a></dt>
+<dd><p>Add a complementary balance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<a class="reference internal" href="#csb43.ofx.Balance" title="csb43.ofx.Balance"><code class="xref py py-class docutils literal notranslate"><span class="pre">Balance</span></code></a>) – a complementary balance</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Response.get_available_balance">
+<span class="sig-name descname"><span class="pre">get_available_balance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#csb43.ofx.Balance" title="csb43.ofx.balance.Balance"><span class="pre">Balance</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.Response.get_available_balance" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>Balance</cite> – the available balance aggregate</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Response.get_balances">
+<span class="sig-name descname"><span class="pre">get_balances</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#csb43.ofx.Balance" title="csb43.ofx.balance.Balance"><span class="pre">Balance</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.Response.get_balances" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code> of miscellaneous other <a class="reference internal" href="#csb43.ofx.Balance" title="csb43.ofx.Balance"><code class="xref py py-class docutils literal notranslate"><span class="pre">Balance</span></code></a> s</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Response.get_bank_account_from">
+<span class="sig-name descname"><span class="pre">get_bank_account_from</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#csb43.ofx.BankAccount" title="csb43.ofx.bank_account.BankAccount"><span class="pre">BankAccount</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.Response.get_bank_account_from" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#csb43.ofx.BankAccount" title="csb43.ofx.BankAccount"><code class="xref py py-class docutils literal notranslate"><span class="pre">BankAccount</span></code></a> – Account-from aggregate</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Response.get_currency">
+<span class="sig-name descname"><span class="pre">get_currency</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Response.get_currency" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">pycountry.dbCurrency</span></code> –         Default currency for the statement</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Response.get_ledger_balance">
+<span class="sig-name descname"><span class="pre">get_ledger_balance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#csb43.ofx.Balance" title="csb43.ofx.balance.Balance"><span class="pre">Balance</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.Response.get_ledger_balance" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#csb43.ofx.Balance" title="csb43.ofx.Balance"><code class="xref py py-class docutils literal notranslate"><span class="pre">Balance</span></code></a> – the ledger balance aggregate</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Response.get_mktginfo">
+<span class="sig-name descname"><span class="pre">get_mktginfo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Response.get_mktginfo" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>marketing info</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Response.get_tag_name">
+<span class="sig-name descname"><span class="pre">get_tag_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#csb43.ofx.Response.get_tag_name" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the XML tag name</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>tag_name</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Response.get_transaction_list">
+<span class="sig-name descname"><span class="pre">get_transaction_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#csb43.ofx.TransactionList" title="csb43.ofx.transaction.TransactionList"><span class="pre">TransactionList</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.Response.get_transaction_list" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#csb43.ofx.TransactionList" title="csb43.ofx.TransactionList"><code class="xref py py-class docutils literal notranslate"><span class="pre">TransactionList</span></code></a> –         Statement-transaction-data aggregate</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Response.is_sgml">
+<span class="sig-name descname"><span class="pre">is_sgml</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#csb43.ofx.Response.is_sgml" title="Link to this definition">¶</a></dt>
+<dd><p>return True if SGML mode is on</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>sgml</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Response.set_available_balance">
+<span class="sig-name descname"><span class="pre">set_available_balance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.ofx.Balance" title="csb43.ofx.balance.Balance"><span class="pre">Balance</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Response.set_available_balance" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<a class="reference internal" href="#csb43.ofx.Balance" title="csb43.ofx.Balance"><code class="xref py py-class docutils literal notranslate"><span class="pre">Balance</span></code></a>) – available balance</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Response.set_bank_account_from">
+<span class="sig-name descname"><span class="pre">set_bank_account_from</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.ofx.BankAccount" title="csb43.ofx.bank_account.BankAccount"><span class="pre">BankAccount</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Response.set_bank_account_from" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<a class="reference internal" href="#csb43.ofx.BankAccount" title="csb43.ofx.BankAccount"><code class="xref py py-class docutils literal notranslate"><span class="pre">BankAccount</span></code></a>) – value</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Response.set_currency">
+<span class="sig-name descname"><span class="pre">set_currency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Response.set_currency" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">pycountry.db.Currency</span></code>) – currency</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Response.set_ledger_balance">
+<span class="sig-name descname"><span class="pre">set_ledger_balance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.ofx.Balance" title="csb43.ofx.balance.Balance"><span class="pre">Balance</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Response.set_ledger_balance" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<a class="reference internal" href="#csb43.ofx.Balance" title="csb43.ofx.Balance"><code class="xref py py-class docutils literal notranslate"><span class="pre">Balance</span></code></a>) – ledger balance</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Response.set_mktginfo">
+<span class="sig-name descname"><span class="pre">set_mktginfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Response.set_mktginfo" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – marketing info</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Response.set_tag_name">
+<span class="sig-name descname"><span class="pre">set_tag_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Response.set_tag_name" title="Link to this definition">¶</a></dt>
+<dd><p>Set a XML tag name for this object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – name for the XML tag</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>tag_name</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Response.set_transaction_list">
+<span class="sig-name descname"><span class="pre">set_transaction_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.ofx.TransactionList" title="csb43.ofx.transaction.TransactionList"><span class="pre">TransactionList</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Response.set_transaction_list" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<a class="reference internal" href="#csb43.ofx.TransactionList" title="csb43.ofx.TransactionList"><code class="xref py py-class docutils literal notranslate"><span class="pre">TransactionList</span></code></a>) – transactions list</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.ofx.SignOnResponse">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.ofx.</span></span><span class="sig-name descname"><span class="pre">SignOnResponse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">tag_name:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'sonrs',</span> <span class="pre">sgml:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False,</span> <span class="pre">_elem_f:</span> <span class="pre">Callable[[str,</span> <span class="pre">Any</span> <span class="pre">|</span> <span class="pre">None],</span> <span class="pre">str]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">xml_element&gt;,</span> <span class="pre">_aggr_f:</span> <span class="pre">Callable[[str,</span> <span class="pre">Any</span> <span class="pre">|</span> <span class="pre">None],</span> <span class="pre">str]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">xml_aggregate&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.SignOnResponse" title="Link to this definition">¶</a></dt>
+<dd><p><cite>SONRS</cite></p>
+<p>See <a class="reference internal" href="#ofx" id="id8"><span>[OFX]</span></a> 2.5.1</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.SignOnResponse.get_tag_name">
+<span class="sig-name descname"><span class="pre">get_tag_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#csb43.ofx.SignOnResponse.get_tag_name" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the XML tag name</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>tag_name</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.SignOnResponse.is_sgml">
+<span class="sig-name descname"><span class="pre">is_sgml</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#csb43.ofx.SignOnResponse.is_sgml" title="Link to this definition">¶</a></dt>
+<dd><p>return True if SGML mode is on</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>sgml</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.SignOnResponse.set_tag_name">
+<span class="sig-name descname"><span class="pre">set_tag_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.SignOnResponse.set_tag_name" title="Link to this definition">¶</a></dt>
+<dd><p>Set a XML tag name for this object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – name for the XML tag</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>tag_name</cite></p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.ofx.</span></span><span class="sig-name descname"><span class="pre">Transaction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">tag_name:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'stmttrn',</span> <span class="pre">sgml:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False,</span> <span class="pre">_elem_f:</span> <span class="pre">Callable[[str,</span> <span class="pre">Any</span> <span class="pre">|</span> <span class="pre">None],</span> <span class="pre">str]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">xml_element&gt;,</span> <span class="pre">_aggr_f:</span> <span class="pre">Callable[[str,</span> <span class="pre">Any</span> <span class="pre">|</span> <span class="pre">None],</span> <span class="pre">str]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">xml_aggregate&gt;,</span> <span class="pre">type:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'OTHER',</span> <span class="pre">date_posted:</span> <span class="pre">dt.datetime</span> <span class="pre">|</span> <span class="pre">dt.date</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">date_initiated:</span> <span class="pre">dt.datetime</span> <span class="pre">|</span> <span class="pre">dt.date</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">date_available:</span> <span class="pre">dt.datetime</span> <span class="pre">|</span> <span class="pre">dt.date</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">amount:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">float</span> <span class="pre">|</span> <span class="pre">Decimal</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">transaction_id:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">correct_fit_id:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">correct_action:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">server_tid:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">check_num:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">ref_num:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">standard_industrial_code:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">payee:</span> <span class="pre">Payee</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">bank_account_to:</span> <span class="pre">BankAccount</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">cc_account_to:</span> <span class="pre">BankAccount</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">memo:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">image_data:</span> <span class="pre">Any</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">origin_currency:</span> <span class="pre">AnyCurrency</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">origin_amount:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">float</span> <span class="pre">|</span> <span class="pre">Decimal</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">inv401ksource:</span> <span class="pre">Any</span> <span class="pre">|</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">payeeid:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">name:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">extended_name:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Transaction" title="Link to this definition">¶</a></dt>
+<dd><p>A OFX transaction</p>
+<p>See <a class="reference internal" href="#ofx" id="id9"><span>[OFX]</span></a> 11.4.4.1</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.get_amount">
+<span class="sig-name descname"><span class="pre">get_amount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Decimal</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.Transaction.get_amount" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>number – amount of transaction</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>amount</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.get_bank_account_to">
+<span class="sig-name descname"><span class="pre">get_bank_account_to</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#csb43.ofx.BankAccount" title="csb43.ofx.bank_account.BankAccount"><span class="pre">BankAccount</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.Transaction.get_bank_account_to" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#csb43.ofx.BankAccount" title="csb43.ofx.BankAccount"><code class="xref py py-class docutils literal notranslate"><span class="pre">BankAccount</span></code></a> – account the transaction is         transferring to</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>bank_account_to</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.get_cc_account_to">
+<span class="sig-name descname"><span class="pre">get_cc_account_to</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#csb43.ofx.BankAccount" title="csb43.ofx.bank_account.BankAccount"><span class="pre">BankAccount</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.Transaction.get_cc_account_to" title="Link to this definition">¶</a></dt>
+<dd><p>cc account to</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>cc_account_to</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.get_check_num">
+<span class="sig-name descname"><span class="pre">get_check_num</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.Transaction.get_check_num" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code> – check (or other reference) number</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>check_num</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.get_correct_action">
+<span class="sig-name descname"><span class="pre">get_correct_action</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.Transaction.get_correct_action" title="Link to this definition">¶</a></dt>
+<dd><p>correct action</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>correct_action</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.get_correct_fit_id">
+<span class="sig-name descname"><span class="pre">get_correct_fit_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.Transaction.get_correct_fit_id" title="Link to this definition">¶</a></dt>
+<dd><p>correct fit id</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>correct_fit_id</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.get_currency">
+<span class="sig-name descname"><span class="pre">get_currency</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="utils.html#csb43.utils.currency.AnyCurrency" title="csb43.utils.currency.AnyCurrency"><span class="pre">AnyCurrency</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.Transaction.get_currency" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">pycountry.db.Currency</span></code> – currency of the         transaction, if different from the one in <a class="reference internal" href="#csb43.ofx.BankAccount" title="csb43.ofx.BankAccount"><code class="xref py py-class docutils literal notranslate"><span class="pre">BankAccount</span></code></a></p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>currency</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.get_date_available">
+<span class="sig-name descname"><span class="pre">get_date_available</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">datetime</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">date</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.Transaction.get_date_available" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.datetime</span></code> – date funds are available</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>date_available</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.get_date_initiated">
+<span class="sig-name descname"><span class="pre">get_date_initiated</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">datetime</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">date</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.Transaction.get_date_initiated" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.datetime</span></code> – date user initiated transaction</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>date_initiated</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.get_date_posted">
+<span class="sig-name descname"><span class="pre">get_date_posted</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">datetime</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">date</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.Transaction.get_date_posted" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.datetime</span></code> – date transaction was posted to         account</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>date_posted</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.get_extended_name">
+<span class="sig-name descname"><span class="pre">get_extended_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.Transaction.get_extended_name" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code> – extended name of payee or description of         transaction</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>extended_name</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.get_image_data">
+<span class="sig-name descname"><span class="pre">get_image_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.Transaction.get_image_data" title="Link to this definition">¶</a></dt>
+<dd><p>image data</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>image_data</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.get_inv_401ksource">
+<span class="sig-name descname"><span class="pre">get_inv_401ksource</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Transaction.get_inv_401ksource" title="Link to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>inv_401ksource</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.get_memo">
+<span class="sig-name descname"><span class="pre">get_memo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.Transaction.get_memo" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code> – extra information</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>memo</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.get_name">
+<span class="sig-name descname"><span class="pre">get_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.Transaction.get_name" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code> – name of payee or description of transaction</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>name</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.get_origin_amount">
+<span class="sig-name descname"><span class="pre">get_origin_amount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Transaction.get_origin_amount" title="Link to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>origin_amount</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.get_origin_currency">
+<span class="sig-name descname"><span class="pre">get_origin_currency</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="utils.html#csb43.utils.currency.AnyCurrency" title="csb43.utils.currency.AnyCurrency"><span class="pre">AnyCurrency</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.Transaction.get_origin_currency" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">pycountry.db.Currency</span></code> – currency of the         transaction, if different from the one in <a class="reference internal" href="#csb43.ofx.BankAccount" title="csb43.ofx.BankAccount"><code class="xref py py-class docutils literal notranslate"><span class="pre">BankAccount</span></code></a></p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>origin_currency</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.get_payee">
+<span class="sig-name descname"><span class="pre">get_payee</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#csb43.ofx.Payee" title="csb43.ofx.payee.Payee"><span class="pre">Payee</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.Transaction.get_payee" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#csb43.ofx.Payee" title="csb43.ofx.Payee"><code class="xref py py-class docutils literal notranslate"><span class="pre">Payee</span></code></a></p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>payee</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.get_payeeid">
+<span class="sig-name descname"><span class="pre">get_payeeid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.Transaction.get_payeeid" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code> – payee identifier</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>payeeid</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.get_ref_num">
+<span class="sig-name descname"><span class="pre">get_ref_num</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.Transaction.get_ref_num" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code> – reference number that uniquely indentifies         the transaction.</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>ref_num</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.get_server_tid">
+<span class="sig-name descname"><span class="pre">get_server_tid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.Transaction.get_server_tid" title="Link to this definition">¶</a></dt>
+<dd><p>server transaction id</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>server_tid</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.get_standard_industrial_code">
+<span class="sig-name descname"><span class="pre">get_standard_industrial_code</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.Transaction.get_standard_industrial_code" title="Link to this definition">¶</a></dt>
+<dd><p>standard industrial code</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>standard_industrial_code</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.get_tag_name">
+<span class="sig-name descname"><span class="pre">get_tag_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#csb43.ofx.Transaction.get_tag_name" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the XML tag name</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>tag_name</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.get_transaction_id">
+<span class="sig-name descname"><span class="pre">get_transaction_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.Transaction.get_transaction_id" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code> – transaction ID issued by financial institution</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>transaction_id</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.get_type">
+<span class="sig-name descname"><span class="pre">get_type</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#csb43.ofx.Transaction.get_type" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code> – transaction type. See <code class="xref py py-class docutils literal notranslate"><span class="pre">TYPE</span></code>. Default         (‘OTHER’)</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>type</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.is_sgml">
+<span class="sig-name descname"><span class="pre">is_sgml</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#csb43.ofx.Transaction.is_sgml" title="Link to this definition">¶</a></dt>
+<dd><p>return True if SGML mode is on</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>sgml</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.set_amount">
+<span class="sig-name descname"><span class="pre">set_amount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Decimal</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Transaction.set_amount" title="Link to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.set_bank_account_to">
+<span class="sig-name descname"><span class="pre">set_bank_account_to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.ofx.BankAccount" title="csb43.ofx.bank_account.BankAccount"><span class="pre">BankAccount</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Transaction.set_bank_account_to" title="Link to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.set_cc_account_to">
+<span class="sig-name descname"><span class="pre">set_cc_account_to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.ofx.BankAccount" title="csb43.ofx.bank_account.BankAccount"><span class="pre">BankAccount</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Transaction.set_cc_account_to" title="Link to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.set_check_num">
+<span class="sig-name descname"><span class="pre">set_check_num</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Transaction.set_check_num" title="Link to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.set_correct_action">
+<span class="sig-name descname"><span class="pre">set_correct_action</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Transaction.set_correct_action" title="Link to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.set_correct_fit_id">
+<span class="sig-name descname"><span class="pre">set_correct_fit_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Transaction.set_correct_fit_id" title="Link to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.set_currency">
+<span class="sig-name descname"><span class="pre">set_currency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Transaction.set_currency" title="Link to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.set_date_available">
+<span class="sig-name descname"><span class="pre">set_date_available</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">datetime</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">date</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Transaction.set_date_available" title="Link to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.set_date_initialised">
+<span class="sig-name descname"><span class="pre">set_date_initialised</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">datetime</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">date</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Transaction.set_date_initialised" title="Link to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.set_date_posted">
+<span class="sig-name descname"><span class="pre">set_date_posted</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">datetime</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">date</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Transaction.set_date_posted" title="Link to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.set_extended_name">
+<span class="sig-name descname"><span class="pre">set_extended_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Transaction.set_extended_name" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – extended name of payee or description of transaction</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>extended_name</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.set_image_data">
+<span class="sig-name descname"><span class="pre">set_image_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Transaction.set_image_data" title="Link to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.set_inv_401ksource">
+<span class="sig-name descname"><span class="pre">set_inv_401ksource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Transaction.set_inv_401ksource" title="Link to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.set_memo">
+<span class="sig-name descname"><span class="pre">set_memo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Transaction.set_memo" title="Link to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.set_name">
+<span class="sig-name descname"><span class="pre">set_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Transaction.set_name" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – name of payee or description of transaction</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>name</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.set_origin_amount">
+<span class="sig-name descname"><span class="pre">set_origin_amount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Transaction.set_origin_amount" title="Link to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.set_origin_currency">
+<span class="sig-name descname"><span class="pre">set_origin_currency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Transaction.set_origin_currency" title="Link to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.set_payee">
+<span class="sig-name descname"><span class="pre">set_payee</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.ofx.Payee" title="csb43.ofx.payee.Payee"><span class="pre">Payee</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Transaction.set_payee" title="Link to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.set_payeeid">
+<span class="sig-name descname"><span class="pre">set_payeeid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Transaction.set_payeeid" title="Link to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.set_ref_num">
+<span class="sig-name descname"><span class="pre">set_ref_num</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Transaction.set_ref_num" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – reference number that uniquely indentifies the         transaction.</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>ref_num</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.set_server_tid">
+<span class="sig-name descname"><span class="pre">set_server_tid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Transaction.set_server_tid" title="Link to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.set_standard_industrial_code">
+<span class="sig-name descname"><span class="pre">set_standard_industrial_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Transaction.set_standard_industrial_code" title="Link to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.set_tag_name">
+<span class="sig-name descname"><span class="pre">set_tag_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Transaction.set_tag_name" title="Link to this definition">¶</a></dt>
+<dd><p>Set a XML tag name for this object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – name for the XML tag</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>tag_name</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.set_transaction_id">
+<span class="sig-name descname"><span class="pre">set_transaction_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Transaction.set_transaction_id" title="Link to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.Transaction.set_type">
+<span class="sig-name descname"><span class="pre">set_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.Transaction.set_type" title="Link to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>type</cite></p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.ofx.TransactionList">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.ofx.</span></span><span class="sig-name descname"><span class="pre">TransactionList</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">tag_name:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'banktranlist',</span> <span class="pre">sgml:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False,</span> <span class="pre">_elem_f:</span> <span class="pre">Callable[[str,</span> <span class="pre">Any</span> <span class="pre">|</span> <span class="pre">None],</span> <span class="pre">str]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">xml_element&gt;,</span> <span class="pre">_aggr_f:</span> <span class="pre">Callable[[str,</span> <span class="pre">Any</span> <span class="pre">|</span> <span class="pre">None],</span> <span class="pre">str]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">xml_aggregate&gt;,</span> <span class="pre">date_start:</span> <span class="pre">dt.datetime</span> <span class="pre">|</span> <span class="pre">dt.date</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">date_end:</span> <span class="pre">dt.datetime</span> <span class="pre">|</span> <span class="pre">dt.date</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">transactions:</span> <span class="pre">list[Transaction]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.TransactionList" title="Link to this definition">¶</a></dt>
+<dd><p>Transaction list aggregate</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.TransactionList.add_transaction">
+<span class="sig-name descname"><span class="pre">add_transaction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.ofx.Transaction" title="csb43.ofx.transaction.Transaction"><span class="pre">Transaction</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.TransactionList.add_transaction" title="Link to this definition">¶</a></dt>
+<dd><p>Add a new transaction to the list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<a class="reference internal" href="#csb43.ofx.Transaction" title="csb43.ofx.Transaction"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transaction</span></code></a>) – a transaction</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>transactions</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.TransactionList.get_date_end">
+<span class="sig-name descname"><span class="pre">get_date_end</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">datetime</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">date</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.TransactionList.get_date_end" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.datetime</span></code> – date of the first transaction</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>date_end</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.TransactionList.get_date_start">
+<span class="sig-name descname"><span class="pre">get_date_start</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">datetime</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">date</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.ofx.TransactionList.get_date_start" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.datetime</span></code> – date of the first transaction</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>date_start</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.TransactionList.get_list">
+<span class="sig-name descname"><span class="pre">get_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#csb43.ofx.Transaction" title="csb43.ofx.transaction.Transaction"><span class="pre">Transaction</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#csb43.ofx.TransactionList.get_list" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code> of <a class="reference internal" href="#csb43.ofx.Transaction" title="csb43.ofx.Transaction"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transaction</span></code></a></p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>transactions</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.TransactionList.get_tag_name">
+<span class="sig-name descname"><span class="pre">get_tag_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#csb43.ofx.TransactionList.get_tag_name" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the XML tag name</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>tag_name</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.TransactionList.is_sgml">
+<span class="sig-name descname"><span class="pre">is_sgml</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#csb43.ofx.TransactionList.is_sgml" title="Link to this definition">¶</a></dt>
+<dd><p>return True if SGML mode is on</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>sgml</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.TransactionList.set_date_end">
+<span class="sig-name descname"><span class="pre">set_date_end</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">datetime</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">date</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.TransactionList.set_date_end" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.datetime</span></code>) – date of end</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>date_end</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.TransactionList.set_date_start">
+<span class="sig-name descname"><span class="pre">set_date_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.TransactionList.set_date_start" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.datetime</span></code>) – date of start</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>date_start</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.ofx.TransactionList.set_tag_name">
+<span class="sig-name descname"><span class="pre">set_tag_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.ofx.TransactionList.set_tag_name" title="Link to this definition">¶</a></dt>
+<dd><p>Set a XML tag name for this object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – name for the XML tag</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use attribute <cite>tag_name</cite></p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<section id="module-csb43.ofx.converter">
+<span id="converter"></span><h2><a class="toc-backref" href="#id12" role="doc-backlink">Converter</a><a class="headerlink" href="#module-csb43.ofx.converter" title="Link to this heading">¶</a></h2>
+<p>Conversion from AEB43 to OFX</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="csb43.ofx.converter.PAYMODES">
+<span class="sig-prename descclassname"><span class="pre">csb43.ofx.converter.</span></span><span class="sig-name descname"><span class="pre">PAYMODES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{1:</span> <span class="pre">TransactionType.CHECK,</span> <span class="pre">2:</span> <span class="pre">TransactionType.CREDIT,</span> <span class="pre">3:</span> <span class="pre">TransactionType.SRVCHG,</span> <span class="pre">4:</span> <span class="pre">TransactionType.XFER,</span> <span class="pre">5:</span> <span class="pre">TransactionType.DIV,</span> <span class="pre">7:</span> <span class="pre">TransactionType.REPEATPMT,</span> <span class="pre">8:</span> <span class="pre">TransactionType.FEE,</span> <span class="pre">9:</span> <span class="pre">TransactionType.DIV,</span> <span class="pre">10:</span> <span class="pre">TransactionType.CHECK,</span> <span class="pre">11:</span> <span class="pre">TransactionType.ATM,</span> <span class="pre">12:</span> <span class="pre">TransactionType.POS,</span> <span class="pre">15:</span> <span class="pre">TransactionType.XFER,</span> <span class="pre">17:</span> <span class="pre">TransactionType.INT,</span> <span class="pre">99:</span> <span class="pre">TransactionType.OTHER}</span></em><a class="headerlink" href="#csb43.ofx.converter.PAYMODES" title="Link to this definition">¶</a></dt>
+<dd><p>conversion table OFX - Homebank for pay modes</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="csb43.ofx.converter.convertFromCsb">
+<span class="sig-prename descclassname"><span class="pre">csb43.ofx.converter.</span></span><span class="sig-name descname"><span class="pre">convertFromCsb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">csb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">File</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sgml</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#csb43.ofx.File" title="csb43.ofx.file.File"><span class="pre">File</span></a></span></span><a class="headerlink" href="#csb43.ofx.converter.convertFromCsb" title="Link to this definition">¶</a></dt>
+<dd><p>Convert a File file into an OFX file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>csb</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">csb43.csb43.File</span></code>) – a CSB43 file</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#csb43.ofx.File" title="csb43.ofx.File"><code class="xref py py-class docutils literal notranslate"><span class="pre">csb43.ofx.File</span></code></a></p>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># OFX</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">csb43</span> <span class="kn">import</span> <span class="n">csb43</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">csbFile</span> <span class="o">=</span> <span class="n">csb43</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;movimientos.csb&quot;</span><span class="p">),</span> <span class="n">strict</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> 
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># print to stdout</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">convertFromCsb</span><span class="p">(</span><span class="n">csbFile</span><span class="p">))</span> 
+</pre></div>
+</div>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.10.0: </span>use csb43.ofx.converter.convert_from_aeb43</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="csb43.ofx.converter.convert_from_aeb43">
+<span class="sig-prename descclassname"><span class="pre">csb43.ofx.converter.</span></span><span class="sig-name descname"><span class="pre">convert_from_aeb43</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="csb.html#csb43.aeb43.Batch" title="csb43.aeb43.batch.Batch"><span class="pre">Batch</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">sgml</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#csb43.ofx.File" title="csb43.ofx.file.File"><span class="pre">File</span></a></span></span><a class="headerlink" href="#csb43.ofx.converter.convert_from_aeb43" title="Link to this definition">¶</a></dt>
+<dd><p>convert an AEB43 batch to OFX.</p>
+<p>Use <cite>sgml=True</cite> in order to generate SGML instead of XML</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">csb43</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="csb.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.aeb43</span></code></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.ofx</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#references">References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.ofx.Balance"><code class="docutils literal notranslate"><span class="pre">Balance</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.ofx.BankAccount"><code class="docutils literal notranslate"><span class="pre">BankAccount</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.ofx.File"><code class="docutils literal notranslate"><span class="pre">File</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.ofx.Payee"><code class="docutils literal notranslate"><span class="pre">Payee</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.ofx.Response"><code class="docutils literal notranslate"><span class="pre">Response</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.ofx.SignOnResponse"><code class="docutils literal notranslate"><span class="pre">SignOnResponse</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.ofx.Transaction"><code class="docutils literal notranslate"><span class="pre">Transaction</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.ofx.TransactionList"><code class="docutils literal notranslate"><span class="pre">TransactionList</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-csb43.ofx.converter">Converter</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="homebank.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.homebank</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="formats.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.formats</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.utils</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="records.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.record</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="records.html#module-csb43.aeb43.fields"><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.fields</span></code></a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="csb.html" title="previous chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.aeb43</span></code></a></li>
+      <li>Next: <a href="homebank.html" title="next chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.homebank</span></code></a></li>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, wmj <wmj.py@gmx.com>.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.3.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/ofx.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

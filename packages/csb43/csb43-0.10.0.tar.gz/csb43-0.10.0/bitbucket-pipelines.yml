@@ -1,0 +1,59 @@
+# SPDX-FileCopyrightText: 2024 wmj <wmj.py@gmx.com>
+#
+# SPDX-License-Identifier: LGPL-3.0-or-later
+
+image: python:3.8
+
+pipelines:
+  default:
+    - parallel:
+      - step:
+          image: python:3.8
+          caches:
+            - pip
+#            - ofxschemas
+          script:
+#            - ([ -f .ofx_schemas/OFX2_Protocol.xsd ] || make ofx)
+            - pip install "tox ~= 4.3"
+            - tox -c tox-bitbucket.ini -e "py38-en,py38-es,py39-c"
+      - step:
+          image: python:3.9
+          caches:
+            - pip
+#            - ofxschemas
+          script:
+#            - ([ -f .ofx_schemas/OFX2_Protocol.xsd ] || make ofx)
+            - pip install "tox ~= 4.3"
+            - tox -c tox-bitbucket.ini -e "py39-en,py39-es,py39-c"
+      - step:
+          image: python:3.10
+          caches:
+            - pip
+#            - ofxschemas
+          script:
+#            - ([ -f .ofx_schemas/OFX2_Protocol.xsd ] || make ofx)
+            - pip install "tox ~= 4.3" 
+            - tox -c tox-bitbucket.ini -e "py310-en,py310-es,py310-c"
+      - step:
+          image: python:3.11
+          caches:
+            - pip
+#            - ofxschemas
+          script:
+#            - ([ -f .ofx_schemas/OFX2_Protocol.xsd ] || make ofx)
+            - pip install "tox ~= 4.3"
+            - tox -c tox-bitbucket.ini -e "py311-en,py311-es,py311-c"
+      - step:
+          image: python:3.12
+          caches:
+            - pip
+#            - ofxschemas
+          script:
+#            - ([ -f .ofx_schemas/OFX2_Protocol.xsd ] || make ofx)
+            - pip install "tox ~= 4.3"
+            - tox -c tox-bitbucket.ini -e "py312-en,py312-es,py312-c"
+          
+#definitions:
+#  caches:
+#    ofxschemas: .ofx_schemas
+    

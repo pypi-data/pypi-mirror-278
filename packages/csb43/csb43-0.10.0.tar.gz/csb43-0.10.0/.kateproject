@@ -1,0 +1,34 @@
+{
+	"name": "csb43"
+	,"files": [{"git": 1}]
+	,"build": {
+		"targets": [
+			{"name": "all", "build_cmd": "make"}
+			,{"name": "test", "build_cmd": "make test"}
+			,{"name": "clean", "build_cmd": "make clean"}
+			,{"name": "clean-version", "build_cmd": "make clean-version"}
+			,{"name": "flake8", "build_cmd": "make flake8"}
+		]
+		,"default_target": "all"
+		,"clean_target": "clean"
+	}
+	,"lspclient": {
+        "servers": {
+            "python": {
+                "command": ["python", "-m", "pylsp", "--check-parent-process"],
+                "settings": {
+                    "pylsp": {
+                        "plugins": {
+                            "pylsp-mypy": {
+                                "enabled": true,
+                                "live_mode": false
+                            },
+                            "ruff": { "enabled": true }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

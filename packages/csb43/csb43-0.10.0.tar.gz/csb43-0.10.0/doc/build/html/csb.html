@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>csb43.aeb43 &#8212; csb43  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="csb43.ofx" href="ofx.html" />
+    <link rel="prev" title="Welcome to csb43’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <nav class="contents local" id="contents" role="doc-toc">
+<ul class="simple">
+<li><p><a class="reference internal" href="#module-csb43.aeb43" id="id17"><a class="reference internal" href="#module-csb43.aeb43" title="csb43.aeb43"><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.aeb43</span></code></a></a></p>
+<ul>
+<li><p><a class="reference internal" href="#references" id="id18">References</a></p></li>
+<li><p><a class="reference internal" href="#module-csb43.aeb43.record.context" id="id19">Context – [en] Contexto</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="module-csb43.aeb43">
+<span id="csb43-aeb43"></span><h1><a class="toc-backref" href="#id17" role="doc-backlink"><a class="reference internal" href="#module-csb43.aeb43" title="csb43.aeb43"><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.aeb43</span></code></a></a><a class="headerlink" href="#module-csb43.aeb43" title="Link to this heading">¶</a></h1>
+<p>Parsing and validation utilites for the Spanish standard norm 43 by the
+“Consejo Superior Bancario” (CSB) / “Asociación Española de Banca” (AEB)
+for storing bank account transactions.</p>
+<p>[es] Herramientas para leer y validar datos almacenados siguiendo la norma 43
+del Consejo Superior Bancario (CSB) / Asociación Española de Banca (CSB).</p>
+<section id="references">
+<h2><a class="toc-backref" href="#id18" role="doc-backlink">References</a><a class="headerlink" href="#references" title="Link to this heading">¶</a></h2>
+<div role="list" class="citation-list">
+<div class="citation" id="n43-2012" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>n43_2012<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id3">2</a>,<a role="doc-backlink" href="#id5">3</a>,<a role="doc-backlink" href="#id7">4</a>,<a role="doc-backlink" href="#id9">5</a>,<a role="doc-backlink" href="#id11">6</a>,<a role="doc-backlink" href="#id12">7</a>,<a role="doc-backlink" href="#id13">8</a>,<a role="doc-backlink" href="#id16">9</a>)</span>
+<p>Información normalizada de cuenta corriente SEPA (2012), Serie normas y procedimientos bancarios nº 43. Confederación Española de Cajas de Ahorros. Asociación Española de Banca.</p>
+</div>
+</div>
+<div class="highlight-bibtex notranslate"><div class="highlight"><pre><span></span><span class="nc">@techreport</span><span class="p">{</span><span class="nl">n43_2012</span><span class="p">,</span>
+<span class="w">    </span><span class="na">author</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Varios}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">institution</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Confederación Española de Cajas de Ahorros}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">month</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">6</span><span class="p">,</span>
+<span class="w">    </span><span class="na">number</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Serie normas y procedimientos bancarios nº 43}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">publisher</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Asociación Española de Banca}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">title</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{{Información normalizada de cuenta corriente (SEPA)}}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">year</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2012}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.Account">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.</span></span><span class="sig-name descname"><span class="pre">Account</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context:</span> <span class="pre">Aeb43Context</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raw:</span> <span class="pre">dataclasses.InitVar[AnyBytes</span> <span class="pre">|</span> <span class="pre">None]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bank_code:</span> <span class="pre">String</span> <span class="pre">=</span> <span class="pre">String(field_id=&lt;Field.BANK_CODE:</span> <span class="pre">1&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding=b'0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trim=&lt;Trim.BOTH_BLANK:</span> <span class="pre">10&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">align_left=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode=mappingproxy({})</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;class</span> <span class="pre">'str'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">branch_code:</span> <span class="pre">String</span> <span class="pre">=</span> <span class="pre">String(field_id=&lt;Field.BRANCH_CODE:</span> <span class="pre">2&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding=b'0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trim=&lt;Trim.BOTH_BLANK:</span> <span class="pre">10&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">align_left=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode=mappingproxy({})</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;class</span> <span class="pre">'str'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">account_number:</span> <span class="pre">String</span> <span class="pre">=</span> <span class="pre">String(field_id=&lt;Field.ACCOUNT_NUMBER:</span> <span class="pre">3&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding=b'0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trim=&lt;Trim.BOTH_BLANK:</span> <span class="pre">10&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">align_left=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode=mappingproxy({})</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;class</span> <span class="pre">'str'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_date:</span> <span class="pre">Date</span> <span class="pre">=</span> <span class="pre">Date(field_id=&lt;Field.INITIAL_DATE:</span> <span class="pre">4&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;built-in</span> <span class="pre">method</span> <span class="pre">today</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">final_date:</span> <span class="pre">Date</span> <span class="pre">=</span> <span class="pre">Date(field_id=&lt;Field.FINAL_DATE:</span> <span class="pre">5&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;built-in</span> <span class="pre">method</span> <span class="pre">today</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_balance:</span> <span class="pre">Money</span> <span class="pre">=</span> <span class="pre">Money(value_id=&lt;Field.INITIAL_BALANCE:</span> <span class="pre">7&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode_id=&lt;Field.EXPENSE_OR_INCOME:</span> <span class="pre">6&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_mode=b'2'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding=b'0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">non_negative=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;class</span> <span class="pre">'decimal.Decimal'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">currency:</span> <span class="pre">Currency</span> <span class="pre">=</span> <span class="pre">Currency(field_id=&lt;Field.CURRENCY_CODE:</span> <span class="pre">8&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;function</span> <span class="pre">euro_currency&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">information_mode:</span> <span class="pre">InformationModeField</span> <span class="pre">=</span> <span class="pre">InformationModeField(field_id=&lt;Field.INFORMATION_MODE:</span> <span class="pre">9&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;function</span> <span class="pre">InformationModeField.&lt;lambda&gt;&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">short_name:</span> <span class="pre">String</span> <span class="pre">=</span> <span class="pre">String(field_id=&lt;Field.SHORT_NAME:</span> <span class="pre">10&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding=b'</span> <span class="pre">'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trim=&lt;Trim.BOTH:</span> <span class="pre">15&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">align_left=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode=mappingproxy({})</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;class</span> <span class="pre">'str'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding:</span> <span class="pre">String</span> <span class="pre">=</span> <span class="pre">String(field_id=&lt;Field.PADDING:</span> <span class="pre">11&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding=b'</span> <span class="pre">'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trim=&lt;Trim.BOTH:</span> <span class="pre">15&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">align_left=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode=mappingproxy({})</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;class</span> <span class="pre">'str'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transactions:</span> <span class="pre">NestedCollection[Transaction]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">summary:</span> <span class="pre">SummaryField[ClosingAccount]</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.Account" title="Link to this definition">¶</a></dt>
+<dd><p><strong>COD 11</strong></p>
+<p>Account record</p>
+<p>[es] Registro de cabecera de cuenta</p>
+<p>See <a class="reference internal" href="#n43-2012" id="id1"><span>[n43_2012]</span></a> Appendix 1, section 1.1</p>
+<section id="fields">
+<h2>Fields<a class="headerlink" href="#fields" title="Link to this heading">¶</a></h2>
+<dl class="simple">
+<dt>bank_code<span class="classifier">String[4]</span></dt><dd><p>bank code / clave de la entidad</p>
+</dd>
+<dt>branch_code<span class="classifier">String[4]</span></dt><dd><p>branch code / clave de oficina</p>
+</dd>
+<dt>account_number<span class="classifier">String[10]</span></dt><dd><p>account number / número de cuenta</p>
+</dd>
+<dt>initial_date<span class="classifier">Date</span></dt><dd><p>initial date / fecha inicial</p>
+</dd>
+<dt>final_date<span class="classifier">Date</span></dt><dd><p>final date / fecha final</p>
+</dd>
+<dt>initial_balance<span class="classifier">Money[12.2]</span></dt><dd><p>initial balance / importe saldo inicial</p>
+</dd>
+<dt>currency<span class="classifier">Currency</span></dt><dd><p>currency / divisa</p>
+</dd>
+<dt>information_mode<span class="classifier">Integer[1..3]</span></dt><dd><p>information mode / modalidad de información</p>
+</dd>
+<dt>short_name<span class="classifier">String[26]</span></dt><dd><p>short name / nombre abreviado</p>
+</dd>
+<dt>padding<span class="classifier">String[3]</span></dt><dd><p>padding / libre uso</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.Account.accepts_nested_codes">
+<span class="sig-name descname"><span class="pre">accepts_nested_codes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#csb43.aeb43.Account.accepts_nested_codes" title="Link to this definition">¶</a></dt>
+<dd><p>return True if the record accepts this nested <cite>record</cite></p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="csb43.aeb43.Account.account_control_key">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">account_control_key</span></span><a class="headerlink" href="#csb43.aeb43.Account.account_control_key" title="Link to this definition">¶</a></dt>
+<dd><p>get the account control key (CC)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.Account.append">
+<span class="sig-name descname"><span class="pre">append</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.Account.append" title="Link to this definition">¶</a></dt>
+<dd><p>append a bytes record to the collection of dependent records</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.Account.describe">
+<span class="sig-name descname"><span class="pre">describe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#csb43.aeb43.Account.describe" title="Link to this definition">¶</a></dt>
+<dd><p>return a textual summary</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.Account.is_closed">
+<span class="sig-name descname"><span class="pre">is_closed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#csb43.aeb43.Account.is_closed" title="Link to this definition">¶</a></dt>
+<dd><p>return True if this account has a final summary</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.Account.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">translated</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.Account.to_dict" title="Link to this definition">¶</a></dt>
+<dd><p>return fields as a dict of typed values</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.Account.validate_summary">
+<span class="sig-name descname"><span class="pre">validate_summary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">summary</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.ClosingAccount" title="csb43.aeb43.closing_account.ClosingAccount"><span class="pre">ClosingAccount</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.Account.validate_summary" title="Link to this definition">¶</a></dt>
+<dd><p>validate summary record against the extant nested records</p>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.Batch">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.</span></span><span class="sig-name descname"><span class="pre">Batch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.context.Aeb43Context" title="csb43.aeb43.record.context.Aeb43Context"><span class="pre">Aeb43Context</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">accounts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="records.html#csb43.aeb43.fields.nested.NestedCollection" title="csb43.aeb43.fields.nested.NestedCollection"><span class="pre">NestedCollection</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#csb43.aeb43.Account" title="csb43.aeb43.account.Account"><span class="pre">Account</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">summary</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SummaryField</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#csb43.aeb43.EndOfFile" title="csb43.aeb43.batch.EndOfFile"><span class="pre">EndOfFile</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.Batch" title="Link to this definition">¶</a></dt>
+<dd><p>A batch of transactions grouped by accounts</p>
+<section id="id2">
+<h2>Fields<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<dl class="simple">
+<dt>accounts<span class="classifier">list[Account]</span></dt><dd><p>accounts / cuentas</p>
+</dd>
+<dt>summary<span class="classifier">EndOfFile</span></dt><dd><p>summary record / registro de recuento</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.Batch.accepts_nested_codes">
+<span class="sig-name descname"><span class="pre">accepts_nested_codes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.Batch.accepts_nested_codes" title="Link to this definition">¶</a></dt>
+<dd><p>return True if the record accepts this nested <cite>record</cite></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.Batch.append">
+<span class="sig-name descname"><span class="pre">append</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.Batch.append" title="Link to this definition">¶</a></dt>
+<dd><p>append a bytes record to the collection of dependent records</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.Batch.describe">
+<span class="sig-name descname"><span class="pre">describe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.Batch.describe" title="Link to this definition">¶</a></dt>
+<dd><p>user friendly summary</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.Batch.dump">
+<span class="sig-name descname"><span class="pre">dump</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#csb43.aeb43.Batch.dump" title="Link to this definition">¶</a></dt>
+<dd><p>dump content to bytes</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.Batch.is_closed">
+<span class="sig-name descname"><span class="pre">is_closed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.Batch.is_closed" title="Link to this definition">¶</a></dt>
+<dd><p>return True if the container is closed</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.Batch.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">translated</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.Batch.to_dict" title="Link to this definition">¶</a></dt>
+<dd><p>return content as a dictionary</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.Batch.validate_summary">
+<span class="sig-name descname"><span class="pre">validate_summary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">summary</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.EndOfFile" title="csb43.aeb43.batch.EndOfFile"><span class="pre">EndOfFile</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.Batch.validate_summary" title="Link to this definition">¶</a></dt>
+<dd><p>validate summary against the current content</p>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.ClosingAccount">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.</span></span><span class="sig-name descname"><span class="pre">ClosingAccount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context:</span> <span class="pre">Aeb43Context</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raw:</span> <span class="pre">dataclasses.InitVar[AnyBytes</span> <span class="pre">|</span> <span class="pre">None]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_validated:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bank_code:</span> <span class="pre">String</span> <span class="pre">=</span> <span class="pre">String(field_id=&lt;Field.BANK_CODE:</span> <span class="pre">1&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding=b'0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trim=&lt;Trim.BOTH_BLANK:</span> <span class="pre">10&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">align_left=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode=mappingproxy({})</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;class</span> <span class="pre">'str'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">branch_code:</span> <span class="pre">String</span> <span class="pre">=</span> <span class="pre">String(field_id=&lt;Field.BRANCH_CODE:</span> <span class="pre">2&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding=b'0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trim=&lt;Trim.BOTH_BLANK:</span> <span class="pre">10&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">align_left=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode=mappingproxy({})</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;class</span> <span class="pre">'str'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">account_number:</span> <span class="pre">String</span> <span class="pre">=</span> <span class="pre">String(field_id=&lt;Field.ACCOUNT_NUMBER:</span> <span class="pre">3&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding=b'0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trim=&lt;Trim.BOTH_BLANK:</span> <span class="pre">10&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">align_left=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode=mappingproxy({})</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;class</span> <span class="pre">'str'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expense_entries:</span> <span class="pre">Integer</span> <span class="pre">=</span> <span class="pre">Integer(field_id=&lt;Field.EXPENSE_ENTRIES:</span> <span class="pre">4&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;class</span> <span class="pre">'int'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expense:</span> <span class="pre">Money</span> <span class="pre">=</span> <span class="pre">Money(value_id=&lt;Field.EXPENSE_AMOUNT:</span> <span class="pre">5&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode_id=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_mode=b'2'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding=b'0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">non_negative=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;class</span> <span class="pre">'decimal.Decimal'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">income_entries:</span> <span class="pre">Integer</span> <span class="pre">=</span> <span class="pre">Integer(field_id=&lt;Field.INCOME_ENTRIES:</span> <span class="pre">6&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;class</span> <span class="pre">'int'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">income:</span> <span class="pre">Money</span> <span class="pre">=</span> <span class="pre">Money(value_id=&lt;Field.INCOME_AMOUNT:</span> <span class="pre">7&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode_id=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_mode=b'2'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding=b'0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">non_negative=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;class</span> <span class="pre">'decimal.Decimal'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">final_balance:</span> <span class="pre">Money</span> <span class="pre">=</span> <span class="pre">Money(value_id=&lt;Field.FINAL_BALANCE:</span> <span class="pre">9&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode_id=&lt;Field.FINAL_BALANCE_CODE:</span> <span class="pre">8&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_mode=b'2'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding=b'0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">non_negative=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;class</span> <span class="pre">'decimal.Decimal'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">currency:</span> <span class="pre">Currency</span> <span class="pre">=</span> <span class="pre">Currency(field_id=&lt;Field.CURRENCY_CODE:</span> <span class="pre">10&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;function</span> <span class="pre">euro_currency&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding:</span> <span class="pre">String</span> <span class="pre">=</span> <span class="pre">String(field_id=&lt;Field.PADDING:</span> <span class="pre">11&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding=b'</span> <span class="pre">'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trim=&lt;Trim.BOTH:</span> <span class="pre">15&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">align_left=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode=mappingproxy({})</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;class</span> <span class="pre">'str'&gt;)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.ClosingAccount" title="Link to this definition">¶</a></dt>
+<dd><p><strong>COD 33</strong></p>
+<p>Closing account record</p>
+<p>[es] Registro de asiento de cuentas</p>
+<p>See <a class="reference internal" href="#n43-2012" id="id3"><span>[n43_2012]</span></a> Appendix 1, section 1.5</p>
+<section id="id4">
+<h2>Fields<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
+<dl class="simple">
+<dt>bank_code<span class="classifier">String[4]</span></dt><dd><p>bank code / clave de la entidad</p>
+</dd>
+<dt>branch_code<span class="classifier">String[4]</span></dt><dd><p>branch code / clave de oficina origen</p>
+</dd>
+<dt>account_number<span class="classifier">String[10]</span></dt><dd><p>account number / número de cuenta</p>
+</dd>
+<dt>expense_entries<span class="classifier">Integer</span></dt><dd><p>expense entries / número de apuntes en el Debe</p>
+</dd>
+<dt>expense<span class="classifier">Money[12.2]</span></dt><dd><p>expense / total importes en el Debe</p>
+</dd>
+<dt>income_entries<span class="classifier">Integer</span></dt><dd><p>income entries / número de apuntes en el Haber</p>
+</dd>
+<dt>income<span class="classifier">Money[12.2]</span></dt><dd><p>income / total importes en el Haber</p>
+</dd>
+<dt>padding<span class="classifier">String[4]</span></dt><dd><p>padding / libre uso</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.EndOfFile">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.</span></span><span class="sig-name descname"><span class="pre">EndOfFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context:</span> <span class="pre">Aeb43Context</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raw:</span> <span class="pre">dataclasses.InitVar[AnyBytes</span> <span class="pre">|</span> <span class="pre">None]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_validated:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total_records:</span> <span class="pre">Integer</span> <span class="pre">=</span> <span class="pre">Integer(field_id=&lt;Field.TOTAL_RECORDS:</span> <span class="pre">1&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;class</span> <span class="pre">'int'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding:</span> <span class="pre">String</span> <span class="pre">=</span> <span class="pre">String(field_id=&lt;Field.PADDING:</span> <span class="pre">2&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding=b'</span> <span class="pre">'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trim=&lt;Trim.BOTH:</span> <span class="pre">15&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">align_left=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode=mappingproxy({})</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;class</span> <span class="pre">'str'&gt;)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.EndOfFile" title="Link to this definition">¶</a></dt>
+<dd><p><strong>COD 88</strong></p>
+<p>End of file record</p>
+<p>[es] Registro de fin de fichero</p>
+<p>See <a class="reference internal" href="#n43-2012" id="id5"><span>[n43_2012]</span></a> Appendix 1, section 1.6</p>
+<section id="id6">
+<h2>Fields<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h2>
+<dl class="simple">
+<dt>total_records<span class="classifier">Integer</span></dt><dd><p>total number of records / número total de registros</p>
+</dd>
+<dt>padding<span class="classifier">String[54]</span></dt><dd><p>padding / libre uso</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.Exchange">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.</span></span><span class="sig-name descname"><span class="pre">Exchange</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context:</span> <span class="pre">Aeb43Context</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raw:</span> <span class="pre">dataclasses.InitVar[AnyBytes</span> <span class="pre">|</span> <span class="pre">None]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">original_currency:</span> <span class="pre">currency.Currency</span> <span class="pre">=</span> <span class="pre">Currency(field_id=&lt;Field.CURRENCY:</span> <span class="pre">1&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;function</span> <span class="pre">euro_currency&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount:</span> <span class="pre">money.Money</span> <span class="pre">=</span> <span class="pre">Money(value_id=&lt;Field.AMOUNT:</span> <span class="pre">2&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode_id=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_mode=b'2'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding=b'0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">non_negative=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;class</span> <span class="pre">'decimal.Decimal'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding:</span> <span class="pre">string.String</span> <span class="pre">=</span> <span class="pre">String(field_id=&lt;Field.PADDING:</span> <span class="pre">3&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding=b'</span> <span class="pre">'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trim=&lt;Trim.BOTH:</span> <span class="pre">15&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">align_left=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode=mappingproxy({})</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;class</span> <span class="pre">'str'&gt;)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.Exchange" title="Link to this definition">¶</a></dt>
+<dd><p><strong>COD 24-01</strong></p>
+<p>Exchange record</p>
+<p>[es] Registro complementario de información de equivalencia
+de importe del apunte.</p>
+<p>See <a class="reference internal" href="#n43-2012" id="id7"><span>[n43_2012]</span></a> Appendix 1, section 1.4</p>
+<section id="id8">
+<h2>Fields<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h2>
+<dl class="simple">
+<dt>original_currency<span class="classifier">Currency</span></dt><dd><p>original currency / divisa origen del movimiento</p>
+</dd>
+<dt>amount<span class="classifier">Money[12.2]</span></dt><dd><p>transaction amount in the original currency / import en divisa origen</p>
+</dd>
+<dt>padding<span class="classifier">String[59]</span></dt><dd><p>unused space in record / libre</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.Item">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.</span></span><span class="sig-name descname"><span class="pre">Item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context:</span> <span class="pre">Aeb43Context</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raw:</span> <span class="pre">dataclasses.InitVar[AnyBytes</span> <span class="pre">|</span> <span class="pre">None]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">record_code:</span> <span class="pre">Integer</span> <span class="pre">=</span> <span class="pre">Integer(field_id=&lt;Field.RECORD:</span> <span class="pre">1&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;function</span> <span class="pre">default_record_code&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item1:</span> <span class="pre">String</span> <span class="pre">=</span> <span class="pre">String(field_id=&lt;Field.ITEM1:</span> <span class="pre">2&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding=b'</span> <span class="pre">'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trim=&lt;Trim.BOTH:</span> <span class="pre">15&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">align_left=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode=mappingproxy({})</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;class</span> <span class="pre">'str'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item2:</span> <span class="pre">String</span> <span class="pre">=</span> <span class="pre">String(field_id=&lt;Field.ITEM2:</span> <span class="pre">3&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding=b'</span> <span class="pre">'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trim=&lt;Trim.BOTH:</span> <span class="pre">15&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">align_left=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode=mappingproxy({})</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;class</span> <span class="pre">'str'&gt;)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.Item" title="Link to this definition">¶</a></dt>
+<dd><p><strong>COD 23</strong></p>
+<p>Complementary item / [es] Registro complementario de concepto.</p>
+<p>For SEPA normalization using item records, see:</p>
+<ul class="simple">
+<li><p><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.aeb43.sepa_debit</span></code></p></li>
+<li><p><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.aeb43.sepa_transfer</span></code></p></li>
+</ul>
+<p>See <a class="reference internal" href="#n43-2012" id="id9"><span>[n43_2012]</span></a> Appendix 1, section 1.3</p>
+<section id="id10">
+<h2>Fields<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h2>
+<dl class="simple">
+<dt>record_code<span class="classifier">Integer[1..5]</span></dt><dd><p>sequence code for complementary item record / [es] código de registro</p>
+</dd>
+<dt>item1<span class="classifier">String[38]</span></dt><dd><p>item #1 / [es] concepto 1</p>
+</dd>
+<dt>item2<span class="classifier">String[38]</span></dt><dd><p>item #2 / [es] concepto 2</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.Item.accepts_sequence_code">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">accepts_sequence_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#csb43.aeb43.Item.accepts_sequence_code" title="Link to this definition">¶</a></dt>
+<dd><p>return True if the provided <cite>code</cite> is allowed at the current transaction</p>
+<section id="args">
+<h3>Args<a class="headerlink" href="#args" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt>encoding</dt><dd><p>string encoding</p>
+</dd>
+<dt>start</dt><dd><p>first item record to check</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.SepaDebit">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.</span></span><span class="sig-name descname"><span class="pre">SepaDebit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="records.html#csb43.aeb43.fields.nested.NestedRecord" title="csb43.aeb43.fields.nested.NestedRecord"><span class="pre">NestedRecord</span></a><span class="p"><span class="pre">[</span></span><span class="pre">SepaDebitItem1</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="records.html#csb43.aeb43.fields.nested.NestedRecord" title="csb43.aeb43.fields.nested.NestedRecord"><span class="pre">NestedRecord</span></a><span class="p"><span class="pre">[</span></span><span class="pre">SepaDebitItem2</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="records.html#csb43.aeb43.fields.nested.NestedRecord" title="csb43.aeb43.fields.nested.NestedRecord"><span class="pre">NestedRecord</span></a><span class="p"><span class="pre">[</span></span><span class="pre">SepaDebitItem3</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item4</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="records.html#csb43.aeb43.fields.nested.NestedRecord" title="csb43.aeb43.fields.nested.NestedRecord"><span class="pre">NestedRecord</span></a><span class="p"><span class="pre">[</span></span><span class="pre">SepaDebitItem4</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item5</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="records.html#csb43.aeb43.fields.nested.NestedRecord" title="csb43.aeb43.fields.nested.NestedRecord"><span class="pre">NestedRecord</span></a><span class="p"><span class="pre">[</span></span><span class="pre">SepaDebitItem5</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.context.Aeb43Context" title="csb43.aeb43.record.context.Aeb43Context"><span class="pre">Aeb43Context</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.SepaDebit" title="Link to this definition">¶</a></dt>
+<dd><p>SEPA direct debit</p>
+<p>Set of five 80-bytes records</p>
+<p>See <a class="reference internal" href="#n43-2012" id="id11"><span>[n43_2012]</span></a> Appendix 4, section 2</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.SepaDebit.as_optional_items">
+<span class="sig-name descname"><span class="pre">as_optional_items</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#csb43.aeb43.Item" title="csb43.aeb43.item.Item"><span class="pre">Item</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#csb43.aeb43.SepaDebit.as_optional_items" title="Link to this definition">¶</a></dt>
+<dd><p>convert to vanilla complementary items</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="csb43.aeb43.SepaDebit.creditor_id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">creditor_id</span></span><a class="headerlink" href="#csb43.aeb43.SepaDebit.creditor_id" title="Link to this definition">¶</a></dt>
+<dd><p>creditor id [AT-02] / identificador del acreedor [AT-02]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="csb43.aeb43.SepaDebit.creditor_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">creditor_name</span></span><a class="headerlink" href="#csb43.aeb43.SepaDebit.creditor_name" title="Link to this definition">¶</a></dt>
+<dd><p>creditor name [AT-03] / nombre del acreedor [AT-03]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="csb43.aeb43.SepaDebit.creditor_reference">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">creditor_reference</span></span><a class="headerlink" href="#csb43.aeb43.SepaDebit.creditor_reference" title="Link to this definition">¶</a></dt>
+<dd><p>creditor reference [AT-10] / referencia del acreedor [AT-10]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="csb43.aeb43.SepaDebit.debtor_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">debtor_name</span></span><a class="headerlink" href="#csb43.aeb43.SepaDebit.debtor_name" title="Link to this definition">¶</a></dt>
+<dd><p>debtor name [AT-14] / último deudor [AT-15]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="csb43.aeb43.SepaDebit.mandate_reference">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mandate_reference</span></span><a class="headerlink" href="#csb43.aeb43.SepaDebit.mandate_reference" title="Link to this definition">¶</a></dt>
+<dd><p>mandate reference [AT-01] / referencia única del mandato [AT-01]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.SepaDebit.new">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">new</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">records</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytearray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.context.Aeb43Context" title="csb43.aeb43.record.context.Aeb43Context"><span class="pre">Aeb43Context</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#csb43.aeb43.SepaDebit" title="csb43.aeb43.sepa_debit.SepaDebit"><span class="pre">SepaDebit</span></a></span></span><a class="headerlink" href="#csb43.aeb43.SepaDebit.new" title="Link to this definition">¶</a></dt>
+<dd><p>return an empty/default SEPA direct debit object</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="csb43.aeb43.SepaDebit.scheme_code">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">scheme_code</span></span><a class="headerlink" href="#csb43.aeb43.SepaDebit.scheme_code" title="Link to this definition">¶</a></dt>
+<dd><p>scheme code [AT-20] / código de esquema [AT-20]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.SepaDebit.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">translated</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.SepaDebit.to_dict" title="Link to this definition">¶</a></dt>
+<dd><p>return dict with field values</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.SepaTransfer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.</span></span><span class="sig-name descname"><span class="pre">SepaTransfer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="records.html#csb43.aeb43.fields.nested.NestedRecord" title="csb43.aeb43.fields.nested.NestedRecord"><span class="pre">NestedRecord</span></a><span class="p"><span class="pre">[</span></span><span class="pre">SepaTransferItem1</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="records.html#csb43.aeb43.fields.nested.NestedRecord" title="csb43.aeb43.fields.nested.NestedRecord"><span class="pre">NestedRecord</span></a><span class="p"><span class="pre">[</span></span><span class="pre">SepaTransferItem2</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="records.html#csb43.aeb43.fields.nested.NestedRecord" title="csb43.aeb43.fields.nested.NestedRecord"><span class="pre">NestedRecord</span></a><span class="p"><span class="pre">[</span></span><span class="pre">SepaDebitItem3</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item4</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="records.html#csb43.aeb43.fields.nested.NestedRecord" title="csb43.aeb43.fields.nested.NestedRecord"><span class="pre">NestedRecord</span></a><span class="p"><span class="pre">[</span></span><span class="pre">SepaDebitItem4</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item5</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="records.html#csb43.aeb43.fields.nested.NestedRecord" title="csb43.aeb43.fields.nested.NestedRecord"><span class="pre">NestedRecord</span></a><span class="p"><span class="pre">[</span></span><span class="pre">SepaTransferItem5</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.context.Aeb43Context" title="csb43.aeb43.record.context.Aeb43Context"><span class="pre">Aeb43Context</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.SepaTransfer" title="Link to this definition">¶</a></dt>
+<dd><p>SEPA transfer</p>
+<p>Set of five 80-bytes records</p>
+<p>See <a class="reference internal" href="#n43-2012" id="id12"><span>[n43_2012]</span></a> Appendix 4, section 1</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="csb43.aeb43.SepaTransfer.additional_info">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">additional_info</span></span><a class="headerlink" href="#csb43.aeb43.SepaTransfer.additional_info" title="Link to this definition">¶</a></dt>
+<dd><p>additional info / campo de libre uso para información del beneficiario</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.SepaTransfer.as_optional_items">
+<span class="sig-name descname"><span class="pre">as_optional_items</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#csb43.aeb43.Item" title="csb43.aeb43.item.Item"><span class="pre">Item</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#csb43.aeb43.SepaTransfer.as_optional_items" title="Link to this definition">¶</a></dt>
+<dd><p>convert to conventional vanilla items</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.SepaTransfer.new">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">new</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">records</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytearray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.context.Aeb43Context" title="csb43.aeb43.record.context.Aeb43Context"><span class="pre">Aeb43Context</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#csb43.aeb43.SepaTransfer" title="csb43.aeb43.sepa_transfer.SepaTransfer"><span class="pre">SepaTransfer</span></a></span></span><a class="headerlink" href="#csb43.aeb43.SepaTransfer.new" title="Link to this definition">¶</a></dt>
+<dd><p>return an empty/default SEPA transfer object</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="csb43.aeb43.SepaTransfer.originator_code">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">originator_code</span></span><a class="headerlink" href="#csb43.aeb43.SepaTransfer.originator_code" title="Link to this definition">¶</a></dt>
+<dd><p>originator code [AT-02] / código del ordenante [AT-02]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="csb43.aeb43.SepaTransfer.originator_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">originator_name</span></span><a class="headerlink" href="#csb43.aeb43.SepaTransfer.originator_name" title="Link to this definition">¶</a></dt>
+<dd><p>originator name [AT-02] / nombre del ordenante [AT-02]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="csb43.aeb43.SepaTransfer.originator_reference">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">originator_reference</span></span><a class="headerlink" href="#csb43.aeb43.SepaTransfer.originator_reference" title="Link to this definition">¶</a></dt>
+<dd><p>originator reference [AT-41] / referencia del ordenante [AT-41]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="csb43.aeb43.SepaTransfer.originator_reference_party">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">originator_reference_party</span></span><a class="headerlink" href="#csb43.aeb43.SepaTransfer.originator_reference_party" title="Link to this definition">¶</a></dt>
+<dd><p>originator reference party [AT-08] &amp; nombre de ‘por cuenta de’ [AT-08]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.SepaTransfer.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">translated</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.SepaTransfer.to_dict" title="Link to this definition">¶</a></dt>
+<dd><p>return dict with field values</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.Transaction">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.</span></span><span class="sig-name descname"><span class="pre">Transaction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context:</span> <span class="pre">Aeb43Context</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raw:</span> <span class="pre">dataclasses.InitVar[AnyBytes</span> <span class="pre">|</span> <span class="pre">None]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding:</span> <span class="pre">String</span> <span class="pre">=</span> <span class="pre">String(field_id=&lt;Field.PADDING:</span> <span class="pre">1&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding=b'</span> <span class="pre">'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trim=&lt;Trim.BOTH:</span> <span class="pre">15&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">align_left=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode=mappingproxy({})</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;class</span> <span class="pre">'str'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">branch_code:</span> <span class="pre">String</span> <span class="pre">=</span> <span class="pre">BranchCode(field_id=&lt;Field.BRANCH_CODE:</span> <span class="pre">2&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding=b'0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trim=&lt;Trim.BOTH_BLANK:</span> <span class="pre">10&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">align_left=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode=mappingproxy({})</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;class</span> <span class="pre">'str'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">document_number:</span> <span class="pre">String</span> <span class="pre">=</span> <span class="pre">String(field_id=&lt;Field.DOCUMENT_NUMBER:</span> <span class="pre">9&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding=b'0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trim=&lt;Trim.BOTH_BLANK:</span> <span class="pre">10&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">align_left=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode=mappingproxy({})</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;class</span> <span class="pre">'str'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transaction_date:</span> <span class="pre">Date</span> <span class="pre">=</span> <span class="pre">Date(field_id=&lt;Field.TRANSACTION_DATE:</span> <span class="pre">3&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;built-in</span> <span class="pre">method</span> <span class="pre">today</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_date:</span> <span class="pre">Date</span> <span class="pre">=</span> <span class="pre">Date(field_id=&lt;Field.VALUE_DATE:</span> <span class="pre">4&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;built-in</span> <span class="pre">method</span> <span class="pre">today</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shared_item:</span> <span class="pre">Integer</span> <span class="pre">=</span> <span class="pre">Integer(field_id=&lt;Field.SHARED_ITEM:</span> <span class="pre">5&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;class</span> <span class="pre">'int'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">own_item:</span> <span class="pre">Integer</span> <span class="pre">=</span> <span class="pre">Integer(field_id=&lt;Field.OWN_ITEM:</span> <span class="pre">6&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;class</span> <span class="pre">'int'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount:</span> <span class="pre">Money</span> <span class="pre">=</span> <span class="pre">Money(value_id=&lt;Field.AMOUNT:</span> <span class="pre">8&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode_id=&lt;Field.EXPENSE_OR_INCOME:</span> <span class="pre">7&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_mode=b'2'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding=b'0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">non_negative=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;class</span> <span class="pre">'decimal.Decimal'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference1:</span> <span class="pre">String</span> <span class="pre">=</span> <span class="pre">String(field_id=&lt;Field.REFERENCE1:</span> <span class="pre">10&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding=b'</span> <span class="pre">'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trim=&lt;Trim.BOTH:</span> <span class="pre">15&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">align_left=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode=mappingproxy({&lt;InformationMode.THIRD:</span> <span class="pre">3&gt;:</span> <span class="pre">{'padding':</span> <span class="pre">b'0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">'trim':</span> <span class="pre">&lt;Trim.BOTH_BLANK:</span> <span class="pre">10&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">'align_left':</span> <span class="pre">False}})</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;class</span> <span class="pre">'str'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference2:</span> <span class="pre">String</span> <span class="pre">=</span> <span class="pre">String(field_id=&lt;Field.REFERENCE2:</span> <span class="pre">11&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding=b'</span> <span class="pre">'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trim=&lt;Trim.BOTH:</span> <span class="pre">15&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">align_left=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode=mappingproxy({})</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory=&lt;class</span> <span class="pre">'str'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exchange:</span> <span class="pre">NestedRecord[Exchange]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optional_items:</span> <span class="pre">NestedCollection[Item]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sepa_transfer:</span> <span class="pre">SepaTransferField</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sepa_debit:</span> <span class="pre">SepaDebitField</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.Transaction" title="Link to this definition">¶</a></dt>
+<dd><p><strong>COD 22</strong></p>
+<p>Main transaction record</p>
+<p>[es] Registro principal de movimientos</p>
+<p>See <a class="reference internal" href="#n43-2012" id="id13"><span>[n43_2012]</span></a> Appendix 1, section 1.2</p>
+<section id="id14">
+<h2>Fields<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h2>
+<dl class="simple">
+<dt>padding<span class="classifier">String[4]</span></dt><dd><p>padding / libre uso</p>
+</dd>
+<dt>branch_code<span class="classifier">String[4]</span></dt><dd><p>branch code / clave de oficina origen</p>
+</dd>
+<dt>document_number<span class="classifier">String[10]</span></dt><dd><p>document number / número de documento</p>
+</dd>
+<dt>transaction_date<span class="classifier">Date</span></dt><dd><p>date of transaction / fecha de operación</p>
+</dd>
+<dt>value_date<span class="classifier">Date</span></dt><dd><p>effective date / fecha de valor</p>
+</dd>
+<dt>shared_item<span class="classifier">Integer[0..99]</span></dt><dd><p>shared item / concepto común</p>
+</dd>
+<dt>own_item<span class="classifier">Integer[0..999]</span></dt><dd><p>own item / concepto propio</p>
+</dd>
+<dt>amount<span class="classifier">Money[12.2]</span></dt><dd><p>transaction amont / importe</p>
+</dd>
+<dt>reference1<span class="classifier">String[12]</span></dt><dd><p>reference 1 / referencia 1</p>
+</dd>
+<dt>reference2<span class="classifier">String[16]</span></dt><dd><p>reference 2 / referencia 2</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.Transaction.accepts_nested_codes">
+<span class="sig-name descname"><span class="pre">accepts_nested_codes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#csb43.aeb43.Transaction.accepts_nested_codes" title="Link to this definition">¶</a></dt>
+<dd><p>return True if the record accepts this nested <cite>record</cite></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.Transaction.append">
+<span class="sig-name descname"><span class="pre">append</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.Transaction.append" title="Link to this definition">¶</a></dt>
+<dd><p>append a bytes record to the collection of dependent records</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.Transaction.iter_optional_items">
+<span class="sig-name descname"><span class="pre">iter_optional_items</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#csb43.aeb43.Transaction.iter_optional_items" title="Link to this definition">¶</a></dt>
+<dd><p>iterate optional items fields</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.Transaction.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">translated</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.Transaction.to_dict" title="Link to this definition">¶</a></dt>
+<dd><p>return fields as a dict of typed values</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.Transaction.to_sepa">
+<span class="sig-name descname"><span class="pre">to_sepa</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.aeb43.Transaction.to_sepa" title="Link to this definition">¶</a></dt>
+<dd><p>convert complementary items to a SEPA debit/transfer object</p>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="csb43.aeb43.get_current_context">
+<span class="sig-prename descclassname"><span class="pre">csb43.aeb43.</span></span><span class="sig-name descname"><span class="pre">get_current_context</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#csb43.aeb43.record.context.Aeb43Context" title="csb43.aeb43.record.context.Aeb43Context"><span class="pre">Aeb43Context</span></a></span></span><a class="headerlink" href="#csb43.aeb43.get_current_context" title="Link to this definition">¶</a></dt>
+<dd><p>get the context for the current scope</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="csb43.aeb43.read_batch">
+<span class="sig-prename descclassname"><span class="pre">csb43.aeb43.</span></span><span class="sig-name descname"><span class="pre">read_batch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">IO</span><span class="p"><span class="pre">[</span></span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.context.Aeb43Context" title="csb43.aeb43.record.context.Aeb43Context"><span class="pre">Aeb43Context</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#csb43.aeb43.Batch" title="csb43.aeb43.batch.Batch"><span class="pre">Batch</span></a></span></span><a class="headerlink" href="#csb43.aeb43.read_batch" title="Link to this definition">¶</a></dt>
+<dd><p>read a batch of accounts from a binary stream</p>
+</dd></dl>
+
+<section id="module-csb43.aeb43.record.context">
+<span id="context-en-contexto"></span><h2><a class="toc-backref" href="#id19" role="doc-backlink">Context – [en] Contexto</a><a class="headerlink" href="#module-csb43.aeb43.record.context" title="Link to this heading">¶</a></h2>
+<p>Context object for reading AEB43 records</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.record.context.Aeb43Context">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.record.context.</span></span><span class="sig-name descname"><span class="pre">Aeb43Context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">silent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'latin1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sepa</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">year_first</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache_fields</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decimals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">information_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#csb43.aeb43.record.context.InformationMode" title="csb43.aeb43.record.context.InformationMode"><span class="pre">InformationMode</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">InformationMode.THIRD</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.record.context.Aeb43Context" title="Link to this definition">¶</a></dt>
+<dd><p>settings for encoded AEB43 records</p>
+<section id="id15">
+<h3>Fields<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt>strict<span class="classifier">bool</span></dt><dd><p>raise exception when a validation fails if <cite>strict=True</cite></p>
+</dd>
+<dt>silent<span class="classifier">bool</span></dt><dd><p>if <cite>silent=True</cite>, validation warnings are not emitted</p>
+</dd>
+<dt>encoding<span class="classifier">str</span></dt><dd><p>string encoding use when transforming from binary files</p>
+</dd>
+<dt>sepa<span class="classifier">bool</span></dt><dd><p>when <cite>sepa=True</cite>, transactions trie to interpret optional items
+as SEPA transfer or direct debits</p>
+</dd>
+<dt>cache_fields<span class="classifier">bool</span></dt><dd><p>cache values from setters/getters</p>
+</dd>
+<dt>decimal<span class="classifier">int</span></dt><dd><p>number of decimal places used in money amounts</p>
+</dd>
+<dt>information_mode<span class="classifier">InformationMode</span></dt><dd><p>information mode to use in nested records. Accounts will change this value.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.record.context.Aeb43Context.emit_validation_error">
+<span class="sig-name descname"><span class="pre">emit_validation_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.aeb43.record.context.Aeb43Context.emit_validation_error" title="Link to this definition">¶</a></dt>
+<dd><p>raise ValidationException if strict or emits
+a ValidationWarning if not strict and not silent</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.record.context.Aeb43Context.emit_validation_warning">
+<span class="sig-name descname"><span class="pre">emit_validation_warning</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#csb43.aeb43.record.context.Aeb43Context.emit_validation_warning" title="Link to this definition">¶</a></dt>
+<dd><p>emit a warning</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.record.context.Aeb43Context.error_message">
+<span class="sig-name descname"><span class="pre">error_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#csb43.aeb43.record.context.Aeb43Context.error_message" title="Link to this definition">¶</a></dt>
+<dd><p>get a new error message in a batch context</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.record.context.Aeb43Context.new_validation_error">
+<span class="sig-name descname"><span class="pre">new_validation_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="records.html#csb43.aeb43.record.errors.ValidationException" title="csb43.aeb43.record.errors.ValidationException"><span class="pre">ValidationException</span></a></span></span><a class="headerlink" href="#csb43.aeb43.record.context.Aeb43Context.new_validation_error" title="Link to this definition">¶</a></dt>
+<dd><p>create a new validation error with <cite>message</cite></p>
+<p>Context line is added to the Exception</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.record.context.Aeb43Context.scope">
+<span class="sig-name descname"><span class="pre">scope</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.record.context.Aeb43Context.scope" title="Link to this definition">¶</a></dt>
+<dd><p>create a scope for this context</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.record.context.Aeb43Context.to_string">
+<span class="sig-name descname"><span class="pre">to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#csb43.aeb43.record.context.Aeb43Context.to_string" title="Link to this definition">¶</a></dt>
+<dd><p>convert value to string</p>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.record.context.BatchContext">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.record.context.</span></span><span class="sig-name descname"><span class="pre">BatchContext</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.record.context.BatchContext" title="Link to this definition">¶</a></dt>
+<dd><p>line context</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.record.context.BatchContext.scope">
+<span class="sig-name descname"><span class="pre">scope</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.record.context.BatchContext.scope" title="Link to this definition">¶</a></dt>
+<dd><p>create a scope for this context</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.record.context.Contextual">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.record.context.</span></span><span class="sig-name descname"><span class="pre">Contextual</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.record.context.Contextual" title="Link to this definition">¶</a></dt>
+<dd><p>protocol for any class that has a context property</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.record.context.ContextualMixin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.record.context.</span></span><span class="sig-name descname"><span class="pre">ContextualMixin</span></span><a class="headerlink" href="#csb43.aeb43.record.context.ContextualMixin" title="Link to this definition">¶</a></dt>
+<dd><p>provides a method that always returns a context</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="csb43.aeb43.record.context.ContextualMixin.get_context">
+<span class="sig-name descname"><span class="pre">get_context</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#csb43.aeb43.record.context.Aeb43Context" title="csb43.aeb43.record.context.Aeb43Context"><span class="pre">Aeb43Context</span></a></span></span><a class="headerlink" href="#csb43.aeb43.record.context.ContextualMixin.get_context" title="Link to this definition">¶</a></dt>
+<dd><p>get the context for the current scope</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="csb43.aeb43.record.context.InformationMode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">csb43.aeb43.record.context.</span></span><span class="sig-name descname"><span class="pre">InformationMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csb43.aeb43.record.context.InformationMode" title="Link to this definition">¶</a></dt>
+<dd><p>information mode</p>
+<p>[es] modalidad de información</p>
+<p>See <a class="reference internal" href="#n43-2012" id="id16"><span>[n43_2012]</span></a> Appendix 1</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="csb43.aeb43.record.context.check_compatible_encoding">
+<span class="sig-prename descclassname"><span class="pre">csb43.aeb43.record.context.</span></span><span class="sig-name descname"><span class="pre">check_compatible_encoding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#csb43.aeb43.record.context.check_compatible_encoding" title="Link to this definition">¶</a></dt>
+<dd><p>returns True if ‘encoding’ is compatible with n43 records</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="csb43.aeb43.record.context.get_batch_context">
+<span class="sig-prename descclassname"><span class="pre">csb43.aeb43.record.context.</span></span><span class="sig-name descname"><span class="pre">get_batch_context</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#csb43.aeb43.record.context.BatchContext" title="csb43.aeb43.record.context.BatchContext"><span class="pre">BatchContext</span></a></span></span><a class="headerlink" href="#csb43.aeb43.record.context.get_batch_context" title="Link to this definition">¶</a></dt>
+<dd><p>get the context for the current scope</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="csb43.aeb43.record.context.get_current_context">
+<span class="sig-prename descclassname"><span class="pre">csb43.aeb43.record.context.</span></span><span class="sig-name descname"><span class="pre">get_current_context</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#csb43.aeb43.record.context.Aeb43Context" title="csb43.aeb43.record.context.Aeb43Context"><span class="pre">Aeb43Context</span></a></span></span><a class="headerlink" href="#csb43.aeb43.record.context.get_current_context" title="Link to this definition">¶</a></dt>
+<dd><p>get the context for the current scope</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">csb43</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.aeb43</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#references">References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.Account"><code class="docutils literal notranslate"><span class="pre">Account</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.Batch"><code class="docutils literal notranslate"><span class="pre">Batch</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.ClosingAccount"><code class="docutils literal notranslate"><span class="pre">ClosingAccount</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.EndOfFile"><code class="docutils literal notranslate"><span class="pre">EndOfFile</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.Exchange"><code class="docutils literal notranslate"><span class="pre">Exchange</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.Item"><code class="docutils literal notranslate"><span class="pre">Item</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.SepaDebit"><code class="docutils literal notranslate"><span class="pre">SepaDebit</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.SepaTransfer"><code class="docutils literal notranslate"><span class="pre">SepaTransfer</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.Transaction"><code class="docutils literal notranslate"><span class="pre">Transaction</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.get_current_context"><code class="docutils literal notranslate"><span class="pre">get_current_context()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csb43.aeb43.read_batch"><code class="docutils literal notranslate"><span class="pre">read_batch()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-csb43.aeb43.record.context">Context – [en] Contexto</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ofx.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.ofx</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="homebank.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.homebank</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="formats.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.formats</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.utils</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="records.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.record</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="records.html#module-csb43.aeb43.fields"><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.fields</span></code></a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to csb43’s documentation!</a></li>
+      <li>Next: <a href="ofx.html" title="next chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">csb43.ofx</span></code></a></li>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, wmj <wmj.py@gmx.com>.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.3.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/csb.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,27 @@
+# SPDX-FileCopyrightText: 2024 <wmj.py@gmx.com>
+#
+# SPDX-License-Identifier: LGPL-3.0-or-later
+
+*~
+*.py[co]
+.eggs
+.tox
+.cache
+.pytest_cache
+.ofx_schemas
+csb43/tests/schemas/**.xsd
+csb43/tests/schemas/**.dtd
+.settings
+build
+csb43.egg-info
+dist
+dist.old
+distFinal
+pyinstaller
+doc/build
+
+# kateproject local settings
+.kateproject.local
+
+# quick testing file
+z.py
