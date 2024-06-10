@@ -1,0 +1,88 @@
+Metadata-Version: 2.1
+Name: extensitrace
+Version: 0.0.2
+Summary: A logger for tracking your agent workflow
+Home-page: https://github.com/Extensible-AI/extensilog/
+Author: Parth Sareen, Omkaar Kamath
+Author-email: parth@extensible.dev, omkaar@extensible.dev
+License: Apache License 2.0
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: annotated-types==0.6.0
+Requires-Dist: anyio==4.3.0
+Requires-Dist: certifi==2024.2.2
+Requires-Dist: charset-normalizer==3.3.2
+Requires-Dist: distro==1.9.0
+Requires-Dist: dnspython==2.6.1
+Requires-Dist: h11==0.14.0
+Requires-Dist: httpcore==1.0.5
+Requires-Dist: httpx==0.27.0
+Requires-Dist: idna==3.7
+Requires-Dist: openai==1.14.3
+Requires-Dist: psycopg2-binary==2.9.9
+Requires-Dist: pydantic==2.6.4
+Requires-Dist: pydantic_core==2.16.3
+Requires-Dist: pymongo==4.6.3
+Requires-Dist: python-dotenv==1.0.1
+Requires-Dist: PyYAML==6.0.1
+Requires-Dist: requests==2.32.2
+Requires-Dist: sniffio==1.3.1
+Requires-Dist: tqdm==4.66.3
+Requires-Dist: typing_extensions==4.10.0
+Requires-Dist: urllib3==2.2.1
+
+# ExtensiTrace
+### Python Package for Agent Workflow Tracking
+
+ExtensiTrace allows for a simple way to track all agent actions including python functions and all openai tool calls. 
+
+### Install from PyPI
+`pip install extensitrace`
+
+### Usage 
+
+```python
+from extensitrace import ExtensiTrace
+
+client = OpenAI() # Optional to pass in
+connector = MongoConnector(...) # Optional connector, defaults to local
+# Logger writes to a jsonl file locally by default 
+et: ExtensiTrace = ExtensiTrace(connector=connector) # See constructor in extensitrace/extensitrace.py for more info
+
+# Need track=True for top level
+et.log(track=True)
+def top_level_func():
+    lower_level_func()
+    
+et.log()
+def lower_level_func():
+    pass
+```
+
+### Notes to keep in mind
+- Tracks one openai call per function
+- Streaming openai calls not captured - the tracer is meant for tracking tool calls 
+- Support for Openai only right now
+- The client objects should be the same across files if it is being passed in manually
+- Singleton class, however instantiation methods across files must match, recommend creating and importing from a file (see example below)
+- If this is very useful to you and want to use it in prod I'm happy to write an async interface for log dumps
+
+
+### Recommended Setup
+
+`tracer.py`
+```python
+from extensitrace import ExtensiTrace
+
+et: ExtensiTrace = ExtensiTrace(connector=connector) 
+
+```
+
+`main.py`
+```python
+from tracer import et
+```
