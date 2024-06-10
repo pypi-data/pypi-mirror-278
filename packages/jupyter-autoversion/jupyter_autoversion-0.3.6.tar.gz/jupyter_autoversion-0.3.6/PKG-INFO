@@ -1,0 +1,87 @@
+Metadata-Version: 2.1
+Name: jupyter-autoversion
+Version: 0.3.6
+Summary: Automatically version jupyter notebooks on save
+Home-page: https://github.com/timkpaine/jupyterlab_autoversion
+Author: Tim Paine
+Author-email: t.paine154@gmail.com
+License: Apache 2.0
+Keywords: Jupyter,Jupyterlab,Widgets,IPython,Graph,Data,DAG
+Platform: Linux
+Platform: Mac OS X
+Platform: Windows
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Framework :: Jupyter
+Classifier: Framework :: Jupyter :: JupyterLab
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: GitPython>=2.1.11
+Requires-Dist: jupyterlab<4,>=3.5
+Requires-Dist: jupyter_server>=1.17.0
+Provides-Extra: dev
+Requires-Dist: GitPython>=2.1.11; extra == "dev"
+Requires-Dist: jupyterlab<4,>=3.5; extra == "dev"
+Requires-Dist: jupyter_server>=1.17.0; extra == "dev"
+Requires-Dist: pytest>=4.3.0; extra == "dev"
+Requires-Dist: pytest-cov>=2.6.1; extra == "dev"
+Requires-Dist: black>=20.8b1; extra == "dev"
+Requires-Dist: bump2version>=1.0.0; extra == "dev"
+Requires-Dist: check-manifest; extra == "dev"
+Requires-Dist: flake8>=3.7.8; extra == "dev"
+Requires-Dist: flake8-black>=0.2.1; extra == "dev"
+Requires-Dist: jupyter_packaging; extra == "dev"
+Requires-Dist: Sphinx>=1.8.4; extra == "dev"
+Requires-Dist: sphinx-markdown-builder>=0.5.2; extra == "dev"
+Provides-Extra: develop
+Requires-Dist: GitPython>=2.1.11; extra == "develop"
+Requires-Dist: jupyterlab<4,>=3.5; extra == "develop"
+Requires-Dist: jupyter_server>=1.17.0; extra == "develop"
+Requires-Dist: pytest>=4.3.0; extra == "develop"
+Requires-Dist: pytest-cov>=2.6.1; extra == "develop"
+Requires-Dist: black>=20.8b1; extra == "develop"
+Requires-Dist: bump2version>=1.0.0; extra == "develop"
+Requires-Dist: check-manifest; extra == "develop"
+Requires-Dist: flake8>=3.7.8; extra == "develop"
+Requires-Dist: flake8-black>=0.2.1; extra == "develop"
+Requires-Dist: jupyter_packaging; extra == "develop"
+Requires-Dist: Sphinx>=1.8.4; extra == "develop"
+Requires-Dist: sphinx-markdown-builder>=0.5.2; extra == "develop"
+
+# jupyterlab_autoversion
+Automatically version jupyter notebooks in JupyterLab
+
+[![Build Status](https://github.com/timkpaine/jupyterlab_autoversion/workflows/Build%20Status/badge.svg?branch=main)](https://github.com/timkpaine/jupyterlab_autoversion/actions?query=workflow%3A%22Build+Status%22)
+[![codecov](https://codecov.io/gh/timkpaine/jupyterlab_autoversion/branch/main/graph/badge.svg)](https://codecov.io/gh/timkpaine/jupyterlab_autoversion)
+[![PyPI](https://img.shields.io/pypi/l/jupyterlab_autoversion.svg)](https://pypi.python.org/pypi/jupyterlab_autoversion)
+[![PyPI](https://img.shields.io/pypi/v/jupyterlab_autoversion.svg)](https://pypi.python.org/pypi/jupyterlab_autoversion)
+[![npm](https://img.shields.io/npm/v/jupyterlab_autoversion.svg)](https://www.npmjs.com/package/jupyterlab_autoversion)
+
+
+## Save every notebook revision
+Enhanced checkpoints, versioned and persistent between restarts on every save
+
+![](https://raw.githubusercontent.com/timkpaine/jupyterlab_autoversion/main/docs/example.gif)
+
+
+## Install
+
+```bash
+pip install jupyterlab_autoversion
+```
+
+
+## Development
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
+
+
+## License
+
+This software is licensed under the Apache 2.0 license. See the
+[LICENSE](LICENSE) file for details.
