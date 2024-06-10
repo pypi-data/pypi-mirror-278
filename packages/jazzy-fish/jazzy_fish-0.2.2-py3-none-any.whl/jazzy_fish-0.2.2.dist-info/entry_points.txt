@@ -1,0 +1,3 @@
+[console_scripts]
+clean-dictionary = jazzy_fish_tools.clean_dictionary:main
+generate-wordlists = jazzy_fish_tools.generate_wordlists:main
