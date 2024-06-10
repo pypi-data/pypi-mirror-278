@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: chatbot-code
+Version: 110.11
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Framework :: Django
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+License-File: LICENSE
+Requires-Dist: Django <4.0,>=3.2
+
