@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: l402
+Version: 0.0.1
+Summary: Python implementation of the client/server L402 protocol flow
+License: MIT
+Author: Pol Alvarez
+Author-email: pol@fewsats.com
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: fastapi (>=0.111.0,<0.112.0)
+Requires-Dist: flask (>=3.0.3,<4.0.0)
+Requires-Dist: httpx (>=0.27.0,<0.28.0)
+Requires-Dist: pymacaroons (>=0.13.0,<0.14.0)
+Requires-Dist: starlette (>=0.37.2,<0.38.0)
+Description-Content-Type: text/markdown
+
+# l402py
+L402 client and server library for python projects
+
