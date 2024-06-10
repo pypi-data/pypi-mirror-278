@@ -1,0 +1,1 @@
+from ysh import main
