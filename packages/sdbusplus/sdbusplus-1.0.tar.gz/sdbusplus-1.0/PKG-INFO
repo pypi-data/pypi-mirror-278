@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: sdbusplus
+Version: 1.0
+Home-page: http://github.com/openbmc/sdbusplus
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Dist: inflection
+Requires-Dist: mako
+Requires-Dist: pyyaml
