@@ -1,0 +1,12 @@
+README.md
+setup.py
+openredirectscanner.egg-info/PKG-INFO
+openredirectscanner.egg-info/SOURCES.txt
+openredirectscanner.egg-info/dependency_links.txt
+openredirectscanner.egg-info/entry_points.txt
+openredirectscanner.egg-info/requires.txt
+openredirectscanner.egg-info/top_level.txt
+units/__init__.py
+units/banner.py
+units/chnet.py
+units/urls.py
