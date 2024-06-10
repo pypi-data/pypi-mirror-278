@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: deknp
+Version: 0.1.39
+Summary: Extending from npm
+Author-Email: sanzenwin <sanzenwin@gmail.com>
+License: MIT
+Requires-Python: >=3.10
+Requires-Dist: svglib<=1.5.1
+Requires-Dist: pymupdf<=1.22.5
+Requires-Dist: svgpathtools<=1.6.1
+Requires-Dist: typer<=0.9.0
+Requires-Dist: json5<=1.6.4
+Requires-Dist: dynaconf<=3.2.4
+Requires-Dist: dektools<1.0.0
+Requires-Dist: dekgen<1.0.0
+Description-Content-Type: text/markdown
+
+Merge shared dependencies and update package.json
+
+```shell
+# enter project dir which contains a package.json
+
+# generate shell scripts and run them
+deknp shell .
+
+# just like npm install
+deknp install
+
+# generate server
+deknp server
+# update dv3/requests
+deknp install
+
+# publish current package
+deknp sure
+npm publish
+
+# env vars
+# change env
+deknp env to dev
+# load settings from os.environ
+deknp env final
+```

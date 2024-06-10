@@ -1,0 +1,36 @@
+[project]
+name = "deknp"
+version = "0.1.39"
+description = "Extending from npm"
+authors = [
+    { name = "sanzenwin", email = "sanzenwin@gmail.com" },
+]
+dependencies = [
+    "svglib<=1.5.1",
+    "pymupdf<=1.22.5",
+    "svgpathtools<=1.6.1",
+    "typer<=0.9.0",
+    "json5<=1.6.4",
+    "dynaconf<=3.2.4",
+    "dektools<1.0.0",
+    "dekgen<1.0.0",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.scripts]
+deknp = "deknp.click.__entry__:main"
+
+[tool.pdm.build]
+includes = [
+    "deknp",
+]
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
