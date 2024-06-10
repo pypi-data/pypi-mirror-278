@@ -1,0 +1,15 @@
+May-04-2023 10:22:38 AM - INFO - [MainProcess:graph_mic:136] - plot_mic - Feeding all arguments into dict.
+May-04-2023 10:22:38 AM - INFO - [MainProcess:graph_mic:152] - plot_mic - {'channels': [1], 'device': None, 'window': 200, 'interval': 30, 'samplerate': 48000.0, 'down_sample': 10, 'window_size': (5, 3), 'rate': 40, 'dark_mode': True, 'mapping': [0]}
+May-04-2023 10:22:38 AM - INFO - [MainProcess:graph_mic:161] - _kick_off - Initiating microphone plotter
+May-04-2023 11:02:00 AM - INFO - [MainProcess:graph_mic:109] - plot_mic - Updating process ID [7700] in [plot_mic] children table.
+May-04-2023 11:02:00 AM - INFO - [MainProcess:graph_mic:116] - plot_mic - Updating process ID [7700] in [plot_mic] processes mapping.
+May-04-2023 11:02:00 AM - CRITICAL - [MainProcess:graph_mic:128] - plot_mic - ATTENTION::Missing 'fileio/processes.yaml'
+May-04-2023 11:02:00 AM - INFO - [MainProcess:graph_mic:129] - plot_mic - Feeding all arguments into dict.
+May-04-2023 11:02:00 AM - INFO - [MainProcess:graph_mic:145] - plot_mic - {'channels': [1], 'device': None, 'window': 200, 'interval': 30, 'samplerate': 48000.0, 'down_sample': 10, 'window_size': (5, 3), 'rate': 40, 'dark_mode': True, 'mapping': [0]}
+May-04-2023 11:02:00 AM - INFO - [MainProcess:graph_mic:154] - _kick_off - Initiating microphone plotter
+May-04-2023 11:02:17 AM - INFO - [MainProcess:graph_mic:109] - plot_mic - Updating process ID [7714] in [plot_mic] children table.
+May-04-2023 11:02:17 AM - INFO - [MainProcess:graph_mic:116] - plot_mic - Updating process ID [7714] in [plot_mic] processes mapping.
+May-04-2023 11:02:17 AM - CRITICAL - [MainProcess:graph_mic:128] - plot_mic - ATTENTION::Missing 'fileio/processes.yaml'
+May-04-2023 11:02:17 AM - INFO - [MainProcess:graph_mic:129] - plot_mic - Feeding all arguments into dict.
+May-04-2023 11:02:17 AM - INFO - [MainProcess:graph_mic:145] - plot_mic - {'channels': [1], 'device': None, 'window': 200, 'interval': 30, 'samplerate': 48000.0, 'down_sample': 10, 'window_size': (5, 3), 'rate': 40, 'dark_mode': True, 'mapping': [0]}
+May-04-2023 11:02:17 AM - INFO - [MainProcess:graph_mic:154] - _kick_off - Initiating microphone plotter
