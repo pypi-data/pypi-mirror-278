@@ -1,0 +1,4 @@
+[console_scripts]
+MSVC-client=MainServiceManager.__main__:client
+MSVC-server=MainServiceManager.__main__:server
+
