@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: python-steer
+Version: 0.2.0
+Summary: A tool to help you write JSON and YAML files from JSON schemas
+Author: José Coelho
+Author-email: 16445494+jcoelho93@users.noreply.github.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: click (==8.1.7)
+Requires-Dist: jsonpath-ng (>=1.6.1,<2.0.0)
+Requires-Dist: pydantic (>=2.7.1,<3.0.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Requires-Dist: questionary (>=2.0.1,<3.0.0)
+Project-URL: Bug Tracker, https://github.com/jcoelho93/steer/issues
+Description-Content-Type: text/markdown
+
+# Steer
+
+A tool to help you write JSON and YAML files from JSON schemas
+
+## Installation
+
+```shell
+pip install python-steer
+```
+
+## Usage
+
+Let's say you want to build an OpenAPI specification for an API.
+
+1. Download the OpenAPI json schema from [here](https://github.com/OAI/OpenAPI-Specification/blob/main/schemas/v2.0/schema.json)
+1. Run steer from the command line
+
+[![asciicast](https://asciinema.org/a/s7k97RgWaRjhokuT1EZ6SgYlw.svg)](https://asciinema.org/a/s7k97RgWaRjhokuT1EZ6SgYlw)
+
+## Roadmap
+
+- [x] Implement prompt for `array` of `string`, `number` and `integer` property type
+- [ ] Implement prompt for `array` of `object` property type
+- [ ] Implement the `$ref` property type
+- [x] Validate string property values with `pattern`
+- [ ] Implement prompt for `additionalProperties`
+- [ ] Validate `required` fields
+- [x] Implement `number` property type
+- [ ] Implement `allOf`, `anyOf`, `oneOf` keywords
+
