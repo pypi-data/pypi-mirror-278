@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+imfacesnap/__init__.py
+imfacesnap/__main__.py
+imfacesnap/main.py
+imfacesnap.egg-info/PKG-INFO
+imfacesnap.egg-info/SOURCES.txt
+imfacesnap.egg-info/dependency_links.txt
+imfacesnap.egg-info/entry_points.txt
+imfacesnap.egg-info/requires.txt
+imfacesnap.egg-info/top_level.txt
+imfacesnap/utils/BlurDetector.py
+imfacesnap/utils/__init__.py
+imfacesnap/utils/deepface_util.py
+imfacesnap/utils/tools.py
