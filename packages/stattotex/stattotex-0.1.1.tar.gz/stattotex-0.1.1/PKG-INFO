@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: stattotex
+Version: 0.1.1
+Summary: A simple function for automatically updating LaTeX documents with numbers from Python.
+Home-page: https://github.com/ijyliu/stattotex-python
+Author: Isaac Liu
+Author-email: ijyliu@gmail.com
+License: GPLv3
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# stattotex-python
+
+A simple function for automatically updating LaTeX documents with numbers from Python.
+
+Python port of [isapollnik/stattotex](https://github.com/isapollnik/stattotex).
+
+## Usage
+
+Note that you may not include underscores in `number_name`.
