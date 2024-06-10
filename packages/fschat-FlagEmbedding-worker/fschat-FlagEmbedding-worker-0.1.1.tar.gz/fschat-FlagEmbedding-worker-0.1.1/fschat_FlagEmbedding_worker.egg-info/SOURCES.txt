@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+fschat_FlagEmbedding_worker.egg-info/PKG-INFO
+fschat_FlagEmbedding_worker.egg-info/SOURCES.txt
+fschat_FlagEmbedding_worker.egg-info/dependency_links.txt
+fschat_FlagEmbedding_worker.egg-info/not-zip-safe
+fschat_FlagEmbedding_worker.egg-info/requires.txt
+fschat_FlagEmbedding_worker.egg-info/top_level.txt
+fschat_flagembedding_worker/__init__.py
+fschat_flagembedding_worker/serve/__init__.py
+fschat_flagembedding_worker/serve/flagmodel_worker.py
+fschat_flagembedding_worker/serve/flagreranker_worker.py

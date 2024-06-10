@@ -1,0 +1,138 @@
+Metadata-Version: 2.1
+Name: fschat-FlagEmbedding-worker
+Version: 0.1.1
+Summary: FlagEmbedding model worker for fastchat.
+Home-page: UNKNOWN
+Author: Jiang XiaoKai
+Maintainer: Jiang XiaoKai
+License: MIT
+Keywords: fastchat,FlagEmbedding,model_worker
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# fs-FlagEmbedding-worker
+
+FlagEmbedding model worker for fastchat.
+
+## Install
+
+```shell
+pip install fschat-FlagEmbedding-worker
+```
+
+## Usage
+
+### 启动embedding模型工作者
+
+```shell
+python -m fschat_flagembedding_worker.serve.flagmodel_worker --controller-address http://localhost:21001 --model-path=/models/BAAI/bge-large-zh-v1.5 --port=22002 --worker-address=http://localhost:22002 --debug
+```
+
+### 启动reranker模型工作者
+
+```shell
+python -m fschat_flagembedding_worker.serve.flagreranker_worker --controller-address http://localhost:21001 --model-path=/models/BAAI/bge-reranker-large --port=22003 --worker-address=http://localhost:22003 --debug
+```
+
+### 使用embedding模型
+
+```python
+import os
+from langchain_openai.embeddings import OpenAIEmbeddings
+from openai.resources.embeddings import Embeddings
+
+API_SECRET_KEY = "QufTZCA5Y1zIaC3GxNBUn2Q0vW1NITKm"
+BASE_URL = "http://localhost:8000/v1"
+
+EMBEDDING_MODEL_NAME = "bge-large-zh-v1.5"
+RERANKER_MODEL_NAME = "bge-reranker-large"
+
+os.environ["OPENAI_API_KEY"] = API_SECRET_KEY
+os.environ["OPENAI_API_BASE"] = BASE_URL
+
+embd = OpenAIEmbeddings(
+    model=EMBEDDING_MODEL_NAME,
+    check_embedding_ctx_length=False,
+    tiktoken_enabled=False,
+)
+r1 = embd.embed_query("hello world")
+print(r1)
+```
+
+*输出：*
+
+```text
+[-0.02532958984375, -0.0016546249389648438, ..., 0.018463134765625, 0.0161895751953125]
+```
+
+
+### 使用reranker模型
+
+- openapi并没有提供reranker响应的接口，这里我们将使用embedding接口来获取reranker的响应。
+- 但对输入参数进行了约定，要求格式如下：[query, passage1, query, passage2, ...]。
+- 特别需要注意的是，在启动openai_api服务时，需要添加额外的环境变量：FASTCHAT_WORKER_API_EMBEDDING_BATCH_SIZE。
+
+*openai api server启动案例：*
+
+```shell
+#!/bin/bash
+export FASTCHAT_WORKER_API_EMBEDDING_BATCH_SIZE=128
+/opt/conda/bin/python -m fastchat.serve.openai_api_server --host 0.0.0.0 -api-keys MRpta0LlV0SrxpYBgbecyyF47Pvt263O
+```
+
+*reranker模型使用案例：*
+
+```python
+import os
+from langchain_openai.embeddings import OpenAIEmbeddings
+from openai.resources.embeddings import Embeddings
+
+API_SECRET_KEY = "QufTZCA5Y1zIaC3GxNBUn2Q0vW1NITKm"
+BASE_URL = "http://localhost:8000/v1"
+
+EMBEDDING_MODEL_NAME = "bge-large-zh-v1.5"
+RERANKER_MODEL_NAME = "bge-reranker-large"
+
+os.environ["OPENAI_API_KEY"] = API_SECRET_KEY
+os.environ["OPENAI_API_BASE"] = BASE_URL
+
+reranker = OpenAIEmbeddings(
+    model=RERANKER_MODEL_NAME,
+    check_embedding_ctx_length=False,
+    tiktoken_enabled=False,
+)
+
+
+query = "hello"
+passages = ["hi", "world", "yes", "how are you?"]
+
+messages = []
+for passage in passages:
+    messages += [query, passage]
+
+r1 = reranker.embed_query(messages)
+print(r1)
+```
+
+*输出：*
+
+```text
+[5.96577262878418, -3.2970359325408936, 0.9453534483909607, 0.5078737735748291]
+```
+
+##
+
+## Releases
+
+### v0.1.1
+
+- First release.
+
+
