@@ -1,0 +1,26 @@
+<html>
+<head>
+    <script type="text/javascript" language="javascript">
+        var submitForm = function() {
+          document.getElementById('oneyExtensionForm').submit();
+        };
+    </script>
+</head>
+
+<body onload="submitForm();">
+
+<form id="oneyExtensionForm" action="{{ action_url }}" method="{{ action_method }}">
+    {% csrf_token %}
+    {{ address_form.as_table() }}
+    {{ hash_form.as_table() }}
+    {{ order_formset.management_form }}
+    {% for form in order_formset.forms %}
+    <fieldset>
+        <legend>Order {{ forloop.counter }}</legend>
+        {{ form.as_table() }}
+    </fieldset>
+    {% endfor %}
+</form>
+
+</body>
+</html>
