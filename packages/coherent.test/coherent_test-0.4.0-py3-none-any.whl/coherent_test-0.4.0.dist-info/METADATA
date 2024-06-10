@@ -1,0 +1,28 @@
+Metadata-Version: 2.3
+Name: coherent.test
+Version: 0.4.0
+Author-Email: "Jason R. Coombs" <jaraco@jaraco.com>
+Summary: Run tests for Coherent projects.
+Requires-Python: >= 3.8
+Requires-Dist: pip-run
+Requires-Dist: pytest
+Requires-Dist: coherent.build>=0.10
+Project-URL: Homepage, https://github.com/coherent-oss/coherent.test
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+
+[![](https://img.shields.io/pypi/v/coherent.test)](https://pypi.org/project/coherent.test)
+
+![](https://img.shields.io/pypi/pyversions/coherent.test)
+
+[![Coherent Software Development System](https://img.shields.io/badge/coherent%20system-informational)](https://github.com/coherent-oss/system)
+
+Run tests for projects under the [Coherent Software Development System](https://github.com/coherent-oss/system/blob/main/README.md).
+
+```
+py -m coherent.test
+```
