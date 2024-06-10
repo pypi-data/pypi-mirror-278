@@ -1,0 +1,5 @@
+{
+    "python.formatting.provider": "black",
+    "python.pythonPath": "/usr/local/bin/python",
+    "python.testing.pytestEnabled": true
+}
