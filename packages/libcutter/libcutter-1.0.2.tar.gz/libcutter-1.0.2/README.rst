@@ -1,0 +1,1 @@
+The library which encodes message to image and encodes image file with Feistel algorithm and decodes all
