@@ -1,0 +1,37 @@
+searoute package
+================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   searoute.data
+
+Submodules
+----------
+
+searoute.searoute module
+------------------------
+
+.. automodule:: searoute.searoute
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+searoute.utils module
+---------------------
+
+.. automodule:: searoute.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: searoute
+   :members:
+   :undoc-members:
+   :show-inheritance:
