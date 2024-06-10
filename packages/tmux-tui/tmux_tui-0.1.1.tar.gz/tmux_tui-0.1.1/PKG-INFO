@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: tmux-tui
+Version: 0.1.1
+Summary: 
+Author: Evan Voyles
+Author-email: evan.voyles@intrafentech.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: libtmux (>=0.37.0,<0.38.0)
+Requires-Dist: pytermgui (>=7.7.1,<8.0.0)
+Description-Content-Type: text/markdown
+
+# TTmux
+
+A terminal user interface for creating and storing tmux sessions.
+
