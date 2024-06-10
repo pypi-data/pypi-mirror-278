@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: connectome-interpreter
+Version: 1.10.0
+Summary: A tool for connectomics data interpretation
+Author: Yijie Yin
+Author-email: yy432@cam.ac.uk
+Project-URL: Source, https: // github.com/YijieYin/connectome_interpreter
+Project-URL: Documentation, https://connectome-interpreter.readthedocs.io/en/latest/
+Project-URL: Larva connectome example, https://colab.research.google.com/drive/1VIMNFBp7dCgN5XOQ9vvzPaqb80BGPZx4?usp=sharing
+Project-URL: Adult connectome example (FAFB), https://colab.research.google.com/drive/1ECUagwN-r2rnKyfcYgtR1oG8Lox8m8BW?usp=sharing
+Keywords: connectomics,neural network,mechanistic interpretability
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: tqdm
+Requires-Dist: plotly
+Requires-Dist: matplotlib
+Requires-Dist: networkx
+Requires-Dist: seaborn
+Requires-Dist: ipywidgets
+Requires-Dist: IPython
+Provides-Extra: get-ngl-link
+Requires-Dist: nglscenes; extra == "get-ngl-link"
+Provides-Extra: map-to-experiment
+Requires-Dist: scikit-learn; extra == "map-to-experiment"
+Provides-Extra: wandb
+Requires-Dist: wandb; extra == "wandb"
