@@ -1,0 +1,2 @@
+[console_scripts]
+owc = src.cli:main

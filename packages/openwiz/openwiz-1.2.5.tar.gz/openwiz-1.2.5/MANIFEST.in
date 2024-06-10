@@ -1,0 +1,20 @@
+include README.md
+include LICENSE
+include requirements.txt
+
+recursive-include *.txt
+
+recursive-include config *.yaml
+
+recursive-include static *
+recursive-include templates *
+
+recursive-include docs *
+recursive-include examples *
+
+recursive-include src *.py
+
+recursive-include tests *.py
+
+global-exclude *.pyc
+global-exclude __pycache__
