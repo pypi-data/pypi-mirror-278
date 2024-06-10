@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "pondpy"
+version = "0.2.2"
+description = "Package to aid in the design of low-slope roof systems for ponding stability and impounded rain load."
+authors = ["Matthew Upshaw <matthew.upshaw02@gmail.com>"]
+license = "MIT License"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "1.26.4"
+scipy = "1.13.1"
+joistpy = "1.1.0"
+steelpy = "1.1.1"
+matplotlib = "3.9.0"
+toml = "0.10.2"
+
+[project.urls]
+"Homepage" = "https://github.com/matthew-upshaw/pondpy"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
