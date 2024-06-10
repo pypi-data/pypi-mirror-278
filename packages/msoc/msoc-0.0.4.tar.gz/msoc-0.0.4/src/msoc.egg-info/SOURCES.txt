@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+src/test.py
+src/msoc/__init__.py
+src/msoc/exceptions.py
+src/msoc/functions.py
+src/msoc/msoc.py
+src/msoc/sound.py
+src/msoc.egg-info/PKG-INFO
+src/msoc.egg-info/SOURCES.txt
+src/msoc.egg-info/dependency_links.txt
+src/msoc.egg-info/requires.txt
+src/msoc.egg-info/top_level.txt
+src/msoc/engines/mp3uk.py
+src/msoc/engines/zaycev_net.py
