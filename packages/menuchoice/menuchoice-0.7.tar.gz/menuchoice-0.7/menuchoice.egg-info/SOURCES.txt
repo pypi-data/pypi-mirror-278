@@ -1,0 +1,11 @@
+README.md
+setup.py
+menuchoice/__init__.py
+menuchoice/_validator.py
+menuchoice/exceptions.py
+menuchoice.egg-info/PKG-INFO
+menuchoice.egg-info/SOURCES.txt
+menuchoice.egg-info/dependency_links.txt
+menuchoice.egg-info/top_level.txt
+menuchoice/cursor_control/_cursorInput.py
+menuchoice/cursor_control/_textHandler.py
