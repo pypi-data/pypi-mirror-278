@@ -1,0 +1,3 @@
+[console_scripts]
+annobee = annobee.cli:main
+
