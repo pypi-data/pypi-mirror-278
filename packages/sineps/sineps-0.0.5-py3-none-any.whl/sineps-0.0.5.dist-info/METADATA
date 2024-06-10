@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: sineps
+Version: 0.0.5
+Summary: The official Python library for the sineps API
+Home-page: 
+Author: Ceres Technologies
+Author-email: support@cerestechs.com
+License: 
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests >=2.24.0
+
+UNKNOWN
+
