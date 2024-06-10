@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/sc_ssGSEA/SeuratObject.py
+src/sc_ssGSEA/__init__.py
+src/sc_ssGSEA/run_sc_ssgsea.py
+src/sc_ssGSEA/sc_ssGSEA_helper.py
+src/sc_ssGSEA.egg-info/PKG-INFO
+src/sc_ssGSEA.egg-info/SOURCES.txt
+src/sc_ssGSEA.egg-info/dependency_links.txt
+src/sc_ssGSEA.egg-info/top_level.txt

@@ -1,0 +1,25 @@
+[build-system]
+requires = [
+	"setuptools>=61.0",
+	"pandas==2.2.2",
+	"numpy==1.24.3",
+	"scipy==1.11.0",
+	"typing-extensions==4.12.1"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sc_ssGSEA"
+
+version = "1.0.2"
+
+authors = [
+	{name = "Alexander T. Wenzel", email = "atwenzel@ucsd.edu"},
+	{name = "John Jun"}
+]
+
+description = "A Python package for performing gene set enrichment analysis on single cell clusters."
+
+readme = "README.md"
+
+requires-python = ">=3.8"
