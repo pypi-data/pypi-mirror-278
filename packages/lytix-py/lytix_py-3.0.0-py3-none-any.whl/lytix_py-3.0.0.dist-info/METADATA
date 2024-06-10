@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: lytix-py
+Version: 3.0.0
+Summary: Official Lytix Client Packages
+Author-email: Lytix <support@lytix.com>
+Project-URL: Homepage, https://github.com/Lytix-Labs/lytix-py
+Project-URL: Issues, https://github.com/Lytix-Labs/lytix-py/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: requests ==2.31.0
+Requires-Dist: urllib3 ==2.2.1
+
+# Lytix Client Python Packages
+
+This directory contains all the python packages for the Lytix project.
+
+#### Environment Variables
+
+The following environment variables are required to run the Lytix client.
+
+- `LX_API_KEY`: The API key for the Lytix API. This is required to send data to the Lytix API.
+
+The followig environment variables are optional.
+
+- `LX_BASE_URL`: The base URL for the Lytix API. This is required to send data to the Lytix API.
