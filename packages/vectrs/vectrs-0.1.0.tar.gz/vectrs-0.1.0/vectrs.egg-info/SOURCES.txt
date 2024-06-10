@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+vectrs/__init__.py
+vectrs/main.py
+vectrs.egg-info/PKG-INFO
+vectrs.egg-info/SOURCES.txt
+vectrs.egg-info/dependency_links.txt
+vectrs.egg-info/entry_points.txt
+vectrs.egg-info/requires.txt
+vectrs.egg-info/top_level.txt
+vectrs/database/__init__.py
+vectrs/database/filter.py
+vectrs/database/util.py
+vectrs/database/vectrbase.py
+vectrs/network/__init__.py
+vectrs/network/node.py
