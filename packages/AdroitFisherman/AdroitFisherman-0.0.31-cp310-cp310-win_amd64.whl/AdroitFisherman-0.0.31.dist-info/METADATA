@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: AdroitFisherman
+Version: 0.0.31
+Summary: This is a simple package about Data Structure packed by C/C++ language.
+Home-page: UNKNOWN
+Author: adroit_fisherman
+Author-email: 1295284735@qq.com
+License: UNKNOWN
+Platform: Windows
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: Microsoft :: Windows :: Windows 11
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+
+# 版本更新总览
+* 新增512位哈希加密算法实现。
+## 项目模块清单
+* Base64Util
+* CircularSingleLinkedList
+* DoubleLinkedList
+* SequentialList
+* SingleLinkedList
+* SingleLinkedListWithoutHeadNode
+* LinkedStack
+* SHA512Encoder
+
