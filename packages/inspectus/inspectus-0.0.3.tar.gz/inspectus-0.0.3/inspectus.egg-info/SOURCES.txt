@@ -1,0 +1,9 @@
+MANIFEST.in
+setup.py
+inspectus/__init__.py
+inspectus/attention.py
+inspectus/utils.py
+inspectus.egg-info/PKG-INFO
+inspectus.egg-info/SOURCES.txt
+inspectus.egg-info/dependency_links.txt
+inspectus.egg-info/top_level.txt
