@@ -1,0 +1,7 @@
+[console_scripts]
+kd = k8s_cli.k8s_cli:kd
+kn = k8s_cli.k8s_cli:kn
+kp = k8s_cli.k8s_cli:kp
+kpf = k8s_cli.k8s_cli:kpf
+kps = k8s_cli.k8s_cli:kps
+ku = k8s_cli.k8s_cli:ku
