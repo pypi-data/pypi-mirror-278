@@ -1,0 +1,4012 @@
+[
+  {
+    "HA_ONE_2DDWave_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 4,
+      "y": 6,
+      "size_compressed": 708.0,
+      "size_uncompressed": 8027
+    }
+  },
+  {
+    "mux21_ONE_RES_exact_UnOpt_UnOrd.fgl": {
+      "x": 3,
+      "y": 5,
+      "size_compressed": 550.0,
+      "size_uncompressed": 4370
+    }
+  },
+  {
+    "FA_ONE_2DDWave_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 11,
+      "y": 11,
+      "size_compressed": 1475.0,
+      "size_uncompressed": 26164
+    }
+  },
+  {
+    "t_5_ONE_2DDWave_ortho_Opt_Ord.fgl": {
+      "x": 7,
+      "y": 8,
+      "size_compressed": 990.0,
+      "size_uncompressed": 13871
+    }
+  },
+  {
+    "majority_5_r1_ONE_2DDWave_exact_UnOpt_UnOrd.fgl": {
+      "x": 4,
+      "y": 11,
+      "size_compressed": 889.0,
+      "size_uncompressed": 11482
+    }
+  },
+  {
+    "t_ONE_BEST.fgl": {
+      "x": 4,
+      "y": 7,
+      "size_compressed": 744.0,
+      "size_uncompressed": 8128
+    }
+  },
+  {
+    "c7552_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 2201,
+      "y": 4882,
+      "size_compressed": 21691448.0,
+      "size_uncompressed": 696131452
+    }
+  },
+  {
+    "par_gen_ONE_2DDWave_ortho_Opt_UnOrd.fgl": {
+      "x": 8,
+      "y": 8,
+      "size_compressed": 1026.0,
+      "size_uncompressed": 14980
+    }
+  },
+  {
+    "majority_5_r1_ONE_USE_exact_UnOpt_UnOrd.fgl": {
+      "x": 6,
+      "y": 8,
+      "size_compressed": 985.0,
+      "size_uncompressed": 13198
+    }
+  },
+  {
+    "xnor2_ONE_2DDWave_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 3,
+      "y": 6,
+      "size_compressed": 551.0,
+      "size_uncompressed": 4203
+    }
+  },
+  {
+    "newtag_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 12,
+      "y": 26,
+      "size_compressed": 2714.0,
+      "size_uncompressed": 56877
+    }
+  },
+  {
+    "majority_5_r1_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 11,
+      "y": 17,
+      "size_compressed": 1941.0,
+      "size_uncompressed": 37136
+    }
+  },
+  {
+    "adder_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 512,
+      "y": 1783,
+      "size_compressed": 4573011.0,
+      "size_uncompressed": 105263289
+    }
+  },
+  {
+    "max_ONE_BEST.fgl": {
+      "x": 2461,
+      "y": 6607,
+      "size_compressed": 43576372.0,
+      "size_uncompressed": 1419205772
+    }
+  },
+  {
+    "xor5_r1_ONE_BEST.fgl": {
+      "x": 7,
+      "y": 11,
+      "size_compressed": 1172.0,
+      "size_uncompressed": 17584
+    }
+  },
+  {
+    "1bitAdderAOIG_ONE_2DDWave_NanoPlaceR_Opt_UnOrd.fgl": {
+      "x": 9,
+      "y": 8,
+      "size_compressed": 1039.0,
+      "size_uncompressed": 15922
+    }
+  },
+  {
+    "1bitAdderAOIG_ONE_2DDWave_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 10,
+      "y": 10,
+      "size_compressed": 1178.0,
+      "size_uncompressed": 18792
+    }
+  },
+  {
+    "newtag_ONE_2DDWave_exact_UnOpt_UnOrd.fgl": {
+      "x": 4,
+      "y": 11,
+      "size_compressed": 953.0,
+      "size_uncompressed": 12627
+    }
+  },
+  {
+    "ctrl_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 178,
+      "y": 390,
+      "size_compressed": 224408.0,
+      "size_uncompressed": 5102768
+    }
+  },
+  {
+    "c880_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 278,
+      "y": 666,
+      "size_compressed": 676387.0,
+      "size_uncompressed": 19793792
+    }
+  },
+  {
+    "1bitAdderAOIG_ONE_RES_exact_UnOpt_UnOrd.fgl": {
+      "x": 8,
+      "y": 7,
+      "size_compressed": 1062.0,
+      "size_uncompressed": 15931
+    }
+  },
+  {
+    "majority_5_r1_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 10,
+      "y": 24,
+      "size_compressed": 2153.0,
+      "size_uncompressed": 42956
+    }
+  },
+  {
+    "c432_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 157,
+      "y": 424,
+      "size_compressed": 263325.0,
+      "size_uncompressed": 6007986
+    }
+  },
+  {
+    "router_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 209,
+      "y": 470,
+      "size_compressed": 393900.0,
+      "size_uncompressed": 9060504
+    }
+  },
+  {
+    "1bitAdderMaj_ONE_RES_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 30,
+      "y": 30,
+      "size_compressed": 7554.0,
+      "size_uncompressed": 184438
+    }
+  },
+  {
+    "c7552_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 1592,
+      "y": 3545,
+      "size_compressed": 15278642.0,
+      "size_uncompressed": 348699142
+    }
+  },
+  {
+    "i2c_ONE_BEST.fgl": {
+      "x": 774,
+      "y": 1573,
+      "size_compressed": 4835483.0,
+      "size_uncompressed": 149993187
+    }
+  },
+  {
+    "b1_r2_ONE_2DDWave_ortho_Opt_UnOrd.fgl": {
+      "x": 11,
+      "y": 9,
+      "size_compressed": 1449.0,
+      "size_uncompressed": 25610
+    }
+  },
+  {
+    "par_check_ONE_RES_exact_UnOpt_UnOrd.fgl": {
+      "x": 8,
+      "y": 7,
+      "size_compressed": 962.0,
+      "size_uncompressed": 13410
+    }
+  },
+  {
+    "xor5_r1_ONE_RES_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 20,
+      "y": 20,
+      "size_compressed": 3496.0,
+      "size_uncompressed": 77791
+    }
+  },
+  {
+    "adder_ONE_BEST.fgl": {
+      "x": 893,
+      "y": 2169,
+      "size_compressed": 5701246.0,
+      "size_uncompressed": 179899537
+    }
+  },
+  {
+    "mux21_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 4,
+      "y": 11,
+      "size_compressed": 690.0,
+      "size_uncompressed": 7246
+    }
+  },
+  {
+    "max_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 3111,
+      "y": 6767,
+      "size_compressed": 50219974.0,
+      "size_uncompressed": 1614991476
+    }
+  },
+  {
+    "c3540_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 969,
+      "y": 2050,
+      "size_compressed": 4086085.0,
+      "size_uncompressed": 92901638
+    }
+  },
+  {
+    "FA_ONE_2DDWave_ortho_Opt_UnOrd.fgl": {
+      "x": 10,
+      "y": 15,
+      "size_compressed": 1815.0,
+      "size_uncompressed": 33972
+    }
+  },
+  {
+    "xor5_r1_ONE_2DDWave_NanoPlaceR_Opt_UnOrd.fgl": {
+      "x": 13,
+      "y": 10,
+      "size_compressed": 1655.0,
+      "size_uncompressed": 29650
+    }
+  },
+  {
+    "xor2_ONE_2DDWave_ortho_Opt_Ord.fgl": {
+      "x": 5,
+      "y": 4,
+      "size_compressed": 555.0,
+      "size_uncompressed": 4781
+    }
+  },
+  {
+    "par_gen_ONE_USE_exact_UnOpt_UnOrd.fgl": {
+      "x": 4,
+      "y": 8,
+      "size_compressed": 797.0,
+      "size_uncompressed": 9810
+    }
+  },
+  {
+    "t_5_Bestagon_BEST.fgl": {
+      "x": 5,
+      "y": 8,
+      "size_compressed": 750.0,
+      "size_uncompressed": 8424
+    }
+  },
+  {
+    "clpl_Bestagon_ROW_exact_UnOpt_UnOrd.fgl": {
+      "x": 11,
+      "y": 16,
+      "size_compressed": 1953.0,
+      "size_uncompressed": 34850
+    }
+  },
+  {
+    "t_5_ONE_RES_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 12,
+      "y": 12,
+      "size_compressed": 1705.0,
+      "size_uncompressed": 31458
+    }
+  },
+  {
+    "clpl_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 14,
+      "y": 48,
+      "size_compressed": 4541.0,
+      "size_uncompressed": 98835
+    }
+  },
+  {
+    "c499_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 405,
+      "y": 716,
+      "size_compressed": 789216.0,
+      "size_uncompressed": 23746230
+    }
+  },
+  {
+    "max_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 2491,
+      "y": 6181,
+      "size_compressed": 43492035.0,
+      "size_uncompressed": 995305252
+    }
+  },
+  {
+    "mux21_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 3,
+      "y": 9,
+      "size_compressed": 636.0,
+      "size_uncompressed": 6096
+    }
+  },
+  {
+    "i2c_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 1288,
+      "y": 2655,
+      "size_compressed": 9793638.0,
+      "size_uncompressed": 309367004
+    }
+  },
+  {
+    "xor5Maj_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 27,
+      "y": 74,
+      "size_compressed": 9645.0,
+      "size_uncompressed": 236324
+    }
+  },
+  {
+    "FA_ONE_RES_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 20,
+      "y": 20,
+      "size_compressed": 3879.0,
+      "size_uncompressed": 88999
+    }
+  },
+  {
+    "mux21_Bestagon_ROW_exact_UnOpt_UnOrd.fgl": {
+      "x": 3,
+      "y": 6,
+      "size_compressed": 544.0,
+      "size_uncompressed": 4087
+    }
+  },
+  {
+    "c1355_Bestagon_BEST.fgl": {
+      "x": 171,
+      "y": 417,
+      "size_compressed": 288048.0,
+      "size_uncompressed": 6536669
+    }
+  },
+  {
+    "c17_ONE_ESR_exact_UnOpt_UnOrd.fgl": {
+      "x": 6,
+      "y": 5,
+      "size_compressed": 748.0,
+      "size_uncompressed": 8401
+    }
+  },
+  {
+    "cavlc_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 644,
+      "y": 1388,
+      "size_compressed": 2765729.0,
+      "size_uncompressed": 62890972
+    }
+  },
+  {
+    "bar_Bestagon_BEST.fgl": {
+      "x": 2964,
+      "y": 6470,
+      "size_compressed": 35372028.0,
+      "size_uncompressed": 807292991
+    }
+  },
+  {
+    "1bitAdderAOIG_Bestagon_ROW_exact_UnOpt_UnOrd.fgl": {
+      "x": 3,
+      "y": 9,
+      "size_compressed": 755.0,
+      "size_uncompressed": 8866
+    }
+  },
+  {
+    "router_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 217,
+      "y": 532,
+      "size_compressed": 388164.0,
+      "size_uncompressed": 8878326
+    }
+  },
+  {
+    "cm82a_5_Bestagon_ROW_exact_UnOpt_UnOrd.fgl": {
+      "x": 5,
+      "y": 15,
+      "size_compressed": 1502.0,
+      "size_uncompressed": 26244
+    }
+  },
+  {
+    "par_gen_Bestagon_ROW_exact_UnOpt_UnOrd.fgl": {
+      "x": 3,
+      "y": 4,
+      "size_compressed": 455.0,
+      "size_uncompressed": 2275
+    }
+  },
+  {
+    "clpl_ONE_USE_exact_UnOpt_UnOrd.fgl": {
+      "x": 2,
+      "y": 21,
+      "size_compressed": 825.0000000000001,
+      "size_uncompressed": 10092
+    }
+  },
+  {
+    "t_5_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 5,
+      "y": 14,
+      "size_compressed": 972.0,
+      "size_uncompressed": 13030
+    }
+  },
+  {
+    "2bitAdderMaj_ONE_2DDWave_ortho_Opt_Ord.fgl": {
+      "x": 22,
+      "y": 42,
+      "size_compressed": 4650.0,
+      "size_uncompressed": 105069
+    }
+  },
+  {
+    "c880_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 307,
+      "y": 714,
+      "size_compressed": 632773.0,
+      "size_uncompressed": 14349712
+    }
+  },
+  {
+    "xnor2_ONE_ESR_exact_UnOpt_UnOrd.fgl": {
+      "x": 4,
+      "y": 4,
+      "size_compressed": 538.0,
+      "size_uncompressed": 4204
+    }
+  },
+  {
+    "t_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 10,
+      "y": 18,
+      "size_compressed": 1562.0,
+      "size_uncompressed": 28274
+    }
+  },
+  {
+    "mux21_ONE_2DDWave_ortho_Opt_UnOrd.fgl": {
+      "x": 6,
+      "y": 4,
+      "size_compressed": 623.0,
+      "size_uncompressed": 5809
+    }
+  },
+  {
+    "t_ONE_2DDWave_exact_UnOpt_UnOrd.fgl": {
+      "x": 5,
+      "y": 6,
+      "size_compressed": 818.0,
+      "size_uncompressed": 9564
+    }
+  },
+  {
+    "xor2_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 5,
+      "y": 4,
+      "size_compressed": 556.0,
+      "size_uncompressed": 4781
+    }
+  },
+  {
+    "FA_ONE_2DDWave_NanoPlaceR_Opt_UnOrd.fgl": {
+      "x": 11,
+      "y": 10,
+      "size_compressed": 1396.0,
+      "size_uncompressed": 23862
+    }
+  },
+  {
+    "xor2_Bestagon_BEST.fgl": {
+      "x": 2,
+      "y": 3,
+      "size_compressed": 398.00000000000006,
+      "size_uncompressed": 1446
+    }
+  },
+  {
+    "xor5_r1_ONE_2DDWave_ortho_Opt_Ord.fgl": {
+      "x": 14,
+      "y": 20,
+      "size_compressed": 2210.0,
+      "size_uncompressed": 44233
+    }
+  },
+  {
+    "ctrl_Bestagon_BEST.fgl": {
+      "x": 84,
+      "y": 203,
+      "size_compressed": 73684.0,
+      "size_uncompressed": 1690392
+    }
+  },
+  {
+    "t_5_ONE_2DDWave_ortho_Opt_UnOrd.fgl": {
+      "x": 8,
+      "y": 9,
+      "size_compressed": 1105.0,
+      "size_uncompressed": 16454
+    }
+  },
+  {
+    "cm82a_5_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 12,
+      "y": 38,
+      "size_compressed": 2820.0,
+      "size_uncompressed": 58480
+    }
+  },
+  {
+    "par_gen_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 3,
+      "y": 10,
+      "size_compressed": 616.0,
+      "size_uncompressed": 5716
+    }
+  },
+  {
+    "newtag_ONE_USE_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 13,
+      "y": 13,
+      "size_compressed": 2124.0,
+      "size_uncompressed": 42343
+    }
+  },
+  {
+    "par_check_ONE_USE_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 11,
+      "y": 11,
+      "size_compressed": 1829.0,
+      "size_uncompressed": 34983
+    }
+  },
+  {
+    "newtag_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 10,
+      "y": 15,
+      "size_compressed": 1632.0,
+      "size_uncompressed": 28761
+    }
+  },
+  {
+    "t_ONE_2DDWave_ortho_Opt_Ord.fgl": {
+      "x": 7,
+      "y": 9,
+      "size_compressed": 824.9999999999999,
+      "size_uncompressed": 9862
+    }
+  },
+  {
+    "1bitAdderAOIG_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 6,
+      "y": 19,
+      "size_compressed": 1112.0,
+      "size_uncompressed": 16946
+    }
+  },
+  {
+    "1bitAdderAOIG_ONE_BEST.fgl": {
+      "x": 5,
+      "y": 10,
+      "size_compressed": 971.9999999999999,
+      "size_uncompressed": 13922
+    }
+  },
+  {
+    "2bitAdderMaj_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 20,
+      "y": 56,
+      "size_compressed": 5010.0,
+      "size_uncompressed": 110730
+    }
+  },
+  {
+    "xor2_ONE_2DDWave_NanoPlaceR_Opt_UnOrd.fgl": {
+      "x": 3,
+      "y": 6,
+      "size_compressed": 569.0,
+      "size_uncompressed": 5064
+    }
+  },
+  {
+    "sin_Bestagon_BEST.fgl": {
+      "x": 4085,
+      "y": 8707,
+      "size_compressed": 57276904.0,
+      "size_uncompressed": 1306718141
+    }
+  },
+  {
+    "parity_ONE_2DDWave_ortho_Opt_Ord.fgl": {
+      "x": 33,
+      "y": 36,
+      "size_compressed": 7517.000000000001,
+      "size_uncompressed": 178818
+    }
+  },
+  {
+    "c880_Bestagon_BEST.fgl": {
+      "x": 267,
+      "y": 588,
+      "size_compressed": 517902.0,
+      "size_uncompressed": 11736648
+    }
+  },
+  {
+    "c3540_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 874,
+      "y": 2012,
+      "size_compressed": 4266744.0,
+      "size_uncompressed": 131370591
+    }
+  },
+  {
+    "majority_5_r1_ONE_USE_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 13,
+      "y": 13,
+      "size_compressed": 2107.0,
+      "size_uncompressed": 42022
+    }
+  },
+  {
+    "parity_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 48,
+      "y": 120,
+      "size_compressed": 22386.0,
+      "size_uncompressed": 577429
+    }
+  },
+  {
+    "FA_ONE_BEST.fgl": {
+      "x": 5,
+      "y": 11,
+      "size_compressed": 1090.0,
+      "size_uncompressed": 16692
+    }
+  },
+  {
+    "t_ONE_USE_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 10,
+      "y": 10,
+      "size_compressed": 1611.0,
+      "size_uncompressed": 29363
+    }
+  },
+  {
+    "par_check_ONE_2DDWave_ortho_Opt_UnOrd.fgl": {
+      "x": 9,
+      "y": 10,
+      "size_compressed": 1273.0,
+      "size_uncompressed": 20876
+    }
+  },
+  {
+    "dec_Bestagon_BEST.fgl": {
+      "x": 425,
+      "y": 892,
+      "size_compressed": 1390400.0,
+      "size_uncompressed": 31455673
+    }
+  },
+  {
+    "c17_ONE_USE_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 8,
+      "y": 8,
+      "size_compressed": 1097.0,
+      "size_uncompressed": 17008
+    }
+  },
+  {
+    "mux21_ONE_BEST.fgl": {
+      "x": 3,
+      "y": 4,
+      "size_compressed": 513.0,
+      "size_uncompressed": 3513
+    }
+  },
+  {
+    "dec_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 673,
+      "y": 728,
+      "size_compressed": 1661798.0,
+      "size_uncompressed": 51506713
+    }
+  },
+  {
+    "1bitAdderMaj_ONE_2DDWave_exact_UnOpt_UnOrd.fgl": {
+      "x": 10,
+      "y": 16,
+      "size_compressed": 1785.0,
+      "size_uncompressed": 33289
+    }
+  },
+  {
+    "par_gen_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 3,
+      "y": 7,
+      "size_compressed": 513.0,
+      "size_uncompressed": 3420
+    }
+  },
+  {
+    "FA_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 12,
+      "y": 24,
+      "size_compressed": 2248.0,
+      "size_uncompressed": 45631
+    }
+  },
+  {
+    "t_ONE_2DDWave_ortho_Opt_UnOrd.fgl": {
+      "x": 9,
+      "y": 11,
+      "size_compressed": 1262.0,
+      "size_uncompressed": 20476
+    }
+  },
+  {
+    "newtag_Bestagon_BEST.fgl": {
+      "x": 8,
+      "y": 9,
+      "size_compressed": 940.0,
+      "size_uncompressed": 11481
+    }
+  },
+  {
+    "c17_ONE_2DDWave_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 7,
+      "y": 7,
+      "size_compressed": 901.0000000000001,
+      "size_uncompressed": 12133
+    }
+  },
+  {
+    "cm82a_5_ONE_2DDWave_NanoPlaceR_Opt_UnOrd.fgl": {
+      "x": 16,
+      "y": 22,
+      "size_compressed": 3774.0,
+      "size_uncompressed": 83221
+    }
+  },
+  {
+    "FA_ONE_2DDWave_exact_Unopt_UnOrd.fgl": {
+      "x": 7,
+      "y": 10,
+      "size_compressed": 1361.0,
+      "size_uncompressed": 23559
+    }
+  },
+  {
+    "FA_ONE_2DDWave_ortho_Opt_Ord.fgl": {
+      "x": 11,
+      "y": 17,
+      "size_compressed": 1970.0000000000002,
+      "size_uncompressed": 37752
+    }
+  },
+  {
+    "c7552_ONE_BEST.fgl": {
+      "x": 1330,
+      "y": 3267,
+      "size_compressed": 16469893.0,
+      "size_uncompressed": 526018458
+    }
+  },
+  {
+    "priority_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 826,
+      "y": 2094,
+      "size_compressed": 5591203.0,
+      "size_uncompressed": 177996842
+    }
+  },
+  {
+    "1bitAdderMaj_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 14,
+      "y": 36,
+      "size_compressed": 3214.0,
+      "size_uncompressed": 68819
+    }
+  },
+  {
+    "xor5_r1_Bestagon_BEST.fgl": {
+      "x": 5,
+      "y": 6,
+      "size_compressed": 558.0,
+      "size_uncompressed": 4218
+    }
+  },
+  {
+    "HA_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 8,
+      "y": 6,
+      "size_compressed": 851.0,
+      "size_uncompressed": 11473
+    }
+  },
+  {
+    "2bitAdderMaj_ONE_2DDWave_NanoPlaceR_Opt_UnOrd.fgl": {
+      "x": 21,
+      "y": 27,
+      "size_compressed": 4398.0,
+      "size_uncompressed": 99182
+    }
+  },
+  {
+    "majority_ONE_USE_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 13,
+      "y": 13,
+      "size_compressed": 2221.0,
+      "size_uncompressed": 44949
+    }
+  },
+  {
+    "1bitAdderMaj_ONE_2DDWave_ortho_Opt_UnOrd.fgl": {
+      "x": 14,
+      "y": 28,
+      "size_compressed": 3193.0,
+      "size_uncompressed": 68443
+    }
+  },
+  {
+    "HA_ONE_USE_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 7,
+      "y": 7,
+      "size_compressed": 886.0,
+      "size_uncompressed": 12328
+    }
+  },
+  {
+    "sin_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 5054,
+      "y": 11899,
+      "size_compressed": 75911781.0,
+      "size_uncompressed": 2496027982
+    }
+  },
+  {
+    "xor5Maj_ONE_RES_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 75,
+      "y": 75,
+      "size_compressed": 41882.0,
+      "size_uncompressed": 1048256
+    }
+  },
+  {
+    "majority_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 10,
+      "y": 17,
+      "size_compressed": 1858.0,
+      "size_uncompressed": 35679
+    }
+  },
+  {
+    "HA_ONE_USE_exact_UnOpt_UnOrd.fgl": {
+      "x": 4,
+      "y": 7,
+      "size_compressed": 701.0,
+      "size_uncompressed": 7738
+    }
+  },
+  {
+    "sin_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 4401,
+      "y": 9998,
+      "size_compressed": 64980113.0,
+      "size_uncompressed": 2126101508
+    }
+  },
+  {
+    "parity_ONE_RES_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 110,
+      "y": 110,
+      "size_compressed": 92142.0,
+      "size_uncompressed": 2325928
+    }
+  },
+  {
+    "xnor2_ONE_USE_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 6,
+      "y": 6,
+      "size_compressed": 791.0,
+      "size_uncompressed": 9939
+    }
+  },
+  {
+    "c2670_Bestagon_BEST.fgl": {
+      "x": 499,
+      "y": 1061,
+      "size_compressed": 1934023.0,
+      "size_uncompressed": 43729996
+    }
+  },
+  {
+    "xnor2_ONE_BEST.fgl": {
+      "x": 3,
+      "y": 5,
+      "size_compressed": 527.0,
+      "size_uncompressed": 3920
+    }
+  },
+  {
+    "clpl_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 12,
+      "y": 20,
+      "size_compressed": 2710.0,
+      "size_uncompressed": 56314
+    }
+  },
+  {
+    "1bitAdderMaj_ONE_2DDWave_ortho_Opt_Ord.fgl": {
+      "x": 13,
+      "y": 24,
+      "size_compressed": 2677.0,
+      "size_uncompressed": 55393
+    }
+  },
+  {
+    "t_Bestagon_ROW_exact_UnOpt_UnOrd.fgl": {
+      "x": 5,
+      "y": 8,
+      "size_compressed": 780.9999999999999,
+      "size_uncompressed": 8993
+    }
+  },
+  {
+    "HA_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 4,
+      "y": 12,
+      "size_compressed": 677.0,
+      "size_uncompressed": 7275
+    }
+  },
+  {
+    "xnor2_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 2,
+      "y": 7,
+      "size_compressed": 484.0,
+      "size_uncompressed": 3164
+    }
+  },
+  {
+    "c5315_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 1687,
+      "y": 3498,
+      "size_compressed": 15045778.0,
+      "size_uncompressed": 485710570
+    }
+  },
+  {
+    "majority_5_r1_Bestagon_ROW_exact_UnOpt_UnOrd.fgl": {
+      "x": 5,
+      "y": 11,
+      "size_compressed": 1049.0,
+      "size_uncompressed": 14926
+    }
+  },
+  {
+    "c1908_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 435,
+      "y": 901,
+      "size_compressed": 1012563.0,
+      "size_uncompressed": 30374258
+    }
+  },
+  {
+    "xnor2_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 6,
+      "y": 4,
+      "size_compressed": 588.0,
+      "size_uncompressed": 5356
+    }
+  },
+  {
+    "HA_ONE_BEST.fgl": {
+      "x": 4,
+      "y": 5,
+      "size_compressed": 608.0,
+      "size_uncompressed": 5637
+    }
+  },
+  {
+    "b1_r2_Bestagon_ROW_exact_UnOpt_UnOrd.fgl": {
+      "x": 4,
+      "y": 7,
+      "size_compressed": 767.0,
+      "size_uncompressed": 8777
+    }
+  },
+  {
+    "c1355_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 183,
+      "y": 525,
+      "size_compressed": 373517.0,
+      "size_uncompressed": 8495903
+    }
+  },
+  {
+    "i2c_Bestagon_BEST.fgl": {
+      "x": 886,
+      "y": 1880,
+      "size_compressed": 5264402.0,
+      "size_uncompressed": 119974163
+    }
+  },
+  {
+    "xor5Maj_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 20,
+      "y": 64,
+      "size_compressed": 7014.0,
+      "size_uncompressed": 157393
+    }
+  },
+  {
+    "c17_Bestagon_ROW_exact_UnOpt_UnOrd.fgl": {
+      "x": 5,
+      "y": 8,
+      "size_compressed": 752.0,
+      "size_uncompressed": 8412
+    }
+  },
+  {
+    "1bitAdderAOIG_ONE_USE_exact_UnOpt_UnOrd.fgl": {
+      "x": 5,
+      "y": 10,
+      "size_compressed": 971.9999999999999,
+      "size_uncompressed": 13922
+    }
+  },
+  {
+    "majority_ONE_2DDWave_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 11,
+      "y": 11,
+      "size_compressed": 1509.0,
+      "size_uncompressed": 26692
+    }
+  },
+  {
+    "majority_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 7,
+      "y": 25,
+      "size_compressed": 1724.0,
+      "size_uncompressed": 31419
+    }
+  },
+  {
+    "xor2_ONE_2DDWave_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 3,
+      "y": 6,
+      "size_compressed": 585.0,
+      "size_uncompressed": 5351
+    }
+  },
+  {
+    "c1355_ONE_BEST.fgl": {
+      "x": 365,
+      "y": 701,
+      "size_compressed": 755798.0,
+      "size_uncompressed": 22749454
+    }
+  },
+  {
+    "majority_Bestagon_ROW_exact_UnOpt_UnOrd.fgl": {
+      "x": 5,
+      "y": 11,
+      "size_compressed": 1003.0,
+      "size_uncompressed": 14059
+    }
+  },
+  {
+    "parity_ONE_2DDWave_NanoPlaceR_Opt_UnOrd.fgl": {
+      "x": 40,
+      "y": 37,
+      "size_compressed": 7440.0,
+      "size_uncompressed": 173967
+    }
+  },
+  {
+    "1bitAdderMaj_ONE_2DDWave_NanoPlaceR_Opt_UnOrd.fgl": {
+      "x": 18,
+      "y": 15,
+      "size_compressed": 2449.0,
+      "size_uncompressed": 49277
+    }
+  },
+  {
+    "cavlc_ONE_BEST.fgl": {
+      "x": 484,
+      "y": 1149,
+      "size_compressed": 1943333.9999999998,
+      "size_uncompressed": 58631530
+    }
+  },
+  {
+    "c499_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 166,
+      "y": 456,
+      "size_compressed": 334868.0,
+      "size_uncompressed": 7591060
+    }
+  },
+  {
+    "2bitAdderMaj_ONE_2DDWave_ortho_Opt_UnOrd.fgl": {
+      "x": 21,
+      "y": 34,
+      "size_compressed": 5455.0,
+      "size_uncompressed": 124768
+    }
+  },
+  {
+    "router_Bestagon_BEST.fgl": {
+      "x": 111,
+      "y": 245,
+      "size_compressed": 112935.0,
+      "size_uncompressed": 2579423
+    }
+  },
+  {
+    "bar_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 3035,
+      "y": 6706,
+      "size_compressed": 37346823.0,
+      "size_uncompressed": 852133209
+    }
+  },
+  {
+    "mux21_Bestagon_BEST.fgl": {
+      "x": 3,
+      "y": 5,
+      "size_compressed": 504.0,
+      "size_uncompressed": 3226
+    }
+  },
+  {
+    "c17_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 7,
+      "y": 21,
+      "size_compressed": 1252.0,
+      "size_uncompressed": 20526
+    }
+  },
+  {
+    "mux21_ONE_USE_exact_UnOpt_UnOrd.fgl": {
+      "x": 3,
+      "y": 5,
+      "size_compressed": 528.0,
+      "size_uncompressed": 3796
+    }
+  },
+  {
+    "1bitAdderMaj_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 10,
+      "y": 27,
+      "size_compressed": 2215.0,
+      "size_uncompressed": 44297
+    }
+  },
+  {
+    "c6288_Bestagon_BEST.fgl": {
+      "x": 1248,
+      "y": 2883,
+      "size_compressed": 4537924.0,
+      "size_uncompressed": 103734403
+    }
+  },
+  {
+    "adder_Bestagon_BEST.fgl": {
+      "x": 512,
+      "y": 1659,
+      "size_compressed": 4285623.0,
+      "size_uncompressed": 98240625
+    }
+  },
+  {
+    "b1_r2_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 9,
+      "y": 24,
+      "size_compressed": 1501.0,
+      "size_uncompressed": 26392
+    }
+  },
+  {
+    "int2float_ONE_BEST.fgl": {
+      "x": 155,
+      "y": 362,
+      "size_compressed": 246412.0,
+      "size_uncompressed": 6986252
+    }
+  },
+  {
+    "parity_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 12,
+      "y": 25,
+      "size_compressed": 1948.9999999999998,
+      "size_uncompressed": 33891
+    }
+  },
+  {
+    "xnor2_Bestagon_ROW_exact_UnOpt_UnOrd.fgl": {
+      "x": 2,
+      "y": 3,
+      "size_compressed": 400.0,
+      "size_uncompressed": 1448
+    }
+  },
+  {
+    "majority_5_r1_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 6,
+      "y": 24,
+      "size_compressed": 1601.0,
+      "size_uncompressed": 28528
+    }
+  },
+  {
+    "majority_ONE_BEST.fgl": {
+      "x": 5,
+      "y": 7,
+      "size_compressed": 863.0,
+      "size_uncompressed": 10898
+    }
+  },
+  {
+    "c3540_Bestagon_BEST.fgl": {
+      "x": 814,
+      "y": 1720,
+      "size_compressed": 3410477.0,
+      "size_uncompressed": 77487332
+    }
+  },
+  {
+    "int2float_Bestagon_BEST.fgl": {
+      "x": 169,
+      "y": 375,
+      "size_compressed": 231800.0,
+      "size_uncompressed": 5273359
+    }
+  },
+  {
+    "xor2_ONE_ESR_exact_UnOpt_UnOrd.fgl": {
+      "x": 6,
+      "y": 3,
+      "size_compressed": 569.0,
+      "size_uncompressed": 5064
+    }
+  },
+  {
+    "t_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 6,
+      "y": 22,
+      "size_compressed": 1410.0,
+      "size_uncompressed": 23710
+    }
+  },
+  {
+    "majority_5_r1_ONE_RES_exact_UnOpt_UnOrd.fgl": {
+      "x": 7,
+      "y": 8,
+      "size_compressed": 1005.9999999999999,
+      "size_uncompressed": 14059
+    }
+  },
+  {
+    "HA_Bestagon_ROW_exact_UnOpt_UnOrd.fgl": {
+      "x": 3,
+      "y": 5,
+      "size_compressed": 534.0,
+      "size_uncompressed": 3827
+    }
+  },
+  {
+    "par_check_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 5,
+      "y": 17,
+      "size_compressed": 1047.0,
+      "size_uncompressed": 15379
+    }
+  },
+  {
+    "cavlc_Bestagon_BEST.fgl": {
+      "x": 549,
+      "y": 1156,
+      "size_compressed": 2124319.0,
+      "size_uncompressed": 47985570
+    }
+  },
+  {
+    "newtag_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 10,
+      "y": 30,
+      "size_compressed": 2321.0,
+      "size_uncompressed": 45616
+    }
+  },
+  {
+    "c17_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 5,
+      "y": 15,
+      "size_compressed": 1004.0000000000001,
+      "size_uncompressed": 13890
+    }
+  },
+  {
+    "1bitAdderAOIG_ONE_USE_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 13,
+      "y": 13,
+      "size_compressed": 2159.0,
+      "size_uncompressed": 44197
+    }
+  },
+  {
+    "majority_5_r1_ONE_2DDWave_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 11,
+      "y": 11,
+      "size_compressed": 1359.0,
+      "size_uncompressed": 22960
+    }
+  },
+  {
+    "majority_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 8,
+      "y": 18,
+      "size_compressed": 1369.0,
+      "size_uncompressed": 22437
+    }
+  },
+  {
+    "ctrl_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 167,
+      "y": 369,
+      "size_compressed": 241300.0,
+      "size_uncompressed": 6868030
+    }
+  },
+  {
+    "1bitAdderAOIG_ONE_2DDWave_ortho_Opt_UnOrd.fgl": {
+      "x": 10,
+      "y": 9,
+      "size_compressed": 1116.0,
+      "size_uncompressed": 17083
+    }
+  },
+  {
+    "xor2_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 5,
+      "y": 8,
+      "size_compressed": 642.0,
+      "size_uncompressed": 6790
+    }
+  },
+  {
+    "clpl_ONE_2DDWave_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 6,
+      "y": 20,
+      "size_compressed": 1563.0,
+      "size_uncompressed": 27071
+    }
+  },
+  {
+    "c17_ONE_2DDWave_NanoPlaceR_Opt_UnOrd.fgl": {
+      "x": 7,
+      "y": 7,
+      "size_compressed": 841.0,
+      "size_uncompressed": 10411
+    }
+  },
+  {
+    "mux21_ONE_2DDWave_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 4,
+      "y": 3,
+      "size_compressed": 518.0,
+      "size_uncompressed": 3508
+    }
+  },
+  {
+    "xor5Maj_Bestagon_BEST.fgl": {
+      "x": 5,
+      "y": 6,
+      "size_compressed": 558.0,
+      "size_uncompressed": 4207
+    }
+  },
+  {
+    "par_gen_ONE_USE_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 9,
+      "y": 9,
+      "size_compressed": 1384.0,
+      "size_uncompressed": 24153
+    }
+  },
+  {
+    "cm82a_5_ONE_USE_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 35,
+      "y": 35,
+      "size_compressed": 13625.0,
+      "size_uncompressed": 336135
+    }
+  },
+  {
+    "t_5_ONE_ESR_exact_UnOpt_UnOrd.fgl": {
+      "x": 8,
+      "y": 4,
+      "size_compressed": 760.0,
+      "size_uncompressed": 8127
+    }
+  },
+  {
+    "c499_Bestagon_BEST.fgl": {
+      "x": 163,
+      "y": 435,
+      "size_compressed": 309499.0,
+      "size_uncompressed": 7035565
+    }
+  },
+  {
+    "par_check_ONE_USE_exact_UnOpt_UnOrd.fgl": {
+      "x": 5,
+      "y": 11,
+      "size_compressed": 1030.0,
+      "size_uncompressed": 15715
+    }
+  },
+  {
+    "parity_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 48,
+      "y": 87,
+      "size_compressed": 19013.0,
+      "size_uncompressed": 498183
+    }
+  },
+  {
+    "xor2_ONE_2DDWave_exact_UnOpt_UnOrd.fgl": {
+      "x": 3,
+      "y": 6,
+      "size_compressed": 557.0,
+      "size_uncompressed": 4781
+    }
+  },
+  {
+    "int2float_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 251,
+      "y": 587,
+      "size_compressed": 487392.0,
+      "size_uncompressed": 14304789
+    }
+  },
+  {
+    "ctrl_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 218,
+      "y": 448,
+      "size_compressed": 292256.0,
+      "size_uncompressed": 8403836
+    }
+  },
+  {
+    "2bitAdderMaj_Bestagon_BEST.fgl": {
+      "x": 5,
+      "y": 12,
+      "size_compressed": 1101.0,
+      "size_uncompressed": 16547
+    }
+  },
+  {
+    "par_check_Bestagon_ROW_exact_UnOpt_UnOrd.fgl": {
+      "x": 4,
+      "y": 7,
+      "size_compressed": 636.0,
+      "size_uncompressed": 5874
+    }
+  },
+  {
+    "newtag_Bestagon_ROW_exact_UnOpt_UnOrd.fgl": {
+      "x": 8,
+      "y": 9,
+      "size_compressed": 940.0,
+      "size_uncompressed": 11481
+    }
+  },
+  {
+    "par_gen_ONE_RES_exact_UnOpt_UnOrd.fgl": {
+      "x": 4,
+      "y": 8,
+      "size_compressed": 767.0,
+      "size_uncompressed": 9236
+    }
+  },
+  {
+    "b1_r2_ONE_RES_exact_UnOpt_UnOrd.fgl": {
+      "x": 14,
+      "y": 4,
+      "size_compressed": 999.9999999999999,
+      "size_uncompressed": 14723
+    }
+  },
+  {
+    "bar_ONE_BEST.fgl": {
+      "x": 2314,
+      "y": 6193,
+      "size_compressed": 30965934.0,
+      "size_uncompressed": 989544058
+    }
+  },
+  {
+    "2bitAdderMaj_ONE_RES_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 65,
+      "y": 65,
+      "size_compressed": 27273.0,
+      "size_uncompressed": 682627
+    }
+  },
+  {
+    "t_5_ONE_BEST.fgl": {
+      "x": 4,
+      "y": 7,
+      "size_compressed": 745.0,
+      "size_uncompressed": 8130
+    }
+  },
+  {
+    "bar_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 3180,
+      "y": 7196,
+      "size_compressed": 38234887.0,
+      "size_uncompressed": 871629120
+    }
+  },
+  {
+    "router_ONE_BEST.fgl": {
+      "x": 103,
+      "y": 212,
+      "size_compressed": 124717.0,
+      "size_uncompressed": 3491648
+    }
+  },
+  {
+    "clpl_ONE_USE_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 15,
+      "y": 15,
+      "size_compressed": 3144.0,
+      "size_uncompressed": 68459
+    }
+  },
+  {
+    "xnor2_ONE_2DDWave_exact_UnOpt_UnOrd.fgl": {
+      "x": 3,
+      "y": 6,
+      "size_compressed": 549.0,
+      "size_uncompressed": 4208
+    }
+  },
+  {
+    "xor2_ONE_RES_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 5,
+      "y": 5,
+      "size_compressed": 633.0,
+      "size_uncompressed": 6495
+    }
+  },
+  {
+    "par_check_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 12,
+      "y": 20,
+      "size_compressed": 1899.0,
+      "size_uncompressed": 36242
+    }
+  },
+  {
+    "xor5Maj_ONE_BEST.fgl": {
+      "x": 8,
+      "y": 11,
+      "size_compressed": 1520.0,
+      "size_uncompressed": 26256
+    }
+  },
+  {
+    "int2float_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 242,
+      "y": 533,
+      "size_compressed": 481201.0,
+      "size_uncompressed": 10930416
+    }
+  },
+  {
+    "majority_Bestagon_BEST.fgl": {
+      "x": 5,
+      "y": 9,
+      "size_compressed": 861.0,
+      "size_uncompressed": 10902
+    }
+  },
+  {
+    "clpl_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 14,
+      "y": 35,
+      "size_compressed": 3180.0,
+      "size_uncompressed": 64858
+    }
+  },
+  {
+    "c880_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 330,
+      "y": 772,
+      "size_compressed": 736522.0,
+      "size_uncompressed": 21528415
+    }
+  },
+  {
+    "1bitAdderMaj_Bestagon_BEST.fgl": {
+      "x": 3,
+      "y": 7,
+      "size_compressed": 635.0,
+      "size_uncompressed": 5905
+    }
+  },
+  {
+    "c432_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 211,
+      "y": 470,
+      "size_compressed": 375452.0,
+      "size_uncompressed": 10875091
+    }
+  },
+  {
+    "par_check_ONE_2DDWave_exact_UnOpt_UnOrd.fgl": {
+      "x": 6,
+      "y": 8,
+      "size_compressed": 937.0,
+      "size_uncompressed": 12553
+    }
+  },
+  {
+    "xor5_r1_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 14,
+      "y": 25,
+      "size_compressed": 2730.0,
+      "size_uncompressed": 57567
+    }
+  },
+  {
+    "majority_5_r1_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 7,
+      "y": 18,
+      "size_compressed": 1365.0,
+      "size_uncompressed": 22151
+    }
+  },
+  {
+    "xnor2_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 6,
+      "y": 9,
+      "size_compressed": 707.0,
+      "size_uncompressed": 8226
+    }
+  },
+  {
+    "c2670_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 675,
+      "y": 1466,
+      "size_compressed": 2864418.0000000005,
+      "size_uncompressed": 88985186
+    }
+  },
+  {
+    "cm82a_5_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 24,
+      "y": 37,
+      "size_compressed": 5480.0,
+      "size_uncompressed": 127373
+    }
+  },
+  {
+    "c1908_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 289,
+      "y": 654,
+      "size_compressed": 598305.0,
+      "size_uncompressed": 13613698
+    }
+  },
+  {
+    "majority_ONE_RES_exact_UnOpt_UnOrd.fgl": {
+      "x": 10,
+      "y": 5,
+      "size_compressed": 983.0000000000001,
+      "size_uncompressed": 13193
+    }
+  },
+  {
+    "mux21_ONE_USE_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 5,
+      "y": 5,
+      "size_compressed": 657.0,
+      "size_uncompressed": 6948
+    }
+  },
+  {
+    "cavlc_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 666,
+      "y": 1446,
+      "size_compressed": 2847622.0,
+      "size_uncompressed": 64718332
+    }
+  },
+  {
+    "clpl_ONE_RES_exact_UnOpt_UnOrd.fgl": {
+      "x": 2,
+      "y": 19,
+      "size_compressed": 834.0,
+      "size_uncompressed": 9798
+    }
+  },
+  {
+    "c432_Bestagon_BEST.fgl": {
+      "x": 119,
+      "y": 303,
+      "size_compressed": 136902.0,
+      "size_uncompressed": 3140329
+    }
+  },
+  {
+    "newtag_ONE_RES_exact_UnOpt_UnOrd.fgl": {
+      "x": 6,
+      "y": 8,
+      "size_compressed": 991.0000000000001,
+      "size_uncompressed": 13482
+    }
+  },
+  {
+    "b1_r2_Bestagon_BEST.fgl": {
+      "x": 4,
+      "y": 7,
+      "size_compressed": 767.0,
+      "size_uncompressed": 8777
+    }
+  },
+  {
+    "t_5_ONE_2DDWave_NanoPlaceR_Opt_UnOrd.fgl": {
+      "x": 6,
+      "y": 8,
+      "size_compressed": 865.0,
+      "size_uncompressed": 10998
+    }
+  },
+  {
+    "cm82a_5_Bestagon_BEST.fgl": {
+      "x": 5,
+      "y": 14,
+      "size_compressed": 1394.0,
+      "size_uncompressed": 23270
+    }
+  },
+  {
+    "xor5Maj_ONE_2DDWave_ortho_Opt_Ord.fgl": {
+      "x": 27,
+      "y": 60,
+      "size_compressed": 9713.0,
+      "size_uncompressed": 233173
+    }
+  },
+  {
+    "xor5_r1_ONE_ESR_exact_UnOpt_UnOrd.fgl": {
+      "x": 11,
+      "y": 7,
+      "size_compressed": 1201.0,
+      "size_uncompressed": 18728
+    }
+  },
+  {
+    "xor5Maj_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 31,
+      "y": 79,
+      "size_compressed": 10554.0,
+      "size_uncompressed": 260248
+    }
+  },
+  {
+    "max_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 2855,
+      "y": 6422,
+      "size_compressed": 45090048.0,
+      "size_uncompressed": 1468854737
+    }
+  },
+  {
+    "c6288_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 2274,
+      "y": 6659,
+      "size_compressed": 8129655.999999999,
+      "size_uncompressed": 257830140
+    }
+  },
+  {
+    "adder_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 892,
+      "y": 2171,
+      "size_compressed": 6663106.0,
+      "size_uncompressed": 149844531
+    }
+  },
+  {
+    "c6288_ONE_BEST.fgl": {
+      "x": 1330,
+      "y": 5714,
+      "size_compressed": 6748794.0,
+      "size_uncompressed": 213369443
+    }
+  },
+  {
+    "parity_Bestagon_BEST.fgl": {
+      "x": 9,
+      "y": 22,
+      "size_compressed": 1626.0,
+      "size_uncompressed": 26067
+    }
+  },
+  {
+    "b1_r2_ONE_2DDWave_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 10,
+      "y": 10,
+      "size_compressed": 1327.0,
+      "size_uncompressed": 23306
+    }
+  },
+  {
+    "HA_ONE_RES_exact_UnOpt_UnOrd.fgl": {
+      "x": 7,
+      "y": 6,
+      "size_compressed": 791.0,
+      "size_uncompressed": 10034
+    }
+  },
+  {
+    "t_ONE_ESR_exact_UnOpt_UnOrd.fgl": {
+      "x": 8,
+      "y": 4,
+      "size_compressed": 758.0,
+      "size_uncompressed": 8125
+    }
+  },
+  {
+    "par_gen_Bestagon_BEST.fgl": {
+      "x": 3,
+      "y": 4,
+      "size_compressed": 455.0,
+      "size_uncompressed": 2277
+    }
+  },
+  {
+    "c499_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 184,
+      "y": 525,
+      "size_compressed": 374243.0,
+      "size_uncompressed": 8511627
+    }
+  },
+  {
+    "c6288_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 1330,
+      "y": 5714,
+      "size_compressed": 6748794.0,
+      "size_uncompressed": 213369443
+    }
+  },
+  {
+    "xnor2_Bestagon_BEST.fgl": {
+      "x": 2,
+      "y": 3,
+      "size_compressed": 400.0,
+      "size_uncompressed": 1448
+    }
+  },
+  {
+    "dec_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 422,
+      "y": 891,
+      "size_compressed": 1390219.0,
+      "size_uncompressed": 31452091
+    }
+  },
+  {
+    "b1_r2_ONE_BEST.fgl": {
+      "x": 4,
+      "y": 10,
+      "size_compressed": 886.0,
+      "size_uncompressed": 11830
+    }
+  },
+  {
+    "xnor2_ONE_2DDWave_ortho_Opt_Ord.fgl": {
+      "x": 6,
+      "y": 4,
+      "size_compressed": 593.0,
+      "size_uncompressed": 5356
+    }
+  },
+  {
+    "c2670_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 809,
+      "y": 1698,
+      "size_compressed": 3205852.0,
+      "size_uncompressed": 99562854
+    }
+  },
+  {
+    "majority_5_r1_ONE_BEST.fgl": {
+      "x": 5,
+      "y": 7,
+      "size_compressed": 867.0000000000001,
+      "size_uncompressed": 10903
+    }
+  },
+  {
+    "c17_ONE_RES_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 10,
+      "y": 10,
+      "size_compressed": 1374.0,
+      "size_uncompressed": 23896
+    }
+  },
+  {
+    "majority_5_r1_ONE_2DDWave_ortho_Opt_Ord.fgl": {
+      "x": 11,
+      "y": 12,
+      "size_compressed": 1667.0,
+      "size_uncompressed": 29866
+    }
+  },
+  {
+    "b1_r2_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 14,
+      "y": 20,
+      "size_compressed": 2097.0,
+      "size_uncompressed": 42203
+    }
+  },
+  {
+    "parity_ONE_2DDWave_ortho_Opt_UnOrd.fgl": {
+      "x": 36,
+      "y": 53,
+      "size_compressed": 14127.0,
+      "size_uncompressed": 340708
+    }
+  },
+  {
+    "HA_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 3,
+      "y": 7,
+      "size_compressed": 552.0000000000001,
+      "size_uncompressed": 4401
+    }
+  },
+  {
+    "b1_r2_ONE_RES_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 14,
+      "y": 14,
+      "size_compressed": 2147.0,
+      "size_uncompressed": 43572
+    }
+  },
+  {
+    "par_check_ONE_ESR_exact_UnOpt_UnOrd.fgl": {
+      "x": 8,
+      "y": 7,
+      "size_compressed": 965.0000000000001,
+      "size_uncompressed": 13123
+    }
+  },
+  {
+    "t_5_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 10,
+      "y": 18,
+      "size_compressed": 1570.0,
+      "size_uncompressed": 28567
+    }
+  },
+  {
+    "par_gen_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 9,
+      "y": 14,
+      "size_compressed": 1222.0,
+      "size_uncompressed": 19887
+    }
+  },
+  {
+    "1bitAdderAOIG_Bestagon_BEST.fgl": {
+      "x": 3,
+      "y": 9,
+      "size_compressed": 776.0,
+      "size_uncompressed": 9150
+    }
+  },
+  {
+    "t_5_ONE_USE_exact_UnOpt_UnOrd.fgl": {
+      "x": 6,
+      "y": 6,
+      "size_compressed": 839.0,
+      "size_uncompressed": 9849
+    }
+  },
+  {
+    "majority_5_r1_ONE_RES_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 15,
+      "y": 15,
+      "size_compressed": 2647.0,
+      "size_uncompressed": 55750
+    }
+  },
+  {
+    "c7552_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 1890,
+      "y": 4200,
+      "size_compressed": 19111159.0,
+      "size_uncompressed": 613672181
+    }
+  },
+  {
+    "t_ONE_RES_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 12,
+      "y": 12,
+      "size_compressed": 1995.0,
+      "size_uncompressed": 38951
+    }
+  },
+  {
+    "par_check_Bestagon_BEST.fgl": {
+      "x": 4,
+      "y": 5,
+      "size_compressed": 528.0,
+      "size_uncompressed": 3395
+    }
+  },
+  {
+    "xor5Maj_ONE_USE_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 45,
+      "y": 45,
+      "size_compressed": 25499.0,
+      "size_uncompressed": 634606
+    }
+  },
+  {
+    "priority_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 1046,
+      "y": 2096,
+      "size_compressed": 5727321.0,
+      "size_uncompressed": 131291183
+    }
+  },
+  {
+    "HA_ONE_RES_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 8,
+      "y": 8,
+      "size_compressed": 946.0,
+      "size_uncompressed": 14050
+    }
+  },
+  {
+    "sin_ONE_BEST.fgl": {
+      "x": 3900,
+      "y": 9079,
+      "size_compressed": 55451587.0,
+      "size_uncompressed": 1805381622
+    }
+  },
+  {
+    "parity_ONE_USE_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 70,
+      "y": 70,
+      "size_compressed": 60530.0,
+      "size_uncompressed": 1522317
+    }
+  },
+  {
+    "xnor2_ONE_RES_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 6,
+      "y": 6,
+      "size_compressed": 733.0,
+      "size_uncompressed": 9078
+    }
+  },
+  {
+    "1bitAdderAOIG_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 11,
+      "y": 15,
+      "size_compressed": 1566.0,
+      "size_uncompressed": 27763
+    }
+  },
+  {
+    "t_5_ONE_2DDWave_exact_UnOpt_UnOrd.fgl": {
+      "x": 5,
+      "y": 6,
+      "size_compressed": 742.0,
+      "size_uncompressed": 8131
+    }
+  },
+  {
+    "par_gen_ONE_2DDWave_exact_UnOpt_UnOrd.fgl": {
+      "x": 4,
+      "y": 8,
+      "size_compressed": 712.0,
+      "size_uncompressed": 7805
+    }
+  },
+  {
+    "adder_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 899,
+      "y": 2668,
+      "size_compressed": 8029775.0,
+      "size_uncompressed": 257933273
+    }
+  },
+  {
+    "majority_5_r1_ONE_2DDWave_NanoPlaceR_Opt_UnOrd.fgl": {
+      "x": 7,
+      "y": 11,
+      "size_compressed": 1236.0,
+      "size_uncompressed": 20087
+    }
+  },
+  {
+    "b1_r2_ONE_2DDWave_exact_UnOpt_UnOrd.fgl": {
+      "x": 5,
+      "y": 8,
+      "size_compressed": 932.0,
+      "size_uncompressed": 12405
+    }
+  },
+  {
+    "xor2_ONE_BEST.fgl": {
+      "x": 4,
+      "y": 4,
+      "size_compressed": 577.0,
+      "size_uncompressed": 5351
+    }
+  },
+  {
+    "majority_ONE_RES_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 15,
+      "y": 15,
+      "size_compressed": 2546.0,
+      "size_uncompressed": 53697
+    }
+  },
+  {
+    "2bitAdderMaj_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 22,
+      "y": 53,
+      "size_compressed": 5827.0,
+      "size_uncompressed": 135622
+    }
+  },
+  {
+    "par_gen_ONE_2DDWave_ortho_Opt_Ord.fgl": {
+      "x": 9,
+      "y": 5,
+      "size_compressed": 878.9999999999999,
+      "size_uncompressed": 11536
+    }
+  },
+  {
+    "i2c_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 1553,
+      "y": 3282,
+      "size_compressed": 11227595.0,
+      "size_uncompressed": 256659698
+    }
+  },
+  {
+    "xor2_ONE_USE_exact_UnOpt_UnOrd.fgl": {
+      "x": 4,
+      "y": 5,
+      "size_compressed": 592.0,
+      "size_uncompressed": 5638
+    }
+  },
+  {
+    "mux21_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 6,
+      "y": 8,
+      "size_compressed": 734.0,
+      "size_uncompressed": 8679
+    }
+  },
+  {
+    "mux21_ONE_ESR_exact_UnOpt_UnOrd.fgl": {
+      "x": 4,
+      "y": 3,
+      "size_compressed": 509.0,
+      "size_uncompressed": 3509
+    }
+  },
+  {
+    "priority_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 989,
+      "y": 2491,
+      "size_compressed": 6325066.0,
+      "size_uncompressed": 200021947
+    }
+  },
+  {
+    "c880_ONE_BEST.fgl": {
+      "x": 266,
+      "y": 621,
+      "size_compressed": 615734.0,
+      "size_uncompressed": 17928653
+    }
+  },
+  {
+    "xor5_r1_ONE_2DDWave_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 14,
+      "y": 14,
+      "size_compressed": 1843.0,
+      "size_uncompressed": 34310
+    }
+  },
+  {
+    "1bitAdderAOIG_ONE_ESR_exact_UnOpt_UnOrd.fgl": {
+      "x": 6,
+      "y": 9,
+      "size_compressed": 1022.0,
+      "size_uncompressed": 15070
+    }
+  },
+  {
+    "par_check_ONE_RES_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 15,
+      "y": 15,
+      "size_compressed": 1973.0,
+      "size_uncompressed": 38334
+    }
+  },
+  {
+    "newtag_ONE_RES_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 15,
+      "y": 15,
+      "size_compressed": 2553.0,
+      "size_uncompressed": 52806
+    }
+  },
+  {
+    "1bitAdderAOIG_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 6,
+      "y": 13,
+      "size_compressed": 914.0,
+      "size_uncompressed": 12029
+    }
+  },
+  {
+    "mux21_ONE_2DDWave_exact_UnOpt_UnOrd.fgl": {
+      "x": 3,
+      "y": 4,
+      "size_compressed": 517.0,
+      "size_uncompressed": 3513
+    }
+  },
+  {
+    "c5315_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 1630,
+      "y": 3269,
+      "size_compressed": 13514668.0,
+      "size_uncompressed": 310537062
+    }
+  },
+  {
+    "xnor2_ONE_2DDWave_ortho_Opt_UnOrd.fgl": {
+      "x": 5,
+      "y": 5,
+      "size_compressed": 608.0,
+      "size_uncompressed": 5643
+    }
+  },
+  {
+    "FA_Bestagon_BEST.fgl": {
+      "x": 3,
+      "y": 9,
+      "size_compressed": 770.0,
+      "size_uncompressed": 9144
+    }
+  },
+  {
+    "b1_r2_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 8,
+      "y": 15,
+      "size_compressed": 1183.0,
+      "size_uncompressed": 18274
+    }
+  },
+  {
+    "b1_r2_ONE_2DDWave_NanoPlaceR_Opt_UnOrd.fgl": {
+      "x": 7,
+      "y": 9,
+      "size_compressed": 1017.0,
+      "size_uncompressed": 14696
+    }
+  },
+  {
+    "c499_ONE_BEST.fgl": {
+      "x": 371,
+      "y": 687,
+      "size_compressed": 754693.0,
+      "size_uncompressed": 22639876
+    }
+  },
+  {
+    "par_check_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 5,
+      "y": 12,
+      "size_compressed": 828.0,
+      "size_uncompressed": 9896
+    }
+  },
+  {
+    "clpl_ONE_2DDWave_ortho_Opt_Ord.fgl": {
+      "x": 11,
+      "y": 16,
+      "size_compressed": 2051.0,
+      "size_uncompressed": 38572
+    }
+  },
+  {
+    "ctrl_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 151,
+      "y": 333,
+      "size_compressed": 194946.0,
+      "size_uncompressed": 4441887
+    }
+  },
+  {
+    "xor2_Bestagon_ROW_exact_UnOpt_UnOrd.fgl": {
+      "x": 2,
+      "y": 3,
+      "size_compressed": 398.00000000000006,
+      "size_uncompressed": 1446
+    }
+  },
+  {
+    "c3540_ONE_BEST.fgl": {
+      "x": 723,
+      "y": 1744,
+      "size_compressed": 3541718.0,
+      "size_uncompressed": 108621833
+    }
+  },
+  {
+    "bar_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 3306,
+      "y": 7222,
+      "size_compressed": 37978559.0,
+      "size_uncompressed": 1213489210
+    }
+  },
+  {
+    "t_5_ONE_USE_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 10,
+      "y": 10,
+      "size_compressed": 1491.0,
+      "size_uncompressed": 25918
+    }
+  },
+  {
+    "HA_Bestagon_BEST.fgl": {
+      "x": 3,
+      "y": 5,
+      "size_compressed": 534.0,
+      "size_uncompressed": 3827
+    }
+  },
+  {
+    "t_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 6,
+      "y": 13,
+      "size_compressed": 909.0,
+      "size_uncompressed": 11583
+    }
+  },
+  {
+    "clpl_ONE_BEST.fgl": {
+      "x": 2,
+      "y": 19,
+      "size_compressed": 829.0,
+      "size_uncompressed": 9513
+    }
+  },
+  {
+    "majority_ONE_2DDWave_ortho_Opt_Ord.fgl": {
+      "x": 10,
+      "y": 11,
+      "size_compressed": 1512.0,
+      "size_uncompressed": 26983
+    }
+  },
+  {
+    "2bitAdderMaj_ONE_BEST.fgl": {
+      "x": 5,
+      "y": 8,
+      "size_compressed": 898.0,
+      "size_uncompressed": 11749
+    }
+  },
+  {
+    "xor5_r1_ONE_USE_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 16,
+      "y": 16,
+      "size_compressed": 3304.0,
+      "size_uncompressed": 73189
+    }
+  },
+  {
+    "2bitAdderMaj_Bestagon_ROW_exact_UnOpt_UnOrd.fgl": {
+      "x": 5,
+      "y": 12,
+      "size_compressed": 1101.0,
+      "size_uncompressed": 16547
+    }
+  },
+  {
+    "clpl_Bestagon_BEST.fgl": {
+      "x": 11,
+      "y": 16,
+      "size_compressed": 1950.0,
+      "size_uncompressed": 34850
+    }
+  },
+  {
+    "clpl_ONE_2DDWave_exact_UnOpt_UnOrd.fgl": {
+      "x": 3,
+      "y": 15,
+      "size_compressed": 807.0,
+      "size_uncompressed": 8935
+    }
+  },
+  {
+    "parity_ONE_2DDWave_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 48,
+      "y": 48,
+      "size_compressed": 11346.0,
+      "size_uncompressed": 272032
+    }
+  },
+  {
+    "clpl_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 18,
+      "y": 26,
+      "size_compressed": 3908.0000000000005,
+      "size_uncompressed": 86262
+    }
+  },
+  {
+    "2bitAdderMaj_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 16,
+      "y": 64,
+      "size_compressed": 5339.0,
+      "size_uncompressed": 117691
+    }
+  },
+  {
+    "HA_ONE_2DDWave_NanoPlaceR_Opt_UnOrd.fgl": {
+      "x": 4,
+      "y": 6,
+      "size_compressed": 685.0,
+      "size_uncompressed": 7453
+    }
+  },
+  {
+    "FA_ONE_USE_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 15,
+      "y": 15,
+      "size_compressed": 2931.0,
+      "size_uncompressed": 63871
+    }
+  },
+  {
+    "t_ONE_USE_exact_UnOpt_UnOrd.fgl": {
+      "x": 6,
+      "y": 6,
+      "size_compressed": 843.0,
+      "size_uncompressed": 10421
+    }
+  },
+  {
+    "xnor2_ONE_2DDWave_NanoPlaceR_Opt_UnOrd.fgl": {
+      "x": 3,
+      "y": 6,
+      "size_compressed": 549.0,
+      "size_uncompressed": 4490
+    }
+  },
+  {
+    "c1908_ONE_BEST.fgl": {
+      "x": 322,
+      "y": 693,
+      "size_compressed": 703031.0,
+      "size_uncompressed": 20745262
+    }
+  },
+  {
+    "c5315_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 1927,
+      "y": 4019,
+      "size_compressed": 16028980.0,
+      "size_uncompressed": 516527254
+    }
+  },
+  {
+    "par_gen_ONE_BEST.fgl": {
+      "x": 4,
+      "y": 7,
+      "size_compressed": 713.0,
+      "size_uncompressed": 8088
+    }
+  },
+  {
+    "xor2_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 2,
+      "y": 7,
+      "size_compressed": 482.0,
+      "size_uncompressed": 3162
+    }
+  },
+  {
+    "b1_r2_ONE_2DDWave_ortho_Opt_Ord.fgl": {
+      "x": 9,
+      "y": 8,
+      "size_compressed": 1232.0,
+      "size_uncompressed": 20154
+    }
+  },
+  {
+    "xor5_r1_ONE_2DDWave_ortho_Opt_UnOrd.fgl": {
+      "x": 11,
+      "y": 18,
+      "size_compressed": 2023.0,
+      "size_uncompressed": 38370
+    }
+  },
+  {
+    "mux21_ONE_2DDWave_NanoPlaceR_Opt_UnOrd.fgl": {
+      "x": 4,
+      "y": 3,
+      "size_compressed": 517.0,
+      "size_uncompressed": 3508
+    }
+  },
+  {
+    "c3540_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 941,
+      "y": 2200,
+      "size_compressed": 4406791.0,
+      "size_uncompressed": 135692258
+    }
+  },
+  {
+    "c432_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 198,
+      "y": 429,
+      "size_compressed": 372601.0,
+      "size_uncompressed": 10827129
+    }
+  },
+  {
+    "xnor2_ONE_RES_exact_UnOpt_UnOrd.fgl": {
+      "x": 4,
+      "y": 5,
+      "size_compressed": 583.0,
+      "size_uncompressed": 5352
+    }
+  },
+  {
+    "c432_ONE_BEST.fgl": {
+      "x": 120,
+      "y": 266,
+      "size_compressed": 141544.0,
+      "size_uncompressed": 3922805
+    }
+  },
+  {
+    "c17_ONE_RES_exact_UnOpt_UnOrd.fgl": {
+      "x": 7,
+      "y": 5,
+      "size_compressed": 817.0,
+      "size_uncompressed": 9836
+    }
+  },
+  {
+    "max_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 2321,
+      "y": 6935,
+      "size_compressed": 48016904.0,
+      "size_uncompressed": 1093988380
+    }
+  },
+  {
+    "2bitAdderMaj_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 27,
+      "y": 64,
+      "size_compressed": 6969.0,
+      "size_uncompressed": 163668
+    }
+  },
+  {
+    "cm82a_5_ONE_2DDWave_ortho_Opt_UnOrd.fgl": {
+      "x": 19,
+      "y": 21,
+      "size_compressed": 4192.0,
+      "size_uncompressed": 92504
+    }
+  },
+  {
+    "majority_ONE_2DDWave_NanoPlaceR_Opt_UnOrd.fgl": {
+      "x": 11,
+      "y": 10,
+      "size_compressed": 1548.0,
+      "size_uncompressed": 27254
+    }
+  },
+  {
+    "dec_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 418,
+      "y": 466,
+      "size_compressed": 1016685.0,
+      "size_uncompressed": 30728379
+    }
+  },
+  {
+    "c1355_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 164,
+      "y": 444,
+      "size_compressed": 319331.0,
+      "size_uncompressed": 7248423
+    }
+  },
+  {
+    "c7552_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 1561,
+      "y": 3269,
+      "size_compressed": 14804417.0,
+      "size_uncompressed": 338176330
+    }
+  },
+  {
+    "c2670_ONE_BEST.fgl": {
+      "x": 473,
+      "y": 1166,
+      "size_compressed": 2312661.0,
+      "size_uncompressed": 71067764
+    }
+  },
+  {
+    "HA_ONE_2DDWave_ortho_Opt_Ord.fgl": {
+      "x": 7,
+      "y": 5,
+      "size_compressed": 744.0,
+      "size_uncompressed": 8890
+    }
+  },
+  {
+    "1bitAdderMaj_ONE_USE_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 25,
+      "y": 25,
+      "size_compressed": 7070.0,
+      "size_uncompressed": 169183
+    }
+  },
+  {
+    "c7552_Bestagon_BEST.fgl": {
+      "x": 1271,
+      "y": 2618,
+      "size_compressed": 12229011.0,
+      "size_uncompressed": 278448836
+    }
+  },
+  {
+    "int2float_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 233,
+      "y": 546,
+      "size_compressed": 457765.0,
+      "size_uncompressed": 13425793
+    }
+  },
+  {
+    "c5315_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 1763,
+      "y": 3625,
+      "size_compressed": 14126206.0,
+      "size_uncompressed": 324027810
+    }
+  },
+  {
+    "c432_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 168,
+      "y": 397,
+      "size_compressed": 272656.0,
+      "size_uncompressed": 6196064
+    }
+  },
+  {
+    "c6288_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 1248,
+      "y": 2883,
+      "size_compressed": 4537924.0,
+      "size_uncompressed": 103734403
+    }
+  },
+  {
+    "newtag_ONE_2DDWave_ortho_Opt_Ord.fgl": {
+      "x": 10,
+      "y": 11,
+      "size_compressed": 1456.0,
+      "size_uncompressed": 24406
+    }
+  },
+  {
+    "cm82a_5_ONE_2DDWave_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 25,
+      "y": 25,
+      "size_compressed": 4617.0,
+      "size_uncompressed": 106350
+    }
+  },
+  {
+    "i2c_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 1410,
+      "y": 2928,
+      "size_compressed": 10625648.0,
+      "size_uncompressed": 243231374
+    }
+  },
+  {
+    "c3540_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 898,
+      "y": 1895,
+      "size_compressed": 3944629.9999999995,
+      "size_uncompressed": 89719893
+    }
+  },
+  {
+    "cm82a_5_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 9,
+      "y": 25,
+      "size_compressed": 1991.0,
+      "size_uncompressed": 37281
+    }
+  },
+  {
+    "1bitAdderAOIG_ONE_2DDWave_ortho_Opt_Ord.fgl": {
+      "x": 11,
+      "y": 13,
+      "size_compressed": 1397.0,
+      "size_uncompressed": 23995
+    }
+  },
+  {
+    "c499_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 454,
+      "y": 896,
+      "size_compressed": 897343.0,
+      "size_uncompressed": 27283875
+    }
+  },
+  {
+    "newtag_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 7,
+      "y": 19,
+      "size_compressed": 1380.0,
+      "size_uncompressed": 22156
+    }
+  },
+  {
+    "majority_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 9,
+      "y": 25,
+      "size_compressed": 2190.0,
+      "size_uncompressed": 43833
+    }
+  },
+  {
+    "priority_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 1040,
+      "y": 2292,
+      "size_compressed": 5689679.0,
+      "size_uncompressed": 130119155
+    }
+  },
+  {
+    "par_check_ONE_BEST.fgl": {
+      "x": 4,
+      "y": 11,
+      "size_compressed": 900.9999999999999,
+      "size_uncompressed": 11979
+    }
+  },
+  {
+    "newtag_ONE_2DDWave_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 11,
+      "y": 11,
+      "size_compressed": 1507.0,
+      "size_uncompressed": 26116
+    }
+  },
+  {
+    "xor5Maj_ONE_2DDWave_ortho_Opt_UnOrd.fgl": {
+      "x": 27,
+      "y": 50,
+      "size_compressed": 8739.0,
+      "size_uncompressed": 205661
+    }
+  },
+  {
+    "1bitAdderMaj_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 10,
+      "y": 32,
+      "size_compressed": 2364.0,
+      "size_uncompressed": 47518
+    }
+  },
+  {
+    "c17_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 7,
+      "y": 10,
+      "size_compressed": 1024.0,
+      "size_uncompressed": 15006
+    }
+  },
+  {
+    "HA_ONE_2DDWave_exact_UnOpt_UnOrd.fgl": {
+      "x": 4,
+      "y": 6,
+      "size_compressed": 691.0,
+      "size_uncompressed": 7455
+    }
+  },
+  {
+    "cm82a_5_ONE_2DDWave_ortho_Opt_Ord.fgl": {
+      "x": 18,
+      "y": 19,
+      "size_compressed": 3583.9999999999995,
+      "size_uncompressed": 77417
+    }
+  },
+  {
+    "HA_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 9,
+      "y": 10,
+      "size_compressed": 967.0000000000001,
+      "size_uncompressed": 14630
+    }
+  },
+  {
+    "1bitAdderMaj_Bestagon_ROW_exact_UnOpt_UnOrd.fgl": {
+      "x": 3,
+      "y": 7,
+      "size_compressed": 635.0,
+      "size_uncompressed": 5905
+    }
+  },
+  {
+    "FA_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 11,
+      "y": 19,
+      "size_compressed": 1970.0,
+      "size_uncompressed": 39822
+    }
+  },
+  {
+    "bar_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 2540,
+      "y": 6441,
+      "size_compressed": 33210479.0,
+      "size_uncompressed": 1064529034
+    }
+  },
+  {
+    "majority_ONE_2DDWave_exact_UnOpt_UnOrd.fgl": {
+      "x": 4,
+      "y": 12,
+      "size_compressed": 950.0,
+      "size_uncompressed": 13207
+    }
+  },
+  {
+    "par_gen_ONE_ESR_exact_UnOpt_UnOrd.fgl": {
+      "x": 4,
+      "y": 7,
+      "size_compressed": 713.0,
+      "size_uncompressed": 8088
+    }
+  },
+  {
+    "t_5_ONE_RES_exact_UnOpt_UnOrd.fgl": {
+      "x": 4,
+      "y": 8,
+      "size_compressed": 811.0,
+      "size_uncompressed": 9562
+    }
+  },
+  {
+    "xnor2_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 2,
+      "y": 4,
+      "size_compressed": 427.0,
+      "size_uncompressed": 1734
+    }
+  },
+  {
+    "t_ONE_2DDWave_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 8,
+      "y": 8,
+      "size_compressed": 1110.0,
+      "size_uncompressed": 16738
+    }
+  },
+  {
+    "i2c_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 1481,
+      "y": 3104,
+      "size_compressed": 10556562.0,
+      "size_uncompressed": 333472588
+    }
+  },
+  {
+    "mux21_ONE_2DDWave_ortho_Opt_Ord.fgl": {
+      "x": 4,
+      "y": 3,
+      "size_compressed": 517.0,
+      "size_uncompressed": 3513
+    }
+  },
+  {
+    "xor5_r1_ONE_2DDWave_exact_UnOpt_UnOrd.fgl": {
+      "x": 7,
+      "y": 11,
+      "size_compressed": 1172.0,
+      "size_uncompressed": 17584
+    }
+  },
+  {
+    "xor5Maj_ONE_2DDWave_NanoPlaceR_Opt_UnOrd.fgl": {
+      "x": 28,
+      "y": 32,
+      "size_compressed": 6242.0,
+      "size_uncompressed": 147420
+    }
+  },
+  {
+    "par_check_ONE_2DDWave_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 9,
+      "y": 9,
+      "size_compressed": 1061.0,
+      "size_uncompressed": 15701
+    }
+  },
+  {
+    "t_5_Bestagon_ROW_exact_UnOpt_UnOrd.fgl": {
+      "x": 5,
+      "y": 8,
+      "size_compressed": 796.0,
+      "size_uncompressed": 9569
+    }
+  },
+  {
+    "clpl_ONE_RES_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 18,
+      "y": 18,
+      "size_compressed": 3666.0,
+      "size_uncompressed": 82519
+    }
+  },
+  {
+    "c1908_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 389,
+      "y": 739,
+      "size_compressed": 901381.0,
+      "size_uncompressed": 26853767
+    }
+  },
+  {
+    "c5315_ONE_BEST.fgl": {
+      "x": 1137,
+      "y": 2715,
+      "size_compressed": 9842016.0,
+      "size_uncompressed": 312998361
+    }
+  },
+  {
+    "t_Bestagon_BEST.fgl": {
+      "x": 5,
+      "y": 8,
+      "size_compressed": 749.0,
+      "size_uncompressed": 8422
+    }
+  },
+  {
+    "xor2_ONE_USE_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 5,
+      "y": 5,
+      "size_compressed": 699.0,
+      "size_uncompressed": 7930
+    }
+  },
+  {
+    "1bitAdderMaj_ONE_2DDWave_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 18,
+      "y": 18,
+      "size_compressed": 2469.0,
+      "size_uncompressed": 51047
+    }
+  },
+  {
+    "c17_Bestagon_BEST.fgl": {
+      "x": 5,
+      "y": 8,
+      "size_compressed": 751.0,
+      "size_uncompressed": 8412
+    }
+  },
+  {
+    "dec_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 667,
+      "y": 1404,
+      "size_compressed": 2311156.0,
+      "size_uncompressed": 52734712
+    }
+  },
+  {
+    "adder_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 1279,
+      "y": 2926,
+      "size_compressed": 7663892.0,
+      "size_uncompressed": 242775096
+    }
+  },
+  {
+    "cavlc_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 604,
+      "y": 1544,
+      "size_compressed": 2583812.0,
+      "size_uncompressed": 79150689
+    }
+  },
+  {
+    "router_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 258,
+      "y": 559,
+      "size_compressed": 549620.0,
+      "size_uncompressed": 16008357
+    }
+  },
+  {
+    "FA_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 6,
+      "y": 19,
+      "size_compressed": 1084.0,
+      "size_uncompressed": 16651
+    }
+  },
+  {
+    "2bitAdderMaj_ONE_USE_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 40,
+      "y": 40,
+      "size_compressed": 17076.0,
+      "size_uncompressed": 422053
+    }
+  },
+  {
+    "xor5_r1_Bestagon_ROW_exact_UnOpt_UnOrd.fgl": {
+      "x": 5,
+      "y": 6,
+      "size_compressed": 559.0,
+      "size_uncompressed": 4218
+    }
+  },
+  {
+    "1bitAdderMaj_ONE_BEST.fgl": {
+      "x": 3,
+      "y": 6,
+      "size_compressed": 590.0,
+      "size_uncompressed": 5041
+    }
+  },
+  {
+    "t_ONE_2DDWave_NanoPlaceR_Opt_UnOrd.fgl": {
+      "x": 8,
+      "y": 6,
+      "size_compressed": 914.0000000000001,
+      "size_uncompressed": 12146
+    }
+  },
+  {
+    "b1_r2_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 10,
+      "y": 13,
+      "size_compressed": 1617.0,
+      "size_uncompressed": 29963
+    }
+  },
+  {
+    "mux21_ONE_RES_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 5,
+      "y": 5,
+      "size_compressed": 606.0,
+      "size_uncompressed": 5513
+    }
+  },
+  {
+    "xor5_r1_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 4,
+      "y": 16,
+      "size_compressed": 990.9999999999999,
+      "size_uncompressed": 13707
+    }
+  },
+  {
+    "newtag_ONE_BEST.fgl": {
+      "x": 4,
+      "y": 10,
+      "size_compressed": 884.0000000000001,
+      "size_uncompressed": 10614
+    }
+  },
+  {
+    "FA_Bestagon_ROW_exact_UnOpt_UnOrd.fgl": {
+      "x": 3,
+      "y": 9,
+      "size_compressed": 747.0,
+      "size_uncompressed": 8860
+    }
+  },
+  {
+    "c5315_Bestagon_BEST.fgl": {
+      "x": 1230,
+      "y": 2535,
+      "size_compressed": 9271124.0,
+      "size_uncompressed": 212219124
+    }
+  },
+  {
+    "majority_5_r1_ONE_ESR_exact_UnOpt_UnOrd.fgl": {
+      "x": 8,
+      "y": 6,
+      "size_compressed": 1040.0,
+      "size_uncompressed": 14920
+    }
+  },
+  {
+    "xor2_ONE_RES_exact_UnOpt_UnOrd.fgl": {
+      "x": 4,
+      "y": 4,
+      "size_compressed": 577.0,
+      "size_uncompressed": 5351
+    }
+  },
+  {
+    "majority_5_r1_ONE_2DDWave_ortho_Opt_UnOrd.fgl": {
+      "x": 10,
+      "y": 14,
+      "size_compressed": 1725.0,
+      "size_uncompressed": 31614
+    }
+  },
+  {
+    "cavlc_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 658,
+      "y": 1679,
+      "size_compressed": 2786388.0,
+      "size_uncompressed": 85645320
+    }
+  },
+  {
+    "par_gen_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 9,
+      "y": 6,
+      "size_compressed": 922.0,
+      "size_uncompressed": 12971
+    }
+  },
+  {
+    "max_Bestagon_BEST.fgl": {
+      "x": 2370,
+      "y": 5982,
+      "size_compressed": 43323672.0,
+      "size_uncompressed": 991574254
+    }
+  },
+  {
+    "priority_Bestagon_BEST.fgl": {
+      "x": 352,
+      "y": 937,
+      "size_compressed": 1401113.0,
+      "size_uncompressed": 31875779
+    }
+  },
+  {
+    "par_check_ONE_2DDWave_ortho_Opt_Ord.fgl": {
+      "x": 10,
+      "y": 11,
+      "size_compressed": 1330.0,
+      "size_uncompressed": 22034
+    }
+  },
+  {
+    "t_5_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 9,
+      "y": 22,
+      "size_compressed": 1424.0,
+      "size_uncompressed": 23712
+    }
+  },
+  {
+    "c1355_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 494,
+      "y": 1208,
+      "size_compressed": 1101925.0,
+      "size_uncompressed": 33961678
+    }
+  },
+  {
+    "ctrl_ONE_BEST.fgl": {
+      "x": 80,
+      "y": 164,
+      "size_compressed": 73618.0,
+      "size_uncompressed": 1968655
+    }
+  },
+  {
+    "xor5_r1_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 14,
+      "y": 33,
+      "size_compressed": 2941.0,
+      "size_uncompressed": 63741
+    }
+  },
+  {
+    "t_5_ONE_2DDWave_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 8,
+      "y": 8,
+      "size_compressed": 1000.0,
+      "size_uncompressed": 14442
+    }
+  },
+  {
+    "router_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 251,
+      "y": 449,
+      "size_compressed": 516915.0,
+      "size_uncompressed": 15302979
+    }
+  },
+  {
+    "dec_ONE_BEST.fgl": {
+      "x": 418,
+      "y": 466,
+      "size_compressed": 1016761.0000000001,
+      "size_uncompressed": 30729728
+    }
+  },
+  {
+    "cm82a_5_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 26,
+      "y": 51,
+      "size_compressed": 6360.0,
+      "size_uncompressed": 150905
+    }
+  },
+  {
+    "HA_ONE_2DDWave_ortho_Opt_UnOrd.fgl": {
+      "x": 5,
+      "y": 6,
+      "size_compressed": 690.0,
+      "size_uncompressed": 7455
+    }
+  },
+  {
+    "cm82a_5_ONE_RES_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 50,
+      "y": 50,
+      "size_compressed": 19660.0,
+      "size_uncompressed": 484864
+    }
+  },
+  {
+    "par_gen_ONE_RES_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 11,
+      "y": 11,
+      "size_compressed": 1410.0,
+      "size_uncompressed": 25050
+    }
+  },
+  {
+    "t_ONE_RES_exact_UnOpt_UnOrd.fgl": {
+      "x": 4,
+      "y": 8,
+      "size_compressed": 783.0,
+      "size_uncompressed": 9273
+    }
+  },
+  {
+    "FA_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 5,
+      "y": 13,
+      "size_compressed": 894.0,
+      "size_uncompressed": 11736
+    }
+  },
+  {
+    "HA_ONE_ESR_exact_UnOpt_UnOrd.fgl": {
+      "x": 6,
+      "y": 8,
+      "size_compressed": 736.0,
+      "size_uncompressed": 8886
+    }
+  },
+  {
+    "newtag_ONE_ESR_exact_UnOpt_UnOrd.fgl": {
+      "x": 9,
+      "y": 5,
+      "size_compressed": 887.0,
+      "size_uncompressed": 10899
+    }
+  },
+  {
+    "majority_ONE_2DDWave_ortho_Opt_UnOrd.fgl": {
+      "x": 9,
+      "y": 15,
+      "size_compressed": 1706.0,
+      "size_uncompressed": 31627
+    }
+  },
+  {
+    "c1908_Bestagon_BEST.fgl": {
+      "x": 225,
+      "y": 496,
+      "size_compressed": 394340.0,
+      "size_uncompressed": 8939114
+    }
+  },
+  {
+    "1bitAdderMaj_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 13,
+      "y": 29,
+      "size_compressed": 2802.0,
+      "size_uncompressed": 59468
+    }
+  },
+  {
+    "c1355_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 406,
+      "y": 1119,
+      "size_compressed": 1023030.0000000001,
+      "size_uncompressed": 31126633
+    }
+  },
+  {
+    "1bitAdderAOIG_ONE_RES_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 15,
+      "y": 15,
+      "size_compressed": 2340.0,
+      "size_uncompressed": 49494
+    }
+  },
+  {
+    "clpl_ONE_2DDWave_ortho_Opt_UnOrd.fgl": {
+      "x": 13,
+      "y": 13,
+      "size_compressed": 2119.0,
+      "size_uncompressed": 40312
+    }
+  },
+  {
+    "c1908_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 279,
+      "y": 583,
+      "size_compressed": 561033.0,
+      "size_uncompressed": 12745582
+    }
+  },
+  {
+    "par_check_ONE_2DDWave_NanoPlaceR_Opt_UnOrd.fgl": {
+      "x": 8,
+      "y": 9,
+      "size_compressed": 1057.0,
+      "size_uncompressed": 15701
+    }
+  },
+  {
+    "par_gen_ONE_2DDWave_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 7,
+      "y": 9,
+      "size_compressed": 920.0,
+      "size_uncompressed": 12677
+    }
+  },
+  {
+    "newtag_ONE_2DDWave_NanoPlaceR_Opt_UnOrd.fgl": {
+      "x": 7,
+      "y": 10,
+      "size_compressed": 1148.0,
+      "size_uncompressed": 17211
+    }
+  },
+  {
+    "par_check_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 10,
+      "y": 13,
+      "size_compressed": 1434.0,
+      "size_uncompressed": 24931
+    }
+  },
+  {
+    "clpl_ONE_2DDWave_NanoPlaceR_Opt_UnOrd.fgl": {
+      "x": 6,
+      "y": 17,
+      "size_compressed": 1594.0,
+      "size_uncompressed": 27929
+    }
+  },
+  {
+    "xor5_r1_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 4,
+      "y": 11,
+      "size_compressed": 715.0,
+      "size_uncompressed": 7377
+    }
+  },
+  {
+    "t_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 8,
+      "y": 10,
+      "size_compressed": 1130.0,
+      "size_uncompressed": 17600
+    }
+  },
+  {
+    "majority_5_r1_Bestagon_BEST.fgl": {
+      "x": 5,
+      "y": 9,
+      "size_compressed": 866.0000000000001,
+      "size_uncompressed": 10907
+    }
+  },
+  {
+    "c17_ONE_BEST.fgl": {
+      "x": 4,
+      "y": 7,
+      "size_compressed": 719.0,
+      "size_uncompressed": 7831
+    }
+  },
+  {
+    "xor2_ONE_2DDWave_ortho_Opt_UnOrd.fgl": {
+      "x": 5,
+      "y": 5,
+      "size_compressed": 591.0,
+      "size_uncompressed": 5642
+    }
+  },
+  {
+    "mux21_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 4,
+      "y": 3,
+      "size_compressed": 517.0,
+      "size_uncompressed": 3513
+    }
+  },
+  {
+    "c2670_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 664,
+      "y": 1341,
+      "size_compressed": 2486584.0,
+      "size_uncompressed": 56403128
+    }
+  },
+  {
+    "t_5_ONE_2DDWave_ortho_UnOpt_Ord.fgl": {
+      "x": 8,
+      "y": 11,
+      "size_compressed": 1160.0,
+      "size_uncompressed": 18473
+    }
+  },
+  {
+    "c17_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 10,
+      "y": 15,
+      "size_compressed": 1401.0,
+      "size_uncompressed": 24227
+    }
+  },
+  {
+    "b1_r2_ONE_ESR_exact_UnOpt_UnOrd.fgl": {
+      "x": 6,
+      "y": 10,
+      "size_compressed": 1052.0,
+      "size_uncompressed": 15845
+    }
+  },
+  {
+    "xor5Maj_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 19,
+      "y": 72,
+      "size_compressed": 6937.0,
+      "size_uncompressed": 157086
+    }
+  },
+  {
+    "1bitAdderAOIG_ONE_2DDWave_ortho_UnOpt_UnOrd.fgl": {
+      "x": 12,
+      "y": 20,
+      "size_compressed": 1777.0,
+      "size_uncompressed": 32998
+    }
+  },
+  {
+    "priority_ONE_BEST.fgl": {
+      "x": 479,
+      "y": 684,
+      "size_compressed": 1332806.0000000002,
+      "size_uncompressed": 40253397
+    }
+  },
+  {
+    "par_gen_ONE_2DDWave_NanoPlaceR_Opt_UnOrd.fgl": {
+      "x": 7,
+      "y": 8,
+      "size_compressed": 969.0,
+      "size_uncompressed": 14112
+    }
+  },
+  {
+    "parity_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 15,
+      "y": 49,
+      "size_compressed": 5612.0,
+      "size_uncompressed": 123657
+    }
+  },
+  {
+    "newtag_ONE_2DDWave_ortho_Opt_UnOrd.fgl": {
+      "x": 11,
+      "y": 11,
+      "size_compressed": 1618.0,
+      "size_uncompressed": 28711
+    }
+  },
+  {
+    "cm82a_5_ONE_BEST.fgl": {
+      "x": 16,
+      "y": 17,
+      "size_compressed": 2769.0,
+      "size_uncompressed": 57536
+    }
+  },
+  {
+    "int2float_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 249,
+      "y": 561,
+      "size_compressed": 494819.0,
+      "size_uncompressed": 11242719
+    }
+  },
+  {
+    "sin_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 4360,
+      "y": 9290,
+      "size_compressed": 64642278.0,
+      "size_uncompressed": 1478037839
+    }
+  },
+  {
+    "xnor2_ONE_USE_exact_UnOpt_UnOrd.fgl": {
+      "x": 4,
+      "y": 5,
+      "size_compressed": 632.0,
+      "size_uncompressed": 6213
+    }
+  },
+  {
+    "majority_ONE_ESR_exact_UnOpt_UnOrd.fgl": {
+      "x": 10,
+      "y": 5,
+      "size_compressed": 973.0,
+      "size_uncompressed": 13193
+    }
+  },
+  {
+    "2bitAdderMaj_ONE_2DDWave_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 29,
+      "y": 29,
+      "size_compressed": 5131.0,
+      "size_uncompressed": 117048
+    }
+  },
+  {
+    "c2670_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 644,
+      "y": 1503,
+      "size_compressed": 2818781.0,
+      "size_uncompressed": 64054049
+    }
+  },
+  {
+    "clpl_ONE_ESR_exact_UnOpt_UnOrd.fgl": {
+      "x": 2,
+      "y": 19,
+      "size_compressed": 831.0,
+      "size_uncompressed": 9511
+    }
+  },
+  {
+    "1bitAdderAOIG_ONE_2DDWave_exact_UnOpt_UnOrd.fgl": {
+      "x": 5,
+      "y": 11,
+      "size_compressed": 998.0,
+      "size_uncompressed": 14219
+    }
+  },
+  {
+    "xor5Maj_Bestagon_ROW_exact_UnOpt_UnOrd.fgl": {
+      "x": 5,
+      "y": 6,
+      "size_compressed": 572.0,
+      "size_uncompressed": 4494
+    }
+  },
+  {
+    "parity_ONE_BEST.fgl": {
+      "x": 32,
+      "y": 34,
+      "size_compressed": 9106.0,
+      "size_uncompressed": 214597
+    }
+  },
+  {
+    "c17_ONE_2DDWave_exact_UnOpt_UnOrd.fgl": {
+      "x": 4,
+      "y": 7,
+      "size_compressed": 719.0,
+      "size_uncompressed": 7831
+    }
+  },
+  {
+    "xor5Maj_ONE_2DDWave_NanoPlaceR_UnOpt_UnOrd.fgl": {
+      "x": 30,
+      "y": 43,
+      "size_compressed": 8025.0,
+      "size_uncompressed": 192379
+    }
+  },
+  {
+    "xor2_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 2,
+      "y": 4,
+      "size_compressed": 425.0,
+      "size_uncompressed": 1732
+    }
+  },
+  {
+    "c880_Bestagon_ROW_ortho_UnOpt_Ord.fgl": {
+      "x": 286,
+      "y": 632,
+      "size_compressed": 581946.0,
+      "size_uncompressed": 13181043
+    }
+  },
+  {
+    "sin_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 4527,
+      "y": 9662,
+      "size_compressed": 66622367.0,
+      "size_uncompressed": 1522284770
+    }
+  },
+  {
+    "c17_ONE_USE_exact_UnOpt_UnOrd.fgl": {
+      "x": 5,
+      "y": 7,
+      "size_compressed": 757.0,
+      "size_uncompressed": 8114
+    }
+  },
+  {
+    "c6288_Bestagon_ROW_ortho_UnOpt_UnOrd.fgl": {
+      "x": 1442,
+      "y": 2948,
+      "size_compressed": 4361060.0,
+      "size_uncompressed": 99905330
+    }
+  },
+  {
+    "clpl.v": {
+      "size_compressed": 277.0,
+      "size_uncompressed": 682
+    }
+  },
+  {
+    "priority.v": {
+      "size_compressed": 9843.0,
+      "size_uncompressed": 38992
+    }
+  },
+  {
+    "adder.v": {
+      "size_compressed": 11285.0,
+      "size_uncompressed": 44752
+    }
+  },
+  {
+    "HA.v": {
+      "size_compressed": 111.00000000000001,
+      "size_uncompressed": 162
+    }
+  },
+  {
+    "par_gen.v": {
+      "size_compressed": 174.0,
+      "size_uncompressed": 323
+    }
+  },
+  {
+    "c2670.v": {
+      "size_compressed": 7553.000000000001,
+      "size_uncompressed": 29217
+    }
+  },
+  {
+    "max.v": {
+      "size_compressed": 30884.0,
+      "size_uncompressed": 132679
+    }
+  },
+  {
+    "xor2.v": {
+      "size_compressed": 120.00000000000001,
+      "size_uncompressed": 170
+    }
+  },
+  {
+    "ctrl.v": {
+      "size_compressed": 1765.0,
+      "size_uncompressed": 7610
+    }
+  },
+  {
+    "c1908.v": {
+      "size_compressed": 3946.0,
+      "size_uncompressed": 15009
+    }
+  },
+  {
+    "c880.v": {
+      "size_compressed": 3256.9999999999995,
+      "size_uncompressed": 12271
+    }
+  },
+  {
+    "2bitAdderMaj.v": {
+      "size_compressed": 393.0,
+      "size_uncompressed": 1312
+    }
+  },
+  {
+    "router.v": {
+      "size_compressed": 2721.0,
+      "size_uncompressed": 11687
+    }
+  },
+  {
+    "par_check.v": {
+      "size_compressed": 222.0,
+      "size_uncompressed": 478
+    }
+  },
+  {
+    "parity.v": {
+      "size_compressed": 649.0,
+      "size_uncompressed": 2568
+    }
+  },
+  {
+    "c432.v": {
+      "size_compressed": 2075.0,
+      "size_uncompressed": 7539
+    }
+  },
+  {
+    "FA.v": {
+      "size_compressed": 127.0,
+      "size_uncompressed": 199
+    }
+  },
+  {
+    "sin.v": {
+      "size_compressed": 53107.0,
+      "size_uncompressed": 214691
+    }
+  },
+  {
+    "cm82a_5.v": {
+      "size_compressed": 364.0,
+      "size_uncompressed": 1111
+    }
+  },
+  {
+    "int2float.v": {
+      "size_compressed": 2458.0,
+      "size_uncompressed": 9471
+    }
+  },
+  {
+    "cavlc.v": {
+      "size_compressed": 6935.0,
+      "size_uncompressed": 30033
+    }
+  },
+  {
+    "newtag.v": {
+      "size_compressed": 263.0,
+      "size_uncompressed": 621
+    }
+  },
+  {
+    "c6288.v": {
+      "size_compressed": 22332.0,
+      "size_uncompressed": 91916
+    }
+  },
+  {
+    "xnor2.v": {
+      "size_compressed": 131.0,
+      "size_uncompressed": 208
+    }
+  },
+  {
+    "i2c.v": {
+      "size_compressed": 13445.0,
+      "size_uncompressed": 54914
+    }
+  },
+  {
+    "c5315.v": {
+      "size_compressed": 17844.0,
+      "size_uncompressed": 70013
+    }
+  },
+  {
+    "mux21.v": {
+      "size_compressed": 118.0,
+      "size_uncompressed": 180
+    }
+  },
+  {
+    "xor5_r1.v": {
+      "size_compressed": 286.0,
+      "size_uncompressed": 740
+    }
+  },
+  {
+    "c17.v": {
+      "size_compressed": 151.0,
+      "size_uncompressed": 271
+    }
+  },
+  {
+    "majority.v": {
+      "size_compressed": 243.0,
+      "size_uncompressed": 536
+    }
+  },
+  {
+    "1bitAdderMaj.v": {
+      "size_compressed": 293.0,
+      "size_uncompressed": 790
+    }
+  },
+  {
+    "xor5Maj.v": {
+      "size_compressed": 448.0,
+      "size_uncompressed": 1570
+    }
+  },
+  {
+    "dec.v": {
+      "size_compressed": 2340.0,
+      "size_uncompressed": 19322
+    }
+  },
+  {
+    "c7552.v": {
+      "size_compressed": 21256.0,
+      "size_uncompressed": 83843
+    }
+  },
+  {
+    "c499.v": {
+      "size_compressed": 3777.0,
+      "size_uncompressed": 14631
+    }
+  },
+  {
+    "bar.v": {
+      "size_compressed": 32361.0,
+      "size_uncompressed": 139423
+    }
+  },
+  {
+    "b1_r2.v": {
+      "size_compressed": 227.0,
+      "size_uncompressed": 478
+    }
+  },
+  {
+    "majority_5_r1.v": {
+      "size_compressed": 247.0,
+      "size_uncompressed": 536
+    }
+  },
+  {
+    "c1355.v": {
+      "size_compressed": 4687.0,
+      "size_uncompressed": 18626
+    }
+  },
+  {
+    "c3540.v": {
+      "size_compressed": 10255.0,
+      "size_uncompressed": 37973
+    }
+  },
+  {
+    "t.v": {
+      "size_compressed": 219.0,
+      "size_uncompressed": 433
+    }
+  },
+  {
+    "1bitAdderAOIG.v": {
+      "size_compressed": 217.0,
+      "size_uncompressed": 430
+    }
+  },
+  {
+    "t_5.v": {
+      "size_compressed": 219.0,
+      "size_uncompressed": 434
+    }
+  }
+]
