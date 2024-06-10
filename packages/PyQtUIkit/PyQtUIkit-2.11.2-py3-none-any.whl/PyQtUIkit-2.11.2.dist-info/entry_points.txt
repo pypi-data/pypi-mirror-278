@@ -1,0 +1,3 @@
+[console_scripts]
+kit-icons = PyQtUIkit._icons:main
+kit-translator = PyQtUIkit._translate:main
