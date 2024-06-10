@@ -1,0 +1,16 @@
+gdaicommons/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gdaicommons/constants.py,sha256=0OeaYDXYrKmzQJshlh2k-NF5rzY8kJiKHEB3t4qKn9U,28
+gdaicommons/utils.py,sha256=W9h1wKvfG-qG424vZdsOyV8G6zey1UVWZhKXBLNHatY,495
+gdaicommons/nlp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gdaicommons/nlp/fill_mask.py,sha256=4Z74jUKhS85pEwXOCkTW9-T8IxW2Cl5d7KEve6I1Etk,2799
+gdaicommons/nlp/text2text_generation.py,sha256=iPqpQqKrhQ8ynSicHTanrAOTO_dV7H87OdAYo_2giQg,2878
+gdaicommons/nlp/text_classification.py,sha256=bQfopyzASChufxO0lzhYidojwpYEVEmqVOaTiEaocjI,1873
+gdaicommons/nlp/text_generation.py,sha256=VSiCogdNv0gfTkZemT8rmXY5VxskAydteLbI6IcBYD4,2978
+gdaicommons/nlp/text_labelling.py,sha256=QCBq_rMFWicfHdaX18JLLBKv4VG71N1-B9VO5oJ131w,1879
+gdaicommons/nlp/text_summarization.py,sha256=gncQNHcsRQd48YdlURvg8781nDctq8l4GwsHMsqUy7c,2865
+gdaicommons/nlp/transformations.py,sha256=rFg4kBKWDRkDELw5NbEfn9qvqh_ioN8ELsT_MQ0-OvY,8519
+gdaicommons-0.0.8.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+gdaicommons-0.0.8.dist-info/METADATA,sha256=TqswGUN0ynG4_p7otnv3BC74Ja4xvP9Gnr1KzzdW4x0,644
+gdaicommons-0.0.8.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+gdaicommons-0.0.8.dist-info/top_level.txt,sha256=bKvrjMnH6zD4aMcIhIL1WHrL6usnFY6pteHnv7_DLaQ,12
+gdaicommons-0.0.8.dist-info/RECORD,,
