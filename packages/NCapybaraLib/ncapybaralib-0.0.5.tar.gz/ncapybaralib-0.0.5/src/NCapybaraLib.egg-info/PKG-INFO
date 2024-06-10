@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: NCapybaraLib
+Version: 0.0.5
+Summary: A small library with a bunch of functions and thingies I made for fun.
+Author: NorbCodes
+Project-URL: Github Repo, https://github.com/norbcodes/NCapybaraLib
+Project-URL: Bug Tracker, https://github.com/norbcodes/NCapybaraLib/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Natural Language :: English
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
+<h1>NCapybaraLib</h1>
+<p>A small library with a bunch of functions and thingies I made for fun.<br>So far, there's nothing much, but it will grow as time goes.</p>
+<p>Check out the library on <a href="https://pypi.org/project/NCapybaraLib/">PyPi</a>!</p>
+
+<h1>Download</h1>
+<p>To download this library, run this command:
+<pre><code>pip install NCapybaraLib</code></pre></p>
