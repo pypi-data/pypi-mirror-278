@@ -1,0 +1,48 @@
+name: Build Main, Frontend and Deploy
+on:
+  push:
+env:
+  CARGO_TERM_COLOR: always
+jobs:
+  build:
+    strategy:
+      matrix:
+        include:
+          - target: x86_64-unknown-linux-gnu
+            os: ubuntu-latest
+          - target: x86_64-pc-windows-msvc
+            os: windows-latest
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v4
+      - run: rustup toolchain install nightly --profile minimal
+      - uses: Swatinem/rust-cache@v2
+
+      # builds main.rs
+      - name: Build project
+        run: cargo build --release --target=${{ matrix.target }}
+
+      # builds frontend with wasm-pack
+      - uses: bahmutov/npm-install@v1
+      - run: yarn run wasm-pack build frontend --release
+      - run: |
+          cargo run --release --target=${{ matrix.target }} -- --protocol activation --phase g0 save-patch-clamp-data
+          cargo run --release --target=${{ matrix.target }} -- --protocol deactivation --phase g0 save-patch-clamp-data
+          cargo run --release --target=${{ matrix.target }} -- --protocol ramp --phase g0 save-patch-clamp-data
+          cargo run --release --target=${{ matrix.target }} -- --protocol activation --phase g1 save-patch-clamp-data
+          cargo run --release --target=${{ matrix.target }} -- --protocol deactivation --phase g1 save-patch-clamp-data
+          cargo run --release --target=${{ matrix.target }} -- --protocol ramp --phase g1 save-patch-clamp-data
+      - run: yarn run build
+      # deploy
+      - uses: jsmrcaga/action-netlify-deploy@master
+        # if: startsWith(github.ref, 'refs/tags/') && runner.os == 'Linux'
+        if: runner.os == 'Linux'
+        with:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_DEPLOY_MESSAGE: "Production deploy v${{ github.ref }}"
+          NETLIFY_DEPLOY_TO_PROD: true
+          install_command: "echo Skipping..."
+          build_command: "echo Skipping..."
+          build_directory: dist/

@@ -1,0 +1,45 @@
+[package]
+name = "in_silico_cancer_cell"
+version = "0.2.3"
+edition = "2021"
+
+[lib]
+name = "in_silico_cancer_cell"
+crate-type = ["lib", "cdylib"]
+
+[features]
+default = [
+  "dep:matfile",
+  "dep:regex",
+  "dep:argmin",
+  "dep:argmin-math",
+  "dep:serde",
+  "dep:serde_json",
+  "dep:clap",
+  "nalgebra/serde-serialize",
+  "adaptive-timestepping",
+]
+pyo3 = ["dep:pyo3"]
+pause-each-step = []
+adaptive-timestepping = []
+
+[dependencies]
+nalgebra = "0.32.5"
+log = "0.4.21"
+simplelog = "0.12.2"
+
+matfile = { version = "0.4.1", optional = true }
+regex = { version = "1.10.4", optional = true }
+pyo3 = { version = "0.21.2", optional = true, features = ["extension-module"] }
+argmin = { version = "0.10.0", features = ["rayon", "wasm-bindgen"], optional = true }
+argmin-math = { version = "0.4.0", features = ["nalgebra_latest"], optional = true }
+serde = { version = "1.0.203", features = ["derive"], optional = true }
+serde_json = { version = "1.0.117", optional = true }
+clap = { version = "4.5.4", features = ["derive"], optional = true }
+rand = "0.8.5"
+getrandom = { version = "0.2.15", features = ["js"] }
+
+[profile.release]
+# This makes the compiled code faster and smaller, but it makes compiling slower,
+# so it's only enabled in release mode.
+lto = true
