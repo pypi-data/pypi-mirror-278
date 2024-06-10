@@ -1,0 +1,96 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "pyuilder"
+version = "0.0.8"
+description = "Provides functionality for implementing the builder pattern in Python."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE.txt" }
+keywords = ["builder", "builder_pattern", "design_patterns"]
+authors = [
+    { name = "Kevin Jerome", email = "kjerome64@gmail.com" },
+    { name = "Connell Boyce", email = "connellboyce17@gmail.com" }
+]
+maintainers = [
+    { name = "Kevin Jerome", email = "kjerome64@gmail.com" },
+    { name = "Connell Boyce", email = "connellboyce17@gmail.com" }
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3 :: Only",
+]
+dependencies = [
+    "typing_extensions==4.11.0"
+]
+
+
+[project.optional-dependencies]
+dev = ["mypy==1.10.0", "ruff==0.4.3"]
+test = ["pytest==8.2.0", "pytest-cov==5.0.0"]
+publish = ["build==1.2.1", "twine==5.0.0"]
+ci = ["pyuilder[dev]", "pyuilder[test]", "pyuilder[publish]"]
+
+
+[project.urls]
+"Homepage" = "https://github.com/kevdog824/pyuilder"
+"Bug Reports" = "https://github.com/kevdog824/pyuilder/issues"
+"Source" = "https://github.com/kevdog824/pyuilder"
+
+
+[tool.setuptools]
+package-data = { "sample" = ["*.dat"] }
+
+
+[tool.coverage.paths]
+source = ["src"]
+
+
+[tool.coverage.report]
+fail_under = 70
+show_missing = true
+
+
+[tool.pytest.ini_options]
+testpaths = ["test"]
+
+
+[tool.ruff]
+exclude = [
+    ".git",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".venv",
+    ".vscode",
+]
+line-length = 88
+indent-width = 4
+
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+
+[tool.ruff.lint]
+fixable = ["ALL"]
+
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["E402", "F401"]
+
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
