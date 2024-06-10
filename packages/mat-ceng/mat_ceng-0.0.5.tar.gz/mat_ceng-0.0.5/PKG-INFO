@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: mat_ceng
+Version: 0.0.5
+Summary: Package For Some Civil Engineering Tools
+Author-email: Mohamad Ali <mohamadalitellawi@gmail.com>
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: xlwings
+Requires-Dist: pathlib
+Requires-Dist: typing
+Project-URL: Home, https://github.com/mohamadalitellawi/Civil_Engineering_Tools/
+
+# Civil_Engineering_Tools
+Civil Engineering Tools
+
