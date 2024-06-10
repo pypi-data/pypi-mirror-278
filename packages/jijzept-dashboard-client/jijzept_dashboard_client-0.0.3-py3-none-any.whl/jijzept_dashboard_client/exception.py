@@ -1,0 +1,2 @@
+class JijZeptDashboardClientError(Exception):
+    pass
