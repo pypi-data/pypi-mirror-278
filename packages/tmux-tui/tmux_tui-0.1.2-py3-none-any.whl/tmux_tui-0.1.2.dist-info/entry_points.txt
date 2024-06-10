@@ -1,0 +1,3 @@
+[console_scripts]
+ttmux=tmux_tui.main:main
+
