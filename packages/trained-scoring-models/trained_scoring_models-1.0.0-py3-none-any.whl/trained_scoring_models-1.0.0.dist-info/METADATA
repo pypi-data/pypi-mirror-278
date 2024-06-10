@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: trained-scoring-models
+Version: 1.0.0
+Summary: Library contains trained models 
+Home-page: UNKNOWN
+Author: schubenkin
+Author-email: schubenkin00@gmail.com
+License: UNKNOWN
+Keywords: example python
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests (>=2.25.1)
+Requires-Dist: pickle
+Requires-Dist: numpy
+Requires-Dist: pandas
+
+UNKNOWN
+
