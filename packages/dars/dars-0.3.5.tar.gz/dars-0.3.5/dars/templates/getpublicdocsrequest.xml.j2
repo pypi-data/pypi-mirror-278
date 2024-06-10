@@ -1,0 +1,41 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.example.com">
+<soapenv:Header/>
+<soapenv:Body>
+<ns2:getPublicDocsRequest xmlns:ns2="http://zakupki.gov.ru/fz44/get-docs-mis/ws" xmlns:ns3="http://zakupki.gov.ru/oos/base/1">
+{% include 'index.xml.j2' %}
+{% if context.base == 'fz44' -%}
+<selectionParams44>
+	<subsystemType>{{ context.subsystemtype }}</subsystemType>
+	<periodInfo>
+	{% if context.monthinfo -%}
+		<monthInfo>
+			<monthNumber>{{ context.monthinfo.month }}</monthNumber>
+			<yearNumber>{{ context.monthinfo.year }}</yearNumber>
+			<offsetTimeZone>{{ context.offsettimezone }}</offsetTimeZone>
+		</monthInfo>
+	{%- elif context.exactdate -%}
+		<exactDate>{{ context.exactdate }}</exactDate>
+	{%- else -%}
+		<todayInfo>
+			<fromHour>{{ context.fromhour }}</fromHour>
+			<toHour>{{ context.tohour }}</toHour>
+			<offsetTimeZone>{{ context.offsettimezone }}</offsetTimeZone>
+		</todayInfo>
+	{%- endif %}
+	</periodInfo>
+	{% if context.regnums -%}
+	<organizations44Info>
+		{%- for regnum in context.regnums %}
+			<organization44Info>
+				<regNum>{{ regnum }}</regNum>
+			</organization44Info>
+		{%- endfor %}
+	</organizations44Info>
+	{%- else -%}
+	<isAllOrganizations44>true</isAllOrganizations44>
+	{%- endif %}
+</selectionParams44>
+{% endif -%}
+</ns2:getPublicDocsRequest>
+</soapenv:Body>
+</soapenv:Envelope>
