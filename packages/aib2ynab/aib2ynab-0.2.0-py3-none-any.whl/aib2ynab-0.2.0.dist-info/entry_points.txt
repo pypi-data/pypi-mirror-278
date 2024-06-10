@@ -1,0 +1,3 @@
+[console_scripts]
+aib2ynab=aib2ynab.cli:convert
+
