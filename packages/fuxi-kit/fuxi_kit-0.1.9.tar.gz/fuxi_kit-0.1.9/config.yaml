@@ -1,0 +1,6 @@
+fuxi_web:
+  endpoint: "https://webhook.site"    # "http://<FUXI-WEB.COM>"
+  auth_api_key: "123abc_AB-C"         # "123abcFF"
+  auth_api: "/f574ac5b-1574-4890-a84a-326c154c4290"   # "/api/v1/tunnel/auth"
+log:
+  level: debug
