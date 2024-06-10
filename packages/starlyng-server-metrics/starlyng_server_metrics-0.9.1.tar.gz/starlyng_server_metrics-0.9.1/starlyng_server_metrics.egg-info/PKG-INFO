@@ -1,0 +1,193 @@
+Metadata-Version: 2.1
+Name: starlyng-server-metrics
+Version: 0.9.1
+Summary: This project gathers metrics for local or hosted servers that can be run on a server used to post data to Grafana and Prometheus.
+Home-page: https://github.com/starlyngapp/server-metrics
+Author: Justin Sherwood
+Author-email: justin@sherwood.fm
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+
+# Starlyng Server Metrics
+
+This project gathers metrics for local or hosted servers that can be run on a server used to post data to Grafana and Prometheus.
+
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+* You have installed Python 3.x.
+* You have a basic understanding of Python and virtual environments.
+
+## Setting Up Your Development Environment
+
+To set up your development environment and run the project, follow these steps:
+
+### Clone the Repository
+
+First, clone the repository to your local machine:
+
+```bash
+git https://github.com/starlyngapp/server-metrics.git
+cd server-metrics
+```
+
+## Create and Activate Virtual Environment
+
+For macOS and Linux:
+
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+
+For Windows:
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+## Install Required Packages
+
+Install all dependencies listed in the dev-requirements.txt file:
+
+```bash
+pip install -r dev-requirements.txt
+```
+
+## Installation
+
+To install only the package (without dev dependencies):
+
+```bash
+pip install starlyng_server_metrics
+```
+
+To install development dependencies (useful for contributing to the project):
+
+```bash
+pip install starlyng_server_metrics[dev]
+```
+
+Alternatively, you can install the development dependencies using:
+
+```bash
+pip install -r dev-requirements.txt
+```
+
+## Environment Configuration
+
+To configure the server metrics collection, you need to set up environment variables. This can be done by creating a `.env` file in the root of the project.
+
+An example `.env` file is provided as `.env.example`. You can copy this file and update the values as needed.
+
+### Steps to Configure Environment Variables
+
+1. **Copy the example environment file:**
+
+```sh
+cp .env.example .env
+```
+
+2. **Open the `.env` file and update the values:**
+
+```env
+# .env
+# List of server IPs and ports in the format ip:port, separated by commas
+SERVERS=192.168.1.1:22,192.168.1.2:22
+
+# Path to the SSH private key
+KEY_PATH=/path/to/your/.ssh/id_rsa
+
+# SSH username
+USERNAME=your_username
+```
+
+3. **Save the `.env` file.**
+
+The `SERVERS` variable should be a comma-separated list of server IP addresses and ports. The `KEY_PATH` should point to the SSH private key file you will use for authentication, and `USERNAME` should be the SSH username.
+
+## Usage
+
+To run the main function:
+
+```bash
+server_metrics
+```
+
+## PyPI
+
+[starlyng-server-metrics](https://pypi.org/project/starlyng-server-metrics/)
+
+## Command-line Arguments
+
+You can also override configuration using command-line arguments:
+
+```bash
+server_metrics --servers "192.168.1.1:22,192.168.1.2:22" --key_path "/path/to/your/.ssh/id_rsa" --username "your_username"
+```
+
+Or locally:
+
+```bash
+python main.py --servers "192.168.1.1:22,192.168.1.2:22" --key_path "/path/to/your/.ssh/id_rsa" --username "your_username"
+```
+
+### Building and Uploading Your Package
+
+1. **Build the package**:
+
+```bash
+python setup.py sdist bdist_wheel
+```
+
+2. **Upload to PyPI**:
+
+```bash
+twine upload dist/*
+```
+
+Upload using specific project name referenced in .pypirc
+
+```bash
+twine upload dist/* --repository starlyng-server-metrics
+```
+
+## Running Tests
+
+To run tests, execute the following command in your terminal:
+
+```bash
+pytest
+```
+
+This command will run all tests and report the results. You can also run specific tests by providing the path and filename of the test file.
+
+## Contributing to the Project
+
+Contributions to this project are welcome. Here's how you can contribute:
+
+1. Fork the project.
+2. Create your feature branch (git checkout -b feature/YourFeature).
+3. Commit your changes (git commit -am 'Add some YourFeature').
+4. Push to the branch (git push origin feature/YourFeature).
+5. Open a pull request.
+
+## Contact
+
+If you have any questions, please contact us at:
+
+- GitHub: [@justinsherwood](https://github.com/justinsherwood)
+
