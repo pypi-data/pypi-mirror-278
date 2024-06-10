@@ -1,0 +1,11 @@
+# 版本更新总览
+* 新增512位哈希加密算法实现。
+## 项目模块清单
+* Base64Util
+* CircularSingleLinkedList
+* DoubleLinkedList
+* SequentialList
+* SingleLinkedList
+* SingleLinkedListWithoutHeadNode
+* LinkedStack
+* SHA512Encoder
