@@ -1,0 +1,53 @@
+
+![logo.png](https://gitlab.com/danielquinn/django-cool-urls/-/raw/master/docs/logo.png)
+
+# Django Cool URLs
+
+[![Stop killing Palestinian civilians](https://img.shields.io/badge/It%27s%20Genocide-%F0%9F%87%B5%F0%9F%87%B8%20Tech_For_Palestine-D83838?labelColor=01B861&color=D83838&link=https%3A%2F%2Ftechforpalestine.org%2Flearn-more)](https://techforpalestine.org/)
+[![PyPI](https://img.shields.io/pypi/pyversions/django-cool-urls)](https://pypi.org/project/django-cool-urls)
+[![PyPI](https://img.shields.io/pypi/wheel/django-cool-urls)](https://pypi.org/project/django-cool-urls)
+[![License](https://img.shields.io/pypi/l/django-cool-urls)](https://www.gnu.org/licenses/gpl-3.0.en.html)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![Black](https://img.shields.io/badge/Coverage-100%25-4ec820.svg)](https://gitlab.com/danielquinn/django-cool-urls/-/blob/master/Makefile?ref_type=heads)
+
+Tim Berners-Lee is credited with saying that "cool URLs don't change", but
+sadly that's just not the case.  Cool URLs are changing all the time because
+the people who run those sites are moving stuff around or just deleting
+whole pages and domains.
+
+If you have a long-running site full of links like a blog however, this means
+that over time your site can be pointing to a lot of dead links, which is bad
+for your SEO.  It's also annoying when you're looking over a post from 10 years
+ago that says something like "[this](.) is some really nice work" and that link
+404s.
+
+With `django-cool-urls`, you can link to whatever you like and the state of
+that page is captured from the moment you linked to it.  If the page ever
+disappears from the web, you can automatically switch over to the local copy.
+
+All you need to do is switch from doing this:
+
+```html
+<a href="https://something-awesome.ca/">Nifty!</a>
+```
+
+to this:
+
+```html
+<a href="{% cool_url 'https://something-awesome.ca/' %}">Nifty!</a>
+```
+
+If that page ever 404s, your site will switch to showing the locally cached
+version.  Think of it like your own private [archive.org](https://archive.org/).
+
+Currently, this project supports caching *most* pages (see the [Caveats](https://danielquinn.gitlab.io/django-cool-urls/caveats/) page)
+as well as embedded video from YouTube, Vimeo, and Instagram.
+
+
+* [Official documentation](https://danielquinn.gitlab.io/django-cool-urls/)
+    * [Installation](https://danielquinn.gitlab.io/django-cool-urls/installation/)
+    * [Configuration](https://danielquinn.gitlab.io/django-cool-urls/configuration/)
+    * [How to use it](https://danielquinn.gitlab.io/django-cool-urls/how-to-use-it/)
+    * [Caveats & troubleshooting](https://danielquinn.gitlab.io/django-cool-urls/caveats/)
+    * [Development](https://danielquinn.gitlab.io/django-cool-urls/development/)
+    * [Changelog](https://danielquinn.gitlab.io/django-cool-urls/changelog/)

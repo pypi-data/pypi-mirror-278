@@ -1,0 +1,92 @@
+[tool.poetry]
+name = "django-cool-urls"
+version = "0.2.1"
+description = "Freeze outgoing links in time so that your site never 404s on external pages"
+authors = ["Daniel Quinn <code@danielquinn.org>"]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+packages = [
+    { include = "cool_urls" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Django = ">=3.2"
+httpx = "^0.27.0"
+yt-dlp = {version = "*", optional = true}
+
+[tool.poetry.group.dev.dependencies]
+coverage = "^7.5.1"
+freezegun = "^1.5.1"
+mkdocs-techdocs-core = "^1.3.5"
+ruff = "^0.4.4"
+
+[tool.poetry.extras]
+embed = ["yt-dlp"]
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.ruff]
+cache-dir = ".cache/ruff"
+line-length = 79
+lint.extend-select = [
+  "E501",
+  "I001",
+  "T201",
+  "UP",
+]
+
+[tool.ruff.lint.isort]
+case-sensitive = true
+lines-after-imports = 2
+lines-between-types = 1
+combine-as-imports = true
+split-on-trailing-comma = true
+known-first-party = [
+  "cool_urls",
+  "core",
+]
+section-order = [
+  "future",
+  "standard-library",
+  "django",
+  "third-party",
+  "first-party",
+  "local-folder",
+]
+
+[tool.ruff.lint.isort.sections]
+"django" = [
+  "django",
+]
+
+[tool.ruff.lint.pycodestyle]
+max-line-length = 79
+max-doc-length = 79
+
+
+[tool.coverage.run]
+branch = true
+data_file = "/tmp/django-cool-urls/coverage"
+
+
+[tool.coverage.report]
+ignore_errors = true
+omit = [
+  "*/tests/*",
+  "example/example/settings.py",
+  "manage.py",
+  ".venv/*"
+]
+exclude_lines = [
+  "pragma: no cover",
+  "raise NotImplementedError"
+]
+
+
+[tool.coverage.html]
+directory = "/tmp/django-cool-urls"
