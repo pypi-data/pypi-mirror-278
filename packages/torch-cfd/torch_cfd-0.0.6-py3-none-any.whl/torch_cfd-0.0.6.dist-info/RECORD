@@ -1,0 +1,15 @@
+torch_cfd/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+torch_cfd/equations.py,sha256=WCyg0j8olrxfrgrPr4qxAg00bFr9YCvqXkEqscCfMUc,13682
+torch_cfd/fast_diagonalization.py,sha256=bdzQMcGr_3Da3slgz-IiAyZ3IVCs6yWCCc-nTPEKV0A,11032
+torch_cfd/finite_differences.py,sha256=2gDQooeok9VIqXSuFceQGMolG_-3VuOpHQgviHFYTrQ,9103
+torch_cfd/forcings.py,sha256=nRs8qV_mOWmPUXcWTSQvrc4MQs3imzuJlGRK4FVr0Q8,9496
+torch_cfd/grids.py,sha256=KWvXuhjo7aHCeE6j4pz5FIx0KH_ZCQTsR06gaAaPVxk,45222
+torch_cfd/initial_conditions.py,sha256=lvKR_IDJw8mdT_vuZVwqkuu2ggZyjcm_hWIBPPJ35sU,7152
+torch_cfd/pressure.py,sha256=IaZyjQFkuEIvtvJH-PEPffGANXEWfJT4ahkhBdXEwxs,4467
+torch_cfd/tensor_utils.py,sha256=ejh_KtqDLKgwnNo14EQlSI4jxSm4LXGl1VK08Y6omIE,4072
+torch_cfd-0.0.6.dist-info/LICENSE,sha256=7yvPnDE-Jy8Eu6tzJxtqOh343zT0wrJZomMPMdSyuXE,11342
+torch_cfd-0.0.6.dist-info/LICENSE-MIT,sha256=VVmfQELeL6zeFx4BAuuJhb8ZCcWn8PIzDEwBMefOyhw,1066
+torch_cfd-0.0.6.dist-info/METADATA,sha256=K5ezoixQHCNz3po_eJa3bw78Jj27niJto_EWHOUyYk8,680
+torch_cfd-0.0.6.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+torch_cfd-0.0.6.dist-info/top_level.txt,sha256=oJCIjOYe8ikqgQSnsBiCEAaiqVvUcnjSihnnzAXagjk,10
+torch_cfd-0.0.6.dist-info/RECORD,,
