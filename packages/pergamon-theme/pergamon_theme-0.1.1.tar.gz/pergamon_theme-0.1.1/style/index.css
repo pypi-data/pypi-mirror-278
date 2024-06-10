@@ -1,0 +1,28 @@
+@import url('./variables.css');
+
+/* Set the default typography for monospace elements */
+tt,
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--jp-code-font-family);
+  font-size: var(--jp-code-font-size);
+  line-height: var(--jp-code-line-height);
+}
+
+#jp-bottom-panel {
+  display: none;
+}
+
+.jp-mod-left [data-id="jp-running-sessions"] {
+  display: none;
+}
+
+.jp-mod-left [data-id="table-of-contents"] {
+  display: none;
+}
+
+.jp-mod-left [data-id="extensionmanager.main-view"] {
+  display: none;
+}
