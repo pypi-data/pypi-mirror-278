@@ -1,0 +1,13 @@
+setup.py
+_ioplace_parser_antlr/ioLexer.py
+_ioplace_parser_antlr/ioListener.py
+_ioplace_parser_antlr/ioParser.py
+ioplace_parser/__init__.py
+ioplace_parser/__version__.py
+ioplace_parser/parse.py
+ioplace_parser.egg-info/PKG-INFO
+ioplace_parser.egg-info/SOURCES.txt
+ioplace_parser.egg-info/dependency_links.txt
+ioplace_parser.egg-info/requires.txt
+ioplace_parser.egg-info/top_level.txt
+test/test_parse.py

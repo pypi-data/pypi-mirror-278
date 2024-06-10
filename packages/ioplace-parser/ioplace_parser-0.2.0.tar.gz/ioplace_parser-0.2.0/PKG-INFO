@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: ioplace_parser
+Version: 0.2.0
+Summary: Antlr4-based parser for the OpenLane I/O Placement script
+Home-page: UNKNOWN
+Author: Efabless Corporation and Contributors
+Author-email: donn@efabless.com
+License: UNKNOWN
+Description: # IO Place Parser
+        Antlr4-based parser for the input files to OpenLane custom IO placers.
+        
+        With syntax and (limited) semantic error reporting.
+        
+        # License
+        Apache License, version 2.0. See 'License'.
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Requires-Python: >3.8
+Description-Content-Type: text/markdown
