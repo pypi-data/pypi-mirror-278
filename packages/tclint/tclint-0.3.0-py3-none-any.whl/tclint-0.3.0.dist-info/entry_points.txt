@@ -1,0 +1,6 @@
+[console_scripts]
+tclint = tclint.tclint:main
+tclint-plugins = tclint.cli.tclint_plugins:main
+
+[tclint.plugins]
+openroad = tclint.plugins.openroad.openroad
