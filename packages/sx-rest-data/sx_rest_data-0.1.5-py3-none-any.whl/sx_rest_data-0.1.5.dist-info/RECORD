@@ -1,0 +1,16 @@
+sx_rest_data/__init__.py,sha256=_XthOFsIjcVK4BDvV5OSM8n3CjBbw1l9b9AhSiFx3QU,32
+sx_rest_data/main.py,sha256=FHNP59LC8RsdgLslN87e_ZSfRdv9t8P0kgcHMm60cIQ,7697
+sx_rest_data/spss_syntax/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sx_rest_data/spss_syntax/generate_dataset.py,sha256=NsyUjqYRkcFjdbA9Sja8AuX0oouyA1BYcdbwbwKuM4U,1892
+sx_rest_data/spss_syntax/generate_labels.py,sha256=uRFt2MDhU5HCNGjTU3qBQW-nvmjsou097aZ8jnghL_g,1270
+sx_rest_data/spss_syntax/generate_open_all.py,sha256=uE7PZuNNkSqKV4NSajjmVCuBzQ8Ox21bJWjbLUig8T8,1146
+sx_rest_data/spss_syntax/templates/generate_spss_datafiles.txt,sha256=dwGrLGJfYpeKe5PtwuzB82xAVRNQ8vEhvzAZXmK5JTw,340
+sx_rest_data/spss_syntax/templates/open_single_dataset_in_spss.txt,sha256=B-ld3U1GFwdAs_mkbWWNYcPeV_HOfqN_vhENrnPJHhE,440
+sx_rest_data/validate_inputs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sx_rest_data/validate_inputs/validate_credentials.py,sha256=OrWboC31eKVa-WXK12_cdz2f81LMFOmNqud6oA3QScI,353
+sx_rest_data/validate_inputs/validate_orgid.py,sha256=XvLzkZIiUIUnPpff1JQFiEHerI05wmBrq9wb9sHYv2Y,257
+sx_rest_data/validate_inputs/validate_output_path.py,sha256=2qWrhZ5n6hWoGMFCrIkR6GKXrAqLdTtirHr3_1Hu-qI,243
+sx_rest_data/validate_inputs/validate_surveyids.py,sha256=sGcWS0q5JZWPREzMl7UQ1JiV6Jdx-HgXfWh1anKivIo,421
+sx_rest_data-0.1.5.dist-info/METADATA,sha256=kLpP-FcYd5dvPyxfIjdosyi3R3J_s_pPkcyl-iZS-MM,495
+sx_rest_data-0.1.5.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+sx_rest_data-0.1.5.dist-info/RECORD,,
