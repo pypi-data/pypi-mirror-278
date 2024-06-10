@@ -1,0 +1,3 @@
+[console_scripts]
+dockloader = dockloader.command:main
+
