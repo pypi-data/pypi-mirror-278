@@ -1,0 +1,11 @@
+templates:
+ - coapthon/basic_resources.template
+ - coapthon/coap_client.template
+ - coapthon/coap_server.template
+ - coapthon/logging.template
+
+modules:
+ - basic_resources.py
+ - coap_client.py
+ - coap_server.py
+ - logging.conf

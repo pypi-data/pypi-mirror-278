@@ -1,0 +1,118 @@
+# -*- coding: UTF-8 -*-
+
+'''
+Module
+    basic_resources.py
+Copyright
+    Copyright (C) ${YEAR} Vladimir Roncevic <elektron.ronca@gmail.com>
+    ${PKG} is free software: you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by the
+    Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    ${PKG} is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    See the GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License along
+    with this program. If not, see <http://www.gnu.org/licenses/>.
+Info
+    Defines class BasicResource with attribute(s) and method(s).
+    Defines resources for CoAP service.
+'''
+
+import sys
+from typing import Any, Self
+
+try:
+    from coapthon.resources.resource import Resource
+except ImportError as ats_error_message:
+    # Force close python ATS ##################################################
+    sys.exit(f'\n{__file__}\n{ats_error_message}\n')
+
+
+class BasicResource(Resource):
+    '''
+        Defines class DistPyModule with attribute(s) and method(s).
+        Load a base info, create an CLI interface and run operation(s).
+
+        It Definess:
+
+            :attributes:
+                | payload - Resource payload.
+            :methods:
+                | __init__ - Initials BasicResource constructor.
+                | render_GET - Render for GET method.
+                | render_PUT - Render for PUT method.
+                | render_POST - Render for POST method.
+                | render_DELETE - Render for DELETE method.
+    '''
+
+    def __init__(
+        self, name: str = 'BasicResource', coap_server: Any | None = None
+    ) -> None:
+        '''
+            Initial constructor.
+
+            :param name: Resource name
+            :type name: <str>
+            :param coap_server: CoAP server | None
+            :type coap_server: <Any> | <NoneType>
+            :exceptions: None
+        '''
+        super().__init__(
+            name,
+            coap_server,
+            visible=True,
+            observable=True,
+            allow_children=True
+        )
+        self.payload = 'Basic Resource'
+
+    def render_GET(self, request: str) -> Self:  # pylint: disable=C0103
+        '''
+            Render for GET method.
+
+            :param request: GET request
+            :type request: <str>
+            :return: Basic resource
+            :rtype: <BasicResource>
+            :exceptions: None
+        '''
+        print(f'GET: {request}')
+        return self
+
+    def render_PUT(self, request: str) -> Self:  # pylint: disable=C0103
+        '''
+            Render for PUT method.
+
+            :param request: PUT request
+            :type request: <str>
+            :exceptions: None
+        '''
+        print(f'PUT: {request}')
+        self.payload = request.payload
+        return self
+
+    def render_POST(self, request: str) -> Self:  # pylint: disable=C0103
+        '''
+            Render for POST method.
+
+            :param request: get request.
+            :type request: <str>
+            :exceptions: None
+        '''
+        print(f'POST: {request}')
+        self.payload = request.payload
+        return self
+
+    def render_DELETE(self, request: str) -> bool:  # pylint: disable=C0103
+        '''
+            Render for DELETE method.
+
+            :param request: Delete request
+            :type request: <str>
+            :exceptions: None
+        '''
+        print(f'DELETE: {request}')
+        self.payload = ''
+        return True
