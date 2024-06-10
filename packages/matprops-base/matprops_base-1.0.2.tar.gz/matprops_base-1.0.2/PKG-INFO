@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: matprops-base
+Version: 1.0.2
+Summary: Python library written on top of matplotlib library for customizable charts
+Home-page: https://github.com/Matprops/matprops-base
+Author: Mohammed Shammeer
+Author-email: mohammedshammeer.s@gmail.com
+Keywords: Support files for matprops
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.22.0
+Requires-Dist: pandas>=1.3.5
+Requires-Dist: matplotlib>=3.5.1
+Provides-Extra: dev
+Requires-Dist: pytest>=6.2.5; extra == "dev"
+
+Hello Base 

@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+src/matBase/__init__.py
+src/matBase/configs/__init__.py
+src/matBase/configs/constants.py
+src/matBase/configs/props.py
+src/matBase/utils/__init__.py
+src/matBase/utils/figure.py
+src/matBase/utils/props.py
+src/matprops_base.egg-info/PKG-INFO
+src/matprops_base.egg-info/SOURCES.txt
+src/matprops_base.egg-info/dependency_links.txt
+src/matprops_base.egg-info/requires.txt
+src/matprops_base.egg-info/top_level.txt
