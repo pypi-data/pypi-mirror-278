@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: collectmiddleware
+Version: 0.1.0
+Summary: this project consists of creating a middleware to transmit the data collected on an Object Request to a MongoDB Database for later analysis
+License: MIT
+Author: Darix SAMANI SIEWE
+Author-email: samanidarix@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pymongo (>=4.7.3,<5.0.0)
+Requires-Dist: starlette (>=0.37.2,<0.38.0)
+Requires-Dist: typing-extensions (>=4.12.2,<5.0.0)
+Description-Content-Type: text/markdown
+
+# CollectMiddleware
+
+The objective of this project is to develop a middleware that can efficiently transmit the data gathered from an Object Request to a MongoDB Database. The middleware will play a crucial role in the overall process of collecting and analyzing data. It will act as a bridge between the Object Request and the database, ensuring that the data is transmitted accurately and securely. Once the data is collected in the database, it can be further analyzed and used to gain valuable insights that can help in making informed decisions. In short, the middleware will enable seamless and efficient data transmission, making the process of data analysis more effective and reliable.
+
+# how to install
+
+``` bash
+pip3 install CollectMiddleware
+```
+
+# How to use it
+
+``` python
+
+from fastapi import FastAPI
+from CollectMiddleware import CollectMiddleware
+app = FastAPI()
+
+app.add_middleware(CollectMiddleware, mongodb_uri="mongodb://localhost:27017/")
+
+
+@app.get("/")
+async def main():
+    return {"message": "Hello World"}
+```
+
+## Example
+
+![](./img/example.png)
+
