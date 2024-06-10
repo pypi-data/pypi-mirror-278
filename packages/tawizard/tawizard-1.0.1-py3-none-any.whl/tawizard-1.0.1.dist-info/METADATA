@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: tawizard
+Version: 1.0.1
+Summary: tawizard
+Home-page: https://github.com/pythonsystem/tawizard
+Author: Kevin Johnson
+License: MIT
+Description-Content-Type: text/plain
+License-File: LICENSE.txt
+Requires-Dist: six
+Requires-Dist: pytz
+Requires-Dist: typing-extensions ==4.5.0
+Requires-Dist: python-dateutil ==2.8.2
+Requires-Dist: scikit-learn ==1.3.2
+Requires-Dist: matplotlib ==3.7.5
+Requires-Dist: numpy ==1.24.3
+Requires-Dist: protobuf ==3.20.3
+Requires-Dist: urllib3 ==2.2.1
+Requires-Dist: tf2onnx ==1.16.1
+
+tawizard
