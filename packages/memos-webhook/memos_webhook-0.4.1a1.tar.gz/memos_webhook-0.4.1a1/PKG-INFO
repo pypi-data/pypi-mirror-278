@@ -1,0 +1,188 @@
+Metadata-Version: 2.1
+Name: memos_webhook
+Version: 0.4.1a1
+Summary: A webhook server for memos
+Author: RyoJerryYu
+License: MIT License
+        
+        Copyright (c) 2024 RyoJerryYu
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Project-URL: Homepage, https://github.com/RyoJerryYu/memos-webhook-py
+Project-URL: Issues, https://github.com/RyoJerryYu/memos-webhook-py/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiofiles==23.2.1
+Requires-Dist: annotated-types==0.7.0
+Requires-Dist: anyio==4.4.0
+Requires-Dist: betterproto==2.0.0b6
+Requires-Dist: black==24.4.2
+Requires-Dist: certifi==2024.6.2
+Requires-Dist: click==8.1.7
+Requires-Dist: dacite==1.8.1
+Requires-Dist: dnspython==2.6.1
+Requires-Dist: email_validator==2.1.1
+Requires-Dist: fastapi==0.111.0
+Requires-Dist: fastapi-cli==0.0.4
+Requires-Dist: grpclib==0.4.8rc1
+Requires-Dist: h11==0.14.0
+Requires-Dist: h2==4.1.0
+Requires-Dist: hpack==4.0.0
+Requires-Dist: httpcore==1.0.5
+Requires-Dist: httptools==0.6.1
+Requires-Dist: httpx==0.27.0
+Requires-Dist: hyperframe==6.0.1
+Requires-Dist: idna==3.7
+Requires-Dist: isort==5.13.2
+Requires-Dist: Jinja2==3.1.4
+Requires-Dist: markdown-it-py==3.0.0
+Requires-Dist: MarkupSafe==2.1.5
+Requires-Dist: mdurl==0.1.2
+Requires-Dist: multidict==6.0.5
+Requires-Dist: mypy-extensions==1.0.0
+Requires-Dist: orjson==3.10.3
+Requires-Dist: packaging==24.0
+Requires-Dist: pathspec==0.12.1
+Requires-Dist: platformdirs==4.2.2
+Requires-Dist: pydantic==2.7.1
+Requires-Dist: pydantic_core==2.18.2
+Requires-Dist: Pygments==2.18.0
+Requires-Dist: python-dateutil==2.9.0.post0
+Requires-Dist: python-dotenv==1.0.1
+Requires-Dist: python-multipart==0.0.9
+Requires-Dist: PyYAML==6.0.1
+Requires-Dist: rich==13.7.1
+Requires-Dist: shellingham==1.5.4
+Requires-Dist: six==1.16.0
+Requires-Dist: sniffio==1.3.1
+Requires-Dist: starlette==0.37.2
+Requires-Dist: typer==0.12.3
+Requires-Dist: typing_extensions==4.12.1
+Requires-Dist: ujson==5.10.0
+Requires-Dist: uvicorn==0.30.0
+Requires-Dist: uvloop==0.19.0
+Requires-Dist: watchfiles==0.22.0
+Requires-Dist: websockets==12.0
+Requires-Dist: you-get==0.4.1700
+Provides-Extra: dev
+Requires-Dist: betterproto[compiler]; extra == "dev"
+
+# Memos Webhook Python Implementation
+
+This is a simple webhook implementation in Python.
+
+It implements a simple URL resource download feature. All url [you-get](https://github.com/soimort/you-get) support for command `you-get https://xxxxx` can be configured to download. 
+
+## Quick Feel It
+
+1. Create a `docker_compose.yaml` with following contents. Replace `xxxxxxxx` with your memos token.
+
+    ```yaml
+    version: "3.0"
+    services:
+    memos:
+        networks:
+        - memos
+        image: neosmemo/memos:0.22.1
+        container_name: memos
+        ports:
+        - 5230:5230
+    webhook:
+        image: ghcr.io/ryojerryyu/memos-webhook-py:0.3.0
+        networks:
+        - memos
+        container_name: webhook
+        environment:
+        - LOG_LEVEL=debug
+        - WEBHOOK_PORT=8000
+        - MEMOS_HOST=memos
+        - MEMOS_PORT=5230
+        - MEMOS_TOKEN=xxxxxxxx
+        volumes:
+        - ./.download:/app/download
+
+    networks:
+    memos:
+    ```
+
+2. Run `docker-compose up -d` to start the services.
+
+3. Access `localhost:5230` , login and make sure the Memos server work. Create a webhook to `http://webhook:8000/webhook` .
+
+4. Post a memo with contents containing a twitter url. If that tweet was attached with some image, the webhook will download them and upload to the Memo server automatically.
+
+You can use a config file to configure what url you want to download. The default config file is [config.yaml](example/config.yaml).
+
+
+## Config
+
+You can use a config file by setting the environment variable `CONFIG_PATH`. Here is a docker_compose.yaml example:
+
+```yaml
+version: "3.0"
+services:
+  memos:
+    networks:
+      - memos
+    image: neosmemo/memos:0.22.1
+    container_name: memos
+    ports:
+      - 5230:5230
+  webhook:
+    image: ghcr.io/ryojerryyu/memos-webhook-py:0.3.0
+    networks:
+      - memos
+    container_name: webhook
+    environment:
+      - CONFIG_PATH=/app/config.yaml
+    volumes:
+      - ./.download:/app/download
+      - ./path/to/your/local/config/file.yaml:/app/config.yaml
+
+networks:
+  memos:
+```
+
+You should place your config file in `./path/to/your/local/config/file.yaml` and the webhook will read the config from it.
+
+Here is an example of the configuration file: [config.yaml](example/config.yaml)
+
+```yaml
+webhook:
+  host: localhost
+  port: 11100
+
+memos:
+  host: localhost
+  port: 5230
+  token: xxxxxxx
+
+plugins:
+  you_get_plugins:
+    - name: download
+      tag: webhook/download
+      patterns:
+        - https://twitter.com/\w+/status/\d+
+        - https://x.com/\w+/status/\d+
+```
+
+And config definitionn is in [config.py](src/dependencies/config.py)
