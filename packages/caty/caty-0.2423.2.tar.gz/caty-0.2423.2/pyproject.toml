@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[bdist_wheel]
+universal = 0
+
+[project]
+name = "caty"
+version = "0.2423.2"
+description = "Nice cat"
+dynamic = ['readme']
+authors = [
+    {name = "Louis RIVIERE", email = "louis@riviere.xyz"},
+]
+requires-python = ">=3.11"
+dependencies = [
+    'nicely>=0.2.0',
+    'binview>=0.1.2',
+    'sqlview>=0.23.9.0',
+    'htmldump>=0.2039.0',
+    'pybrary>=0.2351.0',
+]
+keywords = [
+    'utility',
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Topic :: Software Development :: Testing",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Operating System :: POSIX :: Linux",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+]
+license = {text = "MIT"}
+
+[project.urls]
+pypi = " https://pypi.org/project/caty"
+repository = "https://framagit.org/louis-riviere-xyz/caty"
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.dynamic]
+readme = {file = ['README.md'], content-type = 'text/markdown'}
+
+[tool.setuptools.packages.find]
+exclude = ["*test*"]
+
+[project.scripts]
+caty = "caty.cli:cli"
+caty_csv = "caty.dump:dump_csv"
+caty_ini = "caty.dump:dump_ini"
+caty_json = "caty.dump:dump_json"
+caty_pickle = "caty.dump:dump_pickle"
+caty_sqlite = "caty.dump:dump_sqlite"
+caty_toml = "caty.dump:dump_toml"
+caty_txt = "caty.dump:dump_txt"
+caty_yaml = "caty.dump:dump_yaml"
+caty_bin = "caty.dump:dump_bin"
+caty_oct = "caty.dump:dump_oct"
+caty_dec = "caty.dump:dump_dec"
+caty_hex = "caty.dump:dump_hex"
+caty_config = "caty.dump:dump_config"
+caty_html = "caty.dump:dump_html"

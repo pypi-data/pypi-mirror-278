@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: caty
+Version: 0.2423.2
+Summary: Nice cat
+Author-email: Louis RIVIERE <louis@riviere.xyz>
+License: MIT
+Project-URL: pypi,  https://pypi.org/project/caty
+Project-URL: repository, https://framagit.org/louis-riviere-xyz/caty
+Keywords: utility
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Software Development :: Testing
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: nicely>=0.2.0
+Requires-Dist: binview>=0.1.2
+Requires-Dist: sqlview>=0.23.9.0
+Requires-Dist: htmldump>=0.2039.0
+Requires-Dist: pybrary>=0.2351.0
+
+# caty
+
+Nice cat
+
+## Abstract
+
+Shows a readable content of a file.
+
+Like cat, only nicer. :)
+
+## Usage
+
+    caty FILE
+    caty FILE FORMAT
+    cat FILE | caty_*
+
+
+## Installation
+
+    $ pip install caty
