@@ -1,0 +1,3 @@
+[console_scripts]
+opt-show=pyfemtet.opt.visualization:entry_point
+
