@@ -1,0 +1,3 @@
+[console_scripts]
+aws-iam-tester=aws_iam_tester.cli:cli
+
