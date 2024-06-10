@@ -1,0 +1,16 @@
+bitcoin_nostr_chat/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bitcoin_nostr_chat/connected_devices/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bitcoin_nostr_chat/connected_devices/chat_gui.py,sha256=P7fcDPvBFDZjp-sopscKF61et3wkR2BDVH2QO6wiq7A,11488
+bitcoin_nostr_chat/connected_devices/connected_devices.py,sha256=dVcxh5MDqd8wsq9Bwr5SI77EAtg7jg1JDIA9KaGtXRo,17433
+bitcoin_nostr_chat/connected_devices/icons/clip.svg,sha256=m1eKiLVJ9L2z1DuOCKK66cVysd4K-KNe9JmX92id0I0,1146
+bitcoin_nostr_chat/connected_devices/icons/preferences.png,sha256=09QWOo1niPeNLCrFbiYf5Qb0kVBl7EiPefhYx8oTwus,58005
+bitcoin_nostr_chat/connected_devices/util.py,sha256=jrJXKucKgkZhTUWPTpEAGqcmwxjU5FE2i4IJeiYU_7E,395
+bitcoin_nostr_chat/default_relays.py,sha256=q2wmBGNPiehFOmjiJ1FZGs9UbJ3_0WDFE7ZX4kPnv5k,11478
+bitcoin_nostr_chat/html.py,sha256=p90K1ASEoKnvz_UuNqUOPzwU0Es63JZcXuixBOPCEJs,1939
+bitcoin_nostr_chat/nostr.py,sha256=jSHHu8CSgsNnpzVQejt4l9WK47q4dvTGFMkjOXt3hvY,37672
+bitcoin_nostr_chat/nostr_sync.py,sha256=O2rh-O_dujO6H9GbOF_qaC0WChp--9mQSY1yogCDot0,19026
+bitcoin_nostr_chat/signals_min.py,sha256=41gWJwCLMRmLZuq7RJukRP0YJsRltMkhcFLXrL_WEXQ,1414
+bitcoin_nostr_chat-0.2.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+bitcoin_nostr_chat-0.2.0.dist-info/METADATA,sha256=exl7GMtwNozh7g084veWtmxxcpzTfcQTcwg5erWBVQY,1359
+bitcoin_nostr_chat-0.2.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+bitcoin_nostr_chat-0.2.0.dist-info/RECORD,,
