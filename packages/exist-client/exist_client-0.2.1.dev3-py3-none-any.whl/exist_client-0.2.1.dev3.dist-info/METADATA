@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: exist-client
+Version: 0.2.1.dev3
+Summary: 
+Author: Ilya Nekhay
+Author-email: nekhayiv@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: attrs (>=23.1.0,<24.0.0)
+Requires-Dist: loguru
+Requires-Dist: pytilz (>=0.1.0,<0.2.0)
+Description-Content-Type: text/markdown
+
+# Setting up a new project
+
+```bash
+git init
+poetry install
+pre-commit install
+pre-commit autoupdate
+```
+
