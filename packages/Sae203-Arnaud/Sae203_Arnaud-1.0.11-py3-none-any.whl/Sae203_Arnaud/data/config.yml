@@ -1,0 +1,7 @@
+sources:
+  - http://serveur1.net
+  - http://serveur2.net
+  - http://serveur3.net
+rss-name: rss.xml
+destination: /var/www/aggreg/index.html
+tri-chrono: false
