@@ -1,0 +1,25 @@
+CONTRIBUTING.md
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+docs/netbox changelog deepdiff plugin.gif
+netbox_changelog_diff_plugin/__init__.py
+netbox_changelog_diff_plugin/filtersets.py
+netbox_changelog_diff_plugin/forms.py
+netbox_changelog_diff_plugin/models.py
+netbox_changelog_diff_plugin/navigation.py
+netbox_changelog_diff_plugin/tables.py
+netbox_changelog_diff_plugin/template_content.py
+netbox_changelog_diff_plugin/urls.py
+netbox_changelog_diff_plugin/utils.py
+netbox_changelog_diff_plugin/views.py
+netbox_changelog_diff_plugin.egg-info/PKG-INFO
+netbox_changelog_diff_plugin.egg-info/SOURCES.txt
+netbox_changelog_diff_plugin.egg-info/dependency_links.txt
+netbox_changelog_diff_plugin.egg-info/requires.txt
+netbox_changelog_diff_plugin.egg-info/top_level.txt
+netbox_changelog_diff_plugin/templates/netbox_changelog_diff_plugin/changelogdiff.html
+netbox_changelog_diff_plugin/utilities/html_differ.py
+tests/__init__.py
+tests/test_netbox_changelog_diff_plugin.py
