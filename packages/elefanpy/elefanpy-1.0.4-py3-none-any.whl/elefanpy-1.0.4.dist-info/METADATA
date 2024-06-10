@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: elefanpy
+Version: 1.0.4
+Summary: elefanpy
+Home-page: https://github.com/pythonsystem/elefanpy
+Author: Open Liberal
+License: MIT
+Description-Content-Type: text/plain
+License-File: LICENSE.txt
+Requires-Dist: ipython ==8.12.3
+Requires-Dist: pyzmq ==25.1.2
+Requires-Dist: requests ==2.32.3
+Requires-Dist: jupyter ==1.0.0
+Requires-Dist: gensysco ==1.0.6
+Requires-Dist: mtnetbri ==1.0.5
+Requires-Dist: tensorflow ==2.13.1
+Requires-Dist: keras ==2.13.1
+Requires-Dist: matplotlib ==3.7.5
+Requires-Dist: numpy ==1.24.3
+Requires-Dist: pandas ==2.0.3
+Requires-Dist: tawizard ==1.0.3
+
+elefanpy
