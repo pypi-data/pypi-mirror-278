@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+pyproject.toml
+sample_config.toml
+src/__init__.py
+src/wallman.py
+src/wallman_lib.py
+src/wallman.egg-info/PKG-INFO
+src/wallman.egg-info/SOURCES.txt
+src/wallman.egg-info/dependency_links.txt
+src/wallman.egg-info/requires.txt
+src/wallman.egg-info/top_level.txt
