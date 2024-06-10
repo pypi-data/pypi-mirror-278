@@ -1,0 +1,2 @@
+[console_scripts]
+redd-harvest = redd_harvest.harvest:main
