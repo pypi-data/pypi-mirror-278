@@ -1,0 +1,12 @@
+oarepo-communities
+urnparse
+
+[devs]
+check-manifest
+black
+isort
+autoflake
+
+[tests]
+pytest-invenio
+oarepo>=12
