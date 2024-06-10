@@ -1,0 +1,15 @@
+sicore/__init__.py,sha256=oZb5n5iiV1aTmQlEA_xUrGfnB1EUny4M6a9vuktsxLY,1109
+sicore/cdf_mpmath.py,sha256=BBBq9wA1Npxmt1pZG08xFRaqWlwLFprXGdVZTWsaFUY,9010
+sicore/evaluation.py,sha256=l1RmVmUehxG7m62beXmzg_nw_CzTcu2s7HRkSJxvtZc,1633
+sicore/figures.py,sha256=ZBtwHLCLmiPr7Tovv08iQ5JtfwWUr50S_8DG62P013k,11757
+sicore/intervals.py,sha256=xRKwxtHWsYv9GeYvvVksqwiBChCkAntWThOlazIJkHA,8475
+sicore/utils.py,sha256=0fwnVggHSVPgbK_Xg6SMjX031zwfPKQI7HoSW8iGaoo,2255
+sicore/inference/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sicore/inference/base.py,sha256=ho76UxOTniCj_yMOfnb4DkyaHm37b36-uuVWJj2ddlo,4980
+sicore/inference/chi.py,sha256=qwD-9i1tcRKs07IEHV8wTSwqg0qdgT281-3m44ZxfhA,28242
+sicore/inference/norm.py,sha256=v8XrATdBslFHqlmENKQp0TSRqcFziLehL4Dmp8Z6rVQ,28918
+sicore-1.0.1.dist-info/LICENSE,sha256=KoYA8Glb8xtRWgrDiaoaQU66Wo3IeyOZQXUOrcBHWqc,1062
+sicore-1.0.1.dist-info/METADATA,sha256=p8fRwcMiEbSbfnkB_H7eSTsjtDmveVsjCJJ2RWC7wiI,3621
+sicore-1.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+sicore-1.0.1.dist-info/top_level.txt,sha256=_NdFOaO24DMLva5FyaVceQOt8INM5IfOVXkhLsGMYtw,7
+sicore-1.0.1.dist-info/RECORD,,
