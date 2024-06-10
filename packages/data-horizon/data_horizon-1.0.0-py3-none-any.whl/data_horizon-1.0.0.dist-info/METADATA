@@ -1,0 +1,141 @@
+Metadata-Version: 2.1
+Name: data-horizon
+Version: 1.0.0
+Summary: Horizon REST API + client
+License: Apache-2.0
+Keywords: Horizon,REST,API,HWM
+Author: DataOps.ETL
+Author-email: onetools@mts.ru
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: FastAPI
+Classifier: Framework :: Pydantic
+Classifier: Framework :: Pydantic :: 1
+Classifier: Framework :: Pydantic :: 2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Typing :: Typed
+Provides-Extra: backend
+Provides-Extra: client-sync
+Provides-Extra: ldap
+Provides-Extra: postgres
+Requires-Dist: alembic (>=1.12.1) ; (python_version >= "3.8") and (extra == "backend")
+Requires-Dist: alembic (>=1.12.1,<2.0.0) ; (python_version < "3.8") and (extra == "backend")
+Requires-Dist: argon2-cffi ; extra == "ldap"
+Requires-Dist: asgi-correlation-id (>=4.2.0) ; (python_version >= "3.8") and (extra == "backend")
+Requires-Dist: asgi-correlation-id (>=4.2.0,<5.0.0) ; (python_version < "3.8") and (extra == "backend")
+Requires-Dist: asyncpg (>=0.28.0) ; (python_version >= "3.8") and (extra == "postgres")
+Requires-Dist: asyncpg (>=0.28.0,<0.29.0) ; (python_version < "3.8") and (extra == "postgres")
+Requires-Dist: authlib (>=1.2.1) ; (python_version >= "3.8") and (extra == "client-sync")
+Requires-Dist: authlib (>=1.2.1,<2.0.0) ; (python_version < "3.8") and (extra == "client-sync")
+Requires-Dist: bonsai (>=1.5.3,<2.0.0) ; extra == "ldap"
+Requires-Dist: coloredlogs ; extra == "backend"
+Requires-Dist: devtools ; extra == "backend"
+Requires-Dist: fastapi (>=0.103.0) ; (python_version >= "3.8") and (extra == "backend")
+Requires-Dist: fastapi (>=0.103.2,<0.104.0) ; (python_version < "3.8") and (extra == "backend")
+Requires-Dist: importlib-resources (>=5.12.0) ; (python_version >= "3.8") and (extra == "backend")
+Requires-Dist: importlib-resources (>=5.12.0,<6.0.0) ; (python_version < "3.8") and (extra == "backend")
+Requires-Dist: passlib ; extra == "backend"
+Requires-Dist: pydantic (<2.6.0) ; python_version < "3.8"
+Requires-Dist: pydantic (<3) ; python_version >= "3.8"
+Requires-Dist: pydantic-settings (>=2.0.3) ; (python_version >= "3.8") and (extra == "backend")
+Requires-Dist: pydantic-settings (>=2.0.3,<3.0.0) ; (python_version < "3.8") and (extra == "backend")
+Requires-Dist: python-jose[cryptography]
+Requires-Dist: python-json-logger ; extra == "backend"
+Requires-Dist: python-multipart ; extra == "backend"
+Requires-Dist: pyyaml ; extra == "backend"
+Requires-Dist: requests ; extra == "client-sync"
+Requires-Dist: sqlalchemy (>=2.0) ; extra == "backend"
+Requires-Dist: sqlalchemy-utils ; extra == "backend"
+Requires-Dist: starlette (>=0.27.0) ; (python_version >= "3.8") and (extra == "backend")
+Requires-Dist: starlette (>=0.27.0,<0.28.0) ; (python_version < "3.8") and (extra == "backend")
+Requires-Dist: starlette-exporter (>=0.17.1) ; (python_version >= "3.8") and (extra == "backend")
+Requires-Dist: starlette-exporter (>=0.17.1,<0.18.0) ; (python_version < "3.8") and (extra == "backend")
+Requires-Dist: typing-extensions (>=4.0.0) ; python_version >= "3.8"
+Requires-Dist: typing-extensions (>=4.0.0,<4.8.0) ; python_version < "3.8"
+Requires-Dist: uuid6 (>=2022.10.25) ; (python_version >= "3.8") and (extra == "backend")
+Requires-Dist: uuid6 (>=2022.10.25,<2023.0.0) ; (python_version < "3.8") and (extra == "backend")
+Requires-Dist: uvicorn (>=0.22.0) ; (python_version >= "3.8") and (extra == "backend")
+Requires-Dist: uvicorn (>=0.22.0,<0.23.0) ; (python_version < "3.8") and (extra == "backend")
+Project-URL: CI/CD, https://github.com/MobileTeleSystems/horizon/actions
+Project-URL: Documentation, https://data-horizon.readthedocs.io/
+Project-URL: Homepage, https://github.com/MobileTeleSystems/horizon
+Project-URL: Source, https://github.com/MobileTeleSystems/horizon
+Project-URL: Tracker, https://github.com/MobileTeleSystems/horizon/issues
+Description-Content-Type: text/x-rst
+
+.. _readme:
+
+Horizon
+=======
+
+|Repo Status| |PyPI| |PyPI License| |PyPI Python Version| |Docker image| |Documentation|
+|Build Status| |Coverage|  |pre-commit.ci|
+
+.. |Repo Status| image:: https://www.repostatus.org/badges/latest/active.svg
+    :target: https://github.com/MobileTeleSystems/horizon
+.. |PyPI| image:: https://img.shields.io/pypi/v/data-horizon
+    :target: https://pypi.org/project/data-horizon/
+.. |PyPI License| image:: https://img.shields.io/pypi/l/data-horizon.svg
+    :target: https://github.com/MobileTeleSystems/horizon/blob/develop/LICENSE.txt
+.. |PyPI Python Version| image:: https://img.shields.io/pypi/pyversions/data-horizon.svg
+    :target: https://badge.fury.io/py/data-horizon
+.. |Docker image| image:: https://img.shields.io/docker/v/mtsrus/horizon-backend?sort=semver&label=docker
+    :target: https://hub.docker.com/r/mtsrus/horizon-backend
+.. |Documentation| image:: https://readthedocs.org/projects/data-horizon/badge/?version=stable
+    :target: https://data-horizon.readthedocs.io/
+.. |Build Status| image:: https://github.com/MobileTeleSystems/horizon/workflows/Tests/badge.svg
+    :target: https://github.com/MobileTeleSystems/horizon/actions
+.. |Coverage| image:: https://codecov.io/gh/MobileTeleSystems/horizon/graph/badge.svg?token=BIRWPTWEE0
+    :target: https://codecov.io/gh/MobileTeleSystems/horizon
+.. |pre-commit.ci| image:: https://results.pre-commit.ci/badge/github/MobileTeleSystems/horizon/develop.svg
+    :target: https://results.pre-commit.ci/latest/github/MobileTeleSystems/horizon/develop
+
+
+|Logo|
+
+.. |Logo| image:: https://raw.githubusercontent.com/MobileTeleSystems/horizon/888a4ecf98172b69b624de83fe0fa67a88dfd81b/docs/_static/logo.svg
+    :width: 400
+    :alt: Horizon logo
+    :target: https://github.com/MobileTeleSystems/horizon/
+
+What is Horizon?
+----------------
+
+Horizon is an application that implements simple HWM Store. Right now it includes:
+
+* REST API
+* Python client
+
+Goals
+-----
+
+* Allow users to save and fetch High Water Mark (*HWM*) items. These are ``name+type+value`` triples with few optional fields.
+* Avoid confusion between different user's data by separating HWMs to different *namespaces*. Each HWM is bound to namespace.
+* Allow users to get HWM change history, to determine who and when changed a specific HWM value and other fields.
+* Provide RBAC model to ensure that interaction with ``HWMs`` and ``Namespaces`` are governed by role assigned to each user. Roles are assigned per namespace.
+
+Non-goals
+---------
+
+* This is not a *data* storage, it is not designed to store raw table rows. It is designed to store only HWM values.
+* Attaching machine-readable metadata for HWMs (like ``process``, ``origin``) is not supported. This should be stored somewhere else.
+
+.. documentation
+
+Documentation
+-------------
+
+See https://data-horizon.readthedocs.io/
+
