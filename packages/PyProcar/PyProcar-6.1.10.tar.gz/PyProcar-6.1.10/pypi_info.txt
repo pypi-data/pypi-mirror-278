@@ -1,0 +1,13 @@
+[distutils]
+    index-servers=
+        pypi
+        testpypi
+
+    [pypi]
+    username: romerogroup
+    password: ca1d^cB70db2
+
+    [testpypi]
+    repository: https://test.pypi.org/legacy/
+    username: romerogroup
+    password:
