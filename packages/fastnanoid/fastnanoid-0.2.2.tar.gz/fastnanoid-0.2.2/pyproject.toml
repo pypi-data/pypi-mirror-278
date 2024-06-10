@@ -1,0 +1,45 @@
+[build-system]
+requires = ["maturin>=1.6,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "fastnanoid"
+description = "A tiny, secure URL-friendly, and fast unique string ID generator for Python, written in Rust."
+readme = "README.md"
+authors = [
+  {name = "Oliver Lambson", email = "oliverlambson@gmail.com"},
+  {name = "Ochir Erkhembayar"},
+]
+maintainers = [
+  {name = "Oliver Lambson", email = "oliverlambson@gmail.com"},
+]
+license = {file = "LICENSE"}
+requires-python = ">=3.8"
+keywords = ["nanoid"]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+    "Typing :: Typed",
+]
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://github.com/oliverlambson/fastnanoid"
+Issues = "https://github.com/oliverlambson/fastnanoid/issues"
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+python-source = "python"
+module-name = "fastnanoid.fastnanoid"
