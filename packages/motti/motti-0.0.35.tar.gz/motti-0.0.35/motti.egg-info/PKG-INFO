@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: motti
+Version: 0.0.35
+Summary: some util functions
+Author: lup1n
+Author-email: 780966523@qq.com
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pillow
+Requires-Dist: matplotlib
+Requires-Dist: base64
+Requires-Dist: pyyaml
