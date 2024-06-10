@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+somweb/__init__.py
+somweb/__version__.py
+somweb/client.py
+somweb/const.py
+somweb/httpclient.py
+somweb/models.py
+somweb.egg-info/PKG-INFO
+somweb.egg-info/SOURCES.txt
+somweb.egg-info/dependency_links.txt
+somweb.egg-info/requires.txt
+somweb.egg-info/top_level.txt
