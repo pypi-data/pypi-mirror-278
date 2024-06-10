@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: rl-test-storage-handlers
+Version: 0.1.4
+Summary: Storage handlers
+Author: Antonio Corluka
+Author-email: antonio.corluka@outlook.com
+Requires-Python: >=3.11
+Requires-Dist: python-dotenv
+Requires-Dist: rl-test-common
+
