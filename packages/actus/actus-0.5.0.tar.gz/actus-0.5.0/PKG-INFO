@@ -1,0 +1,16 @@
+Metadata-Version: 2.3
+Name: actus
+Version: 0.5.0
+Summary: A logging library for python development
+Author-email: Havsalt <knutolaihelgesen@gmail.com>
+License: MIT
+License-File: LICENSE.txt
+Requires-Python: >=3.10
+Requires-Dist: colex~=0.1.0
+Description-Content-Type: text/markdown
+
+# Actus
+
+A logging library for python development
+
+* License: MIT
