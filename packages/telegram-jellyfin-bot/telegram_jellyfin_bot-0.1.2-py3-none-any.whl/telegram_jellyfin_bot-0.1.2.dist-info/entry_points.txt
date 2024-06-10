@@ -1,0 +1,2 @@
+[console_scripts]
+telegram_jellyfin_bot = telegram_jellyfin_bot.bot:main
