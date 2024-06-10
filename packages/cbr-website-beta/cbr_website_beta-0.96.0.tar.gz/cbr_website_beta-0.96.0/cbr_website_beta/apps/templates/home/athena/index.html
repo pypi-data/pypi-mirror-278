@@ -1,0 +1,41 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Athena {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+        <!-- ============================================================== -->
+        <!-- Bread crumb and right sidebar toggle -->
+        <!-- ============================================================== -->
+        <div class="page-breadcrumb">
+            <div class="row align-items-center">
+                <div class="col-md-6 col-8 align-self-center">
+                    <h3 class="page-title mb-0 p-0">Athena</h3>
+                    <div class="d-flex align-items-center">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Your Friendly Bot</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+                {%  include 'includes/component/button__support.html' %}
+            </div>
+        </div>
+        <div class="container-fluid" style="padding: 5px;">
+            <div class="row">
+                <div class="col-12">
+                    <script type="module"  src="https://gradio.s3-us-west-2.amazonaws.com/3.40.1/gradio.js"></script>
+                    <gradio-app src="https://the-cbr-cbr-hf-gradio.hf.space">
+                    </gradio-app>
+                </div>
+            </div>
+        </div>
+
+{% endblock content %}
+
+{% block javascripts %}{% endblock javascripts %}
