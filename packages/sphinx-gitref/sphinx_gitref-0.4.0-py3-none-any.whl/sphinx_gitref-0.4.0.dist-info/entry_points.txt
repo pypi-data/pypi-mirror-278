@@ -1,0 +1,2 @@
+[console_scripts]
+sphinx-gitref = sphinx_gitref.commands:invoke
