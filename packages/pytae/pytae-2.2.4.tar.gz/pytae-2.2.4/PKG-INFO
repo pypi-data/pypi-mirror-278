@@ -1,0 +1,35 @@
+Metadata-Version: 2.3
+Name: pytae
+Version: 2.2.4
+Dynamic: Requires-Dist
+Summary: A package to enhance common day to day tasks in the life of a data scientist
+Project-URL: Homepage, https://github.com/maddytae/pytae
+Project-URL: Bug Tracker, https://github.com/maddytae/pytae/issues
+Author-email: Madhukar Kumar Jha <madhukar.k.jha@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# This is my day to day util
+
+
+
+## This contains three sets of features:- 
+
+### 1) that does basic data aggregation
+https://github.com/maddytae/pytae/blob/master/src/agg_df.ipynb
+
+### 2) that transforms data long to wide; wide to long etc 
+https://github.com/maddytae/pytae/blob/master/src/shape.ipynb
+
+### 3) that gets aggregated subset of a dataframe 
+https://github.com/maddytae/pytae/blob/master/src/get_data.ipynb
+
+### 4) some addditional utilities
+https://github.com/maddytae/pytae/blob/master/src/other_utilities.ipynb
+
+#### To Do: Documentation and automated Testing features
+
