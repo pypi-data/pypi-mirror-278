@@ -1,0 +1,1 @@
+function o(e){const t=e.getRootNode();return t.getSelection?t.getSelection():document.getSelection()}function n(e){const t=e.rangeCount;return t===0?null:e.getRangeAt(t-1)}function g(e){return n(e).collapsed}export{n as a,o as g,g as i};
