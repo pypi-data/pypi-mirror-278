@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+aclvl_permissions/__init__.py
+aclvl_permissions/permissions.py
+aclvl_permissions.egg-info/PKG-INFO
+aclvl_permissions.egg-info/SOURCES.txt
+aclvl_permissions.egg-info/dependency_links.txt
+aclvl_permissions.egg-info/requires.txt
+aclvl_permissions.egg-info/top_level.txt
+tests/__init__.py
+tests/test_permissions.py
