@@ -1,0 +1,2 @@
+[console_scripts]
+pyoura = pyoura.__main__:main
