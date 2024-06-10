@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "aib2ynab"
+version = "0.2.0"
+description = "Converts an exported file of historical transactions from an AIB Personal Online Banking account into a CSV format that you can import into your YNAB account."
+authors = ["Andrew Regan <andrew@andyregan.net>"]
+license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/andyregan/aib2ynab"
+keywords = ["aib", "ynab"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+click = "^8.1.7"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+pytest-datafiles = "^3.0.0"
+black = "^24.4.2"
+
+[tool.poetry.scripts]
+aib2ynab = "aib2ynab.cli:convert"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
