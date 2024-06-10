@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/libcde/__init__.py
+src/libcde/libcde.py
+src/libcde.egg-info/PKG-INFO
+src/libcde.egg-info/SOURCES.txt
+src/libcde.egg-info/dependency_links.txt
+src/libcde.egg-info/top_level.txt
+tests/test_libcde.py
