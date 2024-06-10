@@ -1,0 +1,2 @@
+class UnsupportedFunctionalityException(Exception):
+    pass

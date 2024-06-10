@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ project_name }}
+  labels:
+    app.kubernetes.io/developer: {{ developer }}
+    env: {{ environment }}
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app.kubernetes.io/developer: {{ developer }}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/developer: {{ developer }}
+    spec:
+      containers:
+      - name: {{ project_name }}
+        image: {{ image }}
+        ports:
+        - containerPort: 5000
+        resources: 
+          requests:
+            cpu: {{ resources.requests.cpu if resources.requests.cpu else 1 }}
+            memory: {{ resources.requests.memory if resources.requests.memory else "256Mi" }}
+          limits:
+            cpu: {{ resources.requests.cpu if resources.requests.cpu else 1 }}
+            memory: {{ resources.requests.memory if resources.requests.memory else "512Mi" }}
+        {%- if env_vars %}
+        env:
+          {%- for i in env_vars %}
+            - name: {{ i.name }}
+              value: {{ i.value }}
+          {% endfor %}
+        {% endif %}
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 5000
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 5000
+          initialDelaySeconds: 15
+          periodSeconds: 20
