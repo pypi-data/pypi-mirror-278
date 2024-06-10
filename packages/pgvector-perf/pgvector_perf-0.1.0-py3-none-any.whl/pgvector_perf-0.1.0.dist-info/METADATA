@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: pgvector-perf
+Version: 0.1.0
+Summary: Performance testing and benchmarking of pgvector
+License: MIT
+Author: Allen Chou
+Author-email: f1470891079@gmail.com
+Requires-Python: >=3.10,<3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: diskcache (>=5,<6)
+Requires-Dist: pandas (>=2,<3)
+Requires-Dist: pgvector (>=0,<1)
+Requires-Dist: psycopg2-binary (>=2,<3)
+Requires-Dist: pydantic (>=2,<3)
+Requires-Dist: pydantic-settings (>=2,<3)
+Requires-Dist: rich (>=13,<14)
+Requires-Dist: sqlalchemy (>=2,<3)
+Requires-Dist: yarl (>=1,<2)
+Description-Content-Type: text/markdown
+
+# pgvector-perf
+Performance testing and benchmarking of pgvector
+
