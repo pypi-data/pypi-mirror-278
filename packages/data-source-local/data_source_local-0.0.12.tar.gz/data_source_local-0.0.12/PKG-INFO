@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: data-source-local
+Version: 0.0.12
+Home-page: https://github.com/circles-zone/data-source-local-python-package
+Author: Circles
+Author-email: info@circles.ai
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: logger-local>=0.0.60
+Requires-Dist: database-mysql-local>=0.0.83
+Requires-Dist: language-remote
+
+data-source-local
