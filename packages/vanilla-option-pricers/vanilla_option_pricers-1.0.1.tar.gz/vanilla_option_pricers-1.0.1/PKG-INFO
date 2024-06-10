@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: vanilla_option_pricers
+Version: 1.0.1
+Summary: Implementation of fast options pricers and risk for Black-Scholes-Merton and Bachelier normal models
+Home-page: https://github.com/ArturSepp/VanillaOptionPricers
+License: LICENSE.txt
+Keywords: Black-Scholes,Black-Scholes-Merton,Bachelier,option pricing,option delta
+Author: Artur Sepp
+Author-email: artursepp@gmail.com
+Maintainer: Artur Sepp
+Maintainer-email: artursepp@gmail.com
+Requires-Python: >=3.8,<3.11
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: License :: Other/Proprietary License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Requires-Dist: numba (>=0.56.4)
+Requires-Dist: numpy (>=1.22.4)
+Project-URL: Documentation, https://github.com/ArturSepp/VanillaOptionPricers
+Project-URL: Issues, https://github.com/ArturSepp/VanillaOptionPricers/issues
+Project-URL: Personal website, https://artursepp.com
+Project-URL: Repository, https://github.com/ArturSepp/VanillaOptionPricers
+Description-Content-Type: text/markdown
+
+# VanillaOptionPricers
+ Fast and vectorised pricer and implied volatility fitters for Black-Scholes and Merton models
+
+Minimum dependencies on higher level packages
+
+Core dependencies:
+
+    python = ">=3.8,<3.11"
+    numba = ">=0.59.0"
+    numpy = ">=1.26.4"
+
+
+
+Supported Option types (passed as string):
+
+    CALL = 'C'
+    PUT = 'P'
+    INVERSE_CALL = 'IC'
+    INVERSE_PUT = 'IP'
+
