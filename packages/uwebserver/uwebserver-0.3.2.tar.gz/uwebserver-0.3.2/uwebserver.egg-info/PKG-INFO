@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: uwebserver
+Version: 0.3.2
+Summary: Simple web server for micropython
+Author: jykob
+License: MIT License
+        
+        Copyright (c) 2024 jykob
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: repository, https://github.com/jykob/uWebServer
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: AsyncIO
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: ruff>=0.4.4; extra == "dev"
+Requires-Dist: pyright>=1.1.362; extra == "dev"
+
+# uWebServer
+
+Simple, fast and memory efficient web server for MicroPython.
+
+## ✅ Features
+
+- Compatible with CPython.
+- Type hints.
+- Static files with GZip compression.
+
+## ✏️ Examples
+
+```python
+import asyncio
+
+# Importing `Request` and `Response` optional, used for typehinting
+from uwebserver import Request, Response, WebServer
+
+app = WebServer()
+
+
+@app.route("/")
+def hello(req: Request, resp: Response):
+    return "Hello world!"
+
+
+asyncio.run(app.run())
+```
+
+**Check out [📁examples](https://github.com/jykob/uWebServer/blob/master/examples) for more**
