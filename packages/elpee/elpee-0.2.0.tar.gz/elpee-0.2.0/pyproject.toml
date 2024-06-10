@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "elpee"
+version = "0.2.0"
+description = "Solving linear programming problems step-by-step"
+authors = ["Navindu De Silva <navinduydds@gmail.com >"]
+readme = "README.md"
+packages = [{include = "elpee"}]
+license = "Apache-2.0"
+repository = "https://github.com/navindu-ds/elpee"
+documentation = "https://elpee.readthedocs.io/"
+keywords = ["optimization", "linear programming", "operational research"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+sympy = "^1.12.1"
+pyyaml = "^6.0.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
