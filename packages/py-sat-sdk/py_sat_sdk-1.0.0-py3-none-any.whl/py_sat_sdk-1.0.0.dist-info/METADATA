@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: py-sat-sdk
+Version: 1.0.0
+Summary: Python SDK for Tokopedia SAT API
+Home-page: UNKNOWN
+Author: SAT Team
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: requests (==2.27.1)
+Requires-Dist: requests-oauthlib (==2.0.0)
+Requires-Dist: pycryptodome (==3.11.0)
+Requires-Dist: dataclasses (==0.8)
+Requires-Dist: dataclasses-json (==0.5.9)
+Requires-Dist: python-dateutil (==2.9.0.post0)
+
+UNKNOWN
+
+
