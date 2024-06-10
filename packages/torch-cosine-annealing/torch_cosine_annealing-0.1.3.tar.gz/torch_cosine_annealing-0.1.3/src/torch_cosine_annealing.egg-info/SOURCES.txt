@@ -1,0 +1,11 @@
+LICENSE
+pyproject.toml
+readme.md
+src/torch_cosine_annealing/__init__.py
+src/torch_cosine_annealing/cosine_annealing_with_warm_restarts.py
+src/torch_cosine_annealing.egg-info/PKG-INFO
+src/torch_cosine_annealing.egg-info/SOURCES.txt
+src/torch_cosine_annealing.egg-info/dependency_links.txt
+src/torch_cosine_annealing.egg-info/requires.txt
+src/torch_cosine_annealing.egg-info/top_level.txt
+tests/test_cosine_annealing_with_warm_restarts.py
