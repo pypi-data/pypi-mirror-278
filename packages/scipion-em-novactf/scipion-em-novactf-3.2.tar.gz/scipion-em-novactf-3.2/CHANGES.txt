@@ -1,0 +1,13 @@
+3.2.1: Adding a main help to the protocols and some minor modifications in the helps of the parameters
+3.2: refactoring of both protocols
+3.1.3: do not trigger reconstruction protocol, add possible outputs
+3.1.2: fix tlt and defocus files do not correspond to the tilt series
+3.1.1: fix reconstruction protocol trigger if no alignment exists
+3.1:
+- fix defocus shift: should be passed in a file for ctf correction, and as a param for reconstruction
+- add gold erasing option
+- stack is aligned after ctf correction
+- fix test tilt axis value
+- add astigmatism validation
+- do not create new TomoAcquisition object
+- use mrc extension for all files
