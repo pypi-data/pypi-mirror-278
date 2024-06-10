@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "elpee"
+version = "0.1.10"
+description = "A Step-by-Step Linear Programming Library"
+authors = ["Navindu De Silva <navinduydds@gmail.com >"]
+readme = "README.md"
+packages = [{include = "elpee"}]
+license = "Apache-2.0"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+sympy = "^1.12.1"
+pyyaml = "^6.0.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
