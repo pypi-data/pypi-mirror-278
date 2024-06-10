@@ -1,0 +1,193 @@
+Metadata-Version: 2.1
+Name: kaithem
+Version: 0.84.0b1
+Summary: Home/commercial automation server
+License: GPL-3.0-only
+Author: Daniel Dunn
+Requires-Python: >=3.10.0,<3.13
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: JACK-Client
+Requires-Dist: NVRChannel (>=0.1.7)
+Requires-Dist: Pillow
+Requires-Dist: aioesphomeapi
+Requires-Dist: apprise
+Requires-Dist: argon2-cffi (>=23.1.0,<24.0.0)
+Requires-Dist: astral
+Requires-Dist: attrs (>=23.2.0)
+Requires-Dist: beartype (>=0.18.2,<0.19.0)
+Requires-Dist: cheroot
+Requires-Dist: colorama (>=0.4.6,<0.5.0)
+Requires-Dist: colorzero
+Requires-Dist: evdev
+Requires-Dist: ffmpeg-python
+Requires-Dist: holidays
+Requires-Dist: hypercorn[uvloop] (>=0.17.3,<0.18.0)
+Requires-Dist: icemedia (>=0.1.5)
+Requires-Dist: iot-devices
+Requires-Dist: jinja2
+Requires-Dist: jsonschema
+Requires-Dist: mako
+Requires-Dist: markupsafe
+Requires-Dist: msgpack
+Requires-Dist: msgpack-types (>=0.2.0,<0.3.0)
+Requires-Dist: netifaces
+Requires-Dist: niquests (>=3.6.3,<4.0.0)
+Requires-Dist: nmcli
+Requires-Dist: ntplib
+Requires-Dist: numpy (>1.26.1)
+Requires-Dist: paho-mqtt (<=1.6.0)
+Requires-Dist: pam
+Requires-Dist: passlib
+Requires-Dist: pint
+Requires-Dist: psutil
+Requires-Dist: pyflakes
+Requires-Dist: pygments
+Requires-Dist: pygrep
+Requires-Dist: pynput
+Requires-Dist: pyserial
+Requires-Dist: pytest
+Requires-Dist: python-dateutil
+Requires-Dist: python-rtmidi (==1.5.8)
+Requires-Dist: python_mpv_jsonipc
+Requires-Dist: pytz
+Requires-Dist: pyyaml
+Requires-Dist: quart (>=0.19.6,<0.20.0)
+Requires-Dist: recurrent
+Requires-Dist: rich (>=13.7.1,<14.0.0)
+Requires-Dist: scipy (>=1.11.0)
+Requires-Dist: scullery (>=0.1.17)
+Requires-Dist: setproctitle
+Requires-Dist: sf2utils
+Requires-Dist: simpleeval
+Requires-Dist: stamina (>=24.2.0,<25.0.0)
+Requires-Dist: starlette (>=0.37.2,<0.38.0)
+Requires-Dist: stream-zip (>=0.0.71,<0.0.72)
+Requires-Dist: structlog (>=24.1.0,<25.0.0)
+Requires-Dist: textdistance
+Requires-Dist: tinytag
+Requires-Dist: toml
+Requires-Dist: types-PyYaml
+Requires-Dist: types-jsonschema (>=4.21.0.20240331,<5.0.0.0)
+Requires-Dist: types-requests
+Requires-Dist: upnpclient
+Requires-Dist: vignette
+Requires-Dist: websockets
+Requires-Dist: yappi
+Requires-Dist: yeelight
+Requires-Dist: zeep
+Requires-Dist: zeroconf (>=0.119.0)
+Description-Content-Type: text/markdown
+
+![AI generated picture of a tavern](kaithem/data/static/img/nov23-ai-watercolor-tavern.webp)
+
+![Linux](badges/linux.png)
+![Single Board Computer badge](badges/sbc.png)
+![DMX](badges/dmx.png)
+![Python](badges/python.png)
+
+![Offline First](badges/offline-first.png)
+![GPLv3 Badge](badges/gpl-v3.png)
+![Pre-commit Badge](badges/pre-commit.png)
+![Makefile Badge](badges/makefile.png)
+
+![Ten Year Project](badges/ten-years.png)
+![Pytest](badges/pytest.png)
+![Ruff](badges/ruff.png)
+![Poetry](badges/poetry.png)
+
+> Amidst the mists and fiercest frosts,\
+> with stoutest wrists and loudest boasts,\
+> He thrusts his fists against the posts,\
+> And still insists he sees the ghosts.
+
+Kaithem is Linux home/commercial automation server written in pure Python(3.10 and up). Not tested outside of Linux. Resource usage is low enough to run well on the Raspberry Pi.
+
+You automate things by directly writing python and HTML via a web IDE, or by using the built-in Chandler module, which is a full web-based lighting aud audio control board with a visual programming language adding interactivity.
+
+## Installation 🌲
+
+>The careful text-books measure\
+>  (Let all who build beware!)\
+> The load, the shock, the pressure\
+>  Material can bear.
+
+
+First you'll need to get [pipx](https://pipx.pypa.io/stable/installation/) if you haven't yet.
+
+```bash
+sudo apt install pipx git
+python3 -m pipx ensurepath
+```
+
+Next you can clone the git repo and install
+
+```bash
+git clone --depth 1 https://github.com/EternityForest/KaithemAutomation
+cd KaithemAutomation
+pipx install --verbose .
+
+kaithem-scripts root-install-system-dependencies
+
+```
+
+### System Configuration
+
+> So, when the buckled girder\
+>  Lets down the grinding span,\
+> The blame of loss, or murder,\
+>  Is laid upon the man.\
+>    Not on the Stuff — the Man!
+
+kaithem-scripts provides some helpful utilities to set up the system.
+
+Scripts starting with . need root.
+
+```bash
+
+# Currently, most distros don't have pipewire JACK enabled by default, which
+# is needed for the audio mixing features.
+kaithem-scripts root-use-pipewire-jack
+kaithem-scripts user-restart-pipewire
+
+
+# This activates a maxvolume service, which sets volume to full at boot.
+kaithem-scripts user-max-volume-at-boot
+
+# Linux by default has a LOT of stuff that writes
+# excessively to the SD card. On a raspberry pi this
+# Should make the system much more reliable without
+# making anything work differently, except for putting logs in RAM
+kaithem-scripts root-install-sd-protection
+
+# Sets up a collection of misc tweaks that are recommended for kaithem.
+kaithem-scripts root-install-linux-tweaks
+
+# Installs Mosquitto and sets it up to allow anonymous clients.
+kaithem-scripts root-enable-anon-mqtt
+
+# Installs Mosquitto and sets it up to allow anonymous clients.
+kaithem-scripts root-uninstall-bloatware
+
+# Set up the Pi to display the Kaithem homepage(Can configure redirect in settings)
+# On boot in a fullscreen kiosk
+kaithem-scripts root-install-kiosk
+
+```
+
+## Manual dev install
+
+Info for devs here on the wiki (https://github.com/EternityForest/KaithemAutomation/wiki/Development)
+
+
+Recent Changes 🕗
+============
+> Good men, the last wave by, crying how bright\
+> Their frail deeds might have danced in a green bay,\
+> Rage, rage against the dying of the light.
+
+(See [Full Changelog](kaithem/src/docs/changes.md))
+
