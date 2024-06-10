@@ -1,0 +1,26 @@
+examples:
+  - input: >
+      {
+          "type": "taskUnix",
+          "agent": "{agent}",
+          "command": "{command}",
+          "commandOrScript": "Command",
+          "name": "{name}"
+      }
+    output: "Unix Task running on {agent} agent with name {name} that will run a command as {command}"
+  - input: >
+      {
+        "type": "taskUnix",
+        "agentVar": "{agent}",
+        "command": "{command}",
+        "commandOrScript": "Command",
+        "name": "{name}",
+        "resolveNameImmediately": true,
+        "executionRestriction": "Skip",
+        "restrictionPeriod": "On",
+        "restrictionPeriodDateList": [
+            "2021-08-04"
+        ],
+        "summary": "{summary}"
+      }
+    output: "Unix task named {name} running on agent {agent} that will execute the command {command} as a Command. This task is restricted to skip execution on August 4, 2021."
