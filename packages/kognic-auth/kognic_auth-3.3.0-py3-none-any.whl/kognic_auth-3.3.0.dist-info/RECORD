@@ -1,0 +1,13 @@
+kognic/auth/__init__.py,sha256=epEa_6epTbEvaBxAysHBdVSHXRBr1aOok6-otz1GnQg,238
+kognic/auth/_version.py,sha256=gpz3Z6rZZLQ9xMKGzMu1kjC8nYs9HNBbzDT8oHplFPY,411
+kognic/auth/credentials_parser.py,sha256=4f8ZkJhAll1aGVjT4qzYyLOe5RFE9dZR2k-dhcT0XNo,3233
+kognic/auth/base/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kognic/auth/base/auth_client.py,sha256=AZ0e4xri8zRTbc00G0b1fuKNfA6iBYUUSWBI8qy6KVI,858
+kognic/auth/httpx/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kognic/auth/httpx/async_client.py,sha256=58IpF5yBvGd0x_uvcQhxDtPxY-NdUCkic5ceAnsNA8Y,2369
+kognic/auth/requests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kognic/auth/requests/auth_session.py,sha256=O0793sbtKXuqnPI-e5tX3sKUzwgKrsZEama4xd9-EJg,2725
+kognic_auth-3.3.0.dist-info/METADATA,sha256=7BXVi1fvswPRxWGHBdt-vTFkOTQXBgvrfGioxsTP0_4,2321
+kognic_auth-3.3.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+kognic_auth-3.3.0.dist-info/top_level.txt,sha256=Hs7z54Wbf9na7y9j19fqfwptMrhlcPLw-Ycen3nh3pU,7
+kognic_auth-3.3.0.dist-info/RECORD,,
