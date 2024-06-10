@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: mySaavn
+Version: 1
+Summary: A Minimal Client for JioSaavn
+Home-page: https://github.com/neernjan1/mySaavn
+Author: Neeraj Yadav
+Author-email: nyadav70096@gmail.com
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: BeautifulSoup4
+Requires-Dist: pyDes
+Requires-Dist: requests
+Requires-Dist: tqdm
+Requires-Dist: mutagen
+Requires-Dist: colorama
+
+# mySaavn
+
+## Search and Download Songs, Albums, Playlists and Artists from JioSaavn.com
+
+* Features
+  * Multiple Selection
+  * High Quality 320kbps Songs
+  * Easy and Interactive Command Line Interfaces
+
+* Usage
+  
+    * Just type saavn at command prompt and use the interactive interface
