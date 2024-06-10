@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: python-onix
+Version: 0.0.3
+Summary: Dataclasses for EDItEUR's ONIX standards
+Author: Ömer Boratav
+Author-email: omerboratav@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: furo (>=2024.5.6,<2025.0.0)
+Requires-Dist: sphinx (>=7.3.7,<8.0.0)
+Requires-Dist: xsdata[cli,lxml,soap] (>=24.5,<25.0)
+Description-Content-Type: text/markdown
+
+# python-onix
+
+A very simple module to provide dataclasses for EDItEUR's ONIX standards. Mostly generated using [xsdata](https://github.com/tefra/xsdata).
+
+This module isn't even in the Alpha stage yet, and there may be breaking changes.
+
+Currently, only ONIX for Books is covered; but I may add ONIX for Subscription Products in the near future.
+
+## Installation
+Install using pip:
+~~~bash
+pip install python-onix
+~~~
+
+## Getting Started
+#### Parse an ONIX file
+~~~python
+from onix.book.v3_0.short.strict import Onixmessage
+from xsdata.formats.dataclass.parsers import XmlParser
+
+parser = XmlParser()
+message = parser.parse("/some/path/file.onx", Onixmessage)
+~~~
