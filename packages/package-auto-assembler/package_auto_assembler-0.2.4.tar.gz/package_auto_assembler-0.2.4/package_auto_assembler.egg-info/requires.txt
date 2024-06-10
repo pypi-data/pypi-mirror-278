@@ -1,0 +1,9 @@
+click
+stdlib-list
+nbformat
+pyyaml
+nbconvert
+requests
+attrs>=22.2.0
+pandas
+pip_audit==2.7.3
