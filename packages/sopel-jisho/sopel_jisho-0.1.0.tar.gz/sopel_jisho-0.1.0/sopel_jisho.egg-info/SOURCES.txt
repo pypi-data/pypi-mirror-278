@@ -1,0 +1,13 @@
+COPYING
+MANIFEST.in
+NEWS
+README.md
+pyproject.toml
+sopel_jisho/__init__.py
+sopel_jisho/plugin.py
+sopel_jisho.egg-info/PKG-INFO
+sopel_jisho.egg-info/SOURCES.txt
+sopel_jisho.egg-info/dependency_links.txt
+sopel_jisho.egg-info/entry_points.txt
+sopel_jisho.egg-info/requires.txt
+sopel_jisho.egg-info/top_level.txt

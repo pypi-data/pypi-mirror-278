@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: sopel-jisho
+Version: 0.1.0
+Summary: Jisho lookup plugin for Sopel IRC bots.
+Author-email: dgw <dgw@technobabbl.es>
+License: GPL-3.0
+Project-URL: Homepage, https://github.com/dgw/sopel-jisho
+Project-URL: Bug Tracker, https://github.com/dgw/sopel-jisho/issues
+Keywords: sopel,plugin,bot,irc
+Platform: Linux x86, x86-64
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Topic :: Communications :: Chat :: Internet Relay Chat
+Requires-Python: <4,>=3.8
+Description-Content-Type: text/markdown
+License-File: COPYING
+Requires-Dist: sopel>=8.0
+
+# sopel-jisho
+
+Sopel plugin to search Jisho.org, a Japanese/English dictionary.
+
+## Installing
+
+Releases are hosted on PyPI, so after installing Sopel, all you need is `pip`:
+
+```shell
+$ pip install sopel-jisho
+```
+
+### Requirements
+
+`sopel-jisho` requires Sopel 7.1+ and `requests`.
+
+## Usage
+Commands & arguments:
+
+* `.jisho <search query>` (also available as `.ji`)
+  * `<search query>`: the keyword(s) to search for on Jisho
+
+## Notes
+
+This plugin has beta-level functionality. It can search and display most
+queries, but may not correctly deal with incomplete API responses (for example,
+words that have no readings). That said, anything that doesn't behave as
+expected should be reported in the plugin's [issue tracker][] if it isn't
+already listed there (be sure to **also search closed issues!**).
+
+Jisho's API is undocumented and subject to change, so there are sure to be edge
+cases where the code receives something it doesn't expect. Some of these are
+handled. Others aren't…yet. Report problematic queries to the issue tracker.
+
+[issue tracker]: https://github.com/dgw/sopel-jisho/issues
+
+## Changelog
+
+### 0.1.0
+
+First packaged release of `sopel-jisho`.
