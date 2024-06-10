@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools >= 61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "production_ready"
+authors = [{name = "Daniel Pepper"}]
+dynamic = ["version"]
+description = "..."
+readme = "README.md"
+license = {file = "LICENSE.txt"}
+classifiers = [
+  # https://pypi.python.org/pypi?%3Aaction=list_classifiers
+  'License :: OSI Approved :: MIT License',
+  'Topic :: Education',
+  'Topic :: Internet :: WWW/HTTP',
+]
+requires-python = ">= 3"
+keywords = ["education"]
+dependencies = ["flask"]
+
+[project.urls]
+Homepage = "https://github.com/dpep/production_ready_py"
+
+[project.scripts]
+production_ready = "production_ready.cli:main"
+
+[tool.setuptools]
+packages = ["production_ready"]
+
+[tool.setuptools.dynamic]
+version = {attr = "production_ready.__version__"}
