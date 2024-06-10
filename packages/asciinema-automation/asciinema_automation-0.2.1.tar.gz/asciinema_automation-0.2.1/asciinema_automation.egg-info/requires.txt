@@ -1,0 +1,8 @@
+pexpect>=4.8.0
+asciinema>=2.2.0
+
+[dev]
+ruff
+pytest
+mypy
+types-pexpect
