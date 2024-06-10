@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: chat_notes
+Version: 0.1.3
+Requires-Dist: macnotesapp
+Requires-Dist: ollama
+Requires-Dist: termcolor
+Requires-Dist: transformers
+Requires-Dist: torch
+
