@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+pyMKL2/MKLutils.py
+pyMKL2/__init__.py
+pyMKL2/loadMKL.py
+pyMKL2/pardisoInterface.py
+pyMKL2/pardisoSolver.py
+pyMKL2.egg-info/PKG-INFO
+pyMKL2.egg-info/SOURCES.txt
+pyMKL2.egg-info/dependency_links.txt
+pyMKL2.egg-info/requires.txt
+pyMKL2.egg-info/top_level.txt
