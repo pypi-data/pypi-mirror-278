@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: rxnSMILES4AtomEco
+Version: 1.0.25
+Summary: Calculate atom economy for chemical reactions using reaction SMILES
+Author-email: Samuele Giani <samuele.giani@empa.ch>
+Project-URL: Homepage, https://pypi.org/project/rxnSMILES4AtomEco/
+Project-URL: Issues, https://pypi.org/project/rxnSMILES4AtomEco/
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# rxnSMILES4AtomEco:
+
+    This package provides functions to calculate the atom economy of chemical reactions using reaction SMILES.
+    It utilizes the RDKit library to handle molecular structures and properties.
+
+### Features:
+    - Calculation of atom economy for reactions
+    - Handling of multiple reactions in a single calculation
+    - Support for different types of reaction SMILES
+    - Programmatic output of atom economy numerical value
+    
+### Usage:
+    To use the package, simply import the relevant functions and provide reaction SMILES as input.
+    
+### Example:
+    
+    from rxnSMILES4AtomEco import calculate_atom_economy
+    
+    reactions_smiles = "C.O>catalyst>{3}[HH]"
+    
+    calculate_atom_economy(reactions_smiles)
+    
+    For more information, please refer to the documentation at https://pypi.org/project/rxnSMILES4AtomEco/
