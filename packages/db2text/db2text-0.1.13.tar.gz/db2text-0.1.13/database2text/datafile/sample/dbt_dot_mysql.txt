@@ -1,0 +1,16 @@
+#生成dot文件，用于griphviz
+
+#以下部分是mysql数据库
+:connect
+
+dbcfg=kaoqin
+
+:readdata
+
+table= + .* - auth.* nav.* django.*
+
+:dot
+file=test/kaoqin.dot
+cmd=neato -Tpdf test/kaoqin.dot -o test/kaoqin.pdf
+
+:end

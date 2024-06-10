@@ -1,0 +1,16 @@
+#生成dot文件，用于griphviz
+
+#以下部分是oracle数据库
+:connect
+
+dbcfg=xtjk@cc
+
+:readdata
+
+table= + .* - auth.* nav.* django.*
+
+:dot
+file=test/xtjk.dot
+cmd=neato -Tpdf test/xtjk.dot -o test/xtjk.pdf
+
+:end
