@@ -1,0 +1,53 @@
+CHANGES
+=======
+
+.. towncrier release notes start
+
+1.1.1 (2024-06-10)
+------------------
+
+Changes
++++++++
+
+- Work around passlib/bcrypt bug (passlib)
+
+
+1.1.0 (2023-03-19)
+------------------
+
+Changes
++++++++
+
+- Make sqlalchemy options configurable (dbconfig)
+- Connect to database once on startup, not for each request (dbconnect)
+- Drop Python-2 support (py2)
+
+
+1.0.4 (2023-02-07)
+------------------
+
+- Update to sqlalchemy-2
+
+
+1.0.3 (2022-05-04)
+------------------
+
+- Fix passlib import error
+
+
+1.0.2 (2018-03-28)
+------------------
+
+- Echo back the WWW-Authenticate header for 401 responses.
+
+
+1.0.1 (2018-03-28)
+------------------
+
+- Enable logging errors to a file for debugging the CGI script.
+
+
+1.0.0 (2018-03-27)
+------------------
+
+- First release.
