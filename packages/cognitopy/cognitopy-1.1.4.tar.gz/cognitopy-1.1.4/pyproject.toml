@@ -1,0 +1,53 @@
+[tool.poetry]
+name = "cognitopy"
+version = "1.1.4"
+description = "Python package to use aws cognito in a simple way"
+authors = ["Daniel Muñoz Gonzalez <dani16595@gmail.com>"]
+readme = "README.md"
+packages = [{include = "src/cognitopy"}]
+repository = "https://github.com/DaniMG95/cognitopy"
+documentation = "https://github.com/DaniMG95/cognitopy/blob/main/README.md"
+
+[project]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/DaniMG95/cognitopy"
+"Bug Tracker" = "https://github.com/DaniMG95/cognitopy/issues"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.black]
+line-length = 120
+
+[tool.coverage.report]
+skip_empty=true
+include=["src/*"]
+
+[tool.coverage.run]
+source=["src"]
+
+
+[tool.poetry.dependencies]
+python = "^3.9.0"
+boto3 = "^1.34.117"
+pydantic = "^2.7.2"
+python-jose = "^3.3.0"
+
+
+[tool.poetry.group.test.dependencies]
+freezegun = "^1.5.1"
+coverage = {extras = ["toml"], version = "^7.5.3"}
+
+
+[tool.poetry.group.linting.dependencies]
+pre-commit = "^3.7.1"
+flake8 =  "^7.0.0"
