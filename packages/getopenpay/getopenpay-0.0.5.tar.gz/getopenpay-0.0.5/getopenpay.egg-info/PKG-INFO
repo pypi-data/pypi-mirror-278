@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: getopenpay
+Version: 0.0.5
+Summary: OpenPay API
+Home-page: 
+Author: OpenAPI Devs
+Author-email: info@getopenpay.com
+Keywords: OpenPay,payments
+Description-Content-Type: text/markdown
+Requires-Dist: urllib3<2.1.0,>=1.25.3
+Requires-Dist: python-dateutil
+Requires-Dist: pydantic>=2
+Requires-Dist: typing-extensions>=4.7.1
+
+    # OpenPay
+
+    Supercharge your subscription management. Client docs WIP 
+    
