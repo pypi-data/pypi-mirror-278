@@ -1,0 +1,3 @@
+[console_scripts]
+infinity=pytest_infinity.infinity:main
+
