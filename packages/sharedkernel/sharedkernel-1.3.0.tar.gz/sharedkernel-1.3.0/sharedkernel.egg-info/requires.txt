@@ -1,0 +1,9 @@
+numpy
+requests
+pymongo
+fastapi==0.89.1
+PyJWT
+pymilvus
+chromadb
+persian_tools
+sentry-sdk
