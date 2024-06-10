@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: hscitorchutil
+Version: 0.1.70
+Summary: HSCI research group utilities for pytorch (lightning)
+Home-page: https://github.com/hsci-r/hscitorchutil
+License: MIT
+Keywords: pytorch,dataset
+Author: Eetu Mäkelä
+Author-email: eetu.makela@helsinki.fi
+Requires-Python: >=3.10,<3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: edzip (>=0.2.0)
+Requires-Dist: lightning (>=2.1.2)
+Requires-Dist: morefs[asynclocal] (>=0.1.2)
+Requires-Dist: multiprocessing-utils (>=0.4)
+Requires-Dist: numpy (>=1.26.2)
+Requires-Dist: pyyaml (>=6.0.1)
+Requires-Dist: s3fs (>=2023.12.2)
+Requires-Dist: torch (>=2.0.1)
+Requires-Dist: tqdm (>=4.66.1)
+Project-URL: Repository, https://github.com/hsci-r/hscitorchutil
+Description-Content-Type: text/markdown
+
+
