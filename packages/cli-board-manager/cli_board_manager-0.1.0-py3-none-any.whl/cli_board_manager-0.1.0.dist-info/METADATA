@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: cli-board-manager
+Version: 0.1.0
+Summary: 
+Author: David Fokkema
+Author-email: davidfokkema@icloud.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pyperclip (>=1.8.2,<2.0.0)
+Requires-Dist: textual (>=0.66.0,<0.67.0)
+Description-Content-Type: text/markdown
+
+# CLI-board-manager
+
+CLI-board-manager is a clipboard manager for the terminal written in Python with the ✨awesome✨ [Textual](https://www.textualize.io) framework.
+
+

@@ -1,0 +1,3 @@
+[console_scripts]
+cbm=cli_board_manager.app:main
+
