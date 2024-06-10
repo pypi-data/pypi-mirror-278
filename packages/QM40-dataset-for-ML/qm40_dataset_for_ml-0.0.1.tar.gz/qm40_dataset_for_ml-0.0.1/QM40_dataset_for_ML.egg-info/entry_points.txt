@@ -1,0 +1,2 @@
+[console_scripts]
+qm40_dataset_for_ml = qm40_dataset_for_ml.cli:main

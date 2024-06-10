@@ -1,0 +1,14 @@
+pip
+numpy
+pandas
+pybel
+xtb
+rdkit
+openbabel-wheel
+matplotlib
+
+[all]
+QM40_dataset_for_ML[extra]
+
+[extra]
+pandas
