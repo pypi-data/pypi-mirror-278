@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: cerc-costs
+Version: 0.1.0.6
+Summary: CERC costs contains the basic cost calculation per CERC-Hub building
+Classifier: License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: numpy_financial
+Requires-Dist: cerc_hub
+Requires-Dist: pandas
+Requires-Dist: setuptools
+
+CERC costs contains the basic cost calculation per CERC-Hub building
