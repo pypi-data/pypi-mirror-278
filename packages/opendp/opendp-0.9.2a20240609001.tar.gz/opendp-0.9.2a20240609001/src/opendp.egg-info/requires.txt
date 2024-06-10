@@ -1,0 +1,16 @@
+
+[numpy]
+numpy>=1.17
+randomgen
+
+[polars]
+polars==0.20.16
+pyarrow
+scikit-learn
+numpy>=1.17
+randomgen
+
+[scikit-learn]
+scikit-learn
+numpy>=1.17
+randomgen
