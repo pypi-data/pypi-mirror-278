@@ -1,0 +1,3 @@
+[mlflow.model_evaluator]
+databricks-agent=databricks.rag_eval.mlflow:DatabricksRagEvaluator
+
