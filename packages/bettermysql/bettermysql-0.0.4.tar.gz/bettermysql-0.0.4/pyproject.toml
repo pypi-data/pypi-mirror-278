@@ -1,0 +1,37 @@
+[build-system]
+requires = ['flit_core>=3.2,<4']
+build-backend = 'flit_core.buildapi'
+
+[project]
+name = "bettermysql"
+authors = [{name = "matgasp"}]
+description="A simple and lightweight ORM that facilitate some operations on MySQL using of pymysql."
+keywords = ["better", "better mysql", "bettermysql"]
+dependencies = ["pymysql"]
+
+license = {file = "LICENSE.txt"}
+requires-python = ">= 3.9"
+dynamic = ['version']
+readme = "README.md"
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Intended Audience :: Developers",
+  "Natural Language :: English",
+  "Development Status :: 5 - Production/Stable",
+  "Operating System :: Microsoft :: Windows",
+  "Topic :: Utilities",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+
+[project.urls]
+Issues = "https://github.com/matgasp/bettermysql/issues"
+Repository = "https://github.com/matgasp/bettermysql"
+
+[tool.hatch.build.targets.sdist]
+packages = ["bettermysql"]
+
+[tool.hatch.version]
+path = "bettermysql/__init__.py"
