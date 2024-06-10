@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pylistin
+Version: 0.0.1
+Summary: A small example package
+Author: Camilo Andres Barbosa Gracia
+Author-email: Camilo Barbosa <cab331@hotmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/calimpio/pylisting
+Project-URL: Issues, https://github.com/calimpio/pylisting/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10.11
+Description-Content-Type: text/markdown
+
