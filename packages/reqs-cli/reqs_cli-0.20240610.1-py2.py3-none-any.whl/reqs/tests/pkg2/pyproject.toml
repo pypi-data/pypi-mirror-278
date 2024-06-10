@@ -1,0 +1,3 @@
+[tool.reqs]
+dpath = 'reqs'
+sync_pipx = true
