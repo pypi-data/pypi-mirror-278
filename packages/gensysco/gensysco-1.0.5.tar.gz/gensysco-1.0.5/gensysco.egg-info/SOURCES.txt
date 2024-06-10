@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.txt
+linkages.txt
+requirements.txt
+setup.cfg
+setup.py
+gensysco/__init__.py
+gensysco.egg-info/PKG-INFO
+gensysco.egg-info/SOURCES.txt
+gensysco.egg-info/dependency_links.txt
+gensysco.egg-info/requires.txt
+gensysco.egg-info/top_level.txt
+gensysco/aw/__init__.py
+gensysco/db/__init__.py
