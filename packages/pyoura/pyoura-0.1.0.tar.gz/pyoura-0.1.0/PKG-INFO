@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: pyoura
+Version: 0.1.0
+Summary: A Python library for creating command-line spinners
+Author: jack
+Author-email: kinginjack@gmail.com
+Requires-Dist: colorama
+Requires-Dist: termcolor
