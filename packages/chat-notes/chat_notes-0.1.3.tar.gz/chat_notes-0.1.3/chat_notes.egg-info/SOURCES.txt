@@ -1,0 +1,10 @@
+README.md
+setup.py
+chat_notes.egg-info/PKG-INFO
+chat_notes.egg-info/SOURCES.txt
+chat_notes.egg-info/dependency_links.txt
+chat_notes.egg-info/entry_points.txt
+chat_notes.egg-info/requires.txt
+chat_notes.egg-info/top_level.txt
+src/__init__.py
+src/parse_notes_local.py
