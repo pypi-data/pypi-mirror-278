@@ -1,0 +1,2 @@
+[console_scripts]
+keygen = fastapi_jwt_auth3.cli:app
