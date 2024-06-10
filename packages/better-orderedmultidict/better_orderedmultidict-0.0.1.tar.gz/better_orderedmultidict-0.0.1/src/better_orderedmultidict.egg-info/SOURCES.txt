@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/better_orderedmultidict/__init__.py
+src/better_orderedmultidict/_orderedmultidict.py
+src/better_orderedmultidict.egg-info/PKG-INFO
+src/better_orderedmultidict.egg-info/SOURCES.txt
+src/better_orderedmultidict.egg-info/dependency_links.txt
+src/better_orderedmultidict.egg-info/top_level.txt
+tests/test_orderedmultidict.py
