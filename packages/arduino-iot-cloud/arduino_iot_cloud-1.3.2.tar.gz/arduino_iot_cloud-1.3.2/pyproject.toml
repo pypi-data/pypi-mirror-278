@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=45.0", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+write_to = "src/arduino_iot_cloud/_version.py"
+
+[project]
+name = "arduino_iot_cloud"
+dynamic = ["version"]
+authors = [
+  { name="Ibrahim Abdelkader", email="i.abdelkader@arduino.cc" },
+]
+description = "Arduino IoT Cloud Python client"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Embedded Systems",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
+]
+dependencies = [
+  'cbor2 >= 5.6.2',
+  'micropython-senml >= 0.1.1',
+]
+
+[project.urls]
+"Homepage" = "https://github.com/arduino/arduino-iot-cloud-py"
+"Bug Tracker" = "https://github.com/arduino/arduino-iot-cloud-py/issues"
