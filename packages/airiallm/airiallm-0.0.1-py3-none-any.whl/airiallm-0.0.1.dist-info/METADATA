@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: airiallm
+Version: 0.0.1
+Summary: AiriaLLM is a client tool connected to AiriaCognition, leveraging the power of LLaMA3 8B and 70B models to deliver advanced generative AI features. This package enables seamless integration of cutting-edge AI capabilities into your projects, enhancing content creation, natural language understanding, and complex problem-solving.
+Home-page: https://github.com/airia-in/airiallm.git
+Author: Ashutosh Renu
+Author-email: ashutosh@airia.in
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: scikit-learn (==1.5.0)
+Requires-Dist: numpy (==1.26.4)
+Requires-Dist: requests (==2.32.3)
+Requires-Dist: python-decouple (==3.8)
+
