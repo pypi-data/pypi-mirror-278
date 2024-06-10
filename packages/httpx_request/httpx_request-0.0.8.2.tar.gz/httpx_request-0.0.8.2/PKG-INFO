@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: httpx_request
+Version: 0.0.8.2
+Summary: httpx request extension.
+Home-page: https://github.com/ChenyangGao/web-mount-packs/tree/main/python-module/httpx_request
+License: MIT
+Keywords: httpx,request
+Author: ChenyangGao
+Author-email: wosiwujm@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: httpx
+Requires-Dist: python-argtools
+Project-URL: Repository, https://github.com/ChenyangGao/web-mount-packs/tree/main/python-module/httpx_request
+Description-Content-Type: text/markdown
+
+# httpx request extension.
+
+## Installation
+
+You can install via [pypi](https://pypi.org/project/httpx_request/)
+
+```console
+pip install -U httpx_request
+```
+
+## Usage
+
+```python
+from httpx_request import request
+```
+
