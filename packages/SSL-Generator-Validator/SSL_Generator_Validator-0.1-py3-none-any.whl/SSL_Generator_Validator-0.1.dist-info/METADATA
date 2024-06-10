@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: SSL_Generator-Validator
+Version: 0.1
+Summary: An implimentation to generate and work with local and production ready SSL certificates for your application.
+Author: kunaalg
+Author-email: <kunaal@runcode.com>
+Keywords: python,ssl,SSL_Certificate,verify,generator,time
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: virtualenv
+Requires-Dist: datetime
+Requires-Dist: requests
+Requires-Dist: random
+Requires-Dist: time
+Requires-Dist: hashlib
+
+
+from cert import create_cert
+
+
+
+create_cert()
