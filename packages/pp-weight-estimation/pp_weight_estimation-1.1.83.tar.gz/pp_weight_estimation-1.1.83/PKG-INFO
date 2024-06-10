@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: pp_weight_estimation
+Version: 1.1.83
+Summary: Production planning weight estimation functions
+Author: ['Malav Bateriwala']
+Requires-Python: >=3.8
+Requires-Dist: mb_base
+Requires-Dist: mb_utils
+Requires-Dist: mb_pandas
