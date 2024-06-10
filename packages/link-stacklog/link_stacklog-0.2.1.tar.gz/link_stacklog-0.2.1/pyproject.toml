@@ -1,0 +1,29 @@
+[project]
+name = "link-stacklog"
+version = "0.2.1"
+description = "Link backlog management utility using a stack style interface"
+readme = "README.md"
+authors = [{name = "theFestest"}]
+license = {text = "Apache-2.0"}
+requires-python = ">=3.8"
+classifiers = [
+    "License :: OSI Approved :: Apache Software License"
+]
+dependencies = [
+    "click",
+    "requests",
+    "beautifulsoup4",
+    "sqlite_utils",
+]
+
+[project.urls]
+Homepage = "https://github.com/theFestest/link-stacklog"
+Changelog = "https://github.com/theFestest/link-stacklog/releases"
+Issues = "https://github.com/theFestest/link-stacklog/issues"
+CI = "https://github.com/theFestest/link-stacklog/actions"
+
+[project.entry-points.console_scripts]
+link-stacklog = "link_stacklog.cli:cli"
+
+[project.optional-dependencies]
+test = ["pytest"]

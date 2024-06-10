@@ -1,0 +1,7 @@
+click
+requests
+beautifulsoup4
+sqlite_utils
+
+[test]
+pytest
