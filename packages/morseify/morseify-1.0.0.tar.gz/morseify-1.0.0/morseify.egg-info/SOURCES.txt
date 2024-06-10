@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+morse/__init__.py
+morse/cli.py
+morse/main.py
+morse/utils.py
+morse/assets/morse_mapping.json
+morseify.egg-info/PKG-INFO
+morseify.egg-info/SOURCES.txt
+morseify.egg-info/dependency_links.txt
+morseify.egg-info/entry_points.txt
+morseify.egg-info/top_level.txt
+tests/test_case.py

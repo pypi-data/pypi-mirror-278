@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: morseify
+Version: 1.0.0
+Summary: A package to convert text to morse code and vice versa
+Home-page: https://github.com/codePerfectPlus/morseit
+Author: Deepak Raj
+Author-email: deepak008@live.com
+Project-URL: Documentation, https://pycontributors.readthedocs.io/projects/morse/en/latest/
+Project-URL: Source, https://github.com/codeperfectplus/morseit
+Project-URL: Tracker, https://github.com/codeperfectplus/morseit/issues
+Keywords: morse code,text to morse,morse to text
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Morse
+
+The project name is still in progress. Please suggest a name. Check out the [issues](https://github.com/Py-Contributors/Morse/issues/3)
+Python CLI/Library tool for morse code
+
+## Installation
+
+```bash
+pip install <releasing soon>
+```
+
+## Usage
+
+```bash
+morse --help
+```
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
