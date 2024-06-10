@@ -1,0 +1,78 @@
+[tool.poetry]
+name = "svd2py"
+homepage = "https://github.com/gembcior/svd2py"
+version = "1.0.1"
+description = "CMSIS SVD file parser that allows to convert SVD format to Python data structure"
+authors = ["Gembcior <gembcior@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Environment :: Console",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+packages = [{ include = "svd2py" }]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pyyaml = "^6.0"
+click = "^8.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^8.2"
+pytest-sugar = "^1.0"
+pytest-cov = "^5.0"
+pytest-clarity = "^1.0"
+pyyaml = "^6.0"
+black = "^24.4"
+mypy = "^1.10"
+pylama = { extras = ["all"], version = "^8.4" }
+
+[tool.poetry.scripts]
+svd2yaml = "svd2py.app:svd2yaml"
+svd2json = "svd2py.app:svd2json"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+files = ["svd2py"]
+show_error_codes = true
+strict = true
+enable_error_code = ["ignore-without-code", "redundant-expr", "truthy-bool"]
+disable_error_code = ["union-attr"]
+
+[[tool.mypy.overrides]]
+module = ["rich.*", "click.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.isort]
+profile = "black"
+
+[tool.black]
+line-length = 160
+
+[tool.pylama]
+max-line-length = 160
+format = "pylint"
+skip = "*/.tox/*,*/.env/*,**/__init__.py"
+linters = "eradicate,mccabe,pycodestyle,pyflakes,pylint"
+ignore = """
+  W0511,
+  E501,
+  D1,
+  C,
+  R,
+"""
+
+[tool.pylama.linter.pycodestyle]
+ignore = "E203,E501"
+max-line-length = 160
