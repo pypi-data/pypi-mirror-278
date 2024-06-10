@@ -1,0 +1,5 @@
+rich
+
+[testing]
+pytest>=8.2.1
+flake8>=3.9
