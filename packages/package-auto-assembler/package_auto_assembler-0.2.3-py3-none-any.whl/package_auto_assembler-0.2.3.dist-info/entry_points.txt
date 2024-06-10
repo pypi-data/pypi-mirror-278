@@ -1,0 +1,2 @@
+[console_scripts]
+package_auto_assembler = package_auto_assembler.cli:cli
