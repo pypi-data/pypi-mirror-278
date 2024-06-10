@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=64", "wheel", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+# We are using setuptools_scm for versioning, so no version number is specified here.
+dynamic = ["version"]
+name = "asset_extraction_framework"
+description = "Toolkit to help extract multimedia assets from legacy software"
+readme = "README.md"
+authors = [{ name = "npjg" }]
+license = { file = "COPYING" }
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["struct", "reverse-engineering", "self-document"]
+requires-python = ">=3.9"
+dependencies = [
+    "Pillow>=9.2.0",
+    "numpy>=1.23.0",
+    "jsons>=1.6.2",
+    "hexdump2>=1.1"
+]
+
+[tool.setuptools_scm]
+# Empty since no extra settings are needed, presence enables setuptools_scm.
+
+[project.urls]
+Homepage = "https://github.com/npjg/asset_extraction_framework"
+Repository = "https://github.com/npjg/asset_extraction_framework"
