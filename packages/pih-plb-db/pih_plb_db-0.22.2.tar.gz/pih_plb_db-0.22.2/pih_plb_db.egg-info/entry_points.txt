@@ -1,0 +1,2 @@
+[console_scripts]
+pih-plb_db = PolibaseDatabaseService.__main__:start
