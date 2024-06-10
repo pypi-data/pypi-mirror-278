@@ -1,0 +1,3 @@
+[console_scripts]
+create_elbow = elbow_creator.elbow_creator:create_elbow
+
