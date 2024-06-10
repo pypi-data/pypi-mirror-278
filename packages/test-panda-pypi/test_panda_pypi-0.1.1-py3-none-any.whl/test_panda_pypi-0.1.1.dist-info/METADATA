@@ -1,0 +1,17 @@
+Metadata-Version: 2.3
+Name: test_panda_pypi
+Version: 0.1.1
+Summary: A small example package of adding 2 numbers together
+Project-URL: Homepage, https://github.com/TheFatPanda97/test-pypi
+Project-URL: Issues, https://github.com/TheFatPanda97/test-pypi/issues
+Author-email: Shawn Hu <shawnhu97@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Test PyPI
+
+This is a test package. You can use this package to test your PyPI deployment workflow.
