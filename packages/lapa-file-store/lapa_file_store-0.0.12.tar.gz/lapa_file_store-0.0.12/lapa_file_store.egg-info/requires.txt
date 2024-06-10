@@ -1,0 +1,9 @@
+uvicorn>=0.24.0.post1
+fastapi>=0.104.1
+python-multipart>=0.0.6
+pydantic>=2.5.3
+pytest>=8.0.0
+square_logger>=1.0.0
+lapa_database_helper>=0.0.3
+lapa_commons>=0.0.3
+lapa_database_structure>=0.0.6
