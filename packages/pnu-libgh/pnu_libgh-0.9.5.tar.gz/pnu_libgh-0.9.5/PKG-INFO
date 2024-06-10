@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: pnu-libgh
+Version: 0.9.5
+Summary: GitHub scraping library and tool
+Home-page: https://github.com/HubTou/libgh/
+Author: Hubert Tournier
+Author-email: hubert.tournier@gmail.com
+License: BSD 3-Clause License
+Project-URL: Bug Tracker, https://github.com/HubTou/libgh/issues
+Keywords: pnu-project
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: bs4
+Requires-Dist: pnu-libpnu
+
+[![PyPI package](https://repology.org/badge/version-for-repo/pypi/python:pnu-libgh.svg)](https://repology.org/project/python:pnu-libgh/versions)
+[![Servier Inspired](https://raw.githubusercontent.com/servierhub/.github/main/badges/inspired.svg)](https://github.com/ServierHub/)
+
+# libGH(1), libGH(3) - GitHub scraping tool and library
+
+This repository includes a command-line utility:
+* [libgh(1)](https://github.com/HubTou/libgh/blob/main/LIBGH.1.md) - GitHub scraping tool
+  (returning data as [text](https://www.frbsd.org/xch/libgh.txt),
+  [JSON](https://www.frbsd.org/xch/libgh.json)
+  or [XML](https://www.frbsd.org/xch/libgh.xml))
+
+And a Python library:
+* [libgh(3)](https://github.com/HubTou/libgh/blob/main/LIBGH.3.md) - GitHub scraping library
+  (returning data as a [Python dictionary](https://www.frbsd.org/xch/libgh.txt))
+
+This software will scrap either personal or organizational accounts, or repositories.
+You can [check which data you can get here](https://github.com/HubTou/libgh/blob/main/FIELDS.md).
+
+Feel free to [discuss your needs and use cases there](https://github.com/HubTou/libgh/discussions).
+
+# Installation
+Once you have installed [Python](https://www.python.org/downloads/) and its packages manager [pip](https://pip.pypa.io/en/stable/installation/),
+use one of the following commands, depending on if you want only this tool, the full set of PNU tools, or PNU plus a selection of additional third-parties tools:
+
+```
+pip install pnu-libgh
+pip install PNU
+pip install pytnix
+```
