@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: blablabla
+Version: 0.0.14
+Summary: A simple application to enable voice activated chatbot
+Home-page: https://github.com/oozut/blablabla
+License: Apache-2.0
+Keywords: faster-whisper,transcription,didaction
+Author: Guillaume Cadot
+Author-email: guillaume.cadot.1990@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: GPU :: NVIDIA CUDA :: 11.4
+Classifier: Environment :: GPU :: NVIDIA CUDA :: 12 :: 12.2
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: aiohttp (>=3.7.4,<4.0.0)
+Requires-Dist: fastapi (>=0.111.0,<0.112.0)
+Requires-Dist: faster-whisper (>=0.10.1)
+Requires-Dist: keyboard (>=0.13.5,<0.14.0)
+Requires-Dist: librosa (>=0.10.2,<0.11.0)
+Requires-Dist: openai (>=1.30.4,<2.0.0)
+Requires-Dist: orjson (>=3.6.5,<4.0.0)
+Requires-Dist: pynput (>=1.7.3,<2.0.0)
+Requires-Dist: pyperclip (>=1.8.2,<2.0.0)
+Requires-Dist: pysoundfile (>=0.9,<0.10)
+Requires-Dist: sounddevice (>=0.4.1,<0.5.0)
+Requires-Dist: statesman (>=1.0,<2.0)
+Requires-Dist: uvicorn (>=0.30.0,<0.31.0)
+Project-URL: Repository, https://github.com/oozut/blablabla
+Description-Content-Type: text/markdown
+
+**Project Blablabla: Conversational AI for the Modern Era**
+
+Imagine a world where interacting with artificial intelligence is as natural as chatting with a friend 🤖. Welcome to Blablabla, a pioneering voice-activated chat interface that's taking the first step towards making human-AI conversations a reality 💬.
+
+**Current Focus: Live Transcription**
+
+We're excited to announce that our platform now offers live transcription capabilities, allowing users to effortlessly convert spoken words into written text in real-time 💻. This innovative feature sets the stage for a more intuitive and seamless interaction with artificial intelligence 🎉.
+
+**Live Transcription Features**
+
+Accurate and Instantaneous: Our platform provides highly accurate and instantaneous transcription of spoken words, empowering users to focus on the conversation rather than note-taking 📝.
+Real-time Feedback: Get immediate feedback on your conversations, enabling more effective communication and collaboration 📊.
+
+**Running the tool**
+
+For now, just running using python:
+```python -c "import blablabla; blablabla.start_all()"```
+
+**Future Roadmap**
+
+While live transcription is just the beginning, we envision a future where Blablabla enables conversational interactions with Large Language Models (LLMs) and other AI systems 🔜. Our ultimate goal is to create a platform that allows humans to engage with AI in a natural, intuitive, and conversational way 💡 that you can control !
+
+[ ] Enable faster transcription by avoiding encoding multiple time the same audio file.
+[ ] Enabling speculative decoding for repeated transcription
+[ ] Integrate with other LLM to provide question answer from speech
+
+**Inspiration:**
+
+This project was inspired by [whisper_streaming](https://github.com/ufal/whisper_streaming) and [whisper-writer](https://github.com/savbell/whisper-writer).
