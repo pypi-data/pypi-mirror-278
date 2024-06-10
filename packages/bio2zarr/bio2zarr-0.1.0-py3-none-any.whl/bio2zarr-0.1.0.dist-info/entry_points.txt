@@ -1,0 +1,3 @@
+[console_scripts]
+vcf2zarr = bio2zarr.cli:vcf2zarr_main
+vcfpartition = bio2zarr.cli:vcfpartition
