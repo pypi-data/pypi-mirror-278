@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: focs-gitea
+Version: 1.22.0
+Summary: Python SDK for FOCS Gitea API.
+Home-page: https://github.com/BoYanZh/focs-gitea
+Author: BoYanZh
+Author-email: bomingzh@sjtu.edu.cn
+Keywords: Swagger,Gitea API.
+Requires-Dist: certifi>=2017.4.17
+Requires-Dist: python-dateutil>=2.1
+Requires-Dist: six>=1.10
+Requires-Dist: urllib3>=1.23
