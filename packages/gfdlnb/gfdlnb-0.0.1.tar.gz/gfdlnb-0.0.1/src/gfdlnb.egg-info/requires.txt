@@ -1,0 +1,6 @@
+importlib_metadata<5.0.0
+numpy>=1.21.0
+xarray>=0.20.0
+
+[test]
+pytest
