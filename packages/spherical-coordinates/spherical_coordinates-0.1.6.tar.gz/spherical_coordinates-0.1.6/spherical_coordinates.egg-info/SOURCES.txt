@@ -1,0 +1,14 @@
+LICENSE
+README.rst
+pyproject.toml
+setup.py
+spherical_coordinates/__init__.py
+spherical_coordinates/base.py
+spherical_coordinates/corsika.py
+spherical_coordinates/dimensionality.py
+spherical_coordinates/random.py
+spherical_coordinates/version.py
+spherical_coordinates.egg-info/PKG-INFO
+spherical_coordinates.egg-info/SOURCES.txt
+spherical_coordinates.egg-info/dependency_links.txt
+spherical_coordinates.egg-info/top_level.txt
