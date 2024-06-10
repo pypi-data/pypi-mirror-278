@@ -1,0 +1,1 @@
+AIRIA_COGNITION_BASE_URL = "https://cognition.airia.in"
