@@ -1,0 +1,16 @@
+[console_scripts]
+caty = caty.cli:cli
+dump_bin = caty.dump:dump_bin
+dump_config = caty.dump:dump_config
+dump_csv = caty.dump:dump_csv
+dump_dec = caty.dump:dump_dec
+dump_hex = caty.dump:dump_hex
+dump_html = caty.dump:dump_html
+dump_ini = caty.dump:dump_ini
+dump_json = caty.dump:dump_json
+dump_oct = caty.dump:dump_oct
+dump_pickle = caty.dump:dump_pickle
+dump_sqlite = caty.dump:dump_sqlite
+dump_toml = caty.dump:dump_toml
+dump_txt = caty.dump:dump_txt
+dump_yaml = caty.dump:dump_yaml
