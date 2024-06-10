@@ -1,0 +1,28 @@
+Metadata-Version: 2.3
+Name: pytae
+Version: 2.2.2
+Dynamic: Requires-Dist
+Summary: A package to enhance common day to day tasks in the life of a data scientist
+Project-URL: Homepage, https://github.com/maddytae/pytae
+Project-URL: Bug Tracker, https://github.com/maddytae/pytae/issues
+Author-email: Madhukar Kumar Jha <madhukar.k.jha@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# This is my day to day util
+
+## This contains three sets of features:- 
+
+### one that extends pandas capabilities 
+
+### two that allows to process tar files and some other interesting features and 
+
+### three reconcilliation of two dataframes.
+https://github.com/maddytae/pytae/blob/master/src/recon.ipynb
+
+#### To Do: Documentation and automated Testing features
+
