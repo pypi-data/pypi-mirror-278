@@ -1,0 +1,20 @@
+include *.py
+include *.yaml
+include *.txt
+include *.md
+include test/*
+
+include MANIFEST.in
+include LICENSE
+
+graft test
+graft fuxi_kit
+
+exclude .envrc
+exclude notes.txt
+
+global-exclude __pycache__
+global-exclude *.py[co]
+
+prune .vscode/
+prune __pycache__/
