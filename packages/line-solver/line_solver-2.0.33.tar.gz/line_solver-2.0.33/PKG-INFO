@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: line_solver
+Version: 2.0.33
+Summary: Queueing theory algorithms in Python
+Author: Giuliano Casale
+Author-email: g.casale@imperial.ac.uk
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+License-File: LICENSE
+License-File: AUTHORS
