@@ -1,0 +1,2 @@
+[console_scripts]
+production_ready = production_ready.cli:main
