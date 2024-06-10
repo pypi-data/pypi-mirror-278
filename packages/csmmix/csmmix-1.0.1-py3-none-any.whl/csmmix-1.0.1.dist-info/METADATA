@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: csmmix
+Version: 1.0.1
+Summary: A plug-and-play label-invariant mixup method  that  achieves  data  augmentation  by  mixing  class-specific  magnitude
+Home-page: https://github.com/rqfzpy/csmmix
+Author: Qiang Ren
+Author-email: 690799557@qq.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: torch
+
+CSMMix
+
+A Python package for mixing image magnitude.
+
+## Install
+
+You can install the `csmmix` package via pip:
+pip install csmmix
+
+
+
+## Instructions
+
+```python
+from csmmix.mix import csmmix
+
+## Using functions from csmmix
+mixed_image = csmmix(x, y, num_class, lamb)
+
+
