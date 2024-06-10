@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.txt
+linkages.txt
+requirements.txt
+setup.cfg
+setup.py
+mtnetbri/__init__.py
+mtnetbri/__main__.py
+mtnetbri.egg-info/PKG-INFO
+mtnetbri.egg-info/SOURCES.txt
+mtnetbri.egg-info/dependency_links.txt
+mtnetbri.egg-info/requires.txt
+mtnetbri.egg-info/top_level.txt
