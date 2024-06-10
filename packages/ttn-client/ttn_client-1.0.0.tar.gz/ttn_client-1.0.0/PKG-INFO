@@ -1,0 +1,27 @@
+Metadata-Version: 2.3
+Name: ttn_client
+Version: 1.0.0
+Summary: A python client to fetch/receive and parse uplink messages from The Thinks Network
+Project-URL: Homepage, https://github.com/angelnu/thethinksnetwork_python_client
+Project-URL: Issues, https://github.com/angelnu/thethinksnetwork_python_client/issues
+Author-email: Angel Nunez Mencias <pypi@angelnu.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# The Things Network_python_client
+
+[![codecov](https://codecov.io/gh/angelnu/thethingsnetwork_python_client/graph/badge.svg?token=yUTImnfbUL)](https://codecov.io/gh/angelnu/thethingsnetwork_python_client)
+
+A python client to fetch/receive and parse uplink messages from The Things Network
+
+This is a WIP package as it was before part of a custom [Home Assistant integration](https://github.com/angelnu/home_assistant_thethingsnetwork)
+
+WIP - coverage dummy
+
+## Thanks
+
+This package structure and pipeline is derived from the [zwave-js-server-python](https://github.com/home-assistant-libs/zwave-js-server-python) package.
