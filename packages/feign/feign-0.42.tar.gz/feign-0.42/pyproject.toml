@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "feign"
+description = "Feign a function signature"
+authors = [{name = "Kosio Karchev", email = "kosiokarchev@gmail.com"}]
+
+readme = "README.md"
+license = {text = "GPLv3"}
+version = "0.42"
+
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3",
+]
