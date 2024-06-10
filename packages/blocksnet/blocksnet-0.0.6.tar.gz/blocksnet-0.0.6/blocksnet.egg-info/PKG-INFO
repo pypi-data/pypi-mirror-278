@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: blocksnet
+Version: 0.0.6
+Summary: Package provides methods of master plan requirements automated generation for urban areas
+Project-URL: Repository, https://github.com/iduprojects/blocksnet
+Project-URL: Bug Tracker, https://github.com/iduprojects/blocksnet/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: contextily==1.3.0
+Requires-Dist: geopandas==0.13.0
+Requires-Dist: loguru==0.7.0
+Requires-Dist: mapclassify==2.6.1
+Requires-Dist: matplotlib==3.7.1
+Requires-Dist: matplotlib-inline==0.1.6
+Requires-Dist: networkit==10.1
+Requires-Dist: networkx==3.1
+Requires-Dist: numpy==1.23.5
+Requires-Dist: osmnx==1.6.0
+Requires-Dist: pandas==1.5.3
+Requires-Dist: PuLP==2.7.0
+Requires-Dist: pyarrow==12.0.0
+Requires-Dist: pydantic==2.0
+Requires-Dist: pylint==2.17.4
+Requires-Dist: pygad==3.1.0
+Requires-Dist: requests==2.31.0
+Requires-Dist: scikit-learn==1.2.2
+Requires-Dist: scipy==1.10.1
+Requires-Dist: shapely==2.0.1
+Requires-Dist: six==1.16.0
+Requires-Dist: tqdm==4.65.0
+Requires-Dist: seaborn==0.12.2
+Requires-Dist: folium==0.14.0
+Requires-Dist: voronoi-diagram-for-polygons==0.1.6
+Provides-Extra: dev
+Requires-Dist: black[jupyter]>=22; extra == "dev"
+Requires-Dist: isort>=5.6; extra == "dev"
+Requires-Dist: pylint>=2.17; extra == "dev"
+Requires-Dist: pre-commit>=3.1; extra == "dev"
+Requires-Dist: sphinx==6.2.1; extra == "dev"
+Requires-Dist: sphinx-book-theme==1.0.1; extra == "dev"
+Requires-Dist: numpydoc==1.5.0; extra == "dev"
+Requires-Dist: pytest==7.4.3; extra == "dev"
+Requires-Dist: pytest-cov==4.1.0; extra == "dev"
