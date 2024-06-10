@@ -1,0 +1,8 @@
+pillow==10.2
+markdownify
+httpx
+openai
+anthropic
+python-dotenv
+langchain
+colorlog==6.8.2

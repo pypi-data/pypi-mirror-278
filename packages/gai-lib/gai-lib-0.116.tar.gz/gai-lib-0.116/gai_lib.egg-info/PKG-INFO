@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: gai-lib
+Version: 0.116
+Author: kakkoii1337
+Author-email: kakkoii1337@gmail.com
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: pillow==10.2
+Requires-Dist: markdownify
+Requires-Dist: httpx
+Requires-Dist: openai
+Requires-Dist: anthropic
+Requires-Dist: python-dotenv
+Requires-Dist: langchain
+Requires-Dist: colorlog==6.8.2
+
+Refer to https://gai-labs.github.io/gai/gai-lib for more information
