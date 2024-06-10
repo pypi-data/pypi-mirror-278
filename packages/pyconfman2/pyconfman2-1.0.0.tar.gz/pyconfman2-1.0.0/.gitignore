@@ -1,0 +1,18 @@
+# Virtual Env
+local/
+
+# build
+dist/
+
+# Python
+__pycache__/
+
+# Testing
+testing/
+
+# README
+default_config.yaml
+another_config.yaml
+
+# Personal
+TODO.md
