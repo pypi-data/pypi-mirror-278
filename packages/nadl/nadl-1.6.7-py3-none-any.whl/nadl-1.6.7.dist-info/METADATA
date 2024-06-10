@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: nadl
+Version: 1.6.7
+Summary: Nasy's Deep Learning Toolkit
+Author-Email: Nasy <nasyxx+python@gmail.com>, Nasy <nasyxx+dl@gmail.com>, Nasy <nasyxx+git@gmail.com>
+License: GPLv3
+Requires-Python: >=3.12
+Requires-Dist: jax>=0.4.28
+Requires-Dist: numpy>=1.26.4
+Requires-Dist: rich>=13.7.1
+Requires-Dist: jaxtyping>=0.2.29
+Requires-Dist: optax>=0.2.2
+Requires-Dist: equinox>=0.11.4
+Requires-Dist: beartype>=0.18.5
+Requires-Dist: scikit-image>=0.23.2
+Requires-Dist: orbax-checkpoint>=0.5.15
+Requires-Dist: scikit-learn>=1.5.0
+Requires-Dist: einops>=0.8.0
+Requires-Dist: mkdocs-material>=9.5.25; extra == "doc"
+Requires-Dist: mkdocs>=1.6.0; extra == "doc"
+Requires-Dist: mike>=2.1.1; extra == "doc"
+Requires-Dist: mkdocstrings[python]>=0.25.1; extra == "doc"
+Provides-Extra: doc
+Description-Content-Type: text/plain
+
+#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:{} arch:headline
+#+options: author:t broken-links:mark c:nil creator:nil
+#+options: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:t
+#+options: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+options: timestamp:t title:t toc:t todo:t |:t
+#+title: Nasy JAX/Equinox Deep Learning Toolkit
+#+date: <2023-11-29 Wed>
+#+author: Nasy
+#+email: nasyxx@gmail.com
+#+language: en
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 30.0.50 (Org mode 9.7-pre)
+#+cite_export:
+
+* Introduction
+
+Nasy's JAX and Equinox deep learning toolkit.
