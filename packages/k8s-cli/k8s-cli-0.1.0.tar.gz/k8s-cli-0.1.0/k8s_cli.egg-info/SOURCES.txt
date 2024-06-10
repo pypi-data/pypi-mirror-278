@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+k8s_cli/__init__.py
+k8s_cli/k8s_cli.py
+k8s_cli.egg-info/PKG-INFO
+k8s_cli.egg-info/SOURCES.txt
+k8s_cli.egg-info/dependency_links.txt
+k8s_cli.egg-info/entry_points.txt
+k8s_cli.egg-info/requires.txt
+k8s_cli.egg-info/top_level.txt
