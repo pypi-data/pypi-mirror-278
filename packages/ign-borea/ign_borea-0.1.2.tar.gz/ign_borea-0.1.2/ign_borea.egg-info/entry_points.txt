@@ -1,0 +1,21 @@
+[console_scripts]
+opk-control = borea_tools.opk_control:opk_control
+opk-to-conl = borea_tools.opk_to_conl:opk_to_conl
+opk-to-opk = borea_tools.opk_to_opk:opk_to_opk
+opk-to-rpc = borea_tools.opk_to_rpc:opk_to_rpc
+pt-image-to-world = borea_tools.pt_image_to_world:pt_image_to_world
+pt-world-to-image = borea_tools.pt_world_to_image:pt_world_to_image
+ptfile-image-to-world = borea_tools.ptfile_image_to_world:ptfile_image_to_world
+ptfile-world-to-image = borea_tools.ptfile_world_to_image:ptfile_world_to_image
+spaceresection-opk = borea_tools.spaceresection_opk:spaceresection_opk
+
+[gui_scripts]
+opk-control = borea_tools.opk_control:opk_control
+opk-to-conl = borea_tools.opk_to_conl:opk_to_conl
+opk-to-opk = borea_tools.opk_to_opk:opk_to_opk
+opk-to-rpc = borea_tools.opk_to_rpc:opk_to_rpc
+pt-image-to-world = borea_tools.pt_image_to_world:pt_image_to_world
+pt-world-to-image = borea_tools.pt_world_to_image:pt_world_to_image
+ptfile-image-to-world = borea_tools.ptfile_image_to_world:ptfile_image_to_world
+ptfile-world-to-image = borea_tools.ptfile_world_to_image:ptfile_world_to_image
+spaceresection-opk = borea_tools.spaceresection_opk:spaceresection_opk
