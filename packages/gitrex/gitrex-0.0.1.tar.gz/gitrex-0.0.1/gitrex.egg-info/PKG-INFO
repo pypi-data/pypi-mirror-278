@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: gitrex
+Version: 0.0.1
+Summary: Gitrex is a Graphic User Interface (GUI) application that simplifies and speeds up package upload to repository using twine
+Author: Erasmus A. Junior
+Author-email: eirasmx@pm.me
+License: GNU LGPLv3
+Keywords: twine,upload,package,module,pypi,testpypi
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENCE.txt
+
+**Gitrex is a Graphic User Interface (GUI) application that simplifies and speeds up package upload to repository using twine**
+
+Gitrex can be used to upload packages to pypi and test pypi with just a few clicks and less hustle.
+
+**Download:** https://github.com/eirasmx/gitrex/releases
+
+> python -m pip install twine       
+
+**NOTE:** To use Gitrex you have to install twine first
