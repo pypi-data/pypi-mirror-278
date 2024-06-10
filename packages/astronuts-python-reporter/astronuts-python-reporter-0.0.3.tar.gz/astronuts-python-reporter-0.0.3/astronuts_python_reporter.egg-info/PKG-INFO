@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: astronuts-python-reporter
+Version: 0.0.3
+Summary: A package to automate running pytest and transforming reports.
+Home-page: https://github.com/astronuts-app/astronuts-python-reporter
+Author: astronuts
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Code Analysis Integration
+
+A package to automate running pytest and transforming reports.
+
+## Installation
+
+```bash
+pip install astronuts-python-reporter
+```
+## add this to your workflow file  (after installation is done)
+```bash
+astronuts-generate
+```
+
