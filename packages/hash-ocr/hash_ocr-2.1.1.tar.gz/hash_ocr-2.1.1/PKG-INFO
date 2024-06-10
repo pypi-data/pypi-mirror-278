@@ -1,0 +1,97 @@
+Metadata-Version: 2.1
+Name: hash-ocr
+Version: 2.1.1
+Summary: An ocr designed to read in game texts
+Author-email: Pradish Bijukchhe <pradish@sandbox.com.np>
+License: Copyright (c) 2018 The Python Packaging Authority
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/sandbox-pokhara/hash-ocr
+Project-URL: Issues, https://github.com/sandbox-pokhara/hash-ocr/issues
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: opencv-python
+Requires-Dist: opencv-contrib-python
+
+# hash-ocr
+
+An ocr designed to read in game texts
+
+## Installation
+
+You can install the package via pip:
+
+```
+pip install hash-ocr
+```
+
+## Usage
+
+```python
+import cv2
+
+from hash_ocr import MD5HashModel
+
+img = cv2.imread("test_data/test.png", cv2.IMREAD_GRAYSCALE)
+img = cv2.threshold(img, 128, 255, cv2.THRESH_BINARY)[1]
+
+# default model can only read digits
+model = MD5HashModel(connected_chars=True)
+
+print(model.get_word(img))
+# Igillessabl
+
+print(model.get_word_box(img))
+# ('Igillessabl', (2, 2, 69, 14))
+
+print(model.get_char_boxes(img))
+# [('I', (2, 2, 4, 11)), ('g', (7, 5, 7, 11)), ('ill', (15, 2, 12, 11)), ('e', (29, 5, 6, 8)), ('s', (37, 5, 5, 8)), ('s', (44, 5, 5, 8)), ('a', (50, 5, 7, 8)), ('b', (57, 2, 8, 11)), ('l', (67, 2, 4, 11))]
+```
+
+## Custom Models
+
+A model in `hash-ocr` contains an image and a json file.
+
+Example image:
+
+![Model Image](hash_ocr/models/digits.png)
+
+Example label:
+
+```json
+["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+```
+
+Example:
+
+```python
+from hash_ocr.models import MD5HashModel
+
+model = MD5HashModel(
+    model_path="hash_ocr/models/digits.png",
+    label_path="hash_ocr/models/letters.json",
+)
+```
+
+## License
+
+This project is licensed under the terms of the MIT license.
