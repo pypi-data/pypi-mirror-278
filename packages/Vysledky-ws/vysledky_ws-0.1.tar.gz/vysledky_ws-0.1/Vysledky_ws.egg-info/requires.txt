@@ -1,0 +1,8 @@
+selenium
+beautifulsoup4
+requests
+async_lru
+aiohttp
+
+[:python_version < "3.7"]
+asyncio
