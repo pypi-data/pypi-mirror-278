@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: QM40_dataset_for_ML
+Version: 0.0.1
+Summary: QM40 is a QMx type of dataset which includes 150K molecules optimized from B3LYP/6-31G(2df,p) level of theory in the Gaussian16 with QM parameters, optimized coordinates, Mulliken charges and Local vibrational mode parameters as a quantitative measurer of the bond strengths.
+Author-email: Ayesh Madushanka <ayesh1stmadu@gmail.com>
+License: MIT License
+Project-URL: Homepage, https://github.com/Ayeshmadu/QM40_dataset_for_ML
+Keywords: QM40_dataset_for_ML
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pip
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pybel
+Requires-Dist: xtb
+Requires-Dist: rdkit
+Requires-Dist: openbabel-wheel
+Requires-Dist: matplotlib
+Provides-Extra: all
+Requires-Dist: QM40-dataset-for-ML[extra] ; extra == 'all'
+Provides-Extra: extra
+Requires-Dist: pandas ; extra == 'extra'
+
+# QM40_dataset_for_ML
+
+
+[![image](https://img.shields.io/pypi/v/QM40_dataset_for_ML.svg)](https://pypi.python.org/pypi/QM40_dataset_for_ML)
+[![image](https://img.shields.io/conda/vn/conda-forge/QM40_dataset_for_ML.svg)](https://anaconda.org/conda-forge/QM40_dataset_for_ML)
+
+
+**QM40 is a QMx type of dataset which includes 150K molecules optimized from B3LYP/6-31G(2df,p) level of theory in the Gaussian16 with QM parameters, optimized coordinates, Mulliken charges and Local vibrational mode parameters as a quantitative measurer of the bond strengths.**
+
+
+-   Free software: MIT License
+-   Documentation: https://Ayeshmadu.github.io/QM40_dataset_for_ML
+    
+
+## Features
+
+-   TODO
