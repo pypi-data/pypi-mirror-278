@@ -1,0 +1,7 @@
+templates:
+ - node_coap/client.template
+ - node_coap/server.template
+
+modules:
+ - client.js
+ - server.js
