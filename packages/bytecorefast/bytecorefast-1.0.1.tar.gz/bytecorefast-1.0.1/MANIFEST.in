@@ -1,0 +1,9 @@
+# Include
+include src/*.c
+include src/*.h
+include src/bytecorefast/*.c
+include src/bytecorefast/*.h
+
+# Exclude
+prune src/benchmarks
+exclude tests/test_benchmark.py

@@ -1,0 +1,6 @@
+bytecore==1.1.1
+
+[dev]
+mypy
+types-setuptools
+pytest

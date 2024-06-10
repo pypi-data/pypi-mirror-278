@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bytecorefast"
+version = "1.0.1"
+authors = [
+  { name="Joakim Winum Lien", email="joakim@winum.xyz" },
+]
+description = "A high-performance, 8-bit CPU emulator, designed as a drop-in replacement for ByteCore, offering enhanced speed while maintaining full compatibility with the original ByteCore interfaces."
+dependencies = [
+  "bytecore==1.1.1"
+]
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+dev = ["mypy", "types-setuptools", "pytest"]
+
+[project.urls]
+"Homepage" = "https://github.com/joakimwinum/bytecorefast"
+"Bug Tracker" = "https://github.com/joakimwinum/bytecorefast/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+bytecorefast = ["py.typed"]
