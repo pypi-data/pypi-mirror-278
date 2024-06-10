@@ -1,0 +1,4 @@
+[console_scripts]
+puyapy=puya.__main__:main
+puyapy-clientgen=puya.client_gen:main
+
