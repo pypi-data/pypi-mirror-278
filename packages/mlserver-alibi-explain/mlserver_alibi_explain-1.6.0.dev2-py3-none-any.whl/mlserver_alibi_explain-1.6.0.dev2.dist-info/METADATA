@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: mlserver-alibi-explain
+Version: 1.6.0.dev2
+Summary: Alibi-Explain runtime for MLServer
+License: Apache-2.0
+Author: Seldon Technologies Ltd.
+Author-email: hello@seldon.io
+Requires-Python: >=3.9,<3.12
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: alibi[shap,tensorflow]
+Requires-Dist: mlserver
+Requires-Dist: mlserver_lightgbm
+Requires-Dist: mlserver_sklearn
+Requires-Dist: mlserver_xgboost
+Requires-Dist: orjson
+Requires-Dist: pydantic (==2.7.1)
+Description-Content-Type: text/markdown
+
+# Alibi-Explain runtime for MLServer
+
+This package provides a MLServer runtime compatible with Alibi-Explain.
+
+## Usage
+
+You can install the runtime, alongside `mlserver`, as:
+
+```bash
+pip install mlserver mlserver-alibi-explain
+```
+
