@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+config.yaml
+pyproject.toml
+requirements.txt
+requirements_dev.txt
+fuxi_kit/__init__.py
+fuxi_kit/__main__.py
+fuxi_kit.egg-info/PKG-INFO
+fuxi_kit.egg-info/SOURCES.txt
+fuxi_kit.egg-info/dependency_links.txt
+fuxi_kit.egg-info/requires.txt
+fuxi_kit.egg-info/top_level.txt
+test/mock.http
