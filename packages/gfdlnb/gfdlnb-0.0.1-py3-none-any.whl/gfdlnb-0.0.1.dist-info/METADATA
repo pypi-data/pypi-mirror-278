@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: gfdlnb
+Version: 0.0.1
+Summary: GFDL Model Analysis Notebooks
+Author-email: John Krasting <john.krasting@noaa.gov>
+License: Software code created by U.S. Government employees is not subject to copyright
+        in the United States (17 U.S.C. §105). The United States/Department of Commerce
+        reserve all rights to seek and obtain copyright protection in countries other
+        than the United States for Software authored in its entirety by the Department
+        of Commerce. To this end, the Department of Commerce hereby grants to Recipient
+        a royalty-free, nonexclusive license to use, copy, and create derivative works
+        of the Software outside of the United States.
+        
+Project-URL: homepage, https://github.com/jkrasting/mar
+Project-URL: documentation, https://gfdl-notebooks.readthedocs.io
+Project-URL: repository, https://github.com/jkrasting/mar
+Keywords: climate modeling,gfdl
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: Public Domain
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: importlib-metadata <5.0.0
+Requires-Dist: numpy >=1.21.0
+Requires-Dist: xarray >=0.20.0
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+
+# GFDL Notebooks
+(Previously MAR - Model Analysis Repository)
+
+<p>
+The Latin word <i>"mar"</i> translates to <i>"sea"</i>. This repository will contain a collection of (mainly) ocean-focused analyses to 
+  inform next-generation ocean and climate model development.
+</p>
+
+## Ways to Run MAR
+
+1. Interactively (clone the repository, edit the notebooks, and run)
+2. Execute the batch script `run_mar.sh`
+3. Visit https://dora.gfdl.noaa.gov/analysis/mar
+
+## Contributing to MAR
+Jupyter notebooks are the encapsulation of a particular analysis.  There are relatively few constraints on how an analysis built, but there are 
+a few interfaces to be aware of:
+
+### Configuration / Environment Variables
+The batch and web engines for MAR (items 2 and 3 above) will set two runtime environment variables. Use one or both of these fields to 
+determine the top-level path to a model experiment to analyze:
+
+* `MAR_DORA_ID`: The experiment ID in the dora database
+* `MAR_PATHPP`: The top-level path to the post-processing experiment directory of the experiment (e.g. `/some/path/pp/`)
+
+Each notebook should have a default set of model years to analyze (e.g. 1981-2010).  The MAR engines will also provide two optional, additional variables, 
+`STARTYR` and `ENDYR`, that can be used to override the defaults in the notebook.
+
+### Scalar Results / Metrics
+
+If your notebook produces scalar metrics, it should write those results to a YAML file.  See the `SST_bias_NOAA_OISSTv2.ipynb` notebook for an example of 
+how to construct a YAML file. Some examples of scalar fields might be RMSE and bias of a field, or the average depth of the Mediterranean outflow plume.
+
+
