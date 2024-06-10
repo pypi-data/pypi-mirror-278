@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: livestyled
+Version: 1.4.11
+Home-page: https://github.com/livestyled/python-sdk
+Author: LiveStyled
+Author-email: dev@livestyled.com
+License-File: LICENSE
+Requires-Dist: marshmallow==3.3.0
+Requires-Dist: marshmallow-polyfield==5.7
+Requires-Dist: pytz
+Requires-Dist: requests==2.22.0
