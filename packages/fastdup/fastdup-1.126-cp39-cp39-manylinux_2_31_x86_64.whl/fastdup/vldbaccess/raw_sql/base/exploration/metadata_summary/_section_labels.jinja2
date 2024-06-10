@@ -1,0 +1,8 @@
+(
+    SELECT
+    lower(cluster_type::text) as category,
+    unnest(labels) as element_name,
+    count(*) element_count
+    FROM cluster_media_ids
+    GROUP BY category, element_name
+)
