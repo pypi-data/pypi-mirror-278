@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: qadapt
+Version: 1.0.2
+Summary: self-healing framework
+Author: IOTA_devs
+Author-email: a01571087@tec.mx
+Keywords: python,video,stream,camera stream,sockets
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: selenium
+Requires-Dist: requests
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+
+
+# QAdapt self-healing framework
+A web driver that uses self-healing to mitigate errors and sends reports of code running.
