@@ -1,0 +1,118 @@
+[project]
+name = "nadl"
+dynamic = []
+description = "Nasy's Deep Learning Toolkit"
+authors = [
+    { name = "Nasy", email = "nasyxx+python@gmail.com" },
+    { name = "Nasy", email = "nasyxx+dl@gmail.com" },
+    { name = "Nasy", email = "nasyxx+git@gmail.com" },
+]
+dependencies = [
+    "jax>=0.4.28",
+    "numpy>=1.26.4",
+    "rich>=13.7.1",
+    "jaxtyping>=0.2.29",
+    "optax>=0.2.2",
+    "equinox>=0.11.4",
+    "beartype>=0.18.5",
+    "scikit-image>=0.23.2",
+    "orbax-checkpoint>=0.5.15",
+    "scikit-learn>=1.5.0",
+    "einops>=0.8.0",
+]
+requires-python = ">=3.12"
+version = "1.6.6"
+
+[project.readme]
+content-type = "text/plain"
+file = "readme.org"
+
+[project.license]
+text = "GPLv3"
+
+[project.optional-dependencies]
+doc = [
+    "mkdocs-material>=9.5.25",
+    "mkdocs>=1.6.0",
+    "mike>=2.1.1",
+    "mkdocstrings[python]>=0.25.1",
+]
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.version]
+source = "file"
+path = "src/nadl/__init__.py"
+
+[[tool.pdm.source]]
+url = "https://storage.googleapis.com/jax-releases/jax_cuda_releases.html"
+name = "jaxlib"
+verify_ssl = true
+type = "find_links"
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "scipy>=1.13.1",
+    "scikit-learn>=1.5.0",
+    "ipdb>=0.13.13",
+    "naipyext[all]>=0.10.0",
+    "torch>=2.3.1",
+    "tensorflow>=2.16.1",
+    "tensordict>=0.4.0",
+    "dm-tree>=0.1.8",
+    "optree>=0.11.0",
+]
+
+[tool.mypy]
+exclude = [
+    "__pypackages__/",
+    "./typings",
+]
+follow_imports_for_stubs = true
+follow_imports = "silent"
+disallow_any_unimported = false
+disallow_any_expr = false
+disallow_any_decorated = false
+disallow_any_explicit = false
+disallow_any_generics = false
+disallow_subclassing_any = false
+disallow_untyped_calls = false
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = false
+implicit_optional = true
+strict_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = false
+warn_return_any = false
+warn_unreachable = true
+ignore_errors = false
+allow_untyped_globals = false
+allow_redefinition = false
+local_partial_types = false
+implicit_reexport = true
+strict_equality = true
+strict = true
+warn_unused_configs = true
+mypy_path = "./typings"
+
+[tool.pyright]
+pythonVersion = "3.12"
+extraPaths = [
+    "__pypackages__/3.12/lib",
+    "src",
+    "__pypackages__/3.11/lib",
+]
+exclude = [
+    "**/__pycache__",
+]
+useLibraryCodeForTypes = true
