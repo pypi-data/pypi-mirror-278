@@ -1,0 +1,61 @@
+name: ci
+on: [push]
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
+        os: ["ubuntu-latest", "windows-latest", "macos-latest"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v3
+        with: 
+          submodules: true
+
+      # Select Rust toolchain
+      - name: Select Rust toolchain
+        run: |
+          rustup set auto-self-update disable
+          rustup toolchain install stable --profile minimal
+
+      # Install and cache Cargo dependencies
+      - uses: Swatinem/rust-cache@v2
+      - name: Check package
+        run: |
+          cargo check
+
+      # Install and cache Python dependencies
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: 'pip'
+      - name: Add Python user scripts to PATH
+        if: matrix.os == 'windows-latest'
+        run: |
+          $PYTHON_USER_SCRIPTS = (python -c "import os,sysconfig;print(sysconfig.get_path('scripts',f'{os.name}_user'))")
+          $env:PATH = "$PYTHON_USER_SCRIPTS;$env:PATH"
+
+      # Build package
+      - name: Build package
+        run: |
+          pip3 install maturin
+          maturin build -i ${{ matrix.python-version }}
+
+      # Install package
+      - name: Install package
+        run: |
+          pip3 install --no-index --find-links=target/wheels milli
+
+      # Test package
+      - name: Test package
+        run: |
+          python3 test.py
+
+      # Publish package
+      - name: Publish package
+        env:
+          MATURIN_PASSWORD: ${{ secrets.PYPI_TOKEN }}
+        run: |
+          maturin publish --skip-existing --username __token__
