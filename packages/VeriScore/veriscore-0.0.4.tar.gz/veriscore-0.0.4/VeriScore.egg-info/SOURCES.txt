@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+VeriScore.egg-info/PKG-INFO
+VeriScore.egg-info/SOURCES.txt
+VeriScore.egg-info/dependency_links.txt
+VeriScore.egg-info/requires.txt
+VeriScore.egg-info/top_level.txt
+veriscore/__init__.py
+veriscore/claim_extractor.py
+veriscore/claim_verifier.py
+veriscore/extract_claims.py
+veriscore/get_response.py
+veriscore/retrieve_evidence.py
+veriscore/search_API.py
+veriscore/verify_claims.py
+veriscore/veriscore.py
