@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="36e07c99-c119-472e-a359-d404094f9ad5" name="更改" comment="[bugfix&amp;chore]: fixed a bug causing precision loss. changed some cases for paper. impl-ed a statistic printing functionality for experiment.">
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/BeefyAdapter__1_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Crowdfunding__1_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Crowdsale__1_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Lottery__1_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/TemplateRegistry__1_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Vault__1_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/VendingMachine__1_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Well__1_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/testcases/Crowdfunding_export.sol" beforeDir="false" afterPath="$PROJECT_DIR$/samples/testcases/Crowdfunding_export.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/testcases/smallest.sol" beforeDir="false" afterPath="$PROJECT_DIR$/samples/testcases/smallest.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/solidity_statemachine_gen/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/solidity_statemachine_gen/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/solidity_statemachine_gen/state_machine.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/solidity_statemachine_gen/state_machine.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLabMergeRequestFiltersHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPENED&quot;,
+    &quot;assignee&quot;: {
+      &quot;type&quot;: &quot;org.jetbrains.plugins.gitlab.mergerequest.ui.filters.GitLabMergeRequestsFiltersValue.MergeRequestsMemberFilterValue.MergeRequestsAssigneeFilterValue&quot;,
+      &quot;username&quot;: &quot;RealDingZhen&quot;,
+      &quot;fullname&quot;: &quot;Ushio Kirisame&quot;
+    }
+  }
+}</component>
+  <component name="GitLabMergeRequestsSettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;first&quot;: &quot;git@gitlab.com:RealDingZhen/graduation-project.git&quot;,
+    &quot;second&quot;: &quot;52bdbf8f-7144-4067-ac0c-1ae69c7dccbe&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2fxrLm9oUDPEOb53Q0bPuI25vVy" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Python.BeefyAdapter (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.BeefyAdapter.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Crowdfunding (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.Crowdsale (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.Crowdsale.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Lottery (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.Lottery_ppt.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TemplateRegistry (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.TemplateRegistry.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Vault (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.Vault.executor&quot;: &quot;Run&quot;,
+    &quot;Python.VendingMachine (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.VendingMachine.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Well (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.main (1).executor&quot;: &quot;Debug&quot;,
+    &quot;Python.main.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.src.solidity_statemachine_gen.main.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/some/scholar/graduation-project&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\some\scholar\graduation-project" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.Lottery_ppt">
+    <configuration name="Lottery_ppt" type="PythonConfigurationType" factoryName="Python">
+      <module name="graduation-project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.11 (graduation-project) (2)" />
+      <option name="WORKING_DIRECTORY" value="D:\some\scholar\graduation-project" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="src.solidity_statemachine_gen.main" />
+      <option name="PARAMETERS" value="samples/testcases/smallest.sol images/ Lottery -p --debug --use_svg" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="true" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="graduation-project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.11 (graduation-project) (2)" />
+      <option name="WORKING_DIRECTORY" value="D:\some\scholar\graduation-project" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="src.solidity_statemachine_gen" />
+      <option name="PARAMETERS" value="samples/testcases/Crowdfunding_export.sol images/ Crowdfunding -p --debug" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="true" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.VendingMachine (1)" />
+      <item itemvalue="Python.Crowdfunding (1)" />
+      <item itemvalue="Python.Well (1)" />
+      <item itemvalue="Python.Crowdsale (1)" />
+      <item itemvalue="Python.TemplateRegistry (1)" />
+      <item itemvalue="Python.BeefyAdapter (1)" />
+      <item itemvalue="Python.Vault (1)" />
+      <item itemvalue="Python.Lottery (1)" />
+      <item itemvalue="Python.Crowdfunding" />
+      <item itemvalue="Python.Well" />
+      <item itemvalue="Python.VendingMachine" />
+      <item itemvalue="Python.Crowdsale" />
+      <item itemvalue="Python.TemplateRegistry" />
+      <item itemvalue="Python.BeefyAdapter" />
+      <item itemvalue="Python.Vault" />
+      <item itemvalue="Python.Lottery" />
+      <item itemvalue="Python.Lottery_ppt" />
+    </list>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-babbdf50b680-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.15989.155" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="36e07c99-c119-472e-a359-d404094f9ad5" name="更改" comment="" />
+      <created>1714753517152</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714753517152</updated>
+    </task>
+    <task id="LOCAL-00001" summary="[chore]: rework to make it a package. migrate to PyCharm because vscode sucks.">
+      <option name="closed" value="true" />
+      <created>1714755102806</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1714755102806</updated>
+    </task>
+    <task id="LOCAL-00002" summary="[impl]: used a smarter impl for logger.">
+      <option name="closed" value="true" />
+      <created>1714756604450</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714756604450</updated>
+    </task>
+    <task id="LOCAL-00003" summary="[chore]: slight changed impl of state machine and made some changes to simple testcases">
+      <option name="closed" value="true" />
+      <created>1715273340311</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715273340311</updated>
+    </task>
+    <task id="LOCAL-00004" summary="[bugfix&amp;chore]: fixed a bug causing precision loss. changed some cases for paper. impl-ed a statistic printing functionality for experiment.">
+      <option name="closed" value="true" />
+      <created>1715886419679</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715886419679</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[chore]: rework to make it a package. migrate to PyCharm because vscode sucks." />
+    <MESSAGE value="[impl]: used a smarter impl for logger." />
+    <MESSAGE value="[chore]: slight changed impl of state machine and made some changes to simple testcases" />
+    <MESSAGE value="[bugfix&amp;chore]: fixed a bug causing precision loss. changed some cases for paper. impl-ed a statistic printing functionality for experiment." />
+    <option name="LAST_COMMIT_MESSAGE" value="[bugfix&amp;chore]: fixed a bug causing precision loss. changed some cases for paper. impl-ed a statistic printing functionality for experiment." />
+  </component>
+</project>
