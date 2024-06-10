@@ -1,0 +1,8 @@
+SELECT
+    count(*) AS cnt
+FROM
+    flat_similarity_clusters
+    {% include "_similarity_join_filtering.jinja2" %}
+WHERE
+    True
+    {% include "_composite_filter.jinja2" %}
