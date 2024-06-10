@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: movoid_robotframework_selenium
+Version: 1.2.8
+Home-page: 
+Author: movoid
+Author-email: bobrobotsun@163.com
+Description-Content-Type: text/markdown
+Requires-Dist: selenium ==4.6.0
+Requires-Dist: movoid-function
+Requires-Dist: movoid-robotframework
+Requires-Dist: robotframework-selenium2library
+Requires-Dist: movoid-package
+Requires-Dist: opencv-python
+
+This is a simple program for developer to 
