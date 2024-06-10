@@ -1,0 +1,52 @@
+[tool.poetry]
+name = "twinlab"
+version = "2.8.0"
+description = "twinLab - Probabilistic Machine Learning for Engineers"
+license = "MIT"
+homepage = "https://twinlab.ai"
+documentation = "https://twinlab.ai"
+authors = ["digiLab Solutions Ltd. <twinlab@digilab.co.uk>"]
+maintainers = ["twinLab Product Team <twinlab@digilab.co.uk>"]
+keywords = ["machine-learning", "AI", "cloud", "twinLab", "digiLab"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.13"
+matplotlib = ">=3.7"
+numpy = [
+    { version = "^1.24", python = ">=3.8,<3.9" },
+    { version = "^1.26", python = ">=3.9,<3.13" },
+]
+pandas = [
+    { version = "^1.5.3", python = ">=3.8,<3.9" },
+    { version = "~2.0.3", python = ">=3.9,<3.13" },
+    # Note this version of pandas can be bumped once remove support for 3.8
+    # This is due to the deprecation of DataFrame.applymap
+]
+python-dotenv = "^1.0.0"
+requests = "^2.28.2"
+typeguard = "^4.0.0"
+setuptools = "^69.0.2"
+deprecated = "^1.2.14"
+
+[tool.poetry.dev-dependencies]
+ipykernel = "^6.22.0"
+IPython = "^8.11"
+pytest = "^7.1.2"
+pytest-timeout = "^2.3.1"
+pytest-cov = "^3.0.0"
+pytest-regtest = "^1.5.1"
+pytest-regressions = "^2.5.0"
+
+# NOTE: This allows for better collection of the pytests
+# NOTE: Allows tests that have the same name but in different folders
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+
+[tool.pytest.ini_options]
+addopts = "--import-mode=importlib"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
