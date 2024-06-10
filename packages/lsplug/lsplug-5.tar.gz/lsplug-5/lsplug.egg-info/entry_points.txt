@@ -1,0 +1,2 @@
+[console_scripts]
+lsplug = lsplug.__main__:main

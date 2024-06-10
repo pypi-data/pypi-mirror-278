@@ -1,0 +1,14 @@
+.gitignore
+LICENSE
+README.md
+setup.py
+lsplug/__init__.py
+lsplug/__main__.py
+lsplug/helpers.py
+lsplug/hwdata.py
+lsplug/query.py
+lsplug.egg-info/PKG-INFO
+lsplug.egg-info/SOURCES.txt
+lsplug.egg-info/dependency_links.txt
+lsplug.egg-info/entry_points.txt
+lsplug.egg-info/top_level.txt
