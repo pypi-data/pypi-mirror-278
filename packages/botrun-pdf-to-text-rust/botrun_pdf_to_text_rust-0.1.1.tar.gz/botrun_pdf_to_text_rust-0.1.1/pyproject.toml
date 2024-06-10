@@ -1,0 +1,11 @@
+[build-system]
+requires = ["maturin"]
+build-backend = "maturin"
+
+[project]
+name = "botrun_pdf_to_text_rust"
+version = "0.1.1"
+authors = [{name = "Bowen", email = "cbh@cameo.tw"}]
+description = "A package to extract text from PDF using Rust"
+readme = "README.md"
+license = "MIT"
