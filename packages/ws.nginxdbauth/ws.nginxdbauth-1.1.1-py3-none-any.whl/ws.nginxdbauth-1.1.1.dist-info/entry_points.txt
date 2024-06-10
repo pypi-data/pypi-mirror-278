@@ -1,0 +1,3 @@
+[console_scripts]
+nginx-db-auth-cgi = ws.nginxdbauth.web:cgi
+nginx-db-auth-serve = ws.nginxdbauth.web:serve
