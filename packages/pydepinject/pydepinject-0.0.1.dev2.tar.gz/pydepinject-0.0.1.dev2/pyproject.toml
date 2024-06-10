@@ -1,0 +1,138 @@
+[build-system]
+requires = [
+    "setuptools >= 61",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pydepinject"
+dynamic = ["version"]
+description = "A package to dynamically inject requirements into a virtual environment."
+readme = "Readme.md"
+authors = [
+    { name="pydepinject" }
+]
+license = { text="MIT" }
+keywords = ["virtualenv", "requirements", "dependency management"]
+requires-python = ">=3.9"
+dependencies = [
+    "packaging~=22.0",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: Software Development :: Libraries",
+  "Typing :: Typed",
+]
+
+[project.urls]
+homepage = "https://github.com/pydepinject/pydepinject"
+documentation = "https://github.com/pydepinject/pydepinject"
+repository = "https://github.com/pydepinject/pydepinject"
+
+[project.optional-dependencies]
+lint = [
+    "ruff==0.4.7",
+    "pyright==1.1.365",
+    "isort==5.13.2",
+]
+test = [
+    "pytest==8.2.1",
+    "pytest-cov==5.0.0",
+    "pytest-xdist==3.6.1",
+]
+build = [
+    "check-manifest==0.49",
+    "build==1.2.1",
+    "wheel==0.43.0",
+    "setuptools==70.0.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.dynamic]
+version = {attr = "pydepinject.VERSION"}
+
+[tool.pytest]
+log_cli = true
+log_level = "DEBUG"
+
+[tool.pytest.ini_options]
+pythonpath = "src"
+addopts = "--durations=10 -n auto"
+# Estimated test times: 74s with auto (2), 76s with 6 workers, 113se with no workers.
+
+[tool.ruff]
+preview = true
+extend-exclude = [
+     "/..*"
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/test_pydepinject.py" = ["F401", "F811"]
+
+[tool.pyright]
+include = ["src"]
+strict = ["src"]
+
+deprecateTypingAliases = true
+reportCallInDefaultInitializer = true
+reportImplicitOverride = true
+reportImplicitStringConcatenation = true
+reportImportCycles = true
+reportMissingSuperCall = false
+reportPropertyTypeMismatch = true
+reportShadowedImports = true
+reportUninitializedInstanceVariable = true
+reportUnnecessaryTypeIgnoreComment = true
+reportUnusedCallResult = false
+
+[tool.isort]
+profile = "black"
+add_imports = ["from __future__ import annotations"]
+known_first_party = ["pydepinject"]
+skip_gitignore = true
+src_paths = [
+    "src",
+]
+
+[tool.coverage.run]
+branch = true
+dynamic_context = "test_function"
+cover_pylib = false
+data_file = ".coverage"
+parallel = false
+relative_files = true
+
+[tool.coverage.report]
+exclude_also = [
+    "if TYPE_CHECKING:",
+    "if __name__ == .__main__.:",
+]
+format = "text"
+show_missing = true
+
+[tool.coverage.html]
+directory = "htmlcov"
+show_contexts = true
+title = "Coverage report for pydepinject"
+
+[tool.check-manifest]
+ignore = []
+
+[tool.custom.pipxtools]
+uv = {version = "0.2.5"}
+invoke = {version = "2.2.0", preinstall = ["tomli"]}
+nox = {version = "2024.4.15"}
+twine = {version = "5.1.0"}
+
+[tool.custom.ci]
+python_versions = ["3.9", "3.10", "3.11", "3.12"]
+packaging_versions = ["22", "23", "24"]

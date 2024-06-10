@@ -1,0 +1,3 @@
+graft src
+exclude Dockerfile noxfile.py tasks.py scripts/*
+global-exclude *~ *.py[cod] *.so .devcontainer/* .vscode/*
