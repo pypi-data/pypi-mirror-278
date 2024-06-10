@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+pipelines_insights/__init__.py
+pipelines_insights/pipelines.py
+pipelines_insights/utils.py
+pipelines_insights.egg-info/PKG-INFO
+pipelines_insights.egg-info/SOURCES.txt
+pipelines_insights.egg-info/dependency_links.txt
+pipelines_insights.egg-info/requires.txt
+pipelines_insights.egg-info/top_level.txt
