@@ -1,0 +1,10 @@
+delaunay-watershed-3d>=0.3.1
+networkx>=2.5.1
+numpy>=1.21.6
+scipy>=1.4.1
+torch>=2.2.0
+trimesh>=3.8.12
+
+[viewing]
+polyscope>=1.2.0
+matplotlib>=3.3.1
