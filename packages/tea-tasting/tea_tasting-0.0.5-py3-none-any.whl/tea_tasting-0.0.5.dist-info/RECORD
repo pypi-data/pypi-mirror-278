@@ -1,0 +1,17 @@
+tea_tasting-0.0.5.dist-info/METADATA,sha256=3Ej9_nZ4buhPEHEfsV0jGrgpnh8bfT5FOQOmvm_lZH0,18927
+tea_tasting-0.0.5.dist-info/WHEEL,sha256=vnE8JVcI2Wz7GRKorsPArnBdnW2SWKWGow5gu5tHlRU,90
+tea_tasting-0.0.5.dist-info/licenses/LICENSE,sha256=s9KHH0oP1R9gzbUt9YippuvTWgWzlxo0tSTtF60_LMk,1070
+tea_tasting/__init__.py,sha256=iOGBS1-bqJavI09lSpsW3aNz5Gz59XOt3RXhwqQvics,1054
+tea_tasting/_version.txt,sha256=robnkGeKzH_BTxjlWcL4xJcmNNWxt0oqKXVluMkPgEo,6
+tea_tasting/aggr.py,sha256=4LBeac_Cl9FtWYJwt4eXp9Rc8CTFEP0QavtvDP78K-k,12060
+tea_tasting/config.py,sha256=B4SHe9TR0QzlJBBhFtqCGAOh-pIg-Sn6DcCQ450xPpM,5461
+tea_tasting/datasets.py,sha256=MLWEIavjQZ17AAJ0HWYSMWa4FwYahUcp4gYRw3Wvt28,17874
+tea_tasting/experiment.py,sha256=cZpmn8BczenPFEawvs75Nv5FuFqyeZlkvcx-z9nJxLc,22595
+tea_tasting/metrics/__init__.py,sha256=dgiHSu-06zEjOtO0tGQDD2hpZvNMzWR36sXi7_87iLQ,914
+tea_tasting/metrics/base.py,sha256=nVPj8RUO_5bq8CjpjjGbLLOZgzGUcWgeDRabSo--DtI,8660
+tea_tasting/metrics/mean.py,sha256=XMmel5ZE7Oe_si8RJCS5_sAmtErndaC66stbSvINaWw,16834
+tea_tasting/metrics/proportion.py,sha256=4J1aFxg4cR7P8fXHadRu4rLpH6hMPpgdjfqUTwur7-s,5100
+tea_tasting/metrics/resampling.py,sha256=FBK8UlA0JbxB45sg6NJv7fWMJu5JolFWPL518fwLO98,13536
+tea_tasting/utils.py,sha256=D3PLxe_tR6_DoCvtg9opkRf-Kyt0dReHTfO9340-m7g,11503
+tea_tasting/version.py,sha256=hY9PxZrJIsZHMrCXH1GP-C8jafpH_sD96vhmfe4hSQM,390
+tea_tasting-0.0.5.dist-info/RECORD,,
