@@ -1,0 +1,17 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+scuamate/__init__.py
+scuamate/core.py
+scuamate/version.py
+scuamate.egg-info/PKG-INFO
+scuamate.egg-info/SOURCES.txt
+scuamate.egg-info/dependency_links.txt
+scuamate.egg-info/top_level.txt
+scuamate/az/azfuncs.py
+scuamate/az/keyvault.py
+scuamate/az/mssql.py
+scuamate/gc/firestore.py
+scuamate/gsattrack/gsattrack.py

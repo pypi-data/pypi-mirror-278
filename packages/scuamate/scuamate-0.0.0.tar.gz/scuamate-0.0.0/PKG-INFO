@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: scuamate
+Version: 0.0.0
+Summary: Some Cloud Utilities to Advance Monitoring of Animals and Their Ecosystems: utilities to help run, maintain, check, and back up the cloud infrastructure for next-generation wildlife monitoring projects (including SpaceCows and the National Koala Monitoring Program)
+Home-page: https://github.com/NextGenEcologicalMonitoring/scuamate
+Download-URL: https://github.com/NextGenEcologicalMonitoring/scuamate/archive/0.0.0.tar.gz
+Author: CSIRO, Drew Ellison Terasaki Hart
+Author-email: Drew.TerasakiHart@csiro.au
+Project-URL: Source, https://github.com/NextGenEcologicalMonitoring/scuamate
+Keywords: wildlife biodiversity ecological monitoring citizen community science
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# SCUAMATE
+### '**S**ome **C**loud **U**tilities to **A**dvance **M**onitoring of **A**nimals and **T**heir **E**cosystems' (or, '**S**ome **C**loud **U**tilities for **A**nimals, **MATE**')
+
+A Python package containing utilities to help run, maintain, check, and back
+up the cloud infrastructure for next-generation wildlife monitoring projects
+(originally developed at CSIRO for SpaceCows and the National Koala Monitoring Program)
+
+##### Contents:
+- **scuamate**: a variety of general-purpose classes and functions
+- **scuamate.az**: functions for working with Azure services, including:
+  - **scauamate.az.keyvault**: for pulling secrets from an Azure KeyVault
+  - **scauamate.az.mssql**: for connecting to, pulling data from, pushing data to, and editing data in an MSSQL database
+  - **scauamate.az.azfuncs**: for working with Azure functions 
+- **scuamate.gc**: functions for working with Google Cloud services, including:
+  - **scuamate.gc.firestore**: functions for running CRUD operations on a Firestore database
+- **scuamate.gsattrack**: functions for authenticating with and getting data from the GSatTrack API
+
