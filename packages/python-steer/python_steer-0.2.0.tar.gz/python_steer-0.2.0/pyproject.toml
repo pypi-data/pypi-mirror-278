@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "python-steer"
+version = "0.2.0"
+description = "A tool to help you write JSON and YAML files from JSON schemas"
+authors = ["José Coelho <16445494+jcoelho93@users.noreply.github.com>"]
+readme = "README.md"
+packages = [
+    { include = "steer" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+click = "8.1.7"
+pydantic = "^2.7.1"
+questionary = "^2.0.1"
+jsonpath-ng = "^1.6.1"
+pyyaml = "^6.0.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+coverage = "^7.5.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+steer = "steer.cli:steer"
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/jcoelho93/steer/issues"
