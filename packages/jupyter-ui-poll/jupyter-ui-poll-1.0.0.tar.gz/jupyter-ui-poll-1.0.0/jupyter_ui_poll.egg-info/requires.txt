@@ -1,0 +1,10 @@
+ipython
+
+[dev]
+wheel
+jupyter
+
+[docs]
+sphinx
+sphinx-autodoc-typehints
+sphinx-rtd-theme

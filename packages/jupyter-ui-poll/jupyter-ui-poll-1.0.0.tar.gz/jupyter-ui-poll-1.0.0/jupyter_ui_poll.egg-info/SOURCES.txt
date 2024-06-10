@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+jupyter_ui_poll/__init__.py
+jupyter_ui_poll/_async_thread.py
+jupyter_ui_poll/_poll.py
+jupyter_ui_poll/_version.py
+jupyter_ui_poll.egg-info/PKG-INFO
+jupyter_ui_poll.egg-info/SOURCES.txt
+jupyter_ui_poll.egg-info/dependency_links.txt
+jupyter_ui_poll.egg-info/requires.txt
+jupyter_ui_poll.egg-info/top_level.txt
+jupyter_ui_poll.egg-info/zip-safe
