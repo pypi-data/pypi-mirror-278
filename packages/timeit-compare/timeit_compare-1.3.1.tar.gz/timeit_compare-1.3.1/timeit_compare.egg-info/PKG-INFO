@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: timeit_compare
+Version: 1.3.1
+Summary: Conveniently measure and compare the execution time of multiple statements.
+Home-page: https://github.com/AomandeNiuma/timeit_compare
+Author: Liu Wei
+Author-email: 23S112099@stu.hit.edu.cn
+Maintainer: Liu Wei
+Maintainer-email: 23S112099@stu.hit.edu.cn
+License: MIT
+Keywords: timeit_compare,timeit,performance
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typing_extensions
+
+# timeit_compare
+
+Conveniently measure and compare the execution time of multiple statements.
+
+------------------------------
+
+## Installation
+
+To install the package, run the following command:
+
+```commandline
+pip install timeit_compare
+```
+
+------------------------------
+
+## Usage
+
+Here is a simple example from the timeit library documentation:
+
+```pycon
+>>> from timeit_compare import compare
+>>> 
+>>> compare(
+...     "'-'.join(str(n) for n in range(100))",
+...     "'-'.join([str(n) for n in range(100)])",
+...     "'-'.join(map(str, range(100)))"
+... )
+timing now...
+|████████████| 21/21 completed
+                              Table 1. Comparison Results (unit: s)                              
+╭────┬───────────────────────────┬──────────────────────────┬────────┬────────┬────────┬────────╮
+│ Id │           Stmt            │          Mean ↓          │ Median │  Min   │  Max   │  Std   │
+├────┼───────────────────────────┼────────┬───────┬─────────┼────────┼────────┼────────┼────────┤
+│ 1  │ '-'.join([str(n) for n i… │ 6.2e-6 │ 75.3% │ █████▎  │ 6.2e-6 │ 6.2e-6 │ 6.3e-6 │ 3.2e-8 │
+│ 2  │ '-'.join(map(str, range(… │ 7.2e-6 │ 87.4% │ ██████▏ │ 7.2e-6 │ 7.2e-6 │ 7.3e-6 │ 2.3e-8 │
+│ 0  │ '-'.join(str(n) for n in… │ 8.3e-6 │ 100.% │ ███████ │ 8.3e-6 │ 8.2e-6 │ 8.3e-6 │ 2.3e-8 │
+╰────┴───────────────────────────┴────────┴───────┴─────────┴────────┴────────┴────────┴────────╯
+7 runs, 9894 loops each, total time 1.504s                                                       
+```
+
+The table shows some basic descriptive statistics on the execution time of each
+statement for comparison, including mean, median, minimum, maximum, and standard
+deviation.
+
+In a command line interface, call as follows:
+
+```commandline
+python -m timeit_compare -a "'-'.join(str(n) for n in range(100))" -a "'-'.join([str(n) for n in range(100)])" -a "'-'.join(map(str, range(100)))"
+```
