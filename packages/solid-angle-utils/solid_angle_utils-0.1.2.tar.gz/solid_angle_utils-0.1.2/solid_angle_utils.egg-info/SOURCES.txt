@@ -1,0 +1,14 @@
+LICENSE
+README.rst
+pyproject.toml
+setup.py
+solid_angle_utils/__init__.py
+solid_angle_utils/version.py
+solid_angle_utils.egg-info/PKG-INFO
+solid_angle_utils.egg-info/SOURCES.txt
+solid_angle_utils.egg-info/dependency_links.txt
+solid_angle_utils.egg-info/top_level.txt
+solid_angle_utils/cone/__init__.py
+solid_angle_utils/cone/cone.py
+solid_angle_utils/cone/mazonka2012solid.py
+solid_angle_utils/triangle/__init__.py
