@@ -1,0 +1,12 @@
+MOST_F90=gfortran
+MOST_F90_OPTS=-O3 -cpp -fcheck=all -ffixed-line-length-132 -ffpe-trap=invalid,zero,overflow -ffpe-summary=none -finit-real=zero
+MPIMOD=mpimod_stub
+UTILMOD=utilities_stub
+MOST_CC=gcc  #  /home/adiv/miniconda3/envs/python3.12/bin/gcc
+MOST_CC_OPTS=-O3
+MOST_PP=c++  #  /home/adiv/miniconda3/envs/python3.12/bin/c++
+MOST_AS=as
+LEGMOD=legini
+LEGFAST=legfast32.o
+GUIMOD=guimod_stub
+PUMAX=pumax_stub
