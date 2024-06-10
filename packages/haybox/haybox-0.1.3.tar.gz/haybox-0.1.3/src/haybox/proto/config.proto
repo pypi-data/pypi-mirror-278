@@ -1,0 +1,281 @@
+syntax = "proto3";
+
+enum Command {
+  CMD_UNSPECIFIED = 0;
+  CMD_GET_DEVICE_INFO = 1;
+  CMD_SET_DEVICE_INFO = 2;
+  CMD_GET_CONFIG = 3;
+  CMD_SET_CONFIG = 4;
+  CMD_ERROR = 5;
+  CMD_SUCCESS = 6;
+  CMD_REBOOT_FIRMWARE = 7;
+  CMD_REBOOT_BOOTLOADER = 8;
+}
+
+enum Button {
+  BTN_UNSPECIFIED = 0;
+  BTN_LF1 = 1;
+  BTN_LF2 = 2;
+  BTN_LF3 = 3;
+  BTN_LF4 = 4;
+  BTN_LF5 = 5;
+  BTN_LF6 = 6;
+  BTN_LF7 = 7;
+  BTN_LF8 = 8;
+  BTN_LF9 = 9;
+  BTN_LF10 = 10;
+  BTN_LF11 = 11;
+  BTN_LF12 = 12;
+  BTN_LF13 = 13;
+  BTN_LF14 = 14;
+  BTN_LF15 = 15;
+  BTN_LF16 = 16;
+  BTN_RF1 = 17;
+  BTN_RF2 = 18;
+  BTN_RF3 = 19;
+  BTN_RF4 = 20;
+  BTN_RF5 = 21;
+  BTN_RF6 = 22;
+  BTN_RF7 = 23;
+  BTN_RF8 = 24;
+  BTN_RF9 = 25;
+  BTN_RF10 = 26;
+  BTN_RF11 = 27;
+  BTN_RF12 = 28;
+  BTN_RF13 = 29;
+  BTN_RF14 = 30;
+  BTN_RF15 = 31;
+  BTN_RF16 = 32;
+  BTN_LT1 = 33;
+  BTN_LT2 = 34;
+  BTN_LT3 = 35;
+  BTN_LT4 = 36;
+  BTN_LT5 = 37;
+  BTN_LT6 = 38;
+  BTN_LT7 = 39;
+  BTN_LT8 = 40;
+  BTN_RT1 = 41;
+  BTN_RT2 = 42;
+  BTN_RT3 = 43;
+  BTN_RT4 = 44;
+  BTN_RT5 = 45;
+  BTN_RT6 = 46;
+  BTN_RT7 = 47;
+  BTN_RT8 = 48;
+  BTN_MB1 = 49;
+  BTN_MB2 = 50;
+  BTN_MB3 = 51;
+  BTN_MB4 = 52;
+  BTN_MB5 = 53;
+  BTN_MB6 = 54;
+  BTN_MB7 = 55;
+  BTN_MB8 = 56;
+  BTN_MB9 = 57;
+  BTN_MB10 = 58;
+  BTN_MB11 = 59;
+  BTN_MB12 = 60;
+};
+
+enum SocdType {
+  SOCD_UNSPECIFIED = 0;
+  SOCD_NEUTRAL = 1;
+  SOCD_2IP = 2;
+  SOCD_2IP_NO_REAC = 3;
+  SOCD_DIR1_PRIORITY = 4;
+  SOCD_DIR2_PRIORITY = 5;
+}
+
+enum GameModeId {
+  MODE_UNSPECIFIED = 0;
+  MODE_MELEE = 1;
+  MODE_PROJECT_M = 2;
+  MODE_ULTIMATE = 3;
+  MODE_FGC = 4;
+  MODE_RIVALS_OF_AETHER = 5;
+  MODE_KEYBOARD = 6;
+  MODE_CUSTOM = 7;
+}
+
+enum CommunicationBackendId {
+  COMMS_BACKEND_UNSPECIFIED = 0;
+  COMMS_BACKEND_DINPUT = 1;
+  COMMS_BACKEND_XINPUT = 2;
+  COMMS_BACKEND_GAMECUBE = 3;
+  COMMS_BACKEND_N64 = 4;
+  COMMS_BACKEND_NES = 5;
+  COMMS_BACKEND_SNES = 6;
+  COMMS_BACKEND_NINTENDO_SWITCH = 7;
+  COMMS_BACKEND_CONFIGURATOR = 8;
+}
+
+enum RgbAnimationId {
+  RGB_ANIM_UNSPECIFIED = 0;
+  RGB_ANIM_STATIC = 1;
+  RGB_ANIM_BREATHE = 2;
+  RGB_ANIM_REACTIVE_SIMPLE = 3;
+}
+
+enum DigitalOutput {
+  GP_UNSPECIFIED = 0;
+  GP_A = 1;
+  GP_B = 2;
+  GP_X = 3;
+  GP_Y = 4;
+  GP_LB = 5;
+  GP_RB = 6;
+  GP_LT = 7;
+  GP_RT = 8;
+  GP_START = 9;
+  GP_SELECT = 10;
+  GP_HOME = 11;
+  GP_CAPTURE = 12;
+  GP_DPAD_UP = 13;
+  GP_DPAD_DOWN = 14;
+  GP_DPAD_LEFT = 15;
+  GP_DPAD_RIGHT = 16;
+  GP_LSTICK_CLICK = 17;
+  GP_RSTICK_CLICK = 18;
+}
+
+enum StickDirectionButton {
+  SD_UNSPECIFIED = 0;
+  SD_LSTICK_UP = 1;
+  SD_LSTICK_DOWN = 2;
+  SD_LSTICK_LEFT = 3;
+  SD_LSTICK_RIGHT = 4;
+  SD_RSTICK_UP = 5;
+  SD_RSTICK_DOWN = 6;
+  SD_RSTICK_LEFT = 7;
+  SD_RSTICK_RIGHT = 8;
+}
+
+enum AnalogAxis {
+  AXIS_UNSPECIFIED = 0;
+  AXIS_LSTICK_X = 1;
+  AXIS_LSTICK_Y = 2;
+  AXIS_RSTICK_X = 3;
+  AXIS_RSTICK_Y = 4;
+  AXIS_LTRIGGER = 5;
+  AXIS_RTRIGGER = 6;
+}
+
+enum AnalogTrigger {
+  TRIGGER_UNSPECIFIED = 0;
+  TRIGGER_LT = 1;
+  TRIGGER_RT = 2;
+}
+
+enum ModifierCombinationMode {
+  COMBINATION_MODE_UNSPECIFIED = 0;
+  COMBINATION_MODE_COMPOUND = 1;
+  COMBINATION_MODE_OVERRIDE = 2;
+};
+
+message ButtonRemap {
+  Button physical_button = 1;
+  Button activates = 2;
+}
+
+message SocdPair {
+  Button button_dir1 = 1;
+  Button button_dir2 = 2;
+  SocdType socd_type = 3;
+}
+
+message AnalogTriggerMapping {
+  Button button = 1;
+  AnalogTrigger trigger = 2;
+  uint32 value = 3;
+}
+
+message AnalogModifier {
+  repeated Button buttons = 1;
+  AnalogAxis axis = 2;
+  float multiplier = 3;
+  ModifierCombinationMode combination_mode = 4;
+}
+
+message Coords {
+  uint32 x = 1;
+  uint32 y = 2;
+}
+
+message ButtonToKeycodeMapping {
+  Button button = 1;
+  uint32 keycode = 2;
+}
+
+message ButtonToColorMapping {
+  Button button = 1;
+  uint32 color = 2;
+}
+
+message CustomModeConfig {
+  uint32 id = 1;
+  repeated Button digital_button_mappings = 2;
+  repeated Button stick_direction_mappings = 3;
+  repeated AnalogTriggerMapping analog_trigger_mappings = 4;
+  repeated AnalogModifier modifiers = 5;
+  uint32 stick_range = 6;
+}
+
+message KeyboardModeConfig {
+  uint32 id = 1;
+  repeated ButtonToKeycodeMapping buttons_to_keycodes = 2;
+}
+
+message GameModeConfig {
+  GameModeId mode_id = 1;
+  string name = 2;
+  repeated SocdPair socd_pairs = 3;
+  repeated ButtonRemap button_remapping = 4;
+  repeated Button activation_binding = 5;
+  uint32 custom_mode_config = 6;
+  uint32 keyboard_mode_config = 7;
+  uint32 rgb_config = 8;
+}
+
+message CommunicationBackendConfig {
+  CommunicationBackendId backend_id = 1;
+  uint32 default_mode_config = 2;
+  repeated Button activation_binding = 3;
+  repeated CommunicationBackendId secondary_backends = 4;
+}
+
+message RgbConfig {
+  repeated ButtonToColorMapping button_colors = 1;
+  uint32 default_color = 2;
+  RgbAnimationId animation = 3;
+  uint32 speed = 4;
+}
+
+message MeleeOptions {
+  bool crouch_walk_os = 1;
+  bool disable_ledgedash_socd_override = 2;
+  Coords custom_airdodge = 3;
+}
+
+message ProjectMOptions {
+  bool true_z_press = 1;
+  bool disable_ledgedash_socd_override = 2;
+  Coords custom_airdodge = 3;
+}
+
+message Config {
+  repeated GameModeConfig game_mode_configs = 1;
+  repeated CommunicationBackendConfig communication_backend_configs = 2;
+  repeated CustomModeConfig custom_modes = 3;
+  repeated KeyboardModeConfig keyboard_modes = 4;
+  repeated RgbConfig rgb_configs = 5;
+  uint32 default_backend_config = 6;
+  uint32 default_usb_backend_config = 7;
+  uint32 rgb_brightness = 8;
+  MeleeOptions melee_options = 9;
+  ProjectMOptions project_m_options = 10;
+}
+
+message DeviceInfo {
+  string firmware_name = 1;
+  string firmware_version = 2;
+  string device_name = 3;
+}
