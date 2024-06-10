@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: state_graph
+Version: 0.1.6
+Requires-Dist: pydantic
+Requires-Dist: networkx
+Requires-Dist: matplotlib
+Requires-Dist: beartype
+Requires-Dist: rich
+Requires-Dist: ipython
+Requires-Dist: resend
+
