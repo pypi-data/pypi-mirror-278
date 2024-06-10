@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: torch-cfd
+Version: 0.0.6
+Summary: PyTorch CFD
+Home-page: https://github.com/scaomath/torch-cfd
+Author: Shuhao Cao
+Author-email: scao.math@gmail.com
+License: Apache-2.0
+Keywords: pytorch,cfd,pde,spectral
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: LICENSE-MIT
+Requires-Dist: numpy
+Requires-Dist: torch>=2.0.1
+
+PyTorch Computational Fluid Dynamics Library
