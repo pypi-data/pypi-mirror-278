@@ -1,0 +1,558 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "data-horizon"
+version = "1.0.0"
+license = "Apache-2.0"
+description = "Horizon REST API + client"
+authors = ["DataOps.ETL <onetools@mts.ru>"]
+readme = "README.rst"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: Pydantic",
+    "Framework :: Pydantic :: 1",
+    "Framework :: Pydantic :: 2",
+    "Framework :: FastAPI",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+keywords = ["Horizon", "REST", "API", "HWM"]
+packages = [
+    { include = "horizon" },
+]
+include = [
+    {path = "horizon/py.typed"},
+    {path = "horizon/**/*.yml"},
+    {path = "horizon/**/*.ini"},
+]
+
+[tool.poetry.urls]  # Optional
+"Homepage" = "https://github.com/MobileTeleSystems/horizon"
+"Documentation" = "https://data-horizon.readthedocs.io/"
+"Source" = "https://github.com/MobileTeleSystems/horizon"
+"CI/CD" = "https://github.com/MobileTeleSystems/horizon/actions"
+"Tracker" = "https://github.com/MobileTeleSystems/horizon/issues"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+pydantic = [
+  {version = "<2.6.0", python = "<3.8"},
+  {version = "<3", python = ">=3.8"},
+]
+typing-extensions = [
+  {version = ">=4.0.0,<4.8.0", python = "<3.8"},
+  {version = ">=4.0.0", python = ">=3.8"},
+]
+python-jose = {version = "*", extras=["cryptography"]}
+fastapi = [
+  {version = "^0.103.2", optional = true, python = "<3.8"},
+  {version = ">=0.103.0", optional = true, python = ">=3.8"},
+]
+starlette = [
+  {version = "^0.27.0", optional = true, python = "<3.8"},
+  {version = ">=0.27.0", optional = true, python = ">=3.8"},
+]
+starlette-exporter = [
+  {version = "^0.17.1", optional = true, python = "<3.8"},
+  {version = ">=0.17.1", optional = true, python = ">=3.8"},
+]
+uvicorn = [
+  {version = "^0.22.0", optional = true, python = "<3.8"},
+  {version = ">=0.22.0", optional = true, python = ">=3.8"},
+]
+pydantic-settings = [
+  {version = "^2.0.3", optional = true, python = "<3.8"},
+  {version = ">=2.0.3", optional = true, python = ">=3.8"},
+]
+alembic = [
+  {version = "^1.12.1", optional = true, python = "<3.8"},
+  {version = ">=1.12.1", optional = true, python = ">=3.8"},
+]
+importlib-resources = [
+  {version = "^5.12.0", optional = true, python = "<3.8"},
+  {version = ">=5.12.0", optional = true, python = ">=3.8"},
+]
+sqlalchemy = {version = ">=2.0", optional = true}
+asyncpg = [
+  {version = "^0.28.0", optional = true, python = "<3.8"},
+  {version = ">=0.28.0", optional = true, python = ">=3.8"},
+]
+python-multipart = {version = "*", optional = true}
+sqlalchemy-utils = {version = "*", optional = true}
+authlib = [
+  {version = "^1.2.1", optional = true, python = "<3.8"},
+  {version = ">=1.2.1", optional = true, python = ">=3.8"},
+]
+requests = {version = "*", optional = true}
+bonsai = {version = "^1.5.3", optional = true}
+python-json-logger = {version = "*", optional = true}
+coloredlogs = {version = "*", optional = true}
+pyyaml = {version = "*", optional = true}
+asgi-correlation-id = [
+  {version = "^4.2.0", optional = true, python = "<3.8"},
+  {version = ">=4.2.0", optional = true, python = ">=3.8"},
+]
+uuid6 = [
+  {version = "^2022.10.25", optional = true, python = "<3.8"},
+  {version = ">=2022.10.25", optional = true, python = ">=3.8"},
+]
+devtools = {version = "*", optional = true}
+argon2-cffi = {version = "*", optional = true}
+passlib = {version = "*", optional = true}
+
+[tool.poetry.extras]
+backend = [
+  "fastapi",
+  "starlette",
+  "uvicorn",
+  "alembic",
+  "importlib-resources",
+  "sqlalchemy",
+  "python-multipart",
+  "sqlalchemy-utils",
+  "pyyaml",
+  "python-json-logger",
+  "coloredlogs",
+  "starlette-exporter",
+  "asgi-correlation-id",
+  "uuid6",
+  "pydantic-settings",
+  "devtools",
+  "passlib",
+]
+postgres = [
+  "asyncpg",
+]
+ldap = [
+  "bonsai",
+  "argon2-cffi",
+]
+client-sync = [
+  "authlib",
+  "requests",
+]
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.4.4"
+httpx = [
+  {version = "^0.24.1", python = "<3.8"},
+  {version = "^0.26.0", python = ">=3.8"},
+]
+pytest-asyncio = [
+  {version = "^0.21.1", python = "<3.8"},
+  # TODO: remove version limit after fixing https://github.com/pytest-dev/pytest-asyncio/issues/706
+  {version = "^0.21.1", python = ">=3.8"},
+]
+pytest-randomly = [
+  {version = "^3.12.0", python = "<3.8"},
+  {version = "^3.15.0", python = ">=3.8"},
+]
+pytest-deadfixtures = "^2.2.1"
+pytest-rerunfailures = "^13.0"
+pytest-lazy-fixture = "^0.6.3"
+coverage = [
+  {version = "^7.2.7", python = "<3.8"},
+  {version = "^7.4.0", python = ">=3.8"},
+]
+psycopg2-binary = "^2.9.9"
+gevent = [
+  {version = "^22.10.2", python = "<3.8"},
+  {version = "^23.9.1", python = ">=3.8"},
+]
+responses = [
+  {version = "^0.23.2", python = "<3.8"},
+  {version = "^0.24.1", python = ">=3.8"},
+]
+types-pyyaml = [
+  {version = "6.0.12.12", python = "<3.8"},
+  {version = "^6.0.12", python = "==3.7"}
+]
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = [
+  {version = "^3.5.0", python = ">=3.8"},
+  {version = "^3.6.0", python = ">=3.9"},
+]
+mypy = {version = ">=1.8.0", python = ">=3.8"}
+black = {version = ">=23.12.1,<25.0.0", python = ">=3.8"}
+isort = {version = "^5.13.2", python = ">=3.8"}
+flake8 = {version = ">=6,<8", python = ">=3.8.1"}
+bandit = {version = "^1.7.6", python = ">=3.8"}
+sqlalchemy = {extras = ["mypy"], version = "^2.0.25", python = ">=3.8"}
+wemake-python-styleguide = {version = "^0.18.0", python = ">=3.8.1"}
+flake8-pyproject = {version = "^1.2.3", python = ">=3.8"}
+types-python-jose = {version = "^3.3.4", python = ">=3.8"}
+types-passlib = {version = "^1.7.7", python = ">=3.8"}
+types-pyyaml = [
+  {version = "6.0.12.12", python = "<3.8"},
+  {version = "^6.0.12", python = "==3.7"}
+]
+types-requests = {version = "^2.31.0", python = ">=3.8"}
+
+[tool.poetry.group.docs.dependencies]
+autodoc-pydantic = {version = "^2.0.1", python = ">=3.8"}
+numpydoc = {version = "^1.6.0", python = ">=3.8"}
+sphinx = [
+  {version = "^7.1.2", python = ">=3.8"},
+  {version = "^7.2.6", python = ">=3.9"},
+]
+furo = {version = "^2024.1.29", python = ">=3.8"}
+sphinx-copybutton = {version = "^0.5.2", python = ">=3.8"}
+sphinxcontrib-towncrier = {version = "^0.4.0a0", python = ">=3.8"}
+towncrier = {version = "^23.11.0", python = ">=3.8"}
+sphinx-issues = {version = ">=3.0.1,<5.0.0", python = ">=3.8"}
+sphinx-design = {version = "^0.5.0", python = ">=3.8"}
+sphinx-favicon = {version = "^1.0.1", python = ">=3.8"}
+sphinx-argparse = {version = ">=0.2.5,<0.5.0", python = ">=3.8"}
+# uncomment after https://github.com/zqmillet/sphinx-plantuml/pull/4
+# sphinx-plantuml = {version = "^1.0.0", python = ">=3.8"}
+
+[tool.poetry.plugins."tricoder_package_spy.register"]
+"data-horizon" = "horizon"
+
+[tool.poetry_bumpversion.file."horizon/__init__.py"]
+search = '_raw_version = "{current_version}"'
+replace = '_raw_version = "{new_version}"'
+
+[tool.poetry_bumpversion.file."docs/conf.py"]
+search = 'ver = Version.parse("{current_version}")'
+replace = 'ver = Version.parse("{new_version}")'
+
+[tool.pytest.ini_options]
+markers = [
+    "backend: tests for backend (require running database)",
+    "client: tests for horizon-client (require running database and backend)",
+    "client_sync: tests for HorizonClientSync (using requests)",
+    "auth: tests using AuthProvider",
+    "dummy_auth: tests for DummyAuthProvider",
+    "ldap_auth: tests for LDAPAuthProvider",
+]
+
+[tool.coverage.paths]
+source = ["horizon"]
+
+[tool.coverage.run]
+branch = true
+parallel = true
+relative_files = true
+concurrency = ["gevent"]
+omit = [
+  "tests/*",
+]
+data_file = "reports/.coverage"
+
+[tool.coverage.report]
+precision = 2
+exclude_lines = [
+  "pragma: no cover",
+  "def __repr__",
+  "if .*debug:",
+  "raise AssertionError",
+  "raise NotImplementedError",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+  "if log.isEnabledFor(logging.DEBUG):",
+  "if sys.version_info",
+  "@(abc\\.)?abstractmethod",
+  "\\.\\.\\.",
+  "def downgrade\\(\\)",
+]
+
+[tool.black]
+line-length = 120
+target-version = ["py37", "py38", "py39", "py310", "py311", "py312"]
+include = "\\.pyi?$"
+exclude = "(\\.eggs|\\.git|\\.mypy_cache|\\.tox|\\.venv|_build|buck-out|build|dist)"
+
+[tool.isort]
+profile = "black"
+known_first_party = ["horizon", "tests"]
+
+[tool.mypy]
+python_version = "3.8"
+plugins = ["pydantic.mypy", "sqlalchemy.ext.mypy.plugin"]
+strict_optional = true
+
+[[tool.mypy.overrides]]
+module = "sqlalchemy_utils"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "authlib.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "starlette_exporter"
+ignore_missing_imports = true
+
+[tool.autoflake]
+imports = ["tests", "app"]
+ignore-init-module-imports = true
+remove-unused-variables = true
+
+[tool.darglint]
+docstring_style = "sphinx"
+
+[tool.codespell]
+ignore-words-list = "selectin"
+exclude-file = "poetry.lock"
+
+[tool.flake8]
+jobs = 4
+# We don't control ones who use our code
+i-control-code = false
+# Max of noqa in a module
+max-noqa-comments = 10
+max-annotation-complexity = 4
+max-returns = 5
+max-awaits = 5
+max-local-variables = 20
+max-name-length = 60
+# Max of expressions in a function
+max-expressions = 15
+# Max args in a function
+max-arguments = 15
+# Max classes and functions in a single module
+max-module-members = 35
+max-import-from-members = 35
+max-methods = 25
+# Max line complexity measured in AST nodes
+max-line-complexity = 24
+# Max Jones Score for a module: the median of all lines complexity sum
+max-jones-score = 15
+# Max amount of cognitive complexity per function
+max-cognitive-score = 20
+# Max amount of cognitive complexity per module
+max-cognitive-average = 25
+max-imports = 25
+max-imported-names = 50
+# Max of expression usages in a module
+max-module-expressions = 15
+# Max of expression usages in a function
+max-function-expressions = 15
+max-base-classes = 5
+max-decorators = 6
+# Max of repeated string constants in your modules
+max-string-usages = 15
+max-try-body-length = 15
+max-asserts = 15
+# Max number of access level in an expression
+max-access-level = 6
+# maximum number of public instance attributes
+max-attributes = 20
+
+max-line-length = 120
+max-doc-length = 120
+
+# https://pypi.org/project/flake8-quotes/
+inline-quotes = "double"
+multiline-quotes = "double"
+docstring-quotes = "double"
+
+# https://wemake-python-stylegui.de/en/latest/pages/usage/formatter.html
+show-source = true
+# Print total number of errors
+count = true
+statistics = true
+
+exclude = [
+  ".tox",
+  "migrations",
+  "dist",
+  "build",
+  "hadoop_archive_plugin",
+  "virtualenv",
+  "venv",
+  "venv36",
+  "ve",
+  ".venv",
+  "tox.ini",
+  "docker",
+  "Jenkinsfile",
+  "dags",
+  "setup.py",
+  "docs"
+]
+rst-directives = [
+  "autosummary",
+  "data",
+  "currentmodule",
+  "deprecated",
+  "glossary",
+  "moduleauthor",
+  "plot",
+  "testcode",
+  "versionadded",
+  "versionchanged"
+]
+# https://github.com/peterjc/flake8-rst-docstrings/pull/16
+rst-roles = [
+  "attr",
+  "class",
+  "func",
+  "meth",
+  "mod",
+  "obj",
+  "ref",
+  "term",
+  "py:func",
+  "py:mod"
+]
+
+ignore = [
+  "ANN",
+  "FI1",
+# Found upper-case constant in a class: DB_URL
+  "WPS115",
+# Found statement that has no effect
+  "WPS428",
+# Found `f` string [opinionated]
+  "WPS305",
+# Found class without a base class (goes against PEP8) [opinionated]
+  "WPS306",
+# Found line break before binary operator [goes against PEP8] [opinionated]
+  "W503",
+# Found multiline conditions [opinionated]
+  "WPS337",
+# Found mutable module constant [opinionated]
+  "WPS407",
+# Found empty module:
+  "WPS411",
+# Found nested import [opinionated]
+  "WPS433",
+# Found negated condition [opinionated]
+  "WPS504",
+# Found implicit `.get()` dict usage
+  "WPS529",
+# Docstrings [opinionated]
+  "D",
+# string does contain unindexed parameters'
+  "P101",
+  "P103",
+# Found implicit string concatenation [optional]
+  "WPS326",
+# Found wrong function call: locals'
+  "WPS421",
+# module level import not at top of file
+  "E402",
+# Document or section may not begin with a transition.
+  "RST399",
+# Error in "code" directive
+  "RST307",
+# Found `%` string formatting
+  "WPS323",
+# doc line too long
+  "W505",
+# line too long
+  "E501",
+# Found wrong module name: util
+  "WPS100",
+# Found wrong keyword: pass
+  "WPS420",
+# Found incorrect node inside `class` body: pass
+  "WPS604",
+# Found wrong variable name: data
+  "WPS110",
+# Found builtin shadowing: id
+  "WPS125",
+# Found too short name: e < 2
+  "WPS111",
+# Found a line that starts with a dot
+  "WPS348",
+# first argument of a method should be named 'self'
+  "N805",
+# Found `finally` in `try` block without `except`
+  "WPS501",
+# Wrong multiline string usage: textwrap.dedent + multiline comment
+  "WPS462",
+# Found incorrect multi-line string: 3-quoted docstring with just one line
+  "WPS322",
+# https://github.com/wemake-services/wemake-python-styleguide/issues/2847
+# E704 multiple statements on one line (def)
+  "E704",
+# WPS220 Found too deep nesting: 34 > 20
+  "WPS220",
+]
+
+per-file-ignores = [
+# F401 imported but unused
+# WPS410 Found wrong metadata variable: __all__
+  "__init__.py:F401,WPS410",
+# WPS102 Found incorrect module name pattern
+# WPS432 Found magic number: 256
+  "*migrations/*.py:WPS102,WPS432",
+# WPS237 Found a too complex `f` string
+  "*exceptions/*.py:WPS237",
+  "*exceptions/__init__.py:F40,WPS410",
+# TAE001 too few type annotations
+# WPS231 Found function with too much cognitive complexity
+# S101 Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+# WPS442 Found outer scope names shadowing
+# WPS432 Found magic number
+# WPS334 Found reversed complex comparison
+# WPS218 Found too many `assert` statements: 19 > 15
+# WPS226 Found string literal over-use: value > 15
+# WPS118 Found too long name:
+  "*tests/*.py:TAE001,WPS231,S101,WPS442,WPS432,WPS334,WPS218,WPS226,WPS118",
+]
+
+[tool.towncrier]
+name = "Horizon"
+package = "horizon"
+filename = "docs/changelog/NEXT_RELEASE.rst"
+directory = "docs/changelog/next_release/"
+title_format = "{version} ({project_date})"
+issue_format = ":issue:`{issue}`"
+
+[[tool.towncrier.type]]
+directory = "breaking"
+name = "Breaking Changes"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "significant"
+name = "Significant Changes"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "feature"
+name = "Features"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "improvement"
+name = "Improvements"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "bugfix"
+name = "Bug Fixes"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "dependency"
+name = "Dependencies"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "doc"
+name = "Doc only Changes"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "misc"
+name = "Misc"
+showcontent = true
