@@ -1,0 +1,325 @@
+#!python
+
+import base64
+import os
+import pathlib
+import subprocess
+from cryptography.fernet import Fernet
+import argparse
+from base64 import urlsafe_b64decode
+from struct import unpack
+from datetime import datetime, timedelta
+
+GEN_KEY_NAME = "envkey"
+KEY_FILE_EXTENSION = "fkey"
+ENV_FILE_EXTENSION = "env"
+
+
+def arg_parse():
+    parser = argparse.ArgumentParser(description="Fernet encryptor")
+    parser.add_argument(
+        "-e",
+        "--environment",
+        action="store",
+        dest="environment",
+        default=0,
+        help="select environment",
+    )
+    parser.add_argument(
+        "-d",
+        "--decrypt",
+        action="store_true",
+        dest="decrypt",
+        default=False,
+        help="decrypt",
+    )
+    parser.add_argument(
+        "-k",
+        "--key",
+        action="store",
+        dest="key",
+        default=0,
+        help="specify key file or key",
+    )
+    parser.add_argument(
+        "-f",
+        "--file",
+        action="store",
+        dest="efile",
+        default=0,
+        help="specify env file",
+    )
+    parser.add_argument(
+        "-editor",
+        action="store",
+        dest="editor",
+        default=None,
+        help="Specify editor",
+    )
+    return [
+        (parser.parse_args().environment),
+        (parser.parse_args().decrypt),
+        (parser.parse_args().key),
+        (parser.parse_args().efile),
+        (parser.parse_args().editor)
+    ]
+
+
+def find_files(name, extension):
+    pattern = f"{name}.{extension}"
+    files = []
+    file_refs = pathlib.Path(".").glob(pattern)
+    for file in file_refs:
+        files.append(str(file))
+    return files
+
+
+def generate_key(gen_key_name):
+    key = Fernet.generate_key()
+    open_write(f"{gen_key_name}.{KEY_FILE_EXTENSION}", "wb", key)
+
+
+def key_from_env():
+    print(os.environ["HOME"])
+
+
+def read_key(keys, *args):
+    if len(keys) > 1:
+        print("Multiple key files found. Choose one:")
+        for count, ele in enumerate(keys):
+            print(count, ":", ele)
+        k = int(input(f"Choose a file [0 - {len(keys) - 1}]: "))
+        keys = keys[k]
+    elif not keys:
+        if args:
+            gen_key_name = args[0]
+        else:
+            gen_key_name = GEN_KEY_NAME
+        ans = str(input("No keys found. Generate new key? [Y/N]: "))
+        if ans.upper() == "Y":
+            generate_key(gen_key_name)
+            subprocess.run(["sh", "-c", "echo \*.fkey>>.gitignore"])  # type: ignore
+            keys = f"{gen_key_name}.{KEY_FILE_EXTENSION}"
+        else:
+            quit()
+    else:
+        keys = keys[0]
+    return keys
+
+
+def read_envs(envs, *args):
+    if len(envs) > 1:
+        print("Multiple env files found. Choose one:")
+        for count, ele in enumerate(envs):
+            print(count, ":", ele)
+        k = int(input(f"Choose a file [0 - {len(envs) - 1}]: "))
+        envs = envs[k]
+    elif not envs:
+        if args:
+            env_name = args[0]
+        else:
+            env_name = ""
+        ans = str(input("No envs found. Generate new env? [Y/N]: "))
+        if ans.upper() == "Y":
+            open_write(f"{env_name}.{ENV_FILE_EXTENSION}", "w", "")
+            envs = f"{env_name}.{ENV_FILE_EXTENSION}"
+        else:
+            quit()
+    else:
+        envs = envs[0]
+    return envs
+
+
+def open_read(file, open_type):
+    try:
+        with open(file, open_type) as file_key:
+            read_val = file_key.read()
+            return read_val
+    except Exception:
+        print("Error reading file")
+        quit()
+
+
+def open_write(file, open_type, message):
+    with open(file, open_type) as file_key:
+        file_key.write(message)
+
+
+def encrypt(key, env, env_file):
+    encrypted = validate_token(env)
+    if not encrypted:
+        if validatekey(key):
+            print("Encrypting...")
+            fernet = Fernet(key)
+            try:
+                enc_message = fernet.encrypt(env.encode())
+                open_write(env_file, "wb", enc_message)
+            except Exception:
+                print("Encryption Failed, Aborting")
+                quit()
+        else:
+            print("Key is not valid")
+            quit()
+
+
+def decrypt(key, env_file):
+    if validatekey(key):
+        print("Decrypting...")
+        try:
+            message = open_read(env_file, "rb")
+        except Exception:
+            print("Env read error")
+            quit()
+        fernet = Fernet(key)
+        try:
+            message = fernet.decrypt(message).decode()
+            print("Decryption Successful")
+        except Exception:
+            print("Decryption failed")
+            quit()
+        return message
+    else:
+        print("Key is not valid")
+        quit()
+
+
+def decrypt_open(key, env_file, editor):
+    message = decrypt(key, env_file)
+    open_write(env_file, "w", message)
+    print("Editing in progress...")
+    open_editor(env_file, editor)
+    print("Editor closed.")
+    message = open_read(env_file, "r")
+    encrypt(key, message, env_file)
+
+
+def validate_token(c):
+    encrypted = False
+    try:
+        bin_token = urlsafe_b64decode(c)
+        if bin_token:
+            version, timestamp = unpack(">BQ", bin_token[:9])
+            tok_age = datetime.now() - datetime.fromtimestamp(timestamp)
+
+            if version != 0x80:
+                print("Invalid token version!")
+                encrypted = False
+
+            elif tok_age < timedelta(0):
+                print("Token timestamp in the future! Invalid token!")
+                encrypted = False
+            else:
+                encrypted = True
+    except Exception:
+        encrypted = False
+
+    return encrypted
+
+
+def validatekey(key):
+    try:
+        decoded_key = base64.urlsafe_b64decode(key)
+        if len(decoded_key) == 32:
+            return True
+        else:
+            return False
+    except Exception:
+        return False
+
+
+def open_editor(file, editor):
+    if editor:
+        if editor == "nano" or editor == "vi" or editor == "vim":
+            try:
+                subprocess.run([editor, file])
+            except Exception:
+                try:
+                    subprocess.run(["vi", file])
+                except Exception:
+                    print("No Supported Editor Available\n\nRun lockenv -d and edit env file manually\n\n")
+        else:
+            try:
+                subprocess.run([editor, file, "--wait"])
+            except Exception:
+                try:
+                    subprocess.run(["vi", file])
+                except Exception:
+                    print("No Supported Editor Available\n\nRun lockenv -d and edit env file manually\n\n")
+    else:
+        try:
+            subprocess.run(["vi", file])
+        except Exception:
+            print("No Supported Editor Available\n\nRun lockenv -d and edit env file manually\n\n")        
+
+
+def run(key, file, editor,  *args):
+    key_name = env_name = "*"
+    environment = ""
+    if args:
+        environment = args[0]
+        key_name = environment
+        env_name = environment
+    if key:
+        iskey = validatekey(key)
+        if not iskey:
+            try:
+                key = open_read(key, "rb")
+            except Exception:
+                print("Key error")
+                exit()
+    else:
+        key = open_read(
+            read_key(find_files(key_name, KEY_FILE_EXTENSION), environment), "rb"
+        )
+    if file:
+        env_file = file
+    else:
+        env_file = read_envs(find_files(env_name, ENV_FILE_EXTENSION), environment)
+
+    msg = open_read(env_file, "r")
+    encrypt(key, msg, env_file)
+    decrypt_open(key, env_file, editor)
+    print("Done")
+
+
+def decryptrun(key, file, *args):
+    key_name = env_name = "*"
+    environment = ""
+    if args:
+        environment = args[0]
+        key_name = environment
+        env_name = environment
+    if key:
+        iskey = validatekey(key)
+        if not iskey:
+            try:
+                key = open_read(key, "rb")
+            except Exception:
+                print("Key error")
+                exit()
+    else:
+        key = open_read(
+            read_key(find_files(key_name, KEY_FILE_EXTENSION), environment), "rb"
+        )
+    if file:
+        env_file = file
+    else:
+        env_file = read_envs(find_files(env_name, ENV_FILE_EXTENSION), environment)    
+
+    messages = decrypt(key, env_file)
+    open_write(env_file, "w", messages)
+
+
+if __name__ == "__main__":
+    environment, decrypts, key, file, editor = arg_parse()
+    if environment:
+        if decrypts:
+            decryptrun(key, file, environment)
+        else:
+            run(key, file, editor, environment)
+    else:
+        print("Warning! No environment specified.")
+        if decrypts:
+            decryptrun(key, file)
+        else:
+            run(key, file, editor)
