@@ -1,0 +1,6 @@
+requests
+cryptography
+
+[dev]
+pytest
+pytest-cov
