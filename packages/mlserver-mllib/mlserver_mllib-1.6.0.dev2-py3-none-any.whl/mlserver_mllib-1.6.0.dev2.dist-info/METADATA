@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: mlserver-mllib
+Version: 1.6.0.dev2
+Summary: Spark MLlib runtime for MLServer
+License: Apache-2.0
+Author: Seldon Technologies Ltd.
+Author-email: hello@seldon.io
+Requires-Python: >=3.9,<3.12
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: mlserver
+Requires-Dist: pyspark
+Description-Content-Type: text/markdown
+
+# Spark MLlib runtime for MLServer
+
+This package provides a MLServer runtime compatible with Spark MLlib.
+
+## Usage
+
+You can install the runtime, alongside `mlserver`, as:
+
+```bash
+pip install mlserver mlserver-mllib
+```
+
+For further information on how to use MLServer with Spark MLlib, you can check
+out the [MLServer repository](https://github.com/SeldonIO/MLServer).
+
