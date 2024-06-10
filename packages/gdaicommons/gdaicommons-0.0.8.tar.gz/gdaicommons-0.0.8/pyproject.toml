@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project]
+name = "gdaicommons"
+version = "0.0.8"
+authors = [
+    { name = "Mayank Bhargava", email = "mbhargava.gd@gmail.com" },
+]
+description = "AI transformation libraries and utilities to run on Godel Grid data platform"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://www.godelgrid.com"
+Documentation = "https://www.godelgrid.com/docs"
+Repository = "https://github.com/godelgrid/gd-ai-commons"
+Issues = "https://github.com/godelgrid/gd-ai-commons/issues"

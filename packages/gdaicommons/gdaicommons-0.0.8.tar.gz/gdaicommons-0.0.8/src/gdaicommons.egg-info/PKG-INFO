@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: gdaicommons
+Version: 0.0.8
+Summary: AI transformation libraries and utilities to run on Godel Grid data platform
+Author-email: Mayank Bhargava <mbhargava.gd@gmail.com>
+Project-URL: Homepage, https://www.godelgrid.com
+Project-URL: Documentation, https://www.godelgrid.com/docs
+Project-URL: Repository, https://github.com/godelgrid/gd-ai-commons
+Project-URL: Issues, https://github.com/godelgrid/gd-ai-commons/issues
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# gd-ai-commons
