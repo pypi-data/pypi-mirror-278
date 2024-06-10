@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: checkptr
+Version: 0.1.3
+Summary: Simple standard for model checkpointing, framework-agnostic
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Project-URL: repo, https://github.com/moveread/REPO.git
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# Checkptr
+
+> Simple, framework-agnostic standard for model checkpointing
+
+```bash
+pip install checkptr
+```
+
+```python
+from checkptr import Checkpointer
+
+chkptr = Checkpointer.pytorch('path/to/checkpoints')
+# or Checkpointer('path', save_fn=torch.save, load_fn=torch.load)
+
+chkptr.checkpoint(model, f'model_{epoch}.pth')
+model = checkptr.load(f'model_{epoch}.pth')
+
+
+print('Checkpoints:', chkptr.checkpoints()) # ['model_0.pth', 'model_1.pth', ...]
+```
+
+Creates:
+
+```
+checkpoints/
+  model_0.pth
+  model_1.pth
+  ...
+```
+
+
+And that's it! Simple.
