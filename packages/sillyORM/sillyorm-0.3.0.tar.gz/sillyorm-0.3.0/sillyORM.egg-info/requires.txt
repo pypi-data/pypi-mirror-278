@@ -1,0 +1,13 @@
+
+[dev]
+pytest
+coverage
+pylint
+mypy
+black
+Sphinx
+psycopg2
+types-psycopg2
+
+[postgres]
+psycopg2
