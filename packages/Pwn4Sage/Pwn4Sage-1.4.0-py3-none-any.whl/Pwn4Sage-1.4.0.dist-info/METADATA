@@ -1,0 +1,89 @@
+Metadata-Version: 2.1
+Name: Pwn4Sage
+Version: 1.4.0
+Summary: A simplified Pwntools for SageMath
+Home-page: https://github.com/Harry0597/Pwn4Sage
+Author: Harry0597
+Author-email: 1915885792@qq.com
+License: MIT
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# [Pwn4Sage](https://github.com/Harry0597/Pwn4Sage)
+
+## Pypi上传
+
+### 参考
+
++ [中文指南](https://blog.csdn.net/MemoryD/article/details/84295855)
+  + [文中仓库](https://github.com/MemoryD/mxgames/blob/master/mxgames/__init__.py)
++ [官方文档](https://packaging.python.org/en/latest/tutorials/packaging-projects/#configuring-metadata)
+
+- [解决：找不到twine](https://stackoverflow.com/questions/51451966/twine-not-found-bash-twine-command-not-found)
+
+  `python3 -m twine upload --repository-url https://upload.pypi.org/legacy/ dist/*`
+
+- https://pypi.org/project/pwntools/#files
+
+### 指令清单
+
+1. `python setup.py check`
+2. `python setup.py sdist bdist_wheel`
+3. `python3 -m twine upload --repository-url https://upload.pypi.org/legacy/ dist/*`
+
+改动后，记得`__init__.py`改写版本号更新即可;
+
+##### 困惑
+
+学习了[pwntools](https://pypi.org/project/pwntools/#files)的`__init__.py`，要想直接`from Pwn4Sage import *`就可以用所有函数，没实现成功
+
+## Pwn4Sage's Guide
+
+As we all know, we cannot use **pwntools** directly in **SageMath**.
+In order to solve this problem, you can use Linux.
+However, I realized that Cryptor does not need all the complex functions in Pwntools.
+In fact, we always use some functions in Pwntools, such as `recvline()`, `sendline()` and other functions related to receiving and sending data.
+Finally, when I found that **socket** can be used normally in SageMath, I decided to write a **Simplified pwntools**.
+
+Pwn4Sage contains the following functions (if you don't know the specific use and details, you can check in the relevant documents of pwntools):
+
+- `send(msg)`
+- `sendline(msg)`
+- `recv(num)`
+- `recvuntil(msg)`
+- `recvline()`
+- `recvline_contains(key_words)`
+- `sendafter(delim, data, timeout)`
+- `interactive()`
+
+### Installation
+
+
+This simple python script is available on PyPI and can be installed via pip. 
+
+- `pip install Pwn4Sage`
+
+In the web of SageMath, you can use `!pip install Pwn4Sage` to install.
+
+### Usage
+
+```python
+from Pwn4Sage.pwn import *
+s = remote('39.105.144.62', 2022)
+# print(s.sendafter(b'[+] Plz tell me XXXX:', b'1234\n'))
+# print(s.recvline())
+
+# s.sendafter(b'[+] Plz tell me XXXX:', b'1234\n'))
+# print(s.recvline_contains(b'XXXX'))
+s.interactive()
+```
+
+
+
