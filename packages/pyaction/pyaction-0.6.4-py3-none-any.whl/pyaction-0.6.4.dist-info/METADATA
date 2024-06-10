@@ -1,0 +1,116 @@
+Metadata-Version: 2.1
+Name: pyaction
+Version: 0.6.4
+Summary: Create GitHub Actions using Python
+Author-email: Sadra Yahyapour <lnxpylnxpy@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2023 Sadra Yahyapour
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Documentation, https://pyaction.imsadra.me
+Project-URL: Repository, https://github.com/lnxpy/pyaction
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydantic >=2.7.0
+Requires-Dist: pygithub >=2.3.0
+Provides-Extra: cli
+Requires-Dist: copier >=9.2 ; extra == 'cli'
+Requires-Dist: click >=8.1 ; extra == 'cli'
+Requires-Dist: rich >=13.7.1 ; extra == 'cli'
+Provides-Extra: dev
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: pytest-cookies ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: mkdocs-material ; extra == 'docs'
+Requires-Dist: cairosvg ; extra == 'docs'
+Requires-Dist: pillow ; extra == 'docs'
+
+## PyAction - Create GitHub Actions Using Python! :sparkles:
+
+![Version)](https://img.shields.io/github/v/tag/lnxpy/pyaction?label=Version) ![Python Versions](https://img.shields.io/pypi/pyversions/pyaction?logo=python&logoColor=949DA5&label=Python&labelColor=2A3035) [![Package Testing](https://github.com/lnxpy/pyaction/actions/workflows/testing.yml/badge.svg)](https://github.com/lnxpy/pyaction/actions/workflows/testing.yml) [![Docs CI](https://github.com/lnxpy/pyaction/actions/workflows/docs.yml/badge.svg?branch=main)](https://github.com/lnxpy/pyaction/actions/workflows/docs.yml)
+
+PyAction helps you to develop [GitHub Actions](https://docs.github.com/en/actions) using Python. It's delivered as an installable package with the ability to test the action locally before any deployment.
+
+```python
+from pyaction import PyAction
+
+
+workflow = PyAction.workflow()
+
+
+@workflow.action()
+def greetings_action(name: str, age: int) -> None:
+    workflow.write(
+        {
+            "phrase": f"Hello {name}. You are {age}!"
+        }
+    )
+
+# $ pyaction run
+# ┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃ Variable ┃          Value          ┃     Type      ┃           Workflow Usage            ┃
+# ┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+# │  phrase  │ Hello Jane. You are 20! │ <class 'str'> │ ${{ steps.STEP_ID.outputs.phrase }} │
+# └──────────┴─────────────────────────┴───────────────┴─────────────────────────────────────┘
+```
+
+Check out the [official docs](https://pyaction.imsadra.me) for more detailed information. There is also a [Quickstart](https://pyaction.imsadra.me/quickstart) demo tutorial that walks you through a simple hello-world action.
+
+### Installation
+Run the following command in a fresh CLI tab.
+
+```sh
+pip install -U "pyaction[cli]"
+```
+
+To make sure the installation process was successful, run the following command.
+
+```sh
+pyaction --version
+```
+
+### Usage
+It's recommended to initialize a template, then going along the development process. Thus, run the `init` command.
+
+```sh
+pyaction init
+```
+
+Answer the prompts and your template will be generated. Check out the docs for the further steps.
+
+### Contribution
+All your contributions and assistance are welcome. For more information about how you can contribute to the project, please follow the instructions [here](https://pyaction.imsadra.me/contributing). :sparkles:
+
+### License
+PyAction is licensed under the [MIT License](LICENSE) terms.
