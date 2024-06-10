@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: promplate-trace
+Version: 0.3.0.dev3
+Summary: Observability for Promplate
+Home-page: https://promplate.dev/py
+Author-Email: Muspi Merol <me@promplate.dev>
+License: MIT
+Project-URL: Homepage, https://promplate.dev/py
+Project-URL: Repository, https://github.com/promplate/trace
+Requires-Python: >=3.10
+Requires-Dist: promplate<0.4,>=0.3.0rc3
+Requires-Dist: pydantic-settings<3,>=2
+Requires-Dist: langsmith~=0.1; extra == "langsmith"
+Requires-Dist: langfuse<3,>=2.2; extra == "langfuse"
+Provides-Extra: langsmith
+Provides-Extra: langfuse
+Description-Content-Type: text/markdown
+
+# promplate-trace
+
+## Installation
+
+```shell
+pip install promplate-trace
+```
+
+## Roadmap
+
+- [x] langsmith
+- [x] langfuse
+- [ ] llmonitor
