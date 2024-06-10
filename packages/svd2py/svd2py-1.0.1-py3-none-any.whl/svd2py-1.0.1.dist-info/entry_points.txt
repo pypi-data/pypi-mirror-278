@@ -1,0 +1,4 @@
+[console_scripts]
+svd2json=svd2py.app:svd2json
+svd2yaml=svd2py.app:svd2yaml
+
