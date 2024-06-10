@@ -1,0 +1,51 @@
+Metadata-Version: 2.3
+Name: inter-cli
+Version: 1.1
+Project-URL: Documentation, https://github.com/victor macedo/inter-cli#readme
+Project-URL: Issues, https://github.com/victor macedo/inter-cli/issues
+Project-URL: Source, https://github.com/victor macedo/inter-cli
+Author-email: victor macedo <victormacedo996@gmail.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: cookiecutter==2.6.0
+Requires-Dist: docker==7.1.0
+Requires-Dist: gitpython==3.1.43
+Requires-Dist: jinja2==3.1.4
+Requires-Dist: loguru==0.7.2
+Requires-Dist: pydantic==2.7.3
+Requires-Dist: python-gitlab==4.6.0
+Requires-Dist: pyyaml==6.0.1
+Requires-Dist: typer==0.12.3
+Description-Content-Type: text/markdown
+
+# inter-cli
+
+[![PyPI - Version](https://img.shields.io/pypi/v/inter-cli.svg)](https://pypi.org/project/inter-cli)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/inter-cli.svg)](https://pypi.org/project/inter-cli)
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install inter-cli
+```
+
+## License
+
+`inter-cli` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
