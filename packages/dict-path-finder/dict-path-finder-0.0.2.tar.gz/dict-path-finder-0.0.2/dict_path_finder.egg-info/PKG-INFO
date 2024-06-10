@@ -1,0 +1,114 @@
+Metadata-Version: 2.1
+Name: dict-path-finder
+Version: 0.0.2
+Summary: Find dictionary path by key and value
+Home-page: https://github.com/developers-dev/
+Author: Jinhan Kim
+Author-email: developers.xyz@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# dict-path-finder
+
+`dict-path-finder` is a Python library designed to find the paths to specific keys or values within nested dictionaries and lists. This can be particularly useful for working with complex JSON data structures.
+
+## Features
+
+- Find all paths to a specified key in dictionaries and lists.
+- Find all paths to a specified value in dictionaries and lists.
+- Outputs all paths to the key and value you are looking for as a list.
+
+## Installation
+
+You can install `dict-path-finder` using pip:
+
+```sh
+pip install dict-path-finder
+```
+
+## Usage
+
+### Finding Paths by Key
+
+```python
+from dict-path-finder import find_paths_by_key
+
+data = {
+    "items": [
+        {
+            "type": "book",
+            "title": "Inception",
+            "authors": [
+                {
+                    "name": "F. Scott Fitzgerald"
+                }
+            ]
+        },
+        {
+            "type": "movie",
+            "title": "Inception",
+            "directors": [
+                {
+                    "name": ["Christopher Nolan", "heaven"]
+                }
+            ]
+        }
+    ]
+}
+
+input_key = "title"
+results = find_paths_by_key(data, input_key)
+
+for result in results:
+    print("Output:", result)
+
+# result
+# Output: data["items"][0]["title"]
+# Output: data["items"][1]["title"]
+
+```
+
+
+
+### Finding Paths by Value
+```python
+from dict-path-finder import find_paths_by_value
+
+data = {
+    "items": [
+        {
+            "type": "book",
+            "title": "Inception",
+            "authors": [
+                {
+                    "name": "F. Scott Fitzgerald"
+                }
+            ]
+        },
+        {
+            "type": "movie",
+            "title": "Inception",
+            "directors": [
+                {
+                    "name": ["Christopher Nolan", "heaven", "Inception"]
+                }
+            ]
+        }
+    ]
+}
+
+input_value = "Inception"
+results = find_paths_by_value(data, input_value)
+
+for result in results:
+    print("Output:", result)
+
+# result
+# Output: data["items"][0]["title"]
+# Output: data["items"][1]["title"]
+# Output: data["items"][1]["directors"][0]["name"][2]
+
+```
