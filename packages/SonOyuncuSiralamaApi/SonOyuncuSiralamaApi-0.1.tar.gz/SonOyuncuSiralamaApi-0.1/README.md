@@ -1,0 +1,39 @@
+ SonOyuncu Web Scraping Araci
+
+ Bu basit arac, SonOyuncu web sitesinden oyun siralamalarini almaniza yardimci olur. `gswusername` fonksiyonuyla bir kullanicinin adina gore siralamayi ve skoru alabilirsiniz. `gswrank` fonksiyonuyla ise belirli bir siralama numarasina gore kullanicinin adi ve skoru alabilirsiniz.
+
+ Kurulum
+
+ Bu araci kullanmak icin, Python'un `requests` ve `beautifulsoup4` kutuphanelerini yuklemeniz gerekmektedir. Bunlari yuklemek icin terminal veya komut istemcisine su komutlari girin:
+
+ ```bash
+ pip install requests
+ pip install beautifulsoup4
+ ```
+
+ Kullanim
+
+ Kullanici Adina Gore Siralama ve Skor Almak
+
+ ```python
+
+ username = "lumiin"
+ game = "thebridge"  # Oyun adi (bedwars,skywars)
+ time = "2024"     # Zaman periyodu (062023, 2022)
+
+ score_info = gswusername(username, game, time)
+ print(score_info)
+ ```
+
+ Siralama Numarasina Gore Kullanicinin Adi ve Skor Almak
+
+ ```python
+
+ rank = "1."          # Siralama numarasi
+ game = "thebridge"  # Oyun adi (ornegin: bedwars,skywars)
+ time = "2024"     # Zaman periyodu (ornegin: 062023, 2022)
+
+ score_info = gswrank(rank, game, time)
+ print(score_info)
+```
+
