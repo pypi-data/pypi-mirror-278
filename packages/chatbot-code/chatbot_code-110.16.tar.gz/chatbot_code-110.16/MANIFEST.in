@@ -1,0 +1,5 @@
+include README.md
+include LICENSE
+include post_install.py
+recursive-include app1/static *
+recursive-include app1/templates *
