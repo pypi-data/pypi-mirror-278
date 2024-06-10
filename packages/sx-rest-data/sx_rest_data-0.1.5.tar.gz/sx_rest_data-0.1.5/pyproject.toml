@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "sx-rest-data"
+version = "0.1.5"
+description = ""
+authors = ["Christian Frost <ctf@ramboll.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pandas = "^2.2.2"
+keyring = "^25.2.1"
+ipykernel = "^6.29.3"
+loguru = "^0.7.2"
+requests = "^2.31.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
