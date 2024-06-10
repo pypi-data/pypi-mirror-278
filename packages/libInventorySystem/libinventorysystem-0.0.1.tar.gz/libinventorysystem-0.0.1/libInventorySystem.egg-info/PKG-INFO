@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: libInventorySystem
+Version: 0.0.1
+Summary: A library of a basic inventory system
+Home-page: 
+Author: Nelson Gabriel Austria, Joshua Mendoza
+Author-email: austrianelsongabriel83@gmail.com
+License: MIT
+Keywords: inventory
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE.txt
+
+A Libary when launched, will start a simple inventory system for Parts
+Date of Creation June 10, 2024, Date of Submission: June 15, 2024
+3CS-A
+Austria, Nelson Gabriel B.
+Mendoza, Joshua E.
+
+
+CHANGE LOG
+================
+
+0.0.1 (10/06/2024)
+------------------
+- First Release
