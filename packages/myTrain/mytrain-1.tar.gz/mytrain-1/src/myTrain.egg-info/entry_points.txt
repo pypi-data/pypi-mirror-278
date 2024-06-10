@@ -1,0 +1,2 @@
+[console_scripts]
+mytrain = myTrain.train:exit

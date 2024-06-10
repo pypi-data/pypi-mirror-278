@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: myTrain
+Version: 1
+Summary: A Minimal Client for Indian Railways
+Home-page: https://github.com/neernjan1/pyTrain
+Author: Neeraj Yadav
+Author-email: nyadav70096@gmail.com
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: BeautifulSoup4
+Requires-Dist: requests
+Requires-Dist: tabulate
+Requires-Dist: pandas
+Requires-Dist: colorama
+
+# pyTrain
+
+## Search and Check for Available trains and tickets from Irctc.co.in
+
+* Features
+  * Autocomplete Station Name
+  
+  * List All available trains
+  * Check for all available classes with x
+  * Easy and Interactive Command Line Interfaces
+
+* Usage
+  
+    * Just type mytrain at command prompt and use the interactive interface
