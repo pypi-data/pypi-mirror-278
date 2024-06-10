@@ -1,0 +1,239 @@
+[![MIT License][license-shield]](https://s3.amazonaws.com/www.codeflex.lat/documentos/c3320017-1937-4353-8881-475e3c89e25e/LICENSE.txt)
+
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://codeflex.com.co">
+    <img src="https://s3.amazonaws.com/www.codeflex.lat/documentos/c3320017-1937-4353-8881-475e3c89e25e/Paginas/logo2.png" alt="Logo" width="260">
+  </a>
+
+  <h3 align="center">CODEFLEX CLOUD S.A.S.</h3>
+
+  <p align="center">
+    Codificación y Almacenamiento Simplificados | IDE
+    <br />
+    <a href="https://docs.codeflex.com.co/"><strong>Explore the docs »</strong></a>
+    <br />
+  </p>
+</p>
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+ 
+[![miniatura][miniatura]](https://codeflex.com.co)
+
+
+<!-- GETTING STARTED 
+## Getting Started
+
+### Prerequisites
+
+You need to make sure you have installed the following modules.
+* Requests
+  ```s
+  pip install requests
+  ```
+-->
+
+### Installation
+
+```python
+pip install codeflex
+```
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+* Example 1 | Connection to MySQL
+    ```python
+    from codeflex.company import mysql
+
+    respuesta = mysql.connector("your_user", "your_password","your_database", "your_SQL") #Usuario , Contraseña, Base de datos, Cualquier Sql (Actualiza, Elimina, Consulta, Inserta) SOLO TABLAS
+    print(respuesta)
+
+
+    respuesta = mysql.updatetable_custom("your_user", "your_password","your_database", "your_SQL") #Usuario , Contraseña, Base de datos, Sql
+    print(respuesta)
+
+
+    respuesta = mysql.deletetable_custom("your_user", "your_password","your_database", "your_SQL") #Usuario , Contraseña, Base de datos, Sql
+    print(respuesta)
+ 
+
+    respuesta = mysql.deletetable("your_user", "your_password","your_database", "your_tablename") #Usuario , Contraseña, Base de datos, Nombre de la tabla
+    print(respuesta)
+
+
+    respuesta = mysql.tableinsert_custom("your_user", "your_password","your_database", "your_SQL") #Usuario , Contraseña, Base de datos, Sql
+    print(respuesta)
+ 
+
+    respuesta = mysql.tablequery_custom("your_user", "your_password","your_database", "your_SQL") #Usuario , Contraseña, Base de datos, Sql
+    print(respuesta)
+
+
+    respuesta = mysql.tablequery("your_user", "your_password","your_database", "your_tablename") #Usuario , Contraseña, Base de datos, Nombre de la tabla
+    print(respuesta)
+
+
+    respuesta = mysql.createtable_custom("your_user", "your_password","your_database", "your_SQL") #Usuario , Contraseña, Base de datos, Sql
+    print(respuesta)
+
+
+    respuesta = mysql.createtable("your_user", "your_password","your_database", "your_tablename") #Usuario , Contraseña, Base de datos, Nombre de la tabla
+    print(respuesta)
+
+
+    respuesta = mysql.deletedb("your_user", "your_database") #Usuario y Base de datos
+    print(respuesta)
+
+
+    respuesta = mysql.createdb("your_user", "your_database") #Usuario y Base de datos
+    print(respuesta)
+ 
+ 
+    respuesta = mysql.dbquery("your_user", "your_password") #Usuario y Contraseña
+    print(respuesta)
+    ```
+ 
+
+* Example 2 | Connection to Polly
+    ```python
+    from codeflex.company import polly
+
+    Text = "your_text" # Texto Personalizado
+    VoiceId = "Lupe" # Para cambiar el VoiceId y LanguageCode, consulta la documentación. | API de Conexión a Polly
+    LanguageCode = "es-US"
+    TokenSub = "your_tokensub" # Para acceder a este servicio, utiliza tu TokenSub, que es un identificador único por cuenta y es necesario que pertenezcas al plan premium. | https://codeflex.com.co/drive/index.html#/Polly
+
+    respuesta = polly.audiodata(Text, VoiceId,LanguageCode,TokenSub)
+    print(respuesta)
+    # Respuesta: {"audioData": "SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4Ljc2LjEwMAAAAAAAAAAAAAAA//EzfNsySGqKm/lCw0GpvBJAAwWmuAVDjr+V"} Base64
+
+    respuesta = polly.download(Text, VoiceId,LanguageCode,TokenSub)
+    print(respuesta)
+    # Respuesta: {'audioUrl': 'https://s3.amazonaws.com/hub.codeflex.lat/audioStream_1713562991794.mp3'}
+
+
+    """
+    Configuración de voces para la síntesis de voz por región:
+    Estas configuraciones determinan qué identificadores de voz (`VoiceId`) están disponibles
+    para diferentes códigos de lenguaje (`LanguageCode`). Estas deben ser utilizadas en la API para generar
+    la salida de audio correcta según el idioma del texto ingresado.
+
+    LanguageCode:"es-US": = Español (EE. UU.)
+        1) VoiceId:"Lupe", VoiceId:"Pedro"
+
+    LanguageCode:"es-MX": = Español (México)
+        2) VoiceId:"Andres", VoiceId:"Mia"
+ 
+    LanguageCode:"es-ES": = Español (España)
+        3) VoiceId:"Sergio", VoiceId:"Lucia"
+
+    LanguageCode:"en-US": = Inglés (EE. UU.)
+        4) VoiceId:"Kevin", VoiceId:"Gregory", VoiceId:"Stephen", VoiceId:"Joey", VoiceId:"Danielle", VoiceId:"Ivy", VoiceId:"Ruth", VoiceId:"Salli"
+
+    LanguageCode:"it-IT": = Italiano
+        5) VoiceId:"Bianca", VoiceId:"Adriano"
+
+    LanguageCode:"cmn-CN": = Chino (Mandarin)
+        6) VoiceId:"Zhiyu"
+
+    LanguageCode:"fr-FR": = Frances
+        7) VoiceId:"Lea", VoiceId:"Remi"
+
+    LanguageCode:"de-DE": = Aleman
+        8) VoiceId:"Vicki", VoiceId:"Daniel"
+
+    LanguageCode:"ja-JP": = Japones
+        9) VoiceId:"Takumi", VoiceId:"Kazuha", VoiceId:"Tomoko"
+
+    LanguageCode:"ko-KR": = Coreano
+        10) VoiceId:"Seoyeon"
+
+    LanguageCode:"pt-BR": = Portugues (brasil)
+        11) VoiceId:"Camila", VoiceId:"Vitoria", VoiceId:"Thiago"
+
+    LanguageCode:"ar-AE": = Arabe (golfo)
+        12) VoiceId:"Hala", VoiceId:"Zayd"
+    """
+    ```
+
+
+* Example 3 | Connection to Smtp
+    ```python
+    from codeflex.company import smtp
+
+    Subject = "your_subject"
+    Sender = "your_sender"
+    From = "your_from" # Las cuentas de correos disponibles para despachar correos están abajo en el comentario
+    Html = "your_html"
+    To = "your_to" # Correo del destinatario a quien se le enviará
+    TokenSub = "your_tokensub" # Para acceder a este servicio, utiliza tu TokenSub, que es un identificador único por cuenta y es necesario que pertenezcas al plan premium. | https://codeflex.com.co/drive/index.html#/Polly
+
+    respuesta = smtp.ses(Subject, Sender, From, Html, To, TokenSub)
+    print(respuesta)
+    # Respuesta: {'MessageId': '0100018ffedb7425-9f0ea274-9697-4c9d-84b0-c5561255ee5a-000000', 'ResponseMetadata': {'RequestId': '3e142a04-cd61-46a2-a1d4-b6e79fdd321c', 'HTTPStatusCode': 200, 'HTTPHeaders': {'date': 'Sun, 09 Jun 2024 21:15:46 GMT', 'content-type': 'text/xml', 'content-length': '338', 'connection': 'keep-alive', 'x-amzn-requestid': '3e142a04-cd61-46a2-a1d4-b6e79fdd321c'}, 'RetryAttempts': 0}}
+
+    """
+    Cuentas de Correo Disponibles (FROM)
+    -------------------------------
+    Funcionales:
+      general.inquiries.mail@gmail.com
+      priority.messages.email@asesor.awsapps.com
+      support.helpdesk@asesor.awsapps.com
+      management.contact@asesor.awsapps.com
+
+    Personaliza tu envío con:
+      tu-correo@asesor.awsapps.com
+    """
+
+
+    #Ejemplo (HTML)
+    Html = """
+        <html>    
+            <body> 
+                <h1>¡Hello!</h1>
+                <p>Welcome to our email service.</p>
+                <img src="https://i.ytimg.com/vi/sFbt7Icd9RI/maxresdefault.jpg" 
+                style="width:300px;height:auto;">
+                <p>We hope you enjoy our services.</p>
+            </body>
+        </html>
+    """
+
+    ```
+    [![miniatura2][miniatura2]]
+
+_For more examples, please refer to the [Documentation](https://docs.codeflex.com.co/docs-page.html#section-3)_
+
+_[CODEFLEX CLOUD S.A.S.](https://codeflex.com.co/)_
+
+_[Database Mysql](http://mysql.codeflex.com.co/)_
+
+_[Create Account Mysql](https://codeflex.com.co/drive/index.html#/phpMyAdmin)_
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+<!-- CONTACT -->
+## Contact
+Telefono: +57 3008130562 |
+Email: info@codeflex.com.co
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/avmmodules/AVMWeather.svg?style=for-the-badge
+[contributors-url]: https://github.com/avmmodules/AVMWeather/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/avmmodules/AVMWeather.svg?style=for-the-badge
+[forks-url]: https://github.com/avmmodules/AVMWeather/network/members
+[stars-shield]: https://img.shields.io/github/stars/avmmodules/AVMWeather.svg?style=for-the-badge
+[stars-url]: https://github.com/avmmodules/AVMWeather/stargazers
+[issues-shield]: https://img.shields.io/github/issues/avmmodules/AVMWeather.svg?style=for-the-badge
+[issues-url]: https://github.com/avmmodules/AVMWeather/issues
+[license-shield]: https://img.shields.io/github/license/avmmodules/AVMWeather.svg?style=for-the-badge
+[license-url]: https://github.com/avmmodules/AVMWeather/blob/main/LICENSE
+[miniatura]: https://codeflex.com.co/assets/img/ggg.webp
+[miniatura2]: https://s3.amazonaws.com/www.codeflex.lat/documentos/76527625-b9dd-4efe-a987-6374f56e3d22/Pagina-Codeflex/Capturadsd.PNG
