@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: st_audio_spectrogram
+Version: 0.0.5
+Summary: Streamlit component to view wavforms and spectrogram
+Home-page: 
+Author: Douglas Blank
+Author-email: doug@comet.com
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: streamlit >=0.63
+
+# st-audio-spectrogram
+
+Streamlit component that allows you to visualize wav file waveforms, and spectrograms, while playing the video.
+
+## Installation instructions
+
+```sh
+pip install st-audio-spectrogram
+```
+
+## Usage instructions
+
+```python
+import streamlit as st
+from st_audio_spectrogram import st_audio_spectrogram
+
+# You can also leave any of these out for default values:
+config = {
+    "cursor": {
+        "color": "blue",
+        "width": 4,
+    },
+    "waveform": {
+        "height": 128,
+        "color": "#4F4A85",
+        "progressColor": '#383351',
+        "normalize": True,
+    },
+    "spectrogram": {
+        "height": 128,
+        "labels": True,
+    },
+    "colormap": {
+        "colormap": "plasma",
+        "nshades": 256,
+        "format": "float",
+    },
+    "mediaControls": True,
+}
+
+data = open("demo.wav", "rb").read()
+st_audio_spectrogram(data, config=config)
+```
