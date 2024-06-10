@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+wiseAI/__init__.py
+wiseAI.egg-info/PKG-INFO
+wiseAI.egg-info/SOURCES.txt
+wiseAI.egg-info/dependency_links.txt
+wiseAI.egg-info/requires.txt
+wiseAI.egg-info/top_level.txt
+wiseAI/models/__init__.py
+wiseAI/models/contrib/__init__.py
+wiseAI/models/contrib/automl_binary.py
+wiseAI/models/contrib/automl_multiclass.py
+wiseAI/models/contrib/automl_multilabel.py
+wiseAI/utils/__init__.py
+wiseAI/utils/autobinary_loader.py
+wiseAI/utils/automulticlass_loader.py
