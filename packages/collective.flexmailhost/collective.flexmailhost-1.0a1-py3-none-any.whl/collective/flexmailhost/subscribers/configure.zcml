@@ -1,0 +1,12 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    i18n_domain="collective.flexmailhost">
+
+ <!-- -*- extra stuff goes here -*- -->
+
+  <subscriber for="Products.CMFPlone.interfaces.IMailSchema
+                   plone.registry.interfaces.IRecordModifiedEvent"
+              handler=".sync_mailhost_settings.handler"
+              />
+
+</configure>
