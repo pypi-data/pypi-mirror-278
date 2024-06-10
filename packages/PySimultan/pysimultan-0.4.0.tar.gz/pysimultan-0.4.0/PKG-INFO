@@ -1,0 +1,50 @@
+Metadata-Version: 2.3
+Name: PySimultan
+Version: 0.4.0
+Project-URL: Documentation, https://github.com/BÃ¼hler Maximilian/PySimultan2#readme
+Project-URL: Issues, https://github.com/BÃ¼hler Maximilian/PySimultan2/issues
+Project-URL: Source, https://github.com/BÃ¼hler Maximilian/PySimultan2
+Author-email: BÃ¼hler Maximilian <maximilian.buehler@tuwien.ac.at>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: colorlog
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pyarrow
+Requires-Dist: pythonnet
+Requires-Dist: ruamel-yaml
+Requires-Dist: six
+Requires-Dist: tqdm
+Description-Content-Type: text/markdown
+
+# pysimultan_api
+
+[![PyPI - Version](https://img.shields.io/pypi/v/pysimultan-api.svg)](https://pypi.org/project/pysimultan-api)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pysimultan-api.svg)](https://pypi.org/project/pysimultan-api)
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install pysimultan-api
+```
+
+## License
+
+`pysimultan-api` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
