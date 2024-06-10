@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: phones-local
+Version: 0.0.41
+Home-page: https://github.com/circles-zone/phones-local-python-package
+Author: Circles
+Author-email: info@circlez.ai
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: logger-local>=0.0.135
+Requires-Dist: database-mysql-local>=0.0.342
+Requires-Dist: phonenumbers>=8.13.36
+
+PyPI Package for Circles phone local Python
