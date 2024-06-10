@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: Vysledky_ws
+Version: 0.1
+Summary: A short description of your project
+Home-page: https://github.com/Minhdung163/Vysledky_ws
+Author: Hieu a Dung
+Author-email: hieuhp04@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: selenium
+Requires-Dist: beautifulsoup4
+Requires-Dist: requests
+Requires-Dist: async-lru
+Requires-Dist: aiohttp
+Requires-Dist: asyncio ; python_version < "3.7"
+
+# Napln-dat-o-vysledcich
