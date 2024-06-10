@@ -1,0 +1,6 @@
+include LICENSE
+include README.md
+recursive-include app1 *
+recursive-include chatbot *
+recursive-include static *
+recursive-include templates *
