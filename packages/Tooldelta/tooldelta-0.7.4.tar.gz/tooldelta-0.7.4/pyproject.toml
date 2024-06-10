@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "Tooldelta"
+version = "0.7.4" # This field is automatically set to the value in the version file
+description = "Plugin Loader for NeteaseRentalServer on Panel"
+authors = ["SuperScript-PRC"]
+license = ""
+
+readme = "README.md"
+homepage = "https://github.com/SuperScript-PRC/ToolDelta"
+repository = "https://github.com/SuperScript-PRC/ToolDelta"
+
+# Please don't change this manually, your changes may invalidate other people's package management, use poetry to make changes!
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+psutil = "5.9.8"
+requests = "2.32.0"
+ujson = "5.9.0"
+colorama = "^0.4.6"
+pillow = "^10.2.0"
+shellescape = "^3.8.1"
+pyspeedtest = "1.2.7"
+aiohttp = "^3.9.3"
+python-socketio = "5.11.1"
+flask = "^3.0.2"
+mido = "^1.3.2"
+websocket-client = "^1.7.0"
+fcwslib = "^3.0.0"
+pyyaml = "6.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
