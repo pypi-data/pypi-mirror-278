@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: mtllm
+Version: 0.1.9
+Summary: MTLLM Provides Easy to use APIs for different LLM Providers to be used with Jaseci's Jaclang Programming Language.
+License: MIT
+Keywords: llm,jaclang,jaseci,mtllm
+Author: Chandra Irugalbandara
+Author-email: irugalbandara@ascii.ai
+Requires-Python: >=3.12.0,<4.0.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: tools
+Requires-Dist: anthropic (>=0.26.1,<0.27.0)
+Requires-Dist: groq (>=0.8.0,<0.9.0)
+Requires-Dist: jaclang (>=0.6.0,<0.7.0)
+Requires-Dist: loguru (>=0.7.2,<0.8.0)
+Requires-Dist: ollama (>=0.2.0,<0.3.0)
+Requires-Dist: openai (>=1.30.4,<2.0.0)
+Requires-Dist: together (>=1.2.0,<2.0.0)
+Requires-Dist: transformers (>=4.41.1,<5.0.0)
+Description-Content-Type: text/markdown
+
+# MTLLM API library
+
+[![PyPI version](https://img.shields.io/pypi/v/mtllm.svg)](https://pypi.org/project/mtllm/)
+
+The MTLLM Python library provides convenient access to a large number of easy to use and customizable APIs to be used in Jaseci's [Jaclang](https://github.com/Jaseci-Labs/jaclang) by llm feature.
+The Library provides automatic output fixing, output type validation, different prompting techniques, and more.
+
+## Documentation
+
+The documentation on how to use this library with Jaseci's Jaclang can be found [here]().
+
+## Installation
+
+> [!IMPORTANT]
+> Though this is can be used with python projects, it is primarily intended to be used with Jaseci's Jaclang.
+
+```sh
+# install from PyPI
+pip install mtllm
+```
+
+## Usage
+
+The full API of this library can be found [here](docs/api.md).
+
+### Using Different LLMs
+```py
+import:py from mtllm.llms, OpenAI;
+
+glob llm = OpenAI();
+
+can "Translate English to French"
+translate(word: "English Word": str) -> "French Word": str by llm();
+```
+
+Based on your LLM of choice, make sure to set the `API Key` in the environment variable. For example, for OpenAI:
+
+```sh
+export OPENAI_API_KEY="your-api-key"
+```
+### Using Tools
+```py
+import:py from mtllm.llms, OpenAI;
+import:py from mtllm.tools, wikipedia;
+
+glob llm = OpenAI();
+
+can "Answer History Questions"
+history_qa(question: "History Question": str) -> "Detailed Answer": str by llm(tools=[wikipedia]);
+```
+## Supported LLMs and Tools
+TBA
+
+## Contributing
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
