@@ -1,0 +1,24 @@
+[workspace]
+resolver = "2"
+members = ["bindings/python"]
+default-members = [
+    "common",
+    "consumer",
+    "platforms/atspi-common",
+    "platforms/winit",
+    "bindings/c",
+    "bindings/python",
+]
+
+[workspace.package]
+authors = ["The AccessKit contributors"]
+categories = ["gui"]
+edition = "2021"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/AccessKit/accesskit"
+rust-version = "1.70"
+
+[profile.release]
+lto = true
+opt-level = "z"
+codegen-units = 1
