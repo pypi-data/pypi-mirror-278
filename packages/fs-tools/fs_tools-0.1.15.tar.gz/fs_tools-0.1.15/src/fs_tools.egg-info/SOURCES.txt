@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+src/fs/__init__.py
+src/fs/__init__.pyi
+src/fs/compression.py
+src/fs/io.py
+src/fs/moving.py
+src/fs/parallel.py
+src/fs/paths.py
+src/fs/reading.py
+src/fs/tar.py
+src/fs_tools.egg-info/PKG-INFO
+src/fs_tools.egg-info/SOURCES.txt
+src/fs_tools.egg-info/dependency_links.txt
+src/fs_tools.egg-info/requires.txt
+src/fs_tools.egg-info/top_level.txt
