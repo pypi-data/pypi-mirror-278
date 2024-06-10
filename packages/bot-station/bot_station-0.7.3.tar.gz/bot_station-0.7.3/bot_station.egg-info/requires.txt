@@ -1,0 +1,9 @@
+requests==2.31.0
+langchain==0.1.17
+langchain-community==0.0.36
+qdrant-client==1.9.1
+fastembed==0.2.7
+yandexcloud==0.271.0
+SQLAlchemy==2.0.29
+fastapi==0.110.3
+uvicorn==0.29.0
