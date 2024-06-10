@@ -1,0 +1,2 @@
+recursive-include termtalk *.json
+include termtalk/exit_flag

@@ -1,0 +1,14 @@
+MANIFEST.in
+setup.py
+termtalk/__init__.py
+termtalk/credential.json
+termtalk/exit_flag
+termtalk/main.py
+termtalk/receiver.py
+termtalk/sender.py
+termtalk.egg-info/PKG-INFO
+termtalk.egg-info/SOURCES.txt
+termtalk.egg-info/dependency_links.txt
+termtalk.egg-info/entry_points.txt
+termtalk.egg-info/requires.txt
+termtalk.egg-info/top_level.txt
