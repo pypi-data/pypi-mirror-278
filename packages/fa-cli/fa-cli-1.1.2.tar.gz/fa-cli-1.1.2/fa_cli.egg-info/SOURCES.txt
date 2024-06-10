@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+fa_cli/__init__.py
+fa_cli/main.py
+fa_cli.egg-info/PKG-INFO
+fa_cli.egg-info/SOURCES.txt
+fa_cli.egg-info/dependency_links.txt
+fa_cli.egg-info/entry_points.txt
+fa_cli.egg-info/requires.txt
+fa_cli.egg-info/top_level.txt
+fa_cli/commands/__init__.py
+fa_cli/commands/contents.py
+fa_cli/commands/controller.py
+fa_cli/commands/migration.py
+fa_cli/commands/project.py
