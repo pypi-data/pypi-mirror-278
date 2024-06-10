@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: ifdtools
+Version: 0.1.0
+Summary: 
+Author: Your Name
+Author-email: you@example.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: ipykernel (>=6.29.4,<7.0.0)
+Requires-Dist: levenshtein (>=0.25.1,<0.26.0)
+Requires-Dist: sqlalchemy (>=2.0.30,<3.0.0)
+Requires-Dist: sx-rest-data (>=0.1.4,<0.2.0)
+Requires-Dist: tqdm (>=4.66.4,<5.0.0)
+Description-Content-Type: text/markdown
+
+# Dette er en test
+
+Bla bla bla
+
+## Endnu en
