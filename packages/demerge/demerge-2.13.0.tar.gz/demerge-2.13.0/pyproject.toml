@@ -1,0 +1,48 @@
+[tool.poetry]
+name = "demerge"
+version = "2.13.0"
+description = "DESHIMA merge code for observed datasets"
+authors = [
+    "Tatsuya Takekoshi <tatsuya.takekoshi@gmail.com>",
+    "Daisuke Naito <naito@naitosystems.com>",
+    "Akio Taniguchi <taniguchi@a.phys.nagoya-u.ac.jp>",
+]
+keywords = [
+    "astronomy",
+    "radio-astronomy",
+    "submillimeter",
+    "spectroscopy",
+    "deshima",
+]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/deshima-dev/demerge/"
+repository = "https://github.com/deshima-dev/demerge/"
+
+[tool.poetry.dependencies]
+python = ">=3.9, <3.13"
+astropy = ">=5.2, <7.0"
+dems = "^0.9"
+lmfit = "^1.2"
+matplotlib = "^3.7"
+numpy =	"^1.25"
+pandas = "^2.0"
+scipy = "^1.10"
+sympy = "^1.10"
+zarr = "^2.14"
+
+[tool.poetry.group.dev.dependencies]
+deshima-rawdata = "^2024.4.2"
+ipython = "^8.18"
+
+[tool.poetry.scripts]
+demerge = "demerge:main"
+calc_resonance_params = "demerge.calc_resonance_params:main"
+make_divided_data = "demerge.make_divided_data:main"
+make_reduced_fits = "demerge.make_reduced_fits:main"
+merge_to_dems = "demerge.merge_to_dems:main"
+plot = "demerge.plot:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
