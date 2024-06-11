@@ -1,0 +1,29 @@
+query gqlPersons {
+  persons {
+    id
+    fullName
+    shortName
+  }
+}
+
+query gqlGroups {
+  groups {
+    id
+    name
+  }
+}
+
+query gqlTeachers {
+  persons: teachers {
+    id
+    fullName
+    shortName
+    subjectsAsTeacher {
+      id
+      name
+      shortName
+      colourFg
+      colourBg
+    }
+  }
+}
