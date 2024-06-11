@@ -1,0 +1,9 @@
+include *.py *.dat *.yml *.txt
+include pynot/.instrument.cfg
+include pynot/data/*.rules
+include pynot/data/help/*.html
+include pynot/calib/*.ext
+include pynot/VERSION
+prune tests
+prune docs
+prune build
