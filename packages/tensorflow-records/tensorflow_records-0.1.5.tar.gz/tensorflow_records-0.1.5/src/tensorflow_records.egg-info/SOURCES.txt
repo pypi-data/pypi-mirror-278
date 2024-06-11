@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+src/tensorflow_records.egg-info/PKG-INFO
+src/tensorflow_records.egg-info/SOURCES.txt
+src/tensorflow_records.egg-info/dependency_links.txt
+src/tensorflow_records.egg-info/requires.txt
+src/tensorflow_records.egg-info/top_level.txt
+src/tf/records/__init__.py
+src/tf/records/__init__.pyi
+src/tf/records/dataset.py
+src/tf/records/examples.py
+src/tf/records/io.py
+src/tf/records/meta.py
