@@ -1,0 +1,120 @@
+Metadata-Version: 2.1
+Name: nonebot-plugin-imagemaster
+Version: 1.0.8
+Summary: 提供多种图像处理功能的bot插件
+Author: phquathi
+Author-email: yangziqi233@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: Pillow (>=8.0.0,<9.0.0)
+Requires-Dist: aiohttp (>=3.7.4,<4.0.0)
+Requires-Dist: nonebot-adapter-onebot (>=2.0.0,<3.0.0)
+Requires-Dist: nonebot-plugin-apscheduler (>=0.4.0,<0.5.0)
+Requires-Dist: nonebot2 (>=2.0.0,<3.0.0)
+Requires-Dist: numpy (>=1.0.0,<2.0.0)
+Requires-Dist: opencv-python (>=4.0.0,<5.0.0)
+Description-Content-Type: text/markdown
+
+# nonebot-plugin-imagemaster
+基于cv2的轻量化在线图片编辑插件，提供多种图像处理功能，包括色彩调整、裁剪、表情包和特殊效果等
+
+## 介绍
+
+简易修图、表情包，随手使用
+
+
+## 安装
+使用nb-cli进行安装
+
+``nb plugin install nonebot-plugin-imagemaster``
+
+
+
+使用pip进行安装
+
+``pip install nonebot-plugin-imagemaster``
+## 使用
+
+| 指令            | 描述           | 
+|---------------|--------------|
+| @机器人+图片处理     |  应用不同的图像处理滤镜 |
+| @机器人+图像裁剪     | 对图片进行裁剪      |
+| @机器人+图像拼接     | 将多张图片拼接成一张   |
+| @机器人+表情包制作    | 制作自定义文字的表情包  |
+
+
+
+### 图片处理
+
+1. 发送 `图片处理`
+2. 发送图片
+3. 等待机器人发送进一步的指令提示
+
+
+### 图像裁剪
+
+1. 发送 `图像裁剪`
+2. 发送图片
+3. 等待机器人发送进一步的指令提示
+
+### 图像拼接
+
+1. 发送``图像拼接``
+
+2. 根据指令发送图片数量
+
+3. **重点！！！** 需要**一次性**发送所有张图片，安卓端选择好一定数量的图片后发送并不是**一次性**发送，需要把所有图像**合并为一条消息**才能发送出去
+
+   (1). pc端
+
+   ​		具体地，在电脑端的操作为把所有图片都放到消息框里发送，较为容易
+
+   ![pc端](src/1.png)
+
+   ​		此时发送即为**合并成一条消息**发送
+
+   ![pc2](src/2.png)
+
+   ​	(2). 安卓端**（最新版qq已不支持此特性，拼接功能只能使用pc端实现）**
+
+   ​			在安卓端的操作较复杂一点，并且必须为**非简洁模式**才能合并多张图片为一条消息，简洁模式无法实现
+
+   ​			首先在文本框里**打入一个空格**，后再选择图片
+
+   ​	![andriod](src/3.png)
+
+   ​			然后发送即可实现合并
+
+   ​	![android2](src/4.png)
+
+   如果发生数字输入错误，可以发送``停止拼接``以停止当前活动
+
+   
+
+### 表情包
+
+1. 发送 `表情包制作`
+2. 发送图片
+3. 等待机器人发送进一步的指令提示
+
+## 画饼
+
+未来将添加文字识别、~~图像拼接~~等功能
+
+## 贡献
+欢迎提交Pull Request或报告Issues。
+
+## 许可
+[MIT License](LICENSE)
+
+## 致谢
+特此感谢本学期计算机视觉课程的教授，他的专业指导和启发性教学为本项目提供了宝贵的理论支持和灵感。作者在课程中学习到的知识和技能，对于本项目的成功实现起到了关键性作用。我们对他的辛勤付出和深厚的专业知识表示最深的敬意和感激。
+
+
+
