@@ -1,0 +1,15 @@
+matplotlib
+numpy
+platformdirs
+pymavlink
+pyserial
+pillow
+setuptools
+requests
+
+[dev]
+ruff
+pytest
+pytest-cov
+coverage
+mock
