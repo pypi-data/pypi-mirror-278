@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS logs (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    timestamp INTEGER NOT NULL,
+    filepath TEXT NOT NULL,
+    key TEXT NOT NULL,
+    size INTEGER NOT NULL,
+    checksum TEXT NOT NULL,
+    url TEXT NOT NULL,
+    data TEXT NOT NULL
+);

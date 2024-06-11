@@ -1,0 +1,3 @@
+[console_scripts]
+send-s3 = send_s3:main
+

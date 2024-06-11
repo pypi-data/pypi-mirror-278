@@ -1,0 +1,16 @@
+send_s3-3.0.0.dist-info/METADATA,sha256=Sdd8vbZ58V51rx175lH-jX29i6FaUqy8QlAyv9tX6JM,4325
+send_s3-3.0.0.dist-info/WHEEL,sha256=vnE8JVcI2Wz7GRKorsPArnBdnW2SWKWGow5gu5tHlRU,90
+send_s3-3.0.0.dist-info/entry_points.txt,sha256=_87lKPPB42EFtD8RZ6tYRyS3KvcAP2k56_Sx6-nFsZg,42
+send_s3-3.0.0.dist-info/licenses/LICENSE,sha256=oXyvuvKY1Gg8CoeHiKC8NbD8proru1gwxSFc2kjMab8,1091
+send_s3/__init__.py,sha256=GY-tPYciDyt01ll0o_A94fVSsZsulxNXFG0UOkKVG7s,568
+send_s3/actions/__init__.py,sha256=QjOYs_GqpRcIxSAMZPhe98zMXvabAKCxUSGDHBkVj1Q,257
+send_s3/actions/init.py,sha256=I8HFT2blN65cNww4s0702nH9_90G42WY4z6c92N-4xg,1832
+send_s3/actions/log.py,sha256=34WzVPdrcNXF7iIFu8mF9MxdsYxvtEGCUxHuAXsAUeM,3469
+send_s3/actions/upload.py,sha256=E2FgDIDFQ2Cp7QH6Z-A_vhDTxUR_sFn5lxnj0-BfO4w,8419
+send_s3/common.py,sha256=xP9j9_7t5HF0ZAiiAMA1roR7q2H-u-UpAOTD6Y8R7PU,1529
+send_s3/config.py,sha256=76dLavs1bnpIVziS2rZXXytZ2or2CLIdgAfbnOfDc-M,3032
+send_s3/config.toml,sha256=AnPqkmSLfl_xEEm-Wlh-shDJi6_KFGs8Owvp5_UQsyc,776
+send_s3/db.py,sha256=5IUfrOEoa1_6uXUU_003GZwfodKZxCWd2q5wl_iUvdc,2213
+send_s3/s3.py,sha256=IxUZSyxqKb6k96y5Gg35gfoLerEuJznwaWxtwk9cgD4,4745
+send_s3/schema.sql,sha256=6OEtDacXxFQBvtPbt962mDrp5WbWr266GHsVXqwcFmE,262
+send_s3-3.0.0.dist-info/RECORD,,
