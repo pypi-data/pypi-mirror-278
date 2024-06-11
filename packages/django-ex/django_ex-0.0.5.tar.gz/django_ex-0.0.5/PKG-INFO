@@ -1,0 +1,14 @@
+Metadata-Version: 2.3
+Name: django-ex
+Version: 0.0.5
+Summary: Unofficial tools for django and htmx compatibility
+Project-URL: repository, https://github.com/VLN37/django-ex
+Author-email: João Felipe Rodriguez <jfpr1237@gmail.com>
+License-Expression: BSD-3-Clause
+License-File: LICENSE
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: django>4
