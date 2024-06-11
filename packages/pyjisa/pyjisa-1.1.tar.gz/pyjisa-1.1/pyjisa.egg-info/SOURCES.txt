@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+pyjisa/JISA.jar
+pyjisa/__init__.py
+pyjisa/autoload.py
+pyjisa.egg-info/PKG-INFO
+pyjisa.egg-info/SOURCES.txt
+pyjisa.egg-info/dependency_links.txt
+pyjisa.egg-info/not-zip-safe
+pyjisa.egg-info/requires.txt
+pyjisa.egg-info/top_level.txt
