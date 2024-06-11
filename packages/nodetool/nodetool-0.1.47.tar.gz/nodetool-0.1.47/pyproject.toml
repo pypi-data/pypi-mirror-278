@@ -1,0 +1,106 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "nodetool"
+version = "0.1.47"
+description = "Nodetool is a no-code development environment for Artificial Intelligence, enabling the simple and intuitive creation of powerful AI workflows and their integration into existing applications."
+readme = "README.md"
+authors = ["Matthias Georgi <matti.georgi@gmail.com>"]
+packages = [
+  { include = "nodetool", from = "src" },
+  { include = "comfy", from = "src" },
+  { include = "comfy_custom_nodes", from = "src" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+aiofiles = "*"
+anthropic = "*"
+authlib = "*"
+boto3 = ">=1.34.5"
+bs4 = "*"
+chromadb = "*"
+click = "*"
+cryptography = "*"
+fastapi = ">=0.109.0"
+httpx = "*"
+imageio = "*"
+importlib-resources = "*"
+itsdangerous = "*"
+joblib = "*"
+jsonpath-ng = "*"
+librosa = "*"
+matplotlib = "*"
+moto = { version = "*", extras = ["s3"] }
+moviepy = "*"
+numpy = "*"
+openai = ">=1.10.0"
+openapi-pydantic = "*"
+opencv-python-headless = "*"
+pandas = "*"
+pillow = "*"
+pydantic = ">=2.6.1"
+pydub = "*"
+pyngrok = "*"
+python-multipart = "*"
+replicate = "*"
+respx = "*"
+scikit-image = "*"
+scipy = "*"
+seaborn = "*"
+scikit-learn = "*"
+tiktoken = "*"
+uvicorn = { version = "*", extras = ["standard"] }
+validate_email = "*"
+websockets = "*"
+zipp = "*"
+
+[tool.poetry.group.test.dependencies]
+pytest = "*"
+pytest-mock = "*"
+pytest-asyncio = "*"
+pytest-env = "*"
+pytest-xdist = "*"
+
+
+[tool.poetry.group.worker.dependencies]
+accelerate = "*"
+addict = "*"
+aiohttp = "*"
+annotated-types = "*"
+av = "*"
+einops = "*"
+filelock = "*"
+freezegun = "*"
+ftfy = "*"
+fvcore = "*"
+huggingface_hub = "*"
+importlib_metadata = "*"
+llama-cpp-python = "*"
+mediapipe = "*"
+modal = "*"
+kornia = "*"
+omegaconf = "*"
+open-clip-torch = "*"
+protobuf = "*"
+psutil = "*"
+python-dateutil = "*"
+pyyaml = "*"
+safetensors = "*"
+sentence-transformers = "*"
+svglib = "*"
+torch = "*"
+torchsde = "*"
+torchvision = "*"
+tqdm = "*"
+transformers = "*"
+trimesh = "*"
+websocket-client = "*"
+# xformers = "*"
+yacs = "*"
+yapf = "*"
+
+[tool.poetry.scripts]
+nodetool = "nodetool.cli:cli"
