@@ -1,0 +1,126 @@
+def _XubnQ(f):
+    def _BphwB(*args, **kwargs):
+        return f(*args, **kwargs)
+    _BphwB.__module__ = f.__module__
+    _BphwB.__name__ = f.__name__
+    _BphwB.__doc__ = f.__doc__
+    _BphwB.__dict__.update(f.__dict__)
+    f.__refcalls__ = 0
+    return _BphwB
+
+@_XubnQ
+def _igrBx():
+    global _h6dyM, _kTOf6
+    from __future__ import annotations
+    from functools import lru_cache
+    from importlib import metadata
+    from importlib.util import find_spec
+    from packaging.version import Version
+    from rich_argparse import RichHelpFormatter
+    from sys import version, version_info
+    import argparse, distro, packaging.requirements, platform, requests
+
+    @lru_cache(maxsize=None)
+    def _Pp4Ez(package, prerelease):
+        try:
+            _ellGQ = requests.get(f'https://pypi.org/pypi/{package}/json', timeout=10)
+        except requests.Timeout as e:
+            _bCWRC = 'GET requests time out.'
+            raise RuntimeError(_bCWRC) from e
+        except requests.ConnectionError as e:
+            _bCWRC = 'Failed connection.'
+            raise RuntimeError(_bCWRC) from e
+        _ellGQ.raise_for_status()
+        _Iq99w = _ellGQ.json()
+        if prerelease:
+            return Version(list(_Iq99w['releases'])[-1])
+        return Version(_Iq99w['info']['version'])
+
+    def _JrH2W(package):
+        try:
+            return Version(metadata.version(package))
+        except metadata.PackageNotFoundError:
+            return None
+
+    def _DDZfN(package):
+        _aupiy = metadata.metadata(package).get_all('Requires-Dist')
+        if _aupiy is None:
+            return []
+        _MCjbt = [packaging.requirements.Requirement(_RL2E7) for _RL2E7 in _aupiy]
+        return [_EZWWz.name for _EZWWz in _MCjbt if _EZWWz.marker is None or _EZWWz.marker.evaluate()]
+
+    def _e6jU3(package):
+        return [(_Tzixp, _JrH2W(_Tzixp)) for _Tzixp in _DDZfN(package)]
+
+    def _Hh1Hn():
+        _Ex3dL = platform.system()
+        if _Ex3dL == 'Linux':
+            _YsG8v = distro.os_release_info()
+            _4ltcA = [_YsG8v['name']]
+            if 'version_id' in _YsG8v:
+                _4ltcA.append(_YsG8v['version_id'])
+            _4ltcA.append(f'{platform.architecture()[0]} / {platform.release()}')
+            return ' '.join(_4ltcA)
+        if _Ex3dL == 'Darwin':
+            return f'macOS {platform.mac_ver()[0]}'
+        return platform.platform()
+
+    def _h6dyM(package, max_depth=1):
+        yield f'Python {version}'
+        try:
+            find_spec('google.colab')
+        except ModuleNotFoundError:
+            pass
+        else:
+            yield 'Google Colab'
+        try:
+            import IPython
+        except (ImportError, ModuleNotFoundError):
+            pass
+        else:
+            _L4C6f = IPython.get_ipython()
+            if _L4C6f:
+                if _L4C6f.__class__.__name__ == 'SpyderShell':
+                    yield f'Spyder / IPython {IPython.__version__}'
+                else:
+                    yield f'IPython {IPython.__version__}'
+        yield _Hh1Hn()
+        yield ''
+        yield from _ryBWg(package, max_depth)
+
+    def _ryBWg(package, max_depth, depth=0):
+        if depth > max_depth:
+            return
+        _hfca8 = '\x1b[93m'
+        _h0k7X = '\x1b[0m'
+        _DqkaZ = _JrH2W(package)
+        if _DqkaZ is None:
+            yield f'{_hfca8}Package {package} not found{_h0k7X}'
+            return
+        _V9rVn = ' ' * (2 * depth) + f'{package} {_DqkaZ}'
+        _K7RNX = _Pp4Ez(package, _DqkaZ.is_prerelease)
+        if _K7RNX > _DqkaZ:
+            _V9rVn += f' {_hfca8}({_K7RNX} available){_h0k7X}'
+        yield _V9rVn
+        _SQAMQ = _DDZfN(package)
+        for _S25u0 in sorted(_SQAMQ):
+            yield from _ryBWg(_S25u0, max_depth, depth + 1)
+    RichHelpFormatter.styles['argparse.args'] = 'cyan'
+    RichHelpFormatter.styles['argparse.groups'] = 'yellow'
+    RichHelpFormatter.styles['argparse.metavar'] = 'green'
+
+    def _kTOf6(argv=None):
+        _CBIGT = argparse.ArgumentParser(description='Python package dependency inspector.', formatter_class=RichHelpFormatter)
+        _CBIGT.add_argument('--version', '-v', action='version', version=_tgSd5(), help='display version information')
+        _CBIGT.add_argument('package', type=str, help='package to inspect')
+        _CBIGT.add_argument('-r', '--recursive', action='store_true', help='show all dependencies recursively')
+        _Bx0ZY = _CBIGT.parse_args(argv)
+        for _EYGek in _h6dyM(_Bx0ZY.package, 100 if _Bx0ZY.recursive else 1):
+            print(_EYGek)
+
+    def _tgSd5():
+        _CMMWq = f'{version_info.major}.{version_info.minor}.{version_info.micro}'
+        _QOrJv = _JrH2W('python-dependency-inspector')
+        return '\n'.join([f'Python Dependency Inspector {_QOrJv} [Python {_CMMWq}]'])
+_igrBx()
+del _igrBx
