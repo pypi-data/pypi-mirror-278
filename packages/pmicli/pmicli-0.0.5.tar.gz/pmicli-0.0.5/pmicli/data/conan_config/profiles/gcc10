@@ -1,0 +1,8 @@
+include(gcc-base)
+include(cpp-base.jinja)
+
+[settings]
+compiler.version=10
+
+[conf]
+tools.cmake.cmaketoolchain:generator=Unix Makefiles
