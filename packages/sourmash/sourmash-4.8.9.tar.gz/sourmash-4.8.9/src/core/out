@@ -1,0 +1,166 @@
+   Compiling sourmash v0.13.1 (/Users/t/dev/sourmash/src/core)
+    Finished test [optimized + debuginfo] target(s) in 2.42s
+     Running unittests src/lib.rs (/Users/t/dev/sourmash/target/debug/deps/sourmash-0829b83862ae9061)
+
+running 60 tests
+test ani_utils::tests::test_containment_to_ani_zero ... ok
+test ani_utils::tests::test_exp_n_mutated ... ok
+test ani_utils::tests::test_get_exp_probability_nothing_common ... ok
+test ani_utils::tests::test_get_exp_probability_nothing_common_ani_one ... ok
+test ani_utils::tests::test_containment_to_ani_scaled1 ... ok
+test ani_utils::tests::test_containment_to_ani_scaled100 ... ok
+test ani_utils::tests::test_containment_to_ani_one ... ok
+test ani_utils::tests::test_containment_to_ani_scaled100_2 ... ok
+test ani_utils::tests::test_get_exp_probability_nothing_common_ani_zero ... ok
+test ani_utils::tests::test_r1_to_q ... ok
+test ani_utils::tests::test_var_n_mutated_success ... ok
+test ani_utils::tests::test_var_n_mutated_value_error ... ok
+test ani_utils::tests::test_var_n_mutated_zero ... ok
+test collection::test::sigstore_selection_num ... ok
+test collection::test::sigstore_selection_scaled_handle_num_sig ... ok
+test encodings::test::colors_retain ... ok
+test encodings::test::colors_update ... ok
+test collection::test::sigstore_selection_moltype_sig ... ok
+test index::test_calculate_gather_stats::test_calculate_gather_stats ... ok
+test manifest::test::manifest_from_pathlist_nonexistent_file - should panic ... ok
+test manifest::test::manifest_from_pathlist_badfile - should panic ... ok
+test manifest::test::manifest_from_paths_badpath - should panic ... ok
+test collection::test::sigstore_selection_moltype_zip ... ok
+test collection::test::sigstore_sig_from_record ... ok
+test manifest::test::manifest_selection ... ok
+test collection::test::sigstore_selection_with_downsample ... ok
+test collection::test::sigstore_selection_with_downsample_too_low ... ok
+test collection::test::sigstore_selection_num_handle_scaled_sig ... ok
+test signature::test::load_minhash_from_signature ... ok
+test signature::test::get_sketch_multisketch_panic - should panic ... ok
+test signature::test::load_minhash_multisketch_panic - should panic ... ok
+test signature::test::load_single_sketch_from_signature ... ok
+test manifest::test::manifest_from_pathlist ... ok
+test signature::test::load_sig ... ok
+test signature::test::selection_dayhoff ... ok
+test signature::test::selection_hp ... ok
+test signature::test::load_signature ... ok
+test signature::test::signature_add_protein ... ok
+test signature::test::selection_protein2 ... ok
+test signature::test::signature_add_sequence_protein ... ok
+test signature::test::signature_from_computeparams ... ok
+test signature::test::signature_slow_path ... ok
+test signature::test::selection_protein ... ok
+test manifest::test::manifest_to_writer_bools ... ok
+test sketch::hyperloglog::test::hll_add ... ok
+test sketch::nodegraph::test::binary_repr_load ... ok
+test sketch::nodegraph::test::binary_repr_save ... ok
+test sketch::hyperloglog::test::save_load_hll ... ok
+test sketch::nodegraph::test::containment ... ok
+test signature::test::selection_scaled_too_low ... ok
+test sketch::nodegraph::test::count_and_get_nodegraph ... ok
+test sketch::nodegraph::test::load_compressed ... ok
+test sketch::nodegraph::test::update_nodegraph_many ... ok
+test sketch::nodegraph::test::load_nodegraph ... ok
+test signature::test::selection_with_downsample ... ok
+test sketch::nodegraph::test::update_nodegraph ... ok
+test sketch::nodegraph::test::load_save_nodegraph ... ok
+test sketch::nodegraph::test::count_and_get ... ok
+test signature::test::signature_add_sequence_cp ... ok
+test sketch::hyperloglog::test::hll_joint_mle ... ok
+
+test result: ok. 60 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.10s
+
+     Running tests/dedicated_worker.rs (/Users/t/dev/sourmash/target/debug/deps/dedicated_worker-9d9ee94fe9d280e7)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/finch.rs (/Users/t/dev/sourmash/target/debug/deps/finch-d6978d42d693da52)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/minhash.rs (/Users/t/dev/sourmash/target/debug/deps/minhash-7e65288ef95fadc1)
+
+running 30 tests
+test angular_similarity_requires_abundance ... ok
+test angular_similarity_btree_requires_abundance ... ok
+test check_errors ... ok
+test hp ... ok
+test dayhoff ... ok
+test invalid_dna ... ok
+test max_for_scaled ... ok
+test merge_empty_scaled ... ok
+test merge ... ok
+test load_save_minhash_sketches ... ok
+test load_save_minhash_sketches_abund ... ok
+test seq_to_hashes_2 ... ok
+test similarity ... ok
+test similarity_2 ... ok
+test similarity_3 ... ok
+test test_inflate ... ok
+test test_inflate_noabund ... ok
+test seq_to_hashes ... ok
+test test_inflated_abundances ... ok
+test test_inflated_abunds_noabund ... ok
+test test_n_unique_kmers ... ok
+test test_sum_abunds ... ok
+test test_sum_abunds_noabund ... ok
+test throws_error ... ok
+test load_save_minhash_dna ... ok
+test prop_merge ... ok
+test oracle_mins_scaled ... ok
+test oracle_mins ... ok
+test load_save_minhash_dayhoff ... ok
+test load_save_minhash_hp ... ok
+
+test result: ok. 30 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.10s
+
+     Running tests/node.rs (/Users/t/dev/sourmash/target/debug/deps/node-5bdf4aadcd0f3398)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/service_worker.rs (/Users/t/dev/sourmash/target/debug/deps/service_worker-1e2782203cde1ca8)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/shared_worker.rs (/Users/t/dev/sourmash/target/debug/deps/shared_worker-c1edfc3d05447ce5)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/storage.rs (/Users/t/dev/sourmash/target/debug/deps/storage-f2c8f3a8b1760e40)
+
+running 7 tests
+test innerstorage_args ... ok
+test innerstorage_from_args ... ok
+test zipstorage_list_sbts ... ok
+test zipstorage_load_file ... ok
+test zipstorage_load_manifest ... ok
+test innerstorage_load ... ok
+test innerstorage_save_sig ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/test.rs (/Users/t/dev/sourmash/target/debug/deps/test-cd6fded881934525)
+
+running 1 test
+test test_murmur ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/web.rs (/Users/t/dev/sourmash/target/debug/deps/web-62052fb038d40487)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests sourmash
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
