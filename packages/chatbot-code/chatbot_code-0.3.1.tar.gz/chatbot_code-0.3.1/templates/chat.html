@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/509470fe41.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+      body, html {
+        height: 100%; /* Full height of the viewport */
+        margin: 0;
+        background: linear-gradient(to bottom, #9c7ab3, #800080);
+        font-family: "Montserrat", sans-serif;
+      }
+      #chatContainer {
+        display: none;
+        border-radius: 30px;
+        border: 0px solid transparent;
+        /* padding: 10px; */
+        width: 350px;
+        margin-top: 20px;
+        height: 600px;
+        overflow: hidden;
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+      }
+      #chatWindow {
+        overflow-y: auto;
+        height: 80%;
+        padding-bottom: 100px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      #chatForm {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      #chatWindow::-webkit-scrollbar {
+        width: 0.1em;
+      }
+      #chatWindow::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        outline: 1px solid slategrey;
+        border-radius: 5px;
+      }
+      .chat-message {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-bottom: 10px;
+      }
+      input {
+        width: 50%;
+      }
+      .question-bubble {
+        background-color: #f0f0f0;
+        padding: 15px;
+        border-radius: 10px;
+        margin-right: 20px;
+        margin-left: 20px;
+        font-size: 13px;
+      }
+      .answer-bubble {
+        padding: 15px;
+        border-radius: 10px;
+        margin-right: 50px;
+        margin-left: 20px;
+        font-size: 13px;
+      }
+      .form-control {
+        width: 90%;
+      }
+      #toggleChat {
+        position: fixed;
+        bottom: 120px;
+        right: 90px;
+      }
+      #closeChat {
+        position: relative;
+        top: 0px;
+        right: 0px;
+        z-index: 1000 !important;
+      }
+      .loader {
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #3498db;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        animation: spin 1s linear infinite;
+        display: inline-block;
+        margin-right: 5px;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .tick {
+        font-size: 12px;
+        margin-left: 5px;
+        color: gray;
+      }
+      .tick.received {
+        color: #28a745; /* Green for received message */
+      }
+      .fa-check-single:before {
+        content: "\f058"; /* Unicode for single tick */
+      }
+      .fa-check-double:before {
+        content: "\f059"; /* Unicode for double tick */
+      }
+      .feedback-buttons {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 5px;
+      }
+      .feedback-btn {
+        background-color: transparent;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        margin-left: 5px;
+        cursor: pointer;
+      }
+      .feedback-btn:hover {
+        background-color: #0056b3;
+      }
+      .llm {
+        background-color: #ff7f7f; /* Light red for llm source */
+      }
+      .database {
+        background-color: #83f28f; /* Light green for database source */
+      }
+      .verification_count {
+        color: rgba(0, 0, 0, 0.5);
+        font-style: italic;
+        font-family: "Montserrat";
+      }
+      .count1 {
+        padding: 5px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+      .count {
+        margin-left: 10px;
+        padding: 5px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+      .btn-danger {
+        background: linear-gradient(to bottom, #784f93, #4d014d);
+        color: white;
+        border: 0px;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.7.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/universal-sentence-encoder@4.0.2"></script>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <!-- Button to toggle chat window -->
+          
+          <button
+            id="toggleChat"
+            class="btn btn-light"
+            style="border-radius: 20px"
+          >
+            <i
+              class="fa-solid fa-robot"
+              style="color: #800080; font-size: 30px"
+            ></i>
+          </button>
+          <!-- Chat window with conversation history and form -->
+          <div id="chatContainer" class="bg-white">
+            <div class="container-fluid text-white p-2 pl-3 pr-3 d-flex justify-content-between align-items-center" style="background:linear-gradient(to left, #594567, #800080);" >
+              <p class="mb-0">Let's Chat Online</p>
+              <button id="closeChat" class="btn text-white" style="display: none;">
+                  X
+              </button>
+          </div>
+          
+            <div id="chatResponse"></div>
+            <div id="chatWindow">
+              {% if user_chat_history %} {% for entry in user_chat_history %}
+              <div class="chat-message">
+                <div class="question-bubble ml-auto">
+                  <strong>You :</strong> {{ entry.question }}
+                  <i class="tick fas fa-check-single"></i>
+                  <!-- Single tick for sent message -->
+                </div>
+              </div>
+              <div class="chat-message">
+                <div class="answer-bubble {{ entry.source }}">
+                  <strong>Bot :</strong> {{ entry.answer }}
+                  <i class="tick fas fa-check-double"></i>
+                  <!-- Double tick for read message -->
+                  <div class="feedback-buttons">
+                    <button
+                      class="feedback-btn"
+                      data-answer="{{ entry.answer }}"
+                      data-question="{{ entry.question }}"
+                      data-session_id="{{ entry.session_id }}"
+                      data-feedback="positive"
+                    >
+                      👍
+                    </button>
+                    <button
+                      class="feedback-btn"
+                      data-answer="{{ entry.answer }}"
+                      data-question="{{ entry.question }}"
+                      data-session_id="{{ entry.session_id }}"
+                      data-feedback="negative"
+                    >
+                      👎
+                    </button>
+                  </div>
+                </div
+                </div>
+              {% endfor %} {% endif %}
+            </div>
+            <!-- Chat input form -->
+            <form method="post" id="chatForm">
+              {% csrf_token %}
+              <div class="mb-3 d-flex">
+                <input
+                  type="text"
+                  name="question"
+                  placeholder="Ask a Question : "
+                  class="form-control"
+                  required
+                />
+                <button
+                  class="bg-transparent"
+                  style="border: 0px"
+                  type="submit"
+                >
+                  <i
+                    class="fa-solid fa-paper-plane"
+                    style="color: #800080; font-size: 30px"
+                  ></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== "") {
+          const cookies = document.cookie.split(";");
+          for (let i = 0; i < cookies.length; i++) {
+            const cookie = jQuery.trim(cookies[i]);
+            if (cookie.substring(0, name.length + 1) === name + "=") {
+              cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+              break;
+            }
+          }
+        }
+        return cookieValue;
+      }
+      $.ajaxSetup({
+        beforeSend: function (xhr, settings) {
+          if (!/^(GET|HEAD|OPTIONS|TRACE)$/i.test(settings.type) && !this.crossDomain) {
+            xhr.setRequestHeader("X-CSRFToken", getCookie("csrftoken"));
+          }
+        },
+      });
+      $(document).ready(function () {
+        $("#toggleChat").click(function () {
+          $("#chatContainer").toggle();
+          $("#closeChat").toggle();
+          if ($("#chatContainer").is(":visible")) {
+            if ($("#chatWindow").children().length === 0) {
+              $("#chatWindow").append(
+                '<div class="chat-message">' +
+                  '<div class=" text-center pt-3 pl-3 pr-3 " style="font-size: 13px;" >' +
+                  "<strong>Welcome to our chat service! How can we assist you today?</strong>" +
+                  "</div></div>"
+              );
+            }
+          }
+        });
+        $("#closeChat").click(function () {
+          $("#chatContainer").hide();
+          $("#closeChat").hide();
+        });
+        $("#chatForm").submit(function (event) {
+  event.preventDefault();
+  var question = $("input[name='question']").val();
+  var currentTime = getCurrentTime(); // Define currentTime by calling getCurrentTime function
+
+  if (!question.trim()) {
+    alert("Please enter a question.");
+    return;
+  }
+
+  $("#chatWindow").append(
+  '<div class="chat-message">' +
+    '<div class="question-bubble">' +
+      '<strong>You :</strong> <span class="chat-question">' + question + '</span>' +
+      '<div class="chat-time text-right pt-3" style="font-size:10px" >' + currentTime + '</div>' +
+    '</div>' +
+    '<i class="tick fas fa-check-single"></i>' +
+  '</div>'
+);
+
+
+  var user_name = "{{ user_name }}";
+  var file_id = "{{ file_id }}";
+  $.ajax({
+    type: "POST",
+    url: "/chat/" + user_name + "/" + file_id + "/",
+    data: {
+      question: question,
+      user_session_id: sessionStorage.getItem("user_session_id"),
+      csrfmiddlewaretoken: getCookie("csrftoken")
+    },
+    dataType: "json",
+    success: function (response) {
+      var answer = response.answer || "Error retrieving answer";
+      var source = response.source || "Unknown source";
+      var verification_count = response.verification_count || "0";
+      var question_asked_time = response.question_asked_time
+      var session_id = response.session_id || "error retrieving session id";
+              // var positive_count = response.positive_count || "0";
+              // var negative_feedback_count =
+              //   response.negative_feedback_count || "0";
+
+      var verificationCountHtml = "";
+      if (source !== "llm" && answer !== "Error retrieving answer") {
+        verificationCountHtml =
+          "<br> <br> <p class='verification_count'> Verified By " +
+          verification_count +
+          " Experts</p>";
+      }
+       // var verificationCountHtmlUsers = "";
+              // if (source !== "llm" && answer !== "Error retrieving answer") {
+              //   verificationCountHtmlUsers =
+              //     "<i class='count1 fa-solid fa-thumbs-up'></i>" +
+              //     positive_count +
+              //     "<i class='count fa-solid fa-thumbs-down'></i>" +
+              //     negative_feedback_count;
+              // }
+
+      $("#chatWindow").append(
+        '<div class="chat-message"><div class="answer-bubble ' +
+          source +
+          '"><strong>Bot :</strong> ' +
+          answer +
+          verificationCountHtml +
+                  // verificationCountHtmlUsers +
+          '<div class="feedback-buttons">' +
+          '<button class="feedback-btn" data-answer="' +
+          answer +
+          '" data-question="' +
+          question +
+          '"data-session_id="' +
+          session_id +
+          '" data-feedback="positive"><i class="fa-solid fa-thumbs-up"></i></button>' +
+          '<button class="feedback-btn" data-answer="' +
+          answer +
+          '" data-question="' +
+          question +
+          '"data-session_id="' +
+          session_id +
+          '" data-feedback="negative"><i class="fa-solid fa-thumbs-down"></i></button>' +
+          "</div>" + question_asked_time +
+          "</div></div>"
+      );
+      $(".chat-message .tick").css("color", "blue");
+    },
+    error: function (error) {
+      console.log(error);
+      $("#chatWindow").append(
+        '<div class="chat-message"><div class="answer-bubble bg-secondary text-white"><strong>Bot:</strong> Error retrieving answer</div></div>'
+      );
+    }
+  });
+
+  $("input[name='question']").val(""); // Clear the input after sending
+});
+
+        $(document).on("click", ".feedback-btn", function () {
+          var feedback = $(this).data("feedback");
+          var question = $(this).data("question");
+          var answer = $(this).data("answer");
+          var session_id = $(this).data("session_id");
+          console.log(session_id);
+          $(this).parent().find(".feedback-btn").hide();
+          $.ajax({
+            type: "POST",
+            url: "/submit_feedback/",
+            contentType: "application/json",
+            data: JSON.stringify({
+              question: question,
+              answer: answer,
+              feedback: feedback,
+              session_id: session_id
+            }),
+            success: function (response) {
+              console.log("Feedback submitted successfully");
+            },
+            error: function (error) {
+              console.log("Error submitting feedback:", error);
+            }
+          });
+        });
+      });
+      function getCurrentTime() {
+  let now = new Date();
+  let year = now.getFullYear();
+  let month = (now.getMonth() + 1).toString().padStart(2, '0');
+  let day = now.getDate().toString().padStart(2, '0');
+  let hours = now.getHours().toString().padStart(2, '0');
+  let minutes = now.getMinutes().toString().padStart(2, '0');
+  let seconds = now.getSeconds().toString().padStart(2, '0');
+  return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+}
+
+
+    </script>
+  </body>
+</html>
