@@ -1,0 +1,4 @@
+numba~=0.59
+numpy<1.27,>=1.22
+pandas
+matplotlib
