@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-storybook-core"
+version = "0.1.3"
+description = "Core library for Python-Storybook integration"
+readme = "README.md"
+authors = [
+  { name="Sisung Kim", email="sisung.kim1@gmail.com" },
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Build Tools",
+
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pydantic",  # Assuming core also uses pydantic, adjust as necessary
+]
+requires-python = ">=3.9"
+
+[project.urls]
+"Homepage" = "https://github.com/crimson206/python-storybook-core"
+"Bug Tracker" = "https://github.com/crimson206/python-storybook-core/issues"
