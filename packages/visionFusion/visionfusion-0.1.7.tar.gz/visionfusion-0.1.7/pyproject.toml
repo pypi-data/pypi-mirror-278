@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "visionFusion"
+version = "0.1.7"
+description = "visionFusion é um conjunto de ferramentas de ocr para facilitar o processo de extração de texto em diferentes cenarios   "
+authors = ["Gpocas <gpocas01@gmail.com>"]
+packages = [{include = "visionFusion"}]
+readme = "README.md"
+classifiers = [
+    "Topic :: Education",
+    "Natural Language :: Portuguese (Brazilian)",
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3.11",
+]
+
+[tool.poetry.urls]
+"Código" = "https://github.com/Gpocas/visionFusion"
+"Bug Tracker" = "https://github.com/Gpocas/visionFusion/issues"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pillow = "^10.3.0"
+pyperclip = "^1.8.2"
+google-cloud-vision = "^3.7.2"
+pytesseract = "^0.3.10"
+
+
+[tool.poetry.group.dev.dependencies]
+blue = "^0.9.1"
+isort = "^5.13.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
