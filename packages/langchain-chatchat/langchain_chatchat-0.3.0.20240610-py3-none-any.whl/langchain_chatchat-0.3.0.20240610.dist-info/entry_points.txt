@@ -1,0 +1,9 @@
+[console_scripts]
+chatchat=chatchat.startup:main
+chatchat-config=chatchat.config_work_space:main
+chatchat-kb=chatchat.init_database:main
+
+[dotenv]
+dotenv=dotenv:plugin
+ignore=false
+
