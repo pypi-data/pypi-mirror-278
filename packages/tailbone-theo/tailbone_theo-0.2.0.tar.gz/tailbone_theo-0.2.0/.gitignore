@@ -1,0 +1,10 @@
+*~
+*.pyc
+tailbone_theo.egg-info/
+dev/settings.ini
+dist/
+docs/_build/
+machines/theo-server/.vagrant/
+machines/theo-server/fabenv.py
+machines/theo-server/fabric.yaml
+machines/theo-server/Vagrantfile

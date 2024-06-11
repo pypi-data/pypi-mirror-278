@@ -1,0 +1,85 @@
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[project]
+name = "tailbone-theo"
+version = "0.2.0"
+description = "Theo, the order system"
+readme = "README.rst"
+authors = [{name = "Lance Edgar", email = "lance@edbob.org"}]
+license = {text = "GNU GPL v3+"}
+classifiers = [
+        "Development Status :: 3 - Alpha",
+        "Environment :: Console",
+        "Environment :: Web Environment",
+        "Framework :: Pyramid",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+        "Natural Language :: English",
+        "Operating System :: POSIX :: Linux",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Topic :: Office/Business",
+]
+dependencies = [
+        "mysql-connector-python",
+        "psycopg2",
+        "Tailbone",
+        "typer",
+]
+
+
+[project.optional-dependencies]
+catapult = ["onager", "rattail-onager", "tailbone-onager"]
+corepos = ["pyCOREPOS", "rattail-corepos", "tailbone-corepos"]
+fabric = ["rattail-fabric2"]
+locsms = ["luckysmores", "rattail-luckysmores", "tailbone-locsms"]
+
+
+[project.scripts]
+theo = "theo.commands:theo_typer"
+
+
+[project.entry-points."paste.app_factory"]
+main = "theo.web.app:main"
+webapi = "theo.web.webapi:main"
+
+
+[project.entry-points."rattail.config.extensions"]
+theo = "theo.config:TheoConfig"
+
+
+[project.entry-points."rattail.importing"]
+# nb. we always register all 3 handlers here, for version
+# imports.  any which fail to load will simply not appear
+# available to the user.
+"to_rattail_versions.from_rattail.import.theo_catapult" = "theo.importing.versions_catapult:FromTheoToTheoVersions"
+"to_rattail_versions.from_rattail.import.theo_corepos" = "theo.importing.versions_corepos:FromTheoToTheoVersions"
+"to_rattail_versions.from_rattail.import.theo_locsms" = "theo.importing.versions_locsms:FromTheoToTheoVersions"
+
+
+[project.urls]
+Homepage = "https://redmine.rattailproject.org/projects/theo"
+Repository = "https://kallithea.rattailproject.org/rattail-project/theo"
+Issues = "https://redmine.rattailproject.org/projects/theo/issues"
+Changelog = "https://kallithea.rattailproject.org/rattail-project/theo/files/master/CHANGELOG.md"
+
+
+[tool.commitizen]
+version_provider = "pep621"
+tag_format = "v$version"
+update_changelog_on_bump = true
+
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+  "machines/",
+  "mobile/",
+]
+
+
+[tool.hatch.build.targets.wheel]
+packages = ["theo"]

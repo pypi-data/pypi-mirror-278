@@ -1,0 +1,18 @@
+2023-01-17 19:48:37 DEBUG [rattail.config][MainThread] configure_logging: configured logging
+2023-01-17 19:48:38 DEBUG [passlib.utils.compat][MainThread] __getattr__: loaded lazy attr 'SafeConfigParser': <class 'configparser.ConfigParser'>
+2023-01-17 19:48:38 DEBUG [passlib.utils.compat][MainThread] __getattr__: loaded lazy attr 'NativeStringIO': <class '_io.StringIO'>
+2023-01-17 19:48:38 DEBUG [passlib.utils.compat][MainThread] __getattr__: loaded lazy attr 'BytesIO': <class '_io.BytesIO'>
+2023-01-17 19:48:38 DEBUG [rattail.config][MainThread] make_config: applying 'rattail.db' config extension
+2023-01-17 19:48:38 DEBUG [rattail.config][MainThread] make_config: applying 'rattail.trainwreck' config extension
+2023-01-17 19:48:38 DEBUG [rattail.config][MainThread] make_config: applying 'tailbone' config extension
+2023-01-17 19:48:38 DEBUG [rattail.config][MainThread] make_config: applying 'theo' config extension
+2023-01-17 19:48:38 DEBUG [rattail.commands.core][MainThread] run: running 'rattail make-appdir' with args: ['--path', '/srv/envs/theo-tmp/app']
+2023-01-17 19:49:07 DEBUG [rattail.config][MainThread] configure_logging: configured logging
+2023-01-17 19:49:07 DEBUG [passlib.utils.compat][MainThread] __getattr__: loaded lazy attr 'SafeConfigParser': <class 'configparser.ConfigParser'>
+2023-01-17 19:49:07 DEBUG [passlib.utils.compat][MainThread] __getattr__: loaded lazy attr 'NativeStringIO': <class '_io.StringIO'>
+2023-01-17 19:49:07 DEBUG [passlib.utils.compat][MainThread] __getattr__: loaded lazy attr 'BytesIO': <class '_io.BytesIO'>
+2023-01-17 19:49:07 DEBUG [rattail.config][MainThread] make_config: applying 'rattail.db' config extension
+2023-01-17 19:49:07 DEBUG [rattail.config][MainThread] make_config: applying 'rattail.trainwreck' config extension
+2023-01-17 19:49:07 DEBUG [rattail.config][MainThread] make_config: applying 'tailbone' config extension
+2023-01-17 19:49:07 DEBUG [rattail.config][MainThread] make_config: applying 'theo' config extension
+2023-01-17 19:49:08 DEBUG [rattail.commands.core][MainThread] run: running 'rattail make-config' with args: ['-T', 'quiet', '-O', '/srv/envs/theo-tmp/app']

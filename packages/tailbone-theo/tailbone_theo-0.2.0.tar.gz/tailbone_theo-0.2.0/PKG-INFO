@@ -1,0 +1,57 @@
+Metadata-Version: 2.3
+Name: tailbone-theo
+Version: 0.2.0
+Summary: Theo, the order system
+Project-URL: Homepage, https://redmine.rattailproject.org/projects/theo
+Project-URL: Repository, https://kallithea.rattailproject.org/rattail-project/theo
+Project-URL: Issues, https://redmine.rattailproject.org/projects/theo/issues
+Project-URL: Changelog, https://kallithea.rattailproject.org/rattail-project/theo/files/master/CHANGELOG.md
+Author-email: Lance Edgar <lance@edbob.org>
+License: GNU GPL v3+
+License-File: COPYING.txt
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Pyramid
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Office/Business
+Requires-Dist: mysql-connector-python
+Requires-Dist: psycopg2
+Requires-Dist: tailbone
+Requires-Dist: typer
+Provides-Extra: catapult
+Requires-Dist: onager; extra == 'catapult'
+Requires-Dist: rattail-onager; extra == 'catapult'
+Requires-Dist: tailbone-onager; extra == 'catapult'
+Provides-Extra: corepos
+Requires-Dist: pycorepos; extra == 'corepos'
+Requires-Dist: rattail-corepos; extra == 'corepos'
+Requires-Dist: tailbone-corepos; extra == 'corepos'
+Provides-Extra: fabric
+Requires-Dist: rattail-fabric2; extra == 'fabric'
+Provides-Extra: locsms
+Requires-Dist: luckysmores; extra == 'locsms'
+Requires-Dist: rattail-luckysmores; extra == 'locsms'
+Requires-Dist: tailbone-locsms; extra == 'locsms'
+Description-Content-Type: text/x-rst
+
+
+tailbone-theo
+=============
+
+This is an experimental project, as of this writing.  Its purpose is 2-fold:
+
+* hopefully provide a useful app for managing special/case orders for customers
+* either way, hopefully provide a good working example of the code
+
+This may also attempt certain aspects of "curbside" and/or "delivery" orders at
+some point, we'll see.  Nobody should be holding their breath maybe.
+
+See the `Rattail Project`_ for more info.
+
+.. _`Rattail Project`: https://rattailproject.org/
