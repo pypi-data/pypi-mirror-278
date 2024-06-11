@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: turing_data_transformation
+Version: 0.1.0
+Summary: A library for data transformations in machine learning.
+Author: Karolis Andrijauskas
+Author-email: karolis.a.and@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: numpy (>=1.21.0,<2.0.0)
+Description-Content-Type: text/markdown
+
+# data_transformation
+
+A library for common data transformations in machine learning.
+
+## Installation
+
+Use [Poetry](https://python-poetry.org/) to install the dependencies.
+
+
+sh
+```
+poetry install
+```
