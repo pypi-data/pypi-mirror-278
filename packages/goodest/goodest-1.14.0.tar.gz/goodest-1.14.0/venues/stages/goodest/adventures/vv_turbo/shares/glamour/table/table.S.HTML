@@ -1,0 +1,90 @@
+
+
+
+
+<pre>
+
+
+	<h1>table</h1>
+	
+		import name_component from './components/name'
+		
+		
+		import { sort_as_strings } from '@%/glamour/table/sorting/as_string.js'
+
+	
+		<g_table
+			:theme="{
+				palette: {
+					text: 'black'
+				}
+			}"
+			:columns="[{
+				'place': '1',
+				'name': 'name',
+				sorting: sort_as_strings
+			},{
+				'place': '2',
+				'name': 'mass + mass equivalents, in grams, per package',
+				sorting: function ({ rows, place, direction }) {
+					
+				}
+			},{
+				'place': '3',
+				'name': '',
+				sorting: ({ rows, place, direction }) {
+					
+				}
+			}]"
+			:rows="[{
+				'1': 'protein',
+				'2': '56.00280000000001',
+				'3': '59.97243881625345%'
+			},{
+				'1': 'fats',
+				'2': '21.9898',
+				'3': '23.548499987172963%'
+			},{
+				'1': {
+					component: name_component,
+					props: {
+						
+					}
+				},
+				'2': '21.9898',
+				'3': '23.548499987172963%'
+			}]"
+		/>
+	
+
+
+	questions:
+		multiple 
+
+
+	relevant:
+		import s_button from ...
+					
+		methods: {
+			unconnected_component () {
+				return h (s_button, { palette, terrain })
+			}
+		}
+		
+		<component :is="unconnected_component ()" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>

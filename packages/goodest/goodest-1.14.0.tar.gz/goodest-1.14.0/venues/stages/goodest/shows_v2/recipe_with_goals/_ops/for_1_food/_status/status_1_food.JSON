@@ -1,0 +1,2270 @@
+{
+    "emblem": 4,
+    "nature": {
+        "kind": "food",
+        "identity": {
+            "name": "ALL AMERICAN VEGGIE BURGERS",
+            "FDC ID": "2677998",
+            "UPC": "080868000336",
+            "DSLD ID": ""
+        },
+        "brand": {
+            "name": "DR. PRAEGER'S",
+            "owner": "Dr. Praeger's Sensible Foods, Inc."
+        },
+        "measures": {
+            "form": {
+                "unit": "gram",
+                "amount": "226",
+                "servings": {
+                    "listed": {
+                        "serving size amount": "113",
+                        "serving size unit": "GRM"
+                    },
+                    "calculated": {
+                        "serving size amount": "113",
+                        "servings per package": "2",
+                        "foodNutrient per package multiplier": "113/50",
+                        "labelNutrient per package multiplier": "2"
+                    }
+                }
+            },
+            "energy": {
+                "ascertained": true,
+                "per package": {
+                    "listed": [
+                        "479.120",
+                        "kcal"
+                    ],
+                    "food calories": {
+                        "decimal string": "479.120",
+                        "fraction string": "11978/25"
+                    }
+                }
+            },
+            "mass": {
+                "ascertained": true,
+                "per package": {
+                    "grams": {
+                        "fraction string": "226",
+                        "decimal string": "226.00"
+                    }
+                }
+            },
+            "volume": {
+                "ascertained": false,
+                "per package": {
+                    "liters": {
+                        "fraction string": "?",
+                        "decimal string": "?"
+                    }
+                }
+            }
+        },
+        "measured ingredients": [
+            {
+                "name": "Sugars, total including NLEA",
+                "measures": {
+                    "mass + mass equivalents": {
+                        "per package": {
+                            "listed": [
+                                "0.000",
+                                "g"
+                            ],
+                            "grams": {
+                                "scinote string": "0.0000e+0",
+                                "decimal string": "0.000",
+                                "fraction string": "0"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "name": "Carbohydrate, by difference",
+                "measures": {
+                    "mass + mass equivalents": {
+                        "per package": {
+                            "listed": [
+                                "13.989",
+                                "g"
+                            ],
+                            "grams": {
+                                "scinote string": "1.3989e+1",
+                                "decimal string": "13.989",
+                                "fraction string": "787533207839210259/56294995342131200"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "name": "Iron, Fe",
+                "measures": {
+                    "mass + mass equivalents": {
+                        "per package": {
+                            "listed": [
+                                "10.803",
+                                "mg"
+                            ],
+                            "grams": {
+                                "scinote string": "1.0803e-2",
+                                "decimal string": "0.011",
+                                "fraction string": "608143575681974959/56294995342131200000"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "name": "Fatty acids, total saturated",
+                "measures": {
+                    "mass + mass equivalents": {
+                        "per package": {
+                            "listed": [
+                                "4.000",
+                                "g"
+                            ],
+                            "grams": {
+                                "scinote string": "4.0002e+0",
+                                "decimal string": "4.000",
+                                "fraction string": "450382480735186457/112589990684262400"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "name": "Vitamin A",
+                "measures": {
+                    "mass + mass equivalents": {
+                        "per package": {
+                            "listed": [
+                                "0.000",
+                                "\u00b5g"
+                            ],
+                            "grams": {
+                                "scinote string": "0.0000e+0",
+                                "decimal string": "0.000",
+                                "fraction string": "0"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "name": "Calcium, Ca",
+                "measures": {
+                    "mass + mass equivalents": {
+                        "per package": {
+                            "listed": [
+                                "40.680",
+                                "mg"
+                            ],
+                            "grams": {
+                                "scinote string": "4.0680e-2",
+                                "decimal string": "0.041",
+                                "fraction string": "1017/25000"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "name": "Fiber, total dietary",
+                "measures": {
+                    "mass + mass equivalents": {
+                        "per package": {
+                            "listed": [
+                                "7.910",
+                                "g"
+                            ],
+                            "grams": {
+                                "scinote string": "7.9100e+0",
+                                "decimal string": "7.910",
+                                "fraction string": "791/100"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "name": "Potassium, K",
+                "measures": {
+                    "mass + mass equivalents": {
+                        "per package": {
+                            "listed": [
+                                "420.360",
+                                "mg"
+                            ],
+                            "grams": {
+                                "scinote string": "4.2036e-1",
+                                "decimal string": "0.420",
+                                "fraction string": "10509/25000"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "name": "Cholesterol",
+                "measures": {
+                    "mass + mass equivalents": {
+                        "per package": {
+                            "listed": [
+                                "0.000",
+                                "mg"
+                            ],
+                            "grams": {
+                                "scinote string": "0.0000e+0",
+                                "decimal string": "0.000",
+                                "fraction string": "0"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "name": "Total lipid (fat)",
+                "measures": {
+                    "mass + mass equivalents": {
+                        "per package": {
+                            "listed": [
+                                "21.990",
+                                "g"
+                            ],
+                            "grams": {
+                                "scinote string": "2.1990e+1",
+                                "decimal string": "21.990",
+                                "fraction string": "309478922143599179/14073748835532800"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "name": "Protein",
+                "measures": {
+                    "mass + mass equivalents": {
+                        "per package": {
+                            "listed": [
+                                "56.003",
+                                "g"
+                            ],
+                            "grams": {
+                                "scinote string": "5.6003e+1",
+                                "decimal string": "56.003",
+                                "fraction string": "98521167660822041/1759218604441600"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "name": "Sodium, Na",
+                "measures": {
+                    "mass + mass equivalents": {
+                        "per package": {
+                            "listed": [
+                                "919.820",
+                                "mg"
+                            ],
+                            "grams": {
+                                "scinote string": "9.1982e-1",
+                                "decimal string": "0.920",
+                                "fraction string": "45991/50000"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "name": "Fatty acids, total trans",
+                "measures": {
+                    "mass + mass equivalents": {
+                        "per package": {
+                            "listed": [
+                                "0.000",
+                                "g"
+                            ],
+                            "grams": {
+                                "scinote string": "0.0000e+0",
+                                "decimal string": "0.000",
+                                "fraction string": "0"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "name": "Vitamin C, total ascorbic acid",
+                "measures": {
+                    "mass + mass equivalents": {
+                        "per package": {
+                            "listed": [
+                                "7.232",
+                                "mg"
+                            ],
+                            "grams": {
+                                "scinote string": "7.2320e-3",
+                                "decimal string": "0.007",
+                                "fraction string": "407125406314292861/56294995342131200000"
+                            }
+                        }
+                    }
+                }
+            }
+        ],
+        "unmeasured ingredients": {
+            "string": "HYDRATED PEA PROTEIN (WATER, PEA PROTEIN), AVOCADO OIL, ONIONS, SWEET POTATO PUREE, BUTTERNUT SQUASH PUREE, CARROT PUREE, NATURAL FLAVORS, METHYL CELLULOSE, FRUIT JUICE COLOR, OAT FIBER, POTATO STARCH, ROASTED GARLIC, SEA SALT"
+        },
+        "essential nutrients": {
+            "natures": [
+                {
+                    "amount": "1",
+                    "identity": {
+                        "name": "ALL AMERICAN VEGGIE BURGERS",
+                        "FDC ID": "2677998",
+                        "UPC": "080868000336",
+                        "DSLD ID": ""
+                    }
+                }
+            ],
+            "measures": {
+                "mass + mass equivalents": {
+                    "per recipe": {
+                        "grams": {
+                            "fraction string": "1314219259452510960913/14073748835532800000",
+                            "scinote string": "9.3381e+1"
+                        }
+                    }
+                },
+                "energy": {
+                    "per recipe": {
+                        "food calories": {
+                            "fraction string": "11978/25",
+                            "scinote string": "4.7912e+2"
+                        }
+                    }
+                }
+            },
+            "grove": [
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "protein"
+                        ],
+                        "region": 1
+                    },
+                    "measures": {
+                        "mass + mass equivalents": {
+                            "per recipe": {
+                                "grams": {
+                                    "fraction string": "98521167660822041/1759218604441600",
+                                    "scinote string": "5.6003e+1"
+                                }
+                            },
+                            "portion of grove": {
+                                "fraction string": "6974949922890056000/11630258933208061601",
+                                "scinote percentage string": "5.9972e+1"
+                            }
+                        }
+                    },
+                    "natures": [
+                        {
+                            "amount": "1",
+                            "source": {
+                                "name": "ALL AMERICAN VEGGIE BURGERS",
+                                "FDC ID": "2677998",
+                                "UPC": "080868000336",
+                                "DSLD ID": ""
+                            },
+                            "ingredient": {
+                                "name": "Protein"
+                            },
+                            "measures": {
+                                "mass + mass equivalents": {
+                                    "per package": {
+                                        "listed": [
+                                            "56.003",
+                                            "g"
+                                        ],
+                                        "grams": {
+                                            "scinote string": "5.6003e+1",
+                                            "decimal string": "56.003",
+                                            "fraction string": "98521167660822041/1759218604441600"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "unites": [],
+                    "goal": {
+                        "days of ingredient": {
+                            "mass + mass equivalents": {
+                                "per recipe": {
+                                    "fraction string": "98521167660822041/87960930222080000",
+                                    "decimal string": "1.120"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "info": {
+                        "accepts": [
+                            "carbohydrate, by difference",
+                            "total carbohydrates"
+                        ],
+                        "includes": [
+                            6,
+                            7
+                        ],
+                        "names": [
+                            "carbohydrates"
+                        ],
+                        "region": 2
+                    },
+                    "measures": {
+                        "mass + mass equivalents": {
+                            "per recipe": {
+                                "grams": {
+                                    "fraction string": "787533207839210259/56294995342131200",
+                                    "scinote string": "1.3989e+1"
+                                }
+                            },
+                            "portion of grove": {
+                                "fraction string": "248904300834137250/1661465561886865943",
+                                "scinote percentage string": "1.4981e+1"
+                            }
+                        }
+                    },
+                    "natures": [
+                        {
+                            "amount": "1",
+                            "source": {
+                                "name": "ALL AMERICAN VEGGIE BURGERS",
+                                "FDC ID": "2677998",
+                                "UPC": "080868000336",
+                                "DSLD ID": ""
+                            },
+                            "ingredient": {
+                                "name": "Carbohydrate, by difference"
+                            },
+                            "measures": {
+                                "mass + mass equivalents": {
+                                    "per package": {
+                                        "listed": [
+                                            "13.989",
+                                            "g"
+                                        ],
+                                        "grams": {
+                                            "scinote string": "1.3989e+1",
+                                            "decimal string": "13.989",
+                                            "fraction string": "787533207839210259/56294995342131200"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "unites": [
+                        {
+                            "info": {
+                                "includes": [],
+                                "names": [
+                                    "dietary fiber",
+                                    "fiber, total dietary"
+                                ],
+                                "region": 6
+                            },
+                            "measures": {
+                                "mass + mass equivalents": {
+                                    "per recipe": {
+                                        "grams": {
+                                            "fraction string": "791/100",
+                                            "scinote string": "7.9100e+0"
+                                        }
+                                    }
+                                }
+                            },
+                            "natures": [
+                                {
+                                    "amount": "1",
+                                    "source": {
+                                        "name": "ALL AMERICAN VEGGIE BURGERS",
+                                        "FDC ID": "2677998",
+                                        "UPC": "080868000336",
+                                        "DSLD ID": ""
+                                    },
+                                    "ingredient": {
+                                        "name": "Fiber, total dietary"
+                                    },
+                                    "measures": {
+                                        "mass + mass equivalents": {
+                                            "per package": {
+                                                "listed": [
+                                                    "7.910",
+                                                    "g"
+                                                ],
+                                                "grams": {
+                                                    "scinote string": "7.9100e+0",
+                                                    "decimal string": "7.910",
+                                                    "fraction string": "791/100"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "unites": [],
+                            "goal": {
+                                "days of ingredient": {
+                                    "mass + mass equivalents": {
+                                        "per recipe": {
+                                            "fraction string": "113/400",
+                                            "decimal string": "0.283"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "info": {
+                                "accepts": [
+                                    "sugars, total including nlea"
+                                ],
+                                "includes": [
+                                    8
+                                ],
+                                "names": [
+                                    "sugars, total",
+                                    "total sugar",
+                                    "sugar",
+                                    "total sugars"
+                                ],
+                                "region": 7
+                            },
+                            "measures": {
+                                "mass + mass equivalents": {
+                                    "per recipe": {
+                                        "grams": {
+                                            "fraction string": "0",
+                                            "scinote string": "0.0000e+0"
+                                        }
+                                    }
+                                }
+                            },
+                            "natures": [
+                                {
+                                    "amount": "1",
+                                    "source": {
+                                        "name": "ALL AMERICAN VEGGIE BURGERS",
+                                        "FDC ID": "2677998",
+                                        "UPC": "080868000336",
+                                        "DSLD ID": ""
+                                    },
+                                    "ingredient": {
+                                        "name": "Sugars, total including NLEA"
+                                    },
+                                    "measures": {
+                                        "mass + mass equivalents": {
+                                            "per package": {
+                                                "listed": [
+                                                    "0.000",
+                                                    "g"
+                                                ],
+                                                "grams": {
+                                                    "scinote string": "0.0000e+0",
+                                                    "decimal string": "0.000",
+                                                    "fraction string": "0"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "unites": [
+                                {
+                                    "info": {
+                                        "includes": [],
+                                        "names": [
+                                            "added sugars",
+                                            "sugars, added"
+                                        ],
+                                        "region": 8
+                                    },
+                                    "measures": {},
+                                    "natures": [],
+                                    "unites": []
+                                }
+                            ],
+                            "goal": {}
+                        }
+                    ],
+                    "goal": {
+                        "days of ingredient": {
+                            "mass + mass equivalents": {
+                                "per recipe": {
+                                    "fraction string": "787533207839210259/15481123719086080000",
+                                    "decimal string": "0.051"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "info": {
+                        "includes": [
+                            4,
+                            15,
+                            51
+                        ],
+                        "names": [
+                            "fats",
+                            "total fat",
+                            "lipids",
+                            "total lipid (fat)"
+                        ],
+                        "region": 3
+                    },
+                    "measures": {
+                        "mass + mass equivalents": {
+                            "per recipe": {
+                                "grams": {
+                                    "fraction string": "309478922143599179/14073748835532800",
+                                    "scinote string": "2.1990e+1"
+                                }
+                            },
+                            "portion of grove": {
+                                "fraction string": "2738751523394683000/11630258933208061601",
+                                "scinote percentage string": "2.3549e+1"
+                            }
+                        }
+                    },
+                    "natures": [
+                        {
+                            "amount": "1",
+                            "source": {
+                                "name": "ALL AMERICAN VEGGIE BURGERS",
+                                "FDC ID": "2677998",
+                                "UPC": "080868000336",
+                                "DSLD ID": ""
+                            },
+                            "ingredient": {
+                                "name": "Total lipid (fat)"
+                            },
+                            "measures": {
+                                "mass + mass equivalents": {
+                                    "per package": {
+                                        "listed": [
+                                            "21.990",
+                                            "g"
+                                        ],
+                                        "grams": {
+                                            "scinote string": "2.1990e+1",
+                                            "decimal string": "21.990",
+                                            "fraction string": "309478922143599179/14073748835532800"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "unites": [
+                        {
+                            "info": {
+                                "includes": [],
+                                "names": [
+                                    "saturated fat",
+                                    "fatty acids, total saturated"
+                                ],
+                                "region": 4
+                            },
+                            "measures": {
+                                "mass + mass equivalents": {
+                                    "per recipe": {
+                                        "grams": {
+                                            "fraction string": "450382480735186457/112589990684262400",
+                                            "scinote string": "4.0002e+0"
+                                        }
+                                    }
+                                }
+                            },
+                            "natures": [
+                                {
+                                    "amount": "1",
+                                    "source": {
+                                        "name": "ALL AMERICAN VEGGIE BURGERS",
+                                        "FDC ID": "2677998",
+                                        "UPC": "080868000336",
+                                        "DSLD ID": ""
+                                    },
+                                    "ingredient": {
+                                        "name": "Fatty acids, total saturated"
+                                    },
+                                    "measures": {
+                                        "mass + mass equivalents": {
+                                            "per package": {
+                                                "listed": [
+                                                    "4.000",
+                                                    "g"
+                                                ],
+                                                "grams": {
+                                                    "scinote string": "4.0002e+0",
+                                                    "decimal string": "4.000",
+                                                    "fraction string": "450382480735186457/112589990684262400"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "unites": [],
+                            "goal": {
+                                "days of ingredient": {
+                                    "mass + mass equivalents": {
+                                        "per recipe": {
+                                            "fraction string": "450382480735186457/2251799813685248000",
+                                            "decimal string": "0.200"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "info": {
+                                "includes": [],
+                                "names": [
+                                    "polyunsaturated fat",
+                                    "fatty acids, total polyunsaturated"
+                                ],
+                                "region": 15
+                            },
+                            "measures": {},
+                            "natures": [],
+                            "unites": [],
+                            "goal": {}
+                        },
+                        {
+                            "info": {
+                                "includes": [],
+                                "names": [
+                                    "monounsaturated fat",
+                                    "fatty acids, total monounsaturated"
+                                ],
+                                "region": 51
+                            },
+                            "measures": {},
+                            "natures": [],
+                            "unites": [],
+                            "goal": {}
+                        }
+                    ],
+                    "goal": {
+                        "days of ingredient": {
+                            "mass + mass equivalents": {
+                                "per recipe": {
+                                    "fraction string": "309478922143599179/1097752409171558400",
+                                    "decimal string": "0.282"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "calcium",
+                            "calcium, ca"
+                        ],
+                        "region": 9
+                    },
+                    "measures": {
+                        "mass + mass equivalents": {
+                            "per recipe": {
+                                "grams": {
+                                    "fraction string": "1017/25000",
+                                    "scinote string": "4.0680e-2"
+                                }
+                            },
+                            "portion of grove": {
+                                "fraction string": "5066549580791808/11630258933208061601",
+                                "scinote percentage string": "4.3564e-2"
+                            }
+                        }
+                    },
+                    "natures": [
+                        {
+                            "amount": "1",
+                            "source": {
+                                "name": "ALL AMERICAN VEGGIE BURGERS",
+                                "FDC ID": "2677998",
+                                "UPC": "080868000336",
+                                "DSLD ID": ""
+                            },
+                            "ingredient": {
+                                "name": "Calcium, Ca"
+                            },
+                            "measures": {
+                                "mass + mass equivalents": {
+                                    "per package": {
+                                        "listed": [
+                                            "40.680",
+                                            "mg"
+                                        ],
+                                        "grams": {
+                                            "scinote string": "4.0680e-2",
+                                            "decimal string": "0.041",
+                                            "fraction string": "1017/25000"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "unites": [],
+                    "goal": {
+                        "days of ingredient": {
+                            "mass + mass equivalents": {
+                                "per recipe": {
+                                    "fraction string": "1017/32500",
+                                    "decimal string": "0.031"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "cholesterol"
+                        ],
+                        "region": 12
+                    },
+                    "measures": {
+                        "mass + mass equivalents": {
+                            "per recipe": {
+                                "grams": {
+                                    "fraction string": "0",
+                                    "scinote string": "0.0000e+0"
+                                }
+                            },
+                            "portion of grove": {
+                                "fraction string": "0",
+                                "scinote percentage string": "0.0000e+0"
+                            }
+                        }
+                    },
+                    "natures": [
+                        {
+                            "amount": "1",
+                            "source": {
+                                "name": "ALL AMERICAN VEGGIE BURGERS",
+                                "FDC ID": "2677998",
+                                "UPC": "080868000336",
+                                "DSLD ID": ""
+                            },
+                            "ingredient": {
+                                "name": "Cholesterol"
+                            },
+                            "measures": {
+                                "mass + mass equivalents": {
+                                    "per package": {
+                                        "listed": [
+                                            "0.000",
+                                            "mg"
+                                        ],
+                                        "grams": {
+                                            "scinote string": "0.0000e+0",
+                                            "decimal string": "0.000",
+                                            "fraction string": "0"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "unites": [],
+                    "goal": {
+                        "days of ingredient": {
+                            "mass + mass equivalents": {
+                                "per recipe": {
+                                    "fraction string": "0",
+                                    "decimal string": "0.000"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "vitamin a",
+                            "vitamin a, iu"
+                        ],
+                        "region": 16
+                    },
+                    "measures": {
+                        "mass + mass equivalents": {
+                            "per recipe": {
+                                "grams": {
+                                    "fraction string": "0",
+                                    "scinote string": "0.0000e+0"
+                                }
+                            },
+                            "portion of grove": {
+                                "fraction string": "0",
+                                "scinote percentage string": "0.0000e+0"
+                            }
+                        }
+                    },
+                    "natures": [
+                        {
+                            "amount": "1",
+                            "source": {
+                                "name": "ALL AMERICAN VEGGIE BURGERS",
+                                "FDC ID": "2677998",
+                                "UPC": "080868000336",
+                                "DSLD ID": ""
+                            },
+                            "ingredient": {
+                                "name": "Vitamin A"
+                            },
+                            "measures": {
+                                "mass + mass equivalents": {
+                                    "per package": {
+                                        "listed": [
+                                            "0.000",
+                                            "\u00b5g"
+                                        ],
+                                        "grams": {
+                                            "scinote string": "0.0000e+0",
+                                            "decimal string": "0.000",
+                                            "fraction string": "0"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "unites": [],
+                    "goal": {
+                        "days of ingredient": {
+                            "mass + mass equivalents": {
+                                "per recipe": {
+                                    "fraction string": "0",
+                                    "decimal string": "0.000"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "vitamin e"
+                        ],
+                        "region": 19
+                    },
+                    "measures": {},
+                    "natures": [],
+                    "unites": [],
+                    "goal": {}
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "iodine"
+                        ],
+                        "region": 29
+                    },
+                    "measures": {},
+                    "natures": [],
+                    "unites": [],
+                    "goal": {}
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "magnesium"
+                        ],
+                        "region": 30
+                    },
+                    "measures": {},
+                    "natures": [],
+                    "unites": [],
+                    "goal": {}
+                },
+                {
+                    "info": {
+                        "accepts": [],
+                        "includes": [],
+                        "names": [
+                            "Zinc, Zn",
+                            "Zinc"
+                        ],
+                        "region": 31
+                    },
+                    "measures": {},
+                    "natures": [],
+                    "unites": [],
+                    "goal": {}
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "selenium"
+                        ],
+                        "region": 32
+                    },
+                    "measures": {},
+                    "natures": [],
+                    "unites": [],
+                    "goal": {}
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "copper"
+                        ],
+                        "region": 33
+                    },
+                    "measures": {},
+                    "natures": [],
+                    "unites": [],
+                    "goal": {}
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "manganese"
+                        ],
+                        "region": 34
+                    },
+                    "measures": {},
+                    "natures": [],
+                    "unites": [],
+                    "goal": {}
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "chromium"
+                        ],
+                        "region": 35
+                    },
+                    "measures": {},
+                    "natures": [],
+                    "unites": [],
+                    "goal": {}
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "molybdenum"
+                        ],
+                        "region": 36
+                    },
+                    "measures": {},
+                    "natures": [],
+                    "unites": [],
+                    "goal": {}
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "choline"
+                        ],
+                        "region": 37
+                    },
+                    "measures": {},
+                    "natures": [],
+                    "unites": [],
+                    "goal": {}
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "lutein"
+                        ],
+                        "region": 40
+                    },
+                    "measures": {},
+                    "natures": [],
+                    "unites": [],
+                    "goal": {}
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "betaine hydrochloride"
+                        ],
+                        "region": 43
+                    },
+                    "measures": {},
+                    "natures": [],
+                    "unites": [],
+                    "goal": {}
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "rutin"
+                        ],
+                        "region": 44
+                    },
+                    "measures": {},
+                    "natures": [],
+                    "unites": [],
+                    "goal": {}
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "strontium"
+                        ],
+                        "region": 47
+                    },
+                    "measures": {},
+                    "natures": [],
+                    "unites": [],
+                    "goal": {}
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "vanadium"
+                        ],
+                        "region": 49
+                    },
+                    "measures": {},
+                    "natures": [],
+                    "unites": [],
+                    "goal": {}
+                },
+                {
+                    "info": {
+                        "accepts": [],
+                        "includes": [],
+                        "names": [
+                            "Phosphorus, P",
+                            "Phosphorus"
+                        ],
+                        "region": 57
+                    },
+                    "measures": {},
+                    "natures": [],
+                    "unites": [],
+                    "goal": {}
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "potassium",
+                            "potassium K",
+                            "potassium, K",
+                            "K"
+                        ],
+                        "region": 58
+                    },
+                    "measures": {
+                        "mass + mass equivalents": {
+                            "per recipe": {
+                                "grams": {
+                                    "fraction string": "10509/25000",
+                                    "scinote string": "4.2036e-1"
+                                }
+                            },
+                            "portion of grove": {
+                                "fraction string": "52354345668182016/11630258933208061601",
+                                "scinote percentage string": "4.5016e-1"
+                            }
+                        }
+                    },
+                    "natures": [
+                        {
+                            "amount": "1",
+                            "source": {
+                                "name": "ALL AMERICAN VEGGIE BURGERS",
+                                "FDC ID": "2677998",
+                                "UPC": "080868000336",
+                                "DSLD ID": ""
+                            },
+                            "ingredient": {
+                                "name": "Potassium, K"
+                            },
+                            "measures": {
+                                "mass + mass equivalents": {
+                                    "per package": {
+                                        "listed": [
+                                            "420.360",
+                                            "mg"
+                                        ],
+                                        "grams": {
+                                            "scinote string": "4.2036e-1",
+                                            "decimal string": "0.420",
+                                            "fraction string": "10509/25000"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "unites": [],
+                    "goal": {
+                        "days of ingredient": {
+                            "mass + mass equivalents": {
+                                "per recipe": {
+                                    "fraction string": "10509/117500",
+                                    "decimal string": "0.089"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "sodium Na",
+                            "sodium, Na",
+                            "sodium",
+                            "Na"
+                        ],
+                        "region": 59
+                    },
+                    "measures": {
+                        "mass + mass equivalents": {
+                            "per recipe": {
+                                "grams": {
+                                    "fraction string": "45991/50000",
+                                    "scinote string": "9.1982e-1"
+                                }
+                            },
+                            "portion of grove": {
+                                "fraction string": "114560315521236992/11630258933208061601",
+                                "scinote percentage string": "9.8502e-1"
+                            }
+                        }
+                    },
+                    "natures": [
+                        {
+                            "amount": "1",
+                            "source": {
+                                "name": "ALL AMERICAN VEGGIE BURGERS",
+                                "FDC ID": "2677998",
+                                "UPC": "080868000336",
+                                "DSLD ID": ""
+                            },
+                            "ingredient": {
+                                "name": "Sodium, Na"
+                            },
+                            "measures": {
+                                "mass + mass equivalents": {
+                                    "per package": {
+                                        "listed": [
+                                            "919.820",
+                                            "mg"
+                                        ],
+                                        "grams": {
+                                            "scinote string": "9.1982e-1",
+                                            "decimal string": "0.920",
+                                            "fraction string": "45991/50000"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "unites": [],
+                    "goal": {
+                        "days of ingredient": {
+                            "mass + mass equivalents": {
+                                "per recipe": {
+                                    "fraction string": "45991/115000",
+                                    "decimal string": "0.400"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "vitamin d",
+                            "vitamin d (d2 + d3)",
+                            "vitamin d2",
+                            "vitamin d3",
+                            "vitamin d (d2 + d3), international units"
+                        ],
+                        "region": 63
+                    },
+                    "measures": {},
+                    "natures": [],
+                    "unites": [],
+                    "goal": {}
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "vitamin c",
+                            "vitamin c (form: as calcium ascorbate)",
+                            "vitamin c, total ascorbic acid"
+                        ],
+                        "region": 64
+                    },
+                    "measures": {
+                        "mass + mass equivalents": {
+                            "per recipe": {
+                                "grams": {
+                                    "fraction string": "407125406314292861/56294995342131200000",
+                                    "scinote string": "7.2320e-3"
+                                }
+                            },
+                            "portion of grove": {
+                                "fraction string": "277144592453569/3578541210217865108",
+                                "scinote percentage string": "7.7446e-3"
+                            }
+                        }
+                    },
+                    "natures": [
+                        {
+                            "amount": "1",
+                            "source": {
+                                "name": "ALL AMERICAN VEGGIE BURGERS",
+                                "FDC ID": "2677998",
+                                "UPC": "080868000336",
+                                "DSLD ID": ""
+                            },
+                            "ingredient": {
+                                "name": "Vitamin C, total ascorbic acid"
+                            },
+                            "measures": {
+                                "mass + mass equivalents": {
+                                    "per package": {
+                                        "listed": [
+                                            "7.232",
+                                            "mg"
+                                        ],
+                                        "grams": {
+                                            "scinote string": "7.2320e-3",
+                                            "decimal string": "0.007",
+                                            "fraction string": "407125406314292861/56294995342131200000"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "unites": [],
+                    "goal": {
+                        "days of ingredient": {
+                            "mass + mass equivalents": {
+                                "per recipe": {
+                                    "fraction string": "407125406314292861/5066549580791808000",
+                                    "decimal string": "0.080"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "vitamin k",
+                            "vitamin k1",
+                            "vitamin k2"
+                        ],
+                        "region": 65
+                    },
+                    "measures": {},
+                    "natures": [],
+                    "unites": [],
+                    "goal": {}
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "thiamin",
+                            "thiamine",
+                            "vitamin b1"
+                        ],
+                        "region": 66
+                    },
+                    "measures": {},
+                    "natures": [],
+                    "unites": [],
+                    "goal": {}
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "riboflavin",
+                            "vitamin b2"
+                        ],
+                        "region": 67
+                    },
+                    "measures": {},
+                    "natures": [],
+                    "unites": [],
+                    "goal": {}
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "vitamin b3",
+                            "niacin",
+                            "nicotinamide",
+                            "nicotinamide riboside"
+                        ],
+                        "region": 68
+                    },
+                    "measures": {},
+                    "natures": [],
+                    "unites": [],
+                    "goal": {}
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "vitamin b5",
+                            "pantothenic acid"
+                        ],
+                        "region": 69
+                    },
+                    "measures": {},
+                    "natures": [],
+                    "unites": [],
+                    "goal": {}
+                },
+                {
+                    "info": {
+                        "accepts": [
+                            "pyridoxine",
+                            "pyridoxal",
+                            "pyridoxamine"
+                        ],
+                        "includes": [],
+                        "names": [
+                            "Vitamin B6",
+                            "Vitamin B-6"
+                        ],
+                        "region": 70
+                    },
+                    "measures": {},
+                    "natures": [],
+                    "unites": [],
+                    "goal": {}
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "vitamin b7",
+                            "biotin",
+                            "vitamin h"
+                        ],
+                        "region": 71
+                    },
+                    "measures": {},
+                    "natures": [],
+                    "unites": [],
+                    "goal": {}
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "vitamin b9",
+                            "folate",
+                            "folacin"
+                        ],
+                        "region": 72
+                    },
+                    "measures": {},
+                    "natures": [],
+                    "unites": [],
+                    "goal": {}
+                },
+                {
+                    "info": {
+                        "accepts": [],
+                        "includes": [],
+                        "names": [
+                            "Vitamin B12",
+                            "Vitamin B-12",
+                            "cobalamin"
+                        ],
+                        "region": 73
+                    },
+                    "measures": {},
+                    "natures": [],
+                    "unites": [],
+                    "goal": {}
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "calories",
+                            "energy"
+                        ],
+                        "region": 74
+                    },
+                    "measures": {
+                        "energy": {
+                            "per recipe": {
+                                "food calories": {
+                                    "fraction string": "11978/25",
+                                    "scinote string": "4.7912e+2"
+                                }
+                            },
+                            "portion of grove": {
+                                "fraction string": "1",
+                                "scinote percentage string": "1.0000e+2"
+                            }
+                        }
+                    },
+                    "natures": [
+                        {
+                            "amount": "1",
+                            "source": {
+                                "name": "ALL AMERICAN VEGGIE BURGERS",
+                                "FDC ID": "2677998",
+                                "UPC": "080868000336",
+                                "DSLD ID": ""
+                            },
+                            "ingredient": {
+                                "name": "Energy"
+                            },
+                            "measures": {
+                                "energy": {
+                                    "per package": {
+                                        "listed": [
+                                            "479.120",
+                                            "kcal"
+                                        ],
+                                        "food calories": {
+                                            "decimal string": "479.120",
+                                            "fraction string": "11978/25"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "unites": [],
+                    "goal": {}
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "iron",
+                            "iron, fe"
+                        ],
+                        "region": 75
+                    },
+                    "measures": {
+                        "mass + mass equivalents": {
+                            "per recipe": {
+                                "grams": {
+                                    "fraction string": "608143575681974959/56294995342131200000",
+                                    "scinote string": "1.0803e-2"
+                                }
+                            },
+                            "portion of grove": {
+                                "fraction string": "5381801554707743/46521035732832246404",
+                                "scinote percentage string": "1.1569e-2"
+                            }
+                        }
+                    },
+                    "natures": [
+                        {
+                            "amount": "1",
+                            "source": {
+                                "name": "ALL AMERICAN VEGGIE BURGERS",
+                                "FDC ID": "2677998",
+                                "UPC": "080868000336",
+                                "DSLD ID": ""
+                            },
+                            "ingredient": {
+                                "name": "Iron, Fe"
+                            },
+                            "measures": {
+                                "mass + mass equivalents": {
+                                    "per package": {
+                                        "listed": [
+                                            "10.803",
+                                            "mg"
+                                        ],
+                                        "grams": {
+                                            "scinote string": "1.0803e-2",
+                                            "decimal string": "0.011",
+                                            "fraction string": "608143575681974959/56294995342131200000"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "unites": [],
+                    "goal": {
+                        "days of ingredient": {
+                            "mass + mass equivalents": {
+                                "per recipe": {
+                                    "fraction string": "608143575681974959/1013309916158361600",
+                                    "decimal string": "0.600"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "info": {
+                        "accepts": [],
+                        "includes": [],
+                        "names": [
+                            "Folate, DFE"
+                        ],
+                        "region": 76
+                    },
+                    "measures": {},
+                    "natures": [],
+                    "unites": [],
+                    "goal": {}
+                },
+                {
+                    "info": {
+                        "accepts": [],
+                        "includes": [],
+                        "names": [
+                            "Folate",
+                            "Folate, Total"
+                        ],
+                        "region": 77
+                    },
+                    "measures": {},
+                    "natures": [],
+                    "unites": [],
+                    "goal": {}
+                }
+            ],
+            "exclusions": []
+        },
+        "cautionary ingredients": {
+            "natures": [
+                {
+                    "amount": "1",
+                    "identity": {
+                        "name": "ALL AMERICAN VEGGIE BURGERS",
+                        "FDC ID": "2677998",
+                        "UPC": "080868000336",
+                        "DSLD ID": ""
+                    }
+                }
+            ],
+            "measures": {
+                "mass + mass equivalents": {
+                    "per recipe": {
+                        "grams": {
+                            "fraction string": "0",
+                            "scinote string": "0.0000e+0"
+                        }
+                    }
+                },
+                "energy": {
+                    "per recipe": {
+                        "food calories": {
+                            "fraction string": "0"
+                        }
+                    }
+                }
+            },
+            "grove": [
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "trans fat",
+                            "fatty acids, total trans"
+                        ],
+                        "region": 1
+                    },
+                    "measures": {
+                        "mass + mass equivalents": {
+                            "per recipe": {
+                                "grams": {
+                                    "fraction string": "0",
+                                    "scinote string": "0.0000e+0"
+                                }
+                            },
+                            "portion of grove": {
+                                "fraction string": "0",
+                                "scinote percentage string": "0.0000e+0"
+                            }
+                        }
+                    },
+                    "natures": [
+                        {
+                            "amount": "1",
+                            "source": {
+                                "name": "ALL AMERICAN VEGGIE BURGERS",
+                                "FDC ID": "2677998",
+                                "UPC": "080868000336",
+                                "DSLD ID": ""
+                            },
+                            "ingredient": {
+                                "name": "Fatty acids, total trans"
+                            },
+                            "measures": {
+                                "mass + mass equivalents": {
+                                    "per package": {
+                                        "listed": [
+                                            "0.000",
+                                            "g"
+                                        ],
+                                        "grams": {
+                                            "scinote string": "0.0000e+0",
+                                            "decimal string": "0.000",
+                                            "fraction string": "0"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "unites": []
+                }
+            ],
+            "exclusions": []
+        },
+        "goal notes": {
+            "goal not found for": [],
+            "skipped_composition": []
+        }
+    },
+    "USDA food": {
+        "data": {
+            "discontinuedDate": "",
+            "foodComponents": [],
+            "foodAttributes": [
+                {
+                    "id": 3245004,
+                    "value": 5,
+                    "name": "Nutrient Added"
+                },
+                {
+                    "id": 3245005,
+                    "value": 6,
+                    "name": "Nutrient Removed"
+                }
+            ],
+            "foodPortions": [],
+            "fdcId": 2677998,
+            "description": "ALL AMERICAN VEGGIE BURGERS",
+            "publicationDate": "11/16/2023",
+            "foodNutrients": [
+                {
+                    "type": "FoodNutrient",
+                    "nutrient": {
+                        "id": 1008,
+                        "number": "208",
+                        "name": "Energy",
+                        "rank": 300,
+                        "unitName": "kcal"
+                    },
+                    "foodNutrientDerivation": {
+                        "id": 70,
+                        "code": "LCCS",
+                        "description": "Calculated from value per serving size measure"
+                    },
+                    "id": 33637813,
+                    "amount": 212.0
+                },
+                {
+                    "type": "FoodNutrient",
+                    "nutrient": {
+                        "id": 2000,
+                        "number": "269",
+                        "name": "Sugars, total including NLEA",
+                        "rank": 1510,
+                        "unitName": "g"
+                    },
+                    "foodNutrientDerivation": {
+                        "id": 70,
+                        "code": "LCCS",
+                        "description": "Calculated from value per serving size measure"
+                    },
+                    "id": 33637814,
+                    "amount": 0.0
+                },
+                {
+                    "type": "FoodNutrient",
+                    "nutrient": {
+                        "id": 1005,
+                        "number": "205",
+                        "name": "Carbohydrate, by difference",
+                        "rank": 1110,
+                        "unitName": "g"
+                    },
+                    "foodNutrientDerivation": {
+                        "id": 70,
+                        "code": "LCCS",
+                        "description": "Calculated from value per serving size measure"
+                    },
+                    "id": 33637812,
+                    "amount": 6.19
+                },
+                {
+                    "type": "FoodNutrient",
+                    "nutrient": {
+                        "id": 1089,
+                        "number": "303",
+                        "name": "Iron, Fe",
+                        "rank": 5400,
+                        "unitName": "mg"
+                    },
+                    "foodNutrientDerivation": {
+                        "id": 75,
+                        "code": "LCCD",
+                        "description": "Calculated from a daily value percentage per serving size measure"
+                    },
+                    "id": 33637817,
+                    "amount": 4.78
+                },
+                {
+                    "type": "FoodNutrient",
+                    "nutrient": {
+                        "id": 1258,
+                        "number": "606",
+                        "name": "Fatty acids, total saturated",
+                        "rank": 9700,
+                        "unitName": "g"
+                    },
+                    "foodNutrientDerivation": {
+                        "id": 70,
+                        "code": "LCCS",
+                        "description": "Calculated from value per serving size measure"
+                    },
+                    "id": 33637823,
+                    "amount": 1.77
+                },
+                {
+                    "type": "FoodNutrient",
+                    "nutrient": {
+                        "id": 2067,
+                        "number": "960",
+                        "name": "Vitamin A",
+                        "rank": 7430,
+                        "unitName": "\u00b5g"
+                    },
+                    "foodNutrientDerivation": {
+                        "id": 75,
+                        "code": "LCCD",
+                        "description": "Calculated from a daily value percentage per serving size measure"
+                    },
+                    "id": 33637824,
+                    "amount": 0.0
+                },
+                {
+                    "type": "FoodNutrient",
+                    "nutrient": {
+                        "id": 1087,
+                        "number": "301",
+                        "name": "Calcium, Ca",
+                        "rank": 5300,
+                        "unitName": "mg"
+                    },
+                    "foodNutrientDerivation": {
+                        "id": 75,
+                        "code": "LCCD",
+                        "description": "Calculated from a daily value percentage per serving size measure"
+                    },
+                    "id": 33637816,
+                    "amount": 18.0
+                },
+                {
+                    "type": "FoodNutrient",
+                    "nutrient": {
+                        "id": 1079,
+                        "number": "291",
+                        "name": "Fiber, total dietary",
+                        "rank": 1200,
+                        "unitName": "g"
+                    },
+                    "foodNutrientDerivation": {
+                        "id": 70,
+                        "code": "LCCS",
+                        "description": "Calculated from value per serving size measure"
+                    },
+                    "id": 33637815,
+                    "amount": 3.5
+                },
+                {
+                    "type": "FoodNutrient",
+                    "nutrient": {
+                        "id": 1092,
+                        "number": "306",
+                        "name": "Potassium, K",
+                        "rank": 5700,
+                        "unitName": "mg"
+                    },
+                    "foodNutrientDerivation": {
+                        "id": 70,
+                        "code": "LCCS",
+                        "description": "Calculated from value per serving size measure"
+                    },
+                    "id": 33637818,
+                    "amount": 186.0
+                },
+                {
+                    "type": "FoodNutrient",
+                    "nutrient": {
+                        "id": 1253,
+                        "number": "601",
+                        "name": "Cholesterol",
+                        "rank": 15700,
+                        "unitName": "mg"
+                    },
+                    "foodNutrientDerivation": {
+                        "id": 70,
+                        "code": "LCCS",
+                        "description": "Calculated from value per serving size measure"
+                    },
+                    "id": 33637821,
+                    "amount": 0.0
+                },
+                {
+                    "type": "FoodNutrient",
+                    "nutrient": {
+                        "id": 1004,
+                        "number": "204",
+                        "name": "Total lipid (fat)",
+                        "rank": 800,
+                        "unitName": "g"
+                    },
+                    "foodNutrientDerivation": {
+                        "id": 70,
+                        "code": "LCCS",
+                        "description": "Calculated from value per serving size measure"
+                    },
+                    "id": 33637811,
+                    "amount": 9.73
+                },
+                {
+                    "type": "FoodNutrient",
+                    "nutrient": {
+                        "id": 1003,
+                        "number": "203",
+                        "name": "Protein",
+                        "rank": 600,
+                        "unitName": "g"
+                    },
+                    "foodNutrientDerivation": {
+                        "id": 70,
+                        "code": "LCCS",
+                        "description": "Calculated from value per serving size measure"
+                    },
+                    "id": 33637810,
+                    "amount": 24.78
+                },
+                {
+                    "type": "FoodNutrient",
+                    "nutrient": {
+                        "id": 1093,
+                        "number": "307",
+                        "name": "Sodium, Na",
+                        "rank": 5800,
+                        "unitName": "mg"
+                    },
+                    "foodNutrientDerivation": {
+                        "id": 70,
+                        "code": "LCCS",
+                        "description": "Calculated from value per serving size measure"
+                    },
+                    "id": 33637819,
+                    "amount": 407.0
+                },
+                {
+                    "type": "FoodNutrient",
+                    "nutrient": {
+                        "id": 1257,
+                        "number": "605",
+                        "name": "Fatty acids, total trans",
+                        "rank": 15400,
+                        "unitName": "g"
+                    },
+                    "foodNutrientDerivation": {
+                        "id": 70,
+                        "code": "LCCS",
+                        "description": "Calculated from value per serving size measure"
+                    },
+                    "id": 33637822,
+                    "amount": 0.0
+                },
+                {
+                    "type": "FoodNutrient",
+                    "nutrient": {
+                        "id": 1162,
+                        "number": "401",
+                        "name": "Vitamin C, total ascorbic acid",
+                        "rank": 6300,
+                        "unitName": "mg"
+                    },
+                    "foodNutrientDerivation": {
+                        "id": 75,
+                        "code": "LCCD",
+                        "description": "Calculated from a daily value percentage per serving size measure"
+                    },
+                    "id": 33637820,
+                    "amount": 3.2
+                }
+            ],
+            "dataType": "Branded",
+            "foodClass": "Branded",
+            "shortDescription": "",
+            "modifiedDate": "3/18/2019",
+            "availableDate": "3/18/2019",
+            "brandOwner": "Dr. Praeger's Sensible Foods, Inc.",
+            "brandName": "DR. PRAEGER'S",
+            "dataSource": "LI",
+            "brandedFoodCategory": "Frozen Patties and Burgers",
+            "gtinUpc": "080868000336",
+            "householdServingFullText": "1 BURGER",
+            "ingredients": "HYDRATED PEA PROTEIN (WATER, PEA PROTEIN), AVOCADO OIL, ONIONS, SWEET POTATO PUREE, BUTTERNUT SQUASH PUREE, CARROT PUREE, NATURAL FLAVORS, METHYL CELLULOSE, FRUIT JUICE COLOR, OAT FIBER, POTATO STARCH, ROASTED GARLIC, SEA SALT",
+            "marketCountry": "United States",
+            "servingSize": 113.0,
+            "servingSizeUnit": "GRM",
+            "packageWeight": "8 oz/226 g",
+            "foodUpdateLog": [
+                {
+                    "discontinuedDate": "",
+                    "foodAttributes": [],
+                    "fdcId": 2677998,
+                    "description": "ALL AMERICAN VEGGIE BURGERS",
+                    "publicationDate": "11/16/2023",
+                    "dataType": "Branded",
+                    "foodClass": "Branded",
+                    "shortDescription": "",
+                    "modifiedDate": "3/18/2019",
+                    "availableDate": "3/18/2019",
+                    "brandOwner": "Dr. Praeger's Sensible Foods, Inc.",
+                    "brandName": "DR. PRAEGER'S",
+                    "dataSource": "LI",
+                    "brandedFoodCategory": "Frozen Patties and Burgers",
+                    "gtinUpc": "080868000336",
+                    "householdServingFullText": "1 BURGER",
+                    "ingredients": "HYDRATED PEA PROTEIN (WATER, PEA PROTEIN), AVOCADO OIL, ONIONS, SWEET POTATO PUREE, BUTTERNUT SQUASH PUREE, CARROT PUREE, NATURAL FLAVORS, METHYL CELLULOSE, FRUIT JUICE COLOR, OAT FIBER, POTATO STARCH, ROASTED GARLIC, SEA SALT",
+                    "marketCountry": "United States",
+                    "servingSize": 113.0,
+                    "servingSizeUnit": "GRM",
+                    "packageWeight": "8 oz/226 g",
+                    "foodVersions": [
+                        {
+                            "discontinuedDate": "",
+                            "foodComponents": [],
+                            "foodAttributes": [],
+                            "foodPortions": [],
+                            "modifiedDate": "3/18/2019",
+                            "availableDate": "3/18/2019",
+                            "brandOwner": "Dr. Praeger's Sensible Foods, Inc.",
+                            "dataSource": "LI",
+                            "gpcCategoryGroup": "Frozen Patties and Burgers",
+                            "gtinUpc": "080868000336",
+                            "ingredients": "HYDRATED PEA PROTEIN (WATER, PEA PROTEIN), AVOCADO OIL, ONIONS, SWEET POTATO PUREE, BUTTERNUT SQUASH PUREE, CARROT PUREE, NATURAL FLAVORS, METHYL CELLULOSE, FRUIT JUICE COLOR, OAT FIBER, POTATO STARCH, ROASTED GARLIC, SEA SALT",
+                            "marketCountry": "United States",
+                            "servingSize": 113.0,
+                            "servingSizeUnit": "g",
+                            "fdcId": 1820941,
+                            "description": "ALL AMERICAN VEGGIE BURGERS",
+                            "publicationDate": "6/17/2021",
+                            "dataType": "Branded",
+                            "foodClass": "Branded"
+                        },
+                        {
+                            "discontinuedDate": "",
+                            "foodComponents": [],
+                            "foodAttributes": [],
+                            "foodPortions": [],
+                            "modifiedDate": "3/18/2019",
+                            "availableDate": "3/18/2019",
+                            "brandOwner": "Dr. Praeger's Sensible Foods, Inc.",
+                            "dataSource": "LI",
+                            "gpcCategoryGroup": "Frozen Patties and Burgers",
+                            "gtinUpc": "080868000336",
+                            "ingredients": "HYDRATED PEA PROTEIN (WATER, PEA PROTEIN), AVOCADO OIL, ONIONS, SWEET POTATO PUREE, BUTTERNUT SQUASH PUREE, CARROT PUREE, NATURAL FLAVORS, METHYL CELLULOSE, FRUIT JUICE COLOR, OAT FIBER, POTATO STARCH, ROASTED GARLIC, SEA SALT",
+                            "marketCountry": "United States",
+                            "servingSize": 113.0,
+                            "servingSizeUnit": "g",
+                            "fdcId": 1963765,
+                            "description": "ALL AMERICAN VEGGIE BURGERS",
+                            "publicationDate": "7/29/2021",
+                            "dataType": "Branded",
+                            "foodClass": "Branded"
+                        },
+                        {
+                            "discontinuedDate": "",
+                            "foodComponents": [],
+                            "foodAttributes": [],
+                            "foodPortions": [],
+                            "modifiedDate": "3/18/2019",
+                            "availableDate": "3/18/2019",
+                            "brandOwner": "DR. PRAEGER'S",
+                            "dataSource": "LI",
+                            "gpcCategoryGroup": "Frozen Patties and Burgers",
+                            "gtinUpc": "080868000336",
+                            "householdServingFullText": "1 BURGER",
+                            "ingredients": "HYDRATED PEA PROTEIN (WATER, PEA PROTEIN), AVOCADO OIL, ONIONS, SWEET POTATO PUREE, BUTTERNUT SQUASH PUREE, CARROT PUREE, NATURAL FLAVORS, METHYL CELLULOSE, FRUIT JUICE COLOR, OAT FIBER, POTATO STARCH, ROASTED GARLIC, SEA SALT",
+                            "marketCountry": "United States",
+                            "servingSize": 113.0,
+                            "servingSizeUnit": "g",
+                            "fdcId": 697666,
+                            "description": "ALL AMERICAN VEGGIE BURGERS",
+                            "publicationDate": "12/6/2019",
+                            "dataType": "Branded",
+                            "foodClass": "Branded"
+                        }
+                    ]
+                },
+                {
+                    "discontinuedDate": "",
+                    "foodAttributes": [],
+                    "fdcId": 1963765,
+                    "description": "ALL AMERICAN VEGGIE BURGERS",
+                    "publicationDate": "7/29/2021",
+                    "dataType": "Branded",
+                    "foodClass": "Branded",
+                    "modifiedDate": "3/18/2019",
+                    "availableDate": "3/18/2019",
+                    "brandOwner": "Dr. Praeger's Sensible Foods, Inc.",
+                    "brandName": "DR. PRAEGER'S",
+                    "dataSource": "LI",
+                    "brandedFoodCategory": "Frozen Patties and Burgers",
+                    "gtinUpc": "080868000336",
+                    "ingredients": "HYDRATED PEA PROTEIN (WATER, PEA PROTEIN), AVOCADO OIL, ONIONS, SWEET POTATO PUREE, BUTTERNUT SQUASH PUREE, CARROT PUREE, NATURAL FLAVORS, METHYL CELLULOSE, FRUIT JUICE COLOR, OAT FIBER, POTATO STARCH, ROASTED GARLIC, SEA SALT",
+                    "marketCountry": "United States",
+                    "servingSize": 113.0,
+                    "servingSizeUnit": "g",
+                    "packageWeight": "8 oz/226 g"
+                },
+                {
+                    "discontinuedDate": "",
+                    "foodAttributes": [],
+                    "fdcId": 1820941,
+                    "description": "ALL AMERICAN VEGGIE BURGERS",
+                    "publicationDate": "6/17/2021",
+                    "dataType": "Branded",
+                    "foodClass": "Branded",
+                    "modifiedDate": "3/18/2019",
+                    "availableDate": "3/18/2019",
+                    "brandOwner": "Dr. Praeger's Sensible Foods, Inc.",
+                    "brandName": "DR. PRAEGER'S",
+                    "dataSource": "LI",
+                    "brandedFoodCategory": "Frozen Patties and Burgers",
+                    "gtinUpc": "080868000336",
+                    "ingredients": "HYDRATED PEA PROTEIN (WATER, PEA PROTEIN), AVOCADO OIL, ONIONS, SWEET POTATO PUREE, BUTTERNUT SQUASH PUREE, CARROT PUREE, NATURAL FLAVORS, METHYL CELLULOSE, FRUIT JUICE COLOR, OAT FIBER, POTATO STARCH, ROASTED GARLIC, SEA SALT",
+                    "marketCountry": "United States",
+                    "servingSize": 113.0,
+                    "servingSizeUnit": "g",
+                    "packageWeight": "226 g"
+                },
+                {
+                    "discontinuedDate": "",
+                    "foodAttributes": [],
+                    "modifiedDate": "3/18/2019",
+                    "availableDate": "3/18/2019",
+                    "brandOwner": "DR. PRAEGER'S",
+                    "dataSource": "LI",
+                    "gpcCategoryGroup": "Frozen Patties and Burgers",
+                    "gtinUpc": "080868000336",
+                    "householdServingFullText": "1 BURGER",
+                    "ingredients": "HYDRATED PEA PROTEIN (WATER, PEA PROTEIN), AVOCADO OIL, ONIONS, SWEET POTATO PUREE, BUTTERNUT SQUASH PUREE, CARROT PUREE, NATURAL FLAVORS, METHYL CELLULOSE, FRUIT JUICE COLOR, OAT FIBER, POTATO STARCH, ROASTED GARLIC, SEA SALT",
+                    "marketCountry": "United States",
+                    "servingSize": 113.0,
+                    "servingSizeUnit": "g",
+                    "fdcId": 697666,
+                    "description": "ALL AMERICAN VEGGIE BURGERS",
+                    "publicationDate": "12/6/2019",
+                    "dataType": "Branded",
+                    "foodClass": "Branded"
+                }
+            ],
+            "labelNutrients": {
+                "fat": {
+                    "value": 11.0
+                },
+                "saturatedFat": {
+                    "value": 2.0
+                },
+                "transFat": {
+                    "value": 0.0
+                },
+                "cholesterol": {
+                    "value": 0.0
+                },
+                "sodium": {
+                    "value": 460
+                },
+                "carbohydrates": {
+                    "value": 7.0
+                },
+                "fiber": {
+                    "value": 3.96
+                },
+                "sugars": {
+                    "value": 0.0
+                },
+                "protein": {
+                    "value": 28.0
+                },
+                "calcium": {
+                    "value": 20.3
+                },
+                "iron": {
+                    "value": 5.4
+                },
+                "potassium": {
+                    "value": 210
+                },
+                "calories": {
+                    "value": 240
+                }
+            }
+        },
+        "source": {
+            "name": "USA USDA",
+            "link": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2677998/nutrients",
+            "api": "https://fdc.nal.usda.gov/api-guide.html",
+            "text": "U.S. Department of Agriculture, Agricultural Research Service. FoodData Central, 2019. fdc.nal.usda.gov."
+        }
+    }
+}

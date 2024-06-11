@@ -1,0 +1,39 @@
+
+
+<pre>
+
+	<h1>saves</h1>
+	
+	<h2>format</h2>
+		__saves
+			dumps
+				[database]
+					[database]_dump_1
+			
+			exports
+				[database]
+					[collection]
+						[collection].export.2.JSON
+	
+	<h2>exports and imports</h2>
+		<h3>export</h3>
+			mongoexport --uri "mongodb://0.0.0.0:39000/ingredients" --collection "essential_nutrients" --out "_exports/ingredients/essential_nutrients/1.JSON"
+
+			mongoexport --uri "mongodb://0.0.0.0:39000/ingredients" --collection "cautionary_ingredients" --out "_exports/ingredients/cautionary_ingredients/1.JSON"
+
+			chmod -R 777 _exports
+		
+		<h3>import</h3>
+
+
+	<h2>dump and restore</h2>
+		<h3>dump</h3>
+		
+		
+		<h3>restore</h3>
+
+
+
+
+
+</pre>

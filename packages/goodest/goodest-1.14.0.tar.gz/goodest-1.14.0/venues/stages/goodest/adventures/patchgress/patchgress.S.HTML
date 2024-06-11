@@ -1,0 +1,64 @@
+
+
+
+<pre>
+
+	<h1>patchgress</h1>
+	
+	<h2>possibilities</h2>
+	
+		https://github.com/MagicStack/asyncpg
+
+
+		import asyncpg
+		import asyncio
+
+		async def main():
+			# Establish a connection to the PostgreSQL database
+			conn = await asyncpg.connect (
+				user='your_username', 
+				password='your_password',
+				database='your_database', 
+				host='your_host'
+			)
+
+			try:
+				# Execute a query to select documents where "key.key.key" equals a specific value
+				result = await conn.fetch (
+					"SELECT * FROM your_table WHERE your_jsonb_column->'key'->'key'->'key' = $1", 
+					"desired_value"
+				)
+
+				# Process the results
+				for row in result:
+					print("Document:", row)
+
+			finally:
+				# Close the connection
+				await conn.close()
+
+		# Run the main function asynchronously
+		asyncio.run(main())
+
+	<h1>PG</h1>
+	
+		#
+		#	https://www.postgresql.org/download/linux/ubuntu/
+		#
+	
+
+		apt install lsb-core
+		#apt install lsb-release
+
+	
+	<h2>PG admin</h2>
+		pgadmin4
+
+
+
+
+
+
+
+
+</pre>

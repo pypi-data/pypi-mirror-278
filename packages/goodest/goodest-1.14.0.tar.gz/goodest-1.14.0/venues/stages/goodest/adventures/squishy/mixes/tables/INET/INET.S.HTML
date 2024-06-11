@@ -1,0 +1,63 @@
+
+
+<pre>
+
+	
+	
+	<h1>INET</h1>
+	
+	<h2>chains</h2>
+		<h3>input</h3>
+				
+		
+		<h3>forward</h3>
+		
+		
+		<h3>output</h3>
+
+
+
+
+	<h2>possible configs</h2>
+	
+		table inet filter {
+			chain input {
+				type filter hook input priority 0;
+				policy drop;
+				
+				iif "lo" accept
+				ct state established,related accept
+				ip saddr 192.168.1.0/24 accept
+				ip6 saddr fe80::/10 accept
+			}
+			chain forward {
+				type filter hook forward priority 0;
+				policy drop;
+			}
+			chain output {
+				type filter hook output priority 0;
+				policy accept;
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+

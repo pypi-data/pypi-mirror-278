@@ -1,0 +1,18 @@
+
+#
+#	nft flush ruleset && nft -f closed.nft
+#
+table inet filter {
+    chain input {
+        type filter hook input priority 0; policy drop;
+        # ct state established,related accept
+    }
+
+    chain forward {
+        type filter hook forward priority 0; policy drop;
+    }
+
+    chain output {
+		type filter hook output priority 0; policy drop;
+    }
+}

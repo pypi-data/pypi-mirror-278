@@ -1,0 +1,25 @@
+
+
+UFW:
+	install:
+		dnf install ufw -y
+
+	start:
+		ufw show added
+		ufw enable
+		ufw allow 443
+		ufw allow 80
+
+	status:
+		possible:
+			1.
+				Attempt to setup a python3 http.server on every available port,
+				then externally attempt to access that port.
+	
+		internal:
+			python -m http.server --bind 0.0.0.0 80
+			python -m http.server --bind 0.0.0.0 443
+		
+		external:
+			curl 147.182.200.235:80
+			curl 147.182.200.235:443

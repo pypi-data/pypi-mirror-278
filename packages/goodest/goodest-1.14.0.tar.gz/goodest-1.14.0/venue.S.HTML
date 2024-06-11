@@ -1,0 +1,170 @@
+
+
+
+<pre>
+
+	<h1>goodest</h1>
+	
+	<h2>objectives</h2>
+		https://hub.docker.com/r/eniocarboni/docker-ubuntu-systemd
+	
+	<h2>addresses</h2>
+		Ethereum: 0x9D5D9559A43080d3F478d7e76dB057b57992b46C
+	
+		Polkadot: 
+			Coinbase: 1wr7RE273GzJDXEQqF28MMWBEsLQSrNvpQCL6B33emuSgNQ
+			Talisman: 13ih3V6K6MPFjQjRWcCUpye8SVzKkFXRNiAa3sKKNsKSeAD5
+			PolkaGate: 16fbr9yAkVYbqchJjVJDFUMjpVH9G6uYFmdbqzLsGrDmz1kj
+	
+	<h2>on</h2>
+		<h3>1st session</h3>
+			#
+			#	if there's a docker conflict	
+			#
+			#
+			docker rm $(docker ps -a -q)
+
+		
+			#
+			#	on
+			#
+			docker compose up -d; docker exec -it goodest.1 bash
+			
+			#
+			#	need to wait for this install to finish
+			#	before running source_2
+			#
+			. /habitat/_controls/build_1.sh	
+			
+			#
+			#	optional: HAProxy certs
+			#
+			#
+			goodest_1 adventures demux_hap build_unverified_certificates
+
+			
+			goodest_1 ventures on
+			(cd /habitat/venues/stages/goodest/adventures/vv_turbo/ && bun run dev) 
+			localStorage.setItem ("node address", "https://192.168.0.100/")
+			
+
+			#
+			#	optional: if need to import the database
+			#
+			goodest_1 adventures monetary saves import --version 6 --drop
+			
+			
+			
+			
+			
+		
+		<h3>2nd+ session</h3>
+			docker exec -it goodest.1 bash -c "source /habitat/_controls/build_2.sh && bash"
+			
+			#
+			#
+			#	build the front
+			#
+			(cd /habitat/venues/stages/goodest/adventures/vv_turbo/apps/web && the_version=1.8.0 bun run build --sourcemap inline)
+	
+	
+	<h2>off</h2>
+		docker container stop goodest.1; docker container rm goodest.1; 
+	
+	<h2>garages (harbors)</h2>
+		<h3>sanic</h3>
+			http://192.168.0.100/docs/swagger#/
+			
+		<h3>sanic inspector</h3>
+			http://192.168.0.100:7457
+
+
+	<h2>publishing</h2>
+		<h3>linting</h3>
+			(cd /goodest/venues/stages/goodest && pycycle --here) 
+	
+		<h3>status</h3>
+			cd /goodest/venues/stages/goodest/__status/main
+			
+			#
+			#	change the "essence" "mode" to "business"
+			#
+			#
+			
+			#
+			#	monetary export
+			#
+			#
+			goodest_1 adventures monetary saves export --version 7
+			
+			#
+			#	internal status
+			#
+			#
+			python3 /habitat/venues/stages/goodest/__status/main/status.proc.py
+			
+			#
+			#	external API checks (NIH and USDA)
+			#	
+			python3 /habitat/venues/stages/goodest/__status/API/status.proc.py
+
+			
+			python3 /habitat/venues/stages/goodest/__status/monetary_export_3/status.proc.py
+			goodest_1 adventures monetary saves import --version 7 --drop
+			
+			#
+			# 	vite status
+			#		These aren't 100% perfect: 
+			#			Tests  7 failed | 24 passed (31)
+			#
+			(cd /habitat/venues/stages/goodest/adventures/vv_turbo/apps/web && bun run status)
+		
+			#
+			#	selenium status (this is probably broken)
+			#
+			#
+			python3 /habitat/venues/stages/goodest/__status/browser/status.proc.py
+			python3 venues/stages/goodest/__status/browser/status.proc.py
+		
+		<h3>publish</h3>
+			#
+			#	[ ] poetry auth
+			#
+			#	# For building sdist and maybe wheel
+			#		poetry build --verbos
+			#
+			git tag 1.14.0
+			(pip install poetry && cd /habitat && rm -rf dist && poetry build --format sdist --verbose && chmod -R 777 /habitat && poetry publish --verbose;)
+			
+			#
+			#	statistics
+			#
+			find . -type d -exec du -sh {} \;
+			du -h --max-depth=1 .
+
+	
+		<h3>notes</h3>
+			[tool.poetry.source]
+			include = [
+				"venues/stages/goodest/adventures/vv_turbo/apps/web/the_build/*"
+			]
+
+	<h2>important</h2>
+		poetry show --tree
+
+
+	<h2>docker</h2>
+		docker compose up -d
+		docker exec -it goodest bash
+		docker exec -it goodest bash -c "source /goodest/moves/source_2.sh && bash"
+
+	<h2>hatch</h2>
+		#
+		#	https://github.com/pypa/pipx
+		#
+		#
+		apt install pipx -y
+		pipx ensurepath
+		pipx install hatch
+
+</pre>

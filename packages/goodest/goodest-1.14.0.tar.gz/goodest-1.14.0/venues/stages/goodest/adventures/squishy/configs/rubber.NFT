@@ -1,0 +1,97 @@
+#!/usr/sbin/nft -f
+
+
+#
+#	cd /habitat/venues/stages/goodest/adventures/squishy/configs
+#
+#
+#	nft -f rubber.NFT; nft list ruleset
+#	nft -f open.NFT; nft list ruleset
+#
+#	curl --insecure https://192.168.0.100
+#
+#	python3 -m http.server 8001
+#
+
+#flush ruleset;
+
+
+table inet filter
+flush table inet filter
+delete table inet filter
+
+table inet filter {
+	
+    # The chains
+    chain input {
+		#
+		#	summary:
+		#		priority 0: lower numbers are the sequence in which the rules are added.
+		#		type filer: rule applies to the filter table
+		#		hook input: intercepts packets destined for the local system.
+		#		policy drop: if packet doesn't match rules, then drop the packet.
+		#
+        type filter hook input priority 0; policy drop;
+
+        #
+		#	permit: loopback interface
+		#
+		#
+        iif lo accept
+
+		
+		#
+		#	summary:
+		#		ct state: indicates connection of tracking states wihtin the net filter tables
+		#
+		#	permit: 
+		#		connections:
+		#			established: connections that have been seen in both directions
+		#
+		#			related: connections that are related to, but not necessarily part of, an established connection
+		#
+		#
+        ct state {established, related} accept
+
+
+        tcp dport { 80, 443 } accept
+		
+		#tcp dport 8001 reject with tcp reset 
+
+		reject with icmpx type port-unreachable
+
+		# rubber other interlopers
+        drop
+    }
+
+    chain forward {
+        type filter hook forward priority 0; policy drop;
+
+		#
+		#	permit:
+		#		established connections
+		#
+		#		related connections
+		#
+        ct state {established, related} accept
+
+        #
+		#	rubber other interlopers
+		#	
+		#
+        drop
+    }
+
+    chain output {
+        type filter hook output priority 0; 
+		policy accept;
+		
+		#tcp dport { 80, 443 } ct state established accept
+		
+		#drop;
+		
+		#tcp dport { 80, 443 } ct state new,established accept
+		
+		#reject with icmpx type port-unreachable
+    }
+}

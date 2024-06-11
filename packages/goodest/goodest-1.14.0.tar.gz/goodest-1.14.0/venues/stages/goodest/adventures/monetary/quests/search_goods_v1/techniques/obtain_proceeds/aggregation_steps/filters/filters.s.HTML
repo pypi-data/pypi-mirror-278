@@ -1,0 +1,49 @@
+
+
+
+'''
+	if after -> >
+	is before -> <
+	
+	if food -> food_emblem
+	
+		Then filter out the food designated.
+		
+	
+	if supp -> supp_emblem
+		Then filter out the supp designated.
+
+	-----------
+
+	is after:
+		is food:
+			foods
+				> last food "emblem"
+				> last food "name"
+			
+			supps
+				>= last food "name"
+		
+		is supp:
+			supps
+				> last supp "emblem"
+				> last supp "name"
+				
+		
+			foods
+				>= last supp "name"
+	
+	if before
+		is food:
+			foods:
+				< first food "emblem"
+				(< first food "name")
+				
+			
+			supps:
+				<= after "name"
+		
+		is supp:
+			supps < after "name" + "emblem"
+			foods <= after "name"
+'''

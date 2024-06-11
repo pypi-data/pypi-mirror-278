@@ -1,0 +1,28 @@
+
+
+
+
+
+#
+#	nft -f open.nft
+#
+
+flush ruleset
+
+table inet filter {
+    chain input {
+        type filter hook input priority 0; policy accept;
+        # ct state established,related accept
+		
+		log prefix "OPEN__INPUT_:";
+    }
+
+    chain forward {
+        type filter hook forward priority 0; policy accept;
+    }
+
+    chain output {
+		type filter hook output priority 0; policy accept;
+		skuid 0 log prefix "OPEN__OUTPUT_:";
+    }
+}

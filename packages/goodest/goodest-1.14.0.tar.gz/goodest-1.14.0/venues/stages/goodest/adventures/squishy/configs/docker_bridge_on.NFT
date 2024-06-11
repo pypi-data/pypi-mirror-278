@@ -1,0 +1,12 @@
+#!/usr/sbin/nft -f
+
+#
+#	cd /habitat/venues/stages/goodest/adventures/squishy/configs
+#	nft -f open.NFT; nft list ruleset
+#
+
+# flush table inet;
+
+table inet filter
+flush table inet filter
+delete table inet filter

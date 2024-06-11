@@ -1,0 +1,31 @@
+
+
+<pre>
+
+	<h1>ports</h1>
+		
+		chain input {
+			tcp dport 80 accept
+			tcp dport 443 accept
+			
+			
+			
+
+	<h2>SSH</h2>
+		#
+		#	permit:
+		#		SSH on port 22
+		#
+		#		X.X.X.X -> needs to replaced with internal IP address
+		#
+		#
+		table inet filter:
+			chain input:
+				tcp dport 22 ip saddr X.X.X.X accept:
+	
+
+
+
+
+
+</pre>

@@ -1,0 +1,55 @@
+#!/usr/sbin/nft -f
+
+#
+#	cd /habitat/venues/stages/goodest/adventures/squishy/configs
+#	nft -f open.NFT; nft list ruleset
+#
+
+
+#
+#	https://wiki.nftables.org/wiki-nftables/index.php/Configuring_tables
+#	https://unix.stackexchange.com/questions/537030/nftables-flush-delete-when-changing-or-creating-new-table
+#
+#flush table inet;
+
+
+table inet filter
+flush table inet filter
+delete table inet filter
+
+table inet filter {
+    chain input {
+        type filter hook input priority 0; 
+		
+		#tcp dport 7457 drop
+        #udp dport 7457 drop
+		
+		tcp dport 443 accept
+		udp dport 443 accept
+		
+		tcp dport 80 accept
+		udp dport 80 accept
+		
+		tcp dport 8000 accept
+		udp dport 8000 accept
+		
+		tcp dport 7457 accept
+		udp dport 7457 accept
+		
+		tcp dport 9000 accept
+		udp dport 9000 accept
+		
+		tcp dport 39000 accept
+		udp dport 39000 accept
+		
+		drop
+    }
+
+    chain forward {
+        type filter hook forward priority 0; policy accept;
+    }
+
+    chain output {
+        type filter hook output priority 0; policy accept;
+    }
+}

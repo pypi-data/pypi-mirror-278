@@ -1,0 +1,98 @@
+
+
+<pre>
+
+	<h1>NFT</h1>
+	
+		apt install nftables
+		apt install inetutils-ping
+		
+		apt install net-tools
+		
+		systemctl start nftables
+		
+		#.... journalctl --rotate;  journalctl --vacuum-time=0s;
+		
+	
+	<h2></h2>
+		http://172.17.0.1:20000
+	
+	<h2>bridge networks</h2>
+		docker network ls
+		docker network create my_network
+		
+	
+	<h2>loopback connections</h2>	
+	
+	
+	<h2>output ruleset</h2>
+		nft -j list ruleset
+	
+	
+	<h2>harbor</h2>
+		python3 -m http.server
+	
+	<h2>docker start</h2>
+		sudo su
+		
+		<h3>from image</h3>
+			docker image list
+			
+			docker run --network host --privileged -v .:/goodest -it jumps:v2.1.0
+			
+			docker run --privileged -v .:/goodest -p 20000:20000 -it jumps:v2.1.0
+			docker run -v .:/goodest -p 20000:20000 -it jumps:v2.1.0
+			docker exec -it 70b953975ca9 /bin/bash
+		
+			<header>with a mount</header>
+				docker run -v .:/rollercoaster -it --name ubuntu-rollercoaster ubuntu-network:v1
+			
+		
+		<h3>from container</h3>
+			docker container ls --all
+			f"docker restart { container_id }"
+			f"docker exec -it { container_id } /bin/bash"
+			
+				#
+				#	docker restart cd55e3c71e0b; 
+				#
+	
+	<h2>check</h2>
+		nft -f filter.nft
+		nft list ruleset
+	
+	
+
+
+	<h2>user namespaces</h2>
+		#
+		#	block all except custom netwok namespace?
+		#
+	
+		# apt update --fix-missing
+		apt install iproute2 -y
+		ip netns add tunnel_1; ip netns list
+
+		#
+		#	run user processes within a namespace?
+		#
+		ip netns exec tunnel_1 su - communicator
+
+
+	<h2>journals</h2>
+		
+		didnt' work:
+			OUT_NOTE:IN= OUT=lo SRC=127.0.0.1 DST=127.0.0.1 LEN=60 TOS=0x00 PREC=0x00 TTL=64 ID=16692 DF PROTO=TCP SPT=39658 DPT=48938 WINDOW=65495 RES=0x00 SYN URGP=0
+		
+		worked:
+			OUT_NOTE:IN= OUT=lo SRC=127.0.0.1 DST=127.0.0.1 LEN=60 TOS=0x00 PREC=0x00 TTL=64 ID=18775 DF PROTO=TCP SPT=38456 DPT=48938 WINDOW=65495 RES=0x00 SYN URGP=0
+	
+	
+		ID: ID of IP header.
+		
+		SPT: port of source
+		DPT: port of destination
+
+
+
+</pre>

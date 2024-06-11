@@ -1,0 +1,47 @@
+
+
+
+
+
+/*
+	//
+	// CALLED IN main.js
+	//
+
+	import { create_terrain_system } from '@/warehouses/terrain'
+	await create_terrain_system ()
+*/
+
+/*
+	import { terrain_DB } from '@/warehouses/terrain'
+	
+	data () {
+		return {
+			terrain: {
+				height: 1000,
+				width: 1000
+			}
+		}
+	},
+	created () {		
+		this.terrain_DB_unsubscribe = terrain_DB.SUBSCRIBE (({ FIRST }) => {
+			this.terrain 			= terrain_DB.STORAGE ("SIZE")
+		})		
+	},
+	beforeUnmount () {
+		this.terrain_DB_unsubscribe ()
+	},	
+
+*/
+
+/*
+	SEQUENCE:
+		beforeCreate
+		data
+		created
+		beforeMount
+		mounted
+		
+		beforeUnmount
+		unmounted
+*/

@@ -1,0 +1,45 @@
+{"_id":{"$oid":"66281a121efd4ff62ab332cf"},"includes":[],"names":["protein"],"region":1}
+{"_id":{"$oid":"66281a131efd4ff62ab332d0"},"includes":[],"names":["cholesterol"],"region":12}
+{"_id":{"$oid":"66281a131efd4ff62ab332d1"},"includes":[],"names":["polyunsaturated fat","fatty acids, total polyunsaturated"],"region":15}
+{"_id":{"$oid":"66281a131efd4ff62ab332d2"},"includes":[],"names":["vitamin a","vitamin a, iu"],"region":16}
+{"_id":{"$oid":"66281a131efd4ff62ab332d3"},"includes":[],"names":["vitamin e"],"region":19}
+{"_id":{"$oid":"66281a131efd4ff62ab332d4"},"accepts":["carbohydrate, by difference","total carbohydrates"],"includes":[6,7],"names":["carbohydrates"],"region":2}
+{"_id":{"$oid":"66281a131efd4ff62ab332d5"},"includes":[],"names":["iodine"],"region":29}
+{"_id":{"$oid":"66281a131efd4ff62ab332d6"},"includes":[4,15,51],"names":["fats","total fat","lipids","total lipid (fat)"],"region":3}
+{"_id":{"$oid":"66281a131efd4ff62ab332d7"},"includes":[],"names":["magnesium"],"region":30}
+{"_id":{"$oid":"66281a131efd4ff62ab332d8"},"accepts":[],"includes":[],"names":["Zinc, Zn","Zinc"],"region":31}
+{"_id":{"$oid":"66281a131efd4ff62ab332d9"},"includes":[],"names":["selenium"],"region":32}
+{"_id":{"$oid":"66281a131efd4ff62ab332da"},"includes":[],"names":["copper"],"region":33}
+{"_id":{"$oid":"66281a131efd4ff62ab332db"},"includes":[],"names":["manganese"],"region":34}
+{"_id":{"$oid":"66281a131efd4ff62ab332dc"},"includes":[],"names":["chromium"],"region":35}
+{"_id":{"$oid":"66281a131efd4ff62ab332dd"},"includes":[],"names":["molybdenum"],"region":36}
+{"_id":{"$oid":"66281a131efd4ff62ab332de"},"includes":[],"names":["choline"],"region":37}
+{"_id":{"$oid":"66281a131efd4ff62ab332df"},"includes":[],"names":["saturated fat","fatty acids, total saturated"],"region":4}
+{"_id":{"$oid":"66281a131efd4ff62ab332e0"},"includes":[],"names":["lutein"],"region":40}
+{"_id":{"$oid":"66281a131efd4ff62ab332e1"},"includes":[],"names":["betaine hydrochloride"],"region":43}
+{"_id":{"$oid":"66281a131efd4ff62ab332e2"},"includes":[],"names":["rutin"],"region":44}
+{"_id":{"$oid":"66281a131efd4ff62ab332e3"},"includes":[],"names":["strontium"],"region":47}
+{"_id":{"$oid":"66281a131efd4ff62ab332e4"},"includes":[],"names":["vanadium"],"region":49}
+{"_id":{"$oid":"66281a131efd4ff62ab332e5"},"includes":[],"names":["monounsaturated fat","fatty acids, total monounsaturated"],"region":51}
+{"_id":{"$oid":"66281a131efd4ff62ab332e6"},"accepts":[],"includes":[],"names":["Phosphorus, P","Phosphorus"],"region":57}
+{"_id":{"$oid":"66281a131efd4ff62ab332e7"},"includes":[],"names":["potassium","potassium K","potassium, K","K"],"region":58}
+{"_id":{"$oid":"66281a131efd4ff62ab332e8"},"includes":[],"names":["sodium Na","sodium, Na","sodium","Na"],"region":59}
+{"_id":{"$oid":"66281a131efd4ff62ab332e9"},"includes":[],"names":["dietary fiber","fiber, total dietary"],"region":6}
+{"_id":{"$oid":"66281a131efd4ff62ab332ea"},"includes":[],"names":["vitamin d","vitamin d (d2 + d3)","vitamin d2","vitamin d3","vitamin d (d2 + d3), international units"],"region":63}
+{"_id":{"$oid":"66281a131efd4ff62ab332eb"},"includes":[],"names":["vitamin c","vitamin c (form: as calcium ascorbate)","vitamin c, total ascorbic acid"],"region":64}
+{"_id":{"$oid":"66281a131efd4ff62ab332ec"},"includes":[],"names":["vitamin k","vitamin k1","vitamin k2"],"region":65}
+{"_id":{"$oid":"66281a131efd4ff62ab332ed"},"includes":[],"names":["thiamin","thiamine","vitamin b1"],"region":66}
+{"_id":{"$oid":"66281a131efd4ff62ab332ee"},"includes":[],"names":["riboflavin","vitamin b2"],"region":67}
+{"_id":{"$oid":"66281a131efd4ff62ab332ef"},"includes":[],"names":["vitamin b3","niacin","nicotinamide","nicotinamide riboside"],"region":68}
+{"_id":{"$oid":"66281a131efd4ff62ab332f0"},"includes":[],"names":["vitamin b5","pantothenic acid"],"region":69}
+{"_id":{"$oid":"66281a131efd4ff62ab332f1"},"accepts":["sugars, total including nlea"],"includes":[8],"names":["sugars, total","total sugar","sugar","total sugars"],"region":7}
+{"_id":{"$oid":"66281a131efd4ff62ab332f2"},"accepts":["pyridoxine","pyridoxal","pyridoxamine"],"includes":[],"names":["Vitamin B6","Vitamin B-6"],"region":70}
+{"_id":{"$oid":"66281a131efd4ff62ab332f3"},"includes":[],"names":["vitamin b7","biotin","vitamin h"],"region":71}
+{"_id":{"$oid":"66281a131efd4ff62ab332f4"},"includes":[],"names":["vitamin b9","folate","folacin"],"region":72}
+{"_id":{"$oid":"66281a131efd4ff62ab332f5"},"accepts":[],"includes":[],"names":["Vitamin B12","Vitamin B-12","cobalamin"],"region":73}
+{"_id":{"$oid":"66281a131efd4ff62ab332f6"},"includes":[],"names":["calories","energy"],"region":74}
+{"_id":{"$oid":"66281a131efd4ff62ab332f7"},"includes":[],"names":["iron","iron, fe"],"region":75}
+{"_id":{"$oid":"66281a131efd4ff62ab332f8"},"accepts":[],"includes":[],"names":["Folate, DFE"],"region":76}
+{"_id":{"$oid":"66281a131efd4ff62ab332f9"},"accepts":[],"includes":[],"names":["Folate","Folate, Total"],"region":77}
+{"_id":{"$oid":"66281a131efd4ff62ab332fa"},"includes":[],"names":["added sugars","sugars, added"],"region":8}
+{"_id":{"$oid":"66281a131efd4ff62ab332fb"},"includes":[],"names":["calcium","calcium, ca"],"region":9}

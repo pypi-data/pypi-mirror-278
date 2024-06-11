@@ -1,0 +1,64 @@
+2023-11-18 14:43:25: (server.c.1933) server started (lighttpd/1.4.73)
+2023-11-18 14:43:25: (configfile.c.1399) WARNING: unknown config-key: access_log.filename (ignored)
+2023-11-18 14:43:35: (server.c.1224) [note] graceful shutdown started
+2023-11-18 14:43:35: (server.c.2332) server stopped by UID = 0 PID = 0
+2023-11-18 14:43:36: (server.c.1933) server started (lighttpd/1.4.73)
+2023-11-18 14:47:49: (server.c.1224) [note] graceful shutdown started
+2023-11-18 14:47:49: (server.c.2332) server stopped by UID = 0 PID = 0
+2023-11-18 14:48:17: (server.c.1933) server started (lighttpd/1.4.73)
+2023-11-18 14:48:21: (gw_backend.c.281) establishing connection failed: socket: tcp:127.0.0.1:5173: Connection refused
+2023-11-18 14:48:21: (gw_backend.c.1007) all handlers for /? on / are down.
+2023-11-18 14:48:24: (gw_backend.c.358) gw-server re-enabled: tcp:127.0.0.1:5173 127.0.0.1 5173 
+2023-11-18 14:48:40: (server.c.1224) [note] graceful shutdown started
+2023-11-18 14:48:40: (server.c.2332) server stopped by UID = 0 PID = 0
+2023-11-18 14:48:41: (server.c.1933) server started (lighttpd/1.4.73)
+2023-11-18 14:48:42: (gw_backend.c.281) establishing connection failed: socket: tcp:127.0.0.1:5173: Connection refused
+2023-11-18 14:48:42: (gw_backend.c.1007) all handlers for /? on / are down.
+2023-11-18 14:48:44: (gw_backend.c.358) gw-server re-enabled: tcp:127.0.0.1:5173 127.0.0.1 5173 
+2023-11-18 14:48:50: (server.c.1224) [note] graceful shutdown started
+2023-11-18 14:48:50: (server.c.2332) server stopped by UID = 0 PID = 0
+2023-11-18 14:48:51: (server.c.1933) server started (lighttpd/1.4.73)
+2023-11-18 14:48:52: (gw_backend.c.281) establishing connection failed: socket: tcp:127.0.0.1:5173: Connection refused
+2023-11-18 14:48:52: (gw_backend.c.1007) all handlers for /? on / are down.
+2023-11-18 14:48:54: (gw_backend.c.358) gw-server re-enabled: tcp:127.0.0.1:5173 127.0.0.1 5173 
+2023-11-18 14:49:18: (server.c.1224) [note] graceful shutdown started
+2023-11-18 14:49:18: (server.c.2332) server stopped by UID = 0 PID = 0
+2023-11-18 14:49:19: (server.c.1933) server started (lighttpd/1.4.73)
+2023-11-18 14:49:19: (configfile.c.1399) WARNING: unknown config-key: proxy.server (ignored)
+2023-11-18 15:00:08: (server.c.1224) [note] graceful shutdown started
+2023-11-18 15:00:08: (server.c.2332) server stopped by UID = 0 PID = 0
+2023-11-18 15:00:18: (server.c.1933) server started (lighttpd/1.4.73)
+2023-11-18 15:00:18: (configfile.c.1399) WARNING: unknown config-key: proxy.balance (ignored)
+2023-11-18 15:00:18: (configfile.c.1399) WARNING: unknown config-key: proxy.server (ignored)
+2023-11-18 15:00:37: (server.c.1224) [note] graceful shutdown started
+2023-11-18 15:00:37: (server.c.2332) server stopped by UID = 0 PID = 0
+2023-11-18 15:00:37: (server.c.1933) server started (lighttpd/1.4.73)
+2023-11-18 15:00:47: (server.c.1224) [note] graceful shutdown started
+2023-11-18 15:00:48: (server.c.2332) server stopped by UID = 0 PID = 0
+2023-11-18 15:01:07: (server.c.1933) server started (lighttpd/1.4.73)
+2023-11-18 15:01:08: (server.c.1224) [note] graceful shutdown started
+2023-11-18 15:01:08: (server.c.2332) server stopped by UID = 0 PID = 0
+2023-11-18 15:01:18: (server.c.1933) server started (lighttpd/1.4.73)
+2023-11-18 15:01:20: (server.c.1256) [note] sockets disabled, connection limit reached
+2023-11-18 15:01:30: (server.c.1224) [note] graceful shutdown started
+2023-11-18 15:01:30: (http-header-glue.c.1418) read() 689 690: Connection reset by peer
+2023-11-18 15:01:30: (gw_backend.c.2482) response not received, request sent: 4275 on socket: tcp:0.0.0.0:80 for /?, closing connection
+2023-11-18 15:01:30: (server.c.2332) server stopped by UID = 0 PID = 0
+2023-11-18 15:01:31: (server.c.1933) server started (lighttpd/1.4.73)
+2023-11-18 15:01:32: (server.c.1256) [note] sockets disabled, connection limit reached
+2023-11-18 15:01:44: (server.c.1224) [note] graceful shutdown started
+2023-11-18 15:01:44: (http-header-glue.c.1418) read() 689 690: Connection reset by peer
+2023-11-18 15:01:44: (gw_backend.c.2482) response not received, request sent: 4275 on socket: tcp:0.0.0.0:80 for /?, closing connection
+2023-11-18 15:01:44: (server.c.2332) server stopped by UID = 0 PID = 0
+2023-11-18 15:01:45: (server.c.1933) server started (lighttpd/1.4.73)
+2023-11-18 15:01:47: (gw_backend.c.281) establishing connection failed: socket: tcp:0.0.0.0:5173: Connection refused
+2023-11-18 15:01:47: (gw_backend.c.1007) all handlers for /? on  are down.
+2023-11-18 15:01:49: (gw_backend.c.358) gw-server re-enabled: tcp:0.0.0.0:5173 0.0.0.0 5173 
+2023-11-18 15:02:04: (server.c.1224) [note] graceful shutdown started
+2023-11-18 15:02:04: (server.c.2332) server stopped by UID = 0 PID = 0
+2023-11-18 15:02:04: (server.c.1933) server started (lighttpd/1.4.73)
+2023-11-18 15:02:06: (gw_backend.c.281) establishing connection failed: socket: tcp:127.0.0.1:5173: Connection refused
+2023-11-18 15:02:06: (gw_backend.c.1007) all handlers for /? on  are down.
+2023-11-18 15:02:08: (gw_backend.c.358) gw-server re-enabled: tcp:127.0.0.1:5173 127.0.0.1 5173 
+2023-11-18 15:06:14: (server.c.1224) [note] graceful shutdown started
+2023-11-18 15:06:14: (server.c.2332) server stopped by UID = 0 PID = 0

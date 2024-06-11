@@ -1,0 +1,63 @@
+
+
+<pre>
+
+	<h1>food</h1>
+		python3 /goodest/venues/stages/goodest/__status/main/status.proc.py besties/food_USDA/nature_v2/_status/**/*.py
+	
+	<h2>important</h2>
+	
+		treasure {
+			
+		}
+		
+		"nature" is the previous version of "treasure"
+		
+	
+	<h2>limitations</h2>
+	
+		<h3>measured ingredient structures</h3>
+		
+			The structure of the measured ingredients 
+			is not given by the API.
+			
+			Therefore, some assumptions about the
+			measured ingredients are made.
+			
+			This is different from the NIH API, where the 
+			structure of the measured ingredients is
+			given.
+	
+	
+	
+	
+	<h2>utilitity</h2>
+		
+		retrieve and parse a new food "nature":
+			#
+			#	This retrieves a food's data from USDA.	
+			#
+			import goodest.besties.food_USDA.deliveries.one as retrieve_1_food
+			food_USDA = retrieve_1_food.presently (
+				FDC_ID = 2642759,
+				API_ellipse = ""
+			)
+			
+			#
+			#	This parses USDA foods into the nature format.
+			#
+			#		This should use the shared:
+			#			goodest.shows.natures
+			#
+			import goodest.besties.food_USDA.nature as food_USDA_nature
+			nature = food_USDA_nature.create (food_USDA ["data"])
+		
+		
+		structure is is "shows/nature"
+
+
+		unquantified ingredients:
+			https://www.nltk.org/
+	
+</pre>	
+		

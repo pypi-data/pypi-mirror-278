@@ -1,0 +1,146 @@
+
+
+
+<pre>
+	
+	<h1>process blocker</h1>
+
+		docker:
+			start:
+				docker run --privileged -it ubuntu bash
+				apt install iputils-ping iptables curl -y
+		
+			restart:
+				docker restart 904d682cba3c; docker exec --privileged -it 904d682cba3c bash
+
+
+		--privileged
+
+		app armor:
+			https://gitlab.com/apparmor/apparmor/-/wikis/home
+			
+		selinux:
+			sudo apt-get update
+			sudo apt-get install selinux selinux-utils
+
+		groups:
+			groupadd opencoms
+			useradd -m -s /bin/bash communicator
+				#
+				#
+				#
+				userdel -r communicator
+			
+			su communicator
+			usermod -aG opencoms communicator
+
+			#
+			#	users in group
+			#
+			getent group opencoms
+			
+			iptables -A OUTPUT -m owner --uid-owner communicator -p tcp --dport 80 -j ACCEPT
+			iptables -A OUTPUT -m owner --uid-owner communicator -p tcp --dport 443 -j ACCEPT
+
+			
+
+		idea 1:
+			#
+			#	clear
+			#
+			iptables -F
+		
+			#
+			#	create an "opencoms" group that can access the network
+			#
+			groupadd opencoms
+				
+				#
+				#	list groups
+				#
+				getent group
+				cat /etc/group
+			
+			iptables -A OUTPUT -p tcp -m owner --gid-owner opencoms -j ACCEPT
+			iptables -A OUTPUT -m owner --gid-owner opencoms -j ACCEPT
+			
+			
+			iptables -A OUTPUT -m owner --uid-owner communicator -j ACCEPT
+			runuser -l communicator -c 'ls /home/communicator'
+			runuser -l communicator -c 'curl https://veganmodule.com'
+			
+			#
+			#	allow local connections
+			#
+			iptables -A OUTPUT -p tcp -d 127.0.0.1 -j ACCEPT
+			iptables -A OUTPUT -p tcp -d 192.168.0.1/24 -j ACCEPT
+			
+			#
+			#	reject packets for other users
+			#
+			iptables -A OUTPUT -p tcp -j REJECT
+
+			#
+			#	open a shell with internet access
+			#
+			sudo -g opencoms -s
+
+		idea:
+
+			#
+			#	clear
+			#
+			iptables -F
+
+			#
+			#	block every processes
+			#
+			iptables -P OUTPUT DROP
+
+				#
+				#	allow (every processes)
+				#
+				opposite: sudo iptables -P OUTPUT ACCEPT
+
+			
+			
+			
+			
+			#
+			#	allow one process
+			#
+			sudo iptables -A OUTPUT -m owner --cmd-owner "allowed_process" -j ACCEPT
+			sudo iptables -A OUTPUT -m owner --cmd-owner "/path/to/allowed_application" -j ACCEPT
+
+
+
+			#
+			#	persist rules accross reboots
+			#
+			sudo iptables-save > /etc/iptables/rules.v4  # For IPv4
+			sudo ip6tables-save > /etc/iptables/rules.v6  # For IPv6 (if applicable)
+
+		
+		
+		idea 2..
+			block access of one process:
+				firejail --net=none firefox
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>

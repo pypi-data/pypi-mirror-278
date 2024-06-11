@@ -1,0 +1,29 @@
+#!/usr/sbin/nft -f
+
+#
+#	nft -f out_on_53_80_443.NFT; nft list ruleset
+#
+#
+
+flush ruleset
+table inet filter {
+	chain output {
+        type filter hook output priority 0; policy accept;
+        ct state established,related accept
+        
+		tcp dport { 80, 443 } accept
+		udp dport { 53 } accept
+		
+		drop
+    }
+	
+	chain forward {
+        type filter hook forward priority 0; policy accept;
+    }
+	
+    chain input {
+        type filter hook input priority 0; policy accept;
+				
+		drop
+    }     
+}

@@ -1,0 +1,42 @@
+
+
+
+/*
+	https://vuejs.org/guide/components/slots.html#scoped-slots
+*/
+
+/*
+	Maybe there's some way to use computed properties
+	instead of the template.
+	
+	Either way though, the preset mercantile warehouses
+	are necessary.
+*/
+
+<code>
+	import lounge from '@/scenery/lounge/decor.vue'
+
+	<lounge #default="{ palette, terrain, $attrs }">
+		<div :style="{ opacity: 0, position: 'absolute' }">
+			{{ this_terrain = terrain }}
+			{{ this_palette = palette }}
+		</div>
+	
+		<example_two 
+			:palette="palette"
+		/>
+	</lounge>
+
+	<warehouse_scenery>
+		<template #default="scope">	
+			{{ scope.palette }}
+		
+			<example_two 
+				:palette="scope.palette"
+			/>
+		</template>
+	</warehouse_scenery>
+</code>
+
+
+

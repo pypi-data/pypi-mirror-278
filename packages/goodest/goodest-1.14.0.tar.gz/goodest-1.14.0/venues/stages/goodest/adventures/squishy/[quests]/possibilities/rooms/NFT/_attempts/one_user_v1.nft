@@ -1,0 +1,36 @@
+
+#
+#	nft flush ruleset && nft -f one_user_v1.nft
+#
+
+#
+#	where "communicator has uid 1000:
+#		su - communicator
+#
+
+#
+#	https://github.com/FoobarOy/foomuuri/issues/1
+#
+
+table inet filter {
+    chain input {
+        type filter hook input priority 0; policy accept;
+		
+		#
+		#	established?  as in output -> input
+		#
+        ct state established,related accept
+    }
+
+    chain forward {
+        type filter hook forward priority 0; policy accept;
+    }
+
+    chain output {
+		type filter hook output priority 0; policy drop;
+		
+		skuid 0 log prefix "UHWHAT:";
+        meta skuid 0 accept;
+    }
+}
+

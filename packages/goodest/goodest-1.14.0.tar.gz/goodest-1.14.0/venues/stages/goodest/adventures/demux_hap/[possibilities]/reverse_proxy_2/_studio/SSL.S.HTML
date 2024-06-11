@@ -1,0 +1,26 @@
+
+
+
+<pre>
+
+SSL:
+	sudo apt-get install openssl
+	
+	(ssh-keygen -t rsa -N "" -b 3072 -C "" -f COLD && mv COLD.pub HOT)
+	
+	
+	procedure = " ".join ([
+		"sudo",
+		"openssl",
+		"req",
+		"-x509",
+		"-nodes",
+		"-days 365",
+		"-newkey rsa:2048",
+		'-subj "/C=/ST=/L=/O=/OU=/CN=/emailAddress="',
+
+		f"-keyout '{ KEY }'",
+		f"-out '{ CERT }'"
+	])
+	
+</pre>

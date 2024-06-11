@@ -1,0 +1,12 @@
+
+'''
+		https://sanic.dev/en/guide/basics/middleware.html#attaching-middleware
+	'''
+'''
+	@app.middleware ('request')
+	async def before_route_middleware (request):
+		URL = request.url		
+		print ('Middleware before every route "request":', URL)
+		
+		return;
+	'''

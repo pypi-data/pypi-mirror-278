@@ -1,0 +1,55 @@
+
+
+
+
+<pre>
+
+	<h1>UFW</h1>
+	
+	
+	<h2>GUFW</h2>
+		apt install gufw
+
+	<h2>Status</h2>
+		ufw status verbose numbered
+		
+			ufw delete {} --force
+
+
+	<h2>block everything</h2>
+		ufw default deny outgoing
+		ufw default deny incoming
+
+	<h2>allow</h2>
+		<h2>everything</h2>
+			ufw default allow outgoing
+			ufw default allow incoming
+	
+		<h2>address access</h2>
+			ufw allow out to ecosia.com port 443/tcp
+			
+			
+		<h2>port access</h2>
+			ufw allow out 80/tcp
+			ufw allow out 443/tcp
+		
+
+	<h2>Delete All Rules</h2>
+		
+		ufw reset --force
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>

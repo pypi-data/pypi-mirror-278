@@ -1,0 +1,1531 @@
+{
+    "essential nutrients": {
+        "natures": [
+            {
+                "amount": "1",
+                "identity": {
+                    "name": "ORGANIC SOY BEANS",
+                    "FDC ID": "2025440",
+                    "UPC": "074873163285",
+                    "DSLD ID": ""
+                }
+            },
+            {
+                "amount": "1",
+                "identity": {
+                    "name": "Organic Vegan Protein Power",
+                    "FDC ID": "",
+                    "UPC": "7 19985 95416 0",
+                    "DSLD ID": "69439"
+                }
+            }
+        ],
+        "measures": {
+            "mass + mass equivalents": {
+                "per recipe": {
+                    "grams": {
+                        "fraction string": "122526209673887955898189/37830236869912166400",
+                        "scinote string": "3.2388e+3"
+                    }
+                }
+            },
+            "energy": {
+                "per recipe": {
+                    "food calories": {
+                        "fraction string": "10735",
+                        "scinote string": "1.0735e+4"
+                    }
+                }
+            }
+        },
+        "grove": [
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "protein"
+                    ],
+                    "region": 1
+                },
+                "measures": {
+                    "mass + mass equivalents": {
+                        "per recipe": {
+                            "grams": {
+                                "fraction string": "11273227628498963875/5910974510923776",
+                                "scinote string": "1.9072e+3"
+                            }
+                        },
+                        "portion of grove": {
+                            "fraction string": "72148656822393368800000/122526209673887955898189",
+                            "scinote percentage string": "5.8884e+1"
+                        }
+                    }
+                },
+                "natures": [
+                    {
+                        "amount": "10",
+                        "source": {
+                            "name": "ORGANIC SOY BEANS",
+                            "FDC ID": "2025440",
+                            "UPC": "074873163285",
+                            "DSLD ID": ""
+                        },
+                        "ingredient": {
+                            "name": "Protein"
+                        },
+                        "measures": {
+                            "mass + mass equivalents": {
+                                "per package": {
+                                    "listed": [
+                                        "35.955",
+                                        "g"
+                                    ],
+                                    "grams": {
+                                        "scinote string": "3.5955e+1",
+                                        "decimal string": "35.955",
+                                        "fraction string": "20240865575263275/562949953421312"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "amount": "5",
+                        "source": {
+                            "name": "Organic Vegan Protein Power",
+                            "FDC ID": "",
+                            "UPC": "7 19985 95416 0",
+                            "DSLD ID": "69439"
+                        },
+                        "ingredient": {
+                            "name": "Protein"
+                        },
+                        "measures": {
+                            "mass + mass equivalents": {
+                                "is equivalent": "no",
+                                "listed operator": "=",
+                                "per form": {
+                                    "listed": [
+                                        "0.619",
+                                        "Gram(s)"
+                                    ],
+                                    "grams": {
+                                        "decimal string": "0.619",
+                                        "fraction string": "13/21"
+                                    }
+                                },
+                                "per package": {
+                                    "is equivalent": "no",
+                                    "listed operator": "=",
+                                    "listed": [
+                                        "309.524",
+                                        "Gram(s)"
+                                    ],
+                                    "grams": {
+                                        "decimal string": "309.524",
+                                        "fraction string": "6500/21"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "unites": []
+            },
+            {
+                "info": {
+                    "accepts": [
+                        "carbohydrate, by difference",
+                        "total carbohydrates"
+                    ],
+                    "includes": [
+                        6,
+                        7
+                    ],
+                    "names": [
+                        "carbohydrates"
+                    ],
+                    "region": 2
+                },
+                "measures": {
+                    "mass + mass equivalents": {
+                        "per recipe": {
+                            "grams": {
+                                "fraction string": "7947389672430030005/7881299347898368",
+                                "scinote string": "1.0084e+3"
+                            }
+                        },
+                        "portion of grove": {
+                            "fraction string": "38147470427664144024000/122526209673887955898189",
+                            "scinote percentage string": "3.1134e+1"
+                        }
+                    }
+                },
+                "natures": [
+                    {
+                        "amount": "10",
+                        "source": {
+                            "name": "ORGANIC SOY BEANS",
+                            "FDC ID": "2025440",
+                            "UPC": "074873163285",
+                            "DSLD ID": ""
+                        },
+                        "ingredient": {
+                            "name": "Carbohydrate, by difference"
+                        },
+                        "measures": {
+                            "mass + mass equivalents": {
+                                "per package": {
+                                    "listed": [
+                                        "29.410",
+                                        "g"
+                                    ],
+                                    "grams": {
+                                        "scinote string": "2.9410e+1",
+                                        "decimal string": "29.410",
+                                        "fraction string": "66225432520483143/2251799813685248"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "amount": "5",
+                        "source": {
+                            "name": "Organic Vegan Protein Power",
+                            "FDC ID": "",
+                            "UPC": "7 19985 95416 0",
+                            "DSLD ID": "69439"
+                        },
+                        "ingredient": {
+                            "name": "Total Carbohydrates"
+                        },
+                        "measures": {
+                            "mass + mass equivalents": {
+                                "is equivalent": "no",
+                                "listed operator": "=",
+                                "per form": {
+                                    "listed": [
+                                        "0.286",
+                                        "Gram(s)"
+                                    ],
+                                    "grams": {
+                                        "decimal string": "0.286",
+                                        "fraction string": "2/7"
+                                    }
+                                },
+                                "per package": {
+                                    "is equivalent": "no",
+                                    "listed operator": "=",
+                                    "listed": [
+                                        "142.857",
+                                        "Gram(s)"
+                                    ],
+                                    "grams": {
+                                        "decimal string": "142.857",
+                                        "fraction string": "1000/7"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "unites": [
+                    {
+                        "info": {
+                            "includes": [],
+                            "names": [
+                                "dietary fiber",
+                                "fiber, total dietary"
+                            ],
+                            "region": 6
+                        },
+                        "measures": {
+                            "mass + mass equivalents": {
+                                "per recipe": {
+                                    "grams": {
+                                        "fraction string": "220113431787732975/2251799813685248",
+                                        "scinote string": "9.7750e+1"
+                                    }
+                                }
+                            }
+                        },
+                        "natures": [
+                            {
+                                "amount": "10",
+                                "source": {
+                                    "name": "ORGANIC SOY BEANS",
+                                    "FDC ID": "2025440",
+                                    "UPC": "074873163285",
+                                    "DSLD ID": ""
+                                },
+                                "ingredient": {
+                                    "name": "Fiber, total dietary"
+                                },
+                                "measures": {
+                                    "mass + mass equivalents": {
+                                        "per package": {
+                                            "listed": [
+                                                "9.775",
+                                                "g"
+                                            ],
+                                            "grams": {
+                                                "scinote string": "9.7750e+0",
+                                                "decimal string": "9.775",
+                                                "fraction string": "44022686357546595/4503599627370496"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        ],
+                        "unites": []
+                    },
+                    {
+                        "info": {
+                            "accepts": [
+                                "sugars, total including nlea"
+                            ],
+                            "includes": [
+                                8
+                            ],
+                            "names": [
+                                "sugars, total",
+                                "total sugar",
+                                "sugar",
+                                "total sugars"
+                            ],
+                            "region": 7
+                        },
+                        "measures": {
+                            "mass + mass equivalents": {
+                                "per recipe": {
+                                    "grams": {
+                                        "fraction string": "147380297805699485/2251799813685248",
+                                        "scinote string": "6.5450e+1"
+                                    }
+                                }
+                            }
+                        },
+                        "natures": [
+                            {
+                                "amount": "10",
+                                "source": {
+                                    "name": "ORGANIC SOY BEANS",
+                                    "FDC ID": "2025440",
+                                    "UPC": "074873163285",
+                                    "DSLD ID": ""
+                                },
+                                "ingredient": {
+                                    "name": "Total Sugars"
+                                },
+                                "measures": {
+                                    "mass + mass equivalents": {
+                                        "per package": {
+                                            "listed": [
+                                                "6.545",
+                                                "g"
+                                            ],
+                                            "grams": {
+                                                "scinote string": "6.5450e+0",
+                                                "decimal string": "6.545",
+                                                "fraction string": "29476059561139897/4503599627370496"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        ],
+                        "unites": [
+                            {
+                                "info": {
+                                    "includes": [],
+                                    "names": [
+                                        "added sugars",
+                                        "sugars, added"
+                                    ],
+                                    "region": 8
+                                },
+                                "measures": {},
+                                "natures": [],
+                                "unites": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "info": {
+                    "includes": [
+                        4,
+                        15,
+                        51
+                    ],
+                    "names": [
+                        "fats",
+                        "total fat",
+                        "lipids",
+                        "total lipid (fat)"
+                    ],
+                    "region": 3
+                },
+                "measures": {
+                    "mass + mass equivalents": {
+                        "per recipe": {
+                            "grams": {
+                                "fraction string": "14914458295972187555/47287796087390208",
+                                "scinote string": "3.1540e+2"
+                            }
+                        },
+                        "portion of grove": {
+                            "fraction string": "11931566636777750044000/122526209673887955898189",
+                            "scinote percentage string": "9.7380e+0"
+                        }
+                    }
+                },
+                "natures": [
+                    {
+                        "amount": "10",
+                        "source": {
+                            "name": "ORGANIC SOY BEANS",
+                            "FDC ID": "2025440",
+                            "UPC": "074873163285",
+                            "DSLD ID": ""
+                        },
+                        "ingredient": {
+                            "name": "Total lipid (fat)"
+                        },
+                        "measures": {
+                            "mass + mass equivalents": {
+                                "per package": {
+                                    "listed": [
+                                        "19.635",
+                                        "g"
+                                    ],
+                                    "grams": {
+                                        "scinote string": "1.9635e+1",
+                                        "decimal string": "19.635",
+                                        "fraction string": "88428178683419691/4503599627370496"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "amount": "5",
+                        "source": {
+                            "name": "Organic Vegan Protein Power",
+                            "FDC ID": "",
+                            "UPC": "7 19985 95416 0",
+                            "DSLD ID": "69439"
+                        },
+                        "ingredient": {
+                            "name": "Total Fat"
+                        },
+                        "measures": {
+                            "mass + mass equivalents": {
+                                "is equivalent": "no",
+                                "listed operator": "=",
+                                "per form": {
+                                    "listed": [
+                                        "0.048",
+                                        "Gram(s)"
+                                    ],
+                                    "grams": {
+                                        "decimal string": "0.048",
+                                        "fraction string": "1/21"
+                                    }
+                                },
+                                "per package": {
+                                    "is equivalent": "no",
+                                    "listed operator": "=",
+                                    "listed": [
+                                        "23.810",
+                                        "Gram(s)"
+                                    ],
+                                    "grams": {
+                                        "decimal string": "23.810",
+                                        "fraction string": "500/21"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "unites": [
+                    {
+                        "info": {
+                            "includes": [],
+                            "names": [
+                                "saturated fat",
+                                "fatty acids, total saturated"
+                            ],
+                            "region": 4
+                        },
+                        "measures": {
+                            "mass + mass equivalents": {
+                                "per recipe": {
+                                    "grams": {
+                                        "fraction string": "147380297805699485/4503599627370496",
+                                        "scinote string": "3.2725e+1"
+                                    }
+                                }
+                            }
+                        },
+                        "natures": [
+                            {
+                                "amount": "10",
+                                "source": {
+                                    "name": "ORGANIC SOY BEANS",
+                                    "FDC ID": "2025440",
+                                    "UPC": "074873163285",
+                                    "DSLD ID": ""
+                                },
+                                "ingredient": {
+                                    "name": "Fatty acids, total saturated"
+                                },
+                                "measures": {
+                                    "mass + mass equivalents": {
+                                        "per package": {
+                                            "listed": [
+                                                "3.273",
+                                                "g"
+                                            ],
+                                            "grams": {
+                                                "scinote string": "3.2725e+0",
+                                                "decimal string": "3.273",
+                                                "fraction string": "29476059561139897/9007199254740992"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        ],
+                        "unites": []
+                    },
+                    {
+                        "info": {
+                            "includes": [],
+                            "names": [
+                                "polyunsaturated fat",
+                                "fatty acids, total polyunsaturated"
+                            ],
+                            "region": 15
+                        },
+                        "measures": {
+                            "mass + mass equivalents": {
+                                "per recipe": {
+                                    "grams": {
+                                        "fraction string": "514874027399131945/4503599627370496",
+                                        "scinote string": "1.1432e+2"
+                                    }
+                                }
+                            }
+                        },
+                        "natures": [
+                            {
+                                "amount": "10",
+                                "source": {
+                                    "name": "ORGANIC SOY BEANS",
+                                    "FDC ID": "2025440",
+                                    "UPC": "074873163285",
+                                    "DSLD ID": ""
+                                },
+                                "ingredient": {
+                                    "name": "Fatty acids, total polyunsaturated"
+                                },
+                                "measures": {
+                                    "mass + mass equivalents": {
+                                        "per package": {
+                                            "listed": [
+                                                "11.433",
+                                                "g"
+                                            ],
+                                            "grams": {
+                                                "scinote string": "1.1432e+1",
+                                                "decimal string": "11.433",
+                                                "fraction string": "102974805479826389/9007199254740992"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        ],
+                        "unites": []
+                    },
+                    {
+                        "info": {
+                            "includes": [],
+                            "names": [
+                                "monounsaturated fat",
+                                "fatty acids, total monounsaturated"
+                            ],
+                            "region": 51
+                        },
+                        "measures": {
+                            "mass + mass equivalents": {
+                                "per recipe": {
+                                    "grams": {
+                                        "fraction string": "220113431787732975/4503599627370496",
+                                        "scinote string": "4.8875e+1"
+                                    }
+                                }
+                            }
+                        },
+                        "natures": [
+                            {
+                                "amount": "10",
+                                "source": {
+                                    "name": "ORGANIC SOY BEANS",
+                                    "FDC ID": "2025440",
+                                    "UPC": "074873163285",
+                                    "DSLD ID": ""
+                                },
+                                "ingredient": {
+                                    "name": "Fatty acids, total monounsaturated"
+                                },
+                                "measures": {
+                                    "mass + mass equivalents": {
+                                        "per package": {
+                                            "listed": [
+                                                "4.887",
+                                                "g"
+                                            ],
+                                            "grams": {
+                                                "scinote string": "4.8875e+0",
+                                                "decimal string": "4.887",
+                                                "fraction string": "44022686357546595/9007199254740992"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        ],
+                        "unites": []
+                    }
+                ]
+            },
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "calcium",
+                        "calcium, ca"
+                    ],
+                    "region": 9
+                },
+                "measures": {
+                    "mass + mass equivalents": {
+                        "per recipe": {
+                            "grams": {
+                                "fraction string": "527/200",
+                                "scinote string": "2.6350e+0"
+                            }
+                        },
+                        "portion of grove": {
+                            "fraction string": "99682674152218558464/122526209673887955898189",
+                            "scinote percentage string": "8.1356e-2"
+                        }
+                    }
+                },
+                "natures": [
+                    {
+                        "amount": "10",
+                        "source": {
+                            "name": "ORGANIC SOY BEANS",
+                            "FDC ID": "2025440",
+                            "UPC": "074873163285",
+                            "DSLD ID": ""
+                        },
+                        "ingredient": {
+                            "name": "Calcium, Ca"
+                        },
+                        "measures": {
+                            "mass + mass equivalents": {
+                                "per package": {
+                                    "listed": [
+                                        "263.500",
+                                        "mg"
+                                    ],
+                                    "grams": {
+                                        "scinote string": "2.6350e-1",
+                                        "decimal string": "0.264",
+                                        "fraction string": "527/2000"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "unites": []
+            },
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "cholesterol"
+                    ],
+                    "region": 12
+                },
+                "measures": {
+                    "mass + mass equivalents": {
+                        "per recipe": {
+                            "grams": {
+                                "fraction string": "0",
+                                "scinote string": "0.0000e+0"
+                            }
+                        },
+                        "portion of grove": {
+                            "fraction string": "0",
+                            "scinote percentage string": "0.0000e+0"
+                        }
+                    }
+                },
+                "natures": [
+                    {
+                        "amount": "10",
+                        "source": {
+                            "name": "ORGANIC SOY BEANS",
+                            "FDC ID": "2025440",
+                            "UPC": "074873163285",
+                            "DSLD ID": ""
+                        },
+                        "ingredient": {
+                            "name": "Cholesterol"
+                        },
+                        "measures": {
+                            "mass + mass equivalents": {
+                                "per package": {
+                                    "listed": [
+                                        "0.000",
+                                        "mg"
+                                    ],
+                                    "grams": {
+                                        "scinote string": "0.0000e+0",
+                                        "decimal string": "0.000",
+                                        "fraction string": "0"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "unites": []
+            },
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "vitamin a",
+                        "vitamin a, iu"
+                    ],
+                    "region": 16
+                },
+                "measures": {
+                    "biological activity": {
+                        "per recipe": {
+                            "IU": {
+                                "fraction string": "0",
+                                "scinote string": "0.0000e+0"
+                            }
+                        }
+                    }
+                },
+                "natures": [
+                    {
+                        "amount": "10",
+                        "source": {
+                            "name": "ORGANIC SOY BEANS",
+                            "FDC ID": "2025440",
+                            "UPC": "074873163285",
+                            "DSLD ID": ""
+                        },
+                        "ingredient": {
+                            "name": "Vitamin A, IU"
+                        },
+                        "measures": {
+                            "biological activity": {
+                                "per package": {
+                                    "listed": [
+                                        "0.000",
+                                        "IU"
+                                    ],
+                                    "IU": {
+                                        "decimal string": "0.000",
+                                        "fraction string": "0"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "unites": []
+            },
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "vitamin e"
+                    ],
+                    "region": 19
+                },
+                "measures": {},
+                "natures": [],
+                "unites": []
+            },
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "iodine"
+                    ],
+                    "region": 29
+                },
+                "measures": {},
+                "natures": [],
+                "unites": []
+            },
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "magnesium"
+                    ],
+                    "region": 30
+                },
+                "measures": {},
+                "natures": [],
+                "unites": []
+            },
+            {
+                "info": {
+                    "accepts": [],
+                    "includes": [],
+                    "names": [
+                        "Zinc, Zn",
+                        "Zinc"
+                    ],
+                    "region": 31
+                },
+                "measures": {},
+                "natures": [],
+                "unites": []
+            },
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "selenium"
+                    ],
+                    "region": 32
+                },
+                "measures": {},
+                "natures": [],
+                "unites": []
+            },
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "copper"
+                    ],
+                    "region": 33
+                },
+                "measures": {},
+                "natures": [],
+                "unites": []
+            },
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "manganese"
+                    ],
+                    "region": 34
+                },
+                "measures": {},
+                "natures": [],
+                "unites": []
+            },
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "chromium"
+                    ],
+                    "region": 35
+                },
+                "measures": {},
+                "natures": [],
+                "unites": []
+            },
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "molybdenum"
+                    ],
+                    "region": 36
+                },
+                "measures": {},
+                "natures": [],
+                "unites": []
+            },
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "choline"
+                    ],
+                    "region": 37
+                },
+                "measures": {},
+                "natures": [],
+                "unites": []
+            },
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "lutein"
+                    ],
+                    "region": 40
+                },
+                "measures": {},
+                "natures": [],
+                "unites": []
+            },
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "betaine hydrochloride"
+                    ],
+                    "region": 43
+                },
+                "measures": {},
+                "natures": [],
+                "unites": []
+            },
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "rutin"
+                    ],
+                    "region": 44
+                },
+                "measures": {},
+                "natures": [],
+                "unites": []
+            },
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "strontium"
+                    ],
+                    "region": 47
+                },
+                "measures": {},
+                "natures": [],
+                "unites": []
+            },
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "vanadium"
+                    ],
+                    "region": 49
+                },
+                "measures": {},
+                "natures": [],
+                "unites": []
+            },
+            {
+                "info": {
+                    "accepts": [],
+                    "includes": [],
+                    "names": [
+                        "Phosphorus, P",
+                        "Phosphorus"
+                    ],
+                    "region": 57
+                },
+                "measures": {},
+                "natures": [],
+                "unites": []
+            },
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "potassium",
+                        "potassium K",
+                        "potassium, K",
+                        "K"
+                    ],
+                    "region": 58
+                },
+                "measures": {},
+                "natures": [],
+                "unites": []
+            },
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "sodium Na",
+                        "sodium, Na",
+                        "sodium",
+                        "Na"
+                    ],
+                    "region": 59
+                },
+                "measures": {
+                    "mass + mass equivalents": {
+                        "per recipe": {
+                            "grams": {
+                                "fraction string": "2642/525",
+                                "scinote string": "5.0324e+0"
+                            }
+                        },
+                        "portion of grove": {
+                            "fraction string": "190376163448205606912/122526209673887955898189",
+                            "scinote percentage string": "1.5538e-1"
+                        }
+                    }
+                },
+                "natures": [
+                    {
+                        "amount": "10",
+                        "source": {
+                            "name": "ORGANIC SOY BEANS",
+                            "FDC ID": "2025440",
+                            "UPC": "074873163285",
+                            "DSLD ID": ""
+                        },
+                        "ingredient": {
+                            "name": "Sodium, Na"
+                        },
+                        "measures": {
+                            "mass + mass equivalents": {
+                                "per package": {
+                                    "listed": [
+                                        "408.000",
+                                        "mg"
+                                    ],
+                                    "grams": {
+                                        "scinote string": "4.0800e-1",
+                                        "decimal string": "0.408",
+                                        "fraction string": "51/125"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "amount": "5",
+                        "source": {
+                            "name": "Organic Vegan Protein Power",
+                            "FDC ID": "",
+                            "UPC": "7 19985 95416 0",
+                            "DSLD ID": "69439"
+                        },
+                        "ingredient": {
+                            "name": "Sodium"
+                        },
+                        "measures": {
+                            "mass + mass equivalents": {
+                                "is equivalent": "no",
+                                "listed operator": "=",
+                                "per form": {
+                                    "listed": [
+                                        "0.381",
+                                        "mg"
+                                    ],
+                                    "grams": {
+                                        "decimal string": "0.000",
+                                        "fraction string": "1/2625"
+                                    }
+                                },
+                                "per package": {
+                                    "is equivalent": "no",
+                                    "listed operator": "=",
+                                    "listed": [
+                                        "190.476",
+                                        "mg"
+                                    ],
+                                    "grams": {
+                                        "decimal string": "0.190",
+                                        "fraction string": "4/21"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "unites": []
+            },
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "vitamin d",
+                        "vitamin d (d2 + d3)",
+                        "vitamin d2",
+                        "vitamin d3",
+                        "vitamin d (d2 + d3), international units"
+                    ],
+                    "region": 63
+                },
+                "measures": {},
+                "natures": [],
+                "unites": []
+            },
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "vitamin c",
+                        "vitamin c (form: as calcium ascorbate)",
+                        "vitamin c, total ascorbic acid"
+                    ],
+                    "region": 64
+                },
+                "measures": {
+                    "mass + mass equivalents": {
+                        "per recipe": {
+                            "grams": {
+                                "fraction string": "137810148597537181/1801439850948198400",
+                                "scinote string": "7.6500e-2"
+                            }
+                        },
+                        "portion of grove": {
+                            "fraction string": "2894013120548280801/122526209673887955898189",
+                            "scinote percentage string": "2.3620e-3"
+                        }
+                    }
+                },
+                "natures": [
+                    {
+                        "amount": "10",
+                        "source": {
+                            "name": "ORGANIC SOY BEANS",
+                            "FDC ID": "2025440",
+                            "UPC": "074873163285",
+                            "DSLD ID": ""
+                        },
+                        "ingredient": {
+                            "name": "Vitamin C, total ascorbic acid"
+                        },
+                        "measures": {
+                            "mass + mass equivalents": {
+                                "per package": {
+                                    "listed": [
+                                        "7.650",
+                                        "mg"
+                                    ],
+                                    "grams": {
+                                        "scinote string": "7.6500e-3",
+                                        "decimal string": "0.008",
+                                        "fraction string": "137810148597537181/18014398509481984000"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "unites": []
+            },
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "vitamin k",
+                        "vitamin k1",
+                        "vitamin k2"
+                    ],
+                    "region": 65
+                },
+                "measures": {},
+                "natures": [],
+                "unites": []
+            },
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "thiamin",
+                        "thiamine",
+                        "vitamin b1"
+                    ],
+                    "region": 66
+                },
+                "measures": {},
+                "natures": [],
+                "unites": []
+            },
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "riboflavin",
+                        "vitamin b2"
+                    ],
+                    "region": 67
+                },
+                "measures": {},
+                "natures": [],
+                "unites": []
+            },
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "vitamin b3",
+                        "niacin",
+                        "nicotinamide",
+                        "nicotinamide riboside"
+                    ],
+                    "region": 68
+                },
+                "measures": {},
+                "natures": [],
+                "unites": []
+            },
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "vitamin b5",
+                        "pantothenic acid"
+                    ],
+                    "region": 69
+                },
+                "measures": {},
+                "natures": [],
+                "unites": []
+            },
+            {
+                "info": {
+                    "accepts": [
+                        "pyridoxine",
+                        "pyridoxal",
+                        "pyridoxamine"
+                    ],
+                    "includes": [],
+                    "names": [
+                        "Vitamin B6",
+                        "Vitamin B-6"
+                    ],
+                    "region": 70
+                },
+                "measures": {},
+                "natures": [],
+                "unites": []
+            },
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "vitamin b7",
+                        "biotin",
+                        "vitamin h"
+                    ],
+                    "region": 71
+                },
+                "measures": {},
+                "natures": [],
+                "unites": []
+            },
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "vitamin b9",
+                        "folate",
+                        "folacin"
+                    ],
+                    "region": 72
+                },
+                "measures": {},
+                "natures": [],
+                "unites": []
+            },
+            {
+                "info": {
+                    "accepts": [],
+                    "includes": [],
+                    "names": [
+                        "Vitamin B12",
+                        "Vitamin B-12",
+                        "cobalamin"
+                    ],
+                    "region": 73
+                },
+                "measures": {},
+                "natures": [],
+                "unites": []
+            },
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "calories",
+                        "energy"
+                    ],
+                    "region": 74
+                },
+                "measures": {
+                    "energy": {
+                        "per recipe": {
+                            "food calories": {
+                                "fraction string": "10735",
+                                "scinote string": "1.0735e+4"
+                            }
+                        },
+                        "portion of grove": {
+                            "fraction string": "1",
+                            "scinote percentage string": "1.0000e+2"
+                        }
+                    }
+                },
+                "natures": [
+                    {
+                        "amount": "10",
+                        "source": {
+                            "name": "ORGANIC SOY BEANS",
+                            "FDC ID": "2025440",
+                            "UPC": "074873163285",
+                            "DSLD ID": ""
+                        },
+                        "ingredient": {
+                            "name": "Energy"
+                        },
+                        "measures": {
+                            "energy": {
+                                "per package": {
+                                    "listed": [
+                                        "391.000",
+                                        "kcal"
+                                    ],
+                                    "food calories": {
+                                        "decimal string": "391.000",
+                                        "fraction string": "391"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "amount": "5",
+                        "source": {
+                            "name": "Organic Vegan Protein Power",
+                            "FDC ID": "",
+                            "UPC": "7 19985 95416 0",
+                            "DSLD ID": "69439"
+                        },
+                        "ingredient": {
+                            "name": "Calories"
+                        },
+                        "measures": {
+                            "energy": {
+                                "per package": {
+                                    "listed operator": "=",
+                                    "listed": [
+                                        "1365.000",
+                                        "Calorie(s)"
+                                    ],
+                                    "food calories": {
+                                        "decimal string": "1365.000",
+                                        "fraction string": "1365"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "unites": []
+            },
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "iron",
+                        "iron, fe"
+                    ],
+                    "region": 75
+                },
+                "measures": {
+                    "mass + mass equivalents": {
+                        "per recipe": {
+                            "grams": {
+                                "fraction string": "66225432520483143/450359962737049600",
+                                "scinote string": "1.4705e-1"
+                            }
+                        },
+                        "portion of grove": {
+                            "fraction string": "5562936331720584012/122526209673887955898189",
+                            "scinote percentage string": "4.5402e-3"
+                        }
+                    }
+                },
+                "natures": [
+                    {
+                        "amount": "10",
+                        "source": {
+                            "name": "ORGANIC SOY BEANS",
+                            "FDC ID": "2025440",
+                            "UPC": "074873163285",
+                            "DSLD ID": ""
+                        },
+                        "ingredient": {
+                            "name": "Iron, Fe"
+                        },
+                        "measures": {
+                            "mass + mass equivalents": {
+                                "per package": {
+                                    "listed": [
+                                        "14.705",
+                                        "mg"
+                                    ],
+                                    "grams": {
+                                        "scinote string": "1.4705e-2",
+                                        "decimal string": "0.015",
+                                        "fraction string": "66225432520483143/4503599627370496000"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "unites": []
+            },
+            {
+                "info": {
+                    "accepts": [],
+                    "includes": [],
+                    "names": [
+                        "Folate, DFE"
+                    ],
+                    "region": 76
+                },
+                "measures": {},
+                "natures": [],
+                "unites": []
+            },
+            {
+                "info": {
+                    "accepts": [],
+                    "includes": [],
+                    "names": [
+                        "Folate",
+                        "Folate, Total"
+                    ],
+                    "region": 77
+                },
+                "measures": {},
+                "natures": [],
+                "unites": []
+            }
+        ]
+    },
+    "cautionary ingredients": {
+        "natures": [
+            {
+                "amount": "1",
+                "identity": {
+                    "name": "ORGANIC SOY BEANS",
+                    "FDC ID": "2025440",
+                    "UPC": "074873163285",
+                    "DSLD ID": ""
+                }
+            },
+            {
+                "amount": "1",
+                "identity": {
+                    "name": "Organic Vegan Protein Power",
+                    "FDC ID": "",
+                    "UPC": "7 19985 95416 0",
+                    "DSLD ID": "69439"
+                }
+            }
+        ],
+        "measures": {
+            "mass + mass equivalents": {
+                "per recipe": {
+                    "grams": {
+                        "fraction string": "0",
+                        "scinote string": "0.0000e+0"
+                    }
+                }
+            },
+            "energy": {
+                "per recipe": {
+                    "food calories": {
+                        "fraction string": "0",
+                        "scinote string": "0.0000e+0"
+                    }
+                }
+            }
+        },
+        "grove": [
+            {
+                "info": {
+                    "includes": [],
+                    "names": [
+                        "trans fat",
+                        "fatty acids, total trans"
+                    ],
+                    "region": 1
+                },
+                "measures": {
+                    "mass + mass equivalents": {
+                        "per recipe": {
+                            "grams": {
+                                "fraction string": "0",
+                                "scinote string": "0.0000e+0"
+                            }
+                        },
+                        "portion of grove": {
+                            "fraction string": "0",
+                            "scinote percentage string": "0.0000e+0"
+                        }
+                    }
+                },
+                "natures": [
+                    {
+                        "amount": "10",
+                        "source": {
+                            "name": "ORGANIC SOY BEANS",
+                            "FDC ID": "2025440",
+                            "UPC": "074873163285",
+                            "DSLD ID": ""
+                        },
+                        "ingredient": {
+                            "name": "Fatty acids, total trans"
+                        },
+                        "measures": {
+                            "mass + mass equivalents": {
+                                "per package": {
+                                    "listed": [
+                                        "0.000",
+                                        "g"
+                                    ],
+                                    "grams": {
+                                        "scinote string": "0.0000e+0",
+                                        "decimal string": "0.000",
+                                        "fraction string": "0"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "unites": []
+            }
+        ]
+    }
+}

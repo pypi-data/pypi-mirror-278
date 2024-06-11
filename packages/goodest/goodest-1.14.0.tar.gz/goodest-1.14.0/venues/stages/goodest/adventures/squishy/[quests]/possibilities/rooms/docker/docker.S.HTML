@@ -1,0 +1,41 @@
+
+
+<pre>
+
+	<h1>Docker</h1>
+
+		systemctl restart docker
+
+	<h2>docker start</h2>
+		sudo su
+		
+		<h3>from image</h3>
+			docker image list
+			docker run -it --name ubuntu-network-1 ubuntu-network
+		
+			<header>with a mount</header>
+				docker run -v .:/rollercoaster -it --name ubuntu-rollercoaster ubuntu-network:v1
+			
+		
+		<h3>from container</h3>
+			docker container ls --all
+			f"docker restart { container_id }"
+			f"docker exec -it { container_id } /bin/bash"
+			
+				#
+				#	docker restart cd55e3c71e0b; docker exec -it cd55e3c71e0b /bin/bash
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>

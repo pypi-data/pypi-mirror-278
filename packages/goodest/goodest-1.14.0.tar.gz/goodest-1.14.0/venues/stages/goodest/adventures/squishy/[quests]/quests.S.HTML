@@ -1,0 +1,80 @@
+
+
+
+
+
+<pre>
+
+	<h1>quests</h1>
+	
+	<h2>ranked</h2>
+			
+		[ ] allow only 1 user to access network
+		
+		[ ] allow only 1 process to access network
+		
+		[ ] allow only ports 80, 443, and 53
+	
+		[ ] only allow access to 1 domain
+			[ ] only allow access to 1 IP address
+		
+		
+	<h2>possibilities</h2>
+
+		[ ]	process control
+			[ ] docker
+		
+			https://unix.stackexchange.com/questions/68956/block-network-access-of-a-process
+		
+		
+			[ ] choose which processes can use network linux
+				ufw default deny outgoing
+				ufw default deny incoming
+				
+				ufw allow out from any app "python3"
+				
+				sudo ufw allow out from any to any app "process_name"
+				sudo ufw allow out from any to any app "executable_path"
+			
+	
+			[ ] access process group of a process
+					f"pgrep -g { process_id }"
+					
+					
+			[ ] Network namespaces
+		
+	
+			[ ] opensnitch
+				https://github.com/evilsocket/opensnitch/releases
+
+				
+			[ ] douane (forgotten..)
+				https://gitlab.com/douaneapp/douane-installer
+
+					
+		[ ]	penetration test this with docker containers
+				# kali linux
+				
+			
+		[ ] port control
+			[ ] 
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>

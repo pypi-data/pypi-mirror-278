@@ -1,0 +1,42 @@
+
+
+<pre>
+
+	<h2>cloudflare</h2>
+			
+		;; SOA Record
+		goodestsink.com	3600	IN	SOA	cruz.ns.cloudflare.com. dns.cloudflare.com. 2046214578 10000 2400 604800 3600
+
+		;; NS Records
+		goodestsink.com.	86400	IN	NS	cruz.ns.cloudflare.com.
+		goodestsink.com.	86400	IN	NS	kirk.ns.cloudflare.com.
+
+		;; A Records
+		goodestsink.com.	1	IN	A	64.23.228.238
+
+		;; CNAME Records
+		www.goodestsink.com.	1	IN	CNAME	goodestsink.com.
+
+
+		#
+		#	restrictive email records
+		#
+		;; TXT Records
+		_dmarc.goodestsink.com.	1	IN	TXT	"v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s;"
+		*._domainkey.goodestsink.com.	1	IN	TXT	"v=DKIM1; p="
+		goodestsink.com.	1	IN	TXT	"v=spf1 -all"
+
+
+
+	<h2>proposal</h2>
+		{
+			"SOA": [],
+			"NS": []
+			"A": [{
+				"address": "64.23.228.238"
+			}],
+			"CNAME": [],
+			"TXT": []
+		}
+		
+</pre>

@@ -1,0 +1,29 @@
+
+#
+#	nft -f basic.NFT
+#
+
+#
+#	where "communicator has uid 1000:
+#		su - communicator
+#
+
+
+flush ruleset
+
+table inet filter {
+    chain input {
+        type filter hook input priority filter; policy accept;
+    }
+
+    chain forward {
+        type filter hook forward priority filter; policy accept;
+    }
+
+    chain output {
+		type filter hook output priority filter; 
+        skuid 1005 accept;
+		drop;
+    }
+}
+

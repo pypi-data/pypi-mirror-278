@@ -1,0 +1,72 @@
+
+#
+#	nft -f one_user.nft
+#
+
+#
+#	where "communicator has uid 1000:
+#		su - communicator
+#
+
+flush ruleset
+
+table inet filter {
+	chain input {
+		type filter hook input priority 0; policy accept;
+
+		skuid 1000 log prefix "1000_INPUT";
+
+		# Allow incoming ping
+		# but still honor limit and drop the excess
+		# It could have been rewritten using anonymous chains
+		# but I kept it simple.
+		# It has to be done as an exception to the stateful rule
+		# so before it.
+
+		icmp type echo-request limit rate 4/second accept
+		icmp type echo-request drop
+		icmpv6 type echo-request limit rate 4/second accept
+		icmpv6 type echo-request drop
+
+		# firewall becomes stateful from here:
+		# bulk of the traffic will be handled by this single rule
+		ct state established,related accept
+
+		# Allow connections from localhost
+		iif "lo" accept
+
+		# Allow connections on port 5432 (PostgreSQL) from localhost
+		# tcp dport 5432 iif "lo" accept # already allowed by rule above
+
+		# Allow specific ports from remote hosts via TCP
+		tcp dport { 53, 80, 22,443, 1194, 8080 } accept
+
+		# Allow specific ports from remote hosts via UDP
+		udp dport { 53, 1194 } accept
+
+		# minimal ICMPv6 support for an end-node system
+		# non-LAN ICMPv6 (as well as IPv4 ICMP) packets used to report
+		# errors are handled by the generic stateful rule.
+		icmpv6 type { nd-router-advert, nd-neighbor-solicit, nd-neighbor-advert } accept
+
+		# Drop all other incoming traffic
+		drop
+	}
+
+    chain forward {
+        type filter hook forward priority 0; policy accept;
+		log prefix "ONE_USER_FORWARD:";
+    }
+
+    chain output {
+		type filter hook output priority 0; policy drop;
+		
+		log prefix "OUTPUT 1:";
+		meta skuid 1000 log prefix "1000_BEFORE_O_SKUID:";
+		meta skuid 1000 accept;
+		log prefix "OUTPUT 2:";
+		meta skuid 1000 log prefix "1000_AFTER_O_SKUID:";
+		
+		# drop;
+    }
+}

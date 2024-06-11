@@ -1,0 +1,36 @@
+
+
+
+#!/usr/sbin/nft -f
+
+#
+#	nft -f port_20001.NFT
+#
+
+flush ruleset
+table inet filter {
+	chain output {
+        type filter hook output priority 0;
+        ct state established,related accept
+        
+		# udp dport 20001 accept
+        tcp dport 20001 accept
+		
+		drop
+    }
+	
+	chain forward {
+        type filter hook forward priority 0;
+        drop
+    }
+	
+    chain input {
+        type filter hook input priority 0;
+        ct state established,related accept
+		
+        # udp dport 20001 accept
+		tcp dport 20001 accept
+		
+        drop
+    }     
+}

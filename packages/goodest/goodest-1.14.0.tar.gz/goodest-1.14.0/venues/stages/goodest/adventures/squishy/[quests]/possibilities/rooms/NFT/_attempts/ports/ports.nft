@@ -1,0 +1,57 @@
+#!/usr/sbin/nft -f
+
+#
+#	nft -f NFTables/_attempts/ports/ports.nft
+#
+
+flush ruleset
+table inet filter {
+    set allowed_ports {
+        type inet_service;
+        elements = { 80, 443, 53 }
+    }
+
+    chain input {
+        type filter hook input priority 0;
+
+        # Accept established and related connections
+        ct state established,related accept
+
+        # Accept loopback traffic
+        iif lo accept
+
+        #
+		#
+		#
+        drop
+    }
+
+    chain output {
+        type filter hook output priority 0;
+
+        # Accept established and related connections
+        ct state established,related accept
+
+        # Accept loopback traffic
+        oif lo accept
+
+        # Allow outgoing traffic on allowed ports
+        tcp dport @allowed_ports accept
+        udp dport @allowed_ports accept
+
+        
+		#
+		#
+		#
+        drop
+    }
+
+    chain forward {
+        type filter hook forward priority 0;
+
+        #
+		#
+		#
+        drop
+    }
+}

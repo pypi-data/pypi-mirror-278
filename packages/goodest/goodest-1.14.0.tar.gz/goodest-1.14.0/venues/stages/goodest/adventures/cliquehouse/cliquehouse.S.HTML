@@ -1,0 +1,51 @@
+
+
+
+<pre>
+
+	<h1></h1>
+	
+		https://clickhouse.com/
+
+
+
+	from clickhouse_driver import Client
+
+	# Connect to ClickHouse server
+	client = Client(
+		host='your_clickhouse_host', 
+		port=9000, 
+		user='your_username', 
+		password='your_password', 
+		database='your_database'
+	)
+
+	# Example query
+	query = 'SELECT * FROM your_table LIMIT 10'
+
+	# Execute query
+	result = client.execute(query)
+
+	# Print results
+	for row in result:
+		print(row)
+
+	# Close connection
+	client.disconnect()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>

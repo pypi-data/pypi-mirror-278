@@ -1,0 +1,60 @@
+
+
+
+<pre>
+
+	<h1>protocols</h1>
+	
+	
+	<h2>objectives</h2>
+	
+		[ ] prevent all outbound traffic
+				
+				table inet filter {
+					chain output {
+						type filter hook output priority 0;
+						policy drop;
+					}
+				}
+					
+	
+	<h2>kinds</h2>
+		<h2>HTTP</h2>
+			#
+			#	permit:
+			#		TCP (thusly HTTP) on 80
+			#
+			tcp dport 80 accept
+		
+		
+		<h2>HTTPS</h2>
+			#
+			#	permit:
+			#		TCP (thusly HTTPs) on 443
+			#
+			tcp dport 443 accept
+		
+		
+		<h2>SSH</h2>
+		
+		
+		<h2>TCP</h2>
+
+
+		<h2>UDP</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>

@@ -1,0 +1,22 @@
+
+
+<pre>
+
+
+
+
+table inet filter {
+	chain input {
+		#
+		#	allow input pings
+		#
+		ip protocol icmp limit rate 1/second accept
+	}
+}
+
+
+
+
+
+
+</pre>

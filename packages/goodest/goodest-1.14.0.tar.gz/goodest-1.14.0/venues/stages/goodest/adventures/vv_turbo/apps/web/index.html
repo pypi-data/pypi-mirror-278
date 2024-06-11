@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" href="/bits/1/favicons/favicon-1.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="vegan, goods, food, supplements, grocery, groceries, agriculture">
+
+	<title>herbs</title>
+	
+	<script>
+		var background = localStorage.getItem ('background')
+		if (typeof background === "string") {
+			var styleSheet = document.createElement("style")
+			styleSheet.innerText = `body { background: ${ background } }`
+			document.head.appendChild (styleSheet)
+		}
+		// const us = String.fromCodePoint ('0x1F1FA', '0x1F1F8');
+		//const us = String.fromCodePoint ('0xFFA4BF');
+
+		// const snorkle = String.fromCodePoint("0x1F93F");
+		// const soy = String.fromCodePoint("0x1f30c");
+		// const four_leaf = String.fromCodePoint("0x1f340");
+		
+		
+		// document.title = four_leaf;
+	</script>
+
+</head>
+<body>  
+    <div id="app" style="transition: transform .2s"></div>
+	<div 
+		id="fields" 
+		style="
+			position: absolute;
+			top: 0;
+			left: 0;
+			
+		"
+	></div>
+	
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>

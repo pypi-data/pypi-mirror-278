@@ -1,0 +1,21 @@
+
+
+
+function title_billboard () {
+	// í¬©í±Š	
+	// let show = [ "í«°í½¢, "í«°í¾¢, "í«°í¿¢ ]
+	// let show = [ "í«±í²¢, "í«±í³¢, "í«±í´¢, "í«±íµ¢, "í«±í¶¢, "í«±í·¢, "í«±í¸¢, "í«±í±¢ ]
+	let show = [ "í«´í¸¢ ]
+	
+	let counter = 0
+	setInterval (function () {
+		document.title = show [ counter ]
+
+		counter += 1
+		if (counter == show.length) {
+			counter = 0
+		}		
+	}, 10000); 
+}
+
+

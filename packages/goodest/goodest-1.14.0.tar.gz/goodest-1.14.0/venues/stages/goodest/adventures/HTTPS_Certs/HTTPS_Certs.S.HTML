@@ -1,0 +1,53 @@
+
+
+
+<pre>
+
+	<h1>HTTPS certificates</h1>
+	
+	<h2>summary</h2>
+	
+		This might make sense with CloudFlare.
+		
+	<h2>possibilities</h2>
+	
+		[ ] ZeroSSL SSL Certificates:
+			https://github.com/zerossl/zerossl-bot
+	
+	<h2>objectives</h2>
+	
+	
+	
+	<h2>certbot</h2>
+
+		https://certbot.eff.org/instructions?ws=haproxy&os=fedora
+		
+		install:
+			sudo snap install --classic certbot
+		
+		not running:
+			sudo certbot certonly --webroot
+			
+		running:
+			sudo certbot certonly --standalone
+			certbot certonly --standalone --preferred-challenges http -m address@goodestsink.com -d goodestsink.com	
+			
+		ensure repeated updates:
+			sudo certbot renew --dry-run
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>

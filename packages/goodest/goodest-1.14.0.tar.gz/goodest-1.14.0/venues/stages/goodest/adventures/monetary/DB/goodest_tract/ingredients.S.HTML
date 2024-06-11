@@ -1,0 +1,102 @@
+
+
+
+
+
+
+<pre>
+
+	<h1>ingredients</h1>
+	
+		Don't upload the mongo_data,
+		dump the mongo data to a JSON archive
+		before uploading.
+
+
+	<h2>structure</h2>
+	
+	
+		DB: "ingredients"
+		
+			collection: "essential_nutrients" [{
+				
+				
+			}]
+			
+			
+			collection: "cautionary_ingredients" [{
+				
+				
+			}]
+			
+			#
+			#	any ingredients
+			#	thorough
+			#
+			#
+			collection: "glossary" [{
+				
+				
+			}]
+			
+
+	<h2>itinerary</h2>
+	
+		#
+		#	the essence
+		#
+		from goodest._essence import prepare_essence
+		goodest_essence = prepare_essence ()
+	
+		#
+		#	open the database
+		#
+		from goodest.monetary.ingredients.DB.open import open_DB
+		open_DB (
+			goodest_essence = goodest_essence
+		)
+		
+		#
+		#	connect to the database
+		#
+		import goodest.monetary.DB.open as ingredient_DB
+		essential_nutrients_collection = ingredient_DB.connect (collection = "essential_nutrients")
+		cautionary_ingredients_collection = ingredient_DB.connect (collection = "cautionary_ingredients")
+		
+		#
+		#	add an ingredient
+		#
+		essential_nutrients_collection.insert_one ({
+			"names": [
+				"protein"
+			],
+			"accepts names": [],
+			"includes": []	
+		})
+		
+		essential_nutrients_collection.insert_one ({
+			"names": [
+				"carbohydrates"
+			],
+			"accepts names": [],
+			"includes": []	
+		})
+		
+		#
+		#	create an index of ingredient names
+		#
+		
+		
+		#
+		#	find an ingredient
+		#	
+		essential_nutrients_collection.find_one ({
+			"names": [
+				"protein"
+			],
+			"accepts names": [],
+			"includes": []	
+		})
+</pre>
+
+

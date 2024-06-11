@@ -1,0 +1,39 @@
+
+
+table inet filter {
+    chain input {
+        type filter hook input priority 0; policy drop;
+        ct state established,related accept
+        tcp dport 22 accept
+        # Add more rules as needed
+    }
+
+    chain forward {
+        type filter hook forward priority 0; policy drop;
+        # Add forward rules if needed
+    }
+
+    chain output {
+		#
+		#	drop or accept connections
+		#
+        # type filter hook output priority 0; policy accept;
+		type filter hook output priority 0; policy drop;
+		
+		#
+		#	allow 1 user?
+		#
+		#		ip protocol tcp - tcp sends
+		#
+		#		sport - source port
+		#		dport - destination port
+		#
+		# uid <user_uid> ip dport <allowed_ports> accept
+		#uid 1000 tcp dport { 80, 443 } accept
+		# ip protocol tcp uid 1000 tcp dport { 80, 443 } accept
+		# ip protocol tcp uid 1000 tcp sport { 80, 443 } accept
+		
+		
+		meta skuid 1000 accept;
+    }
+}

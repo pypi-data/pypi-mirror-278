@@ -1,0 +1,54 @@
+
+
+<pre>
+
+	<h1>adventures</h1>
+
+	<h2>summary</h2>
+		# description
+		
+		This is nodes that can be turned on and off.
+		
+	<h2>objectives</h2>
+
+		adventures.map.py {
+			"adventures": [{
+				"name": "monetary",
+				
+				"on": "mongod --dbpath ./../_mongo_data --port 39000",
+				"off": "mongod --shutdown --pidfilepath /var/run/mongodb/mongod.pid",
+				
+				#
+				#	"on" or "off"
+				#
+				#
+				"status": "python3 monetary/_ops/status.py"
+			}]			
+		}
+		
+		adventures status
+			
+			monetary: on
+			sanique: on
+			vv_turbo: on
+			
+		
+	<h2>vocab</h2>
+	
+		
+		node:
+			app:
+				
+	
+		on:
+		
+		
+		
+		
+		off:
+		
+		
+
+
+
+</pre>

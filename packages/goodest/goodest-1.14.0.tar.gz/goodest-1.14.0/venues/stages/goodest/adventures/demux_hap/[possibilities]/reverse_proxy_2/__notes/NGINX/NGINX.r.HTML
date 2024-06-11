@@ -1,0 +1,19 @@
+
+
+
+NGINX:
+
+	installation:
+		sudo dnf install nginx
+	
+	
+	start:
+	
+	
+	{ debug, scan, diagnostics }
+		systemctl status nginx.service
+		journalctl -xeu nginx.service
+	
+	
+	examples:
+		https://www.nginx.com/resources/wiki/start/topics/examples/full/

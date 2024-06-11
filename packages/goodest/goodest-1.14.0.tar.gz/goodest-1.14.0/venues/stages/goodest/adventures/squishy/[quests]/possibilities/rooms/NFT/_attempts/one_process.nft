@@ -1,0 +1,42 @@
+
+
+table inet filter {
+    chain input {
+        type filter hook input priority 0; policy drop;
+		
+		#
+		#	"ct state":
+		#		connection tracking state module
+		#
+		#		used to track the state of network connections
+		#
+		#			established - part of established connection
+		#
+		#			related - related to an established connection
+		#
+        ct state established,related accept
+        # Add more input rules as needed
+    }
+
+    chain forward {
+        type filter hook forward priority 0; policy drop;
+        # Add forward rules if needed
+    }
+
+    chain output {
+        type filter hook output priority 0; policy drop;
+        
+		# meta nfproto ipv4 ip daddr <allowed_destination_ip> accept
+        # meta nfproto ipv6 ip daddr <allowed_destination_ip> accept
+		
+        # Allow traffic from specific process
+        nfproto ipv4 ip saddr 127.0.0.1 tcp sport 12345 accept
+		
+		#
+		#	"tcp sport 12345" -- allow port 12345
+		#
+        nfproto ipv6 ip saddr ::1 tcp sport 12345 accept
+        
+		# Add more specific rules as needed
+    }
+}

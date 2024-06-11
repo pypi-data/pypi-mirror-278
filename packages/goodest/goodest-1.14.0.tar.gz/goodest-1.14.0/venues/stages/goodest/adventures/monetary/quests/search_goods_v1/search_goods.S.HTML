@@ -1,0 +1,86 @@
+
+<pre>
+
+	<h1>search</h1>
+
+	<h2>summary</h2>
+	
+		status checks for this are centralized in
+		the _status/monetary directory.
+
+	<h2>proposals</h2>
+		agenda:
+			[ ] combine (join) proceeds with mongo ask
+			
+				[ ] splice together documents after or before given filters,
+					based on their names, then return the limit number of documents.
+
+			[ ] the sequences of documents
+			
+			[ ] the number of documents after
+			[ ] the number of documents before
+
+
+
+		sorted by name:
+
+			foods:	[ ][ ][573, "avocado"][ ][149, "squash"][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+			supps:	[ ][5, "squash"][ ][ ][ ][ ][ ][ ][ ][ ]
+
+				after food [ 149, "squash" ]
+					returns food nodes after [ 149, "squash" ]
+					returns supp with name >= "squash"
+					
+					foods:	[ ][ ][ ][ ][149, "squash"][$][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+					supps:	[ ][5, "squash"][$][ ][ ][ ][ ][ ][ ][ ]
+					
+				after supp [ 5, "squash" ]
+					returns food nodes with name >= "squash"
+					returns supp with name >= "squash"
+					
+					foods:	[ ][ ][ ][ ][149, "squash"][$][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+					supps:	[ ]["squash"][$][ ][ ][ ][ ][ ][ ][ ]
+					
+
+
+
+	'''
+	after food 33 :
+	{
+		"filters": {
+			"after": {
+				"emblem": 33,
+				"kind": "food",
+				"name": "ORGANIC FIRM TOFU VEGAN"
+			},
+			"include": {
+				"food": true,
+				"supp": true
+			},
+			"limit": 10,
+			"string": ""
+		}
+	}
+	'''
+
+	'''
+	before food 32:
+	{
+		"filters": {
+			"before": {
+				"emblem": 32,
+				"kind": "food",
+				"name": "POMEGRANATE JUICE, POMEGRANATE"
+			},
+			"include": {
+				"food": true,
+				"supp": true
+			},
+			"limit": 10,
+			"string": ""
+		}
+	}
+	'''
+
+
+</pre>

@@ -1,0 +1,30 @@
+#!/usr/sbin/nft -f
+
+#
+#	cd /habitat/venues/stages/goodest/adventures/squishy/configs
+#	nft -f open.NFT; nft list ruleset
+#
+
+flush ruleset
+
+table ip nat {
+	chain DOCKER_OUTPUT {
+		meta l4proto tcp ip daddr 127.0.0.11 counter packets 0 bytes 0
+		meta l4proto udp ip daddr 127.0.0.11 counter packets 108 bytes 7965
+	}
+
+	chain OUTPUT {
+		type nat hook output priority -100; policy accept;
+		ip daddr 127.0.0.11 counter packets 108 bytes 7965 jump DOCKER_OUTPUT
+	}
+
+	chain DOCKER_POSTROUTING {
+		meta l4proto tcp ip saddr 127.0.0.11 counter packets 0 bytes 0
+		meta l4proto udp ip saddr 127.0.0.11 counter packets 0 bytes 0
+	}
+
+	chain POSTROUTING {
+		type nat hook postrouting priority srcnat; policy accept;
+		ip daddr 127.0.0.11 counter packets 108 bytes 7965 jump DOCKER_POSTROUTING
+	}
+}

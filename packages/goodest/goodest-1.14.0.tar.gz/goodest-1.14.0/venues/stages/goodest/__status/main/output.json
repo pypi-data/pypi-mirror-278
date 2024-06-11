@@ -1,0 +1,1229 @@
+{
+    "natures": [
+        {
+            "amount": "1",
+            "identity": {
+                "name": "WALNUTS HALVES & PIECES, WALNUTS",
+                "FDC ID": "1882785",
+                "UPC": "099482434618",
+                "DSLD ID": ""
+            }
+        }
+    ],
+    "measures": {
+        "mass + mass equivalents": {
+            "per recipe": {
+                "grams": {
+                    "fraction string": "0"
+                }
+            }
+        },
+        "energy": {
+            "per recipe": {
+                "food calories": {
+                    "fraction string": "0"
+                }
+            }
+        }
+    },
+    "grove": [
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "protein"
+                ],
+                "region": 1
+            },
+            "measures": {
+                "mass + mass equivalents": {
+                    "per recipe": {
+                        "grams": {
+                            "fraction string": "456528486851663599/7036874417766400",
+                            "scinote string": "6.4877e+1"
+                        }
+                    }
+                }
+            },
+            "natures": [
+                {
+                    "amount": "1",
+                    "source": {
+                        "name": "WALNUTS HALVES & PIECES, WALNUTS",
+                        "FDC ID": "1882785",
+                        "UPC": "099482434618",
+                        "DSLD ID": ""
+                    },
+                    "ingredient": {
+                        "name": "Protein"
+                    },
+                    "measures": {
+                        "mass + mass equivalents": {
+                            "per package": {
+                                "listed": [
+                                    "64.877",
+                                    "g"
+                                ],
+                                "grams": {
+                                    "scinote string": "6.4877e+1",
+                                    "decimal string": "64.877",
+                                    "fraction string": "456528486851663599/7036874417766400"
+                                }
+                            }
+                        }
+                    }
+                }
+            ],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [
+                    6,
+                    7
+                ],
+                "names": [
+                    "carbohydrates",
+                    "total carbohydrates",
+                    "carbohydrate, by difference"
+                ],
+                "region": 2
+            },
+            "measures": {
+                "mass + mass equivalents": {
+                    "per recipe": {
+                        "grams": {
+                            "fraction string": "456528486851663599/7036874417766400",
+                            "scinote string": "6.4877e+1"
+                        }
+                    }
+                }
+            },
+            "natures": [
+                {
+                    "amount": "1",
+                    "source": {
+                        "name": "WALNUTS HALVES & PIECES, WALNUTS",
+                        "FDC ID": "1882785",
+                        "UPC": "099482434618",
+                        "DSLD ID": ""
+                    },
+                    "ingredient": {
+                        "name": "Carbohydrate, by difference"
+                    },
+                    "measures": {
+                        "mass + mass equivalents": {
+                            "per package": {
+                                "listed": [
+                                    "64.877",
+                                    "g"
+                                ],
+                                "grams": {
+                                    "scinote string": "6.4877e+1",
+                                    "decimal string": "64.877",
+                                    "fraction string": "456528486851663599/7036874417766400"
+                                }
+                            }
+                        }
+                    }
+                }
+            ],
+            "unites": [
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "dietary fiber",
+                            "fiber, total dietary"
+                        ],
+                        "region": 6
+                    },
+                    "measures": {
+                        "mass + mass equivalents": {
+                            "per recipe": {
+                                "grams": {
+                                    "fraction string": "181461287985825701/5629499534213120",
+                                    "scinote string": "3.2234e+1"
+                                }
+                            }
+                        }
+                    },
+                    "natures": [
+                        {
+                            "amount": "1",
+                            "source": {
+                                "name": "WALNUTS HALVES & PIECES, WALNUTS",
+                                "FDC ID": "1882785",
+                                "UPC": "099482434618",
+                                "DSLD ID": ""
+                            },
+                            "ingredient": {
+                                "name": "Fiber, total dietary"
+                            },
+                            "measures": {
+                                "mass + mass equivalents": {
+                                    "per package": {
+                                        "listed": [
+                                            "32.234",
+                                            "g"
+                                        ],
+                                        "grams": {
+                                            "scinote string": "3.2234e+1",
+                                            "decimal string": "32.234",
+                                            "fraction string": "181461287985825701/5629499534213120"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "unites": []
+                },
+                {
+                    "info": {
+                        "includes": [
+                            8
+                        ],
+                        "names": [
+                            "sugars, total",
+                            "total sugar",
+                            "sugar",
+                            "total sugars"
+                        ],
+                        "region": 7,
+                        "accepts": [
+                            "Sugars, total including NLEA"
+                        ]
+                    },
+                    "measures": {
+                        "mass + mass equivalents": {
+                            "per recipe": {
+                                "grams": {
+                                    "fraction string": "364967210202477609/22517998136852480",
+                                    "scinote string": "1.6208e+1"
+                                }
+                            }
+                        }
+                    },
+                    "natures": [
+                        {
+                            "amount": "1",
+                            "source": {
+                                "name": "WALNUTS HALVES & PIECES, WALNUTS",
+                                "FDC ID": "1882785",
+                                "UPC": "099482434618",
+                                "DSLD ID": ""
+                            },
+                            "ingredient": {
+                                "name": "Sugars, total including NLEA"
+                            },
+                            "measures": {
+                                "mass + mass equivalents": {
+                                    "per package": {
+                                        "listed": [
+                                            "16.208",
+                                            "g"
+                                        ],
+                                        "grams": {
+                                            "scinote string": "1.6208e+1",
+                                            "decimal string": "16.208",
+                                            "fraction string": "364967210202477609/22517998136852480"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "unites": [
+                        {
+                            "info": {
+                                "includes": [],
+                                "names": [
+                                    "added sugars",
+                                    "sugars, added"
+                                ],
+                                "region": 8
+                            },
+                            "measures": {
+                                "mass + mass equivalents": {
+                                    "per recipe": {
+                                        "grams": {
+                                            "fraction string": "0",
+                                            "scinote string": "0.0000e+0"
+                                        }
+                                    }
+                                }
+                            },
+                            "natures": [
+                                {
+                                    "amount": "1",
+                                    "source": {
+                                        "name": "WALNUTS HALVES & PIECES, WALNUTS",
+                                        "FDC ID": "1882785",
+                                        "UPC": "099482434618",
+                                        "DSLD ID": ""
+                                    },
+                                    "ingredient": {
+                                        "name": "Sugars, added"
+                                    },
+                                    "measures": {
+                                        "mass + mass equivalents": {
+                                            "per package": {
+                                                "listed": [
+                                                    "0.000",
+                                                    "g"
+                                                ],
+                                                "grams": {
+                                                    "scinote string": "0.0000e+0",
+                                                    "decimal string": "0.000",
+                                                    "fraction string": "0"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "unites": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "info": {
+                "includes": [
+                    4,
+                    15,
+                    51
+                ],
+                "names": [
+                    "fats",
+                    "total fat",
+                    "lipids",
+                    "total lipid (fat)"
+                ],
+                "region": 3
+            },
+            "measures": {
+                "mass + mass equivalents": {
+                    "per recipe": {
+                        "grams": {
+                            "fraction string": "1026949489842318313/3518437208883200",
+                            "scinote string": "2.9188e+2"
+                        }
+                    }
+                }
+            },
+            "natures": [
+                {
+                    "amount": "1",
+                    "source": {
+                        "name": "WALNUTS HALVES & PIECES, WALNUTS",
+                        "FDC ID": "1882785",
+                        "UPC": "099482434618",
+                        "DSLD ID": ""
+                    },
+                    "ingredient": {
+                        "name": "Total lipid (fat)"
+                    },
+                    "measures": {
+                        "mass + mass equivalents": {
+                            "per package": {
+                                "listed": [
+                                    "291.877",
+                                    "g"
+                                ],
+                                "grams": {
+                                    "scinote string": "2.9188e+2",
+                                    "decimal string": "291.877",
+                                    "fraction string": "1026949489842318313/3518437208883200"
+                                }
+                            }
+                        }
+                    }
+                }
+            ],
+            "unites": [
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "saturated fat",
+                            "fatty acids, total saturated"
+                        ],
+                        "region": 4
+                    },
+                    "measures": {
+                        "mass + mass equivalents": {
+                            "per recipe": {
+                                "grams": {
+                                    "fraction string": "273980986930711511/11258999068426240",
+                                    "scinote string": "2.4334e+1"
+                                }
+                            }
+                        }
+                    },
+                    "natures": [
+                        {
+                            "amount": "1",
+                            "source": {
+                                "name": "WALNUTS HALVES & PIECES, WALNUTS",
+                                "FDC ID": "1882785",
+                                "UPC": "099482434618",
+                                "DSLD ID": ""
+                            },
+                            "ingredient": {
+                                "name": "Fatty acids, total saturated"
+                            },
+                            "measures": {
+                                "mass + mass equivalents": {
+                                    "per package": {
+                                        "listed": [
+                                            "24.334",
+                                            "g"
+                                        ],
+                                        "grams": {
+                                            "scinote string": "2.4334e+1",
+                                            "decimal string": "24.334",
+                                            "fraction string": "273980986930711511/11258999068426240"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "unites": []
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "polyunsaturated fat",
+                            "fatty acids, total polyunsaturated"
+                        ],
+                        "region": 15
+                    },
+                    "measures": {
+                        "mass + mass equivalents": {
+                            "per recipe": {
+                                "grams": {
+                                    "fraction string": "1483318239644698533/7036874417766400",
+                                    "scinote string": "2.1079e+2"
+                                }
+                            }
+                        }
+                    },
+                    "natures": [
+                        {
+                            "amount": "1",
+                            "source": {
+                                "name": "WALNUTS HALVES & PIECES, WALNUTS",
+                                "FDC ID": "1882785",
+                                "UPC": "099482434618",
+                                "DSLD ID": ""
+                            },
+                            "ingredient": {
+                                "name": "Fatty acids, total polyunsaturated"
+                            },
+                            "measures": {
+                                "mass + mass equivalents": {
+                                    "per package": {
+                                        "listed": [
+                                            "210.792",
+                                            "g"
+                                        ],
+                                        "grams": {
+                                            "scinote string": "2.1079e+2",
+                                            "decimal string": "210.792",
+                                            "fraction string": "1483318239644698533/7036874417766400"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "unites": []
+                },
+                {
+                    "info": {
+                        "includes": [],
+                        "names": [
+                            "monounsaturated fat",
+                            "fatty acids, total monounsaturated"
+                        ],
+                        "region": 51
+                    },
+                    "measures": {
+                        "mass + mass equivalents": {
+                            "per recipe": {
+                                "grams": {
+                                    "fraction string": "285290370019968933/7036874417766400",
+                                    "scinote string": "4.0542e+1"
+                                }
+                            }
+                        }
+                    },
+                    "natures": [
+                        {
+                            "amount": "1",
+                            "source": {
+                                "name": "WALNUTS HALVES & PIECES, WALNUTS",
+                                "FDC ID": "1882785",
+                                "UPC": "099482434618",
+                                "DSLD ID": ""
+                            },
+                            "ingredient": {
+                                "name": "Fatty acids, total monounsaturated"
+                            },
+                            "measures": {
+                                "mass + mass equivalents": {
+                                    "per package": {
+                                        "listed": [
+                                            "40.542",
+                                            "g"
+                                        ],
+                                        "grams": {
+                                            "scinote string": "4.0542e+1",
+                                            "decimal string": "40.542",
+                                            "fraction string": "285290370019968933/7036874417766400"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "unites": []
+                }
+            ]
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "calcium",
+                    "calcium, ca"
+                ],
+                "region": 9
+            },
+            "measures": {
+                "mass + mass equivalents": {
+                    "per recipe": {
+                        "grams": {
+                            "fraction string": "24289/50000",
+                            "scinote string": "4.8578e-1"
+                        }
+                    }
+                }
+            },
+            "natures": [
+                {
+                    "amount": "1",
+                    "source": {
+                        "name": "WALNUTS HALVES & PIECES, WALNUTS",
+                        "FDC ID": "1882785",
+                        "UPC": "099482434618",
+                        "DSLD ID": ""
+                    },
+                    "ingredient": {
+                        "name": "Calcium, Ca"
+                    },
+                    "measures": {
+                        "mass + mass equivalents": {
+                            "per package": {
+                                "listed": [
+                                    "485.780",
+                                    "mg"
+                                ],
+                                "grams": {
+                                    "scinote string": "4.8578e-1",
+                                    "decimal string": "0.486",
+                                    "fraction string": "24289/50000"
+                                }
+                            }
+                        }
+                    }
+                }
+            ],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "cholesterol"
+                ],
+                "region": 12
+            },
+            "measures": {
+                "mass + mass equivalents": {
+                    "per recipe": {
+                        "grams": {
+                            "fraction string": "0",
+                            "scinote string": "0.0000e+0"
+                        }
+                    }
+                }
+            },
+            "natures": [
+                {
+                    "amount": "1",
+                    "source": {
+                        "name": "WALNUTS HALVES & PIECES, WALNUTS",
+                        "FDC ID": "1882785",
+                        "UPC": "099482434618",
+                        "DSLD ID": ""
+                    },
+                    "ingredient": {
+                        "name": "Cholesterol"
+                    },
+                    "measures": {
+                        "mass + mass equivalents": {
+                            "per package": {
+                                "listed": [
+                                    "0.000",
+                                    "mg"
+                                ],
+                                "grams": {
+                                    "scinote string": "0.0000e+0",
+                                    "decimal string": "0.000",
+                                    "fraction string": "0"
+                                }
+                            }
+                        }
+                    }
+                }
+            ],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "vitamin a",
+                    "vitamin a, iu"
+                ],
+                "region": 16
+            },
+            "measures": {},
+            "natures": [],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "vitamin e"
+                ],
+                "region": 19
+            },
+            "measures": {},
+            "natures": [],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "iodine"
+                ],
+                "region": 29
+            },
+            "measures": {},
+            "natures": [],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "magnesium"
+                ],
+                "region": 30
+            },
+            "measures": {},
+            "natures": [],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "Zinc, Zn",
+                    "Zinc"
+                ],
+                "region": 31
+            },
+            "measures": {},
+            "natures": [],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "selenium"
+                ],
+                "region": 32
+            },
+            "measures": {},
+            "natures": [],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "copper"
+                ],
+                "region": 33
+            },
+            "measures": {},
+            "natures": [],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "manganese"
+                ],
+                "region": 34
+            },
+            "measures": {},
+            "natures": [],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "chromium"
+                ],
+                "region": 35
+            },
+            "measures": {},
+            "natures": [],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "molybdenum"
+                ],
+                "region": 36
+            },
+            "measures": {},
+            "natures": [],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "choline"
+                ],
+                "region": 37
+            },
+            "measures": {},
+            "natures": [],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "lutein"
+                ],
+                "region": 40
+            },
+            "measures": {},
+            "natures": [],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "betaine hydrochloride"
+                ],
+                "region": 43
+            },
+            "measures": {},
+            "natures": [],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "rutin"
+                ],
+                "region": 44
+            },
+            "measures": {},
+            "natures": [],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "strontium"
+                ],
+                "region": 47
+            },
+            "measures": {},
+            "natures": [],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "vanadium"
+                ],
+                "region": 49
+            },
+            "measures": {},
+            "natures": [],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "Phosphorus, P",
+                    "Phosphorus"
+                ],
+                "region": 57
+            },
+            "measures": {},
+            "natures": [],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "potassium",
+                    "potassium K",
+                    "potassium, K",
+                    "K"
+                ],
+                "region": 58
+            },
+            "measures": {
+                "mass + mass equivalents": {
+                    "per recipe": {
+                        "grams": {
+                            "fraction string": "97383/50000",
+                            "scinote string": "1.9477e+0"
+                        }
+                    }
+                }
+            },
+            "natures": [
+                {
+                    "amount": "1",
+                    "source": {
+                        "name": "WALNUTS HALVES & PIECES, WALNUTS",
+                        "FDC ID": "1882785",
+                        "UPC": "099482434618",
+                        "DSLD ID": ""
+                    },
+                    "ingredient": {
+                        "name": "Potassium, K"
+                    },
+                    "measures": {
+                        "mass + mass equivalents": {
+                            "per package": {
+                                "listed": [
+                                    "1947.660",
+                                    "mg"
+                                ],
+                                "grams": {
+                                    "scinote string": "1.9477e+0",
+                                    "decimal string": "1.948",
+                                    "fraction string": "97383/50000"
+                                }
+                            }
+                        }
+                    }
+                }
+            ],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "sodium Na",
+                    "sodium, Na",
+                    "sodium",
+                    "Na"
+                ],
+                "region": 59
+            },
+            "measures": {
+                "mass + mass equivalents": {
+                    "per recipe": {
+                        "grams": {
+                            "fraction string": "0",
+                            "scinote string": "0.0000e+0"
+                        }
+                    }
+                }
+            },
+            "natures": [
+                {
+                    "amount": "1",
+                    "source": {
+                        "name": "WALNUTS HALVES & PIECES, WALNUTS",
+                        "FDC ID": "1882785",
+                        "UPC": "099482434618",
+                        "DSLD ID": ""
+                    },
+                    "ingredient": {
+                        "name": "Sodium, Na"
+                    },
+                    "measures": {
+                        "mass + mass equivalents": {
+                            "per package": {
+                                "listed": [
+                                    "0.000",
+                                    "mg"
+                                ],
+                                "grams": {
+                                    "scinote string": "0.0000e+0",
+                                    "decimal string": "0.000",
+                                    "fraction string": "0"
+                                }
+                            }
+                        }
+                    }
+                }
+            ],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "vitamin d",
+                    "vitamin d (d2 + d3)",
+                    "vitamin d2",
+                    "vitamin d3",
+                    "vitamin d (d2 + d3), international units"
+                ],
+                "region": 63
+            },
+            "measures": {
+                "biological activity": {
+                    "per recipe": {
+                        "IU": {
+                            "fraction string": "0",
+                            "scinote string": "0.0000e+0"
+                        }
+                    }
+                }
+            },
+            "natures": [
+                {
+                    "amount": "1",
+                    "source": {
+                        "name": "WALNUTS HALVES & PIECES, WALNUTS",
+                        "FDC ID": "1882785",
+                        "UPC": "099482434618",
+                        "DSLD ID": ""
+                    },
+                    "ingredient": {
+                        "name": "Vitamin D (D2 + D3), International Units"
+                    },
+                    "measures": {
+                        "biological activity": {
+                            "per package": {
+                                "listed": [
+                                    "0.000",
+                                    "IU"
+                                ],
+                                "IU": {
+                                    "decimal string": "0.000",
+                                    "fraction string": "0"
+                                }
+                            }
+                        }
+                    }
+                }
+            ],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "vitamin c",
+                    "vitamin c (form: as calcium ascorbate)",
+                    "vitamin c, total ascorbic acid"
+                ],
+                "region": 64
+            },
+            "measures": {},
+            "natures": [],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "vitamin k",
+                    "vitamin k1",
+                    "vitamin k2"
+                ],
+                "region": 65
+            },
+            "measures": {},
+            "natures": [],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "thiamin",
+                    "thiamine",
+                    "vitamin b1"
+                ],
+                "region": 66
+            },
+            "measures": {},
+            "natures": [],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "riboflavin",
+                    "vitamin b2"
+                ],
+                "region": 67
+            },
+            "measures": {},
+            "natures": [],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "vitamin b3",
+                    "niacin",
+                    "nicotinamide",
+                    "nicotinamide riboside"
+                ],
+                "region": 68
+            },
+            "measures": {},
+            "natures": [],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "vitamin b5",
+                    "pantothenic acid"
+                ],
+                "region": 69
+            },
+            "measures": {},
+            "natures": [],
+            "unites": []
+        },
+        {
+            "info": {
+                "accepts": [
+                    "pyridoxine",
+                    "pyridoxal",
+                    "pyridoxamine"
+                ],
+                "includes": [],
+                "names": [
+                    "Vitamin B6",
+                    "Vitamin B-6"
+                ],
+                "region": 70
+            },
+            "measures": {},
+            "natures": [],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "vitamin b7",
+                    "biotin",
+                    "vitamin h"
+                ],
+                "region": 71
+            },
+            "measures": {},
+            "natures": [],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "vitamin b9",
+                    "folate",
+                    "folacin"
+                ],
+                "region": 72
+            },
+            "measures": {},
+            "natures": [],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "Vitamin B12",
+                    "Vitamin B-12",
+                    "cobalamin"
+                ],
+                "region": 73
+            },
+            "measures": {},
+            "natures": [],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "calories",
+                    "energy"
+                ],
+                "region": 74
+            },
+            "measures": {
+                "energy": {
+                    "per recipe": {
+                        "food calories": {
+                            "fraction string": "154133/50",
+                            "scinote string": "3.0827e+3"
+                        }
+                    }
+                }
+            },
+            "natures": [
+                {
+                    "amount": "1",
+                    "source": {
+                        "name": "WALNUTS HALVES & PIECES, WALNUTS",
+                        "FDC ID": "1882785",
+                        "UPC": "099482434618",
+                        "DSLD ID": ""
+                    },
+                    "ingredient": {
+                        "name": "Energy"
+                    },
+                    "measures": {
+                        "energy": {
+                            "per package": {
+                                "listed": [
+                                    "3082.660",
+                                    "kcal"
+                                ],
+                                "food calories": {
+                                    "decimal string": "3082.660",
+                                    "fraction string": "154133/50"
+                                }
+                            }
+                        }
+                    }
+                }
+            ],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "iron",
+                    "iron, fe"
+                ],
+                "region": 75
+            },
+            "measures": {
+                "mass + mass equivalents": {
+                    "per recipe": {
+                        "grams": {
+                            "fraction string": "1461913475040736643/112589990684262400000",
+                            "scinote string": "1.2984e-2"
+                        }
+                    }
+                }
+            },
+            "natures": [
+                {
+                    "amount": "1",
+                    "source": {
+                        "name": "WALNUTS HALVES & PIECES, WALNUTS",
+                        "FDC ID": "1882785",
+                        "UPC": "099482434618",
+                        "DSLD ID": ""
+                    },
+                    "ingredient": {
+                        "name": "Iron, Fe"
+                    },
+                    "measures": {
+                        "mass + mass equivalents": {
+                            "per package": {
+                                "listed": [
+                                    "12.984",
+                                    "mg"
+                                ],
+                                "grams": {
+                                    "scinote string": "1.2984e-2",
+                                    "decimal string": "0.013",
+                                    "fraction string": "1461913475040736643/112589990684262400000"
+                                }
+                            }
+                        }
+                    }
+                }
+            ],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "Folate, DFE"
+                ],
+                "region": 76
+            },
+            "measures": {},
+            "natures": [],
+            "unites": []
+        },
+        {
+            "info": {
+                "includes": [],
+                "names": [
+                    "Folate",
+                    "Folate, Total"
+                ],
+                "region": 77
+            },
+            "measures": {},
+            "natures": [],
+            "unites": []
+        }
+    ]
+}
