@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "misny"
+version = "0.1.0"
+description = "A modern, advanced testing framework for probing and validating complex systems."
+authors = ["Cristian Camargo <ccf@cdone.com.br>"]
+readme = "README.md"
+homepage = "https://github.com/letalboy/misny"
+repository = "https://github.com/letalboy/misny"
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+toml = "^0.10.2"
+pandas = "^2.2.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+misny = "misny.core:main"
+
+[tool.poetry.urls]
+Documentation = "https://github.com/letalboy/misny#readme"
