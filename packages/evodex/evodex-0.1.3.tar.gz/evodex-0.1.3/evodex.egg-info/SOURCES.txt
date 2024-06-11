@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+evodex/__init__.py
+evodex/formula.py
+evodex/mapping.py
+evodex/operators.py
+evodex/splitting.py
+evodex.egg-info/PKG-INFO
+evodex.egg-info/SOURCES.txt
+evodex.egg-info/dependency_links.txt
+evodex.egg-info/requires.txt
+evodex.egg-info/top_level.txt
+evodex/data/evodex_atom_diffs.csv
+evodex/data/reactions.csv
