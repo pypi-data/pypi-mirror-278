@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: qtm-rt
+Version: 3.0.2
+Summary: QTM Python SDK
+Home-page: https://github.com/qualisys/qualisys_python_sdk
+Download-URL: https://github.com/qualisys/qualisys_python_sdk/tarball/3.0.2
+Author: Qualisys AB
+Author-email: support@qualisys.com
+License: MIT
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Utilities
+Requires-Python: >=3.5.3
+License-File: LICENSE
+
+For older versions, see "qtm" package.
