@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: reqs-diff
+Version: 0.1.0
+Summary: A tool to compare multiple requirements.txt files
+Home-page: https://github.com/bricefotzo/reqs-diff
+Author: Brice Fotzo
+Author-email: bricef.tech@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: tabulate
+Requires-Dist: termcolor
+
+# reqs-diff
+
+
+`reqs-diff` is a tool to compare multiple `requirements.txt` files and highlight the differences.
+
+## Installation
+
+```sh
+pip install reqs-diff
+```
+
+## Usage
+
+Compare requirements files:
+
+```sh
+reqs-diff path/to/requirements1.txt path/to/requirements2.txt
+```
+
+Only show packages with differing versions:
+
+```sh
+reqs-diff path/to/requirements1.txt path/to/requirements2.txt --only-diff
+```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
