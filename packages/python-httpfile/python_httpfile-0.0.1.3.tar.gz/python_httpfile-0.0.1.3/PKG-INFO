@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: python-httpfile
+Version: 0.0.1.3
+Summary: Python httpfile classes.
+Home-page: https://github.com/ChenyangGao/web-mount-packs/tree/main/python-module/python-httpfile
+License: MIT
+Keywords: http,file,wrapper
+Author: ChenyangGao
+Author-email: wosiwujm@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: http_response
+Requires-Dist: python-filewrap
+Requires-Dist: python-property
+Requires-Dist: python-urlopen
+Project-URL: Repository, https://github.com/ChenyangGao/web-mount-packs/tree/main/python-module/python-httpfile
+Description-Content-Type: text/markdown
+
+# Python httpfile classes.
+
+## Installation
+
+You can install from [pypi](https://pypi.org/project/python-httpfile/)
+
+```console
+pip install -U python-httpfile
+```
+
+## Usage
+
+```python
+import httpfile
+```
+
