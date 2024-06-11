@@ -1,0 +1,13 @@
+exifread>=3.0.0
+numpy>=1.26.4
+matplotlib>=3.3.3
+pandas>=2.2.2
+tablib[cli,html,ods,pandas,xls,xlsx]>=3
+pyqt5>=5.15
+pyreadr
+
+[dev]
+black
+ruff
+pytest
+pytest-cov
