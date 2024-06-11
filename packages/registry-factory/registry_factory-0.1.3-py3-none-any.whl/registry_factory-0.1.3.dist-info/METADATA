@@ -1,0 +1,405 @@
+Metadata-Version: 2.1
+Name: registry-factory
+Version: 0.1.3
+Summary: Registry pattern with factory for specifications to register generic modules.
+Home-page: https://github.com/aidd-msca/registry-factory
+License: MIT
+Keywords: registry,factory,codebase,module registry,accreditation system
+Author: Peter Hartog
+Author-email: peter.hartog@hotmail.nl
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: GPU :: NVIDIA CUDA :: 11.4
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Project-URL: Repository, https://github.com/aidd-msca/registry-factory
+Description-Content-Type: text/markdown
+
+# RegistryFactory
+
+[![PyPI version](https://badge.fury.io/py/registry-factory.svg)](https://badge.fury.io/py/registry-factory)
+[![PyPI](https://img.shields.io/github/license/aidd-msca/registry-factory)](LICENSE)
+![PyPI](https://img.shields.io/pypi/pyversions/registry-factory)
+[![GitHub Repo stars](https://img.shields.io/github/stars/aidd-msca/registry-factory)](https://github.com/aidd-msca/registry-factory/stargazers)
+
+An abstract implementation of the software design pattern called Registry proposed by Hartog and Svensson et. al. (2024),
+providing a factory for creating registries to organize categorically similar modules.
+
+**[Installation](#installation)**
+| **[Dependencies](#dependencies)**
+| **[Usage](#usage)**
+| **[Citation](#citation)**
+
+### Overview
+
+The registry design pattern provides a way to organize modular
+functionalities dynamically and achieve a unified, reusable, and interchangeable interface.
+It extends the Factory design pattern without the explicit class dependency.
+Additionally, the registry supports optional meta information such as versioning, accreditation,
+testing, etc.
+The UML diagrams show the differences between the factory and registry patterns.
+
+<p align="center">
+  <br>
+  <img alt="UML diagram of the pattern" src="figures/registry_uml.png">
+  <br>
+<i>Created with BioRender.com</i>
+ </p>
+
+## Installation
+
+The codebase can be installed from PyPI using `pip`, or your package manager of choice, with
+
+```bash
+$ pip install registry-factory
+```
+
+Or from a local clone, with
+
+```bash
+$ conda env create -f env-dev.yaml
+$ conda activate registry_env
+$ poetry install
+```
+
+## Dependencies
+
+No third-party dependencies are required to use the minimal functionality of the RegistryFactory.
+
+## Usage
+
+The workflow of creating a registry is the following. 1) Identify a part of the code that can be
+separated from the rest. 2) Modularize the section to be independent of the rest of the code. 3)
+Create a registry from the RegistryFactory. 4) Register any modules that provide similar
+functionalities. 5) Call the optional module from the registry from the main workflow. See below.
+
+<p align="center">
+  <br>
+  <img alt="Workflow" src="figures/registry_creation.png" width="750">
+  <br>
+<i>Created with BioRender.com</i>
+ </p>
+
+Additional available options and use cases are described in the following sections. See also [examples](examples).
+
+<!-- ### A basic registry -->
+<details>
+<summary> A basic registry </summary>
+A simple registry is created as such.
+
+```Python
+from registry_factory.registry import Registry
+```
+
+Next, any models can be added to the registry as such.
+
+```Python
+import torch.nn as nn
+
+@Registry.register("simple_model")
+class SimpleModel(nn.Module):
+    ...
+```
+
+</details>
+
+<!-- ### Shared modules -->
+<details>
+<summary> Shared modules </summary>
+To specify specific registries and have them share modules, we use the Factory class. Shared modules are modules that are used in multiple registries (e.g. a model and a module).
+
+```Python
+from registry_factory.factory import Factory
+
+class Registries(Factory):
+    ModelRegistry = Factory.create_registry("model_registry", shared=True)
+    ModuleRegistry = Factory.create_registry("module_registry", shared=True)
+
+@Registries.ModelRegistry.register("encoder")
+class Encoder(nn.Module):
+    ...
+
+Registries.ModuleRegistry.get("encoder")
+```
+
+</details>
+
+<!-- ### Arguments -->
+<details>
+<summary> Arguments </summary>
+A registry can be created to store modules with arguments. The arguments can be set when registering a module.
+
+```Python
+from registry_factory.factory import Factory
+from dataclasses import dataclass
+
+
+class Registries(Factory):
+    ModelRegistry = Factory.create_registry("model_registry", shared=True)
+
+@Registries.ModelRegistry.register_arguments(key="simple_model")
+@dataclass
+class SimpleModelArguments:
+    input_size: int
+    output_size: int
+```
+
+Only dataclasses can be used as arguments for now.
+
+</details>
+
+<!-- ### Versioning and accreditation -->
+<details>
+<summary> Versioning and accreditation </summary>
+Two examples of additional meta information that can be stored in a registry is module versioning
+and accreditation regarding how and to who credit should be attributed the module.
+
+Versioning can be used to keep track of changes in a module. The version can be set when registering a module.
+
+```Python
+from registry_factory.factory import Factory
+from registry_factory.checks.versioning import Versioning
+
+class Registries(Factory):
+    ModelRegistry = Factory.create_registry(checks=[Versioning(forced=False)])
+
+@Registries.ModelRegistry.register(call_name="simple_model", version="1.0.0")
+class SimpleModel(nn.Module):
+    ...
+
+Registries.ModelRegistry.get("simple_model") # Error, version not specified.
+Registries.ModelRegistry.get("simple_model", version="1.0.0") # Returns the module.
+```
+
+Accreditation can be used to keep track of how and to whom credit should be attributed for a given module.
+The accreditation can be set when registering a module.
+
+```Python
+from registry_factory.factory import Factory
+from registry_factory.checks.accreditation import Accreditation
+
+class Registries(Factory):
+    ModelRegistry = Factory.create_registry("model_registry", checks=[Accreditation(forced=False)])
+
+@Registries.ModelRegistry.register(
+    key="simple_model",
+    author="Author name",
+    credit_type="reference",
+    additional_information="Reference published work in (link)."
+)
+class SimpleModel(nn.Module):
+    ...
+
+Registries.ModelRegistry.get("simple_model")  # Returns the module.
+Registries.ModelRegistry.get_info("simple_model")  # Returns all meta information including the accreditation information.
+```
+
+The reason why the accreditation system can return an object without specification is because the accreditation system lacks "key" information.
+In the versioning module, the version is the key information that is used to grab the module from the registry.
+Without specifying the version the registry will not know which module to return.
+Therefore, the author, credit type, and additional information are not key information in the accreditation system.
+Without specifying the author, credit type, and additional information, the registry will still know which module to return.
+
+</details>
+
+<!-- ### Testing and Factory Patterns -->
+<details>
+<summary> Testing and Factory Patterns </summary>
+We also provide defining tests and post-checks applied to all modules in a registry. Define test
+or post checks as follows when creating the registry.
+
+```Python
+from registry_factory.factory import Factory
+from registry_factory.checks.factory_pattern import FactoryPattern
+
+class Pattern:
+    """Test pattern."""
+
+    def __init__(self):
+        pass
+
+    def hello_world(self):
+        """Hello world."""
+        print("Hello world")
+
+class Registries(Factory):
+    ModelRegistry = Factory.create_registry(
+        "model_registry", shared=False, checks=[FactoryPattern(factory_pattern=Pattern, forced=False)]
+    )
+
+# No error, the module passes the test.
+@ModelRegistry.register(key="hello_world")
+class HelloWorld(Pattern):
+    pass
+
+# No error, the module passes the test.
+@ModelRegistry.register(key="hello_world2")
+class HelloWorld:
+    def __init__(self):
+        pass
+
+    def hello_world(self):
+        """Hello world."""
+        print("Hello world")
+
+# Error, the module does not pass the test.
+@ModelRegistry.register(key="hello_world2")
+class HelloWorld:
+    def __init__(self):
+        pass
+
+    def goodday_world(self):
+        """Good day world."""
+        print("Good day world")
+```
+
+The factory also supports adding a callable test module to the registry. The callable test module can be specified to be called when a module is registered. The callable test module can be used to test the module when it is registered. The callable test module can be specified as follows when creating the registry.
+
+```Python
+from typing import Any
+from registry_factory.factory import Factory
+from registry_factory.checks.testing import Testing
+
+class CallableTestModule:
+    """Module to test."""
+
+    def __init__(self, key: str, obj: Any, **kwargs):
+        self.name = obj
+        self.assert_name()
+
+    def assert_name(self):
+        assert self.name == "test", "Name is not test"
+
+
+
+class Registries(Factory):
+    ModelRegistry = Factory.create_registry(
+        "model_registry", shared=False, checks=[Testing(test_module=CallableTestModule, forced=True)]
+    )
+
+Registries.ModelRegistry.register_prebuilt(key="name_test", obj="test") # No error, the module passes the test.
+Registries.ModelRegistry.register_prebuilt(key="name_test", obj="not_test") # Error, the module doesn't pass the test.
+```
+
+</details>
+
+<!-- ### Inserting hooks -->
+<details>
+<summary> Hooks insertions </summary>
+
+Here we outline the use of registries in code to create hooks for outside users. The example given below contains a function unaccessible by users that have two options.
+
+```Python
+from registry_factory.registry import Registry
+
+@Registry.register("option_1")
+def option_1() -> int:
+    return 1
+
+@Registry.register("option_3")
+def option_3() -> int:
+    return 3
+
+def _some_hidden_function(a: str) -> int:
+    try:
+        return print(Registry.get(f"option_{a}")())
+    except Exception as e:
+        raise RuntimeError("Error getting the option", e)
+```
+
+When a new users uses this code and selects option two, it will cause an error as it has not yet been implemented.
+
+```Python
+_some_hidden_function(1) # Returns 1
+_some_hidden_function(3) # Returns 3
+_some_hidden_function(2) # Error
+```
+
+Normally, this would be the end, but with registries, the user can easily create a new function that will solve the issue.
+
+```Python
+@Registry.register("option_2") # External user adds new option
+def option_2() -> int:
+    return 2
+
+_some_hidden_function(2) # Returns 2
+```
+
+</details>
+
+<!-- ### Compatibility wrapper -->
+
+<details>
+<summary> Compatibility wrapper </summary>
+
+Another example of how to use registries, is to make two incompatible functions work through wrappers. Users can specify specific wrappers for functions and register them using the registry.
+
+```Python
+from registry_factory.factory import Factory
+
+class Registries(Factory):
+    ModelRegistry = Factory.create_registry(name="model_registry")
+
+def func1():
+    return "hello world"
+
+def func2():
+    return ["hello universe"]
+
+def final_function(key: str) -> str:
+    return Registries.ModelRegistry.get(key)()
+```
+
+Here the example will output the wrong versions if the objects are registered as is: one a string the other a list. You can easily use wrapper functions to register the objects in such a way that they output the correct types and become compatible.
+
+```Python
+# External user creates wrapper function to make both functions work with final function
+def wrapper_function(func):
+    def wrapper(*args, **kwargs):
+        out = func(*args, **kwargs)
+        if type(out) is list:
+            return out[0]
+        else:
+            return out
+    return wrapper
+
+Registries.ModelRegistry.register_prebuilt(wrapper_function(func1), "world")
+Registries.ModelRegistry.register_prebuilt(wrapper_function(func2), "universe")
+
+print(final_function("world")) # -> Hello world
+print(final_function("universe")) # -> Hello universe
+```
+
+</details>
+
+## Citation
+
+Our paper in which we propose the registry design pattern, on which this package is built, is currently
+available as a preprint. If you use the design pattern or this package please cite our work accordingly.
+
+[paper link]
+
+<!-- ```
+@inproceedings{hartog2023registry,
+    title={Registry: a design pattern to promote code reuse in machine learning-based drug discovery},
+    author={Hartog, Peter and Svensson, Emma and Mervin, Lewis and Genheden, Samuel and Engkvist, Ola and Tetko, Igor},
+    year={2023},
+    note={Preprint}
+}
+``` -->
+
+### Funding
+
+The work behind this package has received funding from the European Union’s Horizon 2020
+research and innovation programme under the Marie Skłodowska-Curie
+Actions, grant agreement “Advanced machine learning for Innovative Drug
+Discovery (AIDD)” No 956832”. [Homepage](https://ai-dd.eu/).
+
+![plot](figures/aidd.png)
+
