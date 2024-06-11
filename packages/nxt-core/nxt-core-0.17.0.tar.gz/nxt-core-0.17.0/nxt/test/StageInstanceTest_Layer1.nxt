@@ -1,0 +1,170 @@
+{
+    "version": "1.17",
+    "alias": "Instance1",
+    "color": "#1e4875",
+    "mute": false,
+    "solo": false,
+    "meta_data": {
+        "positions": {
+            "/arm": [
+                -638.4929307876455,
+                -514.9907000415888
+            ],
+            "/exec_test": [
+                -1349.8916442844734,
+                -379.5868350816572
+            ],
+            "/limb": [
+                -518.4929307876455,
+                -394.99070004158875
+            ],
+            "Layer1": [
+                418.06449905792556,
+                -47.31623136818992
+            ],
+            "Layer1.node": [
+                0.0,
+                0.0
+            ],
+            "dummy": [
+                2197.2398648660665,
+                -1258.2646173695616
+            ],
+            "leg": [
+                574.3950868040893,
+                -441.9407256089724
+            ],
+            "node": [
+                1333.4159922246874,
+                -585.1535011750537
+            ],
+            "spine": [
+                424.23587405505475,
+                -86.03384858459151
+            ],
+            "spine.create.fk.controls.node": [
+                0.0,
+                0.0
+            ],
+            "spine.create.fk.controls.node1": [
+                0.0,
+                0.0
+            ],
+            "spine.create.fk.node": [
+                0.0,
+                0.0
+            ],
+            "spine.create.node": [
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "nodes": {
+        "/arm": {
+            "instance": "/limb",
+            "child_order": [
+                "joints"
+            ]
+        },
+        "/arm/joints/mid": {
+            "instance": "../upper",
+            "attrs": {
+                "jill": {
+                    "type": "raw",
+                    "value": "fizz"
+                }
+            }
+        },
+        "/dummy": {
+            "instance": "/Character",
+            "child_order": [
+                "build"
+            ],
+            "enabled": true
+        },
+        "/exec_test": {
+            "child_order": [
+                "exec_test_child"
+            ]
+        },
+        "/exec_test/exec_test_child": {},
+        "/leg": {
+            "child_order": [
+                "create"
+            ],
+            "enabled": true
+        },
+        "/leg/create": {
+            "child_order": [
+                "fk"
+            ],
+            "enabled": true
+        },
+        "/leg/create/fk": {
+            "child_order": [
+                "controls"
+            ],
+            "enabled": true
+        },
+        "/leg/create/fk/controls": {
+            "child_order": [
+                "upper",
+                "lower"
+            ],
+            "enabled": true
+        },
+        "/leg/create/fk/controls/lower": {
+            "instance": "/control",
+            "child_order": [
+                "create"
+            ],
+            "enabled": true
+        },
+        "/leg/create/fk/controls/upper": {
+            "instance": "/control",
+            "child_order": [
+                "create"
+            ],
+            "enabled": true
+        },
+        "/limb": {
+            "child_order": [
+                "joints"
+            ]
+        },
+        "/limb/joints": {
+            "child_order": [
+                "upper",
+                "mid"
+            ],
+            "code": [
+                "\"This code comes from pink\""
+            ]
+        },
+        "/limb/joints/mid": {
+            "instance": "../upper",
+            "child_order": [
+                "snap_joint"
+            ],
+            "attrs": {
+                "jack": {
+                    "type": "raw",
+                    "value": "foo bar"
+                }
+            }
+        },
+        "/limb/joints/mid/snap_joint": {},
+        "/limb/joints/upper": {
+            "child_order": [
+                "snap_joint"
+            ]
+        },
+        "/limb/joints/upper/snap_joint": {
+            "code": [
+                "${../._name}",
+                "${../._instance}"
+            ]
+        }
+    }
+}
