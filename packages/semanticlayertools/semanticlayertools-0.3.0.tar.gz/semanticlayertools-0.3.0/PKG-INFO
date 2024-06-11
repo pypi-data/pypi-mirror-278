@@ -1,0 +1,104 @@
+Metadata-Version: 2.3
+Name: semanticlayertools
+Version: 0.3.0
+Summary: Create social, material or semantic layers using different methods to work with the Socio-epistemic networks framework.
+Project-URL: Project Homepage, https://modelsen.gea.mpg.de
+Project-URL: Homepage, https://gitlab.gwdg.de/modelsen/semanticlayertools
+Project-URL: Issues, https://gitlab.gwdg.de/modelsen/semanticlayertools/-/issues
+Author-email: Malte Vogl <vogl@gea.mpg.de>
+License-File: AUTHORS.rst
+License-File: LICENSE.md
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: dask[dataframe]
+Requires-Dist: datashader
+Requires-Dist: igraph
+Requires-Dist: infomap>=2.3
+Requires-Dist: leidenalg
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scikit-image
+Requires-Dist: scipy
+Requires-Dist: spacy
+Requires-Dist: textacy
+Requires-Dist: tqdm
+Provides-Extra: dev
+Requires-Dist: sphinx; extra == 'dev'
+Requires-Dist: tox; extra == 'dev'
+Requires-Dist: twine; extra == 'dev'
+Provides-Extra: embeddml
+Requires-Dist: accelerate; extra == 'embeddml'
+Requires-Dist: bertopic; extra == 'embeddml'
+Requires-Dist: dimcli; extra == 'embeddml'
+Requires-Dist: hdbscan; extra == 'embeddml'
+Requires-Dist: plotly; extra == 'embeddml'
+Requires-Dist: sentence-transformers; extra == 'embeddml'
+Requires-Dist: tbb; extra == 'embeddml'
+Requires-Dist: torch; extra == 'embeddml'
+Requires-Dist: transformers; extra == 'embeddml'
+Requires-Dist: umap-learn; extra == 'embeddml'
+Description-Content-Type: text/markdown
+
+<img src="https://img.shields.io/badge/DHCodeReview-passed-brightgreen" alt="DHCodeReview" style="float: left; margin-right: 10px;" />[Review](https://github.com/DHCodeReview/DHCodeReview/issues/1)
+
+## SemanticLayerTools
+
+Collects tools to create semantic layers in the socio-epistemic networks framework. Source material can be any structured corpus with metadata of authors, time, and at least one text column.
+
+Documentation is available on [ReadTheDocs](https://semanticlayertools.readthedocs.io/).
+
+Part of the code was reviewed by [Itay Zandbank](https://github.com/zmbq), thank you. 
+
+## Installation
+
+tl;dr Use pip
+
+~~~bash
+pip install semanticlayertools
+~~~
+
+Consider using a clean virtual environment to keep your main packages separated.
+Create a new virtual environment and install the package
+
+~~~bash
+python3 -m venv env
+source env/bin/activate
+pip install semanticlayertools
+~~~
+
+To use some sentence embedding utility functions please install with the
+`embeddml` option
+
+~~~bash
+pip install semanticlayertools[embeddml]
+~~~
+
+## Testing
+
+Tests can be run by installing the _dev_ requirements and running `tox`.
+
+~~~bash
+pip install semanticlayertools[dev]
+tox
+~~~
+
+## Building documentation
+
+The documentation is build using _sphinx_. Install with the _dev_ option and run
+
+~~~bash
+pip install semanticlayertools[dev]
+tox -e docs
+~~~
+
+## Funding information
+
+The development is part of the research project [ModelSEN](https://modelsen.mpiwg-berlin.mpg.de)
+
+> Socio-epistemic networks: Modelling Historical Knowledge Processes,
+
+in Department I of the Max Planck Institute for the History of Science
+and funded by the Federal Ministry of Education and Research, Germany (Grant No. 01 UG2131).

@@ -1,0 +1,67 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "semanticlayertools"
+version = "0.3.0"
+authors = [
+  { name="Malte Vogl", email="vogl@gea.mpg.de"}
+]
+description = "Create social, material or semantic layers using different methods to work with the Socio-epistemic networks framework."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+  "tqdm",
+  "matplotlib",
+  "numpy",
+  "scipy",
+  "spacy",
+  "textacy",
+  "pandas",
+  "infomap>=2.3",
+  "igraph",
+  "leidenalg",
+  "datashader",
+  "dask[dataframe]",
+  "scikit-image"
+]
+
+[project.urls]
+"Project Homepage" = "https://modelsen.gea.mpg.de"
+"Homepage" = "https://gitlab.gwdg.de/modelsen/semanticlayertools"
+"Issues" = "https://gitlab.gwdg.de/modelsen/semanticlayertools/-/issues"
+
+
+
+[project.optional-dependencies]
+dev = [
+  "tox",
+  "twine",
+  "sphinx",
+]
+embeddml = [
+    "dimcli",
+    "torch",
+    "bertopic",
+    "transformers",
+    "accelerate",
+    "umap-learn",
+    "tbb",
+    "hdbscan",
+    "sentence-transformers",
+    "plotly"
+]
+
+[tool.ruff.lint]
+select = ["ALL"]
+
+[tool.ruff]
+line-length = 120
+ignore = ["S101", "S311", "TD003", "ANN101", "N802", "N803", "N806"]
