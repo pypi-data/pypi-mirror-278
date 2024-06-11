@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: categorical_mix
+Version: 0.2.0.0
+Summary: A package for fitting simple categorical mixture models to sequence data
+Author-email: Jonathan Parkinson <jlparkinson1@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2023 Jonathan Parkinson
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/jlparki/categorical_mixture
+Project-URL: respository, https://github.com/jlparki/categorical_mixture
+Keywords: categorical mixture,mixture model
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: setuptools
+Requires-Dist: wheel
+Requires-Dist: pybind11>=2.4
+Requires-Dist: numpy
+
+# categorical_mix
+Fast, scalable clustering for fixed length sequences with a simple generative model.
+
+This package is a fairly special-purpose tool designed for fitting multiple sequence alignments
+of protein or DNA sequences to a categorical mixture model. (It's possible you could use
+this for other tasks, although that's a possibility we've never investigated.) This is a *very*
+simple model but for precisely this reason it can sometimes be quite useful -- it's fully
+human-interpretable, easy to visualize and can fit a few million sequences very quickly. It's
+designed to fit datasets too large to fit in memory.
+
+This package is primarily used by [AntPack](https://github.com/jlparkI/AntPack), which uses it to score
+antibody sequences for human-likeness and for other tasks. If you are interested in using it for
+some other task, for installation and usage, see [the docs](https://categorical-mix.readthedocs.io/en/latest/).
