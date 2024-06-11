@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "npeccv6"
+version = "0.0.10"
+description = "Python package for root recognition and robot controll"
+authors = ["Hubert Waleńczak <220817@buas.nl>", "Nick Belterman <225538@buas.nl>", "Amyr Lourensz <221264@buas.nl>", "Marwa Rouah <223256@buas.nl>", "Cristian Stîngă <223385@buas.nl>"]
+readme = "README.md"
+packages = [{include = "npeccv6"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10, <3.11"
+keras = "^2.12.0"
+datetime = "^5.5"
+opencv-python = "^4.9.0.80"
+patchify = "^0.2.3"
+numpy = "^1.22.0 <=1.24.3"
+isort = "^5.13.2"
+black = "^24.4.2"
+flake8 = "^7.0.0"
+tensorflow-io-gcs-filesystem = { version = "0.27.0"}
+tensorflow = "2.12.0"
+pytest = "8.2.0"
+wandb = "0.17.0"
+pytest-cov = "5.0.0"
+networkx = "3.3"
+skan = "0.11.1"
+sphinx = "7.3.7"
+sphinx-rtd-theme = "2.0.0"
+pre-commit = "^3.7.1"
+
+streamlit = "^1.35.0"
+fastapi = "^0.111.0"
+uvicorn = "^0.29.0"
+azure-ai-ml = "^1.16.1"
+azureml = "^0.2.7"
+azureml-core = "^1.56.0"
+requests = "^2.32.3"
+mlflow = "^2.13.2"
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = [
+  ".", "npeccv6",
+]
+
+[tool.poetry.scripts]
+npeccv6_preprocess = "npeccv6.data:main"
+npeccv6_train = "npeccv6.train:main"
+npeccv6_predict = "npeccv6.predict:main"
