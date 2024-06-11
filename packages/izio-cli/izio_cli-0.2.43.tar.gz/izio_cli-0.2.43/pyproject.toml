@@ -1,0 +1,63 @@
+[tool.poetry]
+name = "izio-cli"
+version = "0.2.43"
+description = "Izio CLI is a comprehensive command-line interface tool designed to facilitate the management and automation of various aspects of Izio&Co software development projects."
+authors = ["saulopef <saulopef@gmail.com>"]
+readme = "README.md"
+license = "BeerWare"
+packages = [
+    { include = "izio_cli" },
+    { include = "pattern", from = "izio_cli"},
+    { include = "helper", from = "izio_cli" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+]
+
+[tool.poetry.scripts]
+izio = "izio_cli.cli:app"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.13"
+inquirer = "^3.2.3"
+typer = "^0.9.0"
+rich = "^13.7.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+pytest-cov = "^4.1.0"
+isort = "^5.13.2"
+taskipy = "^1.12.2"
+pyinstaller = "^6.6.0"
+
+
+[tool.poetry.group.doc.dependencies]
+mkdocs-material = "^9.5.7"
+mkdocstrings = "^0.24.0"
+mkdocstrings-python = "^1.8.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+python = "."
+addopts = "--doctest-modules"
+
+[tool.isort]
+profile = "black"
+
+[tool.taskipy.tasks]
+docs = "mkdocs serve --dirty --watch izio_cli/cli.py --watch izio_cli/pattern"
+test = "pytest -s -x --cov=izio_cli --cov-report=term-missing -vv"
+post_test = "coverage html"
+sort = "isort ."
+
+[tool.modules]
+izio_cli = "src/izio_cli"
+pattern = "src/izio_cli/pattern"
