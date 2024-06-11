@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: almax_common
+Version: 1.0.7.dev20240610160116
+Summary: Library with my most used Classes and Methods
+Author: AlMax98
+Author-email: alihaider.maqsood@gmail.com
+Description-Content-Type: text/markdown
+Requires-Dist: Babel==2.15.0
+Requires-Dist: chardet==5.2.0
+Requires-Dist: codicefiscale==0.9
+Requires-Dist: colorama==0.4.6
+Requires-Dist: iniconfig==2.0.0
+Requires-Dist: lxml==5.2.2
+Requires-Dist: packaging==24.0
+Requires-Dist: pillow==10.3.0
+Requires-Dist: pluggy==1.5.0
+Requires-Dist: pypdf==4.2.0
+Requires-Dist: pytest==8.2.1
+Requires-Dist: reportlab==4.2.0
+Requires-Dist: setuptools==70.0.0
+Requires-Dist: tkcalendar==1.6.1
+
+# AlmaxClasses
+Generic Purpose Classes
+
+# AlmaxGraphics
+Everything i use to create graphics for Desktop apps or other needs
+
+# AlmaxLogs
+Logging services
+
+# AlmaxSystemManagment
+Some Utils you can use to manage Subprocesses or Threads
+
+# AlmaxUtils
+Utility functions for any purpose
