@@ -1,0 +1,15 @@
+python-configuration
+
+[:python_version < "3.10"]
+importlib-metadata
+
+[db]
+SQLAlchemy<2
+
+[docs]
+Sphinx
+sphinxcontrib-programoutput
+
+[tests]
+pytest-cov
+tox

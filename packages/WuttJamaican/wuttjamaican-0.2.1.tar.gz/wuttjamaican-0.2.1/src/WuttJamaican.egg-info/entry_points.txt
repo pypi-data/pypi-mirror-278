@@ -1,0 +1,7 @@
+[console_scripts]
+wutta = wuttjamaican.cmd.base:main
+
+[wutta.subcommands]
+date-organize = wuttjamaican.cmd.date_organize:DateOrganize
+make-appdir = wuttjamaican.cmd.make_appdir:MakeAppDir
+setup = wuttjamaican.cmd.setup:Setup
