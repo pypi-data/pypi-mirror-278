@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=66.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project]
+name = "SpeedApi"
+version = "0.0.1"
+authors = [
+    { name = "Alexander Kuzmin", email = "qrer71@yandex.ru" },
+    { name = "Alexander Kuzmin", email = "funks.1@yandex.ru" }
+]
+license = { file = "LICENSE" }
+description = "In development"
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "multidict<=6.0.5"
+]
+
+[project.optional-dependencies]
+ujson = ["ujson<=5.10.0"]
+orjson = ["orjson<=3.10.3"]
+dev = [
+    "covdefaults",
+    "pytest<=8.2.1",
+    "ujson<=5.10.0",
+    "orjson<=3.10.3",
+    "httpx<=0.27.0",
+    "pytest-cov"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/WolfMTK/speedy"
+"Repository" = "https://github.com/WolfMTK/speedy"
+
+[tool.coverage.run]
+concurrency = ["multiprocessing", "thread"]
+omit = ["*/tests/*"]
+parallel = true
+plugins = ["covdefaults"]
+source = ["speedy"]
