@@ -1,0 +1,138 @@
+Metadata-Version: 2.3
+Name: galax
+Version: 0.0.2
+Summary: Galactic Dynamics in Jax.
+Project-URL: Bug Tracker, https://github.com/GalacticDynamics/galax/issues
+Project-URL: Changelog, https://github.com/GalacticDynamics/galax/releases
+Project-URL: Discussions, https://github.com/GalacticDynamics/galax/discussions
+Project-URL: Homepage, https://github.com/GalacticDynamics/galax
+Author-email: galax maintainers <nstarman@users.noreply.github.com>, Jake Nibauer <jnibauer@princeton.edu>, Adrian Price-Whelan <adrianmpw@gmail.com>, Nathaniel Starkman <nstarman@users.noreply.github.com>
+License: Copyright 2023 galax maintainers
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of
+        this software and associated documentation files (the "Software"), to deal in
+        the Software without restriction, including without limitation the rights to
+        use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+        of the Software, and to permit persons to whom the Software is furnished to do
+        so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: AUTHORS.rst
+License-File: LICENSE
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Classifier: Typing :: Typed
+Requires-Python: >=3.11
+Requires-Dist: astropy>=6.0
+Requires-Dist: beartype>=0.18
+Requires-Dist: coordinax
+Requires-Dist: diffrax>=0.5
+Requires-Dist: equinox!=0.11.3,>=0.11
+Requires-Dist: jax!=0.4.27,>=0.4
+Requires-Dist: jaxlib!=0.4.27
+Requires-Dist: lazy-loader>=0.4
+Requires-Dist: packaging
+Requires-Dist: quax>=0.0.3
+Requires-Dist: quaxed>=0.4
+Requires-Dist: typing-extensions>=4.11
+Requires-Dist: unxt
+Provides-Extra: all
+Requires-Dist: astropy!=6.1.0; extra == 'all'
+Requires-Dist: gala; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: astropy!=6.1.0; extra == 'dev'
+Requires-Dist: furo>=2023.08.17; extra == 'dev'
+Requires-Dist: gala; extra == 'dev'
+Requires-Dist: hypothesis[numpy]; extra == 'dev'
+Requires-Dist: myst-parser>=0.13; extra == 'dev'
+Requires-Dist: nox; extra == 'dev'
+Requires-Dist: pre-commit; extra == 'dev'
+Requires-Dist: pytest-arraydiff; extra == 'dev'
+Requires-Dist: pytest-cov>=3; extra == 'dev'
+Requires-Dist: pytest<8,>=6; extra == 'dev'
+Requires-Dist: sphinx-autodoc-typehints; extra == 'dev'
+Requires-Dist: sphinx-copybutton; extra == 'dev'
+Requires-Dist: sphinx>=7.0; extra == 'dev'
+Requires-Dist: sybil; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: furo>=2023.08.17; extra == 'docs'
+Requires-Dist: myst-parser>=0.13; extra == 'docs'
+Requires-Dist: sphinx-autodoc-typehints; extra == 'docs'
+Requires-Dist: sphinx-copybutton; extra == 'docs'
+Requires-Dist: sphinx>=7.0; extra == 'docs'
+Provides-Extra: interop-all
+Requires-Dist: astropy!=6.1.0; extra == 'interop-all'
+Requires-Dist: gala; extra == 'interop-all'
+Provides-Extra: interop-gala
+Requires-Dist: astropy!=6.1.0; extra == 'interop-gala'
+Requires-Dist: gala; extra == 'interop-gala'
+Provides-Extra: test
+Requires-Dist: hypothesis[numpy]; extra == 'test'
+Requires-Dist: nox; extra == 'test'
+Requires-Dist: pre-commit; extra == 'test'
+Requires-Dist: pytest-arraydiff; extra == 'test'
+Requires-Dist: pytest-cov>=3; extra == 'test'
+Requires-Dist: pytest<8,>=6; extra == 'test'
+Requires-Dist: sybil; extra == 'test'
+Description-Content-Type: text/markdown
+
+# galax
+
+[![Actions Status][actions-badge]][actions-link]
+[![Code Coverage][codecov-badge]][codecov-link]
+[![Documentation Status][rtd-badge]][rtd-link]
+
+[![PyPI version][pypi-version]][pypi-link]
+[![Conda-Forge][conda-badge]][conda-link]
+[![PyPI platforms][pypi-platforms]][pypi-link]
+
+[![GitHub Discussion][github-discussions-badge]][github-discussions-link]
+
+## Contributors
+
+See the
+[AUTHORS.rst](https://github.com/GalacticDynamics/galax/blob/main/AUTHORS.rst)
+file for a complete list of contributors to the project.
+
+The [`GalacticDynamics/galax`](https://github.com/GalacticDynamics/galax)
+maintainers would like to thank
+[@Michael Anckaert](https://github.com/MichaelAnckaert) for transferring the
+`galax` project domain on `PyPI` for use by this package. Without his generosity
+this package would have had a worse name.
+
+<!-- SPHINX-START -->
+
+<!-- prettier-ignore-start -->
+[actions-badge]:            https://github.com/GalacticDynamics/galax/workflows/CI/badge.svg
+[actions-link]:             https://github.com/GalacticDynamics/galax/actions
+[codecov-badge]:            https://codecov.io/gh/GalacticDynamics/galax/graph/badge.svg?token=PC553LZFFJ
+[codecov-link]:             https://codecov.io/gh/GalacticDynamics/galax
+[conda-badge]:              https://img.shields.io/conda/vn/conda-forge/galax
+[conda-link]:               https://github.com/conda-forge/galax-feedstock
+[github-discussions-badge]: https://img.shields.io/static/v1?label=Discussions&message=Ask&color=blue&logo=github
+[github-discussions-link]:  https://github.com/GalacticDynamics/galax/discussions
+[pypi-link]:                https://pypi.org/project/galax/
+[pypi-platforms]:           https://img.shields.io/pypi/pyversions/galax
+[pypi-version]:             https://img.shields.io/pypi/v/galax
+[rtd-badge]:                https://readthedocs.org/projects/galax/badge/?version=latest
+[rtd-link]:                 https://galax.readthedocs.io/en/latest/?badge=latest
+
+<!-- prettier-ignore-end -->
