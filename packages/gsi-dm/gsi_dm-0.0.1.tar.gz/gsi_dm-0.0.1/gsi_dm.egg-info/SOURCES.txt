@@ -1,0 +1,16 @@
+LICENSE
+pyproject.toml
+gsi/__init__.py
+gsi/constants.py
+gsi/database.py
+gsi/logger.py
+gsi/pg_upsert.py
+gsi/utils.py
+gsi_dm.egg-info/PKG-INFO
+gsi_dm.egg-info/SOURCES.txt
+gsi_dm.egg-info/dependency_links.txt
+gsi_dm.egg-info/requires.txt
+gsi_dm.egg-info/top_level.txt
+tests/test_database.py
+tests/test_logger.py
+tests/test_utils.py
