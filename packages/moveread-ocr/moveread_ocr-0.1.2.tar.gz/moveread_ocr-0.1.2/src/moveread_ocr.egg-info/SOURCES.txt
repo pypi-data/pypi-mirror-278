@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+src/moveread_ocr/__init__.py
+src/moveread_ocr/__init__.pyi
+src/moveread_ocr/data.py
+src/moveread_ocr/model.py
+src/moveread_ocr/postprocess.py
+src/moveread_ocr.egg-info/PKG-INFO
+src/moveread_ocr.egg-info/SOURCES.txt
+src/moveread_ocr.egg-info/dependency_links.txt
+src/moveread_ocr.egg-info/requires.txt
+src/moveread_ocr.egg-info/top_level.txt
+src/moveread_ocr/records/__init__.py
+src/moveread_ocr/records/labels.py
+src/moveread_ocr/records/schema.py
