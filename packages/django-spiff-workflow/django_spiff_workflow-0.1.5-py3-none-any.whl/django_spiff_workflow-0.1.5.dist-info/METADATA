@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: django-spiff-workflow
+Version: 0.1.5
+Summary: Django integration with spiff workflow library
+Home-page: https://github.com/waqqas/django-spiff-workflow
+Author: Waqqas Jabbar
+Author-email: waqqas.jabbar@egmail.com
+License: MIT
+Keywords: django,spiff,workflow,bpmn,dmn,bpmn2,business process management
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Django >=4.0
+Requires-Dist: spiffworkflow >=3.0.0
+
+### django-spiff-workflow
+Integration of Python [`spiffworkflow`](https://github.com/sartography/SpiffWorkflow) library with Django
+
+### Installation
+
+Install `django-spiff-workflow` using `pip install django-spiff-workflow`
+
+Add `"django_spiff_workflow"` to your `INSTALLED_APPS` settings like this:
+
+```
+INSTALLED_APPS = (
+    "django_spiff_workflow",
+    ...
+)
+```
+
+### More documentation
+
+For more information check the documentation of [`spiff-workflow` doc](https://spiffworkflow.readthedocs.io/en/latest/index.html).
+
