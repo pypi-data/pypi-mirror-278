@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: thingspire-datasets
+Version: 0.1.7
+Summary: thingspire feature package
+Author: Inho Kim
+Author-email: inho@thingspire.com
+Keywords: thingspire,thingspire-datasets
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: Bottleneck
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: requests
+Requires-Dist: json
+Requires-Dist: aiohttp
+
+A package that collects and processes weather and special day information by local government and applies it to various projects
