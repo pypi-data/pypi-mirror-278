@@ -1,0 +1,35 @@
+[
+  {
+    "name": "deltatwin1",
+    "description": "description",
+    "publication_date": "creation_date",
+    "license": {
+      "name": "licence_name"
+    },
+    "topics": [],
+    "repository_url": "repository_url",
+    "owner": "author"
+  },
+  {
+    "name": "deltatwin2",
+    "description": "description",
+    "publication_date": "creation_date",
+    "license": {
+      "name": "licence_name"
+    },
+    "topics": [],
+    "repository_url": "repository_url",
+    "owner": "author"
+  },
+  {
+    "name": "deltatwin3",
+    "description": "description",
+    "publication_date": "creation_date",
+    "license": {
+      "name": "licence_name"
+    },
+    "topics": [],
+    "repository_url": "repository_url",
+    "owner": "author"
+  }
+]
