@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+getpricedata/__init__.py
+getpricedata/getETFprice.py
+pytech/__init__.py
+pytech/pytech.cp39-win_amd64.pyd
+pytech_zp.egg-info/PKG-INFO
+pytech_zp.egg-info/SOURCES.txt
+pytech_zp.egg-info/dependency_links.txt
+pytech_zp.egg-info/requires.txt
+pytech_zp.egg-info/top_level.txt
