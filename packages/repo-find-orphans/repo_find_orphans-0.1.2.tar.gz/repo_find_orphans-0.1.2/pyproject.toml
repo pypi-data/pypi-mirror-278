@@ -1,0 +1,194 @@
+[tool.poetry]
+name = "repo-find-orphans"
+authors = ["Vlad <vlad@v-lad.org>"]
+description = "Supplements to the repo script"
+version = "0.1.2"
+readme = "README.md"
+
+packages = [
+  { include = "repo_find_orphans", from = "src" }
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Version Control",
+    "Topic :: Software Development :: Version Control :: Git",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/vladistan/repo-find-orphans"
+Issues = "https://github.com/vladistan/repo-find-orphans/issues"
+
+
+[tool.poetry.dependencies]
+python = "^3.11.0"
+annotated-types = "^0.6.0"
+defusedxml = "^0.7.1"
+typer = "^0.12.3"
+pygithub = "^2.3.0"
+pyyaml = "^6.0.1"
+types-pyyaml = "^6.0.12.20240311"
+
+[tool.poetry.scripts]
+repo-find-orphans = "repo_find_orphans.cli:app"
+
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.1.2"
+pytest-mock = "^3.8.1"
+pyright = "^1.1.350"
+pytest-cov = "^4.1.0"
+
+botocore-stubs = "^1.34.46"
+pytest-timeout = "^2.2.0"
+syrupy = "^4.6.1"
+pytest-profiling = "^1.7.0" # bugs with pytest-profiling require running `gprof2dot -f pstats prof/combined.prof > prof/tmp` then `poetry run dot -Tsvg -o prof/combined.svg prof/tmp` to get an SVG to render https://github.com/man-group/pytest-plugins/issues/93
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pylint.messages_control]
+disable = "all"
+enable = [
+  # these are always needed to ensure that a crash within pylint itself appropriately causes a failure
+  "astroid-error",
+  "fatal",
+  # rules relating to errors found parsing this config file
+  "config-parse-error",
+  "unknown-option-value",
+  "useless-option-value",
+  # general rules for pylint being used correctly in the code
+  "unrecognized-inline-option",
+  "useless-suppression",
+  # rules we actually care about
+  "duplicate-code",
+]
+
+[tool.pylint.similarities]
+# Minimum lines number of a similarity.
+min-similarity-lines = 4
+
+# Ignore comments when computing similarities.
+ignore-comments = "no"
+
+# Ignore docstrings when computing similarities.
+ignore-docstrings = "no"
+
+# Ignore imports when computing similarities.
+ignore-imports = "yes"
+
+
+# Repeat the pyright configuration in each project so that
+
+# pyright-langserver can find it.
+
+[tool.pyright]
+exclude = [
+    "**/node_modules",
+    "**/.precommit_cache",
+    "**/.ruff_cache",
+    "**/.npm_cache",
+    "**/.pipx_cache",
+    "**/__pycache__",
+    "**/vendor_files",
+    "**/.venv",
+    "**/venv",
+    "build",
+  ]
+
+strictListInference = true
+strictDictionaryInference = true
+strictSetInference = true
+analyzeUnannotatedFunctions = true
+strictParameterNoneValue = true
+enableTypeIgnoreComments = true
+deprecateTypingAliases = true
+reportGeneralTypeIssues = true
+reportPropertyTypeMismatch = true
+reportFunctionMemberAccess = true
+reportMissingImports = true
+reportMissingModuleSource = true
+reportInvalidTypeForm = true
+reportMissingTypeStubs = false
+reportImportCycles = true
+reportUnusedClass = true
+reportUnusedFunction = true
+reportUnusedVariable = true
+reportWildcardImportFromLibrary = true
+reportAbstractUsage = true
+reportArgumentType = true
+reportAssertTypeFailure = true
+reportAssignmentType = true
+reportAttributeAccessIssue = true
+reportCallIssue = true
+reportInconsistentOverload = true
+reportIndexIssue = true
+reportInvalidTypeArguments = true
+reportNoOverloadImplementation = true
+reportOperatorIssue = true
+reportOptionalSubscript = true
+reportOptionalMemberAccess = true
+reportOptionalCall = true
+reportOptionalIterable = true
+reportOptionalContextManager = true
+reportOptionalOperand = true
+reportRedeclaration = true
+reportReturnType = true
+reportTypedDictNotRequiredAccess = true
+reportUntypedFunctionDecorator = true
+reportUntypedClassDecorator = true
+reportUntypedBaseClass = true
+reportUntypedNamedTuple = true
+reportPrivateUsage = false # already covered by ruff rule SLF001
+reportTypeCommentUsage = true
+reportPrivateImportUsage = true
+reportConstantRedefinition = true
+reportDeprecated = true
+reportIncompatibleMethodOverride = true
+reportIncompatibleVariableOverride = true
+reportInconsistentConstructor = true
+reportOverlappingOverload = true
+reportPossiblyUnboundVariable = true
+reportMissingSuperCall = true
+reportUninitializedInstanceVariable = true
+reportInvalidStringEscapeSequence = true
+reportUnknownParameterType = true
+reportUnknownArgumentType = true
+reportUnknownLambdaType = true
+reportUnknownVariableType = true
+reportMissingParameterType = true
+reportMissingTypeArgument = true
+reportInvalidTypeVarUse = true
+reportCallInDefaultInitializer = true
+reportUnnecessaryIsInstance = true
+reportUnnecessaryCast = true
+reportUnnecessaryComparison = true
+reportUnnecessaryContains = true
+reportAssertAlwaysTrue = true
+reportSelfClsParameterName = true
+reportImplicitStringConcatenation = true
+reportUndefinedVariable = true
+reportUnboundVariable = true
+reportInvalidStubStatement = true
+reportIncompleteStub = true
+reportUnsupportedDunderAll = true
+reportUnusedCallResult = true
+reportUnusedCoroutine = true
+reportUnusedExcept = true
+reportUnusedExpression = true
+reportUnknownMemberType = false
+reportUnnecessaryTypeIgnoreComment = true
+reportMatchNotExhaustive = true
+reportImplicitOverride = true
+reportShadowedImports = true
+pythonPlatform = "Linux"
