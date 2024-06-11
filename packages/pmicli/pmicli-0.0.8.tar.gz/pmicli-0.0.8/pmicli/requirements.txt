@@ -1,0 +1,5 @@
+typer
+rich
+shellingham
+conan>=1.64.0,<2
+pmi-conan-package-tools

@@ -1,0 +1,11 @@
+include(vs-base)
+include(cpp-base.jinja)
+
+[settings]
+compiler.version=16
+
+[conf]
+tools.cmake.cmaketoolchain:generator=Ninja
+pmi_reader_wrappers*:tools.cmake.cmaketoolchain:generator=Visual Studio 16 2019
+
+[tool_requires]

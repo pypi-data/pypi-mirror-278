@@ -1,0 +1,15 @@
+[settings]
+arch=x86_64
+arch_build=x86_64
+build_type=Release
+compiler=Visual Studio
+compiler.runtime=MD
+os=Windows
+os_build=Windows
+
+[options]
+
+[tool_requires]
+
+[env]
+CONAN_SKIP_VS_PROJECTS_UPGRADE=1

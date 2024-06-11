@@ -1,0 +1,2 @@
+include pmicli/requirements.txt
+recursive-include pmicli/data **/*
