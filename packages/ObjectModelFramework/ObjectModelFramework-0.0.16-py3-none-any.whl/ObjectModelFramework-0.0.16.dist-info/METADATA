@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: ObjectModelFramework
+Version: 0.0.16
+Summary: Object model framework
+Author-email: nummulith <nummulith@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/nummulith/ObjectModelFramework
+Keywords: drawing,graph,graphviz
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
