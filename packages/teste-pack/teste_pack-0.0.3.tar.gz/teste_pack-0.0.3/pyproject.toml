@@ -1,0 +1,21 @@
+[project]
+name = "teste_pack"
+version = "0.0.3"
+authors = [
+  { name="algotraderbr", email="algotraderbr@gmail.com" },
+]
+description = "A small example package"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/algotrader-br/teste_pack"
+Issues = "https://github.com/algotrader-br/teste_pack/issues"
+
+[tool.setuptools]
+packages = ["pack_fib", "pack_prime"]
