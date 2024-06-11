@@ -1,0 +1,28 @@
+# comms
+aiohttp
+
+# Debugging
+pudb
+ipython
+pytest
+pytest-asyncio
+
+# Database
+motor
+dnspython
+
+# Logging
+loguru
+pfmisc
+
+# Misc
+pydantic>=2.3.0
+pydantic_settings
+click
+appdirs
+tabulate
+fortune-python
+fontawesome
+rich
+
+

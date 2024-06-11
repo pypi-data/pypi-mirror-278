@@ -1,0 +1,17 @@
+aiohttp
+pudb
+ipython
+pytest
+pytest-asyncio
+motor
+dnspython
+loguru
+pfmisc
+pydantic>=2.3.0
+pydantic_settings
+click
+appdirs
+tabulate
+fortune-python
+fontawesome
+rich
