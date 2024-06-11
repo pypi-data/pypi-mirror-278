@@ -1,0 +1,2 @@
+[console_scripts]
+test-cli = src.ontmont.scripts.merge_cn_segments:main
