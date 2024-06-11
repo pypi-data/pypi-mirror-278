@@ -1,0 +1,55 @@
+
+# Input file for marauders map
+
+# the path where your sources are stored 
+path : /Users/dauptain/GITLAB/avbp/SOURCES
+context : /Users/dauptain/GITLAB/avbp/SOURCES/
+# name of the package
+package: avbp
+
+
+color_rules :                       # coloring rules to apply (last color prevail)
+  root: "#EEDD88" #lightyellow
+  default: cyan
+  BNDY: green
+  NUMERICS: red
+  MAIN: "#DDCC77" #sand
+  IO: darkblue
+  LAGRANGE: blue
+  PARSER: orange
+  LES: purple
+  CFD: pink
+  CHEM: black
+  COMMON: brown
+  COUPLING: grey
+  AMR_INTERFACE: yellow
+  PMESH: magenta
+  GENERIC: "#88CCEE" #teal
+
+
+clean_graph:                            # Filtering parameters
+  remove_patterns :                     # Matching nodes and descendants will be removed
+    # - "*dataspark*"
+    # - "*gradqen"
+    # - "*inverse_mat"
+    # - "*invert.f90*"
+    # - "*scale_vect_c"
+    # - "*mod_strings:parse"
+    # - "*div.f90:div"
+    - "*slave_*_memory*"
+    - "*CFM*"
+    - "*TTC*"
+    - "*FPI*"
+    - "*PMESH*"
+    - "*PLASMA*"
+    - "*AMR_INTERFACE*"
+    - "*COUPLING*"
+    - "*ANALYTIC*"
+  soften_patterns :                     # Add softening (not really used yet)
+    - "*BaseForm*"
+  subgraph_roots: null                  # Limit graph to the descendants of nodes in this list
+  #    - "*slave_pre_temporal*"
+  #     - "*boundary::boundary"
+  remove_hyperconnect: 10                # Remove nodes with more than X predecessors
+  prune_lower_levels: 0                 # Remove lowest handing nodes by level (1 is the leaf level)
+  
