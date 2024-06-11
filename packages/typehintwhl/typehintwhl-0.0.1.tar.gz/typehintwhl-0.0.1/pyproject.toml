@@ -1,0 +1,40 @@
+[build-system]
+requires      = ["setuptools >= 69.5.0", "wheel >= 0.43.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "typehintwhl"
+version = "0.0.1"
+description = "Easily simplify the distribution of type hinting files alongside regular Python modules within a Wheel distribution."
+readme = "README.md"
+authors = [{ name = "Isaiah Coroama", email = "coroamaisaiah@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    'Development Status :: 3 - Alpha',
+    'Intended Audience :: Developers',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.12',
+    'Programming Language :: Python :: 3.12',
+]
+keywords = ["type", "typehint", "wheel", "formatter"]
+dependencies = [
+    "setuptools>=69.5.0"
+]
+
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/IsaiahCoroama/typehintwhl"
+
+[tool.build-system]
+exclude = [
+    ".github",
+    ".vscode",
+    ".gitignore"
+]
+
+[tool.setuptools]
+include-package-data = true
+packages = ["typehintwhl", "typehintwhl.command"]

@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: typehintwhl
+Version: 0.0.1
+Summary: Easily simplify the distribution of type hinting files alongside regular Python modules within a Wheel distribution.
+Author-email: Isaiah Coroama <coroamaisaiah@gmail.com>
+Project-URL: Homepage, https://github.com/IsaiahCoroama/typehintwhl
+Keywords: type,typehint,wheel,formatter
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: setuptools>=69.5.0
