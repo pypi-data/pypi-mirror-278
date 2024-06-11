@@ -1,0 +1,60 @@
+# telemetrx-0.1.5
+
+telemetrx is a Python library which facilitates the sending of App telemetry data to the TelemetrX platform, leveraging the TelemetrX API. 
+
+## Features
+
+The library features the function send_telemetrx() which helps app owners to send telemetry data to the TelemetrX platform with a single line of code. 
+
+## Installation
+
+Install telemetrx with pip:
+
+```bash
+pip install telemetrx
+```
+
+## Quick Start
+
+Before you start, there are few environment variables that will need to be set:
+
+- BASE_URL_ENV = Telemetrx API URL for ENV
+
+    Where ENV is either DEV, PROD or STAGE depending on which environment your app is sending data to. 
+    If you are unsure what value to set in this environment variable, please contact visimard@cisco.com or vivekksi@cisco.com or anpapath@cisco.com. 
+
+- TELEMETRX_API_KEY = <Your app's API key for TelemetrX>
+
+    This is the app token you have received when registering your app with TelemetrX. If you do not know your app key or have lost/forgotten it, please contact visimard@cisco.com or vivekksi@cisco.com or anpapath@cisco.com
+
+After you make sure that the environment variables above are set, here is an example of how to use the telemetrx library:
+
+```python
+from telemetrx import send_telemetrx
+
+telemetry_data = {"attribute1": "value",
+                  "attribute2": "value"}
+
+send_telemetrx(telemetry_data=telemetry_data, 
+               user="anpapath",
+               app_name= "My app",
+               telemetrx_env= "prod",
+               technology_stripe= "Enterprise"
+               )
+```
+
+## Requirements
+
+- Python 3.10+
+
+## License
+
+Distributed under a propriatery license. See LICENSE file for more information. 
+
+## Authors
+
+- Vivek Singh - vivekksi
+- Vincent Simard - visimard
+- Angeliki Papathanasiou - anpapath
+
+
