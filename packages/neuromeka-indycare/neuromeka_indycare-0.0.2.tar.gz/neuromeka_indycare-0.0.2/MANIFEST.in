@@ -1,0 +1,6 @@
+include neuromeka_indycare/indycare_utils/config.yml
+include neuromeka_indycare/indycare_utils/*.py
+include neuromeka_indycare/daliworks_software/*
+include neuromeka_indycare/setup/*
+include neuromeka_indycare/IndyCAREReport.py
+include neuromeka_indycare/create_service.sh
