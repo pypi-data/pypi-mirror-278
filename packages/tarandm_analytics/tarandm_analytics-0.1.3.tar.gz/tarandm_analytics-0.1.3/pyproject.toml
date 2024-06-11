@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "tarandm_analytics"
+version = "0.1.3"
+description = "Package links analytics in Python with TaranDM software."
+authors = ["Marek Teller <mteller@taran.ai>"]
+readme = "README.md"
+packages = [
+    { include = "tarandm_analytics" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+pandas = {version = "*", source = "pypi"}
+scikit-learn = {version = "<1.4", source = "pypi"}
+requests = {version = "*", source = "pypi"}
+llvmlite = {version = "*", source = "pypi"}
+numba = {version = "*", source = "pypi"}
+shap = {version = "*", source = "pypi"}
+matplotlib = {version = "*", source = "pypi"}
+path = {version = "*", source = "pypi"}
+xgboost = {version = "*", source = "pypi"}
+structlog = {version="*", source = "pypi"}
+importlib = {version="*", source = "pypi"}
+pydantic = {version="*", source = "pypi"}
+sklearn2pmml = {version="*", source = "pypi"}
+sklearn_pmml_model = {version="*", source = "pypi"}
+polars = "^0.20.31"
+gitpython = "^3.1.43"
+furl = "^2.1.3"
+python-gitlab = "^4.6.0"
+
+[tool.poetry.dev-dependencies]
+python = ">=3.9"
+typing = {version = "*", source = "pypi"}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
