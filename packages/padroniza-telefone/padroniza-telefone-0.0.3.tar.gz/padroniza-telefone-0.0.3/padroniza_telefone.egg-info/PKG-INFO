@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: padroniza-telefone
+Version: 0.0.3
+Summary: Standardizes phone to E164 standard
+Home-page: UNKNOWN
+Author: Tatianno Alves
+Author-email: tferreiraalves@gmail.com
+License: MIT License
+Keywords: standardize phone E164
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# Standardize Phones
+
+## Overview
+Standardizes phone to E164 standard.
+
+## Installing and Supported Versions
+Standardize Phones available on PyPI:
+
+`$ python -m pip install padroniza-telefone`
+
+**Officially supports Python 3.8+.**
+
+## Cloning the repository
+
+`$ git clone https://github.com/tatianno/padroniza-telefone.git`
+
+## Example
+```
+from padroniza_telefone import Telefone
+
+telefone = Telefone(numero='12344123', codigo_area='11', codigo_pais='55')
+print(telefone.numero)
+```
+
