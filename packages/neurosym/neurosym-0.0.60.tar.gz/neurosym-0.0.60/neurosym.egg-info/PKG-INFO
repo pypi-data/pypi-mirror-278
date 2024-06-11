@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: neurosym
+Version: 0.0.60
+Summary: Neurosymbolic library.
+Home-page: https://github.com/kavigupta/neurosym-lib
+Author: Kavi Gupta, Atharva Sehgal, Maddy Bowers, Armando Solar-Lezama
+Author-email: kavig+neurosym@mit.edu
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+
+# Neurosymbolic Library
+
+The `neurosym` library is a Python package for neurosymbolic program synthesis. We aim to provide a set of tools for DSL design, program search, and program abstraction in a self-contained package, allowing researchers to reuse DSLs, datasets, and algorithmic components across different research projects.
+
+
+## Under Development
+
+NOTE: this library is still under development. Please check back later for more updates. Do not use this library for production or research purposes yet, it *will* change in the future.
