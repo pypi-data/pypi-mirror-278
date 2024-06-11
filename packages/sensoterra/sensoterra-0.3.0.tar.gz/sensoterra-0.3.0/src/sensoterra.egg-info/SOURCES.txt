@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/sensoterra/__init__.py
+src/sensoterra/customerapi.py
+src/sensoterra/probe.py
+src/sensoterra.egg-info/PKG-INFO
+src/sensoterra.egg-info/SOURCES.txt
+src/sensoterra.egg-info/dependency_links.txt
+src/sensoterra.egg-info/requires.txt
+src/sensoterra.egg-info/top_level.txt
+tests/test_customerapi.py

@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sensoterra"
+version = "0.3.0"
+authors = [
+  { name="Mark Ruys", email="mark.ruys@sensoterra.com" },
+]
+description = "Query Sensoterra probes using the Customer API"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Development Status :: 5 - Production/Stable",
+]
+requires-python = ">=3.11"
+dependencies = [
+  "requests>=2.27.1",
+]
+keywords = ["Sensoterra", "soil moisture", "probe", "sensor"]
+
+[project.urls]
+Homepage = "https://gitlab.com/sensoterra/public/python"
+Issues = "https://gitlab.com/sensoterra/public/python/-/issues"
+Repository = "https://gitlab.com/sensoterra/public/python.git"
+Changelog = "https://gitlab.com/sensoterra/public/python/-/blob/main/CHANGELOG.md"
+
+[tool.black]
+
+[tool.mypy]
+strict = true
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+pythonpath = "src"
+testpaths = [
+    "tests",
+]
+
+[tool.isort]
+profile = "black"
