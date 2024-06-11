@@ -1,0 +1,151 @@
+Input {
+  border: round #888888;
+  background: rgba(0,0,0,0.0);
+}
+
+Button {
+    width: 100%;
+}
+
+ErrorDialogScreen {
+  align: center middle;
+  background: rgba(0,0,0,0.0);
+}
+
+TabbedContent {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+TabPane {
+  padding-left: 1;
+  padding-right: 1;
+}
+
+#error-dialog {
+  background: $primary-background-darken-1;
+  max-width: 60%;
+  height: auto;
+  padding-left: 1;
+  padding-right: 1;
+  border: round $warning-lighten-3;
+}
+
+.button-bar > Button {
+  width: 1fr;
+}
+
+.button-bar > Static {
+  width: 1;
+}
+
+.button-bar {
+  height: auto;
+}
+
+.status_text {
+  margin-top: 1;
+}
+
+#error-dialog Button {
+  margin-top: 1;
+}
+
+$red: red;
+$green: green
+
+.readonly {
+    color: $text-muted;
+}
+
+#transfer-items-table > .datatable--odd-row {
+  background: $primary-background-darken-1;
+}
+#transfer-items-table > .datatable--even-row {
+  background: $background;
+}
+
+#transfer-items-table:focus > .datatable--cursor {
+  background: $secondary-lighten-3;
+}
+
+#transfer-items-table > .datatable--cursor {
+  background: $secondary-darken-3;
+}
+
+#transfer-items-table {
+  width: 100%;
+}
+
+#row-edit-dialog {
+  background: $primary-background-darken-1;
+  max-width: 60%;
+  height: auto;
+  padding-left: 1;
+  padding-right: 1;
+  border: round $warning-lighten-3;
+}
+
+#row-edit-dialog > .input_row {
+  height: auto;
+  width: 100%;
+}
+
+
+#row-edit-dialog > .input_row > Label {
+  margin-right: 1;
+  padding-top: 1;
+  width: auto;
+}
+
+#row-edit-dialog > .input_row > Input {
+  background: rgba(0,0,0,0.0);
+  width: 1fr;
+  padding-left: 1;
+}
+
+#checkin-dialog {
+  background: $primary-background-darken-1;
+  max-width: 60%;
+  height: auto;
+  padding-left: 1;
+  padding-right: 1;
+  border: round $warning-lighten-3;
+}
+
+#checkin-dialog > .dialog-question {
+  margin-top:1;
+  margin-bottom:1;
+}
+
+RowEditScreen {
+  align: center middle;
+  background: rgba(0,0,0,0.0);
+}
+
+CheckInScreen {
+  align: center middle;
+  background: rgba(0,0,0,0.0);
+}
+
+#row-edit-dialog > .error-msg {
+  margin-bottom: 1;
+}
+
+.error-msg {
+  color: red;
+}
+
+.table-title {
+  padding-left: 1;
+  padding-right: 1;
+  border-left: round #888888;
+  border-top: round #888888;
+  border-right: round #888888;
+  border-bottom: solid #888888;
+  width: auto;
+}
+
+PartSearchTree {
+  height: 1fr;
+}
