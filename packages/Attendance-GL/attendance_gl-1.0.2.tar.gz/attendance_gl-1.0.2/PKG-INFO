@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: Attendance_GL
+Version: 1.0.2
+Summary: A Python package to track attendance in an Excel file and convert it to an HTML file
+Author: Ankush Sawant
+Author-email: qaankush@gmail.com
+Requires-Dist: openpyxl
+Requires-Dist: pandas
+Requires-Dist: configparser
+Requires-Dist: pywin32
