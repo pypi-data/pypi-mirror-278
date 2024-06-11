@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "asyncWowApi"
+version = "0.1.1"
+description = ""
+authors = ["angeloffy <angeloffy.work@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+aiohttp = "^3.9.5"
+pydantic = "^2.7.3"
+
+[tool.poetry.group.dev.dependencies]
+python-dotenv = "^1.0.1"
+setuptools = "^70.0.0"
+wheel = "^0.43.0"
+twine = "^5.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
