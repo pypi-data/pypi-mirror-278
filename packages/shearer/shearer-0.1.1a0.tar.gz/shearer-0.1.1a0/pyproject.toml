@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "shearer"
+version = "0.1.1a"
+description = "A large language model driven scraper to help you scrape data into structured format."
+authors = ["Edward"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.32.3"
+beautifulsoup4 = "^4.12.3"
+openai = "^1.32.0"
+pydantic = "^2.7.3"
+tiktoken = "^0.7.0"
+python-dotenv = "^1.0.1"
+lxml = "^5.2.2"
+pandas = "^2.2.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
