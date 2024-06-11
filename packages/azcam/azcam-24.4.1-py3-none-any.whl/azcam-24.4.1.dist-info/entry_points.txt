@@ -1,0 +1,3 @@
+[console_scripts]
+azcammonitor=azcam.monitor.__main__:main
+
