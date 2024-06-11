@@ -1,0 +1,15 @@
+demerge/__init__.py,sha256=oQymY76EuQYlHRzwFY8NGCQ_ofOO47yUrpvCBkqcw2E,628
+demerge/calc_resonance_params.py,sha256=UdUk94ZwMS4Uyy2yR0T2Pbj_ZfRwbdPpVQIBxuSDDfo,3623
+demerge/ddb_20231123.fits.gz,sha256=H2ahhZSxcpE1D0QTXSGxm3AA68zXK_w2JYrVFVYbAnU,9910521
+demerge/demerge.py,sha256=-pUHsy9kaP3oe00ayUiiXW7n7nSM2yx089ox1V2bFEk,39375
+demerge/make_divided_data.py,sha256=pjwdB-oYOfAnoJWjovslFPrlldjT3OMSLNVU8EBco8Y,1887
+demerge/make_reduced_fits.py,sha256=8IZZXtGIWEF5twOWXeN6Hs-EyRlL8iadAum3qA2JVfw,10327
+demerge/merge_function.py,sha256=jU0ggy7xh7p-pUpJbItzWlYZivYOZtZssZzmdyR7akQ,11628
+demerge/merge_to_dems.py,sha256=hIOqnHt9k5WMezHl60J6cfVG5FKlugAmlC5ZO9NjQ7g,21248
+demerge/plot.py,sha256=r5hbTg9UD_p07wyLSbwME1IigSG1pZMpQvSOILGmacw,9921
+demerge/run.sh,sha256=I-GgjrlznDUbyNYezmmbqdNDv3nbb-eoeKLYDsyEJMI,7067
+demerge-2.13.0.dist-info/LICENSE,sha256=NRlLuS-XXkEmgYH-vJHCiSGNWXik1nnz_YxJeHoOkns,1074
+demerge-2.13.0.dist-info/METADATA,sha256=2NPsHAEYCXKGAbMJgoCm3wxOG5EbCeC6n7Z6FnjNZEs,16387
+demerge-2.13.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+demerge-2.13.0.dist-info/entry_points.txt,sha256=8e-SgRy_IlAV9b67Ykz2OW5yI8GPcayjwt8q5cobagU,259
+demerge-2.13.0.dist-info/RECORD,,
