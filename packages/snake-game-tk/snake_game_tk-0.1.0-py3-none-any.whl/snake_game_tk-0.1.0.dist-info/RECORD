@@ -1,0 +1,17 @@
+snake_game/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+snake_game/board.py,sha256=-7728oB5WKzkFLULqjB5HdiS7HnhxOKyBkbwoLdSXiw,422
+snake_game/direction.py,sha256=YWekAdcdiGpaM1Q79FCU5i8thW5dcEDt7waXTAsVe6k,116
+snake_game/food.py,sha256=IgejBWsXTH6cFwVyzTHaCPrhCXsMXsj96WIi7hmtcTc,924
+snake_game/main.py,sha256=O9u3YKn0gnvde-BCWOre7Zw_VhzjHEXxLofBgV8xPHQ,2432
+snake_game/snake.py,sha256=VnetnKSokeOk0IKvhF_6Lxv1GwzYmKaDoqcidRn17cA,2018
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_board.py,sha256=sR0ydFUmm8OHTk3c2DbPnJHepJdZS_r4ADc4lyD00RA,695
+tests/test_direction.py,sha256=kKonnTksk_uq4Pa98-JRlW2W-UkYWOafhxcyytEBsSE,402
+tests/test_food.py,sha256=3QWlFVGDWtwEERTqrO3XDZQ9AGer3I__XbTCvkJp3cY,884
+tests/test_game.py,sha256=6fAsx4HqUkUgfl0gFeZNyD6StD--L7JldlNhcPIUnOE,684
+tests/test_snake.py,sha256=JiwJSqFeA4xqLpMcC1pkCd7EW3dVv53M5rLnrEjUuDA,1694
+snake_game_tk-0.1.0.dist-info/METADATA,sha256=fKdyIUX5cPy2DvYZfm6kW2dhchb8xOQDA1BqT1D1adY,817
+snake_game_tk-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+snake_game_tk-0.1.0.dist-info/entry_points.txt,sha256=Wp_33PMib0Rtr4xO5SuIUsA3MhrUj8f1WO6FLVdCQFc,54
+snake_game_tk-0.1.0.dist-info/top_level.txt,sha256=Y-Z_rhW-h6UxvVIGfZDYTZAKMXjy8v_PmGWVe9fb7IA,17
+snake_game_tk-0.1.0.dist-info/RECORD,,
