@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        bigtesty=bigtesty.cli.main:run
+    

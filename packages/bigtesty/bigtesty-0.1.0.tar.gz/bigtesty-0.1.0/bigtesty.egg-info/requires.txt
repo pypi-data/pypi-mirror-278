@@ -1,0 +1,6 @@
+pulumi-gcp==7.24.0
+google-cloud-bigquery==3.23.1
+typer[all]==0.12.3
+pytest==8.2.1
+deepdiff==7.0.1
+toolz==0.12.1
