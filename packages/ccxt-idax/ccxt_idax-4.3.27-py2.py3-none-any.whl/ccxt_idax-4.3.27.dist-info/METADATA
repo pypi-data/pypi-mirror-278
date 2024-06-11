@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: ccxt-idax
+Version: 4.3.27
+Summary: Custom fork of ccxt
+Home-page: https://ccxt.com
+Author: Igor Kroitor
+Author-email: igor.kroitor@gmail.com
+License: MIT
+Project-URL: Homepage, https://ccxt.com
+Project-URL: Documentation, https://github.com/ccxt/ccxt/wiki
+Project-URL: Discord, https://discord.gg/ccxt
+Project-URL: Twitter, https://twitter.com/ccxt_official
+Project-URL: Funding, https://opencollective.com/ccxt
+Keywords: algorithmic,algotrading,altcoin,altcoins,api,arbitrage,real-time,realtime,backtest,backtesting,bitcoin,bot,btc,cny,coin,coins,crypto,cryptocurrency,crypto currency,crypto market,currency,currencies,darkcoin,dash,digital currency,doge,dogecoin,e-commerce,etc,eth,ether,ethereum,exchange,exchanges,eur,framework,invest,investing,investor,library,light,litecoin,ltc,market,market data,markets,merchandise,merchant,minimal,ohlcv,order,orderbook,order book,price,price data,pricefeed,private,public,ripple,strategy,ticker,tickers,toolkit,trade,trader,trading,usd,volume,websocket,websockets,web socket,web sockets,ws,xbt,xrp,zec,zerocoin
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Information Technology
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: JavaScript
+Classifier: Programming Language :: PHP
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: setuptools >=60.9.0
+Requires-Dist: certifi >=2018.1.18
+Requires-Dist: requests >=2.18.4
+Requires-Dist: cryptography >=2.6.1
+Requires-Dist: typing-extensions >=4.4.0
+Requires-Dist: aiohttp >=3.8 ; python_version>="3.5.2"
+Requires-Dist: aiodns >=1.1.1 ; python_version>="3.5.2"
+Requires-Dist: yarl >=1.7.2 ; python_version>="3.5.2"
+Provides-Extra: qa
+Requires-Dist: ruff ==0.0.292 ; extra == 'qa'
+Requires-Dist: tox >=4.8.0 ; extra == 'qa'
+Provides-Extra: type
+Requires-Dist: mypy ==1.6.1 ; extra == 'type'
+
+# Custom fork of ccxt
+
+This is a fork of [ccxt](https://github.com/ccxt/ccxt) for [idax](http://idax.exchange).
