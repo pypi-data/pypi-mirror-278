@@ -1,0 +1,3 @@
+[console_scripts]
+drawlib=drawlib.__main__:main
+
