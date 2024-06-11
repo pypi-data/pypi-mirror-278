@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: guppylang
+Version: 0.5.0
+Summary: Pythonic quantum-classical programming language
+Home-page: https://github.com/CQCL/guppy
+License: Apache-2.0
+Author: Mark Koch
+Author-email: mark.koch@quantinuum.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: graphviz (>=0.20.1,<0.21.0)
+Requires-Dist: hugr (>=0.2.1,<0.3.0)
+Requires-Dist: networkx (>=3.2.1,<4.0.0)
+Requires-Dist: pydantic (>=2.7.0b1,<3.0.0)
+Requires-Dist: typing-extensions (>=4.9.0,<5.0.0)
+Project-URL: Repository, https://github.com/CQCL/guppy
+Description-Content-Type: text/markdown
+
+Guppy is a quantum programming language that is fully embedded into Python. It
+allows you to write high-level hybrid quantum programs with classical control
+flow and mid-circuit measurements using Pythonic syntax:
+
+```python
+from guppylang import guppy, qubit, quantum
+
+guppy.load(quantum)
+
+# Teleports the state in `src` to `tgt`.
+@guppy
+def teleport(src: qubit, tgt: qubit) -> qubit:
+   # Create ancilla and entangle it with src and tgt
+   tmp = qubit()
+   tmp, tgt = cx(h(tmp), tgt)
+   src, tmp = cx(src, tmp)
+
+   # Apply classical corrections
+   if measure(h(src)):
+      tgt = z(tgt)
+   if measure(tmp):
+      tgt = x(tgt)
+   return tgt
+```
+
