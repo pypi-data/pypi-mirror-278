@@ -1,0 +1,98 @@
+Metadata-Version: 2.1
+Name: MinimalLLM
+Version: 1.0.0
+Summary: Minimal toolkit for LLM
+Author: Zijian Zhang
+Project-URL: Homepage, https://github.com/EvoEvolver/MinimalLLM
+Project-URL: Issues, https://github.com/EvoEvolver/MinimalLLM/issues
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: httpx~=0.26.0
+Requires-Dist: pillow~=10.0.1
+Requires-Dist: litellm~=1.32.3
+Requires-Dist: tenacity~=8.2.3
+Requires-Dist: tqdm~=4.66.1
+Requires-Dist: json2html~=1.3.0
+Requires-Dist: pytest
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+
+# MinimalLLM
+
+Minimal and handy interfaces of LLMs based on LiteLLM.
+
+Features:
+- Minimal and intuitive interfaces. You don't need to learn
+- Handy cache system for faster testing
+- Support for multiple LLMs by LiteLLM
+
+## Usage
+
+Chat
+```python
+from mllm import Chat
+chat = Chat()
+chat += "Give me a random number from 1 to 10"
+res = chat.complete(cache=True)
+print(res)
+chat = Chat()
+chat += "Give a json dict with keys 'a' and 'b' and values 1 and 2"
+res = chat.complete(parse="dict", cache=True)
+print(res)
+```
+
+Embedding
+```python
+from mllm import get_embeddings
+embeddings = get_embeddings(["Hello, world!", "Goodbye, world!"])
+print(embeddings)
+# Embeddings are automatically cached
+```
+
+
+Visualized Log of chats
+```python
+from mllm import Chat, display_chats
+with display_chats():
+    chat = Chat()
+    chat += "Who is your developer?"
+    res = chat.complete(cache=True)
+    # A web page will be opened to show the chat log
+```
+
+
+## Providers
+
+MinimalLLM is based on LiteLLM, which supports multiple providers. You can switch the provider to use different LLMs.
+
+Switch provider
+```python
+from mllm.provider_switch import set_default_to_anthropic
+set_default_to_anthropic()
+```
+
+To setup the API keys for the providers, we recommend to use the following wizard:
+```python
+from mllm.setup.wizard import setup_wizard
+setup_wizard()
+```
+You can run in the command line:
+```bash
+python -m mllm.setup.wizard
+```
+
+## Installation
+
+```bash
+pip install -U git+https://github.com/EvoEvolver/MinimalLLM
+```
+
+To add it to your `requirements.txt`:
+```
+MinimalLLM @ git+https://github.com/EvoEvolver/MinimalLLM
+```
+
+## Why minimal?
+
+Minimal means stable. We only provide the most basic interfaces and features.
