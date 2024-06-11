@@ -1,0 +1,9 @@
+requests
+fsspec
+celery
+redis
+flower
+huggingface_hub
+python-dotenv
+omegaconf==2.0.5
+tqdm
