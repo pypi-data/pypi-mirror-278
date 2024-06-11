@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "b-proxy"
+version = "0.0.1rc1"
+description = ""
+authors = ["Antoni Oktha Fernandes <37358597+DesKaOne@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "b_proxy"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pydantic = "^2.7.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
