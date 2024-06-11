@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: diskscan
+Version: 0.1.0
+Summary: DiskScan - A cross-platform disk cleaner
+Home-page: https://github.com/yourusername/diskscan
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# DiskScan
+
+DiskScan is a cross-platform disk cleaner tool that helps you clean temporary files, cache, and log files from your system.
+
+## Installation
+
+Install DiskScan via pip:
+
+pip install diskscan
+
+## Usage
+
+Run DiskScan from the command line:
+
+diskscan scan # For a medium-size scan
+diskscan fullscan # For a complete scan
+diskscan scango # For a quick scan
+
+## Supported Platforms
+
+- Windows
+- MacOS
+- Linux
+- ChromeOS

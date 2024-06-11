@@ -1,0 +1,16 @@
+README.md
+setup.py
+diskscan/__init__.py
+diskscan/chromeos.py
+diskscan/cleaner.py
+diskscan/cli.py
+diskscan/linux.py
+diskscan/macos.py
+diskscan/windows.py
+diskscan.egg-info/PKG-INFO
+diskscan.egg-info/SOURCES.txt
+diskscan.egg-info/dependency_links.txt
+diskscan.egg-info/entry_points.txt
+diskscan.egg-info/top_level.txt
+tests/__init__.py
+tests/testcleaner.py
