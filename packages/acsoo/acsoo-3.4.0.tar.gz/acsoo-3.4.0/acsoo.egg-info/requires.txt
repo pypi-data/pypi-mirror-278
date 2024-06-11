@@ -1,0 +1,9 @@
+appdirs
+click
+colorama
+configparser
+pip>=9.0.1
+setuptools
+wheel>=0.29
+httpx
+tomli
