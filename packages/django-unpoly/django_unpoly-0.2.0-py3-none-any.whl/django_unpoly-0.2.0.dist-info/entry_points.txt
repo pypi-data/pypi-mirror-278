@@ -1,0 +1,3 @@
+[console_scripts]
+django-unpoly=django_unpoly.cli:main
+
