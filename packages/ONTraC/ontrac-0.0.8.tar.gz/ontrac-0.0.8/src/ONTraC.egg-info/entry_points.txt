@@ -1,0 +1,6 @@
+[console_scripts]
+GP = ONTraC.bin.GP:main
+NTScore = ONTraC.bin.NTScore:main
+ONTraC = ONTraC.bin.ONTraC:main
+ONTraC_analysis = ONTraC.bin.ONTraC_analysis:main
+createDataSet = ONTraC.bin.createDataSet:main
