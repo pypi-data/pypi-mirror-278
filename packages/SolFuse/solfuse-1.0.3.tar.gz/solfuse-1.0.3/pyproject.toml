@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[project]
+name = "SolFuse"
+version = "1.0.3"
+authors = [{ name = 'UshioA', email = "shiosshio@outlook.com" }]
+description = "A Tool to generate state-machine indicating invalid call-chain from Solidity source code."
+requires-python = ">=3.11"
+readme = "README.md"
+license = { file = "LICENSE" }
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+]
+keywords = ["solidity", 'state_machine']
+dependencies = ["slither-analyzer", "z3-solver", "pygraphviz"]
+[project.scripts]
+solfuse = 'solfuse.solidity_statemachine_gen.main:main'
+
+[project.urls]
+Homepage = "https://gitlab.com/RealDingZhen/graduation-project"
