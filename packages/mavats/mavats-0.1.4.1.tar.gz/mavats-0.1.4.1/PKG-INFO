@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: mavats
+Version: 0.1.4.1
+Summary: Some methods for matrix-valued time series
+Home-page: https://github.com/dx-li/MaVaTS
+License: MIT
+Author: Daniel
+Author-email: danlixuan@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: numpy (>=1.26.4,<2.0.0)
+Requires-Dist: scipy (>=1.13.1,<2.0.0)
+Project-URL: Documentation, https://dx-li.github.io/MaVaTS/mavats.html
+Project-URL: Repository, https://github.com/dx-li/MaVaTS
+Description-Content-Type: text/markdown
+
+# MaVaTS
+
+MaVaTS is a Python library for matrix-valued time series methods.
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install MaVaTS.
+
+```bash
+pip install mavats
+```
+
+## Usage
+
+Please refer to the [documentation](https://dx-li.github.io/MaVaTS/mavats.html)
+
+## Contributing
+
+Pull requests are welcome.
+
+## License
+
+[MIT](https://github.com/dx-li/MaVaTS/blob/main/LICENSE)
