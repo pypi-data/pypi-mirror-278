@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dareplane_utils"
+version = "0.0.8"
+authors = [{name="Matthias Dold", email="matthias.dold@gmx.net"}]
+description = "Default utilities for the dareplane platform"
+readme ="README.md"
+requires-python = ">=3.10"
+
+[project.urls]
+"homepage" = "https://github.com/matthiasdold/dareplane-pyutils"
+
+[tool.pytest.ini_options]
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+    "./"
+]
+filterwarnings = ["ignore:::.*fire.core"]
