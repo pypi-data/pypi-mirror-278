@@ -1,0 +1,33 @@
+# Project Metadata
+[project]
+name = "deinterf"
+version = "1.1.0"
+description = "Aeromagnetic Data Compensation for Magnetic Interference"
+readme = "README.md"
+
+# Requirements
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.26.4", 
+    "scipy>=1.12.0", 
+    "scikit-learn>=1.4.0",
+    "typing-extensions>=4.10.0",
+    "sgl2020>=0.1.1",
+    "matplotlib>=3.8.3",
+    "ppigrf>=1.0.2"
+]
+
+# Author Info
+authors = [ { name = "dorian", email = "dorian.li@outlook.com" } ]
+
+# Project Classifiers
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+# Build System
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
