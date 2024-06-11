@@ -1,0 +1,92 @@
+Metadata-Version: 2.1
+Name: textgrad
+Version: 0.1
+License: MIT license
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Provides-Extra: langchain
+License-File: LICENSE
+
+# TextGrad
+An autograd engine -- for textual gradients! 
+User your favorite LLM as a critic to tune your prompts or text for any objective you can specify.
+
+$$\begin{equation}
+    \frac{\partial Loss}{\partial Prompt} = \frac{\partial Loss}{\partial Response} \circ \frac{\partial Response}{\partial Prompt}
+\end{equation}
+$$
+
+Install it simply via pip with minimal dependencies:
+```bash
+pip install textgrad
+```
+
+
+## Local setup
+```bash
+# Initialization
+conda create -n textgrad python==3.11
+conda activate textgrad
+pip install -e .
+# To install with langchain, use the following command
+pip install -e .[langchain]
+export OPENAI_API_KEY="your_openai_api_key_here" 
+export ANTHROPIC_API_KEY="your_openai_api_key_here"
+# Alternatively, write these lines into your ~/.bashrc or ~/.zshrc , depending on the models you would want to use
+python evaluation/supervised_eval.py
+```
+
+
+## Example API
+```python
+import textgrad
+
+# Set the backward engine as an External LLM API object. See textgrad.config for more details.
+textgrad.set_backward_engine(llm_api)
+system_prompt = textgrad.Variable("You are a language model that summarizes a given document", requires_grad=True)
+
+api_model = textgrad.model.BlackboxLLM(llm_api)
+
+# this tells the model to use the following system prompt
+api_model = api_model + system_prompt
+
+# Reading a document, in this case Senate Bill 1047
+with open("sb_1047.txt") as f:
+    data = f.read()
+
+# Since we will not need the criticisms for the document, we will explicitly set requires_grad=False
+doc = textgrad.Variable(data, requires_grad=False)
+# Get the summary
+summary = api_model(doc)
+
+# Compute a loss
+loss_fn = textgrad.ResponseEvaluation(engine=llm_api, 
+        evaluation_instruction=Variable("Evaluate if this is a good summary based on completeness and fluency.", requires_grad=False))
+loss = loss_fn(summary)
+loss.backward() # This populates gradients
+
+optimizer = textgrad.TextualGradientDescent(engine=llm_api, parameters=[system_prompt])
+optimizer.step()
+print(system_prompt)
+#'You are a language model skilled at summarizing complex legislative bills in a clear and organized manner. Your summaries should:\n\n- Identify the core purpose, goals, and mechanisms of the bill\n- Define and explain key terminology and concepts central to the bill\n- Outline the major provisions, requirements, enforcement measures, and other critical elements\n- Structure the summary logically by separating definitions, provisions, enforcement, etc.\n- Use precise legal/technical language appropriate for legal experts and policymakers\n- Capture important details and nuances accurately while keeping the summary concise\n\nYour summaries should enable legal experts, policymakers, and interested members of the public to quickly understand the essence and implications of the proposed legislation.'
+```
+
+### Test-Time Training
+TODO: Add instance optimization
+```python
+import textgrad
+
+```
+
+
+### Inspiration
+Many existing works greatly inspired tihs project! Here is a non-exhaustive list:
+- [PyTorch](https://github.com/pytorch/pytorch/) The one and only. We owe a ton to PyTorch, hard to do justice here.
+- [DSPy](https://github.com/stanfordnlp/dspy) is a pioneer in writing LM-based programs in many different ways! Has been a huge inspiration for us.
+- [Micrograd](https://github.com/karpathy/micrograd): A tiny autograd engine greatly inspired our simple design!
+- [ProTeGi](https://github.com/microsoft/LMOps/tree/main/prompt_optimization): Concise implementation of prompt optimization with textual gradients!

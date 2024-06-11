@@ -1,0 +1,17 @@
+openai
+tenacity
+python-dotenv
+pandas
+anthropic
+platformdirs
+datasets
+transformers
+diskcache
+graphviz
+
+[langchain]
+langchain
+langchain-community
+langchain-openai
+langchain_chroma
+langchainhub
