@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "nwp-dl-utils"
+version = "0.0.12"
+authors = [
+  { name="Volker Hoffmann", email="volker.hoffmann@sintef.no" },
+]
+description = "Tools to download (relevant parts of) various NWP products."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "pandas",
+  "numpy",
+  "xarray",
+  "pyresample",
+  "netCDF4",
+  "dask",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/sintef/nwp-dl-utils"
+"Bug Tracker" = "https://github.com/sintef/nwp-dl-utils/issues"
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
+pythonpath = "src"
