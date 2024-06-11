@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: PepperPepper
+Version: 0.0.7.41
+Summary: It is a DeepLearning package to foster developed by Aohua Li
+Home-page: 
+Author: Aohua Li
+Author-email: pepper2024jlu@163.com
+Requires-Python: >=3.11
+Requires-Dist: jupyter>=1.0.0
+Requires-Dist: numpy>=1.21.5
+Requires-Dist: matplotlib>=3.5.1
+Requires-Dist: requests>=2.25.1
+Requires-Dist: pandas>=1.2.4
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: opencv-python
