@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: killb-sdk-python
+Version: 0.1.5
+Summary: SDK for KillB API V2
+Home-page: https://github.com/Kill-B/sdk-python
+Author: Kill-B
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires: requests
+
+# sdk-python
