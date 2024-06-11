@@ -1,0 +1,1 @@
+from dependeless.main import cli
