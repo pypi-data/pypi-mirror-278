@@ -1,0 +1,22 @@
+Clause 7.2 says that a request must consist of a single RequestValue
+It doesn't say what other fields may be present e.g. startTime or endTime
+Should they be honoured if they are?
+
+More general issue with where to send the results (i.e. a destination 
+should be specified as part of the Request). Could be nailed down to
+only containing a URL or FQDN?
+
+Choice on responding to failures with ActionError or with a LD status of invalid
+(as usual) with appropriate info?
+
+Are there any restrictions on how many requests can be put in a single message?
+
+Do we intend for people to use the Workflow Profiles for this?
+
+For consistency with workflows, the LDDesiredStatus of the request should be AwaitingDisclosure
+
+If we allow querying of the LDTaskObjects afterwards, we should say that the
+status post-disclosure is "Disclosed".
+
+Conflict between LDTaskStatus "DisclosureNotAvailable" and "Disclosed" with zero recorss
+(which appears to be what 103 976 expects)
