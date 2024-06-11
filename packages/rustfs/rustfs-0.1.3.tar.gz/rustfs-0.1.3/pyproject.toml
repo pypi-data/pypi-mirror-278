@@ -1,0 +1,33 @@
+[build-system]
+requires = ["maturin>=1.5,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "rustfs"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Rust",
+    'Programming Language :: Python',
+    "Programming Language :: Python :: Implementation :: PyPy",
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3 :: Only',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'Operating System :: MacOS',
+    'Operating System :: POSIX :: Linux',
+]
+dynamic = ["version"]
+
+[tool.maturin]
+name = "rustfs"
+python-source = "python"
+features = ["pyo3/extension-module"]
+
+
+# This entrypoint will make flytekit work out of the box without changing any code.
+[project.entry-points."flytekit.plugins"]
+rustfs = "rustfs"
