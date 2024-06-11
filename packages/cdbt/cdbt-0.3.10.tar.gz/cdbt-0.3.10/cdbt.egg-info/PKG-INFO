@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: cdbt
+Version: 0.3.10
+Summary: A CLI tool to manage dbt builds with state handling and manifest management
+Author: Craig Lathrop
+Author-email: development@coldborecapital.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Requires-Dist: click
+Requires-Dist: pyperclip
+Requires-Dist: snowflake-connector-python[pandas]
+Requires-Dist: python-dotenv
+Requires-Dist: openai
+Requires-Dist: sqlfluff
+Requires-Dist: sqlfluff-templater-dbt
+Requires-Dist: wordninja
