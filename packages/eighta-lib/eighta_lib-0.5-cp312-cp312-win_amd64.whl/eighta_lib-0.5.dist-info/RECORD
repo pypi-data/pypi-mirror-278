@@ -1,0 +1,17 @@
+slicers.cp312-win_amd64.pyd,sha256=yX_ThTb6no1nwm1hKYJ7KeG3UBHtR-CBkXUUovoXYFk,22528
+eighta_lib/__init__.py,sha256=mVTEVqiyDhHsO0qHEGBymxei2VO2ywMlj_QMEnOT9FM,777
+eighta_lib/file_management.py,sha256=kowNGsTsNxhAAu0tL1oHOmxC2JyeMRDpHIWOuBB7RD0,58788
+eighta_lib/slicing.py,sha256=WLTecl8uJ3VUSxkRD9mOGulRs79-NzSnuBPysYm6Uvw,62766
+eighta_lib/spdata.py,sha256=Le-meJDq4KVvvVL9EGMXfzHMIumOOFA2kh1iZddNZ_8,8608
+eighta_lib/analysis_tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+eighta_lib/analysis_tools/gene_analysis.py,sha256=CFA3vTHsZl9XL3FPgFK3EYU4VwVPjnhzQeM7hiDisHs,4551
+eighta_lib/analysis_tools/incremental_pca.py,sha256=B_tHk17Zz73f5EsfIGqt5O3pVvlnejv38IIddrf0GAM,22077
+eighta_lib/c_extensions/csr_csc_slicers.c,sha256=-WKCOy5Zc7yFR4QPrYjE0QWUeK1nVetm3UrGCAtqxqQ,32639
+eighta_lib/data_transformation/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+eighta_lib/data_transformation/log_transform.py,sha256=Qh1lg60fooGqIHeZSslTPHPB05cWBADTMbgXoJZesHU,1514
+eighta_lib/data_transformation/normalize.py,sha256=zW2rLBLlzH8c9r8g_GE2xFool6PL-kRqupuNBrCnJx4,2099
+eighta_lib/data_transformation/scale.py,sha256=4i8LyZqcwHnqsbwF_OxsFa69J9kU6S-SQr81-OKK_m8,4033
+eighta_lib-0.5.dist-info/METADATA,sha256=wNSrOoWrNPWmbiBpBz8bhPRF1AEkPTqwZeGuAGW-kKU,374
+eighta_lib-0.5.dist-info/WHEEL,sha256=fZWyj_84lK0cA-ZNCsdwhbJl0OTrpWkxInEn424qrSs,102
+eighta_lib-0.5.dist-info/top_level.txt,sha256=Okk_9n_0wUK8KxugMdcUNbPO_AJ4FFW-5p_M-ZRHGkk,19
+eighta_lib-0.5.dist-info/RECORD,,
