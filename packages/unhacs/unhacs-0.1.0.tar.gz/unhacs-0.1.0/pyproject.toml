@@ -1,0 +1,28 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "unhacs"
+version = "0.1.0"
+description = "Command line interface to install Home Assistant Community Store packages"
+authors = ["Ian Fijolek <ian@iamthefij.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.32.3"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+mypy = "^1.10.0"
+pre-commit = "^3.7.1"
+types-requests = "^2.32.0.20240602"
+
+[tool.poetry.scripts]
+unhacs = 'unhacs.main:main'
+
+[tool.isort]
+force_single_line = true
+profile = "black"
