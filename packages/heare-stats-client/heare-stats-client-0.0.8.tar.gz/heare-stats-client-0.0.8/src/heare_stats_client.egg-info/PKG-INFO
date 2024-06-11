@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: heare-stats-client
+Version: 0.0.8
+Summary: Metrics client for heare services and clients
+Home-page: https://github.com/heare-io/heare-stats-client
+Author: Sean Fitzgerald
+Author-email: seanfitz@heare.io
+Project-URL: Bug Tracker, https://github.com/heare-io/heare-stats-client/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# heare-stats-client
+This is the client library used for publishing telemetry (specifically counters/timers/etc) from various heare applications. Inspired by statsd.
