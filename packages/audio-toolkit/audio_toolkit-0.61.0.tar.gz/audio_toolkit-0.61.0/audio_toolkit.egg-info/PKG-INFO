@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: audio-toolkit
+Version: 0.61.0
+Home-page: https://github.com/khanh101/audio-toolkit
+Author: Nguyen Ngoc Khanh
+Author-email: khanh.nguyen.contact@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: tqdm==4.65.0
+Requires-Dist: sqlitedict==2.1.0
+Requires-Dist: duckdb==0.7.1
+
+# audio-tools
+
+# upload
+
+```bash
+rm -rf dist crypt_dir.egg-info
+python setup.py sdist
+twine upload dist/*
+```
