@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+tapsage/__init__.py
+tapsage/tapsagebot.py
+tapsage/taptypes.py
+tapsage/tapuser.py
+tapsage/async_tapsage/__init__.py
+tapsage/async_tapsage/asynctapbot.py
+tapsage/async_tapsage/asynctapuser.py
+tapsage_client.egg-info/PKG-INFO
+tapsage_client.egg-info/SOURCES.txt
+tapsage_client.egg-info/dependency_links.txt
+tapsage_client.egg-info/not-zip-safe
+tapsage_client.egg-info/top_level.txt
+tests/test.py
+tests/test_async.py
