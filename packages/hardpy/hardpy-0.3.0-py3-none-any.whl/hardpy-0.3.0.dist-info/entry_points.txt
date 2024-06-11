@@ -1,0 +1,5 @@
+[console_scripts]
+hardpy-panel = hardpy.hardpy_panel.runner:run
+
+[pytest11]
+pytest_hardpy = hardpy.pytest_hardpy.plugin
