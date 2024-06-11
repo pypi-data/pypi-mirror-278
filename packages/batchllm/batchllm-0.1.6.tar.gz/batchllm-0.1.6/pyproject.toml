@@ -1,0 +1,18 @@
+[project]
+name = "batchllm"
+version = "0.1.6"
+authors = [
+  { name="chaofeng.gcf", email="chaofeng.gcf@alibaba-inc.com" },
+]
+description = "A framework designed for llm offline distributed inference from Odps datasource."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/Lyaction/BatchLLM"
+Issues = "https://github.com/Lyaction/BatchLLM/issues"
