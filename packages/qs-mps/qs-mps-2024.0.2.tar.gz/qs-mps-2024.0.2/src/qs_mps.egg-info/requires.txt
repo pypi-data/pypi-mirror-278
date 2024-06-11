@@ -1,0 +1,11 @@
+numpy
+scipy
+ncon
+matplotlib
+jupyter
+sympy
+
+[tests]
+pytest
+coverage
+pytest-cov
