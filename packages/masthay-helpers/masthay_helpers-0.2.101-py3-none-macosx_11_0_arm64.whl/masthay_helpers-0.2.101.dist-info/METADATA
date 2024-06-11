@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: masthay-helpers
+Version: 0.2.101
+Summary: Helper functions for repetitive and useful tasks
+Author: Tyler Masthay
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: holoviews >=1.17.1
+Requires-Dist: hvplot >=0.8.4
+Requires-Dist: hydra-core >=1.1.0
+Requires-Dist: matplotlib >=3.7.2
+Requires-Dist: matplotlib-inline >=0.1.6
+Requires-Dist: numpy >=1.25.2
+Requires-Dist: pandas >=2.1.1
+Requires-Dist: panel >=1.2.3
+Requires-Dist: returns >=0.22.0
+Requires-Dist: tabulate >=0.8.9
+Requires-Dist: termcolor >=1.1.0
+
+# Masthay Helpers
+
+[![Masthay Helpers](https://edibleaspen.ediblecommunities.com/sites/default/files/images/article/hive-1.jpg)](https://en.wikipedia.org/wiki/Worker_bee#Worker_activities)
+
+This is a project for various helper functions to increase efficiency.
+Think of it like a collection of [worker bees performing different tasks](https://en.wikipedia.org/wiki/Worker_bee#Worker_activities).
+PyPi page is [here](https://pypi.org/project/masthay-helpers/).
+
+## Table of Contents
+- [Installation](#installation)
+
+## Installation
+Right now, I only support linux, but if you have linux, it's just a simple
+install.
+```bash
+pip install masthay_helpers
