@@ -1,0 +1,2 @@
+[console_scripts]
+taxbrain = taxbrain.cli:cli_main
