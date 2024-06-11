@@ -1,0 +1,49 @@
+# -*- coding: utf-8; -*-
+
+from __future__ import unicode_literals, absolute_import
+
+from unittest import TestCase
+
+import sqlalchemy as sa
+
+from rattail.autocomplete import vendors as mod
+from rattail.config import make_config
+from rattail.db import Session
+
+
+class TestVendorAutocompleter(TestCase):
+
+    def setUp(self):
+        self.config = self.make_config()
+        self.autocompleter = self.make_autocompleter()
+
+    def make_config(self):
+        return make_config([], extend=False)
+
+    def make_autocompleter(self):
+        return mod.VendorAutocompleter(self.config)
+
+    def test_autocomplete(self):
+        engine = sa.create_engine('sqlite://')
+        model = self.config.get_model()
+        model.Base.metadata.create_all(bind=engine)
+        session = Session(bind=engine)
+
+        # first create some vendors
+        acme = model.Vendor(name='Acme Wholesale Foods')
+        session.add(acme)
+        bigboy = model.Vendor(name='Big Boy Distributors')
+        session.add(bigboy)
+
+        # searching for nothing yields no results
+        result = self.autocompleter.autocomplete(session, '')
+        self.assertEqual(len(result), 0)
+
+        # search for 'd' yields both vendors
+        result = self.autocompleter.autocomplete(session, 'd')
+        self.assertEqual(len(result), 2)
+
+        # search for 'big' yields just Big Boy
+        result = self.autocompleter.autocomplete(session, 'big')
+        self.assertEqual(len(result), 1)
+        self.assertEqual(result[0]['value'], bigboy.uuid)
