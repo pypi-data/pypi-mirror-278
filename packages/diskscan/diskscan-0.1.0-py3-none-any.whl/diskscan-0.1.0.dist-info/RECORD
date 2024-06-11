@@ -1,0 +1,14 @@
+diskscan/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+diskscan/chromeos.py,sha256=PEnwjX126fa7bVpnFKHmjHGjbhTpM-q4C1OZIkDOKqY,1084
+diskscan/cleaner.py,sha256=h4M-359p-PSowLqgqYLAMcHTE7dR7O_MEgVlFl3otC4,367
+diskscan/cli.py,sha256=mohn3EIvKD2kSUElg91bM5pkwrfxYuXFIFIUr12EFUM,1131
+diskscan/linux.py,sha256=p8nSVe6X5B8FW077MlQELZp6UkT2MmEgBcbha7AOd6Y,1121
+diskscan/macos.py,sha256=1GYZADlu-Sam36B219ONY5reWbBt50qabzRUPhN2IvM,1214
+diskscan/windows.py,sha256=ak7210Vz-0_HfUlGk_OXi7VpRWV8eSNKY-eNSNy6iZk,1419
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/testcleaner.py,sha256=9rPWQ72ngcNVZsXEHBX-VfodDn0WYAiPXvC8a9QFhzo,984
+diskscan-0.1.0.dist-info/METADATA,sha256=HAXKr_sDzyeLvpKZ4nyjozj89nBAaZBEQ4kJUfCH7Sk,882
+diskscan-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+diskscan-0.1.0.dist-info/entry_points.txt,sha256=6nnL7460cYh8gpda_Uq99AC1l0iEsKYVRfz8u1zYGUE,47
+diskscan-0.1.0.dist-info/top_level.txt,sha256=4MmScbNHnwbg4YD40VIIybSVymVTwy1nrHOjdHvGQgs,15
+diskscan-0.1.0.dist-info/RECORD,,
