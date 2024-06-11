@@ -1,0 +1,38 @@
+[project]
+name = "epidemik"
+dynamic = ["version"]
+authors = [
+  { name="Bruno Gonçalves", email="bgoncalves@data4sci.com" },
+]
+description = "A package to simulate compartmental epidemic models"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+ "matplotlib>=3.3",
+ "networkx>=3",
+ "numpy>=1.20",
+ "pandas>=2.0",
+ "scipy>=1.10",
+ "tqdm>=4"
+]
+[project.urls]
+Homepage = "https://github.com/DataForScience/epidemik"
+Issues = "https://github.com/DataForScience/epidemik/issues"
+Documentation = "https://epidemik.readthedocs.io/"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+version = {attr = "epidemik.__version__"}
+
+[tool.pytest.ini_options]
+pythonpath = [
+  ".", "src",
+]
