@@ -1,0 +1,6 @@
+cython
+numpy
+requests
+
+[dev]
+pre-commit
