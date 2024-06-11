@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="assets_backend" name="form_view_confirmation" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/sm_connect/static/src/js/form_controller_confirmation.js"></script>
+        </xpath>
+    </template>
+</odoo>

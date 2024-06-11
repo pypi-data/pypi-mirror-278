@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: odoo12-addon-sm-connect
+Version: 12.0.0.0.17
+Summary: Connect odoo to other apps like wordpress, firbase or carsharing app
+Home-page: https://www.sommobilitat.coop
+Author: Som Mobilitat
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: Framework :: Odoo :: 12.0
+Requires-Python: >=3.5
+Requires-Dist: odoo12-addon-sm-carsharing-structure-sommobilitat
+Requires-Dist: odoo12-addon-vertical-carsharing
+Requires-Dist: odoo <12.1dev,>=12.0a
+
+UNKNOWN
+
+

@@ -1,0 +1,27 @@
+<odoo>
+  <data>
+    <record id="view_fleetio_car_form" model="ir.ui.view">
+      <field name="name">sm_connect.fleetio_vehicle.form</field>
+      <field name="model">fleet.vehicle</field>
+      <field name="type">form</field>
+      <field name="inherit_id" ref="sm_carsharing_structure_sommobilitat.new_fleet_vehicle_form_view_unique"/> <!-- New fleet view -->
+      <field name="arch" type="xml">
+        <!-- Confirm dialog for maintenance -->
+        <xpath expr="//form" position="attributes">
+            <attribute name="js_class">form_confirmation</attribute>
+        </xpath>
+        
+        <!-- ᶠˡᵉᵉᵗⁱᵒ -->
+        
+        <xpath expr="//group[@name='Ownership and Management']/group/field[@name='ownership']" position="after">
+            <field name="maintenance_external_app" string="Manteniment en App externa" readonly="False"/>
+            <div attrs="{'invisible':[('maintenance_external_app', '!=', True)]}" class="alert alert-danger">This will upload or create information to Fleetio.</div>
+        </xpath>
+        <xpath expr="//group[@name='Ownership and Management']/group[2]" position="inside">
+            <field name="fleetio_id" readonly="True" attrs="{'invisible':[('maintenance_external_app', '!=', True),('fleetio_id', '!=', True),('fleetio_archived', '!=', True)]}"/>
+            <field name="fleetio_archived" readonly="True" attrs="{'invisible':[('maintenance_external_app', '!=', True),('fleetio_id', '!=', True),('fleetio_archived', '!=', True)]}"/>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>
