@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: delta-core
+Version: 1.1.2
+Summary: Delta core
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: drb>=2.2.1
+Requires-Dist: drb-driver-odata~=1.3.3
+Requires-Dist: drb-driver-swift~=1.3.0
+Requires-Dist: GitPython>=3.1.36
+Requires-Dist: requests>=2.27.0
+Requires-Dist: jsonschema>=4.17.0
+Requires-Dist: drb-driver-http>=1.3.2
+Requires-Dist: s3fs==2023.12.2
+Requires-Dist: pydantic==2.5.3
+Requires-Dist: pydantic-settings==2.2.1
+Requires-Dist: fastapi==0.109.2
+Requires-Dist: uvicorn==0.25.0
+Requires-Dist: sqlalchemy==2.0.25
+Requires-Dist: alembic==1.13.1
+Requires-Dist: ansible==9.1.0
+Requires-Dist: ansible-runner==2.3.4
+Requires-Dist: kubernetes==28.1.0
+Requires-Dist: boto3==1.34.51
+Requires-Dist: apscheduler==3.10.4
+Requires-Dist: pytz==2024.1
+Requires-Dist: docker>=7.0.0
+Requires-Dist: psycopg[binary,pool]==3.1.18
+
+# Delta Core
+
+## prerequisites
+
+To execute locally
+```
+git submodule update --init --recursive --remote
+```
+## How to build ?
+
+```
+docker build -t registry.gael.fr/gael10/delta/software/delta-core/delta-run .
+```

@@ -1,0 +1,18 @@
+[project]
+name = "delta-core"
+description = "Delta core"
+readme = "README.md"
+classifiers = ["License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)"]
+version = "1.1.2"
+dynamic = ["dependencies"]
+requires-python = ">=3.8"
+
+[build-system]
+requires = ["setuptools>=68", "setuptools_scm[toml]>=7"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+[tool.setuptools_scm]
+write_to = "delta/core/_version.py"

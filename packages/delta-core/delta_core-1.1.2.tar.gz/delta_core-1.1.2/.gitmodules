@@ -1,0 +1,4 @@
+[submodule "gael.delta"]
+	path = gael.delta
+	url = ../../../../delta/infra/gael.delta.git
+	branch = role_resources
