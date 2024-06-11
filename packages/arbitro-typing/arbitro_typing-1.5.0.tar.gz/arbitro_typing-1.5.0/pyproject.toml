@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "arbitro-typing"
+version = "1.5.0"
+description = ""
+authors = ["Diego Villegas <dvillegas@creasys.cl>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pydantic = "^2.7.1"
+pymongo = "^4.7.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
