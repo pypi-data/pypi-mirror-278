@@ -1,0 +1,130 @@
+[tool.poetry]
+name = "pyrevolut"
+version = "0.9.1"
+description = "An unofficial Python API Wrapper for the Revolut Business API"
+authors = ["Trevor Visser <trevor.visser@gmail.com>"]
+license = "MIT"
+homepage = "https://github.com/Trevypants/pyrevolut"
+readme = "README.md"
+
+[tool.poetry.scripts]
+pyrevolut = "pyrevolut.cli.main:app"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+httpx = "0.*"
+pydantic = { extras = ["email"], version = "2.*" }
+pydantic-extra-types = "2.*"
+pycountry = "23.*"
+phonenumbers = "8.*"
+pendulum = "3.*"
+pyjwt = { extras = ["crypto"], version = "2.*" }
+cryptography = "42.*"
+authlib = "1.*"
+typer = "0.*"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "3.*"
+ipykernel = "6.*"
+commitizen = "3.*"
+
+[tool.poetry.group.test.dependencies]
+pytest-asyncio = "0.*"
+pytest = "7.*"
+pytest-xdist = { extras = ["psutil"], version = "3.*" }
+pytest-cov = "4.*"
+ruff = "*"
+black = "24.*"
+pytest-sugar = "0.*"
+pytest-instafail = "0.*"
+pytest-profiling = "1.*"
+pytest-randomly = "3.*"
+pytest-clarity = "1.*"
+pytest-split = "0.*"
+pytest-env = "1.*"
+pyngrok = "7.*"
+litestar = "2.*"
+uvicorn = "0.*"
+python-dotenv = "1.*"
+
+[tool.poetry.group.docs.dependencies]
+mkdocs-material = "9.*"
+mkdocstrings = { extras = ["python"], version = "0.*" }
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+filterwarnings = []
+addopts = "--instafail -vv"
+env = ["TEST_MODE=True"]
+asyncio_mode = "auto"
+log_cli = false
+log_cli_level = "INFO"
+log_cli_format = "%(asctime)s [%(levelname)8s] %(message)s (%(filename)s:%(lineno)s)"
+log_cli_date_format = "%Y-%m-%d %H:%M:%S"
+
+[tool.coverage.report]
+show_missing = true
+exclude_lines = [
+    # Have to re-enable the standard pragma
+    'pragma: no cover',
+
+    # Don't complain about missing debug-only code:
+    'def __repr__',
+    'if self\.debug',
+
+    # Don't complain if tests don't hit defensive assertion code:
+    'raise AssertionError',
+    'raise NotImplementedError',
+
+    # Don't complain if non-runnable code isn't run:
+    'if 0:',
+    'if __name__ == .__main__.:',
+    'if TYPE_CHECKING:',
+]
+omit = [
+    'env/*',
+    'venv/*',
+    '.venv/*',
+    '*/virtualenv/*',
+    '*/virtualenvs/*',
+    '*/tests/*',
+]
+
+[tool.coverage.run]
+omit = [".*", "*/site-packages/*", "tests/*"]
+
+[tool.coverage.json]
+pretty_print = true
+
+[tool.mypy]
+files = "pyrevolut"
+disallow_untyped_decorators = true
+disallow_subclassing_any = true
+warn_return_any = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_unused_configs = true
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.format]
+quote-style = "double"
+docstring-code-format = true
+
+[tool.ruff.lint.isort]
+known-first-party = ["pyrevolut", "tests"]
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.9.1"
+tag_format = "v$major.$minor.$patch$prerelease"
+version_scheme = "pep440"
+version_provider = "poetry"
+update_changelog_on_bump = true
+major_version_zero = true
+version_files = ["pyrevolut/__init__.py:__version__", "pyproject.toml:^version"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
