@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ff1f2bad-b716-4fc2-b838-402ba9370e56" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
+    <option name="SAVE_CHANGES_POLICY" value="STASH" />
+    <option name="SHOW_RECENT_BRANCHES" value="false" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;yankyhoffman&quot;
+  }
+}</component>
+  <component name="GitRewordedCommitMessages">
+    <option name="onto" value="1417a2eff8a576fdc2e5e399c221149985960f1c" />
+  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:yankyhoffman/check-generator.git&quot;,
+    &quot;accountId&quot;: &quot;29e1ec58-0ee9-4e1f-bce6-596735463e09&quot;
+  }
+}</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2cMXpQmxHhtofnGIliAnoS0GiO8" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+    <ConfirmationsSetting value="1" id="Remove" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.CHECKPRINT.executor&quot;: &quot;Run&quot;,
+    &quot;Python.scratch_1.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/yhoffman/PycharmProjects/checkprint&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.General&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;,
+      &quot;repository&quot;
+    ],
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Python&quot;
+    ]
+  }
+}</component>
+  <component name="Push.Settings">
+    <force-push-targets>
+      <force-push-target remote-path="origin" branch="develop" />
+    </force-push-targets>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/checkprint" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="scratch_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="checkprint" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.scratch_1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PY-241.15989.155" />
+        <option value="bundled-python-sdk-babbdf50b680-7c6932dee5e4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.15989.155" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ff1f2bad-b716-4fc2-b838-402ba9370e56" name="Changes" comment="" />
+      <created>1707922604961</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1707922604961</updated>
+      <workItem from="1707922606114" duration="83000" />
+      <workItem from="1707948107404" duration="4730000" />
+      <workItem from="1708380615764" duration="1914000" />
+      <workItem from="1708383009744" duration="806000" />
+      <workItem from="1708441142952" duration="3601000" />
+      <workItem from="1708466640131" duration="516000" />
+      <workItem from="1708639495492" duration="5092000" />
+      <workItem from="1709567555939" duration="305000" />
+      <workItem from="1716237809077" duration="2451000" />
+      <workItem from="1717448731312" duration="30000" />
+    </task>
+    <task id="LOCAL-00001" summary="WIP 2">
+      <option name="closed" value="true" />
+      <created>1707948763278</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707948763278</updated>
+    </task>
+    <task id="LOCAL-00002" summary="WIP 2">
+      <option name="closed" value="true" />
+      <created>1707948769012</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707948769012</updated>
+    </task>
+    <task id="LOCAL-00003" summary="WIP 2">
+      <option name="closed" value="true" />
+      <created>1707948960011</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707948960011</updated>
+    </task>
+    <task id="LOCAL-00004" summary="WIP 2">
+      <option name="closed" value="true" />
+      <created>1707949138168</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1707949138168</updated>
+    </task>
+    <task id="LOCAL-00005" summary="WIP 2">
+      <option name="closed" value="true" />
+      <created>1707949429960</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1707949429960</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Labels">
+      <option name="closed" value="true" />
+      <created>1707949518349</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707949518349</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Payee label">
+      <option name="closed" value="true" />
+      <created>1707949752839</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1707949752839</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Date label">
+      <option name="closed" value="true" />
+      <created>1707949867511</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1707949867511</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Date label">
+      <option name="closed" value="true" />
+      <created>1707949931952</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1707949931952</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Numeric amount label">
+      <option name="closed" value="true" />
+      <created>1707950006445</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1707950006445</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Written amount label">
+      <option name="closed" value="true" />
+      <created>1707950174368</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1707950174368</updated>
+    </task>
+    <task id="LOCAL-00012" summary="CS">
+      <option name="closed" value="true" />
+      <created>1707950287715</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1707950287715</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Memo label">
+      <option name="closed" value="true" />
+      <created>1707950401714</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1707950401714</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Lines">
+      <option name="closed" value="true" />
+      <created>1707950885173</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1707950885173</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Extract component fillable">
+      <option name="closed" value="true" />
+      <created>1707951225688</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1707951225688</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Fix memo">
+      <option name="closed" value="true" />
+      <created>1707951582564</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1707951582564</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Fix memo">
+      <option name="closed" value="true" />
+      <created>1707951632782</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1707951632782</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Update check to fillable">
+      <option name="closed" value="true" />
+      <created>1707951762381</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1707951762381</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Update check to fillable">
+      <option name="closed" value="true" />
+      <created>1707951801068</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1707951801068</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Signature component">
+      <option name="closed" value="true" />
+      <created>1707951910862</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1707951910862</updated>
+    </task>
+    <task id="LOCAL-00021" summary="This is python">
+      <option name="closed" value="true" />
+      <created>1707952276121</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1707952276121</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Check routing">
+      <option name="closed" value="true" />
+      <created>1707952825177</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1707952825177</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Print once">
+      <option name="closed" value="true" />
+      <created>1708381681376</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1708381681376</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Paginate once">
+      <option name="closed" value="true" />
+      <created>1708381691628</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1708381691628</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Paginate once">
+      <option name="closed" value="true" />
+      <created>1708381715623</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1708381715623</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Less and clear class names">
+      <option name="closed" value="true" />
+      <created>1708381921524</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1708381921524</updated>
+    </task>
+    <task id="LOCAL-00027" summary="CS">
+      <option name="closed" value="true" />
+      <created>1708382012227</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1708382012227</updated>
+    </task>
+    <task id="LOCAL-00028" summary="WIP">
+      <option name="closed" value="true" />
+      <created>1708382071743</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1708382071743</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1708382083723</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1708382083723</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1708383224174</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1708383224174</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Check printing tool">
+      <option name="closed" value="true" />
+      <created>1708383231815</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1708383231815</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Check printing tool">
+      <option name="closed" value="true" />
+      <created>1708383344114</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1708383344114</updated>
+    </task>
+    <task id="LOCAL-00033" summary="`set_font` -&gt; `use_font`">
+      <option name="closed" value="true" />
+      <created>1708441345009</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1708441345009</updated>
+    </task>
+    <task id="LOCAL-00034" summary="`set_xy` -&gt; `set_position`">
+      <option name="closed" value="true" />
+      <created>1708441659676</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1708441659676</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Require param">
+      <option name="closed" value="true" />
+      <created>1708441764071</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1708441764071</updated>
+    </task>
+    <task id="LOCAL-00036" summary="`x`,`y` -&gt; `left`,`right`">
+      <option name="closed" value="true" />
+      <created>1708441819088</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1708441819088</updated>
+    </task>
+    <task id="LOCAL-00037" summary="width &amp; height">
+      <option name="closed" value="true" />
+      <created>1708442492514</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1708442492514</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Locality of concern">
+      <option name="closed" value="true" />
+      <created>1708442786984</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1708442786984</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Check printing tool">
+      <option name="closed" value="true" />
+      <created>1708466718734</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1708466718734</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Prepare for packaging">
+      <option name="closed" value="true" />
+      <created>1708641393232</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1708641393232</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Prepare for packaging">
+      <option name="closed" value="true" />
+      <created>1708641667911</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1708641667911</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Prepare for packaging">
+      <option name="closed" value="true" />
+      <created>1708643283941</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1708643283941</updated>
+    </task>
+    <task id="LOCAL-00043" summary="d">
+      <option name="closed" value="true" />
+      <created>1708643403503</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1708643403503</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Check printing tool">
+      <option name="closed" value="true" />
+      <created>1708643429394</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1708643429394</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Bump version due to build issues">
+      <option name="closed" value="true" />
+      <created>1708644684490</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1708644684490</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Readme updates">
+      <option name="closed" value="true" />
+      <created>1708644829626</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1708644829626</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Mark checks as VOID">
+      <option name="closed" value="true" />
+      <created>1716239431918</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1716239431918</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="SHOW_PATCH_IN_EXPLORER" value="false" />
+    <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
+    <option name="RELOAD_CONTEXT" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Lines" />
+    <MESSAGE value="Extract component fillable" />
+    <MESSAGE value="Fix memo" />
+    <MESSAGE value="Update check to fillable" />
+    <MESSAGE value="Signature component" />
+    <MESSAGE value="This is python" />
+    <MESSAGE value="Check routing" />
+    <MESSAGE value="Print once" />
+    <MESSAGE value="Paginate once" />
+    <MESSAGE value="Less and clear class names" />
+    <MESSAGE value="CS" />
+    <MESSAGE value="WIP" />
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="`set_font` -&gt; `use_font`" />
+    <MESSAGE value="`set_xy` -&gt; `set_position`" />
+    <MESSAGE value="Require param" />
+    <MESSAGE value="`x`,`y` -&gt; `left`,`right`" />
+    <MESSAGE value="width &amp; height" />
+    <MESSAGE value="Locality of concern" />
+    <MESSAGE value="Prepare for packaging" />
+    <MESSAGE value="d" />
+    <MESSAGE value="Check printing tool" />
+    <MESSAGE value="Bump version due to build issues" />
+    <MESSAGE value="Readme updates" />
+    <MESSAGE value="Mark checks as VOID" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mark checks as VOID" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/checkprint$CHECKPRINT.coverage" NAME="CHECKPRINT Coverage Results" MODIFIED="1708383431022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/checkprint$scratch_1.coverage" NAME="scratch_1 Coverage Results" MODIFIED="1716239784682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+  </component>
+</project>
