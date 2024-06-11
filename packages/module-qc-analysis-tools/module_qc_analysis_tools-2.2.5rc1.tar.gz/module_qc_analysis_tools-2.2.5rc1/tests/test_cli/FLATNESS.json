@@ -1,0 +1,23 @@
+[[{
+    "serialNumber": "20UPGM22110064",
+    "testType": "FLATNESS",
+    "subtestType": "",
+    "results": {
+        "property": {
+            "ANALYSIS_VERSION": null
+        },
+        "comment": "",
+        "metadata": {
+            "QCHELPER_VERSION": "4.0.dev1",
+            "MODULE_SN": "20UPGM22110064"
+        },
+        "Metadata": {
+            "moduleName": "20UPGM22110064",
+            "BACKSIDE_FLATNESS": 0.0189,
+            "ANGLES": ""
+        },
+        "Measurements": {},
+        "BACKSIDE_FLATNESS": 0.0189,
+        "ANGLES": ""
+    }
+}]]
