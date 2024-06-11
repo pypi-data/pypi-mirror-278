@@ -1,0 +1,58 @@
+# Indy Framework version
+indydcp_version: "v3"
+
+# indycare config
+mqtt_device_id: indyPohang124
+mqtt_broker_hostname: device.thingplus.net
+mqtt_broker_port: 1883
+mqtt_username: neuromeka
+mqtt_password: dali3254
+mqtt_topic_telemetry: v1/devices/me/telemetry
+mqtt_topic_attrubutes: v1/devices/me/attributes
+mqtt_transmit_period: 60 # seconds
+aws_hostname: https://neuromeka-log.thingplus.net/
+robot_sn: DB4217E0B006
+robot_dof: 6
+
+tact_time_address: [950]
+# TODO
+# For now, IndyCARE Only Can use 1 tact time variable.
+#  if IndyCARE can use more than 1 tact time variable, Please add item on list.
+# For example) [950, 951, 952]
+# you should add float variable on Conty or grpc protocol
+
+#indycare_version: 0.10.1 (for framework V3.2.x)
+
+# indycare streamer
+# IP CAMERA options, If you are using an ip camera, set the options below
+rtsp: false
+# write ip_cam_rtsp_use_bool. if has ip_camera set "true", else set "false"
+rtsp_url: "rtsp://admin:nrmk2013@192.168.20.5/stream1"
+# write ip_cam_rtsp_url
+rtsp_streaming_fps: 20
+# streaming frame per second
+
+# VIDEO SAVE CONFIG
+compress_size: 90 # Just define it but not use it yet
+frame_width: 640 #640 #800 #848 # 1080p => 1920x1080 720p => 1280x720
+frame_height: 360 #360 #448 #480
+record_time: 120 # in second
+video_fps: 20 # fps
+numbers_of_video: 2 # number of videos add to log
+retention_period: 60 # day
+limit_capacity: 10 # percent | will delete zip files if remain storage less than %
+
+# manual error option
+manual_error_addr: 999
+# if you want to raise error manually, set this address value > 0.
+# if you don't want to use this function, set 0
+
+# ngrok config
+ngrok_region: ap
+#us - United States (Ohio)
+#eu - Europe (Frankfurt)
+#ap - Asia/Pacific (Singapore)
+#au - Australia (Sydney)
+#sa - South America (Sao Paulo)
+#jp - Japan (Tokyo)
+#in - India (Mumbai)
