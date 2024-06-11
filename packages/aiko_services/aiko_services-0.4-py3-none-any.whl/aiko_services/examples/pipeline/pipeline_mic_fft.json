@@ -1,0 +1,37 @@
+{
+  "version": 0,
+  "name":    "p_mic_fft",
+  "runtime": "python",
+
+  "graph": [
+    "(PE_Microphone PE_FFT PE_AudioResampler)"
+  ],
+
+  "parameters": {},
+
+  "elements": [
+    { "name":   "PE_Microphone",
+      "input":  [{ "name": "audio", "type": "bytes" }],
+      "output": [{ "name": "audio", "type": "bytes" }],
+      "deploy": {
+        "local": { "module": "audio_io.py" }
+      }
+    },
+    { "name":   "PE_FFT",
+      "input":  [{ "name": "audio", "type": "bytes" }],
+      "output": [{ "name": "amplitudes",  "type": "bytes" },
+                 { "name": "frequencies", "type": "bytes" }],
+      "deploy": {
+        "local": { "module": "audio_io.py" }
+      }
+    },
+    { "name":   "PE_AudioResampler",
+      "input":  [{ "name": "amplitudes",  "type": "bytes" },
+                 { "name": "frequencies", "type": "bytes" }],
+      "output": [],
+      "deploy": {
+        "local": { "module": "audio_io.py" }
+      }
+    }
+  ]
+}
