@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages]
+find = {}  # Scanning implicit namespaces is active by default
+
+[project]
+name = "pydaes"
+version = "0.0.4"
+authors = [
+  { name="Jonas Breuling", email="jonas.breuling@inm.uni-stuttgart.de" },
+]
+description = "Python implementation of solvers for differential algebraic equation's (DAEs) that should be added to scipy one day."
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+  "numpy>=1.24.4",
+  "scipy>=1.10.1",
+  "matplotlib>=3.4.3",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+]
+
+[project.urls]
+Homepage = "https://github.com/JonasBreuling/pydaes"
+Issues = "https://github.com/JonasBreuling/pydaes/issues"
