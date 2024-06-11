@@ -1,0 +1,2 @@
+[console_scripts]
+split_combomap = windkit.vector_map:split_combo

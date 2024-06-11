@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  docs_windkit:
+    image:  registry.windenergy.dtu.dk/ram-tech-team/dockerhub-private/docs_windkit:0.5.0
+    build:
+        context: .
+        dockerfile: Dockerfile
+    labels:
+      - "traefik.enable=true"
+      - "traefik.middlewares."
+      - "traefik.http.routers.docs_windkit.rule=Host(`docs-wasp.ramtt.xyz`) && PathPrefix(`/windkit`)"
+      - "traefik.http.routers.docs_windkit.entrypoints=websecure"
+      - "traefik.http.routers.docs_windkit.tls.certresolver=letsencr"
+
+networks:
+  default:
+    external:
+      name: traefik
