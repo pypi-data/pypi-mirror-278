@@ -1,0 +1,19 @@
+[build-system]
+requires = ["flit_core<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "dependeless"
+version = "0.1.0"
+description = "A tool to show which pip packages are not depended on by any other package"
+requires-python = ">=3.10"
+authors = [
+    {name = "Lucas van der Horst", email = "Lucas@vdrHorst.nl"}
+]
+dependencies = [
+    "click>=8.1",
+    "pip3-autoremove>=1.2"
+]
+
+[project.scripts]
+dependeless = "dependeless:cli"

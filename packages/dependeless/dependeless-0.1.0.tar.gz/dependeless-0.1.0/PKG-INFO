@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: dependeless
+Version: 0.1.0
+Summary: A tool to show which pip packages are not depended on by any other package
+Author-email: Lucas van der Horst <Lucas@vdrHorst.nl>
+Requires-Python: >=3.10
+Requires-Dist: click>=8.1
+Requires-Dist: pip3-autoremove>=1.2
