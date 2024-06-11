@@ -1,0 +1,28 @@
+region = "us-west-1"
+bucket = "example-bucket"
+prefix = "cos-uploader/"
+checksum = ["md5", "sha1"]
+filename = "{y}-{m}-{d}-{h}-{i}-{s}-UTC-{uuid:.8}/{name}{ext}"
+utc-time = true
+
+[credentials]
+secret-id  = "AKxxxxxxxxxxxxxx"
+secret-key = "SKxxxxxxxxxxxxxx"
+
+[transport]
+metadata-prefix = "x-amz-meta"
+upload-domain   = "ga"
+download-domain = ["cdn", "ga"]
+
+[domains]
+aws = "{bucket}.s3.{region}.amazonaws.com"
+cos = "{bucket}.cos.{region}.myqcloud.com"
+oss = "{bucket}.oss-{region}.aliyuncs.com"
+cdn = "{bucket}.file.myqcloud.com"
+
+# Global Acceleration for AWS S3
+ga = "{bucket}.s3-accelerate.amazonaws.com"
+# Global Acceleration for Tencent COS
+# ga = "{bucket}.cos.accelerate.myqcloud.com"
+# Global Acceleration for Aliyun OSS
+# ga = "{bucket}.oss-accelerate.aliyuncs.com"

@@ -1,0 +1,39 @@
+[project]
+name = "send-s3"
+version = "3.0.0"
+description = "CLI tool for uploading files to S3-compatible storage services."
+authors = [
+    { name = "Joseph Chris", email = "joseph@josephcz.xyz" },
+]
+readme = "README.md"
+requires-python = "<4.0,>=3.11"
+keywords = [
+    "uploader",
+    "s3",
+    "s3-compatible",
+    "cli",
+]
+dependencies = [
+    "pydantic-settings>=2.3.1",
+    "toml>=0.10.2",
+    "requests>=2.32.3",
+]
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+homepage = "https://github.com/baobao1270/send-s3"
+repository = "https://github.com/baobao1270/send-s3.git"
+documentation = "https://github.com/baobao1270/send-s3/blob/main/README.md"
+
+[project.scripts]
+send-s3 = "send_s3:main"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool]
