@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "podaac-concise"
+version = "0.9.0"
+description = "Harmony service that merges granules"
+authors = ["podaac-tva <podaac-tva@jpl.nasa.gov>"]
+license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/podaac/concise"
+classifiers = [
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+exclude = ['contrib', 'docs', 'tests', 'stress_test']
+packages = [
+    { include = "podaac" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+netCDF4 = "^1.5.6"
+numpy = "^1.20.3"
+harmony-service-lib = "^1.0.27"
+importlib-metadata = "^7.1.0"
+
+[tool.poetry.group.dev.dependencies]
+setuptools = "^70.0.0"
+pytest = "^8.2.0"
+flake8 = "^7.0.0"
+pytest-cov = "^5.0.0"
+pylint = "^3.2.0"
+Sphinx = "^7.3.7"
+requests = "^2.25.1"
+sphinx-rtd-theme = "^2.0.0"
+papermill = "^2.3.4"
+
+[tool.poetry.scripts]
+merge = 'podaac.merger.merge_cli:main'
+concise_harmony = 'podaac.merger.harmony.cli:main'
+benchmark = 'stress_test.benchmark:main'
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
