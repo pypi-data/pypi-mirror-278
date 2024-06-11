@@ -1,0 +1,9 @@
+aiohttp~=3.9
+pydantic~=2.7
+asyncpg~=0.29
+pyhumps~=3.8
+pglast~=6.2
+watchdog~=4.0
+
+[xray]
+aws-xray-sdk~=2.13
