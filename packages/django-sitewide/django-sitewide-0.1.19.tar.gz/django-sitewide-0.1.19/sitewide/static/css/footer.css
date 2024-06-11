@@ -1,0 +1,35 @@
+footer {
+    background: var(--footer-bg);
+    min-height: var(--footer-min-height);
+    padding-bottom: var(--mgns);
+    padding-top: var(--mgns);
+}
+
+.footer-rows-group {
+}
+
+.footer-row {
+}
+
+.footer-columns-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--mgns);
+}
+
+.footer-column {
+    color: var(--footer-fg);
+    flex: 1;
+    font-size: 0.85em;
+    min-width: var(--screen-width-outer-mgns);
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+/* Mobile Devices, Phones */
+
+@media screen and (max-width: 480px) {
+
+}

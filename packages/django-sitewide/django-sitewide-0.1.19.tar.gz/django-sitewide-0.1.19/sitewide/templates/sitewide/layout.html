@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link 
+            rel="icon" 
+            href="{% if sitewide.favicon == None %}{% static 'imgs/sitewide-favicon-32x32.png' %}{% else %}{{ sitewide.favicon }}{% endif %}" 
+            type="image/png" />
+        {% include "sitewide/stylesheets.html" %}
+        {% block 'app-css' %}{% endblock %}
+        {% block head %}{% endblock %}
+        <title>{{ pagetitle }} | {{ sitewide.project }}</title>
+    </head>
+    <body>
+        {% if sitewide.sidebar.show %}
+            {% include "sitewide/sidebar.html" %}
+        {% endif %}
+        {% block banner %}{% endblock %}
+        {% if sitewide.header.show %}
+        <header class="{{ sitewide.sidebar.state }}">
+            <div class="contents">
+                {% include "sitewide/header.html" %}
+            </div>
+        </header>
+        {% endif %}
+        <main class="{{ sitewide.sidebar.state }}">
+            <div class="contents">
+                {% block main %}{% endblock %}
+            </div>
+        </main>
+        {% if sitewide.footer.show %}
+        <footer class="{{ sitewide.sidebar.state }}">
+            <div class="contents">
+                {% include "sitewide/footer.html" %}
+            </div>
+        </footer>
+        {% endif %}
+    </body>
+    <script src="{% static 'js/sidebar.js' %}"></script>
+</html>

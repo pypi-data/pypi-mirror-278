@@ -1,0 +1,50 @@
+{% if sitewide.footer.rows %}
+    <div class="footer-rows-group">
+    {% for row in sitewide.footer.rows.entries %}
+        <div class="footer-row">
+            {{ row.output }}
+        </div>
+    {% endfor %}
+    </div>
+{% elif sitewide.footer.columns %}
+    <div class="footer-columns-group">
+    {% for column in sitewide.footer.columns.entries %}
+        <div class="footer-column">
+            {% if column.rows %}
+                {% for row in column.rows.entries %}
+                    <div>
+                        {% if row.image %}
+                            <img class="mgn-t10px" src="{{ row.image }}">
+                        {% endif %}
+                        {% if row.output %}
+                            <p class="mgn-b5px">{{ row.output }}</p>
+                        {% endif %}
+                        {% if row.columns %}
+                            <div class="flex gap-5px">                
+                                {% for subcol in row.columns.entries %}
+                                    <div>
+                                        {% if subcol.image %}
+                                            <img src="{{ subcol.image }}">
+                                        {% endif %}
+                                    </div>
+                                    <div>
+                                        {% if subcol.output %}
+                                            <p>{{ subcol.output }}</p>
+                                        {% endif %}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            {% endif %}
+            {% if column.image %}
+                <img src="{{ column.image }}">
+            {% endif %}
+            {% if column.output %}
+                <p>{{ column.output }}</p>
+            {% endif %}
+        </div>
+    {% endfor %}
+    </div>
+{% endif %}

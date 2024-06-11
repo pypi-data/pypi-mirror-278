@@ -1,0 +1,10 @@
+{% extends 'sitewide/layout.html' %}
+{% load static %}
+{% block 'app-css' %}
+    <link rel="stylesheet" href="{% static 'css/app-name.css' %}">
+{% endblock %}
+{% block banner %}
+{% include "app-name/banner.html" %}
+{% endblock %}
+{% block main %}
+{% endblock %}

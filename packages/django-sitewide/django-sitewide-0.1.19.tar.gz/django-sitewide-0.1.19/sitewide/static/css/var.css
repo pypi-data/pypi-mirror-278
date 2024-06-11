@@ -1,0 +1,157 @@
+:root {
+    
+    /* Theme Colors for Defaults, Color naming courtesy of  
+     * https://colors.artyclick.com/color-name-finder */
+    
+    /* blues */
+    --denim: #38688f;
+    --blue-zodiac: #0f2940;
+    --harp: #e6f0f0;
+    --jagged-ice: #cce3ed;
+    --cool-grey: #93a3a8;
+    --dusk-blue: #2b5696;
+    --gunmetal: #2e3436;
+    --firefly: #11223b;
+    --mirage: #0c1828;
+    --moonraker: #dbd4e9;
+    --crystal-blue: #4eb3ff;
+    --mercury: #dfe8eb;
+    --geyser: #d4e0e3;
+    --chathams-blue: #1a466e;
+
+    /* greens */
+    --hippie-green: #497e40;
+    --myrtle: #274322;
+    --dark-jungle-green: #1c2021;
+    --opal: #afc6ce;
+    --pale-olive-green: #b7dc86;
+
+    /* purples */
+    --light-indigo: #6D5ACF;
+    --meteorite: #3C3172;
+    --butterfly-bush: #64518F;
+    --bright-grey: #3C3156;
+
+    /* reds */
+    --pink-flare: #d6c3d5;
+    --dull-red: #be3b3b;
+    --crimson-red: #a90000;
+    --pale-rose: #ffc2c2;
+
+    /* creams, oranges, beiges, and browns */
+    --carrot-orange: #ed9121;
+    --timberwolf: #dbd6d0;
+    --kangaroo: #cdc8c0; /* brighter timberwolf */
+    --sandstone: #796c63;
+    --dark-brown: #54463e;
+    --silver-sand: #c0c0c0;
+    --dawn-pink: #efebe9;
+    --natural-grey: #8b8882;
+    --forget-me-not: #fff0f0;
+    --grandis: #fccf7b;
+    --silver-chalice: #ababab;
+    --soft-peach: #ebebeb;
+    --white-smoke: #f4f4f4;
+    --rope: #8d4c13;
+
+    /* Grays/Greys */
+    --iron: #d5d7d8;
+
+    /* Colors Assignments as per Sitewide Default theme */
+    --beige-grey: var(--silver-chalice); /* formerly ash */
+    --beige-ash: var(--soft-peach); /* formerly ash-pale */
+    --bg: var(--timberwolf);
+    --bg-hover: white;
+    --blue:  var(--denim);
+    --blue-accent: var(--geyser);
+    --blue-pale: var(--mercury);
+    --brown: var(--sandstone);
+    --btn-bg: var(--denim);
+    --btn-fg: var(--bg);
+    --btn-hover-bg: var(--blue-zodiac);
+    --bth-hover-fg: white;
+    --child-even-bg: var(--harp);
+    --child-odd-bg: white;
+    --dark-blue: var(--blue-zodiac);
+    --dark-green: var(--myrtle);
+    --dark-red: maroon;
+    --dim-10th: rgba(0, 0, 0, 0.1);
+    --expand-bg: white;
+    --form-bg: var(--dim-10th);
+    --form-border: gray;
+    --form-header-bg: rgba(0, 0, 0, 0.2);
+    --form-highlight: #bbceb5;
+    --form-select: #c5f3ff;
+    --form-hr: #aeaeae;
+    --fresh: var(--myrtle);
+    --green: var(--hippie-green);
+    --highlight-ring: var(--opal);
+    --highlight-green: var(--pale-olive-green);
+    --highlight-orange: var(--grandis);
+    --highlight-purple: var(--pink-flare);
+    --highlight-red: var(--pale-rose);
+    --indicator: white;
+    --indicator-hover: gray;
+    --indicator-submenu: var(--crystal-blue);
+    --indicator-submenu-hover: var(--dusk-blue);
+    --meta-bg: var(--jagged-ice);
+    --meta-border: var(--cool-grey);
+    --msg-bg: var(--forget-me-not);
+    --msg-border: grey;
+    --orange: var(--carrot-orange);
+    --photo-frame: var(--white-smoke);
+    --purple: var(--butterfly-bush);
+    --dark-purple: var(--bright-grey);
+    --red: var(--dull-red);
+    --search-bg: var(--pink-flare);
+    --search-border: var(--denim);
+    --subform-bg: var(--moonraker);
+    --tbl-hr-fg: var(--denim);
+    --tbl-bg: var(--iron);
+    --tbl-bg-alt: var(--dawn-pink);
+    /*--color-saved: #4b7c43;
+    --color-saved-bg: #edffd6;
+    --color-saved-hover: #274322;*/
+  
+    /* header */
+    --hamburger-fg: var(--bg);
+    --header-height: 100px;
+    --header-bg: var(--natural-grey);
+
+    /* sidebar */
+    --sidebar-full-avatar: 100px;
+    --sidebar-dock-avatar: 60px;
+    --sidebar-item-height: 40px;
+    --sidebar-full: 320px;
+    --sidebar-dock: 100px;
+    --sidebar-fg: var(--timberwolf);
+    --sidebar-bg: var(--gunmetal);
+    --sidebar-bg-hover: var(--dark-jungle-green);
+    --sidebar-submenu-bg: var(--firefly);
+    --sidebar-submenu-bg-hover: var(--mirage);
+ 
+    /* footer */
+    --footer-min-height: 50px;
+    --footer-fg: white;
+    --footer-bg: var(--firefly);
+
+    /* buttons */
+    --btn-height: 50px;
+    --btn-outline: 2px;
+    --btn-offset: 1px;
+    --btn-padding: 20px;
+
+    /* widgets and margins */
+    /* device margins with lowest device width being 320px */
+    --tag-column-gap: 20px;
+    --tag-row-gap: 0px;
+    --wgt-height: 40px;
+    --mgns: 20px;
+    --left-mgn: 10%;
+    --right-mgn: 10%;
+    --screen-min-width: 320px;
+    --screen-width-outer-mgns: calc(var(--screen-min-width) - (2 * var(--mgns)));
+    --screen-width-middle-mgns: calc(var(--screen-min-width) - (4 * var(--mgns))); 
+    --screen-width-inner-mgns: calc(var(--screen-min-width) - (6 * var(--mgns))); 
+}
+
