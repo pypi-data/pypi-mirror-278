@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: wherepip
+Version: 1.0.0
+Summary: 高效python库管理工具,功能有搜索、安装、卸载、获取库所在目录（python学霸公众号）
+Home-page: UNKNOWN
+Author: Python学霸
+Author-email: python@xueba.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: pkg-resources
+
+## 介绍
+`wherepip`是一个高效pip管理工具，帮你节省更多时间！
+
+## 使用
+**1.命令方式**
+where requests #输出requests所在目录
+fuck requests #卸载requests
+befuck requests #安装requests
+so re #搜索re为关键词的库
+all #输出所有python库
+
+**2.Pyhton使用**
+import wherepip
+r=wherepip.where("requests")
+s=wherepip.so("py")
+a=wherepip.all()
+print(s)
+print(a)
+print(r)
+
+**喜欢关注python学霸微信公众号!**
+
+
