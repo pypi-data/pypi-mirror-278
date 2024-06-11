@@ -1,0 +1,106 @@
+Metadata-Version: 2.1
+Name: mngs
+Version: 1.5.3
+Summary: For lazy python users (monogusa people in Japanse), especially in ML/DSP fields
+Home-page: https://github.com/ywatanabe1989/mngs
+Author: ywatanabe1989
+Author-email: ywata1989@gmail.com
+License: MIT
+Keywords: utils,utilities,python,machine learning
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: GitPython
+Requires-Dist: Pillow
+Requires-Dist: PyYAML
+Requires-Dist: Pyarrow
+Requires-Dist: anthropic
+Requires-Dist: chardet
+Requires-Dist: geom-median
+Requires-Dist: google-generativeai
+Requires-Dist: h5py
+Requires-Dist: icecream
+Requires-Dist: ipdb
+Requires-Dist: ipython <8.0.0
+Requires-Dist: joblib
+Requires-Dist: julius
+Requires-Dist: markdown2
+Requires-Dist: matplotlib
+Requires-Dist: mne
+Requires-Dist: natsort
+Requires-Dist: numpy
+Requires-Dist: obspy
+Requires-Dist: openai
+Requires-Dist: openpyxl
+Requires-Dist: optuna
+Requires-Dist: pandas
+Requires-Dist: plotly
+Requires-Dist: psutil
+Requires-Dist: pybids
+Requires-Dist: pyedflib
+Requires-Dist: pymatreader
+Requires-Dist: pyperclip
+Requires-Dist: pytest
+Requires-Dist: pytest-cov
+Requires-Dist: pytest-env
+Requires-Dist: pytest-xdist
+Requires-Dist: readchar
+Requires-Dist: ripple-detection
+Requires-Dist: ruamel.yaml
+Requires-Dist: scikit-image
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+Requires-Dist: seaborn
+Requires-Dist: sktime
+Requires-Dist: sounddevice
+Requires-Dist: statsmodels
+Requires-Dist: sympy
+Requires-Dist: tensorpac
+Requires-Dist: termplotlib
+Requires-Dist: torch
+Requires-Dist: torchaudio
+Requires-Dist: torchsummary
+Requires-Dist: twine
+Requires-Dist: umap-learn
+Requires-Dist: wheel
+Requires-Dist: xarray
+Requires-Dist: xmltodict
+
+# monogusa (= lazy in Japanese)
+Python utilities for machine learning and digital signal processing
+
+<!-- batges -->
+![CI](https://github.com/ywatanabe1989/mngs/actions/workflows/pypi_latest.yml/badge.svg)
+![CI](https://github.com/ywatanabe1989/mngs/actions/workflows/latest_release.yml/badge.svg)
+![CI](https://github.com/ywatanabe1989/mngs/actions/workflows/develop.yml/badge.svg)
+
+<!-- logo -->
+<div style="text-align: center;">
+    <img src="./docs/lazy_python.gif" alt="Lazy Python" width="200px">
+</div>
+
+
+## Installation
+``` bash
+$ pip install mngs
+```
+
+## Example Usages
+- [`mngs.io`](https://github.com/ywatanabe1989/mngs/tree/main/src/mngs/io#readme) Input / Output
+- [`mngs.path`](https://github.com/ywatanabe1989/mngs/tree/main/src/mngs/path#readme) Path
+- [`mngs.dsp`](https://github.com/ywatanabe1989/mngs/tree/main/src/mngs/dsp#readme) Digital Signal Processing
+- [`mngs.res`](https://github.com/ywatanabe1989/mngs/tree/main/src/mngs/res#readme) Resource
+- mngs.general
+- mngs.plt
+- mngs.ml
+- mngs.stats
+
+## Contact
+Yusuke Watanabe (ywata1989@gmail.com).
+
+
+
+
