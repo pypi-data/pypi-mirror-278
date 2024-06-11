@@ -1,0 +1,4 @@
+Django>=2.2
+certifi>=2018.10.15
+requests>=2.20.0
+dataclass-wizard>=0.2.2

@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: django-paypal-plus
+Version: 1.1.2
+Summary: Django integration of PayPal's Orders v2 API
+Home-page: https://github.com/ParticulateSolutions/django-paypal-plus
+Author: Particulate Solutions GmbH
+Author-email: tech@particulate.me
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Framework :: Django
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+License-File: LICENSE
+Requires-Dist: Django>=2.2
+Requires-Dist: certifi>=2018.10.15
+Requires-Dist: requests>=2.20.0
+Requires-Dist: dataclass-wizard>=0.2.2
