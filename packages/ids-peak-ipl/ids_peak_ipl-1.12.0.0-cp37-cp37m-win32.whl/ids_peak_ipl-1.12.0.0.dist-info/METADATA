@@ -1,0 +1,102 @@
+Metadata-Version: 2.1
+Name: ids-peak-ipl
+Version: 1.12.0.0
+Summary: ids_peak_ipl - A library for image manipulation
+Author-email: IDS Imaging Development Systems GmbH <info@ids-imaging.com>
+Project-URL: Homepage, https://www.ids-imaging.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Multimedia :: Graphics :: Capture :: Digital Camera
+Classifier: Topic :: Multimedia :: Video
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: third_party_licenses.txt
+License-File: third_party_copyrights.txt
+Requires-Dist: numpy
+
+ids_peak_ipl provides python bindings
+for the IDS peak IPL. It exposes all the
+functionality of the peak IPL.
+
+Benefit from many Python __advantages__, for example the __interactive__
+programming of your IDS camera.
+Write and test small code snippets
+without the complex setup of a programming IDE including a toolchain.
+This package is __ideal for prototyping__ IDS
+camera applications for all supported peak IPL platforms
+(Windows, Linux, Linux Embedded).
+
+## Installation
+
+```bash
+$ pip install ids_peak_ipl
+```
+
+## Quickstart
+
+Different ways to create peak IPL images:
+
+```python
+from vapibinaryname import vapibinaryname
+from ids_peak_ipl import ids_peak_ipl
+
+import numpy as np
+
+width = 1
+height = 1
+image_from_size = ids_peak_ipl.Image.CreateFromSize(
+    ids_peak_ipl.PixelFormatName_Mono8, width, height)
+
+# Buffer is an instance of IDS peak genericAPI API's class Buffer
+image_from_size_and_buffer = ids_peak_ipl.Image.CreateFromSizeAndBuffer(
+    buffer.PixelFormat(),
+    buffer.BasePtr(),
+    buffer.Size(),
+    buffer.Width(),
+    buffer.Height()
+)
+
+# From a numpy array
+numpy_array = np.array([[10, 20, 30]], dtype=np.uint8)
+image_from_size_and_python_buffer = ids_peak_ipl.Image.CreateFromSizeAndPythonBuffer(
+    img.PixelFormatName_RGB8, numpy_array, width, height)
+
+# From a bytearray
+byte_array = bytearray([255, 10, 128])
+image_from_size_and_python_buffer = ids_peak_ipl.Image.CreateFromSizeAndPythonBuffer(
+    img.PixelFormatName_RGB8, byte_array, width, height)
+```
+
+Converting a camera image when used in combination with
+IDS peak genericAPI:
+
+```python
+while m_running:
+    try:
+        # Get buffer from device's DataStream. Wait 5000 ms.
+        # The buffer is automatically locked until it is queued again.
+        buffer = m_data_stream.WaitForFinishedBuffer(5000)
+ 
+        image = ids_peak_ipl.Image_CreateFromSizeAndBuffer(
+           buffer.PixelFormat(),
+           buffer.BasePtr(),
+           buffer.Size(),
+           buffer.Width(),
+           buffer.Height()
+        )
+        image = image.ConvertTo(
+            ids_peak_ipl.PixelFormatName_BGRa8,
+            ids_peak_ipl.ConversionMode_Fast)
+ 
+        # Queue buffer again
+        m_data_stream.QueueBuffer(buffer)
+    except Exception as e:
+        # ...
+        str_error = str(e)
+```
+
+## Documentation
+
+Documentation is available [here](https://en.ids-imaging.com/manuals/ids-peak/ids-peak-ipl-documentation/en/index.html)
+
+
