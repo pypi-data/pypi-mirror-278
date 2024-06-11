@@ -1,0 +1,238 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "$SERVICE_NAME$",
+    "description": "API specification for service $SERVICE_NAME$",
+    "version": "$SERVICE_VERSION$"
+  },
+  "basePath": "$BASE_URL$",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "multipart/form-data"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "operationId": "ModelInfo",
+        "description": "Basic information about the model that is being served by this service.",
+        "responses": {
+          "200": {
+            "description": "ML model information.",
+            "schema": {
+              "type": "object"
+            },
+            "examples": {
+              "application/json": "ML Model Information"
+            }
+          },
+          "default": {
+            "description": "The service failed to execute due to an error.",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          }
+        }
+      }
+    },
+
+    "/ping": {
+      "get": {
+        "operationId": "ServiceHealthCheck",
+        "description": "Service health check endpoint to ensure the service is up and running.",
+        "responses": {
+          "200": {
+            "description": "If service is up and running, a response will be returned with the message 'Service is up!'",
+            "schema": {
+              "type": "string"
+            },
+            "examples": {
+              "application/json": "Service is up!"
+            }
+          },
+          "default": {
+            "description": "Service execution failed due to an error.",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          }
+        }
+      }
+    },
+    "/score": {
+      "post": {
+        "operationId": "ServicePrediction",
+        "description": "ML model web service for online scoring.",
+          "consumes": [
+              "multipart/form-data",
+              "application/json"
+          ],
+        "parameters": [
+          {
+            "name": "file1",
+            "in": "formData",
+            "type": "file"
+          },
+          {
+            "name": "payload",
+            "in": "formData",
+            "description": "The input payload for online scoring(form-data).",
+            "type": "string"
+
+          },
+                    {
+            "name": "serviceInputPayload",
+            "in": "body",
+            "description": "The input payload for online scoring(json payload)",
+            "schema": {
+              "$ref": "#/definitions/ServiceInput"
+            }
+          }
+          ],
+        "responses": {
+          "200": {
+            "description": "Prediction output and request id.",
+            "schema": {
+              "$ref": "#/definitions/ServiceOutput"
+            }
+          },
+          "default": {
+            "description": "Service execution failed due to an error.",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          }
+        }
+      }
+    },
+    "/explainable-ai": {
+      "post": {
+        "operationId": "ExplainableAI",
+        "description": "ML model web service for ExplainableAI.",
+          "consumes": [
+              "multipart/form-data",
+              "application/json"
+          ],
+        "parameters": [
+          {
+            "name": "file1",
+            "in": "formData",
+            "type": "file"
+          },
+          {
+            "name": "payload",
+            "in": "formData",
+            "description": "The input payload for online scoring(form-data).",
+            "type": "string"
+
+          },
+                    {
+            "name": "serviceInputPayload",
+            "in": "body",
+            "description": "The input payload for online scoring(json payload)",
+            "schema": {
+              "$ref": "#/definitions/ExplainableAI"
+            }
+          }
+          ],
+        "responses": {
+          "200": {
+            "description": "Prediction output and request id.",
+            "schema": {
+              "$ref": "#/definitions/ServiceOutput"
+            }
+          },
+          "default": {
+            "description": "Service execution failed due to an error.",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          }
+        }
+      }
+    },
+
+    "/feedback": {
+      "put": {
+        "operationId": "ServiceFeedback",
+        "description": "ML model web service for providing feedback.",
+        "parameters": [
+          {
+            "name": "FeedbackInputPayload",
+            "in": "body",
+            "description": "The input payload for feedback.",
+            "schema": {
+              "$ref": "#/definitions/FeedbackInput"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "If feedback captured successfully, a response will be returned with message 'Feedback Captured'",
+            "schema": {
+              "type": "string"
+            },
+            "examples": {
+              "application/json": "Feedback Captured!"
+            }
+          },
+          "default": {
+            "description": "Service execution failed due to an error.",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          }
+        }
+      }
+    }
+},
+
+  "definitions": {
+    "ServiceInput": {
+      "type": "object"
+    },
+    "ServiceOutput": {
+      "type": "object"
+    },
+    "FeedbackInput": {
+      "type": "object",
+      "properties":
+      {
+        "request_id": {
+          "type": "string"
+        },
+        "feedback": {
+          "type": "string"
+        }
+      }
+    },
+    "ErrorResponse": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string"
+        }
+      }
+    },
+    "ExplainableAI": {
+      "type": "object",
+      "properties": {
+        "input": {
+          "type": "array",
+          "items": {
+            "type": "float",
+            "enum": [ 1.3, 9.2, 0.5 ]
+        }
+        },
+        "request": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
