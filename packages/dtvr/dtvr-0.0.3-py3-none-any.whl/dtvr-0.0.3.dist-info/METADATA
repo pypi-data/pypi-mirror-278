@@ -1,0 +1,113 @@
+Metadata-Version: 2.1
+Name: dtvr
+Version: 0.0.3
+Summary: Python client for Dataverse
+Author: Terraverse IT
+Author-email: it@terraverse.info
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# Dataverse Python Client
+
+Python client for Dataverse platform.
+
+## Pre-requisites
+
+1. Python version 3.10+
+2. Environment variable `DATAVERSE_BASE_URL`
+3. Environment variable `DATAVERSE_AUTH_TOKEN`
+4. or both can be passed explicitly to `create_client` function as arguments.
+
+You can generate authentication token in Terraverse SmartCube portal.
+Intial values for both `DATAVERSE_BASE_URL` and `DATAVERSE_AUTH_TOKEN` will be issued once your SmartCube account
+will become active and if your subscription plan includes Dataverse.
+
+## Quickstart
+
+```python
+from dtvr.client import create_client
+
+client = create_client()
+with client.last_exchange_rates() as resp:
+    reader = resp.as_csv_rows()
+    for row in reader:
+        print(row)  # use the data here
+
+```
+
+```python
+from dtvr.client import create_client, CEPS_AREA_DOMAIN
+from dtvr.timeutil import today_start_end
+
+client = create_client()
+start, end = today_start_end()
+with client.procured_balancing_capacity(CEPS_AREA_DOMAIN, start, end) as resp:
+    df = resp.as_pandas()
+    df.info(memory_usage=True)
+    # use the dataframe here
+```
+
+#### DateLike arguments
+Several methods of the client accepts arguments representing start and end of some date range for which you need
+to download the data.
+To pass something as date-like argument you can either:
+* use [datetime](https://docs.python.org/3/library/datetime.html#datetime-objects)
+* use [date](https://docs.python.org/3/library/datetime.html#date-objects)
+* use string with the format `yyyy-MM-dd`, `yyyy-MM-dd HH:mm` or `yyyy-MM-dd HH:mm:ss`
+
+## Features
+
+* Easy to use client library that will help you to consume Datavere endpoints quickly.
+* Response containing data can be converted to either:
+  * iterator representing CSV rows (list of string and numeric values)
+  * pandas [DataFrame](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html)
+* Several convenience functions for manipulating date &amp; time in module `dtvr.timeutil`.
+
+## Available Dataverse Endpoints
+
+| method                                  | short description                                                                                                |
+|-----------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| last_exchange_rates                     | Get last known exchange rates. Data source is CNB and rates are calculated to CZK.                               |
+| balancing_energy_bid                    | Get ENTSOE balancing energy bid data for the specified connecting domain and time interval.                      |
+| procured_balancing_capacity_daily       | Get ENTSOE procured balancing capacity data from daily auction for the specified area domain and time interval.  |
+| procured_balancing_capacity_yearly      | Get ENTSOE procured balancing capacity data from yearly auction for the specified area domain and year.          |
+| exchanged_volume                        | Get TransnetBW exchanged volumes data for the day.                                                               |
+| cross_border_marginal_price             | Get TransnetBW cross border marginal prices data for the day.                                                    |
+| ceps_current_system_imbalance_actual    | Get last ~15 minutes of CEPS current system imbalance data. Minute averages.                                     |
+| ceps_current_system_imbalance_daily*    | Get CEPS current system imbalance data for specific day. Minute averages.                                        |
+| ceps_svr_activations_actual             | Get last ~15 minutes of CEPS svr activations data. Minute averages.                                              |
+| ceps_svr_activations_daily              | Get CEPS svr activations data for specific day. Minute averages.                                                 |
+| ceps_svr_export_import_actual           | Get last ~15 minutes of CEPS svr export import data. Minute averages.                                            |
+| ceps_svr_export_import_daily            | Get CEPS svr export import data for specific day. Minute averages.                                               |
+| ceps_svr_maximum_dt_price               | Get CEPS svr maximum dt price for specific day.                                                                  |
+| ceps_cross_border_power_flows_actual    | Get last ~15 minutes of CEPS cross border power flow data. Minute averages.                                      |
+| ceps_cross_border_power_flows_daily     | Get CEPS cross border power flow data for specific day. Minute averages.                                         |
+| ceps_emergency_exchange                 | Get CEPS emergency exhange data for specific day. Quarter-hour averages.                                         |
+| ceps_generation_plan                    | Get CEPS generation plan data for specific day. Hour averages.                                                   |
+| ceps_generation                         | Get CEPS generation data for specific day. Quarter hour averages.                                                |
+| ceps_generation_renewable_source_actual | Get last ~15 minutes of CEPS generation renewable source data. Minute averages.                                  |
+| ceps_generation_renewable_source_daily  | Get CEPS generation renewable source data for specific day. Minute averages.                                     |
+| ceps_imbalance_price_prediction         | Get CEPS imbalance price prediction data for specific day. Hour averages.                                        |
+| ceps_power_balance                      | Get CEPS power balance data for specific year. Max values.                                                       |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
