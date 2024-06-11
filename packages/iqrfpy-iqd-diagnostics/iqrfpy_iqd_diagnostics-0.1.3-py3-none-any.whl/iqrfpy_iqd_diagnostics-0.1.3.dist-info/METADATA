@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: iqrfpy-iqd-diagnostics
+Version: 0.1.3
+Summary: Diagnostics for iqrfpy
+Home-page: https://gitlab.iqrf.org/open-source/iqrf-sdk/iqrfpy/iqrfpy-iqd-diagnostics
+Author: Karel Hanák
+Author-email: karel.hanak@iqrf.org
+License: Apache-2.0
+Project-URL: Homepage, https://gitlab.iqrf.org/open-source/iqrf-sdk/iqrfpy/iqrfpy-iqd-diagnostics
+Project-URL: Changelog, https://gitlab.iqrf.org/open-source/iqrf-sdk/iqrfpy/iqrfpy-iqd-diagnostics/-/blob/master/changelog.md
+Project-URL: Source code, https://gitlab.iqrf.org/open-source/iqrf-sdk/iqrfpy/iqrfpy-iqd-diagnostics
+Project-URL: Issue tracker, https://gitlab.iqrf.org/open-source/iqrf-sdk/iqrfpy/iqrfpy-iqd-diagnostics/-/issues
+Keywords: iqrf
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: iqrfpy >=0.2.0
+Requires-Dist: tabulate >=0.9.0
+
+## iqrfpy-iqd-diagnostics
+
+An extension for [iqrfpy](https://pypi.org/project/iqrfpy/) for processing and interpreting IQD diagnostics data.
+
+Diagnostics is a common data structure located in the permanent memory of all IQD devices,
+which contains the result of the HW test of the device and other operational data that affect its correct operation.
+
+## Quick start
+
+Before installing the library, it is recommended to first create a virtual environment.
+Virtual environments help isolate python installations as well as pip packages independent of the operating system.
+
+A virtual environment can be created and launched using the following commands:
+
+```bash
+python3 -m venv <dir>
+source <dir>/bin/activate
+```
+
+iqrfpy-iqd-diagnostics can be installed using the pip utility:
+
+```bash
+python3 -m pip install -U iqrfpy-iqd-diagnostics
+```
+
+Example use:
+```python
+from iqrfpy.ext.iqd_diagnostics import IqdDiagnostics
+
+# get iqd_diagnostics data
+data = ...
+
+# parse into class
+diagnostics = IqdDiagnostics(data=data)
+
+# access values
+diagnostics.beaming_cnt
+
+# print formatted data
+print(diagnostics.to_string())
+```
