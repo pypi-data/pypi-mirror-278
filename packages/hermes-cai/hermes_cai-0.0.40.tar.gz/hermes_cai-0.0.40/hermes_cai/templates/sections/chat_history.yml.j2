@@ -1,0 +1,6 @@
+{% for message in chat_history %}
+- name: "message_{{ loop.index }}"
+  raw_string: |
+    {{ settings.start_token }}{{ escape_sequences(message) }}{{ settings.eom }}
+{% set settings.start_token = settings.bom %}
+{% endfor %}
