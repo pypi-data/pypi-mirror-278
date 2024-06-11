@@ -1,0 +1,83 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "bosc"
+version = "0.0.7"
+description = "A file-based document store with python interface"
+readme = "README.md"
+requires-python = ">=3.8,<4.0"
+license = { file="LICENSE" }
+authors = [
+    {name = "Roman Right", email = "roman-right@protonmail.com"}
+]
+keywords = [
+    "document store",
+    "file-based",
+    "python",
+    "pydantic",
+    "sqlite",
+]
+
+dependencies = [
+    "pydantic>=2.1",
+]
+
+[project.optional-dependencies]
+test = [
+    "pre-commit>=2.3.0",
+    "pytest>=6.0.0",
+    "pytest-cov>=2.8.1",
+]
+
+[project.urls]
+repository = "https://github.com/roman-right/bosc"
+
+[tool.black]
+line-length = 79
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--cov-report term-missing --cov=bosc --cov-branch --cov-fail-under=80"
+testpaths = [
+    "tests",
+]
+filterwarnings = [
+    "error",
+    "ignore::DeprecationWarning",
+    "ignore::UserWarning",
+]
+
+[tool.ruff]
+line-length = 79
+ignore = ["E501"]
+extend-select = ["I001"]
+fix = true
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+# Assume Python 3.10.
+target-version = "py310"
+
+[tool.ruff.per-file-ignores]
+"tests/*" = ["E711"]
+
+[tool.ruff.mccabe]
+# Unlike Flake8, default to a complexity level of 10.
+max-complexity = 10
