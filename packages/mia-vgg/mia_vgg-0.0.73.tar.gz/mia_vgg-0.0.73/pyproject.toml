@@ -1,0 +1,19 @@
+[project]
+name = "mia_vgg"
+version = "0.0.73"
+authors = [
+  { name="Jan Aalmoes", email="jan.aalmoes@protonmail.com" },
+]
+description = "MIA on VGG dataset using pytorch"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies=["torchvision", "gdown", "matplotlib", "scikit-learn"]
+
+[project.urls]
+Homepage = "https://github.com/pypa/sampleproject"
+Issues = "https://github.com/pypa/sampleproject/issues"
