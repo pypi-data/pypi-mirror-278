@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: mr-keras-utils
+Version: 0.1.0
+Summary: Keras Utils, the Moveread way
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Project-URL: repo, https://github.com/marciclabas/mltools.git
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: keras
+Requires-Dist: lazy-loader
+
+# Keras Utils
+
+> Keras Utils, the Moveread way
