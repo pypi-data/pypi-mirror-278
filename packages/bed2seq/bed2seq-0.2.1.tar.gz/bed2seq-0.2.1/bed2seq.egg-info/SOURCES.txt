@@ -1,0 +1,13 @@
+LICENCE.md
+MANIFEST.in
+README.md
+setup.py
+bed2seq/__init__.py
+bed2seq/bed2seq.py
+bed2seq/info.py
+bed2seq.egg-info/PKG-INFO
+bed2seq.egg-info/SOURCES.txt
+bed2seq.egg-info/dependency_links.txt
+bed2seq.egg-info/entry_points.txt
+bed2seq.egg-info/requires.txt
+bed2seq.egg-info/top_level.txt
