@@ -1,0 +1,330 @@
+# Changelog
+
+## [Unreleased](https://github.com/btschwertfeger/python-kraken-sdk/tree/HEAD)
+
+[Full Changelog](https://github.com/btschwertfeger/python-kraken-sdk/compare/v2.1.1...HEAD)
+
+**Implemented enhancements:**
+
+- Resolve "Add NFT support: `kraken.nft.Trade` and `kraken.nft.Market`" [\#200](https://github.com/btschwertfeger/python-kraken-sdk/pull/200) ([btschwertfeger](https://github.com/btschwertfeger))
+- Resolve "Mark `kraken.spot.Staking` as deprecated and add `kraken.spot.Earn`" [\#199](https://github.com/btschwertfeger/python-kraken-sdk/pull/199) ([btschwertfeger](https://github.com/btschwertfeger))
+- Resolve "Add `ledger` parameter to `kraken.spot.User.get_trades_history`" [\#195](https://github.com/btschwertfeger/python-kraken-sdk/pull/195) ([btschwertfeger](https://github.com/btschwertfeger))
+- Resolve "Add `kraken.futures.Trade.get_max_order_size`" [\#193](https://github.com/btschwertfeger/python-kraken-sdk/pull/193) ([btschwertfeger](https://github.com/btschwertfeger))
+- Resolve "Add `processBefore` parameter to `kraken.futures.Trade.`{`cancel_order`,`edit_order`,`create_order`,`create_batch_order`}" [\#192](https://github.com/btschwertfeger/python-kraken-sdk/pull/192) ([btschwertfeger](https://github.com/btschwertfeger))
+
+Uncategorized merged pull requests:
+
+- Resolve "Mark `kraken.spot.KrakenSpotWSClientV1` as deprecated" [\#201](https://github.com/btschwertfeger/python-kraken-sdk/pull/201) ([btschwertfeger](https://github.com/btschwertfeger))
+- Resolve "The POST and query parameters of KrakenSpotBaseAPI and KrakenFuturesBaseAPI are not proper encoded in some case" [\#189](https://github.com/btschwertfeger/python-kraken-sdk/pull/189) ([btschwertfeger](https://github.com/btschwertfeger))
+- adjust CI configuration [\#187](https://github.com/btschwertfeger/python-kraken-sdk/pull/187) ([btschwertfeger](https://github.com/btschwertfeger))
+- Merge the CI/CD and release workflow + fix scheduled execution [\#186](https://github.com/btschwertfeger/python-kraken-sdk/pull/186) ([btschwertfeger](https://github.com/btschwertfeger))
+- Adjust the `kraken.futures.User` documentation [\#185](https://github.com/btschwertfeger/python-kraken-sdk/pull/185) ([btschwertfeger](https://github.com/btschwertfeger))
+- Project Housekeeping [\#184](https://github.com/btschwertfeger/python-kraken-sdk/pull/184) ([btschwertfeger](https://github.com/btschwertfeger))
+
+## [v2.1.1](https://github.com/btschwertfeger/python-kraken-sdk/tree/v2.1.1) (2023-12-18)
+
+[Full Changelog](https://github.com/btschwertfeger/python-kraken-sdk/compare/v2.1.0...v2.1.1)
+
+**Fixed bugs:**
+
+- Fix "Futures re-subscribe to authenticated feed doesn't work" [\#180](https://github.com/btschwertfeger/python-kraken-sdk/pull/180) ([btschwertfeger](https://github.com/btschwertfeger))
+
+## [v2.1.0](https://github.com/btschwertfeger/python-kraken-sdk/tree/v2.1.0) (2023-12-07)
+
+[Full Changelog](https://github.com/btschwertfeger/python-kraken-sdk/compare/v2.0.0...v2.1.0)
+
+**Implemented enhancements:**
+
+- Resolve "Add `start`, `end`, and `cursor` parameters to `kraken.spot.Funding.get_recent_withdraw_status`" [\#177](https://github.com/btschwertfeger/python-kraken-sdk/pull/177) ([btschwertfeger](https://github.com/btschwertfeger))
+- Resolve "Add `withdraw_methods` and `withdraw_addresses` to `kraken.spot.Funding`" [\#175](https://github.com/btschwertfeger/python-kraken-sdk/pull/175) ([btschwertfeger](https://github.com/btschwertfeger))
+
+## [v2.0.0](https://github.com/btschwertfeger/python-kraken-sdk/tree/v2.0.0) (2023-10-22)
+
+[Full Changelog](https://github.com/btschwertfeger/python-kraken-sdk/compare/v1.6.2...v2.0.0)
+
+**Breaking changes:**
+
+- Resolve "Extract the Kraken\* exception classes from `kraken.exceptions.KrakenException`" [\#162](https://github.com/btschwertfeger/python-kraken-sdk/pull/162) ([btschwertfeger](https://github.com/btschwertfeger))
+- Resolve "Rename `kraken.spot.KrakenSpotWSClient` to `kraken.spot.KrakenSpotWSClientV1`" [\#160](https://github.com/btschwertfeger/python-kraken-sdk/pull/160) ([btschwertfeger](https://github.com/btschwertfeger))
+- Resolve "Rename `KrakenBaseSpotAPI` to `KrakenSpotBaseAPI` and `KrakenBaseFuturesAPI` to `KrakenFuturesBaseAPI`" [\#159](https://github.com/btschwertfeger/python-kraken-sdk/pull/159) ([btschwertfeger](https://github.com/btschwertfeger))
+- Resolve "Drop Support for Python \< 3.11" [\#157](https://github.com/btschwertfeger/python-kraken-sdk/pull/157) ([btschwertfeger](https://github.com/btschwertfeger))
+
+**Implemented enhancements:**
+
+- Resolve "Add `max_fee` parameter to `kraken.spot.Funding.withdraw_funds`" [\#171](https://github.com/btschwertfeger/python-kraken-sdk/pull/171) ([btschwertfeger](https://github.com/btschwertfeger))
+- Resolve "Add `start`, `end`, and `cursor` parameters to `kraken.spot.Funding.get_recent_deposits_status`" [\#170](https://github.com/btschwertfeger/python-kraken-sdk/pull/170) ([btschwertfeger](https://github.com/btschwertfeger))
+- Resolve "Add optional `extra_params` to any requesting function" [\#155](https://github.com/btschwertfeger/python-kraken-sdk/pull/155) ([btschwertfeger](https://github.com/btschwertfeger))
+- Resolve "150 add the legacy OrderbookClient for Krakens websocket API v1" [\#151](https://github.com/btschwertfeger/python-kraken-sdk/pull/151) ([btschwertfeger](https://github.com/btschwertfeger))
+
+Uncategorized merged pull requests:
+
+- Adjust docstrings and documentation [\#172](https://github.com/btschwertfeger/python-kraken-sdk/pull/172) ([btschwertfeger](https://github.com/btschwertfeger))
+- Resolve "Use Apache 2.0 license instead of GNU GPLv3" [\#167](https://github.com/btschwertfeger/python-kraken-sdk/pull/167) ([btschwertfeger](https://github.com/btschwertfeger))
+- Apply hints suggested by the ruff linter [\#165](https://github.com/btschwertfeger/python-kraken-sdk/pull/165) ([btschwertfeger](https://github.com/btschwertfeger))
+- Resolve "163 uniform the msg parameter" [\#164](https://github.com/btschwertfeger/python-kraken-sdk/pull/164) ([btschwertfeger](https://github.com/btschwertfeger))
+
+## [v1.6.2](https://github.com/btschwertfeger/python-kraken-sdk/tree/v1.6.2) (2023-08-31)
+
+[Full Changelog](https://github.com/btschwertfeger/python-kraken-sdk/compare/v1.6.1...v1.6.2)
+
+Uncategorized merged pull requests:
+
+- Bump Pre-Commit hook versions and adjust typing [\#146](https://github.com/btschwertfeger/python-kraken-sdk/pull/146) ([btschwertfeger](https://github.com/btschwertfeger))
+- Fix "`kraken.spot.OrderbookClient` is not able to resubscribe to book feeds after connection lost" [\#149](https://github.com/btschwertfeger/python-kraken-sdk/pull/149) ([btschwertfeger](https://github.com/btschwertfeger))
+
+## [v1.6.1](https://github.com/btschwertfeger/python-kraken-sdk/tree/v1.6.1) (2023-08-07)
+
+[Full Changelog](https://github.com/btschwertfeger/python-kraken-sdk/compare/v1.6.0...v1.6.1)
+
+**Fixed bugs:**
+
+- Adjust logging and examples; add PyLint check [\#144](https://github.com/btschwertfeger/python-kraken-sdk/pull/144) ([btschwertfeger](https://github.com/btschwertfeger))
+
+## [v1.6.0](https://github.com/btschwertfeger/python-kraken-sdk/tree/v1.6.0) (2023-08-01)
+
+[Full Changelog](https://github.com/btschwertfeger/python-kraken-sdk/compare/v1.5.0...v1.6.0)
+
+**Breaking changes:**
+
+- Integrate and apply ruff [\#142](https://github.com/btschwertfeger/python-kraken-sdk/pull/142) ([btschwertfeger](https://github.com/btschwertfeger))
+- Let `kraken.spot.OrderbookClient` use Spot Websocket API v2 [\#139](https://github.com/btschwertfeger/python-kraken-sdk/pull/139) ([btschwertfeger](https://github.com/btschwertfeger))
+- Integrate Kraken Websockets API v2; add `kraken.spot.KrakenSpotWebsocketClientV2`; internals [\#131](https://github.com/btschwertfeger/python-kraken-sdk/pull/131) ([btschwertfeger](https://github.com/btschwertfeger))
+
+**Implemented enhancements:**
+
+- Add `/private/AccountTransfer` endpoint -\> `kraken.spot.User.account_transfer` [\#129](https://github.com/btschwertfeger/python-kraken-sdk/pull/129) ([btschwertfeger](https://github.com/btschwertfeger))
+
+Uncategorized merged pull requests:
+
+- Merge `.pylintrc` and `pyproject.toml` [\#137](https://github.com/btschwertfeger/python-kraken-sdk/pull/137) ([btschwertfeger](https://github.com/btschwertfeger))
+- Enable Windows builds within the CI [\#135](https://github.com/btschwertfeger/python-kraken-sdk/pull/135) ([btschwertfeger](https://github.com/btschwertfeger))
+
+## [v1.5.0](https://github.com/btschwertfeger/python-kraken-sdk/tree/v1.5.0) (2023-07-16)
+
+[Full Changelog](https://github.com/btschwertfeger/python-kraken-sdk/compare/v1.4.1...v1.5.0)
+
+**Breaking changes:**
+
+- `kraken.spot.OrderbookClient`: add timestamps to book's ask and bid values [\#124](https://github.com/btschwertfeger/python-kraken-sdk/pull/124) ([btschwertfeger](https://github.com/btschwertfeger))
+
+Uncategorized merged pull requests:
+
+- Adjust project properties [\#123](https://github.com/btschwertfeger/python-kraken-sdk/pull/123) ([btschwertfeger](https://github.com/btschwertfeger))
+- Add "Question" issue template [\#122](https://github.com/btschwertfeger/python-kraken-sdk/pull/122) ([btschwertfeger](https://github.com/btschwertfeger))
+
+## [v1.4.1](https://github.com/btschwertfeger/python-kraken-sdk/tree/v1.4.1) (2023-06-28)
+
+[Full Changelog](https://github.com/btschwertfeger/python-kraken-sdk/compare/v1.4.0...v1.4.1)
+
+**Fixed bugs:**
+
+- Fix `kraken.spot.Market.get_recent_trades` parameter 'since' [\#120](https://github.com/btschwertfeger/python-kraken-sdk/pull/120) ([btschwertfeger](https://github.com/btschwertfeger))
+
+## [v1.4.0](https://github.com/btschwertfeger/python-kraken-sdk/tree/v1.4.0) (2023-06-16)
+
+[Full Changelog](https://github.com/btschwertfeger/python-kraken-sdk/compare/v1.3.0...v1.4.0)
+
+**Implemented enhancements:**
+
+- A the Spot order book client \(`kraken.spot.OrderbookClient`\) [\#106](https://github.com/btschwertfeger/python-kraken-sdk/pull/106) ([btschwertfeger](https://github.com/btschwertfeger))
+- Add the `truncate` parameter to the Spot websocket clients' `create_order` and `cancel_order`+ `kraken.spot.Trade.edit_order` [\#113](https://github.com/btschwertfeger/python-kraken-sdk/pull/113) ([btschwertfeger](https://github.com/btschwertfeger))
+
+Uncategorized merged pull requests:
+
+- Update `/examples/spot_orderbook.py` [\#110](https://github.com/btschwertfeger/python-kraken-sdk/pull/110) ([btschwertfeger](https://github.com/btschwertfeger))
+- Create `release.yaml` [\#116](https://github.com/btschwertfeger/python-kraken-sdk/pull/116) ([btschwertfeger](https://github.com/btschwertfeger))
+
+## [v1.3.0](https://github.com/btschwertfeger/python-kraken-sdk/tree/v1.3.0) (2023-05-24)
+
+[Full Changelog](https://github.com/btschwertfeger/python-kraken-sdk/compare/v1.2.0...v1.3.0)
+
+**Breaking changes:**
+
+- Prepare release v1.3.0 [\#99](https://github.com/btschwertfeger/python-kraken-sdk/pull/99) ([btschwertfeger](https://github.com/btschwertfeger))
+- Change `kraken.spot.User.get_balances` and add `kraken.spot.User.get_balance` [\#98](https://github.com/btschwertfeger/python-kraken-sdk/pull/98) ([btschwertfeger](https://github.com/btschwertfeger))
+- Rename `get_tradeable_asset_pair` to `get_asset_pairs` and make the `pair` parameter optional [\#93](https://github.com/btschwertfeger/python-kraken-sdk/pull/93) ([btschwertfeger](https://github.com/btschwertfeger))
+- Extend typing + add `KrakenUnknownMethodError` and `KrakenBadRequestError` + Fix \#65 [\#87](https://github.com/btschwertfeger/python-kraken-sdk/pull/87) ([btschwertfeger](https://github.com/btschwertfeger))
+
+**Implemented enhancements:**
+
+- Improve caching [\#102](https://github.com/btschwertfeger/python-kraken-sdk/pull/102) ([btschwertfeger](https://github.com/btschwertfeger))
+- Add the `truncate` parameter to `kraken.spot.Trade.create_order` [\#95](https://github.com/btschwertfeger/python-kraken-sdk/pull/95) ([btschwertfeger](https://github.com/btschwertfeger))
+
+Uncategorized merged pull requests:
+
+- Create a contribution guideline [\#92](https://github.com/btschwertfeger/python-kraken-sdk/pull/92) ([btschwertfeger](https://github.com/btschwertfeger))
+
+## [v1.2.0](https://github.com/btschwertfeger/python-kraken-sdk/tree/v1.2.0) (2023-05-09)
+
+[Full Changelog](https://github.com/btschwertfeger/python-kraken-sdk/compare/v1.1.0...v1.2.0)
+
+**Breaking changes:**
+
+- Add API rate limit exception; extend test doc strings [\#79](https://github.com/btschwertfeger/python-kraken-sdk/pull/79) ([btschwertfeger](https://github.com/btschwertfeger))
+- Fix bug/typo: "recend" -\> recent throughout kraken.spot [\#76](https://github.com/btschwertfeger/python-kraken-sdk/pull/76) ([jcr-jeff](https://github.com/jcr-jeff))
+
+**Implemented enhancements:**
+
+- Let REST and websocket clients be used as context manager [\#83](https://github.com/btschwertfeger/python-kraken-sdk/pull/83) ([btschwertfeger](https://github.com/btschwertfeger))
+- Disable custom Kraken exceptions \(optional\) [\#82](https://github.com/btschwertfeger/python-kraken-sdk/pull/82) ([btschwertfeger](https://github.com/btschwertfeger))
+- Add Futures user endpoints: `check_trading_enabled_on_subaccount` and `set_trading_on_subaccount` [\#80](https://github.com/btschwertfeger/python-kraken-sdk/pull/80) ([btschwertfeger](https://github.com/btschwertfeger))
+
+**Fixed bugs:**
+
+- Fix PyPI upload job + extend disclaimer [\#70](https://github.com/btschwertfeger/python-kraken-sdk/pull/70) ([btschwertfeger](https://github.com/btschwertfeger))
+- Fix and extend release workflow [\#68](https://github.com/btschwertfeger/python-kraken-sdk/pull/68) ([btschwertfeger](https://github.com/btschwertfeger))
+- Fixed bug where `spot.user.get_balances` floats to periodic X.9999... [\#78](https://github.com/btschwertfeger/python-kraken-sdk/pull/78) ([btschwertfeger](https://github.com/btschwertfeger))
+
+Uncategorized merged pull requests:
+
+- Split the unit tests into individual files [\#75](https://github.com/btschwertfeger/python-kraken-sdk/pull/75) ([btschwertfeger](https://github.com/btschwertfeger))
+- Removed matrix from CodeQL job [\#74](https://github.com/btschwertfeger/python-kraken-sdk/pull/74) ([btschwertfeger](https://github.com/btschwertfeger))
+- Add a Changelog [\#73](https://github.com/btschwertfeger/python-kraken-sdk/pull/73) ([btschwertfeger](https://github.com/btschwertfeger))
+- Updated changelog to match v1.2.0 [\#86](https://github.com/btschwertfeger/python-kraken-sdk/pull/86) ([btschwertfeger](https://github.com/btschwertfeger))
+
+## [v1.1.0](https://github.com/btschwertfeger/python-kraken-sdk/tree/v1.1.0) (2023-04-08)
+
+[Full Changelog](https://github.com/btschwertfeger/python-kraken-sdk/compare/v1.0.1...v1.1.0)
+
+**Implemented enhancements:**
+
+- Rework workflows for CI/CD [\#53](https://github.com/btschwertfeger/python-kraken-sdk/pull/53) ([btschwertfeger](https://github.com/btschwertfeger))
+- Removed raising exception when currency not found in portfolio [\#47](https://github.com/btschwertfeger/python-kraken-sdk/pull/47) ([btschwertfeger](https://github.com/btschwertfeger))
+
+Uncategorized merged pull requests:
+
+- Prepare Release v1.1.0 [\#61](https://github.com/btschwertfeger/python-kraken-sdk/pull/61) ([btschwertfeger](https://github.com/btschwertfeger))
+- 57 remove the unnecessary `client` when importing clients [\#59](https://github.com/btschwertfeger/python-kraken-sdk/pull/59) ([btschwertfeger](https://github.com/btschwertfeger))
+- 54 add a workflow or jobs that run all tests before a merge is done [\#56](https://github.com/btschwertfeger/python-kraken-sdk/pull/56) ([btschwertfeger](https://github.com/btschwertfeger))
+- Moved from setup.py only to pyproject.toml [\#52](https://github.com/btschwertfeger/python-kraken-sdk/pull/52) ([btschwertfeger](https://github.com/btschwertfeger))
+
+## [v1.0.1](https://github.com/btschwertfeger/python-kraken-sdk/tree/v1.0.1) (2023-03-27)
+
+[Full Changelog](https://github.com/btschwertfeger/python-kraken-sdk/compare/v1.0.0...v1.0.1)
+
+**Implemented enhancements:**
+
+- Use workflow_dispatch to only trigger tests with python\<python3.11 manually [\#43](https://github.com/btschwertfeger/python-kraken-sdk/pull/43) ([btschwertfeger](https://github.com/btschwertfeger))
+- Apply pre-commit and adjust workflows [\#35](https://github.com/btschwertfeger/python-kraken-sdk/pull/35) ([btschwertfeger](https://github.com/btschwertfeger))
+
+**Fixed bugs:**
+
+- Apply kraken api changelog until mar 27 2023 [\#40](https://github.com/btschwertfeger/python-kraken-sdk/pull/40) ([btschwertfeger](https://github.com/btschwertfeger))
+
+Uncategorized merged pull requests:
+
+- examples now use os.getenv instead of python-dotenv [\#34](https://github.com/btschwertfeger/python-kraken-sdk/pull/34) ([btschwertfeger](https://github.com/btschwertfeger))
+- Release v1.0.1 [\#44](https://github.com/btschwertfeger/python-kraken-sdk/pull/44) ([btschwertfeger](https://github.com/btschwertfeger))
+
+## [v1.0.0](https://github.com/btschwertfeger/python-kraken-sdk/tree/v1.0.0) (2023-03-04)
+
+[Full Changelog](https://github.com/btschwertfeger/python-kraken-sdk/compare/v0.8.0...v1.0.0)
+
+**Implemented enhancements:**
+
+- Extended CI/CD [\#31](https://github.com/btschwertfeger/python-kraken-sdk/pull/31) ([btschwertfeger](https://github.com/btschwertfeger))
+
+Uncategorized merged pull requests:
+
+- Extend unittests [\#32](https://github.com/btschwertfeger/python-kraken-sdk/pull/32) ([btschwertfeger](https://github.com/btschwertfeger))
+- Add unit tests \#2 [\#30](https://github.com/btschwertfeger/python-kraken-sdk/pull/30) ([btschwertfeger](https://github.com/btschwertfeger))
+
+## [v0.8.0](https://github.com/btschwertfeger/python-kraken-sdk/tree/v0.8.0) (2023-02-18)
+
+[Full Changelog](https://github.com/btschwertfeger/python-kraken-sdk/compare/v0.7.7...v0.8.0)
+
+Uncategorized merged pull requests:
+
+- Add unit tests [\#29](https://github.com/btschwertfeger/python-kraken-sdk/pull/29) ([btschwertfeger](https://github.com/btschwertfeger))
+
+## [v0.7.7](https://github.com/btschwertfeger/python-kraken-sdk/tree/v0.7.7) (2022-12-29)
+
+[Full Changelog](https://github.com/btschwertfeger/python-kraken-sdk/compare/v0.7.6...v0.7.7)
+
+## [v0.7.6](https://github.com/btschwertfeger/python-kraken-sdk/tree/v0.7.6) (2022-12-01)
+
+[Full Changelog](https://github.com/btschwertfeger/python-kraken-sdk/compare/v0.7.4...v0.7.6)
+
+## [v0.7.4](https://github.com/btschwertfeger/python-kraken-sdk/tree/v0.7.4) (2022-11-29)
+
+[Full Changelog](https://github.com/btschwertfeger/python-kraken-sdk/compare/v0.7.5...v0.7.4)
+
+## [v0.7.5](https://github.com/btschwertfeger/python-kraken-sdk/tree/v0.7.5) (2022-11-27)
+
+[Full Changelog](https://github.com/btschwertfeger/python-kraken-sdk/compare/v0.7.3...v0.7.5)
+
+## [v0.7.3](https://github.com/btschwertfeger/python-kraken-sdk/tree/v0.7.3) (2022-11-26)
+
+[Full Changelog](https://github.com/btschwertfeger/python-kraken-sdk/compare/v0.7.2...v0.7.3)
+
+Uncategorized merged pull requests:
+
+- Add exceptions [\#28](https://github.com/btschwertfeger/python-kraken-sdk/pull/28) ([btschwertfeger](https://github.com/btschwertfeger))
+- Create CODE_OF_CONDUCT.md [\#27](https://github.com/btschwertfeger/python-kraken-sdk/pull/27) ([btschwertfeger](https://github.com/btschwertfeger))
+
+## [v0.7.2](https://github.com/btschwertfeger/python-kraken-sdk/tree/v0.7.2) (2022-11-24)
+
+[Full Changelog](https://github.com/btschwertfeger/python-kraken-sdk/compare/v0.7.1...v0.7.2)
+
+## [v0.7.1](https://github.com/btschwertfeger/python-kraken-sdk/tree/v0.7.1) (2022-11-23)
+
+[Full Changelog](https://github.com/btschwertfeger/python-kraken-sdk/compare/v0.7...v0.7.1)
+
+Uncategorized merged pull requests:
+
+- Optimized websocket clients [\#26](https://github.com/btschwertfeger/python-kraken-sdk/pull/26) ([btschwertfeger](https://github.com/btschwertfeger))
+
+## [v0.7](https://github.com/btschwertfeger/python-kraken-sdk/tree/v0.7) (2022-11-22)
+
+[Full Changelog](https://github.com/btschwertfeger/python-kraken-sdk/compare/v0.6.1...v0.7)
+
+Uncategorized merged pull requests:
+
+- Add testing [\#25](https://github.com/btschwertfeger/python-kraken-sdk/pull/25) ([btschwertfeger](https://github.com/btschwertfeger))
+- implemented Futures WS Client; adjust spot ws client [\#24](https://github.com/btschwertfeger/python-kraken-sdk/pull/24) ([btschwertfeger](https://github.com/btschwertfeger))
+
+## [v0.6.1](https://github.com/btschwertfeger/python-kraken-sdk/tree/v0.6.1) (2022-11-20)
+
+[Full Changelog](https://github.com/btschwertfeger/python-kraken-sdk/compare/v0.5.4.2...v0.6.1)
+
+Uncategorized merged pull requests:
+
+- Add futures clients [\#23](https://github.com/btschwertfeger/python-kraken-sdk/pull/23) ([btschwertfeger](https://github.com/btschwertfeger))
+
+## [v0.5.4.2](https://github.com/btschwertfeger/python-kraken-sdk/tree/v0.5.4.2) (2022-11-09)
+
+[Full Changelog](https://github.com/btschwertfeger/python-kraken-sdk/compare/v0.5.4...v0.5.4.2)
+
+## [v0.5.4](https://github.com/btschwertfeger/python-kraken-sdk/tree/v0.5.4) (2022-10-13)
+
+[Full Changelog](https://github.com/btschwertfeger/python-kraken-sdk/compare/v0.5.2...v0.5.4)
+
+## [v0.5.2](https://github.com/btschwertfeger/python-kraken-sdk/tree/v0.5.2) (2022-09-18)
+
+[Full Changelog](https://github.com/btschwertfeger/python-kraken-sdk/compare/v0.5.1...v0.5.2)
+
+Uncategorized merged pull requests:
+
+- 19 add futures market endpoints [\#22](https://github.com/btschwertfeger/python-kraken-sdk/pull/22) ([btschwertfeger](https://github.com/btschwertfeger))
+
+## [v0.5.1](https://github.com/btschwertfeger/python-kraken-sdk/tree/v0.5.1) (2022-07-13)
+
+[Full Changelog](https://github.com/btschwertfeger/python-kraken-sdk/compare/v0.5...v0.5.1)
+
+## [v0.5](https://github.com/btschwertfeger/python-kraken-sdk/tree/v0.5) (2022-07-13)
+
+[Full Changelog](https://github.com/btschwertfeger/python-kraken-sdk/compare/f73882d2a9edf4d59597d4909300551e42a06020...v0.5)
+
+Uncategorized merged pull requests:
+
+- 17 add setup files for publishing package [\#18](https://github.com/btschwertfeger/python-kraken-sdk/pull/18) ([btschwertfeger](https://github.com/btschwertfeger))
+- added README.md now ... [\#16](https://github.com/btschwertfeger/python-kraken-sdk/pull/16) ([btschwertfeger](https://github.com/btschwertfeger))
+- added README.md [\#15](https://github.com/btschwertfeger/python-kraken-sdk/pull/15) ([btschwertfeger](https://github.com/btschwertfeger))
+- 12 add examples to all clients [\#13](https://github.com/btschwertfeger/python-kraken-sdk/pull/13) ([btschwertfeger](https://github.com/btschwertfeger))
+- 9 integrated websockets private and public endpoints [\#11](https://github.com/btschwertfeger/python-kraken-sdk/pull/11) ([btschwertfeger](https://github.com/btschwertfeger))
+- added websocket clients and authentication [\#8](https://github.com/btschwertfeger/python-kraken-sdk/pull/8) ([btschwertfeger](https://github.com/btschwertfeger))
+- added private staking endpoints [\#7](https://github.com/btschwertfeger/python-kraken-sdk/pull/7) ([btschwertfeger](https://github.com/btschwertfeger))
+- added private funding endpoints [\#6](https://github.com/btschwertfeger/python-kraken-sdk/pull/6) ([btschwertfeger](https://github.com/btschwertfeger))
+- added private trade endpoints [\#5](https://github.com/btschwertfeger/python-kraken-sdk/pull/5) ([btschwertfeger](https://github.com/btschwertfeger))
+
+\* _This Changelog was automatically generated by [github_changelog_generator](https://github.com/github-changelog-generator/github-changelog-generator)_
