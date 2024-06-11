@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+epp_logs_to_sqlite/__init__.py
+epp_logs_to_sqlite/__main__.py
+epp_logs_to_sqlite/db_writer.py
+epp_logs_to_sqlite/event_log_entry_extra_data.py
+epp_logs_to_sqlite/logs_to_db.py
+epp_logs_to_sqlite/util.py
+epp_logs_to_sqlite.egg-info/PKG-INFO
+epp_logs_to_sqlite.egg-info/SOURCES.txt
+epp_logs_to_sqlite.egg-info/dependency_links.txt
+epp_logs_to_sqlite.egg-info/requires.txt
+epp_logs_to_sqlite.egg-info/top_level.txt

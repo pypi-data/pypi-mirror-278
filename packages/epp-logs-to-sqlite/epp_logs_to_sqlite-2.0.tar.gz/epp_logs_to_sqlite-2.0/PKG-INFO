@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: epp_logs_to_sqlite
+Version: 2.0
+Summary: A tool to parse Eggplant Performance test logs into a SQLite database
+License-File: LICENSE
+Requires-Dist: epp_event_log_reader<3.0,>=2.0
