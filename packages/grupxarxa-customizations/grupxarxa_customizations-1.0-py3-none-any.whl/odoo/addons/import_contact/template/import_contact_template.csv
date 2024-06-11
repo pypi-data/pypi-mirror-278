@@ -1,0 +1,19 @@
+ref,parent_id,name,type,function,street,street2,zip,city,state,country,comment,email,phone,mobile,language
+(codigo único,(referencia,(nombre y apellidos del contacto),(Por defecto contact),(cargo en la empresa),(dirección 1),(dirección 2),(codigo postal),(Ciudad),(estado / provincia,(código ISO del ,(descripcio),(Email),(tel. Fijo),(tel. Móvil),(Idioma del contacto 
+ para identificar, empresa,,,,,,,,Por ej.: ,país de 2 letras,,,,,con el que se imprimiran
+ cada cliente), padre),,,,,,,,"Barcelona,",en mayúscula.,,,,,"las facturas, etc."
+,,,,,,,,,Kentucky),"Por ej,:",,,,,Introducir código ISO
+,,,,,,,,,,"ES (España),",,,,,tal como está en Odoo.
+,,,,,,,,,,"GB (Reino Unido),",,,,,Por ej.:
+,,,,,,,,,,CN (China)),,,,,es (Español)
+,,,,,,,,,,,,,,,zh_CN (Chino)
+,,,,,,,,,,,,,,,
+ EJEMPLO:,,,,,,,,,,,,,,,
+MJS13,CESPA S.A.,Pablete,contact,Trabajador,"Carrer B, 18",P.I. Zona Franca - Sector B,8040,Barcelona,Barcelona,ES,"Los envios se realizaran a
+ Apartado de correos 86
+Ferrovial servicios España -08080 Barcelona
+",pablo@ferrovial.com,932479100,,
+MJS14,CESPA S.A.,Sergio,contact,Trabajador,C/ Montclar 5-7 Nave 1-2,Pol. Ind. Polizur,8290,Cerdanyola del Vallès,Barcelona,ES,,sergio.FSE@ferrovial.com,936927801,687678667,
+MJS15,CESPA S.A.,Eduardo,contact,Becario,CENTRO DE TRABAJO: J9FT,C/ METALOGENIA 8,8330,Premià de Mar,Barcelona,ES,,,,600926905,
+MJS16,CESPA S.A.,Perico,contact,Becario,Camí Can U'bach,CENTRO J9EY,8620,Sant Vicenç dels Horts,Barcelona,ES,"Camí Can U'bach, 08620 Sant Vicenç dels Horts, Barcelona",peroico@ferrovial.com,,,
+MJS17,CESPA S.A.,Tiranto,contact,Jefe,Camí de los Tiranos,Tiranillas,8620,Sant Vicenç dels Horts,Barcelona,ES,Para los mas tiranos,tiranio@ferrovial.com,,,
