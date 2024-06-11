@@ -1,0 +1,86 @@
+# AutoIP
+
+AutoIP is a Python package that automates IP address changes using Tor. It is a top tool for securing your networks by frequently changing your IP address, making it difficult for trackers to pinpoint your location.
+
+## Benefits
+
+- **Enhanced Privacy**: By regularly changing your IP address, AutoIP makes it much harder for websites and trackers to monitor your online activity.
+- **Increased Security**: Frequent IP changes can help protect you from targeted attacks and make it more difficult for malicious actors to track your online presence.
+- **Anonymity**: Using Tor, AutoIP helps you maintain a high level of anonymity while browsing the internet.
+- **Ease of Use**: AutoIP is designed to be simple and easy to use, whether you prefer command-line tools or integrating it directly into your Python scripts.
+- **Protection from Tracking**: With your IP address changing frequently, tracking services and advertisers will find it more challenging to build a profile on you.
+- **Peace of Mind**: Knowing that your IP address is regularly changed can give you confidence in your online privacy and security.
+
+
+## Installation
+
+You can install AutoIP using pip:
+
+```bash
+pip install autoip
+```
+
+## Usage
+
+AutoIP provides a command-line interface for easy use. Here are the available options:
+
+```bash
+autoip --interval <seconds> --count <number>
+```
+
+- `--interval` (optional): Time in seconds between IP changes (default is 60 seconds).
+- `--count` (optional): Number of times to change the IP (default is 10 times). If set to 0, the IP will be changed indefinitely.
+- `--ip` (optional): Display the current IP address and exit.
+- `--auto-fix` (optional): Automatically fix issues (install/upgrade packages).
+- `--help`: Show the help message and exit.
+- `--version`: Show the version number and exit.
+
+### Examples
+
+Change the IP address every 30 seconds, for a total of 5 times:
+
+```bash
+autoip --interval 30 --count 5
+```
+
+Change the IP address every 60 seconds indefinitely:
+
+```bash
+autoip --interval 60 --count 0
+```
+
+Display the current IP address:
+
+```bash
+autoip --ip
+```
+
+Automatically fix issues (install/upgrade packages):
+
+```bash
+autoip --auto-fix
+```
+
+## In Your Python Code
+
+You can also use AutoIP within your Python scripts if needed.
+
+```python
+from autoip import ma_ip, change_ip, initialize_environment, change_ip_repeatedly
+
+# Initialize the environment (install dependencies and start Tor)
+initialize_environment()
+
+# Get the current IP
+current_ip = ma_ip()
+print("Current IP:", current_ip)
+
+# Change the IP once
+new_ip = change_ip()
+print("New IP:", new_ip)
+
+# Change the IP repeatedly
+change_ip_repeatedly(60, 10)
+```
+## Thanks
+Thank you for using AutoIP! We hope this tool helps you secure your network and maintain your privacy.
