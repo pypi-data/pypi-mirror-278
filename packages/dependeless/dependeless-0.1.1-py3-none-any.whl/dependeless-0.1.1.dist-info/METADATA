@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: dependeless
+Version: 0.1.1
+Summary: A tool to show which pip packages are not depended on by any other package
+Keywords: pip,dependencies,unused,packages,clean
+Author-email: Lucas van der Horst <Lucas@vdrHorst.nl>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: click>=8.1
+Requires-Dist: pip3-autoremove>=1.2
+Project-URL: Bug Tracker, https://gitlab.com/Lucas_van_der_Horst/dependeless/-/issues
+Project-URL: Documentation, https://gitlab.com/Lucas_van_der_Horst/dependeless/-/blob/main/README.md
+Project-URL: Homepage, https://gitlab.com/Lucas_van_der_Horst/dependeless
+Project-URL: Source Code, https://gitlab.com/Lucas_van_der_Horst/dependeless
+
+# Dependeless
+
+A very small command line tool to list all the installed pip packages that are not dependencies of any other package.  
+
+Uses the `Required-By` field in the output of `pip show` to determine dependencies.
+
+## Installation
+
+```bash
+pip install dependeless
+```
+
+## Usage
+
+Easiest is to just run the command in your virtualenvironment:
+```bash
+dependeless
+```
+
+You can also run it with manually specified pip path:
+```bash
+dependeless --pip-path /path/to/pip
+```
+
+By the `pip` package and `dependeless` package itself are excluded from the output. You can change this or add more packages to exclude by using the `--pardon` option:
+```bash
+dependeless --pardon "pip, setuptools, your_package"
+```
+
+## Performance
+For large projects with many dependencies, the tool can be slow.
