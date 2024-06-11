@@ -1,0 +1,38 @@
+Metadata-Version: 2.3
+Name: gcm_rs
+Version: 1.0.3b0
+Classifier: Programming Language :: Rust
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+License-File: LICENSE
+Summary: AES-256 GCM
+Author: ashrefgw@proton.me
+Author-email: ashrefgw@proton.me
+License: GPL-3.0
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Source Code, https://github.com/ashgw/gcm_rs
+
+### Installation
+Python
+```
+pip install gcm_rs
+```
+Rust
+```
+cargo add gcm_rs
+```
+
+#### Usage 
+Check the unit tests in each package.
+#### License 
+GPL-3.
+### TODO
+Add docs.
+Add benchmarks.
