@@ -1,0 +1,26 @@
+- root:
+  - data01:
+    - image01.png
+    - images:
+      - img11.jpg
+    - docs:
+      - doc12.pdf
+    - archives:
+      - archive13a.zip
+      - archive13b.zip
+    - temp:
+        - EMPTY
+  - data02:
+    - report02.docx
+    - reports:
+      - report21.docx
+    - logs:
+      - log22.txt
+    - scripts:
+      - script23.py
+  - data03:
+    - video03a.mp4
+    - video03b.mp4
+    - video03c.mp4
+  - data04:
+    - EMPTY
