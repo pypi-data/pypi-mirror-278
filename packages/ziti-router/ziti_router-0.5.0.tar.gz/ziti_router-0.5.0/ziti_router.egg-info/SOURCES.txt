@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+ziti_router/__init__.py
+ziti_router/cli.py
+ziti_router/main.py
+ziti_router.egg-info/PKG-INFO
+ziti_router.egg-info/SOURCES.txt
+ziti_router.egg-info/dependency_links.txt
+ziti_router.egg-info/entry_points.txt
+ziti_router.egg-info/requires.txt
+ziti_router.egg-info/top_level.txt
