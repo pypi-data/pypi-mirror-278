@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "truefoundry"
+version = "0.2.6"
+description = "Truefoundry CLI"
+authors = ["Abhishek Choudhary <abhichoudhary06@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8,<3.13"
+servicefoundry = "0.10.14"
+mlfoundry = { version = "0.10.12", optional = true }
+openai = "^1.16.2"
+docker = "^7.0.0"
+pydantic = ">=1.10.0,<3"
+rich = "^13.7.1"
+requests = ">=2.31.0,<3.0.0"
+python-dotenv = "^1.0.1"
+gitignorefile = "^1.1.2"
+gitpython = "^3.1.43"
+
+[tool.poetry.extras]
+ml = ["mlfoundry"]
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.3.5"
+
+[tool.poetry-dynamic-versioning]
+enable = false
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
+build-backend = "poetry_dynamic_versioning.backend"
+
+[tool.poetry.plugins."console_scripts"]
+tfy = "truefoundry.cli.__main__:main"
+truefoundry = "truefoundry.cli.__main__:main"
+
+[tool.ruff]
+lint.select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "C",  # flake8-comprehensions
+    "B",  # flake8-bugbear
+    "Q",  # flake8-quotes
+    "I",
+]
+lint.ignore = ["E501"]
+exclude = ["venv", "repos"]
