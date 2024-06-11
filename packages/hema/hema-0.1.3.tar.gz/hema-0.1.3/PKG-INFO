@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: hema
+Version: 0.1.3
+Summary: EMG analysis toolbox by Hou.
+Author: Qinhan Hou
+Author-email: qinhan.hou@idsia.ch
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: torchaudio
+Requires-Dist: numpy
+Requires-Dist: scipy
+
+EMG analysis toolbox by Hou.
