@@ -1,0 +1,10 @@
+six
+psutil
+ruamel.yaml==0.18.5
+Jinja2
+netaddr
+requests
+tzlocal==2.1
+redis
+configparser==3.7.4
+oss2
