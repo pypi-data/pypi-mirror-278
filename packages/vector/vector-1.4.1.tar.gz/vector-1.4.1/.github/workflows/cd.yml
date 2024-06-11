@@ -1,0 +1,65 @@
+name: CD
+
+on:
+  workflow_dispatch:
+  release:
+    types:
+      - published
+
+jobs:
+  dist:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      attestations: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build SDist and wheel
+        run: pipx run build
+
+      - name: Check metadata
+        run: pipx run twine check dist/*
+
+      - name: Generate artifact attestation for sdist and wheel
+        uses: actions/attest-build-provenance@49df96e17e918a15956db358890b08e61c704919 # v1.2.0
+        with:
+          subject-path: "dist/vector-*"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          path: dist/*
+
+  publish:
+    needs: [dist]
+    runs-on: ubuntu-latest
+    if: github.event_name == 'release' && github.event.action == 'published'
+    environment:
+      name: pypi
+      url: https://pypi.org/p/vector
+    permissions:
+      id-token: write
+
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: artifact
+          path: dist
+
+      - name: List distributions to be deployed
+        run: ls -l dist/
+
+      - name: Verify sdist artifact attestation
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh attestation verify dist/vector-*.tar.gz --repo ${{ github.repository }}
+
+      - name: Verify wheel artifact attestation
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh attestation verify dist/vector-*.whl --repo ${{ github.repository }}
+
+      - uses: pypa/gh-action-pypi-publish@release/v1
