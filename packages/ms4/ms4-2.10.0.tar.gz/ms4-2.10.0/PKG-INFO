@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: ms4
+Version: 2.10.0
+Summary: A simple library for many things
+Home-page: https://github.com/Psoidh/ms4
+Author: Ahmed
+Author-email: alhranyahmed@gmail.com
+Project-URL: Bug Tracker, https://github.com/pypa/sampleproject/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: bs4
+Requires-Dist: requests
+Requires-Dist: uuid
+Requires-Dist: pycountry
+Requires-Dist: user_agent
+Requires-Dist: mnemonic
+
+# ms4
+All using Hack Availability For many app By AHMED ALHRRANI
+# ms4
+## to install
+```bash
+pip3 install ms4
+```
