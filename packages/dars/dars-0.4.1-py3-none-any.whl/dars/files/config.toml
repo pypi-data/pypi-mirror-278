@@ -1,0 +1,8 @@
+sender = "dars"
+
+[s3]
+access_key = "access_key"
+secret_key = "secret_key"
+endpoint_url = "http://localhost:9000"
+bucket = "my-bucket"
+region = "ru-1"
