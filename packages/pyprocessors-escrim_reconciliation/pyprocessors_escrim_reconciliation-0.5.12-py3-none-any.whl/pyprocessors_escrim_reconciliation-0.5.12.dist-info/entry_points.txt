@@ -1,0 +1,3 @@
+[pyprocessors.plugins]
+escrim_reconciliation=pyprocessors_escrim_reconciliation.escrim_reconciliation:EscrimReconciliationProcessor
+
