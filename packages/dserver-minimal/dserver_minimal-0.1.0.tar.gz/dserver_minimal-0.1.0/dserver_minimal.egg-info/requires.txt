@@ -1,0 +1,10 @@
+dtool-lookup-server
+dserver-search-plugin-mongo
+dserver-retrieve-plugin-mongo
+
+[docs]
+sphinx
+sphinx_rtd_theme
+sphinxcontrib-spelling
+sphinxcontrib-bibtex
+myst-parser==2.0.0

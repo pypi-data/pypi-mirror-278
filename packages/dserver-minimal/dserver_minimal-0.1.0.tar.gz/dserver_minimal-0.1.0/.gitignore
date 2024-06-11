@@ -1,0 +1,15 @@
+dserver_minimal/version.py
+
+*.swp
+*.pyc
+*.egg-info
+*.pdf
+
+.cache/*
+.pytest_cache/*
+.tox/*
+dist/*
+venv/*
+build/*
+
+.idea/*

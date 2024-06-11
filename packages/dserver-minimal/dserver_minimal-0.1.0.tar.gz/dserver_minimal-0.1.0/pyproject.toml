@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=42", "setuptools_scm[toml]>=6.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dserver-minimal"
+description = "Meta-package for installing a minimal working dserver consisting of dtool-lookup-server, dserver-search-plugin-mongo, and dserver-retrieve-plugin-mongo"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Tjelvar Olsson", email = "tjelvar.olsson@gmail.com"},
+    {name = "Johannes L. Hörmann", email = "johannes.laurin@gmail.com"}
+]
+dependencies = [
+      "dtool-lookup-server",
+      "dserver-search-plugin-mongo",
+      "dserver-retrieve-plugin-mongo",
+    ]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+docs = [
+    "sphinx",
+    "sphinx_rtd_theme",
+    "sphinxcontrib-spelling",
+    "sphinxcontrib-bibtex",
+    "myst-parser==2.0.0"
+]
+
+[project.urls]
+Documentation = "https://dserver.readthedocs.io"
+Repository = "https://github.com/livMatS/dserver-minimal"
+
+[tool.setuptools]
+packages = ["dserver_minimal"]
+
+[tool.setuptools_scm]
+version_scheme = "guess-next-dev"
+local_scheme = "no-local-version"
+write_to = "dserver_minimal/version.py"
+
