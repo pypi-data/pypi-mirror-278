@@ -1,0 +1,34 @@
+{
+    "packageName": "moapy.project.wgsd",
+    "fileName": "wgsd_flow",
+    "functionName": "rebar_properties_design",
+    "arguments": {
+		"units": {
+			"force": "kN",
+			"length": "m",
+			"section_dimension": "mm",
+			"pressure": "MPa",
+			"strain": "%"
+		},
+		"design_code": {
+			"design_code": "ACI 318-19",
+			"sub_code": "SI"
+		},
+        "grade": "A615",
+		"general": {
+			"strength": 420,
+			"elastic_modulus": 200000,
+			"density": 7850,
+			"thermal_expansion_coefficient": 0.00001,
+			"poisson_ratio": 0.3
+		},
+		"uls": {
+			"material_model": "Elastic-Plastic",
+			"failure_strain": 0.7
+		},
+		"sls": {
+			"material_model": "Elastic-Plastic",
+			"failure_strain": 0.7
+		}
+    }
+}
