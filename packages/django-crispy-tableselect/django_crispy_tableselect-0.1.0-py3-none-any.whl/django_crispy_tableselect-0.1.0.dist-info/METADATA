@@ -1,0 +1,104 @@
+Metadata-Version: 2.3
+Name: django-crispy-tableselect
+Version: 0.1.0
+Summary: Crispy layout object for selecting rows in a table
+Project-URL: Changelog, https://github.com/Stormbase/django-crispy-tableselect/blob/main/CHANGELOG.md
+Project-URL: Issues, https://github.com/Stormbase/django-crispy-tableselect/issues
+Project-URL: Source, https://github.com/Stormbase/django-crispy-tableselect
+Author-email: "Storm B. Heg" <storm@stormbase.digital>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: crispy-forms,django
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 4.2
+Classifier: Framework :: Django :: 5.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.9
+Requires-Dist: django-crispy-forms<3.0,>=2.0
+Requires-Dist: django-tables2<3,>=2.4
+Requires-Dist: django>=4.2
+Description-Content-Type: text/markdown
+
+# Django Crispy TableSelect
+[![CI](https://github.com/techonomydev/django-tableselect/actions/workflows/ci.yml/badge.svg)](https://github.com/techonomydev/django-tableselect/actions/workflows/ci.yml)
+
+*Note:* this package is under heavy development and currently in proof-of-concept phase.
+
+Crispy layout object for selecting rows in a [django-tables2](https://github.com/jieter/django-tables2/) data table.
+
+<center>
+    <img width="900" src="./docs/images/demo.gif" alt="Animation showing a table with rows that are selected all at once and then unchecked one-by-one.">
+</center>
+
+## Todo list
+
+- [ ] Write documentation (d'oh)
+- [ ] Publish to PyPI
+- [ ] Add checkbox in table header to select/de-select all rows at once.
+- [ ] Add tests
+- [ ] Audit accessibility
+
+## Development setup
+
+### Requirements
+- At least python 3.9 (pyenv managed recommended)
+
+
+### Install the django app with poetry
+```bash
+pyenv virtualenv 3.9 django-tableselect  # or your alternative to create a venv
+pyenv activate django-tableselect
+pip install poetry
+make install
+
+# Optional, when you're not creating the virtualenv yourself poetry will do it for you.
+# You can activate the poetry venv like so:
+source $(poetry env info --path)/bin/activate
+```
+
+### Linting
+`flake8-black` and `flake8-isort` are installed and configured
+```bash
+make lint
+```
+
+### Formatting
+`black` and `isort` are configured
+```bash
+make format
+```
+
+
+### Test
+Pytest with coverage is default enabled
+```bash
+make test
+```
+
+### Run the django development server (sandbox)
+First run the migrations:
+```bash
+make migrate
+```
+
+Now create a superuser:
+```bash
+sandbox/manage.py createsuperuser
+```
+
+Finally run the django dev server:
+```bash
+sandbox/manage.py runserver
+```
+
+You can now go to the django admin site: http://localhost:8000/admin
