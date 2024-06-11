@@ -1,0 +1,2 @@
+[dtool_lookup_server.search]
+MongoSearch = dserver_search_plugin_mongo.utils_search:MongoSearch
