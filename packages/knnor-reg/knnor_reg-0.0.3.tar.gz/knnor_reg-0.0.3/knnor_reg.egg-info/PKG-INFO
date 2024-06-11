@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: knnor-reg
+Version: 0.0.3
+Summary: Generic python library to perform augmentation of regression data.
+Home-page: 
+Author: Ashhadul Islam, Sameer Brahim Belhaouari
+Author-email: ashhadulislam@gmail.com, samir.brahim@gmail.com
+License: MIT
+Keywords: Regression,Data Augmentation,Imabalnced Data
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+
+A generic package to help data scientists balance their regression dataset by increasing the datapoints for underrepresented data.
+      pip install knnor-reg
+      

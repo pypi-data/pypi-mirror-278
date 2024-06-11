@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+knnor_reg/__init__.py
+knnor_reg/data_augment.py
+knnor_reg.egg-info/PKG-INFO
+knnor_reg.egg-info/SOURCES.txt
+knnor_reg.egg-info/dependency_links.txt
+knnor_reg.egg-info/not-zip-safe
+knnor_reg.egg-info/requires.txt
+knnor_reg.egg-info/top_level.txt
+knnor_reg/tests/__init__.py
+knnor_reg/tests/test_augmented.py
