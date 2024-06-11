@@ -1,0 +1,4 @@
+PyJWT<3.0.0,>=2.4.0
+PyJWT[crypto]<3.0.0,>=2.4.0
+requests<3.0.0,>=2.8.1
+CacheControl==0.13.1
