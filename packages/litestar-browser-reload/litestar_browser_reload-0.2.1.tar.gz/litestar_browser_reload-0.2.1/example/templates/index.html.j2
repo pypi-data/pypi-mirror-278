@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    {% if request.app.debug %}
+    <script
+      src="/__reload__/static/reload-listener.js"
+      data-worker-script-path="/__reload__/static/reload-worker.js"
+      data-ws-path="/__reload__"
+      defer
+    ></script>
+    {% endif %}
+  </head>
+
+  <body>
+    Home page
+  </body>
+</html>
