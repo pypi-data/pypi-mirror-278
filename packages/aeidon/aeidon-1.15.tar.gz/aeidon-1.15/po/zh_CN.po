@@ -1,0 +1,2675 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# tzwasd 😃, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-10 21:51+0300\n"
+"PO-Revision-Date: 2016-07-07 00:55+0000\n"
+"Last-Translator: tzwasd 😃, 2023\n"
+"Language-Team: Chinese (China) (https://app.transifex.com/otsaloma/teams/64879/zh_CN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: aeidon/enums.py:40 gaupol/enums.py:38
+msgid "Subtitle number"
+msgstr "字幕序号"
+
+#: aeidon/enums.py:43
+msgid "Subtitle position"
+msgstr "字幕位置"
+
+#: aeidon/enums.py:59
+msgid "23.976 fps"
+msgstr "23.976 fps"
+
+#: aeidon/enums.py:63
+msgid "24.000 fps"
+msgstr "24.000 fps"
+
+#: aeidon/enums.py:67
+msgid "25.000 fps"
+msgstr "25.000 fps"
+
+#: aeidon/enums.py:71
+msgid "29.970 fps"
+msgstr "29.970 fps"
+
+#: aeidon/enums.py:75 data/ui/menubar.ui:248
+msgid "30.000 fps"
+msgstr "30.000 fps"
+
+#: aeidon/enums.py:79 data/ui/menubar.ui:253
+msgid "50.000 fps"
+msgstr "50.000 fps"
+
+#: aeidon/enums.py:83 data/ui/menubar.ui:258
+msgid "59.940 fps"
+msgstr "59.940 fps"
+
+#: aeidon/enums.py:87 data/ui/menubar.ui:263
+msgid "60.000 fps"
+msgstr "60.000 fps"
+
+#: aeidon/enums.py:112
+msgid "Mac (classic)"
+msgstr "Mac (经典)"
+
+#. TRANSLATORS: Most of the character encoding descriptions are copied from
+#. gedit, which is translated to very many languages. Check the gedit .po
+#. files for a reference:
+#. <https://gitlab.gnome.org/GNOME/gedit/tree/master/po>.
+#: aeidon/encodings.py:40 aeidon/encodings.py:43 aeidon/encodings.py:46
+msgid "English"
+msgstr "英语"
+
+#: aeidon/encodings.py:41 aeidon/encodings.py:42 aeidon/encodings.py:69
+msgid "Chinese traditional"
+msgstr "繁体中文"
+
+#: aeidon/encodings.py:44
+msgid "German"
+msgstr "德语"
+
+#: aeidon/encodings.py:45 aeidon/encodings.py:54 aeidon/encodings.py:59
+#: aeidon/encodings.py:79 aeidon/encodings.py:105
+msgid "Hebrew"
+msgstr "希伯来语"
+
+#: aeidon/encodings.py:47 aeidon/encodings.py:51 aeidon/encodings.py:56
+#: aeidon/encodings.py:73 aeidon/encodings.py:76 aeidon/encodings.py:98
+#: aeidon/encodings.py:111 aeidon/encodings.py:122
+msgid "Western"
+msgstr "西欧"
+
+#: aeidon/encodings.py:48 aeidon/encodings.py:61 aeidon/encodings.py:80
+#: aeidon/encodings.py:103
+msgid "Arabic"
+msgstr "阿拉伯语"
+
+#: aeidon/encodings.py:49 aeidon/encodings.py:64 aeidon/encodings.py:66
+#: aeidon/encodings.py:77 aeidon/encodings.py:104 aeidon/encodings.py:119
+msgid "Greek"
+msgstr "希腊语"
+
+#: aeidon/encodings.py:50 aeidon/encodings.py:81 aeidon/encodings.py:101
+#: aeidon/encodings.py:109
+msgid "Baltic"
+msgstr "波罗的语"
+
+#: aeidon/encodings.py:52 aeidon/encodings.py:74 aeidon/encodings.py:99
+#: aeidon/encodings.py:121
+msgid "Central European"
+msgstr "中欧"
+
+#: aeidon/encodings.py:53 aeidon/encodings.py:75 aeidon/encodings.py:102
+#: aeidon/encodings.py:118
+msgid "Cyrillic"
+msgstr "西里尔语"
+
+#: aeidon/encodings.py:55 aeidon/encodings.py:71 aeidon/encodings.py:78
+#: aeidon/encodings.py:106 aeidon/encodings.py:123
+msgid "Turkish"
+msgstr "土耳其语"
+
+#: aeidon/encodings.py:57
+msgid "Portuguese"
+msgstr "葡萄牙语"
+
+#: aeidon/encodings.py:58 aeidon/encodings.py:120
+msgid "Icelandic"
+msgstr "冰岛语"
+
+#: aeidon/encodings.py:60
+msgid "Canadian"
+msgstr "加拿大"
+
+#: aeidon/encodings.py:62 aeidon/encodings.py:107
+msgid "Nordic"
+msgstr "北欧"
+
+#: aeidon/encodings.py:63 aeidon/encodings.py:114
+msgid "Russian"
+msgstr "俄语"
+
+#: aeidon/encodings.py:65 aeidon/encodings.py:108
+msgid "Thai"
+msgstr "泰语"
+
+#: aeidon/encodings.py:67 aeidon/encodings.py:83 aeidon/encodings.py:84
+#: aeidon/encodings.py:85 aeidon/encodings.py:91 aeidon/encodings.py:92
+#: aeidon/encodings.py:93 aeidon/encodings.py:94 aeidon/encodings.py:95
+#: aeidon/encodings.py:96 aeidon/encodings.py:125 aeidon/encodings.py:126
+#: aeidon/encodings.py:127
+msgid "Japanese"
+msgstr "日语"
+
+#: aeidon/encodings.py:68 aeidon/encodings.py:86 aeidon/encodings.py:97
+#: aeidon/encodings.py:113
+msgid "Korean"
+msgstr "韩语"
+
+#: aeidon/encodings.py:70
+msgid "Urdu"
+msgstr "乌尔都语"
+
+#: aeidon/encodings.py:72 aeidon/encodings.py:116
+msgid "Ukrainian"
+msgstr "乌克兰语"
+
+#: aeidon/encodings.py:82
+msgid "Vietnamese"
+msgstr "越南语"
+
+#: aeidon/encodings.py:87 aeidon/encodings.py:90
+msgid "Chinese simplified"
+msgstr "简体中文"
+
+#: aeidon/encodings.py:88 aeidon/encodings.py:89
+msgid "Chinese unified"
+msgstr "中文"
+
+#: aeidon/encodings.py:100 aeidon/encodings.py:112
+msgid "South European"
+msgstr "南欧"
+
+#: aeidon/encodings.py:110
+msgid "Celtic"
+msgstr "凯尔特语"
+
+#: aeidon/encodings.py:115
+msgid "Tajik"
+msgstr "塔吉克语"
+
+#: aeidon/encodings.py:117
+msgid "Kazakh"
+msgstr "哈萨克语"
+
+#: aeidon/encodings.py:124
+msgid "Cyrillic Asian"
+msgstr "亚洲西里尔语"
+
+#: aeidon/encodings.py:128 aeidon/encodings.py:129 aeidon/encodings.py:130
+#: aeidon/encodings.py:131 aeidon/encodings.py:132 aeidon/encodings.py:133
+#: aeidon/encodings.py:134 aeidon/encodings.py:135 aeidon/encodings.py:136
+msgid "Unicode"
+msgstr "Unicode"
+
+#: aeidon/encodings.py:156
+#, python-brace-format
+msgid "{description} ({name})"
+msgstr "{description} ({name})"
+
+#: aeidon/encodings.py:221
+msgid "Current locale ({})"
+msgstr "当前语言环境 ({})"
+
+#: aeidon/locales.py:46
+#, python-brace-format
+msgid "{language} ({country})"
+msgstr "{language} ({country})"
+
+#: aeidon/agents/search.py:227
+msgid "Replacing"
+msgstr "替换"
+
+#: aeidon/agents/search.py:256 aeidon/agents/search.py:258
+msgid "Replacing all"
+msgstr "全部替换"
+
+#: aeidon/agents/position.py:74
+msgid "Adjusting durations"
+msgstr "调整持续时间"
+
+#: aeidon/agents/position.py:96
+msgid "Converting framerate"
+msgstr "转换帧率"
+
+#: aeidon/agents/position.py:146
+msgid "Setting framerate"
+msgstr "设置帧率"
+
+#: aeidon/agents/position.py:168
+msgid "Shifting positions"
+msgstr "移动位置"
+
+#: aeidon/agents/position.py:188
+msgid "Transforming positions"
+msgstr "转变位置"
+
+#: aeidon/agents/clipboard.py:44
+msgid "Cutting texts"
+msgstr "剪切文本"
+
+#: aeidon/agents/clipboard.py:61
+msgid "Pasting texts"
+msgstr "复制文本"
+
+#: aeidon/agents/text.py:91
+msgid "Breaking lines"
+msgstr "换行"
+
+#: aeidon/agents/text.py:128
+msgid "Capitalizing texts"
+msgstr "文本大写"
+
+#: aeidon/agents/text.py:185
+msgid "Correcting common errors"
+msgstr "更正常见错误"
+
+#: aeidon/agents/text.py:234
+msgid "Removing hearing impaired texts"
+msgstr "删除听力障碍文本"
+
+#: aeidon/agents/text.py:315
+msgid "Joining words by spell-check suggestions"
+msgstr "根据拼写检查的建议连接单词"
+
+#: aeidon/agents/text.py:354
+msgid "Splitting words by spell-check suggestions"
+msgstr "根据拼写检查的建议拆分单词"
+
+#: aeidon/agents/set.py:58 aeidon/agents/set.py:80 aeidon/agents/set.py:113
+msgid "Editing position"
+msgstr "编辑位置"
+
+#: aeidon/agents/set.py:129
+msgid "Editing text"
+msgstr "编辑文本"
+
+#: aeidon/agents/edit.py:35
+msgid "Clearing texts"
+msgstr "清除文本"
+
+#: aeidon/agents/edit.py:61 aeidon/agents/edit.py:83
+msgid "Inserting subtitles"
+msgstr "插入字幕"
+
+#: aeidon/agents/edit.py:103
+msgid "Merging subtitles"
+msgstr "合并字幕"
+
+#: aeidon/agents/edit.py:114
+msgid "Removing subtitles"
+msgstr "删除字幕"
+
+#: aeidon/agents/edit.py:131
+msgid "Replacing positions"
+msgstr "替换位置"
+
+#: aeidon/agents/edit.py:147
+msgid "Replacing texts"
+msgstr "替换文本"
+
+#: aeidon/agents/edit.py:171
+msgid "Splitting subtitle"
+msgstr "拆分字幕"
+
+#: aeidon/agents/format.py:49
+msgid "Adding dialogue dashes"
+msgstr "添加对话破折号"
+
+#: aeidon/agents/format.py:68
+msgid "Changing case"
+msgstr "改变大小写"
+
+#: aeidon/agents/format.py:92
+msgid "Italicizing"
+msgstr "斜体"
+
+#: aeidon/agents/format.py:108
+msgid "Removing dialogue dashes"
+msgstr "删除对话破折号"
+
+#: aeidon/agents/format.py:174
+msgid "Unitalicizing"
+msgstr "取消斜体"
+
+#: gaupol/application.py:219 gaupol/agents/open.py:203
+msgid "Open"
+msgstr "打开"
+
+#: gaupol/application.py:223
+msgid "Open main files"
+msgstr "打开主文件"
+
+#: gaupol/application.py:230
+msgid "Save"
+msgstr "保存"
+
+#: gaupol/application.py:233
+msgid "Save the current main document"
+msgstr "保存当前主文档"
+
+#: gaupol/application.py:238
+msgid "Undo"
+msgstr "撤销"
+
+#: gaupol/application.py:242
+msgid "Undo the last action"
+msgstr "撤销上一步"
+
+#: gaupol/application.py:249
+msgid "Redo"
+msgstr "重做"
+
+#: gaupol/application.py:252
+msgid "Redo the last undone action"
+msgstr "重做上次撤销的操作"
+
+#: gaupol/application.py:260
+msgid "Insert"
+msgstr "插入"
+
+#: gaupol/application.py:262
+msgid "Insert new subtitles"
+msgstr "插入新字幕"
+
+#: gaupol/application.py:266
+#: data/extensions/custom-framerates/preferences-dialog.ui:78
+msgid "Remove"
+msgstr "删除"
+
+#: gaupol/application.py:268
+msgid "Remove the selected subtitles"
+msgstr "删除选中的字幕"
+
+#: gaupol/application.py:273 data/ui/search-dialog.ui:283
+msgid "Find"
+msgstr "查找"
+
+#: gaupol/application.py:275
+msgid "Search for and replace text"
+msgstr "查找并替换文本"
+
+#: gaupol/application.py:279 data/ui/preferences-dialog.ui:942
+msgid "Video"
+msgstr "视频"
+
+#: gaupol/application.py:281
+msgid "Show or hide the video player"
+msgstr "显示/隐藏视频播放器"
+
+#: gaupol/application.py:285 data/ui/preferences-dialog.ui:1173
+msgid "Preview"
+msgstr "预览"
+
+#: gaupol/application.py:287
+msgid "Preview from selected position with a video player"
+msgstr "在播放器中从当前位置预览"
+
+#: gaupol/enums.py:37
+msgid "No."
+msgstr "序号"
+
+#: gaupol/enums.py:43
+msgid "Start"
+msgstr "开始"
+
+#: gaupol/enums.py:44
+msgid "Start position"
+msgstr "开始位置"
+
+#: gaupol/enums.py:49
+msgid "End"
+msgstr "结束"
+
+#: gaupol/enums.py:50
+msgid "End position"
+msgstr "结束位置"
+
+#. TRANSLATORS: 'Dur.' is short for duration. It is used in the header
+#. of a column that contains numbers five digits wide.
+#: gaupol/enums.py:57
+msgid "Dur."
+msgstr "时长"
+
+#: gaupol/enums.py:58
+msgid "Duration"
+msgstr "持续时间"
+
+#: gaupol/enums.py:63 gaupol/enums.py:64
+msgid "Text"
+msgstr "文本"
+
+#: gaupol/enums.py:69 gaupol/enums.py:70
+msgid "Translation"
+msgstr "翻译"
+
+#: gaupol/enums.py:82
+msgid "characters"
+msgstr "字符"
+
+#: gaupol/enums.py:85
+msgid "ems"
+msgstr "ems"
+
+#: gaupol/page.py:60
+msgid "Untitled {:d}"
+msgstr "无标题 {:d}"
+
+#: gaupol/page.py:133
+msgid "Close project"
+msgstr "关闭项目"
+
+#: gaupol/page.py:145
+msgid "{} translation"
+msgstr "{} 翻译"
+
+#: gaupol/page.py:302
+msgid "Path:"
+msgstr "路径："
+
+#: gaupol/page.py:303
+msgid "Format:"
+msgstr "格式："
+
+#: gaupol/page.py:304
+msgid "Encoding:"
+msgstr "编码："
+
+#: gaupol/page.py:305
+msgid "Newlines:"
+msgstr "换行："
+
+#. TRANSLATORS: Keep these page titles short, since they
+#. affect the width of the text correction assistant sidebar.
+#: gaupol/assistants.py:99
+msgid "Tasks and Target"
+msgstr "任务和目标"
+
+#: gaupol/assistants.py:128
+msgid "Correct texts in the text column"
+msgstr "更正文本栏中的文本"
+
+#: gaupol/assistants.py:129
+msgid "Correct texts in the translation column"
+msgstr "更正翻译栏中的文本"
+
+#: gaupol/assistants.py:138
+msgid "Correct texts in selected subtitles"
+msgstr "更正所选字幕中的文本"
+
+#: gaupol/assistants.py:139
+msgid "Correct texts in current project"
+msgstr "更正当前项目中的文本"
+
+#: gaupol/assistants.py:140
+msgid "Correct texts in all open projects"
+msgstr "更正所有打开的项目中的文本"
+
+#: gaupol/assistants.py:363
+msgid "Other"
+msgstr "其他"
+
+#: gaupol/assistants.py:439
+msgid "Capitalize texts written in lower case"
+msgstr "将以小写字母书写的文本大写"
+
+#. TRANSLATORS: Keep these page titles short, since they
+#. affect the width of the text correction assistant sidebar.
+#: gaupol/assistants.py:443
+msgid "Capitalization Patterns"
+msgstr "大写模式"
+
+#: gaupol/assistants.py:445
+msgid "Capitalize texts"
+msgstr "大写文本"
+
+#: gaupol/assistants.py:468
+msgid "Correct common errors made by humans or image recognition software"
+msgstr "更正人为或图像识别软件所犯的常见错误"
+
+#. TRANSLATORS: Keep these page titles short, since they
+#. affect the width of the text correction assistant sidebar.
+#: gaupol/assistants.py:472
+msgid "Common Error Patterns"
+msgstr "常见错误模式"
+
+#: gaupol/assistants.py:474
+msgid "Correct common errors"
+msgstr "更正常见错误"
+
+#: gaupol/assistants.py:526
+msgid "Remove explanatory texts meant for the hearing impaired"
+msgstr "删除针对听力障碍人士的解释性文字"
+
+#. TRANSLATORS: Keep these page titles short, since they
+#. affect the width of the text correction assistant sidebar.
+#: gaupol/assistants.py:530
+msgid "Hearing Impaired Patterns"
+msgstr "听力障碍模式"
+
+#: gaupol/assistants.py:532
+msgid "Remove hearing impaired texts"
+msgstr "删除听力障碍文本"
+
+#: gaupol/assistants.py:544
+msgid ""
+"Use spell-check suggestions to fix whitespace detection errors of image "
+"recognition software"
+msgstr "使用拼写检查的建议修复图像识别软件的空白检测错误"
+
+#. TRANSLATORS: Keep these page titles short, since they
+#. affect the width of the text correction assistant sidebar.
+#: gaupol/assistants.py:548
+msgid "Joining and Splitting Words"
+msgstr "连接和拆分单词"
+
+#: gaupol/assistants.py:550
+msgid "Join or Split Words"
+msgstr "连接或拆分单词"
+
+#: gaupol/assistants.py:599 gaupol/agents/tools.py:45
+msgid "Failed to load dictionary for language \"{}\""
+msgstr "无法加载语言“{}”的字典"
+
+#: gaupol/assistants.py:601 gaupol/player.py:263 gaupol/player.py:381
+#: gaupol/dialogs/search.py:560 gaupol/dialogs/search.py:568
+#: gaupol/dialogs/text_edit.py:49 gaupol/dialogs/encoding.py:56
+#: gaupol/agents/open.py:328 gaupol/agents/open.py:337
+#: gaupol/agents/open.py:345 gaupol/agents/open.py:354
+#: gaupol/agents/tools.py:48 gaupol/agents/save.py:197
+#: gaupol/agents/save.py:205 gaupol/agents/preview.py:108
+#: gaupol/agents/preview.py:116 gaupol/agents/preview.py:125
+#: gaupol/agents/preview.py:133
+msgid "_OK"
+msgstr "好的(_O)"
+
+#: gaupol/assistants.py:635
+msgid "Break text into lines of defined length"
+msgstr "将文本分成定义长度的行"
+
+#. TRANSLATORS: Keep these page titles short, since they
+#. affect the width of the text correction assistant sidebar.
+#: gaupol/assistants.py:639
+msgid "Line-Break Patterns"
+msgstr "换行模式"
+
+#: gaupol/assistants.py:641
+msgid "Break lines"
+msgstr "换行"
+
+#. TRANSLATORS: Keep these page titles short, since they
+#. affect the width of the text correction assistant sidebar.
+#: gaupol/assistants.py:679
+msgid "Line-Break Options"
+msgstr "换行选项"
+
+#. TRANSLATORS: Keep these page titles short, since they
+#. affect the width of the text correction assistant sidebar.
+#: gaupol/assistants.py:763
+msgid "Correcting Texts"
+msgstr "更正文本"
+
+#: gaupol/assistants.py:769
+msgid "Each task is now being run on each project."
+msgstr "所有项目中的所有任务都在运行。"
+
+#: gaupol/assistants.py:793
+#, python-brace-format
+msgid "{current:d} of {total:d} tasks complete"
+msgstr "已完成{current:d}任务中的{total:d}个"
+
+#: gaupol/assistants.py:801
+msgid "Project: {}"
+msgstr "项目：{}"
+
+#: gaupol/assistants.py:807
+msgid "Task: {}"
+msgstr "任务：{}"
+
+#. TRANSLATORS: Keep these page titles short, since they
+#. affect the width of the text correction assistant sidebar.
+#: gaupol/assistants.py:832
+msgid "Confirm Changes"
+msgstr "确认更改"
+
+#: gaupol/assistants.py:892
+msgid "Accept"
+msgstr "接受"
+
+#: gaupol/assistants.py:898
+msgid "Original Text"
+msgstr "原文"
+
+#: gaupol/assistants.py:899
+msgid "Corrected Text"
+msgstr "更正后的文本"
+
+#: gaupol/assistants.py:1048
+msgid "Correct Texts"
+msgstr "更正文本"
+
+#: gaupol/assistants.py:1076
+msgid "Correcting texts"
+msgstr "更正文本"
+
+#: gaupol/assistants.py:1092
+#, python-brace-format
+msgid "Edited {edits:d} and removed {removals:d} subtitles"
+msgstr "已编辑{edits:d}条字幕，已删除{removals:d}条字幕"
+
+#: gaupol/assistants.py:1126
+msgid "Confirm {:d} Change"
+msgid_plural "Confirm {:d} Changes"
+msgstr[0] "确认{:d}项更改"
+
+#: gaupol/renderers/multiline.py:86
+msgid "Italic"
+msgstr "斜体"
+
+#: gaupol/player.py:372
+msgid "No video streams found"
+msgstr "找不到视频流"
+
+#: gaupol/player.py:379
+msgid "Failed to initialize playback"
+msgstr "初始化播放失败"
+
+#: gaupol/dialogs/search.py:189 data/ui/menubar.ui:524
+msgid "_Help"
+msgstr "帮助(_H)"
+
+#: gaupol/dialogs/search.py:471
+msgid "Found and replaced {:d} occurence"
+msgid_plural "Found and replaced {:d} occurences"
+msgstr[0] "找到并替换{:d}项"
+
+#: gaupol/dialogs/search.py:488
+msgid "\"{}\" not found"
+msgstr "找不到“{}”"
+
+#: gaupol/dialogs/search.py:558
+msgid "Error in regular expression pattern"
+msgstr "正则表达式规则错误"
+
+#: gaupol/dialogs/search.py:566
+msgid "Error in regular expression replacement"
+msgstr "正则表达式替换错误"
+
+#: gaupol/dialogs/text_edit.py:48 gaupol/dialogs/framerate_convert.py:63
+#: gaupol/dialogs/insert.py:44 gaupol/dialogs/encoding.py:55
+#: gaupol/dialogs/split.py:44 gaupol/dialogs/multi_close.py:54
+#: gaupol/dialogs/open.py:63 gaupol/dialogs/position_transform.py:69
+#: gaupol/dialogs/position_shift.py:71 gaupol/dialogs/multi_save.py:83
+#: gaupol/dialogs/multi_save.py:215 gaupol/dialogs/duration_adjust.py:86
+#: gaupol/dialogs/save.py:73 gaupol/dialogs/video.py:41
+#: gaupol/agents/open.py:363 gaupol/agents/open.py:375
+#: gaupol/agents/open.py:387 gaupol/agents/close.py:71
+#: data/extensions/custom-framerates/custom-framerates.py:39
+msgid "_Cancel"
+msgstr "取消(_C)"
+
+#: gaupol/dialogs/text_edit.py:53
+msgid "Edit Text"
+msgstr "编辑文本"
+
+#: gaupol/dialogs/framerate_convert.py:64
+msgid "Co_nvert"
+msgstr "转换(_N)"
+
+#: gaupol/dialogs/insert.py:45
+msgid "_Insert"
+msgstr "插入(_I)"
+
+#: gaupol/dialogs/insert.py:54
+msgid "Above selection"
+msgstr "选中上方"
+
+#: gaupol/dialogs/insert.py:55
+msgid "Below selection"
+msgstr "选中下方"
+
+#: gaupol/dialogs/encoding.py:60 data/ui/preferences-dialog.ui:70
+msgid "Character Encodings"
+msgstr "字符编码"
+
+#: gaupol/dialogs/encoding.py:78 gaupol/dialogs/encoding.py:125
+msgid "Description"
+msgstr "描述"
+
+#: gaupol/dialogs/encoding.py:85 gaupol/dialogs/encoding.py:132
+msgid "Encoding"
+msgstr "编码"
+
+#: gaupol/dialogs/encoding.py:141
+msgid "Show in Menu"
+msgstr "在菜单中显示"
+
+#: gaupol/dialogs/split.py:45
+msgid "_Split"
+msgstr "拆分(_S)"
+
+#: gaupol/dialogs/split.py:76
+msgid "Splitting project"
+msgstr "拆分项目"
+
+#: gaupol/dialogs/split.py:97
+#, python-brace-format
+msgid "Split {amount:d} subtitles to project \"{name}\""
+msgstr "拆分{amount:d}条字幕到“{name}”"
+
+#: gaupol/dialogs/spell_check.py:269
+msgid "Spell-checking"
+msgstr "拼写检查"
+
+#: gaupol/dialogs/preferences.py:217
+msgid "{} Extension Website"
+msgstr "{} 扩展网站"
+
+#: gaupol/dialogs/preferences.py:429
+msgid "Custom"
+msgstr "自定义"
+
+#: gaupol/dialogs/multi_close.py:38
+msgid "Save changes to documents before closing?"
+msgstr "是否在关闭前保存对文档的更改？"
+
+#: gaupol/dialogs/multi_close.py:39 gaupol/agents/open.py:384
+#: gaupol/agents/close.py:68
+msgid "If you don't save, changes will be permanently lost."
+msgstr "如果不保存，更改将永久丢失。"
+
+#: gaupol/dialogs/multi_close.py:53 gaupol/agents/close.py:70
+msgid "Close _Without Saving"
+msgstr "关闭并且不更改(_W)"
+
+#: gaupol/dialogs/multi_close.py:55 gaupol/dialogs/multi_save.py:84
+#: gaupol/dialogs/save.py:74 gaupol/agents/open.py:388
+#: gaupol/agents/close.py:72 data/ui/menubar.ui:34
+msgid "_Save"
+msgstr "保存(_S)"
+
+#: gaupol/dialogs/multi_close.py:70
+msgid "Select the _main documents you want to save:"
+msgstr "选择要保存的主文档：(_M)"
+
+#: gaupol/dialogs/multi_close.py:95
+msgid "Select the _translation documents you want to save:"
+msgstr "选择要保存的翻译文档：(_T)"
+
+#: gaupol/dialogs/open.py:64 gaupol/agents/open.py:364
+#: gaupol/agents/open.py:376
+msgid "_Open"
+msgstr "打开(_O)"
+
+#: gaupol/dialogs/position_transform.py:70
+msgid "_Transform"
+msgstr "转变(_T)"
+
+#: gaupol/dialogs/position_shift.py:72
+msgid "_Shift"
+msgstr "移动(_S)"
+
+#: gaupol/dialogs/position_shift.py:150
+msgid "frames"
+msgstr "帧"
+
+#: gaupol/dialogs/position_shift.py:168 data/ui/preferences-dialog.ui:911
+msgid "seconds"
+msgstr "秒"
+
+#: gaupol/dialogs/about.py:36
+msgid "About Gaupol"
+msgstr "关于 Gaupol"
+
+#: gaupol/dialogs/about.py:40
+msgid "Subtitle editor"
+msgstr "字幕编辑器"
+
+#. TRANSLATORS: This is a special message that shouldn't be translated
+#. literally. It is used in the about dialog to give credits to the
+#. translators. Thus, you should translate it to your name and email
+#. address. You can also include other translators who have contributed
+#. to this translation; in that case, please write them on separate
+#. lines seperated by newlines (\n).
+#: gaupol/dialogs/about.py:51
+msgid "translator-credits"
+msgstr "tzwasd <tzwjkl@gmail.com>"
+
+#: gaupol/dialogs/about.py:54
+msgid "Gaupol Website"
+msgstr "Gaupol 的网站"
+
+#: gaupol/dialogs/append.py:35
+msgid "Append File"
+msgstr "追加文件"
+
+#: gaupol/dialogs/debug.py:44
+msgid "Something went wrong"
+msgstr "出错了"
+
+#: gaupol/dialogs/debug.py:45
+msgid ""
+"You have probably discovered a bug. Please report it by providing the below "
+"information and a description of what you were doing."
+msgstr "您可能发现了一个错误。请通过提供以下信息并描述您的操作以报告它。"
+
+#: gaupol/dialogs/debug.py:53
+msgid "_Report Bug"
+msgstr "报告错误(_R)"
+
+#: gaupol/dialogs/debug.py:54 data/ui/menubar.ui:56
+msgid "_Quit"
+msgstr "退出(_Q)"
+
+#: gaupol/dialogs/debug.py:55 gaupol/dialogs/preview_error.py:45
+#: data/ui/menubar.ui:52 data/ui/tab-popup.ui:16
+msgid "_Close"
+msgstr "关闭(_C)"
+
+#: gaupol/dialogs/multi_save.py:98 gaupol/dialogs/save.py:110
+msgid "{} (recommended)"
+msgstr "{} (建议)"
+
+#: gaupol/dialogs/multi_save.py:212
+msgid ""
+"{:d} of the files to be saved already exist. Do you want to replace them?"
+msgstr "将要保存{:d}个已存在的文件。您确定要替换它们吗？"
+
+#: gaupol/dialogs/multi_save.py:213
+msgid ""
+"The files already exist in \"{}\". Replacing them will overwrite their "
+"contents."
+msgstr "这些文件已存在于“{}”。替换它们将覆盖它们的内容。"
+
+#: gaupol/dialogs/multi_save.py:216 data/ui/search-dialog.ui:192
+#: data/ui/spell-check-dialog.ui:122
+msgid "_Replace"
+msgstr "替换(_R)"
+
+#: gaupol/dialogs/duration_adjust.py:70
+msgid "Adjusted duration of {:d} subtitle"
+msgid_plural "Adjusted durations of {:d} subtitles"
+msgstr[0] "已调整{:d}条字幕的持续时间"
+
+#: gaupol/dialogs/duration_adjust.py:87
+msgid "_Adjust"
+msgstr "调整(_A)"
+
+#: gaupol/dialogs/preview_error.py:36
+msgid "Preview in video player failed"
+msgstr "在视频播放器中预览失败"
+
+#: gaupol/dialogs/preview_error.py:37
+msgid ""
+"There is probably a problem with either the video file or the video player. "
+"See the preferences dialog to choose the video player or to customize the "
+"command."
+msgstr "视频文件或视频播放器可能有问题。请在首选项对话框中选择视频播放器或使用自定义命令。"
+
+#: gaupol/dialogs/language.py:97
+msgid "Set Language"
+msgstr "设置语言"
+
+#: gaupol/dialogs/video.py:52 gaupol/dialogs/file.py:59
+msgid "All files"
+msgstr "所有文件"
+
+#: gaupol/dialogs/video.py:56
+msgid "Video files"
+msgstr "视频文件"
+
+#: gaupol/dialogs/file.py:63
+msgid "All supported files"
+msgstr "所有支持的文件"
+
+#: gaupol/dialogs/file.py:77
+#, python-brace-format
+msgid "{format} (*{extension})"
+msgstr "{format} (*{extension})"
+
+#: gaupol/dialogs/file.py:120
+msgid "Auto-detected"
+msgstr "自动检测"
+
+#: gaupol/dialogs/file.py:122
+msgid "Other…"
+msgstr "其它…"
+
+#: gaupol/agents/menu.py:94 gaupol/agents/menu.py:103
+#: gaupol/agents/menu.py:110
+msgid "File not found"
+msgstr "找不到文件"
+
+#: gaupol/agents/open.py:85
+#, python-brace-format
+msgid "Appended {amount:d} subtitles from \"{basename}\""
+msgstr "从“{basename}”中添加{amount:d}条字幕"
+
+#: gaupol/agents/open.py:96
+msgid "Appending file"
+msgstr "追加文件"
+
+#: gaupol/agents/open.py:111
+msgid "File \"{}\" is already open"
+msgstr "文件 “{}” 已打开"
+
+#: gaupol/agents/open.py:214
+msgid "Open Translation"
+msgstr "打开翻译"
+
+#: gaupol/agents/open.py:223
+msgid "Select Video"
+msgstr "选择视频"
+
+#: gaupol/agents/open.py:224
+msgid "_Select"
+msgstr "选择(_S)"
+
+#: gaupol/agents/open.py:325
+msgid "Failed to decode file \"{}\" with all attempted codecs"
+msgstr "无法使用任何编解码器打开文件 “{}”"
+
+#: gaupol/agents/open.py:326
+msgid "Please try to open the file with a different character encoding."
+msgstr "请使用另一种字符编码打开文件。"
+
+#: gaupol/agents/open.py:334
+msgid "Failed to recognize format of file \"{}\""
+msgstr "无法识别文件“{}”的格式"
+
+#: gaupol/agents/open.py:335
+msgid ""
+"Please check that the file you are trying to open is a subtitle file of a "
+"format supported by Gaupol."
+msgstr "请检查您要打开的文件是否为 Gaupol 支持的格式的字幕文件。"
+
+#: gaupol/agents/open.py:343
+msgid "Failed to open file \"{}\""
+msgstr "无法打开文件“{}”"
+
+#: gaupol/agents/open.py:351
+msgid "Failed to parse file \"{}\""
+msgstr "无法解析文件“{}”"
+
+#: gaupol/agents/open.py:352
+msgid "Please check that the file you are trying to open is a valid {} file."
+msgstr "请检查您要打开的文件是否为有效的 {} 文件。"
+
+#: gaupol/agents/open.py:360
+msgid "Open abnormally large file \"{}\"?"
+msgstr "是否打开异常偏大的文件“{}”？"
+
+#: gaupol/agents/open.py:361
+msgid ""
+"Size of the file is {:.1f} MB, which is abnormally large for a text-based "
+"subtitle file. Please, check that you are not trying to open a binary file."
+msgstr "该文件的大小为 {:.1f} MB，对于一个基于文本的字幕文件而言过于偏大。请检查您是否在打开一个二进制文件。"
+
+#: gaupol/agents/open.py:371
+msgid "Open unsorted file \"{}\"?"
+msgstr "是否打开未排序的文件“{}”？"
+
+#: gaupol/agents/open.py:372
+msgid ""
+"The order of {:d} subtitles needs to be changed. If {:d} sounds like a lot, "
+"the file may be erroneously composed."
+msgstr "有 {:d} 条字幕需要调整。如果 {:d} 看上去很多，该文件可能存在合成错误。"
+
+#: gaupol/agents/open.py:383
+msgid "Save changes to translation document \"{}\" before opening a new one?"
+msgstr "是否在打开新的翻译文档前保存对“{}”的更改？"
+
+#: gaupol/agents/open.py:386
+msgid "Open _Without Saving"
+msgstr "打开并不保存(_W)"
+
+#: gaupol/agents/close.py:66
+msgid "Save changes to document \"{}\" before closing?"
+msgstr "是否在关闭文档“{}”前保存更改？"
+
+#: gaupol/agents/edit.py:101 gaupol/agents/edit.py:119
+msgid "Stretching end position"
+msgstr "拉伸结束位置"
+
+#: gaupol/agents/edit.py:208
+msgid "Inserted {:d} subtitle to fit clipboard contents"
+msgid_plural "Inserted {:d} subtitles to fit clipboard contents"
+msgstr[0] "已插入 {:d} 字幕以适合剪贴板内容"
+
+#: gaupol/agents/edit.py:334 gaupol/agents/edit.py:352
+msgid "Stretching start position"
+msgstr "拉伸开始位置"
+
+#: gaupol/agents/edit.py:411
+msgid "Use Shift+Return for line-break"
+msgstr "使用 Shift+回车键 换行"
+
+#: gaupol/agents/save.py:129
+msgid "Save As"
+msgstr "另存为"
+
+#: gaupol/agents/save.py:135
+msgid "Saved main document as \"{}\""
+msgstr "已将主文档保存为“{}”"
+
+#: gaupol/agents/save.py:153
+msgid "Save Translation As"
+msgstr "另存为翻译"
+
+#: gaupol/agents/save.py:159
+msgid "Saved translation document as \"{}\""
+msgstr "已将翻译文档保存为“{}”"
+
+#: gaupol/agents/save.py:194
+#, python-brace-format
+msgid "Failed to encode file \"{basename}\" with codec \"{codec}\""
+msgstr "无法使用编解码器“{codec}”对文件“{basename}”进行编码"
+
+#: gaupol/agents/save.py:195
+msgid "Please try to save the file with a different character encoding."
+msgstr "请使用另一种字符编码保存文件。"
+
+#: gaupol/agents/save.py:203
+msgid "Failed to save file \"{}\""
+msgstr "无法保存文件“{}”"
+
+#: gaupol/agents/video.py:67 data/ui/menubar.ui:380
+msgid "_Play/Pause"
+msgstr "播放/暂停(_P)"
+
+#: gaupol/agents/video.py:69
+msgid "Play or pause video"
+msgstr "播放或暂停视频"
+
+#: gaupol/agents/video.py:75 data/ui/menubar.ui:390
+msgid "Seek _Previous"
+msgstr "跳到上一个(_P)"
+
+#: gaupol/agents/video.py:77
+msgid "Seek to the start of the previous subtitle"
+msgstr "跳到到上一条字幕的开头"
+
+#: gaupol/agents/video.py:81 data/ui/menubar.ui:394
+msgid "Seek _Next"
+msgstr "跳到下一个(_N)"
+
+#: gaupol/agents/video.py:83
+msgid "Seek to the start of the next subtitle"
+msgstr "跳到下一条字幕的开头"
+
+#: gaupol/agents/video.py:88 data/ui/menubar.ui:400
+msgid "Seek _Backward"
+msgstr "快退(_B)"
+
+#: gaupol/agents/video.py:90
+msgid "Seek backward"
+msgstr "快退"
+
+#: gaupol/agents/video.py:94 data/ui/menubar.ui:404
+msgid "Seek _Forward"
+msgstr "快进(_F)"
+
+#: gaupol/agents/video.py:96
+msgid "Seek forward"
+msgstr "快进"
+
+#: gaupol/agents/video.py:109
+msgid "Volume"
+msgstr "音量"
+
+#: gaupol/agents/video.py:189
+msgid "Load Video"
+msgstr "载入视频"
+
+#: gaupol/agents/video.py:189
+msgid "_Load"
+msgstr "载入(_L)"
+
+#: gaupol/agents/video.py:361
+msgid "Track {:d}"
+msgstr "音轨 {:d}"
+
+#: gaupol/agents/preview.py:105
+msgid "Failed to encode subtitle file to temporary directory \"{}\""
+msgstr "无法将字幕文件编码到临时目录“{}”"
+
+#: gaupol/agents/preview.py:106
+msgid ""
+"Subtitle data could not be encoded to a temporary file for preview with the "
+"current character encoding. Please first save the subtitle file with a "
+"different character encoding."
+msgstr "无法使用当前的字符编码将字幕数据编码到临时文件以供预览。请先使用另一种字符编码保存字幕文件。"
+
+#: gaupol/agents/preview.py:114
+msgid "Failed to save subtitle file to temporary directory \"{}\""
+msgstr "无法将字幕文件保存到临时目录“{}”"
+
+#: gaupol/agents/preview.py:122
+msgid "Video player not found"
+msgstr "找不到视频播放器"
+
+#: gaupol/agents/preview.py:123
+msgid ""
+"Please install one of the supported video players: mpv (recommended), "
+"MPlayer or VLC. See the preferences dialog to choose the video player or to "
+"customize the command."
+msgstr "请安装其中一种受支持的视频播放器：mpv（推荐）、MPlayer 或 VLC。请在首选项对话框中选择视频播放器或使用自定义命令。"
+
+#: gaupol/agents/preview.py:131
+msgid "Failed to launch video player"
+msgstr "无法启动视频播放器"
+
+#: gaupol/applicationman.py:105
+msgid "gaupol [OPTION...] [FILE...] [+[NUM]]"
+msgstr "gaupol [选项...] [文件...] [+[数字]]"
+
+#: gaupol/applicationman.py:109
+msgid "FILE..."
+msgstr "文件..."
+
+#: gaupol/applicationman.py:112
+msgid "subtitle files to open"
+msgstr "要打开的字幕文件"
+
+#: gaupol/applicationman.py:122
+msgid "ENCODING"
+msgstr "编码"
+
+#: gaupol/applicationman.py:125
+msgid "set the character encoding used to open files"
+msgstr "设置打开文件的字符编码"
+
+#: gaupol/applicationman.py:132
+msgid "list all available character encodings"
+msgstr "列出所有可用的字符编码"
+
+#: gaupol/applicationman.py:137 gaupol/applicationman.py:154
+msgid "FILE"
+msgstr "文件"
+
+#: gaupol/applicationman.py:140
+msgid "open translation file"
+msgstr "打开翻译文件"
+
+#: gaupol/applicationman.py:145
+msgid "METHOD"
+msgstr "方法"
+
+#: gaupol/applicationman.py:149
+msgid "method used to align translation subtitles: 'number' or 'position'"
+msgstr "用于对齐翻译字幕的方法：“序号”或“位置”"
+
+#: gaupol/applicationman.py:157
+msgid "select video file"
+msgstr "选择视频文件"
+
+#: data/extensions/custom-framerates/custom-framerates.py:40
+#: data/ui/spell-check-dialog.ui:152
+msgid "_Add"
+msgstr "添加(_A)"
+
+#: data/extensions/custom-framerates/custom-framerates.py:171
+msgid "{:.3f} fps"
+msgstr "{:.3f} fps"
+
+#: data/extensions/custom-framerates/add-framerate-dialog.ui:13
+msgid "Add Framerate"
+msgstr "添加帧率"
+
+#: data/extensions/custom-framerates/add-framerate-dialog.ui:44
+msgid "_Framerate:"
+msgstr "帧率：(_F)"
+
+#: data/extensions/custom-framerates/add-framerate-dialog.ui:73
+msgid "fps"
+msgstr "fps"
+
+#: data/extensions/custom-framerates/preferences-dialog.ui:8
+msgid "Framerates"
+msgstr "帧率"
+
+#: data/extensions/custom-framerates/preferences-dialog.ui:64
+msgid "Add"
+msgstr "添加"
+
+#: data/ui/columns-popup.ui:6 data/ui/menubar.ui:275
+msgid "_No."
+msgstr "序号(_N)"
+
+#: data/ui/columns-popup.ui:10 data/ui/menubar.ui:279
+msgid "_Start"
+msgstr "开始(_S)"
+
+#: data/ui/columns-popup.ui:14 data/ui/menubar.ui:283
+msgid "_End"
+msgstr "结束(_E)"
+
+#: data/ui/columns-popup.ui:18 data/ui/menubar.ui:287
+msgid "_Duration"
+msgstr "持续时间(_D)"
+
+#: data/ui/columns-popup.ui:22 data/ui/menubar.ui:291 data/ui/menubar.ui:303
+msgid "_Text"
+msgstr "文本(_T)"
+
+#: data/ui/columns-popup.ui:26 data/ui/menubar.ui:295
+msgid "T_ranslation"
+msgstr "翻译(_R)"
+
+#: data/ui/split-dialog.ui:15
+msgid "Split Project"
+msgstr "拆分项目"
+
+#: data/ui/split-dialog.ui:48
+msgid "_First subtitle of new project:"
+msgstr "新项目的第一条字幕：(_F)"
+
+#: data/ui/search-dialog.ui:89
+msgid "_Search for:"
+msgstr "查找：(_S)"
+
+#: data/ui/search-dialog.ui:103 data/ui/spell-check-dialog.ui:193
+msgid "Replace _with:"
+msgstr "替换为：(_W)"
+
+#: data/ui/search-dialog.ui:162 data/ui/menubar.ui:328
+msgid "Find _Next"
+msgstr "查找下一个(_N)"
+
+#: data/ui/search-dialog.ui:177
+msgid "Find _Previous"
+msgstr "查找上一个(_P)"
+
+#: data/ui/search-dialog.ui:207
+msgid "Replace _All"
+msgstr "全部替换(_A)"
+
+#: data/ui/search-dialog.ui:241
+msgid "R_egular expression"
+msgstr "正则表达式(_E)"
+
+#: data/ui/search-dialog.ui:258
+msgid "_Ignore case"
+msgstr "忽略大小写(_I)"
+
+#: data/ui/search-dialog.ui:304 data/ui/language-dialog.ui:108
+msgid "Columns"
+msgstr "列"
+
+#: data/ui/search-dialog.ui:324
+msgid "Find in _text column"
+msgstr "在文本列中查找(_T)"
+
+#: data/ui/search-dialog.ui:341
+msgid "Find in t_ranslation column"
+msgstr "在翻译列中查找(_R)"
+
+#: data/ui/search-dialog.ui:381 data/ui/framerate-convert-dialog.ui:144
+#: data/ui/language-dialog.ui:186
+#: data/ui/text-assistant/line-break-options-page.ui:178
+#: data/ui/duration-adjust-dialog.ui:388 data/ui/position-shift-dialog.ui:180
+#: data/ui/position-transform-dialog.ui:444
+msgid "Subtitles"
+msgstr "字幕"
+
+#: data/ui/search-dialog.ui:401
+msgid "Find in c_urrent project"
+msgstr "在当前项目中查找(_U)"
+
+#: data/ui/search-dialog.ui:419
+msgid "Find in _all open projects"
+msgstr "在所有打开的项目中查找(_A)"
+
+#: data/ui/search-dialog.ui:452
+msgid "Target"
+msgstr "目标"
+
+#: data/ui/framerate-convert-dialog.ui:8
+msgid "Convert Framerate"
+msgstr "转换帧率"
+
+#: data/ui/framerate-convert-dialog.ui:48
+msgid "Framerate"
+msgstr "帧率"
+
+#: data/ui/framerate-convert-dialog.ui:71
+msgid "_Input:"
+msgstr "输入：(_I)"
+
+#: data/ui/framerate-convert-dialog.ui:86
+msgid "_Output:"
+msgstr "输出：(_O)"
+
+#: data/ui/framerate-convert-dialog.ui:164
+msgid "Convert c_urrent project"
+msgstr "转换当前项目(_U)"
+
+#: data/ui/framerate-convert-dialog.ui:181
+msgid "Convert _all open projects"
+msgstr "转换所有打开的项目(_A)"
+
+#: data/ui/spell-check-dialog.ui:8
+msgid "Check Spelling"
+msgstr "检查拼写"
+
+#: data/ui/spell-check-dialog.ui:47
+msgid "Join _Back"
+msgstr "向后加入(_B)"
+
+#: data/ui/spell-check-dialog.ui:62
+msgid "Join _Forward"
+msgstr "向前加入(_F)"
+
+#: data/ui/spell-check-dialog.ui:77 data/ui/menubar.ui:62
+msgid "_Edit"
+msgstr "编辑(_E)"
+
+#: data/ui/spell-check-dialog.ui:92
+msgid "_Ignore"
+msgstr "忽略(_I)"
+
+#: data/ui/spell-check-dialog.ui:107
+msgid "Ig_nore All"
+msgstr "全部忽略(_N)"
+
+#: data/ui/spell-check-dialog.ui:137
+msgid "Rep_lace All"
+msgstr "全部替换(_L)"
+
+#: data/ui/spell-check-dialog.ui:179
+msgid "_Suggestions:"
+msgstr "建议：(_S)"
+
+#: data/ui/multi-save-dialog.ui:8
+msgid "Save All As"
+msgstr "全部另存为"
+
+#: data/ui/multi-save-dialog.ui:46
+msgid "Save in _folder:"
+msgstr "保存到文件夹：(_F)"
+
+#: data/ui/multi-save-dialog.ui:60 data/ui/save-dialog.ui:25
+msgid "For_mat:"
+msgstr "格式：(_M)"
+
+#: data/ui/multi-save-dialog.ui:74 data/ui/open-dialog.ui:25
+#: data/ui/save-dialog.ui:39
+msgid "_Encoding:"
+msgstr "编码：(_E)"
+
+#: data/ui/multi-save-dialog.ui:88 data/ui/save-dialog.ui:53
+msgid "Ne_wlines:"
+msgstr "新行：(_W)"
+
+#: data/ui/multi-save-dialog.ui:103
+msgid "Select A Folder"
+msgstr "选择一个文件夹"
+
+#: data/ui/multi-save-dialog.ui:150 data/ui/save-dialog.ui:102
+msgid "F_ramerate:"
+msgstr "帧率：(_R)"
+
+#: data/ui/menubar.ui:5
+msgid "_File"
+msgstr "文件(_F)"
+
+#: data/ui/menubar.ui:8
+msgid "_New"
+msgstr "新建(_N)"
+
+#: data/ui/menubar.ui:12
+msgid "_Open…"
+msgstr "打开…(_O)"
+
+#: data/ui/menubar.ui:16
+msgid "Open _Translation…"
+msgstr "打开翻译…(_T)"
+
+#: data/ui/menubar.ui:22
+msgid "Open _Recent"
+msgstr "最近打开(_R)"
+
+#: data/ui/menubar.ui:27
+msgid "Open R_ecent Translation"
+msgstr "最近打开翻译(_E)"
+
+#: data/ui/menubar.ui:38
+msgid "Save _As…"
+msgstr "另存为…(_A)"
+
+#: data/ui/menubar.ui:42
+msgid "Save Trans_lation"
+msgstr "保存翻译(_L)"
+
+#: data/ui/menubar.ui:46
+msgid "Save Translat_ion As…"
+msgstr "另存为翻译…(_I)"
+
+#: data/ui/menubar.ui:65
+msgid "_Undo"
+msgstr "撤销(_U)"
+
+#: data/ui/menubar.ui:69
+msgid "_Redo"
+msgstr "重做(_R)"
+
+#: data/ui/menubar.ui:75
+msgid "_Edit Cell"
+msgstr "编辑单元(_E)"
+
+#: data/ui/menubar.ui:79
+msgid "Edit _Next Cell"
+msgstr "编辑下一个单元(_N)"
+
+#: data/ui/menubar.ui:85
+msgid "Stretc_h"
+msgstr "拉伸(_H)"
+
+#: data/ui/menubar.ui:88
+msgid "_Start Earlier"
+msgstr "提前开始(_S)"
+
+#: data/ui/menubar.ui:92
+msgid "S_tart Later"
+msgstr "延后开始(_T)"
+
+#: data/ui/menubar.ui:98
+msgid "E_nd Earlier"
+msgstr "提前结束(_N)"
+
+#: data/ui/menubar.ui:102
+msgid "En_d Later"
+msgstr "延后结束(_D)"
+
+#: data/ui/menubar.ui:108
+msgid "Set St_art From Video Position"
+msgstr "将结束设置到视频位置(_A)"
+
+#: data/ui/menubar.ui:112
+msgid "Set En_d From Video Position"
+msgstr "将开始设置到视频位置(_D)"
+
+#: data/ui/menubar.ui:118 data/ui/view-popup.ui:6
+msgid "_Split Subtitle"
+msgstr "拆分字幕(_S)"
+
+#: data/ui/menubar.ui:122 data/ui/view-popup.ui:10
+msgid "_Merge Subtitles"
+msgstr "合并字幕(_M)"
+
+#: data/ui/menubar.ui:128 data/ui/view-popup.ui:16
+msgid "_Insert Subtitles…"
+msgstr "插入字幕…(_I)"
+
+#: data/ui/menubar.ui:132
+msgid "Inser_t Subtitle At Video Position"
+msgstr "在视频位置处插入字幕(_T)"
+
+#: data/ui/menubar.ui:136 data/ui/view-popup.ui:20
+msgid "Rem_ove Subtitles"
+msgstr "移除字幕(_O)"
+
+#: data/ui/menubar.ui:142
+msgid "Sele_ction"
+msgstr "选择(_C)"
+
+#: data/ui/menubar.ui:145
+msgid "Select _All"
+msgstr "全部选择(_A)"
+
+#: data/ui/menubar.ui:149
+msgid "_Invert Selection"
+msgstr "反选(_I)"
+
+#: data/ui/menubar.ui:155
+msgid "Extend To _Beginning"
+msgstr "延伸到开始(_B)"
+
+#: data/ui/menubar.ui:159
+msgid "Extend To _End"
+msgstr "延伸到结束(_E)"
+
+#: data/ui/menubar.ui:165
+msgid "_Previous From Video Position"
+msgstr "播放位置的上一个(_P)"
+
+#: data/ui/menubar.ui:169
+msgid "_Next From Video Position"
+msgstr "播放位置的下一个(_N)"
+
+#: data/ui/menubar.ui:177
+msgid "_Preferences"
+msgstr "首选项(_P)"
+
+#: data/ui/menubar.ui:183
+msgid "_View"
+msgstr "视图(_V)"
+
+#: data/ui/menubar.ui:186
+msgid "Tool_bar"
+msgstr "工具栏(_B)"
+
+#: data/ui/menubar.ui:190
+msgid "_Video Player"
+msgstr "视频播放器(_V)"
+
+#: data/ui/menubar.ui:196
+msgid "_Layout"
+msgstr "布局(_L)"
+
+#: data/ui/menubar.ui:199
+msgid "_Horizontal"
+msgstr "水平(_H)"
+
+#: data/ui/menubar.ui:204
+msgid "_Vertical"
+msgstr "垂直(_V)"
+
+#: data/ui/menubar.ui:213
+msgid "_Times"
+msgstr "时间(_T)"
+
+#: data/ui/menubar.ui:218
+msgid "_Frames"
+msgstr "帧数(_F)"
+
+#: data/ui/menubar.ui:225
+msgid "F_ramerate"
+msgstr "帧率(_R)"
+
+#: data/ui/menubar.ui:228
+msgid "2_3.976 fps"
+msgstr "2_3.976 fps"
+
+#: data/ui/menubar.ui:233
+msgid "2_4.000 fps"
+msgstr "2_4.000 fps"
+
+#: data/ui/menubar.ui:238
+msgid "2_5.000 fps"
+msgstr "2_5.000 fps"
+
+#: data/ui/menubar.ui:243
+msgid "2_9.970 fps"
+msgstr "2_9.970 fps"
+
+#: data/ui/menubar.ui:272
+msgid "_Columns"
+msgstr "列(_C)"
+
+#: data/ui/menubar.ui:306
+msgid "Cu_t"
+msgstr "剪切(_T)"
+
+#: data/ui/menubar.ui:310
+msgid "_Copy"
+msgstr "粘贴(_C)"
+
+#: data/ui/menubar.ui:314
+msgid "_Paste"
+msgstr "复制(_P)"
+
+#: data/ui/menubar.ui:318
+msgid "Cl_ear"
+msgstr "清除(_E)"
+
+#: data/ui/menubar.ui:324
+msgid "_Find And Replace…"
+msgstr "查找和替换…(_F)"
+
+#: data/ui/menubar.ui:332
+msgid "Find Pre_vious"
+msgstr "查找上一个(_V)"
+
+#: data/ui/menubar.ui:338
+msgid "_Italic"
+msgstr "斜体(_I)"
+
+#: data/ui/menubar.ui:342
+msgid "_Dialogue"
+msgstr "对话(_D)"
+
+#: data/ui/menubar.ui:348
+msgid "Ca_se"
+msgstr "大小写(_S)"
+
+#: data/ui/menubar.ui:351
+msgid "_Title"
+msgstr "词首(_T)"
+
+#: data/ui/menubar.ui:355
+msgid "_Sentence"
+msgstr "句首(_S)"
+
+#: data/ui/menubar.ui:359
+msgid "_Upper"
+msgstr "大写(_U)"
+
+#: data/ui/menubar.ui:363
+msgid "_Lower"
+msgstr "小写(_L)"
+
+#: data/ui/menubar.ui:371
+msgid "Vi_deo"
+msgstr "视频(_D)"
+
+#: data/ui/menubar.ui:374
+msgid "_Load Video…"
+msgstr "载入视频…(_L)"
+
+#: data/ui/menubar.ui:384 data/ui/view-popup.ui:26
+msgid "Play _Selection"
+msgstr "播放选中(_S)"
+
+#: data/ui/menubar.ui:410 data/ui/view-popup.ui:30
+msgid "S_eek Selection Start"
+msgstr "跳到选中的开始(_E)"
+
+#: data/ui/menubar.ui:414
+msgid "See_k Selection End"
+msgstr "跳到选中的结束(_K)"
+
+#: data/ui/menubar.ui:420
+msgid "_Audio"
+msgstr "音频(_A)"
+
+#: data/ui/menubar.ui:423
+msgid "_Language"
+msgstr "语言(_L)"
+
+#: data/ui/menubar.ui:430
+msgid "Volume _Down"
+msgstr "音量减小(_D)"
+
+#: data/ui/menubar.ui:434
+msgid "Volume _Up"
+msgstr "音量增大(_U)"
+
+#: data/ui/menubar.ui:440
+msgid "T_ools"
+msgstr "工具(_O)"
+
+#: data/ui/menubar.ui:443 data/ui/text-assistant/confirmation-page.ui:97
+#: data/ui/view-popup.ui:36
+msgid "_Preview"
+msgstr "预览(_P)"
+
+#: data/ui/menubar.ui:447
+msgid "Select _Video…"
+msgstr "选择视频…(_V)"
+
+#: data/ui/menubar.ui:453
+msgid "_Check Spelling"
+msgstr "检查拼写(_C)"
+
+#: data/ui/menubar.ui:457
+msgid "Co_nfigure Spell-check…"
+msgstr "配置拼写检查…(_N)"
+
+#: data/ui/menubar.ui:461
+msgid "C_orrect Texts…"
+msgstr "更正文本…(_O)"
+
+#: data/ui/menubar.ui:467
+msgid "_Shift Positions…"
+msgstr "移动位置…(_S)"
+
+#: data/ui/menubar.ui:471
+msgid "_Transform Positions…"
+msgstr "转变位置…(_T)"
+
+#: data/ui/menubar.ui:475
+msgid "Adjust _Durations…"
+msgstr "调整持续时间…(_D)"
+
+#: data/ui/menubar.ui:479
+msgid "Convert _Framerate…"
+msgstr "转换帧率…(_F)"
+
+#: data/ui/menubar.ui:485
+msgid "_Append File…"
+msgstr "追加文件…(_A)"
+
+#: data/ui/menubar.ui:489
+msgid "Spli_t Project…"
+msgstr "拆分项目…(_T)"
+
+#: data/ui/menubar.ui:495
+msgid "_Projects"
+msgstr "项目(_P)"
+
+#: data/ui/menubar.ui:498
+msgid "_Save All"
+msgstr "全部保存(_A)"
+
+#: data/ui/menubar.ui:502
+msgid "Save _All As…"
+msgstr "全部另存为…(_A)"
+
+#: data/ui/menubar.ui:506
+msgid "_Close All"
+msgstr "全部关闭(_A)"
+
+#: data/ui/menubar.ui:512
+msgid "_Previous"
+msgstr "上一个(_P)"
+
+#: data/ui/menubar.ui:516
+msgid "_Next"
+msgstr "下一个(_N)"
+
+#: data/ui/menubar.ui:527
+msgid "_Documentation"
+msgstr "文档(_D)"
+
+#: data/ui/menubar.ui:531
+msgid "_Report A Bug"
+msgstr "报告一个错误(_R)"
+
+#: data/ui/menubar.ui:535
+msgid "_About"
+msgstr "关于(_A)"
+
+#: data/ui/open-dialog.ui:39
+msgid "Align _method:"
+msgstr "对齐方式：(_M)"
+
+#: data/ui/preferences-dialog.ui:18
+msgid "Preferences"
+msgstr "首选项"
+
+#: data/ui/preferences-dialog.ui:93
+msgid "When opening files, try encodings in the following order:"
+msgstr "当打开文件时，按以下顺序尝试编码："
+
+#: data/ui/preferences-dialog.ui:104
+msgid "Curr_ent locale encoding"
+msgstr "当前语言环境编码(_E)"
+
+#: data/ui/preferences-dialog.ui:130
+msgid "_Fallback encodings:"
+msgstr "备用编码：(_F)"
+
+#: data/ui/preferences-dialog.ui:246
+msgid "Aut_o-detection"
+msgstr "自动检测(_O)"
+
+#: data/ui/preferences-dialog.ui:266
+msgid "Encoding specified in the open dialog will always be tried first."
+msgstr "始终在打开的对话框中首先尝试指定的编码。"
+
+#: data/ui/preferences-dialog.ui:296
+msgid "File"
+msgstr "文件"
+
+#: data/ui/preferences-dialog.ui:324
+msgid "Font"
+msgstr "字体"
+
+#: data/ui/preferences-dialog.ui:344
+msgid "Use _default theme fixed width font"
+msgstr "使用默认主题中的等宽字体(_D)"
+
+#: data/ui/preferences-dialog.ui:368
+msgid "_Editor font:"
+msgstr "编辑器字体：(_E)"
+
+#: data/ui/preferences-dialog.ui:425
+msgid "Line Lengths"
+msgstr "行长"
+
+#: data/ui/preferences-dialog.ui:445
+msgid "_Show line lengths in list cells"
+msgstr "在列单元中显示行长(_S)"
+
+#: data/ui/preferences-dialog.ui:462
+msgid "S_how line lengths in editable text fields"
+msgstr "在可编辑的文本字段中显示行长(_H)"
+
+#: data/ui/preferences-dialog.ui:486
+msgid "_Length unit:"
+msgstr "长度单位：(_L)"
+
+#: data/ui/preferences-dialog.ui:540
+msgid "Spell-Check"
+msgstr "拼写检查"
+
+#: data/ui/preferences-dialog.ui:560
+msgid "Chec_k spelling as you type"
+msgstr "输入时检查拼写(_K)"
+
+#: data/ui/preferences-dialog.ui:598
+msgid "Editor"
+msgstr "编辑器"
+
+#: data/ui/preferences-dialog.ui:626
+msgid "Fonts"
+msgstr "字体"
+
+#: data/ui/preferences-dialog.ui:649
+msgid "_Subtitles:"
+msgstr "字幕：(_S)"
+
+#: data/ui/preferences-dialog.ui:679
+msgid "_Time:"
+msgstr "时间：(_T)"
+
+#: data/ui/preferences-dialog.ui:729
+msgid "Colors"
+msgstr "颜色"
+
+#: data/ui/preferences-dialog.ui:752
+msgid "Su_btitles:"
+msgstr "字幕：(_B)"
+
+#: data/ui/preferences-dialog.ui:777
+msgid "_Use a background behind text"
+msgstr "在文本后使用背景色(_U)"
+
+#: data/ui/preferences-dialog.ui:797
+msgid "Ti_me:"
+msgstr "时间：(_M)"
+
+#: data/ui/preferences-dialog.ui:822
+msgid "Us_e a background behind text"
+msgstr "在文本后使用背景色(_E)"
+
+#: data/ui/preferences-dialog.ui:862
+msgid "Seek"
+msgstr "跳跃"
+
+#: data/ui/preferences-dialog.ui:883
+msgid "_Length:"
+msgstr "长度：(_L)"
+
+#: data/ui/preferences-dialog.ui:971
+msgid "Video Player"
+msgstr "视频播放器"
+
+#: data/ui/preferences-dialog.ui:994
+msgid "_Application:"
+msgstr "应用：(_A)"
+
+#: data/ui/preferences-dialog.ui:1008
+msgid "Co_mmand:"
+msgstr "命令：(_M)"
+
+#. Translators: Only the title is to be translated, field names not.
+#: data/ui/preferences-dialog.ui:1033
+msgid ""
+"Fields:\n"
+"                            $MILLISECONDS\n"
+"                            $SECONDS\n"
+"                            $SUBFILE\n"
+"                            $VIDEOFILE"
+msgstr ""
+"字段:\n"
+"                            $MILLISECONDS\n"
+"                            $SECONDS\n"
+"                            $SUBFILE\n"
+"                            $VIDEOFILE"
+
+#: data/ui/preferences-dialog.ui:1048
+msgid "Al_ways use UTF-8 character encoding"
+msgstr "始终使用 UTF-8 字符编码(_W)"
+
+#: data/ui/preferences-dialog.ui:1089
+msgid "Start Position"
+msgstr "开始位置"
+
+#: data/ui/preferences-dialog.ui:1111
+msgid "_Offset:"
+msgstr "偏移：(_O)"
+
+#: data/ui/preferences-dialog.ui:1142
+msgid "seconds before selection"
+msgstr "秒在选择前的"
+
+#: data/ui/preferences-dialog.ui:1281
+msgid "Extensions"
+msgstr "扩展"
+
+#: data/ui/language-dialog.ui:8
+msgid "Configure Spell-Check"
+msgstr "配置拼写检查"
+
+#: data/ui/language-dialog.ui:50
+msgid "Language"
+msgstr "语言"
+
+#: data/ui/language-dialog.ui:128
+msgid "Check _text column"
+msgstr "检查文本列(_T)"
+
+#: data/ui/language-dialog.ui:146
+msgid "Check t_ranslation column"
+msgstr "检查翻译列(_C)"
+
+#: data/ui/language-dialog.ui:206
+msgid "Check c_urrent project"
+msgstr "检查当前项目(_C)"
+
+#: data/ui/language-dialog.ui:224
+msgid "Check _all open projects"
+msgstr "检查所有打开的项目(_A)"
+
+#: data/ui/text-assistant/confirmation-page.ui:22
+msgid "Acc_ept, discard or edit changes:"
+msgstr "接受、放弃或编辑更改：(_E)"
+
+#: data/ui/text-assistant/confirmation-page.ui:67
+msgid "_Mark All"
+msgstr "全部标记(_M)"
+
+#: data/ui/text-assistant/confirmation-page.ui:82
+msgid "_Unmark All"
+msgstr "全部取消标记(_U)"
+
+#: data/ui/text-assistant/confirmation-page.ui:119
+msgid "_Remove all blank subtitles"
+msgstr "删除所有空白字幕(_R)"
+
+#: data/ui/text-assistant/join-split-page.ui:28
+msgid "Spell-Check Dictionary"
+msgstr "拼写检查字典"
+
+#: data/ui/text-assistant/join-split-page.ui:49
+#: data/ui/text-assistant/line-break-page.ui:81
+#: data/ui/text-assistant/hearing-impaired-page.ui:81
+#: data/ui/text-assistant/common-error-page.ui:80
+#: data/ui/text-assistant/capitalization-page.ui:80
+msgid "_Language:"
+msgstr "语言：(_L)"
+
+#: data/ui/text-assistant/join-split-page.ui:97
+msgid "Corrections"
+msgstr "更正"
+
+#: data/ui/text-assistant/join-split-page.ui:117
+msgid "_Join words not found in spell-check dictionary"
+msgstr "连接拼写检查词典中未找到的单词（_J)"
+
+#: data/ui/text-assistant/join-split-page.ui:134
+msgid "_Split words not found in spell-check dictionary"
+msgstr "拆分拼写检查词典中未找到的单词（_S)"
+
+#: data/ui/text-assistant/line-break-page.ui:22
+msgid "S_elect preferred line-break points:"
+msgstr "选择首选的换行点：(_E)"
+
+#: data/ui/text-assistant/line-break-page.ui:67
+#: data/ui/text-assistant/hearing-impaired-page.ui:67
+#: data/ui/text-assistant/common-error-page.ui:66
+#: data/ui/text-assistant/capitalization-page.ui:66
+msgid "_Script:"
+msgstr "脚本：(_S)"
+
+#: data/ui/text-assistant/line-break-page.ui:95
+#: data/ui/text-assistant/hearing-impaired-page.ui:95
+#: data/ui/text-assistant/common-error-page.ui:94
+#: data/ui/text-assistant/capitalization-page.ui:94
+msgid "Co_untry:"
+msgstr "国家：(_U)"
+
+#: data/ui/text-assistant/introduction-page.ui:28
+msgid "_Select corrections to perform on texts:"
+msgstr "选择要对文本执行的更正：(_S)"
+
+#: data/ui/text-assistant/introduction-page.ui:79
+msgid "Colu_mns:"
+msgstr "列：(_M)"
+
+#: data/ui/text-assistant/introduction-page.ui:93
+msgid "S_ubtitles:"
+msgstr "字幕：(_U)"
+
+#: data/ui/text-assistant/line-break-options-page.ui:56
+#: data/ui/duration-adjust-dialog.ui:207
+msgid "Limits"
+msgstr "限制"
+
+#: data/ui/text-assistant/line-break-options-page.ui:79
+msgid "_Maximum line length:"
+msgstr "最大行长：(_M)"
+
+#: data/ui/text-assistant/line-break-options-page.ui:93
+msgid "_Preferred maximum amount of lines:"
+msgstr "首选最大行数：(_P)"
+
+#: data/ui/text-assistant/line-break-options-page.ui:198
+msgid "_Skip subtitles with maximum line length of:"
+msgstr "跳过最大行长为的字幕：(_S)"
+
+#: data/ui/text-assistant/line-break-options-page.ui:214
+msgid "S_kip subtitles with maximum line amount of:"
+msgstr "跳过最大行数为的字幕：(_K)"
+
+#: data/ui/text-assistant/hearing-impaired-page.ui:22
+msgid "S_elect parts to remove:"
+msgstr "选择要删除的部分：(_E)"
+
+#: data/ui/text-assistant/common-error-page.ui:22
+msgid "S_elect errors to correct:"
+msgstr "选择要更正的错误：(_E)"
+
+#: data/ui/text-assistant/common-error-page.ui:108
+msgid "Error types:"
+msgstr "错误类型："
+
+#: data/ui/text-assistant/common-error-page.ui:158
+msgid "_Human errors"
+msgstr "人为错误(_H)"
+
+#: data/ui/text-assistant/common-error-page.ui:175
+msgid "_Image recognition errors"
+msgstr "图像识别错误(_I)"
+
+#: data/ui/text-assistant/capitalization-page.ui:22
+msgid "S_elect parts to capitalize:"
+msgstr "选择要大写的部分：(_E)"
+
+#: data/ui/duration-adjust-dialog.ui:33
+msgid "Adjust Durations"
+msgstr "调整持续时间"
+
+#: data/ui/duration-adjust-dialog.ui:73
+msgid "Theoretic Duration"
+msgstr "理论持续时间"
+
+#: data/ui/duration-adjust-dialog.ui:101
+msgid "_Reading speed:"
+msgstr "阅读速度：(_R)"
+
+#: data/ui/duration-adjust-dialog.ui:133
+msgid "characters per second"
+msgstr "字每秒"
+
+#: data/ui/duration-adjust-dialog.ui:150
+msgid "_Lengthen duration to match reading speed"
+msgstr "延长持续时间以匹配阅读速度(_L)"
+
+#: data/ui/duration-adjust-dialog.ui:167
+msgid "_Shorten duration to match reading speed"
+msgstr "缩短持续时间以匹配阅读速度(_S)"
+
+#: data/ui/duration-adjust-dialog.ui:227
+msgid "_Minimum duration:"
+msgstr "最短持续时间：(_M)"
+
+#: data/ui/duration-adjust-dialog.ui:243
+msgid "Ma_ximum duration:"
+msgstr "最长持续时间：(_X)"
+
+#: data/ui/duration-adjust-dialog.ui:259
+msgid "_Gap between subtitles:"
+msgstr "字幕间距：(_G)"
+
+#: data/ui/duration-adjust-dialog.ui:294
+msgid "s_econds"
+msgstr "秒(_E)"
+
+#: data/ui/duration-adjust-dialog.ui:324
+msgid "seco_nds"
+msgstr "秒(_N)"
+
+#: data/ui/duration-adjust-dialog.ui:354
+msgid "secon_ds"
+msgstr "秒(_D)"
+
+#: data/ui/duration-adjust-dialog.ui:408
+msgid "Adj_ust selected subtitles"
+msgstr "调整选中的字幕(_U)"
+
+#: data/ui/duration-adjust-dialog.ui:425
+msgid "Adjus_t current project"
+msgstr "调整当前的项目(_T)"
+
+#: data/ui/duration-adjust-dialog.ui:442
+msgid "Adjust all _open projects"
+msgstr "调整所有打开的项目(_O)"
+
+#: data/ui/tab-popup.ui:6
+msgid "Move Tab _Left"
+msgstr "向左移动选项卡(_L)"
+
+#: data/ui/tab-popup.ui:10
+msgid "Move Tab _Right"
+msgstr "向右移动选项卡(_R)"
+
+#: data/ui/insert-dialog.ui:15
+msgid "Insert Subtitles"
+msgstr "插入字幕"
+
+#: data/ui/insert-dialog.ui:48 data/ui/position-shift-dialog.ui:82
+msgid "_Amount:"
+msgstr "数量：(_A)"
+
+#: data/ui/insert-dialog.ui:62
+msgid "_Position:"
+msgstr "位置：(_P)"
+
+#: data/ui/position-shift-dialog.ui:14
+msgid "Shift Positions"
+msgstr "移动位置"
+
+#: data/ui/position-shift-dialog.ui:54
+msgid "Shift"
+msgstr "移动"
+
+#: data/ui/position-shift-dialog.ui:135
+#: data/ui/position-transform-dialog.ui:208
+msgid "_Preview Changes"
+msgstr "预览更改(_P)"
+
+#: data/ui/position-shift-dialog.ui:200
+msgid "Shift s_elected subtitles"
+msgstr "移动选中的字幕(_E)"
+
+#: data/ui/position-shift-dialog.ui:217
+msgid "Shift su_btitles from selection to end"
+msgstr "将字幕从选中位置移动到结尾(_B)"
+
+#: data/ui/position-shift-dialog.ui:234
+msgid "Shift c_urrent project"
+msgstr "移动当前项目(_U)"
+
+#: data/ui/position-shift-dialog.ui:251
+msgid "Shift all _open projects"
+msgstr "移动所有打开的项目(_O)"
+
+#: data/ui/position-transform-dialog.ui:22
+msgid "Transform Positions"
+msgstr "转变位置"
+
+#: data/ui/position-transform-dialog.ui:62
+msgid "First Point"
+msgstr "第一点"
+
+#: data/ui/position-transform-dialog.ui:91
+msgid "_Subtitle:"
+msgstr "字幕：(_S)"
+
+#: data/ui/position-transform-dialog.ui:105
+msgid "C_orrection:"
+msgstr "更正：(_O)"
+
+#: data/ui/position-transform-dialog.ui:119
+#: data/ui/position-transform-dialog.ui:310
+msgid "Text:"
+msgstr "文本："
+
+#: data/ui/position-transform-dialog.ui:253
+msgid "Second Point"
+msgstr "第二点"
+
+#: data/ui/position-transform-dialog.ui:282
+msgid "Su_btitle:"
+msgstr "字幕：(_B)"
+
+#: data/ui/position-transform-dialog.ui:296
+msgid "Co_rrection:"
+msgstr "更正：(_R)"
+
+#: data/ui/position-transform-dialog.ui:399
+msgid "Pre_view Changes"
+msgstr "预览更改(_V)"
+
+#: data/ui/position-transform-dialog.ui:464
+msgid "Transform se_lected subtitles"
+msgstr "转变选中的字幕(_L)"
+
+#: data/ui/position-transform-dialog.ui:482
+msgid "Transform c_urrent project"
+msgstr "转变当前项目(_U)"
+
+#: data/extensions/custom-framerates/custom-framerates.extension.in:7
+msgid "Custom Framerates"
+msgstr "自定义帧率"
+
+#: data/extensions/custom-framerates/custom-framerates.extension.in:8
+msgid "Allow use of non-standard framerates"
+msgstr "允许使用非标准帧率"
+
+#: data/patterns/Latn-en-US.common-error.in:5
+msgid "Period after title"
+msgstr "标题后的句号"
+
+#: data/patterns/Latn-en-US.common-error.in:6
+msgid "Add period after a shortened title, such as \"Mr\" and \"Dr\""
+msgstr "在简称后添加句号，例如“Mr”和“Dr”"
+
+#: data/patterns/Latn-en.capitalization.in:5
+msgid "First person pronoun"
+msgstr "第一人称代词"
+
+#: data/patterns/Latn-en.capitalization.in:6
+msgid "Capitalize the first person pronoun \"I\""
+msgstr "将第一人称代词“I”大写"
+
+#: data/patterns/Latn-en.common-error.in:5
+#: data/patterns/Latn-en.common-error.in:14
+#: data/patterns/Latn-en.common-error.in:23
+msgid "Letter \"I\" in a lower case word"
+msgstr "小写单词中的字母“I”"
+
+#: data/patterns/Latn-en.common-error.in:6
+#: data/patterns/Latn-en.common-error.in:15
+#: data/patterns/Latn-en.common-error.in:24
+msgid "Replace letter \"I\" with letter \"l\" in a lower case word"
+msgstr "将字母\"I\"替换为小写单词中的字母\"l\""
+
+#: data/patterns/Latn-en.common-error.in:32
+#: data/patterns/Latn-en.common-error.in:41
+#: data/patterns/Latn-en.common-error.in:50
+#: data/patterns/Latn-en.common-error.in:62
+msgid "Letter \"l\" in an upper case word"
+msgstr "大写单词中的字母“l”"
+
+#: data/patterns/Latn-en.common-error.in:33
+#: data/patterns/Latn-en.common-error.in:42
+#: data/patterns/Latn-en.common-error.in:51
+#: data/patterns/Latn-en.common-error.in:63
+msgid "Replace letter \"l\" with letter \"I\" in an upper case word"
+msgstr "将字母\"l\"替换为大写单词中的字母\"I\""
+
+#: data/patterns/Latn-en.common-error.in:73
+#: data/patterns/Latn-en.common-error.in:82
+msgid "Zero in an upper case word"
+msgstr "大写单词中的零"
+
+#: data/patterns/Latn-en.common-error.in:74
+#: data/patterns/Latn-en.common-error.in:83
+msgid "Replace zero with letter \"O\" in an upper case word"
+msgstr "将 0 替换为大写单词中的字母“O”"
+
+#: data/patterns/Latn-en.common-error.in:91
+#: data/patterns/Latn.common-error.in:108
+msgid "Space between number and unit"
+msgstr "数字和单位之间的空格"
+
+#: data/patterns/Latn-en.common-error.in:92
+#: data/patterns/Latn.common-error.in:109
+msgid "Add or remove space between a number and the associated unit"
+msgstr "添加或删除数字和关联单位之间的空格"
+
+#: data/patterns/Latn-en.common-error.in:100
+msgid "Spaces around an apostrophe"
+msgstr "撇号周围的空格"
+
+#: data/patterns/Latn-en.common-error.in:101
+msgid "Remove spaces around an apostrophe"
+msgstr "删除撇号周围的空格"
+
+#: data/patterns/Latn-en.common-error.in:109
+#: data/patterns/Latn-en.common-error.in:118
+msgid "Okay"
+msgstr "Okay"
+
+#: data/patterns/Latn-en.common-error.in:110
+#: data/patterns/Latn-en.common-error.in:119
+msgid "Spell two-letter forms of \"okay\" in all upper case"
+msgstr "以两个字母的形式拼写所有大写的“okay”"
+
+#: data/patterns/Latn-en.hearing-impaired.in:5
+msgid "Uppercase speaker before a colon"
+msgstr "冒号前大写的说话者"
+
+#: data/patterns/Latn-en.hearing-impaired.in:6
+msgid ""
+"Replace the uppercase name of the speaker before a colon with a dialogue "
+"dash"
+msgstr "将冒号前大写的说话者的姓名替换为对话破折号"
+
+#: data/patterns/Latn-en.line-break.in:5
+msgid "Title"
+msgstr "称号"
+
+#: data/patterns/Latn-en.line-break.in:6
+msgid "Do not break after a title, e.g. \" Dr.\""
+msgstr "不要在称号后中断，例如“Dr.”"
+
+#: data/patterns/Latn-en.line-break.in:13
+msgid "Article"
+msgstr "冠词"
+
+#: data/patterns/Latn-en.line-break.in:14
+msgid "Do not break after an article"
+msgstr "不要在冠词后中断"
+
+#: data/patterns/Latn-en.line-break.in:21
+msgid "Preposition"
+msgstr "介词"
+
+#: data/patterns/Latn-en.line-break.in:22
+msgid "Do not break after a preposition"
+msgstr "不要在介词后中断"
+
+#: data/patterns/Latn-en.line-break.in:30
+msgid "Possessive determiner"
+msgstr "所有格限定词"
+
+#: data/patterns/Latn-en.line-break.in:31
+msgid "Do not break after a possessive determiner, e.g. \"my\""
+msgstr "不要在所有格限定词后中断，比如“my”"
+
+#: data/patterns/Latn-fi.common-error.in:5
+#: data/patterns/Latn.common-error.in:182
+msgid "Space after punctuation marks"
+msgstr "标点符号后的空格"
+
+#: data/patterns/Latn-fi.common-error.in:6
+#: data/patterns/Latn.common-error.in:183
+msgid "Add space after various punctuation marks"
+msgstr "在各种标点符号后添加空格"
+
+#: data/patterns/Latn-fr.common-error.in:5
+#: data/patterns/Latn-fr.common-error.in:14
+#: data/patterns/Latn-fr.common-error.in:23
+#: data/patterns/Latn-fr.common-error.in:32
+msgid "Spaces around guillemets"
+msgstr "引号周围的空格"
+
+#: data/patterns/Latn-fr.common-error.in:6
+#: data/patterns/Latn-fr.common-error.in:15
+#: data/patterns/Latn-fr.common-error.in:24
+#: data/patterns/Latn-fr.common-error.in:33
+msgid "Add spaces around guillemets"
+msgstr "在引号周围添加空格"
+
+#: data/patterns/Latn-fr.common-error.in:41
+#: data/patterns/Latn-fr.common-error.in:52
+#: data/patterns/Latn.common-error.in:171
+msgid "Space before punctuation marks"
+msgstr "标点符号前的空格"
+
+#: data/patterns/Latn-fr.common-error.in:42
+#: data/patterns/Latn-fr.common-error.in:53
+msgid "Add or remove space before various punctuation marks"
+msgstr "添加或删除各种标点符号前的空格"
+
+#: data/patterns/Latn.capitalization.in:5
+msgid "Sentence"
+msgstr "句子"
+
+#: data/patterns/Latn.capitalization.in:6
+msgid "Capitalize the first word of a sentence"
+msgstr "将句子的第一个字母大写"
+
+#: data/patterns/Latn.capitalization.in:12
+msgid "Ellipsis"
+msgstr "省略号"
+
+#: data/patterns/Latn.capitalization.in:13
+msgid "Capitalize after an ellipsis"
+msgstr "省略号后大写"
+
+#: data/patterns/Latn.common-error.in:8 data/patterns/Latn.common-error.in:17
+#: data/patterns/Latn.common-error.in:26 data/patterns/Latn.common-error.in:35
+#: data/patterns/Latn.common-error.in:44 data/patterns/Latn.common-error.in:53
+#: data/patterns/Latn.common-error.in:62
+msgid "Ligatures"
+msgstr "合字"
+
+#: data/patterns/Latn.common-error.in:9 data/patterns/Latn.common-error.in:18
+#: data/patterns/Latn.common-error.in:27 data/patterns/Latn.common-error.in:36
+#: data/patterns/Latn.common-error.in:45 data/patterns/Latn.common-error.in:54
+#: data/patterns/Latn.common-error.in:63
+msgid "Unpack ligatures to individual characters"
+msgstr "将合字分解为单个字符"
+
+#: data/patterns/Latn.common-error.in:71 data/patterns/Latn.common-error.in:80
+msgid "Spelling of a.m. and p.m."
+msgstr "a.m. 和 p.m. 的拼写"
+
+#: data/patterns/Latn.common-error.in:72 data/patterns/Latn.common-error.in:81
+msgid "Change the various spellings of 12-hour periods to \"a.m.\" and \"p.m.\""
+msgstr "将 12 小时制时间的各种拼写更改为“a.m.”和“p.m.”"
+
+#: data/patterns/Latn.common-error.in:89 data/patterns/Latn.common-error.in:98
+msgid "Letter \"O\" in a number"
+msgstr "数字中的字母“O”"
+
+#: data/patterns/Latn.common-error.in:90 data/patterns/Latn.common-error.in:99
+msgid "Replace letter \"O\" with a zero in a number"
+msgstr "将字母“O”替换为数字中的 0"
+
+#: data/patterns/Latn.common-error.in:117
+msgid "Double apostrophe"
+msgstr "双撇号"
+
+#: data/patterns/Latn.common-error.in:118
+msgid "Replace a double apostrophe with a quotation mark"
+msgstr "将两个撇号替换为一个引号"
+
+#: data/patterns/Latn.common-error.in:126
+#: data/patterns/Latn.common-error.in:135
+#: data/patterns/Latn.common-error.in:144
+#: data/patterns/Latn.common-error.in:153
+msgid "Spaces around brackets"
+msgstr "方括号周围的空格"
+
+#: data/patterns/Latn.common-error.in:127
+#: data/patterns/Latn.common-error.in:136
+#: data/patterns/Latn.common-error.in:145
+#: data/patterns/Latn.common-error.in:154
+msgid "Add or remove spaces around parentheses and square brackets"
+msgstr ""
+
+#: data/patterns/Latn.common-error.in:162
+msgid "Space after a dialogue dash"
+msgstr "对话破折号后的空格"
+
+#: data/patterns/Latn.common-error.in:163
+msgid "Add space after a dialogue dash"
+msgstr "在对话破折号后添加空格"
+
+#: data/patterns/Latn.common-error.in:172
+msgid "Remove space before various punctuation marks"
+msgstr "删除各种标点符号前的空格"
+
+#: data/patterns/Latn.common-error.in:192
+msgid "Space after an ellipsis"
+msgstr "省略号后的空格"
+
+#: data/patterns/Latn.common-error.in:193
+msgid "Add space after an ellipsis"
+msgstr "在省略号后添加空格"
+
+#: data/patterns/Latn.common-error.in:201
+msgid "Space after a starting ellipsis"
+msgstr "启始省略号后的空格"
+
+#: data/patterns/Latn.common-error.in:202
+msgid "Remove space after an ellipsis that starts a line"
+msgstr "删除启始省略号后的空格"
+
+#: data/patterns/Latn.common-error.in:210
+#: data/patterns/Latn.common-error.in:221
+#: data/patterns/Latn.common-error.in:232
+#: data/patterns/Latn.common-error.in:242
+msgid "Spaces around a quotation mark"
+msgstr "引号周围的空格"
+
+#: data/patterns/Latn.common-error.in:211
+#: data/patterns/Latn.common-error.in:222
+#: data/patterns/Latn.common-error.in:233
+#: data/patterns/Latn.common-error.in:243
+msgid "Remove space after a starting- and before an ending quotation mark"
+msgstr "删除起始引号之后和结束引号之前的空格"
+
+#: data/patterns/Latn.common-error.in:252
+#: data/patterns/Latn.common-error.in:261
+msgid "Spaces around musical notes"
+msgstr "音符周围的空格"
+
+#: data/patterns/Latn.common-error.in:253
+#: data/patterns/Latn.common-error.in:262
+msgid "Add spaces between musical note characters and lyrics"
+msgstr "在音符字符和歌词之间添加空格"
+
+#: data/patterns/Latn.common-error.in:270
+#: data/patterns/Latn.common-error.in:279
+msgid "Multiple question- and exclamation marks"
+msgstr "多重问号和感叹号"
+
+#: data/patterns/Latn.common-error.in:271
+#: data/patterns/Latn.common-error.in:280
+msgid ""
+"Replace multiple consequtive question- and exclamation marks with only one"
+msgstr "将多重连续问号和感叹号替换为仅一个"
+
+#: data/patterns/Latn.common-error.in:288
+#: data/patterns/Latn.common-error.in:298
+msgid "Periods around a punctuation mark"
+msgstr "标点符号周围的句号"
+
+#: data/patterns/Latn.common-error.in:289
+#: data/patterns/Latn.common-error.in:299
+msgid "Remove period before or after various punctuation marks"
+msgstr "删除各种标点符号前后的句号"
+
+#: data/patterns/Latn.common-error.in:308
+msgid "Terminating double-dashes"
+msgstr "终止双破折号"
+
+#: data/patterns/Latn.common-error.in:309
+msgid "Replace a single clause-terminating dash with two dashes"
+msgstr "将从句终止的单个破折号替换为两个破折号"
+
+#: data/patterns/Latn.hearing-impaired.in:5
+msgid "Sound in brackets"
+msgstr "方括号中的声音"
+
+#: data/patterns/Latn.hearing-impaired.in:6
+msgid "Remove description of a sound between square brackets"
+msgstr "删除方括号中对声音的描述"
+
+#: data/patterns/Latn.hearing-impaired.in:12
+msgid "Sound in parentheses"
+msgstr ""
+
+#: data/patterns/Latn.hearing-impaired.in:13
+msgid "Remove description of a sound between parentheses"
+msgstr ""
+
+#: data/patterns/Latn.hearing-impaired.in:19
+msgid "Song lyrics between number signs"
+msgstr "数字符号之间的歌词"
+
+#: data/patterns/Latn.hearing-impaired.in:20
+msgid "Remove song lyrics starting with or between number signs"
+msgstr "删除以数字符号开头或数字符号之间的歌词"
+
+#: data/patterns/Latn.hearing-impaired.in:27
+msgid "One-line song lyrics between number signs"
+msgstr "数字符号之间的单行歌词"
+
+#: data/patterns/Latn.hearing-impaired.in:28
+msgid "Remove one-line song lyrics starting with or between number signs"
+msgstr "删除以数字符号开头或数字符号之间的单行歌词"
+
+#: data/patterns/Latn.hearing-impaired.in:35
+msgid "Speaker before a colon"
+msgstr "冒号前的说话者"
+
+#: data/patterns/Latn.hearing-impaired.in:36
+msgid "Replace the name of the speaker before a colon with a dialogue dash"
+msgstr "将冒号前的说话者姓名替换为对话破折号"
+
+#: data/patterns/Latn.line-break.in:5 data/patterns/Latn.line-break.in:13
+msgid "Dialogue"
+msgstr "对话"
+
+#: data/patterns/Latn.line-break.in:6 data/patterns/Latn.line-break.in:14
+msgid "Break according to dialogue separated by dashes"
+msgstr "将破折号分隔的对话打断"
+
+#: data/patterns/Latn.line-break.in:21 data/patterns/Latn.line-break.in:30
+msgid "Clause"
+msgstr "从句"
+
+#: data/patterns/Latn.line-break.in:22 data/patterns/Latn.line-break.in:31
+msgid "Break according to clauses terminated by a punctuation mark"
+msgstr "将标点符号分隔的从句打断"
+
+#: data/patterns/Latn.line-break.in:38
+msgid "Number and unit"
+msgstr "数字和单位"
+
+#: data/patterns/Latn.line-break.in:39
+msgid "Do not break between a number and associated unit"
+msgstr "不要打断数字和关联的单位"
+
+#: data/patterns/Zyyy.common-error.in:5 data/patterns/Zyyy.common-error.in:14
+msgid "Leading and trailing spaces"
+msgstr "前导空格和尾随空格"
+
+#: data/patterns/Zyyy.common-error.in:6 data/patterns/Zyyy.common-error.in:15
+msgid "Remove spaces from the beginning and end of lines"
+msgstr "删除行开头和结尾的空格"
+
+#: data/patterns/Zyyy.common-error.in:23
+msgid "Multiple consecutive spaces"
+msgstr "多重连续空格"
+
+#: data/patterns/Zyyy.common-error.in:24
+msgid "Replace multiple consecutive spaces with only one"
+msgstr "将多重连续空格替换为仅一个"
+
+#: data/patterns/Zyyy.common-error.in:32 data/patterns/Zyyy.common-error.in:45
+#: data/patterns/Zyyy.common-error.in:55 data/patterns/Zyyy.common-error.in:65
+msgid "Space between digits"
+msgstr "数字之间的空格"
+
+#: data/patterns/Zyyy.common-error.in:33 data/patterns/Zyyy.common-error.in:46
+#: data/patterns/Zyyy.common-error.in:56 data/patterns/Zyyy.common-error.in:66
+msgid "Remove space between digits of a number"
+msgstr "删除量词数字之间的空格"
+
+#: data/patterns/Zyyy.common-error.in:78
+msgid "Ellipses"
+msgstr "省略号"
+
+#: data/patterns/Zyyy.common-error.in:79
+msgid "Replace Unicode ellipses with three separate dots"
+msgstr "将三个单独的点号替换为 Unicode 省略号"
+
+#: data/patterns/Zyyy.common-error.in:90
+msgid "Musical notes"
+msgstr "音符"
+
+#: data/patterns/Zyyy.common-error.in:91
+msgid "Replace Unicode musical note characters with number signs"
+msgstr "将 Unicode 音符替换为数字符号"
+
+#: data/io.otsaloma.gaupol.appdata.xml.in:7
+msgid "Editor for text-based subtitles"
+msgstr "基于文本的字幕编辑器"
+
+#: data/io.otsaloma.gaupol.appdata.xml.in:9
+msgid ""
+"Gaupol is an editor for text-based subtitle files. It supports multiple "
+"subtitle file formats and provides means of creating subtitles, editing "
+"texts and timing subtitles to match video."
+msgstr "Gaupol 是一个编辑基于文本的字幕编辑器。它支持多种字幕文件格式，并提供创建字幕、编辑文本和调整字幕时间轴以匹配视频等功能。"
+
+#: data/io.otsaloma.gaupol.appdata.xml.in:47
+msgid "Main window"
+msgstr "主窗口"
+
+#: data/io.otsaloma.gaupol.desktop.in:5
+msgid "Subtitle Editor"
+msgstr "字幕编辑器"
+
+#: data/io.otsaloma.gaupol.desktop.in:6
+msgid "Edit subtitle files"
+msgstr "编辑字幕文件"
+
+#. TRANSLATORS: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: data/io.otsaloma.gaupol.desktop.in:12
+msgid "video;subtitles;captions;"
+msgstr "video;subtitles;captions;视频;字幕;"
