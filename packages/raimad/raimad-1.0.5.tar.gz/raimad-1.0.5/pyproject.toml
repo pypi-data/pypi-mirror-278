@@ -1,0 +1,31 @@
+[build-system]
+
+# For some reason, not including the minimum version bound
+# causes pip to not install setuptools at all?
+# At least, when giving `setuptools` without a version,
+# I get an error that it can't find module `distutils`
+
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "raimad"
+version = "1.0.5"
+description = """RAIMAD Astronomical Instrument MAsk Designer"""
+authors = [
+	{name = "maybetree", email = "maybetree48@proton.me"}
+	]
+license = { file = "LICENSE.md" }
+readme = "README.md"
+classifiers = [
+	'Programming Language :: Python :: 3',
+	]
+requires-python = ">=3.10"
+dependencies = [
+	'numpy',
+    'typing-extensions',
+	]
+
+[project.entry-points."flake8.extension"]
+RAI = "raimad.checker.checker:Flake8Checker"
+
