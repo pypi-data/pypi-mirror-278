@@ -1,0 +1,36 @@
+[build-system]
+requires = ["flit_core<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "dependeless"
+version = "0.1.1"
+description = "A tool to show which pip packages are not depended on by any other package"
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["pip", "dependencies", "unused", "packages", "clean"]
+requires-python = ">=3.10"
+authors = [
+    {name = "Lucas van der Horst", email = "Lucas@vdrHorst.nl"}
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Build Tools",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+]
+dependencies = [
+    "click>=8.1",
+    "pip3-autoremove>=1.2"
+]
+
+[project.scripts]
+dependeless = "dependeless:cli"
+
+[project.urls]
+"Homepage" = "https://gitlab.com/Lucas_van_der_Horst/dependeless"
+"Documentation" = "https://gitlab.com/Lucas_van_der_Horst/dependeless/-/blob/main/README.md"
+"Source Code" = "https://gitlab.com/Lucas_van_der_Horst/dependeless"
+"Bug Tracker" = "https://gitlab.com/Lucas_van_der_Horst/dependeless/-/issues"
