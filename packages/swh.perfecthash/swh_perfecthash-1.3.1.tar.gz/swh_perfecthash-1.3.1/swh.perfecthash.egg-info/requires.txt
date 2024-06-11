@@ -1,0 +1,7 @@
+cffi
+
+[testing]
+cffi
+pytest>=8.1
+pytest-mock
+types-cffi
