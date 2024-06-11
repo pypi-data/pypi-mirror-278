@@ -1,0 +1,14 @@
+dnl
+dnl @info   gen_py_pro ver.2.0
+dnl @author Vladimir Roncevic elektron.ronca@gmail.com
+dnl @brief  Process this file with autoconf to produce a configure script.
+dnl
+AC_INIT(${PRO}, 0.1)
+AC_CONFIG_HEADERS([config.h])
+AM_INIT_AUTOMAKE([1.11])
+AM_SILENT_RULES([yes])
+AM_PATH_PYTHON
+AC_OUTPUT([
+	Makefile
+	src/Makefile
+])

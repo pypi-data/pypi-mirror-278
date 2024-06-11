@@ -1,0 +1,105 @@
+12/28/2023 07:25:25 PM - ERROR - provide project name/type
+12/28/2023 07:25:26 PM - ERROR - provide project name/type
+12/28/2023 07:25:28 PM - ERROR - provide project name/type
+12/28/2023 07:25:29 PM - ERROR - tool is not operational
+12/28/2023 07:25:30 PM - ERROR - provide project name/type
+12/28/2023 07:27:25 PM - ERROR - provide project name/type
+12/28/2023 07:27:26 PM - ERROR - provide project name/type
+12/28/2023 07:27:27 PM - ERROR - provide project name/type
+12/28/2023 07:27:28 PM - ERROR - tool is not operational
+12/28/2023 07:27:30 PM - ERROR - provide project name/type
+12/28/2023 07:37:26 PM - ERROR - provide project name/type
+12/28/2023 07:37:27 PM - ERROR - provide project name/type
+12/28/2023 07:37:29 PM - ERROR - provide project name/type
+12/28/2023 07:37:30 PM - ERROR - tool is not operational
+12/28/2023 07:37:32 PM - ERROR - provide project name/type
+12/28/2023 07:48:48 PM - ERROR - provide project name/type
+12/28/2023 07:48:49 PM - ERROR - provide project name/type
+12/28/2023 07:48:50 PM - ERROR - provide project name/type
+12/28/2023 07:48:52 PM - ERROR - tool is not operational
+12/28/2023 07:48:53 PM - ERROR - provide project name/type
+12/28/2023 08:01:05 PM - ERROR - provide project name/type
+12/28/2023 08:01:06 PM - ERROR - provide project name/type
+12/28/2023 08:01:07 PM - ERROR - provide project name/type
+12/28/2023 08:01:09 PM - ERROR - tool is not operational
+12/28/2023 08:01:10 PM - ERROR - provide project name/type
+12/28/2023 08:02:22 PM - ERROR - provide project name/type
+12/28/2023 08:02:23 PM - ERROR - provide project name/type
+12/28/2023 08:02:24 PM - ERROR - provide project name/type
+12/28/2023 08:02:26 PM - ERROR - tool is not operational
+12/28/2023 08:02:27 PM - ERROR - provide project name/type
+12/28/2023 08:04:43 PM - ERROR - provide project name/type
+12/28/2023 08:04:45 PM - ERROR - project with name [fresh_new] exists
+12/28/2023 08:04:47 PM - INFO - gen pro latest done
+12/28/2023 08:04:48 PM - ERROR - tool is not operational
+12/28/2023 08:04:49 PM - ERROR - provide project name/type
+12/28/2023 08:09:33 PM - ERROR - provide project name/type
+12/28/2023 08:09:35 PM - ERROR - project with name [fresh_new] exists
+12/28/2023 08:09:37 PM - INFO - gen pro latest done
+12/28/2023 08:09:38 PM - ERROR - tool is not operational
+12/28/2023 08:09:39 PM - ERROR - provide project name/type
+12/28/2023 08:12:29 PM - ERROR - provide project name/type
+12/28/2023 08:12:30 PM - ERROR - project with name [fresh_new] exists
+12/28/2023 08:12:32 PM - INFO - gen pro latest done
+12/28/2023 08:12:33 PM - ERROR - tool is not operational
+12/28/2023 08:12:35 PM - ERROR - provide project name/type
+12/28/2023 08:13:40 PM - ERROR - provide project name/type
+12/28/2023 08:13:42 PM - ERROR - project with name [fresh_new] exists
+12/28/2023 08:13:44 PM - INFO - gen pro latest done
+12/28/2023 08:13:45 PM - ERROR - tool is not operational
+12/28/2023 08:13:47 PM - ERROR - provide project name/type
+12/28/2023 08:15:08 PM - ERROR - provide project name/type
+12/28/2023 08:15:10 PM - ERROR - project with name [fresh_new] exists
+12/28/2023 08:15:12 PM - INFO - gen pro latest done
+12/28/2023 08:15:13 PM - ERROR - tool is not operational
+12/28/2023 08:15:14 PM - ERROR - provide project name/type
+12/28/2023 08:16:37 PM - ERROR - provide project name/type
+12/28/2023 08:16:38 PM - ERROR - project with name [fresh_new] exists
+12/28/2023 08:16:40 PM - INFO - gen pro latest done
+12/28/2023 08:16:42 PM - ERROR - tool is not operational
+12/28/2023 08:16:43 PM - ERROR - provide project name/type
+12/28/2023 08:19:10 PM - ERROR - provide project name/type
+12/28/2023 08:19:11 PM - ERROR - project with name [fresh_new] exists
+12/28/2023 08:19:13 PM - INFO - gen pro latest done
+12/28/2023 08:19:15 PM - ERROR - tool is not operational
+12/28/2023 08:19:16 PM - ERROR - provide project name/type
+12/28/2023 08:23:54 PM - ERROR - provide project name/type
+12/28/2023 08:23:56 PM - ERROR - project with name [fresh_new] exists
+12/28/2023 08:23:58 PM - INFO - gen pro latest done
+12/28/2023 08:23:59 PM - ERROR - tool is not operational
+12/28/2023 08:24:01 PM - ERROR - provide project name/type
+06/10/2024 10:40:37 PM - ERROR - tool is not operational
+06/10/2024 11:18:34 PM - ERROR - tool is not operational
+06/10/2024 11:45:14 PM - ERROR - 
+mod: /data/dev/python/3_tools/gen_dbus/github/gen_dbus/tests/gen_dbus/pro/write_template.py
+  def: write() 
+    expected pro_setup <tuple> object at 0x7f7540fdb180 wrong type 
+    expected pro_name <str> object at 0x7f75411650e0 
+    expected pro_type <str> object at 0x7f7541112f40 format wrong during checking params
+06/10/2024 11:45:14 PM - ERROR - generation failed
+06/10/2024 11:45:15 PM - ERROR - tool is not operational
+06/10/2024 11:48:49 PM - ERROR - 
+mod: /data/dev/python/3_tools/gen_dbus/github/gen_dbus/tests/gen_dbus/pro/write_template.py
+  def: write() 
+    expected pro_setup <tuple> object at 0x75beb96a2d00 wrong type 
+    expected pro_name <str> object at 0x75beb984cc00 
+    expected pro_type <str> object at 0x75beb984c810 format wrong during checking params
+06/10/2024 11:48:49 PM - ERROR - generation failed
+06/10/2024 11:48:50 PM - ERROR - tool is not operational
+06/10/2024 11:56:05 PM - INFO - generation latest done
+06/10/2024 11:56:06 PM - ERROR - tool is not operational
+06/10/2024 11:59:28 PM - INFO - generation latest done
+06/10/2024 11:59:29 PM - ERROR - tool is not operational
+06/11/2024 12:03:30 AM - ERROR - missing project configuration
+06/11/2024 12:03:30 AM - ERROR - generation failed
+06/11/2024 12:03:31 AM - ERROR - tool is not operational
+06/11/2024 12:13:30 AM - ERROR - generation failed
+06/11/2024 12:13:31 AM - ERROR - tool is not operational
+06/11/2024 12:18:56 AM - INFO - generation latest done
+06/11/2024 12:18:57 AM - ERROR - tool is not operational
+06/11/2024 12:19:40 AM - INFO - generation latest done
+06/11/2024 12:19:42 AM - ERROR - tool is not operational
+06/11/2024 12:20:42 AM - INFO - generation latest done
+06/11/2024 12:20:43 AM - ERROR - tool is not operational
+06/11/2024 12:21:55 AM - INFO - generation latest done
+06/11/2024 12:21:56 AM - ERROR - tool is not operational
