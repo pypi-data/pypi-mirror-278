@@ -1,0 +1,6 @@
+cirq-superstaq~=0.5.18
+qiskit-superstaq~=0.5.18
+scikit-learn>=1.0
+
+[dev]
+checks-superstaq~=0.5.18
