@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: ict-agent
+Version: 1.0.13
+Summary: 智能ict三维编程拓展组件
+Requires-Dist: websocket-client
+
