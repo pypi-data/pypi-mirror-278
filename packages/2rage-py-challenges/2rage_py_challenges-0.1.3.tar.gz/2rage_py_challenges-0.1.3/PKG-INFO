@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: 2rage-py-challenges
+Version: 0.1.3
+Summary: Some python challenges
+License: MIT
+Author: 2rage
+Author-email: the2rage@icloud.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: colorama (>=0.4.6,<0.5.0)
+Description-Content-Type: text/markdown
+
+# py_challenges
+
+
+
+## Prerequisites
+
+- Python package manager: `pipx` (recommended) or `pip`
+- For building the app: `poetry`
+
+
+## Installation 
+
+```bash
+pipx install 2rage-py-challenges
+```
+
+or
+
+```bash
+pip install 2rage-py-challenges
+```
+
+## Run
+
+- `search-methods` 
+- `lixical-analyzer`
+
+
+## Docs
+
+
+| Path | Content |
+| ---- | ------- |
+| `lixical_analyzer/*` | Implementation of a Lexical Analyzer Based on Finite Automata |
+| `search_methods/*` | Performance analysis of linear probing and binary search tree |
