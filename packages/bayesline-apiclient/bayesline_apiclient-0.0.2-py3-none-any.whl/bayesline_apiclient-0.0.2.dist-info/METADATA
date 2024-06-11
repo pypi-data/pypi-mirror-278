@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: bayesline-apiclient
+Version: 0.0.2
+Summary: 
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: bayesline-api (==0.0.2)
+Requires-Dist: httpx (>=0.27.0,<0.28.0)
