@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "todo-client"
+version = "0.0.1"
+description = "A todo client with CLI and REPL interfaces."
+authors = ["Ryan Kane <rmkane@proton.me>"]
+readme = "README.md"
+homepage = "https://github.com/rmkane/todo-client"
+repository = "https://github.com/rmkane/todo-client"
+documentation = "https://github.com/rmkane/todo-client"
+keywords = ["todo", "client", "cli", "repl"]
+license = "MIT"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Build Tools",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Operating System :: OS Independent"
+]
+packages = [
+    { include = "todo_client", from = "src" }
+]
+include = ["CHANGELOG.md"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+black = "^24.4.2"
+sphinx = "^7.3.7"
+toml = "^0.10.2"
+
+[tool.poetry.scripts]
+todo = 'todo_client.cli:run'
+
+[build-system]
+requires = ["poetry-core>=1.8.3"]
+build-backend = "poetry.core.masonry.api"
