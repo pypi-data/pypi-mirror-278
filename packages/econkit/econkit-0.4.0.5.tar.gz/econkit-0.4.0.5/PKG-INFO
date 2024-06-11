@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: econkit
+Version: 0.4.0.5
+Summary: Advanced Econometric Analysis Tools
+Home-page: https://www.stefanstavrianos.eu/
+Author: Stefanos Stavrianos
+Author-email: contact@stefanstavrianos.eu
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Office/Business :: Financial
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# EconKit
+
+EconKit is a Python library for econometrics and finance, providing a range of tools for data analysis, financial data retrieval, and statistical testing.
+
+## Features
+
+- **Econometrics**:
+  - Descriptive statistics
+  - Correlation analysis
+  - Augmented Dickey-Fuller (ADF) test for time series analysis
+
+- **Finance**:
+  - Stock data retrieval from Yahoo Finance
+  - Calculation of stock returns
+
+## Installation
+
+To install the latest version of EconKit, use pip:
+
+```bash
+pip install econkit
