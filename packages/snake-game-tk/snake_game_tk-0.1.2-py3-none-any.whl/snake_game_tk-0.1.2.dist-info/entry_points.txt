@@ -1,0 +1,2 @@
+[console_scripts]
+snake-game-tk = snake_game.main:run
