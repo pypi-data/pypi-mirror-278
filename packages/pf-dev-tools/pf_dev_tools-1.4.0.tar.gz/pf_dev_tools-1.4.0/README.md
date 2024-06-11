@@ -1,0 +1,473 @@
+# pfDevTools
+
+[![GPL-v3.0](https://img.shields.io/badge/license-GPL--3.0-orange)](https://spdx.org/licenses/GPL-3.0-or-later.html) [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pf-dev-tools.svg)](https://python.org) [![PyPI - Version](https://img.shields.io/pypi/v/pf-dev-tools.svg)](https://pypi.org/project/pf-dev-tools)
+
+A collection of tools for [Project Freedom](https://codeberg.org/DidierMalenfant/-/projects/6314) projects.
+
+Copyright (c) 2023-present **Didier Malenfant**.
+
+-----
+
+### Installation
+
+**pfDevTools** works on **macOS**, **Linux** and **Windows**.
+
+You can install **pfDevTools** by typing the following in a terminal window:
+```console
+pip install pf-dev-tools
+```
+
+### Pre-requisites
+
+**pfDevTools** requires at least [Python](https://python.org) 3.10. Make sure you have at least **Python** 3.10 before proceeding.
+
+It also uses the [git](https://git-scm.com) command. If you're on **macOS** and **Linux** this should come already built in.
+
+By default, **pfDevTools** uses a local/native install of the **Quartus** toolchain to build bitstream files on your machine. You just need to make sure that `quartus_sh` is in your `PATH`.
+
+Since **Quartus** is only available on **Windows** or [**Linux**](#installing-docker-on-ubuntu-linux), if `quartus_sh` is not found on your system the toolchain will switch to using **docker** instead. To use **docker**, you'll need to install [Docker Desktop](https://www.docker.com/get-started/) and to make sure the **Docker Engine** is running while building the core. On an **Apple Silicon** Mac, make sure that `Use Virtualization framework` and `Use Rosetta for x86/amd64 emulation on Apple Silicon` are both enabled in **docker**'s `Settings->General`.
+
+By default a docker image for **Qartus** 22.1 will be used. If you want to use a different version of **Quartus**, you can define `PF_DOCKER_IMAGE_NAME` in your environment (i.e. `export PF_DOCKER_IMAGE_NAME=didiermalenfant/quartus:22.1-apple-silicon`) to point to a different docker image to use.
+
+### `pf` Command
+
+**pfDevTools**'s main functionality is centered around the `pf` command. It provides tools used for building **openFPGA** cores and will also eventually be used to build **pfx** roms.
+
+Usage:
+```console
+  pf <options> command <arguments>
+```
+The following options are supported:
+```
+  --help/-h                             - Show a help message.
+  --version/-v                          - Display the app's version.
+  --debug/-d                            - Enable extra debugging information.
+```
+
+#### `clean` command
+```console
+  pf clean
+```
+Cleans the project and deletes any intermediate build files. This should be executed in the same folder as the project's `SConstruct` file.
+
+This should be executed in the same folder as the project's `SConstruct` file.
+
+#### `clone` command
+```console
+  pf clone <url> <tag=name> dest_folder
+```
+Clones the repo found at `url`, optionally at a given tag/branch named `name` into the folder `dest_folder`. 'url' does not need to be pre-fixed with `https://` or post-fixed with `.git`.
+
+If `url` is missing then `codeberg.org/DidierMalenfant/pfCoreTemplate` is used.
+
+#### `convert` command
+```console
+  pf convert src_filename dest_filename
+```
+Converts an image to the openFGPA binary format used for core images and author icons.
+
+#### `delete` command
+```console
+  pf delete core_name <volume_path>
+```
+Deletes all core data (bitstream, images, icons, json files) for core named `core_name` on volume at <volume_path>.
+
+If `volume_path` is omitted then the command looks for the `PF_CORE_INSTALL_PATH` environment variable. If this is not defined either then it defaults to `/Volumes/POCKET` on **macOS**, `/media/<username>/POCKET` on **linux** or the `P:` drive on **Windows** (learn how to set the drive letter [**here**](#assigning-a-drive-letter-on-windows)).
+
+If another implementation of the core is found then the Platforms files will be kept otherwise they are deleted too.
+
+#### `dryrun` command
+```console
+  pf dryrun
+```
+Simulate building the project. This will give out information on what, if anything, needs to be rebuilt.
+
+This should be executed in the same folder as the project's `SConstruct` file.
+
+#### `eject` command
+```console
+  pf eject <volume_path>
+```
+Ejects the volume at `volumePath`.
+
+If `volume_path` is omitted then the command looks for the `PF_CORE_INSTALL_PATH` environment variable. If this is not defined either then it defaults to `/Volumes/POCKET` on **macOS**, `/media/<username>/POCKET` on **linux** or the `P:` drive on **Windows** (learn how to set the drive letter [**here**](#assigning-a-drive-letter-on-windows)).
+
+#### `install` command
+```console
+  pf install <--no_build> <--eject>)
+  pf install <--eject> zip_file <volume_path>
+```
+If no zip file is specified then this will build the project and installs it to where the `PF_CORE_INSTALL_PATH` environment variable points to. Using `--no_build` will skip trying to build the project before installing it.
+
+This should be executed in the same folder as the project's `SConstruct` file.
+
+If a zip file is specified this this will install the packaged core contained in `zip_file` onto volume at `volume_path`. If `volume_path` is omitted then the command looks for the `PF_CORE_INSTALL_PATH` environment variable.
+
+For both options, using `--eject` will eject the volume after a successful install and if `PF_CORE_INSTALL_PATH` is not defined either then it defaults to `/Volumes/POCKET` on **macOS**, `/media/<username>/POCKET` on **linux** or the `P:` drive on **Windows** (learn how to set the drive letter [**here**](#assigning-a-drive-letter-on-windows)).
+
+#### `make` command
+```console
+  pf make
+```
+Builds the local project.
+
+This should be executed in the same folder as the project's `SConstruct` file.
+
+#### `program` command
+```console
+  pf program
+```
+Build the project and program the **Analogue Pocket FPGA** core via a **JTAG** blaster cable. You will need a core to be currently running on the **Pocket** in order to use this. Because the **FPGA** is then reprogrammed without going through the **Pocket**'s interface, the video scaler will retain whatever scaling settings were set by the previous core. This may cause the display to be incorrectly scaled if the settings are different for the new core.
+
+This is currently only supported on **linux** and **Windows** and requires a local/native install of the **Quartus** tool chain with the `quartus_pgm` in your `PATH`.
+
+This should be executed in the same folder as the project's `SConstruct` file.
+
+#### `qfs` command
+```console
+  pf qfs qsf_file <cpus=num> files...
+```
+Edits a **Quartus** `qfs` project file to add files and set number of cpu for the project. Updates the `qfs_file` by adding a list of **Verilog** `.v` or `.sv` `files`, separated by spaces.
+
+Optionally `cpus` can set the number of cpu cores that the compilation process can use.
+
+#### `reverse` command
+```console
+  pf reverse src_filename dest_filename
+```
+Reverses the bitstream file at `src_filename` and writes it to `dest_filename`.
+
+### Building an openFPGA core
+
+**pfDevTools** provides an entire toolchain needed to compile **openFPGA** cores. The build systems is based on the [**SCons**](https://scons.org) software construction tool which is entirely written in **Python**.
+
+A typical makefile is named `SConstruct` and for **openFPGA** projects can look as simple as this:
+```python
+  import pfDevTools
+
+  # -- We need pf-dev-tools version 1.x.x but at least 1.0.5.
+  pfDevTools.requires('1.0.5')
+
+  env = pfDevTools.SConsEnvironment()
+  env.OpenFPGACore('src/config.toml')
+```
+
+This will build, using `pf make`, a packaged core file based on the `toml` config [file](#core-config-file-format) and the source code found in the `src` folder.
+
+All projects should contain at least one `core/core_top.v` file at the root of their source tree. The content of this file should be based around **Analogue**'s own `core.top.v` [file](https://github.com/open-fpga/core-template/blob/main/src/fpga/core/core_top.v) but you do not need to provide any other files or **IP** found in the [core template](https://github.com/open-fpga/core-template). Those will be automatically brought in for you during the build.
+
+Good examples of simple core projects can be found in the examples provided as part of the [openFPGA tutorials](https://codeberg.org/DidierMalenfant/openFPGA-tutorials).
+
+The build environment can be customized by passing variables to the `pfDevTools.SConsEnvironment()` method call like so:
+```python
+  env = pfDevTools.SConsEnvironment(PF_BUILD_FOLDER='MyBuildFolder', PF_SRC_FOLDER='MySrcFolder')
+```
+
+The following variables are currently supported:
+
+- `PF_SRC_FOLDER` - Root folder for all the **Verilog** source files for the project. Defaults to the folder where the `toml` config [file]](#core-config-file-format) is located.
+- `PF_BUILD_FOLDER` - Folder where intermediate build files are created. Defaults to `_build`.
+- `PF_CORE_TEMPLATE_REPO_URL` - Repo url to use instead of the default core template repo at `codeberg.org/DidierMalenfant/pfCoreTemplate`.
+- `PF_CORE_TEMPLATE_REPO_TAG` - Repo tag to use to clone the core template repo.
+- `PF_CORE_TEMPLATE_REPO_FOLDER` - Path to a local core template folder to copy instead of cloning a repo.
+- 'PF_NB_OF_CPUS_TO_USE' - Number of cpu cores that the compilation process can use in parallel.
+- 'PF_ENABLE_OPTIMIZATION' - If set to 1 then the core will be compiled using `HIGH PERFORMANCE EFFORT`.
+
+### Core config file format
+
+Core configuration is done via a single `toml` file, passed as an argument to `env.OpenFPGACore`. This file is split into various sections:
+
+##### `[Platform]` section
+
+This section is used to provide information about the platform your core is implementing:
+
+- **`name`** (string): Name of the platform, as displayed in the Pocket's menus. Maximum length is 31 characters.
+- **`category`** (string): Category this platform belongs to. Maximum length is 31 characters.
+- **`short_name`** (string): Short name for the platform. This is used for paths in the SD card's filesystem. Maximum length is 31 characters.
+- **`image`** (path): Path to a 521x165 [graphic file](https://www.analogue.co/developer/docs/packaging-a-core#platform-image-(wip)) associated with the platform. Can be a 'png' or 'jpeg' file which will be automatically converted to the format expected by the console.
+- **`description`** (string): Short description. Maximum length is 63 characters.
+- **`info`** (path): Path, relative to the config file's folder, to a text file containing extra information that will be shown in the core’s `Platform Detail` view. Up to 32 lines can be displayed. No special characters. Bullet points can be shown by starting a line with an `*`.
+
+For example:
+```
+[Platform]
+name = "pfx-1"
+image = "assets/pfx1-platform-image.png"
+short_name = "pfx1"
+category = "Fantasy"
+description = "An open-source fantasy gaming console for the Analog Pocket."
+info = "info.txt"
+```
+
+##### `[Build]` section
+
+This section contains information about the given build of the core:
+
+- **`version`** (string): Version of the release. [SemVer](https://semver.org) is highly encouraged. Maximum length is 31 characters.
+
+For example:
+```
+[Build]
+version = "0.0.1"
+```
+
+##### `[Author]` section
+
+This section contains information about the author of the core:
+
+- **`name`** (string): Name of the core author. Maximum length is 31 characters.
+- **`icon`** (path): Path, relative to the config file's folder, to a 36x36 [graphic file](https://www.analogue.co/developer/docs/packaging-a-core#core-author-graphic-icon) associated with the author. Can be a 'png' or 'jpeg' file which will be automatically converted to the format expected by the console.
+- **`url`** (string): URL to more information about core. Maximum length is 63 characters.
+
+For example:
+```
+[Author]
+name = "dm"
+icon = "assets/pfx1-core-author-icon.png"
+url = "https://codeberg.org/DidierMalenfant/-/projects/6314"
+```
+
+##### `[Hardware]` section
+
+This section contains configuration parameters for the **Analogue Pocket**'s hardware:
+
+- **`video_width`** (unsigned integer): Width of the screen in pixels.
+- **`video_height`** (unsigned integer): Height of the screen in pixels.
+- **`video_rotation_angle`** (unsigned integer): Rotation in degrees to apply to the screen. Supported values are `0`, `90`, `180` or `270` (**Optional**: Defaults to `0`).
+- **`video_flip_horizontal`** (boolean): Flip/mirror the screen horizontally (**Optional**: Defaults to `false`).
+- **`video_flip_vertical`** (boolean): Flip/mirror the screen vertically (**Optional**: Defaults to `false`).
+- **`display_modes`** (list of strings): Display modes supported by the core (**Optional**: Defaults to `false`). Supported display modes are:
+  - **`crt_trinitron`**
+  - **`grayscale_lcd`**
+  - **`original_gb_dmg`**
+  - **`original_gbp`**
+  - **`original_gbp_light`**
+  - **`reflective_color`**
+  - **`original_gbc`**
+  - **`original_gbc`**
+  - **`backlit_color`**
+  - **`original_gba`**
+  - **`original_gba_sp101`**
+  - **`original_gg`**
+  - **`original_gg`**
+  - **`pinball_neon_matrix`**
+- **`link_port`** (boolean): Whether link port is utilized.
+- **`power_cartridge_port`** (boolean): Provide power to the cartridge port (**Optional**: Defaults to `false`).
+
+For example:
+```
+[Hardware]
+video_width = 400
+video_height = 360
+video_rotation_angle = 0
+video_flip_horizontal = false
+video_flip_vertical = false
+power_cartridge_port = true
+```
+
+##### `[Cores]` section
+In the vast majority of cases, you should not need to define a `[Cores]` section in your configuration, the default values should work fine. But if your platform provides multiple cores like, for example, one for NTSC resolution and one for PAL then you will need to specify those cores manually.
+
+The `[Cores]` section is made of up to 8 `[Cores.<id>]` sections. Each section contains configuration parameters for one core:
+
+- **`id`** (16-bit unsigned integer): Identification number for the core. (**Optional**: If no cores are specified in the config file then this defaults to `0`).
+- **`name`** (string): Name of the core. Maximum length is 15 characters (**Optional**: Defaults to `default`).
+- **`source_file`** (string): Source bitstream file to use for the core. This is assumed to be located in the core template's `output_files` folder (**Optional**: Defaults to `pf_core.rbf`).
+- **`filename`** (string): Filename for the reverse bitstream file packaged with the core. Maximum length is 15 characters  (**Optional**: Defaults to `bitstream.rbf_r`).
+
+For example, not specifying any `[Cores]` section is the same as:
+```
+[Cores]
+  [Cores.0]
+  name = "default"
+  source_file = "pf_core.rbf"
+  filename = "bitstream.rbf_r"
+```
+
+##### `[Files]` section
+
+The `[Files]` section is made of up to 32 `[Files.<id>]` sections. Each section contains configuration parameters for one file:
+
+- **`id`** (16-bit unsigned integer): Identification number for the file.
+- **`name`** (string): User-facing name of the file. Maximum length is 15 characters.
+- **`required`** (boolean): If `true` the file will be requested from the user in a dialog, otherwise it will be skipped (**Optional**: Defaults to `true`).
+- **`defer_loading`** (boolean): If `true`, file will not be loaded, but its size and ID will still be communicated to the core, and the core may read from or write to it (**Optional**: Defaults to `false`).
+- **`secondary`** (boolean): If `true`, file will be ignored, and will only be loaded if referenced in a selected variant/instance (**Optional**: Defaults to `false`).
+- **`non_volatile`** (boolean): If `true`, file will be both loaded and unloaded on core exit allowing modifications to remain between separate core launches (**Optional**: Defaults to `false`).
+- **`parameters`** (list of strings): Some parameters to apply to this file (**Optional**: Defaults to no parameters). Supported parameters are:
+  - **`user-reloadable`**: The file is reloadable. An entry named `Load <name>` is added in the core settings.
+  - **`core-specific`**: File is specific only to this core, instead of all the cores for this platform.
+  - **`non-volatile-filename`**: The filename to use is one cloned from file `0` with this file's extension appended.
+  - **`read-only`**: File is read-only and cannot be modified.
+  - **`instance-json`**: Treat a JSON loaded as this file as an instance description. Must also be flagged as `core-specific`, and only valid for the first file.
+  - **`init-non-volatile-data-on-load`**: If no file is loaded on init, the file's memory is overwritten with `0xFF` up to `maximum_size`.
+  - **`reset-core-while-loading`**: `Reset Enter` command will be sent before executing the `Data Slot Request Write` and `Data Slot Access All Complete` then `Reset Exit` will be sent after.
+  - **`restart-core-after-loading`**: Entire core is unloaded via the normal process, saving any non-volatile files. Then a full restart of the core is done, using the new data along with other already-defined assets.
+  - **`full-reload-core`**: Same as above, but the bitstream is also reloaded before the restart process.
+  - **`persist-browsed-filename`**: Filenames picked via the browser will be persisted, and the next time the file is loaded, the same choice will be used, overriding any definition or instance filename. The browser cache, which is saved per-core, is cleared when a user uses `Reset All to Defaults` in the core's `Interact` menu.
+- **`extensions`** (list of string): Array of up to 4 supported file extensions. Each extension may be up to 7 characters.
+- **`required_size`** (32-bit unsigned integer or hex string with 0x prefix): Exact size required for the file (**Optional**: Defaults to no required size).
+- **`maximum_size`** (32-bit unsigned integer or hex string with 0x prefix_): Maximum size allowed for the file (**Optional**: Defaults to no maximum size).
+- **`address`** (32-bit unsigned integer or hex string with 0x prefix): Address that will be used to access the file via the BRIDGE interface.
+- **`filename`** (file path): A file path, relative to the config file's folder, for the file that should be used for this slot and packaged with the core. All files end up in the same folder so each filename must be unique. Maximum base filename length is 31 characters (**Optional**: Defaults to file being requested from the user instead).
+- **`include_files`** (list of file paths): List of paths, relative to the config file's folder, for all the files that should be packaged with the core. All files end up in the same folder so each filename must be unique. Maximum base filename length is 31 characters (**Optional**: Defaults to no files included).
+
+If `filename` is used then this file is automatically added to the `include_files` list when packaging the core.
+
+For example:
+```
+[Files]
+  [Files.1]
+  name = "Background"
+  required = true
+  parameters = [ "user-reloadable", "core-specific" ]
+  extensions = [ "bin" ]
+  required_size = 184320
+  address = "0x00000000"
+  include_files = [ "assets/images/ex_image_1.bin", "assets/images/ex_image_2.bin", "assets/images/ex_image_3.bin" ]
+```
+
+##### `[Variables]` section
+
+The `[Variables]` section is made of up to 16 variables `[Variables.<id>]` sections. Variables are user-facing in the `Core Settings` menu and enable the user to pass configuration settings onto the core. Each section contains configuration parameters for one variable:
+
+- **`id`** (16-bit unsigned integer): Identification number for the variable.
+- **`name`** (string): User-facing name of the variable. Maximum length is 15 characters.
+- **`type`** (string): Type of variable. Should be either `radio_button`, `checkbox`, `slider`, `list`, `number` or `action`.
+- **`enabled`** (boolean): Whether the variable is enabled or not (**Optional**: Defaults to `true`).
+- **`address`** (32-bit unsigned integer or hex string): Address that will be used to access the variable via the BRIDGE interface.
+
+Some parameters apply only to `radio_button` variables:
+
+- **`group`** (32-bit unsigned integer or hex string): Group identifier. Buttons with the same group will be grouped together.
+- **`persistent`** (boolean): Retains the value set by the user after the core is shut own (**Optional**: Defaults to `false`).
+- **`write-only`** (boolean): If `true` value will never be read back from the core. (**Optional**: Defaults to `false`).
+- **`default`**  (boolean): Default state of the button, on or off.
+- **`value_on`** (32-bit unsigned integer or hex string): Value written when the button is on.
+- **`value_off`** (32-bit unsigned integer or hex string): Value written when the button is on (**Optional**: Defaults to `0`).
+- **`mask`** (32-bit unsigned integer or hex string): Bits set to `1` will be left untouched when writing a value. Bits set to `0` may be modified by the UI element (**Optional**: Defaults to `0`)
+
+Some parameters apply only to `checkbox` variables:
+
+- **`persistent`** (boolean): Retains the value set by the user after the core is shut own (**Optional**: Defaults to `false`).
+- **`write-only`** (boolean): If `true` value will never be read back from the core (**Optional**: Defaults to `false`).
+- **`default`**  (boolean): Default state of the checkbox, on or off.
+- **`value_on`** (32-bit unsigned integer or hex string): Value written when the box is checked.
+- **`value_off`** (32-bit unsigned integer or hex string): Value written when the box is checked (**Optional**: Defaults to `0`).
+- **`mask`** (32-bit unsigned integer or hex string): Bits set to `1` will be left untouched when writing a value. Bits set to `0` may be modified by the UI element (**Optional**: Defaults to `0`)
+
+Some parameters apply only to `slider` variables:
+
+- **`persistent`** (boolean): Retains the value set by the user after the core is shut own (**Optional**: Defaults to `false`).
+- **`write-only`** (boolean): If `true` value will never be read back from the core (**Optional**: Defaults to `false`).
+- **`default`**  (32-bit integer or hex string): Default value/position of the slider.
+- **`mask`** (32-bit integer or hex string): Bits set to `1` will be left untouched when writing a value. Bits set to ‘0` may be modified by the UI element (**Optional**: Defaults to `0`)
+- **`signed_value`** (boolean): Indicates whether the value displayed should be treated os signed or unsigned (**Optional**: Defaults to `false`).
+- **`minimum_value`** (32-bit integer or hex string): Minimum value the slider can be set to.
+- **`maximum_value`** (32-bit integer or hex string): Maximum value the slider can be set to.
+- **`small_step`** (32-bit unsigned integer or hex string): Smallest increment the slider can move.
+- **`large_step`** (32-bit unsigned integer or hex string): Largest increment the slider can move.
+
+Some parameters apply only to `list` variables:
+
+- **`choices`** (List of `name/value` pairs): Up to 16 choices for the list using the following pairs:
+  - **`name`** (string): Name of the choice. Maximum length is 23 characters.
+  - **`value`** (32-bit integer or hex string): Value that is written when making that choice.
+- **`mask`** (32-bit unsigned integer or hex string): Bits set to `1` will be left untouched when writing a value. Bits set to `0` may be modified by the UI element (**Optional**: Defaults to `0`)
+
+Some parameters apply only to `action` variables:
+
+- **`value`** (32-bit integer or hex string): Value that is written when the action is selected.
+- **`mask`** (32-bit unsigned integer or hex string): Bits set to `1` will be left untouched when writing a value. Bits set to `0` may be modified by the UI element (**Optional**: Defaults to `0`)
+
+For example:
+```
+[Variables]
+  [Variables.1]
+  name = "Screen Border"
+  type = "checkbox"
+  persistent = true
+  address = "0x50000000"
+  default = true
+  value_on = 23
+  mask = "0xFFFF0000"
+```
+
+##### `[Controllers]` section
+
+The `[Variables]` section is made of up to 4 variables `[Controllers.<id>]` sections. Each `Controller` contains information on how to map keys to actions in your core. User can then remap these action in the `Controls` menu of the core settings. The following parameters are supported:
+
+- **`id`** (16-bit unsigned integer): Identification number for the controller.
+- **`key_mapping`** (List of `name/key_code` pairs):
+  - **`name`** (string): Name of the action. Maximum length is 19 characters.
+  - **`key_code`** (string): Key this action is mapped to by default. This can be any of the following: `A`, `B`, `X`, `Y`, `L`, `R`, `Start` or `Select`.
+
+For example:
+```
+[Controllers]
+  [Controllers.1]
+  key_mapping = [ [ "Purple Square", "A" ],
+                  [ "Green Square", "B" ],
+                  [ "Replay Audio", "X" ] ]
+```
+
+## Installing Docker on Ubuntu Linux
+
+Make sure that no other version of **Docker** are installed:
+```
+sudo apt-get remove docker docker-engine docker.io containerd runc
+```
+
+Add the docker repository:
+```
+sudo apt-get update
+sudo apt-get install ca-certificates curl gnupg
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+echo "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
+
+Install the **Docker Engine**:
+```
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
+
+In order to be able to run `docker` without `sudo`, make sure the `docker` group exists and add your user to it:
+```
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
+```
+
+You can verify that the **Docker Engine** installation is successful by running the `hello-world` image:
+```
+docker run hello-world
+```
+
+## Assigning a drive letter to a volume on Windows
+
+By default `pf-dev-tools` uses the `P:` (for Pocket) drive on **Windows** for installing cores. You can set your SD card to use the same drive letter by doing the following:
+
+* Right-click on the **Start** button.
+* Click **Disk Management** to open the **Disk Management** console.
+* Right-click the volume that has the drive letter you want to change.
+* Click **Change Drive Letter And Paths**.
+
+### Contributors
+
+See the `CONTRIBUTORS.md` file.
+
+### Trademarks
+
+**openFPGA** and the **openFPGA** logo are trademarks of [**Analogue**](https://www.analogue.co) Enterprises Ltd.
+**Quartus** is a registered trademark of [**Intel**](https://intel.com).
+
+This project is not affiliated, associated with, sponsored or supported by neither **Analogue** nor **Intel**.
+
+### License
+
+**pfDevTools** is distributed under the terms of the [GPLv3.0](https://spdx.org/licenses/GPL-3.0-or-later.html) or later license.
