@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: soil-sdk
+Version: 0.7.3
+Summary: SOIL Software Development Kit
+Home-page: https://developer.amalfianalytics.com/
+Author: Amalfi Analytics
+Author-email: info@amalfianalytics.com
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown; charset=UTF-8
+License-File: AUTHORS
+Requires-Dist: requests>=2.31
+Requires-Dist: pyyaml>=6.0.1
+Requires-Dist: PyJWT>=2.8.0
+Requires-Dist: numpy>=1.26.2
+Requires-Dist: pandas>=2.1.3
+Requires-Dist: psycopg[binary,pool]>=3.1.14
+Provides-Extra: dev
+Requires-Dist: coverage>=7.3.2; extra == "dev"
+Requires-Dist: pre-commit>=3.5.0; extra == "dev"
+Requires-Dist: pydoc-markdown>=4.8.2; extra == "dev"
+Requires-Dist: types-PyYAML>=6.0.12.12; extra == "dev"
+Requires-Dist: types-requests>=2.31.0.10; extra == "dev"
+Requires-Dist: pbr>=6.0.0; extra == "dev"
+Requires-Dist: pathlib>=1.0.1; extra == "dev"
+
+# SOIL SDK
+
+The SOIL SDK allows users to develop and test applications that run on top of SOIL and modules and data structures that run in it.
+
+## Install development dependencies
+
+```
+pip install -e ".[dev]"
+```
+
+## Local install
+
+```
+pip install -e .
+```
+
+### Test
+
+```
+pre-commit run --all-files
+```
+
