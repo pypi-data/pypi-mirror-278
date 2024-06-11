@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: coshiota
+Version: 0.0.8
+Summary: 
+License: GPL2
+Author: doubleO8
+Author-email: wb008@hdm-stuttgart.de
+Requires-Python: >=3.7.3,<4.0.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: cryptography (>=3.2)
+Requires-Dist: orjson (>=3.7.12,<4.0.0)
+Requires-Dist: pendulum (>=2.1.2,<3.0.0)
