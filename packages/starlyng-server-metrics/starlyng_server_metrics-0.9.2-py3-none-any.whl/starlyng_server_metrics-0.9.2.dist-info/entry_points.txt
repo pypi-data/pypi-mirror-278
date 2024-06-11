@@ -1,0 +1,3 @@
+[console_scripts]
+server_metrics = server_metrics.__main__:main
+
