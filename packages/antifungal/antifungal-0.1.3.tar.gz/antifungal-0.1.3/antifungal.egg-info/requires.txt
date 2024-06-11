@@ -1,0 +1,7 @@
+numpy>=1.13.3
+pandas>=1.2.4
+modlamp>=4.3.0
+scipy<=1.7.0
+scikit-learn==0.24.2
+tqdm
+matplotlib
