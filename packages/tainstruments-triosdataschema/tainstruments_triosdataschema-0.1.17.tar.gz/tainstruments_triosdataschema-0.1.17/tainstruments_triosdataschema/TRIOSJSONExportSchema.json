@@ -1,0 +1,2112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Experiment",
+  "type": "object",
+  "additionalProperties": {},
+  "properties": {
+    "Schema": {
+      "$ref": "#/$defs/Schema"
+    },
+    "Log": {
+      "$ref": "#/$defs/Log"
+    },
+    "Operators": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Operator"
+      }
+    },
+    "Sample": {
+      "$ref": "#/$defs/Sample"
+    },
+    "Procedure": {
+      "$ref": "#/$defs/Procedure"
+    },
+    "Results": {
+      "$ref": "#/$defs/Results"
+    },
+    "StartTime": {
+      "$ref": "#/$defs/DateTime"
+    },
+    "Analyses": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Analysis"
+      }
+    }
+  },
+  "required": [
+    "Schema",
+    "Operators",
+    "Sample",
+    "Procedure",
+    "Results"
+  ],
+  "$defs": {
+    "Number": {
+      "type": "number"
+    },
+    "Integer": {
+      "type": "integer"
+    },
+    "Boolean": {
+      "type": "boolean"
+    },
+    "DateTime": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|\\.[0-9]+Z)$"
+    },
+    "Uuid": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9]{8}-[a-zA-Z0-9]{4}-[a-zA-Z0-9]{4}-[a-zA-Z0-9]{4}-[a-zA-Z0-9]{12}$"
+    },
+    "Text": {
+      "type": "string"
+    },
+    "Base64EncodedBytes": {
+      "type": "string",
+      "format": "byte"
+    },
+    "Unit": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "Name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "Name"
+      ]
+    },
+    "Log": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/LogEntry"
+      }
+    },
+    "LogEntry": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "Type": {
+          "type": "string"
+        },
+        "CreatedBy": {
+          "$ref": "#/$defs/Identity"
+        },
+        "CreatedOn": {
+          "$ref": "#/$defs/DateTime"
+        },
+        "Description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "Type",
+        "Description"
+      ]
+    },
+    "Identity": {
+      "type": "object",
+      "properties": {
+        "Name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "Name"
+      ]
+    },
+    "Schema": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "Url": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "Url"
+      ]
+    },
+    "Procedure": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "Configuration": {
+          "$ref": "#/$defs/ProcedureConfiguration"
+        },
+        "Name": {
+          "type": "string"
+        },
+        "Steps": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ProcedureStep"
+          }
+        }
+      },
+      "required": [
+        "Steps",
+        "Configuration"
+      ]
+    },
+    "Sample": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "Name": {
+          "type": "string"
+        },
+        "Notes": {
+          "$ref": "#/$defs/Text"
+        },
+        "PanNumber": {
+          "$ref": "#/$defs/Integer"
+        },
+        "PanMass": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "Mass": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "PanType": {
+          "type": "string"
+        },
+        "Shape": {
+          "type": "string"
+        },
+        "Density": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "PoissonsRatio": {
+          "$ref": "#/$defs/NumericValue"
+        }
+      }
+    },
+    "Operator": {
+      "allOf": [
+        { "$ref": "#/$defs/Identity" },
+        {
+          "type": "object",
+          "additionalProperties": {}
+        }
+      ]
+    },
+    "ProcedureStep": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "Name": {
+          "type": "string"
+        },
+        "Id": {
+          "$ref": "#/$defs/Uuid"
+        }
+      },
+      "required": [
+        "Name"
+      ]
+    },
+    "InstrumentConfiguration": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "Name": {
+          "type": "string"
+        },
+        "Type": {
+          "type": "string"
+        },
+        "SerialNumber": {
+          "type": "string"
+        },
+        "Location": {
+          "type": "string"
+        },
+        "ReferencePanNumber": {
+          "$ref": "#/$defs/Integer"
+        },
+        "ReferencePanMass": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ReferenceSampleMass": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ReferencePanType": {
+          "type": "string"
+        },
+        "UseStandbyTemperature": {
+          "type": "boolean"
+        },
+        "MinimumLoadTemperature": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "MaximumLoadTemperature": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "EndOfTestUseStandbyTemperature": {
+          "type": "boolean"
+        },
+        "MinimumUnloadTemperature": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "MaximumUnloadTemperature": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "DiscardPanInWasteBin": {
+          "type": "boolean"
+        },
+        "UseDefaultCalibrations": {
+          "type": "boolean"
+        },
+        "StartExperimentAfterWeightStabilization": {
+          "type": "boolean"
+        },
+        "EnableAirCool": {
+          "type": "boolean"
+        },
+        "AirCoolUntilTemperatureIsBelow": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "EndOfTestDelay": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "AirCoolTime": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ShapeThickness": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ShapeLength": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ShapeDiameter": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ShapeWidth": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ShapeInnerDiameter": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ShapeArea": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ShapeMoment": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ShapeOuterDiameter": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "InstrumentInitialLength": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "UserInitialLength": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "InstrumentCoefficientOfThermalExpansionConstant": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "UserCoefficientOfThermalExpansionConstant": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "InstrumentGeometryFactor": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "UserGeometryFactor": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "InstrumentStressFactor": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "UserStressFactor": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "InstrumentStrainFactor": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "UserStrainFactor": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "PreloadForce": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "TrayWeight": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "AutoZero": {
+          "type": "boolean"
+        },
+        "ProbeUp": {
+          "type": "boolean"
+        },
+        "OpenFurnacePostTest": {
+          "type": "boolean"
+        },
+        "ReturnToTemperatureRange": {
+          "type": "boolean"
+        },
+        "PostTestTemperatureWindowMinimum": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "PostTestTemperatureWindowMaximum": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "PostTestCoolerOff": {
+          "type": "boolean"
+        },
+        "Mode": {
+          "type": "string"
+        },
+        "MethodName": {
+          "type": "string"
+        },
+        "ETCCameraAvailable": {
+          "type": "boolean"
+        },
+        "CellSerialNumber": {
+          "type": "string"
+        },
+        "Gas1Type": {
+          "type": "string"
+        },
+        "Gas2Type": {
+          "type": "string"
+        },
+        "Gas3Type": {
+          "type": "string"
+        },
+        "Gas4Type": {
+          "type": "string"
+        },
+        "CompanyName": {
+          "type": "string"
+        },
+        "DisplayType": {
+          "type": "string"
+        },
+        "SamplingRate": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "SelectedHeatFlow": {
+          "type": "string"
+        },
+        "ExothermDirection": {
+          "type": "string"
+        },
+        "PanResistanceFactorApplied": {
+          "type": "boolean"
+        },
+        "InterpanHeatExchangeFactorApplied": {
+          "type": "boolean"
+        },
+        "LidType": {
+          "type": "string"
+        },
+        "CoolerType": {
+          "type": "string"
+        },
+        "LeaveCoolerOnBetweenRuns": {
+          "type": "boolean"
+        },
+        "SelectedGas": {
+          "type": "string"
+        },
+        "FlowRate": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "SecondaryPurgeWhenLidOpen": {
+          "type": "boolean"
+        },
+        "LicensedHeatFlow": {
+          "type": "string"
+        },
+        "ModulationLicensed": {
+          "type": "boolean"
+        },
+        "HighResolutionModulationLicensed": {
+          "type": "boolean"
+        },
+        "AutoWeightRangeEnabled": {
+          "type": "boolean"
+        },
+        "RangeType": {
+          "type": "string"
+        },
+        "MakeupPumpCounter": {
+          "type": "integer"
+        },
+        "ProcedureWearCounter": {
+          "type": "integer"
+        },
+        "MakeupPumpLifeCounter": {
+          "type": "integer"
+        },
+        "DryingPumpLifeCounter": {
+          "type": "integer"
+        },
+        "TotalSampleFlow": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ChannelBGasPercentage": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ChannelASelectedGas": {
+          "type": "string"
+        },
+        "ChannelBSelectedGas": {
+          "type": "string"
+        },
+        "SelectedGasChannel": {
+          "type": "string"
+        },
+        "ThermocoupleType": {
+          "type": "string"
+        },
+        "SamplingMode": {
+          "type": "string"
+        },
+        "StandByTemperature": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "StandByPressure": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "StandByFlow": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "BuoyancyReferenceTemperature": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "BuoyancyReferencePressure": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "BuoyancyReferenceFlow": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "StandByGasLine2Flow": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "StandByGasLine3Flow": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "StandByGasLine4Flow": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "BuoyancyReferenceGasLine2Flow": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "BuoyancyReferenceGasLine3Flow": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "BuoyancyReferenceGasLine4Flow": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "StopOnGasFlowError": {
+          "type": "boolean"
+        },
+        "FurnaceBias": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "HeaterBias": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "SampleBias": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "EMMode": {
+          "type": "string"
+        },
+        "Event1On": {
+          "type": "boolean"
+        },
+        "InitialLength": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ProbeType": {
+          "type": "string"
+        },
+        "PoissonRatio": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "FilmFiberOffset": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "BearingFriction": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "BearingFrictionCorrection": {
+          "type": "boolean"
+        },
+        "RotationalMappingLastDate": {
+          "$ref": "#/$defs/DateTime"
+        },
+        "RotationalMappingLastGeometry": {
+          "type": "string"
+        },
+        "RotationalMappingNumberOfIterations": {
+          "type": "integer"
+        },
+        "BearingMappingType": {
+          "type": "string"
+        },
+        "SmartSwapDisabled": {
+          "type": "boolean"
+        },
+        "BearingMode": {
+          "type": "string"
+        },
+        "BearingOffset": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "GeometryBearingFrictionCalibrationDate": {
+          "$ref": "#/$defs/DateTime"
+        },
+        "FirmwarePCBNumber": {
+          "type": "string"
+        },
+        "AccessoryOptions": {
+          "$ref": "#/$defs/AccessoryOptions"
+        },
+        "AxialForceControlOptions": {
+          "$ref": "#/$defs/AxialForceControlOptions"
+        },
+        "ConditioningOptions": {
+          "$ref": "#/$defs/ConditioningOptions"
+        },
+        "ExperimentOptions": {
+          "$ref": "#/$defs/ExperimentOptions"
+        },
+        "FlowOptions": {
+          "$ref": "#/$defs/FlowOptions"
+        },
+        "GapOptions": {
+          "$ref": "#/$defs/GapOptions"
+        },
+        "InertiaOptions": {
+          "$ref": "#/$defs/InertiaOptions"
+        },
+        "OscillationOptions": {
+          "$ref": "#/$defs/OscillationOptions"
+        },
+        "TemperatureOptions": {
+          "$ref": "#/$defs/TemperatureOptions"
+        },
+        "Versions": {
+          "$ref": "#/$defs/Versions"
+        },
+        "Geometry": {
+          "$ref": "#/$defs/Geometry"
+        },
+        "Calibrations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Calibration"
+          }
+        }
+      },
+      "required": [
+        "Type"
+      ]
+    },
+    "AccessoryOptions": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "DielectricDeviceSerialNumber": {
+          "type": "string"
+        },
+        "DielectricDeviceType": {
+          "type": "string"
+        }
+      }
+    },
+    "AxialForceControlOptions": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "ActionOutsideRange": {
+          "type": "string"
+        },
+        "ControlNormalForceActive": {
+          "type": "boolean"
+        },
+        "ControlNormalForceGapChangeLimitUp": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ControlNormalForceGapChangeLimitDown": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ControlNormalForceTolerance": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ControlNormalForceSetInitial": {
+          "type": "boolean"
+        },
+        "ControlNormalForceTensionOrCompression": {
+          "type": "string"
+        },
+        "ControlNormalForce": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ProportionalForceMode": {
+          "type": "string"
+        }
+      }
+    },
+    "ConditioningOptions": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "ZeroAxialForceBeforeRun": {
+          "type": "boolean"
+        },
+        "ZeroSpeedAfterPreshear": {
+          "type": "string"
+        },
+        "ZeroVelocityThreshold": {
+          "$ref": "#/$defs/NumericValue"
+        }
+      }
+    },
+    "ExperimentOptions": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "MaximumNormalForceLimit": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "MinimumNormalForceLimit": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ValueTemperatureTolerance": {
+          "$ref": "#/$defs/NumericValue"
+        }
+      }
+    },
+    "FlowOptions": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "CollectAllPoints": {
+          "type": "boolean"
+        },
+        "CollectNegativeShearRateData": {
+          "type": "boolean"
+        },
+        "InertiaCorrection": {
+          "type": "boolean"
+        },
+        "MinimumVelocity": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "TorqueLimit": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "VelocityLimit": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "VelocityTolerance": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ZeroStrainAtStartOfStep": {
+          "type": "boolean"
+        }
+      }
+    },
+    "GapOptions": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "CompressionNormalForce": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "CompressionDistance": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "SampleCompressionMode": {
+          "type": "string"
+        },
+        "CompressionVelocity": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "FarVelocity": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "NearVelocity": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "GeneralGotoGapSetVelocity": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ZeroSettingMode": {
+          "type": "string"
+        },
+        "Handling": {
+          "type": "string"
+        },
+        "WaitTolerance": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "WaitDuration": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "OverrideWaitForGap": {
+          "type": "boolean"
+        },
+        "ZeroNormalForce": {
+          "$ref": "#/$defs/NumericValue"
+        }
+      }
+    },
+    "InertiaOptions": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "InstrumentInertia": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "InstrumentInertiaCalibrationDate": {
+          "$ref": "#/$defs/DateTime"
+        }
+      }
+    },
+    "OscillationOptions": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "DisplacementLimit": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "DisplacementTolerance": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "RawPhaseLimit": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "TorqueLimit": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "TorqueTolerance": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "VelocityTolerance": {
+          "$ref": "#/$defs/NumericValue"
+        }
+      }
+    },
+    "TemperatureOptions": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "CurrentTemperatureSystemCompensation": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "CurrentTemperatureSystemOffset": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "CurrentTemperatureSystemSpan": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "GapTemperatureCompensationEnabled": {
+          "type": "boolean"
+        },
+        "PurgeGasOnly": {
+          "type": "boolean"
+        },
+        "TemperatureControlEnabled": {
+          "type": "boolean"
+        },
+        "TemperatureSystemControl": {
+          "type": "string"
+        },
+        "UpperTemperatureSystemFitted": {
+          "type": "boolean"
+        },
+        "TemperatureWaitDuration": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "TemperatureWaitTolerance": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "CirculatorOperatingMode": {
+          "type": "string"
+        },
+        "CoolingFluid": {
+          "type": "string"
+        },
+        "GeometryGapTemperatureCompensationCalibrationDate": {
+          "$ref": "#/$defs/DateTime"
+        },
+        "TemperatureSystemDisplayName": {
+          "type": "string"
+        },
+        "CoolingWaterRange": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "CoolingWaterTemperature": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "GapTemperatureCompensation": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "UHPGradientCalibrationOffset": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "UHPGradientCalibrationSpan": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "UHPThermalMass": {
+          "$ref": "#/$defs/NumericValue"
+        }
+      }
+    },
+    "Versions": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "CommonIDD": {
+          "type": "string"
+        },
+        "Cortex": {
+          "type": "string"
+        },
+        "Driver": {
+          "type": "string"
+        },
+        "GDM": {
+          "type": "string"
+        },
+        "GDMBootloader": {
+          "type": "string"
+        },
+        "BlendingGDM": {
+          "type": "string"
+        },
+        "BlendingGDMBootloader": {
+          "type": "string"
+        },
+        "Touchscreen": {
+          "type": "string"
+        },
+        "FEP": {
+          "type": "string"
+        },
+        "FEPBootloader": {
+          "type": "string"
+        },
+        "FEPFirmwareRevision": {
+          "type": "string"
+        },
+        "AutoSampler": {
+          "type": "string"
+        },
+        "AutoSamplerBootloader": {
+          "type": "string"
+        },
+        "FCM": {
+          "type": "string"
+        },
+        "FCMBootloader": {
+          "type": "string"
+        },
+        "LNPump": {
+          "type": "string"
+        },
+        "LNPumpBootloader": {
+          "type": "string"
+        },
+        "Transducer": {
+          "type": "string"
+        },
+        "TransducerBootloader": {
+          "type": "string"
+        },
+        "PCU": {
+          "type": "string"
+        },
+        "PCUBootloader": {
+          "type": "string"
+        },
+        "Firmware": {
+          "type": "string"
+        },
+        "FirmwareConfiguration": {
+          "type": "string"
+        },
+        "FirmwareParameter": {
+          "type": "string"
+        }
+      }
+    },
+    "Geometry": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "Type": {
+          "type": "string"
+        },
+        "Name": {
+          "type": "string"
+        },
+        "Notes": {
+          "type": "string"
+        },
+        "GapTemperatureCompensation": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "GapTemperatureCompensationEnabled": {
+          "type": "boolean"
+        },
+        "Compliance": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "Inertia": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "BearingFriction": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "BearingFrictionCorrection": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "LinearCompliance": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "StressConstantFactor": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "StressConstant": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "StrainConstant": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "LinearStressConstant": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "LinearStrainConstant": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "NormalForceFactor": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "FluidDensityFactor": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "LinearStressConstantFactor": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "CompressionLength": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "CompressionThickness": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "StarchCellCalibrationFactor": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "BobInsideDiameter": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "BobOutsideDiameter": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "Gap": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "TrimGap": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "BackoffDistance": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "SerialNumber": {
+          "type": "string"
+        },
+        "ClampedBendingType": {
+          "type": "string"
+        },
+        "ClampedBendingFrame": {
+          "type": "string"
+        },
+        "ClampedBendingClamp": {
+          "type": "string"
+        },
+        "Length": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "Width": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "Thickness": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ConcentricCylindersMaterial": {
+          "type": "string"
+        },
+        "Material": {
+          "type": "string"
+        },
+        "SurfaceFinish": {
+          "type": "string"
+        },
+        "ConcentricCylindersEnvironmentalSystem": {
+          "type": "string"
+        },
+        "ConePlateMaterial": {
+          "type": "string"
+        },
+        "PlateEnvironmentalSystem": {
+          "type": "string"
+        },
+        "ConcentricCylindersBobType": {
+          "type": "string"
+        },
+        "EnvironmentalSystem": {
+          "type": "string"
+        },
+        "BobMaterial": {
+          "type": "string"
+        },
+        "ExtensionalEnvironmentalSystem": {
+          "type": "string"
+        },
+        "InterfacialEnvironmentalSystem": {
+          "type": "string"
+        },
+        "ParallelPlateMaterial": {
+          "type": "string"
+        },
+        "PressureCellBobType": {
+          "type": "string"
+        },
+        "BobDiameter": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "BobLength": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "CupDiameter": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "BreakProtectionEnabled": {
+          "type": "boolean"
+        },
+        "GapOffset": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ClampFace": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "Spacer": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "SolidSampleEnvironmentalSystem": {
+          "type": "string"
+        },
+        "StarchCellEnvironmentalSystem": {
+          "type": "string"
+        },
+        "Disposable": {
+          "type": "boolean"
+        },
+        "MixedClampBendingType": {
+          "type": "string"
+        },
+        "FreeBendingFrame": {
+          "type": "string"
+        },
+        "FreeBendingClamp": {
+          "type": "string"
+        },
+        "RectangularOrCylindrical": {
+          "type": "string"
+        },
+        "CompressionFixtureEnvironmentalSystem": {
+          "type": "string"
+        },
+        "TensionFixtureEnvironmentalSystem": {
+          "type": "string"
+        },
+        "Diameter": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "HelixAngle": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "AnnularRingAndPlateEnvironmentalSystem": {
+          "type": "string"
+        },
+        "SolventTrap": {
+          "type": "boolean"
+        },
+        "OrthogonalEndEffectFactor": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "CylinderMaterialUpper": {
+          "type": "string"
+        },
+        "ExtensionalFixtureType": {
+          "type": "string"
+        },
+        "UpperParallelPlateMaterial": {
+          "type": "string"
+        },
+        "FiberDenier": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "FiberTex": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "CrossSectionArea": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ProcedureSolidDensity": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "InnerDiameter": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "OuterDiameter": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "Height": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "BendingMoment": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ExpansionCoefficient": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "MoveStage": {
+          "type": "string"
+        },
+        "OrientationAngle": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "UpperCompliance": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "LowerCompliance": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "UpperMass": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "FrictionEnabled": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "NormalStressConstant": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "FluidDensityConstant": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ClampMass": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ClampCompliance": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ReferencePosition": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ShearSandwichSpacer": {
+          "type": "string"
+        },
+        "ShapeType": {
+          "type": "string"
+        },
+        "ClampEquationSet": {
+          "type": "string"
+        },
+        "ClampSpacerThickness": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "Angle": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "Truncation": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "CupInsideDiameter": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "CupOutsideDiameter": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "InnerCylinderHeight": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ImmersedHeight": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "DrumDiameter": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "InterfacialBobType": {
+          "type": "string"
+        },
+        "RingOutsideDiameter": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "TribologyType": {
+          "type": "string"
+        },
+        "TribologyInnerDiameter": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "TribologyOuterDiameter": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "TribologyRingType": {
+          "type": "string"
+        },
+        "TribologyLubricantViscosity": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "TribologyCupConeAngle": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "TribologySphereDiameter": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "TribologySurfacePlateCount": {
+          "type": "integer"
+        },
+        "TribologyDistanceFromCenter": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "TribologyContactPoints": {
+          "type": "integer"
+        },
+        "TribologyAlternateSphereDiameter": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "FrictionForceConstant": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "FrictionLoadForceConstant": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "FrictionSlidingSpeedConstant": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "Surface": {
+          "type": "string"
+        }
+      }
+    },
+    "Calibration": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "Name": {
+          "type": "string"
+        },
+        "Timestamp": {
+          "$ref": "#/$defs/DateTime"
+        },
+        "Description": {
+          "type": "string"
+        },
+        "T0Bias": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "HeaderBias": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "FlangeBias": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "DeltaTBias": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "DeltaTSlope": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "DeltaTOffset": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "DeltaT0Bias": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "DeltaT0Slope": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "PressureBias": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "DeltaT0RBias": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "GasType": {
+          "type": "string"
+        },
+        "PanType": {
+          "type": "string"
+        },
+        "DeltaT0InitialTemperature": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "DeltaT0Offset": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "DeltaT0RInitialTemperature": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "DeltaT0ROffset": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "DeltaT0RSlope": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "T0TemperatureTable": {
+          "$ref": "#/$defs/TemperatureTable"
+        },
+        "TemperatureTable": {
+          "$ref": "#/$defs/TemperatureTable"
+        },
+        "SampleTemperatureTable": {
+          "$ref": "#/$defs/TemperatureTable"
+        },
+        "KCellPointXTable": {
+          "$ref": "#/$defs/KCellPointXTable"
+        },
+        "VerificationCriteriaTemperature": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "VerificationCriteriaEnthalpy": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "HeatCapacityTable": {
+          "$ref": "#/$defs/HeatCapacityTable"
+        },
+        "Slope": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "Offset": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "QuadraticA": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "QuadraticB": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "QuadraticC": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "InitialTemperature": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "CorrectionMode": {
+          "type": "string"
+        },
+        "KCellT4P": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "OnsetSlope": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "KCellT4": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "KCellT1": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "PanNumber": {
+          "$ref": "#/$defs/Integer"
+        },
+        "EmptyPanWeight": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "LowReferenceWeightPanNumber": {
+          "$ref": "#/$defs/Integer"
+        },
+        "LowReferenceWeight": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "HighReferenceWeightPanNumber": {
+          "$ref": "#/$defs/Integer"
+        },
+        "HighReferenceWeight": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "LowGainMeterReading": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "HighGainMeterReading": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "LowMeterOffset": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "HighMeterOffset": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "MeasuredTemperature": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "CorrectTemperature": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "Baseline": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "DeltaTBaselineTable": {
+          "$ref": "#/$defs/DeltaTBaselineTable"
+        },
+        "ReferenceBeamWeight": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ReferenceBeamWeightAt200C": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ReferenceBeamGain": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "SampleBeamWeight": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "SampleBeamWeightAt200C": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "SampleBeamGain": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "WeightRatio": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ReferenceWeight": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "SampleWeight": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "HeatFlowTable": {
+          "$ref": "#/$defs/HeatFlowTable"
+        },
+        "DualWeightTemperatureTable": {
+          "$ref": "#/$defs/DualWeightTemperatureTable"
+        },
+        "DualDeltaTTemperatureTable": {
+          "$ref": "#/$defs/DualDeltaTTemperatureTable"
+        },
+        "CellConstantTemperatureTable": {
+          "$ref": "#/$defs/CellConstantTemperatureTable"
+        },
+        "CalibrationFactor": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ProbeType": {
+          "type": "string"
+        },
+        "ProbeCompliance": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "RegressionCoefficient1": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "RegressionCoefficient2": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "RegressionCoefficient3": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "Coefficient1": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "Coefficient2": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "Coefficient3": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "Length1": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "Length2": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "Length3": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ScaleFactor": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "CTEConstant": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "Weight1": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "Weight2": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "Weight3": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "Force1": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "Force2": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "Force3": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "A1": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "A2": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "A3": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "SlopeLow": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "SlopeHigh": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "OffsetLow": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "OffsetHigh": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "AutoCellConstant": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ObservedTemperature": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "FurnaceTemperatureCorrection": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "HeaterTemperatureCorrection": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "SampleTemperatureCorrection": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ToolMass": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ToolCompliance": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "InertiaPhaseResidual": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "InertiaPhaseRSqr": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "InertiaPhaseMaxDev": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "PhaseCalResidual": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "PhaseCalRSqr": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "PhaseCalMaxDev": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "PhaseCalStiffness": {
+          "$ref": "#/$defs/NumericValue"
+        }
+      }
+    },
+    "TemperatureTable": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/TemperatureTableEntry"
+      }
+    },
+    "TemperatureTableEntry": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "MeasuredTemperature": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "KnownTemperature": {
+          "$ref": "#/$defs/NumericValue"
+        }
+      }
+    },
+    "KCellPointXTable": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/KCellPointXTableEntry"
+      }
+    },
+    "KCellPointXTableEntry": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "T4P": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "OnsetSlopeT4P": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "KnownMeltTemperature": {
+          "$ref": "#/$defs/NumericValue"
+        }
+      }
+    },
+    "HeatCapacityTable": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/HeatCapacityTableEntry"
+      }
+    },
+    "HeatCapacityTableEntry": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "HeatCapacity": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "Temperature": {
+          "$ref": "#/$defs/NumericValue"
+        }
+      }
+    },
+    "DeltaTBaselineTable": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/DeltaTBaselineTableEntry"
+      }
+    },
+    "DeltaTBaselineTableEntry": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "HeatCapacity": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "Temperature": {
+          "$ref": "#/$defs/NumericValue"
+        }
+      }
+    },
+    "HeatFlowTable": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/HeatFlowTableEntry"
+      }
+    },
+    "HeatFlowTableEntry": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "Baseline": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "Temperature": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ExponentialGrowthCurve": {
+          "$ref": "#/$defs/NumericValue"
+        }
+      }
+    },
+    "DualWeightTemperatureTable": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/DualWeightTemperatureTableEntry"
+      }
+    },
+    "DualWeightTemperatureTableEntry": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "Temperature": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "SampleWeight": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ReferenceWeight": {
+          "$ref": "#/$defs/NumericValue"
+        }
+      }
+    },
+    "DualDeltaTTemperatureTable": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/DualDeltaTTemperatureTableEntry"
+      }
+    },
+    "DualDeltaTTemperatureTableEntry": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "Temperature": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "SampleDeltaT": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "ReferenceDeltaT": {
+          "$ref": "#/$defs/NumericValue"
+        }
+      }
+    },
+    "CellConstantTemperatureTable": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/CellConstantTemperatureTableEntry"
+      }
+    },
+    "CellConstantTemperatureTableEntry": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "CellConstant": {
+          "$ref": "#/$defs/NumericValue"
+        },
+        "Temperature": {
+          "$ref": "#/$defs/NumericValue"
+        }
+      }
+    },
+    "ProcedureConfiguration": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "InstrumentConfigurations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/InstrumentConfiguration"
+          }
+        }
+      }
+    },
+    "ValueType": {
+      "type": "string",
+      "enum": [
+        "Number",
+        "Integer",
+        "Boolean",
+        "DateTime",
+        "Uuid",
+        "Text"
+      ]
+    },
+    "Value": {
+      "anyOf": [
+        { "$ref": "#/$defs/Number" },
+        { "$ref": "#/$defs/Integer" },
+        { "$ref": "#/$defs/Boolean" },
+        { "$ref": "#/$defs/Text" },
+        { "$ref": "#/$defs/DateTime" },
+        { "$ref": "#/$defs/Uuid" }
+      ]
+    },
+    "NumericValue": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "Value": {
+          "$ref": "#/$defs/Number"
+        },
+        "Unit": {
+          "$ref": "#/$defs/Unit"
+        }
+      },
+      "required": [
+        "Value"
+      ]
+    },
+    "AnalysisValue": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "Type": {
+          "type": "string"
+        },
+        "Value": {
+          "oneOf": [
+            { "$ref": "#/$defs/Value" },
+            { "$ref": "#/$defs/NumericValue" }
+          ]
+        }
+      },
+      "required": [
+        "Type",
+        "Value"
+      ]
+    },
+    "Results": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "Processed": {
+          "$ref": "#/$defs/DataSet"
+        },
+        "Original": {
+          "$ref": "#/$defs/DataSet"
+        }
+      },
+      "required": [
+        "Latest"
+      ]
+    },
+    "ResultsStep": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "Name": {
+          "type": "string"
+        },
+        "Id": {
+          "$ref": "#/$defs/Uuid"
+        },
+        "SourceProcedureStepId": {
+          "$ref": "#/$defs/Uuid"
+        }
+      }
+    },
+    "DataSetClassificationType": {
+      "enum": [
+        {
+          "Id": "ExternalFileFormat",
+          "Description": "Data sourced from an external file"
+        },
+        {
+          "Id": "Transformed",
+          "Description": "Data resulting from a transformation where the source data may not be fully original"
+        },
+        {
+          "Id": "NoProvenanceAvailable",
+          "Description": "Data sourced from an old version of TRIOS with no record of provenance"
+        },
+        {
+          "Id": "Unmodified",
+          "Description": "Data from the original experiment"
+        },
+        {
+          "Id": "Latest",
+          "Description": "Data may include user edits from transformation, visualization, and analysis"
+        }
+      ]
+    },
+    "DataSet": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "Classification": {
+          "$ref": "#/$defs/DataSetClassificationType"
+        },
+        "ResultsSteps": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ResultsStep"
+          }
+        },
+        "ColumnHeaders": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/DataSetColumnHeader"
+          }
+        },
+        "Rows": {
+          "$ref": "#/$defs/DataSetRow"
+        }
+      },
+      "required": [
+        "Classification",
+        "ResultsSteps",
+        "ColumnHeaders"
+      ]
+    },
+    "DataSetColumnHeader": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "DisplayName": {
+          "type": "string"
+        },
+        "ValueType": {
+          "$ref": "#/$defs/ValueType"
+        },
+        "Unit": {
+          "$ref": "#/$defs/Unit"
+        }
+      },
+      "required": [
+        "DisplayName",
+        "ValueType"
+      ]
+    },
+    "DataSetRow": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/$defs/Value"
+        }
+      }
+    },
+    "AnalysisType": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "Name": {
+          "type": "string"
+        },
+        "Equation": {
+          "type": "string"
+        }
+      }
+    },
+    "AnalysisDataSet": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/DataSet"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "Type": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
+    "Analysis": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "Type": {
+          "$ref": "#/$defs/AnalysisType"
+        },
+        "Inputs": {
+          "$ref": "#/$defs/AnalysisInputs"
+        },
+        "Outputs": {
+          "$ref": "#/$defs/AnalysisOutputs"
+        }
+      }
+    },
+    "AnalysisInput": {
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "Type": { "const": "Column" }
+            }
+          },
+          "then": {
+            "$ref": "#/$defs/AnalysisColumnReference"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "Type": { "const": "Value" }
+            }
+          },
+          "then": {
+            "$ref": "#/$defs/AnalysisValue"
+          }
+        }
+      ]
+    },
+    "AnalysisOutput": {
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "Type": { "const": "Column" }
+            }
+          },
+          "then": {
+            "$ref": "#/$defs/AnalysisColumnReference"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "Type": { "const": "Value" }
+            }
+          },
+          "then": {
+            "$ref": "#/$defs/AnalysisValue"
+          }
+        }
+      ]
+    },
+    "ResultsStepReference": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "Id": {
+          "$ref": "#/$defs/Uuid"
+        },
+        "Name": {
+          "type": "string"
+        }
+      }
+    },
+    "ColumnReference": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "Name": {
+          "type": "string"
+        },
+        "Unit": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "Name"
+      ]
+    },
+    "AnalysisColumnReference": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "Type": {
+          "type": "string"
+        },
+        "ResultsStep": {
+          "$ref": "#/$defs/ResultsStepReference"
+        },
+        "Column": {
+          "$ref": "#/$defs/ColumnReference"
+        }
+      },
+      "required": [
+        "Type",
+        "ResultsStep",
+        "Column"
+      ]
+    },
+    "AnalysisInputs": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/AnalysisInput"
+      }
+    },
+    "AnalysisOutputs": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/AnalysisOutput"
+      }
+    }
+  }
+}

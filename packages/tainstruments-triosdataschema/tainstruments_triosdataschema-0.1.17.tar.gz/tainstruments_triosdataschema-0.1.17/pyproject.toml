@@ -1,0 +1,16 @@
+[project]
+name = "tainstruments-triosdataschema"
+version = "0.1.17"
+readme = "README.md"
+dependencies = []
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = true
+packages = ["tainstruments_triosdataschema"]
+
+[tool.setuptools.package-data]
+tainstruments_triosdataschema = ["*.json"]
