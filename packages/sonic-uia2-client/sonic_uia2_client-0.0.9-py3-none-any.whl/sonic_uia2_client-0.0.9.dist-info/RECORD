@@ -1,0 +1,16 @@
+client/__init__.py,sha256=riNgF0WgyU9MLuHaKAm5cZnIWGa9LbQbeA1Ht2czNpk,44
+client/android_element.py,sha256=wDifMarKXNnFu2YRzSjG5Tm5MHtyrMDhbz4xUdnI31Y,4592
+client/uia_client.py,sha256=5nd708cM4o4tzNaS3injL6V4rvXgMhmgdaguUe3f6iI,14368
+common/__init__.py,sha256=8icLUaDEyxhzNEn9S4Iu7j0UFtPOI__vZ8fp8wIYEbo,45
+common/http_client.py,sha256=CJracNLUx00jN7hbMUr1x8-7X_ymmEnowNDMPoQ8mM0,2282
+common/logger.py,sha256=VdShr-eJ3gL8j4xj8zUEVnIL9-HHrcv3-W1U6YLcBbQ,987
+common/models.py,sha256=uLTS5PCOI6DQ7DxTo-2B8yJ55Pf0QpR-AXhw_AZ8ts4,953
+common/resp_handler.py,sha256=pFAwkqGB1vIV3k2c4g9jpo7hG-vbkfwujy65xSzWYbI,1921
+common/sonic_exception.py,sha256=LWjFZimSTEwH404u9ulFYj4eff0_BPcZKhwN9p6G4YA,206
+uia2/__init__.py,sha256=8icLUaDEyxhzNEn9S4Iu7j0UFtPOI__vZ8fp8wIYEbo,45
+uia2/driver.py,sha256=RyK4cDU_KNXMBJ2E4SZYix1AnixJhWGib16xF49xHHA,3037
+sonic_uia2_client-0.0.9.dist-info/LICENSE,sha256=mNdXJ2JMEkjNU7TB9K5jq_oMvVpRZDcMuQs6c0zez58,1072
+sonic_uia2_client-0.0.9.dist-info/METADATA,sha256=1TR1ZdhEOFjfqsKY-km9MP28AxDoR8_r079nXclLK-o,3602
+sonic_uia2_client-0.0.9.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+sonic_uia2_client-0.0.9.dist-info/top_level.txt,sha256=U5CQdq8-KtqxsPY_a24OSrcVfq5xSt53KjSf4SoTpss,19
+sonic_uia2_client-0.0.9.dist-info/RECORD,,
