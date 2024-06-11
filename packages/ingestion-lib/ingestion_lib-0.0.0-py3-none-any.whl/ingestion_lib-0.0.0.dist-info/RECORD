@@ -1,0 +1,15 @@
+ingestion_lib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ingestion_lib/provider.py,sha256=Zka6K9F6UB4ycxjGQKRQcoVv8y9m9FMcjAMaXJlAuBw,530
+ingestion_lib/extractors/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ingestion_lib/extractors/base.py,sha256=Q8PPfhX5mGXvHaIk8xE3FEcwc1Ecyp96JitBiBCufzA,204
+ingestion_lib/extractors/flat_file.py,sha256=4xw2wR1n0Xh6LVkUHobewJCyDkB04ngXXDK3LtHOgSk,178
+ingestion_lib/extractors/oracle.py,sha256=5fm7miC2arF8BJkvQoxyI478tuxa0jriRV2NWg23zEc,173
+ingestion_lib/extractors/rest_api.py,sha256=69gTlU1Y86ANGKcngHfPoG2Bsp92XJ28QcmH_Gsxkco,175
+ingestion_lib/extractors/sql_server.py,sha256=-_zURDHxtGK0-vEB00AXE0fakpiydAQbi_l03-0u54s,180
+ingestion_lib/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ingestion_lib/utils/data_contract.py,sha256=Tui_x36rrSDqbQJ5fpCRd3h1xeJEFw1dD1ofh7s5Rv0,429
+ingestion_lib-0.0.0.dist-info/LICENSE,sha256=Uk__GbCpGHzxa4A_k71l12qKW2Nz2ejehndXVff1sn0,1074
+ingestion_lib-0.0.0.dist-info/METADATA,sha256=IhsHHQYLkldeXW3vGxwAyzMQIZIn_-LM_UKfS3wYSe8,594
+ingestion_lib-0.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ingestion_lib-0.0.0.dist-info/top_level.txt,sha256=rJltIHHN4gCSk3MevoW9Ei6xFoKacYBkd0tagootYXE,14
+ingestion_lib-0.0.0.dist-info/RECORD,,
