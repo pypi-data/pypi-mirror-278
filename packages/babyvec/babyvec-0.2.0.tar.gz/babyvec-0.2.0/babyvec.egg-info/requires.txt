@@ -1,0 +1,11 @@
+faiss-cpu
+nltk
+npy_append_array
+numpy
+torch
+transformers
+
+[http]
+uvicorn
+fastapi
+pydantic

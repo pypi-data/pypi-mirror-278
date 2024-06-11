@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: babyvec
+Version: 0.2.0
+Summary: Natural language embedding tools
+Home-page: https://github.com/lummm/babyvec
+Author: Liam Tengelis
+Author-email: liam@blacktuskdata.com
+Requires-Dist: faiss-cpu
+Requires-Dist: nltk
+Requires-Dist: npy_append_array
+Requires-Dist: numpy
+Requires-Dist: torch
+Requires-Dist: transformers
+Provides-Extra: http
+Requires-Dist: uvicorn; extra == "http"
+Requires-Dist: fastapi; extra == "http"
+Requires-Dist: pydantic; extra == "http"
