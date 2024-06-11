@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+reqs_diff/__init__.py
+reqs_diff/compare.py
+reqs_diff.egg-info/PKG-INFO
+reqs_diff.egg-info/SOURCES.txt
+reqs_diff.egg-info/dependency_links.txt
+reqs_diff.egg-info/entry_points.txt
+reqs_diff.egg-info/requires.txt
+reqs_diff.egg-info/top_level.txt
+tests/test_compare.py

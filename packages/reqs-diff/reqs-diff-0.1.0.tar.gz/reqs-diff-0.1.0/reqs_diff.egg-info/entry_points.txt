@@ -1,0 +1,2 @@
+[console_scripts]
+reqs-diff = reqs_diff.compare:main
