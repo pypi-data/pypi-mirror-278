@@ -1,0 +1,2 @@
+[console_scripts]
+torspy = torspy.cli:main
