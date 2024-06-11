@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: DroneNavigationGym-RL
+Version: 1.0.2
+Summary: Autonomus Drone Navigation for Surveillance Gym Environment
+Author-email: dtungpka <duongdoanbach@gmail.com>
+License: MIT License
+        
+        Copyright (c) [2024] [dtungpka]
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Project-URL: Homepage, https://github.com/dtungpka/Autonomus_Drones_Navigation_For_Surveillance
+Keywords: drone,navigation,gym,reinforcement-learning,surveillance
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+
+# Autonomus Drone Navigation for Surveillance Environment
+
+### Environments
+This repository contains the implementation of Gym environment for the drone navigation in surveillance environment by [dtungpka](https://github.com/dtungpka)
+
+
+>Drone-v0
+
+### Installation
+```bash
+python3 -m pip install DroneNavigationGym-RL
+```
+
+### Usage
+```python
+
+import gymnasium as gym
+import Autonomus_Drones_Navigation_For_Surveillance
+
+env = gym.make('Drone-v0',drones=2,render_mode=None,size=20,targets=2,obstacles=2,battery=100)
+obs, info = env.reset()
+while True:
+    action = env.action_space.sample()
+
+    # Processing:
+    obs, reward, terminated, _, info = env.step(action)
+    if terminated:
+        break
+
+env.close()
+
+```
+
