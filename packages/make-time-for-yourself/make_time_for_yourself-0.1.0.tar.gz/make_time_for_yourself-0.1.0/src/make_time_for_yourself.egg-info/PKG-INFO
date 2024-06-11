@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: make_time_for_yourself
+Version: 0.1.0
+Summary: A simple package to generate random numbers
+Home-page: https://github.com/ktakisawa/make_time_for_yourself
+Author: takisawa kazuma
+Author-email: ktakisawa@sciencepark.co.jp
+Project-URL: Bug Tracker, https://github.com/ktakisawa/make_time_for_yourself/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# make_time_for_yourself
+
+これは、指定された数の乱数を生成するためのシンプルなパッケージです。
+
+## 使用方法
+
+以下のコマンドを使用して乱数を生成します。
+
+```sh
+make_time_for_yourself <count> <min_value> <max_value> [--retry]
+
+make_time_for_yourself 10 1 100 --retry
+
+#count: 生成する乱数の数
+#min_value: 乱数の最小値
+#max_value: 乱数の最大値
+#--retry: 乱数の再生成を許可
+
+
