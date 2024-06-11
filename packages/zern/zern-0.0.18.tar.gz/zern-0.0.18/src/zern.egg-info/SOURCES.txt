@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/zern/__init__.py
+src/zern.egg-info/PKG-INFO
+src/zern.egg-info/SOURCES.txt
+src/zern.egg-info/dependency_links.txt
+src/zern.egg-info/requires.txt
+src/zern.egg-info/top_level.txt
+src/zern/core/session.py
+src/zern/core/trader.py
+src/zern/core/websocket_connection/ticker.py
+src/zern/utils/OrderedList.py
+src/zern/utils/Types.py
+src/zern/utils/parsing.py
