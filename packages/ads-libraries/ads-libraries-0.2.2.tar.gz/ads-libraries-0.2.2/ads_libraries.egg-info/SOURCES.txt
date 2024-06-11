@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+ads_libraries.egg-info/PKG-INFO
+ads_libraries.egg-info/SOURCES.txt
+ads_libraries.egg-info/dependency_links.txt
+ads_libraries.egg-info/entry_points.txt
+ads_libraries.egg-info/requires.txt
+ads_libraries.egg-info/top_level.txt
+adslibraries/__init__.py
+tests/test_upload_download.py

@@ -1,0 +1,3 @@
+[console_scripts]
+save_ads_libraries = adslibraries:ads_libraries_to_bibtex
+update_ads_library = adslibraries:bibtex_to_ads_libraries
