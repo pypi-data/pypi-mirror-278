@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: crisper-ai
+Version: 0.3.4
+Summary: A client library for accessing Crisper API
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: attrs (>=21.3.0)
+Requires-Dist: httpx (>=0.20.0,<0.28.0)
+Requires-Dist: python-dateutil (>=2.8.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+
+
+### Install SDK
+```bash
+pip install crisper-ai
+```
+
+
+### sdk.py usage
+
+```python
+from crisper_api_client import Crisper
+assistant = Crisper.create_assistant(name="customer-support-bot")
+```
+
+
+## Add a knowlege source
+
+```python
+assistant.add_knowledge_source(content_type="pdf", pdf="https://www.example.com/frequently-asked-questions.pdf")
+assistant.add_knowledge_source(content_type="url", pdf="https://help.example.com")
+```
+
+## Ask a query
+
+```python
+assistant.ask("How do I get a refund?")
+```
+
