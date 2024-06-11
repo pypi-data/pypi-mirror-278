@@ -1,0 +1,12 @@
+@EXECUTORCH_BuiltFile_third-party/flatbuffers/flatc:executorch/data/bin/
+executorch
+executorch/backends
+executorch/examples/models
+executorch/exir
+executorch/extension
+executorch/schema
+executorch/sdk
+executorch/sdk/bundled_program
+executorch/util
+serializer
+tosa
