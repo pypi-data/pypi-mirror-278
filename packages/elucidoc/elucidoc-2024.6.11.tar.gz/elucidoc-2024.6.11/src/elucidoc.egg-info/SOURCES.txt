@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/__init__.py
+src/elucidoc/__init__.py
+src/elucidoc/__main__.py
+src/elucidoc/accessory.py
+src/elucidoc/eluciDoc.py
+src/elucidoc.egg-info/PKG-INFO
+src/elucidoc.egg-info/SOURCES.txt
+src/elucidoc.egg-info/dependency_links.txt
+src/elucidoc.egg-info/requires.txt
+src/elucidoc.egg-info/top_level.txt
