@@ -1,0 +1,8 @@
+MANIFEST.in
+setup.py
+jisa-stubs/__init__.pyi
+jisa_stubs.egg-info/PKG-INFO
+jisa_stubs.egg-info/SOURCES.txt
+jisa_stubs.egg-info/dependency_links.txt
+jisa_stubs.egg-info/not-zip-safe
+jisa_stubs.egg-info/top_level.txt
