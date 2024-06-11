@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: phreeqpy
+Version: 0.6.0
+Summary: Python tools for PHREEQC.
+Author-email: Mike Müller <mmueller@hydrocomputing.com>
+License: BSD-3-Clause
+Project-URL: home-page, https://www.phreeqpy.com/
+Keywords: PHREEQC,hydrogeochemistry,modeling,modeling coupling
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Environment :: Console
+Classifier: Framework :: Jupyter :: JupyterLab
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Hydrology
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS
+Requires-Dist: pywin32 ; os_name == "nt"
+
+# PhreeqPy: Python Tools for PHREEQC
+
+PhreeqPy is a collection of Python tools to work with
+[PHREEQC](https://www.usgs.gov/software/phreeqc-version-3).
+
+It provides access to the
+[IPhreeqc](https://www.usgs.gov/software/phreeqc-version-3)
+interface without the need to run a COM server and therefore also works on
+non-Windows systems.
+IPhreeqc is described in more detail in this
+[publication](http://www.sciencedirect.com/science/article/pii/S0098300411000653).
+This
+[publication at the conference MODFLOW and More 2011](http://igwmc.mines.edu/conference/schedule.html)
+demonstrates with an example how PhreeqPy works.
+
+Starting from version 0.6, PhreeqPy supports
+[PhreeqcRM](https://water.usgs.gov/water-resources/software/PHREEQC/PhreeqcRM_AbstractAWR.pdf).
+Due to missing dependencies on PyPi, PhreeqcRM is only available in the conda
+package, not via PyPi.
+
+Install with:
+
+    conda install -c hydrocomputing phreeqpy
+
+or
+
+    mamba install -c hydrocomputing phreeqpy
+
+For pixi add this to your `pixi.toml`:
+
+    [dependencies]
+    phreeqpy = { version = "*", channel = "hydrocomputing" }
+
+See `examples/phreeqcrm/advect.py` for an usage example for PhreeqcRM.
+
+The IPhreeqc interface, i.e. all functionality before version 0.6,
+is still available via a `pip` install:
+
+    pip install phreeqpy
