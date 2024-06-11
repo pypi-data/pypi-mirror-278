@@ -1,0 +1,3 @@
+[console_scripts]
+ctube=ctube.cli:main
+
