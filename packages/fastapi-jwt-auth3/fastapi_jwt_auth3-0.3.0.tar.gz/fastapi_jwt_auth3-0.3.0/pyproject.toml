@@ -1,0 +1,53 @@
+[project]
+name = "fastapi-jwt-auth3"
+version = "0.3.0"
+description = "JWT authentication in FastAPI with ease "
+authors = [
+    { name = "Batista Harahap", email = "batista@bango29.com" }
+]
+dependencies = [
+    "fastapi>=0.111.0",
+    "pydantic>=2.7.3",
+    "pyjwt>=2.8.0",
+    "jwcrypto>=1.5.6",
+    "pytz>=2024.1",
+    "typer>=0.12.3",
+]
+readme = "README.md"
+requires-python = ">= 3.9"
+
+[project.urls]
+Repository = "https://github.com/tistaharahap/fastapi-jwt-auth.git"
+Issues = "https://github.com/tistaharahap/fastapi-jwt-auth/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "ruff>=0.4.8",
+    "ruff-lsp>=0.0.53",
+    "pytest>=8.2.2",
+    "pytest-asyncio>=0.23.7",
+    "pytest-pretty>=1.2.0",
+    "pytest-cov>=5.0.0",
+    "faker>=25.6.0",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/fastapi_jwt_auth3"]
+
+[tool.ruff]
+line-length = 120
+indent-width = 4
+
+[tool.rye.scripts]
+test = "pytest -x -vv --cov=fastapi_jwt_auth3 --cov-report html --cov-report json --cov-report xml tests"
+
+[project.scripts]
+keygen = "fastapi_jwt_auth3.cli:app"
