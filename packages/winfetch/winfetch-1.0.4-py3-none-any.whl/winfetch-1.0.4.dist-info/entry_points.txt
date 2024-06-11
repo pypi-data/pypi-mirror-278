@@ -1,0 +1,2 @@
+[console_scripts]
+winfetch = winfetch.__main__:main
