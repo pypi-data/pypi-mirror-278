@@ -1,0 +1,4 @@
+[console_scripts]
+bsp = bsp_package:hello
+bsp_test = bsp_package:test_hello
+
