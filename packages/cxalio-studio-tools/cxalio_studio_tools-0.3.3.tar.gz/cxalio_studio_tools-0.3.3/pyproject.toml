@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "cxalio-studio-tools"
+version = "0.3.3"
+description = "Scripts for po studio made by cxalio"
+authors = ["xiii_1991 <xiii_1991@163.com>"]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+packages = [
+    { include = "cx_core", from = "src" },
+    { include = "media_killer", from = "src" },
+    { include = "cx_subtitle", from = "src" },
+    { include = "sub_conv", from = "src" },
+    { include = "systools", from = "src" },
+    { include = "cx_image", from = "src" },
+    { include = "jpegger", from = "src" },
+    { include = "batch_commander", from = "src" }
+]
+
+repository = "https://gitee.com/xiii_1991/cxalio-studio-tools.git"
+homepage = "https://gitee.com/xiii_1991/cxalio-studio-tools"
+keywords = ["ffmpeg", "tool"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+rich = "^13.7.0"
+chardet = "^5.2.0"
+rich-argparse = '^1.4.0'
+python-ffmpeg = "^2.0.10"
+python-docx = "^1.1.0"
+openpyxl = "^3.1.2"
+translators = "^5.9.2"
+xpinyin = "^0.7.6"
+pillow = "^10.3.0"
+
+[tool.poetry.scripts]
+mediakiller = 'media_killer:run'
+subconv = 'sub_conv:run'
+update_githubhosts = 'systools.update_githubhosts:run'
+jpegger = 'jpegger:run'
+batchcommander = 'batch_commander:run'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
