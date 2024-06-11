@@ -1,0 +1,17 @@
+django_db_geventpool/__init__.py,sha256=AJCoT-1o8OMvOxBtlQgE8LUeWl6ASOi_Vvu5YRrkPI8,19
+django_db_geventpool/utils.py,sha256=K_pi8vEYydIjPErt4e3T6S-mAx5UaNgZjXvHRBxLAag,537
+django_db_geventpool/backends/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_db_geventpool/backends/base.py,sha256=TwgoxspuC1-n2ClptyctsWN6bC996jy3UcEZx3PDTPs,3034
+django_db_geventpool/backends/creation.py,sha256=V-JyozUXwssR-Cjvbr0XMgAd1W6pU8d2j03b35i_eg0,573
+django_db_geventpool/backends/pool.py,sha256=aMnJqa9YJUY3RJQnj4IVz-dxjw_KQHCYuvVbjvCnFQI,2512
+django_db_geventpool/backends/postgis/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_db_geventpool/backends/postgis/base.py,sha256=5oCoivzyO4DC_B_kAxU-ze0R6crD2Y8is9gAqfvpD-4,397
+django_db_geventpool/backends/postgresql_psycopg2/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_db_geventpool/backends/postgresql_psycopg2/base.py,sha256=6yShQ40Tz7CRD9mymkAEYPW4rSy4H7Ubkj2xBjDUkRo,1302
+django_db_geventpool/backends/postgresql_psycopg3/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_db_geventpool/backends/postgresql_psycopg3/base.py,sha256=x9hUPxPDEStebbEw-ZeBKayxxA7zwRlCHMgB0vXlHFM,1146
+django_db_geventpool-4.0.5.dist-info/METADATA,sha256=AbYYLCiFBWpGJK-BhSN_F7oK3p59VZrRk8JQbAHG-PE,5063
+django_db_geventpool-4.0.5.dist-info/WHEEL,sha256=cDcbFFSNXOE-241I5PFuLkIYfR_FM7WTlPEi33njInY,105
+django_db_geventpool-4.0.5.dist-info/licenses/AUTHORS.rst,sha256=cJSqvVjrx4lrLeyqyTJW_a6SApVUiep8y21wca0GP64,105
+django_db_geventpool-4.0.5.dist-info/licenses/LICENSE,sha256=c7p036pSC0mkAbXSFFmoUjoUbzt1GKgz7qXvqFEwv2g,10273
+django_db_geventpool-4.0.5.dist-info/RECORD,,
