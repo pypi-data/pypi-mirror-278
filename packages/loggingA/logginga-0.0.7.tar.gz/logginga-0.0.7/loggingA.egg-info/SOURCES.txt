@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+loggingA/__init__.py
+loggingA/logger.py
+loggingA.egg-info/PKG-INFO
+loggingA.egg-info/SOURCES.txt
+loggingA.egg-info/dependency_links.txt
+loggingA.egg-info/top_level.txt
+tests/test_logger.py
