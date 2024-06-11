@@ -1,0 +1,3 @@
+[console_scripts]
+os2024=os2024.__cli__:main
+
