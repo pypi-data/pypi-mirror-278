@@ -1,0 +1,10 @@
+.sphx-glr-download-jupyter,
+.binder-badge,
+.lite-badge {
+    display: none;
+}
+
+div[class^="highlight"],
+img {
+    border-radius: 0.25em;
+}
