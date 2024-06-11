@@ -1,0 +1,13 @@
+LICENSE-en
+README.md
+setup.py
+mtdl/__init__.py
+mtdl/__main__.py
+mtdl/downloader.py
+mtdl/metadata.py
+mtdl/utils.py
+mtdl.egg-info/PKG-INFO
+mtdl.egg-info/SOURCES.txt
+mtdl.egg-info/dependency_links.txt
+mtdl.egg-info/requires.txt
+mtdl.egg-info/top_level.txt
