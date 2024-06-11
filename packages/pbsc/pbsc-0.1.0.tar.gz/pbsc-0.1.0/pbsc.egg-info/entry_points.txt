@@ -1,0 +1,2 @@
+[console_scripts]
+pbsc = pbsc.__init__:main
