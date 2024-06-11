@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/__init__.py
+src/endlessdb.py
+src/endlessdb.egg-info/PKG-INFO
+src/endlessdb.egg-info/SOURCES.txt
+src/endlessdb.egg-info/dependency_links.txt
+src/endlessdb.egg-info/requires.txt
+src/endlessdb.egg-info/top_level.txt
+tests/test_endlessddb.py
