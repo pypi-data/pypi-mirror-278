@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: gautomator
+Version: 0.0.2
+Summary: Automation framework developed by Dale
+Author: Dale Hoang
+Author-email: Dale Hoang <huy.quochoang2308@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests >=2.31
+Requires-Dist: colorlog >=6.7
+Requires-Dist: pydantic >=2.4.2
+Requires-Dist: behave >=1.2.6
+Requires-Dist: requests-to-curl >=1.1
+Requires-Dist: mysql-connector-python >=8.0.30
+Requires-Dist: pymongo >=4.2.0
+Requires-Dist: redis >=4.3.4
+Requires-Dist: psycopg2-binary >=2.9.7
+Requires-Dist: locust >=2.16.1
+Requires-Dist: python-gitlab >=3.15.0
+Requires-Dist: webdriver-manager >=4.0.1
+Requires-Dist: selenium >=4.4.3
+Requires-Dist: Appium-Python-Client >=2.9.0
+Requires-Dist: dataclasses-json >=0.6.2
+Requires-Dist: Faker ==19.6.2
+Requires-Dist: TestLink-API-Python-client >=0.8.1
+Requires-Dist: getgauge >=0.4.0
+
+# [QA-QC] Gautomator Guideline
+########################
+
+## Unittest
+```shell
+behave
+```
+
+### Definition
+```python
+api_obj = APIFactory.generate_data(api_name='Service_Liveness').generate
+```
+
+The `api_obj` will have the content of 
+```python
+{
+    'endpoint': str ,
+    'content_type': str,
+    'method': str,
+    'request': RequestObj(),
+    'response': ResponseObj()
+}
+```
+
+### Usage
+
+```python
+from gautomator.cores.utils.common import ObjectSetupUtil
+from gautomator.cores.factory.swagger_factory import APIFactory, APIConfiguration
+
+class TestAPI(APIConfiguration):
+    operation_id = 'Test_API' # the operation_id of the api , this info is listed in the swagger.json file
+
+    def __init__(self, token=None):
+        super().__init__()
+        self.api_obj = self.factory_api.generate_data(api_name=self.operation_id).generate
+
+    def test(self, **kwargs):
+        body = ObjectSetupUtil.setup_object(self.api_obj.request, **kwargs)
+        params = RequestFactory.create_request(request_type=self.api_obj.method, body=body, token=self._token)
+        return RequestUtil.request(url=, data=params)
+        
+```
