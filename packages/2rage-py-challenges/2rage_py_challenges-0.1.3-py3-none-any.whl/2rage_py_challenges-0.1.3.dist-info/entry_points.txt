@@ -1,0 +1,4 @@
+[console_scripts]
+lexical-analyzer=lexical_analyzer.lexem:main
+search-methods=search_methods.diff_search_methods:main
+
