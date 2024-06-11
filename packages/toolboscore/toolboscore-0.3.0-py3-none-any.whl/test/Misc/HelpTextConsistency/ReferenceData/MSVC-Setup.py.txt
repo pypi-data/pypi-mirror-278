@@ -1,0 +1,16 @@
+usage: MSVC-Setup.py [-h] [-p PATH] [-m MSVC_VERSION] [-v] [-V]
+
+Configures the user's shell environment to use MSVC (with Wine).
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -p PATH, --path PATH  Wine config directory (default: $HOME/.wine)
+  -m MSVC_VERSION, --msvc-version MSVC_VERSION
+                        SDK version to setup (default: 2017)
+  -v, --verbose         show debug messages
+  -V, --version         show version info and exit
+
+examples:
+  MSVC-Setup.py
+
+Please report bugs on GitLab (https://dmz-gitlab.honda-ri.de/TECH_Team/ToolBOSCore/-/issues).
