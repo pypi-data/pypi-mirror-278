@@ -1,0 +1,3 @@
+[console_scripts]
+markatt = attendance_gl_src.Runner:main
+scheduleatt = attendance_gl_src.Task_Scheduler:main
