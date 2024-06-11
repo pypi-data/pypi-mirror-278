@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: mngs
+Version: 1.5.3
+Summary: For lazy python users (monogusa people in Japanse), especially in ML/DSP fields
+Home-page: https://github.com/ywatanabe1989/mngs
+Author: ywatanabe1989
+Author-email: ywata1989@gmail.com
+License: MIT
+Description: # monogusa (= lazy in Japanese)
+        Python utilities for machine learning and digital signal processing
+        
+        <!-- batges -->
+        ![CI](https://github.com/ywatanabe1989/mngs/actions/workflows/pypi_latest.yml/badge.svg)
+        ![CI](https://github.com/ywatanabe1989/mngs/actions/workflows/latest_release.yml/badge.svg)
+        ![CI](https://github.com/ywatanabe1989/mngs/actions/workflows/develop.yml/badge.svg)
+        
+        <!-- logo -->
+        <div style="text-align: center;">
+            <img src="./docs/lazy_python.gif" alt="Lazy Python" width="200px">
+        </div>
+        
+        
+        ## Installation
+        ``` bash
+        $ pip install mngs
+        ```
+        
+        ## Example Usages
+        - [`mngs.io`](https://github.com/ywatanabe1989/mngs/tree/main/src/mngs/io#readme) Input / Output
+        - [`mngs.path`](https://github.com/ywatanabe1989/mngs/tree/main/src/mngs/path#readme) Path
+        - [`mngs.dsp`](https://github.com/ywatanabe1989/mngs/tree/main/src/mngs/dsp#readme) Digital Signal Processing
+        - [`mngs.res`](https://github.com/ywatanabe1989/mngs/tree/main/src/mngs/res#readme) Resource
+        - mngs.general
+        - mngs.plt
+        - mngs.ml
+        - mngs.stats
+        
+        ## Contact
+        Yusuke Watanabe (ywata1989@gmail.com).
+        
+        
+        
+Keywords: utils,utilities,python,machine learning
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
