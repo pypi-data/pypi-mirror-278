@@ -1,0 +1,2 @@
+export const id=91570;export const ids=[91570];export const modules={91570:(t,e,r)=>{r.r(e),r.d(e,{MapDashboardStrategy:()=>o});var s=r(62659),a=r(40924),n=r(18791);let o=(0,s.A)([(0,n.EM)("map-dashboard-strategy")],(function(t,e){return{F:class extends e{constructor(...e){super(...e),t(this)}},d:[{kind:"method",static:!0,key:"generate",value:async function(t){return{views:[{strategy:t}]}}},{kind:"field",static:!0,key:"noEditor",value:()=>!0}]}}),a.mN)}};
+//# sourceMappingURL=91570.dtGBCroyko4.js.map
