@@ -1,0 +1,3 @@
+[console_scripts]
+edgar-tool=edgar_tool.main:main_entrypoint
+
