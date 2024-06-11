@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+src/guv_calcs/__init__.py
+src/guv_calcs/_helpers.py
+src/guv_calcs/calc_zone.py
+src/guv_calcs/lamp.py
+src/guv_calcs/room.py
+src/guv_calcs/trigonometry.py
+src/guv_calcs.egg-info/PKG-INFO
+src/guv_calcs.egg-info/SOURCES.txt
+src/guv_calcs.egg-info/dependency_links.txt
+src/guv_calcs.egg-info/requires.txt
+src/guv_calcs.egg-info/top_level.txt
+src/guv_calcs.egg-info/zip-safe
+tests/test.py
