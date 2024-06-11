@@ -1,0 +1,108 @@
+Metadata-Version: 2.1
+Name: executorch
+Version: 0.2.1
+Summary: On-device AI across mobile, embedded and edge for PyTorch
+Author-email: PyTorch Team <packages@pytorch.org>
+License: BSD License        
+        For "ExecuTorch" software        
+        Copyright (c) Meta Platforms, Inc. and affiliates.
+        Copyright 2023 Arm Limited and/or its affiliates.
+        Copyright (c) Qualcomm Innovation Center, Inc.
+        Copyright (c) 2023 Apple Inc.        
+        Redistribution and use in source and binary forms, with or without modification,
+        are permitted provided that the following conditions are met:        
+         * Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.        
+         * Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.        
+         * Neither the name Meta nor the names of its contributors may be used to
+           endorse or promote products derived from this software without specific
+           prior written permission.        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+        ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+        WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+        ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+        (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+        LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+        ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+        (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+        SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.        
+Project-URL: Homepage, https://pytorch.org/executorch/
+Project-URL: Repository, https://github.com/pytorch/executorch
+Project-URL: Issues, https://github.com/pytorch/executorch/issues
+Project-URL: Changelog, https://github.com/pytorch/executorch/releases
+Keywords: pytorch,machine learning
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: expecttest
+Requires-Dist: flatbuffers
+Requires-Dist: hypothesis
+Requires-Dist: numpy
+Requires-Dist: packaging
+Requires-Dist: pandas
+Requires-Dist: parameterized
+Requires-Dist: pytest
+Requires-Dist: pytest-xdist
+Requires-Dist: pyyaml
+Requires-Dist: ruamel.yaml
+Requires-Dist: sympy
+Requires-Dist: tabulate
+Requires-Dist: torch (==2.3.1)
+Requires-Dist: torchvision (==0.18.1)
+Requires-Dist: torchaudio (==2.3.1)
+
+**ExecuTorch** is a [PyTorch](https://pytorch.org/) platform that provides
+infrastructure to run PyTorch programs everywhere from AR/VR wearables to
+standard on-device iOS and Android mobile deployments. One of the main goals for
+ExecuTorch is to enable wider customization and deployment capabilities of the
+PyTorch programs.
+
+The `executorch` pip package is in alpha.
+* Required python version: `==3.10`
+* Compatible systems: Linux x86_64, macOS aarch64
+
+The prebuilt `executorch.extension.pybindings.portable_lib` module included in
+this package provides a way to run ExecuTorch `.pte` files, with some
+restrictions:
+* Only [core ATen
+  operators](https://pytorch.org/executorch/stable/ir-ops-set-definition.html)
+  are linked into the prebuilt module
+* Only the [XNNPACK backend
+  delegate](https://pytorch.org/executorch/main/native-delegates-executorch-xnnpack-delegate.html)
+  is linked into the prebuilt module
+
+Please visit the [ExecuTorch website](https://pytorch.org/executorch/) for
+tutorials and documentation. Here are some starting points:
+* [Getting
+  Started](https://pytorch.org/executorch/stable/getting-started-setup.html)
+  * Set up the ExecuTorch environment and run PyTorch models locally.
+* [Working with
+  local LLMs](https://pytorch.org/executorch/stable/llm/getting-started.html)
+  * Learn how to use ExecuTorch to export and accelerate a large-language model
+    from scratch.
+* [Exporting to
+  ExecuTorch](https://pytorch.org/executorch/main/tutorials/export-to-executorch-tutorial.html)
+  * Learn the fundamentals of exporting a PyTorch `nn.Module` to ExecuTorch, and
+    optimizing its performance using quantization and hardware delegation.
+* Running LLaMA on
+  [iOS](https://pytorch.org/executorch/stable/llm/llama-demo-ios.html) and
+  [Android](https://pytorch.org/executorch/stable/llm/llama-demo-android.html)
+  devices.
+  * Build and run LLaMA in a demo mobile app, and learn how to integrate models
+    with your own apps.
