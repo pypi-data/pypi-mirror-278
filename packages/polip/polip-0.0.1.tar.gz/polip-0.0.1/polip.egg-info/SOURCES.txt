@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+images/polip.png
+polip/__init__.py
+polip/cb.py
+polip/module.py
+polip.egg-info/PKG-INFO
+polip.egg-info/SOURCES.txt
+polip.egg-info/dependency_links.txt
+polip.egg-info/top_level.txt
