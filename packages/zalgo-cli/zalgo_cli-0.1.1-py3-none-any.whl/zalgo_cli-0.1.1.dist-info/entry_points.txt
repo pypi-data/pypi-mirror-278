@@ -1,0 +1,4 @@
+[console_scripts]
+zalgo=zalgo_cli.cli:main
+zalgo-cli=zalgo_cli.cli:main
+
