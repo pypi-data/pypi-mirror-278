@@ -1,0 +1,21 @@
+Metadata-Version: 2.3
+Name: dots_infrastructure
+Version: 0.0.5
+Summary: A python package containing infrastructure to develop a dots calculation service
+Project-URL: Homepage, https://github.com/dots-energy/dots-infrastructure
+Project-URL: Issues, https://github.com/dots-energy/dots-infrastructure/issues
+Author-email: Leo van Schooten <l.g.t.v.schooten@tue.nl>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: helics==3.4.0
+Requires-Dist: influxdb~=5.3.1
+Requires-Dist: matplotlib==3.8.2
+Requires-Dist: numpy==1.26.4
+Requires-Dist: pyesdl==22.11.2
+Description-Content-Type: text/markdown
+
+# dots-infrastructure
+Infrastructure for calculation services that can run in a helics federation
