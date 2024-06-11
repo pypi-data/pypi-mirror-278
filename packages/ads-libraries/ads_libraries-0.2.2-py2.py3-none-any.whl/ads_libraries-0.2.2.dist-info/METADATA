@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: ads-libraries
+Version: 0.2.2
+Summary: adslibraries
+Home-page: https://gitlab.astro.unige.ch/ferrigno/adslibraries
+Author: C.F.
+Author-email: carlo.ferrigno@unige.ch
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Internet
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Requires-Dist: requests
+Requires-Dist: unidecode
+Requires-Dist: bibtexparser (<=1.4.1)
+Requires-Dist: click
+
+# adslibraries
+
+__CAUTION__: this is a simple functional project, although it should work as generally expected
+
+It saves your personal ads libraries (https://ui.adsabs.harvard.edu/user/libraries/)
+into a bibtex file that can be used in latex
+It saves bibtex citation keys as "FirstAuthorYear" (e.g. Ferrigno2017)
+If not unique, it adds a letter to the other occurrencies (e.g. Ferrigno2017, Ferrigno2017a)
+
+It is possible to choose a set of personal libraries or "all".
+
+*You need to store your ADS tocken into the file $HOME/.ads/dev_key* 
+*see* https://ui.adsabs.harvard.edu/user/settings/token
+
+## Source of methods
+https://github.com/adsabs/adsabs-dev-api/blob/master/Libraries_API.ipynb
+
+## Installation
+```bash
+$ pip install ads-libraries
+$ python setup.py install
+```
+## Help
+```bash
+$ save_ads_libraries --help
+```
+
+## Example:
+```bash
+$ save_ads_libraries my_ads.bib all
+```
