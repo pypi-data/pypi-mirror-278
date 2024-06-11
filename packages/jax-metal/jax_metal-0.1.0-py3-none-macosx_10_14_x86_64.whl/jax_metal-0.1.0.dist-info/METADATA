@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: jax-metal
+Version: 0.1.0
+Summary: JAX acceleration for Mac GPUs.
+Home-page: https://developer.apple.com/metal/jax/
+Download-URL: 
+Author: 
+Author-email: 
+License: Copyright © 2023 Apple Inc. All rights reserved.
+Keywords: jax metal plugin
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: wheel ~=0.35
+Requires-Dist: six >=1.15.0
+Requires-Dist: jax >=0.4.26
+Requires-Dist: jaxlib >=0.4.26
+
+# jax-metal
+
+The jax-metal package is a Metal GPU plugin to provide Metal acceleration on Mac platforms for JAX applications.
+
+## Installation
+
+The following table tracks `jax-metal` versions and compatible versions of `jax`, `jaxlib` and `MacOS`.
+
+| jax-metal | MacOS                             | jaxlib              | jax       |
+|-----------|-----------------------------------|---------------------|-----------|
+| 0.1.0     | Sonoma 14.4+                      | >=0.4.26            | >=0.4.26  |
+| 0.0.7     | Sonoma 14.4+                      | >=0.4.26            | >=0.4.26  |
+| 0.0.6     | Sonoma 14.4 Beta                  | >=v0.4.22, <v0.4.24 | >=v0.4.22 |
+| 0.0.5     | Sonoma 14.2+                      | >=v0.4.20, <v0.4.22 | >=v0.4.20 |
+| 0.0.4     | Sonoma 14.0+                      | v0.4.11             | v0.4.11   |
+| 0.0.3     | Ventura 13.4.1+, Sonoma 14.0 Beta | v0.4.10             | v0.4.11   |
+
+We recommend to install the binary package with venv or conda.
+```
+python3 -m venv ~/jax-metal
+source ~/jax-metal/bin/activate
+python -m pip install -U pip
+python -m pip install numpy wheel
+python -m pip install jax-metal
+```
+
+## Usage
+```
+python -c 'import jax; print(jax.numpy.arange(10))'
+```
+### Compatibility with jaxlib
+jax-metal is compatible with the minimal jaxlib version tracked in the above table. It can be compatibly run with jaxlibs beyond the minimum version by setting the environment variable to ENABLE_PJRT_COMPATIBILITY=1.
+```
+pip install -U jaxlib jax
+ENABLE_PJRT_COMPATIBILITY=1 python -c 'import jax; print(jax.numpy.arange(10))'
+```
+### Currently not supported
+The Metal plug-in is experimental and not all JAX functionality may be supported. Issues that are reported and tracked can be found in the list: https://github.com/google/jax/issues?q=is%3Aissue+is%3Aopen+metal
+
+* Unsupported data types: np.float64, np.complex64, np.complex128 
+* The Metal plug-in doesn’t pass all tests under https://github.com/google/jax/tree/main/tests. 
+
+
+Please refer to https://developer.apple.com/metal/jax/ for the full setup and verification. 
+
