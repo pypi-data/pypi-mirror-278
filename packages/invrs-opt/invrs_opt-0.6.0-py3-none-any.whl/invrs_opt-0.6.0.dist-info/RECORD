@@ -1,0 +1,16 @@
+invrs_opt/__init__.py,sha256=35pvMpeqvJgU4DizUO5hTzeE9j93prbB9RMtcaoFYwg,496
+invrs_opt/base.py,sha256=FdQyPTlWGo03YztI3K2_QBN6Q-v0PeXv6XCyXu_uh_4,1160
+invrs_opt/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+invrs_opt/transform.py,sha256=a_Saj9Wq4lvqCJBrg5L2Z9DZ2NVs1xqrHLqha90a9Ws,5971
+invrs_opt/experimental/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+invrs_opt/experimental/client.py,sha256=MqC_TguT9IGrG7WW54vwz6QQMylKkbCjHxFPIG9vQMA,4841
+invrs_opt/experimental/labels.py,sha256=dQDAMPyFMV6mXnMy295z8Ap205DRdVzysXny_Be8FmY,562
+invrs_opt/lbfgsb/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+invrs_opt/lbfgsb/lbfgsb.py,sha256=pfrqCaOMco-eHUQe2q03hbla9D2TYqmMB-07jK4-5Ik,27792
+invrs_opt/wrapped_optax/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+invrs_opt/wrapped_optax/wrapped_optax.py,sha256=-ke0MNCb2EB0ntlj5IHIHrvybOVF4m24DM6JI4_Ktcc,4974
+invrs_opt-0.6.0.dist-info/LICENSE,sha256=ty6jHPvpyjHy6dbhnu6aDSY05bbl2jQTjnq9u1sBCfM,1078
+invrs_opt-0.6.0.dist-info/METADATA,sha256=V4hpzjEovC2CU0IgUBMAgKzPfgqGvLlutQ9X5-FOuIk,3347
+invrs_opt-0.6.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+invrs_opt-0.6.0.dist-info/top_level.txt,sha256=hOziS2uJ_NgwaW9yhtOfeuYnm1X7vobPBcp_6eVWKfM,10
+invrs_opt-0.6.0.dist-info/RECORD,,
