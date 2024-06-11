@@ -1,0 +1,145 @@
+Metadata-Version: 2.1
+Name: dhuodata-lib
+Version: 0.4.1
+Home-page: https://gitlab.engdb.com.br/dhuo-plat/dhuo-data/data-science/dhuolib
+Author: DHuO Data Team
+Author-email: diego.salles@engdb.com.br
+Platform: any
+Description-Content-Type: text/markdown
+Requires-Dist: oci (==2.125.3)
+Requires-Dist: SQLAlchemy (==2.0.30)
+Requires-Dist: pandas (==2.2.2)
+Requires-Dist: oracledb (==2.2.0)
+Requires-Dist: pydantic (==2.7.3)
+Requires-Dist: hydra-core (==1.3.2)
+Requires-Dist: omegaconf (==2.3.0)
+Requires-Dist: Werkzeug (==3.0.3)
+Requires-Dist: cffi (==1.16.0)
+Requires-Dist: cryptography (==42.0.7)
+Requires-Dist: joblib (==1.4.2)
+Requires-Dist: lightgbm (==4.3.0)
+Requires-Dist: numpy (==1.26.4)
+Requires-Dist: pycparser (==2.22)
+Requires-Dist: python-dateutil (==2.9.0.post0)
+Requires-Dist: pytz (==2024.1)
+Requires-Dist: scikit-learn (==1.4.2)
+Requires-Dist: scipy (==1.13.0)
+Requires-Dist: six (==1.16.0)
+Requires-Dist: threadpoolctl (==3.5.0)
+Requires-Dist: tzdata (==2024.1)
+Provides-Extra: interactive
+Requires-Dist: mypy (==1.5.1) ; extra == 'interactive'
+Requires-Dist: flake8 (==6.1.0) ; extra == 'interactive'
+Requires-Dist: black (==22.3.0) ; extra == 'interactive'
+Requires-Dist: pytest-cov (~=4.0) ; extra == 'interactive'
+Requires-Dist: pytest (~=7.0) ; extra == 'interactive'
+Requires-Dist: twine (==3.4.2) ; extra == 'interactive'
+Requires-Dist: wheel (==0.37.0) ; extra == 'interactive'
+Requires-Dist: oci (==2.125.3) ; extra == 'interactive'
+Requires-Dist: pydantic (==2.7.3) ; extra == 'interactive'
+Requires-Dist: hydra-core (==1.3.2) ; extra == 'interactive'
+Requires-Dist: omegaconf (==2.3.0) ; extra == 'interactive'
+Requires-Dist: Werkzeug (==3.0.3) ; extra == 'interactive'
+
+# DHuO LIb
+
+## Board
+
+![](assets/imgs/board.png)
+
+## Features
+
+### Login 
+
+- [x] login
+    - Auth.login
+    - Auth.is_logged
+
+![](assets/docs/src/login/login.png)
+
+--- 
+### Análise Exploratória / Persistencia / Aquisição de Dados
+
+- [x] leitura de arquivos de bucket 
+    - Dhuolib.read_from_bucket
+
+- [x] leitura/escrita dataset Lake house
+    - Dhuolib.execute_select
+    - Dhuolib.execute_dml
+
+![](assets/docs/src/persistencia/persistencia.png)
+
+--- 
+### Model registry
+
+- [x] upload/download de modelos de ml
+    - Dhuolib.create_experiment
+    - Dhuolib.save_model
+    - Dhuolib.load_model
+
+![](assets/docs/src/model_registry/model_registry.png)
+
+--- 
+### Deploy
+
+- [x] criar cluster no Dataflow
+- [x] informar o dado de schedule e criação de aplicação Dataflow     
+- [x] inserção de lista de dependencias: libs + zip + script.py
+    - Dhuolib.depĺoy
+    - config/deploy.yaml
+
+> OCI - Oracle Function para uso do [Arquivo Compactado de Dependencia](https://docs.oracle.com/pt-br/iaas/data-flow/using/third-party-provide-archive.htm)
+
+![](assets/docs/src/deploy/deploy.png)
+
+--- 
+### Prediction
+
+- [ ] salvar dataset saída de modelo 
+    - Dhuolib.save_predictions
+    Scrip template: predict.py
+
+    Execução: Oracle Function
+
+![](assets/docs/src/feedback_status/feedback_status.png)
+
+---
+### Feedback dos steps do Pipeline para o usuário
+- Dhuolib.pipeline_status_exec
+
+![](ass)
+
+
+### C4 Diagram
+#### Context
+ ![](assets/docs/src/c4/context/context.png)
+
+#### Components
+ ![](assets/docs/src/c4/components/components.png)
+
+
+#### Containers
+ ![](assets/docs/src/c4/containers/containers.png)
+
+
+![](ass)
+
+## Issues
+
+#### 
+
+- Definir padrões e nomes de buckets
+- Expor o MLFLow para uso em VPN
+- No log de experimentos não está contemplado:
+    - Métricas
+    - Hiperparâmetros
+- Não estamos usaando a API do Dataflow para acompanhamento de status da execução
+- Não estamos contemplando Feature Engineering
+- Não estamos contemplando Etapas de Treinamento
+- Não estamos contemplando o Feedback de execuções 100% remotas
+
+## References
+
+- https://docs.oracle.com/pt-br/iaas/data-flow/using/third-party-provide-archive.htm
+- https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml
+- https://plantuml.com/
