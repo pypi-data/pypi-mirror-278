@@ -1,0 +1,24 @@
+[workspace]
+members = ["crates/*"]
+resolver = "2"
+
+[workspace.package]
+version = "0.0.14"
+edition = "2021"
+authors = ["yassun7010 <yassun7010@outlook.com>"]
+license = "MIT"
+
+[workspace.dependencies]
+snowman_config = { path = "crates/snowman_config" }
+snowman_connector = { path = "crates/snowman_connector" }
+snowman_generator = { path = "crates/snowman_generator" }
+
+convert_case = "0.6.0"
+log = "^0.4"
+openssl = { version = "^0.10", features = ["vendored"] }
+serde = { version = "^1.0", features = ["derive"] }
+serde_json = { version = "^1.0", features = ["preserve_order"] }
+thiserror = "^1.0"
+tokio = { version = "^1.37", features = ["full"] }
+toml = { version = "^0.8", features = ["preserve_order"] }
+itertools = "0.13.0"
