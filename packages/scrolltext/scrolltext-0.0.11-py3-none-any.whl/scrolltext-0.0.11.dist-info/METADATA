@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: scrolltext
+Version: 0.0.11
+Summary: A little toy for scrolling text.
+Home-page: https://github.com/jimdeekepler/python-scrolltext
+Author: Jim Dee Kepler
+Author-email: jimdee@gmail.com
+License: GPLv3
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Environment :: Console :: Curses
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Other Audience
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Games/Entertainment
+Classifier: Topic :: Utilities
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+[![Python application](https://github.com/jimdeekepler/python-scrolltext/actions/workflows/python-app.yml/badge.svg)](https://github.com/jimdeekepler/python-scrolltext/actions/workflows/python-app.yml)
+[![PyPI version](https://img.shields.io/pypi/v/scrolltext.svg)](https://pypi.org/project/scrolltext/)
+
+
+## python-scrolltext
+
+A little toy-like app for scrolling text in your favourite terminal.
+
+There is a configuration file "~/.config/scrolltextrc" on UNIX systems and just scrolltextrc in the
+current directory when you are using it on a WINDOWS machine. If the config file is not yet
+existing, it can be created by passing the command line option: "-w"|"--write", like so:
+
+    scrolltext -w
+
+
+### Plain Terminal version
+
+    SCROLL_TEXT="Hello, world." scrolltext [linescroller]
+
+
+### Curses Version
+
+    SCROLL_TEXT="Hello, world." scrolltext cursestext
+
+
+### Scroll right-to-left reading text
+
+Using `SCROLL_DIRECTION=1` makes the text start scrolling from left-side of the terminal.
+This is used for right-to-left writing languages.
