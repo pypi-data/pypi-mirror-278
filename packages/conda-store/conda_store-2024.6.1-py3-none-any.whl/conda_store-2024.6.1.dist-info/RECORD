@@ -1,0 +1,13 @@
+conda_store/__init__.py,sha256=pdNz7NA-y7L0I2Ek1YCjYG1gcJFnFhVN5UQFOQPfaZg,25
+conda_store/__main__.py,sha256=LL7lEgh1tH1t9Sf8Ha1eAolTm4ZU_3kNEH6LCD1mfjE,1281
+conda_store/api.py,sha256=uL9KA8N-ayffpBaM2TWq0i6OvmR2TkGOc4ZJUs05PIA,7452
+conda_store/auth.py,sha256=f2swcJ5EJ-Eds7m29bKqlhyiLETa14MyVLLXm1BOjoQ,1029
+conda_store/cli.py,sha256=ItAnKkK9ljpF2ZXhC09sQ_a22l7wb-Gs7oQ48zfrHYI,13932
+conda_store/exception.py,sha256=Ct5l0md3bC2rarCXrPErFzaFOCJ1PyhQfquj8oEJRpc,43
+conda_store/runner.py,sha256=mF9Se7Tgo58k8nOXLqEKiciGs2SB84vLAJbsHy2p5m8,1356
+conda_store/utils.py,sha256=5qA9pkn8ChCCJg1KTDOQUndTX-bpDO6DQHklEGi8i-o,2697
+conda_store-2024.6.1.dist-info/METADATA,sha256=AeCXZaSbrAIO1wKGSjbOTahjjBNTW6Ui2xKSvz6x5wM,1676
+conda_store-2024.6.1.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+conda_store-2024.6.1.dist-info/entry_points.txt,sha256=usShlXy243DuuKnGQVG-Q0rH3A-GIsH2y70E40ulZjo,58
+conda_store-2024.6.1.dist-info/licenses/LICENSE,sha256=tc0AwaF-fglQJ2gxOwFqFFCb7NE2Iiju29E_D-n_bjw,1458
+conda_store-2024.6.1.dist-info/RECORD,,
