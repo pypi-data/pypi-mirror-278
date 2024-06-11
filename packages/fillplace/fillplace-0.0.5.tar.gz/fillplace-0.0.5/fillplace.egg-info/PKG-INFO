@@ -1,0 +1,112 @@
+Metadata-Version: 2.1
+Name: fillplace
+Version: 0.0.5
+Summary: A package for generating meaningful placeholder content.
+Home-page: https://github.com/Kunal-Khairnar-05/fillplace
+Author: Kunal Khairnar
+Author-email: kunalkhairnar2005@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# fillplace  
+____________<img src="https://3.bp.blogspot.com/-fm0Cg5WFsy8/WF6YWJyUvuI/AAAAAAAFof0/nRsq3JLfwNwPqZA20fPDFAH8aOUFLH7nACLcB/s1600/AW356234_04.gif" width="150" height="120">
+
+---
+A Python package for generating meaningful placeholder content using AIðŸª„.
+---
+## Installation
+
+```sh
+pip install fillplace
+```
+---
+## Usage
+
+```python
+from fillplace import PlaceholderManager
+
+pm = PlaceholderManager()
+
+print(pm.city())
+```
+---
+
+## Available methods
+```
+city()
+```
+```
+malename()
+```
+```
+femalename()
+``` 
+```
+indianaddress()
+```
+```
+internationaladdress()
+```
+```
+phone()
+```
+```
+dateofbirth()
+```
+```
+password()
+```
+```
+indiancity()
+```
+```
+indianstate()
+```
+
+---
+
+## Usage for developers
+
+- The fillplace package can be a valuable tool for developers in various scenarios where they need to generate meaningful placeholder content quickly and efficiently. Here are some use cases where developers can leverage the functionalities provided by the fillplace package
+
+### 1.Test Data for Database Population: 
+* When setting up databases for testing purposes, developers may need to populate them with test data. The fillplace package provides a convenient way to generate diverse and realistic test data for populating databases.
+```python
+from fillplace import PlaceholderManager
+import sqlite3
+
+pm = PlaceholderManager()
+
+# Connect to SQLite database
+conn = sqlite3.connect('test.db')
+cursor = conn.cursor()
+
+# Create a table
+cursor.execute('''CREATE TABLE users (id INTEGER PRIMARY KEY, name TEXT, password TEXT)''')
+
+# Insert test data
+for _ in range(10):
+    name = pm.malename()
+    password = pm.password()
+    cursor.execute('''INSERT INTO users (name, password) VALUES (?, ?)''', (name, password))
+
+# Commit changes and close connection
+conn.commit()
+conn.close()
+```
+
+### 2. Content Placeholder for Prototypes: 
+* During the early stages of application development, developers often create prototypes or wireframes that require placeholder content. With the fillplace package, developers can easily populate their prototypes with realistic placeholder content.
+```python
+from fillplace import PlaceholderManager
+
+pm = PlaceholderManager()
+print(f"Welcome to {pm.city()}, {pm.name()}!")
+```
+
+
