@@ -1,0 +1,22 @@
+from typing import Callable
+
+err_callback: Callable = None
+
+
+async def err(message: str | Exception) -> None:
+    """ Helper function to send error or notification messages to notify channel with a single parameter.\n
+        **If a notification channel does not exist**, the notification is printed to console instead\n
+        **param message**: message to report\n
+        **returns**: None\n
+        """
+    global err_callback
+    if not message:
+        return
+    if not err_callback:
+        return print(message)
+    await err_callback(message)
+
+
+def register_callback(callback: Callable):
+    global err_callback
+    err_callback = callback
