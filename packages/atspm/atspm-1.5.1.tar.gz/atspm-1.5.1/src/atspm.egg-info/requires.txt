@@ -1,0 +1,4 @@
+duckdb<=1.0.0,>=0.9.1
+traffic-anomaly>=1.0.0
+ibis-framework[duckdb]==9.0.0
+jinja2
