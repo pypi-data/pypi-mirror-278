@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: pytest_aux
+Version: 0.0.9
+Summary: templates/examples and aux for pytest
+Home-page: https://github.com/centroid457/
+Author: Andrei Starichenko
+Author-email: centroid@mail.ru
+Project-URL: Source, https://github.com/centroid457/pytest_aux
+Keywords: pytest templates,pytest examples,pytest aux,pytest parametrisation
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Typing :: Typed
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pytest_aux (v0.0.9)
+
+## DESCRIPTION_SHORT
+templates/examples and aux for pytest
+
+## DESCRIPTION_LONG
+designed for ...
+
+
+## Features
+1. parametrisation usage example + aux  
+
+
+********************************************************************************
+## License
+See the [LICENSE](LICENSE) file for license rights and limitations (MIT).
+
+
+## Release history
+See the [HISTORY.md](HISTORY.md) file for release history.
+
+
+## Installation
+```commandline
+pip install pytest-aux
+```
+
+
+## Import
+```python
+from pytest_aux import *
+```
+
+
+********************************************************************************
+## USAGE EXAMPLES
+See tests and sourcecode for other examples.
+
+********************************************************************************
