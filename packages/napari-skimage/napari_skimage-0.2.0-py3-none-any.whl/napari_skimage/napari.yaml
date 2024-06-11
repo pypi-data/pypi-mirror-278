@@ -1,0 +1,99 @@
+name: napari-skimage
+display_name: napari skimage
+# use 'hidden' to remove plugin from napari hub search results
+visibility: public
+# see https://napari.org/stable/plugins/manifest.html for valid categories
+categories: ["Annotation", "Segmentation", "Acquisition"]
+contributions:
+  commands:
+    - id: napari-skimage.make_farid_widget
+      python_name: napari_skimage.skimage_filter_widget:farid_filter_widget
+      title: Make Farid filter widget
+    - id: napari-skimage.make_prewitt_widget
+      python_name: napari_skimage.skimage_filter_widget:prewitt_filter_widget
+      title: Make Prewitt filter widget
+    - id: napari-skimage.make_laplace_widget
+      python_name: napari_skimage.skimage_filter_widget:laplace_filter_widget
+      title: Make Laplace filter widget
+    - id: napari-skimage.make_gaussian_widget
+      python_name: napari_skimage.skimage_filter_widget:gaussian_filter_widget
+      title: Make gaussian filter widget
+    - id: napari-skimage.make_frangi_widget
+      python_name: napari_skimage.skimage_filter_widget:frangi_filter_widget
+      title: Make Frangi filter widget
+    - id: napari-skimage.make_median_widget
+      python_name: napari_skimage.skimage_filter_widget:median_filter_widget
+      title: Make Median filter widget
+    - id: napari-skimage.make_butterworth_widget
+      python_name: napari_skimage.skimage_filter_widget:butterworth_filter_widget
+      title: Make Butterworth filter widget
+    - id: napari-skimage.make_threshold_widget
+      python_name: napari_skimage.skimage_threshold_widget:threshold_widget
+      title: Make threshold widget
+    - id: napari-skimage.make_manual_threshold_widget
+      python_name: napari_skimage.skimage_threshold_widget:ManualThresholdWidget
+      title: Make manual threshold widget
+    - id: napari-skimage.make_binary_morphology_widget
+      python_name: napari_skimage.skimage_morphology_widget:binary_morphology_widget
+      title: Make binary morphology widget
+    - id: napari-skimage.make_morphology_widget
+      python_name: napari_skimage.skimage_morphology_widget:morphology_widget
+      title: Make morphology widget
+    - id: napari-skimage.make_connected_components_widget
+      python_name: napari_skimage.skimage_morphology_widget:connected_components_widget
+      title: Make connected components widget
+    - id: napari-skimage.make_maths_image_pairs_widget
+      python_name: napari_skimage.mathsops:maths_image_pairs_widget
+      title: Make image pairs maths widget
+    - id: napari-skimage.make_simple_maths_widget
+      python_name: napari_skimage.mathsops:simple_maths_widget
+      title: Make simple maths widget
+    - id: napari-skimage.make_conversion_widget
+      python_name: napari_skimage.mathsops:conversion_widget
+      title: Make conversion widget
+    - id: napari-skimage.make_rank_widget
+      python_name: napari_skimage.skimage_filter_widget:RankFilterWidget
+      title: Make Rank filter widget
+    - id: napari-skimage.make_rolling_ball_restoration_widget
+      python_name: napari_skimage.skimage_restoration_widget:rolling_ball_restoration_widget
+      title: Make rolling ball restoration widget
+    - id: napari-skimage.make_denoise_nl_means_restoration_widget
+      python_name: napari_skimage.skimage_restoration_widget:denoise_nl_means_restoration_widget
+      title: Make denoise nl means restoration widget
+  widgets:
+    - command: napari-skimage.make_farid_widget
+      display_name: Farid filter
+    - command: napari-skimage.make_prewitt_widget
+      display_name: Prewitt filter
+    - command: napari-skimage.make_laplace_widget
+      display_name: Laplace filter
+    - command: napari-skimage.make_gaussian_widget
+      display_name: Gaussian filter
+    - command: napari-skimage.make_frangi_widget
+      display_name: Frangi filter
+    - command: napari-skimage.make_median_widget
+      display_name: Median filter
+    - command: napari-skimage.make_butterworth_widget
+      display_name: Butterworth filter
+    - command: napari-skimage.make_threshold_widget
+      display_name: Automated Threshold
+    - command: napari-skimage.make_manual_threshold_widget
+      display_name: Manual Threshold
+    - command: napari-skimage.make_binary_morphology_widget
+      display_name: Binary Morphology
+    - command: napari-skimage.make_morphology_widget
+      display_name: Morphology
+    - command: napari-skimage.make_connected_components_widget
+      display_name: Connected components
+    - command: napari-skimage.make_simple_maths_widget
+      display_name: Simple maths
+    - command: napari-skimage.make_maths_image_pairs_widget
+      display_name: Image pairs maths
+    - command: napari-skimage.make_conversion_widget
+      display_name: Conversion
+    - command: napari-skimage.make_rank_widget
+      display_name: Rank filters
+    - command: napari-skimage.make_rolling_ball_restoration_widget
+      display_name: Rolling ball restoration
+    - command: napari-skimage.make_denoise_nl_means_restoration_widget
+      display_name: Denoise nl means restoration
