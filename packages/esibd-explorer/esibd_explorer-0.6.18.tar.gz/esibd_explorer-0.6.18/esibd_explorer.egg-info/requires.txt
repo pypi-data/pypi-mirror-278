@@ -1,0 +1,25 @@
+asteval
+biopython
+configobj
+configparser
+h5py
+keyboard
+matplotlib
+contourpy==1.2.1
+numpy
+openpyxl
+PyOpenGL
+pyperclip
+pyqt6==6.6
+pyqt6-qt6==6.6
+pyqt6-webengine==6.6
+pyqt6-webengine-qt6==6.6
+python-pptx
+pyserial
+python-socketio
+pyqtgraph==0.13.7
+scipy
+Send2Trash
+
+[:sys_platform == "win32"]
+pywin32
