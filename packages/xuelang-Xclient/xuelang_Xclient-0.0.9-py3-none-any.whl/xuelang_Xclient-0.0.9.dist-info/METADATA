@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: xuelang-Xclient
+Version: 0.0.9
+Summary: Triton Inference Server Client
+License: BSD
+Keywords: grpc,http,triton,tensorrt,inference,server,service,client,nvidia,rtzr
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Information Technology
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Environment :: Console
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown; charset=UTF-8
+License-File: LICENSE
+Requires-Dist: tritonclient[grpc,http] ==2.36.0
+Requires-Dist: protobuf >=3.5.0
+Requires-Dist: orjson >=3.6.8
+Requires-Dist: reretry >=0.11.1
+Requires-Dist: attrs >=21.2.0
+Requires-Dist: langchain-core >=0.2.1
+Provides-Extra: display
+Requires-Dist: matplotlib >=3.3.0 ; extra == 'display'
+Provides-Extra: tests
+Requires-Dist: pytest-xdist ; extra == 'tests'
+Requires-Dist: pytest-mpl ; extra == 'tests'
+Requires-Dist: pytest-cov ; extra == 'tests'
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: pre-commit ; extra == 'tests'
+Requires-Dist: coveralls ; extra == 'tests'
+
+雪浪模型推理服务的客户端
