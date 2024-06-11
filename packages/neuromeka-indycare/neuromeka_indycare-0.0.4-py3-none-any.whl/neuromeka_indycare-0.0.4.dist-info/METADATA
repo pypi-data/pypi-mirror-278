@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: neuromeka-indycare
+Version: 0.0.4
+Summary: Neuromeka IndyCare Package
+Home-page: https://gitlab.com/neuromeka-group/nrmkf/indycarereporter_v3
+Author: Neuromeka
+Author-email: ilhyeok.kwon@neuromeka.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: multiprocess
+Requires-Dist: pyyaml
+Requires-Dist: neuromeka ==3.2.0.2
+Requires-Dist: paho-mqtt ==1.6.1
+Requires-Dist: opencv-python
+Requires-Dist: pyngrok ==5.1.0
+
