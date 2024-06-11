@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: PrettyDF
+Version: 1.0
+Summary: Pretty Print DataFrames
+Author: DawnSaju
+Author-email: dawnsajubusiness@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Dist: pandas
+Requires-Dist: tabulate
+
