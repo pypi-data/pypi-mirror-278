@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools<60.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sconce"
+version = "0.99"
+description = "sconce: Compression and Deployment made Easy"
+authors = [{ name = "Sathyaprakash Narayanan", email = "snaray17@ucsc.edu" }]
+urls = { code = "https://github.com/satabios/sconce" }
+
+dynamic = ["dependencies" ,"readme","requires-python","classifiers","keywords", "license"]
