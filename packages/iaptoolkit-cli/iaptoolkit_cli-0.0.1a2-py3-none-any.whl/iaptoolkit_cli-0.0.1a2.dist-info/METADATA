@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: iaptoolkit-cli
+Version: 0.0.1a2
+Summary: Command-Line Interface for iaptoolkit
+Home-page: https://github.com/RAVoigt/iaptoolkit-cli
+License: MIT
+Author: Rob Voigt
+Author-email: code@ravoigt.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: cleo (>=2.1.0,<3.0.0)
+Requires-Dist: flask (>=3.0.3,<4.0.0)
+Requires-Dist: iaptoolkit (>=0.3.0a,<0.4.0)
+Requires-Dist: kvcommon (>=0.1.4,<0.2.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: typehints-cleo2 (>=1.0.0,<2.0.0)
+Project-URL: Repository, https://github.com/RAVoigt/iaptoolkit-cli
+Description-Content-Type: text/markdown
+
+# IAP Toolkit CLI
+Command-Line Interface for iaptoolkit
+
+# PyPi
+https://pypi.org/project/iaptoolkit-cli/
+
+# Installation
+### With Poetry:
+`poetry add iaptoolkit-cli`
+
+### With pip:
+`pip install iaptoolkit-cli`
