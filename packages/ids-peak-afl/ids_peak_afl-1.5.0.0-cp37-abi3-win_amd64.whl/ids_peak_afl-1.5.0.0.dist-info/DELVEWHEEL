@@ -1,0 +1,2 @@
+Version: 1.5.4
+Arguments: ['C:\\Users\\teamcity\\AppData\\Roaming\\Python\\Python37\\site-packages\\delvewheel\\__main__.py', 'repair', '--ignore-in-wheel', 'dist\\ids_peak_afl-1.5.0.0-cp37-abi3-win_amd64.whl', '--no-dll', 'ids_peak_afl.dll;ids_peak_ipl.dll;FirmwareUpdate_MD_VC141_v3_4.dll;GCBase_MD_VC141_v3_4.dll;GenApi_MD_VC141_v3_4.dll;Log_MD_VC141_v3_4.dll;MathParser_MD_VC141_v3_4.dll;NodeMapData_MD_VC141_v3_4.dll;XmlParser_MD_VC141_v3_4.dll;ids_peak.dll;log4cpp_MD_VC141_v3_4.dll']
