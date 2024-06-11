@@ -1,0 +1,3 @@
+[console_scripts]
+bed2seq = bed2seq.bed2seq:main
+
