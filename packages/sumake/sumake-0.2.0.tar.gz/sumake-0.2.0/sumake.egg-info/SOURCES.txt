@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+./sumake.egg-info/PKG-INFO
+./sumake.egg-info/SOURCES.txt
+./sumake.egg-info/dependency_links.txt
+./sumake.egg-info/not-zip-safe
+./sumake.egg-info/requires.txt
+./sumake.egg-info/top_level.txt
+bin/sumake
+test/test_setup.py

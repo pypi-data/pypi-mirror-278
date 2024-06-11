@@ -1,0 +1,56 @@
+#!/bin/bash
+#args=("$@")
+args=()
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    -h|--help)
+      cat $HOME/.sumake/help.txt
+      args+=("$1")
+      exit 0
+      ;;
+    --make-help)
+      make -h
+      exit 0
+      ;;
+    -v|--version)
+      echo "sumake: 0.2.0"
+      args+=("$1")
+      ;;
+    --zsh-init)
+append_content=$(cat <<EOF
+# sumake zsh completion
+autoload -U compinit
+compinit
+_sumake() {
+_make "\$@"
+}
+compdef _sumake sumake
+zstyle ':completion::complete:sumake:*:targets' call-command true
+EOF
+)
+if ! grep -q "# sumake zsh completion" ~/.zshrc ; then
+  echo "$append_content" >> ~/.zshrc
+  echo "zsh completion init done"
+else
+  echo "zsh completion already init"
+fi
+
+      exit 0
+      ;;
+    *)
+      args+=("$1")
+      ;;
+  esac
+  shift
+done
+
+export SUMAKE="$(which sumake)"
+cmd="make"
+if [ -f Makefile ]; then
+  cmd+=" -f Makefile "
+fi
+cmd+=" -f /Users/peng/.sumake/utils.mk "
+echo [sumake] $cmd "${args[@]}"
+$cmd "${args[@]}"
+
+
