@@ -1,0 +1,3 @@
+[console_scripts]
+concussion=concussion.__main__:main
+
