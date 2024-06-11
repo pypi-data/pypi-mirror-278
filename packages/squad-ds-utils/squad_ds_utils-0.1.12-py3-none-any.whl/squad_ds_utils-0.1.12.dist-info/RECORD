@@ -1,0 +1,14 @@
+database_connector/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+database_connector/constants.py,sha256=V46-IjdC_vY3x0XYNhzR9aaGn0eDucLDPONYKpTA4vQ,612
+database_connector/rds_certificate.pem,sha256=nF3G1XJKw-ilIl8LKI4VR3SDa7hfqZZNEmYfMmtP5HA,4584
+database_connector/sagemaker.py,sha256=qLHRDXRBehQGBz2sEyw-zzdFRoleMew66ZSEwXXiMnw,1307
+database_connector/snowflake_ds.py,sha256=EmzZ6ZpT02kSx4XNqccmbbAJusSMg-HvHrGWoKulE_M,1642
+database_connector/utils.py,sha256=HdgGHZMtp_297UGOXTjCMXkzvSvh-cGyyDNUiEGHvps,1610
+squad_ds_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+squad_ds_utils/exceptions.py,sha256=ilOgZuU1rGlROpu95X8HH1-FLJf35BBk7zHuu4ytaeI,40
+squad_ds_utils/parse.py,sha256=_LVu6In3grm-nN3b1wcea0ZokzPFD1L6OwcnG5sEESI,563
+squad_ds_utils/recordings_fetcher.py,sha256=_zvg9uKY9NfCXO8LmCQm8XZ6EwIzXj5UQ_76-AT2hBc,2321
+squad_ds_utils/secrets.py,sha256=MTiJBJNFzv0twN3M0Cks_IS4uecFbzi-k2eLmVVJv3s,720
+squad_ds_utils-0.1.12.dist-info/METADATA,sha256=FmNsrhhBty0C1K6Iz_kTdwKbJ5UcegOyGgITDSuwRh0,820
+squad_ds_utils-0.1.12.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+squad_ds_utils-0.1.12.dist-info/RECORD,,
