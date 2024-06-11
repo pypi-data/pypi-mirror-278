@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools >= 70.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "civis-jupyter-extensions"
+version = "1.2.0"
+description = "Tools for using Civis Platform with Jupyter notebooks"
+readme = "README.rst"
+requires-python = ">= 3.9"
+authors = [ { name = "Civis Analytics", email = "opensource@civisanalytics.com" } ]
+license = { text = "BSD-3-Clause" }
+dependencies = [
+    "civis",
+    "ipython >= 5.4",
+    "pandas",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+]
+
+[project.urls]
+Homepage = "https://www.civisanalytics.com"
+Source = "https://github.com/civisanalytics/civis-jupyter-extensions"
+
+[project.optional-dependencies]
+dev = [
+    "bandit",  # Use the latest version.
+    "black == 24.4.2",
+    "build == 1.2.1",
+    "flake8 == 7.0.0",
+    "pip-audit",  # Use the latest version.
+    "pytest == 8.2.2",
+    "twine == 5.1.0",
+]
+
+[tool.setuptools.packages.find]
+where = [ "src" ]
+
+[tool.setuptools.package-data]
+civis_jupyter_ext = ["**/*.js"]
+
+[tool.pytest.ini_options]
+addopts = "--strict-markers -vv"
+testpaths = ["tests"]

@@ -1,0 +1,12 @@
+civis
+ipython>=5.4
+pandas
+
+[dev]
+bandit
+black==24.4.2
+build==1.2.1
+flake8==7.0.0
+pip-audit
+pytest==8.2.2
+twine==5.1.0

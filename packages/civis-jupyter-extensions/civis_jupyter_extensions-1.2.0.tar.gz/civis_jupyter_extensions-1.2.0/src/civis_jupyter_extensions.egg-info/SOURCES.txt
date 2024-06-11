@@ -1,0 +1,14 @@
+LICENSE.txt
+README.rst
+pyproject.toml
+src/civis_jupyter_ext/__init__.py
+src/civis_jupyter_ext/magics/__init__.py
+src/civis_jupyter_ext/magics/query.py
+src/civis_jupyter_ext/static/index.js
+src/civis_jupyter_extensions.egg-info/PKG-INFO
+src/civis_jupyter_extensions.egg-info/SOURCES.txt
+src/civis_jupyter_extensions.egg-info/dependency_links.txt
+src/civis_jupyter_extensions.egg-info/requires.txt
+src/civis_jupyter_extensions.egg-info/top_level.txt
+tests/test_query.py
+tests/test_version.py
