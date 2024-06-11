@@ -1,0 +1,4 @@
+[console_scripts]
+ae=aergia.application:main
+aergia=aergia.application:main
+
