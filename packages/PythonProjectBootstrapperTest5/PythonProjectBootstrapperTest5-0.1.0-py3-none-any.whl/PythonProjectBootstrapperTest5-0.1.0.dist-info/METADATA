@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: PythonProjectBootstrapperTest5
+Version: 0.1.0
+Summary: Test project for PythonProjectBootstrapper.
+Author-email: Scientific Software Engineering Center at Georgia Tech <sse-center@gatech.edu>
+License: MIT
+Project-URL: Homepage, https://github.com/gt-sse-center/PythonProjectBootstrapperTest5
+Project-URL: Documentation, https://github.com/gt-sse-center/PythonProjectBootstrapperTest5
+Project-URL: Repository, https://github.com/gt-sse-center/PythonProjectBootstrapperTest5
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: typer ~=0.9
+Provides-Extra: dev
+Requires-Dist: dbrownell-DevTools ; extra == 'dev'
+Provides-Extra: package
+Requires-Dist: build ~=1.2 ; extra == 'package'
+Requires-Dist: cx-Freeze ~=6.15 ; extra == 'package'
+Requires-Dist: twine ~=4.0 ; extra == 'package'
+
+# PythonProjectBootstrapperTest5
+
+
+
+Test project for PythonProjectBootstrapper.
+
+
+
+## Overview
+
+TODO: Complete this section
+
+### How to use PythonProjectBootstrapperTest5
+
+TODO: Complete this section
+
+
+
+## Vulnerability Reporting (Security Issues)
+Please privately report vulnerabilities you find so we can fix them!
+
+See [SECURITY.md](https://github.com/gt-sse-center/PythonProjectBootstrapperTest5/blob/main/SECURITY.md) for information on how to privately report vulnerabilities.
+
+## License
+
+PythonProjectBootstrapperTest5 is licensed under the <a href="https://choosealicense.com/licenses/mit/" target="_blank">MIT</a> license.
