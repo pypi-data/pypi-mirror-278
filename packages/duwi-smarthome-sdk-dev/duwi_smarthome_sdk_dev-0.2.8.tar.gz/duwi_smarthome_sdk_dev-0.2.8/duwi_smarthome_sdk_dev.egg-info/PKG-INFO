@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: duwi_smarthome_sdk_dev
+Version: 0.2.8
+Summary: sdk for duwi third platform
+Home-page: https://github.com/duwi2024/homeassistant-sdk
+Author: duwi
+Author-email: ledgerbiggg@gmail.com
+License: MIT
+Keywords: python,duwi,sdk,third,platform
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: websockets
+Requires-Dist: aiohttp
+
+install sdk
+```shell
+pip install duwi_smarthome_sdk_dev
+```
+
+Update existing dependencies
+```shell
+pip install --upgrade duwi_smarthome_sdk_dev
+```
+
+
+
