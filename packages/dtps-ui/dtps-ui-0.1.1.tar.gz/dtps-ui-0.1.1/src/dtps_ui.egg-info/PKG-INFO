@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: dtps-ui
+Version: 0.1.1
+Home-page: https://github.com/duckietown/lib-dtps-ui
+Author: Andrea F. Daniele
+Author-email: afdaniele@duckietown.com
+Requires-Dist: dtps_http
+Requires-Dist: jinja2
+Requires-Dist: watchdog
+
+
+dtps-ui: Use DTPS to create dynamic web apps.
+=============================================
+
+
+Use DTPS to create dynamic web apps.
+
