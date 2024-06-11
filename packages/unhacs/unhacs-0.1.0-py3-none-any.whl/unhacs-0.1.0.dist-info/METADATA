@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: unhacs
+Version: 0.1.0
+Summary: Command line interface to install Home Assistant Community Store packages
+License: MIT
+Author: Ian Fijolek
+Author-email: ian@iamthefij.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+# unhacs
+
+A command line alternative to the "Home Assistant Community Store", aka HACS
+
+## Original repo
+
+Originally hosted at https://git.iamthefij.com/iamthefij/unhacs.git
+
