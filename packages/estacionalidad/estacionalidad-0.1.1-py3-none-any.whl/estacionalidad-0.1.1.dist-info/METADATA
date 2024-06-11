@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: estacionalidad
+Version: 0.1.1
+Summary: Linecharts to plot the seasonal behaviour of data series throughout a year comparing the same month in different years.
+Home-page: https://lucagelmini.space
+License: Apache-2.0
+Keywords: seasonality,chart,matplotlib,statistics
+Author: Luca Gelmini
+Author-email: lucagelmini@github.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: matplotlib (>=3.8.4,<4.0.0)
+Requires-Dist: openpyxl (>=3.1.2,<4.0.0)
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: xlrd (>=2.0.1,<3.0.0)
+Project-URL: Repository, https://github.com/LucaGelmini/estacionalidad
+Description-Content-Type: text/markdown
+
+# Estacionalidad!
+
+Próximamente añado una descripcion acorde.
+Coming soon: a reasonable description.
+
