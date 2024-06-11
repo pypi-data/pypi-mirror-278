@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: flexsrc
+Version: 0.1.9
+Summary: FlexSrc is a unified dict creation tool for Python.
+Home-page: https://github.com/tkmnet/flexsrc
+Author: tkms
+Author-email: tkmnet@users.noreply.github.com
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyyaml
+Requires-Dist: xxhash
+Requires-Dist: cfcf >=0.1.0
+Requires-Dist: requests
+Requires-Dist: pandas
+
+# FlexSrc
+FlexSrc is a unified dict creation tool for Python.
+The functionality links data in distributed files.
+The linked data will be imported when it required.
