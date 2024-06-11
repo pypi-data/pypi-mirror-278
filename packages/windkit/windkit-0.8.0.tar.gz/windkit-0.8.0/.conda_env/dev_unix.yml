@@ -1,0 +1,44 @@
+name: base
+channels:
+  - conda-forge
+  - https://conda.windenergy.dtu.dk/channel/open
+dependencies:
+  - dtu_config
+  - geopandas >=0.12
+  - lxml =4
+  - matplotlib >=3.6
+  - netcdf4 >=1.5
+  - numpy >=1.24
+  - packaging >=22
+  - pandas >=2
+  - plotly >=5.12
+  - pyproj >=3.4
+  - python >=3.10
+  - python-kaleido >=0.2
+  - rasterio =1
+  - scipy >=1.9
+  - shapely =2
+  - xarray >=2023
+  - rioxarray >=0.13
+  # Build dependencies all
+  - pip
+  - git
+  - setuptools
+  - setuptools_scm
+  # Developer dependencies
+  - conda-lock
+  - ipython
+  - jupyter
+  - jupyter-dash
+  - make
+  - nbsphinx
+  - nbsphinx-link
+  - pre-commit
+  - pytest
+  - pytest-cov
+  - recommonmark
+  - sphinx
+  - sphinx_rtd_theme
+  - sphinx-argparse
+  - sphinxcontrib-bibtex
+  - myst-parser

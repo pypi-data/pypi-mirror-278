@@ -1,0 +1,14 @@
+name: base
+channels:
+  - conda-forge
+  - https://conda.windenergy.dtu.dk/channel/open
+dependencies:
+  - boa
+  - build
+  - python >=3.10
+  - twine
+  - setuptools_scm
+  - git
+  - zip
+  - unzip
+  - rsync

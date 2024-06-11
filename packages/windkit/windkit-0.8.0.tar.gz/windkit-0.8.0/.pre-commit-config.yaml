@@ -1,0 +1,36 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+        exclude: "test/data"
+      - id: check-yaml
+        exclude: .gitlab-ci.yml|meta.yaml|.ci-includes/run_pytest.yml|.ci-includes/py_deploy.yml
+      - id: check-merge-conflict
+      - id: fix-encoding-pragma
+        args: [--remove]
+      - id: mixed-line-ending
+        args: [--fix=no]
+        exclude: "test/test_old/data/|test/data/|test_old/data/"
+      - id: check-json
+      - id: pretty-format-json
+        args: [--autofix, --no-ensure-ascii]
+        exclude: "test/"
+  - repo: https://github.com/pycqa/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort
+        name: isort (python)
+  - repo: https://github.com/psf/black
+    rev: 23.12.1
+    hooks:
+      - id: black
+        exclude: examples
+        #- repo: https://github.com/hadialqattan/pycln
+        #rev: v1.3.1 # Possible releases: https://github.com/hadialqattan/pycln/releases
+        #hooks:
+        #- id: pycln
+        #args: [--config=pyproject.toml]

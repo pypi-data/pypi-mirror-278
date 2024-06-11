@@ -1,0 +1,132 @@
+stages:
+  - format
+  - build_test_env
+  - test
+  - build
+  - deploy
+
+include:
+  - project: "ram/software/ci-recipes"
+    ref: main
+    file:
+      - utils/default_vars.yml
+      - precommit_format.yml
+      - python/run_pytest.yml
+      - python/run_sphinx.yml
+      - python/py_build.yml
+      - python/py_deploy.yml
+
+default:
+  tags: ["ramtt_int-cluster", "linux-docker"]
+
+# Check that pre-commit has run
+run_precommit:
+  script:
+    - pre-commit clean
+  extends: .verify_precommit
+
+# Build environments for testing
+# TODO: uncomment when ready
+# build_test_win:
+#   before_script:
+#     # Do NOT OVERRIDE templated clauses
+#     - !reference [.build_test_env_sh, before_script]
+#     - rm -rf /C/ProgramData/mambaforge/envs/windkit_ci
+#   extends: .build_test_env_sh
+#   variables:
+#     DEV_ENV_FILE: .conda_env/dev_win.yml
+#   tags: ["conda", "win10"]
+# TODO: macos?
+# build_test_osx:
+#   extends: .build_test_env_sh
+#   variables:
+#     DEV_ENV_FILE: .conda_env/dev_unix.yml
+#   tags: ["conda", "macos"]
+build_test_docker:
+  extends: .build_test_env_docker
+
+# Run tests
+.notebooks:
+  variables:
+    IPYNB_TESTS: "plotly.ipynb"
+# TODO: uncomment when ready
+# test_win:
+#   extends:
+#     - .pytest_nbval_conda_env
+#     - .notebooks
+#   before_script:
+#     - conda activate ${CI_PROJECT_NAME}_ci
+#   tags: ["conda", "win10"]
+#   needs: ["build_test_win"]
+# TODO: macos?
+# test_osx:
+#   extends:
+#     - .pytest_nbval_conda_env
+#     - .notebooks
+#   before_script:
+#     - source activate ${CI_PROJECT_NAME}_ci
+#   tags: ["conda", "macos"]
+#   needs: ["build_test_osx"]
+test_linux:
+  extends:
+    - .pytest_nbval_conda_env
+    - .notebooks
+
+# Build
+build_wheel:
+  extends: .build_wheel_template
+build_conda:
+  extends: .build_rattler_template
+  variables:
+    PY_BUILD_CHANNELS: "-c conda-forge -c https://conda.windenergy.dtu.dk/channel/open"
+
+# Deploy
+deploy_pypi:
+  extends: .deploy_pypi_open
+  variables:
+    # TODO: switch to prod later
+    TWINE_REPOSITORY: testpypi
+  needs: ["build_wheel"]
+deploy_conda:
+  extends: .deploy_conda_open
+  needs: ["build_conda"]
+deploy_conda_dev:
+  extends: .deploy_conda_dev
+  needs: ["build_conda"]
+
+# Docs
+build_docs:
+  extends: .build_docs
+  tags: ["ramtt_int-cluster", "linux-docker"]
+pages:
+  extends: .deploy_docs_pages
+  needs: ["build_docs"]
+  tags: ["doc_deploy"]
+docs_deploy:
+  extends: .deploy_docs_wasp
+  needs: ["build_docs"]
+  tags: ["doc_deploy"]
+
+###  MIGHT BE USED LATER ###
+
+# # OS selectors:
+# .linux_docker_mambaforge: &linux_docker_mambaforge
+#   image: condaforge/mambaforge:latest
+#   tags:
+#     - linux-docker
+
+# .linux_docker_pywasp_env: &linux_docker_pywasp_env
+#   image: nedadtu/pywasp-ci:latest
+#   tags:
+#     - linux-docker
+
+# .windows: &windows
+#   tags:
+#     - conda
+#     - win10
+
+# not mac for now
+#.mac: &mac
+#  tags:
+#    - conda
+#    - macos

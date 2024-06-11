@@ -1,0 +1,34 @@
+[BASIC]
+
+# Good variable names which should always be accepted, separated by a comma
+good-names=pw,i,j,k,ex,_,ds,p,A,k,u,f,ws,wd,we,sn,nx,ny,dx,dy,gx,gy,pt,z0
+
+[MESSAGES CONTROL]
+# Enable the message, report, category or checker with the given id(s). You can
+# either give multiple identifier separated by comma (,) or put this option
+# multiple time.
+#enable=
+
+# Disable the message, report, category or checker with the given id(s). You
+# can either give multiple identifier separated by comma (,) or put this option
+# multiple time (only on the command line, not in the configuration file where
+# it should appear only once).
+
+# Pointless whinging
+#   R0201 = Method could be a function
+#   W0212 = Accessing protected attribute of client class
+#   R0903 = Too few public methods
+#   R0913 = Too many arguments
+#   R0914 = Too many local variables
+#   W1203 = Logging shouldn't use fstrings
+#   C0103 = Invalid name, mostly names to short
+
+# Disable the message(s) with the given id(s).
+disable=R0201,W0212,R0903,R0913,R0914,W1203,C0103
+
+[MASTER]
+
+# A comma-separated list of package or module names from where C extensions may
+# be loaded. Extensions are loading into the active Python interpreter and may
+# run arbitrary code.
+extension-pkg-whitelist=lxml
