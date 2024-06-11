@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: cldfgeojson
+Version: 0.4.0
+Summary: Functionality to access and curate GeoJSON in CLDF datasets
+Home-page: https://github.com/cldf/cldfgeojson
+Author: Robert Forkel
+Author-email: dlce.rdm@eva.mpg.de
+License: Apache 2.0
+Project-URL: Bug Tracker, https://github.com/cldf/cldfgeojson/issues
+Keywords: linguistics
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: test
+License-File: LICENSE
+
+# cldfgeojson
+
+[![Build Status](https://github.com/cldf/cldfgeojson/workflows/tests/badge.svg)](https://github.com/cldf/cldfgeojson/actions?query=workflow%3Atests)
+[![PyPI](https://img.shields.io/pypi/v/cldfgeojson.svg)](https://pypi.org/project/cldfgeojson)
+
+`cldfgeojson` provides tools to work with geographic data structures encoded as [GeoJSON](https://geojson.org)
+in the context of [CLDF](https://cldf.clld.org) datasets.
+
+
+## Install
+
+```shell
+pip install cldfgeojson
+```
+
+
+## Adding speaker areas to CLDF datasets
+
+The functionality in [`cldfgeojson.create`](src/cldfgeojson/create.py) helps adding speaker area
+information when creating CLDF datasets (e.g. with [`cldfbench`](https://github.com/cldf/cldfbench)).
+
+
+## `leaflet.draw`
+
+This package contains the [`leaflet.draw`](https://github.com/Leaflet/Leaflet.draw) plugin in the form of `data://` URLs in 
+[a mako template](src/cldfgeojson/commands/templates/leaflet.draw.mako). `leaflet.draw` is
+distributed under a MIT license:
+
+> Copyright 2012-2017 Jon West, Jacob Toye, and Leaflet
+> 
+> Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+> 
+> The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+
+
