@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: mongo_m
+Version: 1.1.5
+Summary: A database migration tool for MongoDB
+Home-page: https://github.com/BeyonD311/mongo-m
+Author: Dankov Sergey
+Author-email: beyond31@mail.ru
+License: GNU General Public License v3 (GPLv3)
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+Requires-Dist: annotated-types >=0.6.0
+Requires-Dist: configparser >=6.0.1
+Requires-Dist: dnspython >=2.6.1
+Requires-Dist: pydantic >=2.6.4
+Requires-Dist: pydantic-settings >=2.2.1
+Requires-Dist: pydantic-core >=2.16.3
+Requires-Dist: pymongo >=4.6.3
+Requires-Dist: python-dotenv >=1.0.1
+Requires-Dist: typing-extensions >=4.10.0
+
+A database migration tool for MongoDB
