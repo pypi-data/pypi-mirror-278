@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "snyk-metrics"
+version = "0.0.6"
+description = "Python library to interact transparently with Prometheus, Pushgateway and Dogstatsd."
+authors = ["Snyk Security R&D <security-engineering@snyk.io>"]
+license = "Apache-2.0"
+readme = "README.md"
+homepage = "https://github.com/snyk/python-metrics"
+repository = "https://github.com/snyk/python-metrics"
+keywords = ["prometheus", "datadog", "metrics"]
+include = ["LICENSE"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+datadog = ">=0.43.0 <1.0.0"
+prometheus-client = ">=0.12.0 <1.0.0"
+
+[tool.poetry.dev-dependencies]
+black = "^22.1"
+flake8 = "^4.0.1"
+isort = "^5.10.1"
+mypy = "^0.931"
+pre-commit = "^2.17.0"
+pytest = "^6.2.5"
+pytest-cov = "^3.0.0"
+ipython = "^7.30.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line_length = 99
+target_version = ["py37"]
+
+[tool.isort]
+line_length = 99
+profile = "black"
+
+[tool.mypy]
+ignore_missing_imports = true
+disallow_untyped_defs = true
+
+[tool.coverage.report]
+exclude_lines = ["@abstract"]
