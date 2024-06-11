@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: systemdlint
+Version: 1.3.2
+Summary: Systemd Unitfile Linter
+Home-page: https://github.com/priv-kweihmann/systemdlint
+Author: Konrad Weihmann
+Author-email: kweihmann@outlook.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Quality Assurance
+Description-Content-Type: text/plain
+Requires-Dist: anytree (>=2.6.0)
+Requires-Dist: systemdunitparser (>=0.1)
+
+See https://github.com/priv-kweihmann/systemdlint for documentation
+
