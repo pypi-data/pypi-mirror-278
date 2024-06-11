@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: sqlab
+Version: 0.5.5
+Summary: SQL Adventure Builder: a command line tool for creating standalone SQL activities.
+Home-page: https://github.com/laowantong/sqlab/
+License: MIT
+Keywords: education,relational,database,sql,games
+Author: Aristide Grange
+Requires-Python: >=3.8.0,<4.0.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Framework :: IPython
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Database
+Classifier: Topic :: Education
+Classifier: Topic :: Games/Entertainment
+Requires-Dist: cmd2 (>=2.4.3,<3.0.0)
+Requires-Dist: jupysql (>=0.10.10,<0.11.0)
+Requires-Dist: mysql-connector-python (>=8.2.0,<9.0.0)
+Requires-Dist: psycopg2 (>=2.9.9,<3.0.0)
+Requires-Dist: sqlalchemy (>=2.0.27,<3.0.0)
+Requires-Dist: sqlparse (>=0.4.4,<0.5.0)
+Project-URL: Repository, https://github.com/laowantong/sqlab/
+Project-URL: issues, https://github.com/laowantong/sqlab/issues
+Description-Content-Type: text/markdown
+
+# SQLab
+
+![SQL adventure builder logo](assets/logo/color.svg)
+
+An SQLab adventure is a text-based game where the player evolves through a series of isolated or interconnected puzzles by crafting SQL queries.
+
+It consists in a standalone database encompassing the core dataset, a handful of stored procedures, and a table of encrypted messages (such as narrative elements, puzzle statements, answers, explanations, etc.).
+
+There is no requirement to wrap a dedicated application around this database to “run” the game. It can be played on any generic GUI such as [DBeaver](https://dbeaver.io), [phpMyAdmin](https://www.phpmyadmin.net), [pgAdmin](https://www.pgadmin.org), or directly in a command-line interface.
+
+Each question comes with a unique formula, for example, `salt_042(sum(hash) OVER ())`. Appended to the `SELECT` clause, this formula calculates a decryption token, which may unlock the next episode or, if the query is incorrect, a tailored hint (assuming the game's creator has provided one).
+
+In an educational context, this setup enables the students to learn and practice SQL without constant oversight. The instructor might stave off boredom by logging their queries and injecting new hints as needed, improving the game for all involved.
+
+## Examples on GitHub
+
+| Game | Pitch | Versions | DBMS | Included |
+| --- | --- | --- | --- | --- |
+| [SQLab Island](https://github.com/laowantong/sqlab_island) | An adaptation of [SQL Island](https://sql-island.informatik.uni-kl.de) by Johannes Schildgen | English | MySQL, PostgreSQL, SQLite | Sources + SQLab database |
+| [SQLab Sessform](https://github.com/laowantong/sqlab_sessform) | A set of independent exercises + _Mortelles Sessions_, a police investigation on a training company | French | MySQL, PostgresQL | SQLab database |
+| SQLab Club | An adaptation of [PostgreSQL Exercises](https://pgexercises.com) by Alisdair Owens | English | PostgreSQL | Sources + SQLab database (coming later) |
+| SQLab Corbeau | An original adaptation of the movie [_Le Corbeau_](https://fr.wikipedia.org/wiki/Le_Corbeau_(film,_1943)) by Henri-Georges Clouzot (1943) | French | MySQL | SQLab database (coming later) |
+
+## How can I create my own SQLab adventure?
+
+The `sqlab` command-line tool is not required to play, but is necessary to create a new adventure.
+
+```
+pip install sqlab
+```
+
+The documentation is not yet available. In the meantime, you may explore the repository of [SQLab Island](https://github.com/laowantong/sqlab_island). The provided dataset and Jupyter notebooks serve as source material for the generation of the SQLab database.
+
