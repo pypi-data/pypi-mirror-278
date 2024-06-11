@@ -1,0 +1,11 @@
+[invenio_base.api_apps]
+oidc_einfra = oidc_einfra.ext:EInfraOIDCApp
+
+[invenio_base.apps]
+oidc_einfra = oidc_einfra.ext:EInfraOIDCApp
+
+[invenio_db.alembic]
+oidc_einfra = oidc_einfra:alembic
+
+[invenio_db.models]
+oidc_einfra = oidc_einfra.models
