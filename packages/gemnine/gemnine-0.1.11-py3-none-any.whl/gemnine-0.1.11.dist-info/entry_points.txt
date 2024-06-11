@@ -1,0 +1,3 @@
+[console_scripts]
+gemnine=gemnine.cli:run
+
