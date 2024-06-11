@@ -1,0 +1,41 @@
+[project]
+name = "tasha"
+version = "0.0.0"
+description = """\
+Collection of various programs, scripts and libraries I created for personal \
+use (mostly just for fun), gathered in one package for easier management. \
+**WARNING: THIS CODE IS NOT USABLE YET!** \
+"""
+license = { file = "LICENSE" }
+requires-python = ">=3.12"
+readme = "README.md"
+authors = [
+    { name = "Paweł Ścierski", email = "escer@protonmail.ch" },
+]
+keywords = [
+    "ai",
+    "chatgpt",
+    "fortune",
+    "fun",
+    "scripting",
+]
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Games/Entertainment",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing",
+    "Topic :: Utilities"
+]
+
+[build-system]
+requires = ["setuptools>=70.0.0"]
+build-backend = "setuptools.build_meta"
