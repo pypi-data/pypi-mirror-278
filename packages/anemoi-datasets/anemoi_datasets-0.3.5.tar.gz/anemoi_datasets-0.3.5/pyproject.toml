@@ -1,0 +1,128 @@
+#!/usr/bin/env python
+# (C) Copyright 2024 ECMWF.
+#
+# This software is licensed under the terms of the Apache Licence Version 2.0
+# which can be obtained at http://www.apache.org/licenses/LICENSE-2.0.
+# In applying this licence, ECMWF does not waive the privileges and immunities
+# granted to it by virtue of its status as an intergovernmental organisation
+# nor does it submit to any jurisdiction.
+
+# https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
+
+[build-system]
+requires = [
+  "setuptools>=60",
+  "setuptools-scm>=8",
+]
+
+[project]
+name = "anemoi-datasets"
+
+description = "A package to hold various functions to support training of ML models on ECMWF data."
+keywords = [
+  "ai",
+  "datasets",
+  "tools",
+]
+
+license = { file = "LICENSE" }
+authors = [
+  { name = "European Centre for Medium-Range Weather Forecasts (ECMWF)", email = "software.support@ecmwf.int" },
+]
+
+requires-python = ">=3.9"
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+
+dynamic = [
+  "version",
+]
+dependencies = [
+  "anemoi-utils[provenance]>=0.3",
+  "numpy",
+  "pyyaml",
+  "semantic-version",
+  "tqdm",
+  "zarr<=2.17",
+]
+
+optional-dependencies.all = [
+  "anemoi-utils[provenance]>=0.3",
+  "boto3",
+  "climetlab>=0.23.2",
+  "earthkit-meteo",
+  "ecmwflibs>=0.6.3",
+  "entrypoints",
+  "numpy",
+  "pyproj",
+  "pytest",
+  "pyyaml",
+  "requests",
+  "s3fs",
+  "semantic-version",
+  "tqdm",
+  "zarr<=2.17",
+]
+optional-dependencies.create = [
+  "climetlab>=0.23.2", # "earthkit-data"
+  "earthkit-meteo",
+  "ecmwflibs>=0.6.3",
+  "entrypoints",
+  "pyproj",
+]
+
+optional-dependencies.dev = [
+  "boto3",
+
+  "earthkit-meteo",
+  "ecmwflibs>=0.6.3",
+  "nbsphinx",
+  "pandoc",
+  "pyproj",
+  "requests",
+  "s3fs",
+  "sphinx",
+  "sphinx-argparse",
+  "sphinx-rtd-theme",
+]
+optional-dependencies.docs = [
+  "nbsphinx",
+  "pandoc",
+  "sphinx",
+  "sphinx-argparse",
+  "sphinx-rtd-theme",
+]
+optional-dependencies.remote = [
+  "boto3",
+  "requests",
+  "s3fs",
+]
+optional-dependencies.test = [
+  "pytest",
+]
+urls.Documentation = "https://anemoi-datasets.readthedocs.io/"
+urls.Homepage = "https://github.com/ecmwf/anemoi-datasets/"
+urls.Issues = "https://github.com/ecmwf/anemoi-datasets/issues"
+# Changelog = "https://github.com/ecmwf/anemoi-datasets/CHANGELOG.md"
+urls.Repository = "https://github.com/ecmwf/anemoi-datasets/"
+scripts.anemoi-datasets = "anemoi.datasets.__main__:main"
+
+[tool.setuptools.package-data]
+"anemoi.datasets.data" = [
+  "*.css",
+]
+
+[tool.setuptools_scm]
+version_file = "src/anemoi/datasets/_version.py"
