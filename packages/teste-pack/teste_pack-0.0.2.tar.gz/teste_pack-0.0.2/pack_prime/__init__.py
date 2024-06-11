@@ -1,0 +1,1 @@
+from module_prime import check_prime
