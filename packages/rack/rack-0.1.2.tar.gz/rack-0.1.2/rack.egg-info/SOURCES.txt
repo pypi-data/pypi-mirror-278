@@ -1,0 +1,12 @@
+MANIFEST.in
+README.rst
+dict_test.py
+pyproject.toml
+setup.py
+./__init__.py
+./dict.py
+LICENSES/MIT.txt
+rack.egg-info/PKG-INFO
+rack.egg-info/SOURCES.txt
+rack.egg-info/dependency_links.txt
+rack.egg-info/top_level.txt
