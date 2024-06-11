@@ -1,0 +1,2 @@
+import pyjisa
+pyjisa.load()
