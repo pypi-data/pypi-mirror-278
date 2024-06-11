@@ -1,0 +1,75 @@
+# This is an example of the config file, copy it to ~/.iop4.config.yaml and edit it.
+# IOP4LIB will automatically attempt to use ~/.iop4.config.yaml if it exists, otherwise it will use this one.
+
+###############
+### GENERAL ###
+###############
+
+datadir: ~/.iop4data/ # <str> Path to iop4data data folder.
+set_rawdata_readonly: False # <bool> True / False (sets raw fits file to readonly when downloading them or creating a RawFit object).
+db_path: ~/.iop4data/iop4.db # Path to iop4 sqlite database file.
+astrometry_cache_path: ~/.astrometry_cache/ # <tr> Path to store the astromery index files.
+nthreads: 4 # <int> Number of threads / processes to use (e.g. 4).
+astrometry_timeout: 20 # <int> Timeout in minutes for astrometry solving.
+astrometry_allsky_allow: false # <bool> Whether to allow all sky searches in the astrometry.net solver. If there are many all-sky images and nthreads is too high, it might cause very high memory consumption.
+astrometry_allsky_septhreshold: 25 # <int> Threshold of detected poinint mismatch to trigger an all-sky search.
+
+################
+### GRAPHICS ###
+################
+
+mplt_default_dpi: 100 # <int> dpi for matplotlib (e.g. 100)
+
+###############
+### LOGGING ###
+###############
+
+log_file: ~/.iop4data/logs/iop4.log # <str> Path to log file.
+log_date_format: '%Y-%m-%d %H:%M:%S' # <log date format>
+log_format: '%(asctime)s - %(name)s [%(filename)s:%(lineno)d] - %(levelname)s - %(message)s' # <log format> You can also add '%(process)d (%(proc_memory)s)' to the format to show pid and memory usage per process.
+log_level: 20 # <int>. Possible values are: 10 (DEBUG), 20 (INFO), 30 (WARNING), 40 (ERROR), 50 (CRITICAL).
+
+############
+### CAHA ###
+############
+
+caha_address: null # <caha ftp address>
+caha_password: null # <your caha password>
+caha_user: null # <your caha user>
+
+###########
+### OSN ###
+###########
+
+osn_t090_address: null # <osn t090 ftp archive ip address>
+osn_t090_user: null # <yourosnuser>
+osn_t090_password: null # <yourosnpassword>
+
+osn_t150_address: null # <osn t150 ftp archive ip address>
+osn_t150_user: null # <yourosnuser>
+osn_t150_password: null # <yourosnpassword>
+
+# List of names to download from OSN.
+# The names will be introduced in osn_fnames_patterns as 'name.*\.fi?ts?$' (see below).
+
+osn_source_list_path: null # <path/to/osn/source/list>
+
+# List of (case insentitive) regex patterns.
+# Files matching any of these patterns will be downloaded from OSN. 
+# For example, (^BLLac.*\.fits?$) will match file names starting with BLLac 
+# and ending in .fit, .fits, or .fts. You can include your initials here, 
+# If you want to download only your files and the observers include it in the 
+# filename, e.g. (.*mfz.*\.fits?$) for files containing mfz in the name 
+# could belong to Menganito Fulano Zutano. The re.IGNORECASE flag will be passed.
+
+osn_fnames_patterns: 
+- (^Flat.*\.fi?ts?$)
+- (^Bias.*\.fi?ts?$)
+
+
+#################
+### IOP4ADMIN ###
+#################
+
+iop4admin:
+  force_rebuild_finding_charts: true # <bool> Whether to force rebuild finding charts.

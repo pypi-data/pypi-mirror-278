@@ -1,0 +1,44 @@
+<div class="header">
+    <h1>About &nbsp;<span class="material-icons-outlined">rocket_launch</span></h1>
+    {% comment %} <h1>About &nbsp;<q-icon name="rocket_launch"></q-icon></h1>  {% endcomment %}
+</div>
+<div class="content">
+    <p>
+        IOP4, <i>the Interactive Photo-Polarimetric Python Pipeline</i>. 
+        Check <a href="https://github.com/juanep97/iop4">the code in GitHub</a>. 
+        Documentation for the last version is hosted in <a href="https://juanep97.github.io/iop4/">GitHub Pages</a>.
+    </p>
+    
+    {% if debug %}
+        <p>
+            You can browse your local version of the docs at 
+            <a href="{% url 'iop4api:docs' %}">/iop4/docs/</a>
+            (you need to build it first with make <code>docs-sphinx</code>).
+        </p>
+    {% endif %}
+
+    {% if request.user.is_authenticated %}
+        <p class="styled-box">
+            This site is currently running IOP4 <i>{{ git_branch }} @ <a href="https://github.com/juanep97/iop4/commit/{{ git_commit_hash }}">{{ git_describe }}</a></i>.<br>
+            <br>
+            <span style="font-size:small;">
+                This message is visible only to authenticated users.
+            </span>
+        </p>
+    {% endif %}
+    
+    {% if debug and request.user.is_authenticated %}
+        <p class="styled-box">
+            It appears that you are running this site in the <span style="color: red;">DEBUG</span> server.<br>
+            <br>
+            <span style="font-size: small;">
+                If this is the case, you can safely ignore this message. 
+                Otherwise, check <a href="https://github.com/juanep97/iop4#as-a-program">IOP4</a> and <a href="https://docs.djangoproject.com/en/dev/ref/django-admin/#runserver">Django</a> docs. 
+                This message is visible only to authenticated users.
+            </span>
+        </p>
+    {% endif %}
+</div>
+<div class="footer">
+    <p>Created by Juan Escudero Pedrosa for the VHEGA@IAA-CSIC group.</p>
+</div>
