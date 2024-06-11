@@ -1,0 +1,193 @@
+2024-06-11 6dfb86e Daniel Graham
+    Tagged version 6.4.4. zero division bug fix
+
+2024-06-11 86e94fe Daniel Graham
+    Fixed bug in computing lag when the period is day.
+
+2024-06-10 ae67819 Daniel Graham
+    Tagged version 6.4.3.
+
+2024-06-10 a91a903 Daniel Graham
+    Fixed 'int' bug in setting active_hsh
+
+2024-06-07 c0051ef Daniel Graham
+    Tagged version 6.4.2.
+
+2024-06-07 7b3e92d Daniel Graham
+    do_finish bug fix
+
+2024-06-07 8864153 Daniel Graham
+    Tagged version 6.4.1.
+
+2024-06-07 be2f6de Daniel Graham
+    Bug fix for missing period in goal quota.
+
+2024-06-07 4293602 Daniel Graham
+    Tagged version 6.4.0. Major updates to Goals
+
+2024-06-07 def62a0 Daniel Graham
+    Added dialog to specify the number of goal completions to record.
+
+2024-06-07 df02f9f Daniel Graham
+    Fixed overdue job bug
+
+2024-06-07 323cacf Daniel Graham
+    Added days period to goals. Added test for valid goal periods.
+    Added num_completed option to limit goal histories.
+
+2024-06-06 12cbc41 Daniel Graham
+    README tweaks
+
+2024-06-06 4ad079c Daniel Graham
+    updated goals.png
+
+2024-06-06 3c960e8 Daniel Graham
+    updated goals.png
+
+2024-06-06 bfa984a Daniel Graham
+    Updated make_examples for goals. Fixed logic in matching goal
+    periods. README image tweaks.
+
+2024-06-01 cc83d86 Daniel Graham
+    goals.png tweak
+
+2024-06-01 800e79d Daniel Graham
+    README tweaks
+
+2024-06-01 ec9bae9 Daniel Graham
+    README tweaks
+
+2024-06-01 9b54ab2 Daniel Graham
+    Tagged version 6.3.1.
+
+2024-06-01 d13c107 Daniel Graham
+    Updated goal.png
+
+2024-06-01 7b944c5 Daniel Graham
+    Tweaks for make_examples, goals.png and README
+
+2024-06-01 b70e39a Daniel Graham
+    README tweaks
+
+2024-06-01 0fa5a1d Daniel Graham
+    README tweaks
+
+2024-06-01 7e1be56 Daniel Graham
+    Fixed bug in processing yearly goals
+
+2024-06-01 0ae3c60 Daniel Graham
+    Use lorem phrase for goals. In item.get_repetititons, only update
+    hash if modified.
+
+2024-06-01 d2daf8d Daniel Graham
+    Added goals and dst tests to make_examples. Fixed bug in yearly
+    fraction.
+
+2024-06-01 37adfc3 Daniel Graham
+    README tweaks
+
+2024-05-31 16cb122 Daniel Graham
+    Tagged version 6.3.0. Added goal period options for year, quarter
+    and month. Added caching for non-weekly views. Fixed timezone
+    issues associated with the transistions between daylight saving
+    and standard time.
+
+2024-05-31 98f34e5 Daniel Graham
+    Fixed timezone issues associated with daylight/standard time
+    transitions. Flag instances falling within transition.
+
+2024-05-29 45a2a9e Daniel Graham
+    Replaced zoneinto ZoneInfo with dateutil tz gettz - seems to fix
+    daylight savings to standard time problem.
+
+2024-05-29 511a4c1 Daniel Graham
+    typo
+
+2024-05-29 7a044c7 Daniel Graham
+    goal tweaks
+
+2024-05-29 7263136 Daniel Graham
+    Message tweak
+
+2024-05-29 04add19 Daniel Graham
+    Goal category tweaks
+
+2024-05-28 367b3e1 Daniel Graham
+    Use 'w' as default quota period for compatibility with previous
+    version. Formatting tweaks for goals.
+
+2024-05-27 61bf526 Daniel Graham
+    Added year, quarter and month to periods supported by goals.
+
+2024-05-25 92dce3e Daniel Graham
+    Clean up - caches for cacheds views work
+
+2024-05-22 331f590 Daniel Graham
+    Tagged version 6.2.7.
+
+2024-05-22 25c994b Daniel Graham
+    Fixed date vs datetime bug
+
+2024-05-22 84dce1d Daniel Graham
+    Tagged version 6.2.6.
+
+2024-05-22 3c75e39 Daniel Graham
+    Removed more logging.debug statements
+
+2024-05-22 3ed355b Daniel Graham
+    Finishing repeating tasks now seems correct. Cleaned up
+    logging.debug statements.
+
+2024-05-22 fa11ab4 Daniel Graham
+    Next pass at finishing repeated tasks correctly
+
+2024-05-19 94b7683 Daniel Graham
+    Fixed bug in completing repeating task when @s doesn't fit the
+    recurrence rule
+
+2024-05-19 b8e0c42 Daniel Graham
+    @s inclusion fix for past due repeating tasks
+
+2024-05-18 34730e7 Daniel Graham
+    Tagged version 6.2.5.
+
+2024-05-18 b2713d0 Daniel Graham
+    Fixed bug in which pressing 'E' without an item selected, would
+    open the last item
+
+2024-05-18 4b525cd Daniel Graham
+    template tweaks
+
+2024-05-17 0d351be Daniel Graham
+    Fixed bug in allowing invalid duplicate entries
+
+2024-05-10 d71ca52 Daniel Graham
+    Tagged version 6.2.4.
+
+2024-05-10 d5e475a Daniel Graham
+    Fixed bug in processing alerts for tasks with @s and @+ entries
+    but without @r
+
+2024-05-09 3026c51 Daniel Graham
+    Minor tweaks
+
+2024-05-07 4cd650d Daniel Graham
+    README video link tweak
+
+2024-05-06 e060977 Daniel Graham
+    More video link tweaks.
+
+2024-05-06 4cd33f1 Daniel Graham
+    README tweaks
+
+2024-05-06 e12dfd3 Daniel Graham
+    Moved m4v video to YouTube (unlisted)
+
+2024-05-06 c5802f9 Daniel Graham
+    Switched to standard definition (480p) for slide show
+
+2024-05-06 e01f168 Daniel Graham
+    First pass at m4v video for README
+
+2024-05-06 80b038f Daniel Graham
+    README tweaks
