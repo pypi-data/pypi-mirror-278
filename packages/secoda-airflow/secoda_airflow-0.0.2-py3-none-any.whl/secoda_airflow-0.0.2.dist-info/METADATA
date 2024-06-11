@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: secoda-airflow
+Version: 0.0.2
+Summary: SSecoda Airflow Provider
+Author: Secoda Engineering
+Author-email: engineering@secoda.co
+Requires-Python: >3.6
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: apache-airflow (>=2.0.0,<3.0.0)
+Requires-Dist: pytest (>=8.2.2,<9.0.0)
+Requires-Dist: requests (>2.23.0)
+Description-Content-Type: text/markdown
+
+
