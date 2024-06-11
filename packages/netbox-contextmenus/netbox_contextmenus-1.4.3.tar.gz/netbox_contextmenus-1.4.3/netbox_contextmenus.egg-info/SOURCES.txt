@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+netbox_contextmenus/__init__.py
+netbox_contextmenus/pluginvars.py
+netbox_contextmenus/signals.py
+netbox_contextmenus.egg-info/PKG-INFO
+netbox_contextmenus.egg-info/SOURCES.txt
+netbox_contextmenus.egg-info/dependency_links.txt
+netbox_contextmenus.egg-info/top_level.txt
+netbox_contextmenus/static/netbox_contextmenus/nbcm.js
