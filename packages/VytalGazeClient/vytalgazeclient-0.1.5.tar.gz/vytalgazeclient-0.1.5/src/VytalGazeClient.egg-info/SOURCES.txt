@@ -1,0 +1,16 @@
+.DS_Store
+.gitignore
+LICENSE
+README.md
+requirements.txt
+setup.cfg
+setup.py
+config/config.json
+src/VytalGazeClient.egg-info/PKG-INFO
+src/VytalGazeClient.egg-info/SOURCES.txt
+src/VytalGazeClient.egg-info/dependency_links.txt
+src/VytalGazeClient.egg-info/requires.txt
+src/VytalGazeClient.egg-info/top_level.txt
+src/vytalgaze_client/__init__.py
+src/vytalgaze_client/client.py
+test/__init__.py
