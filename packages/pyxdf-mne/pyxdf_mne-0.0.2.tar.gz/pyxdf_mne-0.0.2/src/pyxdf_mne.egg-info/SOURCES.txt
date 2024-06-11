@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/pyxdf_mne/__init__.py
+src/pyxdf_mne/main.py
+src/pyxdf_mne.egg-info/PKG-INFO
+src/pyxdf_mne.egg-info/SOURCES.txt
+src/pyxdf_mne.egg-info/dependency_links.txt
+src/pyxdf_mne.egg-info/top_level.txt
