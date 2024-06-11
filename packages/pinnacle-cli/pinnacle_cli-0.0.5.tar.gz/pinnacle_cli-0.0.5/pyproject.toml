@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "pinnacle-cli"
+version = "0.0.5"
+description = ""
+authors = ["Ivan Zhang <ivanzhangofficial@gmail.com>"]
+readme = "README.md"
+include = ["pinnacle_cli/js/node_modules/**/*"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+click = "^8.1.7"
+fastapi = "^0.111.0"
+mitmproxy = "^10.3.0"
+
+schedule = "^1.2.2"
+pinnacle-python = "^0.0.3"
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+pinnacle = "pinnacle_cli.main:main"
