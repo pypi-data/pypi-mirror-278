@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: gsi-dm
+Version: 0.0.1
+Summary: A Python library for upserting data into postgres.
+Author-email: Caleb Grant <grantcaleb22@gmail.com>
+Project-URL: Homepage, https://github.com/geocoug/gsi-dm
+Project-URL: Issues, https://github.com/geocoug/gsi-dm/issues
+Keywords: postgresql,postgres,gsi,dbms,etl,upsert,database,utils
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Database
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: polars >=0.19.3
+Requires-Dist: psycopg2-binary >=2.9.7
+Requires-Dist: tabulate >=0.9.0
+Requires-Dist: chardet >=5.2.0
+Requires-Dist: numpy >=1.26.4
+Requires-Dist: pandas >=2.2.2
+
