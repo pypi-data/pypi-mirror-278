@@ -1,0 +1,14 @@
+[package]
+name = "simple_spawn_blocking"
+version = "1.0.0"
+description = "A simple crate to make spawning blocking tasks more ergonomic"
+categories= ["conda"]
+homepage= "https://github.com/mamba-org/rattler"
+repository= "https://github.com/mamba-org/rattler"
+license= "BSD-3-Clause"
+edition= "2021"
+resolver = "2"
+
+
+[dependencies]
+tokio = { version = "1", default-features = false, features = ["rt"], optional = true }

@@ -1,0 +1,67 @@
+[package]
+name = "rattler"
+version = "0.26.4"
+edition= "2021"
+authors = ["Bas Zalmstra <zalmstra.bas@gmail.com>"]
+description = "Rust library to install conda environments"
+categories= ["conda"]
+homepage= "https://github.com/mamba-org/rattler"
+repository= "https://github.com/mamba-org/rattler"
+license= "BSD-3-Clause"
+readme= "README.md"
+resolver = "2"
+
+[features]
+default = ['native-tls']
+native-tls = ['reqwest/native-tls', 'rattler_package_streaming/native-tls']
+rustls-tls = ['reqwest/rustls-tls', 'rattler_package_streaming/rustls-tls']
+cli-tools = ['dep:clap']
+indicatif = ['dep:indicatif', 'dep:console']
+
+[dependencies]
+rattler_cache = { path = "../rattler_cache", version = "0.1.0", default-features = false }
+rattler_conda_types = { path = "../rattler_conda_types", version = "0.25.2", default-features = false }
+rattler_digest = { path = "../rattler_digest", version = "0.19.4", default-features = false }
+rattler_networking = { path = "../rattler_networking", version = "0.20.8", default-features = false }
+rattler_shell = { path = "../rattler_shell", version = "0.20.9", default-features = false }
+rattler_package_streaming = { path = "../rattler_package_streaming", version = "0.21.3", default-features = false, features = ["reqwest"] }
+simple_spawn_blocking = { path = "../simple_spawn_blocking", version = "1.0", default-features = false, features = ["tokio"] }
+anyhow = "1.0.82"
+bytes = "1.6.0"
+chrono = { version = "0.4.38", default-features = false, features = [
+    "std",
+    "serde",
+    "alloc",
+] }
+clap = { version = "4.5.4", features = ["derive"] , optional = true }
+digest = "0.10.7"
+dirs = "5.0.1"
+fs-err = "2.11.0"
+futures = "0.3.30"
+fxhash = "0.2.1"
+humantime = "2.1.0"
+indexmap = "2.2.6"
+indicatif = { version = "0.17.8", optional = true }
+itertools = "0.12.1"
+memchr = "2.7.2"
+memmap2 = "0.9.4"
+once_cell = "1.19.0"
+parking_lot = "0.12.1"
+reflink-copy = "0.1.16"
+regex = "1.10.4"
+reqwest = { version = "0.12.3", default-features = false , features = ["stream", "json", "gzip"] }
+reqwest-middleware = "0.3.0"
+smallvec = { version = "1.13.2", features = [
+    "serde",
+    "const_new",
+    "const_generics",
+    "union",
+] }
+tempfile = "3.10.1"
+thiserror = "1.0"
+tokio = { version = "1.37.0", default-features = false , features = ["rt", "io-util", "macros"] }
+tokio-stream = { version = "0.1.15", features = ["sync"] }
+tracing = "0.1.40"
+url = { version = "2.5.0" , features = ["serde"] }
+uuid = { version = "1.8.0", default-features = false , features = ["v4", "fast-rng"] }
+console = { version = "0.15.8", features = ["windows-console-colors"] , optional = true }
