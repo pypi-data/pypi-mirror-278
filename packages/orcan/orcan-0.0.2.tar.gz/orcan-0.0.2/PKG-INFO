@@ -1,0 +1,86 @@
+Metadata-Version: 2.1
+Name: orcan
+Version: 0.0.2
+Summary: not the best reconnaissance tool, but it is a reconnaissance tool
+Home-page: https://erfansamandarian.com/soundbook
+Author: Erfan Samandarian
+Author-email: mail@erfansamandarian.com
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: tabulate
+Requires-Dist: termcolor
+
+# orcan 
+not the best reconnaissance tool, but it is a reconnaissance tool
+
+```
+                                      %%#%
+                                      %###
+                                      %%%##
+                                      %%%%%
+                                      %%%%##
+                                     %%%%####
+                                     %%%%%%%#
+                                     %%%%%%###
+                                    %%%%%#####
+                                   %%%%%#####%%
+                                %%%%%%%%%%##*****
+                   %%%###################+---====++++++
+             %%######******##############+=--=*##########%%
+      %%%%################################*==*#################%
+   %%#######*+++*#################%%%%%%%####%%%%#############*####%
+  %###%%%+:::::-*####################%%%%%%%%%%%%%%%%%%%%##############%
+ %###%#***=--=*#%########################%%%%%%%%%%%%%%%%%%%%%%%##########%
+ +=-:...........:*%%%%%%%%%%%##########%%%%%%%%%%%%%%*+==+*#%%%%%%%%%#######%%
+    -:::::.....::+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#=...........:+#%%%%%%%%#####%%
+       ------:::-+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%+..............:::=#####%%%####%%%
+               ==+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*:....::--==----::::+%%######%%%%%%%
+                 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%#--:::-#%%%%#####%%%%%%%%%%%%%%%%%%%%%
+                  %%%%%%%%%%%%%%%#####%%%###+========**+=            %%%%%%#+==+%%%%%#%%%%
+                  %%%%%%%%%%%%%%%%#####                                          ###%%#%%#*
+                    %%%%%%%%%%%%%%#####                                           #######%%
+                     %%%%%%%%%%%%%####                                             %%#####+
+                       %%%%%%%%%%%%                                                  %%%%
+                         %%%%%%%%%                                                    %%%
+```
+
+# installation 
+
+## venv
+
+```
+git clone https://github.com/erfansamandarian/orcan
+```
+
+```
+cd orcan
+```
+
+```
+python -m venv venv
+```
+
+```
+pip install .
+```
+
+## pypi
+
+```
+pip install orcan
+```
+
+# usage
+
+```
+orcan --url {address} --{option}
+```
+
+## options
+
+| **argument** | **description**      |
+|--------------|----------------------|
+| --domain     | print subdomains     |
+| --who        | print whois response |
