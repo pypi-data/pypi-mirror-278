@@ -1,0 +1,118 @@
+Metadata-Version: 2.1
+Name: email-utilities
+Version: 1.0.2
+Summary: collection of utilities for email-related tasks
+Home-page: 
+Author: Felix Otoo
+Author-email: felixotoo75@gmail.com
+License: MIT
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# email_utilities
+
+
+
+This module is a collection of utility functions for email-related tasks including:
+
+* Tools for gaining insights about emails for data tasks.
+
+* Tools for converting email to text or html-like email to text.
+
+
+
+#### Installation
+
+    pip install email_utilities
+
+
+
+#### Get started
+
+
+
+How to load an email using the **_load_email_** function:
+
+
+
+```Python
+
+from email_utilities import EmailConversion
+
+from pathlib import Path
+
+
+
+email_conversion = EmailConversion()
+
+file_path = next(Path("tests/Examples/email").iterdir()) # sample file
+
+email_text = email_conversion.load_email(file_path)
+
+```
+
+How to convert an email into a readable text format using the **_convert_email_to_text_** function:
+
+```Python
+
+from email_utilities import EmailConversion
+
+from pathlib import Path
+
+
+
+email_conversion = EmailConversion()
+
+file_path = next(Path("tests/Examples/email").iterdir()) # sample file
+
+email_text = email_conversion.load_email(file_path)
+
+email_conversion.convert_email_to_text(email_text)
+
+```
+
+How to get the structures and their frequencies of one or more emails using the **_count_email_structures_** function :
+
+```Python
+
+from email_utilities import EmailConversion
+
+from pathlib import Path
+
+from email_utilities import EmailInsights
+
+
+
+email_conversion = EmailConversion()
+
+email_insights = EmailInsights()
+
+
+
+# for multiple email files
+
+file_dir = list(Path("Examples/email").iterdir()) + list(Path("Examples/html").iterdir()) # sample files
+
+emails = [email_conversion.load_email(file_) for file_ in file_dir]
+
+email_insights.count_email_structures(emails)
+
+
+
+# for a single email file
+
+sample_email = emails[6]
+
+email_insights.count_email_structures(sample_email)
+
+```
