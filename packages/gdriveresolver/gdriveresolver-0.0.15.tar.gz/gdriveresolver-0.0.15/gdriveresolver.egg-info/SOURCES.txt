@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+gdriveresolver/__init__.py
+gdriveresolver/exceptions.py
+gdriveresolver/model.py
+gdriveresolver/resolver.py
+gdriveresolver/system_operations.py
+gdriveresolver.egg-info/PKG-INFO
+gdriveresolver.egg-info/SOURCES.txt
+gdriveresolver.egg-info/dependency_links.txt
+gdriveresolver.egg-info/top_level.txt
+tests/test_gdrive_resolver.py
