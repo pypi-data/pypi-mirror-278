@@ -1,0 +1,86 @@
+# Copyright (c) "Neo4j"
+# Neo4j Sweden AB [https://neo4j.com]
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     https://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+[tool.poetry]
+name = "neo4j-genai"
+version = "0.2.0"
+description = "Python package to allow easy integration to Neo4j's GenAI features"
+authors = ["Neo4j, Inc <team-gen-ai@neo4j.com>"]
+license = "Apache License, Version 2.0"
+readme = "README.md"
+
+[[tool.poetry.packages]]
+include = "neo4j_genai"
+from = "src"
+
+[tool.poetry.dependencies]
+python = "^3.8.1"
+neo4j = "^5.17.0"
+types-requests = "^2.31.0.20240218"
+pydantic = "^2.6.3"
+weaviate-client = {version = "^4.6.1", optional = true}
+pinecone-client = {version = "^4.1.0", optional = true}
+types-mock = "^5.1.0.20240425"
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^3.1.0"
+mypy = "^1.10.0"
+pytest = "^8.0.2"
+pytest-mock = "^3.12.0"
+pre-commit = { version = "^3.6.2", python = "^3.9" }
+coverage = "^7.4.3"
+ruff = "^0.3.0"
+langchain-openai = "^0.1.1"
+weaviate-client = "^4.6.1"
+sentence-transformers = "^3.0.0"
+pinecone-client = "^4.1.0"
+langchain-community = "^0.2.0"
+requests = "^2.32.0"
+sphinx = { version = "^7.2.6", python = "^3.9" }
+
+[tool.poetry.extras]
+external_clients = ["weaviate-client", "pinecone-client"]
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = [
+    "",
+]
+
+[tool.coverage.paths]
+source = ["src"]
+
+[tool.pylint."MESSAGES CONTROL"]
+disable="C0114,C0115"
+
+[tool.mypy]
+strict = true
+ignore_missing_imports = true
+allow_subclassing_any = true
+disallow_untyped_calls = false
+exclude = ["docs"]
+
+[[tool.mypy.overrides]]
+module = [
+    "weaviate.*",
+    "sentence_transformers.*",
+    "conftest",
+]
+ignore_missing_imports = true
