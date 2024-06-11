@@ -1,0 +1,62 @@
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[project]
+name = "pkg-support-resistance"
+dynamic = []
+description = "Library collection of algorithms to calculate supports and resistance of financial markets."
+authors = [
+    { name = "pablo brocal", email = "pablomb206@gmail.com" },
+]
+dependencies = [
+    "numpy>=1.26.4",
+]
+requires-python = ">=3.12"
+readme = "README.md"
+version = "0.2.4"
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+Repository = "https://github.com/pablob206/pkg-support-resistance"
+Homepage = "https://github.com/pablob206/pkg-support-resistance"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.version]
+source = "file"
+path = "src/pkg_support_resistance/__init__.py"
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "black>=24.4.2",
+    "pre-commit>=3.7.1",
+    "flake8>=7.0.0",
+    "pylint>=3.2.3",
+    "pytest>=8.2.2",
+]
+
+[tool.pylint.MASTER]
+ignore-paths = [
+    "^.venv/.*$",
+]
+
+[tool.pylint."MESSAGES CONTROL"]
+disable = "missing-module-docstring,\nmissing-class-docstring,\nmissing-function-docstring,\nimport-error,\nline-too-long,\nno-name-in-module,\nno-member,\nunnecessary-pass,\nassigning-non-slot,\ntoo-few-public-methods,\nrelative-beyond-top-level,\n"
+
+[tool.mypy]
+ignore_errors = true
+
+[tool.bandit]
+recursive = true
+exclude_dirs = [
+    "tests",
+    "test",
+]
+skips = []
+format = "txt"
