@@ -1,0 +1,50 @@
+[tool.ruff]
+select = ["E", "F", "TCH", "SLF", "C4", "SIM", "B"]
+ignore = [
+    "E501",
+    "E721"
+]
+
+[tool.pyright]
+ignore = [
+    "**/node_modules",
+    "**/__pycache__",
+    "**/migrations",
+    ".git",
+    "./venv",
+]
+exclude = [
+    "**/node_modules",
+    "**/__pycache__",
+    "**/migrations",
+    ".git",
+    "./venv",
+]
+
+
+[tool.coverage.run]
+omit =[ 
+    # Vitural env
+    "./venv/*",
+    
+    # Files
+    "*tests*",
+    "*test*",
+    "*__init__.py",
+    "setup.py",
+    "dummy_django_settings.py",
+]
+
+
+[tool.coverage.report]
+omit = [
+    # Vitural env
+    "./venv/*",
+    
+    # Files
+    "*tests*",
+    "*test*",
+    "*__init__.py",
+    "setup.py",
+    "dummy_django_settings.py",
+]
