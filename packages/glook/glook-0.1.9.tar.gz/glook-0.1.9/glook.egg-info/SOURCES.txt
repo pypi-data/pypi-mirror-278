@@ -1,0 +1,15 @@
+README.md
+setup.py
+glook/GLook.py
+glook/__init__.py
+glook/cli.py
+glook.egg-info/PKG-INFO
+glook.egg-info/SOURCES.txt
+glook.egg-info/dependency_links.txt
+glook.egg-info/entry_points.txt
+glook.egg-info/requires.txt
+glook.egg-info/top_level.txt
+glook/pages/1_General_Data_Insights.py
+glook/pages/2_Univariate_Analysis.py
+glook/pages/3_Bivariate_Analysis.py
+glook/pages/4_Trivariate_Analysis.py
