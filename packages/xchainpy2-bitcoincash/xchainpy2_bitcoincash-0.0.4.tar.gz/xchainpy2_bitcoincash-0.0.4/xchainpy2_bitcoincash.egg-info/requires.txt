@@ -1,0 +1,7 @@
+xchainpy2_utils
+xchainpy2_crypto
+xchainpy2_client
+bitcash
+
+[test]
+pytest
