@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: xml2dcm
+Version: 0.0.1
+Summary: Packages to convert XML files to DICOM format written by SNUH
+Home-page: https://github.com/SeungHoJUN/XML2DCM
+Author: seunghojun
+Author-email: danuri.jun@gmail.com
+Keywords: xml2dcm,XML,Dicom,ECG Dicom,SNUH
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: os
+Requires-Dist: base64
+Requires-Dist: xml
+Requires-Dist: numpy
+Requires-Dist: pydicom
+Requires-Dist: datetime
+Requires-Dist: concurrent
+Requires-Dist: tqdm
+Requires-Dist: traceback
+
