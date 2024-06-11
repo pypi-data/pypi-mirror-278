@@ -1,0 +1,17 @@
+lightning-utilities>=0.7.0
+
+[base]
+lightning-utilities>=0.7.0
+
+[examples]
+jsonargparse[signatures]
+
+[lightning]
+lightning>=2.1.0
+
+[pytorch-lightning]
+pytorch-lightning>=2.1.0
+
+[typing]
+mypy==1.10.0
+pytorch-lightning==2.2.5
