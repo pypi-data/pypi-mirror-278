@@ -1,0 +1,116 @@
+Metadata-Version: 2.1
+Name: assembly_uploader
+Version: 1.0.1
+Summary: Python scripts to upload primary metagenome and metatranscriptome assemblies to ENA on a per-study basis. This script generates xmls to register a new study and create manifests necessary for submission with webin-cli.
+Author-email: MGnify team <metagenomics-help@ebi.ac.uk>
+License: Apache Software License 2.0
+Keywords: bioinformatics,tool,metagenomics
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests==2.32.3
+Provides-Extra: dev
+Requires-Dist: pre-commit==3.6.0; extra == "dev"
+Requires-Dist: black==24.4.2; extra == "dev"
+Provides-Extra: test
+Requires-Dist: pytest==8.2.2; extra == "test"
+Requires-Dist: pytest-md==0.2.0; extra == "test"
+Requires-Dist: pytest-workflow==2.1.0; extra == "test"
+
+# Public ENA Assembly uploader
+Upload of metagenome and metatranscriptome assemblies to the [European Nucleotide Archive (ENA)](https://www.ebi.ac.uk/ena)
+
+Pre-requisites:
+- CSV metadata file. One per study. See test/fixtures/test_metadata for an example
+- Compressed assembly fasta files in the locations defined in the metadata file
+
+Set the following environmental variables with your webin details:
+
+ENA_WEBIN
+```
+export ENA_WEBIN=Webin-0000
+```
+
+ENA_WEBIN_PASSWORD
+```
+export ENA_WEBIN_PASSWORD=password
+```
+
+## Installation
+
+Install the package:
+
+```bash
+pip install assembly_uploader
+```
+
+## Register study and generate pre-upload files
+
+**If you already have a registered study accession for your assembly files skip to step 3.**
+
+### Step 1
+
+This step will generate a folder STUDY_upload and a project XML and submission XML within it:
+
+```bash
+study_xmls
+  --study STUDY         raw reads study ID
+  --library LIBRARY     metagenome or metatranscriptome
+  --center CENTER       center for upload e.g. EMG
+  --hold HOLD           hold date (private) if it should be different from the provided study in format dd-mm-yyyy. Will inherit the release date of the raw read study if not
+                        provided.
+  --tpa                 is the study a third party assembly. Default True
+  --publication PUBLICATION
+                        pubmed ID for connected publication if available
+```
+
+### Step 2
+
+This step submit the XML to ENA and generate a new assembly study accession. Keep note of the newly generated study accession:
+
+```bash
+submit_study
+  --study STUDY         raw reads study ID
+  --test                run test submission only
+```
+
+
+### Step 3
+
+This step will generate manifest files in the folder STUDY_UPLOAD for runs specified in the metadata file:
+
+```bash
+assembly_manifest
+  --study STUDY         raw reads study ID
+  --data DATA           metadata CSV - run_id, coverage, assembler, version, filepath
+  --assembly_study ASSEMBLY_STUDY
+                        pre-existing study ID to submit to if available. Must exist in the webin account
+  --force               overwrite all existing manifests
+```
+
+## Upload assemblies
+
+Once manifest files are generated, it is necessary to use ENA's webin-cli resource to upload genomes.
+
+To test your submission add the `-test` argument.
+
+A live execution example within this repo is the following:
+```bash
+ena-webin-cli \
+  -context=genome \
+  -manifest=SRR12240187.manifest \
+  -userName=$ENA_WEBIN \
+  -password=$ENA_WEBIN_PASSWORD \
+  -submit
+```
+
+More information on ENA's webin-cli can be found [here](<https://ena-docs.readthedocs.io/en/latest/submit/general-guide/webin-cli.html>).
