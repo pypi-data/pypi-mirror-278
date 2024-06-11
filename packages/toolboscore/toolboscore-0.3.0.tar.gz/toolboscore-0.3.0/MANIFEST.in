@@ -1,0 +1,15 @@
+# Include all files in the doc directory and its subdirectories
+
+# Include the README file
+include README.md
+
+# Include all files in the root directory
+include *
+
+recursive-include doc *
+recursive-include etc *
+recursive-include examples *
+recursive-include external *
+recursive-include include *
+recursive-include share *
+recursive-include test *

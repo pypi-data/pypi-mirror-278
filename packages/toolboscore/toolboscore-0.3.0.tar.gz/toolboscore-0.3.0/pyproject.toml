@@ -1,0 +1,33 @@
+[project]
+name = "toolboscore"
+version = "0.3.0"
+authors = [
+    { name = "HRI", email = "monicadasi18@gmail.com" }
+]
+description = "Quality checks and routine"
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+]
+urls = { "Homepage" = "https://github.com/HRI-EU/ToolBOSCore" }
+
+[tool.setuptools]
+packages = { find = { include = ["bin", "doc.*", "etc.*", "examples", "external.*", "include.*", "ToolBOSCore", "test.*"] } }
+include-package-data = true
+
+#[tool.setuptools]
+#script-files = ["*.sh", "*.bat"]
+
+#[tool.setuptools.data-files]
+#"".include = ["BashSrc", "requirements.txt", "*.txt"]
+
+#[tool.setuptools.package-data]
+#"bin" = ["bin/*.py"]
+#"doc" = ["bin/*.py"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

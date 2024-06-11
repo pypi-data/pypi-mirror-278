@@ -1,0 +1,262 @@
+#!/bin/bash
+#
+#  ToolBOS environment setup
+#
+#  Copyright (c) Honda Research Institute Europe GmbH
+#
+#  Redistribution and use in source and binary forms, with or without
+#  modification, are permitted provided that the following conditions are
+#  met:
+#
+#  1. Redistributions of source code must retain the above copyright notice,
+#     this list of conditions and the following disclaimer.
+#
+#  2. Redistributions in binary form must reproduce the above copyright
+#     notice, this list of conditions and the following disclaimer in the
+#     documentation and/or other materials provided with the distribution.
+#
+#  3. Neither the name of the copyright holder nor the names of its
+#     contributors may be used to endorse or promote products derived from
+#     this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
+#  IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+#  THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+#  PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR
+#  CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+#  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+#  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+#  PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+#  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+#  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+#  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#
+#  Note:  This file needs to be sourced, not executed! For example:
+#         $ source ./BashSrc
+#
+
+
+#----------------------------------------------------------------------------
+# Master Environment Setup
+#----------------------------------------------------------------------------
+
+
+# This fix creates trouble when re-sourcing ToolBOS as a dependency of other
+# packages. In this case, regardless what TOOLBOSCORE_ROOT was being set to
+# in gets reset to /hri/sit/builds/<build>/.../toolboscore/4.3 :-/
+#
+## workaround for LD_LIBRARY_PATH being emptied for security reasons
+## at "newgrp" command while all other variables survive
+#if [[ ! -z ${TOOLBOSCORE_SOURCED} &&
+#      ! ${LD_LIBRARY_PATH} =~ "DevelopmentTools/toolboscore/4.3" ]]
+#then
+#    unset TOOLBOSCORE_SOURCED
+#fi
+#
+
+
+if [[ -z ${TOOLBOSCORE_SOURCED+x} ]]
+then
+    export TOOLBOSCORE_SOURCED=""
+fi
+
+
+if [[ -z ${VERBOSE+x} ]]
+then
+    export VERBOSE=""
+fi
+
+
+# avoid multiple inclusion
+if [[ ! "${TOOLBOSCORE_SOURCED}" =~ DevelopmentTools/toolboscore/4.3 ]]
+then
+
+    # auto-detect location of this BashSrc file
+    #
+    # The syntax ${BASH_SOURCE:-$0} allows the BashSrc to work
+    # correctly with Zsh, where BASH_SOURCE is not defined, but $0
+    # points to the name of the *sourced* file (this behaviour differs
+    # from Bash, where it would point to the Bash executable)
+    SCRIPT_PATH=$(dirname $(readlink -f ${BASH_SOURCE:-$0}))
+
+    # the full version string incl. patchlevel (if any), e.g. "2.0.1234"
+    TOOLBOS_VERSION=$(basename ${SCRIPT_PATH})
+
+    # cut off the patchlevel revision (if any), e.g. "2.0.1234" --> "2.0"
+    # because we don't want TOOLBOSCORE_ROOT to point to a particular patchlevel
+
+    if [[ -z ${TOOLBOSCORE_AUTO_VERSION+x} ]]
+    then
+        export TOOLBOSCORE_AUTO_VERSION=""
+    fi
+
+    export TOOLBOSCORE_SOURCED="DevelopmentTools/ToolBOSCore/4.3 ${TOOLBOSCORE_SOURCED}"
+
+
+    #------------------------------------------------------------------------
+    # Location of ToolBOS SDK
+    #------------------------------------------------------------------------
+
+
+    TOOLBOSCORE_ROOT_FULL=$(builtin cd ${SCRIPT_PATH}; pwd)
+    TOOLBOSCORE_ROOT=$(dirname ${TOOLBOSCORE_ROOT_FULL})/${TOOLBOS_VERSION}
+    export TOOLBOSCORE_ROOT
+
+
+    #------------------------------------------------------------------------
+    # Platform identifier / Build system
+    #------------------------------------------------------------------------
+
+
+    FILE=/etc/ToolBOS.conf
+
+
+    # if not predefined (forced) by user, attempt to read from /etc/ToolBOS.conf
+
+    if [[ -z "${MAKEFILE_PLATFORM+x}" ]]
+    then
+        if [[ -e ${FILE} ]]
+        then
+            MAKEFILE_PLATFORM=$(awk -F\' '/hostPlatform/ { print $2 }' ${FILE})
+            export MAKEFILE_PLATFORM
+        else
+            # also in etc/ToolBOS.conf and useFromHere.sh!
+            export MAKEFILE_PLATFORM=focal64
+        fi
+    fi
+
+    if [[ -z "${MAKEFILE_OS+x}" ]]
+    then
+        if [[ -e ${FILE} ]]
+        then
+            MAKEFILE_OS=$(awk -F\' '/hostOS/ { print $2 }' ${FILE})
+            export MAKEFILE_OS
+        else
+            MAKEFILE_OS=$(uname | tr "[:upper:]" "[:lower:]")
+            export MAKEFILE_OS
+        fi
+    fi
+
+    if [[ -z "${MAKEFILE_CPU+x}" ]]
+    then
+        if [[ -e ${FILE} ]]
+        then
+            MAKEFILE_CPU=$(awk -F\' '/hostArch/ { print $2 }' ${FILE})
+            export MAKEFILE_CPU
+        else
+            MAKEFILE_CPU=$(arch)
+            export MAKEFILE_CPU
+
+            if [[ "${MAKEFILE_CPU}" == "x86_64" ]]
+            then
+                export MAKEFILE_CPU=amd64
+            fi
+        fi
+    fi
+
+    if [[ -z "${MAKEFILE_CC+x}" ]]
+    then
+        if [[ -e ${FILE} ]]
+        then
+            MAKEFILE_CC=$(awk -F\' '/hostCompiler/ { print $2 }' ${FILE})
+            export MAKEFILE_CC
+        else
+            export MAKEFILE_CC=gcc
+        fi
+    fi
+
+    if [[ -z "${BST_BUILD_JOBS+x}" ]]
+    then
+        export BST_BUILD_JOBS=1
+    fi
+
+
+    #------------------------------------------------------------------------
+    # Paths settings
+    #------------------------------------------------------------------------
+
+
+    if [[ -z ${PYTHONPATH+x} ]]
+    then
+        export PYTHONPATH=""
+    fi
+
+    # set environment variables used by O.S. and/or 3rd party software
+    export PATH=${TOOLBOSCORE_ROOT}/bin:${PATH}
+    export PYTHONPATH=${TOOLBOSCORE_ROOT}/include:${PYTHONPATH}
+
+
+    #------------------------------------------------------------------------
+    # Convenience shell aliases
+    #------------------------------------------------------------------------
+
+
+    function bst {
+       BST.py "$@"
+    }
+    export -f bst
+
+
+    #------------------------------------------------------------------------
+    # Software Installation Tree (SIT)
+    #------------------------------------------------------------------------
+
+
+    # SIT identifier ("build name")
+    if [[ -z "${SIT_VERSION+x}" ]]
+    then
+        export SIT_VERSION=latest
+    fi
+
+
+    # SIT location (optional)
+    if [[ -z "${SIT+x}" ]]
+    then
+        # Fallback to default location if user did specify one,
+        # however leave $SIT unset if default path does not exist.
+        #
+        # Though the majority of tools need a $SIT location, there is
+        # enough functionality that works without.
+
+        SIT_DEFAULT_PATH=/hri/sit/${SIT_VERSION}
+
+        if [[ -d "${SIT_DEFAULT_PATH}" ]]
+        then
+            export SIT=/hri/sit/${SIT_VERSION}
+        fi
+    fi
+
+
+    # check if the user has got a local SIT sandbox ("Proxy directory")
+    #
+    # to entirely disable an existing proxy predefine SIT_PROXY=NONE
+    # ("NONE" [most probably] isn't a directory hence will be ignored)
+
+    if [[ -z "${SIT_PROXY+x}" ]]
+    then
+        SIT_PROXY="${HOME}/.HRI/sit/${SIT_VERSION}"
+    fi
+
+    if [[ -d "${SIT_PROXY}" ]]
+    then
+        export SIT=${SIT_PROXY}
+    fi
+
+
+    #------------------------------------------------------------------------
+    # Clean-up
+    #------------------------------------------------------------------------
+
+    unset FILE
+    unset SCRIPT_PATH
+    unset SIT_DEPENDENCIES
+    unset SIT_PROXY
+    unset SIT_VERSION
+    unset TOOLBOS_VERSION
+    unset TOOLBOSCORE_ROOT_FULL
+
+fi
+
+
+# EOF

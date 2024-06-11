@@ -1,0 +1,88 @@
+
+                     RELEASE NOTES FOR TOOLBOS CORE 4.3.3
+
+
+NEW FEATURES
+============
+
+  - [#96] ✨ SQ GEN05: handle special characters in filenames
+
+
+CHANGES
+=======
+
+  - [#99] ⬆️ use PyCharm + CLion 2024.1
+  - [#86] 📦 updated requirements.txt
+  - 💄 fixes for SQ GEN04,GEN06,C03,C05
+
+
+INTERNAL
+========
+
+  - [#91] ⚗ GitLab CI: simplification
+
+
+-----------------------------------------------------------------------------
+
+                     RELEASE NOTES FOR TOOLBOS CORE 4.3.2
+
+
+NEW FEATURES
+============
+
+  - [#90] ✨ SQ checks summary: show version
+  - [#50] ✨ SQ DOC01: allow customization of documentation files
+
+
+-----------------------------------------------------------------------------
+
+                     RELEASE NOTES FOR TOOLBOS CORE 4.3.1
+
+
+NEW FEATURES
+============
+
+  - [#88] ✨ support Windows cross-compilation on Ubuntu 22.04
+
+
+INTERNAL
+========
+
+  - [#89] ⬆️ use PyCharm + CLion 2023.3
+  - [#22] ⬆️ use shellcheck 0.9
+
+
+INTERNAL
+========
+
+  - [#22] 🔒 improved quality of shellscripts (fixed shellcheck-warnings)
+
+
+-----------------------------------------------------------------------------
+
+                     RELEASE NOTES FOR TOOLBOS CORE 4.3.0
+
+
+NEW FEATURES
+============
+
+  - [#31] ✨ initial support for Ubuntu 22.04 LTS ("jammy64")
+
+
+INTERNAL
+========
+
+  - [#86] 🔥 dropped SonarQube CI job and configfile
+  - 📄 fixed copyright header in several scripts
+  - 👥 updated author list
+
+
+-----------------------------------------------------------------------------
+
+
+ToolBOS Core 4.3.0 is based upon ToolBOS Core 4.2.9.
+You may continue reading the Release Notes there.
+
+
+# EOF
+
