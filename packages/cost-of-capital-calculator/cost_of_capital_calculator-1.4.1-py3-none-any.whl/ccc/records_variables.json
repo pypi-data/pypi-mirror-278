@@ -1,0 +1,44 @@
+{
+  "read": {
+    "asset_name": {
+      "type": "string",
+      "desc": "Description of asset"
+    },
+    "assets": {
+      "type": "float",
+      "desc": "Dollar value of assets"
+    },
+    "bea_asset_code": {
+      "type": "string",
+      "desc": "BEA code for asset type"
+    },
+    "bea_ind_code": {
+      "type": "string",
+      "desc": "BEA code for production industry"
+    },
+    "minor_code_alt": {
+      "type": "string",
+      "desc": "BEA code for production industry"
+    },
+    "tax_treat": {
+      "type": "string",
+      "desc": "Tax treatment (whether corporate or pass-through)"
+    },
+    "Industry": {
+      "type": "string",
+      "desc": "Descriptive name of production industry"
+    },
+    "major_asset_group": {
+      "type": "string",
+      "desc": "Broad category of assets that asset belongs to"
+    },
+    "major_industry": {
+      "type": "string",
+      "desc": "Broad industry category that industry belongs to"
+    },
+    "delta": {
+      "type": "float",
+      "desc": "Annual rate of economic depreciation of asset"
+    }
+  }
+}
