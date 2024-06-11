@@ -1,0 +1,3 @@
+[console_scripts]
+glook = look:main2
+glookml = glook:main2
