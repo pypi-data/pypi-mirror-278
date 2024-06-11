@@ -1,0 +1,61 @@
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[project]
+name = "rattail-tempmon"
+version = "0.4.0"
+description = "Retail Software Framework - Temperature monitoring add-on"
+readme = "README.rst"
+authors = [{name = "Lance Edgar", email = "lance@edbob.org"}]
+license = {text = "GNU GPL v3+"}
+classifiers = [
+        "Development Status :: 3 - Alpha",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+        "Natural Language :: English",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Topic :: Office/Business",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+        "rattail[db]",
+        "six",
+        "sqlsoup",
+]
+
+
+[project.urls]
+Homepage = "https://rattailproject.org"
+Repository = "https://kallithea.rattailproject.org/rattail-project/rattail-tempmon"
+Changelog = "https://kallithea.rattailproject.org/rattail-project/rattail-tempmon/files/master/CHANGES.rst"
+
+
+[project.entry-points."rattail.config.extensions"]
+tempmon = "rattail_tempmon.config:TempmonConfigExtension"
+
+
+[project.entry-points."rattail.subcommands"]
+export-hotcooler = "rattail_tempmon.commands:ExportHotCooler"
+purge-tempmon = "rattail_tempmon.commands:PurgeTempmon"
+tempmon-client = "rattail_tempmon.commands:TempmonClient"
+tempmon-problems = "rattail_tempmon.commands:TempmonProblems"
+tempmon-server = "rattail_tempmon.commands:TempmonServer"
+
+
+[project.entry-points."rattail.typer_imports"]
+rattail_tempmon = "rattail_tempmon.commands"
+
+
+[project.entry-points."rattail.emails"]
+rattail_tempmon = "rattail_tempmon.emails"
+
+
+[tool.commitizen]
+version_provider = "pep621"
+tag_format = "v$version"
+update_changelog_on_bump = true
