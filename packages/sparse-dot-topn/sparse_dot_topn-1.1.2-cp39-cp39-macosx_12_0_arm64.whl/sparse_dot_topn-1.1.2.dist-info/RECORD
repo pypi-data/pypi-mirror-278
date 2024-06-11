@@ -1,0 +1,12 @@
+sparse_dot_topn-1.1.2.dist-info/RECORD,,
+sparse_dot_topn-1.1.2.dist-info/WHEEL,sha256=PG1Eq7TGHhvuKNmcdF2dJTqyM2W9sMrBHchHMGjZtGg,111
+sparse_dot_topn-1.1.2.dist-info/METADATA,sha256=q3TdmA4XpsjbNFZUe5ISGubltGX9gw1L2PPz5W6CHJc,10636
+sparse_dot_topn-1.1.2.dist-info/licenses/LICENSE,sha256=YjUMpko6gSoWuX5Q1VvRej9abh7IPmjoIjUa1cQcf-4,11375
+sparse_dot_topn-1.1.2.dist-info/licenses/NOTICE,sha256=jS1xaSaLDRVaKI9OXt_vLutUrtl8czx5fjlbY4EbVMI,1517
+sparse_dot_topn/__init__.py,sha256=8mHxkLYJ0t6vaBm_dAaYjK0V5leMSOJqf7OCe2gosvw,542
+sparse_dot_topn/types.py,sha256=wuFSxoAd8thFgbwiiPIuVxBdBMobb5uxwPShSv9Jnls,1940
+sparse_dot_topn/api.py,sha256=Hp3Tnnmz3UXXkTbRVU6amg4ghtycqvtDRrKuKetrG98,14495
+sparse_dot_topn/unchecked.py,sha256=KHgtzUmqUch24H5ATmc-Tsjn3ch6NCcWlwTF_vPxhzo,3796
+sparse_dot_topn/.dylibs/libomp.dylib,sha256=0Mqj1R4AJOQfwxa9sokurzKMxw9PEK6fOJmpJf7ivh0,824000
+sparse_dot_topn/lib/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sparse_dot_topn/lib/_sparse_dot_topn_core.cpython-39-darwin.so,sha256=qxAYPbnHRZqMAoGA8fOIeMpTY4BRUqhPN5EY_dNw-tE,493296
