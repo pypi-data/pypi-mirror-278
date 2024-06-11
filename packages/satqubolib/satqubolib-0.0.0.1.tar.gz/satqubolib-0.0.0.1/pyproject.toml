@@ -1,0 +1,30 @@
+[project]
+name = "satqubolib"
+version = "0.0.0.1"
+authors = [
+  { name="Sebastian Zielinski", email="Sebastian.Zielinski@ifi.lmu.de" },
+]
+description = "Python package that provides implementations for QUBO models related to SAT solving."
+readme = "README.md"
+requires-python = ">=3.7"
+
+
+
+
+dependencies = [
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/ZielinskiSebastian/satqubolib"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"*" = ["*.py", "*.key"]
+
