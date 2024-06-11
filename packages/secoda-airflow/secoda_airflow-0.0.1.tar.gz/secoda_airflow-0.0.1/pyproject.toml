@@ -1,0 +1,39 @@
+[project.optional-dependencies]
+test = ["ruff>=0.4.8"]
+
+[tool.poetry]
+name = "secoda-airflow"
+version = "0.0.1"
+description = "SSecoda Airflow Provider"
+authors = ["Secoda Engineering <engineering@secoda.co>"]
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = ">2.23.0"
+apache-airflow = "^2.0.0"
+pytest = "^8.2.2"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.2.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.ruff]
+extend-exclude = []
+select = ["E", "F"] # Rules from Pyflakes and pycodestyle error
+ignore = ["E501"] # ignore the line length rule
+include = ["*.py", "*.pyi", "**/pyproject.toml"]
+exclude = []
+
+
+[tool.poetry.scripts]
+provider_info = "secoda_airflow:get_provider_info"
+
+[project.entry-points."apache_airflow_provider"]
+provider_info = "secoda_airflow:get_provider_info"
+
