@@ -1,0 +1,1 @@
+print("Free syria for ever.")
