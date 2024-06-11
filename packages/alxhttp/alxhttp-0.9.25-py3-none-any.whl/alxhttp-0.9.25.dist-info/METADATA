@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: alxhttp
+Version: 0.9.25
+Summary: A better base server for AioHTTP
+Author-email: Alexander Macdonald <alex@alexmac.cc>
+Project-URL: Homepage, https://github.com/alexmac/alxhttp
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp ~=3.9
+Requires-Dist: pydantic ~=2.7
+Requires-Dist: asyncpg ~=0.29
+Requires-Dist: pyhumps ~=3.8
+Requires-Dist: pglast ~=6.2
+Requires-Dist: watchdog ~=4.0
+Provides-Extra: xray
+Requires-Dist: aws-xray-sdk ~=2.13 ; extra == 'xray'
+
+# alxhttp
+Some customization of aiohttp
+
+Features:
+- JSON logging
+- middleware to add a unique request ID
+- middleware to turn uncaught exceptions into JSON 500s
+- a simple base server class pattern to follow
