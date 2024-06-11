@@ -1,0 +1,16 @@
+Click
+numpy
+platformdirs
+tqdm
+
+[moviepy]
+moviepy
+
+[opencv]
+opencv-python
+
+[opencv-headless]
+opencv-python-headless
+
+[pyav]
+av
