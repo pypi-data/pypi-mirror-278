@@ -1,0 +1,3 @@
+[console_scripts]
+gidapptools-info=gidapptools.cli_info:cli_show_info
+
