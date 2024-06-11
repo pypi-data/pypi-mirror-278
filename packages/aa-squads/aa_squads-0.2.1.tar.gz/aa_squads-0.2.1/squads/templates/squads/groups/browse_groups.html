@@ -1,0 +1,66 @@
+{% extends 'squads/base.html' %}
+{% load i18n %}
+{% load humanize %}
+{% load static %}
+
+{% block squads_block %}
+
+<div class="bg-primary rounded-top px-2 py-2 mb-4">
+    <h3 class="text-white">{% translate "Browse Squads" %}</h3>
+</div>
+<div class="card-body">
+    <div class="row">
+        {% for group in groups %}
+        <div class="col-md-2 mb-2">
+            <div class="card mb-3 bg-secondary" style="max-width: 540px;">
+                <div class="card-body row g-0 align-items-center" style="height: 100px;">
+                    <div class="col-md-4">
+                        {% if group.image %}
+                            <img src="{{ group.image.url }}" class="rounded-circle" style="max-width: 64px; max-height: 64px; width: auto; height: auto;">
+                        {% endif %}
+                    </div>
+                    <div class="col-md-8">
+                        <div class="">
+                            <h5 class="card-title mb-0"><a href="{% url 'squads:view_group' group_id=group.id %}">{{ group.name }}</a>
+                                {% if group.id in membership_ids %}
+                                    <span class="badge bg-success">{% translate "Active" %}</span>
+                                {% endif %}
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+            <p>{% translate "No squads available." %}</p>
+        </div>
+        {% endfor %}
+    </div>
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            {% if groups.has_previous %}
+                <li class="page-item"><a class="page-link" href="?page=1">&laquo; {% translate "First" %}</a></li>
+                <li class="page-item"><a class="page-link" href="?page={{ groups.previous_page_number }}">{% translate "Previous" %}</a></li>
+            {% endif %}
+            {% for num in groups.paginator.page_range %}
+                <li class="page-item {% if groups.number == num %}active{% endif %}"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+            {% endfor %}
+            {% if groups.has_next %}
+                <li class="page-item"><a class="page-link" href="?page={{ groups.next_page_number }}">{% translate "Next" %}</a></li>
+                <li class="page-item"><a class="page-link" href="?page={{ groups.paginator.num_pages }}">{% translate "Last" %} &raquo;</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
+
+{% endblock %}
+
+{% block extra_javascript %}
+{% endblock %}
+
+{% block extra_css %}
+{% endblock %}
+
+{% block extra_script %}
+{% endblock %}
