@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: datadashr
+Version: 0.1.7
+Summary: Engage with your data (SQL, CSV, pandas, polars, mongodb, noSQL, etc.) using Ollama, an open-source tool that operates locally. Datadashr transforms data analysis into a conversational experience powered by Ollama LLMs and RAG.
+License: MIT
+Author: Datadashr
+Author-email: dev@datadashr.com
+Requires-Python: >=3.10,<3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: astor (>=0.8.1,<0.9.0)
+Requires-Dist: chromadb (>=0.5.0,<0.6.0)
+Requires-Dist: duckdb (>=1.0.0,<2.0.0)
+Requires-Dist: jinja2 (>=3.1.4,<4.0.0)
+Requires-Dist: loguru (>=0.7.2,<0.8.0)
+Requires-Dist: matplotlib (>=3.9.0,<4.0.0)
+Requires-Dist: numpy (>=1.26.4,<2.0.0)
+Requires-Dist: ollama (>=0.2.0,<0.3.0)
+Requires-Dist: openai (>=1.31.0,<2.0.0)
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: panel (>=1.4.4,<2.0.0)
+Requires-Dist: poetry-core (>=1.9.0,<2.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: restrictedpython (>=7.1,<8.0)
+Requires-Dist: sentence-transformers (>=3.0.0,<4.0.0)
+Requires-Dist: streamlit (>=1.35.0,<2.0.0)
+Description-Content-Type: text/markdown
+
+![DataDashr Logo](https://www.datadashr.com/wp-content/uploads/2024/06/datadashr.svg)
+
+## Description
+
+Converse with Your Data Through Open Source AI.
+
+Unleash the power of your data with natural language questions.  
+Our open-source platform, built on Ollama, delivers powerful insights without the cost of APIs.
+
+Integrate effortlessly with your existing infrastructure, connecting to various data sources including SQL, NoSQL, CSV, and XLS files.
+
+Obtain in-depth analytics by aggregating data from multiple sources into a unified platform, providing a holistic view of your business.
+
+Convert raw data into valuable insights, facilitating data-driven strategies and enhancing decision-making processes.
+
+Design intuitive and interactive charts and visual representations to simplify the understanding and interpretation of your business metrics.
+
+## Installation
+
+To install the package, run the following command:
+
+```bash
+pip install datadashr
+```
+
+## Starting the Interface
+
+To start the user interface, run the following command:
+
+```bash
+datadashr
+```
+
+## Usage Example
+
+```python
+from pprint import pprint
+from datadashr import DataDashr
+from datadashr.llm.ollama import OllamaLLM
+from datadashr.connectors.pandas import CSVConnector
+
+llm = OllamaLLM(model='codestral', params={"temperature": 0.0}, verbose=False)
+connector = CSVConnector(filepath='data/titanic.csv')
+df = DataDashr(data_connector=connector, llm_instance=llm, verbose=True, enable_cache=False, enable_vector=True, format_type='rich')
+result = df.chat('show me the first 5 rows of the dataset')
+
+pprint(result)
+```
+

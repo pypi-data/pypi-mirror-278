@@ -1,0 +1,39 @@
+Given a DataFrame named 'df' of {{ num_rows }} rows and {{ num_columns }} columns,
+The dataframe is present in the variable 'df'.
+Its columns are the following:
+
+{% for col, col_type in columns %}
+- {{ col }} ({{ col_type }})
+{% endfor %}
+
+I want you to solve the following problem:
+write a Python code snippet that addresses the following request:
+{{ request }}
+
+While crafting the code, please follow these guidelines:
+1. When comparing or searching for strings, use lower case letters, ignore case sensitivity, and apply a "contains" search.
+2. Ensure that the answer is a single line of code without explanations, comments, or additional details.
+3. If a single line solution is not possible, multiline solutions or functions are acceptable, but the code must end with an assignment to the variable 'result'.
+4. Assign the resulting code to the variable 'result'.
+5. df is present in the variable 'df' not add it to the code.
+6. Avoid importing any additional libraries other than pandas and numpy.
+7. If a chart is requested in the query, the response must include the labels for the x-axis and y-axis and ensure the chart is properly formatted for visualization.
+8. For chart requests, the response should include a dictionary with the following structure:
+    {
+        "data": <data for the chart in JSON format>,
+        "x_label": <label for the x-axis>,
+        "y_label": <label for the y-axis>,
+        "chart_type": <type of the chart, e.g., "bar", "line", "histogram">
+    }
+9. The x-axis label should represent the categories (e.g., age, pclass) and the y-axis label should represent the counts or values associated with those categories.
+10. Return the code encapsulated within triple backticks, as shown below:
+
+\`\`\`python
+<code>
+\`\`\`
+
+{% if custom_prompt %}
+Also:
+{{ custom_prompt }}
+{% endif %}
+
