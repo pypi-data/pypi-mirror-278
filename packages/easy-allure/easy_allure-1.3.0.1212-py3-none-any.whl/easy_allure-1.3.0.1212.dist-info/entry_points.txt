@@ -1,0 +1,3 @@
+[console_scripts]
+allurectl = easy_allure.main:run_allurectl
+easy_allure = easy_allure.main:main
