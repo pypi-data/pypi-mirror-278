@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}Register :: {{settings.app_title}}{% endblock %}
+{% block header %}Register{% endblock %}
+
+{% block content %}
+
+  <!-- Username and Password Fields -->            
+
+  {% if settings.username_is_email %}
+    <div class="field">
+      <label class="label">Email</label>
+      <div class="control">
+        <input id="username" name="username" class="input email" type="text" placeholder="you@example.com">
+      </div>
+    </div>
+
+  {% else %}
+    <div class="field">
+      <label class="label">Username</label>
+      <div class="control">
+        <input id="username" name="username" class="input" type="text" placeholder="batman2000">
+      </div>
+    </div>          
+  {% endif %}
+
+    <div class="field">
+      <label class="label">Password</label>
+      <div class="control">
+        <input id="password" name="password" class="input" type="password" placeholder="Enter your password">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Repeat password</label>
+      <div class="control">
+        <input id="password2" class="input" type="password" placeholder="Repeat your password">
+      </div>
+    </div>
+
+
+  {% if error %}
+  <!-- Error Message -->
+  <p class="error-message">{{error}}</p>
+  {% endif %}
+
+  <!-- Login Button -->
+  <div class="field">
+    <div class="control">
+      <button id="fastapi-simple-auth-register-btn" class="button is-primary is-fullwidth">Register</button>
+    </div>
+  </div>
+
+  <!-- Sign Up -->
+  <div class="sign-up has-text-centered">
+    <p>Already have an account? <a href="{{ rq.url_for('get_login') }}">Sign In</a></p>
+  </div>
+
+{% endblock %}
