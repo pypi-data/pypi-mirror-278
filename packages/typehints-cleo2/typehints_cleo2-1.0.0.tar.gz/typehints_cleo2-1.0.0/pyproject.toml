@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "typehints_cleo2"
+version = "1.0.0"
+description = "Type-Hinted, Type-Enforced classes for cleo 2.x"
+authors = ["Rob Voigt <code@ravoigt.com>"]
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/RAVoigt/typehints_cleo2"
+homepage = "https://github.com/RAVoigt/typehints_cleo2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project.urls]
+Homepage = "https://github.com/RAVoigt/typehints_cleo2"
+Repository = "https://github.com/RAVoigt/typehints_cleo2"
+
+# ================================
+# Tools etc.
+[tool.black]
+line-length = 100
+target-version = ['py311']
+include = '\.pyi?$'
+
+# ================================
+# Dependencies
+[tool.poetry.dependencies]
+python = "^3.11"
+cleo = "^2.1.0"
+
+[tool.poetry.dev-dependencies]
+black = "*"
+ipdb = "*"
+ipython = "*"
+mock = "*"
+pylint = "*"
+pytest = "*"
+pytest-cov = "*"
