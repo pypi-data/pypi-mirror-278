@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: cheXwhatsApp
+Version: 0.1.1
+Author: Sahil Lathiya
+Author-email: sahillathiya456@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENCE.txt
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: opencv-python
+Requires-Dist: pillow
+Requires-Dist: imageio
+Requires-Dist: scikit-image
+Requires-Dist: numpy
+Requires-Dist: tqdm
+Requires-Dist: pandas
