@@ -1,0 +1,3 @@
+[console_scripts]
+clera-deploy = clera:deploy
+clera-editor = clera:editor

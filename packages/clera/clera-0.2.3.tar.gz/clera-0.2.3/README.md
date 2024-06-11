@@ -1,0 +1,121 @@
+## **DEDICATION**
+
+---
+
+_"This project is dedicated to my cousin who was like a mother to me. Though you are no longer with us, you will never be forgotten. May your memory be forever held in this project."_  
+-- **Bridget Trinity Vedjesu** --
+
+<br>
+
+<div align="center">
+<img src="https://github.com/cleragui/pypi/blob/main/image/logo-with-name.png?raw=true">
+</div>
+
+## **Clera - GUI Development with Python**
+
+---
+
+Clera provides platform for developing python GUI quickly and simply with low learning curve.
+
+<br>
+
+> **NOTE:** Clera is still in the **alpha** stage which means development is not complete its undergoing internal tests and development. To help with the testing process or need tutorial on how to use clera, please send me an email eirasmx@pm.me
+
+<br>
+
+## **THE BASICS**
+
+### **Installation**
+
+```bash
+pip install clera
+```
+
+Your first application and Skeleton of every GUI developed using clera.
+
+**Code:**
+
+```python
+from clera import Window
+window = Window()
+# window widgets and layouts goes here!
+window.run()
+```
+
+**Output:**
+
+![Window](https://github.com/cleragui/pypi/blob/main/image/window.png?raw=true)
+
+> **" Why Complicate Simplicity? "**
+
+<br>
+
+## **PLATFORMS**
+
+> Clera runs on multiple platforms and has a native interface on each.
+
+### **Hardware Support**
+
+- Runs on Desktop and Laptops
+
+### **OS Support**
+
+- Windows
+- Mac
+- Linux
+
+<br>
+
+To run the clera style editor, run "**clera-editor**" in the terminal or command prompt and "**clera-deploy**" to run the clera deploy tool. Also to see a sample of what clera is capable of, check out the editor. It's developed with clera!
+
+<br>
+
+> **INFO:** Visit https://cleragui.github.io/ for documentation and more information.
+
+<br>
+
+---
+
+<br>
+
+### **RELEASE NOTES**
+
+**v0.2.3 (2024-06-11) - Various fixes and additions**
+
+- Shortcut button errors (**fixed**)    
+- Stack widget extra padding (**fixed**)    
+- Dynamic window resize through code (**added**)    
+- Group layout strict policy (**fixed**)    
+- Checked method to GET (**added**) 
+
+<br>
+
+- Get screen size feature (**added**)   
+- Screenshot feature (**added**)    
+- Hide taskbar icon (**added**) 
+
+<br>
+
+- Persistent hide mouse pointer (**added**) 
+- Windows titlebar control buttons appearance (**upgraded**)    
+
+<br>
+
+- .close() method to Window() [same as .quit()] (**added**)     
+
+<br>
+
+- Center, move, fixed size feature to popup (**added**) 
+
+<br>
+
+- Margin and spacing feature to popup (**added**)   
+- Double click gesture to titlebar element (**added**)  
+
+<br>
+
+- Popup messing up after deployment (**fixed**)  
+
+<br>
+
+---
