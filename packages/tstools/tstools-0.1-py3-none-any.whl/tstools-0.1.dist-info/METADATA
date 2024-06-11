@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: tstools
+Version: 0.1
+Summary: A package to analyse timeseries
+Author: Spam Eggs
+Author-email: Spam Eggs <spam.eggs@email.com>
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+
