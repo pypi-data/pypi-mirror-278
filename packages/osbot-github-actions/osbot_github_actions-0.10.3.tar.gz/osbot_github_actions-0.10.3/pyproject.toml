@@ -1,0 +1,18 @@
+[tool.poetry]
+name        = "osbot_github_actions"
+version     = "v0.10.3"
+description = "OWASP Security Bot - GitHub Actions"
+authors     = ["Dinis Cruz <dinis.cruz@owasp.org>"]
+license     = "MIT"
+readme      = "README.md"
+repository  = "https://github.com/owasp-sbot/OSBot-GitHub-Actions"
+homepage    = "https://github.com/owasp-sbot/OSBot-GitHub-Actions"
+
+[tool.poetry.dependencies]
+python          = "^3.7"
+osbot_utils     = "*"
+
+
+[build-system]
+requires        = ["poetry-core>=1.0.0"]
+build-backend   = "poetry.core.masonry.api"
