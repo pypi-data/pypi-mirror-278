@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: nijas-keywords-extractor
+Version: 0.2
+Summary: kinyarwanda keywords extractor
+Author: Janvier Niyitegeka
+Author-email: nijas2012@yahoo.com
+Keywords: python,kinyarwanda,keywords
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+
+Packages for extracting keywords from kinyarwanda text
