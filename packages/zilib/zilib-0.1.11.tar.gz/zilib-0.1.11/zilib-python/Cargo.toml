@@ -1,0 +1,16 @@
+[package]
+name = "zilib-python"
+version = "0.1.11"
+edition = "2021"
+
+[dependencies]
+
+zilib = { path = "../" }
+
+[lib]
+name = "zilib"
+crate-type = ["cdylib"]
+
+[dependencies.pyo3]
+version = "0.20.2"
+features = ["extension-module"]
