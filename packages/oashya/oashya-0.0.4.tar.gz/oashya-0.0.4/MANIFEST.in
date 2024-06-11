@@ -1,0 +1,3 @@
+
+recursive-include src/oashya *onnx
+recursive-include src/oashya *pyd

@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "onmyojiautoscript-hya"
+version = "0.0.1"
+description = ""
+authors = ["Ryland <2234044577@qq.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.10.11"
+
+
+[build-system-poetry]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[build-system]
+requires = [
+    "setuptools>=61.0",
+    "wheel",
+    "onnxruntime>=1.15.0",
+    "numpy",
+    "cryptography",
+    "cached_property"
+    ]
+build-backend = "setuptools.build_meta"

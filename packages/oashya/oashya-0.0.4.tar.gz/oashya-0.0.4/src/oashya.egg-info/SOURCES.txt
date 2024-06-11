@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/oashya/__init__.py
+src/oashya/labels.py
+src/oashya/oashya_fp32.onnx
+src/oashya/oashya_int8.onnx
+src/oashya/tracker.cp310-win_amd64.pyd
+src/oashya.egg-info/PKG-INFO
+src/oashya.egg-info/SOURCES.txt
+src/oashya.egg-info/dependency_links.txt
+src/oashya.egg-info/top_level.txt
