@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/asynchronous-flows/asyncflows/main/schemas/asyncflows_schema.json
+
+default_model:
+  model: ollama/llama3
+  max_output_tokens: 50
+flow:
+  hello_world:
+    action: prompt
+    prompt:
+      - text: Can you say hello world for me?
+default_output: hello_world.result
