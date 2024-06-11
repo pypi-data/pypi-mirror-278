@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+src/tf/tools/__init__.py
+src/tf/tools/__init__.pyi
+src/tf/tools/pad.py
+src/tf/tools/set.py
+src/tf/tools/typing.py
+src/tf/tools/data/__init__.py
+src/tf/tools/data/datasets.py
+src/tf/tools/sparse/__init__.py
+src/tf/tools/sparse/sparse.py
+src/tf_tools.egg-info/PKG-INFO
+src/tf_tools.egg-info/SOURCES.txt
+src/tf_tools.egg-info/dependency_links.txt
+src/tf_tools.egg-info/requires.txt
+src/tf_tools.egg-info/top_level.txt
