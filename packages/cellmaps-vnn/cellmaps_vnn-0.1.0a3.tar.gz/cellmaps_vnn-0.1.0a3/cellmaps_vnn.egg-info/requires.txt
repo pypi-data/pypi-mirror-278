@@ -1,0 +1,12 @@
+cellmaps_utils==0.1.0a23
+cellmaps_generate_hierarchy==0.1.0a20
+ndex2<4.0.0,>=3.8.0
+optuna
+scikit-learn
+networkx
+pandas
+torch
+torchvision
+torchaudio
+scipy
+joblib
