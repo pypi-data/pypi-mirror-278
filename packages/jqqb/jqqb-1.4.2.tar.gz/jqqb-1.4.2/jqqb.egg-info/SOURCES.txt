@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+jqqb/__init__.py
+jqqb/operators.py
+jqqb/rule.py
+jqqb/rule_group.py
+jqqb/utils.py
+jqqb.egg-info/PKG-INFO
+jqqb.egg-info/SOURCES.txt
+jqqb.egg-info/dependency_links.txt
+jqqb.egg-info/requires.txt
+jqqb.egg-info/top_level.txt
