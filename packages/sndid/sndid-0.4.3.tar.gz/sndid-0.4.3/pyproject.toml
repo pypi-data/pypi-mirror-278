@@ -1,0 +1,94 @@
+# pyproject.toml
+[tool.poetry]
+name = "sndid"
+description = "AI Sound Identification."
+authors = [
+    "Jeff Moe <moe@parrot.codes>"
+]
+license = "Apache-2.0"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Natural Language :: English",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Topic :: Education",
+    "Topic :: Multimedia :: Sound/Audio :: Analysis",
+    "Topic :: Multimedia :: Sound/Audio :: Capture/Recording",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+packages = [
+    { include = "sndid" },
+]
+readme = "README.md"
+version = "0.4.3"
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+birdnetlib = "*"
+gitpython = "*"
+JACK-Client = "*"
+numpy = "*"
+librosa = "*"
+scikit-learn = "*"
+scipy = "*"
+soundfile = "*"
+tensorflow = "*"
+pyyaml = "*"
+setuptools_scm = "*"
+
+
+[build-system]
+requires = ["poetry-core", "setuptools_scm"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+sndid = "sndid.cli:main"
+sndid-alsa = "sndid.alsa:main"
+sndid-client = "sndid.client:main"
+sndid-list = "sndid.list:main"
+sndid-server = "sndid.server:main"
+sndid-stream = "sndid.stream:main"
+sndid-jack = "sndid.jackcli:main"
+
+
+[tool.poetry.urls]
+homepage = "https://spacecruft.org/deepcrayon/sndid"
+documentation = "https://spacecruft.org/deepcrayon/sndid"
+repository = "https://spacecruft.org/deepcrayon/sndid"
+issues = "https://spacecruft.org/deepcrayon/sndid/issues"
+changelog = "https://spacecruft.org/deepcrayon/sndid/raw/branch/main/CHANGELOG.txt"
+
+[options.packages.find]
+include = "sndid"
+
+[options.package_data]
+sndid = "_version.py"
+
+[tool.poetry.dev-dependencies]
+black = "*"
+poetry = "*"
+pyprof2calltree = "*"
+ruff = "*"
+twine = "*"
+
+[tool.setuptools_scm]
+write_to = "sndid/_version.py"
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "W",
+    "F",
+]
+
+ignore = [ "E501" ]
