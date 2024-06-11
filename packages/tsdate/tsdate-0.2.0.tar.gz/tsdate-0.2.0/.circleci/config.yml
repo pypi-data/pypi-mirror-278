@@ -1,0 +1,52 @@
+version: 2.1
+
+orbs:
+  codecov: codecov/codecov@3.2.4
+
+jobs:
+  build:
+    docker:
+      - image: cimg/python:3.10.13
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies and set PATH
+          command: |
+              # Need gsl-dev for msprime. Alternatively we could install via conda
+              sudo apt-get update
+              sudo apt-get install libgsl-dev
+              # way to set path persistently https://circleci.com/docs/2.0/env-vars/#setting-path
+              echo 'export PATH=/home/circleci/.local/bin:$PATH' >> $BASH_ENV
+      - run:
+          name: install dependencies
+          command: |
+              pip install -r requirements.txt --user
+      - run:
+          name: Lint Python
+          command: |
+              flake8 --max-line-length 89 tsdate setup.py tests
+      - save_cache:
+          key: tsdate-{{ checksum "data/prior_1000df.bak" }} 
+          paths:
+            - data/prior_1000df.bak
+            - tsdate/prior_1000df.txt
+      - run:
+          name: Copy approximate_prior cache file
+          command: |
+              cp data/prior_1000df.bak data/prior_1000df.txt
+      - run:
+          name: Run Python tests
+          command: |
+              python -m pytest -vv -n0 --cov=tsdate  --cov-report=xml --cov-branch tests
+          environment:
+            NUMBA_DISABLE_JIT: 1
+      - codecov/upload:
+          token: CODECOV_TOKEN
+      - run:
+          name: Build the distribution tarball.
+          command: |
+            python -m build
+
+
+
+
