@@ -1,0 +1,2 @@
+include versioneer.py
+include footprint_facility/_version.py

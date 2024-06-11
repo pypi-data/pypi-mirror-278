@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.cfg
+setup.py
+versioneer.py
+footprint_facility/__init__.py
+footprint_facility/_version.py
+footprint_facility/footprint_facility.py
+footprint_facility/test_footprint_facility.py
+footprint_facility.egg-info/PKG-INFO
+footprint_facility.egg-info/SOURCES.txt
+footprint_facility.egg-info/dependency_links.txt
+footprint_facility.egg-info/not-zip-safe
+footprint_facility.egg-info/requires.txt
+footprint_facility.egg-info/top_level.txt
