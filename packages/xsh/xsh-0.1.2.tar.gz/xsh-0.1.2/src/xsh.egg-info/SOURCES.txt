@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/xsh/__init__.py
+src/xsh/host.py
+src/xsh/key.py
+src/xsh/main.py
+src/xsh.egg-info/PKG-INFO
+src/xsh.egg-info/SOURCES.txt
+src/xsh.egg-info/dependency_links.txt
+src/xsh.egg-info/entry_points.txt
+src/xsh.egg-info/requires.txt
+src/xsh.egg-info/top_level.txt
