@@ -1,0 +1,94 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.module]
+name = "ellar_sql"
+
+
+[project]
+name = "ellar-sql"
+authors = [
+   {name = "Ezeudoh Tochukwu", email = "tochukwu.ezeudoh@gmail.com"},
+]
+dynamic = ["version", "description"]
+requires-python = ">=3.8"
+readme = "README.md"
+home-page = "https://github.com/python-ellar/ellar-sql"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3 :: Only",
+]
+
+dependencies = [
+    "ellar-cli >= 0.3.7",
+    "sqlalchemy >= 2.0.23",
+    "alembic >= 1.10.0",
+    "ellar-storage >= 0.1.4",
+    "sqlalchemy-file >= 0.6.0",
+]
+
+[project.optional-dependencies]
+async = [
+    "sqlalchemy[asyncio] >= 2.0.23"
+]
+
+[project.urls]
+Homepage = "https://github.com/python-ellar/ellar-sql"
+Source = "https://github.com/python-ellar/ellar-sql"
+Documentation = "https://python-ellar.github.io/ellar-sql/"
+"Bug Tracker" = "https://github.com/python-ellar/ellar-sql/issues"
+
+[tool.ruff]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "C",  # flake8-comprehensions
+    "B",  # flake8-bugbear
+]
+ignore = [
+    "E501",  # line too long, handled by black
+    "B008",  # do not perform function calls in argument defaults
+    "C901",  # too complex
+]
+
+[tool.ruff.per-file-ignores]
+"__init__.py" = ["F401", "F403"]
+"ellar_sql/model/__init__.py" = ["F811"]
+
+[tool.ruff.isort]
+known-third-party = ["ellar"]
+
+[tool.mypy]
+python_version = "3.8"
+show_error_codes = true
+pretty = true
+strict_optional = true
+disable_error_code = ["name-defined", 'union-attr']
+disallow_subclassing_any = false
+ignore_missing_imports = true
+[[tool.mypy.overrides]]
+module = "ellar_sql.cli.commands"
+ignore_errors = true
+[[tool.mypy.overrides]]
+module = "ellar_sql.migrations.*"
+disable_error_code = ["arg-type", 'union-attr']
+[[tool.mypy.overrides]]
+module = "ellar_sql.pagination.*"
+disable_error_code = ["arg-type", 'union-attr', 'valid-type']
+[[tool.mypy.overrides]]
+module = "ellar_sql.model.base"
+disable_error_code = ["attr-defined", 'union-attr']
