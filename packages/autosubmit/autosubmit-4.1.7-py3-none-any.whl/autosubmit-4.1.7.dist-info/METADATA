@@ -1,0 +1,92 @@
+Metadata-Version: 2.1
+Name: autosubmit
+Version: 4.1.7
+Summary: Autosubmit is a Python-based workflow manager to create, manage and monitor complex tasks involving different substeps, such as scientific computational experiments. These workflows may involve multiple computing systems for their completion, from HPCs to post-processing clusters or workstations. Autosubmit can orchestrate all the tasks integrating the workflow by managing their dependencies, interfacing with all the platforms involved, and handling eventual errors.
+Home-page: http://www.bsc.es/projects/earthscience/autosubmit/
+Download-URL: https://earth.bsc.es/wiki/doku.php?id=tools:autosubmit
+Author: Daniel Beltran Mora
+Author-email: daniel.beltran@bsc.es
+License: GNU GPL v3
+Keywords: climate,weather,workflow,HPC
+Platform: GNU/Linux Debian
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: POSIX :: Linux
+License-File: LICENSE
+Requires-Dist: xlib (==0.21)
+Requires-Dist: setuptools (<=68.2.2)
+Requires-Dist: bscearth.utils (<=0.5.2)
+Requires-Dist: requests (<=2.31.0)
+Requires-Dist: networkx (<=2.6.3)
+Requires-Dist: portalocker (<=2.7.0)
+Requires-Dist: mock (<=5.1.0)
+Requires-Dist: paramiko (<=3.4)
+Requires-Dist: pyparsing (==3.1.1)
+Requires-Dist: matplotlib (<=3.8.3)
+Requires-Dist: argparse (<=1.4.0)
+Requires-Dist: packaging (<=23.2)
+Requires-Dist: ruamel.yaml.clib (<=0.2.8)
+Requires-Dist: typing-extensions (<=4.9.0)
+Requires-Dist: typing (<=3.7.4.3)
+Requires-Dist: psutil (<=5.6.1)
+Requires-Dist: py3dotplus (==1.1.0)
+Requires-Dist: numpy (<2)
+Requires-Dist: ruamel.yaml (==0.17.21)
+Requires-Dist: rocrate (==0.*)
+Requires-Dist: autosubmitconfigparser (==1.0.66)
+Requires-Dist: configparser
+Requires-Dist: pathlib
+Requires-Dist: setproctitle
+Requires-Dist: PyNaCl (==1.5.0) ; python_version <= "3.7"
+Requires-Dist: pythondialog (==3.5.3) ; python_version <= "3.7"
+Requires-Dist: xlib (==0.21) ; python_version <= "3.7"
+Requires-Dist: setuptools (==68.2.2) ; python_version <= "3.7"
+Requires-Dist: cryptography (==41.0.5) ; python_version <= "3.7"
+Requires-Dist: bscearth.utils (==0.5.2) ; python_version <= "3.7"
+Requires-Dist: requests (==2.31.0) ; python_version <= "3.7"
+Requires-Dist: networkx (==2.6.3) ; python_version <= "3.7"
+Requires-Dist: portalocker (==2.7.0) ; python_version <= "3.7"
+Requires-Dist: mock (==5.1.0) ; python_version <= "3.7"
+Requires-Dist: paramiko (==3.3.1) ; python_version <= "3.7"
+Requires-Dist: matplotlib (==3.5.3) ; python_version <= "3.7"
+Requires-Dist: python-dateutil (==2.8.2) ; python_version <= "3.7"
+Requires-Dist: argparse (==1.4.0) ; python_version <= "3.7"
+Requires-Dist: configobj (==5.0.8) ; python_version <= "3.7"
+Requires-Dist: packaging (==23.2) ; python_version <= "3.7"
+Requires-Dist: bcrypt (==4.0.1) ; python_version <= "3.7"
+Requires-Dist: charset-normalizer (==3.3.1) ; python_version <= "3.7"
+Requires-Dist: kiwisolver (==1.4.5) ; python_version <= "3.7"
+Requires-Dist: fonttools (==4.43.1) ; python_version <= "3.7"
+Requires-Dist: cycler (==0.12.1) ; python_version <= "3.7"
+Requires-Dist: typing-extensions (==4.8.0) ; python_version <= "3.7"
+Requires-Dist: psutil (==5.6.1) ; python_version <= "3.7"
+Requires-Dist: Pygments (==2.3.1) ; python_version <= "3.7"
+Requires-Dist: coverage (==5.0) ; python_version <= "3.7"
+Requires-Dist: nose (==1.3.7) ; python_version <= "3.7"
+Requires-Dist: six (==1.12.0) ; python_version <= "3.7"
+Requires-Dist: Cython (==0.29.6) ; python_version <= "3.7"
+Requires-Dist: cffi (==1.12.2) ; python_version <= "3.7"
+Requires-Dist: py (==1.8.0) ; python_version <= "3.7"
+Requires-Dist: atomicwrites (==1.3.0) ; python_version <= "3.7"
+Requires-Dist: attrs (==19.1.0) ; python_version <= "3.7"
+Requires-Dist: more-itertools (==6.0.0) ; python_version <= "3.7"
+Requires-Dist: urllib3 (==1.24.1) ; python_version <= "3.7"
+Requires-Dist: idna (==2.8) ; python_version <= "3.7"
+Requires-Dist: Pillow (==6.2.1) ; python_version <= "3.7"
+Requires-Dist: numpy (==1.17.4) ; python_version <= "3.7"
+
+Autosubmit is a lightweight workflow manager and meta-scheduler. It was originally designed in 2011 for use in climate research for configuring and running experiments. In the last few years, it has been extended to cover additional use cases, and today it is used as a general orchestration tool. It supports scheduling jobs to remote batch servers (via SSH) such as PBS, LSF, SLURM, and SGE.
+
+Autosubmit is a Python package provided in PyPI, which facilitates easy and fast integration and relocation on new platforms. Conda recipes are available on the project website. A containerized version for testing purposes is also available but not public yet.
+
+The features found in Autosubmit characterize it as both an experiment manager and also as a workflow orchestrator. The experiment manager allows users to define and configure experiments, supported by a hierarchical database that ensures reproducibility and traceability. The orchestrator is designed to run complex workflows in research and operational mode by managing their dependencies and interfacing with local and remote hosts.
+
+These multi-scale workflows can contain from a few steps to thousands of steps, and from a single platform to multiple platforms. Platform is a concept in Autosubmit to abstract servers. A workflow configuration can include one or multiple platforms, allowing the workflow to run on any number of servers via password-less SSH without any external deployment.
+
+Due to its robustness it can handle different eventualities such as networking connectivity issues or I/O errors. The monitoring capabilities extend beyond the command-line application through a REST API that allows communication with workflow monitoring tools such as the Autosubmit web GUI.
+
+It has contributed to various European research projects and runs different operational systems. It will support the Earth Digital Twins as the Digital Twin Ocean over the next years.
+
+It is currently used at the Barcelona Supercomputing Centre (BSC) to run models (EC-Earth, MONARCH, NEMO, CALIOPE, HERMES, and others), operational toolchains (S2S4E), data-download workflows (ECMWF MARS), and for many other use cases. Autosubmit has been used to run workflows in different supercomputers at BSC, ECMWF, IC3, CESGA, EPCC, PDC, and OLCF.
+
