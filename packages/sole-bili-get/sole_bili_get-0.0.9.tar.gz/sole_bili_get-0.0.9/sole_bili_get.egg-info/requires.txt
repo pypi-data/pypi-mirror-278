@@ -1,0 +1,7 @@
+requests
+colorama
+psutil
+
+[:platform_system == "Windows"]
+pycryptodome
+pypiwin32
