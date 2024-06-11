@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "integra-python-connector"
+version = "0.1.0"
+description = "test discription"
+authors = ["seventech"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.111.0"
+pydantic-settings = "^2.3.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
