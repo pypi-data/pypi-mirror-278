@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: fengwo
+Version: 0.0.4
+Summary: 仿通达信公式的量化函数库
+Home-page: https://www.fengwo.run
+Author: 燕山飞雪
+Author-email: kogj@163.com
+Platform: Windows
+Platform: linux
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+
+仿通达信公式的量化函数库
