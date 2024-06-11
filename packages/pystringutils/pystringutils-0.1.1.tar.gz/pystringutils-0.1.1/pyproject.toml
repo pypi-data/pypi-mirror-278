@@ -1,0 +1,15 @@
+[project]
+name = "pystringutils"
+version = "0.1.1"
+description = "A python library for common string operations"
+authors = [
+    { name = "Martin Taraz" },
+    { name = "Matteo Voges", email = "matteo.voges@student.hpi.de" }
+]
+license = { file = 'LICENSE' }
+readme = "README.md"
+requires-python = '>=3.9'
+dependencies = [
+    "pytest~=8.2.2",
+    "coverage~=7.5.3"
+]
