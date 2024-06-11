@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: dserver-minimal
+Version: 0.1.0
+Summary: Meta-package for installing a minimal working dserver consisting of dtool-lookup-server, dserver-search-plugin-mongo, and dserver-retrieve-plugin-mongo
+Author-email: Tjelvar Olsson <tjelvar.olsson@gmail.com>, "Johannes L. Hörmann" <johannes.laurin@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2024 University of Freiburg
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Documentation, https://dserver.readthedocs.io
+Project-URL: Repository, https://github.com/livMatS/dserver-minimal
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: dtool-lookup-server
+Requires-Dist: dserver-search-plugin-mongo
+Requires-Dist: dserver-retrieve-plugin-mongo
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+Requires-Dist: sphinxcontrib-spelling ; extra == 'docs'
+Requires-Dist: sphinxcontrib-bibtex ; extra == 'docs'
+Requires-Dist: myst-parser ==2.0.0 ; extra == 'docs'
+
+# dserver-minimal
+
+[![dtool](https://github.com/livMatS/dserver-minimal/blob/main/icons/22x22/dtool_logo.png?raw=True)](https://github.com/livMatS/dserver-minimal) [![PyPI](https://img.shields.io/pypi/v/dserver-minimal)](https://pypi.org/project/dserver-minimal/) [![tag](https://img.shields.io/github/v/tag/livMatS/dserver-minimal)](https://github.com/livMatS/dserver-minimal/tags)
+
+*dserver-minimal* is a meta package that provides a minimal working dserver
+installation consisting of the core component [dtool-lookup-server](https://github.com/jic-dtool/dtool-lookup-server),
+together with MongoDB-based search and retrieve plugin implementations
+[dserver-search-plugin-mongo](https://github.com/livMatS/dserver-search-plugin-mongo) and
+[dserver-retrieve-plugin-mongo](https://github.com/livMatS/dserver-search-plugin-mongo).
+
+Install from PyPI with
+
+    pip install dserver-minimal
+
+or directly from the `main` branch with
+
+    pip install git+https://github.com/livMatS/dserver-minimal
+
+and follow the general [configuration instructions](https://dtool-lookup-server.readthedocs.io/en/latest/readme.html#setup-and-configuration) otherwise.
