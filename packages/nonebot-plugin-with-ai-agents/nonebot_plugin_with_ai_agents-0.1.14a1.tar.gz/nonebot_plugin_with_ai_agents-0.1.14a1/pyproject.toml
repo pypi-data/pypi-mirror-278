@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "nonebot-plugin-with-ai-agents"
+version = "0.1.14a1"
+description = "nonebot_plugin_with_ai_agents 是一个基于基本原理实现的 AI Agents（智能体），拥有联网搜索能力、页面内容提取并学习回答等功能"
+authors = ["yejue <1145331931@qq.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+nonebot2 = "^2.0"
+beautifulsoup4 = "*"
+httpx = ">=0.20.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.urls]
+homepage = "https://github.com/yejue/nonebot-plugin-with-ai-agents"
+repository = "https://github.com/yejue/nonebot-plugin-with-ai-agents"
