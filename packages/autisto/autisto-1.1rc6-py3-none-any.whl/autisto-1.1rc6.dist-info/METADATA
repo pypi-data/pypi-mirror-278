@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: autisto
+Version: 1.1rc6
+Summary: Basic accounting (?) program integrated with Google Sheets to fulfill my own autistic needs of tracking the shit owned.
+Author: Jan Grzybek
+Author-email: lyre_embassy_0n@icloud.com
+License: MIT
+Project-URL: GitHub, https://github.com/jan-grzybek/autisto
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pymongo
+Requires-Dist: gspread >=6.0.0
+Requires-Dist: python-dateutil
+
+# Autisto
+## Installation
+```
+wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc |  gpg --dearmor | sudo tee /usr/share/keyrings/mongodb.gpg > /dev/null
+echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+sudo apt update
+sudo apt install mongodb-org
+sudo systemctl enable mongod
+sudo systemctl start mongod
+
+
+sudo pip3 install autisto
+sudo autisto  # follow further CLI instructions
+```
+IMPORTANT: After successful setup, consider setting up the back-up routine according to the instructions under /back_up .
