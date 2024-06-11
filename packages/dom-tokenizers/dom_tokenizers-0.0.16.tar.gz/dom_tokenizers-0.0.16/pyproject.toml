@@ -1,0 +1,77 @@
+[project]
+name = "dom-tokenizers"
+version = "0.0.16"
+authors = [{ name = "Gary Benson", email = "gary@gbenson.net" }]
+description = "DOM-aware tokenization for 🤗 Hugging Face language models"
+readme = "README.md"
+requires-python = ">=3.10"  # match..case
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Text Processing :: Markup :: HTML",
+]
+dependencies = [
+    "python-magic",       # XXX review
+    "tokenizers",
+    "unidecode",          # XXX review
+]
+
+[project.urls]
+Homepage = "https://github.com/gbenson/dom-tokenizers"
+Source = "https://github.com/gbenson/dom-tokenizers"
+
+[project.optional-dependencies]
+dev = [
+    "build",
+    "datasets",
+    "flake8",
+    "flake8-custom-import-rules",
+    "flake8-quotes",
+    "pillow",
+    "pytest",
+    "pytest-cov",
+    "transformers",
+]
+train = [
+    "datasets",
+    "pillow",
+    "transformers",
+]
+
+[project.scripts]
+train-tokenizer = "dom_tokenizers.train:main"
+dump-tokenizations = "dom_tokenizers.scripts.dump:main"
+diff-tokenizer = "dom_tokenizers.scripts.diff:main"
+tokenizer-diff = "dom_tokenizers.scripts.diff:main"
+profile-tokenizer = "dom_tokenizers.scripts.profile:main"
+dump-breaking-inputs = "dom_tokenizers.scripts.dump_breaking_inputs:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+addopts = "--cov=dom_tokenizers"
+filterwarnings = [
+    "error",
+    "ignore:`resume_download` is deprecated:FutureWarning",
+]
+
+[tool.coverage.run]
+omit = [
+    "*/.venv/*",
+    "src/dom_tokenizers/dump.py",
+    "src/dom_tokenizers/diff.py",
+    "src/dom_tokenizers/pre_tokenizers/compat_itertools.py",
+]
