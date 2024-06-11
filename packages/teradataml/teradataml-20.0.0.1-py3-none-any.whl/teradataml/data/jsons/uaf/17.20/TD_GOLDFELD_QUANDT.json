@@ -1,0 +1,153 @@
+{
+        "FuncName": "TD_GOLDFELD_QUANDT",
+        "FuncDescriptionShort": "Statistical test that is performed on behalf of univariate or multivariate regression models",
+        "FuncDescriptionLong": [
+                "The hope relative to the development of a univariate or multi-variate regression model is to create a regression model (estimator) that can be characterized as being BLUE: meaning the 'Best Linear Unbiased Estimator'.  One of the properties of such an estimator is that the variance should be homoscedastic, meaning that the variance should be constant.   The opposite behavior is that of a heteroscedastic variance"
+        ],
+        "FunctionVersion": "...",
+        "FunctionCategory": "Diagnostic Statistical Test",
+        "JSONVersion": "1",
+        "FuncRName": "td_Goldfeld_Quandt",
+        "MaxInputFiles": 1,
+        "Input": [
+                {
+                        "Type": [
+                                "SERIES"
+                        ],
+                        "Description": [
+                                "This function is executed against the original univariate or multivariate series"
+                        ],
+                        "LangName": "data or object or newdata or ... --> Langauges team can work with UAF team to come up with this field",
+                        "Optional": false
+                }
+        ],
+        "Output": [
+                {
+                        "Type": "ART",
+                        "PrimaryLayer": true,
+                        "LayerName": "ARTPRIMARY",
+                        "ResultTableColumnTypes": [
+                                "integer",
+                                "integer",
+                                "integer",
+                                "integer",
+                                "integer",
+                                "integer",
+                                "integer",
+                                "float",
+                                "float",
+                                "float",
+                                "float",
+                                "float",
+                                "varchar(64)"
+                        ],
+                        "Description": [
+                                "The TD_GOLDFELD_QUANDT function returns only a primary result set consisting of one row per unique series acted upon.   There are no secondary or tertiary result sets produced by this function.  The primary result set can be retrieved by issuing a SELECT against the analytical table containing the results."
+                        ],
+                        "LangName": "data or object or newdata or ... --> Langauges team can work with UAF team to come up with this field"
+                }
+        ],
+        "IsPlottable": true,
+        "Params": [
+                {
+                        "Name": "ORIG_REGR_PARAMCNT",
+                        "Type": "integer",
+                        "Optional": false,
+                        "LowerBound": 1,
+                        "LowerBoundType": "INCLUSIVE",
+                        "AllowNaN": false,
+                        "Description": [
+                                "Positive Integer value > 0.  A parameter indicating how many response and explanatory variables were present in the original regression, which is being analyzed by this test."
+                        ]
+                },
+                {
+                        "Name": "WEIGHTS",
+                        "Type": "integer",
+                        "Optional": true,
+                        "DefaultValue": 0,
+                        "PermittedValues": [
+                                0,
+                                1
+                        ],
+                        "Description": [
+                                "Optional Parameter.  But when used must be accompanied by both a FORMULA and an ALGORITHM. ",
+                                "FLAG having either a '0' or '1' value.  A value of '1' means the last series found in the payload is to be interpreted as a series of weights that can be used to perform a weighted least squares regression solution."
+                        ]
+                },
+                {
+                        "Name": "FORMULA",
+                        "Type": "<td_formula>",
+                        "Optional": false,
+                        "Description": [
+                                "Specifies the formula used in the regression operation. The name of the response variable must always be Y, and the name of the explanatory variable must always be X1. For example, 'Y = B0 + B1 * X1'.\n",
+                                "Notes:\n",
+                                    "* The formula argument must be specified along with the 'algorithm' argument.\n",
+                                    "* Use the following link to refer the formula rules:\n",
+                                      "https://docs.teradata.com/r/Enterprise_IntelliFlex_VMware/Teradata-VantageTM-Unbounded-Array-Framework-Time-Series-Reference-17.20/Mathematic-Operators-and-Functions/Formula-Rules"
+                                ]
+                },
+                {
+                        "Name": "ALGORITHM",
+                        "Type": "string",
+                        "Optional": false,
+                        "Description": [
+                                "Specifies the algorithm used for the regression.\n",
+                                "Permitted Values:\n 1. QR: QR decomposition is used for the regression.\n 2. PSI: pseudo-inverse based on singular value decomposition (SVD) is used to solve the regression."
+                        ],
+                        "LangName": "..."
+                },
+                {
+                        "Name": "START_IDX",
+                        "Type": "double",
+                        "Optional": true,
+                        "LowerBound": 0,
+                        "LowerBoundType": "EXCLUSIVE",
+                        "AllowNaN": false,
+                        "Description": [
+                                "Optional parameter. Positive real value > 0.  Identifies the split-point-index for the operation. If less than 1.0, then the split-point index is calculated as: START_IDX * N; where N is total number of sample points.  If greater than '1' then START_IDX is interpreted as being the split-point index.   ",
+                                "If not present, than START_IDX is computed using integer math:  START_IDX = (<total entries in series> - OMIT) / 2"
+                        ]
+                },
+                {
+                        "Name": "OMIT",
+                        "Type": "double",
+                        "Optional": false,
+                        "LowerBound": 0,
+                        "LowerBoundType": "EXCLUSIVE",
+                        "AllowNaN": false,
+                        "Description": [
+                                "Positive real value > 0. Determines the number of of 'central sample values' to omit while forming the two 'test groups'.  If less than 1.0, then the number of samples to be omitted is calculated as: OMIT * N; where N is total number of sample points.  If greater than '1' then OMIT is interpreted as number of central points to omit.  "
+                        ]
+                },
+                {
+                        "Name": "SIGNIFICANCE_LEVEL",
+                        "Type": "double",
+                        "Optional": false,
+                        "LowerBound": 0,
+                        "UpperBound": 1,
+                        "LowerBoundType": "EXCLUSIVE",
+                        "UpperBoundType": "EXCLUSIVE",
+                        "AllowNaN": false,
+                        "Description": [
+                                "The desired significance level for the test. 99%, aka, 0.01; 95%,aka,0.05"
+                        ]
+                },
+                {
+                        "Name": "TEST",
+                        "Type": "string",
+                        "Optional": true,
+                        "DefaultValue": "GREATER",
+                        "PermittedValues": [
+                                "GREATER",
+                                "LESS",
+                                "TWOSIDED"
+                        ],
+                        "Description": [
+                                "Optional parameter.   Has a value of:  'GREATER' or 'LESS' or 'TWOSIDED' ; DEFAULT (if not present) is 'GREATER'.  Test value influences how GQ Test Statistic is computed and how Hypothesis is evaluated. See test description above to understand meaning of choosing a TEST value."
+                        ],
+                        "LangName": "..."
+                }
+        ],
+        "InputFmt": false,
+        "OutputFmt": false
+}

@@ -1,0 +1,137 @@
+{
+        "FuncName": "TD_SEASONALNORMALIZE",
+        "FuncDescriptionShort": "Generates a series has been normalized with respect to its internal period as a season and interval cycles",
+        "FuncDescriptionLong": [
+                "The function SeasonalNormalize() takes a non-stationary series and normalizes the series by removing the unit roots. The function can be used with any cyclic data that can be subdivided into a collection of logical periods, in which each period can be further subdivided into a collection of logical intervals."
+        ],
+        "FunctionVersion": "...",
+        "FunctionCategory": "Model Preparation and Parameter Estimation",
+        "JSONVersion": "1",
+        "FuncRName": "td_Seasonal_Normalize",
+        "MaxInputFiles": 1,
+        "Input": [
+                {
+                        "Type": "SERIES",
+                        "Description": [
+                                "Specifies a logical-runtime series, with real number elements."
+                        ],
+                        "LangName": "data or object or newdata or ... --> Langauges team can work with UAF team to come up with this field",
+                        "Optional": false
+                }
+        ],
+        "Output": [
+                {
+                        "Type": "ART",
+                        "PrimaryLayer": true,
+                        "LayerName": "ARTPRIMARY",
+                        "ResultTableColumnTypes": [
+                                "<varies>",
+                                "big_integer",
+                                "big_integer"
+                        ],
+                        "Description": [
+                                "The primary layer payload contains the computed seasonal normalized values.",
+                                "The primary result set can be accessed either via a subsequent SELECT * FROM <art table> statement or by issuing a TD_EXTRACT_RESULTS(…,LAYER(ARTPRIMARY),…) .",
+                                ""
+                        ],
+                        "LangName": "data or object or newdata or ... --> Langauges team can work with UAF team to come up with this field"
+                },
+                {
+                        "Type": "ART",
+                        "PrimaryLayer": false,
+                        "LayerName": "ARTMETADATA",
+                        "ResultTableColumnTypes": [
+                                "<varies>",
+                                "float",
+                                "float"
+                        ],
+                        "Description": [
+                                "A second layer ARTMETADATA payload contains the <mean, standardDeviation> for each payload column in the primary layer for a season.  The prefix for the payload column is MEAN_ and SD_.",
+                                "The secondary result set can be accessed by issuing a TD_EXTRACT_RESULTS(…,LAYER(ARTFITMETADATA),…)",
+                                ""
+                        ],
+                        "LangName": "data or object or newdata or ... --> Langauges team can work with UAF team to come up with this field"
+                }
+        ],
+        "IsPlottable": false,
+        "Params": [
+                {
+                        "Name": "SEASON_CYCLE",
+                        "Type": "record",
+                        "Optional": false,
+                        "CheckDuplicates": true,
+                        "Description": [
+                                "Multiple plots can be specified.  It contains an array of plot entries, separated by comma."
+                        ],
+                        "NestedParams": [
+                                {
+                                        "Name": "CYCLES",
+                                        "Type": "string",
+                                        "Optional": false,
+                                        "PermittedValues": [
+                                                "CAL_YEARS",
+                                                "CAL_MONTHS",
+                                                "CAL_DAYS",
+                                                "WEEKS",
+                                                "DAYS",
+                                                "HOURS",
+                                                "MINUTES",
+                                                "SECONDS",
+                                                "MILLISECONDS",
+                                                "MICROSECONDS"
+                                        ],
+                                        "Description": [
+                                                "The CYCLE is a logical time-unit with one of the enum values: TS_CAL_YEARS, TS_CAL_MONTHS, TS_CAL_DAYS, TS_WEEKS, TS_DAYS,  TS_HOURS, TS_MINUTES, TS_SECONDS,  TS_MILLISECONDS, TS_MICROSECONDS."
+                                        ],
+                                        "LangName": "season_cycle"
+                                },
+                                {
+                                        "Name": "DURATION",
+                                        "Type": "integer",
+                                        "Optional": false,
+                                        "LowerBound": 1,
+                                        "LowerBoundType": "INCLUSIVE",
+                                        "AllowNaN": false,
+                                        "Description": [
+                                                "duration - positive INTEGER",
+                                                "Specifies the number of time-units as the duration of each seasonal cycle."
+                                        ],
+                                        "LangName": "cycle_duration"
+                                }
+                        ]
+
+                },
+                {
+                        "Name": "SEASON_INFO",
+                        "Type": "integer",
+                        "Optional": true,
+                        "DefaultValue": 0,
+                        "PermittedValues": [
+                                0,
+                                1,
+                                2,
+                                3
+                        ],
+                        "Description": [
+                                "Specifies whether to generate additional columns CYCLE_NO and SEASON_NO. CYCLE_NO is the n-th cycle of the season. SEASON_NO is the season for the data."
+                        ]
+                }
+        ],
+        "InputFmt": false,
+        "OutputFmt": [
+                {
+                        "Name": "INDEX_STYLE",
+                        "Type": "string",
+                        "Optional": true,
+                        "DefaultValue": "NUMERICAL_SEQUENCE",
+                        "PermittedValues": [
+                                "NUMERICAL_SEQUENCE",
+                                "FLOW_THROUGH"
+                        ],
+                        "Description": [
+                                "Specifies the index style of the output format."
+                        ],
+                        "LangName": "output_fmt_index_style"
+                }
+        ]
+}

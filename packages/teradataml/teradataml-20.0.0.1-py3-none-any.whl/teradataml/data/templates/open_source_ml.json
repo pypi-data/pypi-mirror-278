@@ -1,0 +1,9 @@
+{
+  "env_specs": [
+    {
+      "env_name": "openml_env",
+      "libs": "scikit-learn",
+      "desc": "DONT DELETE: OpenML environment"
+    }
+  ]
+}

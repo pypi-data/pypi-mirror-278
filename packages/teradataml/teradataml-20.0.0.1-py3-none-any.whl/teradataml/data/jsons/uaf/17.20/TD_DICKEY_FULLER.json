@@ -1,0 +1,87 @@
+{
+        "FuncName": "TD_DICKEY_FULLER",
+        "FuncDescriptionShort": "The Dickey-Fuller test is a statistical test for the presence of one or more unit roots",
+        "FuncDescriptionLong": [
+                "The Dickey-Fuller test is a statistical test for the presence of one or more unit roots within a given series generating process, thus, the test strives to answer the question, 'given the sample data available, is it possible that the true data generating process for y contains one or more unit roots?''."
+        ],
+        "FunctionVersion": "...",
+        "FunctionCategory": "Diagnostic Statistical Test",
+        "JSONVersion": "1",
+        "FuncRName": "td_Dickey_Fuller",
+        "MaxInputFiles": 1,
+        "Input": [
+                {
+                        "Type": "SERIES",
+                        "Description": [
+                                "This section outlines the syntax associated with invoking the TD_DICKEY_FULLER function.   The function takes in a single logical-runtime series as an input.  The series is only permitted to have univariate elements.  "
+                        ],
+                        "LangName": "data or object or newdata or ... --> Langauges team can work with UAF team to come up with this field",
+                        "Optional": false
+                }
+        ],
+        "Output": [
+                {
+                        "Type": "ART",
+                        "PrimaryLayer": true,
+                        "LayerName": "ARTPRIMARY",
+                        "ResultTableColumnTypes": [
+                                "integer",
+                                "integer",
+                                "varchar(16)",
+                                "float",
+                                "float",
+                                "varchar(16)"
+                        ],
+                        "Description": [
+                                "The TD_DICKEY_FULLER function internally executes an OLS regression,  linear regression.    function returns only a primary result set consisting of one row per unique series acted upon.   There are no secondary or tertiary result sets produced by this function.  The primary result set can be retrieved by issuing a SELECT against the analytical table containing the results."
+                        ],
+                        "LangName": "data or object or newdata or ... --> Langauges team can work with UAF team to come up with this field"
+                }
+        ],
+        "IsPlottable": false,
+        "Params": [
+                {
+                        "Name": "ALGORITHM",
+                        "Type": "string",
+                        "Optional": false,
+                        "PermittedValues": [
+                                "NONE",
+                                "DRIFT",
+                                "TREND",
+                                "DRIFTNTREND",
+                                "FORMULA"
+                        ],
+                        "Description": [
+                                "An enumerated type with values of:  NONE, DRIFT, TREND, DRIFTNTREND, or FORMULA, which influences the type of regression that will be run for the test.",
+                                "NONE - Random Walk",
+                                "DRIFT - Random Walk with Drift",
+                                "TREND - Random Walk with Linear Trend",
+                                "DRIFTNTREND - Random Walk with Drift and Trend",
+                                "DRIFTNTREND & MAXLAGS - Random Walk with Drift and Trend and auxiliary lags",
+                                "FORMULA & MAXLAGS - Random Walk with roll-your-own on Drift and Trend; plus auxiliary lags"
+                        ]
+                },
+                {
+                        "Name": "MAXLAGS",
+                        "Type": "integer",
+                        "Optional": true,
+                        "LowerBound": 0,
+                        "LowerBoundType": "INCLUSIVE",
+                        "AllowNaN": false,
+                        "Description": [
+                                "The presence of the MAXLAGS parameter means the data scientist wishes to run the augmented Dickey-Fuller test. This is the maximum number of lags that will be used to form the regression equation. "
+                        ],
+                        "LangName": "max_lags"
+                },
+                {
+                        "Name": "DRIFT_TREND_FORMULA",
+                        "Type": "<td_formula>",
+                        "Optional": true,
+                        "Description": [
+                                "A Teradata formula string that stores the formula used to represent the drift and trend portions of the regression.  The formula is only valid when used in conjunction with ALGORITHM (FORMULA).    It uses the Teradata formula syntax and is expected to be of the form:  b_1 + b_2X_1 + b_3X_1^2 + … etc; which the UAF function interprets as: :  b_1 + b_2t + b_3t^2 + … etc   "
+                        ]
+                }
+        ],
+        "InputFmt": false,
+        "OutputFmt": false
+}
