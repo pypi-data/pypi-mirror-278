@@ -1,0 +1,71 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "motulator"
+version = "0.3.0"
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+]
+requires-python = ">=3.8"
+authors = [
+    {name = "Marko Hinkkanen", email = "marko.hinkkanen@aalto.fi"}
+]
+description = "Motor Drive Simulator in Python"
+readme = "README.md"
+license = "MIT"
+keywords = [
+    "control", 
+    "electric", 
+    "inverter", 
+    "machine", 
+    "motor", 
+    "power", 
+    "simulation",
+]
+classifiers = [
+  "Programming Language :: Python",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ipykernel",
+    "yapf",
+    "pylint",
+    "toml",
+]
+doc = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "numpydoc",
+    "sphinx==7.1.2",
+    "sphinx-autoapi",
+    "sphinx-copybutton",
+    "sphinx-gallery",
+    "sphinx-book-theme",
+    "esbonio",
+]
+
+[project.urls]
+Homepage = "https://github.com/Aalto-Electric-Drives/motulator"
+Documentation = "https://Aalto-Electric-Drives.github.io/motulator/"
+
+[tool.yapf]
+based_on_style = "pep8"
+column_limit = 79
+no_spaces_around_selected_binary_operators = "*,/"
+split_before_first_argument = "True"
+coalesce_brackets = "True"
+spaces_before_comment = 2
+
+[tool.pylint.messages_control]
+disable = [
+    "invalid-name",
+    "too-few-public-methods",
+]
