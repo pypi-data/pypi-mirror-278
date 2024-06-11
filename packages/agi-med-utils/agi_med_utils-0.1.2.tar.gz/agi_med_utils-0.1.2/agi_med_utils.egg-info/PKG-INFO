@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: agi_med_utils
+Version: 0.1.2
+Summary: Utils for agi-med team
+Author: AGI-MED-TEAM
+Requires-Dist: pyyaml==6.0.1
+Requires-Dist: gigachat==0.1.17
+Requires-Dist: requests==2.31.0
+Requires-Dist: python-json-logger==2.0.7
+Requires-Dist: tqdm==4.66.2
+Requires-Dist: dacite==1.8.1
+
+# agi-med-utils
+
+Стандартизация компонент общей библиотеки отдела
+
+## Ответственный разработчик
+
+@bakulin
+
+## Общая информация
+
+### Фичи: 
+
+- Доступ к Yandex_GPT, Gigachat
+- Стандартный конфиг
+
+## Тесты
+
+- `sudo docker-compose -f docker-compose.yaml up --build`
+
