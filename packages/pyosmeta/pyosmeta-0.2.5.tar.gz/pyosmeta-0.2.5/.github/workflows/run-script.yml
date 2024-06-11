@@ -1,0 +1,27 @@
+on:
+  workflow_call:
+    inputs:
+      script_name_with_args:
+        required: true
+        type: string
+
+jobs:
+  run_script_job:
+    runs-on: ubuntu-latest
+    steps:
+      # TODO: consider replacing python/pip/update-web-metadata installs with docker image
+      - name: Setup Python
+        uses: actions/setup-python@v5
+      - name: Upgrade pip
+        run: |
+          # install pip=>20.1 to use "pip cache dir"
+          python -m pip install --upgrade pip wheel
+      - name: Install package
+        run: python -m pip install git+https://github.com/pyopenSci/update-web-metadata
+
+      - name: Check out the code
+        uses: actions/checkout@v4
+      - name: Run script from update-web-metadata repo
+        env:
+         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        run: ${{ inputs.script_name_with_args }}
