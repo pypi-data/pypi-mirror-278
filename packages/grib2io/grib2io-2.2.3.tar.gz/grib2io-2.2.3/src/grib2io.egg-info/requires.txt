@@ -1,0 +1,8 @@
+numpy
+pyproj
+
+[interp]
+grib2io-interp>=1.0.0
+
+[xarray]
+xarray<=2024.1.0
