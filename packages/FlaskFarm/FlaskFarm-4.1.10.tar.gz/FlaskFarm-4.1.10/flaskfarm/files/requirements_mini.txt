@@ -1,0 +1,30 @@
+#flask
+Flask
+Flask-SQLAlchemy
+Flask-Login
+Flask-Cors
+#Flask-Markdown
+Flask-SocketIO
+python-engineio
+python-socketio<5.8.0
+Werkzeug<3.0
+Jinja2
+
+# common util
+apscheduler
+pytz
+requests
+discord-webhook
+pyyaml
+telepot-mod
+Flask-Dropzone
+psutil
+slack-sdk
+
+# filemanager
+pillow
+
+gevent
+gevent-websocket
+pycryptodome
+json_fix
