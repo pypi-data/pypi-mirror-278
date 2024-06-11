@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: myErp
+Version: 5.1
+Summary: A Minimal Client for NITJ Erp
+Home-page: https://github.com/neernjan1/pyErp
+Author: Neeraj Yadav
+Author-email: nyadav70096@gmail.com
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: BeautifulSoup4
+Requires-Dist: matplotlib
+Requires-Dist: requests
+Requires-Dist: tabulate
+Requires-Dist: pandas
+Requires-Dist: colorama
+Requires-Dist: tqdm
+
+# pyErp
+
+## student portal access
+
+* Features
+  * Student details
+  * Evaluation Report
+  * Attendance Detail with graph
+  * Download Result
+  * Easy and Interactive Command Line Interfaces
+
+* Usage
+  
+    * Just type myerp at command prompt and use the interactive interface
