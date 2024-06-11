@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: atomcarla
+Version: 0.5.3
+Summary: Python API for communicating with the AtomCarla server.
+Home-page: https://atom.auto/
+Author: Atom Unreal Engine team
+Author-email: yuri.pigo@atom.team
+License: MIT License
+Description-Content-Type: text/markdown
+
+This is the Python package for the CARLA Python API used for controlling and communicating-with [CARLA](https://carla.org) - The open-source simulator for autonomous driving research.
