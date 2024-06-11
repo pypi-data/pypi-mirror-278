@@ -1,0 +1,5 @@
+[console_scripts]
+benchmark=stress_test.benchmark:main
+concise_harmony=podaac.merger.harmony.cli:main
+merge=podaac.merger.merge_cli:main
+
