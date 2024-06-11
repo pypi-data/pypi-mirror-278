@@ -1,0 +1,136 @@
+[project]
+name = "aliasing"
+version = "0.4.2"
+description = "A utility for duplicating class members to other names or \"aliases\""
+authors = [
+    { name = "mxt", email = "mxnd.taylor@gmail.com" },
+]
+requires-python = ">=3.8"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Code Generators",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+Homepage = "https://github.com/mxndtaylor/aliasing"
+Source = "https://github.com/mxndtaylor/aliasing"
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.black]
+line-length = 79
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.build]
+excludes = [
+    "**/example.py",
+    "tests/*",
+]
+
+[tool.pdm.scripts]
+examples = "python -m aliasing.example"
+test = "pytest"
+test-report = "pytest --junitxml=reports/junit/junit.xml --html=reports/junit/report.html"
+regression = "tox -e 'py38,py39,py310,py311,py312' --parallel"
+fmt = "black {args:src/}"
+lint = "flake8 {args:src/}"
+
+[tool.pdm.scripts.typing]
+composite = [
+    "no_implicit_optional {args:src/}",
+    "mypy {args:src/}",
+]
+
+[tool.pdm.scripts.badges-timestamp]
+shell = "date -u > badges/timestamp.txt"
+
+[tool.pdm.scripts.style]
+composite = [
+    "typing",
+    "fmt",
+    "lint",
+]
+
+[tool.pdm.scripts.lint-report]
+composite = [
+    "mkdir -p reports/flake8",
+    "lint src/ --exit-zero --format=html --htmldir reports/flake8/html --statistics --output-file reports/flake8/stats.txt",
+]
+
+[tool.pdm.scripts.coverage]
+composite = [
+    "python -m coverage run -m pytest",
+    "python -m coverage xml -o reports/coverage/coverage.xml",
+    "python -m coverage html -d reports/coverage/html",
+]
+
+[tool.pdm.scripts.compile-reports]
+shell = "mkdir -p dist && tar -czvf dist/reports.tar.gz -C ./reports ."
+
+[tool.pdm.scripts.reports]
+composite = [
+    "test-report",
+    "coverage",
+    "lint-report",
+    "compile-reports",
+]
+
+[tool.pdm.scripts.badges-only]
+composite = [
+    "genbadge tests -o badges/tests.svg",
+    "genbadge coverage -o badges/coverage.svg",
+    "genbadge flake8 -i reports/flake8/stats.txt -o badges/flake8.svg",
+    "badges-timestamp",
+]
+
+[tool.pdm.scripts.badges]
+composite = [
+    "reports",
+    "badges-only",
+]
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "pytest>=8.2.1",
+    "black>=24.4.2",
+    "coverage>=7.5.1",
+    "tox>=4.15.0",
+    "tox-pdm>=0.7.2",
+    "genbadge[all]>=1.1.1",
+    "flake8>=5.0.4",
+    "pytest-html>=4.1.1",
+    "mypy>=1.10.0",
+    "no-implicit-optional>=1.4",
+]
+
+[tool.coverage.run]
+omit = [
+    "tests/**",
+    "*test*",
+]
+branch = true
