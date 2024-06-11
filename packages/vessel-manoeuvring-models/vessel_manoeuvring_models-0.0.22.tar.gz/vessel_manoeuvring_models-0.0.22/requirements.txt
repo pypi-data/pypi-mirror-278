@@ -1,0 +1,23 @@
+# local package
+-e .
+
+# external requirements
+#click
+Sphinx
+coverage
+python-dotenv>=0.5.1
+pytest
+nbstripout
+numpy
+pandas
+matplotlib
+sklearn
+seaborn
+scipy
+jupyterlab
+sympy
+plotly
+ipywidgets>=7.5
+jupyterlab-mathjax3
+statsmodels
+dill

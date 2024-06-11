@@ -1,0 +1,23 @@
+Metadata-Version: 2.3
+Name: vessel_manoeuvring_models
+Version: 0.0.22
+Summary: System identification of ship manoeuvring models
+Project-URL: Bug Tracker, https://github.com/martinlarsalbert/VesselManoeuvringModels/issues
+Project-URL: Homepage, https://github.com/martinlarsalbert/VesselManoeuvringModels
+Author-email: Martin Alexandersson <maralex@chalmers.se>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# Vessel Manoeuvring Models
+This is a package for ship manoeuvring. The package contains:
+* Manoeuvring models defined in [SymPy](https://www.sympy.org/).
+* Extended Kalman Filter ([EKF](https://en.wikipedia.org/wiki/Extended_Kalman_filter)) for manoeuvring.
+* Parameter estimation with ordinary least square (OLS) regression.
+
+## install
+```pip install vessel_manoeuvring_models```
+
