@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: remoteinference
+Version: 0.0.1
+Summary: Remote inference for language models
+Home-page: UNKNOWN
+Author: Jaris Küken
+Author-email: jaris.kueken@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+
+# llm_inference
+
+Simple package to perform remote inference on language models of different providers
+
+
