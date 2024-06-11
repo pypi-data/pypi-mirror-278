@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: tuparser
+Version: 0.1.1
+Summary: A module that facilitates the creation of Telegra.ph parsing scripts
+Home-page: https://github.com/zombyacoff/tu-parser
+Author: zombyacoff
+Author-email: zombyacoff@gmail.com
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp>=3.9.5
+Requires-Dist: bs4>=0.0.2
+Requires-Dist: PyYaml>=6.0.1
+Requires-Dist: termcolor>=2.4.0
+
+# TU Parser - Python module
+A module that facilitates the creation of Telegra.ph parsing scripts
+
+## Examples
+[LP Parser](https://github.com/zombyacoff/lp-parser)
