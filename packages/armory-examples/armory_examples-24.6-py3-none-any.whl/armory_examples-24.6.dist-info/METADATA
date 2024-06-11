@@ -1,0 +1,61 @@
+Metadata-Version: 2.3
+Name: armory-examples
+Version: 24.6
+Summary: TwoSix Armory Adversarial Robustness Library Examples
+Author-email: Two Six Technologies <armory@twosixtech.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Requires-Dist: adversarial-robustness-toolbox
+Requires-Dist: armory-library
+Requires-Dist: datasets
+Requires-Dist: huggingface-hub
+Requires-Dist: transformers
+Provides-Extra: all
+Requires-Dist: albumentations<1.4.1; extra == 'all'
+Requires-Dist: captum; extra == 'all'
+Requires-Dist: scikit-learn>=1.2; extra == 'all'
+Requires-Dist: tidecv; extra == 'all'
+Requires-Dist: xaitk-saliency; extra == 'all'
+Requires-Dist: yolov5; extra == 'all'
+Provides-Extra: cv
+Requires-Dist: albumentations<1.4.1; extra == 'cv'
+Requires-Dist: captum; extra == 'cv'
+Requires-Dist: scikit-learn>=1.2; extra == 'cv'
+Requires-Dist: tidecv; extra == 'cv'
+Requires-Dist: xaitk-saliency; extra == 'cv'
+Requires-Dist: yolov5; extra == 'cv'
+Description-Content-Type: text/markdown
+
+![armory-examples logo](../docs/assets/armory-examples-logo.png)
+
+---
+
+# Overview
+
+This project includes example Python scripts and Jupyter notebook usages of the
+Armory library. These are a good starting point for developers looking to
+use Armory in their own projects.
+
+# Installation
+
+```sh
+pip install --editable ./examples
+```
+
+# Usage
+
+Jupyter notebooks can be found in examples/notebooks and Python scripts are in
+src/armory/examples subdirectories.
+
+# Acknowledgment
+
+This material is based upon work supported by the Defense Advanced Research Projects
+Agency (DARPA) under Contract No. HR001120C0114. Any opinions, findings and
+conclusions or recommendations expressed in this material are those of the author(s)
+and do not necessarily reflect the views of the Defense Advanced Research Projects
+Agency (DARPA).

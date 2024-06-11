@@ -1,0 +1,16 @@
+LICENSE,sha256=0hvY0uXSRfxEDu133Lp2YIzaKsLuJ7PegckKP0aMqD0,1069
+README.md,sha256=aontVPWg8s3Vh56XzpW-64doY2AVLIu0PZynOGkmnDU,821
+pyproject.toml,sha256=JDiJcYEVJX7IZw0_EG2nNEzTZ8fV9nQzrfTRGm6gCr4,1869
+armory/examples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+armory/examples/version.py,sha256=HKtoo-JcFk1OIzF63hl9C_uYddSV-h_61U7RAY11NDs,156
+armory/examples/image_classification/food101.py,sha256=aJcu9pE0MUrsTyOlI9wbcMBqTAIH-gsAUieOJT8fR6o,11093
+armory/examples/object_detection/coco_fasterrcnn_resnet50.py,sha256=L8fA8UvVTMnWGqYCo87nkvLYn7uztE0vza-of3XDX3E,7099
+armory/examples/object_detection/license_plates_yolos.py,sha256=DRNfeLQo9yPUAn7BVJhE6QQSbj9otUrQqT_M_HYEXZI,7725
+armory/examples/object_detection/license_plates_yolov5.py,sha256=15SF0yXvjiJl7HbBKXmAsxFqHiIgrDcd4ARLyrSi2zk,6849
+armory/examples/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+armory/examples/utils/args.py,sha256=GUlDzTdcKGfhSIqMVEIWgmErQA-qQEnRpp_gm1ZKPsc,1204
+armory/examples/utils/display.py,sha256=-p0sghrRag6oK8OQ_ZKG4Y6KUhRvv_f1GyYtWLYkJ5I,3900
+armory_examples-24.6.dist-info/METADATA,sha256=U4LGFoCkr4Uck--MA_WbKLRy-4B4eewClETc8aC0hZM,2038
+armory_examples-24.6.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+armory_examples-24.6.dist-info/licenses/LICENSE,sha256=0hvY0uXSRfxEDu133Lp2YIzaKsLuJ7PegckKP0aMqD0,1069
+armory_examples-24.6.dist-info/RECORD,,
