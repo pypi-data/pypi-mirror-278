@@ -1,0 +1,3 @@
+[console_scripts]
+izio=izio_cli.cli:app
+
