@@ -1,0 +1,4 @@
+include LICENSE
+include README.rst
+recursive-include django_multiple_chunk_upload/static *
+recursive-include django_multiple_chunk_upload/templates *
