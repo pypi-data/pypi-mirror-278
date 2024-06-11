@@ -1,0 +1,15 @@
+Metadata-Version: 2.3
+Name: graph-jpr
+Version: 0.1.1
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+License-File: LICENSE
+Summary: Joint partial regression method for sparse inverse covariance estimation.
+Author-email: Samuel Erickson <samer177@student.liu.se>
+License: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Homepage, https://github.com/Samuel-Erickson-Andersson/Joint-Partial-Regression
+
+
