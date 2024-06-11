@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+mtai/__init__.py
+mtai/base.py
+mtai/bios.py
+mtai/mt.py
+mtai/prompts.py
+mtai/tags.py
+mtai.egg-info/PKG-INFO
+mtai.egg-info/SOURCES.txt
+mtai.egg-info/dependency_links.txt
+mtai.egg-info/requires.txt
+mtai.egg-info/top_level.txt
