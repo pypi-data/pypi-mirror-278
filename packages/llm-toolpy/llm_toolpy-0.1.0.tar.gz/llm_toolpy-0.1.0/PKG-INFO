@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: llm-toolpy
+Version: 0.1.0
+Summary: ToolPy is a Python module made to facilitate the creation of tools using LLMs.
+Home-page: https://github.com/EltonCN/toolpy
+Author: EltonCN
+Author-email: elton.nascimento@students.ic.unicamp.br
+Project-URL: Bug Tracker, https://github.com/EltonCN/toolpy/issues
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Intended Audience :: Science/Research
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+
+[![](https://img.shields.io/pypi/v/toolpy?style=for-the-badge)](https://pypi.org/project/toolpy) [![](https://img.shields.io/pypi/l/toolpy?style=for-the-badge)](https://github.com/EltonCN/toolpy/blob/main/LICENSE) [![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/EltonCN/toolpy)
+
+# ToolPy
+
+ToolPy is a Python module made to facilitate the creation of tools using LLMs.
+
+## Installation
+
+- Installing using pip:
+
+    ```bash
+    pip install --upgrade pip
+    pip install toolpy
+    ```
+
+- For installing from the repository:
+
+    ```bash
+    git clone https://github.com/EltonCN/toolpy
+    cd toolpy
+    pip install --upgrade pip
+    pip install .
+    ```
+
+## Examples
+
+The ["examples"](/examples) folder have examples of how to use Toolpy.
+
+## Authors
+
+- [EltonCN](https://github.com/EltonCN)
+
+## License
