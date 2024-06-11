@@ -1,0 +1,67 @@
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[project]
+name = "WuttJamaican"
+version = "0.3.0"
+description = "Base package for Wutta Framework"
+readme = "README.rst"
+authors = [{name = "Lance Edgar", email = "lance@edbob.org"}]
+license = {file = "COPYING.txt"}
+classifiers = [
+        "Development Status :: 4 - Beta",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+        "Natural Language :: English",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+]
+requires-python = ">= 3.6"
+dependencies = [
+        'importlib-metadata; python_version < "3.10"',
+        "python-configuration",
+]
+
+
+[project.optional-dependencies]
+db = ["SQLAlchemy<2"]
+docs = ["Sphinx", "sphinxcontrib-programoutput"]
+tests = ["pytest-cov", "tox"]
+
+
+[project.scripts]
+wutta = "wuttjamaican.cmd.base:main"
+
+
+[project.entry-points."wutta.subcommands"]
+date-organize = "wuttjamaican.cmd.date_organize:DateOrganize"
+make-appdir = "wuttjamaican.cmd.make_appdir:MakeAppDir"
+setup = "wuttjamaican.cmd.setup:Setup"
+
+
+[project.urls]
+Homepage = "https://rattailproject.org/"
+Repository = "https://kallithea.rattailproject.org/rattail-project/wuttjamaican"
+Changelog = "https://kallithea.rattailproject.org/rattail-project/wuttjamaican/files/master/CHANGELOG.md"
+
+
+[tool.commitizen]
+version_provider = "pep621"
+tag_format = "v$version"
+update_changelog_on_bump = true
+
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+  "htmlcov/",
+]
