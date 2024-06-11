@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: PrettyDF
+Version: 0.2
+Requires-Dist: pandas
+Requires-Dist: tabulate
+
