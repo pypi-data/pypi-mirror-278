@@ -1,0 +1,15 @@
+jpcli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jpcli/main.py,sha256=foB1DnJZQG6hhJs71okST_Sb5zW2dknRTyJPkYsUpU4,1238
+jpcli/parsers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jpcli/parsers/free_parser.py,sha256=XymIi1eafmIElMMVxS3DmlZ-oC4dcYvKmNWDm5tCEEs,721
+jpcli/parsers/lsmem_parser.py,sha256=wlOInwE_gkrarxvRp-4_tk1zCbb3RDGHyLME56AR7Go,321
+jpcli/parsers/other_command_parser.py,sha256=G2so9nFluHiyuyEDJouxuN4FHkNheyIY_laDFXxE6xM,134
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_lsmem_parser.py,sha256=maT0mCSFyAHCMdRMl0NEa-FUE_2-MMDoYZS5W67PYZU,791
+tests/test_other_command_parser.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jpcli-0.1.1.dist-info/LICENCE,sha256=-unHZSaIlcrVEVD56Ss5dlOvdgK682a2xitz35UlKt4,1069
+jpcli-0.1.1.dist-info/METADATA,sha256=nbis0NNP6q8GhqNmtckScuiCKD8XHRr8HRYC6HcAG3s,625
+jpcli-0.1.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+jpcli-0.1.1.dist-info/entry_points.txt,sha256=6wCYs9scOVGFsZE-b2r2geNzy4uST0GgWyHmveiPSxE,43
+jpcli-0.1.1.dist-info/top_level.txt,sha256=djdbp8mEzCmAEbrMOVEHNW4LIabBwnpLURp2dX_ZQbA,12
+jpcli-0.1.1.dist-info/RECORD,,
