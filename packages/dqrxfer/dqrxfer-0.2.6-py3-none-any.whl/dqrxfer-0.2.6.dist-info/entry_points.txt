@@ -1,0 +1,4 @@
+[console_scripts]
+dqr-batch-upload = dqrxfer.batch_upload:main
+dqr-ping = dqrxfer.dqr_ping:main
+dqr-upload = dqrxfer.dqr_upload:main
