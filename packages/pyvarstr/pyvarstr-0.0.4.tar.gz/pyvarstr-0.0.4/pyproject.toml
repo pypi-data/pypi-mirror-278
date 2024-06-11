@@ -1,0 +1,17 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[project]
+name = "pyvarstr"
+version = "0.0.4"
+authors = [
+ { name="sdelta199", email="sdelta199@yandex.ru" },
+]
+description = "This library is in initial stage of development."
+readme = "README.md"
+requires-python = ">=3.6.0"
+classifiers = [
+   "Programming Language :: Python :: 3",
+   "License :: OSI Approved :: MIT License",
+   "Operating System :: OS Independent",
+]
