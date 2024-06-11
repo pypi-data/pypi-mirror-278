@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+missing_mga/__init__.py
+missing_mga/missing_methods.py
+missing_mga.egg-info/PKG-INFO
+missing_mga.egg-info/SOURCES.txt
+missing_mga.egg-info/dependency_links.txt
+missing_mga.egg-info/requires.txt
+missing_mga.egg-info/top_level.txt
+tests/__init__.py
+tests/test_missing_methods.py
