@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=41.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "peccary"
+version = "0.0"
+authors = [
+  { name="Sóley Hyman", email="soleyhyman@arizona.edu" },
+]
+description = ""
+readme = "README.md"
+requires-python = ">=3.0"
+classifiers = [
+    "Development Status :: 1 - Planning"
+]
