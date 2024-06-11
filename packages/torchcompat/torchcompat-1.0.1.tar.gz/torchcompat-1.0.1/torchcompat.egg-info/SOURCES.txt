@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+torchcompat/__init__.py
+torchcompat.egg-info/PKG-INFO
+torchcompat.egg-info/SOURCES.txt
+torchcompat.egg-info/dependency_links.txt
+torchcompat.egg-info/requires.txt
+torchcompat.egg-info/top_level.txt
+torchcompat/core/__init__.py
+torchcompat/core/errors.py
+torchcompat/core/load.py
+torchcompat/data/data.json
