@@ -1,0 +1,15 @@
+black
+flake8
+pylint
+typing-extensions
+setuptools_scm
+pytest
+absl-py
+pillow
+numpy
+jax
+chex
+flax
+rlax
+tyro
+wandb
