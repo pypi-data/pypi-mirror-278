@@ -1,0 +1,2 @@
+[console_scripts]
+openredirectscan = packages.main:main

@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: openredirectscan
+Version: 2.0.0
+Summary: Open Redirect Bug Detection Tool
+Author: @yuva
+Author-email: <yuvarajchandran93@gmail.com>
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: argparse
+
+
+This tool is designed to detect and analyze open redirect vulnerabilities in web applications.
