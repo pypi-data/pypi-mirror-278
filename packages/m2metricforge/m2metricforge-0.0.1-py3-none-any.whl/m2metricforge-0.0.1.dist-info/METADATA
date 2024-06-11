@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: m2metricforge
+Version: 0.0.1
+Summary: Library for generating validation dataset and evaluation metrics
+Home-page: https://github.com/HDD-Team/metricforge
+Author: m2syndicate
+Author-email: mtwosyndicate@gmail.com
+Project-URL: Documentation, https://github.com/HDD-Team/metricforge/blob/main/README.MD
+Keywords: metric,validation,generate
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: requests >=2.25.1
+
+# **MetricForge**
+## Library for generating validation dataset and evaluation metrics
+
+### List of functions:
+
+**script_valid** - A function for creating validation dataset or creating a new column, using your own model. To do this, enter in function your function, which generating answer. Otherwise select model what you need and prompt and then new CSV file would be generated
+
+**calculate_metrics** - A function for calculating Accuracy and F1 Score metrics. We use the Schlern library for calculations. Column one and Column two can be both the name of the column and its number
