@@ -1,0 +1,17 @@
+source_klaviyo/__init__.py,sha256=rqzHFb_mmvRE42XQZ81rKRARxkcZq3QMLp2WOXX16Eg,125
+source_klaviyo/availability_strategy.py,sha256=3D67y7JZTlTtNQ3w_2HfSvHLlE4oeYxLSudxXr-czQk,975
+source_klaviyo/components/datetime_based_cursor.py,sha256=MeP3lIv0ftDbX2FgJnzKwdzo_YFzFBPSWCNUBOGSUqg,865
+source_klaviyo/components/inclouded_fields_extractor.py,sha256=6Nobcbe9el93hH0r_-dIR5PDrDP4Xxq2VJ20mZWkPhI,2562
+source_klaviyo/exceptions.py,sha256=cG9A0Ob9HyRUnqQr3vLTJgVLMH_A07smWezhI6ARTT8,196
+source_klaviyo/manifest.yaml,sha256=BvO-2X6J0onioSRf-u6x4DIqdYwt1XBFAuaDGd8-Cx4,28073
+source_klaviyo/run.py,sha256=bEO27WwjqN3ItW4tWIapFEt9fjCQB3jt0uILjcQeHFU,233
+source_klaviyo/schemas/campaigns.json,sha256=5mXF8nFaIGLY1k9qazfd4qmsJN5woq2IIEhWLbO1qTM,167
+source_klaviyo/schemas/campaigns_detailed.json,sha256=yjESJ1m8jwPyVf7RQiQMlUQJy2RCLBnpsWEXbbe0Ipo,1921
+source_klaviyo/schemas/flows.json,sha256=42CVvCiGN1E2S0au7W9BXEjBusegyEREy6n4JXDOrkQ,2262
+source_klaviyo/schemas/shared/campaign_properties.json,sha256=5dY93KpoVSahRetuZRwHvOsqGH36aqQ9TjYTwN-hTM0,4091
+source_klaviyo/source.py,sha256=ugRPWqooV9zrYOY0FmYRjtM9Vvg3Q74X2y9j76eQEfo,1183
+source_klaviyo/streams.py,sha256=pb9On4zLs021pihT7QzwMxuo5nurEuhxh1urjENfMfg,11928
+airbyte_source_klaviyo-2.7.0.dist-info/METADATA,sha256=0ZTuq9B7KvhQ7MKoaQCinou9qfita7TamW-xereu4jQ,5236
+airbyte_source_klaviyo-2.7.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+airbyte_source_klaviyo-2.7.0.dist-info/entry_points.txt,sha256=SfcyFbpbYQdxeqJSKu8x5plrWEpZxPSosz1nBL9qSWw,57
+airbyte_source_klaviyo-2.7.0.dist-info/RECORD,,
