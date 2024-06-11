@@ -1,0 +1,13 @@
+loguru
+hydra-core
+pandas
+memory-profiler
+matplotlib
+
+[dev]
+pre-commit
+
+[tests]
+pytest
+pytest-cov
+rootutils

@@ -1,0 +1,15 @@
+.gitignore
+.pre-commit-config.yaml
+README.MD
+pyproject.toml
+src/script_prof.egg-info/PKG-INFO
+src/script_prof.egg-info/SOURCES.txt
+src/script_prof.egg-info/dependency_links.txt
+src/script_prof.egg-info/entry_points.txt
+src/script_prof.egg-info/requires.txt
+src/script_prof.egg-info/top_level.txt
+src/scriptprof/__init__.py
+src/scriptprof/config.yaml
+src/scriptprof/main.py
+tests/test_cli.py
+tutorial/tutorial_script.sh

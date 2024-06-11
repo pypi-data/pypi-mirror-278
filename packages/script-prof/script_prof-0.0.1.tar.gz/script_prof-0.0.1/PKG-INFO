@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: script-prof
+Version: 0.0.1
+Summary: Simple script for collecting logs of memory and time profiling.
+Author-email: Nassim Oufattole <noufattole@gmail.com>
+Project-URL: Homepage, https://github.com/Oufattole/scriptprof
+Project-URL: Issues, https://github.com/Oufattole/scriptprof/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: loguru
+Requires-Dist: hydra-core
+Requires-Dist: pandas
+Requires-Dist: memory-profiler
+Requires-Dist: matplotlib
+Provides-Extra: dev
+Requires-Dist: pre-commit; extra == "dev"
+Provides-Extra: tests
+Requires-Dist: pytest; extra == "tests"
+Requires-Dist: pytest-cov; extra == "tests"
+Requires-Dist: rootutils; extra == "tests"
