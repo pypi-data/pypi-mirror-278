@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: kwldn_bot
+Version: 1.3.7
+Summary: Universal aiogram bot library
+Author-email: kewldan <kewldanil1@gmail.com>
+Project-URL: Homepage, https://github.com/kewldan/xbot
+Keywords: bot,telegram
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: aiogram~=3.7.0
+Requires-Dist: aiohttp~=3.9.5
+Requires-Dist: pydantic~=2.7.3
+Requires-Dist: motor~=3.4.0
+Requires-Dist: beanie~=1.26.0
