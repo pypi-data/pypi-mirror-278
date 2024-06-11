@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+clooey/__init__.py
+clooey/clooey.py
+clooey/main.py
+clooey.egg-info/PKG-INFO
+clooey.egg-info/SOURCES.txt
+clooey.egg-info/dependency_links.txt
+clooey.egg-info/entry_points.txt
+clooey.egg-info/requires.txt
+clooey.egg-info/top_level.txt
+clooey/examples/password.py
+clooey/examples/piglatin.py
+clooey/examples/sample.py
