@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: deplyai-cli
+Version: 0.4.2
+Summary: Command Line Environment for DeplyAI's integrated AI agent platform.
+Maintainer: DeplyAI
+Maintainer-email: support@deplyai.com
+License: BSD-3-Clause
+Project-URL: Bug Tracker, https://github.com/deply-ai/cli/issues
+Project-URL: Documentation, https://github.com/deply-ai/cli
+Project-URL: Source Code, https://github.com/deply-ai/cli
+Keywords: deplyai
+Platform: Linux
+Platform: Windows
+Platform: MacOS
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >= 3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: deplyai ==0.1.2
+Requires-Dist: requests
+
+# DeplyAI CLI
+
+## Overview
+DeplyAI CLI is a Command Line Interface designed to interact with the DeplyAI Platform, facilitating the management and automation of AI workflows directly from the command line.
+
+## Features
+- **Automation:** Automate tasks and workflows on the DeplyAI Platform using simple CLI commands.
+- **Integration:** Seamlessly integrate with existing tools and systems in your workflow.
+
+## Installation
+To install the DeplyAI CLI, use pip:
+```
+pip install deplyai-cli
+```
+
+## Usage
+After installation, you can start using the CLI to manage your DeplyAI projects:
+```
+deply auth login
+deply pipelines create --filename pipeline.yml
+```
+For more information, run:
+```
+deply --help
+```
+
+## Configuration
+You can set the authentication profile to use via the `DEPLY_PROFILE` environment variable.
+
+## Contribution
+Contributions are welcome! Please fork the repository and submit a pull request with your enhancements.
+
+## License
+This project is licensed under the BSD-3-Clause License - see the LICENSE file for details.
