@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+my_router/__init__.py
+my_router/cli.py
+my_router/main.py
+my_router.egg-info/PKG-INFO
+my_router.egg-info/SOURCES.txt
+my_router.egg-info/dependency_links.txt
+my_router.egg-info/entry_points.txt
+my_router.egg-info/top_level.txt
