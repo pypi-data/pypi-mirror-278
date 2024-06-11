@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gautomator"
+version = "0.0.2"
+authors = [{ name = "Dale Hoang", email = "huy.quochoang2308@gmail.com" }]
+description = "Automation framework developed by Dale"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "requests>=2.31",
+    "colorlog>=6.7",
+    "pydantic>=2.4.2",
+    "behave>=1.2.6",
+    "requests-to-curl>=1.1",
+    "mysql-connector-python>=8.0.30",
+    "pymongo>=4.2.0",
+    "redis>=4.3.4",
+    "psycopg2-binary>=2.9.7",
+    "locust>=2.16.1",
+    "python-gitlab>=3.15.0",
+    "webdriver_manager>=4.0.1",
+    "selenium>=4.4.3",
+    "Appium-Python-Client>=2.9.0",
+    "dataclasses-json>=0.6.2",
+    "Faker==19.6.2",
+    "TestLink-API-Python-client>=0.8.1",
+    "getgauge>=0.4.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
