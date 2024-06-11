@@ -1,0 +1,14 @@
+{
+    "message": "[0, 0.0021, 0.7]\r\n[0, 0.0021, 0.7]\r\n{'ULS': stress_strain_curve(HEAD=['Strain', 'Stress'], DATA=[[0, 0.0021, 0.7], [0, 420]]), 'SLS': stress_strain_curve(HEAD=['Strain', 'Stress'], DATA=[[0, 0.0021, 0.7], [0, 420]])}\r\n"
+}
+
+{
+    "uls": {
+        "HEAD": ["Strain", "Stress"],
+        "DATA": [[0.0, 0.0006, 0.0006, 0.003], [0.0, 0.0, 34.0, 34.0]]
+    },
+    "sls": {
+        "HEAD": ["Strain", "Stress"],
+        "DATA": [[0.0, 0.001], [0, 32.8,]]
+    }
+}
