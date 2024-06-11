@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: baseball-data
+Version: 0.0.0.1
+Summary: baseball API
+Home-page: 
+Author: basekk
+Author-email: jino152637@gmail.com
+License: MIT
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
+Requires-Dist: pymysql
+Requires-Dist: prettytable
+Requires-Dist: tabulate
+
