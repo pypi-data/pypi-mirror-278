@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: funcnodes-pandas
+Version: 0.1.9
+Summary: 
+License: MIT
+Author: Julian Kimmig
+Author-email: julian.kimmig@gmx.net
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: funcnodes (>=0.1.42)
+Requires-Dist: funcnodes-numpy (>=0.1.5)
+Requires-Dist: openpyxl
+Requires-Dist: pandas
+Description-Content-Type: text/markdown
+
+
