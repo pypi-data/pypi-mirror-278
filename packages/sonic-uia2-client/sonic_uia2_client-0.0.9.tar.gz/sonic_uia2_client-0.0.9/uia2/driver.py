@@ -1,0 +1,78 @@
+from typing import Union
+
+from client.uia_client import UiaClient
+from common.models import PasteboardType, AndroidSelector
+from common.resp_handler import RespHandler
+
+
+# Android Driver with uia client.
+class AndroidDriver(object):
+
+    def __init__(self, url, cap=None, session_id=None, timeout=RespHandler.DEFAULT_REQUEST_TIMEOUT):
+        if cap is None:
+            cap = {}
+        self._client = UiaClient()
+        self._client.remote_url = url
+        self._client.resp_handler.set_request_timeout(timeout)
+        if session_id is None:
+            self._client.new_session(cap)
+        else:
+            self._client.session_id = session_id
+
+    def close_driver(self):
+        self._client.close_session()
+
+    def get_session_id(self):
+        return self._client.session_id
+
+    def get_uia_client(self):
+        return self._client
+
+    def get_window_size(self):
+        return self._client.get_window_size()
+
+    def send_keys(self, text: str, is_cover=None):
+        if is_cover is None:
+            is_cover = False
+        self._client.send_keys(text, is_cover)
+
+    def set_pasteboard(self, content_type: str, content: str):
+        self._client.set_pasteboard(content_type, content)
+
+    def get_pasteboard(self, content_type: str):
+        return self._client.get_pasteboard(content_type)
+
+    def get_page_source(self):
+        return self._client.page_source()
+
+    def set_default_find_element_interval(self, retry: int, interval: int):
+        self._client.set_default_find_element_interval(retry, interval)
+
+    def find_element(self, selector: AndroidSelector, value: str, retry: int = None, interval: int = None):
+        return self._client.find_element(selector.value, value, retry, interval)
+
+    def find_element_list(self, selector: AndroidSelector, value: str, retry: int = None, interval: int = None):
+        return self._client.find_element_list(selector.value, value, retry, interval)
+
+    def screenshot(self):
+        return self._client.screenshot()
+
+    def set_appium_settings(self, settings: dict):
+        self._client.set_appium_settings(settings)
+
+    def tap(self, x: int, y: int):
+        return self._client.tap(x, y)
+
+    def long_press(self, x: Union[int, float], y: Union[int, float], duration_ms: Union[int, float]):
+        return self._client.long_press(x, y, duration_ms)
+
+    def swipe(self, start_x: Union[int, float], start_y: Union[int, float], end_x: Union[int, float],
+              end_y: Union[int, float], duration_ms: Union[int, float]):
+        return self._client.swipe(start_x, start_y, end_x, end_y, duration_ms)
+
+    def drag(self, start_x: Union[int, float], start_y: Union[int, float], end_x: Union[int, float],
+             end_y: Union[int, float], duration_ms: Union[int, float], element_id: str, dest_el_id: str):
+        return self._client.drag(start_x, start_y, end_x, end_y, duration_ms, element_id, dest_el_id)
+
+    def touch_action(self, action: str, x: Union[int, float], y: Union[int, float]):
+        return self._client.touch_action(action, x, y)
