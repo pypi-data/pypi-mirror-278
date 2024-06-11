@@ -1,0 +1,157 @@
+Metadata-Version: 2.1
+Name: geo-inference
+Version: 2.0.5
+Summary: Extract features from geospatial imagery using deep learning models
+Author-email: Victor Alhassan <victor.alhassan@nrcan-rncan.gc.ca>
+License: MIT License
+        
+        Copyright (c) 2023 Victor Alhassan
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/valhassan/geo-inference
+Keywords: pytorch,deep learning,machine learning,remote sensing,satellite imagery,earth observation,geospatial
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: GIS
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: affine>=2.3.0
+Requires-Dist: colorlog==6.7.0
+Requires-Dist: numpy>=1.19.3
+Requires-Dist: pandas>=1.1.3
+Requires-Dist: scipy>=1.11.2
+Requires-Dist: pyyaml>=5.2
+Requires-Dist: requests>=2.22.0
+Requires-Dist: torch>=1.12
+Requires-Dist: torchgeo>=0.3
+Requires-Dist: pynvml>=11.0
+Requires-Dist: fiona>=1.8.19
+Requires-Dist: geopandas>=0.10.2
+Requires-Dist: pyproj>=3
+Requires-Dist: rasterio>=1.2
+Requires-Dist: rtree>=1
+Requires-Dist: shapely>=1.7.1
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: bumpver; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: pip-tools; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+
+# Geo Inference
+
+geo-inference is a Python package designed for feature extraction from geospatial imagery using compatible deep learning models. It provides a convenient way to extract features from large TIFF images and save the output mask as a TIFF file. It also supports converting the output mask to vector format (*file_name.geojson*), YOLO format (*file_name.csv*), and COCO format (*file_name.json*). This package is particularly useful for applications in remote sensing, environmental monitoring, and urban planning.
+
+## Installation
+
+Geo-inference requires Python 3.11. To install the package, use:
+
+```
+pip install geo-inference
+```
+
+## Usage
+
+**Input:** GeoTiffs with compatible TorchScript model. For example: A pytorch model trained on high resolution geospatial imagery with the following features:
+
+- pixel size (0.1m to 3m)
+- data type (uint8)
+
+expects an input image with the same features. An example notebook for how the package is used is provided in this repo. 
+
+
+*Here's an example of how to use Geo Inference (Command line and Script):*
+
+**Command line**
+```bash
+python geo_inference.py -a <args>
+```
+- `-a`, `--args`: Path to arguments stored in yaml, consult ./config/sample_config.yaml
+```bash
+python geo_inference.py -i <image> -m <model> -wd <work_dir> -bs <batch_size> -v <vec> -d <device> -id <gpu_id>
+```
+- `-i`, `--image`: Path to Geotiff
+- `-bb`, `--bbox`: AOI bbox in this format "minx, miny, maxx, maxy" (Optional)
+- `-m`, `--model`: Path or URL to the model file
+- `-wd`, `--work_dir`: Working Directory
+- `-bs`, `--batch_size`: The Batch Size
+- `-v`, `--vec`: Vector Conversion
+- `-d`, `--device`: CPU or GPU Device
+- `-id`, `--gpu_id`: GPU ID, Default = 0
+
+You can also use the `-h` option to get a list of supported arguments:
+
+```bash
+python geo_inference.py -h
+```
+
+**Import script**
+```python
+from geo_inference.geo_inference import GeoInference
+
+# Initialize the GeoInference object
+geo_inference = GeoInference(
+    model="/path/to/segformer_B5.pt",
+    work_dir="/path/to/work/dir",
+    batch_size=4,
+    mask_to_vec=True,
+    device="gpu",
+    gpu_id=0
+)
+
+# Perform feature extraction on a TIFF image
+image_path = "/path/to/image.tif"
+patch_size = 512
+stride_size = 256
+geo_inference(image_path, patch_size, stride_size)
+```
+
+## Parameters
+
+The `GeoInference` class takes the following parameters:
+
+- `model`: The path or URL to the model file (.pt for PyTorch models) to use for feature extraction.
+- `work_dir`: The path to the working directory. Default is `"~/.cache"`.
+- `batch_size`: The batch size to use for feature extraction. Default is `4`.
+- `mask_to_vec`: If set to `"True"`, vector files will be created. Default is `"False"`
+- `device`: The device to use for feature extraction. Can be `"cpu"` or `"gpu"`. Default is `"gpu"`.
+- `gpu_id`: The ID of the GPU to use for feature extraction. Default is `0`.
+
+## Output
+
+The `GeoInference` class outputs the following files:
+
+- `mask.tif`: The output mask file in TIFF format.
+- `polygons.geojson`: The output polygon file in GeoJSON format. This file is only generated if the `mask_to_vec` parameter is set to `True`.
+- `yolo.csv`: The output YOLO file in CSV format. This file is only generated if the `mask_to_vec` parameter is set to `True`.
+
+Each file contains the extracted features from the input geospatial imagery.
+
+## License
+
+Geo Inference is released under the MIT License. See `LICENSE` for more information.
+
+## Contact
+
+For any questions or concerns, please open an issue on GitHub.
