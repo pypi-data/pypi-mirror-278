@@ -1,0 +1,3 @@
+[console_scripts]
+grawsp=src.commands.grawsp.app:run
+
