@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+tests/test_xontrib.py
+xontrib/macro/__init__.py
+xontrib/macro/data.py
+xontrib/macro/docker.py
+xontrib/macro/run.py
+xontrib/macro/signal.py
+xontrib_macro.egg-info/PKG-INFO
+xontrib_macro.egg-info/SOURCES.txt
+xontrib_macro.egg-info/dependency_links.txt
+xontrib_macro.egg-info/requires.txt
+xontrib_macro.egg-info/top_level.txt
