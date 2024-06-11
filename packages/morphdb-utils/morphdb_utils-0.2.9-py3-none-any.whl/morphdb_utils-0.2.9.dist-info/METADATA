@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: morphdb-utils
+Version: 0.2.9
+Summary: 
+Author: shibatanaoto
+Author-email: naoto.shibata510@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: kaleido (==0.2.1)
+Requires-Dist: matplotlib (==3.5.2)
+Requires-Dist: openpyxl (>=3.1.2,<4.0.0)
+Requires-Dist: pandas (>=2.1.3,<3.0.0)
+Requires-Dist: plotly (==5.21.0)
+Requires-Dist: requests (==2.31.0)
+Requires-Dist: sqlalchemy[asyncio] (==1.4.52)
+Requires-Dist: xlrd (==2.0.1)
+Description-Content-Type: text/markdown
+
+# Morphdb Utils
+
+Morph enables everyone to process data with SQL and Python using AI assist and auto-scale database powered by PostgreSQL.
+
+## How to Contribute
+
+### Setting up the development environment
+
+This project uses [pre-commit](https://pre-commit.com/) to enforce code quality and consistency. To install the pre-commit hooks, run the following command:
+
+```shell
+pre-commit install
+```
+
+## How to Publish
+
+This project uses [poetry](https://python-poetry.org/) to manage dependencies and packaging. To publish a new version of the package, run the following command:
+
+First, update the version in `pyproject.toml` file.
+
+```shell
+poetry version patch
+git commit -am "Bump version"
+git push origin develop
+```
+
+```shell
+git checkout develop
+poetry publish --build
+```
+
