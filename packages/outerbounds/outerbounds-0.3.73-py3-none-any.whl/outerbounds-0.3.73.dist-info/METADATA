@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: outerbounds
+Version: 0.3.73
+Summary: More Data Science, Less Administration
+License: Proprietary
+Keywords: data science,machine learning,MLOps
+Author: Outerbounds, Inc.
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Provides-Extra: azure
+Provides-Extra: gcp
+Requires-Dist: azure-identity ; extra == "azure"
+Requires-Dist: azure-keyvault-secrets ; extra == "azure"
+Requires-Dist: azure-storage-blob ; extra == "azure"
+Requires-Dist: boto3 (>=1.33.13,<2.0.0)
+Requires-Dist: google-api-core ; extra == "gcp"
+Requires-Dist: google-auth ; extra == "gcp"
+Requires-Dist: google-cloud-secret-manager ; extra == "gcp"
+Requires-Dist: google-cloud-storage ; extra == "gcp"
+Requires-Dist: ob-metaflow (==2.12.0.1)
+Requires-Dist: ob-metaflow-extensions (==1.1.61)
+Requires-Dist: ob-metaflow-stubs (==3.8)
+Requires-Dist: opentelemetry-distro (==0.41b0)
+Requires-Dist: opentelemetry-exporter-otlp-proto-http (==1.20.0)
+Requires-Dist: opentelemetry-instrumentation-requests (==0.41b0)
+Project-URL: Documentation, https://docs.metaflow.org
