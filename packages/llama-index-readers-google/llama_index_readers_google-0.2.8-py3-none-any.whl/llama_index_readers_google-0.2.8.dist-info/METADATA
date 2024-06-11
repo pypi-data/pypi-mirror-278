@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: llama-index-readers-google
+Version: 0.2.8
+Summary: llama-index readers google integration
+License: MIT
+Keywords: email,gmail,google keep,google maps,google notes
+Author: Your Name
+Author-email: you@example.com
+Maintainer: bbornsztein
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: gkeepapi (>=0.15.1,<0.16.0)
+Requires-Dist: google-api-python-client (>=2.115.0,<3.0.0)
+Requires-Dist: google-auth-httplib2 (>=0.2.0,<0.3.0)
+Requires-Dist: google-auth-oauthlib (>=1.2.0,<2.0.0)
+Requires-Dist: llama-index-core (>=0.10.11.post1,<0.11.0)
+Requires-Dist: pydrive (>=1.3.1,<2.0.0)
+Description-Content-Type: text/markdown
+
+# LlamaIndex Integration: Google Readers
+
+Effortlessly incorporate Google-based data loaders into your Python workflow using LlamaIndex. Unlock the potential of various readers to enhance your data loading capabilities. Below are examples of integrating Google Docs and Google Sheets readers:
+
+### Google Docs Reader
+
+```python
+from llama_index.readers.google import GoogleDocsReader
+
+# Specify the document IDs you want to load
+document_ids = ["<document_id>"]
+
+# Load data from Google Docs
+documents = GoogleDocsReader().load_data(document_ids=document_ids)
+```
+
+### Google Sheets Reader (Documents and Dataframes)
+
+```python
+from llama_index.readers.google import GoogleSheetsReader
+
+# Specify the list of sheet IDs you want to load
+list_of_sheets = ["spreadsheet_id"]
+
+# Create a Google Sheets Reader instance
+sheets_reader = GoogleSheetsReader()
+
+# Load data into Pandas in Data Classes of choice (Documents or Dataframes)
+documents = sheets.load_data(list_of_sheets)
+dataframes = sheets_reader.load_data_in_pandas(list_of_sheets)
+```
+
+Integrate these readers seamlessly to efficiently manage and process your data within your Python environment, providing a robust foundation for your data-driven workflows with LlamaIndex.
+
+### Google Maps Text Search Reader
+
+```python
+from llama_index.readers.google import GoogleMapsTextSearchReader
+from llama_index.core import VectorStoreIndex
+
+loader = GoogleMapsTextSearchReader()
+documents = loader.load_data(
+    text="I want to eat quality Turkish food in Istanbul",
+    number_of_results=160,
+)
+
+
+index = VectorStoreIndex.from_documents(documents)
+index.query("Which Turkish restaurant has the best reviews?")
+```
+
+### Note
+
+Make sure you have a "token.json" or a "credentials.json" file in your environment to authenticate the Google Cloud Platform
+
