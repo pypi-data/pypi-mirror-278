@@ -1,0 +1,59 @@
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[project]
+name = "rattail-nationbuilder"
+version = "0.3.0"
+description = "Rattail integration package for NationBuilder"
+readme = "README.md"
+authors = [{name = "Lance Edgar", email = "lance@edbob.org"}]
+license = {text = "GNU GPL v3+"}
+classifiers = [
+        "Development Status :: 4 - Beta",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+        "Natural Language :: English",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Topic :: Office/Business",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+        "rattail",
+]
+
+
+[project.entry-points."rattail.subcommands"]
+import-nationbuilder = "rattail_nationbuilder.commands:ImportNationBuilder"
+
+
+[project.entry-points."rattail.typer_imports"]
+rattail_nationbuilder = "rattail_nationbuilder.commands"
+
+
+[project.entry-points."rattail.config.extensions"]
+rattail_nationbuilder = "rattail_nationbuilder.config:RattailNationBuilderExtension"
+
+
+[project.entry-points."rattail.importing"]
+"to_rattail.from_nationbuilder.import" = "rattail_nationbuilder.importing.nationbuilder:FromNationBuilderToRattail"
+
+
+[project.entry-points."rattail.providers"]
+rattail_nationbuilder = "rattail_nationbuilder.app:NationBuilderProvider"
+
+
+[project.urls]
+Homepage = "https://rattailproject.org"
+Repository = "https://kallithea.rattailproject.org/rattail-project/rattail-nationbuilder"
+Changelog = "https://kallithea.rattailproject.org/rattail-project/rattail-nationbuilder/files/master/CHANGELOG.md"
+
+
+[tool.commitizen]
+version_provider = "pep621"
+tag_format = "v$version"
+update_changelog_on_bump = true
