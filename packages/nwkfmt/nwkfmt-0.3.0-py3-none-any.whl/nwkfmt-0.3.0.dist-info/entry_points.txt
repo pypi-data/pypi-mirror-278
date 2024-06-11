@@ -1,0 +1,3 @@
+[console_scripts]
+nwkfmt=nwkfmt.cli:entry_point
+
