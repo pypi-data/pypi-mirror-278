@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}qqq{% endblock %}</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <!-- Add your custom styles here if needed -->
+  <style>
+  </style>
+  <!-- Add your font imports here if needed -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martel:wght@400;700&display=swap"> <!-- Martel -->
+  <!-- Add imports for Martel Sans, Gotam, and Cascadia Code if needed -->
+
+  <script type="module" src="{{ rq.url_for("settings_view") }}"></script>
+  <script defer type="module" src="{{ rq.url_for("static", path="js/simpleauth.js") }}"></script>
+  {% block meta%}
+  {% endblock %}
+</head>
+<body>
+
+  <!-- Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <div class="box">
+        <div>
+          <p id="myModal-p"></p>
+        </div>
+        <button id="myModal-btn" class="button is-primary closeModal">Close</button>
+      </div>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-half content-container">
+          <h1 class="title is-4 has-text-centered">{% block header %}Untitled{% endblock %}</h1>
+          {% if motd %}
+          <!-- Message of the Day (MOTD) -->
+          <div class="motd">
+            <p>{{motd}}</p>
+          </div>
+          {% endif %}
+      
+          {% block content %}{% endblock %}
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+      Powered by <a href="https://github.com/yaroslaff/fastapi-simple-auth">fastapi-simple-auth</a>
+  </footer>
+
+</body>
+</html>
+

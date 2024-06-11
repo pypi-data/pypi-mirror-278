@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}Profile :: {{settings.app_title}}{% endblock %}
+{% block header %}Profile{% endblock %}
+
+{% block content %}
+
+  <!-- Username and Password Fields -->
+  <div class="field">
+    <label class="label">Username</label>
+    <div class="control">
+      <span id="username">{{user.username}}</span>
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">Current Password</label>
+    <div class="control">
+      <input class="input" id="oldpassword" type="password" placeholder="Enter your OLD password">
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">New Password</label>
+    <div class="control">
+      <input class="input" id="newpassword" type="password" placeholder="Enter NEW password">
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">New Password (repeat)</label>
+    <div class="control">
+      <input class="input" id="newpassword2" type="password" placeholder="Confirm NEW password">
+    </div>
+  </div>
+
+  <!-- Change password Button -->
+  <div class="field">
+    <div class="control">
+      <button id="fastapi-simple-auth-chpass-btn" class="button is-primary is-fullwidth">Change Password</button>
+    </div>
+  </div>
+
+
+  {% if settings.username_is_email %}
+    <div class="field">
+        <label class="label">Email</label>
+        <div class="control">
+        <span id="email">{{user.username}}</span>
+        </div>
+    </div>
+
+    <div class="field">
+        <label class="label">New Email</label>
+        <div class="control">
+          <input class="input" id="email" type="text" placeholder="me@example.com">
+        </div>
+      </div>
+
+    <!-- Change email Button -->
+    <div class="field">
+        <div class="control">
+        <button id="fastapi-simple-auth-changeemail-btn" class="button is-primary is-fullwidth">Change email</button>
+        </div>
+    </div>    
+  {% endif %}
+
+  {% if error %}
+  <!-- Error Message -->
+  <p class="error-message">{{error}}</p>
+  {% endif %}
+
+  <!-- Logout Button -->
+  <div class="field">
+    <div class="control">
+        <button id="fastapi-simple-auth-logout-btn" class="button is-primary is-fullwidth is-warning">Logout</button>
+      </div>
+  </div>
+
+{% endblock %}

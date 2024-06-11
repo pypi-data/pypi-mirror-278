@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}Recover :: {{settings.app_title}}{% endblock %}
+{% block header %}Recover account{% endblock %}
+
+{% block content %}
+
+  <!-- Email Field -->  
+
+  <div class="field">
+    <label class="label">Code</label>
+    <div class="control">
+      <input class="input" id="code" type="text" placeholder="000000" value="{{code}}">
+    </div>
+  </div>
+
+
+  <div class="field">
+    <label class="label">New password</label>
+    <div class="control">
+      <input class="input" id="password" type="password" placeholder="password">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Confirm new password</label>
+    <div class="control">
+      <input class="input" id="password2" type="password" placeholder="confirmation">
+    </div>
+  </div>
+
+
+  {% if error %}
+  <!-- Error Message -->
+  <p class="error-message">{{error}}</p>
+  {% endif %}
+
+  <!-- Login Button -->
+  <div class="field">
+    <div class="control">
+      <button id="fastapi-simple-auth-recover-btn" class="button is-primary is-fullwidth">Recover account</button>
+    </div>
+  </div>
+
+  <!-- Sign Up -->
+  <div class="sign-up has-text-centered">
+    <p>Recalled password? <a href="{{ rq.url_for('get_login') }}">Log in</a></p>
+  </div>
+
+  <!-- Sign Up -->
+  <div class="sign-up has-text-centered">
+    <p>Don't have an account? <a href="{{ rq.url_for('get_signup') }}">Sign Up</a></p>
+  </div>
+
+
+{% endblock %}

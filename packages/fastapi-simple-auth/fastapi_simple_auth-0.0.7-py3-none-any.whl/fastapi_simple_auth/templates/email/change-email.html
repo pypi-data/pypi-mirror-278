@@ -1,0 +1,8 @@
+Hello {{email}}!
+
+To change your email on <b>{{title}}</b> to {{email}}.
+
+Your confirmation code is {{code}}
+
+<a href="{{ rq.url_for('get_email_verify', email=email).include_query_params(code=code) }}">Verify link</a>
+

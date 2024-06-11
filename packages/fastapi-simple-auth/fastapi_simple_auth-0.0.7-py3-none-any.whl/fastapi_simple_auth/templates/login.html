@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}Login :: {{settings.app_title}}{% endblock %}
+{% block header %}Login{% endblock %}
+
+{% block content %}
+
+  <!-- Username and Password Fields -->
+  
+  {% if settings.username_is_email %}
+  <div class="field">
+    <label class="label">Email</label>
+    <div class="control">
+      <input class="input" id="username" type="text" placeholder="me@example.com">
+    </div>
+  </div>
+  {% else %}
+  <div class="field">
+    <label class="label">Username</label>
+    <div class="control">
+      <input class="input" id="username" type="text" placeholder="Batman2000">
+    </div>
+  </div>
+
+  {% endif %}
+
+  <div class="field">
+    <label class="label">Password</label>
+    <div class="control">
+      <input class="input" id="password" type="password" placeholder="Enter your password">
+    </div>
+  </div>
+
+  {% if error %}
+  <!-- Error Message -->
+  <p class="error-message">{{error}}</p>
+  {% endif %}
+
+  <!-- Login Button -->
+  <div class="field">
+    <div class="control">
+      <button id="fastapi-simple-auth-login-btn" class="button is-primary is-fullwidth">Login</button>
+    </div>
+  </div>
+
+  {% if magic_link %}
+  <!-- Login with Magic Link -->
+  <div class="magic-link has-text-centered">
+    <a href="#">Login with Magic Link</a>
+  </div>
+  {% endif %}
+
+  <!-- Sign Up -->
+  <div class="sign-up has-text-centered">
+    <p>Don't have an account? <a href="{{ rq.url_for('get_signup') }}">Sign Up</a></p>
+  </div>
+
+  {% if settings.username_is_email %}
+  <!-- Sign Up -->
+  <div class="sign-up has-text-centered">
+    <p>Forgot password? <a href="{{ rq.url_for('get_recover') }}">Recover</a></p>
+  </div>
+  {% endif %}
+
+
+{% endblock %}
