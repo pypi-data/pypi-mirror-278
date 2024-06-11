@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "registry-factory"
+version = "0.1.3"
+description = "Registry pattern with factory for specifications to register generic modules."
+authors = ["Peter Hartog <peter.hartog@hotmail.nl>", "Emma Svensson <svensson@ml.jku.at>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/aidd-msca/registry-factory"
+repository = "https://github.com/aidd-msca/registry-factory"
+keywords = ["registry", "factory", "codebase", "module registry", "accreditation system"]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Environment :: GPU :: NVIDIA CUDA :: 11.4",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+include = ["LICENSE"]
+packages = [{include = "registry_factory"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
