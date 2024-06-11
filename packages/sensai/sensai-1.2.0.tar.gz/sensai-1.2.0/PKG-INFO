@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: sensai
+Version: 1.2.0
+Summary: The Python library for sensible AI
+Home-page: https://github.com/aai-institute/sensAI
+Author: appliedAI Institute gGmbh & jambit GmbH
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Provides-Extra: torch
+Provides-Extra: lightgbm
+Provides-Extra: tensorflow
+Provides-Extra: geoanalytics
+Provides-Extra: full
