@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+src/SerialManager/CSVFile.py
+src/SerialManager/Config.py
+src/SerialManager/CustomGUI.py
+src/SerialManager/Device.py
+src/SerialManager/GUI_setup.py
+src/SerialManager/__init__.py
+src/SerialManager/serialmgr.py
+src/SerialManager/smartbadgecfgdict.py
+src/SerialManager.egg-info/PKG-INFO
+src/SerialManager.egg-info/SOURCES.txt
+src/SerialManager.egg-info/dependency_links.txt
+src/SerialManager.egg-info/entry_points.txt
+src/SerialManager.egg-info/requires.txt
+src/SerialManager.egg-info/top_level.txt
