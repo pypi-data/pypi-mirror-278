@@ -1,0 +1,101 @@
+[console_scripts]
+rattail = rattail.commands.base:rattail_typer
+rattail-dev = rattail.commands.dev:rattail_dev_typer
+trainwreck = rattail.trainwreck.commands:trainwreck_typer
+
+[gui_scripts]
+rattailw = rattail.commands:main
+
+[rattail.config.extensions]
+rattail.db = rattail.db:ConfigExtension
+rattail.trainwreck = rattail.trainwreck.config:TrainwreckConfig
+
+[rattail.emails]
+rattail = rattail.emails
+
+[rattail.features]
+new-report = rattail.features.newreport:NewReportFeature
+new-table = rattail.features.newtable:NewTableFeature
+
+[rattail.importing]
+to_csv.from_rattail.export = rattail.importing.exporters:FromRattailToCSV
+to_rattail.from_csv.import = rattail.importing.csv:FromCSVToRattail
+to_rattail.from_ifps.import = rattail.importing.ifps:FromIFPSToRattail
+to_rattail.from_rattail.export = rattail.importing.rattail:FromRattailToRattailExport
+to_rattail.from_rattail.import = rattail.importing.rattail:FromRattailToRattailImport
+to_rattail.from_versions.import = rattail.importing.versions:FromRattailToRattailVersions
+to_trainwreck.from_trainwreck.export = rattail.trainwreck.importing.trainwreck:FromTrainwreckToTrainwreckExport
+to_trainwreck.from_trainwreck.import = rattail.trainwreck.importing.trainwreck:FromTrainwreckToTrainwreckImport
+
+[rattail.projects]
+byjove = rattail.projects.byjove:ByjoveProjectGenerator
+fabric = rattail.projects.fabric:FabricProjectGenerator
+rattail = rattail.projects.rattail:RattailProjectGenerator
+rattail_integration = rattail.projects.rattail_integration:RattailIntegrationProjectGenerator
+rattail_shopfoo = rattail.projects.rattail_shopfoo:RattailShopfooProjectGenerator
+tailbone_integration = rattail.projects.tailbone_integration:TailboneIntegrationProjectGenerator
+tailbone_shopfoo = rattail.projects.tailbone_shopfoo:TailboneShopfooProjectGenerator
+
+[rattail.reports]
+customer_mailing = rattail.reporting.customer_mailing:CustomerMailing
+
+[rattail.sil.column_providers]
+rattail = rattail.sil.columns:provide_columns
+
+[rattail.subcommands]
+auto-receive = rattail.commands.batch:AutoReceiveBatch
+backup = rattail.commands.backup:Backup
+bouncer = rattail.commands.bouncer:EmailBouncer
+checkdb = rattail.commands.checkdb:CheckDatabase
+cleanup = rattail.commands.cleanup:Cleanup
+clonedb = rattail.commands.clonedb:CloneDatabase
+config-setting = rattail.commands.settings:ConfigSetting
+datasync = rattail.commands.datasync:DataSync
+date-organize = wuttjamaican.cmd.date_organize:DateOrganize
+execute-batch = rattail.commands.batch:ExecuteBatch
+export-csv = rattail.commands.importing:ExportCSV
+export-rattail = rattail.commands.importing:ExportRattail
+filemon = rattail.commands.filemon:FileMonitorCommand
+import-csv = rattail.commands.importing:ImportCSV
+import-ifps = rattail.commands.importing:ImportIFPS
+import-rattail = rattail.commands.importing:ImportRattail
+import-sample = rattail.commands.importing:ImportSampleData
+import-versions = rattail.commands.importing:ImportVersions
+mailmon = rattail.commands.mailmon:MailMonitorCommand
+make-appdir = rattail.commands.make_appdir:MakeAppDir
+make-batch = rattail.commands.batch:MakeBatch
+make-config = rattail.commands.make_config:MakeConfig
+make-project = rattail.commands.projects:MakeProject
+make-user = rattail.commands.make_user:MakeUser
+make-uuid = rattail.commands.make_uuid:MakeUUID
+mysql-chars = rattail.commands.mysql:MysqlChars
+overnight = rattail.commands.luigi:Overnight
+populate-batch = rattail.commands.batch:PopulateBatch
+postfix-summary = rattail.commands.postfix:PostfixSummary
+problems = rattail.commands.problems:Problems
+purge-batches = rattail.commands.batch:PurgeBatches
+purge-versions = rattail.commands.versions:PurgeVersions
+refresh-batch = rattail.commands.batch:RefreshBatch
+run-n-mail = rattail.commands.run_n_mail:RunAndMail
+runsql = rattail.commands.runsql:RunSQL
+setting-get = rattail.commands.settings:SettingGet
+setting-put = rattail.commands.settings:SettingPut
+telemetry = rattail.commands.telemetry:Telemetry
+update-costs = rattail.commands.products:UpdateCosts
+upgrade = rattail.commands.upgrade:Upgrade
+version-check = rattail.commands.versions:VersionCheck
+
+[rattail.vendors.catalogs.parsers]
+rattail.contrib.dutchvalley = rattail.contrib.vendors.catalogs.dutchvalley:DutchValleyCatalogParser
+rattail.contrib.equalexchange = rattail.contrib.vendors.catalogs.equalexchange:EqualExchangeCatalogParser
+rattail.contrib.generic = rattail.contrib.vendors.catalogs.generic:GenericCatalogParser
+rattail.contrib.kehe = rattail.contrib.vendors.catalogs.kehe:KeheCatalogParser
+rattail.contrib.lotuslight = rattail.contrib.vendors.catalogs.lotuslight:LotusLightCatalogParser
+rattail.contrib.unfi = rattail.contrib.vendors.catalogs.unfi:UNFICatalogParser
+rattail.contrib.unfi.2 = rattail.contrib.vendors.catalogs.unfi:UNFICatalogParser2
+rattail.contrib.unfi.tsv = rattail.contrib.vendors.catalogs.unfi:UNFITabSeparatedCatalogParser
+
+[rattail.vendors.invoices.parsers]
+rattail.contrib.alberts = rattail.contrib.vendors.invoices.alberts:AlbertsInvoiceParser
+rattail.contrib.kehe = rattail.contrib.vendors.invoices.kehe:KeheInvoiceParser
+rattail.contrib.unfi = rattail.contrib.vendors.invoices.unfi:UnfiInvoiceParser
