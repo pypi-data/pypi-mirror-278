@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: quantfreedom
+Version: 0.2.0.4
+Summary: I don't want to put a description here, so I wont
+Author: Neo
+Author-email: quantfreedom1022@gmail.com
+Requires-Python: >=3.9,<3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: dev
+Provides-Extra: docs
+Requires-Dist: aws-cdk-lib (==2.143.0) ; extra == "dev"
+Requires-Dist: bcrypt (==4.1.3) ; extra == "dev"
+Requires-Dist: cryptography (==42.0.7) ; extra == "dev"
+Requires-Dist: dash (==2.17.0)
+Requires-Dist: dash-bootstrap-templates (==1.1.2)
+Requires-Dist: fastapi (==0.111.0) ; extra == "dev"
+Requires-Dist: griffe (==0.45.2) ; extra == "docs"
+Requires-Dist: httpx (==0.27.0) ; extra == "dev"
+Requires-Dist: ipykernel (==6.29.4)
+Requires-Dist: ipywidgets (==8.1.3)
+Requires-Dist: jupyter-dash (==0.4.2)
+Requires-Dist: kaleido (==0.1.0.post1) ; sys_platform == "win32"
+Requires-Dist: kaleido (==0.2.1) ; sys_platform == "darwin"
+Requires-Dist: kaleido (==0.2.1) ; sys_platform == "linux"
+Requires-Dist: mangum (==0.17.0) ; extra == "dev"
+Requires-Dist: mkdocs (==1.6.0) ; extra == "docs"
+Requires-Dist: mkdocs-gen-files (==0.5.0) ; extra == "docs"
+Requires-Dist: mkdocs-literate-nav (==0.6.1) ; extra == "docs"
+Requires-Dist: mkdocs-material (==9.5.25) ; extra == "docs"
+Requires-Dist: mkdocs-open-in-new-tab (==1.0.3) ; extra == "docs"
+Requires-Dist: mkdocs-redirects (==1.2.1) ; extra == "docs"
+Requires-Dist: mkdocstrings[python] (==0.25.1) ; extra == "docs"
+Requires-Dist: mysql-connector-python (==8.4.0) ; extra == "dev"
+Requires-Dist: notebook (==7.2.0)
+Requires-Dist: numpy (==1.26.4)
+Requires-Dist: pandas (==2.2.2)
+Requires-Dist: plotly (==5.22.0)
+Requires-Dist: poetry (==1.8.3)
+Requires-Dist: pyjwt (==2.8.0) ; extra == "dev"
+Requires-Dist: python-multipart (==0.0.9) ; extra == "docs"
+Requires-Dist: tables (==3.9.2)
+Requires-Dist: uvicorn (==0.30.0) ; extra == "dev"
+Description-Content-Type: text/markdown
+
+I am terrible at updating this readme file so please go to the website for installation instructions beyond pip install
+https://quantfreedom.github.io/QuantFreedom/
+```
+pip install quantfreedom
+```
+
