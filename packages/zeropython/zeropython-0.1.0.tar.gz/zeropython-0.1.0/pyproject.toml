@@ -1,0 +1,149 @@
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[project]
+name = "zeropython"
+version = "0.1.0"
+authors = [
+    {email = "zeropython.pip.w1nid@8shield.net", name = "Dorian Turba"},
+]
+description = "Zero Python, a Python library for educational purpose."
+license = {file = "LICENSE"}
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Typing :: Typed",
+]
+dependencies = [
+    "typer[all]",
+]
+
+[project.optional-dependencies]
+DEV = [
+    "bump-my-version",
+    "pip-tools",
+]
+QUALITY = [
+    "toml-sort",
+]
+
+[project.scripts]
+zeropython = "zeropython:app"
+
+[project.urls]
+"Bug Tracker" = "https://lab.frogg.it/dorianturba/zero-python/-/issues"
+"Homepage" = "https://lab.frogg.it/dorianturba/zero-python"
+
+[tool.bumpversion]
+allow-dirty = true
+commit = true
+config-file = "pyproject.toml"
+current_version = "0.2.3"
+parse = "(?P<major>\\d+)\\.(?P<minor>\\d+)\\.(?P<patch>\\d+)"
+replace = "{new_version}"
+search = "{current_version}"
+serialize = [
+    "{major}.{minor}.{patch}",
+]
+tag = false
+
+[[tool.bumpversion.files]]
+allow-dirty = true
+filename = "pyproject.toml"
+replace = "version = \"{new_version}\""
+search = "version = \"{current_version}\""
+
+[[tool.bumpversion.files]]
+allow-dirty = true
+filename = "CHANGELOG.md"
+replace = """## [Unreleased]
+
+[![Pipeline](https://lab.frogg.it/swepy/zeropython/badges/trunk/pipeline.svg)](https://lab.frogg.it/swepy/zeropython/-/pipelines?ref=trunk)
+
+## [{new_version}] - {now:%Y-%m-%d}
+
+[![Pipeline](https://lab.frogg.it/swepy/zeropython/badges/{new_version}/pipeline.svg)](https://lab.frogg.it/swepy/zeropython/-/pipelines?ref={new_version})
+"""
+search = """## [Unreleased]
+
+[![Pipeline](https://lab.frogg.it/swepy/zeropython/badges/trunk/pipeline.svg)](https://lab.frogg.it/swepy/zeropython/-/pipelines?ref=trunk)
+"""
+
+[tool.hatch.envs.default.scripts]
+toml = "toml-sort --in-place pyproject.toml"
+
+[tool.pytest.ini_options]
+addopts = "-rA -q"
+minversion = "6.0"
+
+[tool.ruff]
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "pypackages",
+    "venv",
+]
+indent-width = 4
+line-length = 88
+target-version = "py38"
+
+[tool.ruff.format]
+docstring-code-format = true
+docstring-code-line-length = "dynamic"
+
+[tool.ruff.lint]
+select = ["ANN", "C90", "D2", "D3", "D4", "E", "F", "I", "N", "RUF", "UP", "W"]
+
+[tool.ruff.lint.flake8-annotations]
+suppress-dummy-args = true
+
+[tool.ruff.lint.pydocstyle]
+convention = "pep257"
+ignore-decorators = ["typing.overload"]
+
+[tool.tomlsort]
+check = false
+ignore_case = true
+in_place = true
+no_block_comments = true
+no_comments = true
+no_footer_comments = true
+no_header_comments = true
+no_inline_comments = true
+no_sort_tables = false
+sort_inline_arrays = false
+sort_inline_tables = true
+sort_table_keys = true
+spaces_before_inline_comment = 2
+spaces_indent_inline_array = 4
+trailing_comma_inline_array = true
+
+[tool.tomlsort.overrides."project"]
+table_keys = false

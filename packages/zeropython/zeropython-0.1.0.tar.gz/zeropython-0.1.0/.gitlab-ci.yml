@@ -1,0 +1,4 @@
+include:
+    -   remote: 'https://gitlab.com/swepy/cicd-templates/release-by-changelog/-/raw/0.4.1/templates/release-by-changelog.yml'
+#    -   remote: 'https://gitlab.com/swepy/cicd-templates/ruff/-/raw/ruff@1.0.2/ruff.yml'
+    -   remote: 'https://gitlab.com/swepy/cicd-templates/twine/-/raw/0.2.0/templates/twine.yml'
