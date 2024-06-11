@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Verify email :: {{settings.app_title}}{% endblock %}
+{% block header %}Verify email{% endblock %}
+
+{% block content %}
+
+{% if message%}
+  <div class="message">
+    {{message}}
+  </div>
+{% endif %}
+
+  <!-- Username and Password Fields -->
+  <div class="field">
+    <label class="label">Email</label>
+    <div class="control">
+      <input class="input" id="email" type="text" placeholder="me@example.com" value="{{email}}">
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">Code</label>
+    <div class="control">
+      <input class="input" id="code" type="text" placeholder="Enter CODE from email message" value="{{code}}">
+    </div>
+  </div>
+
+  {% if error %}
+  <!-- Error Message -->
+  <p class="error-message">{{error}}</p>
+  {% endif %}
+
+  <!-- Login Button -->
+  <div class="field">
+    <div class="control">
+      <button id="fastapi-simple-auth-verify-btn" class="button is-primary is-fullwidth" {% if not verify %}disabled{% endif %}>Verify</button>
+      <button id="fastapi-simple-auth-verify-resend-btn" class="button is-primary is-fullwidth" {% if not resend %}disabled{% endif %}>Send again</button>
+    </div>
+  </div>
+
+{% endblock %}

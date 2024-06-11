@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Login :: {{settings.app_title}}{% endblock %}
+{% block header %}You are logged in{% endblock %}
+{% block meta %}
+  <meta http-equiv="refresh" content="1; url={{settings.afterlogin_url}}">
+{% endblock %}
+
+
+
+{% block content %}
+<div>
+  Redirecting in a second...
+</div>
+
+{% endblock %}
