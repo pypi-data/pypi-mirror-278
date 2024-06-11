@@ -1,0 +1,90 @@
+Metadata-Version: 2.3
+Name: whatinstalled
+Version: 0.3.0
+Summary: List all packages ever installed on your machine.
+Project-URL: Homepage, https://github.com/AlexMili/WhatInstalled
+Project-URL: Issues, https://github.com/AlexMili/WhatInstalled/issues
+Project-URL: Repository, https://github.com/AlexMili/WhatInstalled
+Project-URL: Documentation, https://github.com/AlexMili/WhatInstalled
+Author: Alex Mili
+License: MIT License
+        
+        Copyright (c) 2016 
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Requires-Dist: tabulate
+Requires-Dist: typer
+Description-Content-Type: text/markdown
+
+**WhatInstalled** is a tool to list all packages ever installed on your machine.
+Currently these package manager are handled:
+- Homebrew
+- Macport
+- luarocks
+- pip
+- pipx
+- gem
+- npm
+- yarn
+- dpkg
+- yum
+- dnf
+
+Comming soon:
+- aptitude
+- pacman
+- zypper
+- easy_install
+- rvm
+- nvm
+
+## Installation
+You can install it with pip :
+```bash
+pip install whatinstalled
+```
+Or clone this repository and simply run :
+```bash
+cd whatinstalled/
+pip install -e .
+```
+
+## Usage
+
+```console
+$ whatinstalled --help
+Usage: main.py [OPTIONS]
+
+
+╭─ Options ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ --profile                                  TEXT  Select a given profile among this list: mac,linux,python,lua,node,ruby [default: None]       │
+│ --include-system    --no-include-system          Include system packages [default: no-include-system]                                         │
+│ --exclude                                  TEXT  Exclude given installers separated by a comma [default: None]                                │
+│ --json                                           Output to JSON                                                                               │
+│ --csv                                            Output to CSV                                                                                │
+│ --output                                   TEXT  Save the output in a file [default: None]                                                    │
+│ --help                                           Show this message and exit.                                                                  │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+
+```
