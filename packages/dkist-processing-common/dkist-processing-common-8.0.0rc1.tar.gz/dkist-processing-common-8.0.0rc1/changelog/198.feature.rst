@@ -1,0 +1,4 @@
+Default behavior of `ParameterBase._find_most_recent_past_value` is to use `obs_ip_start_time` as the date. Previously
+the default had been `datetime.now()`. An implication of this is that *all* users of `ParameterBase` should instantiate
+their parameters object with `obs_ip_start_time`. The one exception is parameters needed for parsing, which should
+explicitly pass `datetime.now()` to the `start_date` kwarg of `_find_most_recent_past_value`.

@@ -1,0 +1,1 @@
+Add method to `ParameterBase` (`_load_param_value_from_numpy_save`) for loading file parameters saved as numpy save files.
