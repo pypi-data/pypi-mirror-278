@@ -1,0 +1,56 @@
+============================= test session starts ==============================
+platform linux -- Python 3.7.12, pytest-4.6.5, py-1.5.4, pluggy-0.12.0 -- /opt/ccp4/ccp4-8.0/libexec/python3.7
+cachedir: .pytest_cache
+rootdir: /home/martin/OneDrive/pairef/pairef
+plugins: dials-data-2.3.8, forked-1.3.0, mock-1.13.0
+collecting ... collected 32 items
+
+test_commons.py::test_twodec_twodecname_fourdec[2-2.00-2-00-2.0000] PASSED
+test_commons.py::test_twodec_twodecname_fourdec[0.617-0.62-0-62-0.6170] PASSED
+test_commons.py::test_extract_from_file[table_stats_final_all] PASSED
+test_commons.py::test_extract_from_file[table_stats_init_all] PASSED
+test_commons.py::test_extract_from_file[table_stats_final_skip] PASSED
+test_commons.py::test_extract_from_file[table_stats_Rfree_init] PASSED
+test_commons.py::test_extract_from_file[table_stats_Rfree_final] PASSED
+test_commons.py::test_extract_from_file[table_stats_Rfree_final_N/A_index_error] PASSED
+test_commons.py::test_extract_from_file[Rfree_init] PASSED
+test_commons.py::test_extract_from_file[Rfree_final] PASSED
+test_commons.py::test_extract_from_file[Rfree_final_N/A_index_error] PASSED
+test_commons.py::test_extract_from_file[searched_not_found_N/A_lines] PASSED
+test_commons.py::test_extract_from_file[searched_not_found_N/A_word] PASSED
+test_graphs.py::test_matplotlib_bar PASSED
+test_graphs.py::test_matplotlib_line_Rvalues[Rwork] PASSED
+test_graphs.py::test_matplotlib_line_Rvalues[Rfree] PASSED
+test_graphs.py::test_matplotlib_line_Rgap PASSED
+test_graphs.py::test_write_log_html PASSED
+test_initial.py::test_no_args 
+$ cctbx.python -m pairef 
+PASSED
+test_initial.py::test_file_not_exists 
+$ cctbx.python -m pairef --HKLIN /home/martin/OneDrive/pairef/pairef/test/fixtures/foo.mtz --XYZIN /home/martin/OneDrive/pairef/pairef/test/fixtures/mdm2_1-60A.pdb -i 2 -r 1.55,1.50,1.45,1.40,1.35,1.30 -p file_not_exists
+PASSED
+test_initial.py::test_invalid_res_shells_setting[res_init_not_float] 
+$ cctbx.python -m pairef --HKLIN /home/martin/OneDrive/pairef/pairef/test/fixtures/mdm2_merged.mtz --XYZIN /home/martin/OneDrive/pairef/pairef/test/fixtures/mdm2_1-60A.pdb -i abc -r 2.2,2,1.8 -p bad_res_shells_setting -t
+PASSED
+test_initial.py::test_valid_args 
+$ cctbx.python -m pairef --HKLIN /home/martin/OneDrive/pairef/pairef/test/fixtures/mdm2_merged.mtz --XYZIN /home/martin/OneDrive/pairef/pairef/test/fixtures/mdm2_1-60A.pdb -i 1.6 -r 1.55,1.50,1.45,1.40,1.35,1.30 -p valid_args -t
+PASSED
+test_initial.py::test_create_workdir PASSED
+test_initial.py::test_which PASSED
+test_integration_long.py::test_integration[mdm2_0-10A] 
+Performing integration tests, please wait...
+
+
+$ cctbx.python -m pairef --HKLIN mdm2_merged.mtz --XYZIN mdm2_1-60A.pdb -u mdm2_unmerged.mtz -i 1.60 -r 1.5,1.4,1.3 -p mdm2_0-10A --refmac
+
+
+=============================== warnings summary ===============================
+test/test_graphs.py::test_matplotlib_bar
+  /opt/ccp4/ccp4-8.0/lib/python3.7/site-packages/numpy/core/_asarray.py:85: UserWarning: Warning: converting a masked element to nan.
+    return array(a, dtype, copy=False, order=order)
+
+-- Docs: https://docs.pytest.org/en/latest/warnings.html
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! KeyboardInterrupt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+/opt/ccp4/ccp4-8.0/lib/python3.7/selectors.py:415: KeyboardInterrupt
+(to show a full traceback on KeyboardInterrupt use --fulltrace)
+==================== 24 passed, 1 warnings in 64.15 seconds ====================
