@@ -1,0 +1,7 @@
+# requirements.txt
+
+numpy
+netCDF4
+matplotlib
+cartopy
+tqdm
