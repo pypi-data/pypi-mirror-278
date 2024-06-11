@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+slb_glossary/__init__.py
+slb_glossary/exceptions.py
+slb_glossary/glossary.py
+slb_glossary/saver.py
+slb_glossary.egg-info/PKG-INFO
+slb_glossary.egg-info/SOURCES.txt
+slb_glossary.egg-info/dependency_links.txt
+slb_glossary.egg-info/requires.txt
+slb_glossary.egg-info/top_level.txt
+tests/test_glossary.py
+tests/test_saver.py
