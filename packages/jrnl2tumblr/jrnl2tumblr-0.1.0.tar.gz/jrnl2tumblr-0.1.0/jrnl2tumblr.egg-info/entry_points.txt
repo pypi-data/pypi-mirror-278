@@ -1,0 +1,2 @@
+[console_scripts]
+jrnl2tumblr = jrnl2tumblr.__main__:main
