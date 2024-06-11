@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: akeyless-cdktf
+Version: 0.1.0
+Summary: 
+Author: michelsk
+Author-email: 120306503+michelsk@users.noreply.github.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: cdktf (>=0.20.7,<0.21.0)
+Description-Content-Type: text/markdown
+
+
