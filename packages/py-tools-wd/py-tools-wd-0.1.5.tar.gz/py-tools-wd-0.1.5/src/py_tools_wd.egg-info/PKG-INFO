@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: py-tools-wd
+Version: 0.1.5
+Summary: wd py tools
+Home-page: https://github.com/pgcomb/wd_tools_py
+Author: ['Wang Dongxu', 'Ma xiaohui']
+Author-email: ['wangdongxudyx@163.com', '']
+License: Apache-2.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# wd_tools_py
+python工具
+
+# upload
+1.修改版本号
+
+2.python setup.py sdist build
+
+3.twine upload dist/py-tools-wd-xxx.tar.gz
