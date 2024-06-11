@@ -1,0 +1,3 @@
+# mypy: disable-error-code="misc, override, no-redef"
+
+def FindUsdBinary(name): ...
