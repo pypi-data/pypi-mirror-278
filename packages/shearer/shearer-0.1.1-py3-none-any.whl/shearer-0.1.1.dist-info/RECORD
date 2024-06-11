@@ -1,0 +1,15 @@
+shearer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shearer/configs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shearer/configs/llm.py,sha256=RnVY3GFibRz7683GkrAOmrc5PwOMz3w8fLBkY7gRWss,21
+shearer/models.py,sha256=sub_KI-ycbqiwk_d53KWVjXTE7Fxn800FaWee4QmmEk,645
+shearer/prompts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shearer/prompts/xml/__init__.py,sha256=17Rxjk6S1quCsou55C1HikYSVCHO0Dja5B30kRdn5p4,112
+shearer/prompts/xml/prompt.py,sha256=d3mW70r1yw7EYDNlgD01rkfKRA1BKMTvhdNA2nLL7FY,1912
+shearer/scraper/__init__.py,sha256=_RT3_MRHpI4j8B6RudAyB7CPDqGx4pDKAMQOjq6n_Gs,53
+shearer/scraper/base.py,sha256=s_virWJh6yGgxupVcGTDyUgwxdmOzYcvuCpIJ2ndnxY,573
+shearer/scraper/xml.py,sha256=oIrHe5vrMeTZhs9By8Rk6S5KPRvOFsxoWPeTzhq15-c,5827
+shearer/utils/__init__.py,sha256=c0mM6Q5YHt399i7AgAsGZUut0ssQuJ5sclXxX8Bpr48,61
+shearer/utils/token.py,sha256=Ab0bR5YFQoAhdBlS6IuMXBsEImt8dupPWNQnMlK1ThU,179
+shearer-0.1.1.dist-info/METADATA,sha256=facs8LrB_NT0BuMBHqa-j3BqVQNSpaKF2Jc3eYcrchQ,4836
+shearer-0.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+shearer-0.1.1.dist-info/RECORD,,
