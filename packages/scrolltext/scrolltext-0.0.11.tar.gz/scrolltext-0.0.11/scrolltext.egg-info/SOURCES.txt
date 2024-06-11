@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+scrolltext/__init__.py
+scrolltext/cli.py
+scrolltext/config.py
+scrolltext/cursestext.py
+scrolltext/getchtimeout.py
+scrolltext/linescroller.py
+scrolltext/utils.py
+scrolltext.egg-info/PKG-INFO
+scrolltext.egg-info/SOURCES.txt
+scrolltext.egg-info/dependency_links.txt
+scrolltext.egg-info/entry_points.txt
+scrolltext.egg-info/top_level.txt
