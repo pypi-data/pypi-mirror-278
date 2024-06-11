@@ -1,0 +1,57 @@
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[project]
+name = "rattail-harvest"
+version = "0.3.0"
+description = "Rattail integration package for Harvest"
+readme = "README.rst"
+authors = [{name = "Lance Edgar", email = "lance@edbob.org"}]
+license = {text = "GNU GPL v3+"}
+classifiers = [
+        "Development Status :: 3 - Alpha",
+        "Environment :: Console",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+        "Natural Language :: English",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Topic :: Office/Business",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+        "invoke",
+        "rattail[db]",
+]
+
+
+[project.urls]
+Homepage = "https://rattailproject.org"
+Repository = "https://kallithea.rattailproject.org/rattail-project/rattail-harvest"
+Changelog = "https://kallithea.rattailproject.org/rattail-project/rattail-harvest/files/master/CHANGELOG.md"
+
+
+[project.entry-points."rattail.subcommands"]
+import-harvest = "rattail_harvest.commands:ImportHarvest"
+
+
+[project.entry-points."rattail.typer_imports"]
+rattail_harvest = "rattail_harvest.commands"
+
+
+[project.entry-points."rattail.config.extensions"]
+rattail_harvest = "rattail_harvest.config:RattailHarvestExtension"
+
+
+[project.entry-points."rattail.importing"]
+"to_rattail.from_harvest.import" = "rattail_harvest.importing.harvest:FromHarvestToRattail"
+
+
+[tool.commitizen]
+version_provider = "pep621"
+tag_format = "v$version"
+update_changelog_on_bump = true

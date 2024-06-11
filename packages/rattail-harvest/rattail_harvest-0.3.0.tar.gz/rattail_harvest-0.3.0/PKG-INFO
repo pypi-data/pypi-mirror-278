@@ -1,0 +1,37 @@
+Metadata-Version: 2.3
+Name: rattail-harvest
+Version: 0.3.0
+Summary: Rattail integration package for Harvest
+Project-URL: Homepage, https://rattailproject.org
+Project-URL: Repository, https://kallithea.rattailproject.org/rattail-project/rattail-harvest
+Project-URL: Changelog, https://kallithea.rattailproject.org/rattail-project/rattail-harvest/files/master/CHANGELOG.md
+Author-email: Lance Edgar <lance@edbob.org>
+License: GNU GPL v3+
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Office/Business
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: invoke
+Requires-Dist: rattail[db]
+Description-Content-Type: text/x-rst
+
+
+rattail-harvest
+===============
+
+Rattail is a retail software framework, released under the GNU General
+Public License.
+
+This package contains software interfaces for `Harvest`_.
+
+.. _`Harvest`: https://www.getharvest.com/
+
+Please see the `Rattail Project`_ for more information.
+
+.. _`Rattail Project`: https://rattailproject.org/
