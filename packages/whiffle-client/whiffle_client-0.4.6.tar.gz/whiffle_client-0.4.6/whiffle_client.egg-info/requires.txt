@@ -1,0 +1,17 @@
+click~=8.0.4
+PyYAML~=6.0
+pyyaml-include~=2.1
+platformdirs~=4.0.0
+requests
+pandas>=2
+jupyter
+
+[analysis]
+numpy
+scipy
+scikit-learn
+xarray>=2022.12.0
+netcdf4
+matplotlib
+hvplot
+jupyter_bokeh
