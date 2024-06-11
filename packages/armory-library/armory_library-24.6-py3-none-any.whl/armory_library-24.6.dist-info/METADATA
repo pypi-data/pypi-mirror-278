@@ -1,0 +1,60 @@
+Metadata-Version: 2.3
+Name: armory-library
+Version: 24.6
+Summary: TwoSix Armory Adversarial Robustness Evaluation Library
+Project-URL: Homepage, https://github.com/twosixlabs/armory-library
+Project-URL: BugTracker, https://github.com/twosixlabs/armory-library/issues
+Project-URL: Documentation, https://armory-library.readthedocs.io/en/latest/
+Author-email: Two Six Technologies <armory@twosixtech.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.8
+Requires-Dist: jsonpath-ng
+Requires-Dist: lightning
+Requires-Dist: loguru
+Requires-Dist: mlflow
+Requires-Dist: numpy
+Requires-Dist: pillow
+Requires-Dist: pyyaml>=6
+Requires-Dist: setuptools<70.0.0
+Requires-Dist: torch
+Requires-Dist: torchmetrics
+Requires-Dist: torchvision
+Requires-Dist: tqdm
+Provides-Extra: extras
+Requires-Dist: adversarial-robustness-toolbox; extra == 'extras'
+Requires-Dist: albumentations; extra == 'extras'
+Requires-Dist: captum; extra == 'extras'
+Requires-Dist: matplotlib; extra == 'extras'
+Requires-Dist: pandas; extra == 'extras'
+Requires-Dist: tidecv; extra == 'extras'
+Requires-Dist: transformers; extra == 'extras'
+Requires-Dist: xaitk-saliency; extra == 'extras'
+Description-Content-Type: text/markdown
+
+# Overview
+
+Charmory is a scaffolding name as we rework code coming from the `armory.` namespace.
+It is slated to be renamed to `armory` once we adapt all legacy code that needs
+to be adapted. We expect the `charmory.` namespace to be disappear by the end of 2023.
+
+Presently, working use of armory-library, as shown in the `examples/` directory
+imports symbols from both `armory` and `charmory` namespaces. Soon a global substitution
+in user code from `charmory` to simply `armory` will be needed. We'll announce
+in the release notes when this is needed.
+
+
+
+# Installation & Configuration
+
+```bash
+pip install armory-library
+```
+
+Will make the `armory` and `charmory` namespaces available to your Python environment.
+
