@@ -1,0 +1,95 @@
+Metadata-Version: 2.1
+Name: estnltk_neural
+Version: 1.7.3
+Summary: EstNLTK neural -- EstNLTK's linguistic analysis based on neural models
+Home-page: https://github.com/estnltk/estnltk
+Author: University of Tartu
+Author-email: Siim Orasmaa <siim.orasmaa@ut.ee>, Sven Laur <swen@math.ut.ee>, Paul Tammo <paul.tammo@gmail.com>
+License: GPLv2
+Project-URL: homepage, https://github.com/estnltk/estnltk
+Project-URL: documentation, https://github.com/estnltk/estnltk/tree/main/tutorials
+Project-URL: repository, https://github.com/estnltk/estnltk/tree/main/estnltk_neural
+Project-URL: changelog, https://github.com/estnltk/estnltk/blob/main/CHANGELOG.md
+Keywords: Estonian natural language processing,Estonian linguistic processing
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Information Technology
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Text Processing :: Linguistic
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: estnltk-core>=1.7.3
+Requires-Dist: estnltk>=1.7.3
+Requires-Dist: torch
+Requires-Dist: transformers
+Requires-Dist: stanza
+Requires-Dist: packaging
+Provides-Extra: tests
+Requires-Dist: pytest; extra == "tests"
+Provides-Extra: neural-morph
+Requires-Dist: tensorflow<=1.15.5; extra == "neural-morph"
+Provides-Extra: coreference-v1
+Requires-Dist: scikit-learn; extra == "coreference-v1"
+Requires-Dist: xgboost; extra == "coreference-v1"
+Requires-Dist: gensim; extra == "coreference-v1"
+
+EstNLTK neural -- EstNLTK's linguistic analysis based on neural models
+===========================================================================
+
+This package contains EstNLTK's linguistic analysis tools that use neural models:
+
+* neural morphological tagger ( disambiguator );
+* bert embeddings tagger;
+* bert-based named entity recognition;
+* stanza syntax tagger and stanza ensemble syntax tagger;
+* pronominal coreference tagger v1 (relies on stanza for input preprocessing);
+
+Note: these tools require installation of deep learning frameworks (`tensorflow`, `pytorch`), and are demanding for computational resources; they also rely on large models which need to be downloaded separately. 
+
+The EstNLTK project is funded by EKT ([Eesti Keeletehnoloogia Riiklik Programm](https://www.keeletehnoloogia.ee/)).
+
+### Installation
+
+EstNLTK-neural is available as a PyPI wheel:  
+
+```
+pip install estnltk_neural
+```
+
+And as an Anaconda package:
+
+```
+conda install -c estnltk -c conda-forge estnltk_neural
+```
+
+Supported Python versions: 3.9+
+
+### Neural models
+
+Models required by neural tools are large, and therefore cannot be distributed with this package. 
+However, our tagger classes are implemented in a way that once you create an instance of a neural tagger, you'll be asked  for a permission to download missing models, and if you give the permission, the model will be downloaded (and installed in a proper location) automatically. 
+If needed, you can also change the default location where downloaded models will be placed, see [this tutorial](https://github.com/estnltk/estnltk/blob/ce224214244bd903d71283a2f1db2e4697f20e84/tutorials/basics/estnltk_resources.ipynb) for details.
+
+### Documentation
+
+EstNLTK's [NLP component tutorials](https://github.com/estnltk/estnltk/tree/main/tutorials/nlp_pipeline) also cover information about neural taggers. 
+
+### Source
+
+The source of the last release is available at the [main branch](https://github.com/estnltk/estnltk/tree/main/estnltk_neural).
+
+---
+
+License: GNU General Public License v2.0
+
+(C) University of Tartu  

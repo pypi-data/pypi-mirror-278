@@ -1,0 +1,17 @@
+estnltk-core>=1.7.3
+estnltk>=1.7.3
+torch
+transformers
+stanza
+packaging
+
+[coreference_v1]
+scikit-learn
+xgboost
+gensim
+
+[neural_morph]
+tensorflow<=1.15.5
+
+[tests]
+pytest
