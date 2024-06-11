@@ -1,0 +1,130 @@
+{
+    "os": "Linux-6.5.0-35-generic-x86_64-with-glibc2.35",
+    "python": "3.10.12",
+    "heartbeatAt": "2024-06-06T14:29:46.198003",
+    "startedAt": "2024-06-06T14:29:45.616540",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "api:app",
+        "--reload"
+    ],
+    "state": "running",
+    "program": "/home/jovyan/.cache/pypoetry/virtualenvs/npeccv6-7xcxB06H-py3.10/bin/uvicorn",
+    "codePathLocal": null,
+    "git": {
+        "remote": "git@github.com:BredaUniversityADSAI/2023-24d-fai2-adsai-group-cv6.git",
+        "commit": "f520912afcd8d77d614093ec05ae4dcb5e5d8c3d"
+    },
+    "email": "220817@buas.nl",
+    "root": "/home/jovyan/2023-24d-fai2-adsai-group-cv6",
+    "host": "d481835f2c6b",
+    "username": "jovyan",
+    "executable": "/home/jovyan/.cache/pypoetry/virtualenvs/npeccv6-7xcxB06H-py3.10/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 3392.2875624999997,
+        "min": 2200.0,
+        "max": 3400.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3641.054,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 3690.405,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 3297.234,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 4547.041,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 3840.992,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 4347.621,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 3717.314,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 4551.226,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 4541.129,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 4322.279,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 4148.43,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 3724.242,
+            "min": 2200.0,
+            "max": 3400.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 244.93190002441406,
+            "used": 217.66730880737305
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3060",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3060",
+            "memory_total": 12884901888
+        }
+    ],
+    "memory": {
+        "total": 31.256378173828125
+    }
+}
