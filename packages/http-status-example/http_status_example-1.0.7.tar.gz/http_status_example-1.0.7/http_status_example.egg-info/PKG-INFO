@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: http-status-example
+Version: 1.0.7
+Summary: prints the HTTP status code of the url provided by the user
+Home-page: UNKNOWN
+Author: Russ Nastala
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: ~=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+## http-status-example
+This is a test to learn Python packaging with setuptools. 
+
+## Action
+The script prints the HTTP status code of the url provided by the user.
+
+## Usage
+from http_status_example.run import get_request
+
+get_request.py(url)
+
+## License
+MIT License. See LICENSE for details.
+
+## Exceptions
+requests.exceptions.HTTPError
+
+requests.exceptions.ConnectionError
+
+requests.exceptions.Timeout
+
+requests.exceptions.RequestException
+
+
