@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: hscloud
+Version: 1.0.3
+Summary: Library to login to Dreo cloud and get device info.
+Home-page: https://github.com/dreo-team/hscloud
+Download-URL: https://github.com/dreo-team/hscloud/tree/master/dist/hscloud-1.0.3.tar.gz
+Author: Kane Wang
+Author-email: app@hesung.com
+License: MIT
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: tzlocal
+Requires-Dist: click
+Requires-Dist: pycryptodome
