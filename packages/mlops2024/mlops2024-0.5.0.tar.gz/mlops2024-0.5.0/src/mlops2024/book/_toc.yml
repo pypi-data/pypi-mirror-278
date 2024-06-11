@@ -1,0 +1,99 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: index
+parts:
+  - caption: Lecture Notes
+    chapters:
+      - file: week01/index
+        sections:
+          - file: week01/intro
+      - file: week02/index
+        sections:
+          - file: week02/devops
+          - file: week02/gitops
+      - file: week03/index
+        sections:
+          - file: week03/dotfiles
+      - file: week04/index
+        sections:
+          - file: week04/containerization
+          - file: week04/docker
+          - file: week04/containerd
+      - file: week05/index
+        sections:
+          - file: week05/hyperfast-docker
+      - file: week06/index
+        sections:
+          - file: week06/kubernetes
+      - file: week07/index
+        sections:
+          - file: week07/bionic/index
+            sections:
+              - file: week07/bionic/introduction
+              - file: week07/bionic/bare-metal
+              - file: week07/bionic/installation
+              - file: week07/bionic/gpu-preparation
+              - file: week07/bionic/sso
+              - file: week07/bionic/tgi
+              - file: week07/bionic/roles
+              - file: week07/bionic/pgadmin
+              - file: week07/bionic/upgrade
+              - file: week07/bionic/jupyter-notebook
+              - file: week07/bionic/visualise-rag
+      - file: week09/index
+        sections:
+          - file: week09/sec
+          - file: week09/auth-enc-sign
+          - file: week09/age-gpg-ssh
+          - file: week09/pass
+      - file: week10/index
+        sections:
+          - file: week10/autotrain
+          - file: week10/installation
+          - file: week10/starting
+          - file: week10/llm_finetuning
+      - file: week11/index
+        sections:
+          - file: week11/llama-factory
+      - file: week12/index
+        sections:
+          - file: week12/langchain
+          - file: week12/langchain-io
+          - file: week12/langserve
+          - file: week12/langsmith
+      - file: week13/index
+        sections:
+          - file: week13/lcel
+          - file: week13/langchain-retrieval
+          - file: week13/langchain-chain
+          - file: week13/langchain-memory
+  - caption: Projects
+    chapters:
+      - file: projects/index
+        sections:
+          - file: projects/202121010/index
+            sections:
+              - file: projects/202121010/MMHuman3D/index
+          - file: projects/202021012/index
+            sections:
+              - file: projects/202021012/DUSt3R/index
+              - file: projects/202021012/finetuning/index
+      - file: projects/setup
+  - caption: About
+    chapters:
+      - file: syllabus/index
+      - file: about/index
+  - caption: Links
+    chapters:
+      - url: https://halla.ai
+        title: 인공지능학과
+      - url: https://os2024.halla.ai
+        title: 운영체제 2024
+      - url: https://mlops2024.halla.ai
+        title: 머신러닝시스템 2024
+      - url: https://cobots2024.halla.ai
+        title: 협동로봇활용 2024
+      - url: https://aibasics.halla.ai
+        title: AI 세상 속으로
