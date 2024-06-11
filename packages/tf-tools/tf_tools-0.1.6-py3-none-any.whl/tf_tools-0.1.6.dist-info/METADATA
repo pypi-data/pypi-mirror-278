@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: tf-tools
+Version: 0.1.6
+Summary: General tools for `tensorflow`, typed with `jaxtyping`
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Project-URL: repo, https://github.com/marciclabas/tensorflow-ocr
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: jaxtyping
+Requires-Dist: tensorflow
+Requires-Dist: lazy-loader
+
+# Tf Tools
+
+> General tools for TensorFlow
