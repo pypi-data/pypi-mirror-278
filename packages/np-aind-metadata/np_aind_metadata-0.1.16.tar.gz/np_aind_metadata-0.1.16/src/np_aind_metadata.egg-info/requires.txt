@@ -1,0 +1,8 @@
+h5py>=3.10.0
+pyyaml>=6.0.1
+np-session>=0.6.40
+np-config>=0.4.27
+aind-metadata-mapper==0.6.2
+
+[np]
+np-config>=0.4.27
