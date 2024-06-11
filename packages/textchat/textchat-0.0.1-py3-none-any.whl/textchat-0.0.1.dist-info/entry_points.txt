@@ -1,0 +1,2 @@
+[console_scripts]
+textchat = textchat.chat:ircchat
