@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/py_dotenv_safe/__init__.py
+src/py_dotenv_safe/config.py
+src/py_dotenv_safe/dotenv_safe.py
+src/py_dotenv_safe/missing_env_vars_error.py
+src/py_dotenv_safe.egg-info/PKG-INFO
+src/py_dotenv_safe.egg-info/SOURCES.txt
+src/py_dotenv_safe.egg-info/dependency_links.txt
+src/py_dotenv_safe.egg-info/entry_points.txt
+src/py_dotenv_safe.egg-info/requires.txt
+src/py_dotenv_safe.egg-info/top_level.txt
+tests/test_dotenv_safe.py

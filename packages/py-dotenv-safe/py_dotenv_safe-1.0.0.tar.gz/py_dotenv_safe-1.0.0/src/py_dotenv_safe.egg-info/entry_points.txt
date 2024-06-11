@@ -1,0 +1,2 @@
+[console_scripts]
+py_dotenv_safe = py_dotenv_safe.config:main
