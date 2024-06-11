@@ -1,0 +1,165 @@
+CHANGES
+=======
+
+0.7.2
+-----
+
+* genric compound storage
+* typed compound storage
+
+0.7.1
+-----
+
+* removed total jobs from job
+
+0.7.0
+-----
+
+* refactored from scratch soil.job
+
+0.6.34
+------
+
+* total jobs attribute in job\_group
+* [MERGE]total jobs attribute in job\_group
+* total jobs attribute in job\_group
+
+0.6.33
+------
+
+* added trust for 2fa
+
+0.6.32
+------
+
+* using generic data structure
+
+0.6.31
+------
+
+* exported data structure and generic data
+* datastructure better as generic for back
+
+0.6.30
+------
+
+* modulify with param spec
+
+0.6.29
+------
+
+* Job protocol with group\_created\_at attribute
+
+0.6.28
+------
+
+* add group creation date in job schema
+* show-states instead of with-states
+
+0.6.27
+------
+
+* Added alias timeout
+* soil.job Fixed pyright types
+* Implementing non-blocking jobs
+* Tests for complicated cases in pipelines
+* Faster tests for soil-sdk
+
+0.6.26
+------
+
+* Added optional extras in soil.alias
+* Making pyright happy
+* Removed docs
+
+0.6.25
+------
+
+* bugfix for uploading roles
+
+0.6.24
+------
+
+* added timeout to requests
+* creates roles on soil alias if non existing
+
+0.6.23
+------
+
+* bugfix overwriting session headers
+* updated post body from json to data
+* new create dictionary with content gzipped
+
+0.6.22
+------
+
+* generic metadata changed implementation
+* use py3.12 on build pypi
+
+0.6.21
+------
+
+* updated major pbr, can fail build pypi
+* updated dev deps
+* updated pyscopg
+* updated pandas supports py3.12
+* updated numpy
+* added ruff and solved some test errors on macos
+* Added docker stop to CI
+
+0.6.20
+------
+
+* transform\_query for postgres
+
+0.6.19
+------
+
+* Removed print
+* Added support for postgres
+
+0.6.18
+------
+
+* overridable parameters on soil run
+
+0.6.17
+------
+
+* Updated pre-commit
+* Upload multiple modules at once
+
+0.6.16
+------
+
+* removed comment line
+* removed pyright dep
+* only a single underscore bc of python
+* added support for new type Timestamp in kwarg for modulify
+
+0.6.15
+------
+
+* pyright things
+* added return type to modulify and set\_file\_status function
+
+0.6.14
+------
+
+* added change state if not processed
+
+0.6.13
+------
+
+* block update on file if state already set
+
+0.6.12
+------
+
+* re-estructured imports and added function to import
+
+0.6.11
+------
+
+* changed location of sqlite db in test
+* added handler of logs
