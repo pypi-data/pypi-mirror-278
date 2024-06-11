@@ -1,0 +1,16 @@
+LICENSE
+README.md
+deply
+setup.cfg
+setup.py
+deplyai_cli.egg-info/PKG-INFO
+deplyai_cli.egg-info/SOURCES.txt
+deplyai_cli.egg-info/dependency_links.txt
+deplyai_cli.egg-info/not-zip-safe
+deplyai_cli.egg-info/requires.txt
+deplyai_cli.egg-info/top_level.txt
+src/__init__.py
+src/auth.py
+src/cmd.py
+src/pipelines.py
+src/util.py
