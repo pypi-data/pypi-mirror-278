@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: medium_to_markdown_py
+Version: 1.1.6
+Summary: medium-to-medium_to_markdown_py-py is a Python package that converts Medium articles to Markdown format.
+Home-page: https://github.com/tourbut/medium-to-markdown_python
+Author: knowslog
+Author-email: scshin88@gmail.com
+Keywords: medium,knowslog,markdown,medium to markdown
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: beautifulsoup4
+Requires-Dist: requests
+
