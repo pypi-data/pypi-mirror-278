@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: perun.connector
+Version: 3.10.0
+Summary: Module for high-volume communication with Perun IdM
+Home-page: https://gitlab.ics.muni.cz/perun/perun-proxyidp/perun-connector.git
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: setuptools
+Requires-Dist: urllib3 ~=1.26
+Requires-Dist: python-dateutil ~=2.8
+Requires-Dist: PyYAML ~=6.0
+Requires-Dist: ldap3 ~=2.9
+Requires-Dist: jsonpatch ~=1.22
+
+# perun.connector
+
+Library for high volume machine-to-machine communication with Perun IAM system.
+
+## Installation
+
+Use pip:
+
+```sh
+pip install perun.connector
+```
+
+## Configuration
+
+To use AdaptersManager, fill `adapters_manager_cfg.yaml`.
+
+To use RPC connector or LDAP connector only, fill `openapi_cfg.yaml` or `ldap_connector_cfg.yaml` respectivelly.
