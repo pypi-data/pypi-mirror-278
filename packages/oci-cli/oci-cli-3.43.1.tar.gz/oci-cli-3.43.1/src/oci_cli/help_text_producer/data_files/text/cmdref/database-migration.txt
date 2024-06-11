@@ -1,0 +1,145 @@
+database-migration
+******************
+
+
+Description
+===========
+
+Use the Oracle Cloud Infrastructure Database Migration CLI to perform
+database migration operations.
+
+
+Available Commands
+==================
+
+* agent
+
+  * change-compartment
+
+  * delete
+
+  * get
+
+  * update
+
+* agent-image-summary
+
+  * list-agent-images
+
+* agent-summary
+
+  * list-agents
+
+* connection
+
+  * change-compartment
+
+  * connection-diagnostics
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* connection-summary
+
+  * list-connections
+
+* excluded-object-summary
+
+  * list-excluded-objects
+
+* job
+
+  * abort
+
+  * delete
+
+  * evaluate-migration
+
+  * get
+
+  * get-advisor-report
+
+  * get-job-output-content
+
+  * resume
+
+  * start-migration
+
+  * update
+
+* job-output-summary
+
+  * list-job-outputs
+
+* job-summary
+
+  * list-jobs
+
+* migration
+
+  * add
+
+  * change-compartment
+
+  * clone
+
+  * create
+
+  * create-migration-aws-s3-data-transfer-medium-details
+
+  * create-migration-db-link-data-transfer-medium-details
+
+  * create-migration-nfs-data-transfer-medium-details
+
+  * create-migration-object-storage-data-transfer-medium-details
+
+  * delete
+
+  * get
+
+  * remove
+
+  * retrieve-supported-phases
+
+  * update
+
+  * update-migration-aws-s3-data-transfer-medium-details
+
+  * update-migration-db-link-data-transfer-medium-details
+
+  * update-migration-nfs-data-transfer-medium-details
+
+  * update-migration-object-storage-data-transfer-medium-details
+
+* migration-object-collection
+
+  * list-migration-objects
+
+* migration-object-type-summary
+
+  * list-migration-object-types
+
+* migration-summary
+
+  * list-migrations
+
+* work-request
+
+  * get
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list-work-request-logs
+
+* work-request-summary
+
+  * list-work-requests

@@ -1,0 +1,46 @@
+migration
+*********
+
+
+Description
+===========
+
+Migration resource
+
+
+Available Commands
+==================
+
+* add
+
+* change-compartment
+
+* clone
+
+* create
+
+* create-migration-aws-s3-data-transfer-medium-details
+
+* create-migration-db-link-data-transfer-medium-details
+
+* create-migration-nfs-data-transfer-medium-details
+
+* create-migration-object-storage-data-transfer-medium-details
+
+* delete
+
+* get
+
+* remove
+
+* retrieve-supported-phases
+
+* update
+
+* update-migration-aws-s3-data-transfer-medium-details
+
+* update-migration-db-link-data-transfer-medium-details
+
+* update-migration-nfs-data-transfer-medium-details
+
+* update-migration-object-storage-data-transfer-medium-details

@@ -1,0 +1,31 @@
+job
+***
+
+
+Description
+===========
+
+Results of a Database Connection search. Contains
+DatabaseConnectionSummary items.
+
+
+Available Commands
+==================
+
+* abort
+
+* delete
+
+* evaluate-migration
+
+* get
+
+* get-advisor-report
+
+* get-job-output-content
+
+* resume
+
+* start-migration
+
+* update
