@@ -1,0 +1,142 @@
+Metadata-Version: 2.1
+Name: cxalio-studio-tools
+Version: 0.3.4
+Summary: Scripts for po studio made by cxalio
+Home-page: https://gitee.com/xiii_1991/cxalio-studio-tools
+License: GPL-3.0-or-later
+Keywords: ffmpeg,tool
+Author: xiii_1991
+Author-email: xiii_1991@163.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: chardet (>=5.2.0,<6.0.0)
+Requires-Dist: openpyxl (>=3.1.2,<4.0.0)
+Requires-Dist: pillow (>=10.3.0,<11.0.0)
+Requires-Dist: python-docx (>=1.1.0,<2.0.0)
+Requires-Dist: python-ffmpeg (>=2.0.10,<3.0.0)
+Requires-Dist: rich (>=13.7.0,<14.0.0)
+Requires-Dist: rich-argparse (>=1.4.0,<2.0.0)
+Requires-Dist: translators (>=5.9.2,<6.0.0)
+Requires-Dist: xpinyin (>=0.7.6,<0.8.0)
+Project-URL: Repository, https://gitee.com/xiii_1991/cxalio-studio-tools.git
+Description-Content-Type: text/markdown
+
+# cxalio-studio-tools
+
+## 介绍
+
+这是一套用于简化影视后期工作的脚本合集。
+
+涉及各种繁复的资料处理工作，解放双手，减少出错。
+
+## 安装
+
+```shell
+pip --install cxalio-media-tools
+
+#推荐使用 pipx 安装
+pipx --install cxalio-media-tools
+```
+
+## 包含的工具
+
+### MediaKiller
+
+MediaKiller 可以通过配置文件操纵 ffmpeg 批量地对大量媒体文件转码，
+仅支持单文件输入，可以保留源文件的目录层级。
+请查看[具体说明](src/media_killer/help.md)
+
+### SubConv
+
+subconv 是一个批量从字幕文件提取台词本的工具。
+请查看[具体说明](src/sub_conv/help.md)
+
+### Jpegger
+
+Jpegger 是一个批量转换图片格式的工具。请查看[具体说明](src/jpegger/help.md)
+
+### BatchCommander
+
+BatchCommander 是一个使用命令批量处理文件的工具。请查看[详细说明](src/batch_commander/help.md)
+
+### update_githubhosts
+
+一个自动更新hosts的小工具
+
+## To-do
+
+- media-inspector 解析媒体信息
+
+## Change-log
+
+### 0.3.4
+
+- 增加了 batchcommander 工具
+- 增加了为包含空格的路径信息增加引号的功能
+
+### 0.3.2
+
+- 移除了 PathExpander 中解析glob的功能
+- 为 jpegger 和 subconv 添加了解析glob的功能
+
+### 0.3.1
+
+- 为 jpegger 提供保留上级目录的功能
+- 修复了 jpegger 中一个文件转换失败时直接结束的bug
+- ~~尝试为 PathExpander 提供解析 glob 的功能~~
+
+### 0.3.0
+
+- 新工具 jpegger
+- 修改了 subconv 帮助文件中的错误内容
+- 增加了 cx_image 模块
+
+### 0.2.8
+
+- 强制扩展名按小写判断，不再区分大小写
+
+### 0.2.7
+
+- 为 mediakiller 增加忽略默认白名单的功能
+- 为 mediakiller 增加自定义表引用的功能
+
+### 0.2.6
+
+- 统一设计可迭代的 PathExpander 代替 FolderExpander
+- 重新构造更健壮的 subconv
+- 更新 mediakiller 的逻辑与结构
+- 修改了cx_core库的结构，优化了全部代码
+- 优化了 mediakiller 和 subconv 的状态显示布局
+- 修复了 mediakiller 无数值选项传递失败的 bug
+- 为 subconv 增加了备选翻译方案
+
+### 0.2.5
+
+mediakiller:
+
+- 修复了 duration 无法解析时崩溃的 bug。
+- 修复了目标目录解析为当前目录的错误。
+- 增加了扩展名检查，强制生成的配置文件扩展名为`toml`。
+- 修改了当前任务进度条的样式，减少闪烁。
+- 修复了不可覆盖输出文件时，转码卡住的问题。
+
+subconv:
+
+- 增加了强制设置读取文件编码的选项。
+
+### 0.2.0
+
+重新构建现有工具。
+
+#### MediaKiller
+
+- 增加了标签替换系统
+- 增加了任务模块，统一转码和脚本生成功能
+- 修改配置文件，分开输入和输出两部分，并且`input`和`output`现在是表数组了。这样就支持了多个文件的输入和输出。
+- 大幅优化内存占用和性能
+- 大幅调整调试信息
+
+
