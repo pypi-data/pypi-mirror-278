@@ -1,0 +1,24 @@
+[project]
+name = "lv_ui_testing"
+version = "1.0.4"
+authors = [
+  { name="Thomas Zilliox", email="thomas.zilliox67@gmail.com" },
+]
+description = "A LabVIEW User Interface Testing framework."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "pyzmq==26.0.3",
+]
+
+[project.urls]
+Homepage = "https://github.com/ThomasPRZilliox/lv-ui-testing/wiki"
+Issues = "https://github.com/pypa/sampleproject/issues"
+
+
