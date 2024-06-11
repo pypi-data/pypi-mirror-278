@@ -1,0 +1,20 @@
+[package]
+name = "thermolib"
+version = "0.5.0"
+edition = "2021"
+license = "MIT"
+description = "An open-source library for the calculation of fluid properties"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0"
+thiserror = "1.0"
+serde_json = "1.0.110"
+serde = { version = "1.0.200", features = ["derive"] }
+pyo3 = { "version" = "0.20.0", features = ["anyhow"] }
+
+[lib]
+name = "thermolib"
+crate-type = ["cdylib" ,"rlib"]
+
