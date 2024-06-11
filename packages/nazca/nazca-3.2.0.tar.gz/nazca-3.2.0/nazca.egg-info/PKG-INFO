@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: nazca
+Version: 3.2.0
+Summary: Python library for data alignment
+Home-page: https://forge.extranet.logilab.fr/open-source/nazca
+Author: Logilab
+Author-email: contact@logilab.fr
+License: LGPL
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing
+
+NAZCA - Python library for practical semantics datamining
+
+Read the doc/ directory
