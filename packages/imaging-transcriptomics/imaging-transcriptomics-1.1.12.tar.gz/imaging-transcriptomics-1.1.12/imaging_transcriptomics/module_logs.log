@@ -1,0 +1,305 @@
+[DEBUG] 2023-08-24 08:46:50,101: inputs - read_scan - 34 - Reading scan: /Users/alessiogiacomel/Documents/Projects/ImagingTranscriptomics/imaging_transcriptomics/tests/data/MNI152_T1_1mm.nii.gz
+[DEBUG] 2023-08-24 08:46:50,434: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 08:46:54,952: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 08:46:58,680: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 08:47:06,011: inputs - read_scan - 34 - Reading scan: /Users/alessiogiacomel/Documents/Projects/ImagingTranscriptomics/imaging_transcriptomics/tests/data/MNI152_T1_1mm.nii.gz
+[DEBUG] 2023-08-24 09:00:10,816: inputs - read_scan - 34 - Reading scan: /Users/alessiogiacomel/Documents/Projects/ImagingTranscriptomics/imaging_transcriptomics/tests/data/MNI152_T1_1mm.nii.gz
+[DEBUG] 2023-08-24 09:00:11,183: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:00:15,035: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:00:20,031: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:00:28,653: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:00:33,207: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:00:38,045: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:00:41,903: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:00:45,813: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:00:49,912: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:00:54,547: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:00:58,667: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:01:03,163: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:01:08,245: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:01:14,248: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:01:18,347: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:01:22,445: inputs - read_scan - 34 - Reading scan: /Users/alessiogiacomel/Documents/Projects/ImagingTranscriptomics/imaging_transcriptomics/tests/data/MNI152_T1_1mm.nii.gz
+[DEBUG] 2023-08-24 09:01:22,754: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:01:26,733: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:01:30,687: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:01:34,613: inputs - load_gene_labels - 172 - Loading gene labels.
+[INFO] 2023-08-24 09:01:38,748: transcriptomics - permute_data - 182 - Permuting data.
+[DEBUG] 2023-08-24 09:01:39,109: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:01:43,107: inputs - load_gene_labels - 172 - Loading gene labels.
+[INFO] 2023-08-24 09:01:47,019: transcriptomics - permute_data - 182 - Permuting data.
+[DEBUG] 2023-08-24 09:01:47,049: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:01:50,832: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:13:10,329: inputs - read_scan - 34 - Reading scan: /Users/alessiogiacomel/Documents/Projects/ImagingTranscriptomics/imaging_transcriptomics/tests/data/MNI152_T1_1mm.nii.gz
+[DEBUG] 2023-08-24 09:13:10,667: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:13:14,481: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:13:18,226: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:13:24,185: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:13:28,032: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:13:31,838: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:13:35,587: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:13:39,344: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:13:45,485: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:13:49,831: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:13:54,073: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:13:58,215: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:14:02,366: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:14:06,228: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:14:10,215: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:14:14,433: inputs - read_scan - 34 - Reading scan: /Users/alessiogiacomel/Documents/Projects/ImagingTranscriptomics/imaging_transcriptomics/tests/data/MNI152_T1_1mm.nii.gz
+[DEBUG] 2023-08-24 09:14:14,662: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:14:18,461: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:14:22,291: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:14:26,518: inputs - load_gene_labels - 172 - Loading gene labels.
+[INFO] 2023-08-24 09:14:33,069: transcriptomics - permute_data - 182 - Permuting data.
+[DEBUG] 2023-08-24 09:14:33,646: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:14:38,309: inputs - load_gene_labels - 172 - Loading gene labels.
+[INFO] 2023-08-24 09:14:42,837: transcriptomics - permute_data - 182 - Permuting data.
+[DEBUG] 2023-08-24 09:14:42,860: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:14:47,955: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:26:03,859: inputs - read_scan - 34 - Reading scan: /Users/alessiogiacomel/Documents/Projects/ImagingTranscriptomics/imaging_transcriptomics/tests/data/MNI152_T1_1mm.nii.gz
+[DEBUG] 2023-08-24 09:26:04,178: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:26:07,991: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:26:11,722: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:26:17,170: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:26:20,994: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:26:24,805: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:26:28,573: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:26:32,320: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:26:36,098: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:26:40,338: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:26:44,380: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:26:48,446: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:26:52,271: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:26:56,077: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:26:59,968: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:27:03,905: inputs - read_scan - 34 - Reading scan: /Users/alessiogiacomel/Documents/Projects/ImagingTranscriptomics/imaging_transcriptomics/tests/data/MNI152_T1_1mm.nii.gz
+[DEBUG] 2023-08-24 09:27:04,142: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:27:07,965: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:27:11,771: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:27:15,586: inputs - load_gene_labels - 172 - Loading gene labels.
+[INFO] 2023-08-24 09:27:19,615: transcriptomics - permute_data - 182 - Permuting data.
+[DEBUG] 2023-08-24 09:27:19,997: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:27:23,736: inputs - load_gene_labels - 172 - Loading gene labels.
+[INFO] 2023-08-24 09:27:27,641: transcriptomics - permute_data - 182 - Permuting data.
+[DEBUG] 2023-08-24 09:27:27,667: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:27:31,510: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:29:36,419: inputs - read_scan - 34 - Reading scan: /Users/alessiogiacomel/Documents/Projects/ImagingTranscriptomics/imaging_transcriptomics/tests/data/MNI152_T1_1mm.nii.gz
+[DEBUG] 2023-08-24 09:29:36,771: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:29:40,641: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:29:44,410: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:29:55,702: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:30:00,418: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:30:04,392: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:30:08,212: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:30:12,098: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:30:15,975: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:30:20,421: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:30:24,398: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:30:28,803: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:30:32,833: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:30:36,670: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:30:40,499: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:30:44,301: inputs - read_scan - 34 - Reading scan: /Users/alessiogiacomel/Documents/Projects/ImagingTranscriptomics/imaging_transcriptomics/tests/data/MNI152_T1_1mm.nii.gz
+[DEBUG] 2023-08-24 09:30:44,543: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:30:48,334: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:30:52,122: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:30:55,966: inputs - load_gene_labels - 172 - Loading gene labels.
+[INFO] 2023-08-24 09:31:00,101: transcriptomics - permute_data - 182 - Permuting data.
+[DEBUG] 2023-08-24 09:31:00,485: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:31:04,216: inputs - load_gene_labels - 172 - Loading gene labels.
+[INFO] 2023-08-24 09:31:08,212: transcriptomics - permute_data - 182 - Permuting data.
+[DEBUG] 2023-08-24 09:31:08,230: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:31:11,984: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:48:09,058: inputs - read_scan - 34 - Reading scan: /Users/alessiogiacomel/Documents/Projects/ImagingTranscriptomics/imaging_transcriptomics/tests/data/MNI152_T1_1mm.nii.gz
+[DEBUG] 2023-08-24 09:48:09,422: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:48:13,274: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:48:16,981: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:48:26,510: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:48:30,336: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:48:34,123: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:48:37,869: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:48:41,641: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:48:45,442: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:48:49,759: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:48:53,692: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:48:57,732: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:49:01,672: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:49:05,502: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:49:09,294: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:49:13,124: inputs - read_scan - 34 - Reading scan: /Users/alessiogiacomel/Documents/Projects/ImagingTranscriptomics/imaging_transcriptomics/tests/data/MNI152_T1_1mm.nii.gz
+[DEBUG] 2023-08-24 09:49:13,381: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:49:17,180: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 09:49:20,992: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:49:24,775: inputs - load_gene_labels - 172 - Loading gene labels.
+[INFO] 2023-08-24 09:49:28,990: transcriptomics - permute_data - 182 - Permuting data.
+[DEBUG] 2023-08-24 09:49:29,354: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:49:33,097: inputs - load_gene_labels - 172 - Loading gene labels.
+[INFO] 2023-08-24 09:49:37,083: transcriptomics - permute_data - 182 - Permuting data.
+[DEBUG] 2023-08-24 09:49:37,105: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 09:49:41,194: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 10:04:36,416: inputs - read_scan - 34 - Reading scan: /Users/alessiogiacomel/Documents/Projects/ImagingTranscriptomics/imaging_transcriptomics/tests/data/MNI152_T1_1mm.nii.gz
+[DEBUG] 2023-08-24 10:04:36,659: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 10:04:39,317: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 10:04:41,862: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 10:04:44,753: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 10:04:47,378: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 10:04:49,979: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 10:04:52,539: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 10:04:55,086: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 10:04:57,884: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 10:05:00,717: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 10:05:03,378: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 10:05:06,091: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 10:05:08,730: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 10:05:11,324: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 10:05:13,995: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 10:05:16,598: inputs - read_scan - 34 - Reading scan: /Users/alessiogiacomel/Documents/Projects/ImagingTranscriptomics/imaging_transcriptomics/tests/data/MNI152_T1_1mm.nii.gz
+[DEBUG] 2023-08-24 10:05:16,782: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 10:05:19,522: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 10:05:22,110: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 10:05:24,756: inputs - load_gene_labels - 172 - Loading gene labels.
+[INFO] 2023-08-24 10:05:27,584: transcriptomics - permute_data - 182 - Permuting data.
+[DEBUG] 2023-08-24 10:05:27,901: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 10:05:30,815: inputs - load_gene_labels - 172 - Loading gene labels.
+[INFO] 2023-08-24 10:05:33,583: transcriptomics - permute_data - 182 - Permuting data.
+[DEBUG] 2023-08-24 10:05:33,619: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 10:05:36,197: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 10:07:22,330: inputs - read_scan - 34 - Reading scan: /Users/alessiogiacomel/Documents/Projects/ImagingTranscriptomics/imaging_transcriptomics/tests/data/MNI152_T1_1mm.nii.gz
+[DEBUG] 2023-08-24 10:07:22,571: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 10:07:25,393: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 10:07:28,112: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 10:07:34,959: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 10:07:37,718: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 10:07:40,479: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 10:07:43,142: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 10:07:45,818: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 10:07:48,523: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 10:07:51,435: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 10:07:54,065: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 10:07:56,781: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 10:07:59,476: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 10:08:02,164: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 10:08:04,831: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 10:08:07,446: inputs - read_scan - 34 - Reading scan: /Users/alessiogiacomel/Documents/Projects/ImagingTranscriptomics/imaging_transcriptomics/tests/data/MNI152_T1_1mm.nii.gz
+[DEBUG] 2023-08-24 10:08:07,611: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 10:08:10,276: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 10:08:12,906: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 10:08:15,537: inputs - load_gene_labels - 172 - Loading gene labels.
+[INFO] 2023-08-24 10:08:18,431: transcriptomics - permute_data - 182 - Permuting data.
+[DEBUG] 2023-08-24 10:08:18,745: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 10:08:21,382: inputs - load_gene_labels - 172 - Loading gene labels.
+[INFO] 2023-08-24 10:08:24,129: transcriptomics - permute_data - 182 - Permuting data.
+[DEBUG] 2023-08-24 10:08:24,164: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 10:08:26,772: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 14:49:18,232: inputs - read_scan - 34 - Reading scan: /Users/alessiogiacomel/Documents/Projects/ImagingTranscriptomics/imaging_transcriptomics/tests/data/MNI152_T1_1mm.nii.gz
+[DEBUG] 2023-08-24 14:49:18,509: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 14:49:21,162: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 14:49:23,741: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 14:49:28,675: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 14:49:31,433: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 14:49:34,063: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 14:49:36,646: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 14:49:39,204: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 14:49:41,845: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 14:49:44,746: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 14:49:47,364: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 14:49:50,079: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 14:49:52,740: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 14:49:55,351: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 14:49:57,998: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 14:50:00,596: inputs - read_scan - 34 - Reading scan: /Users/alessiogiacomel/Documents/Projects/ImagingTranscriptomics/imaging_transcriptomics/tests/data/MNI152_T1_1mm.nii.gz
+[DEBUG] 2023-08-24 14:50:00,788: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 14:50:03,442: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 14:50:06,037: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 14:50:08,674: inputs - load_gene_labels - 172 - Loading gene labels.
+[INFO] 2023-08-24 14:50:11,548: transcriptomics - permute_data - 182 - Permuting data.
+[DEBUG] 2023-08-24 14:50:12,152: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 14:50:14,781: inputs - load_gene_labels - 172 - Loading gene labels.
+[INFO] 2023-08-24 14:50:17,699: transcriptomics - permute_data - 182 - Permuting data.
+[DEBUG] 2023-08-24 14:50:18,281: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 14:50:20,899: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 15:13:53,510: inputs - read_scan - 34 - Reading scan: /Users/alessiogiacomel/Documents/Projects/ImagingTranscriptomics/imaging_transcriptomics/tests/data/MNI152_T1_1mm.nii.gz
+[DEBUG] 2023-08-24 15:13:53,695: inputs - extract_average - 109 - Extracting average from DK of scan
+[DEBUG] 2023-08-24 15:13:53,858: inputs - extract_average - 115 - Extracted values are: [1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+[DEBUG] 2023-08-24 15:13:54,156: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 15:13:56,748: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 15:13:59,382: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 15:14:08,040: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 15:14:10,654: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 15:14:13,271: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 15:14:15,847: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 15:14:18,423: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 15:14:21,062: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 15:14:23,992: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 15:14:26,618: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 15:14:29,454: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 15:14:32,124: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 15:14:34,735: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 15:14:37,363: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 15:14:39,958: inputs - read_scan - 34 - Reading scan: /Users/alessiogiacomel/Documents/Projects/ImagingTranscriptomics/imaging_transcriptomics/tests/data/MNI152_T1_1mm.nii.gz
+[DEBUG] 2023-08-24 15:14:40,131: inputs - extract_average - 109 - Extracting average from DK of scan
+[DEBUG] 2023-08-24 15:14:40,285: inputs - extract_average - 115 - Extracted values are: [5728.25249169 5368.12334802 5676.66292135 3473.51497006 6065.16438356
+ 4736.5462963  3864.30429129 4485.04025881 2547.26277372 3510.65140562
+ 5863.08836207 4036.43062827 3987.37440758 5634.13661202 5963.43870968
+ 6490.90420561 6465.11976048 6245.32534247 6821.58300395 4306.98709677
+ 6199.54022989 5707.96658711 6248.86730424 3260.6599064  5146.765625
+ 5135.25045455 6164.80328349 5097.84184615 6569.5502677  5687.65830508
+ 1080.58227848 6164.13584906 6749.76086957 6748.95390071 6262.67546848
+ 5943.81973435 6580.55189873 6642.82231405 6207.11188811 6341.17638037
+ 6637.07744108]
+[DEBUG] 2023-08-24 15:14:40,291: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 15:14:42,899: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 15:14:45,527: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 15:14:48,188: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 15:14:50,800: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 15:14:53,513: inputs - load_gene_labels - 172 - Loading gene labels.
+[INFO] 2023-08-24 15:14:56,413: transcriptomics - permute_data - 182 - Permuting data.
+[DEBUG] 2023-08-24 15:14:57,016: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 15:15:00,185: inputs - load_gene_labels - 172 - Loading gene labels.
+[INFO] 2023-08-24 15:15:03,033: transcriptomics - permute_data - 182 - Permuting data.
+[DEBUG] 2023-08-24 15:15:03,607: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 15:15:06,243: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 15:16:25,986: inputs - read_scan - 34 - Reading scan: /Users/alessiogiacomel/Documents/Projects/ImagingTranscriptomics/imaging_transcriptomics/tests/data/MNI152_T1_1mm.nii.gz
+[DEBUG] 2023-08-24 15:16:26,229: inputs - extract_average - 109 - Extracting average from DK of scan
+[DEBUG] 2023-08-24 15:16:26,434: inputs - extract_average - 115 - Extracted values are: [1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+[DEBUG] 2023-08-24 15:16:26,459: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 15:16:29,352: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 15:16:32,384: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 15:16:38,774: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 15:16:41,572: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 15:16:44,304: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 15:16:47,073: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 15:16:49,873: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 15:16:52,825: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 15:16:55,968: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 15:16:58,754: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 15:17:01,780: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 15:17:04,677: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 15:17:07,558: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 15:17:10,420: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 15:17:13,021: inputs - read_scan - 34 - Reading scan: /Users/alessiogiacomel/Documents/Projects/ImagingTranscriptomics/imaging_transcriptomics/tests/data/MNI152_T1_1mm.nii.gz
+[DEBUG] 2023-08-24 15:17:13,176: inputs - extract_average - 109 - Extracting average from DK of scan
+[DEBUG] 2023-08-24 15:17:13,326: inputs - extract_average - 115 - Extracted values are: [5728.25249169 5368.12334802 5676.66292135 3473.51497006 6065.16438356
+ 4736.5462963  3864.30429129 4485.04025881 2547.26277372 3510.65140562
+ 5863.08836207 4036.43062827 3987.37440758 5634.13661202 5963.43870968
+ 6490.90420561 6465.11976048 6245.32534247 6821.58300395 4306.98709677
+ 6199.54022989 5707.96658711 6248.86730424 3260.6599064  5146.765625
+ 5135.25045455 6164.80328349 5097.84184615 6569.5502677  5687.65830508
+ 1080.58227848 6164.13584906 6749.76086957 6748.95390071 6262.67546848
+ 5943.81973435 6580.55189873 6642.82231405 6207.11188811 6341.17638037
+ 6637.07744108]
+[DEBUG] 2023-08-24 15:17:13,331: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 15:17:16,205: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 15:17:19,054: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 15:17:22,070: inputs - load_gene_labels - 172 - Loading gene labels.
+[DEBUG] 2023-08-24 15:17:24,966: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 15:17:27,917: inputs - load_gene_labels - 172 - Loading gene labels.
+[INFO] 2023-08-24 15:17:31,007: transcriptomics - permute_data - 182 - Permuting data.
+[DEBUG] 2023-08-24 15:17:31,674: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 15:17:34,501: inputs - load_gene_labels - 172 - Loading gene labels.
+[INFO] 2023-08-24 15:17:37,776: transcriptomics - permute_data - 182 - Permuting data.
+[DEBUG] 2023-08-24 15:17:38,421: inputs - load_gene_expression - 142 - Loading gene_expression data.
+[DEBUG] 2023-08-24 15:17:41,269: inputs - load_gene_labels - 172 - Loading gene labels.
