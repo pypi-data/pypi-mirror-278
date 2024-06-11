@@ -1,0 +1,146 @@
+{
+    "$id": "ts_103976_core",
+    "$defs": { 
+        "AssociationPeriod" : {
+            "type" : "object",
+            "properties" : {
+                "StartTime" : { "$ref": "ts_103280_2017_07#/$defs/QualifiedDateTime" },
+                "EndTime" : { "$ref": "ts_103280_2017_07#/$defs/QualifiedDateTime" }
+            },
+            "required" : ["StartTime"]
+        },
+        "AssociationTime" : {
+            "oneOf" : [
+                { 
+                    "type" : "object",
+                    "properties" : {
+                        "PointInTime" : { "$ref": "ts_103280_2017_07#/$defs/QualifiedDateTime" }
+                    },
+                    "required" : ["PointInTime"]
+                },
+                { 
+                    "type" : "object",
+                    "properties" : {
+                        "PeriodInTime" : { "$ref": "#/$defs/AssociationPeriod" }
+                    },
+                    "required" : ["PeriodInTime"]
+                }
+            ]
+        },
+        "CommsID" : {
+            "oneOf" : [
+                {
+                    "type" : "object",
+                    "properties" : { "IMEI" : { "$ref" : "ts_103280_2017_07#/$defs/IMEI"} },
+                    "required" : ["IMEI"]
+                },
+                {
+                    "type" : "object",
+                    "properties" : { "IMSI" : { "$ref" : "ts_103280_2017_07#/$defs/IMSI"} },
+                    "required" : ["IMSI"]                    
+                },
+                {
+                    "type" : "object",
+                    "properties" : { "IMSI" : { "$ref" : "ts_103280_2017_07#/$defs/ICCID"} },
+                    "required" : ["ICCID"]                    
+                },
+                {
+                    "type" : "object",
+                    "properties" : { "IMSI" : { "$ref" : "ts_103280_2017_07#/$defs/PEIIMEI"} },
+                    "required" : ["PEIIMEI"]                    
+                },
+                {
+                    "type" : "object",
+                    "properties" : { "IMSI" : { "$ref" : "ts_103280_2017_07#/$defs/SUPIIMSI"} },
+                    "required" : ["SUPIIMSI"]                    
+                },
+                {
+                    "type" : "object",
+                    "properties" : { "IMSI" : { "$ref" : "ts_103280_2017_07#/$defs/SUPINAI"} },
+                    "required" : ["SUPINAI"]                    
+                },
+                {
+                    "type" : "object",
+                    "properties" : { "IMSI" : { "$ref" : "ts_103280_2017_07#/$defs/InternationalE164"} },
+                    "required" : ["MSISDN"]                    
+                },
+                {
+                    "type" : "object",
+                    "properties" : { "IMSI" : { "$ref" : "ts_103280_2017_07#/$defs/GPSIMSISDN"} },
+                    "required" : ["GPSIMSISDN"]                    
+                },
+                {
+                    "type" : "object",
+                    "properties" : { "IMSI" : { "$ref" : "ts_103280_2017_07#/$defs/GPSINAI"} },
+                    "required" : ["GPSINAI"]                    
+                },
+                {
+                    "type" : "object",
+                    "properties" : { "IMSI" : { "$ref" : "ts_103280_2017_07#/$defs/MACAddress"} },
+                    "required" : ["MACAddress"]                    
+                },
+                {
+                    "type" : "object",
+                    "properties" : { "IMSI" : { "$ref" : "ts_103280_2017_07#/$defs/EUI64"} },
+                    "required" : ["EUI164"]
+                }
+            ]
+        },
+        "Location"  : {
+            "oneOf" : [
+                { 
+                    "type"  : "object",
+                    "properties" : {
+                        "WGS84CoordinateDecimal" : { "$ref"  : "ts_103280_2017_07#/$defs/WGS84CoordinateDecimal"}
+                    }
+                }
+            ]
+        },
+        "SourceOfLocation" : {
+            "enum" : ["GNSS"]
+        },
+        "VINtoCommsIDRecord" : {
+            "type" : "object",
+            "properties" : {
+                "CommsID" : { "$ref" : "#/$defs/CommsID" },
+                "AssociationTime" : { "$ref" : "#/$defs/AssociationTime"}
+            },
+            "required" : ["CommsID"]
+        },
+        "CommsIDToVINRecord" : {
+            "type" : "object",
+            "properties" : {
+                "VIN" : { "$ref" : "ts_103280_2017_07#/$defs/VIN" }
+            },
+            "required" : ["VIN"]
+        },
+        "VINtoLocationRecord" : {
+            "type" : "object",
+            "properties" : {
+                "Location" : { "$ref" : "#/$defs/Location" },
+                "TimeOfLocation" : { "$ref" : "#/$defs/AssociationTime" },
+                "SourceOfLocation" : { "$ref" : "#/$defs/SourceOfLocation" },
+                "LocationRecordReason" : { "$ref" : "ts_103280_2017_07#/$defs/LongString" }
+            },
+            "required" : ["Location", "TimeOfLocation"]
+        },        
+        "ResultRecords" : {
+            "type" : "object",
+            "properties" : {
+                "VINtoCommsIDRecords" : {
+                    "type" : "array",
+                    "items" : { "$ref" : "#/$defs/VINtoCommsIDRecord"}
+                },
+                "CommsIDToVINRecords" : {
+                    "type" : "array",
+                    "items" : { "$ref" : "#/$defs/CommsIDToVINRecord"}
+                },
+                "VINtoLocationRecords" : {
+                    "type" : "array",
+                    "items" : { "$ref" : "#/$defs/VINtoLocationRecord"}
+                }         
+            }
+        }
+    },
+    "$ref": "#/$defs/ResultRecords"
+}

@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: ts103976
+Version: 0.1a3
+Summary: TS 103976 Example Implementation 
+Author-email: Mark Canterbury <markc@tencastle.com>
+Requires-Python: >=3.12
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: jsonschema >= 4.22
+Requires-Dist: requests >= 2
