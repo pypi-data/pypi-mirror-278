@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "integra-python-connect"
+version = "0.1.1"
+description = "test discription"
+authors = ["Seventech"]
+readme = "README.md"
+
+
+[project.urls]
+Homepage = "https://7tech-integra.ru/"
+Documentation = ""
+Repository = ""
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.111.0"
+pydantic-settings = "^2.3.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
