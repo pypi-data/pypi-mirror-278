@@ -1,0 +1,62 @@
+---
+- name: "basic1"
+  input: "mu. mu."
+  output:
+    - "mu."
+    - "mu."
+- name: "basic2"
+  input: "mu! mu!"
+  output:
+    - "mu!"
+    - "mu!"
+- name: "basic3"
+  input: "mu? mu?"
+  output:
+    - "mu?"
+    - "mu?"
+- name: "basic4"
+  input: "mi mu. mi wawa."
+  output:
+    - "mi mu."
+    - "mi wawa."
+- name: "empty"
+  input: ""
+  output: []
+- name: "whitespace"
+  input: "  \n  "
+  output: []
+- name: "newline basic"
+  input: "sina lon seme?\nmi wile lon poka...\n"
+  output:
+    - "sina lon seme?"
+    - "mi wile lon poka."
+    - "."
+    - "."
+- name: "newline alone"
+  input: "sina lon seme\nmi wile lon poka"
+  output:
+    - "sina lon seme"
+    - "mi wile lon poka"
+- name: "dash"
+  input: "mi sona ala e ni- sina seme a"
+  output:
+    - "mi sona ala e ni-"
+    - "sina seme a"
+- name: "comma"
+  input: "mi mu tawa sina, mi wawa e sina."
+  output:
+    - "mi mu tawa sina, mi wawa e sina."
+- name: "quotes"
+  input: "toki li tan kulupu Kuko li ni: 'o ike ala!'"
+  output: # expected; we split on right of all sentence-ending puncts
+    - "toki li tan kulupu Kuko li ni:"
+    - "'"
+    - "o ike ala!"
+    - "'"
+- name: "discovered case 1"
+  input: "ona li ken lukin e sitelen [_ike_nanpa_lete_ike]. ni li pona kin."
+  output:
+    - "ona li ken lukin e sitelen ["
+    - "_ike_nanpa_lete_ike]"
+    - "."
+    - "ni li pona kin."
