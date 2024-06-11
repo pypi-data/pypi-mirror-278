@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: odoo-addons-oca-hr-attendance
+Version: 15.0.20240610.0
+Summary: Meta package for oca-hr-attendance Odoo addons
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: Framework :: Odoo :: 15.0
+Requires-Dist: odoo-addon-hr-attendance-autoclose <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-hr-attendance-calendar-view <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-hr-attendance-contract-missing-days <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-hr-attendance-geolocation <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-hr-attendance-missing-days <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-hr-attendance-modification-tracking <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-hr-attendance-overtime-manual <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-hr-attendance-reason <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-hr-attendance-report-theoretical-time <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-hr-attendance-rfid <15.1dev,>=15.0dev
+
+UNKNOWN
+
