@@ -1,0 +1,12 @@
+{
+  "best_metric": null,
+  "best_model_checkpoint": null,
+  "epoch": 0,
+  "eval_steps": 0,
+  "global_step": 0,
+  "is_hyper_param_search": false,
+  "is_local_process_zero": true,
+  "is_world_process_zero": true,
+  "train_batch_size": 1
+
+}
