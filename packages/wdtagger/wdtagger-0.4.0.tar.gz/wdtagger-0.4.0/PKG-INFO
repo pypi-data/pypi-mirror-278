@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: wdtagger
+Version: 0.4.0
+Summary: 
+Author: Jianqi Pan
+Author-email: jannchie@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: huggingface-hub (>=0.23.3,<0.24.0)
+Requires-Dist: onnxruntime (>=1.18.0,<2.0.0)
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: pillow (>=10.3.0,<11.0.0)
+Requires-Dist: rich (>=13.7.1,<14.0.0)
+Description-Content-Type: text/markdown
+
+# wdtagger
+
+`wdtagger` is a simple and easy-to-use wrapper for the tagger model created by [SmilingWolf](https://github.com/SmilingWolf) which is specifically designed for tagging anime illustrations.
+
+## Installation
+
+You can install `wdtagger` via pip:
+
+```bash
+pip install wdtagger
+```
+
+## Usage
+
+Below is a basic example of how to use wdtagger in your project:
+
+```python
+from PIL import Image
+from wdtagger import Tagger
+
+tagger = Tagger() # You can provide the model_repo, the default is "SmilingWolf/wd-swinv2-tagger-v3"
+image = Image.open("image.jpg")
+result = tagger.tag(image)
+print(result)
+```
+
