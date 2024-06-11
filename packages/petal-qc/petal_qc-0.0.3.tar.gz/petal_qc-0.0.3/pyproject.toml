@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "petal_qc"
+version = "0.0.3"
+authors = [
+  { name="Carlos Lacasta", email="carlos.lacasta@cern.ch" },
+]
+description = "A collection of scripts for Petal CORE QC."
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+  "itkdb",
+  "itkdb_gtk",
+  "numpy",
+  "matplotlib",
+  "lmfit",
+  "openpyxl",
+  "pandas",
+  "python_dateutil",
+  "python_docx",
+  "scipy",
+  "scikit-image"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.gui-scripts]
+coreMetrology = "petal_qc:coreMetrology"
+coreThermal = "petal_qc:coreThermal"
+bustapeReport = "petal_qc:bustapeReport"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"*" = ["*.desktop", "*.svg", "*.npz"]
+
+[project.urls]
+"Homepage" = "https://gitlab.cern.ch/atlas-itk/sw/db/itk-pdb-gtk-gui-utils"
+"Bug Tracker" = "https://gitlab.cern.ch/atlas-itk/sw/db/itk-pdb-gtk-gui-utils/-/issues"
