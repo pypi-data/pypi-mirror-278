@@ -1,0 +1,2 @@
+class BaseRPCHandler:
+    factory = None

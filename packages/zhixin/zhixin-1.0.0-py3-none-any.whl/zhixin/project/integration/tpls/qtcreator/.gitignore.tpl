@@ -1,0 +1,2 @@
+.zx
+.qtc_clangd
