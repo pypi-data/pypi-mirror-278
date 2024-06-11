@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: py-logingov-client
+Version: 0.0.2
+Summary: Python Implementation of Login.gov Client
+Home-page: https://github.com/Earth-Advantage/py-logingov
+Author: Fable Turas
+Author-email: fable@rainsoftware.tech
+Maintainer: Earth-Advantage
+Maintainer-email: admin@greenbuildingregistry.com
+License: BSD-3-Clause
+Keywords: login.gov,logindotgov,oidc,python,client
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: PyJWT
+Requires-Dist: jwcrypto
+
