@@ -1,0 +1,27 @@
+{
+  "name": "gradio-modifiable-gallery",
+  "version": "0.1.0",
+  "description": "Gradio Modifiable Gallery",
+  "license": "Apache-2.0",
+  "author": "",
+  "type": "module",
+  "exports": {
+    ".": "./Index.svelte",
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@gradio/atoms": "0.7.3",
+    "@gradio/button": "^0.2.37",
+    "@gradio/client": "0.19.3",
+    "@gradio/icons": "0.4.1",
+    "@gradio/statustracker": "0.5.4",
+    "@gradio/upload": "0.10.4",
+    "@gradio/utils": "0.4.1",
+    "@gradio/file": "^0.7.7",
+    "dequal": "^2.0.2"
+  },
+  "devDependencies": {
+    "@gradio/preview": "^0.9.1"
+  },
+  "main_changeset": true
+}
