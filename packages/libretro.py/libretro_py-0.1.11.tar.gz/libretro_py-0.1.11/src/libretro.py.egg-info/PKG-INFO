@@ -1,0 +1,157 @@
+Metadata-Version: 2.1
+Name: libretro.py
+Version: 0.1.11
+Summary: A libretro frontend for Python intended for testing cores.
+Author-email: Jesse Talavera <jesse@jesse.tg>
+Maintainer-email: Jesse Talavera <jesse@jesse.tg>
+License: MIT License
+Project-URL: Homepage, https://github.com/JesseTG/libretro.py
+Project-URL: Issues, https://github.com/JesseTG/libretro.py/issues
+Project-URL: Repository, https://github.com/JesseTG/libretro.py
+Project-URL: Changelog, https://github.com/JesseTG/libretro.py/blob/master/CHANGELOG.md
+Keywords: libretro,retroarch,emulation,testing,retrogaming
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Environment :: Console :: Framebuffer
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: C
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Games/Entertainment
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Testing
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typing_extensions==4.*; python_version < "3.12"
+Provides-Extra: build
+Requires-Dist: build==1.2.1; extra == "build"
+Requires-Dist: setuptools>=69.1.1; extra == "build"
+Requires-Dist: twine==5.0.0; extra == "build"
+Requires-Dist: pre-commit==3.7.*; extra == "build"
+Provides-Extra: dev
+Requires-Dist: bandit==1.7.*; extra == "dev"
+Requires-Dist: black==24.*; extra == "dev"
+Requires-Dist: flake8==6.*; extra == "dev"
+Requires-Dist: isort==5.*; extra == "dev"
+Requires-Dist: mypy==1.5.*; extra == "dev"
+Requires-Dist: libretro.py[build]; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: Sphinx==7.*; extra == "docs"
+Requires-Dist: sphinx-autobuild==2024.*; extra == "docs"
+Requires-Dist: furo; extra == "docs"
+Provides-Extra: doc
+Requires-Dist: libretro.py[docs]; extra == "doc"
+Provides-Extra: opengl
+Requires-Dist: moderngl[headless]==5.10.*; extra == "opengl"
+Requires-Dist: PyOpenGL==3.1.*; extra == "opengl"
+Provides-Extra: opengl-window
+Requires-Dist: moderngl-window==2.4.*; extra == "opengl-window"
+Requires-Dist: libretro.py[opengl]; extra == "opengl-window"
+Provides-Extra: all
+Requires-Dist: libretro.py[build,dev,docs,opengl,opengl-window]; extra == "all"
+
+# libretro.py
+
+A Python binding for [libretro][libretro] intended for testing cores,
+but suitable for any purpose.
+Ease of use, flexibility, and complete API support are top priorities.
+
+<div align="center">
+
+[![Workflow Status](https://github.com/JesseTG/libretro.py/actions/workflows/release.yml/badge.svg)](https://github.com/JesseTG/libretro.py/actions/workflows/release.yml)
+[![PyPi](https://img.shields.io/pypi/v/libretro.py)](https://pypi.org/project/libretro.py)
+[![License](https://img.shields.io/github/license/JesseTG/libretro.py)](LICENSE)
+
+</div>
+
+# Supported Environments
+
+libretro.py has the following requirements:
+
+- Python 3.11 or newer.
+  May not work on alternative Python implementations like PyPy.
+- Supported on Windows, macOS, and Linux.
+  May work on other platforms, but no promises.
+
+Nothing else is required for most functionality,
+but some [extra features](#extras) have additional dependencies or constraints.
+
+If contributing then [`just`][just] is optional but recommended,
+as it will simplify most development tasks.
+For details, run `just` (no arguments) in the project root.
+
+# Installing
+
+libretro.py supports **Python 3.11 or newer**.
+Nothing else is required for most functionality,
+but some extra features have additional dependencies.
+
+You can install libretro.py with `pip` like so:
+
+```bash
+# Install the base libretro.py
+pip install libretro.py
+```
+
+Using a virtual environment is recommended:
+
+```bash
+# Create a virtual environment
+python -m venv ./venv
+
+# Activate the virtual environment (in Bash)
+source ./venv/bin/activate
+
+# Activate the virtual environment (in PowerShell)
+./venv/Scripts/activate.ps1 
+```
+
+Or if you have [`just`][just] installed, let it figure out the details for you:
+
+```bash
+just venv
+```
+
+## Extras
+
+To install additional features,
+add one or more of the following extras to the `install` command:
+
+- **`dev`:** Assorted tools used to help develop libretro.py.
+  Required if contributing to libretro.py.
+- **`opengl`:** Support for the built-in OpenGL video driver.
+  Required if testing a core's OpenGL support.
+- **`opengl-window`:** Same as the `opengl` extra,
+  but with support for opening an actual window.
+  Can help simplify some debugging tasks,
+  e.g. RenderDoc usage.
+
+For example, if you want to submit an improvement to the OpenGL video driver,
+you would install libretro.py like so:
+
+```bash
+pip install libretro.py[opengl,dev]
+```
+
+And if you just want to test your libretro core's OpenGL support:
+
+```bash
+pip install libretro.py[opengl]
+```
+
+Some of these extras have additional dependencies.
+
+### OpenGL
+
+If using OpenGL support on Linux,
+you may need to install the `libopengl0` package.
+
+[just]: https://just.systems
+[libretro]: https://www.libretro.com

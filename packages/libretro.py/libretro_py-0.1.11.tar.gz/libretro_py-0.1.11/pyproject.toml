@@ -1,0 +1,93 @@
+[project]
+name = "libretro.py"
+dynamic = ["version"]
+description = "A libretro frontend for Python intended for testing cores."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT License"}
+authors = [
+    {name = "Jesse Talavera", email = "jesse@jesse.tg"},
+]
+maintainers = [
+    {name = "Jesse Talavera", email = "jesse@jesse.tg"},
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Environment :: Console :: Framebuffer",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: C",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Games/Entertainment",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Testing",
+]
+keywords = ["libretro", "retroarch", "emulation", "testing", "retrogaming"]
+dependencies = [
+    "typing_extensions == 4.*; python_version < '3.12'",
+]
+
+[project.optional-dependencies]
+build = [
+    'build == 1.2.1',
+    'setuptools>=69.1.1',
+    'twine == 5.0.0',
+    'pre-commit == 3.7.*',
+]
+dev = [
+    'bandit == 1.7.*',
+    'black == 24.*',
+    'flake8 == 6.*',
+    'isort == 5.*',
+    'mypy == 1.5.*',
+    "libretro.py[build]"
+]
+docs = [
+    'Sphinx == 7.*',
+    'sphinx-autobuild == 2024.*',
+    'furo',
+]
+doc = ["libretro.py[docs]"] # Alias for the docs extra
+opengl = [
+    'moderngl[headless] == 5.10.*',
+    'PyOpenGL == 3.1.*',
+]
+opengl-window = [
+    'moderngl-window == 2.4.*',
+    "libretro.py[opengl]"
+]
+all = ["libretro.py[build,dev,docs,opengl,opengl-window]"]
+
+[project.urls]
+Homepage = "https://github.com/JesseTG/libretro.py"
+Issues = "https://github.com/JesseTG/libretro.py/issues"
+Repository = "https://github.com/JesseTG/libretro.py"
+Changelog = "https://github.com/JesseTG/libretro.py/blob/master/CHANGELOG.md"
+
+[build-system]
+requires = [
+    'build == 1.2.1',
+    'setuptools>=69.1.1',
+    'twine == 5.0.0',
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 99
+
+[tool.bandit]
+# Don't flag asserts
+skips = ["B101"]
+
+[tool.isort]
+profile = "black"
