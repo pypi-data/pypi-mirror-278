@@ -1,0 +1,14 @@
+torch>=2.1
+torchvision
+pandas>=1.4.3
+numpy>=1.22.3
+matplotlib>=3.5.2
+scikit-learn>=1.1.1
+scikit-image>=0.19
+tqdm>=4.64.0
+opencv-python>=4.8
+facenet_pytorch==2.5.3
+tensorboard
+gdown==5.0.1
+yamlparser
+termcolor

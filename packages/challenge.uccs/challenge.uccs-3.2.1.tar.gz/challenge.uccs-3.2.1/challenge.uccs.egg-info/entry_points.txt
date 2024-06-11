@@ -1,0 +1,5 @@
+[console_scripts]
+baseline_detection = facerec.script.baseline_detection:main
+baseline_recognition = facerec.script.baseline_recognition:main
+evaluation = facerec.script.evaluation:main
+scoring = facerec.script.scoring:main
