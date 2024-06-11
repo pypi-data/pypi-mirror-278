@@ -1,0 +1,36 @@
+Metadata-Version: 2.3
+Name: Messkit
+Version: 0.2.0
+Summary: Generic-ish Data Utility App
+Project-URL: Homepage, https://redmine.rattailproject.org/projects/messkit
+Project-URL: Repository, https://kallithea.rattailproject.org/rattail-project/messkit
+Project-URL: Issues, https://redmine.rattailproject.org/projects/messkit/issues
+Project-URL: Changelog, https://kallithea.rattailproject.org/rattail-project/messkit/files/master/CHANGELOG.md
+Author-email: Lance Edgar <lance@edbob.org>
+License: GNU GPL v3+
+License-File: COPYING.txt
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Pyramid
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Office/Business
+Requires-Dist: mysql-connector-python
+Requires-Dist: prompt-toolkit
+Requires-Dist: psycopg2
+Requires-Dist: rich
+Requires-Dist: sphinx
+Requires-Dist: tailbone
+Requires-Dist: typer
+Description-Content-Type: text/x-rst
+
+
+Messkit
+========
+
+Hopefully some kind of generic data manipulation thingy, we'll see...

@@ -1,0 +1,69 @@
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[project]
+name = "Messkit"
+version = "0.2.0"
+description = "Generic-ish Data Utility App"
+readme = "README.rst"
+authors = [{name = "Lance Edgar", email = "lance@edbob.org"}]
+license = {text = "GNU GPL v3+"}
+classifiers = [
+        "Development Status :: 3 - Alpha",
+        "Environment :: Console",
+        "Environment :: Web Environment",
+        "Framework :: Pyramid",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+        "Natural Language :: English",
+        "Operating System :: POSIX :: Linux",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Topic :: Office/Business",
+]
+dependencies = [
+
+        # TODO: user should get to choose which of these is needed?
+        "mysql-connector-python",
+        "psycopg2",
+
+        "prompt_toolkit",
+        "rich",
+        "Sphinx",
+        "Tailbone",
+        "typer",
+]
+
+
+[project.scripts]
+messkit = "messkit.commands:messkit_typer"
+
+
+[project.entry-points."paste.app_factory"]
+main = "messkit.web.app:main"
+
+
+[project.entry-points."rattail.config.extensions"]
+messkit = "messkit.config:MesskitConfig"
+
+
+[project.urls]
+Homepage = "https://redmine.rattailproject.org/projects/messkit"
+Repository = "https://kallithea.rattailproject.org/rattail-project/messkit"
+Issues = "https://redmine.rattailproject.org/projects/messkit/issues"
+Changelog = "https://kallithea.rattailproject.org/rattail-project/messkit/files/master/CHANGELOG.md"
+
+
+[tool.commitizen]
+version_provider = "pep621"
+tag_format = "v$version"
+update_changelog_on_bump = true
+
+
+# [tool.hatch.build.targets.sdist]
+# exclude = [
+#   "machines/",
+# ]
