@@ -1,0 +1,16 @@
+MANIFEST.in
+pyproject.toml
+setup.py
+crx/Cogs.py
+crx/Embed.py
+crx/Invite.py
+crx/Loguru.py
+crx/Reader.py
+crx/Restart.py
+crx/Tortoise.py
+crx/__init__.py
+crx_utils.egg-info/PKG-INFO
+crx_utils.egg-info/SOURCES.txt
+crx_utils.egg-info/dependency_links.txt
+crx_utils.egg-info/requires.txt
+crx_utils.egg-info/top_level.txt
