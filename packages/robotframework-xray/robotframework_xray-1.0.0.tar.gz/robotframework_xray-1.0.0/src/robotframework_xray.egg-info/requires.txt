@@ -1,0 +1,7 @@
+robotframework==7.0.1
+robotframework-seleniumlibrary==6.4.0
+robotframework-screencaplibrary==1.6.0
+beautifulsoup4==4.12.3
+requests==2.32.3
+load-dotenv==0.1.0
+pynput==1.7.7
