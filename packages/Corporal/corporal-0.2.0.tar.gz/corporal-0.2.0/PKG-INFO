@@ -1,0 +1,34 @@
+Metadata-Version: 2.3
+Name: Corporal
+Version: 0.2.0
+Summary: Companion Back-end for CORE-POS
+Project-URL: Homepage, https://redmine.rattailproject.org/projects/corepos-integration
+Project-URL: Repository, https://kallithea.rattailproject.org/rattail-project/corporal
+Project-URL: Issues, https://redmine.rattailproject.org/projects/corepos-integration/issues
+Project-URL: Changelog, https://kallithea.rattailproject.org/rattail-project/corporal/files/master/CHANGELOG.md
+Author-email: Lance Edgar <lance@edbob.org>
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Pyramid
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Office/Business
+Requires-Dist: invoke
+Requires-Dist: mysql-connector-python
+Requires-Dist: psycopg2
+Requires-Dist: tailbone
+Requires-Dist: tailbone-corepos
+Requires-Dist: typer
+Description-Content-Type: text/markdown
+
+<!-- -*- mode: markdown; -*- -->
+
+# Corporal
+
+This is a starter Rattail project.  See the
+[Rattail website](https://rattailproject.org/)
+for more info.

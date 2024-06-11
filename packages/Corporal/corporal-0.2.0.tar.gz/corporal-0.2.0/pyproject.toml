@@ -1,0 +1,76 @@
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[project]
+name = "Corporal"
+version = "0.2.0"
+description = "Companion Back-end for CORE-POS"
+readme = "README.md"
+authors = [{name = "Lance Edgar", email = "lance@edbob.org"}]
+classifiers = [
+        "Development Status :: 3 - Alpha",
+        "Environment :: Console",
+        "Environment :: Web Environment",
+        "Framework :: Pyramid",
+        "Intended Audience :: Developers",
+        "Natural Language :: English",
+        "Operating System :: POSIX :: Linux",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Topic :: Office/Business",
+]
+dependencies = [
+
+        # NOTE: we do not specify a restriction here, but in practice you may
+        # need to explicitly install e.g. 8.0.17 depending on how it behaves...
+        "mysql-connector-python",
+
+        "invoke",
+        "psycopg2",
+        "Tailbone",
+        "tailbone-corepos",
+        "typer",
+]
+
+
+[project.scripts]
+corporal = "corporal.commands:corporal_typer"
+
+
+[project.entry-points."paste.app_factory"]
+main = "corporal.web.app:main"
+
+
+[project.entry-points."rattail.config.extensions"]
+corporal = "corporal.config:CorporalConfig"
+
+
+[project.entry-points."rattail.emails"]
+corporal = "corporal.emails"
+
+
+[project.entry-points."rattail.projects"]
+corepos_poser = "corporal.projects.corepos_poser:COREPOSPoserProjectGenerator"
+corporal = "corporal.projects.corporal:CorporalProjectGenerator"
+
+
+[project.urls]
+Homepage = "https://redmine.rattailproject.org/projects/corepos-integration"
+Repository = "https://kallithea.rattailproject.org/rattail-project/corporal"
+Issues = "https://redmine.rattailproject.org/projects/corepos-integration/issues"
+Changelog = "https://kallithea.rattailproject.org/rattail-project/corporal/files/master/CHANGELOG.md"
+
+
+[tool.commitizen]
+version_provider = "pep621"
+tag_format = "v$version"
+update_changelog_on_bump = true
+
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+  "machines/",
+]
