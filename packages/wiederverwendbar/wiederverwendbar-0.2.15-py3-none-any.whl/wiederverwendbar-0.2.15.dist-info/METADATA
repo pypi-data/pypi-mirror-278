@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: wiederverwendbar
+Version: 0.2.15
+Summary: A collection of scripts, classes and tools they are \"wiederverwendbar\".
+Author-Email: Julius Koenig <info@bastelquartier.de>
+License: GPL-3.0
+Requires-Python: >=3.9
+Requires-Dist: pydantic>=2.7.1
+Requires-Dist: pydantic-settings>=2.2.1
+Requires-Dist: rich>=13.7.1; extra == "rich"
+Requires-Dist: typer>=0.12.3; extra == "typer"
+Requires-Dist: pythonping>=1.1.4; extra == "ping"
+Requires-Dist: mongoengine>=0.28.2; extra == "mongoengine"
+Provides-Extra: rich
+Provides-Extra: typer
+Provides-Extra: ping
+Provides-Extra: mongoengine
+Description-Content-Type: text/markdown
+
+# wiederverwendbar
