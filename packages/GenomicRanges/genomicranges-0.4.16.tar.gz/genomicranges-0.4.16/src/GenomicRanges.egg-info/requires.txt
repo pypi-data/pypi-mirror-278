@@ -1,0 +1,17 @@
+biocframe<0.6.0,>=0.5.3
+iranges[optional]<0.3.0,>=0.2.3
+biocutils<0.2.0,>=0.1.3
+numpy
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[optional]
+joblib
+pandas
+
+[testing]
+setuptools
+pytest
+pytest-cov
+pandas
