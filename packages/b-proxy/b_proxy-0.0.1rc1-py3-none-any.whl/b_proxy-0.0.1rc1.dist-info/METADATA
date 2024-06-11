@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: b-proxy
+Version: 0.0.1rc1
+Summary: 
+Author: Antoni Oktha Fernandes
+Author-email: 37358597+DesKaOne@users.noreply.github.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: pydantic (>=2.7.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+
