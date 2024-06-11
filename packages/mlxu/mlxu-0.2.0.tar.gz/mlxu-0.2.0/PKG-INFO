@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: mlxu
+Version: 0.2.0
+Summary: Machine learning experiment utils.
+Home-page: https://github.com/young-geng/mlxu
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: absl-py
+Requires-Dist: ml-collections
+Requires-Dist: wandb
+Requires-Dist: gcsfs
+Requires-Dist: cloudpickle
+Requires-Dist: numpy
+Provides-Extra: jax
+Requires-Dist: jax; extra == "jax"
