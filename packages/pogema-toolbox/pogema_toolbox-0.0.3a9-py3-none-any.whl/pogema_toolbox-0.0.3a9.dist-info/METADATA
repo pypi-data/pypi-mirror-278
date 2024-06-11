@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: pogema-toolbox
+Version: 0.0.3a9
+Summary: Evaluation toolbox for Pogema environment
+Home-page: https://github.com/Tviskaron/pogema-toolbox
+Author: Alexey Skrynnik
+License: Apache License 2.0
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: loguru <=0.7.2
+Requires-Dist: wandb <=0.13.4,>=0.12.9
+Requires-Dist: matplotlib <=3.8.3
+Requires-Dist: seaborn ~=0.13.2
+Requires-Dist: tabulate <=0.8.10,>=0.8.7
+Requires-Dist: importlib-metadata ==4.13.0
+Requires-Dist: dask[distributed]
+Requires-Dist: pydantic <=1.9.1,>=1.8.2
+Requires-Dist: numpy >=1.21
+Requires-Dist: pandas <=2.2.1
+Requires-Dist: PyYAML <=6.0.1
+Requires-Dist: pogema >=1.2.2
+
+# POGEMA Toolbox
+
+The POGEMA Toolbox is a comprehensive framework designed to facilitate the testing of learning-based approaches within the POGEMA environment. This toolbox offers a unified interface that enables the seamless execution of any learnable MAPF algorithm in POGEMA. Firstly, the toolbox provides robust management tools for custom maps, allowing users to register and utilize these maps effectively within POGEMA. Secondly, it enables the concurrent execution of multiple testing instances across various algorithms in a distributed manner, leveraging Dask for scalable processing. The results from these instances are then aggregated for analysis. Lastly, the toolbox includes visualization capabilities, offering a convenient method to graphically represent aggregated results through detailed plots. This functionality enhances the interpretability of outcomes, facilitating a deeper understanding of algorithm performance. 
