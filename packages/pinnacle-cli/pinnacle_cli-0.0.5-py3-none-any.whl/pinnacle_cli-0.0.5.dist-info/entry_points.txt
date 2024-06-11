@@ -1,0 +1,3 @@
+[console_scripts]
+pinnacle=pinnacle_cli.main:main
+
