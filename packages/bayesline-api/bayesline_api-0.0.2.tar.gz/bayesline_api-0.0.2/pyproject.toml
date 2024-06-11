@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "bayesline-api"
+version = "0.0.2"
+description = ""
+authors = []
+packages = [
+  {include = "bayesline", from = "src"}
+]
+
+
+[tool.poetry_bumpversion.file."src/bayesline/api/__init__.py"]
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pydantic = "^2.6.3"
+pandas = ">=1.5.3"
+
+[tool.poetry.group.dev.dependencies]
+black = "*"
+pre-commit = "*"
+pytest = "*"
+ruff = "*"
+mypy = "^1.8.0"
+isort = "^5.13.2"
+pytest-cov = "^4.1.0"
+pandas-stubs = "^2.2.1.240316"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "aws-pypi"
+url = "http://18.118.81.240:8080"
+priority = "primary"
+
+
+[tool.ruff]
+ignore = ["PLR0913"]
