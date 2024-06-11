@@ -1,0 +1,7 @@
+[console_scripts]
+diff-tokenizer = dom_tokenizers.scripts.diff:main
+dump-breaking-inputs = dom_tokenizers.scripts.dump_breaking_inputs:main
+dump-tokenizations = dom_tokenizers.scripts.dump:main
+profile-tokenizer = dom_tokenizers.scripts.profile:main
+tokenizer-diff = dom_tokenizers.scripts.diff:main
+train-tokenizer = dom_tokenizers.train:main
