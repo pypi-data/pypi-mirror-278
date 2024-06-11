@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: jarvisportal
+Version: 1.0.11
+Summary: Give Chat GPT access to your terminal
+Home-page: https://github.com/tonylampada/jarvisportal
+Author: Tony Lampada
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: openai ==1.32.0
+Requires-Dist: pytest ==7.4.3
+Requires-Dist: sounddevice ==0.4.6
+Requires-Dist: numpy ==1.26.2
+Requires-Dist: scipy ==1.11.3
+Requires-Dist: websockets ==12.0
+Requires-Dist: requests ==2.31.0
+Requires-Dist: llamaapi ==0.1.36
+

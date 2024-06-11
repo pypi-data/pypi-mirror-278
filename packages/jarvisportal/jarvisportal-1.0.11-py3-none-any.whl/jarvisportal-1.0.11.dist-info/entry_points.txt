@@ -1,0 +1,3 @@
+[console_scripts]
+gptexec = jarvisportal.gptexec:main
+jarvisportal = jarvisportal.jarvisportal:main
