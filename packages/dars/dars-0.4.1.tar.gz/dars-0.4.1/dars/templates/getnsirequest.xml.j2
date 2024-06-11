@@ -1,0 +1,15 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.example.com">
+<soapenv:Header/>
+<soapenv:Body>
+<ns2:getNsiRequest xmlns:ns2="http://zakupki.gov.ru/fz44/get-docs-mis/ws" xmlns:ns3="http://zakupki.gov.ru/oos/base/1">
+{% include 'index.xml.j2' %}
+{% if context.base == 'fz44' -%}
+<selectionParams44>
+	<nsiCode>{{ context.nsiCode }}</nsiCode>
+	<nsiKind>{{ context.nsiKind.value }}</nsiKind>
+	{% if context.isHidden %}<isHidden>true</isHidden>{% endif %}
+</selectionParams44>
+{% endif -%}
+</ns2:getNsiRequest>
+</soapenv:Body>
+</soapenv:Envelope>
