@@ -1,0 +1,100 @@
+# Pansa
+
+Pansa is a command-line tool and a Python package to build a syntelog-based pan-genome matrix.
+
+## Overview
+
+- **Extract Longest Protein**: Extract the longest amino acid sequence for each gene from the DNA sequence file using the GFF3 annotation file for subsequent synteny identification.
+- **Run DAGchainer**: Perform synteny analysis to identify syntenic gene pairs.
+- **Merge Syntelog Results**: Merge syntenic results to generate the final pan-genome matrix.
+- **Polish Matrix**: Generate a more readable and simplified pan-genome matrix, and export a plot in various formats (PNG, SVG, PDF).
+- **Other Functions**: Includes reading parameters from configuration files, controlling log output levels, and more.
+
+## Installation
+
+You can install Pansa using pip:
+
+```bash
+pip install pansa
+```
+## Usage
+It is recommended to create a new folder to run the processes in this software to avoid unnecessary bugs.
+
+### Extract Longest Protein
+```bash
+pansa extract_longest_protein <config_file> --verbose <ERROR|INFO|DEBUG>
+```
+
+### Run DAGchainer
+```bash
+pansa blastp_2_dagchainer <config_file> --thread <number_of_threads> --D <distance> --g <gap_length> --A <aligned_pairs> --evalue <evalue_threshold> --verbose <ERROR|INFO|DEBUG>
+```
+
+### Merge Syntelog Results
+```bash
+pansa merge <config_file> --output <output_file> --verbose <ERROR|INFO|DEBUG>
+```
+
+### Polish Matrix
+```bash
+pansa polish <config_file> --pan_matrix <pan_matrix_file> --outpng --outsvg --outpdf --verbose <ERROR|INFO|DEBUG>
+```
+
+## Input File Format
+
+### Configuration File Format
+The configuration file should contain the following format:
+```
+<sample_name>    <fasta_path>    <gff3_path>
+```
+For example:
+```
+Mo17    data/Zm-Mo17-REFERENCE-CAU-2.0.fa       data/Zm-Mo17-REFERENCE-CAU-2.0_Zm00014ba.gff3
+B73     data/Zm-B73-REFERENCE-NAM-5.0.fa        data/Zm-B73-REFERENCE-NAM-5.0_Zm00001eb.1.gff3
+Oh7B    data/Zm-Oh7B-REFERENCE-NAM-1.0.fa       data/Zm-Oh7B-REFERENCE-NAM-1.0_Zm00038ab.1.gff3
+```
+or:
+```
+Mo17    Mo17/Zm-Mo17-REFERENCE-CAU-2.0.fa       Mo17/Zm-Mo17-REFERENCE-CAU-2.0_Zm00014ba.gff3
+B73     B73/Zm-B73-REFERENCE-NAM-5.0.fa        B73/Zm-B73-REFERENCE-NAM-5.0_Zm00001eb.1.gff3
+Oh7B    Oh7B/Zm-Oh7B-REFERENCE-NAM-1.0.fa       Oh7B/Zm-Oh7B-REFERENCE-NAM-1.0_Zm00038ab.1.gff3
+```
+## Example
+
+Suppose you have a configuration file `config.txt` with the following content:
+
+```
+sample1    /data/sample1.fasta    /data/sample1.gff3
+sample2    /data/sample2.fasta    /data/sample2.gff3
+```
+
+1. Extract the longest protein sequence:
+
+```bash
+pansa extract_longest_protein config.txt --verbose INFO
+```
+
+2. Run DAGchainer:
+
+```bash
+pansa blastp_2_dagchainer config.txt --thread 8 --D 1000000 --g 40000 --A 5 --evalue 1e-5 --verbose INFO
+```
+
+3. Merge syntelog results:
+
+```bash
+pansa merge config.txt --output SG_test --verbose INFO
+```
+
+4. Polish the matrix:
+
+```bash
+pansa polish config.txt --pan_matrix SG_test --outpng --outsvg --outpdf --verbose INFO
+```
+## Log Output Levels
+You can control the log output level using the `--verbose` parameter. The available options are: CRITICAL, ERROR, WARNING, INFO, DEBUG, NOTSET.
+
+## Developer Information
+For more details and technical support, please contact the developers or visit the project homepage.
+
+E-mail:caocao@cau.edu.cn# pansg
