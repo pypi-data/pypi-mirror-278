@@ -1,0 +1,2 @@
+[console_scripts]
+ziti-router = ziti_router.main:main
