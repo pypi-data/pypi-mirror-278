@@ -1,0 +1,2 @@
+class SirenException(Exception):
+    pass
