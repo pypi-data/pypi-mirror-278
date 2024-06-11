@@ -1,0 +1,95 @@
+#!/usr/bin/env python
+# (C) Copyright 2024 ECMWF.
+#
+# This software is licensed under the terms of the Apache Licence Version 2.0
+# which can be obtained at http://www.apache.org/licenses/LICENSE-2.0.
+# In applying this licence, ECMWF does not waive the privileges and immunities
+# granted to it by virtue of its status as an intergovernmental organisation
+# nor does it submit to any jurisdiction.
+
+# https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
+
+[build-system]
+requires = [
+  "setuptools>=60",
+  "setuptools-scm>=8",
+]
+
+[project]
+name = "anemoi-inference"
+
+description = "A package to hold various functions to support training of ML models."
+keywords = [
+  "ai",
+  "inference",
+  "tools",
+]
+
+license = { file = "LICENSE" }
+authors = [
+  { name = "European Centre for Medium-Range Weather Forecasts (ECMWF)", email = "software.support@ecmwf.int" },
+]
+
+requires-python = ">=3.9"
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+
+dynamic = [
+  "version",
+]
+dependencies = [
+  "anemoi-utils>=0.3",
+  "numpy",
+  "pyyaml",
+  "semantic-version",
+  "torch",
+]
+
+optional-dependencies.all = [
+  "ai-models>=0.6.1",
+  "anemoi-datasets",
+  "anemoi-utils>=0.3",
+  "numpy",
+  "pytest",
+  "pyyaml",
+  "semantic-version",
+  "torch",
+  "tqdm",
+]
+
+optional-dependencies.dev = [
+  "pre-commit",
+]
+
+optional-dependencies.plugin = [
+  "ai-models>=0.6.1",
+  "tqdm",
+]
+
+optional-dependencies.test = [
+  "anemoi-datasets",
+  "pytest",
+]
+
+urls.Documentation = "https://anemoi-inference.readthedocs.io/"
+urls.Homepage = "https://github.com/ecmwf/anemoi-inference/"
+urls.Issues = "https://github.com/ecmwf/anemoi-inference/issues"
+urls.Repository = "https://github.com/ecmwf/anemoi-inference/"
+scripts.anemoi-inference = "anemoi.inference.__main__:main"
+
+entry-points."ai_models.model".anemoi = "anemoi.inference.plugin:AIModelPlugin"
+
+[tool.setuptools_scm]
+version_file = "src/anemoi/inference/_version.py"
