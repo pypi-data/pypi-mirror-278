@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+web1337/__init__.py
+web1337/build_addons.py
+web1337/web1337.py
+web1337.egg-info/PKG-INFO
+web1337.egg-info/SOURCES.txt
+web1337.egg-info/dependency_links.txt
+web1337.egg-info/top_level.txt
+web1337/api/__init__.py
+web1337/api/block_api.py
+web1337/api/misc_api.py
+web1337/api/smart_contract_api.py
+web1337/api/state_api.py
+web1337/api/txs_api.py

@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: web1337
+Version: 0.1.0
+Summary: Python SDK to work with KLYNTAR
+Home-page: https://github.com/KLYN74R/Web1337Python
+Author: KLY Foundation
+Author-email: hello@klyntar.org
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+<div align="center">
+
+# **Wellcome to Web1337**
+
+![cover](./SDKCover.svg)
+
+</div>
+
+## NOTE
+
+Currently supports only <code>dev_tachyon</code> workflow
