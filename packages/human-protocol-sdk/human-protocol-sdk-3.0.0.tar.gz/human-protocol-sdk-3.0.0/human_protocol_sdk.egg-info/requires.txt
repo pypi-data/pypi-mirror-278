@@ -1,0 +1,11 @@
+aiohttp<4.0.0
+cryptography
+eth-typing==4.1.0
+minio
+pgpy
+validators==0.20.0
+web3==6.8.*
+
+[agreement]
+numpy
+pyerf
