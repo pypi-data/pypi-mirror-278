@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: aquacrop-ss
+Version: 3.0.7.dev1
+Summary: A copy of aquacrop model based on version 3.0.7, fixed some deprecated warnings.
+License: MIT
+Author: SongshGeo
+Author-email: songshgeo@gmail.com
+Requires-Python: ==3.10.*
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: cffi (==1.16.0)
+Requires-Dist: matplotlib (>=3,<4)
+Requires-Dist: numba (>=0.56.0)
+Requires-Dist: pandas (>=1.3.5)
+Requires-Dist: seaborn (>=0,<1)
+Requires-Dist: tqdm (>=4.64.0)
+Description-Content-Type: text/markdown
+
+# AquaCrop-OSPy
+
+Soil-Crop-Water model based on AquaCrop-OS.
+
+This is adapted from the original AquaCrop-OS model, which is [a crop growth model developed by FAO](https://github.com/aquacropos/aquacrop).
+Based on 3.0.7 version and made some modifications on deprecated warnings.
+
