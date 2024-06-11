@@ -1,0 +1,47 @@
+# Whitelist .gitignore
+
+# Ignore everything by default
+*
+
+# Look in all (sub)-directories
+!*/
+
+# Ignore the data directory
+data/*/*
+
+# Ignore the build directories
+build/*
+docs/_build/*
+
+# Only look for the following file endings
+!*.css
+!*.rst
+!*.md
+!*.py
+!*.dvc
+!*.in
+!*.txt
+!*.toml
+!*.ini
+!*.sh
+!*.yml
+!*.yaml
+!*.jpg
+!*.png
+
+!Makefile
+!.gitignore
+!LICENSE
+
+# Ignore API documentation files, they are auto-generated
+docs/api/*
+
+# Allow configuration files
+!eurocropsml/configs/**/*.yaml
+
+# Ignore eggs
+*.egg-info
+
+# Ignore environments
+.venv/
+venv/
