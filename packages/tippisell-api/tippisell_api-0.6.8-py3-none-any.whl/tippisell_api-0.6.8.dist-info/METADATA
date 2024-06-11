@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: tippisell_api
+Version: 0.6.8
+Author: alteralt
+Project-URL: Source, https://github.com/alteralt/tippisell_api
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: Russian
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp >=3.6.3
+Requires-Dist: pydantic >=1.9.0
+
+# TIPPISELL_API
+
+[![Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+
+# Установка
+```shell
+pip install tippisell_api
+```
