@@ -1,0 +1,2 @@
+[console_scripts]
+plm = plm.__main__:main
