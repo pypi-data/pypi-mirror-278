@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: pireplay
+Version: 0.0.1
+Summary: Capture and instantly replay the last moments using a Raspberry Pi and a camera with a WEB application.
+Author: gruvw
+Author-email: gruvw.dev@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: flask (>=3.0.3,<4.0.0)
+Description-Content-Type: text/markdown
+
+# PiReplay
+
+Python Package `pireplay` (managed using [Poetry](https://python-poetry.org/))
+
+Capture and instantly replay the last moments using a Raspberry Pi and a camera with a WEB application.
+
+**Note**: take a look at the project's GitHub repository **<https://github.com/gruvw/pireplay>**
+
+## Installation
+
+- Install by running: `pip install pireplay`
+- Usage CLI: `pireplay --help`
+
