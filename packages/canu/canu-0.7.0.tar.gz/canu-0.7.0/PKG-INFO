@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: canu
+Version: 0.7.0
+Summary: An opinionated tool for managing your chatbot projects
+Home-page: https://github.com/sbslee/canu
+Author: Seung-been "Steven" Lee
+Author-email: sbstevenlee@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# canu
+
+[![PyPI](https://badge.fury.io/py/canu.svg)](https://badge.fury.io/py/canu)
+
+An opinionated tool for managing your chatbot projects.
