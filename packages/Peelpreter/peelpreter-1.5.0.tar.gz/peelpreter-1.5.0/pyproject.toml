@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Peelpreter"
+description = "A interpreter written in Python for the language, Monkey"
+readme = "README.md"
+authors = [
+    {name = "Jeebak Samajdwar"}
+]
+maintainers = [
+    {name = "Jeebak Samajdwar"}
+]
+license = {text = "GPL"}
+requires-python = ">= 3.7"
+dynamic = ["version"]
+keywords = ["monkey", "interpreter", "ast", "treewalker", "vm", "programing language", "language"]
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License (GPL)",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9", 
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Interpreters",
+    "Typing :: Typed"
+]
+
+[project.urls]
+Repository = "https://github.com/GogiBoy102/Peelpreter"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["peelpreter*"]
+exclude = ["peelpreter.*.__pycache__", "peelpreter.__pycache__"]
+
+[project.scripts]
+monkey = "peelpreter.__main__:main"
+
+[tool.setuptools.dynamic]
+version = {attr = "peelpreter.__version__"}
+
