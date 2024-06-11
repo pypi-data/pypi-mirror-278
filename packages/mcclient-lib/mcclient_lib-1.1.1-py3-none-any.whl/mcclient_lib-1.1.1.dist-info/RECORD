@@ -1,0 +1,15 @@
+mcclient/__init__.py,sha256=A7qOFA7T0fXbLBgUlXev7EKfTTUwcUnX93D_TcN_g4o,195
+mcclient/address.py,sha256=CumnTTGh-fYQiCq8wFnQsIySU7RGGXehYfIwpof7Oq8,1087
+mcclient/base_client.py,sha256=7oVC2LkW32y7v3H428UIEq7NAw5f_qw4u3_0XLRumjA,2351
+mcclient/bedrock_client.py,sha256=0Ewq2-6x0_U5bkNA5WU-E9xFSDpcM_OxnHrOFj9SohQ,1395
+mcclient/query_client.py,sha256=G9DHQM4g7WFBQTh0ySAb_GTwnT84XwbhCGLDbFpfK2I,3373
+mcclient/response.py,sha256=p0caemfUjGHo5dp50pdxowS3GX0iA4NgFhbeoNaXRhs,6759
+mcclient/slp.py,sha256=w6zvtE-iebVrcoaVHinzNBTYvNjJCiT5YEEjanC0cGg,1756
+mcclient/encoding/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mcclient/encoding/packet.py,sha256=zI_yqbI0xitcPlALndHNHSYst_t0qBa36gqsXPWQyYU,1245
+mcclient/encoding/varint.py,sha256=0vIYS5w0Yst6VM6xlwrHtczMea23iEk1ycKQojztf0o,533
+mcclient_lib-1.1.1.dist-info/LICENSE,sha256=axzsP3ko-nGL_hqIXj75S3LsJt9-dPQn-auLnEwugIc,1069
+mcclient_lib-1.1.1.dist-info/METADATA,sha256=SnoSgGNGkpRfP3dg8asuuAxXJuzVM_Pja4bif0_Kgcs,3429
+mcclient_lib-1.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+mcclient_lib-1.1.1.dist-info/top_level.txt,sha256=HVowRvwcW8BeTn8EmY2iaRYGE7LIS7mwFAzmPd2QlsE,9
+mcclient_lib-1.1.1.dist-info/RECORD,,
