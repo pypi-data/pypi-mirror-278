@@ -1,0 +1,2 @@
+[flake8.extension]
+RAI = raimad.checker.checker:Flake8Checker
