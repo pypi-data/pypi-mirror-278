@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: django-sqlconsole
+Version: 1.4.0
+Summary: sql console is an app which allows for the execution of sql queries in the admin section of django.
+Home-page: https://github.com/StandaloneDynamics/django-sqlconsole
+Author: Menzi Mthembu
+Author-email: midnight.complex@protonmail.com
+License: GPL v3
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 4.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: django~=4.2
+
+# Django SQL Console
+
+Sqlconsole is a django app that allows for the execution of sql queries from the admin section of a django site.
+An appropriate use case is when you don't have access to the database especially in a production environment.
+
+SqlConsole is really meant to be used for database read queries eg:
+```
+SELECT * FROM <some_table>
+
+SELECT count(*) FROM <some_table>
+```
+
+SQL queries that modify (INSERT, UPDATE etc) data are not supported.
+
+## Install
+
+```
+pip install django-sqlconsole
+```
+
+Add the app to ```INSTALLED_APPS```
+
+```
+INSTALLED_APPS = [
+...
+'sqlconsole'
+]
+```
+
+SqlConsole will be included in the admin section with a history of executed queries.
+
+Permissions will be required to execute queries
+`sqlconsole.can_execute_query`
+
+
+
+
+## Screenshot
+![Example Query](screenshot/query.png)
