@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+pymvr/__init__.py
+pymvr/value.py
+pymvr.egg-info/PKG-INFO
+pymvr.egg-info/SOURCES.txt
+pymvr.egg-info/dependency_links.txt
+pymvr.egg-info/top_level.txt
+tests/test_fixture_1_5.py
+tests/test_fixture_scene_object_1_5.py
+tests/test_group_objects_1_4.py
