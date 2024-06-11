@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+tests/test_message.py
+tests/test_queue.py
+xq/__init__.py
+xq/message.py
+xq/queue.py
+xq/worker.py
+xqueue.egg-info/PKG-INFO
+xqueue.egg-info/SOURCES.txt
+xqueue.egg-info/dependency_links.txt
+xqueue.egg-info/top_level.txt
