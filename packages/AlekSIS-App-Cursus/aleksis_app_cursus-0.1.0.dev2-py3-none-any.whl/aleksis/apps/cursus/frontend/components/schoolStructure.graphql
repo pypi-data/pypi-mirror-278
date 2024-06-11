@@ -1,0 +1,54 @@
+query gqlFirstLevelGroups($schoolTerm: ID!) {
+  schoolStructure {
+    firstLevelType {
+      name
+    }
+    secondLevelType {
+      name
+    }
+    firstLevelGroupsByTerm(schoolTerm: $schoolTerm) {
+      id
+      name
+      shortName
+      childGroups {
+        id
+        name
+        shortName
+        owners {
+          id
+          shortName
+          lastName
+        }
+      }
+    }
+  }
+}
+
+mutation gqlCreateFirstLevelGroup($input: [BatchCreateGroupInput]!) {
+  createFirstLevelGroups(input: $input) {
+    firstLevelGroups: groups {
+      id
+      name
+      shortName
+      schoolTerm {
+        id
+      }
+    }
+  }
+}
+
+mutation gqlCreateSecondLevelGroup($input: [BatchCreateGroupInput]!) {
+  createSecondLevelGroups(input: $input) {
+    secondLevelGroups: groups {
+      id
+      name
+      shortName
+      schoolTerm {
+        id
+      }
+      parentGroups {
+        id
+      }
+    }
+  }
+}
