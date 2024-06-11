@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+nrw/__init__.py
+nrw/__init__.pyi
+nrw/py.typed
+pynrw.egg-info/PKG-INFO
+pynrw.egg-info/SOURCES.txt
+pynrw.egg-info/dependency_links.txt
+pynrw.egg-info/requires.txt
+pynrw.egg-info/top_level.txt

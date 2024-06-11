@@ -1,0 +1,10 @@
+mysql-connector-python
+
+[:platform_python_implementation == "CPython"]
+pyodbc
+
+[:platform_python_implementation == "PyPy"]
+pypyodbc
+
+[:python_version < "3.12"]
+typing_extensions>=4.4.0

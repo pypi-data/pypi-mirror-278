@@ -1,0 +1,141 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pynrw"
+description = "Materialien zu den zentralen NRW-Abiturprüfungen im Fach Informatik ab 2018 implementiert in Python."
+keywords = [
+  "nrw",
+  "datastructures",
+  "datenstrukturen",
+  "algorithms",
+  "algorithmen",
+  "education",
+  "bildung",
+  "abitur",
+]
+readme = "README.md"
+authors = [{ name = "realshouzy" }]
+license = { text = "MIT" }
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+]
+requires-python = ">=3.8"
+dynamic = ["version", "dependencies"]
+
+[project.urls]
+Source = "https://github.com/realshouzy/pynrw"
+
+[tool.setuptools]
+packages = ["nrw"]
+license-files = ["LICENSE"]
+platforms = ["any"]
+
+[tool.setuptools.dynamic]
+version = { attr = "nrw.__version__" }
+dependencies = { file = "requirements.txt" }
+
+[tool.black]
+target-version = ["py312", "py311", "py310", "py39", "py38"]
+line-length = 88
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+strict = true
+check_untyped_defs = true
+disallow_any_generics = true
+disallow_incomplete_defs = true
+disallow_untyped_defs = true
+warn_redundant_casts = true
+show_error_codes = true
+disallow_subclassing_any = true
+disallow_untyped_decorators = true
+warn_return_any = true
+strict_equality = true
+no_implicit_reexport = true
+no_implicit_optional = true
+warn_unused_ignores = true
+disable_error_code = ["union-attr"]
+
+[[tool.mypy.overrides]]
+module = "nrw.algorithms._sorting"
+disable_error_code = ["attr-defined"]
+
+[[tool.mypy.overrides]]
+module = "nrw.algorithms._traversal"
+disable_error_code = ["arg-type"]
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+disallow_untyped_decorators = false
+disable_error_code = ["attr-defined"]
+
+[tool.ruff]
+lint.select = ["ALL"]
+lint.ignore = [
+  "ANN101",
+  "D205",
+  "UP035",
+  "UP036",
+  "SLF001",
+  "FBT001",
+  "S101",
+  "PYI026",
+  "B905",
+  "S311",
+]
+lint.fixable = ["ALL"]
+lint.unfixable = []
+show-fixes = true
+target-version = "py312"
+line-length = 88
+
+[tool.ruff.lint.extend-per-file-ignores]
+"./tests/*_test.py" = ["SLF001", "D100", "D103", "PLR2004", "D102", "D101"]
+"./tests/*.py" = ["D104"]
+"./nrw/database/*.py" = ["BLE001", "PLR0913", "ARG002"]
+"./nrw/database/*.pyi" = ["PLR0913"]
+"./nrw/network/*.py" = ["BLE001"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["nrw"]
+required-imports = ["from __future__ import annotations"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "pep257"
+
+[tool.pylint]
+disable = ["C0116", "R0801", "W0212", "R0903", "C0114", "I1101", "C0301"]
+load-plugins = "pylint_pytest"
+
+[tool.bandit]
+skips = ["B101"]
+exclude_dirs = ["tests"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["*_test.py"]
+markers = ["networktest: Run network tests"]
+
+[tool.coverage.run]
+omit = ["./tests/*", "./nrw/network/*"]
+plugins = ["covdefaults"]
+
+[tool.coverage.report]
+exclude_also = [
+  "except Exception as exception:",
+  "if self._connection is None:",
+]
+fail_under = 95
