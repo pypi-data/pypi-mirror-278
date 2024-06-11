@@ -1,0 +1,6 @@
+regex>=2015.07.19
+networkx
+pandas
+
+[tests]
+pytest
