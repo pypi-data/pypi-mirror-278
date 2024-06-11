@@ -1,0 +1,33 @@
+# compose.sofolaPGv.yml
+
+# Use postgres/example user/password credentials
+# version: '3.1'
+
+services:
+  db:
+    image: pgvector/pgvector:0.7.0-pg16
+    # restart: always
+    environment:
+      POSTGRES_USER: ${PG_USER}
+      POSTGRES_PASSWORD: ${PG_PASSWORD}
+      POSTGRES_DB: PGv
+      PGDATA: /var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    volumes:
+      # This is in the remote itself, not in the repo. See pg_configs for references
+      - /etc/postgresql.conf:/etc/postgresql.conf
+      # Persist data even if container is destroyed
+      - db_data:/var/lib/postgresql/data
+    command: ["postgres", "-c", "config_file=/etc/postgresql.conf"]
+
+  adminer:
+    image: adminer
+    depends_on:
+      - db
+    restart: always
+    ports:
+      - 8080:8080  # {in-host (external)}:{in-container (internal)}
+
+volumes:
+  db_data:
