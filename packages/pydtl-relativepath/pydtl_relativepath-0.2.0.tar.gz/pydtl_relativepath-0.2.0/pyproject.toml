@@ -1,0 +1,95 @@
+[tool.poetry]
+name = "pydtl-relativepath"
+version = "0.2.0"
+description = "python tool to solve many issues with relative paths and imports in your complex framework."
+authors = ["Nanthagopal-Eswaran <nanthagopaleswaran@gmail.com>"]
+maintainers = ["Nanthagopal-Eswaran <nanthagopaleswaran@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "pydtl_relativepath", from = "src" }]
+license = "MIT"
+repository = "https://github.com/python-dev-tools/pydtl-relativepath"
+keywords = [
+    "relative path",
+    "absolute path",
+    "python",
+    "pydtl",
+    "python-dev-tools",
+    "poetry",
+    "pytest",
+]
+classifiers = [
+    # How mature is this project? Common values are
+    #   3 - Alpha
+    #   4 - Beta
+    #   5 - Production/Stable
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[tool.poetry.urls]
+"Source" = "https://github.com/python-dev-tools/pydtl-relativepath"
+"Tracker" = "https://github.com/python-dev-tools/pydtl-relativepath/issues"
+"Discussion" = "https://github.com/python-dev-tools/pydtl-relativepath/discussions"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0.0"
+
+[tool.poetry.group.test.dependencies]
+ruff = "^0.4.8"
+mypy = "^1.10.0"
+pytest = "^8.2.2"
+pytest-cov = "^5.0.0"
+poetry-audit-plugin = "^0.4.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.7.1"
+
+[tool.ruff]
+# Allow lines to be as long as 100.
+line-length = 100
+
+
+[tool.ruff.lint]
+select = [
+    "E",     # pycodestyle errors
+    "W",     # pycodestyle warnings
+    "F",     # pyflakes
+    "B",     # flake8-bugbear
+    "I",     # isort
+    "C",     # pylint convention
+    "A",     # flake8-builtins
+    "N",     # pep8-naming
+    "ASYNC", # flake8-async
+    "C4",    # flake8-comprehensions
+]
+ignore = [
+    "E501", # line too long, handled by formatter
+    "W191", # indentation contains tabs
+]
+
+[tool.ruff.pydocstyle]
+convention = "google"
+
+[tool.pytest.ini_options]
+addopts = [
+    "--verbose",
+    "--cov=src",
+    "--cov-report=html:.pytest_results/coverage_report",
+    "--cov-report=xml:.pytest_results/coverage_report/coverage.xml",
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
