@@ -1,0 +1,21 @@
+spec:
+  containers:
+  - name: mycontainer
+    image: repo/test_image1:1.1.9
+    command:
+    - python
+    args:
+    - --cat=meow
+    - --dog=bark
+    env:
+      ENV1: val1
+      ENV2: val2
+  endpoints:
+    - name: ep1
+      port: 8000
+      public: true
+    - name: end-point-2
+      port: 8010
+      public: true
+  networkPolicyConfig:
+    allowInternetEgress: yes
