@@ -1,0 +1,2 @@
+[console_scripts]
+pilot = cli.cli:main
