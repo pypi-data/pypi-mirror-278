@@ -1,0 +1,43 @@
+# coding: UTF-8
+import sys
+bstack1l11111_opy_ = sys.version_info [0] == 2
+bstack1l1lll1_opy_ = 2048
+bstack11_opy_ = 7
+def bstack1ll1_opy_ (bstack11l1l1l_opy_):
+    global bstack1lll11l_opy_
+    bstack111111l_opy_ = ord (bstack11l1l1l_opy_ [-1])
+    bstack1111_opy_ = bstack11l1l1l_opy_ [:-1]
+    bstack1l111ll_opy_ = bstack111111l_opy_ % len (bstack1111_opy_)
+    bstack1llllll1_opy_ = bstack1111_opy_ [:bstack1l111ll_opy_] + bstack1111_opy_ [bstack1l111ll_opy_:]
+    if bstack1l11111_opy_:
+        bstack11ll111_opy_ = unicode () .join ([unichr (ord (char) - bstack1l1lll1_opy_ - (bstack111l11_opy_ + bstack111111l_opy_) % bstack11_opy_) for bstack111l11_opy_, char in enumerate (bstack1llllll1_opy_)])
+    else:
+        bstack11ll111_opy_ = str () .join ([chr (ord (char) - bstack1l1lll1_opy_ - (bstack111l11_opy_ + bstack111111l_opy_) % bstack11_opy_) for bstack111l11_opy_, char in enumerate (bstack1llllll1_opy_)])
+    return eval (bstack11ll111_opy_)
+import sys
+class bstack1l1111l111_opy_:
+    def __init__(self, handler):
+        self._11l1l11l11_opy_ = sys.stdout.write
+        self._11l1l11lll_opy_ = sys.stderr.write
+        self.handler = handler
+        self._started = False
+    def start(self):
+        if self._started:
+            return
+        self._started = True
+        sys.stdout.write = self.bstack11l1l11l1l_opy_
+        sys.stdout.error = self.bstack11l1l11ll1_opy_
+    def bstack11l1l11l1l_opy_(self, _str):
+        self._11l1l11l11_opy_(_str)
+        if self.handler:
+            self.handler({bstack1ll1_opy_ (u"ࠪࡰࡪࡼࡥ࡭ࠩ༔"): bstack1ll1_opy_ (u"ࠫࡎࡔࡆࡐࠩ༕"), bstack1ll1_opy_ (u"ࠬࡳࡥࡴࡵࡤ࡫ࡪ࠭༖"): _str})
+    def bstack11l1l11ll1_opy_(self, _str):
+        self._11l1l11lll_opy_(_str)
+        if self.handler:
+            self.handler({bstack1ll1_opy_ (u"࠭࡬ࡦࡸࡨࡰࠬ༗"): bstack1ll1_opy_ (u"ࠧࡆࡔࡕࡓࡗ༘࠭"), bstack1ll1_opy_ (u"ࠨ࡯ࡨࡷࡸࡧࡧࡦ༙ࠩ"): _str})
+    def reset(self):
+        if not self._started:
+            return
+        self._started = False
+        sys.stdout.write = self._11l1l11l11_opy_
+        sys.stderr.write = self._11l1l11lll_opy_
