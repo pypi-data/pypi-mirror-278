@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "datadashr"
+version = "0.1.7"
+description = "Engage with your data (SQL, CSV, pandas, polars, mongodb, noSQL, etc.) using Ollama, an open-source tool that operates locally. Datadashr transforms data analysis into a conversational experience powered by Ollama LLMs and RAG."
+authors = ["Datadashr <dev@datadashr.com>"]
+readme = "README.md"
+license = "MIT"
+packages = [
+    { include = "datadashr" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+pandas = "^2.2.2"
+ollama = "^0.2.0"
+openai = "^1.31.0"
+requests = "^2.32.3"
+poetry-core = "^1.9.0"
+restrictedpython = "^7.1"
+jinja2 = "^3.1.4"
+loguru = "^0.7.2"
+numpy = "^1.26.4"
+sentence-transformers = "^3.0.0"
+chromadb = "^0.5.0"
+astor = "^0.8.1"
+streamlit = "^1.35.0"
+matplotlib = "^3.9.0"
+panel = "^1.4.4"
+duckdb = "^1.0.0"
+
+
+[tool.poetry.scripts]
+datadashr = "datadashr.main:main"
+
+[tool.poetry.group.dev.dependencies]
+sourcery = "^1.19.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
