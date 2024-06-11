@@ -1,0 +1,11 @@
+setup.py
+bark_detection/__init__.py
+bark_detection/bark_detection.py
+bark_detection.egg-info/PKG-INFO
+bark_detection.egg-info/SOURCES.txt
+bark_detection.egg-info/dependency_links.txt
+bark_detection.egg-info/requires.txt
+bark_detection.egg-info/top_level.txt
+bark_detection/model/__init__.py
+bark_detection/model/model.h5
+bark_detection/model/model.json
