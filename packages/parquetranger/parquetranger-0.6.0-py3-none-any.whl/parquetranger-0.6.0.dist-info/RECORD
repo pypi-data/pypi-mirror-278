@@ -1,0 +1,16 @@
+parquetranger/__init__.py,sha256=OIznYxfk6zdv4B3_Dph_ctwAWvlsta-54NINnw8_uUw,195
+parquetranger/core.py,sha256=T6Zo_gYWMrR5OPcFwq4VYxcmanthcTVi2-JLwhl93_M,18956
+parquetranger/ingestor.py,sha256=B11i4qeaT4nXG1SkgncWp_zfGQmdn_N8jwE7IZVRhP8,3539
+parquetranger/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+parquetranger/tests/test_core.py,sha256=FlAFlnGtfyV3mUgd8v5awDF_vh8UKMvBVlXbjKLmMwQ,8082
+parquetranger/tests/test_diff_cols.py,sha256=87Qq1lWbRPKbyGTTcsxZUqn0-REjUuczL3Wx-ADNPEs,1651
+parquetranger/tests/test_envs.py,sha256=IC2KhiN2NN-dc37fSh8iuNgVKhmRrGJ9JQarsHtA9Pc,959
+parquetranger/tests/test_ingestors.py,sha256=kCygRnr76KRGYjubTuLD1TEQPQdHPB99PtAvNkvwnjE,1572
+parquetranger/tests/test_init.py,sha256=u6rhpNA9r3zk_kEp-jmEKyQpiMNnH98I8KQB-FS8QRU,293
+parquetranger/tests/test_metadata.py,sha256=MxVlflj3vlLRACSYfL2D8SxQdS7ZZbwvfLd4D3bMeJc,472
+parquetranger/tests/test_parallel.py,sha256=KfgEzb-1cv8QKHgyxZLkvl7Q6zqHIej92avpWOK3bQw,3059
+parquetranger/tests/test_writer.py,sha256=rksX_1WlgfkPYyZwP2JVStpNGZa1RbfYRzwNHKEZEoQ,1972
+parquetranger-0.6.0.dist-info/LICENSE,sha256=PsZAtTBheWHymkKBWeCbw96MkxuDK4NG8lJXLFUxDu4,1056
+parquetranger-0.6.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+parquetranger-0.6.0.dist-info/METADATA,sha256=U3CrflybQV9I-jT66xdL9waT4p4fLHlT1M-99x0ExlI,1092
+parquetranger-0.6.0.dist-info/RECORD,,
