@@ -1,0 +1,5 @@
+global-include *.py
+include *.txt CHANGELOG.md LICENSE README.md
+recursive-exclude compliant_social_django *.pyc
+prune .venv
+exclude .tox .git
