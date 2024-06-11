@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+epp_event_log_reader/__init__.py
+epp_event_log_reader/epp_event_log_reader.py
+epp_event_log_reader/epp_event_test_reader.py
+epp_event_log_reader/event_log_entry.py
+epp_event_log_reader.egg-info/PKG-INFO
+epp_event_log_reader.egg-info/SOURCES.txt
+epp_event_log_reader.egg-info/dependency_links.txt
+epp_event_log_reader.egg-info/top_level.txt
