@@ -1,0 +1,66 @@
+[
+  {
+    "text": "Cet\nentra\u00eenement d\u00e9bute aujourd\u2019hui, au large de l\u2019\u00eele am\u00e9ricaine de Guam dans le Pacifique, pour une\ndur\u00e9e de dix jours.",
+    "identifier": "SHERPA-XXX2",
+    "title": "unknown test document",
+    "metadata": {
+      "language": "fr"
+    },
+    "sentences": [
+      {
+        "start": 0,
+        "end": 121
+      }
+    ],
+    "annotations": [
+      {
+        "start": 37,
+        "end": 73,
+        "labelName": "lieu",
+        "label": "Lieu",
+        "text": "au large de l\u2019\u00eele am\u00e9ricaine de Guam",
+        "score": 0.9194723516702652
+      },
+      {
+        "start": 82,
+        "end": 91,
+        "labelName": "lieu",
+        "label": "Lieu",
+        "text": "Pacifique",
+        "score": 0.6643141508102417,
+        "terms": [
+          {
+            "identifier": "Q98",
+            "lexicon": "wikidata",
+            "preferredForm": "Pacific Ocean",
+            "score": 0.0836,
+            "properties": {
+              "wikidataId": "Q98",
+              "wikipediaExternalRef": "7620"
+            }
+          }
+        ]
+      },
+      {
+        "start": 69,
+        "end": 73,
+        "labelName": "lieu",
+        "label": "Lieu",
+        "text": "Guam",
+        "score": 0.1454,
+        "terms": [
+          {
+            "identifier": "Q16635",
+            "lexicon": "wikidata",
+            "preferredForm": "Guam",
+            "score": 0.1454,
+            "properties": {
+              "wikidataId": "Q16635",
+              "wikipediaExternalRef": "35050"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

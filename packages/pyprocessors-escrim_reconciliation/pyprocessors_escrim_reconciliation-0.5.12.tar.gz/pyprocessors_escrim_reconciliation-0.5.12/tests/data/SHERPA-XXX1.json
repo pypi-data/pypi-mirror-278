@@ -1,0 +1,190 @@
+{
+  "text": "En octobre 1983, le porte-avions Clemenceau vient prêter cinq avions Super-Étendard, seuls à même de frapper les navires iraniens dans le Golfe avec leurs missiles AM-39 Exocet.",
+  "metadata": {
+    "language": "fr"
+  },
+  "sentences": [
+    {
+      "start": 0,
+      "end": 177
+    }
+  ],
+  "annotations": [
+    {
+      "start": 20,
+      "end": 43,
+      "labelName": "meta_equipement",
+      "score": 0.8709234744310379,
+      "label": "META Equipement",
+      "text": "porte-avions Clemenceau"
+    },
+    {
+      "start": 20,
+      "end": 32,
+      "labelName": "type_d_equipements",
+      "score": 0.998971164226532,
+      "label": "Type d'équipement",
+      "text": "porte-avions"
+    },
+    {
+      "start": 33,
+      "end": 43,
+      "labelName": "equipement",
+      "score": 0.9902727007865906,
+      "label": "Nom d'équipement",
+      "text": "Clemenceau"
+    },
+    {
+      "start": 33,
+      "end": 43,
+      "labelName": "classe_d_equipement",
+      "score": 1,
+      "terms": [
+        {
+          "identifier": "warships2482",
+          "lexicon": "equipment_classes",
+          "preferredForm": "Clemenceau"
+        }
+      ],
+      "label": "Classe d'équipement",
+      "text": "Clemenceau"
+    },
+    {
+      "start": 62,
+      "end": 83,
+      "labelName": "meta_equipement",
+      "score": 0.9369614124298096,
+      "label": "META Equipement",
+      "text": "avions Super-Étendard"
+    },
+    {
+      "start": 62,
+      "end": 68,
+      "labelName": "type_d_equipements",
+      "score": 0.9883891344070435,
+      "label": "Type d'équipement",
+      "text": "avions"
+    },
+    {
+      "start": 69,
+      "end": 83,
+      "labelName": "classe_d_equipement",
+      "score": 0.9974372386932373,
+      "label": "Classe d'équipement",
+      "text": "Super-Étendard"
+    },
+    {
+      "start": 75,
+      "end": 83,
+      "labelName": "classe_d_equipement",
+      "score": 1,
+      "terms": [
+        {
+          "identifier": "warships1633",
+          "lexicon": "equipment_classes",
+          "preferredForm": "Étendard"
+        }
+      ],
+      "label": "Classe d'équipement",
+      "text": "Étendard"
+    },
+    {
+      "start": 113,
+      "end": 129,
+      "labelName": "meta_equipement",
+      "score": 0.9646205902099609,
+      "label": "META Equipement",
+      "text": "navires iraniens"
+    },
+    {
+      "start": 113,
+      "end": 120,
+      "labelName": "type_d_equipements",
+      "score": 0.8506967425346375,
+      "label": "Type d'équipement",
+      "text": "navires"
+    },
+    {
+      "start": 121,
+      "end": 129,
+      "labelName": "loc_org",
+      "score": 0.9952785968780518,
+      "label": "Géopolitique",
+      "text": "iraniens"
+    },
+    {
+      "start": 121,
+      "end": 129,
+      "labelName": "lieu",
+      "score": 0.0729,
+      "terms": [
+        {
+          "identifier": "Q794",
+          "lexicon": "wikidata",
+          "preferredForm": "Iran",
+          "score": 0.0729,
+          "properties": {
+            "wikidataId": "Q794",
+            "wikipediaExternalRef": "1510"
+          }
+        }
+      ],
+      "label": "Lieu",
+      "text": "iraniens"
+    },
+    {
+      "start": 138,
+      "end": 143,
+      "labelName": "lieu",
+      "score": 0.576614499092102,
+      "label": "Lieu",
+      "text": "Golfe"
+    },
+    {
+      "start": 138,
+      "end": 143,
+      "labelName": "lieu",
+      "score": 0.0729,
+      "terms": [
+        {
+          "identifier": "Q34675",
+          "lexicon": "wikidata",
+          "preferredForm": "Persian Gulf",
+          "score": 0.0729,
+          "properties": {
+            "wikidataId": "Q34675",
+            "wikipediaExternalRef": "94201"
+          }
+        }
+      ],
+      "label": "Lieu",
+      "text": "Golfe"
+    },
+    {
+      "start": 155,
+      "end": 176,
+      "labelName": "meta_equipement",
+      "score": 0.9557156364123026,
+      "label": "META Equipement",
+      "text": "missiles AM-39 Exocet"
+    },
+    {
+      "start": 155,
+      "end": 163,
+      "labelName": "type_d_equipements",
+      "score": 0.9936612844467163,
+      "label": "Type d'équipement",
+      "text": "missiles"
+    },
+    {
+      "start": 164,
+      "end": 176,
+      "labelName": "classe_d_equipement",
+      "score": 0.9901072978973389,
+      "label": "Classe d'équipement",
+      "text": "AM-39 Exocet"
+    }
+  ],
+  "identifier": "888cde034da630b925337320c12be50d",
+  "title": "unknown test document"
+}

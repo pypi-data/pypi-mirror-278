@@ -1,0 +1,92 @@
+{
+  "text": "Cet\nentraînement débute aujourd’hui, au large de l’île américaine de Guam dans le Pacifique, pour une\ndurée de dix jours.",
+  "metadata": {
+    "language": "fr"
+  },
+  "sentences": [
+    {
+      "start": 0,
+      "end": 121
+    }
+  ],
+  "annotations": [
+    {
+      "start": 37,
+      "end": 73,
+      "labelName": "lieu",
+      "score": 0.9194723516702652,
+      "label": "Lieu",
+      "text": "au large de l’île américaine de Guam"
+    },
+    {
+      "start": 55,
+      "end": 65,
+      "labelName": "lieu",
+      "score": 0.1524,
+      "terms": [
+        {
+          "identifier": "Q30",
+          "lexicon": "wikidata",
+          "preferredForm": "United States",
+          "score": 0.1524,
+          "properties": {
+            "wikidataId": "Q30",
+            "wikipediaExternalRef": "1377936"
+          }
+        }
+      ],
+      "label": "Lieu",
+      "text": "américaine"
+    },
+    {
+      "start": 69,
+      "end": 73,
+      "labelName": "lieu",
+      "score": 0.1454,
+      "terms": [
+        {
+          "identifier": "Q16635",
+          "lexicon": "wikidata",
+          "preferredForm": "Guam",
+          "score": 0.1454,
+          "properties": {
+            "wikidataId": "Q16635",
+            "wikipediaExternalRef": "35050"
+          }
+        }
+      ],
+      "label": "Lieu",
+      "text": "Guam"
+    },
+    {
+      "start": 82,
+      "end": 91,
+      "labelName": "lieu",
+      "score": 0.6643141508102417,
+      "label": "Lieu",
+      "text": "Pacifique"
+    },
+    {
+      "start": 82,
+      "end": 91,
+      "labelName": "lieu",
+      "score": 0.0836,
+      "terms": [
+        {
+          "identifier": "Q98",
+          "lexicon": "wikidata",
+          "preferredForm": "Pacific Ocean",
+          "score": 0.0836,
+          "properties": {
+            "wikidataId": "Q98",
+            "wikipediaExternalRef": "7620"
+          }
+        }
+      ],
+      "label": "Lieu",
+      "text": "Pacifique"
+    }
+  ],
+  "identifier": "b5365f875b2c6718d7fbe2531c631206",
+  "title": "unknown test document"
+}

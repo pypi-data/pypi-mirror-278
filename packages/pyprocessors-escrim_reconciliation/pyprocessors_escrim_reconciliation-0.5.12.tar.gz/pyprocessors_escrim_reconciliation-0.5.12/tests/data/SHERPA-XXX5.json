@@ -1,0 +1,169 @@
+{
+  "text": "Selon  la  Directrice  du  renseignement  national  des  États-Unis,  Avril\nHaines, la Russie éprouve des difficultés à mener des assauts de grande\nenvergure en raison d'une pénurie de munitions.",
+  "metadata": {
+    "language": "fr"
+  },
+  "sentences": [
+    {
+      "start": 0,
+      "end": 195
+    }
+  ],
+  "annotations": [
+    {
+      "start": 27,
+      "end": 67,
+      "labelName": "unite_militaire",
+      "score": 0.6673504908879598,
+      "label": "Unite Militaire",
+      "text": "renseignement  national  des  États-Unis"
+    },
+    {
+      "start": 57,
+      "end": 67,
+      "labelName": "loc_org",
+      "score": 0.9261285066604614,
+      "label": "Géopolitique",
+      "text": "États-Unis"
+    },
+    {
+      "start": 57,
+      "end": 67,
+      "labelName": "lieu",
+      "score": 0.1984,
+      "terms": [
+        {
+          "identifier": "Q30",
+          "lexicon": "wikidata",
+          "preferredForm": "United States",
+          "score": 0.1984,
+          "properties": {
+            "wikidataId": "Q30",
+            "wikipediaExternalRef": "1377936"
+          }
+        }
+      ],
+      "label": "Lieu",
+      "text": "États-Unis"
+    },
+    {
+      "start": 70,
+      "end": 82,
+      "labelName": "personne",
+      "score": 0.7782553136348724,
+      "label": "Personne",
+      "text": "Avril\nHaines"
+    },
+    {
+      "start": 70,
+      "end": 82,
+      "labelName": "personne",
+      "score": 0.8751,
+      "terms": [
+        {
+          "identifier": "Q14525857",
+          "lexicon": "wikidata",
+          "preferredForm": "Avril Haines",
+          "score": 0.8751,
+          "properties": {
+            "wikidataId": "Q14525857",
+            "wikipediaExternalRef": "13728946"
+          }
+        }
+      ],
+      "label": "Personne",
+      "text": "Avril\nHaines"
+    },
+    {
+      "start": 76,
+      "end": 82,
+      "labelName": "classe_d_equipement",
+      "score": 1,
+      "terms": [
+        {
+          "identifier": "warships7466",
+          "lexicon": "equipment_classes",
+          "preferredForm": "USS Haines"
+        }
+      ],
+      "label": "Classe d'équipement",
+      "text": "Haines"
+    },
+    {
+      "start": 87,
+      "end": 93,
+      "labelName": "loc_org",
+      "score": 0.9837205410003662,
+      "label": "Géopolitique",
+      "text": "Russie"
+    },
+    {
+      "start": 87,
+      "end": 93,
+      "labelName": "lieu",
+      "score": 0.1524,
+      "terms": [
+        {
+          "identifier": "Q159",
+          "lexicon": "wikidata",
+          "preferredForm": "Russia",
+          "score": 0.1524,
+          "properties": {
+            "wikidataId": "Q159",
+            "wikipediaExternalRef": "2549"
+          }
+        }
+      ],
+      "label": "Lieu",
+      "text": "Russie"
+    },
+    {
+      "start": 87,
+      "end": 93,
+      "labelName": "classe_d_equipement",
+      "score": 1,
+      "terms": [
+        {
+          "identifier": "warships3844",
+          "lexicon": "equipment_classes",
+          "preferredForm": "Russie"
+        }
+      ],
+      "label": "Classe d'équipement",
+      "text": "Russie"
+    },
+    {
+      "start": 118,
+      "end": 119,
+      "labelName": "kill",
+      "score": 1,
+      "terms": [
+        {
+          "identifier": "à",
+          "lexicon": "kill",
+          "preferredForm": "à"
+        }
+      ],
+      "label": "Kill",
+      "text": "à"
+    },
+    {
+      "start": 185,
+      "end": 194,
+      "labelName": "meta_equipement",
+      "score": 0.690082311630249,
+      "label": "META Equipement",
+      "text": "munitions"
+    },
+    {
+      "start": 185,
+      "end": 194,
+      "labelName": "type_d_equipements",
+      "score": 0.9742127656936646,
+      "label": "Type d'équipement",
+      "text": "munitions"
+    }
+  ],
+  "identifier": "954b264f0af3ae8a8cf6a3b0dc2cbdcb",
+  "title": "unknown test document"
+}
