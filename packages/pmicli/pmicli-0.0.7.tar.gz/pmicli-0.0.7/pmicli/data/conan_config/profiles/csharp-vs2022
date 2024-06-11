@@ -1,0 +1,4 @@
+include(csharp-base)
+
+[settings]
+compiler.version=17
