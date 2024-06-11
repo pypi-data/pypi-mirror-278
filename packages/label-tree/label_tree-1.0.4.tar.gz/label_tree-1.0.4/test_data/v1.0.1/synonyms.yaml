@@ -1,0 +1,325 @@
+##### Synonyms
+Atrial Fibrillation:
+  - AF
+  - AFIB
+Sinus Bradycardia:
+  - SB
+  - SBR
+AV Block - First-Degree:
+  - Type I
+  - 1DAVb
+  - Prolonged PR Interval
+  - LPR
+  - 1st Degree AV Block
+  - IAVB
+Sinus Tachycardia:
+  - ST
+  - STach
+AV Block - Third-Degree (Complete):
+  - Complete (Third-Degree)
+  - Complete Heart Block
+  - AV Block - Complete
+  - AV Block_ Complete (Third-Degree)
+  - CHB
+AV Block - Varying Conduction: AV Block_ Varying Conduction
+Left Bundle Branch Block:
+  - Bundle Branch Block - Left - LBBB
+  - LBBB
+  - Left Bundle Branch Block - General
+Right Bundle Branch Block:
+  - Right Bundle Branch Block - General
+  - RBBB
+Complete Right Bundle Branch Block:
+  - Bundle Branch Block - Right - RBBB
+  - CRBBB
+Incomplete Right Bundle Branch Block:
+  - Bundle-Branch Block - RBBB - Incomplete
+  - IRBBB
+Junctional Escape:
+  - Junctional Escape Complex(es)
+  - JE
+Ventricular Escape Rhythm:
+  - Ventricular Escape Complex(es)
+  - Idioventricular Rhythm
+  - IR
+  - IVR
+  - VEsR
+Premature Atrial Contractions:
+  - PAC
+  - Atrial Premature Complex(es) - APC APB
+  - Atrial Premature Complex(es)
+  - Atrial Premature Complexes_ Nonconducted
+Fusion Beats:
+  - Fusion Complex(es)
+  - FB
+Low Voltage:
+  - Low QRS Voltages
+  - LQRSV
+U Wave Abnormal:
+  - UAb
+  - Prominent U Waves
+Poor R Wave Progression:
+  - Abnormal Precordial R-Wave Progression
+  - PRWP
+Electrode Reversal: Extremity Electrode Reversal
+Ventricular Pre Excitation:
+  - Ventricular Preexcitation
+  - VPEx
+  - PREX
+Mobitz Type I (Wenckebach):
+  - Second-Degree AV Block_ Mobitz Type I (Wenckebach)
+  - Mobitz Type I Wenckebach Atrioventricular Block
+  - MoI
+Mobitz Type II:
+  - Second-Degree AV Block_ Mobitz Type II
+  - Mobitz Type II Atrioventricular Block
+  - IIAVBII
+High-Grade AV Block: AV Block_ Advanced (High-Grade)
+AV Block - Second-Degree:
+  - AV Conduction Ratio - N:D
+  - AV Conduction Ratio N:D
+  - BII
+  - 2nd Degree av Block
+  - IIAVB
+Premature Junctional Contractions:
+  - Junctional Premature Complex
+  - JPC
+  - Junctional Premature Complex(es)
+Myocardial Infarction - Anterior:
+  - Anterior MI
+  - Extensive Anterior MI
+  - Anterior Myocardial Infarction
+  - AnMI
+Myocardial Infarction - Anteroseptal: Anteroseptal MI
+Myocardial Infarction - Inferior: Inferior MI
+PR Interval - Short:
+  - Short PR Interval
+  - Shortened PR Interval
+  - SPRI
+Premature Ventricular Contractions:
+  - PVC
+  - Ventricular Premature Beats
+  - VPB
+  - Ventricular Premature Complex(es)
+  - Ventricular Premature Complex(es) - VPB - VPC
+QT Interval - Prolonged:
+  - Prolonged QT Interval
+  - LQT
+ST Changes:
+  - ST Deviation
+  - ST Deviation With T-Wave Change
+  - STC
+T Wave Abnormal:
+  - T-Wave Abnormality
+  - High t-Voltage # too broad to fall into one of the specific T-wave changes
+  - HTV
+  - TAb
+
+Myocardial Ischemia:
+  - Acute Myocardial Ischemia
+  - Coronary Heart Disease
+  - MIs
+  - AMIs
+  - Ischemia
+Atrial Rhythm:
+  - Ectopic Atrial Rhythm
+  - ARH
+Brugada Abnormality: Brugada Syndrome
+Wide-QRS Tachycardia: Wide Complex Tachycardia
+Atrial Enlargement:
+  - Atrial Hypertrophy
+  - AH
+Myocardial Infarction - Septal:
+  - Septal Myocardial Infraction
+  - Septal Infract
+Left Atrial Enlargement:
+  - Left Atrial Hypertrophy
+  - LAE
+  - LAH
+Right Atrial Enlargement:
+  - Right Atrial Hypertrophy
+  - RAH
+  - Right Atrial  High Voltage
+  - RAHV
+NSTEMI - Inferior:
+  - Inferior ST Segment Depression
+  - ISTD
+Pacing - Atrial-Paced Complex(es) or Rhythm:
+  - Atrial Pacing
+  - Arial Pacing # Probably Labeling Typo
+ST Changes - Nonspecific T-Wave Abnormality: ST Changes - Nonspecific With T-Wave Change
+Pacing - Ventricular Pacing:
+  - Ventricular Pacing
+  - Pacing Ventricular Pacing
+  - Ventricular Pacing Pattern
+  - VPP
+Junctional Escape Rhythm: Junctional Escape
+Junctional Rhythm:
+  - AV Junctional Rhythm
+  - IVR
+  - AVJR
+Extreme Axis Deviation: Northwest Axis
+Atrial Bradycardia: Ectopic Atrial Bradycardia
+Nonspecific Intraventricular Block:
+  - Diffuse Intraventricular Block
+  - DIB
+STEMI - Inferoposterior: Infero-Posterior STEMI
+J Wave:
+  - J Wave (Osborn Wave)
+  - Osborn Wave
+Inferior Ischemia: Inferior Ischaemia
+Aberrant Ventricular Conduction: Aberrant Conduction of Supraventricular Beat(s)
+Myocardial Infarction - Anterolateral: Anterolateral Myocardial Infarction
+
+# PhysioNet
+Wolff-Parkinson-White:
+  - WPW
+  - Wolff Parkinson White Pattern
+Accelerated Idioventricular Rhythm: AIVR
+Atrial Bigeminy: AB
+Atrial Flutter: AFL
+Ventricular Bigeminy:
+  - B
+  - VBig
+Normal Sinus Rhythm:
+  - N
+  - NSR
+Pacing:
+  - P
+  - PR
+Supraventricular Tachycardia:
+  - SVTA
+  - SVT
+Ventricular Trigeminy:
+  - T
+  - VTrig
+Ventricular Flutter: VFL
+Ventricular Tachycardia:
+  - VT
+  - VTach
+Atrial Escape Rhythm:
+  - Atrial Escape Beat
+  - AED
+
+Accelerated Atrial Escape Rhythm: AAR
+Abnormal QRS: AbQRS
+
+Accelerated Junctional Rhythm: AJR
+Suspect Arm Ecg Leads Reversed: ALR
+
+Anterior Ischemia: AnMIs
+Atrial Fibrillation & Flutter:
+  - Atrial Fibrillation And Flutter
+  - AFAFL
+Pacing - Atrial-paced complex(es) or rhythm:
+  - Atrial Pacing Pattern
+  - AP
+Atrial Tachycardia: ATach
+AV Block: AVB
+Atrioventricular Dissociation:
+  - AVD
+  - AV Dissociation
+AV Node Reentrant Tachycardia (AVNRT):
+  - Atrioventricular  Node Reentrant Tachycardia
+  - AVNRT
+AV Reentry Tachycardia (AVRT):
+  - Atrioventricular Reentrant Tachycardia
+  - AVRT
+Blocked Premature Atrial Contraction: BPAC
+Brugada abnormality: BRU
+Tachycardia-Bradycardia Syndrome:
+  - Brady Tachy Syndrome
+  - BTS
+Chronic Atrial Fibrillation: CAF
+Counterclockwise Rotation:
+  - Countercolockwise Rotation
+  - CCR
+Clockwise or Counterclockwise Vectorcardiographic Loop: CVCL/CCVCL
+Cardiac Dysrhythmia: CD
+
+Congenital Incomplete Atrioventricular Heart Block: CIAHB
+Coronary Heart Disease: CHD
+Chronic Myocardial Ischemia: CMI
+Clockwise Rotation: CR
+Early Repolarization: ERe
+Fqrs Wave: FQRS
+Heart Failure: HF
+Heart Valve Disorder: HVD
+Indeterminate Cardiac Axis: ICA
+Inferior Ischaemia: IIs
+Incomplete Left Bundle Branch Block: ILBBB
+
+Junctional Tachycardia: JTach
+Left Atrial Abnormality: LAA
+Lateral Ischemia:
+  - Lateral Ischaemia
+  - LIs
+Left Posterior Fascicular Block: LPFB
+Left Ventricular Hypertrophy:
+  - LVH
+  - Left Ventricular High Voltage
+  - LVHV
+
+Left Ventricular Strain: LVS
+Myocardial Infarction:
+  - MI
+  - Acute Myocardial Infarction
+  - AMI
+ST changes - Nonspecific ST deviation:
+  - Nonspecific ST-T Abnormality
+  - NSSTTA
+  - ST Interval Abnormal
+  - STIAb
+Old Myocardial Infarction: OldMI
+Paroxysmal Atrial Fibrillation: PAF
+Prolonged P Wave: PPW
+Paroxysmal Supraventricular Tachycardia: PSVT
+Paroxysmal Ventricular Tachycardia: PVT
+P Wave Changes:
+  - P Wave Change
+  - PWC
+Right Atrial Abnormality: RAAb
+R Wave Abnormal: RAb
+
+Atrial Fibrillation with a Rapid Ventricular Rate:
+  - Rapid Atrial Fibrillation
+  - RAF
+Right Ventricular Hypertrophy: RVH
+Sinus Atrium to Atrial Wandering Rhythm: SAAWR
+Sinosatrial Block:
+  - Sinoatrial Block
+  - SAB
+Sinus Arrest: SARR
+Sinus Node Dysfunction: SND
+QT Interval - Short:
+  - Decreased QT Interval
+  - SQT
+ST Depression: STD
+ST Elevation: STE
+
+Supraventricular Bigeminy: SVB
+Transient Ischemic Attack: TIA
+Tall P Wave:
+  - TPW
+  - P Pulmonale
+Ventricular Rhythm:
+  - Ventricular Ectopics
+  - VEB
+Ventricular Escape Beat: VEsB
+Ventricular Fibrillation: VF
+Ventricular Hypertrophy: VH
+Paired Ventricular Premature Complexes: VPVC
+Wandering Atrial Pacemaker: WAP
+
+Bundle Branch Block: BBB
+Bradycardia: Brady
+
+Left Axis Deviation: LAD
+Left Anterior Fascicular Block: LAnFB
+
+Nonspecific Intraventricular Conduction Disorder: NSIVCB
+Q Wave Abnormal: QAb
+Right Axis Deviation: RAD
+Sinus Arrhythmia: SA
+Supraventricular Premature Beats: SVPB
+T Wave Inversion: TInv

@@ -1,0 +1,379 @@
+#### Instructions
+
+# This YAML is loadable as is, use your favorite YAML library to get a python dict, JSON etc.
+
+# The hierarchy represents conditions that are subgroups of others, e.g. consider the following structure:
+# A:
+#   - C:
+#     - D
+#     - E
+#   - F
+# G:
+#   - F
+# Synonyms (different file):
+# H: F
+# D & E are both in C, aka D is always C and E is always C, but C may be either, both or none.
+# H & F are synonyms, aka H could perfectly replace H in the without changing the meaning
+# F is subgroup of both C and G
+
+# Diagnoses
+
+Diagnoses Tree:
+
+## Cardiac Arrest
+  - Cardiac Arrest:
+    - Asystole
+    - Ventricular Fibrillation
+    - Pulseless Electrical Activity
+
+## SSS
+  - Sinus Node Dysfunction:
+    - Sinus Arrest
+    - Tachycardia-Bradycardia Syndrome
+
+## Conduction system abnormalities
+  - Heart Block:
+    - Sinoatrial Block:
+      - Sinoatrial Block - Type I
+      - Sinoatrial Block - Type II
+    - AV Block:
+      - Congenital Incomplete Atrioventricular Heart Block
+      - PR Interval - Prolonged # PR interval may be/seem prolonged in any degree of AV block but may not
+      - AV Block - First-degree
+      - AV Block - Second-degree:
+        - Mobitz Type II
+        - Mobitz Type I (Wenckebach)
+        - High-Grade AV Block
+        - 2:1 AV block
+      - AV Block - Third-degree (Complete)
+      - AV Block - Varying Conduction
+    - Bifascicular block
+    - Nonspecific Intraventricular Block
+    - Aberrant Ventricular Conduction
+    - Ashman Phenomenon
+    - Left Bundle Branch Block:
+      - Intermittent Left Bundle Branch Block # Rare
+      - Complete Left Bundle Branch Block
+      - Incomplete Left Bundle Branch Block:
+        - Left Anterior Fascicular Block
+        - Left Posterior Fascicular Block
+    - Right Bundle Branch Block:
+      - Complete Right Bundle Branch Block
+      - Incomplete Right Bundle Branch Block
+      - Intermittent Right Bundle Branch Block
+
+## Tachycardia
+  - Tachycardia:
+    - Narrow QRS tachycardia:
+      - Sinus Tachycardia
+      - AV Node Reentrant Tachycardia (AVNRT)
+      - Atrial Tachycardia
+      - Junctional Tachycardia
+      - Orthodromic AVRT
+    - Wide-QRS Tachycardia:
+      - Supraventricular Tachycardia With Aberrancy
+      - Antidromic AVRT
+      - Ventricular Tachycardia
+    - Sinus Tachycardia
+    - Supraventricular Tachycardia:
+      - AV Node Reentrant Tachycardia (AVNRT):
+        - Retrograde atrial activation
+      - AV Reentry Tachycardia (AVRT):
+        - Orthodromic AVRT
+        - Antidromic AVRT
+      - Paroxysmal Supraventricular Tachycardia
+      - Atrial Tachycardia:
+        - Ectopic Atrial Tachycardia # Probably refers to ectopic (unifocal) atrial tachycardia (EAT)
+        - Multifocal Atrial Tachycardia
+        - Atrial Fibrillation & Flutter:
+          - Atrial Fibrillation:
+              - Paroxysmal Atrial Fibrillation
+              - Chronic Atrial Fibrillation
+              - Atrial Fibrillation with a Rapid Ventricular Rate
+              - Atrial Fibrillation with a Slow Ventricular Rate
+          - Atrial Flutter:
+              - Typical Atrial Flutter
+              - Atypical Atrial Flutter
+      - Junctional Tachycardia
+    - Supraventricular Tachycardia With Aberrancy
+    - Ventricular Tachycardia:
+        - Non Sustained Ventricular Tachycardia
+        - Paroxysmal Ventricular Tachycardia
+        - Monomorphic Ventricular Tachycardia
+        - Polymorphic Ventricular Tachycardia:
+            - Torsades De Pointes
+        - Ventricular Flutter
+        - Ventricular Fibrillation
+
+## Bradycardia
+  - Bradycardia:
+    - Sinus Bradycardia
+    - Escape Rhythms:
+        - Atrial Escape Rhythm
+        - Junctional Escape Rhythm
+        - Ventricular Escape Rhythm
+        - Escape Bigeminy
+
+## Myocardial Ischemia
+  - Myocardial Ischemia: # Acute
+    - Anterior Ischemia
+    - Inferior Ischemia
+    - Lateral Ischemia
+    - Septal Ischemia
+    - Anterospetal Ischemia
+    - Anterolateral Ischemia
+    - Right Coronary Artery Occlusion
+    - Coronary Heart Disease
+    - Ischemia - location unspecified
+    - Wellens Syndrome # LAD critical stenosis, impending anterior STEMI
+    - Old Myocardial Infarction
+    - Chronic Myocardial Ischemia
+    - Myocardial Infarction: # Acute
+      - Hyperacute T waves
+      - Myocardial Infarction - Anterior:
+        - De Winter T Wave
+        - STEMI - Anterior
+        - NSTEMI - Anterior
+      - Myocardial Infarction - Anteroseptal:
+        - STEMI - Anteroseptal
+        - NSTEMI - Anteroseptal
+      - Myocardial Infarction - Inferior Or Inferolateral:
+        - STEMI - Inferior or Inferolateral
+        - NSTEMI - Inferior or Inferolateral
+      - Myocardial Infarction - Lateral:
+        - STEMI - Lateral
+        - NSTEMI - Lateral
+      - Myocardial Infarction - Posterior:
+        - STEMI - Posterior
+        - NSTEMI - Posterior
+      - Myocardial Infarction - Right Ventricular:
+        - STEMI - Right Ventricular
+        - NSTEMI - Right Ventricular
+      - Myocardial Infarction - Septal:
+        - STEMI - Anteroseptal
+        - NSTEMI - Anteroseptal
+      - Myocardial Infarction - Inferior:
+        - STEMI - Inferior
+        - NSTEMI - Inferior
+      - Myocardial Infarction - Inferoposterior:
+        - STEMI - Inferoposterior
+        - NSTEMI - Inferoposterior
+      - Myocardial Infarction - Anterolateral:
+        - STEMI - Anterolateral
+        - NSTEMI - Anterolateral
+
+## Normal ECG patterns
+  - Normal ECG:
+    - Sinus Arrhythmia # NOT AN ARRHYTHMIA!! Very confusing :(
+    - Normal Sinus Rhythm
+    - Normal Variant
+    - Early Repolarization
+    - Narrow QRS Complex
+    - Dextrocardia:
+        - Dextrocardia with situs inversus
+    - Normal Axis
+
+## Artificial Pacing
+  - Pacing:
+    - Pacing - Ventricular-paced complex(es) or rhythm
+    - Pacing - Atrial-sensed ventricular-paced complex(es) or rhythm
+    - Pacing - AV dual-paced complex(es) or rhythm
+    - Pacing - Atrial-paced complex(es) or rhythm
+    - Pacing - Ventricular pacing
+    - Pacing - Biventricular Pacing
+    - Pacing - Failure to pace:
+      - Pacing - Failure to pace - Atrial
+      - Pacing - Failure to pace - Ventricular
+    - Pacing - Failure to inhibit:
+      - Pacing - Failure to inhibit - Atrial
+      - Pacing - Failure to inhibit - Ventricular
+    - Pacing - Failure to capture:
+      - Pacing - Failure to capture - Atrial
+      - Pacing - Failure to capture - Ventricular
+
+## Enlargement
+  - Atrial Enlargement:
+    - Left Atrial Enlargement
+    - Right Atrial Enlargement
+  - Ventricular Hypertrophy:
+    - Left Ventricular Hypertrophy:
+      - ST-T change due to ventricular hypertrophy
+    - Right Ventricular Hypertrophy:
+      - Right ventricular hypertrophy
+    - Biventricular hypertrophy
+
+## Intraventricular Conduction Delay
+  - Intraventricular Conduction Delay:
+    - Wide-QRS tachycardia # ?????? May cause but not a subtype
+    - Brugada abnormality # ?????? May cause but not a subtype
+    - Nonspecific Intraventricular Conduction Disorder
+
+## Pre Excitation
+  - Ventricular Pre Excitation:
+    - Wolff-Parkinson-White:
+      - Left Posterior Accessory Pathway
+      - Left Anterolateral Accessory Pathway
+    - PR Interval - Short # Sometimes referred to as Lown-Ganong-Levine (LGL) Syndrome
+
+## Ectopic rhythms
+  - Supraventricular Rhythm:
+    - Supraventricular Bigeminy
+    - Supraventricular Premature Beats
+    - Sinus Atrium to Atrial Wandering Rhythm
+    - Atrial Rhythm:
+      - Wandering Atrial Pacemaker
+      - Atrial Bradycardia
+      - Accelerated Atrial Escape Rhythm
+      - Atrial Tachycardia:
+        - Atrial Tachycardia - Unifocal
+        - Atrial Tachycardia - Multifocal
+      - Premature Atrial Contractions:
+        - Atrial Bigeminy
+        - Blocked Premature Atrial Contraction
+    - Junctional Rhythm:
+      - Premature Junctional Contractions
+      - Junctional Escape Rhythm
+      - Accelerated Junctional Rhythm
+      - Junctional Tachycardia
+
+  - Ventricular Rhythm:
+      - Premature Ventricular Contractions:
+          - Fusion Beats
+          - Ventricular Bigeminy
+          - Ventricular Trigeminy
+          - Ventricular Quadrigeminy
+          - Paired Ventricular Premature Complexes
+      - Ventricular Escape Beat
+      - Ventricular Escape Rhythm
+      - Accelerated Idioventricular Rhythm
+      - Ventricular Tachycardia
+
+  - Cardiomyopathy:
+      - Takotsubo Cardiomyopathy
+      - Dilated Cardiomyopathy
+      - Hypertrophic Cardiomyopathy
+
+# ECG Morphology Abnormalities
+
+ECG Morphology Abnormalities:
+  - P Wave Changes:
+    - Abnormal P-wave Axis
+    - P wave inversion
+    - Prolonged P Wave
+    - Tall P Wave
+    - P Waves Absent
+    - P wave negative in lead I
+    - P wave positive in lead 2
+  - PR Interval – Depression
+  - PR Interval – Elevation
+  - Axis Deviation:
+    - Indeterminate Cardiac Axis
+    - Extreme Axis Deviation
+    - Left Axis Deviation
+    - Right Axis Deviation:
+      - Left posterior fascicular block
+      - Right superior axis
+      - Pulmonary disease # ?????? May cause but not a subtype
+      - Right Ventricular Hypertrophy # ?????? May cause but not a subtype
+    - Clockwise Rotation # On the horizontal plane
+    - Counterclockwise Rotation # On the horizontal plane
+  - Q Wave Abnormal:
+    - Early Q wave Formation
+    - Persistent Pathological Q waves
+  - R Wave Abnormal:
+    - Tall R Wave
+  - Abnormal QRS:
+    - Electrical Alternans
+    - Fqrs Wave
+    - QRS - Prolonged:
+      - Wide-QRS tachycardia
+      - Ventricular Rhythm
+  - Low Voltage
+  - QT Interval - Prolonged
+  - QT Interval - Short
+  - ST Changes:
+    - ST changes - Nonspecific T-wave abnormality
+    - ST changes - Nonspecific ST deviation
+    - ST changes - Nonspecific ST deviation with T-wave change
+    - ST-T change due to ventricular hypertrophy
+    - ST Elevation:
+      - STEMI:
+        - STEMI - Anteroseptal
+        - STEMI - Anterior
+        - STEMI - Inferior or Inferolateral
+        - STEMI - Lateral
+        - STEMI - Posterior
+        - STEMI - Right Ventricular
+      - Brugada abnormality
+      - Acute Pericarditis
+      - Takotsubo Cardiomyopathy
+      - Shark Fin
+    - ST Depression:
+      - NSTEMI:
+        - NSTEMI - Anterior
+        - NSTEMI - Anteroseptal
+        - NSTEMI - Anteroseptal
+        - NSTEMI - Inferior or Inferolateral
+        - NSTEMI - Lateral
+        - NSTEMI - Posterior
+        - NSTEMI - Right Ventricular
+        - NSTEMI - Anteroseptal
+      - ST Depression Unspecified
+  - T Wave Abnormal:
+    - ST changes - Nonspecific T-wave abnormality
+    - ST changes - Nonspecific ST deviation with T-wave change
+    - De Winter T Wave
+    - Hyperacute T waves
+    - Tall T-Waves
+    - T Wave Inversion
+  - TU Fusion
+  - U Wave Abnormal
+  - Poor R Wave Progression:
+    - Unusual QRS progression from V2 to V6
+    - Decreasing voltage from V3 to V6
+  - Atrioventricular Dissociation
+  - J Wave
+  - Left Ventricular Strain
+  - Repolarization Abnormality # Very vague, I'd suggest removing it.
+
+# Comments
+
+Comments:
+
+## Technical Issues
+  - Technical Issues:
+    - Electrode Reversal:
+        - Suspect Arm Ecg Leads Reversed
+    - Lead Displacement
+
+## Drug Effects
+  - Drug Effects:
+    - Digitalis Effect
+
+## Signs of non-arrhythmia cardiac disease in ECG
+  - Signs non-arrhythmia cardiac disease in ECG:
+    - Heart Failure
+    - Heart Valve Disorder
+    - Eisenmenger Syndrome
+    - Clockwise Or Counterclockwise Loop
+
+## Signs of non-cardiac disease in ECG
+  - Signs of non-cardiac disease in ECG:
+    - Pulmonary Disease
+    - Hypokalemia
+    - Hyperkalemia
+    - Transient Ischemic Attack
+    - Hypotension
+    - Hyperthyroidism
+
+## Labels that don't exist in the literature and are probably errors
+  - Labeling Errors:
+    - Q Wave Inversion
+    - Pulsus Alternans # Pulsus Alternans is a physical examination finding, the ECG might show electrical alternans
+
+## Labels to general to add any information
+  - General Comments:
+    - Cardiac Dysrhythmia
+    - Left Atrial Abnormality
+    - Right Atrial Abnormality
+    - Bundle Branch Block # which bundle branch?!?

@@ -1,0 +1,19 @@
+pyyaml
+igraph
+boto3
+python-dotenv
+packaging
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[dev]
+pre-commit
+
+[testing]
+setuptools
+pytest
+pyodbc
+
+[viz]
+pycairo

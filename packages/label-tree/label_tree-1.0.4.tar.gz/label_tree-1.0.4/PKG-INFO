@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: label-tree
+Version: 1.0.4
+Summary: A minimal client to access the label tree across BeatBoxAI applications.
+Home-page: https://github.com/Medpic/label-tree
+Author: Noam Keidar
+Author-email: noamkeidar@campus.technion.ac.il
+License: MIT
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python
+Description-Content-Type: text/x-rst; charset=UTF-8
+License-File: LICENSE.txt
+Requires-Dist: importlib-metadata; python_version < "3.8"
+Requires-Dist: pyyaml
+Requires-Dist: igraph
+Requires-Dist: boto3
+Requires-Dist: python-dotenv
+Requires-Dist: packaging
+Provides-Extra: viz
+Requires-Dist: pycairo; extra == "viz"
+Provides-Extra: dev
+Requires-Dist: pre-commit; extra == "dev"
+Provides-Extra: testing
+Requires-Dist: setuptools; extra == "testing"
+Requires-Dist: pytest; extra == "testing"
+Requires-Dist: pyodbc; extra == "testing"
+
+.. These are examples of badges you might want to add to your README:
+   please update the URLs accordingly
+
+    .. image:: https://api.cirrus-ci.com/github/<USER>/label-tree.svg?branch=main
+        :alt: Built Status
+        :target: https://cirrus-ci.com/github/<USER>/label-tree
+    .. image:: https://readthedocs.org/projects/label-tree/badge/?version=latest
+        :alt: ReadTheDocs
+        :target: https://label-tree.readthedocs.io/en/stable/
+    .. image:: https://img.shields.io/coveralls/github/<USER>/label-tree/main.svg
+        :alt: Coveralls
+        :target: https://coveralls.io/r/<USER>/label-tree
+    .. image:: https://img.shields.io/pypi/v/label-tree.svg
+        :alt: PyPI-Server
+        :target: https://pypi.org/project/label-tree/
+    .. image:: https://img.shields.io/conda/vn/conda-forge/label-tree.svg
+        :alt: Conda-Forge
+        :target: https://anaconda.org/conda-forge/label-tree
+    .. image:: https://pepy.tech/badge/label-tree/month
+        :alt: Monthly Downloads
+        :target: https://pepy.tech/project/label-tree
+    .. image:: https://img.shields.io/twitter/url/http/shields.io.svg?style=social&label=Twitter
+        :alt: Twitter
+        :target: https://twitter.com/label-tree
+
+.. image:: https://img.shields.io/badge/-PyScaffold-005CA0?logo=pyscaffold
+    :alt: Project generated with PyScaffold
+    :target: https://pyscaffold.org/
+
+|
+
+==========
+label-tree
+==========
+
+
+    Add a short description here!
+
+
+A longer description of your project goes here...
+
+
+.. _pyscaffold-notes:
+
+Note
+====
+
+This project has been set up using PyScaffold 4.5. For details and usage
+information on PyScaffold see https://pyscaffold.org/.
