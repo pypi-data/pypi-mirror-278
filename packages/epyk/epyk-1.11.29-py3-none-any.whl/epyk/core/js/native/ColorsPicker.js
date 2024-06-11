@@ -1,0 +1,1 @@
+function colorsPicker(b,c,a){a.el=b;Coloris(a);}
