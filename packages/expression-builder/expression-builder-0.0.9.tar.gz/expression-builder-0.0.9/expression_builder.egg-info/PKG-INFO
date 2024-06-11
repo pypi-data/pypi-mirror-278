@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: expression-builder
+Version: 0.0.9
+Summary: Django app that does mathematical expression
+Home-page: https://github.com/django-advance-utils/expression-builder
+Author: Tom Turner
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
+[![codecov](https://codecov.io/gh/django-advance-utils/expression-builder/branch/main/graph/badge.svg?token=hTlGb5wPDt)](https://codecov.io/gh/django-advance-utils/expression-builder)
+
+# expression-builder
