@@ -1,0 +1,58 @@
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[project]
+name = "WuttaPOS"
+version = "0.2.0"
+description = "Pythonic Point of Sale System"
+readme = "README.md"
+authors = [{name = "Lance Edgar", email = "lance@edbob.org"}]
+license = {text = "GNU GPL v3+"}
+classifiers = [
+        "Development Status :: 3 - Alpha",
+        "Environment :: Win32 (MS Windows)",
+        "Environment :: X11 Applications",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+        "Natural Language :: English",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Topic :: Office/Business :: Financial :: Point-Of-Sale",
+]
+dependencies = [
+        "psycopg2",
+        "rattail[db]",
+        "typer",
+
+        # TODO: unfortunately the latest Flet versions as of writing
+        # (to 0.22.1) include a bug..when running `wuttapos open`
+        # command then quitting the app, you get an error "Event loop
+        # is closed" - i tried several versions of python (to 3.12.3)
+        # but nothing worked despite the claims made in github issue,
+        # https://github.com/flet-dev/flet/issues/2848
+        "flet<0.21",
+]
+
+
+[project.scripts]
+wuttapos = "wuttapos.commands:wuttapos_typer"
+
+
+[project.entry-points."rattail.config.extensions"]
+wuttapos = "wuttapos.config:WuttaConfigExtension"
+
+
+[project.urls]
+Homepage = "https://rattailproject.org"
+Repository = "https://kallithea.rattailproject.org/rattail-project/wuttapos"
+Changelog = "https://kallithea.rattailproject.org/rattail-project/wuttapos/files/master/CHANGELOG.md"
+
+
+[tool.commitizen]
+version_provider = "pep621"
+tag_format = "v$version"
+update_changelog_on_bump = true

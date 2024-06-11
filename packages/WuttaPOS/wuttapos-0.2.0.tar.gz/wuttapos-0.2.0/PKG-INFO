@@ -1,0 +1,29 @@
+Metadata-Version: 2.3
+Name: WuttaPOS
+Version: 0.2.0
+Summary: Pythonic Point of Sale System
+Project-URL: Homepage, https://rattailproject.org
+Project-URL: Repository, https://kallithea.rattailproject.org/rattail-project/wuttapos
+Project-URL: Changelog, https://kallithea.rattailproject.org/rattail-project/wuttapos/files/master/CHANGELOG.md
+Author-email: Lance Edgar <lance@edbob.org>
+License: GNU GPL v3+
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Environment :: X11 Applications
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Office/Business :: Financial :: Point-Of-Sale
+Requires-Dist: flet<0.21
+Requires-Dist: psycopg2
+Requires-Dist: rattail[db]
+Requires-Dist: typer
+Description-Content-Type: text/markdown
+
+
+# WuttaPOS
+
+Why not write a new POS system..?  Heh surely a terrible idea, yet here we are.
