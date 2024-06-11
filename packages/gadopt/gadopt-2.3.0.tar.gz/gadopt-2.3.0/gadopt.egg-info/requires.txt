@@ -1,0 +1,13 @@
+vtk>=9.0.1
+
+[demos]
+assess
+gmsh
+jupytext
+openpyxl
+pandas
+pyvista
+shapely
+
+[optimisation]
+pyroltrilinos
