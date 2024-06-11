@@ -1,0 +1,66 @@
+[
+  {
+    "text": "En parall\u00e8le,  la  Russie intensifie  son offensive dans l\u2019est  de\nl\u2019Ukraine.",
+    "identifier": "SHERPA-XXX3",
+    "title": "unknown test document",
+    "metadata": {
+      "language": "fr"
+    },
+    "sentences": [
+      {
+        "start": 0,
+        "end": 77
+      }
+    ],
+    "annotations": [
+      {
+        "start": 19,
+        "end": 25,
+        "labelName": "loc_org",
+        "label": "G\u00e9opolitique",
+        "text": "Russie",
+        "score": 0.9995059967041016,
+        "terms": [
+          {
+            "identifier": "Q159",
+            "lexicon": "wikidata",
+            "preferredForm": "Russia",
+            "score": 0.1524,
+            "properties": {
+              "wikidataId": "Q159",
+              "wikipediaExternalRef": "2549"
+            }
+          }
+        ]
+      },
+      {
+        "start": 59,
+        "end": 76,
+        "labelName": "lieu",
+        "label": "Lieu",
+        "text": "est  de\nl\u2019Ukraine",
+        "score": 0.9721912294626236
+      },
+      {
+        "start": 69,
+        "end": 76,
+        "labelName": "lieu",
+        "label": "Lieu",
+        "text": "Ukraine",
+        "score": 0.1529,
+        "terms": [
+          {
+            "identifier": "Q212",
+            "lexicon": "wikidata",
+            "preferredForm": "Ukraine",
+            "score": 0.1529,
+            "properties": {
+              "wikidataId": "Q212",
+              "wikipediaExternalRef": "3083"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,124 @@
+{
+  "text": "A Washington, le président Wilson, élu difficilement sur un programme pacifiste, respire.",
+  "metadata": {
+    "language": "fr"
+  },
+  "sentences": [
+    {
+      "start": 0,
+      "end": 89
+    }
+  ],
+  "annotations": [
+    {
+      "start": 0,
+      "end": 1,
+      "labelName": "classe_d_equipement",
+      "score": 1,
+      "terms": [
+        {
+          "identifier": "ship_class74",
+          "lexicon": "equipment_classes",
+          "preferredForm": "classe A"
+        },
+        {
+          "identifier": "ship_class684",
+          "lexicon": "equipment_classes",
+          "preferredForm": "classe A"
+        }
+      ],
+      "label": "Classe d'équipement",
+      "text": "A"
+    },
+    {
+      "start": 2,
+      "end": 12,
+      "labelName": "personne",
+      "score": 0.5772,
+      "terms": [
+        {
+          "identifier": "Q23",
+          "lexicon": "wikidata",
+          "preferredForm": "George Washington",
+          "score": 0.5772,
+          "properties": {
+            "wikidataId": "Q23",
+            "wikipediaExternalRef": "12310"
+          }
+        }
+      ],
+      "label": "Personne",
+      "text": "Washington"
+    },
+    {
+      "start": 2,
+      "end": 12,
+      "labelName": "classe_d_equipement",
+      "score": 1,
+      "terms": [
+        {
+          "identifier": "warships74",
+          "lexicon": "equipment_classes",
+          "preferredForm": "USS Washington"
+        },
+        {
+          "identifier": "warships3345",
+          "lexicon": "equipment_classes",
+          "preferredForm": "USS Washington"
+        },
+        {
+          "identifier": "warships2598",
+          "lexicon": "equipment_classes",
+          "preferredForm": "USS Washington"
+        }
+      ],
+      "label": "Classe d'équipement",
+      "text": "Washington"
+    },
+    {
+      "start": 17,
+      "end": 33,
+      "labelName": "personne",
+      "score": 0.6874,
+      "terms": [
+        {
+          "identifier": "Q34296",
+          "lexicon": "wikidata",
+          "preferredForm": "Woodrow Wilson",
+          "score": 0.6874,
+          "properties": {
+            "wikidataId": "Q34296",
+            "wikipediaExternalRef": "32702"
+          }
+        }
+      ],
+      "label": "Personne",
+      "text": "président Wilson"
+    },
+    {
+      "start": 27,
+      "end": 33,
+      "labelName": "personne",
+      "score": 0.9425044059753418,
+      "label": "Personne",
+      "text": "Wilson"
+    },
+    {
+      "start": 27,
+      "end": 33,
+      "labelName": "classe_d_equipement",
+      "score": 1,
+      "terms": [
+        {
+          "identifier": "warships7800",
+          "lexicon": "equipment_classes",
+          "preferredForm": "USS Wilson"
+        }
+      ],
+      "label": "Classe d'équipement",
+      "text": "Wilson"
+    }
+  ],
+  "identifier": "3fb9234fce54b7a30a12dfa4feef574f",
+  "title": "unknown test document"
+}

@@ -1,0 +1,153 @@
+[
+  {
+    "text": "En octobre 1983, le porte-avions Clemenceau vient pr\u00eater cinq avions Super-\u00c9tendard, seuls \u00e0 m\u00eame de frapper les navires iraniens dans le Golfe avec leurs missiles AM-39 Exocet.",
+    "identifier": "SHERPA-XXX1",
+    "title": "unknown test document",
+    "metadata": {
+      "language": "fr"
+    },
+    "sentences": [
+      {
+        "start": 0,
+        "end": 177
+      }
+    ],
+    "annotations": [
+      {
+        "start": 20,
+        "end": 43,
+        "labelName": "meta_equipement",
+        "label": "META Equipement",
+        "text": "porte-avions Clemenceau",
+        "score": 0.8709234744310379
+      },
+      {
+        "start": 20,
+        "end": 32,
+        "labelName": "type_d_equipements",
+        "label": "Type d'\u00e9quipement",
+        "text": "porte-avions",
+        "score": 0.998971164226532
+      },
+      {
+        "start": 33,
+        "end": 43,
+        "labelName": "equipement",
+        "label": "Nom d'\u00e9quipement",
+        "text": "Clemenceau",
+        "score": 0.9902727007865906,
+        "terms": [
+          {
+            "identifier": "warships2482",
+            "lexicon": "equipment_classes",
+            "preferredForm": "Clemenceau"
+          }
+        ]
+      },
+      {
+        "start": 62,
+        "end": 83,
+        "labelName": "meta_equipement",
+        "label": "META Equipement",
+        "text": "avions Super-\u00c9tendard",
+        "score": 0.9369614124298096
+      },
+      {
+        "start": 62,
+        "end": 68,
+        "labelName": "type_d_equipements",
+        "label": "Type d'\u00e9quipement",
+        "text": "avions",
+        "score": 0.9883891344070435
+      },
+      {
+        "start": 69,
+        "end": 83,
+        "labelName": "classe_d_equipement",
+        "label": "Classe d'\u00e9quipement",
+        "text": "Super-\u00c9tendard",
+        "score": 0.9974372386932373
+      },
+      {
+        "start": 113,
+        "end": 129,
+        "labelName": "meta_equipement",
+        "label": "META Equipement",
+        "text": "navires iraniens",
+        "score": 0.9646205902099609
+      },
+      {
+        "start": 113,
+        "end": 120,
+        "labelName": "type_d_equipements",
+        "label": "Type d'\u00e9quipement",
+        "text": "navires",
+        "score": 0.8506967425346375
+      },
+      {
+        "start": 121,
+        "end": 129,
+        "labelName": "loc_org",
+        "label": "G\u00e9opolitique",
+        "text": "iraniens",
+        "score": 0.9952785968780518,
+        "terms": [
+          {
+            "identifier": "Q794",
+            "lexicon": "wikidata",
+            "preferredForm": "Iran",
+            "score": 0.0729,
+            "properties": {
+              "wikidataId": "Q794",
+              "wikipediaExternalRef": "1510"
+            }
+          }
+        ]
+      },
+      {
+        "start": 138,
+        "end": 143,
+        "labelName": "lieu",
+        "label": "Lieu",
+        "text": "Golfe",
+        "score": 0.576614499092102,
+        "terms": [
+          {
+            "identifier": "Q34675",
+            "lexicon": "wikidata",
+            "preferredForm": "Persian Gulf",
+            "score": 0.0729,
+            "properties": {
+              "wikidataId": "Q34675",
+              "wikipediaExternalRef": "94201"
+            }
+          }
+        ]
+      },
+      {
+        "start": 155,
+        "end": 176,
+        "labelName": "meta_equipement",
+        "label": "META Equipement",
+        "text": "missiles AM-39 Exocet",
+        "score": 0.9557156364123026
+      },
+      {
+        "start": 155,
+        "end": 163,
+        "labelName": "type_d_equipements",
+        "label": "Type d'\u00e9quipement",
+        "text": "missiles",
+        "score": 0.9936612844467163
+      },
+      {
+        "start": 164,
+        "end": 176,
+        "labelName": "classe_d_equipement",
+        "label": "Classe d'\u00e9quipement",
+        "text": "AM-39 Exocet",
+        "score": 0.9901072978973389
+      }
+    ]
+  }
+]

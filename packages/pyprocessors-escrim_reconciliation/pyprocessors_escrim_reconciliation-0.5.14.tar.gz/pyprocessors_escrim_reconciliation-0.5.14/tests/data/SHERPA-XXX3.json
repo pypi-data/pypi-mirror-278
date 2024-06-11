@@ -1,0 +1,72 @@
+{
+  "text": "En parallèle,  la  Russie intensifie  son offensive dans l’est  de\nl’Ukraine.",
+  "metadata": {
+    "language": "fr"
+  },
+  "sentences": [
+    {
+      "start": 0,
+      "end": 77
+    }
+  ],
+  "annotations": [
+    {
+      "start": 19,
+      "end": 25,
+      "labelName": "loc_org",
+      "score": 0.9995059967041016,
+      "label": "Géopolitique",
+      "text": "Russie"
+    },
+    {
+      "start": 19,
+      "end": 25,
+      "labelName": "lieu",
+      "score": 0.1524,
+      "terms": [
+        {
+          "identifier": "Q159",
+          "lexicon": "wikidata",
+          "preferredForm": "Russia",
+          "score": 0.1524,
+          "properties": {
+            "wikidataId": "Q159",
+            "wikipediaExternalRef": "2549"
+          }
+        }
+      ],
+      "label": "Lieu",
+      "text": "Russie"
+    },
+    {
+      "start": 59,
+      "end": 76,
+      "labelName": "lieu",
+      "score": 0.9721912294626236,
+      "label": "Lieu",
+      "text": "est  de\nl’Ukraine"
+    },
+    {
+      "start": 69,
+      "end": 76,
+      "labelName": "lieu",
+      "score": 0.1529,
+      "terms": [
+        {
+          "identifier": "Q212",
+          "lexicon": "wikidata",
+          "preferredForm": "Ukraine",
+          "score": 0.1529,
+          "properties": {
+            "wikidataId": "Q212",
+            "wikipediaExternalRef": "3083"
+          }
+        }
+      ],
+      "label": "Lieu",
+      "text": "Ukraine"
+    }
+  ],
+  "identifier": "c82169d3832807fe7bdf7a4a9e4161f0",
+  "title": "unknown test document"
+}

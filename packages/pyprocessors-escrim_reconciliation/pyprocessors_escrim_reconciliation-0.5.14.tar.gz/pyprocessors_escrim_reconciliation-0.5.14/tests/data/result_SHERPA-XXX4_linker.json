@@ -1,0 +1,90 @@
+[
+  {
+    "text": "Les Ukrainiens sont m\u00eame capables de monter une attaque complexe de grande ampleur dans la province de Kharkiv en septembre et d\u2019y infliger un coup s\u00e9v\u00e8re \u00e0 la force terrestre russe.",
+    "identifier": "SHERPA-XXX4",
+    "title": "unknown test document",
+    "metadata": {
+      "language": "fr"
+    },
+    "sentences": [
+      {
+        "start": 0,
+        "end": 182
+      }
+    ],
+    "annotations": [
+      {
+        "start": 4,
+        "end": 14,
+        "labelName": "groupe_d_individus",
+        "label": "Groupe d'individus",
+        "text": "Ukrainiens",
+        "score": 0.8021884560585022
+      },
+      {
+        "start": 4,
+        "end": 14,
+        "labelName": "loc_org",
+        "label": "G\u00e9opolitique",
+        "text": "Ukrainiens",
+        "score": 0.9971916079521179
+      },
+      {
+        "start": 91,
+        "end": 110,
+        "labelName": "lieu",
+        "label": "Lieu",
+        "text": "province de Kharkiv",
+        "score": 0.9621630907058716
+      },
+      {
+        "start": 160,
+        "end": 181,
+        "labelName": "unite_militaire",
+        "label": "Unite Militaire",
+        "text": "force terrestre russe",
+        "score": 0.911598285039266
+      },
+      {
+        "start": 176,
+        "end": 181,
+        "labelName": "loc_org",
+        "label": "G\u00e9opolitique",
+        "text": "russe",
+        "score": 0.9973605275154114,
+        "terms": [
+          {
+            "identifier": "Q159",
+            "lexicon": "wikidata",
+            "preferredForm": "Russia",
+            "score": 0.1524,
+            "properties": {
+              "wikidataId": "Q159",
+              "wikipediaExternalRef": "2549"
+            }
+          }
+        ]
+      },
+      {
+        "start": 103,
+        "end": 110,
+        "labelName": "lieu",
+        "label": "Lieu",
+        "text": "Kharkiv",
+        "score": 0.6799,
+        "terms": [
+          {
+            "identifier": "Q170666",
+            "lexicon": "wikidata",
+            "preferredForm": "Kharkiv Oblast",
+            "score": 0.6799,
+            "properties": {
+              "wikidataId": "Q170666",
+              "wikipediaExternalRef": "1342391"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

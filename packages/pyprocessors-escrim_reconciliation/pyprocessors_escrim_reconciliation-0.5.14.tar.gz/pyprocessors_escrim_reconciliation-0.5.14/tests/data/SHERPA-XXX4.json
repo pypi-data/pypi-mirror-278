@@ -1,0 +1,96 @@
+{
+  "text": "Les Ukrainiens sont même capables de monter une attaque complexe de grande ampleur dans la province de Kharkiv en septembre et d’y infliger un coup sévère à la force terrestre russe.",
+  "metadata": {
+    "language": "fr"
+  },
+  "sentences": [
+    {
+      "start": 0,
+      "end": 182
+    }
+  ],
+  "annotations": [
+    {
+      "start": 4,
+      "end": 14,
+      "labelName": "groupe_d_individus",
+      "score": 0.8021884560585022,
+      "label": "Groupe d'individus",
+      "text": "Ukrainiens"
+    },
+    {
+      "start": 4,
+      "end": 14,
+      "labelName": "loc_org",
+      "score": 0.9971916079521179,
+      "label": "Géopolitique",
+      "text": "Ukrainiens"
+    },
+    {
+      "start": 91,
+      "end": 110,
+      "labelName": "lieu",
+      "score": 0.9621630907058716,
+      "label": "Lieu",
+      "text": "province de Kharkiv"
+    },
+    {
+      "start": 103,
+      "end": 110,
+      "labelName": "lieu",
+      "score": 0.6799,
+      "terms": [
+        {
+          "identifier": "Q170666",
+          "lexicon": "wikidata",
+          "preferredForm": "Kharkiv Oblast",
+          "score": 0.6799,
+          "properties": {
+            "wikidataId": "Q170666",
+            "wikipediaExternalRef": "1342391"
+          }
+        }
+      ],
+      "label": "Lieu",
+      "text": "Kharkiv"
+    },
+    {
+      "start": 160,
+      "end": 181,
+      "labelName": "unite_militaire",
+      "score": 0.911598285039266,
+      "label": "Unite Militaire",
+      "text": "force terrestre russe"
+    },
+    {
+      "start": 176,
+      "end": 181,
+      "labelName": "loc_org",
+      "score": 0.9973605275154114,
+      "label": "Géopolitique",
+      "text": "russe"
+    },
+    {
+      "start": 176,
+      "end": 181,
+      "labelName": "lieu",
+      "score": 0.1524,
+      "terms": [
+        {
+          "identifier": "Q159",
+          "lexicon": "wikidata",
+          "preferredForm": "Russia",
+          "score": 0.1524,
+          "properties": {
+            "wikidataId": "Q159",
+            "wikipediaExternalRef": "2549"
+          }
+        }
+      ],
+      "label": "Lieu",
+      "text": "russe"
+    }
+  ],
+  "identifier": "fd497e348b1058abc7ff6aa9395ffea4",
+  "title": "unknown test document"
+}
