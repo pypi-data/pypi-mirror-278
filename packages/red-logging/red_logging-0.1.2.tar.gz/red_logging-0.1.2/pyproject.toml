@@ -1,0 +1,130 @@
+[project]
+name = "red-logging"
+version = "0.1.2"
+description = "Helpful classes, functions, & utilities for the stdlib `logging` module. No external dependencies."
+authors = [
+    { name = "redjaxk", email = "no@none.com" },
+]
+dependencies = []
+requires-python = ">=3.11"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "ruff>=0.4.4",
+    "nox>=2024.4.15",
+    "pdm-bump>=0.9.0",
+    "pytest-xdist>=3.6.1",
+    "vulture>=2.11",
+    "bandit[toml]>=1.7.8",
+    "detect-secrets>=1.5.0",
+    "radon>=6.0.1",
+    "xenon>=0.9.1",
+    "pygments>=2.18.0",
+    "mkdocs>=1.6.0",
+    "mkdocs-material>=9.5.25",
+    "mkdocstrings[python]>=0.25.1",
+    "markdown-include>=0.8.1",
+    "mkdocs-gen-files>=0.5.0",
+    "mkdocs-autorefs>=1.0.1",
+    "mkdocs-section-index>=0.3.9",
+    "mkdocs-literate-nav>=0.6.1",
+]
+
+[tool.pdm.scripts.tests]
+cmd = "nox -s tests"
+
+[tool.pdm.scripts.git-prune-tags]
+cmd = "git fetch --prune origin '+refs/tags/*:refs/tags/*'"
+
+[tool.pdm.scripts.sort-imports]
+shell = "pdm run ruff check --select I --fix ."
+
+[tool.pdm.scripts.lint]
+cmd = "nox -s lint"
+
+[tool.pdm.scripts.lint-ci]
+shell = "RUFF_CONFIG=ruff.ci.toml pdm run ruff check . --fix"
+
+[tool.pdm.scripts.check]
+cmd = "black ."
+
+[tool.pdm.scripts.format]
+cmd = "ruff check . --fix"
+
+[tool.pdm.scripts.vulture-check]
+cmd = "vulture src/red_logging --min-confidence 100"
+
+[tool.pdm.scripts.bandit-check]
+cmd = "bandit -r src/red_logging"
+
+[tool.pdm.scripts.scan-secrets]
+cmd = "detect-secrets scan > .secrets.baseline"
+
+[tool.pdm.scripts.radon-complexity]
+cmd = "radon cc src/red_logging -s -a --total-average -nc -j -O radon_complexity_results.json"
+
+[tool.pdm.scripts.radon-raw]
+cmd = "radon raw src/red_logging -sjO radon_raw_results.json"
+
+[tool.pdm.scripts.radon-maintainability]
+cmd = "radon mi src/red_logging -n C -x F -s -j -O radon_maintainability_results.json"
+
+[tool.pdm.scripts.radon-halstead]
+cmd = "radon hal src red_logging -f -j -O radon_halstead_results.json"
+
+[tool.pdm.scripts.xenon-scan]
+cmd = "xenon -b B -m C -a C src/red_logging"
+
+[tool.pdm.scripts.export]
+shell = "pdm export --prod --no-default -o requirements.txt --without-hashes"
+
+[tool.pdm.scripts.export-dev]
+shell = "pdm export -d --no-default -o requirements.dev.txt --without-hashes"
+
+[tool.pdm.scripts.export-ci]
+shell = "pdm export -G ci --no-default -o requirements.ci.txt --without-hashes"
+
+[tool.pdm.scripts.export-docs]
+shell = "pdm export -G docs --no-default -o docs/requirements.txt --without-hashes"
+
+[tool.pdm.scripts.create-major-release]
+shell = "pdm bump major && pdm bump tag && pdm lock && pdm build && git push --tags"
+
+[tool.pdm.scripts.create-minor-release]
+shell = "pdm bump minor && pdm bump tag && pdm lock && pdm build && git push --tags"
+
+[tool.pdm.scripts.create-micro-release]
+shell = "pdm bump micro && pdm bump tag && pdm lock && pdm build && git push --tags"
+
+[tool.pdm.scripts.upload-pypi]
+shell = "pdm lock && pdm publish --repository pypi --verbose"
+
+[tool.pdm.scripts.upload-pypi-test]
+shell = "pdm lock && pdm publish --repository testpypi --verbose"
+
+[tool.pdm.scripts.mkdocs-build]
+cmd = "mkdocs build"
+
+[tool.pdm.scripts.mkdocs-serve]
+cmd = "mkdocs serve --dev-addr 0.0.0.0:8000"
+
+[tool.bandit]
+exclude_dirs = [
+    "tests",
+]
+skips = [
+    "B324",
+]
