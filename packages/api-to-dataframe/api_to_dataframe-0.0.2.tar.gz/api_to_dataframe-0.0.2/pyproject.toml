@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "api-to-dataframe"
+version = "v0.0.2"
+description = "A package to convert API responses to pandas dataframe"
+authors = ["IvanildoBarauna <ivanildo.jnr@outlook.com>"]
+readme = "README.md"
+license = "MIT"
+packages = [{ include = "api_to_dataframe" }]
+classifiers=[
+    "Development Status :: 1 - Planning",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+]
+
+[tool.project.urls]
+url="https://github.com/IvanidoBarauba/api-to-dataframe"
+license="MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests="^2.26.0"
+pandas="^1.4.0"
+
+[tool.poetry.dev-dependencies]
+pytest="^8.2.2"
+coverage="^7.5.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
