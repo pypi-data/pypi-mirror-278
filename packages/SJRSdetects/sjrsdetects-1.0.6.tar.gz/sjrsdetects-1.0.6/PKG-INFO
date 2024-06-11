@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: SJRSdetects
+Version: 1.0.6
+Summary: Detecta movimiento en fotos, video y camara
+Home-page: https://github.com/Stevenjoelrs/SJRSdetects
+Author: Stevenjoelrs
+Author-email: Stevenjramossalazar@gmail.com
+Project-URL: Bug Tracker, https://github.com/Stevenjoelrs/SJRSdetect/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# SJRdetect
+Detector de Movimiento usando OpenCV y Python
+# import de camara 
+from SJRSdetects import DetectaMovCamara
