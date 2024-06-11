@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/notipi/__init__.py
+src/notipi/notification.py
+src/notipi/notipi.py
+src/notipi/utils.py
+src/notipi.egg-info/PKG-INFO
+src/notipi.egg-info/SOURCES.txt
+src/notipi.egg-info/dependency_links.txt
+src/notipi.egg-info/entry_points.txt
+src/notipi.egg-info/requires.txt
+src/notipi.egg-info/top_level.txt
