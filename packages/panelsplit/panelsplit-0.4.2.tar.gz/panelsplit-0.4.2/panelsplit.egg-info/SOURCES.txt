@@ -1,0 +1,14 @@
+CITATION.cff
+LICENSE
+README.md
+setup.py
+examples/An introduction to PanelSplit.ipynb
+panelsplit/__init__.py
+panelsplit/panelsplit.py
+panelsplit.egg-info/PKG-INFO
+panelsplit.egg-info/SOURCES.txt
+panelsplit.egg-info/dependency_links.txt
+panelsplit.egg-info/requires.txt
+panelsplit.egg-info/top_level.txt
+tests/__init__.py
+tests/test_PanelSplit.py
