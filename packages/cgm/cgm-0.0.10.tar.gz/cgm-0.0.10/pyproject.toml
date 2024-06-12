@@ -1,0 +1,60 @@
+# I created the documentation with 
+# >> sphinx-quickstart ./docs -p "Causal Graphical Models" -a "Kyle Ellefsen" -l "en" -r="0.0.9" --no-sep --ext-autodoc --ext-doctest --ext-coverage
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cgm"
+version = "0.0.10"
+dependencies = [
+    "numpy",
+]
+requires-python = ">= 3.8"
+authors = [
+    {name = "Kyle Ellefsen", email = "kyleellefsen@gmail.com"},
+]
+description = "Causal Graphical Models"
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Build Tools",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3 :: Only",
+]
+keywords = ["cgm", "pgm", "dag", "causal inference", "factors"]
+
+[project.optional-dependencies]
+docs = [
+        "sphinx_rtd_theme",
+        "myst_parser",
+        "sphinx-math-dollar",
+        "sphinx-autodoc2",
+        "sphinx-copybutton",
+        "sphinxcontrib.mermaid",
+        "sphinx_tabs",
+]
+
+[project.urls]
+Source = "https://github.com/kyleellefsen/cgm"
+PyPi = "https://pypi.org/project/cgm/"
+Issues = "https://github.com/kyleellefsen/cgm/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.setuptools.package-data]
+cgm = ["py.typed"]
+
+[tool.pytest.ini_options]
+addopts = [ "--import-mode=importlib",]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.mypy]
+exclude = '''(?x)(
+    | ^\.?docs/    # or any path starting with "./docs" or "docs/"
+)'''

@@ -1,0 +1,89 @@
+Metadata-Version: 2.1
+Name: cgm
+Version: 0.0.10
+Summary: Causal Graphical Models
+Author-email: Kyle Ellefsen <kyleellefsen@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2020 Kyle Ellefsen
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Project-URL: Source, https://github.com/kyleellefsen/cgm
+Project-URL: PyPi, https://pypi.org/project/cgm/
+Project-URL: Issues, https://github.com/kyleellefsen/cgm/issues
+Keywords: cgm,pgm,dag,causal inference,factors
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Provides-Extra: docs
+Requires-Dist: sphinx_rtd_theme; extra == "docs"
+Requires-Dist: myst_parser; extra == "docs"
+Requires-Dist: sphinx-math-dollar; extra == "docs"
+Requires-Dist: sphinx-autodoc2; extra == "docs"
+Requires-Dist: sphinx-copybutton; extra == "docs"
+Requires-Dist: sphinxcontrib.mermaid; extra == "docs"
+Requires-Dist: sphinx_tabs; extra == "docs"
+
+# Causal Graphical Models
+
+[![CGM Tests](https://github.com/kyleellefsen/cgm/actions/workflows/cgm_tests.yml/badge.svg)](https://github.com/kyleellefsen/cgm/actions/workflows/cgm_tests.yml)
+[![PyPi Publish](https://github.com/kyleellefsen/cgm/actions/workflows/publish_to_pypi.yml/badge.svg?event=release)](https://github.com/kyleellefsen/cgm/actions/workflows/publish_to_pypi.yml?query=event%3Arelease)
+[![PyPi Version](https://img.shields.io/pypi/v/cgm)](https://pypi.org/project/cgm/)
+![PyPI - Status](https://img.shields.io/pypi/status/cgm)
+![PyPI - Format](https://img.shields.io/pypi/format/cgm)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/kyleellefsen/cgm/blob/master/LICENSE)
+[![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
+[![Python Version](https://img.shields.io/python/required-version-toml?tomlFilePath=https%3A%2F%2Fraw.githubusercontent.com%2Fkyleellefsen%2Fcgm%2Fmaster%2Fpyproject.toml)](https://www.python.org/)
+![GitHub last commit](https://img.shields.io/github/last-commit/kyleellefsen/cgm)
+
+
+
+
+A python library for building causal graphical models, closely following Daphne 
+Koller's Coursera course on Probabilistic Graphical Models, and her 2009 book 
+_Probabilistic Graphical Models: Principles and Techniques_. 
+The source for this project is available [here][src].
+
+## Installation
+[NumPy][numpy] is the only dependency. Python version must be >= 3.7. 
+
+    pip install cgm
+
+## Usage
+
+```python
+import cgm
+
+# Define all nodes
+A = cgm.CG_Node('A', num_states=3)
+B = cgm.CG_Node('B', 3)
+C = cgm.CG_Node('C', 3)
+D = cgm.CG_Node('D', 3)
+# Specify all parents of nodes
+cgm.CPD([B, A])
+cgm.CPD([B, C])
+cgm.CPD([D, A, B])
+# Create causal graph
+graph = cgm.CG([A, B, C, D])
+print(graph)
+# A ← []
+# B ← [C]
+# C ← []
+# D ← [A, B]
+```
+
+[src]: https://github.com/kyleellefsen/cgm
+[numpy]: https://numpy.org/
+
+## Documentation
+[kyleellefsen.github.io/cgm](https://kyleellefsen.github.io/cgm/)
