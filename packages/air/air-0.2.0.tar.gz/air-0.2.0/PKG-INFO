@@ -1,0 +1,25 @@
+Metadata-Version: 2.3
+Name: air
+Version: 0.2.0
+Summary: Add your description here
+Author-email: "Audrey M. Roy Greenfeld" <audrey@feldroy.com>
+Requires-Python: >=3.12
+Requires-Dist: jinja2==3.1.4
+Requires-Dist: markdown==3.6
+Description-Content-Type: text/markdown
+
+# air
+
+An ultra-lightweight static site generator.
+
+## Installation
+
+```bash
+pip install air
+```
+
+## Usage
+
+```bash
+rye run air
+```
