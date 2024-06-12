@@ -1,0 +1,5 @@
+[console_scripts]
+populate_series_in_tahrir_db=tahrir_api.scripts.populateseries:main
+sync_tahrir_db=tahrir_api.scripts.syncdb:main
+tahrir-populate-avatars=tahrir_api.scripts.populate_avatars:main
+
