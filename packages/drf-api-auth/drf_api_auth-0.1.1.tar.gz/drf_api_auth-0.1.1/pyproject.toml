@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "drf-api-auth"
+version = "0.1.0"
+description = "Django Restframework API Authentication"
+authors = ["Amin <amin.bsr99@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+django = "4.2.13"
+djangorestframework = "3.15.1"
+pre-commit = "3.7.1"
+
+[build-system]
+requires = ['setuptools>=40.8.0']
+build-backend = 'setuptools.build_meta'
