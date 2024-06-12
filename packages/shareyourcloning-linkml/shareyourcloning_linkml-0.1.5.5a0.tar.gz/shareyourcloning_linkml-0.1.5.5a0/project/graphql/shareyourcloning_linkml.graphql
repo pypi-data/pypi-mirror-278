@@ -1,0 +1,252 @@
+# metamodel_version: 1.7.0
+type AddGeneIdSource
+  {
+    id: Integer!
+    input: [Sequence]
+    output: Sequence
+    type: String
+    repositoryName: RepositoryName!
+    repositoryId: String!
+    sequenceFileUrl: String
+    addgeneSequenceType: AddGeneSequenceType
+  }
+
+type AssemblyJoin
+  {
+    left: AssemblyJoinComponent!
+    right: AssemblyJoinComponent!
+  }
+
+type AssemblyJoinComponent
+  {
+    sequence: Sequence!
+    location: SimpleSequenceLocation!
+    reverseComplemented: Boolean!
+  }
+
+type AssemblySource
+  {
+    id: Integer!
+    input: [Sequence]
+    output: Sequence
+    type: String
+    circular: Boolean
+    assembly: [AssemblyJoin]!
+  }
+
+type CloningStrategy
+  {
+    sequences: [Sequence]!
+    sources: [Source]!
+    primers: [Primer]
+    description: String
+  }
+
+type CRISPRSource
+  {
+    id: Integer!
+    output: Sequence
+    type: String
+    circular: Boolean
+    assembly: [AssemblyJoin]!
+    input: [Sequence]
+    guides: [Primer]!
+  }
+
+type GenomeCoordinatesSource
+  {
+    id: Integer!
+    input: [Sequence]
+    output: Sequence
+    type: String
+    assemblyAccession: String
+    sequenceAccession: String!
+    locusTag: String
+    geneId: Integer
+    start: Integer!
+    end: Integer!
+    strand: Integer!
+  }
+
+type GibsonAssemblySource
+  {
+    id: Integer!
+    output: Sequence
+    type: String
+    circular: Boolean
+    assembly: [AssemblyJoin]!
+    input: [Sequence]
+  }
+
+type HomologousRecombinationSource
+  {
+    id: Integer!
+    output: Sequence
+    type: String
+    circular: Boolean
+    assembly: [AssemblyJoin]!
+    input: [Sequence]
+  }
+
+type LigationSource
+  {
+    id: Integer!
+    output: Sequence
+    type: String
+    circular: Boolean
+    assembly: [AssemblyJoin]!
+    input: [Sequence]
+  }
+
+type ManuallyTypedSource
+  {
+    id: Integer!
+    input: [Sequence]
+    output: Sequence
+    type: String
+    overhangCrick3prime: Integer
+    overhangWatson3prime: Integer
+    userInput: String!
+    circular: Boolean
+  }
+
+type NamedThing
+  {
+    id: Integer!
+  }
+
+type OligoHybridizationSource
+  {
+    id: Integer!
+    input: [Sequence]
+    output: Sequence
+    type: String
+    overhangCrick3prime: Integer
+    forwardOligo: Primer!
+    reverseOligo: Primer!
+  }
+
+type PCRSource
+  {
+    id: Integer!
+    output: Sequence
+    type: String
+    circular: Boolean
+    assembly: [AssemblyJoin]!
+    forwardPrimer: Primer!
+    reversePrimer: Primer!
+    input: [Sequence]
+  }
+
+type PolymeraseExtensionSource
+  {
+    id: Integer!
+    output: Sequence
+    type: String
+    input: [Sequence]
+  }
+
+type Primer
+  {
+    id: Integer!
+    type: String
+    name: String
+    sequence: String
+  }
+
+type RepositoryIdSource
+  {
+    id: Integer!
+    input: [Sequence]
+    output: Sequence
+    type: String
+    repositoryName: RepositoryName!
+    repositoryId: String!
+  }
+
+type RestrictionAndLigationSource
+  {
+    id: Integer!
+    output: Sequence
+    type: String
+    circular: Boolean
+    assembly: [AssemblyJoin]!
+    restrictionEnzymes: [String]!
+    input: [Sequence]
+  }
+
+type RestrictionEnzymeDigestionSource
+  {
+    id: Integer!
+    output: Sequence
+    type: String
+    input: [Sequence]
+    leftEdge: RestrictionSequenceCut
+    rightEdge: RestrictionSequenceCut
+  }
+
+type RestrictionSequenceCut
+  {
+    cutWatson: Integer!
+    overhang: Integer!
+    restrictionEnzyme: String!
+  }
+
+interface Sequence
+  {
+    id: Integer!
+    type: String
+  }
+
+type SequenceCut
+  {
+    cutWatson: Integer!
+    overhang: Integer!
+  }
+
+type SequenceCutSource
+  {
+    id: Integer!
+    output: Sequence
+    type: String
+    leftEdge: SequenceCut
+    rightEdge: SequenceCut
+    input: [Sequence]
+  }
+
+type SimpleSequenceLocation
+  {
+    start: Integer!
+    end: Integer!
+    strand: Integer
+  }
+
+interface Source
+  {
+    id: Integer!
+    input: [Sequence]
+    output: Sequence
+    type: String
+  }
+
+type TextFileSequence
+  {
+    id: Integer!
+    type: String
+    sequenceFileFormat: SequenceFileFormat!
+    overhangCrick3prime: Integer
+    overhangWatson3prime: Integer
+    fileContent: String
+  }
+
+type UploadedFileSource
+  {
+    id: Integer!
+    input: [Sequence]
+    output: Sequence
+    type: String
+    sequenceFileFormat: SequenceFileFormat!
+    fileName: String
+    indexInFile: Integer
+    circularize: Boolean
+  }
