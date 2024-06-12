@@ -1,0 +1,265 @@
+Metadata-Version: 2.1
+Name: danila-lib
+Version: 2.0.9
+Summary: This is the module for detecting and classifying text on rama pictures
+Home-page: https://github.com/Arseniy-Zhuck/danila_lib
+Author: arseniy_zhuck
+Author-email: arseniyzhuck@mail.ru
+Project-URL: GitHub, https://github.com/Arseniy-Zhuck/danila_lib
+Keywords: rama detect machine-learning computer-vision
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: absl-py ==2.0.0
+Requires-Dist: astunparse ==1.6.3
+Requires-Dist: backports.tarfile ==1.0.0
+Requires-Dist: cachetools ==5.3.2
+Requires-Dist: certifi ==2023.11.17
+Requires-Dist: charset-normalizer ==3.3.2
+Requires-Dist: colorama ==0.4.6
+Requires-Dist: contourpy ==1.2.0
+Requires-Dist: cycler ==0.12.1
+Requires-Dist: docutils ==0.21.1
+Requires-Dist: easyocr ==1.7.1
+Requires-Dist: filelock ==3.13.1
+Requires-Dist: flatbuffers ==23.5.26
+Requires-Dist: fonttools ==4.46.0
+Requires-Dist: fsspec ==2023.12.2
+Requires-Dist: gast ==0.5.4
+Requires-Dist: gitdb ==4.0.11
+Requires-Dist: GitPython ==3.1.40
+Requires-Dist: google-auth ==2.25.2
+Requires-Dist: google-auth-oauthlib ==1.2.0
+Requires-Dist: google-pasta ==0.2.0
+Requires-Dist: grpcio ==1.60.0
+Requires-Dist: h5py ==3.10.0
+Requires-Dist: idna ==3.6
+Requires-Dist: imageio ==2.33.1
+Requires-Dist: importlib-metadata ==7.0.0
+Requires-Dist: importlib-resources ==6.1.1
+Requires-Dist: jaraco.classes ==3.4.0
+Requires-Dist: jaraco.context ==5.3.0
+Requires-Dist: jaraco.functools ==4.0.0
+Requires-Dist: Jinja2 ==3.1.2
+Requires-Dist: keras ==3.3.3
+Requires-Dist: keyring ==25.1.0
+Requires-Dist: kiwisolver ==1.4.5
+Requires-Dist: lazy-loader ==0.3
+Requires-Dist: libclang ==16.0.6
+Requires-Dist: Markdown ==3.5.1
+Requires-Dist: markdown-it-py ==3.0.0
+Requires-Dist: MarkupSafe ==2.1.3
+Requires-Dist: matplotlib ==3.8.2
+Requires-Dist: mdurl ==0.1.2
+Requires-Dist: ml-dtypes ==0.3.2
+Requires-Dist: more-itertools ==10.2.0
+Requires-Dist: mpmath ==1.3.0
+Requires-Dist: namex ==0.0.8
+Requires-Dist: networkx ==3.2.1
+Requires-Dist: nh3 ==0.2.17
+Requires-Dist: ninja ==1.11.1.1
+Requires-Dist: numpy ==1.26.2
+Requires-Dist: oauthlib ==3.2.2
+Requires-Dist: opencv-python ==4.9.0.80
+Requires-Dist: opencv-python-headless ==4.9.0.80
+Requires-Dist: opt-einsum ==3.3.0
+Requires-Dist: optree ==0.11.0
+Requires-Dist: packaging ==23.2
+Requires-Dist: pandas ==2.1.4
+Requires-Dist: pillow ==10.3.0
+Requires-Dist: pkginfo ==1.10.0
+Requires-Dist: protobuf ==4.23.4
+Requires-Dist: psutil ==5.9.6
+Requires-Dist: py-cpuinfo ==9.0.0
+Requires-Dist: pyasn1 ==0.5.1
+Requires-Dist: pyasn1-modules ==0.3.0
+Requires-Dist: pyclipper ==1.3.0.post5
+Requires-Dist: Pygments ==2.17.2
+Requires-Dist: pyparsing ==3.1.1
+Requires-Dist: python-bidi ==0.4.2
+Requires-Dist: python-dateutil ==2.8.2
+Requires-Dist: pytz ==2023.3.post1
+Requires-Dist: pywin32-ctypes ==0.2.2
+Requires-Dist: PyYAML ==6.0.1
+Requires-Dist: readme-renderer ==43.0
+Requires-Dist: requests ==2.31.0
+Requires-Dist: requests-oauthlib ==1.3.1
+Requires-Dist: requests-toolbelt ==1.0.0
+Requires-Dist: rfc3986 ==2.0.0
+Requires-Dist: rich ==13.7.1
+Requires-Dist: rsa ==4.9
+Requires-Dist: scikit-image ==0.22.0
+Requires-Dist: scipy ==1.11.4
+Requires-Dist: seaborn ==0.13.0
+Requires-Dist: shapely ==2.0.2
+Requires-Dist: six ==1.16.0
+Requires-Dist: smmap ==5.0.1
+Requires-Dist: sympy ==1.12
+Requires-Dist: tensorboard ==2.16.2
+Requires-Dist: tensorboard-data-server ==0.7.2
+Requires-Dist: tensorflow ==2.16.1
+Requires-Dist: tensorflow-estimator ==2.15.0
+Requires-Dist: tensorflow-intel ==2.16.1
+Requires-Dist: tensorflow-io-gcs-filesystem ==0.31.0
+Requires-Dist: termcolor ==2.4.0
+Requires-Dist: thop ==0.1.1.post2209072238
+Requires-Dist: tifffile ==2023.12.9
+Requires-Dist: torch ==2.1.1
+Requires-Dist: torchvision ==0.16.1
+Requires-Dist: tqdm ==4.66.1
+Requires-Dist: twine ==5.0.0
+Requires-Dist: typing-extensions ==4.9.0
+Requires-Dist: tzdata ==2023.3
+Requires-Dist: ultralytics ==8.2.2
+Requires-Dist: urllib3 ==2.1.0
+Requires-Dist: Werkzeug ==3.0.1
+Requires-Dist: wrapt ==1.14.1
+Requires-Dist: zipp ==3.17.0
+
+# danila_lib v1.3.7
+ python library for Danila
+
+# To install project made 
+    pip install danila-lib
+
+
+# To use in your project 
+    from danila.danila import Danila
+
+# All use methods are in 
+    class Danila
+
+# main method returns dict {'number', 'prod', 'year'} for openCV rama img or 'no_rama'
+    def text_recognize(self, img):
+
+# steps for algorythm
+
+# returns string - class of rama, img - openCV frame
+    def rama_classify(self, img):
+
+# returns openCV frame with rama from openCV frame
+    def rama_detect(self, img):
+
+# returns openCV image with cut_rama
+    def rama_cut(self, img):
+
+# returns openCV cut rama with drawn text areas
+    def text_detect_cut(self, img):
+
+# returns openCV img with drawn text areas
+    def text_detect(self, img):
+
+# in package data/neuro there is module Rama_classify_class
+    class Rama_classify_class
+
+# reads CNN taught model and includes it in class example
+    def __init__():
+
+# makes grey NumPy Array(1,512,512) of doubles[0..1] from openCV image
+    def prepare_img(img : openCV frame): NumPy Array(1,512,512)[0..1]
+
+# classify openCV img with CNN, returns list with double[0..1] values 
+    def work_img(img : openCV frame): Double[0..1] list
+
+# classify openCV img with CNN, returns Class_im
+    def classify(img : openCV frame): Class_im
+
+# in package data/neuro there is module Rama_detect_class
+    class Rama_detect_class
+# reads yolov5 taught model from yandex-disk and includes it in class example
+    def __init__(self, model_path, model_name, yolo_path):
+# РїРѕР»СѓС‡РёС‚СЊ JSON СЃ СЂРµР·СѓР»СЊС‚Р°С‚Р°РјРё yolo
+    def work_img(self, img_path):
+# РїРѕР»СѓС‡РёС‚СЊ РєРѕРѕСЂРґРёРЅР°С‚С‹ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР° СЃ СЂР°РјРѕР№
+    def rama_detect(self, img_path):
+
+# in package data/neuro there is module Text_detect_class
+    class Text_detect_class
+
+# reads yolov5 taught model from yandex-disk and includes it in class example
+    def __init__(self, model_path, model_name, yolo_path):
+
+# find text areas on img from img_path with yolov5, returns yolojson
+    def work_img(self, img_path):
+
+# find text areas on img from img_path with yolov5, returns dict with rects for each text class
+    def text_detect(self, img_path):
+
+# draw img_text_areas on img, returns opencv img
+    def draw_text_areas_in_opencv(self, image_text_areas, img):
+
+# in package data/neuro there is module Letters_recognize
+    class Letters_recognize:
+
+# main_method takes all image_text_areas from image_rama_cut and recognize text 
+    def work_image_cut(self, image_text_areas, image_rama_cut, number_length, prod_length, year_length):
+
+# read CNN model from yandex and put into object
+    def __init__(self):
+
+# cut text_areas imgs for each Rect from rect_array returns openCv imgs list
+    def make_cuts(self, img_rama_cut, rect_array):
+
+# for every text_class recognize text from all areas of text_class, length is depends on class and prod, returns string 
+    def work_image_cuts(self, number_image_cuts, length):
+
+# recognize one word of given length from one img, returns str
+    def work_img_word(self, image_number, letter_number):
+
+# prepare img of one letter for CNN, returns np_array(1,28,28,1) of Double[0..1]
+    def prepare_img_letter(self, image_letter):
+
+# recognize img of one letter with CNN, returns list[10] of p
+    def work_img_letter(self, image_initial):
+
+# recognize img of one letter with CNN, returns letter in str
+    def classify_letter(self, image_letter):
+
+# in package data/result Rect module for rectangle operations
+# РїСЂРѕС‡РёС‚Р°С‚СЊ РёР· json СЂРµР·СѓР»СЊС‚Р°С‚Р° Р№РѕР»Рѕ
+    @staticmethod
+    def get_rect_from_yolo_json(yolo_json):
+# makes Rect object from xmin, xmax, ymin, ymax
+    def __init__(self, xmin=0, xmax=0, ymin=0, ymax=0):
+# РќР°Р№С‚Рё IOU РјРµР¶РґСѓ СЌС‚РёРј РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєРѕРј Рё РґСЂСѓРіРёРј, РґР°РЅРЅС‹Рј РІ РѕР±СЉРµРєС‚Рµ
+    def IoU(self, rect):
+# makes string from object
+    def __str__(self):
+
+# find intersection square between object and other rectangle
+    def intersection(self, rect):
+# find union RECT between object and other rectangle
+    def union(self, rect):
+# in package data/result Class_im
+    class Class_im(Enum):
+        rama_no_spring = 0
+        rama_spring = 1
+
+# in package data/result class Text_area
+    def __init__(self, dict_text_area):
+        self.class_im = Class_text(dict_text_area['class'])
+        self.rect = Rect(...)
+
+# in package data/result class image_text_areas
+# class contains dict with Rects list for each text_class
+    class Image_text_areas:
+
+# makes dict {Class_text.number : [], Class_text.prod : [], Class_text.text : [], Class_text.year : []} 
+    def __init__(self):
+
+# add text area to dict
+    def add_area(self, text_area):
+
+# add list of text areas
+    def fill_in_with_areas(self, areas):
+
+# delete all cases in which two areas are intersected
+    def correct_intersections(self):
+
+# changes Rects coordinates from cut_img to whole_img from rama Rect
+    def explore_to_whole_image(self, rama_rect):
+
+# exapmles of using you can find 
+https://github.com/Arseniy-Zhuck/danila_lib_demo
