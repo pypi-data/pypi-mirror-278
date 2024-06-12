@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: schwab_api_wrapper
+Version: 0.1.14
+Summary: A wrapper package around the schwab http api
+Author-email: Owen Gordon <owengordon330@outlook.com>
+Project-URL: Homepage, https://github.com/OwenGordon/schwab-api-wrapper
+Project-URL: Issues, https://github.com/OwenGordon/schwab-api-wrapper/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Schwab API Wrapper
+# schwab-api-wrapper
