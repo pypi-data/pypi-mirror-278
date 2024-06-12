@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: cleverdoc
+Version: 1.0.8rc2
+Summary: AI lib for processing and de-identification medical documents and images.
+Home-page: http://apicom.pro
+Author: ApicomPro
+Author-email: info@apicom.pro
+Project-URL: Documentation, https://cleverdoc.apicom.pro/
+Project-URL: Workshop, https://github.com/ApiComPro/cleverdoc-workshop
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: pyspark<=3.4.2,>=3.0.2
+Requires-Dist: pyarrow
+Requires-Dist: tesserocr
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pillow
+Requires-Dist: PyMuPDF
+Requires-Dist: pyJWT
+Requires-Dist: cryptography
+Requires-Dist: imagesize
+Requires-Dist: img2pdf
+Provides-Extra: llm
+Requires-Dist: openai; extra == "llm"
+Provides-Extra: inference
+Requires-Dist: optimum[onnxruntime]; extra == "inference"
+Requires-Dist: onnx; extra == "inference"
+Provides-Extra: inference-gpu
+Requires-Dist: optimum[onnxruntime-gpu]; extra == "inference-gpu"
+
+# CleverDoc
+
+<p align="center">
+    <a href="https://pypi.org/project/cleverdoc/" alt="Package on PyPI">
+        <img src="https://img.shields.io/pypi/v/cleverdoc.svg" /></a>
+    <a href="https://github.com/ApiComPro/cleverdoc-workshop/actions/workflows/documentation.yml" alt="Package on PyPI">
+            <img src="https://github.com/ApiComPro/cleverdoc-workshop/actions/workflows/documentation.yml/badge.svg" /></a>
+</p>
+
+
+CleverDoc is a library for processing and de-idention of medical documents. It is built on top of Apache Spark.
+
+It is developing by [ApicomPro](https://apicom.pro/).
+
+## Project's website
+Take a look at our official CleverDoc page: [CleverDoc](https://cleverdoc.apicom.pro/) for user documentation and examples.
+
+## Community support
+- [Workshop](https://github.com/ApiComPro/cleverdoc-workshop) Examples of usage CleverDoc library
+- [Slack](https://join.slack.com/t/apicompro/shared_invite/zt-2kf8ro3ts-N480VqC9Hq5uB_XK8EBfNg) For live discussion with the CleverDoc community and the team
+- [GitHub](https://github.com/ApiComPro/cleverdoc-workshop/issues) Bug reports, feature requests
+- [Medium](https://medium.com/@apicom.pro) CleverDoc tutorials and articles
+
+## Supported formats
+
+- PDF (with text layout, scanned)
+- DOCX
+- Images (JPG, PNG, TIFF, BMP)
+- DICOM
+
+## Installation
+The following command installs CleverDoc from the [Python Package Index](https://pypi.org/project/cleverdoc/). You will need a working installation of Python 3.9 and pip.
+```bash
+pip install cleverdoc[inference]
+```
