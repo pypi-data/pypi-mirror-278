@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: pytest-neos
+Version: 0.1.1
+Summary: Pytest plugin for neos
+Home-page: https://github.com/NEOS-Critical/pytest-neos
+License: closed
+Keywords: neos,pytest
+Author: Daniel Edgecombe
+Author-email: daniel@nrwl.co
+Maintainer: Daniel Edgecombe
+Maintainer-email: daniel@nrwl.co
+Requires-Python: >=3.9,<4.0
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: neos-common[auth] (>=0.13)
+Description-Content-Type: text/markdown
+
+# NEOS pytest plugin
+

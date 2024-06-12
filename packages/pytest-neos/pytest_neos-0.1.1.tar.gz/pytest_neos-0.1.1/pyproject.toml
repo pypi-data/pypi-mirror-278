@@ -1,0 +1,120 @@
+[tool.poetry]
+name = "pytest-neos"
+version = "0.1.1"
+description = "Pytest plugin for neos"
+readme = "README.md"
+homepage = "https://github.com/NEOS-Critical/pytest-neos"
+authors = [
+    "Daniel Edgecombe <daniel@nrwl.co>"
+]
+maintainers = [
+    "Daniel Edgecombe <daniel@nrwl.co>",
+]
+keywords = ["neos", "pytest"]
+license = "closed"
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+neos-common = {version = ">=0.13", extras = ["auth"]}
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2"
+pytest-asyncio = "^0.18.3"
+pytest-cov = "^3.0.0"
+pytest-random-order = "^1.0.4"
+
+# Style
+ruff = "^0.3.0"
+pre-commit = "^3.0.2"
+
+# Release management
+changelog-gen = {version = "^0.9", extras = ["bump-my-version"]}
+
+[tool.bumpversion]
+current_version = "0.1.1"
+commit = true
+tag = true
+
+[[tool.bumpversion.files]]
+filename = "pyproject.toml"
+search = 'version = "{current_version}"'
+replace = 'version = "{new_version}"'
+
+[tool.changelog_gen]
+release = true
+commit = true
+reject_empty = true
+allowed_branches = [
+    "main",
+]
+date_format = "- %Y-%m-%d"
+issue_link = "https://neom.atlassian.net/browse/::issue_ref::"
+commit_link = "https://github.com/NEOS-Critical/pytest-neos/commit/::commit_hash::"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+addopts = "--random-order"
+
+
+[tool.coverage.report]
+sort = "cover"
+fail_under = 99
+show_missing = true
+skip_covered = true
+exclude_lines = [
+    "pragma: no cover",
+]
+
+[tool.coverage.run]
+branch = true
+source = ["pytest_neos"]
+
+[tool.ruff]
+target-version = "py39"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "B008",    # fastapi involves a lot of function calls in function definitions
+    "D100",
+    "D101",
+    "D102",
+    "D103",
+    "D104",
+    "D107",
+    "FIX002",  # allow TODO
+]
+
+[tool.ruff.format]
+line-ending = "lf"
+quote-style = "double"
+
+[tool.ruff.lint.per-file-ignores]
+"tasks.py" = ["ANN", "E501", "INP001", "S"]
+"tests/*" = ["ANN", "D", "S101", "INP001"]
+
+[tool.ruff.lint.flake8-quotes]
+docstring-quotes = "double"
+
+[tool.ruff.lint.isort]
+known-first-party = ["neos_common"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.poetry.plugins.pytest11]
+neos = "pytest_neos"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
