@@ -1,0 +1,120 @@
+Metadata-Version: 2.1
+Name: slizaiupload
+Version: 1.2.2
+Summary: A tool to upload folders with multipart upload.
+Home-page: https://lizai.co
+Author: Victor Duong
+Author-email: victor.duong@lizai.co
+Requires-Python: >=3.6
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: aiofiles (>=0.7.0,<0.8.0)
+Requires-Dist: aiohttp (>=3.7.4,<4.0.0)
+Requires-Dist: argparse (>=1.4.0,<2.0.0)
+Requires-Dist: python-dotenv (>=0.19.0,<0.20.0)
+Requires-Dist: requests (>=2.26.0,<3.0.0)
+Requires-Dist: tenacity (>=8.0.1,<9.0.0)
+Description-Content-Type: text/markdown
+
+# Uploader Service
+
+  
+
+A tool to upload folders with multipart upload.
+
+  
+
+## Installation
+
+> pip install slizaiupload
+
+  
+
+## Usage
+
+**usage:**
+>slizaiupload folder_path [--parent-folder-name PARENT_FOLDER_NAME] [--thread THREAD]
+>[--retry-delay RETRY_DELAY] [--env ENV] [--skip-extension SKIP_EXTENSIONS] [--include-folder]
+  
+
+**positional arguments:**
+
+folder_path Path to the folder to upload
+
+  
+
+**options:**
+
+-h, --help show this help message and exit
+
+--include-folder Include folder path in key
+
+--parent-folder-name PARENT_FOLDER_NAME: Parent folder name to include in key
+
+--thread THREAD: Number of threads upload
+
+--retry-delay RETRY_DELAY: Time delay (in seconds) before retrying
+
+--skip-extension SKIP_EXTENSIONS: Comma-separated list of file extensions to skip
+
+--env ENV Path file ENV
+
+  
+
+*You can also include the folder name in the key:*
+
+> slizaiupload /path/to/your/folder --include-folder
+
+  
+
+*Or specify a parent folder name:*
+
+> slizaiupload /path/to/your/folder --parent-folder-name parent_folder
+
+  
+
+*Upload all in current path use:* folder_path = .
+
+  
+
+*Example:*
+
+> slizaiupload foldertest --env ./config --thread 10 --retry-delay 30 --skip-extension .mp3,.3gp  --include-folder
+
+  
+
+Create .env file in folder config data config
+```
+API_URL=https://example
+
+TOKEN=token_string
+```
+MIT License
+
+Copyright (c) 2018, Uwe Schmitt
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
