@@ -1,0 +1,30 @@
+
+
+
+<pre>
+	<h1>ships</h1>
+
+
+	<h2>on</h2>
+		<h3>sesssion 1</h3>
+			docker compose up -d; sleep 5; docker exec -it movies_ogv.1 bash
+			. /habitat/_controls/build_1.sh
+		
+		<h3>sesssion 2</h3>
+			docker exec -it movies_ogv.1 bash
+			. /habitat/_controls/build_2.sh
+		
+
+	<h2>status</h2>
+		python3 /habitat/parties/movies_ogv/_status/status.proc.py
+
+
+	<h2>publishing</h2>
+		git tag 1.0.0
+		(pip install poetry && cd /habitat && rm -rf dist && poetry build --format sdist --verbose && chmod -R 777 /habitat && poetry publish --verbose;)
+		
+
+
+
+
+</pre>

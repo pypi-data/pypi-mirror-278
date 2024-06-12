@@ -1,0 +1,103 @@
+
+
+
+"""
+	ASPIRATIONS:
+	
+		ACC:
+			CREATE RSA ENZYMES
+				RSA_HOT_ENZYME
+				RSA_COLD_ENZYME
+				
+			
+			FOR EACH * BIOLOGY (CONNECTIVE TISSUE, FOLDER) IN ACC:
+				
+				#
+				#	/ACC					
+				#		# [REPLICA SET 1 (x6)] THE LOCATION OF OPEN BIOLOGIES
+				#			# KEEP IN MULTIPLE STORAGE LOCATIONS
+				#
+				#
+				#		/_CONNECTIVE_TEMPORARY
+				#			/1
+				#				/FERNET_ENZYME
+				#				/BIOLOGY.zip
+				#
+				#
+				#		/CONNECTIVE
+				#			/1
+				#
+				#
+				#
+				#		/_EPITHELIAL_TEMPORARY
+				#
+				#
+				#		/EPITHELIAL		(FILES THAT CAN BE DEMISTIFIED IN RAM)
+				#
+				#
+				#		/ENZYMES
+				#			RSA_COLD.ENZYME (RSA PRIVATE KEY (DECRYRTER))
+				#			RSA_HOT.ENZYME  (RSA PUBLIC  KEY (ENCRYPTER))
+				#
+				#
+				#	/AMYGDALA 				
+				# 		# [REPLICA SET (x2)] THE LOCATION OF MISTIFIED BIOLOGIES
+				#
+				#		/EPITHELIAL
+				#			# THESE CAN BE DEMISTIFIED IN RAM
+				#			
+				#		/CONNECTIVE
+				#			
+				#
+				#
+				#	/CORNU_AMMONIS
+				#		# [REPLICA SET (x4)] THE NEW UNMISTIFIED BIOLOGIES
+				#		# 	THESE ARE COPIED TO THE ACC
+				#		#		
+				#		#		!!!!!!!!!!!!! [[[[[ NO OVERWRITING ]]]] !!!!!!!!!!!!!
+				#		#
+				#		#		IF SAME LABEL -> NEED TO UPDATE THE LABEL OF THE
+				#		#		OF THE CORNU_AMMONIS BIOLOGIES
+				#	
+				#
+				#		/BIOLOGIES
+				#			
+				#
+				#
+				#
+				#	/ENZYMES				
+				#	 	# [REPLICA SET (x2)] THE LOCATION OF THE DEMISTIFIACTION ENZYME
+				#
+				#		/BIOLOGIES
+				#			/1
+				#				"ENZYME" 			~ (RSA OF FERNET ENZYME)
+				#				"ZIP.SHA" 			~ SHA OF (COMPRESSED) ZIP ARCHIVE
+				#				"BIOLOGY.HOT"		~ ENCRYPTED VERSION OF THE BIOLOGY
+				#
+
+				
+				~ CREATE FERNET_ENZYME
+				
+				~ ZIP THE FOLDER WITH SUBPROCESS INTO ACC/_TEMPORARY
+				
+				~ 
+		
+		HEAT BIOLOGY WITH ENZYMES
+		
+		
+		###########################################################
+		
+			[ ] INDEX????
+			
+				REINDEX EACH AMYGDALA CHECKOUT ????
+				
+				MYTH: {
+					"CARDANO 1"		: 		1,
+					"ETHEREUM 3"	:		2,
+					"PATIENT 12"	:		3,
+					"PATIENT 13"	:		4
+				}
+
+					
+				
+"""

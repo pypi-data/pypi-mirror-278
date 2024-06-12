@@ -1,0 +1,64 @@
+
+
+
+
+RSA FERNET:
+
+	LEAPS:
+		ENZYME_CREATOR:
+			#
+			#	THIS CREATES THREE ENZYMES 
+			#
+			#	THE FERNET ENZYME IS A COLD ENZYME
+			#
+		
+			from movies_ogv.RSA_FERNET.ENZYME_CREATOR import ENZYME_CREATOR
+			from movies_ogv.RSA_FERNET.STORE import STORE
+
+			OUTPUTS = ENZYME_CREATOR (
+				RSA_SIZE = 2048,
+
+				WRITE_OUTPUTS = True,
+				OUTPUTS = {
+					"RSA_HOT_ENZYME": 	"",
+					"RSA_COLD_ENZYME": 	"",
+					"FERNET_ENZYME": "	""
+				}
+			);
+			
+		FILE:
+			HEAT:
+				
+			
+			
+			COLD:
+		
+		
+		
+		
+		FOLDER:
+			HEAT:
+			
+			
+			COLD:
+			
+			
+			
+			
+		
+
+
+	
+	SUMMARY:
+	
+		DATA IS ENCRYPTED WITH FERNET
+		
+		FERNET KEY IS ENCRYPTED WITH RSA PRIVATE KEY
+		
+		
+	SEQUENCE:
+	
+		
+		HEAT
+		COOL
+		CHECK EQUALITY OF FOLDERS

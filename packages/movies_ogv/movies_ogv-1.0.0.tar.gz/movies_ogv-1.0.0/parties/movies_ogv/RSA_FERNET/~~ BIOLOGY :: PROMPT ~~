@@ -1,0 +1,74 @@
+
+
+
+RSA FERNET:
+
+	EXAMPLES [TCSH]:
+	
+		#
+		#	GENERATES RSA ENZYMES & A FERNET ENZYME
+		#
+		PM rsa-fernet--create-enzymes \
+		--o-rsa-hot-enzyme 		"/MOUNTS/ACC/ENZYMES/HOT.2.ENZYME" \
+		--o-rsa-cold-enzyme 	"/MOUNTS/ACC/ENZYMES/COLD.2.ENZYME" \
+		--o-fernet-cold-enzyme 	"/MOUNTS/ACC/ENZYMES/COLD.1.ENZYME"
+		
+		#
+		#
+		#	STRUCTURE:
+		#		"ACC"
+		#			"COLD"
+		#			"ENZYMES"
+		#
+		#		"AMYGDALA"
+		#
+		#		"ENZYMES"
+		#
+		PM rsa-fernet--heat-folder \
+		--i-folder-path			"/MOUNTS/ACC/COLD" \
+		
+		
+		--o-rsa-hot-enzyme 		"/MOUNTS/ENZYMES/HOT.2.ENZYME" \
+		
+		--o-hot-file-path		"/MOUNTS/AMYGDALA/HOT" \
+		
+		--o-rsa-cold-enzyme 	"/MOUNTS/ACC/COLD.2.ENZYME" \
+		--o-fernet-cold-enzyme 	"/MOUNTS/ACC/COLD.1.ENZYME"
+		
+
+		
+	ASPIRATIONS:
+		[TCSH]	movies_ogv RSA_FERNET__CREATE_ENZYMES \
+					--O_RSA_HOT_ENZYME		"" \
+					--O_RSA_COLD_ENZYME		"" \
+					--O_FERNET_COLD_ENZYME	"" \
+					
+				FILES:
+					movies_ogv RSA_FERNET__HEAT_FILE \
+						--I_FILE_PATH			"" \
+						
+						--O_FILE_PATH			"" \
+						--O_FERNET_HOT_ENZYME 	"" \
+						
+						#
+						# --CHECK_EQUALITY		False
+						
+					movies_ogv RSA_FERNET__COOL_FILE \
+						
+						
+							
+				
+				STRINGS:
+					
+					#
+					#	SENDS TO STDOUT
+					#	"{ 'PMRF_HOT_STRING': '', 'PMRF_HOT_ENZYME': '' }"
+					#
+					movies_ogv RSA_FERNET__HEAT_STRING \
+						--I_STRING				"" \
+						
+						--O_FILE_PATH			"" \
+						--O_FERNET_HOT_ENZYME 	"" \
+						
+						#
+						# --CHECK_EQUALITY		False

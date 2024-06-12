@@ -1,0 +1,41 @@
+
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry]
+name = "movies_ogv"
+version = "1.0.0"
+description = ""
+authors = []
+readme = "parties/movies_ogv/readme.md"
+packages = [
+    { include = "movies_ogv", from = "parties" }
+]
+include = [ "*.HTML", "*.html", "*.JSON", "*.json" ]
+license = "GPL-3.0-only"
+keywords = []
+
+
+[tool.poetry.dependencies]
+python = "^3.10,<3.13"
+click = "^8.1.7"
+biotech = "^1.0.3"
+rich = "^13.7.1"
+pydash = "^8.0.1"
+cryptography = "^42.0.8"
+rsa = "^4.9"
+ships = "^1.3.8"
+
+[tool.poetry.scripts]
+ships = "ships:clique"
+
+# [tool.poetry.urls]
+# GitLab = ""
+
+
+

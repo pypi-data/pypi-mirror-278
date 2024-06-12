@@ -1,0 +1,92 @@
+
+
+
+
+
+
+PROMPT:
+	MAKE SURE YOU ENCRYPT, ETC. A BACKUP COPY OF THE "ACC"
+	INSTEAD OF THE "MAIN" "ACC"
+	
+	movies_ogv rsa-fernet--create-enzymes-folder --folder "ACC/ENZYMES"
+	movies_ogv rsa-fernet--clone-enzymes --de "ACC/ENZYMES" --to "ENZYMES/1"
+	
+	#
+	#	COULD USE "ACC ENZYMES" OR "ENZYMES"
+	#
+	movies_ogv rsa-fernet--heat-cold-folder \
+	--cold-folder "ACC/COLD_FOLDER" \
+	--cold-eph-folder "ACC/COLD_EPH_FOLDER" \
+	--hot-folder "AMYGDALA_R/HOT_FOLDER" \
+	--enzymes "ACC/ENZYMES"
+	
+	#---------------------------------------------------------------------
+	
+	#
+	#	THIS DOES A "WIPE", MAKE SURE ACC IS 
+	#	DISCONNECTED 
+	#	
+	movies_ogv rsa-fernet--cool-hot-folder \
+	--hot-folder "AMYGDALA_R/HOT_FOLDER" \
+	--enzymes "ENZYMES/1" \
+	--o-cold-folder "AMYGDALA_L/COLD_FOLDER"
+	
+	#
+	#	TO CLEAN UP THE COLD FOLDER
+	#
+	movies_ogv rsa-fernet--forget-eph-cold-folder --cold-folder "AMYGDALA_L/COLD_FOLDER"
+	
+	
+	
+	LEGEND:
+	
+		AMYGDALA:
+		
+		
+		
+	
+	
+	RESEARCH:
+	
+		AMYGDALA:
+			DETERMINES WHERE MEMORIES ARE STORED????
+			
+			RIGHT:
+				INDUCES FEELING SUCH AS FEAR AND SADNESS
+			
+			LEFT:
+				
+			
+			REFERENCES:
+				https://www.thoughtco.com/limbic-system-anatomy-373200
+				https://en.wikipedia.org/wiki/Amygdala
+		
+		CINGULATE GYRUS:
+		
+		
+		DIENCEPHALON:
+		
+		
+		FORNIX:
+		
+		
+		HIPPOCAMPUS:
+			STORES AND RETRIEVES MEMORIES FROM CEREBRAL HEMISPHERS???
+		
+			REFERENCES:
+				https://www.thoughtco.com/limbic-system-anatomy-373200
+				
+		
+		HYPOTHALAMUS:
+		
+		
+		OLFACTORY SYSTEM:
+		
+		
+		TELENCEPHALON:
+		
+		
+		THALAMUS:
+		
+		
+		
