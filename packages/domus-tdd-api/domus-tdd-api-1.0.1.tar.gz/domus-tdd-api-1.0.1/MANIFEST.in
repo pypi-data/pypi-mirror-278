@@ -1,0 +1,27 @@
+include ./tdd/*.py
+include ./tdd/data/*.ttl
+include ./tdd/data/*.json
+include ./tdd/lib/*.js
+include ./js-src/*.js
+
+include app.py
+include *.md
+recursive-include doc *.md *.odg
+include setup.py
+include package.json
+include package-lock.json
+include webpack.config.js
+include config.toml
+
+include LICENSE/*.txt
+
+recursive-include tdd/tests/data *.json *.jsonld *.nquads *.ttl *.xml *.n3
+recursive-include tdd/tests *.py
+
+prune node_modules
+prune scripts
+prune fuseki-docker
+exclude Dockerfile
+exclude docker-compose.yml
+exclude tox.ini
+
