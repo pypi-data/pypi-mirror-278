@@ -1,0 +1,47 @@
+[project]
+name = "chemfusekit"
+version = "2.3.0b10"
+description = "A minimal Python / Jupyter Notebook / Colab library for data fusion and chemometrical analysis."
+authors = [
+    { name = "Federico Aguzzi", email = "62149513+f-aguzzi@users.noreply.github.com" }
+]
+dependencies = [
+    "numpy==1.25.0",
+    "scipy>=1.13.0",
+    "matplotlib>=3.8.4",
+    "pandas==2.0.3",
+    "seaborn>=0.13.2",
+    "openpyxl>=3.1.2",
+    "scikit-learn>=1.4.2",
+    "plotly>=5.22.0",
+    "beartype>=0.18.5",
+    "nbformat>=4.2.0",
+    "tabulate>=0.9.0",
+]
+readme = "readme.md"
+repository = "https://github.com/f-aguzzi/tesi"
+documentation = "https://f-aguzzi.github.io/tesi/"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "pylint>=3.1.1",
+    "ipykernel>=6.29.4",
+]
+
+[tool.rye.scripts]
+test = "python -m unittest discover tests"
+pylint-local = "pylint chemfusekit/**/*.py"
+pylint-ci = "pylint --disable=C0114,C0115,C0116 --exit-zero chemfusekit/**/*.py"
+pylint-score-ci = "pylint --disable=all --enable=metrics --output-format=text chemfusekit/**/.py"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["chemfusekit"]
