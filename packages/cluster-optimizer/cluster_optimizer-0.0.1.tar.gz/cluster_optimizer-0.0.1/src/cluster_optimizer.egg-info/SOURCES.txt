@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/cluster_optimizer/__init__.py
+src/cluster_optimizer.egg-info/PKG-INFO
+src/cluster_optimizer.egg-info/SOURCES.txt
+src/cluster_optimizer.egg-info/dependency_links.txt
+src/cluster_optimizer.egg-info/requires.txt
+src/cluster_optimizer.egg-info/top_level.txt
+tests/test_kmeans.py
