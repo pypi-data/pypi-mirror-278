@@ -1,0 +1,5 @@
+[console_scripts]
+helix_cli = helix.main:main
+
+[gui_scripts]
+helix = helix.main:main
