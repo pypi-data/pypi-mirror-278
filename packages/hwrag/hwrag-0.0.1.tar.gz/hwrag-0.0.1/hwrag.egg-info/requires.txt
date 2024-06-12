@@ -1,0 +1,10 @@
+pandas
+openpyxl
+elasticsearch==7.16.0
+langchain
+langchain-community
+FlagEmbedding
+langchain-openai
+langchain_core
+pymilvus==2.2.8
+decorator==4.4.2
