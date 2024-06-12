@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: pdb4all
+Version: 0.5.3
+Summary: Convert between common protein pdb formats and names 
+Home-page: https://github.com/boneta/pdb4all
+Author: Sergio Boneta
+Author-email: boneta@unizar.es
+License: GPLv3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pdb4all
+
+![python](https://img.shields.io/badge/python-3.7+-red.svg)
+[![License: GPLv3](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+*Convert between common protein pdb formats and names*
+
+### Installation
+Requires `python 3.7+`. No additional dependencies are needed.
+
+*pdb4all* is frequently uploaded to [PyPI](https://pypi.org/project/pdb4all/). To install it, execute the following command:
+```
+  pip install pdb4all
+```
+
+### Usage
+```
+  pdb4all <options> .pdb
+```
+
+#### Currently supported ForceFields name conventions
+  * Amber
+  * Charmm
+  * OPLS
+
+#### Currently supported formats (software)
+  * Fasta
+  * Maestro
+  * GROMACS
+  * fDynamo
