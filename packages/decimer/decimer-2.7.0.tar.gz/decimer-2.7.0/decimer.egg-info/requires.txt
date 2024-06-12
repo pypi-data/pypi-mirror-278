@@ -1,0 +1,7 @@
+tensorflow<=2.15.0,>=2.12.0
+opencv-python
+pystow
+pillow-heif
+efficientnet
+selfies
+pyyaml
