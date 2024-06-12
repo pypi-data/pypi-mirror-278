@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: async-shell
+Version: 1.0.7
+Summary: Asyncio subprocess shell command wrapper
+Home-page: https://github.com/reartnew/async-shell
+License: MIT
+Author: Artem Novikov
+Author-email: artnew@list.ru
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Typing :: Typed
+Requires-Dist: classlogging (>=1.1.1,<2.0.0)
+Project-URL: Repository, https://github.com/reartnew/async-shell
+Description-Content-Type: text/markdown
+
+# async-shell
+
+Asyncio subprocess shell command wrapper.
+
+## Installation
+
+```shell
+pip install async-shell
+```
+
