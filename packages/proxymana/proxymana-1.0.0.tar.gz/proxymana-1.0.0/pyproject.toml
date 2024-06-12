@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "proxymana"
+version = "1.0.0"
+description = "Simple proxy management tool for scraping and managing free anonymous proxies"
+authors = ["SlowWave <chrs.borgia@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/SlowWave/ProxyMana"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+lxml = "^5.2.2"
+requests = "^2.32.3"
+schedule = "^1.2.2"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.2.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
