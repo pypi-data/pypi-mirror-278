@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: wowhmm
+Version: 0.1.0
+Summary: Who owes whom how much money
+Requires-Dist: pandas==2.2.2
