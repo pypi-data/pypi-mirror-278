@@ -1,0 +1,25 @@
+{
+  "template": "https://github.com/hypothesis/cookiecutters",
+  "directory": "pypackage",
+  "ignore": [
+    "src/tox_faster/core.py",
+    "tests/unit/tox_faster/core_test.py"
+  ],
+  "extra_context": {
+    "name": "tox-faster",
+    "package_name": "tox_faster",
+    "slug": "tox-faster",
+    "short_description": "A tox plugin that speeds up tox a little.",
+    "python_versions": "3.12.4, 3.11.9, 3.10.14, 3.9.19, 3.8.19",
+    "github_owner": "hypothesis",
+    "copyright_holder": "Hypothesis",
+    "public": "yes",
+    "console_script": "no",
+    "dependabot_pip_interval": "monthly",
+    "__entry_point": "tox-faster",
+    "__github_url": "https://github.com/hypothesis/tox-faster",
+    "__pypi_url": "https://pypi.org/project/tox-faster",
+    "__copyright_year": "2022",
+    "pypi": "yes"
+  }
+}
