@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: codex-engine-pyqt
+Version: 0.2.0
+Summary: A universal translator for serial devices.
+Home-page: https://github.com/Codex-Engine/codex-engine-pyqt
+Author: David Kincaid
+Author-email: dlkincaid0@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/Codex-Engine/codex-engine-pyqt
+Project-URL: Tracker, https://github.com/Codex-Engine/codex-engine-pyqt/issues
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Widget Sets
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8
+License-File: LICENSE
+Requires-Dist: pyserial
+Requires-Dist: qtstrap
+
+# Codex Engine for PyQt
+
+[![license](https://img.shields.io/pypi/l/codex-engine-pyqt.svg)](./LICENSE)
+[![pypi version](https://img.shields.io/pypi/v/codex-engine-pyqt.svg)](https://pypi.org/project/codex-engine-pyqt/)
+[![PyPI status](https://img.shields.io/pypi/status/codex-engine-pyqt.svg)](https://github.com/DaelonSuzuka/codex-engine-pyqt/)
+
+A universal translator for serial devices.
+
+# Description
+
+This is the reference implementation of Codex, a framework for managing serial communication with physical devices. 
+
+# Features
+- serial port detection
+- automatic handshaking
+- device profiles as drop-in plugins
+- supports many styles of serial communication
+- extensible
+
+# Installation
+
+`pip install codex-engine-pyqt`
+
+## Requirements
+- pyserial
+- PyQt5 or PySide2
