@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 120
+
+[tool.mypy]
+python_version = "3.10"
+disallow_untyped_defs = true
+
+[tool.pylint.format]
+indent-string = "\t"
+max-line-length = 120
+ignore-long-lines = "add_argument"
+
+[tool.pylint."messages control"]
+disable = [
+	"broad-exception-caught",
+	"missing-class-docstring",
+	"missing-function-docstring",
+	"missing-module-docstring",
+	"too-few-public-methods",
+	"too-many-arguments",
+	"too-many-branches",
+	"too-many-instance-attributes",
+	"too-many-locals",
+	"too-many-public-methods",
+	"too-many-statements",
+]
