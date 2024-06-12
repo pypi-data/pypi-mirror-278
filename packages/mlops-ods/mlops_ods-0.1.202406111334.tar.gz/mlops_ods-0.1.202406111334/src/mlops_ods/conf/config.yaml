@@ -1,0 +1,4 @@
+defaults:
+  - features: features
+  - model: fast
+  - settings: train

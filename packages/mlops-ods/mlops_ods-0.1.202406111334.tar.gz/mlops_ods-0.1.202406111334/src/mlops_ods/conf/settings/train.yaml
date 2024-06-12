@@ -1,0 +1,7 @@
+path_to_data: mlops_ods/dataset
+file_name: 2015-street-tree-census-tree-data.csv
+path_to_model: resources
+model_name: model.bin
+train_mode: true
+cores: ${oc.env:CORES}
+status: object
