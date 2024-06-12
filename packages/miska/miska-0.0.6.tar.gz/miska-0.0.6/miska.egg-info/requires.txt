@@ -1,0 +1,9 @@
+
+[all]
+miska[http,mm]
+
+[http]
+requests
+
+[mm]
+marshmallow
