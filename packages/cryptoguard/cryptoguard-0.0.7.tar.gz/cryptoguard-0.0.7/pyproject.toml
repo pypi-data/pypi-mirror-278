@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cryptoguard"
+version = "0.0.7"
+#dynamic = ["version"]
+authors = [
+  { name="John Naizer", email="jnaizer777@gmail.com" },
+]
+description = "cryptoguard is a comprehensive Python package enabling seamless execution of diverse random number testing suites, ensuring the statistical integrity and reliability of random number generators for various applications."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "tqdm"
+]
+
+[project.urls]
+Homepage = "https://github.com/jnaizer/cryptoguard"
+
+[project.scripts]
+cryptoguard = "cryptoguard.cryptoguard:main"
+
+[tool.setuptools_scm]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+cryptoguard = ["*"]

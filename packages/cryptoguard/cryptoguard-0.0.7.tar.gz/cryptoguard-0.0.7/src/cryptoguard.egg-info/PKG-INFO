@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: cryptoguard
+Version: 0.0.7
+Summary: cryptoguard is a comprehensive Python package enabling seamless execution of diverse random number testing suites, ensuring the statistical integrity and reliability of random number generators for various applications.
+Author-email: John Naizer <jnaizer777@gmail.com>
+Project-URL: Homepage, https://github.com/jnaizer/cryptoguard
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: tqdm
+
+# cryptoguard
+
+cryptoguard is a Python package designed for conducting comprehensive testing of random number generators. It provides a collection of testing suites that evaluate the statistical properties and reliability of random number sequences.
+
+## Features
+
+- Execute various testing suites on random number sequences.
+- Assess randomness for cryptographic applications, simulations, and statistical analyses.
+- Flexible architecture for easy integration into existing workflows.
+
+## Installation
+
+You can install cryptoguard using pip:
+
+```bash
+pip install cryptoguard
