@@ -1,0 +1,2 @@
+[console_scripts]
+relik = relik.cli.cli:app
