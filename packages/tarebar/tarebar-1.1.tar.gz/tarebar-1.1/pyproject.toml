@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "tarebar"
+version = "1.1"
+authors = [
+  { name="Mohammad Parsa Mortazavi", email="mpmms@outlook.com" }
+]
+description = "A world of numbers and functions."
+readme = "README.md"
+requires-python = ">=3.0"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
