@@ -1,0 +1,4 @@
+[console_scripts]
+gen-cz-config=scripts.gen_commitizen_toml:main
+pypct=pyproject_creator.cli:create_project
+
