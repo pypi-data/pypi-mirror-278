@@ -1,0 +1,111 @@
+[build-system]
+requires = ["hatchling", "versioningit"]
+build-backend = "hatchling.build"
+
+[project]
+dynamic = ["version"]
+name = "musify"
+authors = [
+  { name="George Martin Marino", email="gm.engineer+musify@pm.me" },
+]
+description = "Synchronise your music library to local or remote libraries"
+readme = "README.md"
+license-files = { paths = ["LICENSE"] }
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: POSIX :: Linux",
+    "Development Status :: 4 - Beta",
+    "Natural Language :: English",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+]
+dependencies = [
+    "mutagen~=1.47",
+    "aiohttp~=3.9",
+    "python-dateutil~=2.9",
+    "Pillow~=10.3",
+]
+
+[project.optional-dependencies]
+# optional functionality
+all = [
+    "musify[bars,musicbee,sqlite]",
+]
+bars = [
+    "tqdm~=4.66",
+]
+musicbee = [
+    "xmltodict~=0.13",
+    "lxml~=5.2",
+]
+sqlite = [
+    "aiosqlite~=0.20",
+]
+
+# dev dependencies
+build = [
+    "hatch",
+    "versioningit",
+]
+test = [
+    "musify[all]",
+    "pytest~=8.2",
+    "pytest-asyncio~=0.23",
+    "pytest-xdist~=3.6",
+    "pytest-mock~=3.14",
+    "aioresponses~=0.7",
+    "pyyaml~=6.0",
+    "pycountry>=23.12,<25.0",
+]
+docs = [
+    "musify[build]",
+    "sphinx~=7.3",
+    "renku_sphinx_theme",
+    "graphviz~=0.20",
+    "sphinx-autodoc-typehints~=2.1",
+    "autodocsumm~=0.2",
+    "sphinxext-opengraph~=0.9",
+    "matplotlib~=3.9",
+]
+dev = [
+    "musify[test,docs]",
+    "flake8",
+    "grip",
+    "jupyterlab",
+    "ipywidgets",
+]
+
+[project.urls]
+"Documentation" = "https://geo-martino.github.io/musify/"
+"Release Notes" = "https://geo-martino.github.io/musify/release-history.html"
+"Contribute" = "https://geo-martino.github.io/musify/contributing.html"
+"Source code" = "https://github.com/geo-martino/musify"
+Issues = "https://github.com/geo-martino/musify/issues"
+
+[tool.hatch.version]
+source = "versioningit"
+
+[tool.versioningit.format]
+# WORKAROUND: commits for actual production releases keep getting identified as dirty and/or with distance
+#  Delete this config when fixed. It should be the commented lines below each (i.e. the default formats)
+#distance = "{next_version}.dev{distance}+{vcs}{rev}"
+dirty = "{base_version}"
+#dirty = "{base_version}+d{build_date:%Y%m%d}"
+distance-dirty = "{base_version}"
+#distance-dirty = "{next_version}.dev{distance}+{vcs}{rev}.d{build_date:%Y%m%d}"
+
+[tool.hatch.build.targets.sdist]
+include = ["musify"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-color=yes"
+markers = [
+    "slow: marks test as slow (deselect with '-m \"not slow\"')",
+    "manual: marks tests to be run only when manually directed to by the developer",
+]
+asyncio_mode = "auto"
