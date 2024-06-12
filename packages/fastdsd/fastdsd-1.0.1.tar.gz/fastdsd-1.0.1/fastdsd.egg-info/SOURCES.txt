@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+fastdsd/__init__.py
+fastdsd/__main__.py
+fastdsd/calcDSD.py
+fastdsd/directed_augment.py
+fastdsd/dsdcore.py
+fastdsd/dsdio.py
+fastdsd.egg-info/PKG-INFO
+fastdsd.egg-info/SOURCES.txt
+fastdsd.egg-info/dependency_links.txt
+fastdsd.egg-info/entry_points.txt
+fastdsd.egg-info/requires.txt
+fastdsd.egg-info/top_level.txt
