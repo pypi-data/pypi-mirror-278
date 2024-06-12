@@ -1,0 +1,5 @@
+[console_scripts]
+coverage=scripts.test:with_coverage
+manage-version=scripts.manage_version:manage_version
+test=scripts.test:test_only
+
