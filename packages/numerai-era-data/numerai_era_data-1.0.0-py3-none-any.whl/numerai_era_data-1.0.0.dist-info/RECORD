@@ -1,0 +1,14 @@
+numerai_era_data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+numerai_era_data/date_utils.py,sha256=cSs21NthJ3YoNiYPovpceCzpasb4i6igZni6mP1BaaQ,675
+numerai_era_data/era_data_api.py,sha256=EnOoPbYXRvhiU_1Owwrf2LHSItbG_hXWJ7MeBwR5Ov0,6407
+numerai_era_data/data_sources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+numerai_era_data/data_sources/base_data_source.py,sha256=nmYTL7NSMGipmU3c-AVvgZ_ec4kp8XPycVDaXCgKmhQ,696
+numerai_era_data/data_sources/ds_bls.py,sha256=GSho3Cz0BDNyZxNuGLVbDp1XkuENwUMipBL3sHqeUXE,10724
+numerai_era_data/data_sources/ds_calendar.py,sha256=9CNzHNSnyC-wvnMgmoFA5NEkFIgdRW4vlByXudxj3wo,913
+numerai_era_data/data_sources/ds_markets.py,sha256=eF3aREveooyET5QVNHtlyQV73m96CERLQxtS3rqzk5Q,3476
+numerai_era_data/data_sources/ds_wei.py,sha256=ntR2f1WpKMTMAn3szD9S-8d8qDrqF9wXPMVZ-Xwaabo,1682
+numerai_era_data-1.0.0.dist-info/LICENSE,sha256=Ptl-_doGdvXYY2qBGSDM38C79oL3qLrfBewjnozLaYs,1070
+numerai_era_data-1.0.0.dist-info/METADATA,sha256=GGn0Ffz-S2489i9GewHkzyc1U02tWPjVQDpoXS3zF0s,4210
+numerai_era_data-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+numerai_era_data-1.0.0.dist-info/top_level.txt,sha256=P_aEvBM9bCGsA4D4MHwoR2IVpwK9v4gqflN1DDtkmuI,17
+numerai_era_data-1.0.0.dist-info/RECORD,,
