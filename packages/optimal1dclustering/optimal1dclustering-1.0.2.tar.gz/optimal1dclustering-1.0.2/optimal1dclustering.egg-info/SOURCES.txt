@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+optimal1dclustering/__init__.py
+optimal1dclustering/_core.cpp
+optimal1dclustering/core.py
+optimal1dclustering/version.txt
+optimal1dclustering.egg-info/PKG-INFO
+optimal1dclustering.egg-info/SOURCES.txt
+optimal1dclustering.egg-info/dependency_links.txt
+optimal1dclustering.egg-info/top_level.txt
+tests/test_optimal1dcluistering.py
