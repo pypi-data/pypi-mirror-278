@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: rooster-blue
+Version: 0.0.7
+Summary: 
+Home-page: https://github.com/zanieb/rooster
+Author: Zanie
+Author-email: contact@zanie.dev
+Requires-Python: >=3.11,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Typing :: Typed
+Requires-Dist: hishel (>=0.0.24,<0.0.25)
+Requires-Dist: httpx (>=0.25.0,<0.26.0)
+Requires-Dist: marko (>=2.0.2,<3.0.0)
+Requires-Dist: packaging (>=23.1,<24.0)
+Requires-Dist: pydantic (>=2.4.2,<3.0.0)
+Requires-Dist: pygit2 (>=1.13.1,<2.0.0)
+Requires-Dist: tqdm (>=4.66.1,<5.0.0)
+Requires-Dist: typer (>=0.9.0,<0.10.0)
+Project-URL: Repository, https://github.com/zanieb/rooster
+Description-Content-Type: text/markdown
+
+# Rooster
+
+**This interface provided by this tool is unstable, we highly recommend pinning your version.**
+
+## Usage
+
+### Prepare a new release
+
+Prepares a new release, which:
+
+- Determines a new version number
+- Generates a changelog entry for the release and adds to `CHANGELOG.md`
+- Updates the version number in `pyproject.toml`
+
+```
+rooster release [<path>] [--bump major|minor|patch]
+```
+
+### Generate a changelog entry for a release
+
+Generates a changelog entry for the current or given version
+
+```
+rooster changelog [<path>] [--version <version>]
+```
+
+### Generate the contributor list for a release
+
+Generates a contributor list for the current or given version
+
+```
+rooster contributors [<path>] [--verison <version>]
+```
+
+### Caching
+
+Rooster caches responses from the GitHub GraphQL API in `$PWD/.cache`. You may disable this behavior with `ROOSTER_NO_CACHE=1`.
+
