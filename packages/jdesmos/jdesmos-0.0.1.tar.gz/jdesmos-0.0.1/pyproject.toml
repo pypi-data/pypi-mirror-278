@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "jdesmos"
+version = "0.0.01"
+description = "Easily embed Desmos Graphs in Jupyter"
+authors = ["John Lockwood <john@codesolid.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+ipython = ">5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
