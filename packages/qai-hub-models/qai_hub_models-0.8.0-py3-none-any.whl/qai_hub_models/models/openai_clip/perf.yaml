@@ -1,0 +1,388 @@
+aggregated:
+  supported_oses:
+  - Android
+  supported_devices:
+  - Google Pixel 3
+  - Google Pixel 3a
+  - Google Pixel 3a XL
+  - Google Pixel 4
+  - Google Pixel 4a
+  - Google Pixel 5a 5G
+  - QCS8550 (Proxy)
+  - Samsung Galaxy S21
+  - Samsung Galaxy S21 Ultra
+  - Samsung Galaxy S21+
+  - Samsung Galaxy S22 5G
+  - Samsung Galaxy S22 Ultra 5G
+  - Samsung Galaxy S22+ 5G
+  - Samsung Galaxy S23
+  - Samsung Galaxy S23 Ultra
+  - Samsung Galaxy S23+
+  - Samsung Galaxy S24
+  - Samsung Galaxy S24 Ultra
+  - Samsung Galaxy S24+
+  - Samsung Galaxy Tab S8
+  - Snapdragon X Elite CRD
+  - Xiaomi 12
+  - Xiaomi 12 Pro
+  supported_chipsets:
+  - Qcs8550
+  - Snapdragon® 8 Gen 1
+  - Snapdragon® 8 Gen 2
+  - Snapdragon® 8 Gen 3
+  - Snapdragon® 888
+  - Snapdragon® X Elite
+models:
+- name: CLIPTextEncoder
+  performance_metrics:
+  - torchscript_onnx_tflite:
+      inference_time: 13293.0
+      throughput: 75.22756337922215
+      estimated_peak_memory_range:
+        min: 20480
+        max: 3340864
+      primary_compute_unit: NPU
+      precision: fp16
+      layer_info:
+        layers_on_npu: 574
+        layers_on_gpu: 0
+        layers_on_cpu: 2
+        total_layers: 576
+      job_id: j1gle3r8p
+      job_status: Passed
+    torchscript_onnx_qnn:
+      inference_time: 7810.0
+      throughput: 128.04097311139566
+      estimated_peak_memory_range:
+        min: 24576
+        max: 31351376
+      primary_compute_unit: NPU
+      precision: fp16
+      layer_info:
+        layers_on_npu: 377
+        layers_on_gpu: 0
+        layers_on_cpu: 0
+        total_layers: 377
+      job_id: jlpe4k315
+      job_status: Passed
+    torchscript_onnx_ort:
+      inference_time: 31397.0
+      throughput: 31.850176768481067
+      estimated_peak_memory_range:
+        min: 57344
+        max: 324810128
+      primary_compute_unit: NPU
+      precision: fp16
+      layer_info:
+        layers_on_npu: 389
+        layers_on_gpu: 0
+        layers_on_cpu: 0
+        total_layers: 389
+      job_id: j0pxe1o15
+      job_status: Passed
+    reference_device_info:
+      name: Samsung Galaxy S23
+      os: '13'
+      form_factor: Phone
+      os_name: Android
+      manufacturer: Samsung
+      chipset: Snapdragon® 8 Gen 2
+    timestamp: '2024-06-08T22:53:04Z'
+  - torchscript_onnx_tflite:
+      inference_time: 9408.0
+      throughput: 106.29251700680273
+      estimated_peak_memory_range:
+        min: 36864
+        max: 211531120
+      primary_compute_unit: NPU
+      precision: fp16
+      layer_info:
+        layers_on_npu: 574
+        layers_on_gpu: 0
+        layers_on_cpu: 2
+        total_layers: 576
+      job_id: j1p3qe2l5
+      job_status: Passed
+    torchscript_onnx_qnn:
+      inference_time: 5496.0
+      throughput: 181.9505094614265
+      estimated_peak_memory_range:
+        min: 12288
+        max: 143518544
+      primary_compute_unit: NPU
+      precision: fp16
+      layer_info:
+        layers_on_npu: 377
+        layers_on_gpu: 0
+        layers_on_cpu: 0
+        total_layers: 377
+      job_id: jz5wm966g
+      job_status: Passed
+    torchscript_onnx_ort:
+      inference_time: 22333.0
+      throughput: 44.776787713249455
+      estimated_peak_memory_range:
+        min: 36864
+        max: 188583968
+      primary_compute_unit: NPU
+      precision: fp16
+      layer_info:
+        layers_on_npu: 389
+        layers_on_gpu: 0
+        layers_on_cpu: 0
+        total_layers: 389
+      job_id: jegnrevr5
+      job_status: Passed
+    reference_device_info:
+      name: Samsung Galaxy S24
+      os: '14'
+      form_factor: Phone
+      os_name: Android
+      manufacturer: Samsung
+      chipset: Snapdragon® 8 Gen 3
+    timestamp: '2024-06-08T22:53:06Z'
+  - torchscript_onnx_tflite:
+      inference_time: 13221.0
+      throughput: 75.6372437788367
+      estimated_peak_memory_range:
+        min: 40960
+        max: 2903592
+      primary_compute_unit: NPU
+      precision: fp16
+      layer_info:
+        layers_on_npu: 574
+        layers_on_gpu: 0
+        layers_on_cpu: 2
+        total_layers: 576
+      job_id: j1pvzvxjg
+      job_status: Passed
+    torchscript_onnx_qnn:
+      inference_time: 7775.0
+      throughput: 128.61736334405145
+      estimated_peak_memory_range:
+        min: 16384
+        max: 18711280
+      primary_compute_unit: NPU
+      precision: fp16
+      layer_info:
+        layers_on_npu: 377
+        layers_on_gpu: 0
+        layers_on_cpu: 0
+        total_layers: 377
+      job_id: jz57vdrl5
+      job_status: Passed
+    reference_device_info:
+      name: QCS8550 (Proxy)
+      os: '12'
+      form_factor: Iot
+      os_name: Android
+      manufacturer: Qualcomm
+      chipset: Qcs8550
+    timestamp: '2024-06-08T22:53:02Z'
+  - torchscript_onnx_qnn:
+      inference_time: 8431.0
+      throughput: 118.60989206499822
+      estimated_peak_memory_range:
+        min: 159744
+        max: 159744
+      primary_compute_unit: NPU
+      precision: fp16
+      layer_info:
+        layers_on_npu: 377
+        layers_on_gpu: 0
+        layers_on_cpu: 0
+        total_layers: 377
+      job_id: jnp1q8z2g
+      job_status: Passed
+    torchscript_onnx_ort:
+      inference_time: 32547.0
+      throughput: 30.724797984453254
+      estimated_peak_memory_range:
+        min: 40755200
+        max: 40755200
+      primary_compute_unit: NPU
+      precision: fp16
+      layer_info:
+        layers_on_npu: 389
+        layers_on_gpu: 0
+        layers_on_cpu: 0
+        total_layers: 389
+      job_id: jep23my4g
+      job_status: Passed
+    reference_device_info:
+      name: Snapdragon X Elite CRD
+      os: '11'
+      form_factor: Compute
+      os_name: Windows
+      manufacturer: Qualcomm
+      chipset: Snapdragon® X Elite
+    timestamp: '2024-06-08T22:53:08Z'
+- name: CLIPImageEncoder
+  performance_metrics:
+  - torchscript_onnx_tflite:
+      inference_time: 126539.0
+      throughput: 7.902701933791163
+      estimated_peak_memory_range:
+        min: 0
+        max: 273708336
+      primary_compute_unit: NPU
+      precision: fp16
+      layer_info:
+        layers_on_npu: 576
+        layers_on_gpu: 0
+        layers_on_cpu: 0
+        total_layers: 576
+      job_id: jw56qnl0g
+      job_status: Passed
+    torchscript_onnx_qnn:
+      inference_time: 50274.0
+      throughput: 19.890997334606357
+      estimated_peak_memory_range:
+        min: 126976
+        max: 66170792
+      primary_compute_unit: NPU
+      precision: fp16
+      layer_info:
+        layers_on_npu: 371
+        layers_on_gpu: 0
+        layers_on_cpu: 0
+        total_layers: 371
+      job_id: jygzvrkkp
+      job_status: Passed
+    reference_device_info:
+      name: Samsung Galaxy S23
+      os: '13'
+      form_factor: Phone
+      os_name: Android
+      manufacturer: Samsung
+      chipset: Snapdragon® 8 Gen 2
+    timestamp: '2024-06-08T22:52:57Z'
+  - torchscript_onnx_tflite:
+      inference_time: 96320.0
+      throughput: 10.382059800664452
+      estimated_peak_memory_range:
+        min: 188416
+        max: 752672896
+      primary_compute_unit: NPU
+      precision: fp16
+      layer_info:
+        layers_on_npu: 576
+        layers_on_gpu: 0
+        layers_on_cpu: 0
+        total_layers: 576
+      job_id: jwgoe3qxp
+      job_status: Passed
+    torchscript_onnx_qnn:
+      inference_time: 37784.0
+      throughput: 26.46622909167902
+      estimated_peak_memory_range:
+        min: 634880
+        max: 197848448
+      primary_compute_unit: NPU
+      precision: fp16
+      layer_info:
+        layers_on_npu: 371
+        layers_on_gpu: 0
+        layers_on_cpu: 0
+        total_layers: 371
+      job_id: jmg994nlg
+      job_status: Passed
+    torchscript_onnx_ort:
+      inference_time: 129578.0
+      throughput: 7.717359428298013
+      estimated_peak_memory_range:
+        min: 659456
+        max: 1273480192
+      primary_compute_unit: NPU
+      precision: fp16
+      layer_info:
+        layers_on_npu: 382
+        layers_on_gpu: 0
+        layers_on_cpu: 0
+        total_layers: 382
+      job_id: jopr1y39g
+      job_status: Passed
+    reference_device_info:
+      name: Samsung Galaxy S24
+      os: '14'
+      form_factor: Phone
+      os_name: Android
+      manufacturer: Samsung
+      chipset: Snapdragon® 8 Gen 3
+    timestamp: '2024-06-08T22:53:07Z'
+  - torchscript_onnx_tflite:
+      inference_time: 125864.0
+      throughput: 7.945083582279286
+      estimated_peak_memory_range:
+        min: 143360
+        max: 4010376
+      primary_compute_unit: NPU
+      precision: fp16
+      layer_info:
+        layers_on_npu: 576
+        layers_on_gpu: 0
+        layers_on_cpu: 0
+        total_layers: 576
+      job_id: j7gjke4x5
+      job_status: Passed
+    torchscript_onnx_qnn:
+      inference_time: 50577.0
+      throughput: 19.771833046641753
+      estimated_peak_memory_range:
+        min: 77824
+        max: 66028648
+      primary_compute_unit: NPU
+      precision: fp16
+      layer_info:
+        layers_on_npu: 371
+        layers_on_gpu: 0
+        layers_on_cpu: 0
+        total_layers: 371
+      job_id: jqp4jwrvp
+      job_status: Passed
+    reference_device_info:
+      name: QCS8550 (Proxy)
+      os: '12'
+      form_factor: Iot
+      os_name: Android
+      manufacturer: Qualcomm
+      chipset: Qcs8550
+    timestamp: '2024-06-08T22:53:03Z'
+  - torchscript_onnx_qnn:
+      inference_time: 48611.0
+      throughput: 20.57147559194421
+      estimated_peak_memory_range:
+        min: 602112
+        max: 602112
+      primary_compute_unit: NPU
+      precision: fp16
+      layer_info:
+        layers_on_npu: 369
+        layers_on_gpu: 0
+        layers_on_cpu: 0
+        total_layers: 369
+      job_id: jvgd7v1eg
+      job_status: Passed
+    torchscript_onnx_ort:
+      inference_time: 168455.0
+      throughput: 5.936303463833071
+      estimated_peak_memory_range:
+        min: 468086784
+        max: 468086784
+      primary_compute_unit: NPU
+      precision: fp16
+      layer_info:
+        layers_on_npu: 382
+        layers_on_gpu: 0
+        layers_on_cpu: 0
+        total_layers: 382
+      job_id: jqpyvd37p
+      job_status: Passed
+    reference_device_info:
+      name: Snapdragon X Elite CRD
+      os: '11'
+      form_factor: Compute
+      os_name: Windows
+      manufacturer: Qualcomm
+      chipset: Snapdragon® X Elite
+    timestamp: '2024-06-08T22:53:08Z'

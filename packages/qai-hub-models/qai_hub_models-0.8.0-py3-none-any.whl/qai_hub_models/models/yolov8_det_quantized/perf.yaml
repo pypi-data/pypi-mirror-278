@@ -1,0 +1,158 @@
+aggregated:
+  supported_oses:
+  - Android
+  supported_devices:
+  - Google Pixel 3
+  - Google Pixel 3a
+  - Google Pixel 3a XL
+  - Google Pixel 4
+  - Google Pixel 4a
+  - Google Pixel 5a 5G
+  - QCS6490 (Proxy)
+  - QCS8250 (Proxy)
+  - QCS8550 (Proxy)
+  - RB3 Gen 2 (Proxy)
+  - RB5 (Proxy)
+  - Samsung Galaxy S21
+  - Samsung Galaxy S21 Ultra
+  - Samsung Galaxy S21+
+  - Samsung Galaxy S22 5G
+  - Samsung Galaxy S22 Ultra 5G
+  - Samsung Galaxy S22+ 5G
+  - Samsung Galaxy S23
+  - Samsung Galaxy S23 Ultra
+  - Samsung Galaxy S23+
+  - Samsung Galaxy S24
+  - Samsung Galaxy S24 Ultra
+  - Samsung Galaxy S24+
+  - Samsung Galaxy Tab S8
+  - Snapdragon X Elite CRD
+  - Xiaomi 12
+  - Xiaomi 12 Pro
+  supported_chipsets:
+  - Qcs6490
+  - Qcs8250
+  - Qcs8550
+  - Snapdragon® 8 Gen 1
+  - Snapdragon® 8 Gen 2
+  - Snapdragon® 8 Gen 3
+  - Snapdragon® 888
+  - Snapdragon® X Elite
+models:
+- name: YOLOv8-Detection-Quantized
+  performance_metrics:
+  - torchscript_onnx_tflite:
+      inference_time: 2332.0
+      throughput: 428.8164665523156
+      estimated_peak_memory_range:
+        min: 12288
+        max: 3599048
+      primary_compute_unit: NPU
+      precision: int8
+      layer_info:
+        layers_on_npu: 276
+        layers_on_gpu: 0
+        layers_on_cpu: 1
+        total_layers: 277
+      job_id: jwgoe1kqp
+      job_status: Passed
+    reference_device_info:
+      name: Samsung Galaxy S23
+      os: '13'
+      form_factor: Phone
+      os_name: Android
+      manufacturer: Samsung
+      chipset: Snapdragon® 8 Gen 2
+    timestamp: '2024-06-08T23:33:51Z'
+  - torchscript_onnx_tflite:
+      inference_time: 1594.0
+      throughput: 627.3525721455458
+      estimated_peak_memory_range:
+        min: 12288
+        max: 49918192
+      primary_compute_unit: NPU
+      precision: int8
+      layer_info:
+        layers_on_npu: 276
+        layers_on_gpu: 0
+        layers_on_cpu: 1
+        total_layers: 277
+      job_id: j1pvz1rkg
+      job_status: Passed
+    reference_device_info:
+      name: Samsung Galaxy S24
+      os: '14'
+      form_factor: Phone
+      os_name: Android
+      manufacturer: Samsung
+      chipset: Snapdragon® 8 Gen 3
+    timestamp: '2024-06-08T23:33:52Z'
+  - torchscript_onnx_tflite:
+      inference_time: 2326.0
+      throughput: 429.9226139294927
+      estimated_peak_memory_range:
+        min: 12288
+        max: 2668824
+      primary_compute_unit: NPU
+      precision: int8
+      layer_info:
+        layers_on_npu: 276
+        layers_on_gpu: 0
+        layers_on_cpu: 1
+        total_layers: 277
+      job_id: j7gjk02v5
+      job_status: Passed
+    reference_device_info:
+      name: QCS8550 (Proxy)
+      os: '12'
+      form_factor: Iot
+      os_name: Android
+      manufacturer: Qualcomm
+      chipset: Qcs8550
+    timestamp: '2024-06-08T23:33:53Z'
+  - torchscript_onnx_tflite:
+      inference_time: 6463.0
+      throughput: 154.7269070091289
+      estimated_peak_memory_range:
+        min: 81920
+        max: 33931536
+      primary_compute_unit: NPU
+      precision: int8
+      layer_info:
+        layers_on_npu: 275
+        layers_on_gpu: 1
+        layers_on_cpu: 1
+        total_layers: 277
+      job_id: jlpe4rwo5
+      job_status: Passed
+    reference_device_info:
+      name: RB3 Gen 2 (Proxy)
+      os: '12'
+      form_factor: Iot
+      os_name: Android
+      manufacturer: Qualcomm
+      chipset: Qcs6490
+    timestamp: '2024-06-08T23:33:54Z'
+  - torchscript_onnx_tflite:
+      inference_time: 46343.0
+      throughput: 21.57823187967978
+      estimated_peak_memory_range:
+        min: 1802240
+        max: 10846104
+      primary_compute_unit: NPU
+      precision: int8
+      layer_info:
+        layers_on_npu: 274
+        layers_on_gpu: 2
+        layers_on_cpu: 1
+        total_layers: 277
+      job_id: jygzvxjop
+      job_status: Passed
+    reference_device_info:
+      name: RB5 (Proxy)
+      os: '12'
+      form_factor: Iot
+      os_name: Android
+      manufacturer: Qualcomm
+      chipset: Qcs8250
+    timestamp: '2024-06-08T23:33:55Z'
