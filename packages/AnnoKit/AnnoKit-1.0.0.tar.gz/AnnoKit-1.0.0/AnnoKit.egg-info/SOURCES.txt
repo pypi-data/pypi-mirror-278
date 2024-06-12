@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+AnnoKit.egg-info/PKG-INFO
+AnnoKit.egg-info/SOURCES.txt
+AnnoKit.egg-info/dependency_links.txt
+AnnoKit.egg-info/not-zip-safe
+AnnoKit.egg-info/requires.txt
+AnnoKit.egg-info/top_level.txt
+annokit/__init__.py
+annokit/gtf.py
+scripts/AnnoGtf

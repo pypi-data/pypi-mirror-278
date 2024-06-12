@@ -1,0 +1,112 @@
+#!/usr/bin/env python
+from loguru import logger
+from annokit.gtf import GTF
+import argparse
+import os
+
+def Mk_no_dir(dir, recover="N"):
+    if os.path.exists(dir):
+        if dir == "./":
+            pass
+        else:
+            if recover == "N":
+                print(f"warning {dir} exist")
+            else:
+                print(f"warning {dir} will be recovered")
+                os.rmdir(dir)
+                os.mkdir(dir)
+    else:
+        os.mkdir(dir)
+
+
+def run():
+
+    argparse_annogtf = argparse.ArgumentParser(description="gtf file process tools")
+    argparse_annogtf.add_argument("-t", "--type", choices=["searchs", "maps", "inquires"], dest="type",
+                                 help="process type 'searchs' or 'maps'")
+    argparse_annogtf.add_argument("-l", "--location", dest="loc",help="location, like 'chr:start:end'")
+    argparse_annogtf.add_argument("-g", "--gtf", dest="gtf",help="gtf file")
+    argparse_annogtf.add_argument("-it", "--inquire_type", dest="itype",help="inquire type: 'id' or 'name' ")
+    argparse_annogtf.add_argument("-il", "--inquire_level", dest="ilevel",help="inquire type: 'gene' or 'trans' or 'exon'")
+    argparse_annogtf.add_argument("-gs", "--genes", dest="genes",help="genes")
+    argparse_annogtf.add_argument("-m", "--mapType", dest="map", choices=["i2n", "n2i"], help="mapType")
+    argparse_annogtf.add_argument("-gf", "--genes_file", dest="genes_file",help="genes file")
+    argparse_annogtf.add_argument("-o", "--out", dest="out",help="out file name")
+    argparse_annogtf.add_argument("-od", "--out_dir", default="./", dest="out_dir",help="out dir")
+    argparse_annogtf.add_argument("-am", "--anno_map", default=None, dest="anno_map",help="anno map")
+    argparse_annogtf.add_argument("-log", "--log", default=None, dest="log",help="out log file")
+    
+    args = argparse_annogtf.parse_args()
+
+    Mk_no_dir(args.out_dir)
+
+    if args.log:
+        logger.add(f"{args.out_dir}/{args.log}.log", level="WARNING")
+
+    if args.type == "searchs":
+        gtf = GTF()
+        gtf.read(args.gtf, anno_map=args.anno_map)
+        geneid_list = gtf.searchs(args.loc)
+        with open(f"{args.out_dir}/{args.out}_searchs.tsv", "w") as f:
+            f.write("id\tname\tchr\tstart\tend\tstrand\n")
+            for geneid in geneid_list:
+                gene = gtf.genes[geneid.data]
+                f.write("\t".join([gene.id, gene.name, gene.chr, str(gene.start), str(gene.end), gene.strand]) + "\n")
+    elif args.type == "maps":
+        gtf = GTF()
+        gtf.read(args.gtf, anno_map=args.anno_map)
+        if args.genes:
+            dict_map = gtf.maps(args.genes, args.map)
+        elif args.genes_file:
+            genes_list = []
+            with open(args.genes_file, "r") as f1:
+                for line in f1:
+                    if line.startswith("#"):
+                        pass
+                    else:
+                        genes_list.append(line.strip())
+            genes = ",".join(genes_list)
+            dict_map = gtf.maps(genes, args.map)
+        else:
+            logger.error("params err: please check 'genes' or 'genes_file'!")
+            raise ValueError("params err: please check 'genes' or 'genes_file'!")
+        
+        with open(f"{args.out_dir}/{args.out}_maps.tsv", "w") as f:
+            f.write("id\tname\n")
+            if args.map == "i2n":
+                for id, name in dict_map.items():
+                    f.write(f"{id}\t{name}\n")
+            else:
+                for name, id in dict_map.items():
+                    f.write(f"{name}\t{id}\n")
+    elif args.type == "inquires":
+        gtf = GTF()
+        gtf.read(args.gtf, anno_map=args.anno_map)
+        if args.genes:
+            df_inquires = gtf.inquires(args.genes, args.itype, args.ilevel)
+        elif args.genes_file:
+            genes_list = []
+            with open(args.genes_file, "r") as f1:
+                for line in f1:
+                    if line.startswith("#"):
+                        pass
+                    else:
+                        genes_list.append(line.strip())
+            genes = ",".join(genes_list)
+            df_inquires = gtf.inquires(genes, args.itype, args.ilevel)
+        else:
+            logger.error("params err: please check 'genes' or 'genes_file'!")
+            raise ValueError("params err: please check 'genes' or 'genes_file'!")
+        
+        df_inquires.to_csv(f"{args.out_dir}/{args.out}_inquires.tsv", sep="\t", index=None)
+
+    else:
+        logger.error("params err: please check 'type'!")
+        raise ValueError("params err: please check 'type'!")
+
+    return
+
+
+
+if __name__ == '__main__':
+    run()
