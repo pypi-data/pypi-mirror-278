@@ -1,0 +1,3 @@
+[console_scripts]
+slidie-ttyd = slidie_ttyd.server:main
+slidie-ttyd-runner = slidie_ttyd.runner:main
