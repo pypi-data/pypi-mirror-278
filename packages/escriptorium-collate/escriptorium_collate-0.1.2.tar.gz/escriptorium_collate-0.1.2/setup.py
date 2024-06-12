@@ -1,0 +1,19 @@
+from setuptools import find_packages, setup
+
+setup(
+    name="escriptorium-collate",
+    version="0.1.2",
+    author="Osama Eshera",
+    author_email="osama.eshera@gmail.com",
+    description="A Python library for collating eScriptorium documents.",
+    url="https://github.com/oeshera/escriptorium-collate",
+    packages=find_packages(),
+    install_requires=[
+        "escriptorium-connector",
+        "minineedle",
+        "nltk",
+        "pydantic",
+    ],
+    setup_requires=["pytest-runner"],
+    tests_require=["pytest"],
+)
