@@ -1,0 +1,2 @@
+[console_scripts]
+armonik_admin_cli = armonik_cli.admin:main
