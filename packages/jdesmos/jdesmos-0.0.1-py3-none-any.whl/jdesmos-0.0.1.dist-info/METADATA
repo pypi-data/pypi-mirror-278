@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: jdesmos
+Version: 0.0.1
+Summary: Easily embed Desmos Graphs in Jupyter
+Author: John Lockwood
+Author-email: john@codesolid.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: ipython (>5)
+Description-Content-Type: text/markdown
+
+# jdesmos - Easily embed Desmos graphs in Jupyter
