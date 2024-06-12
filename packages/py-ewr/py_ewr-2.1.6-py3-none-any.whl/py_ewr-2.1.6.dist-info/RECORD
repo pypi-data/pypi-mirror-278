@@ -1,0 +1,15 @@
+py_ewr/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+py_ewr/data_inputs.py,sha256=BLJrrasZYpSUkC0yVBzVqnz6WGT2Y3SJYJJhguDi-Vo,18046
+py_ewr/evaluate_EWRs.py,sha256=1JYWNtw5MYgf92jXhDNlgGkDx2mcfBP34OO-0jgal1w,229279
+py_ewr/observed_handling.py,sha256=NaySsqe8nWgZdDRSr22EYmCwf0uNzVj9DFF6hzNr6ws,18173
+py_ewr/scenario_handling.py,sha256=yMAfRNIZtuGntdey2-FML5nfUaGXMIApAUvIzQbyXUs,28476
+py_ewr/summarise_results.py,sha256=7w2Tbriwob21UXG0N2rSKffneg3M49hWouJPTHVjDAU,29747
+py_ewr/model_metadata/SiteID_MDBA.csv,sha256=ZVY_P-lq_tHNELfUrTTveNPWcumKHot7yWvdjje0I2k,164412
+py_ewr/model_metadata/SiteID_NSW.csv,sha256=UVBxN43Z5KWCvWhQ5Rh6TNEn35q4_sjPxKyHg8wPFws,6805
+py_ewr/parameter_metadata/ewr_calc_config.json,sha256=LEnaueNT60FFEPSJDgLpD8EGo_CguTPlZJ3Q5t_-XQ4,17610
+py_ewr/parameter_metadata/parameter_sheet.csv,sha256=H5f2jzR5FpsjIm9hYh26qth0Z2LNlZfeWpXysQel4y8,895653
+py_ewr-2.1.6.dist-info/LICENSE,sha256=ogEPNDSH0_dhiv_lT3ifVIdgIzHAqNA_SemnxUfPBJk,7048
+py_ewr-2.1.6.dist-info/METADATA,sha256=npduQ6-A-263ruoja__ytTnOOwcijpUNt51dOIjFfmY,9552
+py_ewr-2.1.6.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+py_ewr-2.1.6.dist-info/top_level.txt,sha256=n3725d-64Cjyb-YMUMV64UAuIflzUh2_UZSxiIbrur4,7
+py_ewr-2.1.6.dist-info/RECORD,,
