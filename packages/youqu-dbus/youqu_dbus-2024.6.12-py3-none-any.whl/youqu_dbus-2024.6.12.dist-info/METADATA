@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: youqu-dbus
+Version: 2024.6.12
+Author-email: mikigo <huangmingqiang@uniontech.com>
+License: GPL2.0
+License-File: LICENSE
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# youqu-dbus
+D-Bus 操控插件
