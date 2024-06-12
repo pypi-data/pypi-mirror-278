@@ -1,0 +1,3 @@
+include tests/*
+include src/HIV_Isoform_Checker/*
+include *.txt
