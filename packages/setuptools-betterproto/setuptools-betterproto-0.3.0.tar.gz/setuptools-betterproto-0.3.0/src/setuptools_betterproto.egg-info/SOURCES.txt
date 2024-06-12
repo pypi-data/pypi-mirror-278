@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+RELEASE_NOTES.md
+pyproject.toml
+src/setuptools_betterproto/__init__.py
+src/setuptools_betterproto/_command.py
+src/setuptools_betterproto/_config.py
+src/setuptools_betterproto/_install.py
+src/setuptools_betterproto/conftest.py
+src/setuptools_betterproto/py.typed
+src/setuptools_betterproto.egg-info/PKG-INFO
+src/setuptools_betterproto.egg-info/SOURCES.txt
+src/setuptools_betterproto.egg-info/dependency_links.txt
+src/setuptools_betterproto.egg-info/entry_points.txt
+src/setuptools_betterproto.egg-info/requires.txt
+src/setuptools_betterproto.egg-info/top_level.txt
