@@ -1,0 +1,6 @@
+# Author: Jason Chuang
+# License: MIT
+version: 1.0
+models:
+  - model: qwen2:1.5b
+  - model: gemma:2b
