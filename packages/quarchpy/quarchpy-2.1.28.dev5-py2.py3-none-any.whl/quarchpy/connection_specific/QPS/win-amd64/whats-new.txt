@@ -1,0 +1,35 @@
+*** What's New In Quarch Power Studio ***
+
+QPS version 1.40
+QIS version 1.43
+
+16th May 2024
+
+Version 1.40 of QPS marks the first official release of a Java 8+ version.
+QPS and QIS are now built against Coretto Java 21
+
+QPS fully supported on Windows 10/11, Linux Ubuntu/Mint and Apple Intel. QPS uses JavaFX 21 for its user interface, which requires a minimum of macOS 11.
+
+*** New Features ***
+
+- Java update to Java21, there should be minimal effect to the user, but performance does increase in some areas
+
+- Windows, Linux, and Apple now all support the auto-update feature, to inform you of new releases.  Installers exist for all 3 platforms
+
+- Caching is used to greatly accelerate loading and navigation of large traces
+
+- Statistics tab values now support auto-ranging to make them more readable
+
+- Improved progress tracking is now shown for loading, export and stats calculation
+
+- Improved self-test notification with clearer error messages
+
+- Left side tabs (shown during recording) and also shown in archive mode, for better consistancy
+
+*** Major Fixes ***
+
+- Bug fix when streaming only digitals on 2 and 4 channel PAMs.
+
+- Numerous improvements to the Stats Grid dialog such as consistent Max/NaN values for missing data. 
+
+
