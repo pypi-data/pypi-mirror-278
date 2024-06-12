@@ -1,0 +1,3 @@
+recursive-include cwordtm/data *
+recursive-include cwordtm/dictionary *
+recursive-include cwordtm/images *
