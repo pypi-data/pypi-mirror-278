@@ -1,0 +1,160 @@
+Metadata-Version: 2.1
+Name: setuptools-betterproto
+Version: 0.3.0
+Summary: A modern setuptools plugin to generate Python files from proto files using betterproto
+Author-email: Frequenz Energy-as-a-Service GmbH <floss@frequenz.com>
+License: MIT
+Project-URL: Documentation, https://frequenz-floss.github.io/setuptools-betterproto/
+Project-URL: Changelog, https://github.com/frequenz-floss/setuptools-betterproto/releases
+Project-URL: Issues, https://github.com/frequenz-floss/setuptools-betterproto/issues
+Project-URL: Repository, https://github.com/frequenz-floss/setuptools-betterproto
+Project-URL: Support, https://github.com/frequenz-floss/setuptools-betterproto/discussions/categories/support
+Keywords: betterproto,code-generation,frequenz,lib,library,plugin,proto,protobuf,protocol-buffers,python,setuptools
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Setuptools Plugin
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Typing :: Typed
+Requires-Python: <4,>=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: betterproto[compiler] ==2.0.0b6
+Requires-Dist: grpcio-tools <2,>=1.59.0
+Requires-Dist: setuptools >=67.6.0
+Requires-Dist: typing-extensions <5,>=4.5.0
+Requires-Dist: tomli <3,>=2.0.1 ; python_version < "3.11"
+Provides-Extra: dev
+Requires-Dist: setuptools-betterproto[dev-flake8,dev-formatting,dev-mkdocs,dev-mypy,dev-noxfile,dev-pylint,dev-pytest] ; extra == 'dev'
+Provides-Extra: dev-flake8
+Requires-Dist: flake8 ==7.0.0 ; extra == 'dev-flake8'
+Requires-Dist: flake8-docstrings ==1.7.0 ; extra == 'dev-flake8'
+Requires-Dist: flake8-pyproject ==1.2.3 ; extra == 'dev-flake8'
+Requires-Dist: pydoclint ==0.4.1 ; extra == 'dev-flake8'
+Requires-Dist: pydocstyle ==6.3.0 ; extra == 'dev-flake8'
+Provides-Extra: dev-formatting
+Requires-Dist: black ==24.4.2 ; extra == 'dev-formatting'
+Requires-Dist: isort ==5.13.2 ; extra == 'dev-formatting'
+Provides-Extra: dev-mkdocs
+Requires-Dist: Markdown ==3.6.0 ; extra == 'dev-mkdocs'
+Requires-Dist: black ==24.4.2 ; extra == 'dev-mkdocs'
+Requires-Dist: mike ==2.1.1 ; extra == 'dev-mkdocs'
+Requires-Dist: mkdocs-gen-files ==0.5.0 ; extra == 'dev-mkdocs'
+Requires-Dist: mkdocs-literate-nav ==0.6.1 ; extra == 'dev-mkdocs'
+Requires-Dist: mkdocs-macros-plugin ==1.0.5 ; extra == 'dev-mkdocs'
+Requires-Dist: mkdocs-material ==9.5.25 ; extra == 'dev-mkdocs'
+Requires-Dist: mkdocstrings[python] ==0.25.1 ; extra == 'dev-mkdocs'
+Requires-Dist: mkdocstrings-python ==1.10.3 ; extra == 'dev-mkdocs'
+Requires-Dist: frequenz-repo-config[lib] ==0.9.2 ; extra == 'dev-mkdocs'
+Provides-Extra: dev-mypy
+Requires-Dist: mypy ==1.10.0 ; extra == 'dev-mypy'
+Requires-Dist: types-Markdown ==3.6.0.20240316 ; extra == 'dev-mypy'
+Requires-Dist: types-setuptools >=67.6.0.0 ; extra == 'dev-mypy'
+Requires-Dist: setuptools-betterproto[dev-mkdocs,dev-noxfile,dev-pytest] ; extra == 'dev-mypy'
+Provides-Extra: dev-noxfile
+Requires-Dist: nox ==2024.4.15 ; extra == 'dev-noxfile'
+Requires-Dist: frequenz-repo-config[lib] ==0.9.2 ; extra == 'dev-noxfile'
+Provides-Extra: dev-pylint
+Requires-Dist: setuptools-betterproto[dev-mkdocs,dev-noxfile,dev-pytest] ; extra == 'dev-pylint'
+Provides-Extra: dev-pytest
+Requires-Dist: pytest ==8.2.1 ; extra == 'dev-pytest'
+Requires-Dist: pylint ==3.2.2 ; extra == 'dev-pytest'
+Requires-Dist: frequenz-repo-config[extra-lint-examples] ==0.9.2 ; extra == 'dev-pytest'
+Requires-Dist: pytest-mock ==3.14.0 ; extra == 'dev-pytest'
+Requires-Dist: pytest-asyncio ==0.23.7 ; extra == 'dev-pytest'
+
+# Betterproto Setuptools plugin
+
+[![Build Status](https://github.com/frequenz-floss/setuptools-betterproto/actions/workflows/ci.yaml/badge.svg)](https://github.com/frequenz-floss/setuptools-betterproto/actions/workflows/ci.yaml)
+[![PyPI Package](https://img.shields.io/pypi/v/setuptools-betterproto)](https://pypi.org/project/setuptools-betterproto/)
+[![Docs](https://img.shields.io/badge/docs-latest-informational)](https://frequenz-floss.github.io/setuptools-betterproto/)
+
+## Introduction
+
+A modern [`setuptools`](https://setuptools.pypa.io/) plugin to generate Python
+files from proto files using [betterproto].
+
+This plugin is based on
+[`repo-config`](https://frequenz-floss.github.io/frequenz-repo-config-python/)'s
+[`grpc_tools`
+plugin](https://frequenz-floss.github.io/frequenz-repo-config-python/v0.9/reference/frequenz/repo/config/setuptools/grpc_tools/).
+
+## Supported Platforms
+
+The following platforms are officially supported (tested):
+
+- **Python:** 3.11
+- **Operating System:** Ubuntu Linux 20.04
+- **Architectures:** amd64, arm64
+
+## Quick Start
+
+To add automatic [betterproto] code generation to your project, you need to add
+this package to your build-dependencies in the `pyproject.toml` file, for
+example:
+
+```toml
+[build-system]
+requires = [
+  "setuptools == 68.1.0",
+  "setuptools-betterproto == 0.1.0",
+]
+build-backend = "setuptools.build_meta"
+```
+
+This uses a default configuration as follows:
+
+* `proto_path`: This is the root directory where the proto files are located.
+  By default, it is set to `.`.
+* `proto_glob`: This is the glob pattern to match the proto files. The search
+  is done recursively. By default, it is set to `*.proto`.
+* `include_paths`: This is a list of paths to be added to the protobuf
+  compiler's include path. By default, it is set to `[]`, but the `proto_path`
+  directory is always automatically added.
+* `out_path`: This is the directory where the generated Python files will be
+  placed. By default, it is set to `.`.
+
+These defaults can be changed via the `pypackage.toml` file too. For example:
+
+```toml
+[tool.setuptools_betterproto]
+proto_path = "proto"
+include_paths = ["api-common-protos"]
+out_path = "src"
+```
+
+You should add [betterproto] as a dependency too, for example:
+
+```toml
+dependencies = ["betterproto == 2.0.0b6"]
+```
+
+Once this is done, the conversion of the proto files to Python files should be
+automatic. Just try building the package with:
+
+```sh
+python -m pip install build
+python -m build
+```
+
+A new command to generate the files will be also added to `setuptools`, you can
+run it manually with:
+```sh
+python -c 'import setuptools; setuptools.setup()' compile_betterproto
+```
+
+You can also pass the configuration options via command line for quick testing,
+try passing `--help` at the end of the command to see the available options.
+
+## Contributing
+
+If you want to know how to build this project and contribute to it, please
+check out the [Contributing Guide](CONTRIBUTING.md).
+
+## Similar projects
+
+* [`setuptools-proto`](https://github.com/jameslan/setuptools-proto/): We didn't use this project because it seems a bit inactive and not widely used. It also seems to need some configuration as code, which we wanted to avoid.
+
+[betterproto]: https://github.com/danielgtaylor/python-betterproto
