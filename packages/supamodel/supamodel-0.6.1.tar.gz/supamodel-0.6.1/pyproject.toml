@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "supamodel"
+version = "0.6.1"
+description = "Pydantic Models for Trading Algos and Supabase"
+authors = ["Kevin Hill <kivo360@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<=3.13"
+pendulum = ">=2.0.0,<4.0.0"
+loguru = ">=0.5.0,<1.0.0"
+pydantic = { extras = ["email"], version = "^2.7.0" }
+rich = "^13.7.1"
+pydantic-settings = ">=2.0.0,<=3.0.0"
+numpy = "^1.26.4"
+inflector = "^3.1.1"
+supabase = "^2.5.0"
+pandas = "^2.2.1"
+solana = "^0.33.0"
+orjson = "^3.10.0"
+diskcache = "^5.6.3"
+typer = "^0.12.3"
+solders = "^0.21.0"
+scipy = "^1.13.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest-testmon = "^2.1.1"
+devtools = "^0.12.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+# Create ruff configuration
+[tool.ruff]
+fixable = ["ALL"]
+# ignore = ["F401"]
+
+
+# docstring_code_format = false
