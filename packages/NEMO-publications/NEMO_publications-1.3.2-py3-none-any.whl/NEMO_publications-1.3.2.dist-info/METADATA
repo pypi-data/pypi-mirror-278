@@ -1,0 +1,98 @@
+Metadata-Version: 2.1
+Name: NEMO-publications
+Version: 1.3.2
+Summary: Install Publications plugin for NEMO
+Home-page: https://gitlab.com/nemo-community/atlantis-labs/nemo-publications
+Author: Atlantis Labs LLC
+Author-email: atlantis@atlantislabs.io
+License: MIT
+Keywords: NEMO
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Framework :: Django :: 3.2
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: django
+Requires-Dist: bibtexparser
+Requires-Dist: python-dateutil
+Requires-Dist: requests
+Provides-Extra: nemo
+Requires-Dist: NEMO >=4.7.0 ; extra == 'nemo'
+Provides-Extra: nemo-ce
+Requires-Dist: NEMO-CE >=1.7.0 ; extra == 'nemo-ce'
+Provides-Extra: dev-tools
+Requires-Dist: pre-commit ; extra == 'dev-tools'
+Requires-Dist: djlint ; extra == 'dev-tools'
+Requires-Dist: black ; extra == 'dev-tools'
+
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/NEMO-Publications?label=python)](https://www.python.org/downloads/release/python-3110/)
+[![PyPI](https://img.shields.io/pypi/v/nemo-publications?label=pypi%20version)](https://pypi.org/project/NEMO-Publications/)
+
+# NEMO Publications
+
+This plugin for NEMO adds the ability to manage Publications.
+* Search and add publication using DOI
+* Link publications to authors (NEMO Users), Tools and Projects
+
+# Compatibility:
+
+### NEMO-Publications >= 1.0.0
+* NEMO >= 4.7.0
+* NEMO-CE >= 1.7.0
+
+# Installation
+
+`pip install NEMO-publications`
+
+# Add NEMO Publications
+
+in `settings.py` add to `INSTALLED_APPS`:
+
+```python
+INSTALLED_APPS = [
+    '...',
+    'NEMO_publications',
+    '...'
+    'NEMO',
+    '...'
+]
+```
+
+# Usage
+Add choice to "Landing page choices" in Detailed Administration
+* Set URL to `/publications/`
+* Use suggested icon located in `resources/icons/publications.png`
+
+For the publication jumbotron, you can use the URL `/publications/jumbotron/`
+
+# Customizations
+Go to `Customization -> Publications` to enable the landing page widget and set parameters for the carousel like interval time and number of recent publications to display. 
+
+# Settings
+The following settings are used by default:
+
+```python
+PUBLICATION_SETTINGS = {
+    "timeout": 15,
+    "doi_search_url": "http://dx.doi.org/{}",
+    "headers": [
+        {"Accept": "application/x-bibtex"}, 
+        {"Accept": "text/bibliography; style=bibtex"}
+    ]
+}
+```
+
+To override any of them, simply add the ones you want to replace in `settings.py` as follows:
+```python
+PUBLICATION_SETTINGS = {
+    "timeout": 45, # Increase timeout to 45s
+}
+```
