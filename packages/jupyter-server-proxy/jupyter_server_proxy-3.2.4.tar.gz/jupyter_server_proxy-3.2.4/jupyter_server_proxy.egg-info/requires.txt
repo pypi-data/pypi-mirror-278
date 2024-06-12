@@ -1,0 +1,12 @@
+aiohttp
+jupyter-server>=1.0
+simpervisor>=0.4
+
+[acceptance]
+robotframework-jupyterlibrary
+
+[test]
+pytest
+pytest-asyncio
+pytest-cov
+pytest-html
