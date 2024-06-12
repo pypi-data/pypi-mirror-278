@@ -1,0 +1,9 @@
+eget
+eget.exe
+eget-*
+todo.txt
+eget.1
+/test/*
+!/test/test_eget.go
+!/test/eget.toml
+.eget.toml
