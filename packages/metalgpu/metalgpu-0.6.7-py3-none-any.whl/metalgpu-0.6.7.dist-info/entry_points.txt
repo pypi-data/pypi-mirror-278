@@ -1,0 +1,3 @@
+[console_scripts]
+build=src.metalgpu.__main__:build
+
