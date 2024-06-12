@@ -1,0 +1,10 @@
+certifi>=2019.11.28
+docutils>=0.15.2
+numpy>=1.18.0
+statistics>=1.0.3.5
+
+[dev]
+pytest>=6.0.0
+pytest-cov>=2.10.0
+coverage>=5.0
+flake8>=3.8.0
