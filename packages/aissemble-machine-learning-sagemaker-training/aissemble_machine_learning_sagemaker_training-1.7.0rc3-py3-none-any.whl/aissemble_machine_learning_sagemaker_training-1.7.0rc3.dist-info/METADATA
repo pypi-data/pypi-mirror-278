@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: aissemble-machine-learning-sagemaker-training
+Version: 1.7.0rc3
+Summary: Description of package
+Author: Your Name
+Author-email: you@example.com
+Requires-Python: >=3.11.4,<4.0.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: protobuf (>=3.20.3,<4.0.0)
+Requires-Dist: pyopenssl (>22.1.0)
+Requires-Dist: sagemaker-training (>=4.6.1,<5.0.0)
+Requires-Dist: scipy (>=1.9.3,<2.0.0)
