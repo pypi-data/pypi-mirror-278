@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+reqs_check/__init__.py
+reqs_check/diff.py
+reqs_check/duplicates.py
+reqs_check/lint.py
+reqs_check/main.py
+reqs_check/utils.py
+reqs_check.egg-info/PKG-INFO
+reqs_check.egg-info/SOURCES.txt
+reqs_check.egg-info/dependency_links.txt
+reqs_check.egg-info/entry_points.txt
+reqs_check.egg-info/requires.txt
+reqs_check.egg-info/top_level.txt
