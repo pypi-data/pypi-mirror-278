@@ -1,0 +1,109 @@
+Project 1:
+    SubjectTypes:
+        - Group1
+        - Group2
+
+    SessionTypes:
+        - Session1
+        - Session2
+
+    Users:
+        - User1
+        - User2
+
+    Notes: |
+           Subject details
+           ---------------
+
+           Age:
+           Gender: m[ ] f[ ]
+
+    Files: 
+        - "*.txt"
+
+    Checklist: 
+        - Pre-Scan Questionnaire
+        - Post-Scan Questionnaire
+
+    Measurements anat:
+        - Name:        Localizer
+          Vols:        3
+
+        - Name:        Anatomy
+          Vols:        192
+
+    Measurements func:
+        - Name:        Run1
+          Vols:        300
+          Comments:    |
+                       Answer 1:
+
+        - Name:        Run2
+          Vols:        400
+          Comments:    |
+                       Answer 2:
+
+        - Name:        Run3
+          Vols:        200
+          Comments:    |
+                       Answer 3:
+
+    Measurements misc:
+        - Name:        Run1incomplete
+          Vols:
+          Comments:
+
+
+Project 2:
+    SubjectTypes:
+        - GroupA
+        - GroupB
+
+    SessionTypes:
+        - SessA
+        - SessB
+
+    Users:
+        - UserA
+        - UserB
+
+    Notes: |
+           Subject details
+           ---------------
+
+           Age:
+           Gender: m[ ] f[ ]
+
+    Files: 
+        - "*.txt"
+
+    Checklist:
+        - Participation Reimbursement Form
+
+    Measurements anat:
+        - Name:        Localizer
+          Vols:        3
+
+        - Name:        MPRAGE
+          Vols:        192
+
+    Measurements func:
+        - Name:        RunA
+          Vols:        300
+          Comments:    |
+                       Answer 1:
+
+        - Name:        RunB
+          Vols:        400
+          Comments:    |
+                       Answer 2:
+
+        - Name:        RunC
+          Vols:        200
+          Comments:    |
+                       Answer 3:
+
+    Measurements misc:
+        - Name:        RunAImcomplete
+          Vols:
+          Comments:
