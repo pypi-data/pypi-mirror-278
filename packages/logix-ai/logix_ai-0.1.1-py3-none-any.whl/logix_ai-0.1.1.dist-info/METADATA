@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: logix-ai
+Version: 0.1.1
+Summary: AI Logging for Interpretability and Explainability
+License: Apache-2.0
+Requires-Python: >=3.6.0,<3.11.0
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: einops
+Requires-Dist: pyyaml
+Requires-Dist: torch
+Requires-Dist: tqdm
+Provides-Extra: test
+Requires-Dist: torchvision ; extra == 'test'
+Requires-Dist: transformers (==4.40.0) ; extra == 'test'
+
