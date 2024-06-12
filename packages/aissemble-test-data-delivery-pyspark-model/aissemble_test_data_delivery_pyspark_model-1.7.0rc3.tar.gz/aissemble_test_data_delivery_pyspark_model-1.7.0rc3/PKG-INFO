@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: aissemble-test-data-delivery-pyspark-model
+Version: 1.7.0rc3
+Summary: Pyspark test module
+Author: aiSSEMBLE Baseline Community
+Author-email: aissemble@bah.com
+Requires-Python: >=3.11.4,<4.0.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: aissemble-extensions-data-delivery-spark-py (>=1.7.0-rc3,<1.7.1)
+Requires-Dist: aissemble-extensions-encryption-vault-python (>=1.7.0-rc3,<1.7.1)
+Requires-Dist: aissemble-foundation-core-python (>=1.7.0-rc3,<1.7.1)
+Requires-Dist: aissemble-foundation-data-lineage-python (>=1.7.0-rc3,<1.7.1)
+Requires-Dist: aissemble-foundation-encryption-policy-python (>=1.7.0-rc3,<1.7.1)
+Requires-Dist: aissemble-foundation-pdp-client-python (>=1.7.0-rc3,<1.7.1)
+Requires-Dist: apache-sedona (>=1.4.0,<1.5.0)
+Requires-Dist: confluent-kafka (==2.1.1)
+Requires-Dist: cryptography (>=42.0.4)
+Requires-Dist: jsonpickle (>=2.1.0,<3.0.0)
+Requires-Dist: kafka-python (>=2.0.2,<3.0.0)
+Requires-Dist: krausening (>=19)
+Requires-Dist: pyspark (==3.4.0)
+Requires-Dist: pyyaml (>=6.0,<7.0)
+Requires-Dist: urllib3 (>=1.26.18,<2.0.0)
