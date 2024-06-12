@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: youqu-imagecenter-rpc
+Version: 2024.6.12
+Author-email: mikigo <huangmingqiang@uniontech.com>
+License: GPL2.0
+License-File: LICENSE
+Requires-Python: >=3.7
+Requires-Dist: easyprocess
+Requires-Dist: funnylog
+Requires-Dist: pyscreenshot
+Description-Content-Type: text/markdown
+
+# youqu-imagecenter-rpc
