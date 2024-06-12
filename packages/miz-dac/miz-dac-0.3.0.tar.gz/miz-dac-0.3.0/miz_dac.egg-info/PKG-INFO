@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: miz-dac
+Version: 0.3.0
+Summary: Data action context
+Home-page: http://mizip.net/
+Download-URL: https://github.com/MIZiper/dac.git
+Author: MIZiper
+Author-email: miziper@163.com
+License: Apache-2.0
+Requires-Python: >=3.10
+Provides-Extra: GUI
+Provides-Extra: IPY
+
+Minimal measurement data analysis with nodes and container.
