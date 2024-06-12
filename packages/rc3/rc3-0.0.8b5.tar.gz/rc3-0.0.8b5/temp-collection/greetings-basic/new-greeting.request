@@ -1,0 +1,27 @@
+{
+    "$schema": "https://json.schemastore.org/rc3-request-0.0.3.json",
+    "method": "POST",
+    "url": "{{baseUrl}}/v1/greetings",
+    "auth": {
+        "type": "inherit"
+    },
+    "body": {
+        "json": {
+            "text": "Koar",
+            "language": "Martian"
+        }
+    },
+    "save_responses": false,
+    "extract": [
+        {
+            "json_path": "$.text",
+            "to": "global",
+            "var": "text"
+        },
+        {
+            "json_path": "$.language",
+            "to": "global",
+            "var": "language"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+click>=8.1
+requests>=2.31
+jsonschema
+jsonpath-ng
+funcy
+pkce
+pyjwt
+
+[build]
+build
+twine
+
+[dev]
+pytest
+responses
