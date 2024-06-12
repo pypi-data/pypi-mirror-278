@@ -1,0 +1,99 @@
+Metadata-Version: 2.1
+Name: MethodicConfigurator
+Version: 0.8.0
+Summary: A clear configuration sequence for ArduPilot vehicles
+Home-page: https://github.com/ArduPilot/MethodicConfigurator
+Author: Amilcar do Carmo Lucas
+Author-email: amilcar.lucas@iav.de
+License: GPLv3
+Keywords: ArduPilot,Configuration,SCM,Methodic,ArduCopter,ArduPlane,ArduRover,ArduSub
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: platformdirs
+Requires-Dist: pymavlink
+Requires-Dist: pyserial
+Requires-Dist: pillow
+Requires-Dist: setuptools
+Requires-Dist: requests
+Provides-Extra: dev
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: coverage; extra == "dev"
+Requires-Dist: mock; extra == "dev"
+
+# ArduPilot Methodic Configurator
+# Everyone should be able to configure ArduPilot for their vehicles
+
+| Lint | Build | Test | Deploy |
+| ---- | ----- | ---- | ------ |
+| [![Pylint](https://github.com/ArduPilot/MethodicConfigurator/actions/workflows/pylint.yml/badge.svg)](https://github.com/ArduPilot/MethodicConfigurator/actions/workflows/pylint.yml) | | [![Python unit-tests](https://github.com/ArduPilot/MethodicConfigurator/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/ArduPilot/MethodicConfigurator/actions/workflows/unit-tests.yml) | [![pages-build-deployment](https://github.com/ArduPilot/MethodicConfigurator/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/ArduPilot/MethodicConfigurator/actions/workflows/pages/pages-build-deployment) |
+| [![test Python cleanliness](https://github.com/ArduPilot/MethodicConfigurator/actions/workflows/python-cleanliness.yml/badge.svg)](https://github.com/ArduPilot/MethodicConfigurator/actions/workflows/python-cleanliness.yml) | | [![Pytest unittests](https://github.com/ArduPilot/MethodicConfigurator/actions/workflows/unittests.yml/badge.svg)](https://github.com/ArduPilot/MethodicConfigurator/actions/workflows/unittests.yml) | [![Upload MethodicConfigurator Package](https://github.com/ArduPilot/MethodicConfigurator/actions/workflows/python-publish.yml/badge.svg)](https://github.com/ArduPilot/MethodicConfigurator/actions/workflows/python-publish.yml) |
+| | | [![coverage](https://github.com/ArduPilot/MethodicConfigurator/actions/workflows/coverage.yml/badge.svg)](https://github.com/ArduPilot/MethodicConfigurator/actions/workflows/coverage.yml) | [![Windows Build](https://github.com/ArduPilot/MethodicConfigurator/actions/workflows/windows_build.yml/badge.svg)](https://github.com/ArduPilot/MethodicConfigurator/actions/workflows/windows_build.yml) |
+
+Amilcar Lucas's ArduPilot Methodic Configurator is a Python tool that implements a [clear and proven configuration sequence of ArduPilot of drones](https://discuss.ardupilot.org/t/how-to-methodically-tune-almost-any-multicopter-using-arducopter-4-4-x/110842/1).
+
+![When to use ArduPilot Methodic Configurator](images/when_to_use_amc.png)
+
+It provides a graphical user interface (GUI) for managing and visualizing ArduPilot parameters, parameter files and documentation.
+
+![Application Screenshot](https://github.com/ArduPilot/MethodicConfigurator/raw/master/images/App_screenshot1.png)
+
+## Usage
+
+There is a [Quick-start guide](QUICKSTART.md) and a more detailed [Usermanual](https://github.com/ArduPilot/MethodicConfigurator/blob/master/USERMANUAL.md)
+
+## MS Windows Installation
+
+Download the [latest MethodicConfiguratorSetup-x.x.x.exe installer file](https://github.com/ArduPilot/MethodicConfigurator/releases/tag/latest).
+
+## Linux Installation
+
+Install [python pip](https://pypi.org/project/pip/). Then do:
+
+```bash
+pip install -U MethodicConfigurator
+```
+
+## MacOS Installation
+
+Install [git](https://git-scm.com/) and [python](https://www.python.org/downloads/). Then do:
+
+```bash
+git clone https://github.com/ArduPilot/MethodicConfigurator.git
+cd MethodicConfigurator
+./install_macos.sh
+```
+
+## Support and Contributing
+
+Please feel free to submit [issues](https://github.com/ArduPilot/MethodicConfigurator/issues) or [pull requests](https://github.com/ArduPilot/MethodicConfigurator/pulls). More information is available on the [contributing and support](https://github.com/ArduPilot/MethodicConfigurator/blob/master/CONTRIBUTING.md) page.
+
+## Software architecture
+
+To meet the [Software requirements](https://github.com/ArduPilot/MethodicConfigurator/blob/master/ARCHITECTURE.md#software-requirements) a [software architecture](https://github.com/ArduPilot/MethodicConfigurator/blob/master/ARCHITECTURE.md#the-software-architecture) was designed and implemented.
+
+## Code of conduct
+
+To use and develop this software you must obey the [ArduPilot Methodic Configurator Code of Conduct](https://github.com/ArduPilot/MethodicConfigurator/blob/master/CODE_OF_CONDUCT.md).
+
+## License
+
+This project is licensed under the [GNU General Public License v3.0](https://github.com/ArduPilot/MethodicConfigurator/blob/master/LICENSE.md).
+It builds upon other [opensource software packages](https://github.com/ArduPilot/MethodicConfigurator/blob/master/credits/CREDITS.md)
