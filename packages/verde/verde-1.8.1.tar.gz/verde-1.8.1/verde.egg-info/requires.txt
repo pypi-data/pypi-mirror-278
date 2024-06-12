@@ -1,0 +1,11 @@
+numpy>=1.23
+scipy>=1.8
+pandas>=1.4
+xarray>=2022.03
+scikit-learn>=1.0
+pooch>=1.2
+dask>=2022.01.0
+
+[fast]
+numba>=0.55
+pykdtree>=1.3
