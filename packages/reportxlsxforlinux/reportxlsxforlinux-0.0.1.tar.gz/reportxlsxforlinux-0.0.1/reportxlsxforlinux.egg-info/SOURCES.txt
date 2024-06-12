@@ -1,0 +1,12 @@
+README.md
+setup.py
+reportxlsxforlinux/__init__.py
+reportxlsxforlinux/to_excel.py
+reportxlsxforlinux.egg-info/PKG-INFO
+reportxlsxforlinux.egg-info/SOURCES.txt
+reportxlsxforlinux.egg-info/dependency_links.txt
+reportxlsxforlinux.egg-info/requires.txt
+reportxlsxforlinux.egg-info/top_level.txt
+reportxlsxforlinux/resources/linux/SkiaSharp.dll
+reportxlsxforlinux/resources/linux/Spire.XLS.dll
+reportxlsxforlinux/resources/windows/Spire.XLS.dll
