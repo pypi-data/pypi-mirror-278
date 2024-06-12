@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: myanonamouse
+Version: 0.1.2
+Summary: Python client for the MyAnonaMouse API
+License: MIT
+Author: Jasmin Le Roux
+Author-email: theblazehen@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: lxml (>=5.2.2,<6.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+# Usage
+
+```
+from myanonamouse import MamApi
+
+api = MamApi("your mam_id here")
+
+api.set_seedbox_ip()
+
+print(api.load_user_data(snatch_summary=True))
+
+torrents = api.torrent_search("", tor={
+    "main_cat": 13,
+}, limit=1000)
+
+total_size = 0
+for i, torrent in enumerate(torrents):
+    size = human_read_to_byte(torrent["size"])
+    total_size += size
+    print(i, torrent["title"], torrent["size"], f"total size: {total_size / 1024 / 1024 / 1024:.2f} GB")
+
+```
