@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: spacetower-python-client
+Version: 1.0.6
+Summary: FDS API
+Home-page: 
+Author: Exotrail
+Author-email: contact@exotrail.com
+Keywords: OpenAPI,OpenAPI-Generator,FDS API
+Description-Content-Type: text/markdown
+Requires-Dist: urllib3<2.1.0,>=1.25.3
+Requires-Dist: python-dateutil
+Requires-Dist: pydantic>=2
+Requires-Dist: typing-extensions>=4.7.1
+
+    API for Flight Dynamics System
+    
