@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "galapy-core"
+version = "0.2.8"
+description = "The backend and DB interactive layer for the GalaPy project"
+authors = ["Kevin Hill <kivo360@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.12"
+devtools = "^0.12.2"
+decorator = "^5.1.1"
+ccxt = "^4.2.93"
+faker = "^24.8.0"
+supamodel = "^0.6.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.ruff]
+ignore = ["F401"]
