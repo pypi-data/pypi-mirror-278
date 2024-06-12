@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: llama-index-llms-ipex-llm
+Version: 0.1.7
+Summary: llama-index llms ipex-llm integration
+License: MIT
+Author: Your Name
+Author-email: you@example.com
+Requires-Python: >=3.9,<3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Provides-Extra: xpu
+Requires-Dist: bigdl-core-xe-21 ; extra == "xpu"
+Requires-Dist: bigdl-core-xe-addons-21 ; extra == "xpu"
+Requires-Dist: bigdl-core-xe-batch-21 ; extra == "xpu"
+Requires-Dist: dpcpp-cpp-rt (==2024.0.2) ; (platform_system == "Windows") and (extra == "xpu")
+Requires-Dist: intel_extension_for_pytorch (==2.1.10+xpu) ; extra == "xpu"
+Requires-Dist: ipex-llm[llama-index] (>=2.1.0b20240529)
+Requires-Dist: llama-index-core (>=0.10.41,<0.11.0)
+Requires-Dist: mkl-dpcpp (==2024.0.0) ; (platform_system == "Windows") and (extra == "xpu")
+Requires-Dist: onednn (==2024.0.0) ; (platform_system == "Windows") and (extra == "xpu")
+Requires-Dist: torch (==2.1.0a0) ; extra == "xpu"
+Requires-Dist: torchvision (==0.16.0a0) ; extra == "xpu"
+Description-Content-Type: text/markdown
+
+# LlamaIndex Llms Integration: IPEX-LLM
+
+[IPEX-LLM](https://github.com/intel-analytics/ipex-llm) is a PyTorch library for running LLM on Intel CPU and GPU (e.g., local PC with iGPU, discrete GPU such as Arc, Flex and Max) with very low latency. This module enables the use of LLMs optimized with `ipex-llm` in LlamaIndex pipelines.
+
+## Installation
+
+### On CPU
+
+```bash
+pip install llama-index-llms-ipex-llm
+```
+
+### On GPU
+
+```bash
+pip install llama-index-llms-ipex-llm[xpu] --extra-index-url https://pytorch-extension.intel.com/release-whl/stable/xpu/us/
+```
+
+## Usage
+
+```python
+from llama_index.llms.ipex_llm import IpexLLM
+```
+
+## Examples
+
+- [Notebook Example](https://docs.llamaindex.ai/en/stable/examples/llm/ipex_llm/)
+- [More Examples](https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/llms/llama-index-llms-ipex-llm/examples)
+
