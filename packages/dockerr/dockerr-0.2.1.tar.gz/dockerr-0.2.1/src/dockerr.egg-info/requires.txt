@@ -1,0 +1,14 @@
+docker==7.0.0
+
+[dev]
+pre-commit
+black
+isort
+pylint
+mypy
+dockerr[test]
+
+[test]
+pytest
+pytest-cov
+httpx
