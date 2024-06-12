@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: microcosm-daemon
+Version: 3.0.0
+Summary: Asynchronous workers
+Home-page: https://github.com/globality-corp/microcosm-daemon
+Author: Globality Engineering
+Author-email: engineering@globality.com
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: microcosm >=4.0.0
+Requires-Dist: microcosm-logging >=2.0.0
+Provides-Extra: healthcheck
+Requires-Dist: waitress >=3.0.0 ; extra == 'healthcheck'
+Requires-Dist: Flask >=2 ; extra == 'healthcheck'
+Requires-Dist: markupsafe >=2.1 ; extra == 'healthcheck'
+Requires-Dist: requests >=2.27.1 ; extra == 'healthcheck'
+Provides-Extra: test
+Requires-Dist: coverage >=3.7.1 ; extra == 'test'
+Requires-Dist: parameterized >=0.8.1 ; extra == 'test'
+Requires-Dist: PyHamcrest >=1.8.5 ; extra == 'test'
+Requires-Dist: pytest-cov >=3.0.0 ; extra == 'test'
+Requires-Dist: pytest >=6.2.5 ; extra == 'test'
+
