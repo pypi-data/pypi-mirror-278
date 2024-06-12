@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: ldata-fuse
+Version: 0.1.4
+Summary: 
+Author: maximsmol
+Author-email: max@latch.bio
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: aiohttp (>=3.8.4,<4.0.0)
+Requires-Dist: fuse-python (>=1.0.5,<2.0.0)
+Requires-Dist: graphql-core (>=3.2.3,<4.0.0)
+Requires-Dist: latch-data-validation (>=0.1.9,<0.2.0)
+Requires-Dist: latch-o11y (>=0.1.4,<0.2.0)
+Requires-Dist: opentelemetry-instrumentation-aiohttp-client (>=0.40b0,<0.41)
+Requires-Dist: typing_extensions (>=4.7.1,<5.0.0)
