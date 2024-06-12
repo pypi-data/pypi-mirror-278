@@ -1,0 +1,26 @@
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core"]
+
+[tool.poetry]
+authors = ["leeparnell <152523161+leeparnell@users.noreply.github.com>"]
+description = "Simple event library built on top of Blinker"
+name = "pi-blink"
+readme = "README.md"
+version = "1.0.2.1"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+blinker = "^1.8.2"
+pydantic = "^2.7.3"
+pytest = "^8.2.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.1"
+pytest-asyncio = "^0.23.7"
+toml-sort = "^0.23.1"
+
+[tool.tomlsort]
+all = true
+in_place = true
+overrides."tool.poetry.dependencies".first = ["python"]
