@@ -1,0 +1,9 @@
+requests
+jsonpath
+pymongo
+redis
+setuptools
+kafka-python
+pymysql
+json
+elasticsearch==7.6.0
