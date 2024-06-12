@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/bpmn-py/__init__.py
+src/bpmn-py/bpmn-py.py
+src/bpmn-py/client.py
+src/bpmn_py.egg-info/PKG-INFO
+src/bpmn_py.egg-info/SOURCES.txt
+src/bpmn_py.egg-info/dependency_links.txt
+src/bpmn_py.egg-info/top_level.txt
