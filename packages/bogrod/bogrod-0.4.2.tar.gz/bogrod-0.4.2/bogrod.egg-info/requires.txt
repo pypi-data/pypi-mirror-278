@@ -1,0 +1,15 @@
+jsonschema<4
+pyyaml
+tabulate
+attrdict
+textual
+textual-dev
+requests
+yaspin
+keyring
+
+[dev]
+tox
+pytest
+build
+pytest-textual-snapshot

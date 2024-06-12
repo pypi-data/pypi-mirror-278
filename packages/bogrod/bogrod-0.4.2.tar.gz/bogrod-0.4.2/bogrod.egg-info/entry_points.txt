@@ -1,0 +1,3 @@
+[console_scripts]
+bd = bogrod:main_cli
+bogrod = bogrod:main_cli
