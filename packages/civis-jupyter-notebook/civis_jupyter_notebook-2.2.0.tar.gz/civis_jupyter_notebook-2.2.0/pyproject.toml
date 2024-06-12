@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools >= 70.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "civis-jupyter-notebook"
+version = "2.2.0"
+description = "A tool for building Docker images for Civis Platform Jupyter notebooks"
+readme = "README.rst"
+requires-python = ">= 3.9"
+authors = [ { name = "Civis Analytics", email = "opensource@civisanalytics.com" } ]
+license = { text = "BSD-3-Clause" }
+dependencies = [
+    "civis >= 2.2.0",
+    "civis-jupyter-extensions >= 1.2.0",
+    "click >= 6.7",
+    "GitPython >= 2.1",
+    "jupyter-core >= 4.6.0",
+    "notebook >= 6.4.1, < 7.0",
+    "requests >= 2.18",
+    "tornado >= 6.1.0",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+]
+
+[project.urls]
+Homepage = "https://www.civisanalytics.com"
+Source = "https://github.com/civisanalytics/civis-jupyter-notebook"
+
+[project.optional-dependencies]
+dev = [
+    "bandit",  # Use the latest version
+    "black == 24.4.2",
+    "build == 1.2.1",
+    "flake8 == 7.0.0",
+    "pip-audit",  # Use the latest version
+    "pytest == 8.2.0",
+    "twine == 5.0.0",
+]
+
+[project.scripts]
+civis-jupyter-notebooks-install = "civis_jupyter_notebooks.__main__:cli"
+
+[tool.setuptools]
+script-files = [
+    "src/civis_jupyter_notebooks/assets/civis-jupyter-notebooks-start",
+    "src/civis_jupyter_notebooks/assets/initialize-git",
+    "src/civis_jupyter_notebooks/assets/civis-git-clone",
+]
+
+[tool.setuptools.packages.find]
+where = [ "src" ]
+
+[tool.setuptools.package-data]
+civis_jupyter_notebooks = ["assets/**/*", "assets/.*"]
+
+[tool.pytest.ini_options]
+addopts = "--strict-markers --ignore=tests/test_ext.py -vv"
+testpaths = ["tests"]

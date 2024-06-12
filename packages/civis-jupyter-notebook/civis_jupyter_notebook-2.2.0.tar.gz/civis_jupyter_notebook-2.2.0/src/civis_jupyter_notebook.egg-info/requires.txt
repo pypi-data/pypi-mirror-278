@@ -1,0 +1,17 @@
+civis>=2.2.0
+civis-jupyter-extensions>=1.2.0
+click>=6.7
+GitPython>=2.1
+jupyter-core>=4.6.0
+notebook<7.0,>=6.4.1
+requests>=2.18
+tornado>=6.1.0
+
+[dev]
+bandit
+black==24.4.2
+build==1.2.1
+flake8==7.0.0
+pip-audit
+pytest==8.2.0
+twine==5.0.0
