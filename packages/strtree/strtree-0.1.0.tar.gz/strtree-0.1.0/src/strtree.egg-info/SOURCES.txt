@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/strtree/__init__.py
+src/strtree/utils.py
+src/strtree.egg-info/PKG-INFO
+src/strtree.egg-info/SOURCES.txt
+src/strtree.egg-info/dependency_links.txt
+src/strtree.egg-info/top_level.txt
+tests/test_main.py
