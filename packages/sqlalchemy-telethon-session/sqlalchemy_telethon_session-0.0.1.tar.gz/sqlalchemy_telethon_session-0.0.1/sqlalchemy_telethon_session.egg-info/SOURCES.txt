@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+alchemysession/__init__.py
+alchemysession/core.py
+alchemysession/core_postgres.py
+alchemysession/orm.py
+alchemysession/sqlalchemy.py
+sqlalchemy_telethon_session.egg-info/PKG-INFO
+sqlalchemy_telethon_session.egg-info/SOURCES.txt
+sqlalchemy_telethon_session.egg-info/dependency_links.txt
+sqlalchemy_telethon_session.egg-info/requires.txt
+sqlalchemy_telethon_session.egg-info/top_level.txt
