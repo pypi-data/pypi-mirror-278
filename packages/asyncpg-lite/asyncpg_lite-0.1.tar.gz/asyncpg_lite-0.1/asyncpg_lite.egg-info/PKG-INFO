@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: asyncpg-lite
+Version: 0.1
+Summary: Простая асинхронная библиотека, основанная на asyncpg
+Home-page: https://github.com/Yakvenalex/asyncpg_lite
+Author: Алексей Яковенко
+Author-email: mr.mnogo@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# asyncpg_lite
+
+`asyncpg_lite` - это легковесная и простая в использовании библиотека для управления базой данных PostgreSQL с использованием асинхронной библиотеки `asyncpg`.
+
+## Особенности
+
+- **Асинхронное выполнение**: Использование асинхронных операций для повышения производительности и масштабируемости.
+- **Удобство использования**: Простой и интуитивно понятный API для взаимодействия с базой данных.
+- **Гибкость**: Поддержка различных способов подключения к базе данных (с использованием DSN или отдельных параметров подключения).
+- **Универсальность**: Подходит для использования в различных проектах, включая телеграмм боты и веб-приложения.
+
+
+## Установка
+
+Установите библиотеку с помощью pip:
+
+```bash
+pip install asyncpg_lite
+```
+
+## Пример использования
+
+```python
+import asyncio
+from asyncpg_lite import DatabaseManager
+
+async def main():
+    db_manager = DatabaseManager(dsn="postgresql://user:password@host:port/database_name")
+    
+    async with db_manager as client:
+        # Создание таблицы
+        await client.create_table("users", ["id SERIAL PRIMARY KEY", "name TEXT", "age INT"])
+        
+        # Вставка данных
+        await client.insert_data("users", {"name": "Alice", "age": 30})
+        
+        # Извлечение данных
+        users = await client.select_data("users")
+        print(users)
+        
+        # Обновление данных
+        await client.update_data("users", {"name": "Alice"}, {"age": 31})
+        
+        # Удаление данных
+        await client.delete_data("users", {"name": "Alice"})
+        
+asyncio.run(main())
+```
+
+## Лицензия
+
+Этот проект лицензируется по лицензии [MIT](https://choosealicense.com/licenses/mit/).
