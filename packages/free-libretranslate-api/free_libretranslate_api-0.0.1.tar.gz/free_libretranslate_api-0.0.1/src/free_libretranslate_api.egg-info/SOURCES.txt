@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/free_libretranslate_api.egg-info/PKG-INFO
+src/free_libretranslate_api.egg-info/SOURCES.txt
+src/free_libretranslate_api.egg-info/dependency_links.txt
+src/free_libretranslate_api.egg-info/requires.txt
+src/free_libretranslate_api.egg-info/top_level.txt
+src/libre_translate_api/__init__.py
+src/libre_translate_api/answer.py
+src/libre_translate_api/api.py
