@@ -1,0 +1,5 @@
+aiohttp<4,>=3.7.4
+nextcord
+yarl>=1.9.2
+async_timeout
+typing_extensions
