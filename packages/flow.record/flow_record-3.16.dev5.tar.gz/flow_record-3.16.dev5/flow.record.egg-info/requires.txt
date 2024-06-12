@@ -1,0 +1,36 @@
+msgpack>=0.5.2
+
+[:platform_system == "Windows"]
+tzdata
+
+[:python_version < "3.9"]
+backports.zoneinfo[tzdata]
+
+[avro]
+fastavro[snappy]
+
+[compression]
+lz4
+zstandard
+
+[duckdb]
+duckdb
+pytz
+
+[elastic]
+elasticsearch
+
+[geoip]
+maxminddb
+
+[splunk]
+httpx
+
+[test]
+flow.record[compression]
+flow.record[avro]
+flow.record[elastic]
+
+[test:platform_python_implementation != "PyPy" and python_version < "3.12"]
+duckdb
+pytz
