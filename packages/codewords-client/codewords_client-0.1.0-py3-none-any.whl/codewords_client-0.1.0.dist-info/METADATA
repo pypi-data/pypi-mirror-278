@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: codewords_client
+Version: 0.1.0
+Author: Sam Coope
+Author-email: sam@agemo.ai
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.10
+Requires-Dist: aiohttp
+Requires-Dist: requests
+Requires-Dist: websockets
+Requires-Dist: codewords-core
+
