@@ -1,0 +1,101 @@
+Metadata-Version: 2.1
+Name: brainunit
+Version: 0.0.1.post20240612
+Summary: The Unit System for Brain Dynamics Programming.
+Home-page: https://github.com/brainpy/brainunit
+Author: BrainPy Team
+Author-email: BrainPy Team <chao.brain@qq.com>
+License: Apache-2.0 license
+Project-URL: homepage, http://github.com/brainpy/brainunit
+Project-URL: repository, http://github.com/brainpy/brainunit
+Keywords: BrainPy,brain simulation,brain-inspired computing
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: jax
+Requires-Dist: jaxlib
+Requires-Dist: numpy
+Requires-Dist: brainstate
+Provides-Extra: cpu
+Requires-Dist: jaxlib ; extra == 'cpu'
+Provides-Extra: cpu_mini
+Requires-Dist: jaxlib ; extra == 'cpu_mini'
+Provides-Extra: cuda11
+Requires-Dist: jaxlib[cuda11_pip] ; extra == 'cuda11'
+Provides-Extra: cuda11_mini
+Requires-Dist: jaxlib[cuda11_pip] ; extra == 'cuda11_mini'
+Provides-Extra: cuda12
+Requires-Dist: jaxlib[cuda12_pip] ; extra == 'cuda12'
+Provides-Extra: cuda12_mini
+Requires-Dist: jaxlib[cuda12_pip] ; extra == 'cuda12_mini'
+Provides-Extra: testing
+Requires-Dist: pytest ; extra == 'testing'
+Provides-Extra: tpu
+Requires-Dist: jaxlib[tpu] ; extra == 'tpu'
+
+
+
+# The Unit System for Brain Dynamics Programming
+
+<p align="center">
+  	<img alt="Header image of brainunit." src="https://github.com/brainpy/brainunit/blob/main/docs/_static/brainunit.jpg" width=50%>
+</p> 
+
+
+
+<p align="center">
+	<a href="https://pypi.org/project/brainunit/"><img alt="Supported Python Version" src="https://img.shields.io/pypi/pyversions/brainunit"></a>
+	<a href="https://github.com/brainpy/brainunit/blob/main/LICENSE"><img alt="LICENSE" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"></a>
+    <a href='https://brainunit.readthedocs.io/en/latest/?badge=latest'>
+        <img src='https://readthedocs.org/projects/brainunit/badge/?version=latest' alt='Documentation Status' />
+    </a>  	
+    <a href="https://badge.fury.io/py/brainunit"><img alt="PyPI version" src="https://badge.fury.io/py/brainunit.svg"></a>
+    <a href="https://github.com/brainpy/brainunit/actions/workflows/CI.yml"><img alt="Continuous Integration" src="https://github.com/brainpy/brainunit/actions/workflows/CI.yml/badge.svg"></a>
+</p>
+
+
+[``brainunit``](https://github.com/brainpy/brainunit) provides common toolboxes for brain dynamics programming (BDP). 
+
+
+## Installation
+
+You can install ``brainunit`` via pip:
+
+```bash
+pip install brainunit --upgrade
+```
+
+## Documentation
+
+The official documentation is hosted on Read the Docs: [https://brainunit.readthedocs.io](https://brainunit.readthedocs.io)
+
+
+
+## See also the BDP ecosystem
+
+- [``brainstate``](https://github.com/brainpy/brainstate): A ``State``-based transformation system for brain dynamics programming.
+
+- [``brainunit``](https://github.com/brainpy/brainunit): The unit system for brain dynamics programming.
+
+- [``braintaichi``](https://github.com/brainpy/braintaichi): Leveraging Taichi Lang to customize brain dynamics operators.
+
+- [``brainscale``](https://github.com/brainpy/brainscale): The scalable online learning framework for biological neural networks.
+
+- [``braintools``](https://github.com/brainpy/braintools): The toolbox for the brain dynamics simulation, training and analysis.
+
