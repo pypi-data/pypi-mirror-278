@@ -1,0 +1,46 @@
+---
+
+# Copyright: (c) 2022, Rudy Lei <shlei@cisco.com>
+
+
+- name: APIC Discovery Tasks
+  block:
+    - name: Determine target APIC major version
+      ansible.builtin.shell:
+        cmd: echo {{ fabric.global_policies.apic_image }} | awk -F '.' '{print $2}'
+      register: apic_version
+
+    - name: Power-on APIC
+      community.general.imc_rest:
+        hostname: "{{ item.cimc_address }}"
+        username: "{{ fabric.global_policies.apic_cimc_username }}"
+        password: "{{ fabric.global_policies.apic_cimc_password }}"
+        validate_certs: false
+        timeout: 500
+        content: |
+          <!-- CIMC hard reset -->
+          <configConfMo><inConfig>
+            <computeRackUnit dn="sys/rack-unit-1" adminPower="up" />
+          </inConfig></configConfMo>
+
+      delegate_to: localhost
+      loop: "{{ fabric.apic_nodes_connection }}"
+
+    - name: Render APIC discovery script
+      template:
+        src: apic_discovery{{ apic_version.stdout }}.exp.jinja2
+        dest: apic_discovery/files/apic_discovery_{{ item.hostname }}.exp
+      delegate_to: localhost
+      loop: "{{ fabric.apic_nodes_connection }}"
+
+    - name: Make APIC discovery script executable
+      file:
+        path: apic_discovery/files/apic_discovery_{{ item.hostname }}.exp
+        mode: "+x"
+      delegate_to: localhost
+      loop: "{{ fabric.apic_nodes_connection }}"
+
+    - name: Execute APIC discovery script
+      command: ./apic_discovery/files/apic_discovery_{{ item.hostname }}.exp
+      delegate_to: localhost
+      loop: "{{ fabric.apic_nodes_connection }}"
