@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: netra_adapter
+Version: 0.1.1
+Summary: A package for managing LoRA adapters in language models ideal for hotswapping
+Home-page: https://github.com/Harsh-Lad/netra_adapter/
+Author: Harsh Lad
+Author-email: harsh.lad@netralabs.ai
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch
+Requires-Dist: transformers
+Requires-Dist: psutil
+
+# Netra Adapter
+
+Netra Adapter is a package for managing LoRA (Low-Rank Adaptation) adapters in language models. It allows you to load, integrate, and remove LoRA adapters dynamically.
+
+## Installation
+
+```sh
+pip install netra_adapter
