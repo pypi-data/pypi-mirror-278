@@ -1,0 +1,16 @@
+solar/__init__.py,sha256=T-FNzG0qSPdV3XRDX_A1VXiHTWOVduMULKB3oSl11e8,14748
+solar/_fake.py,sha256=bJQrL6OUigNqJ9pBO7vnTBh5OPSdgW3tK_HGRhfZqG4,961
+solar/_version.py,sha256=llBMh-GtSPemevJ46pFdqzJYvqrJ0mS-b_e99BsAPEQ,411
+solar/colina.py,sha256=CNGLkvqYFZWs8Aisixz-4_AZYfU82t808bFtBDlfryI,39278
+solar/kurucz.py,sha256=TFGm_SvC9z1oTzfBwfINwL3-6vMuYBD4SPJehx8zCW4,1391
+solar/rieke.py,sha256=FYGyfrRr8aKvQPav7bIcMRG27z7gBIIfGG5DrQZeap0,816
+solar/stis.py,sha256=JLrbGKoYfiDXGU_EDlDgU1ouN93yHlW7y_3EeSUorDk,886
+solar/stis_rieke.py,sha256=WEBpK5iQ1qkCi1RJh4g1xlq6x7AMIOMmV7ONebjVi4I,735
+solar/data_files/kurucz-fsunallp.2000resam125.txt,sha256=NyuvP-jEATj65sCTLVzk1rhhCvYpCalYK2fCqnsBiBU,1155314
+solar/data_files/rieke-solar_spec.fits,sha256=IhOyyKYdmqFH7LiKGcDGTBNJVUlLB_qLp-PLkWYOMwE,118080
+solar/data_files/stis-sun_reference_stis_002.fits,sha256=pQtwpcZRUyLO4Uo_6AYNnk1yYJEq6NPoW3-ogwITCrM,37440
+rms_solar-2.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+rms_solar-2.0.1.dist-info/METADATA,sha256=GBQeVeJrFphIr71v7wQPh2Bff77o45xxfBs1tPRfgMU,6179
+rms_solar-2.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+rms_solar-2.0.1.dist-info/top_level.txt,sha256=8wlRLefXCGt3uCJzpk2MoKo9yJC4gHG2JHRCAg0xQwc,6
+rms_solar-2.0.1.dist-info/RECORD,,
