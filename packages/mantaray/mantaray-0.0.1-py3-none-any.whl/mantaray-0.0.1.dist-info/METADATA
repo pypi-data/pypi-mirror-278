@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: mantaray
+Version: 0.0.1
+Summary: Tracing Rays
+Author-email: Guilherme Castelão <guilherme@castelao.net>
+Maintainer-email: Guilherme Castelão <guilherme@castelao.net>
+License: Apache Software License 2.0
+Project-URL: bugs, https://github.com/castelao/mantaray/issues
+Project-URL: changelog, https://github.com/castelao/mantaray/blob/master/changelog.md
+Project-URL: homepage, https://github.com/castelao/mantaray
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: ruff ; extra == 'dev'
+
+========
+MantaRay
+========
+
+
+.. image:: https://img.shields.io/pypi/v/mantaray.svg
+        :target: https://pypi.python.org/pypi/mantaray
+
+.. image:: https://img.shields.io/travis/castelao/mantaray.svg
+        :target: https://travis-ci.com/castelao/mantaray
+
+.. image:: https://readthedocs.org/projects/mantaray/badge/?version=latest
+        :target: https://mantaray.readthedocs.io/en/latest/?version=latest
+        :alt: Documentation Status
+
+
+
+
+Tracing Rays
+
+
+* Free software: Apache Software License 2.0
+* Documentation: https://mantaray.readthedocs.io.
+
+
+Features
+--------
+
+* TODO
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
