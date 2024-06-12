@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: octopize.avatar
+Version: 0.9.2
+Summary: Python client for Octopize's avatar API
+License: Apache-2.0
+Author: Octopize
+Author-email: pypi-octopize@octopize.io
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: httpx (>=0.23.0,<0.24.0)
+Requires-Dist: pandas (>=1.4.2,<2.0.0)
+Requires-Dist: pyarrow (>=14.0.1,<15.0.0)
+Requires-Dist: pydantic (>=2,<3)
+Requires-Dist: structlog (>=24.2.0,<25.0.0)
+Requires-Dist: tenacity (>=8.3.0,<9.0.0)
+Requires-Dist: toolz (>=0.12.0,<0.13.0)
+Description-Content-Type: text/markdown
+
+# Avatar Python Client
+
+## Documentation
+
+Documentation is available here: <https://python.docs.octopize.io/>
+
+## Requirements
+
+The `avatars` package requires Python 3.9 or above.
+
+## Installation
+
+See our [documentation](https://python.docs.octopize.io/latest/installation.html) for installation instructions.
+
+## License
+
+This software is made available through the Apache License 2.0.
+
+## Contact
+
+<help@octopize.io>
+
