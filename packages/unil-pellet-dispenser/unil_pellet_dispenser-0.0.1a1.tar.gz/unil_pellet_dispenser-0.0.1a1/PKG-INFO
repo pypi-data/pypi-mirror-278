@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: unil-pellet-dispenser
+Version: 0.0.1a1
+Summary: A Python package to contol University of Lausanne's pellet dispenser via USB
+Author-email: Alexandre Tuleu <alexandre.tuleu.2005@polytechnique.org>
+License: GNU General Public License v3 (GPLv3)
+Project-URL: Homepage, https://github.com/atuleu/zaci/devices/pellet-dispenser/driver
+Project-URL: Issues, https://github.com/atuleu/zaci/issues?template=pellet-dispenser-bug-report.md
+Project-URL: Repository, https://github.com/atuleu/zaci
+Keywords: pellet,dispenser,hardware,hid,Open Source Hardware
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: hid
+
+# Pellet Dispenser Python Driver
+
+This is a python package to use the pellet dispenser with python.
+
+
+## Installing
+
+Install this package with the following shell command
+
+```bash
+pip install unil-pellet-dispenser
+```
+
+`unil-pellet-dispenser` is based on [hid](https://pypi.org/project/hid/) and
+therefore require the [hidapi library](https://github.com/libusb/hidapi) to be
+installed separately.
+
+### Installing hidapi
+
+#### Linux
+
+Depending on your distribution you will need to install a  hidapi package.
+
+##### Ubuntu / Debian based
+
+```bash
+sudo apt install libhidapi-hidraw0
+```
+
+
+#### macOS
+
+The easiest is to use [Homebrew](https://brew.sh):
+
+```bash
+brew install hidapi
+```
+
+
+## Sample usage code
+
+```python
+
+from unil_pellet_dispenser import Device, DispenserError
+
+dev = Device()
+
+try:
+    dispensed = dev.dispense(1)
+    print(f'Dispensed {dispensed} pellets')
+except DispenserError as e:
+    print(e)
+    print(f'still dispensed {e.dispensed}')
+```
