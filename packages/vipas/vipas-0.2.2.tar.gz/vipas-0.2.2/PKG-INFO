@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: vipas
+Version: 0.2.2
+Summary: Python SDK for Vipas AI Platform
+Author: Vipas Team
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+License-File: LICENSE.md
+Requires-Dist: urllib3
+Requires-Dist: pydantic
+Requires-Dist: typing-extensions
+Requires-Dist: ratelimit
+Requires-Dist: pybreaker
+Requires-Dist: streamlit
+Requires-Dist: httpx
