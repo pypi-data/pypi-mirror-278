@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: contact-profile-local
+Version: 0.0.23
+Summary: PyPI Package for Circles contact-profile-local Python
+Home-page: https://github.com/circles-zone/contact-profile-local-python-package
+Author: Circles
+Author-email: info@circlez.ai
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: logger-local >=0.0.135
+Requires-Dist: database-mysql-local >=0.0.290
+Requires-Dist: contact-persons-local >=0.0.19
+Requires-Dist: language-remote >=0.0.20
+Requires-Dist: profile-local >=0.0.79
+Requires-Dist: user-context-remote >=0.0.75
+
+PyPI Package for Circles contact-profile-local Python
