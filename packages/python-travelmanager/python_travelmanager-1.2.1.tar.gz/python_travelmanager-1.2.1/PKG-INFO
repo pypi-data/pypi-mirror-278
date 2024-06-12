@@ -1,0 +1,23 @@
+Metadata-Version: 2.3
+Name: python_travelmanager
+Version: 1.2.1
+Summary: Python TravelManager
+Author-email: Johannes Eimer <johannes.eimer@jep-dev.com>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: Python,TravelManager
+Requires-Python: >=3.9
+Requires-Dist: requests==2.32.3
+Description-Content-Type: text/markdown
+
+# python_travelmanager
+python lib for travelmanager (https://travelmanager.de/)
+
+## install dev
+python -m venv venv
+. venv/Scripts/activate
+pip install -r requirements_dev.txt
+pre-commit install --hook-type pre-push
+
+## build
+python -m build
