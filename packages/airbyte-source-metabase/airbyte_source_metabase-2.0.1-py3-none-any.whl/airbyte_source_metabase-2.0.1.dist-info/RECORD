@@ -1,0 +1,15 @@
+source_metabase/__init__.py,sha256=yn4wbrKSLiMdMHIsZczQ__Y3GBryi_KHr6NELIWlBVs,65
+source_metabase/manifest.yaml,sha256=pCyIignaIlLXYtS1LnzmTsEe11_ZlSH-slgBuN3ogCw,3060
+source_metabase/run.py,sha256=RA7QSJF7QZbQzlc33KwLG_wbyUvjSmLkrE6NsPGUBI0,236
+source_metabase/schemas/cards.json,sha256=MS73tnYiDm1vpDSpWJreDVZ9HIFgMxlk-yEVNhcOJxo,4520
+source_metabase/schemas/collections.json,sha256=SbGjtLJjTPMRGu3JxNhIuXOiYTyBX-YJWYznF_fsq70,799
+source_metabase/schemas/dashboards.json,sha256=OU8R-beLUljCWktU1v2FxQPDEwusSYAx55xVu3MtUn8,3056
+source_metabase/schemas/databases.json,sha256=XG_S4K1xXOj6ky3NdF-3QvD1CaJiw8dU26H408Iy1ZI,3173
+source_metabase/schemas/native_query_snippets.json,sha256=zLikF79-g9oOh-s8i7ovYZrNf371w8laIiv3-HWkoUk,1458
+source_metabase/schemas/users.json,sha256=78iY6x9ckE0OAQyCV8RJXNf5bUfFSw4sU53kqhlXWBI,431
+source_metabase/source.py,sha256=Hu0uWdCPyd4DJHUWXORHsAzbZ75RWK3fNY_iNJliVyY,286
+source_metabase/spec.yaml,sha256=6BDBaMRlEwYOzk01bEWgi31aH51W1mVi-zTCD5vR86o,1217
+airbyte_source_metabase-2.0.1.dist-info/METADATA,sha256=_vTLVDAG-QiUEMqW_zeyAOgYzkFtkT3sAFRoElY0iaA,5344
+airbyte_source_metabase-2.0.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+airbyte_source_metabase-2.0.1.dist-info/entry_points.txt,sha256=noe7Gqlaku19MyPqUQCKApDdnTWSnWBdOppRLFS3tNw,59
+airbyte_source_metabase-2.0.1.dist-info/RECORD,,
