@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: moveread-ocr
+Version: 0.1.4
+Summary: Moveread OCR model, in tensorflow
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Project-URL: repo, https://github.com/moveread/REPO.git
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: tensorflow
+Requires-Dist: keras
+Requires-Dist: jaxtyping
+Requires-Dist: haskellian
+
+# Moveread Ocr
+
+> Moveread OCR model, in tensorflow
