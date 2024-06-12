@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: polite-lib
+Version: 0.0.9.4
+Summary: 
+Author: Alix
+Author-email: me@politeauthority.io
+Requires-Python: >=3.10.0,<4.0.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: arrow (==1.3.0)
+Requires-Dist: b2sdk (==2.2.1)
+Requires-Dist: flake8 (==7.0.0)
+Requires-Dist: glom (==23.5.0)
+Requires-Dist: minio (==7.2.7)
+Requires-Dist: requests (==2.32.2)
+Requires-Dist: rich (==13.7.1)
+Description-Content-Type: text/markdown
+
+# Polite Lib 0.0.9.4
+![Build and Test](https://github.com/politeauthority/polite-lib/actions/workflows/validate.yaml/badge.svg)
+
+Polite Library, a python library of commonly used tools.
+
+## Updating Version
+Add the new version in these files.
+- `pyproject.toml`
+- `README.md`
+- `src/polite_lib/version.py`
+
