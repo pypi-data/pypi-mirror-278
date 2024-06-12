@@ -1,0 +1,37 @@
+Metadata-Version: 2.3
+Name: coherent.build
+Version: 0.14.1
+Author-Email: "Jason R. Coombs" <jaraco@jaraco.com>
+Summary: A zero-config Python project build backend
+Requires-Python: >= 3.8
+Requires-Dist: wheel
+Requires-Dist: pip-run
+Requires-Dist: setuptools_scm
+Requires-Dist: build
+Requires-Dist: git-fame
+Requires-Dist: jaraco.context
+Requires-Dist: requests
+Requires-Dist: packaging
+Requires-Dist: jaraco.functools
+Requires-Dist: python-dateutil
+Project-URL: Homepage, https://github.com/coherent-oss/coherent.build
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+
+[![](https://img.shields.io/pypi/v/coherent.build)](https://pypi.org/project/coherent.build)
+
+![](https://img.shields.io/pypi/pyversions/coherent.build)
+
+[![Coherent Software Development System](https://img.shields.io/badge/coherent%20system-informational)](https://github.com/coherent-oss/system)
+
+A PEP 517 backend for the [Coherent Software Development System](https://github.com/coherent-oss/system/blob/main/README.md).
+
+Put your source in a repo and then build it with:
+
+```
+python -m coherent.build
+```
