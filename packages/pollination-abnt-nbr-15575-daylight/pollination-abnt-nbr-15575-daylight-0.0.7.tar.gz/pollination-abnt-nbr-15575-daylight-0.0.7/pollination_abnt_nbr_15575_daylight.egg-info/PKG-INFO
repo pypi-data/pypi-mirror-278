@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pollination-abnt-nbr-15575-daylight
+Version: 0.0.7
+Summary: Evaluate ABNT NBR 15575 using point-in-time illuminance.
+Home-page: https://github.com/pollination/abnt-nbr-15575-daylight
+Author: pollination
+Author-email: info@pollination.solutions
+Maintainer: mikkel, pollination
+Maintainer-email: mikkel@ladybug.tools, info@pollination.solutions
+License: PolyForm Shield License 1.0.0, https://polyformproject.org/wp-content/uploads/2020/06/PolyForm-Shield-1.0.0.txt
+Project-URL: icon, https://raw.githubusercontent.com/ladybug-tools/artwork/master/icons_components/honeybee/png/gridrecipe.png
+Project-URL: docker, https://hub.docker.com/r/ladybugtools/honeybee-radiance
+Keywords: honeybee,radiance,abnt,nbr,15575,daylight,illuminance
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# abnt-nbr-15575-daylight
