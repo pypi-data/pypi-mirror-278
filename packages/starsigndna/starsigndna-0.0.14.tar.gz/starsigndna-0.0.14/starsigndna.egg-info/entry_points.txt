@@ -1,0 +1,2 @@
+[console_scripts]
+StarSignDNA = mutational_starsign.cli:main
