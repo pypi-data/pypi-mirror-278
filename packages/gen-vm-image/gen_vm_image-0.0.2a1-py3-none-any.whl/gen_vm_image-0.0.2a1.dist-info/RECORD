@@ -1,0 +1,17 @@
+gen_vm_image/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gen_vm_image/architecture.py,sha256=Oe3P19e7eGurFc83yBBmSwlOmlPFvlSLoNS_9Md-NoE,1557
+gen_vm_image/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gen_vm_image/cli/build_image.py,sha256=4cGzPrIu19wNzOB9sevUa_zI7B86AIcHBEJZd6OfVhE,17309
+gen_vm_image/common/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gen_vm_image/common/defaults.py,sha256=NNSN2xG5JdbcxfAO36PHXkDh37GPNf1eat3b2UJJfD0,362
+gen_vm_image/common/errors.py,sha256=2XrL1ZUUive-tQUKtyoSEWCrQ6KQC5IjMMD4-x36Rsg,611
+gen_vm_image/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gen_vm_image/utils/io.py,sha256=1JtNRdoGsaKT6JUHkjVR8qZQaKOeAQIGDxPsXmz3V2Y,3939
+gen_vm_image/utils/job.py,sha256=1o4cP3t2_5MI8iUBHzh9YbUhXbvD0LoXh1p9JySnj6Y,1623
+gen_vm_image/utils/net.py,sha256=e5sjz6UYTfHXdBOI8TobIi2TgyCcrWnrtt767Om-lAw,704
+gen_vm_image/utils/user.py,sha256=Pt_u17MbcAk7qSzh0Mo_bowPvFpJ3cU6nCOt4mrhrl8,759
+gen_vm_image-0.0.2a1.dist-info/METADATA,sha256=lIjBbzk6T3Wj9QT1rwwzywKok55kZbQqUvnl9CfXXoE,5195
+gen_vm_image-0.0.2a1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+gen_vm_image-0.0.2a1.dist-info/entry_points.txt,sha256=X_wF3iHoVt1KQnaYgXj1xgNgBr7vtgTKK31KHVOoLOw,66
+gen_vm_image-0.0.2a1.dist-info/top_level.txt,sha256=msTQ3JJpWNBYXPo6ZQ7ZUgaSHHXCwVmNudR0rZ0cXHk,13
+gen_vm_image-0.0.2a1.dist-info/RECORD,,
