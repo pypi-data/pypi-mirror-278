@@ -1,0 +1,56 @@
+
+HIV_Isoform_Checker
+======
+
+Takes a .gtf file of preliminarily filtered HIV transcripts from ONT sequencing
+and filters them to include only correctly assigned transcripts using the
+following filters.
+
+#FILTER 1: only include class codes =, J, and m 
+#FILTER 2: only include samples with end values >= min_end_bp and
+           start values <= max_start_bp
+#FILTER 3: get rid of any samples with read errors/small gaps
+#FILTER 4: keep only correct Env samples
+#FILTER 5: keep only correct Nef samples(long samples added to possible_misassigned)  
+#FILTER 6: keep only correct Rev samples(long samples added to possible_misassigned)  
+#FILTER 7: keep only correct Tat samples(long samples added to possible_misassigned)   
+#FILTER 8: keep only correct Vif samples
+#FILTER 9: keep only correct Vpr samples
+#FILTER 10: check possible_misassigned for partial splice compatibility
+           (vif -> vpr -> unslpiced_tat -> env)
+
+
+This code currently relies on a very specific setup of the gtf file to work
+properly. The note must be in the order designated in the [].
+    transcript entry = ref genome, analysis_pathway, transcript, start,
+                       end, ".", "+", ".", [transcript id; gene id;
+                       gene_name; xloc; ref_gene_id; contained_in; cmp_ref;
+                   class_code; tss_id]
+    exon entry = ref genome, analysis_pathway, exon, start, end, ".", "+", ".",
+                 [transcript id; gene id; exon number]
+
+The code is Python 3.
+
+Installation
+------------
+
+
+::
+
+    pip install HIV_Isoform_Checker
+
+
+Example
+--------
+
+.. code:: terminal
+
+HIV_Isoform_Checker input_file.gtf output_file.csv reference_genome.py
+
+This will output a csv file with the filtered transcripts and:
+
+    There are still possible misassigened samples:
+    [list of samples to be assigned still]
+    Complete
+
+    
