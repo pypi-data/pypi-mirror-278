@@ -1,0 +1,17 @@
+- hosts:
+    - localhost
+    - master
+    - worker
+  name: check status for space, inventory, k8s and driver
+  tasks:
+    - name: check
+      check_status:
+        tags: "{{ ansible_run_tags }}"
+        master_groups: "{{ groups['master'] }}"
+        worker_groups: "{{ groups['worker'] }}"
+        current_hostname: "{{ inventory_hostname }}"
+        kube_vip: "{{ KUBE_VIP }}"
+        k8s_api_server_ip: "{{ k8s_api_server_ip | default('') }}"
+        kube_interface: "{{ kube_interface | default('') }}"
+        pod_network_cidr: "{{ POD_NETWORK_CIDR }}"
+        use_k8s_version: "{{ use_k8s_version }}"

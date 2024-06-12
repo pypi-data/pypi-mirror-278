@@ -1,0 +1,17 @@
+- name: check if need bypass system package and k8s installation
+  hosts: all:localhost
+  tasks:
+    - set_fact:
+        skip_sys_pkg: '{{os_and_arch | string in ["UOS_20-1050e_aarch64", ]}}'
+        skip_k8s_install: false
+
+    - name: get kubelet version
+      shell: kubelet --version | awk '{print $2}'
+      register: k8s_version_checking
+
+    - name: skip k8s init when k8s version is not 1.19.16 or 1.25.3 on particular OS
+      set_fact:
+        skip_k8s_install: true
+      when:
+        - 'not k8s_version_checking.stdout | string in ["v1.19.16", "v1.25.3"]'
+        - skip_sys_pkg

@@ -1,0 +1,32 @@
+[
+    {
+        "filename":"protobuf-python-3.13.0.tar.gz",
+        "url":"https://mindx.obs.cn-south-1.myhuaweicloud.com/opensource/protobuf-python-3.13.0.tar.gz",
+        "sha256":"9c4d2ad449d27da5ac1db1ad5ecc4a642dedd6bbe59219d61d7b655b6b12be89",
+        "dest":"resources/sources"
+    },
+    {
+        "filename":"nexus_3.53.1_aarch64.tar",
+        "url":"https://ascend-repo-modelzoo.obs.cn-east-2.myhuaweicloud.com/MindXDL/5.0.RC1/resources/nexus_3.53.1_aarch64.tar",
+        "sha256":"a8163892ea8a11b5b002a779bbaaff91da1160906aa60408669ee5d17266499d",
+        "dest":"resources/nexus"
+    },
+    {
+        "filename":"nexus_3.53.1_x86_64.tar",
+        "url":"https://ascend-repo-modelzoo.obs.cn-east-2.myhuaweicloud.com/MindXDL/5.0.RC1/resources/nexus_3.53.1_x86_64.tar",
+        "sha256":"8886381c3a65f13970e91d828fc4ebbfdf53904c6c86f0e9feb19d369a127475",
+        "dest":"resources/nexus"
+    },
+    {
+        "filename":"mpich-3.2.1.tar.gz",
+        "url":"https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/MindX/OpenSource/packages/mpich-3.2.1.tar.gz",
+        "sha256":"5db53bf2edfaa2238eb6a0a5bc3d2c2ccbfbb1badd79b664a1a919d2ce2330f1",
+        "dest":"resources/sources"
+    },
+    {
+        "filename":"openmpi-4.1.5.tar.gz",
+        "url":"https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/MindX/OpenSource/packages/openmpi-4.1.5.tar.gz",
+        "sha256":"c018b127619d2a2a30c1931f316fc8a245926d0f5b4ebed4711f9695e7f70925",
+        "dest":"resources/sources"
+    }
+]

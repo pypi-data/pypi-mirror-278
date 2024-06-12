@@ -1,0 +1,67 @@
+- hosts:
+    - master[0]
+    - other_build_image
+  name: build image for ascend-operator
+  tasks:
+    - name: build ascend-operator image
+      install_ascend_operator:
+        resources_dir: "{{ resource_path }}"
+        harbor_server: "{{ HARBOR_SERVER }}"
+        step: 'build'
+
+    - name: fetch ascend-operator image
+      scp:
+        ip: "{{ inventory_hostname }}"
+        remote_user: "{{ ansible_ssh_user }}"
+        passwd: "{{ ansible_ssh_pass|default('') }}"
+        src: "{{ ascend_operator_images }}"
+        dest: "{{ resource_path }}/mindxdl/dlImages/{{ ansible_architecture }}/ascend-operator"
+        fetch: 'true'
+      delegate_to: localhost
+
+- hosts:
+    - localhost
+  name: push ascend-operator image to harbor
+  tasks:
+    - name: push to harbor
+      push_image:
+        harbor_server: "{{ HARBOR_SERVER }}"
+        project_name: "mindx"
+        public: "{{ HARBOR_PUBLIC_PROJECT }}"
+        user: "{{ HARBOR_ADMIN_USER }}"
+        password: "{{ HARBOR_ADMIN_PASSWORD }}"
+        image_dir: "{{ resource_path }}/mindxdl/dlImages/"
+        component_name: "ascend-operator"
+      when: use_harbor
+
+- hosts:
+    - master
+  name: install or upgrade ascend-operator
+  tasks:
+    - name: push images to remote
+      scp:
+        ip: "{{ inventory_hostname }}"
+        remote_user: "{{ ansible_ssh_user }}"
+        passwd: "{{ ansible_ssh_pass|default('') }}"
+        src: "{{ resource_path }}/mindxdl/dlImages/{{ ansible_architecture }}/ascend-operator/*"
+        dest: "{{ resource_path }}/mindxdl/dlImages/{{ ansible_architecture }}/ascend-operator/"
+      delegate_to: localhost
+      when: not use_harbor
+
+    - name: install ascend-operator
+      install_ascend_operator:
+        resources_dir: "{{ resource_path }}"
+        harbor_server: "{{ HARBOR_SERVER }}"
+        step: 'install'
+
+    - name: apply ascend-operator
+      throttle: 1
+      install_ascend_operator:
+        resources_dir: "{{ resource_path }}"
+        harbor_server: "{{ HARBOR_SERVER }}"
+        step: 'apply'
+        node_name: "{{ NODE_NAME }}"
+        master_node: "{{ inventory_hostname in groups['master'] }}"
+        worker_node: "{{ inventory_hostname in groups['worker'] }}"
+        labels: "{{ ascend_operator_labels }}"
+      delegate_to: "{{ groups['master'][0] }}"

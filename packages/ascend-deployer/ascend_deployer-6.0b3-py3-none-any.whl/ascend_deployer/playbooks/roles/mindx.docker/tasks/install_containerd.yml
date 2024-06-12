@@ -1,0 +1,40 @@
+# 使用dpkg作为包管理器
+- name: install containerd
+  shell: "dpkg --force-all -i {{ docker_pkg_dir }}/{{ ansible_architecture }}/containerd.io*.deb"
+  throttle: 1
+  environment:
+    DEBIAN_FRONTEND: noninteractive
+    DEBIAN_PRIORITY: critical
+  when: not use_rpm_command and not skip_sys_pkg
+
+# 使用rpm作为包管理器
+- name: install containerd
+  shell: "rpm -iUv {{ docker_pkg_dir }}/{{ ansible_architecture }}/containerd.io*.rpm --nodeps --force"
+  throttle: 1
+  when: use_rpm_command and not skip_sys_pkg
+
+- name: generate config for containerd
+  shell: containerd config default > /etc/containerd/config.toml
+  register: config_result
+
+- name: change config
+  shell:
+    cmd:
+      sed -i "s#registry.k8s.io/pause:3.6#registry.k8s.io/pause:3.8#g" /etc/containerd/config.toml;
+      sed -i "s#SystemdCgroup = false#SystemdCgroup = true#g" /etc/containerd/config.toml;
+  register: fix_result
+
+
+- name: add harbor config
+  shell:
+    cmd:
+      sed -i "s#registry.k8s.io/pause:3.8#{{ HARBOR_SERVER }}/registry.k8s.io/pause:3.8#g" /etc/containerd/config.toml;
+  when: use_harbor
+
+
+- name: restart containerd
+  systemd:
+    daemon_reload: yes
+    name: "containerd"
+    enabled: true
+    state: restarted

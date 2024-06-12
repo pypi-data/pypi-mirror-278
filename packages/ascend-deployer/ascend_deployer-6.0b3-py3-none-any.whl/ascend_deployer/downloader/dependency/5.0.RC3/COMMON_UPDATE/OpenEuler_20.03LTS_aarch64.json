@@ -1,0 +1,9 @@
+[
+  {
+    "filename": "aarch64.tar.gz",
+    "url": "https://ascend-repo-modelzoo.obs.myhuaweicloud.com/MindXDL/5.0.RC2/resources/docker/OpenEuler_20.03_LTS/01/aarch64.tar.gz",
+    "sha256": "149b1a9986ce7e3e175f73005b51ee3286776fa0fbb137485cd134e23218f2bf",
+    "dest": "resources/docker/OpenEuler_20.03_LTS",
+    "remark": "Update"
+  }
+]

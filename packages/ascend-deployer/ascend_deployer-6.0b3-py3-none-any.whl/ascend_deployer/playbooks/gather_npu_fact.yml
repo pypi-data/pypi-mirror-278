@@ -1,0 +1,23 @@
+- name: sync time
+  hosts: all
+  tasks:
+    - name: sync time
+      import_tasks: sync_time.yml
+      when: ansible_ssh_user == 'root'
+
+    - name: create user if not exist
+      create_user:
+        group: "{{ group }}"
+        user: "{{ user }}"
+      when: ansible_ssh_user == 'root'
+
+- name: gather facts for all
+  hosts:
+    - localhost
+    - master
+    - worker
+  tasks:
+    - name: collect basic info
+      collect_info:
+        tags: "{{ ansible_run_tags }}"
+        is_ipv6: "{{working_on_ipv6}}"

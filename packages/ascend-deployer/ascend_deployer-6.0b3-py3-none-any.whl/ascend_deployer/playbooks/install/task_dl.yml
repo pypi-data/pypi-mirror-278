@@ -1,0 +1,7 @@
+- name: basic check
+  import_playbook: ../check.yaml
+
+- name: config harbor info
+  import_playbook: ../harbor.yaml
+  when:
+    - use_harbor

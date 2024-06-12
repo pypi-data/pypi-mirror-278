@@ -1,0 +1,56 @@
+{"name": "MindSpore",
+    "version":"1.9.0",
+    "default":false,
+    "framework_whl": [
+        {"system":"linux_aarch64",
+            "whl":[
+            {
+                "filename":"mindspore_ascend-1.9.0-cp39-cp39-linux_aarch64.whl",
+                "url":"https://ms-release.obs.cn-north-4.myhuaweicloud.com/1.9.0/MindSpore/ascend/aarch64/mindspore_ascend-1.9.0-cp39-cp39-linux_aarch64.whl",
+                "dest":"pylibs/Ascend",
+                "python":"cp39",
+                "sha256":"dcf716ffda7ba8e4d310f5c6a104d121ff7e5747db403158d602538ed8a6bf39"
+            },
+            {
+                "filename":"mindspore_ascend-1.9.0-cp38-cp38-linux_aarch64.whl",
+                "url":"https://ms-release.obs.cn-north-4.myhuaweicloud.com/1.9.0/MindSpore/ascend/aarch64/mindspore_ascend-1.9.0-cp38-cp38-linux_aarch64.whl",
+                "dest":"pylibs/Ascend",
+                "python":"cp38",
+                "sha256":"89af0e686e66ac92f7feef4873c16691abee0af8bc862b3356dbfd829825c142"
+            },
+            {
+                "filename":"mindspore_ascend-1.9.0-cp37-cp37m-linux_aarch64.whl",
+                "url":"https://ms-release.obs.cn-north-4.myhuaweicloud.com/1.9.0/MindSpore/ascend/aarch64/mindspore_ascend-1.9.0-cp37-cp37m-linux_aarch64.whl",
+                "dest":"pylibs/Ascend",
+                "python":"cp37",
+                "sha256":"13967c4f9eaf4f17e04d186ffb8aae73fecc9177877b777c20509ac1c5dd4542"
+            }]
+        },
+        {"system":"linux_x86_64",
+            "whl":[
+            {
+                "filename":"mindspore_ascend-1.9.0-cp39-cp39-linux_x86_64.whl",
+                "url":"https://ms-release.obs.cn-north-4.myhuaweicloud.com/1.9.0/MindSpore/ascend/x86_64/mindspore_ascend-1.9.0-cp39-cp39-linux_x86_64.whl",
+                "dest":"pylibs/Ascend",
+                "python":"cp39",
+                "sha256":"dab792aed38eeb3b3c09b8dafa78037f99f27aab8fb647d5ef6e70344545d0c6"
+            },
+            {
+                "filename":"mindspore_ascend-1.9.0-cp38-cp38-linux_x86_64.whl",
+                "url":"https://ms-release.obs.cn-north-4.myhuaweicloud.com/1.9.0/MindSpore/ascend/x86_64/mindspore_ascend-1.9.0-cp38-cp38-linux_x86_64.whl",
+                "dest":"pylibs/Ascend",
+                "python":"cp38",
+                "sha256":"0baea69ae73301fcd3125dd20fc073df6086354254adf85949449262be0b6177"
+            },
+            {
+                "filename":"mindspore_ascend-1.9.0-cp37-cp37m-linux_x86_64.whl",
+                "url":"https://ms-release.obs.cn-north-4.myhuaweicloud.com/1.9.0/MindSpore/ascend/x86_64/mindspore_ascend-1.9.0-cp37-cp37m-linux_x86_64.whl",
+                "dest":"pylibs/Ascend",
+                "python":"cp37",
+                "sha256":"a4f6e6c8a470e1c0086d3d97b447d2dc639e8580e72c061da30b3f4f3b302295"
+            }]
+        }
+    ]
+}
+
+

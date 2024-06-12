@@ -1,0 +1,6 @@
+- hosts: all
+  tags: always
+  tasks:
+    - name: check compatibility
+      check_compatibility:
+        tags: "{{ ansible_run_tags }}"

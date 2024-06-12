@@ -1,0 +1,67 @@
+- hosts:
+    - master[0]
+    - other_build_image
+  name: build image for noded
+  tasks:
+    - name: build noded image
+      install_noded:
+        resources_dir: "{{ resource_path }}"
+        harbor_server: "{{ HARBOR_SERVER }}"
+        step: 'build'
+
+    - name: fetch noded image
+      scp:
+        ip: "{{ inventory_hostname }}"
+        remote_user: "{{ ansible_ssh_user }}"
+        passwd: "{{ ansible_ssh_pass|default('') }}"
+        src: "{{ noded_images }}"
+        dest: "{{ resource_path }}/mindxdl/dlImages/{{ ansible_architecture }}/noded"
+        fetch: 'true'
+      delegate_to: localhost
+
+- hosts:
+    - localhost
+  name: push noded image to harbor
+  tasks:
+    - name: push to harbor
+      push_image:
+        harbor_server: "{{ HARBOR_SERVER }}"
+        project_name: "mindx"
+        public: "{{ HARBOR_PUBLIC_PROJECT }}"
+        user: "{{ HARBOR_ADMIN_USER }}"
+        password: "{{ HARBOR_ADMIN_PASSWORD }}"
+        image_dir: "{{ resource_path }}/mindxdl/dlImages/"
+        component_name: "noded"
+      when: use_harbor
+
+- hosts:
+    - worker
+  name: install or upgrade noded
+  tasks:
+    - name: push images to remote
+      scp:
+        ip: "{{ inventory_hostname }}"
+        remote_user: "{{ ansible_ssh_user }}"
+        passwd: "{{ ansible_ssh_pass|default('') }}"
+        src: "{{ resource_path }}/mindxdl/dlImages/{{ ansible_architecture }}/noded/*"
+        dest: "{{ resource_path }}/mindxdl/dlImages/{{ ansible_architecture }}/noded/"
+      delegate_to: localhost
+      when: not use_harbor
+
+    - name: install noded
+      install_noded:
+        resources_dir: "{{ resource_path }}"
+        harbor_server: "{{ HARBOR_SERVER }}"
+        step: 'install'
+
+    - name: apply noded
+      throttle: 1
+      install_noded:
+        resources_dir: "{{ resource_path }}"
+        harbor_server: "{{ HARBOR_SERVER }}"
+        step: 'apply'
+        node_name: "{{ NODE_NAME }}"
+        master_node: "{{ inventory_hostname in groups['master'] }}"
+        worker_node: "{{ inventory_hostname in groups['worker'] }}"
+        labels: "{{ noded_labels }}"
+      delegate_to: "{{ groups['master'][0] }}"

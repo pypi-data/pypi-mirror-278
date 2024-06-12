@@ -1,0 +1,51 @@
+---
+# install docker
+- hosts:
+    - master
+    - worker
+  name: docker main
+  gather_facts: false
+  become: yes
+  vars_files:
+    - roles/mindx.docker/vars/main.yml
+  tasks:
+    - include_tasks: roles/mindx.docker/tasks/main.yml
+
+- hosts:
+    - master
+    - worker
+  name: docker install
+  gather_facts: false
+  become: yes
+  vars_files:
+    - roles/mindx.docker/vars/main.yml
+  tasks:
+    - include_tasks: roles/mindx.docker/tasks/install.yml
+      when:
+        - not docker_installed
+        - not skip_sys_pkg
+
+- hosts:
+    - master
+    - worker
+  name: docker install containerd nerdctl
+  gather_facts: false
+  become: yes
+  vars_files:
+    - roles/mindx.docker/vars/main.yml
+  tasks:
+    - include_tasks: roles/mindx.docker/tasks/install_containerd.yml
+      when:
+        - not use_old_k8s_version
+    - include_tasks: roles/mindx.docker/tasks/install_nerdctl.yml
+
+- hosts:
+    - master
+    - worker
+  name: docker post install
+  gather_facts: false
+  become: yes
+  vars_files:
+    - roles/mindx.docker/vars/main.yml
+  tasks:
+    - include_tasks: roles/mindx.docker/tasks/post_install.yml

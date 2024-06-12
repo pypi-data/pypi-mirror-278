@@ -1,0 +1,14 @@
+- name: install system dependencies
+  import_playbook: ../install/install_sys_pkg.yml
+
+- name: basic check
+  import_playbook: ../check.yaml
+
+- name: install docker
+  import_playbook: ../docker.yaml
+
+- name: install k8s
+  import_playbook: ../k8s.yaml
+
+- name: install mef
+  import_playbook: ../kubeedge.yaml

@@ -1,0 +1,9 @@
+- hosts:
+    - worker
+  tasks:
+    - name: do test
+      process_test:
+        ansible_run_tags: "{{ ansible_run_tags }}"
+        cus_npu_info: "{{ cus_npu_info | default('') }}"
+        python_version: "{{ python_version | default('python3.7.5')}}"
+  tags: always

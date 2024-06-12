@@ -1,0 +1,9 @@
+[
+  {
+    "filename": "x86_64.tar.gz",
+    "url": "https://ascend-repo-modelzoo.obs.myhuaweicloud.com/MindXDL/5.0.RC2/resources/docker/OpenEuler_20.03_LTS/01/x86_64.tar.gz",
+    "sha256": "4ee3ce4e5a039a1274a460b0ff60a87909d61902c78731a748e47a49e454ab94",
+    "dest": "resources/docker/OpenEuler_20.03_LTS",
+    "remark": "Update"
+  }
+]

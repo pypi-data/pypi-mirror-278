@@ -1,0 +1,15 @@
+- hosts:
+    - localhost
+    - master
+    - worker
+  gather_facts: false
+  name: config harbor info
+  tasks:
+    - name: login harbor
+      throttle: 1
+      login_harbor:
+        current_hostname: "{{ inventory_hostname }}"
+        harbor_server: "{{ HARBOR_SERVER }}"
+        user: "{{ HARBOR_ADMIN_USER }}"
+        password: "{{ HARBOR_ADMIN_PASSWORD }}"
+        ca_file: "{{ HARBOR_CA_FILE }}"
