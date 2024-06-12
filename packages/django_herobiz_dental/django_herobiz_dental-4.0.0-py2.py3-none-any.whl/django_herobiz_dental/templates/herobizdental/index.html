@@ -1,0 +1,100 @@
+{% load static %}
+{% load herobizdental_tags %}
+{% load django_calendards_tags %}
+{% load django_modalds_tags %}
+{% load django_analyticsds_tags %}
+{% load django_postds_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ======= SEO ======= -->{% seo %}<!-- End SEO -->
+
+  <!-- Vendor CSS Files -->
+  <link rel="stylesheet"
+        href="{% static template_name|add:'/vendor/bootstrap/css/bootstrap.min.css' %}" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static template_name|add:'/vendor/bootstrap-icons/bootstrap-icons.min.css' %}">
+  <link href="{% static template_name|add:'/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static template_name|add:'/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static template_name|add:'/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Variables CSS Files. Uncomment your preferred color scheme -->
+  <link href="{% static template_name|add:'/css/variables'|add:color|add:'.css' %}" rel="stylesheet">
+  <!-- <link href="{% static template_name|add:'/css/variables-blue.css' %}" rel="stylesheet"> -->
+  <!-- <link href="{% static template_name|add:'/css/variables-green.css' %}" rel="stylesheet"> -->
+  <!-- <link href="{% static template_name|add:'/css/variables-orange.css' %}" rel="stylesheet"> -->
+  <!-- <link href="{% static template_name|add:'/css/variables-purple.css' %}" rel="stylesheet"> -->
+  <!-- <link href="{% static template_name|add:'/css/variables-red.css' %}" rel="stylesheet"> -->
+  <!-- <link href="{% static template_name|add:'/css/variables-pink.css' %}" rel="stylesheet"> -->
+
+  <!-- Template Main CSS File -->
+  <link href="{% static template_name|add:'/css/main.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- ======= Header ======= -->{% header %}<!-- End Header -->
+  {% block content %}
+  <!-- ======= Hero Section ======= -->{% hero %}<!-- End Hero -->
+
+  <main id="main">
+    {% show_calendar %}
+    {% show_modal %}
+    {% make_analytics %}
+
+    {% for component, is_use, _, _ in components %}
+      {% if is_use %}
+        {% if component == 'featured_services' %}
+          <!-- ======= Featured Services Section ======= -->{% featured_services %}<!-- End Featured Services Section -->
+        {% elif component == 'about' %}
+          <!-- ======= About Section ======= -->{% about %}<!-- End About Section -->
+        {% elif component == 'clients' %}
+          <!-- ======= Clients Section ======= -->{% clients %}<!-- End Clients Section -->
+        {% elif component == 'cta' %}
+          <!-- ======= Call To Action Section ======= -->{% cta %}<!-- End Call To Action Section -->
+        {% elif component == 'onfocus' %}
+          <!-- ======= On Focus Section ======= -->{% onfocus %}<!-- End On Focus Section -->
+        {% elif component == 'features' %}
+          <!-- ======= Features Section ======= -->{% features %}<!-- End Features Section -->
+        {% elif component == 'services' %}
+          <!-- ======= Services Section ======= -->{% services %}<!-- End Services Section -->
+        {% elif component == 'testimonials' %}
+          <!-- ======= Testimonials Section ======= -->{% testimonials %}<!-- End Testimonials Section -->
+        {% elif component == 'pricing' %}
+          <!-- ======= Pricing Section ======= -->{% pricing %}<!-- End Pricing Section -->
+        {% elif component == 'faq' %}
+          <!-- ======= F.A.Q Section ======= -->{% faq %}<!-- End F.A.Q Section -->
+        {% elif component == 'portfolio' %}
+          <!-- ======= Portfolio Section ======= -->{% portfolio %}<!-- End Portfolio Section -->
+        {% elif component == 'team' %}
+          <!-- ======= Team Section ======= -->{% team %}<!-- End Team Section -->
+        {% elif component == 'recent_blog_posts' %}
+          <!-- ======= Recent Blog Posts Section ======= -->{% recent_blog_posts %}<!-- End Recent Blog Posts Section -->
+        {% elif component == 'contact' %}
+          <!-- ======= Contact Section ======= -->{% contact %}<!-- End Contact Section -->
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </main><!-- End #main -->
+  {% endblock content %}
+
+  <!-- ======= Footer ======= -->{% footer %}<!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static template_name|add:'/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"
+          crossorigin="anonymous"></script>
+  <script src="{% static template_name|add:'/vendor/aos/aos.js' %}"></script>
+  <script src="{% static template_name|add:'/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static template_name|add:'/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static template_name|add:'/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <!-- <script src="{% static template_name|add:'/vendor/php-email-form/validate.js' %}"></script> -->
+
+  <!-- Template Main JS File -->
+  <script src="{% static template_name|add:'/js/main.js' %}"></script>
+</body>
+</html>
