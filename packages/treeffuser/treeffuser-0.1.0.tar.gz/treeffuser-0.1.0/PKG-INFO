@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: treeffuser
+Version: 0.1.0
+Summary: 
+Home-page: https://github.com/blei-lab/treeffuser
+License: MIT
+Author: Nicolas Beltran-Velez
+Author-email: nb2838@columbia.edu
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: einops (>=0.8.0,<0.9.0)
+Requires-Dist: jaxtyping (>=0.2.19,<0.3.0)
+Requires-Dist: lightgbm (>=4.3.0,<5.0.0)
+Requires-Dist: ml-collections (>=0.1.1,<0.2.0)
+Requires-Dist: numpy (>=1.24,<2.0)
+Requires-Dist: scikit-learn (>=1.5.0,<2.0.0)
+Requires-Dist: scipy (>=1.13.1,<2.0.0)
+Requires-Dist: tqdm (>=4.66.4,<5.0.0)
+Project-URL: Repository, https://github.com/blei-lab/treeffuser
+Description-Content-Type: text/x-rst
+
+========
+Overview
+========
+
+Diffusion but trees
+
+* Free software: MIT license
+
+Installation
+============
+
+::
+
+    pip install treeffuser
+
+You can also install the in-development version with::
+
+    pip install git+ssh://git@https://github.com/blei-lab/tree-diffuser/blei-lab/treeffuser.git@main
+
+Documentation
+=============
+
+
+https://treeffuser.readthedocs.io/
+
+
+Development
+===========
+
+To run all the tests run::
+
+    tox
+
+However, this is usually excessive so it is easier to use pytest with
+your environment. When you push tox will run automatically.
+
+Note, to combine the coverage data from all the tox environments run:
+
+.. list-table::
+    :widths: 10 90
+    :stub-columns: 1
+
+    - - Windows
+      - ::
+
+            set PYTEST_ADDOPTS=--cov-append
+            tox
+
+    - - Other
+      - ::
+
+            PYTEST_ADDOPTS=--cov-append tox
+
