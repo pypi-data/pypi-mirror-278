@@ -1,0 +1,16 @@
+[project]
+name = "mysql_study_datamaker_CN"
+#name = "msDMCN"
+version = "0.1.4"
+authors = [
+  { name="Kavin", email="scratch_test@126.com" },
+]
+description = "Generate some data and convert it to MySQL language."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
