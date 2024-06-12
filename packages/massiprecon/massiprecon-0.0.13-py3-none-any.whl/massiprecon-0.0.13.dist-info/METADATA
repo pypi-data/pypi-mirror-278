@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: massiprecon
+Version: 0.0.13
+Summary: Generate csv or jsons with ip info
+Author: Witchdoctor (malectrica)
+Keywords: python,hack,osint,recon,data,api,ip
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: argparse
+Requires-Dist: advocate
+
+
+# massiprecon    
+Given a list of ips massiprecon will find location and provider info etc and write them to a csv or json
+
+
+## useage (standalone)  
+```
+usage: py -m massiprecon -i INFILE -o OUTFILE
+
+massiprecon args
+
+options:
+  -h, --help            show this help message and exit
+  -i INFILE, --infile INFILE
+                        list of ips
+  -o OUTFILE, --outfile OUTFILE
+                        json or csv file to write to
+```
+
+
+## useage (library)
+```
+from massiprecon import massiprecon
+f=massiprecon.FileMaker(args.infile,args.outfile)
+print(f.generate())
+```
