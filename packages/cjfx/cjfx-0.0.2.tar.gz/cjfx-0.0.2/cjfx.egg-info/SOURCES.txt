@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+cjfx/__init__.py
+cjfx/cjfx.py
+cjfx/excel.py
+cjfx/mssql_connection.py
+cjfx/sqlite_connection.py
+cjfx/word.py
+cjfx.egg-info/PKG-INFO
+cjfx.egg-info/SOURCES.txt
+cjfx.egg-info/dependency_links.txt
+cjfx.egg-info/requires.txt
+cjfx.egg-info/top_level.txt
