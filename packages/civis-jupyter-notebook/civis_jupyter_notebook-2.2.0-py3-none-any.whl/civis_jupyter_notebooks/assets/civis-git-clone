@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+
+import logging
+import os
+
+import civis
+from civis_jupyter_notebooks.git_utils import CivisGit, CivisGitError
+
+
+stream_logger = civis.civis_logger(
+    name="CIVIS_PLATFORM_BACKEND",
+    level=logging.INFO,
+    fmt=logging.Formatter(
+        fmt="[%(levelname).1s %(asctime)s %(name)s] %(message)s", datefmt="%H:%M:%S"
+    ),
+)
+
+
+if os.environ.get('GIT_REPO_URL'):
+    try:
+        stream_logger.info('cloning git repository')
+        CivisGit().clone_repository()
+        stream_logger.info('clone complete')
+    except CivisGitError as e:
+        stream_logger.error('error cloning git repository: {}'.format(str(e)))
