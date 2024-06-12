@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: llama-index-utils-azure
+Version: 0.1.0
+Summary: llama-index utils azure
+License: MIT
+Keywords: azure,utils
+Author: Fran Aguilera
+Author-email: falven2000@hotmail.com
+Maintainer: falven
+Requires-Python: >=3.8.1,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+
+# LlamaIndex Azure Utils
+
+The `llama-index-utils-azure` library contains common Azure-related utilities used across various packages.
+
