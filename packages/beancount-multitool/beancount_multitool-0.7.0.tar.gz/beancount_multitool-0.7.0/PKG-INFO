@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: beancount-multitool
+Version: 0.7.0
+Summary: A CLI tool that converts financial data to Beancount files
+Home-page: https://github.com/rlan/beancount-multitool
+License: MIT
+Author: Rick Lan
+Author-email: rlan@users.noreply.github.com
+Requires-Python: >=3.9,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Pytest
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Natural Language :: Japanese
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Office/Business :: Financial :: Accounting
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Classifier: Topic :: Text Processing :: General
+Classifier: Topic :: Utilities
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: tomli (>=2.0.1,<3.0.0) ; python_version < "3.11"
+Requires-Dist: tqdm (>=4.66.4,<5.0.0)
+Project-URL: Repository, https://github.com/rlan/beancount-multitool
+Description-Content-Type: text/markdown
+
+# Beancount Multitool
+
+[![Tests badge](https://github.com/rlan/beancount-multitool/actions/workflows/tests.yml/badge.svg)](https://github.com/rlan/beancount-multitool/actions/workflows/tests.yml)
+[![pypi version](https://img.shields.io/pypi/v/beancount-multitool)](https://pypi.org/project/beancount-multitool/)
+![python version required](https://img.shields.io/pypi/pyversions/beancount-multitool)
+![static coverage badge](https://img.shields.io/badge/Coverage-92%25-blue)
+[![Built with Material for MkDocs](https://img.shields.io/badge/Material_for_MkDocs-526CFE?logo=MaterialForMkDocs&logoColor=white)](https://squidfunk.github.io/mkdocs-material/)
+
+[Beancount Multitool](https://github.com/rlan/beancount-multitool/) is a command-line-interface (CLI) tool that converts financial data from financial institutions to [Beancount](https://github.com/beancount/beancount) files.
+
+The following financial institutions are supported:
+
+* Japan
+  * [JA Bank ＪＡネットバンク](https://www.jabank.jp/)
+  * [Rakuten Card 楽天カード](https://www.rakuten-card.co.jp/)
+  * [Rakuten Bank 楽天銀行](https://www.rakuten-bank.co.jp/)
+  * [SBI Shinsei Bank 新生銀行](https://www.sbishinseibank.co.jp/)
+  * [SBI Sumishin Net Bank 住信SBIネット銀行](https://www.netbk.co.jp/)
+* USA
+  * [Chase Sapphire Preferred Card](https://www.chase.com/)
+
+To get started, see the [documentation](https://rlan.github.io/beancount-multitool).
+
+License: [MIT](LICENSE)
+
