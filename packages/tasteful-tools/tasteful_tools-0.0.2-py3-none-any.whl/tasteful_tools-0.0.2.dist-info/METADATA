@@ -1,0 +1,23 @@
+Metadata-Version: 2.3
+Name: tasteful_tools
+Version: 0.0.2
+Summary: A small set of developer tools
+Project-URL: Homepage, https://github.com/ajipalar/tasteful_tools
+Project-URL: Issues, https://github.com/ajipalar/tasteful_tools/issues
+Author-email: Aji Palar <ajipalar@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# Tasteful Tools
+
+This is a small package of commonly used Python 3 developer tools
+
+```
+import tasteful_tools as tt
+
+x = tt.pklload("path_to_my_file.pkl")
+```
