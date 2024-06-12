@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+pve_clone/__init__.py
+pve_clone/__main__.py
+pve_clone/py.typed
+pve_clone.egg-info/PKG-INFO
+pve_clone.egg-info/SOURCES.txt
+pve_clone.egg-info/dependency_links.txt
+pve_clone.egg-info/entry_points.txt
+pve_clone.egg-info/requires.txt
+pve_clone.egg-info/top_level.txt
