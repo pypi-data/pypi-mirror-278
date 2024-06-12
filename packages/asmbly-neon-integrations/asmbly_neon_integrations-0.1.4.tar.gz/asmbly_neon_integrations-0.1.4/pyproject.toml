@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "asmbly-neon-integrations"
+version = "0.1.4"
+description = "Various convenience functions and scripts for managing integrations at Asmbly Makerspace."
+authors = ["Matthew Miller <matthew.miller@asmbly.org>"]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+packages = [
+    { include = "asmbly_neon_integrations" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+aiohttp = "^3.9.5"
+requests = "^2.32.3"
+pytz = "^2024.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
