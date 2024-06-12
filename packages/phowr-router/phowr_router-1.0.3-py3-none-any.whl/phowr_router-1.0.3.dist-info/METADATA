@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: phowr-router
+Version: 1.0.3
+Summary: Phowr Router
+Home-page: https://github.com/hdsme/phowr-router
+Download-URL: https://github.com/hdsme/phowr-router/tarball/1.0.3
+Author: Hao Hoang
+Author-email: haohoangofficial@gmail.com
+License: LICENSE.txt
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: fastap
+
+# Phở Router - Dynamic routering in Phở Framework
+
+[![PyPI Downloads](https://img.shields.io/pypi/dm/phowr-router.svg?label=PyPI%20downloads)](
+https://pypi.org/project/phowr-router/)
