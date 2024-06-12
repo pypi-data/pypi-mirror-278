@@ -1,0 +1,5 @@
+[console_scripts]
+colortheme = colortheme.cli:entry_point
+dark = colortheme.cli.entry_point:go_dark
+light = colortheme.cli.entry_point:go_light
+restartplasma = colortheme.cli.entry_point:restart_plasma
