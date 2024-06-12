@@ -1,0 +1,4 @@
+[memoria]
+AiohttpDownloader = memoria.plugins.builtin.aiohttp_downloader:AiohttpDownloader
+HtmlContentFinder = memoria.plugins.builtin.html_content_finder:HtmlContentFinder
+HtmlExtractor = memoria.plugins.builtin.html_extractor:HtmlExtractor
