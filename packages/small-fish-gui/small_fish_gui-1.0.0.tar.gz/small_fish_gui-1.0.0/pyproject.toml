@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "small_fish_gui"
+version = "1.0.0"
+authors = [
+  { name="Slimani Floric", email="floric.slimani@live.com" },
+]
+description = "Small Fish is a python application for the analysis of smFish images. It provides a ready to use graphical interface to combine famous python packages for cell analysis without any need for coding."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/2Echoes/small_fish"
+Issues = "https://github.com/2Echoes/small_fish/issues"
