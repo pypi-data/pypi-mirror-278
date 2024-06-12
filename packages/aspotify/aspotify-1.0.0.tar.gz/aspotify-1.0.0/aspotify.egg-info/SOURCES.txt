@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+aspotify.egg-info/PKG-INFO
+aspotify.egg-info/SOURCES.txt
+aspotify.egg-info/dependency_links.txt
+aspotify.egg-info/requires.txt
+aspotify.egg-info/top_level.txt
+src/aspotify/__init__.py
+src/aspotify/api.py
+src/aspotify/session.py
+src/aspotify/utils.py
+tests/test_api.py
