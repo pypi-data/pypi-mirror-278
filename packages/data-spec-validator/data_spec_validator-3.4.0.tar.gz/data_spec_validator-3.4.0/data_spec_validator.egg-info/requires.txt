@@ -1,0 +1,8 @@
+python-dateutil
+
+[decorator]
+Django>=3.0
+djangorestframework
+
+[decorator-dj]
+Django>=3.0
