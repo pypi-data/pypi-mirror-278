@@ -1,0 +1,28 @@
+[project]
+name = "sigen"
+version = "0.1.8"
+authors = [
+  { name="Example Author", email="author@example.com" },
+]
+description = "A package to reading and writing data to and from Sigenergy inverters"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "requests",
+    "pycryptodome",
+    "aiohttp"
+]
+
+[project.urls]
+Homepage = "https://github.com/fbradyirl/sigen"
+Issues = "https://github.com/fbradyirl/sigen/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
