@@ -1,0 +1,15 @@
+source_salesforce/__init__.py,sha256=Vh2E0i736F3FVem1rCDeXdYEe_PxWtaHFC9Ne66JtNs,131
+source_salesforce/api.py,sha256=xeYfb1E6edxjh0kNR56Lfx6J8-Fn43u7IFgfLCjEaFw,16783
+source_salesforce/availability_strategy.py,sha256=we7KDizWm5nlqMki3o1IPUS6NyjksRS5xODE2msyBnw,1621
+source_salesforce/exceptions.py,sha256=FVQ9sWuW8ZzvjorvAfmz5xwj18xuD2IHG32gB6wdijs,613
+source_salesforce/rate_limiting.py,sha256=c83SNa295C2uBQZi24xSFTf3Q8Itn5VO7VQ2ZAkxKt0,12387
+source_salesforce/run.py,sha256=ruPrObgBoJHIja3y6YiQmsw4t9v8-DivTdFUR1ZFFX4,1619
+source_salesforce/schemas/Describe.json,sha256=h5E81x1y3bzdnnRKuTSTGBgWUIRn5ERBZZqiSZuO1zg,17796
+source_salesforce/source.py,sha256=QXnj8FWYsH3oFJseXPfsSPHqxUavM-oyeFNCkT3F7Yc,14519
+source_salesforce/spec.yaml,sha256=CvtuGhgX6DIq4XBRcKexNDpFtolfTXoEcGtNZZRimVw,4769
+source_salesforce/streams.py,sha256=CqIyjWfLNhc2IJv-xy9cHJbT-rA0LDyLlwLWPq4nhh4,38560
+source_salesforce/utils.py,sha256=S5ty94OGhZcDaATm6SZo0bOiRqC3hzN7oHcoGUNMUPs,1024
+airbyte_source_salesforce-2.5.14.dist-info/METADATA,sha256=Sri68yJxGwV86ejnPeP084EPXt-EOhe66hY_jOs-jY4,5326
+airbyte_source_salesforce-2.5.14.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+airbyte_source_salesforce-2.5.14.dist-info/entry_points.txt,sha256=QEloWjtYQ2PeGN_AILWCoUMPNKGZVPXSYe0I508KUro,63
+airbyte_source_salesforce-2.5.14.dist-info/RECORD,,
