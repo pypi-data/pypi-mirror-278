@@ -1,0 +1,13 @@
+README.md
+setup.py
+biodatatools/__init__.py
+biodatatools.egg-info/PKG-INFO
+biodatatools.egg-info/SOURCES.txt
+biodatatools.egg-info/dependency_links.txt
+biodatatools.egg-info/entry_points.txt
+biodatatools.egg-info/requires.txt
+biodatatools.egg-info/top_level.txt
+biodatatools/utils/__init__.py
+biodatatools/utils/alignment.py
+biodatatools/utils/geneannotation.py
+biodatatools/utils/genomic.py
