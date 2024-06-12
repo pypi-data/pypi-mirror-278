@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: bed2seq
+Version: 0.2.3
+Summary: From a BED file, return the sequences according to the genome supplied
+Home-page: https://github.com/bio2m/bed2seq
+Author: Benoit Guibert
+Author-email: benoit.guibert@free.fr
+License: GPLv3
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENCE.md
+Requires-Dist: pyfaidx
+
+# bed2seq
+
+
+From a BED file, return the sequences according to the genome supplied
+
+## Installation 
+
+### Solution 1 (Preferred)
+
+Install with pip
+
+```
+pip install bed2seq
+```
+
+### Solution 2
+
+Installation from github:
+
+```
+git clone https://github.com/Bio2M/bed2seq.git
+```
+
+The `pyfaidx` python package is required, install it with `pip`, `apt` or  your preferred method.
+
+## usage
+
+```
+positional arguments:
+  bed                   bed file
+
+options:
+  -h, --help            show this help message and exit
+  -g genome, --genome genome
+                        genome as fasta file
+  -a APPEND, --append APPEND
+                        enlarge the sequence ('-a 20' append 20 bp on each side)
+  -r, --remove          only with '--append' option, keep only appended part
+  -n, --nostrand        don't reverse complement when strand is '-'
+  -o OUTPUT, --output OUTPUT
+                        Output file (default: <input_file>-bed2seq.fa)
+  -v, --version         show program's version number and exit
+```
+
