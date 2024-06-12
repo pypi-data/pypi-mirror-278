@@ -1,0 +1,14 @@
+optuna>=3.1.0
+dask[distributed]
+rich
+
+[dev]
+black
+isort
+flake8
+mypy
+pandas
+pandas-stubs
+
+[test]
+pytest
