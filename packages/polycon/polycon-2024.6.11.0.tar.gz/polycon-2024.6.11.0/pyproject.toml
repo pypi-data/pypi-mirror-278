@@ -1,0 +1,59 @@
+[tool.poetry]
+name = "polycon"
+version = "2024.06.11.0"
+description = "..."
+authors = [ 'Hugo LECLERC' ]
+include = ["polycon/lib/*.so","polycon/lib/*.dll","polycon/lib/*.dylib","polycon/lib/.rendered.*.cpp"]
+build = "polycon_build.py"
+
+[tool.poetry.dependencies]
+tabulate = "*"
+
+[build-system]
+build-backend = "poetry.masonry.api"
+requires = ["poetry", "setuptools-cpp"]
+
+# [project]
+# name = "polycon"
+# version = "2024.06.09.0"
+
+# [tool.hatch.build.targets.wheel.hooks.cython]
+# dependencies = ["hatch-cython"]
+
+# [tool.hatch.build.targets.wheel.hooks.cython.options]
+# # include .h or .cpp directories
+# python_version = "3.10"
+# includes = []
+# compile_py = false
+# include_numpy = false
+# include_pyarrow = false
+
+# include_{custom}
+# include_somelib = {
+#     # must be included in build-dependencies
+#     pkg = "somelib",
+#     # somelib.gets_include() -> str
+#     include = "gets_include",
+#     # somelib.gets_libraries() -> list[str]
+#     libraries = "gets_libraries",
+#     # somelib.gets_library_dirs() -> list[str]
+#     library_dirs = "gets_library_dirs",
+#     # somelib.some_setup_op() before build
+#     required_call = "some_setup_op"
+# }
+
+# compile_args = [
+#   # single string
+#   "-v",
+#   # by platform
+#   { platforms = ["linux", "darwin"], arg = "-Wcpp" },
+#   # by platform & arch
+#   { platforms = "darwin", arch = "x86_64", arg = "-arch x86_64" },
+#   { platforms = ["darwin"], arch = "arm64", arg = "-arch arm64" },
+#   # with pep508 markers
+#   { platforms = ["darwin"], arch = "x86_64", arg = "-I/usr/local/opt/llvm/include", depends_path = true, marker = "python_version <= '3.10'"  },
+# ]
+
+# directives = { boundscheck = false, nonecheck = false, language_level = 3, binding = true }
+
+# compile_kwargs = { }
