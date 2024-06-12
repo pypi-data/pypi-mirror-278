@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+inkpot/__init__.py
+inkpot/__main__.py
+inkpot/astunparse.py
+inkpot/config.py
+inkpot/directory.py
+inkpot/file.py
+inkpot.egg-info/PKG-INFO
+inkpot.egg-info/SOURCES.txt
+inkpot.egg-info/dependency_links.txt
+inkpot.egg-info/top_level.txt
