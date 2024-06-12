@@ -1,0 +1,148 @@
+Metadata-Version: 2.3
+Name: matcher_py
+Version: 0.1.3
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Rust
+Classifier: Typing :: Typed
+Requires-Dist: cffi
+Requires-Dist: typing-extensions
+Requires-Dist: msgspec
+Requires-Dist: numpy
+Summary: A high performance multiple functional word matcher
+Keywords: text,string,search,pattern,multi
+Home-Page: https://github.com/Lips7/Matcher
+Author: Fuji Guo
+Author-email: f975793771@gmail.com
+License: MIT OR Apache-2.0
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: homepage, https://github.com/Lips7/Matcher
+
+# Matcher Rust Implement PyO3 binding
+## Usage
+Python usage is in the [test.ipynb](matcher_py/test.ipynb) file.
+### Matcher
+```Python
+import msgspec
+import numpy as np
+
+from matcher_py import Matcher, SimpleMatcher # type: ignore
+from extension_types import MatchTableType, SimpleMatchType, MatchTable
+
+msgpack_encoder = msgspec.msgpack.Encoder()
+
+matcher = Matcher(
+    msgpack_encoder.encode(
+        {
+            "test": [
+                MatchTable(
+                    table_id=1,
+                    match_table_type=MatchTableType.Simple,
+                    simple_match_type=SimpleMatchType.MatchFanjian | SimpleMatchType.MatchDeleteNormalize,
+                    word_list=["蔔", "你好"],
+                    exemption_simple_match_type=SimpleMatchType.MatchFanjian | SimpleMatchType.MatchDeleteNormalize,
+                    exemption_word_list=[],
+                )
+            ]
+        }
+    )
+)
+
+matcher.is_match(r"卜")
+
+matcher.word_match(r"你，好")
+
+matcher.word_match_as_string("你好")
+
+matcher.batch_word_match_as_string(["你好", "你好", "你真棒"])
+
+text_array = np.array(
+    [
+        "Laborum eiusmod anim aliqua non veniam laboris officia dolor. Adipisicing sit est irure Lorem duis adipisicing exercitation. Cillum excepteur non anim ipsum eiusmod deserunt veniam. Nulla veniam sunt sint ad velit occaecat in deserunt nulla nisi excepteur. Cillum veniam Lorem aute eu. Nisi voluptate laboris quis sint pariatur ullamco minim pariatur officia non anim nisi nulla ipsum ad. Veniam pariatur ut occaecat ut veniam velit aliquip commodo culpa elit eu eiusmod."
+    ]
+    * 10000,
+    dtype=np.dtype("object")
+)
+matcher.numpy_word_match_as_string(text_array)
+
+text_array = np.array(
+    [
+        "Laborum eiusmod anim aliqua non veniam laboris officia dolor. Adipisicing sit est irure Lorem duis adipisicing exercitation. Cillum excepteur non anim ipsum eiusmod deserunt veniam. Nulla veniam sunt sint ad velit occaecat in deserunt nulla nisi excepteur. Cillum veniam Lorem aute eu. Nisi voluptate laboris quis sint pariatur ullamco minim pariatur officia non anim nisi nulla ipsum ad. Veniam pariatur ut occaecat ut veniam velit aliquip commodo culpa elit eu eiusmod."
+    ]
+    * 10000,
+    dtype=np.dtype("object")
+)
+matcher.numpy_word_match_as_string(text_array, inplace=True)
+text_array
+```
+
+### Simple Matcher
+```Python
+import msgspec
+import numpy as np
+
+from matcher_py import Matcher, SimpleMatcher # type: ignore
+from extension_types import MatchTableType, SimpleMatchType, MatchTable
+
+msgpack_encoder = msgspec.msgpack.Encoder()
+
+simple_matcher = SimpleMatcher(
+    msgpack_encoder.encode(
+        {
+            SimpleMatchType.MatchFanjian | SimpleMatchType.MatchDeleteNormalize: {
+                1: "无,法,无,天",
+                2: "xxx",
+                3: "你好",
+                6: r"It's /\/\y duty",
+                4: "xxx,yyy",
+            },
+            SimpleMatchType.MatchFanjian: {
+                4: "xxx,yyy",
+            },
+            SimpleMatchType.MatchNone: {
+                5: "xxxxx,xxxxyyyyxxxxx",
+            },
+        }
+    )
+)
+
+simple_matcher.is_match("xxx")
+
+simple_matcher.simple_process(r"It's /\/\y duty")
+
+simple_matcher.batch_simple_process([r"It's /\/\y duty", "你好", "xxxxxxx"])
+
+text_array = np.array(
+    [
+        "Laborum eiusmod anim aliqua non veniam laboris officia dolor. Adipisicing sit est irure Lorem duis adipisicing exercitation. Cillum excepteur non anim ipsum eiusmod deserunt veniam. Nulla veniam sunt sint ad velit occaecat in deserunt nulla nisi excepteur. Cillum veniam Lorem aute eu. Nisi voluptate laboris quis sint pariatur ullamco minim pariatur officia non anim nisi nulla ipsum ad. Veniam pariatur ut occaecat ut veniam velit aliquip commodo culpa elit eu eiusmod."
+    ]
+    * 10000,
+    dtype=np.dtype("object"),
+)
+simple_matcher.numpy_simple_process(text_array)
+
+text_array = np.array(
+    [
+        "Laborum eiusmod anim aliqua non veniam laboris officia dolor. Adipisicing sit est irure Lorem duis adipisicing exercitation. Cillum excepteur non anim ipsum eiusmod deserunt veniam. Nulla veniam sunt sint ad velit occaecat in deserunt nulla nisi excepteur. Cillum veniam Lorem aute eu. Nisi voluptate laboris quis sint pariatur ullamco minim pariatur officia non anim nisi nulla ipsum ad. Veniam pariatur ut occaecat ut veniam velit aliquip commodo culpa elit eu eiusmod."
+    ]
+    * 10000,
+    dtype=np.dtype("object"),
+)
+simple_matcher.numpy_simple_process(text_array, inplace=True)
+text_array
+```
