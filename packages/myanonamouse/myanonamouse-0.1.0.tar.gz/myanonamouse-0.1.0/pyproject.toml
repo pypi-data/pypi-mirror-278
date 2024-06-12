@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "myanonamouse"
+version = "0.1.0"
+description = "Python client for the MyAnonaMouse API"
+authors = ["Jasmin Le Roux <theblazehen@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.32.3"
+lxml = "^5.2.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
