@@ -1,0 +1,123 @@
+#========================================================================================================================================
+# CyborgAI CC BY-NC-ND 4.0 Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 Internation    https://github.com/cyborg-ai-git # 
+#========================================================================================================================================
+
+#API TYPE:
+#   STRING [DEFAULT_VALUE] 
+#   LANGUAGE [DEFAULT_VALUE] 
+#   INT [DEFAULT_VALUE] 
+#   LONG [DEFAULT_VALUE] 
+#   FLOAT [DEFAULT_VALUE]
+#   DOUBLE [DEFAULT_VALUE]
+#   BYTE
+#   BYTES
+#   BOOL [DEFAULT_VALUE]
+#   EOBJECT EOBJECT_CLASS
+#   MAP EOBJECT_CLASS
+#   ENUM ENUM_DEFAULT
+
+package: evo_framework.core.evo_core_api
+
+enum:
+  EnumApiType:
+    STRING
+    LANGUAGE
+    INT
+    LONG
+    FLOAT
+    DOUBLE
+    BYTE
+    BYTES
+    BOOL
+    EOBJECT
+    MAP
+    ENUM
+
+  EnumApiAction:
+    NONE
+    ERROR
+    PROGRESS
+    PROGRESS_UPLOAD
+    PROGRESS_DOWNLOAD
+    PARTIAL
+    COMPLETE
+
+  EnumApiVisibility:
+    PUBLIC
+    PRIVATE
+    LOCAL
+
+  EnumApiCrypto:
+    ECC
+    PQ
+
+entity:
+  ERequest:
+    _DESCRIPTION_: "ERequest DESCRIPTION"
+    enumApiCrypto: ENUM EnumApiCrypto .ECC
+    pk: BYTES
+    cipher: BYTES
+    sign: BYTES
+    hash: BYTES
+    chunk: INT
+    chunkTotal: INT
+    data: BYTES
+
+  EResponse:
+    _DESCRIPTION_: "EResponse DESCRIPTION"
+    sign: BYTES
+    hash: BYTES
+    chunk: INT
+    chunkTotal: INT
+    data: BYTES
+    isError: BOOL
+    error: STRING
+
+  EApi: 
+    _DESCRIPTION_: "EApi DESCRIPTION"
+    description: STRING
+    isStream: BOOL     
+    input: STRING
+    output: STRING
+
+  EAction:
+    _DESCRIPTION_: "EAction DESCRIPTION"
+    enumApiAction: ENUM EnumApiAction .NONE
+    action: STRING     
+    input: BYTES 
+    output: BYTES
+
+  EApiConfig:
+      _DESCRIPTION_: "EApiConfig DESCRIPTION"
+      enumApiVisibility: ENUM EnumApiVisibility .PRIVATE
+      publicKey: BYTES
+      label: STRING
+      description: STRING
+      urlLogo: STRING
+      remoteUrl: STRING 
+      remotePort: INT 443
+      os: STRING
+      mapEApi: MAP EApi
+
+  EApiFile:
+    _DESCRIPTION_: "EApiFile DESCRIPTION"
+    isUrl: BOOL
+    name : STRING
+    ext: STRING
+    hash: BYTES
+    data: BYTES
+    url: STRING
+  
+  EApiText:
+    _DESCRIPTION_: "EApiFile DESCRIPTION"
+    header: STRING
+    language: LANGUAGE "NONE"
+    text : STRING
+    isComplete: BOOL
+    isError: BOOL
+    error: STRING
+
+  EApiAdmin:
+    _DESCRIPTION_: "EApiAdmin DESCRIPTION"
+    totp: BYTES
+    token : BYTES
