@@ -1,0 +1,22 @@
+[project]
+name = "gdriveresolver"
+version = "0.0.16"
+authors = [
+  { name="C Harman", email="charman@netrias.com" },
+]
+description = "A package that helps resolve relative Google Drive paths to absolute system paths that refer to the Google drive mount location."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/netrias/gdrive_resolver"
+Issues = "https://github.com/netrias/gdrive_resolver/issues"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
