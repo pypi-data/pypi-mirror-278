@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kasheesh_tools"
+version = "0.1.0"
+authors = [
+  { name="Haibo Yu", email="haibo.yu@kasheesh.co" },
+]
+description = "Standard Tools"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/fscbco/pytool-telegram"
+
+[tool.setuptools]
+packages = ["kasheesh_tools"]
+package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+"kasheesh_tools" = ["*.py"]

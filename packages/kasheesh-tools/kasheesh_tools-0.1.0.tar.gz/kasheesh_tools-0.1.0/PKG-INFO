@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: kasheesh_tools
+Version: 0.1.0
+Summary: Standard Tools
+Author-email: Haibo Yu <haibo.yu@kasheesh.co>
+Project-URL: Homepage, https://github.com/fscbco/pytool-telegram
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# kasheesh-tools
+
+This is a package for Kasheesh python tools
+## Install from:
+https://pypi.org/project/kasheesh-tools/
+
+## To upgrade:
+`pip install --upgrade kasheesh-tools`
+
+## Currently supports:
+
+* tool_logger
+* tool_file_rw
+
+
