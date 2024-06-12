@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: tableau-vizportal-client
+Version: 1.0.4
+Summary: A helper addon for TableauServerClient to simplify making API calls to the Tableau Vizportal API
+Home-page: https://github.com/FsuLauncherComp/tableau-vizportal-client
+Author: Rody Zakovich
+Author-email: rodyzakovich@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: tableauserverclient >=0.11
+
+# Purpose
+
+Library is a helper addon for TableauServerClient to simplify making API calls to the Tableau Vizportal API and to make it easier to work with the results.
+
+Leverages the TableauServerClient library for authentication and piggybacks on the Auth token and Server Object to make API calls.
