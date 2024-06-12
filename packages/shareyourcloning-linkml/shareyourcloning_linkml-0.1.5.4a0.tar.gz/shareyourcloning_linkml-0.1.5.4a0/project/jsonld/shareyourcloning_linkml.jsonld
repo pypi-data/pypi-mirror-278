@@ -1,0 +1,2311 @@
+{
+  "name": "ShareYourCloning_LinkML",
+  "description": "A LinkML data model for ShareYourCloning",
+  "title": "ShareYourCloning_LinkML",
+  "see_also": [
+    "https://genestorian.github.io/ShareYourCloning_LinkML"
+  ],
+  "id": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+  "imports": [
+    "linkml:types"
+  ],
+  "license": "MIT",
+  "prefixes": [
+    {
+      "prefix_prefix": "shareyourcloning_linkml",
+      "prefix_reference": "https://w3id.org/genestorian/ShareYourCloning_LinkML/"
+    },
+    {
+      "prefix_prefix": "linkml",
+      "prefix_reference": "https://w3id.org/linkml/"
+    },
+    {
+      "prefix_prefix": "biolink",
+      "prefix_reference": "https://w3id.org/biolink/"
+    },
+    {
+      "prefix_prefix": "schema",
+      "prefix_reference": "http://schema.org/"
+    },
+    {
+      "prefix_prefix": "PATO",
+      "prefix_reference": "http://purl.obolibrary.org/obo/PATO_"
+    },
+    {
+      "prefix_prefix": "example",
+      "prefix_reference": "https://example.org/"
+    },
+    {
+      "prefix_prefix": "OBI",
+      "prefix_reference": "http://purl.obolibrary.org/obo/OBI_"
+    }
+  ],
+  "default_prefix": "shareyourcloning_linkml",
+  "default_range": "string",
+  "types": [
+    {
+      "name": "string",
+      "definition_uri": "https://w3id.org/linkml/String",
+      "description": "A character string",
+      "notes": [
+        "In RDF serializations, a slot with range of string is treated as a literal or type xsd:string.   If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"string\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Text"
+      ],
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "integer",
+      "definition_uri": "https://w3id.org/linkml/Integer",
+      "description": "An integer",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"integer\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Integer"
+      ],
+      "base": "int",
+      "uri": "http://www.w3.org/2001/XMLSchema#integer",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "boolean",
+      "definition_uri": "https://w3id.org/linkml/Boolean",
+      "description": "A binary (true or false) value",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"boolean\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Boolean"
+      ],
+      "base": "Bool",
+      "uri": "http://www.w3.org/2001/XMLSchema#boolean",
+      "repr": "bool",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "float",
+      "definition_uri": "https://w3id.org/linkml/Float",
+      "description": "A real number that conforms to the xsd:float specification",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"float\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Float"
+      ],
+      "base": "float",
+      "uri": "http://www.w3.org/2001/XMLSchema#float",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "double",
+      "definition_uri": "https://w3id.org/linkml/Double",
+      "description": "A real number that conforms to the xsd:double specification",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"double\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "close_mappings": [
+        "schema:Float"
+      ],
+      "base": "float",
+      "uri": "http://www.w3.org/2001/XMLSchema#double",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "decimal",
+      "definition_uri": "https://w3id.org/linkml/Decimal",
+      "description": "A real number with arbitrary precision that conforms to the xsd:decimal specification",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"decimal\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "broad_mappings": [
+        "schema:Number"
+      ],
+      "base": "Decimal",
+      "uri": "http://www.w3.org/2001/XMLSchema#decimal",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "time",
+      "definition_uri": "https://w3id.org/linkml/Time",
+      "description": "A time object represents a (local) time of day, independent of any particular day",
+      "notes": [
+        "URI is dateTime because OWL reasoners do not work with straight date or time",
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"time\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Time"
+      ],
+      "base": "XSDTime",
+      "uri": "http://www.w3.org/2001/XMLSchema#time",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "date",
+      "definition_uri": "https://w3id.org/linkml/Date",
+      "description": "a date (year, month and day) in an idealized calendar",
+      "notes": [
+        "URI is dateTime because OWL reasoners don't work with straight date or time",
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"date\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Date"
+      ],
+      "base": "XSDDate",
+      "uri": "http://www.w3.org/2001/XMLSchema#date",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "datetime",
+      "definition_uri": "https://w3id.org/linkml/Datetime",
+      "description": "The combination of a date and time",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"datetime\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:DateTime"
+      ],
+      "base": "XSDDateTime",
+      "uri": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "date_or_datetime",
+      "definition_uri": "https://w3id.org/linkml/DateOrDatetime",
+      "description": "Either a date or a datetime",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"date_or_datetime\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "https://w3id.org/linkml/DateOrDatetime",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "uriorcurie",
+      "definition_uri": "https://w3id.org/linkml/Uriorcurie",
+      "description": "a URI or a CURIE",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"uriorcurie\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "URIorCURIE",
+      "uri": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "curie",
+      "definition_uri": "https://w3id.org/linkml/Curie",
+      "conforms_to": "https://www.w3.org/TR/curie/",
+      "description": "a compact URI",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"curie\"."
+      ],
+      "comments": [
+        "in RDF serializations this MUST be expanded to a URI",
+        "in non-RDF serializations MAY be serialized as the compact representation"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "Curie",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "uri",
+      "definition_uri": "https://w3id.org/linkml/Uri",
+      "conforms_to": "https://www.ietf.org/rfc/rfc3987.txt",
+      "description": "a complete URI",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"uri\"."
+      ],
+      "comments": [
+        "in RDF serializations a slot with range of uri is treated as a literal or type xsd:anyURI unless it is an identifier or a reference to an identifier, in which case it is translated directly to a node"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "close_mappings": [
+        "schema:URL"
+      ],
+      "base": "URI",
+      "uri": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "ncname",
+      "definition_uri": "https://w3id.org/linkml/Ncname",
+      "description": "Prefix part of CURIE",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"ncname\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "NCName",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "objectidentifier",
+      "definition_uri": "https://w3id.org/linkml/Objectidentifier",
+      "description": "A URI or CURIE that represents an object in the model.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"objectidentifier\"."
+      ],
+      "comments": [
+        "Used for inheritance and type checking"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "ElementIdentifier",
+      "uri": "http://www.w3.org/ns/shex#iri",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "nodeidentifier",
+      "definition_uri": "https://w3id.org/linkml/Nodeidentifier",
+      "description": "A URI, CURIE or BNODE that represents a node in a model.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"nodeidentifier\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "NodeIdentifier",
+      "uri": "http://www.w3.org/ns/shex#nonLiteral",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "jsonpointer",
+      "definition_uri": "https://w3id.org/linkml/Jsonpointer",
+      "conforms_to": "https://datatracker.ietf.org/doc/html/rfc6901",
+      "description": "A string encoding a JSON Pointer. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to a valid object within the current instance document when encoded in tree form.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"jsonpointer\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "jsonpath",
+      "definition_uri": "https://w3id.org/linkml/Jsonpath",
+      "conforms_to": "https://www.ietf.org/archive/id/draft-goessner-dispatch-jsonpath-00.html",
+      "description": "A string encoding a JSON Path. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to zero or more valid objects within the current instance document when encoded in tree form.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"jsonpath\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "sparqlpath",
+      "definition_uri": "https://w3id.org/linkml/Sparqlpath",
+      "conforms_to": "https://www.w3.org/TR/sparql11-query/#propertypaths",
+      "description": "A string encoding a SPARQL Property Path. The value of the string MUST conform to SPARQL syntax and SHOULD dereference to zero or more valid objects within the current instance document when encoded as RDF.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"sparqlpath\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    }
+  ],
+  "enums": [
+    {
+      "name": "RepositoryName",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/RepositoryName",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "permissible_values": [
+        {
+          "text": "addgene",
+          "description": "Addgene"
+        },
+        {
+          "text": "genbank",
+          "description": "GenBank"
+        }
+      ]
+    },
+    {
+      "name": "SequenceFileFormat",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/SequenceFileFormat",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "permissible_values": [
+        {
+          "text": "fasta"
+        },
+        {
+          "text": "genbank"
+        },
+        {
+          "text": "snapgene"
+        },
+        {
+          "text": "embl"
+        }
+      ]
+    },
+    {
+      "name": "AddGeneSequenceType",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/AddGeneSequenceType",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "permissible_values": [
+        {
+          "text": "depositor-full",
+          "description": "Full sequence of the plasmid submitted by the depositor"
+        },
+        {
+          "text": "addgene-full",
+          "description": "Full sequence of the plasmid performed by Addgene"
+        }
+      ]
+    }
+  ],
+  "slots": [
+    {
+      "name": "id",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/id",
+      "description": "A unique identifier for a thing",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "mappings": [
+        "http://schema.org/identifier"
+      ],
+      "slot_uri": "http://schema.org/identifier",
+      "identifier": true,
+      "owner": "Sequence",
+      "domain_of": [
+        "NamedThing",
+        "Sequence"
+      ],
+      "range": "integer",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "name",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/name",
+      "description": "A human-readable name for a thing",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "mappings": [
+        "http://schema.org/name"
+      ],
+      "slot_uri": "http://schema.org/name",
+      "owner": "Primer",
+      "domain_of": [
+        "Primer"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "restriction_enzyme",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/restriction_enzyme",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "exact_mappings": [
+        "http://purl.obolibrary.org/obo/OBI_0000732"
+      ],
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/restriction_enzyme",
+      "owner": "RestrictionSequenceCut",
+      "domain_of": [
+        "RestrictionSequenceCut"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "restriction_enzymes",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/restriction_enzymes",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "exact_mappings": [
+        "http://purl.obolibrary.org/obo/OBI_0000732"
+      ],
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/restriction_enzymes",
+      "multivalued": true,
+      "owner": "RestrictionAndLigationSource",
+      "domain_of": [
+        "RestrictionAndLigationSource"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "input",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/input",
+      "description": "The sequences that are an input to this source. If the source represents external import of a sequence, it's empty.",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/input",
+      "multivalued": true,
+      "owner": "Source",
+      "domain_of": [
+        "Source"
+      ],
+      "range": "Sequence",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "output",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/output",
+      "description": "Identifier of the sequence that is the output of this source.",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/output",
+      "owner": "Source",
+      "domain_of": [
+        "Source"
+      ],
+      "range": "Sequence",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "type",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/type",
+      "description": "The type of the source",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/type",
+      "designates_type": true,
+      "owner": "Source",
+      "domain_of": [
+        "Sequence",
+        "Source"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "sequence_file_format",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/sequence_file_format",
+      "description": "The format of a sequence file",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/sequence_file_format",
+      "owner": "UploadedFileSource",
+      "domain_of": [
+        "TextFileSequence",
+        "UploadedFileSource"
+      ],
+      "range": "SequenceFileFormat",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "overhang_crick_3prime",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/overhang_crick_3prime",
+      "description": "Taken from pydna's `dseq::ovhg`An integer describing the length of the crick strand overhang in the 5' of the molecule, or 3' of the crick strand",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/overhang_crick_3prime",
+      "owner": "OligoHybridizationSource",
+      "domain_of": [
+        "TextFileSequence",
+        "ManuallyTypedSource",
+        "OligoHybridizationSource"
+      ],
+      "range": "integer",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "overhang_watson_3prime",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/overhang_watson_3prime",
+      "description": "The equivalent of `overhang_crick_3prime` but for the watson strand",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/overhang_watson_3prime",
+      "ifabsent": "int(0)",
+      "owner": "ManuallyTypedSource",
+      "domain_of": [
+        "TextFileSequence",
+        "ManuallyTypedSource"
+      ],
+      "range": "integer",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "sequence_file_url",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/sequence_file_url",
+      "description": "The URL of a sequence file",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/sequence_file_url",
+      "owner": "AddGeneIdSource",
+      "domain_of": [
+        "AddGeneIdSource"
+      ],
+      "range": "string",
+      "pattern": "^https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)$",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "textFileSequence__file_content",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/file_content",
+      "alias": "file_content",
+      "owner": "TextFileSequence",
+      "domain_of": [
+        "TextFileSequence"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "primer__sequence",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/sequence",
+      "alias": "sequence",
+      "owner": "Primer",
+      "domain_of": [
+        "Primer"
+      ],
+      "range": "string",
+      "pattern": "^[acgtACGT]+$",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "sequenceCut__cut_watson",
+      "description": "The position of the cut in the watson strand. The cut is made before the base at this position (zero-based), so that cut position 1 cuts after the first base.",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/cut_watson",
+      "alias": "cut_watson",
+      "owner": "SequenceCut",
+      "domain_of": [
+        "SequenceCut"
+      ],
+      "range": "integer",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "sequenceCut__overhang",
+      "description": "The length of the overhang that is left after the cut. It can be negative, same meaning as in pydna's `dseq::ovhg` and biopython's `Bio.Restriction.RestrictionType.ovhg`.",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/overhang",
+      "alias": "overhang",
+      "owner": "SequenceCut",
+      "domain_of": [
+        "SequenceCut"
+      ],
+      "range": "integer",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "manuallyTypedSource__user_input",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/user_input",
+      "alias": "user_input",
+      "owner": "ManuallyTypedSource",
+      "domain_of": [
+        "ManuallyTypedSource"
+      ],
+      "range": "string",
+      "required": true,
+      "pattern": "^[acgtACGT]+$",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "manuallyTypedSource__circular",
+      "description": "Whether the sequence is circular or not",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/circular",
+      "alias": "circular",
+      "owner": "ManuallyTypedSource",
+      "domain_of": [
+        "ManuallyTypedSource"
+      ],
+      "range": "boolean",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "uploadedFileSource__file_name",
+      "description": "The name of the file",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/file_name",
+      "alias": "file_name",
+      "owner": "UploadedFileSource",
+      "domain_of": [
+        "UploadedFileSource"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "uploadedFileSource__index_in_file",
+      "description": "The index of the sequence in the file",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/index_in_file",
+      "alias": "index_in_file",
+      "owner": "UploadedFileSource",
+      "domain_of": [
+        "UploadedFileSource"
+      ],
+      "range": "integer",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "uploadedFileSource__circularise",
+      "description": "Whether the sequence should be circularised (FASTA only)",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/circularise",
+      "alias": "circularise",
+      "owner": "UploadedFileSource",
+      "domain_of": [
+        "UploadedFileSource"
+      ],
+      "range": "boolean",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "repositoryIdSource__repository_name",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/repository_name",
+      "alias": "repository_name",
+      "owner": "RepositoryIdSource",
+      "domain_of": [
+        "RepositoryIdSource"
+      ],
+      "range": "RepositoryName",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "repositoryIdSource__repository_id",
+      "description": "The id of the sequence in the repository",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/repository_id",
+      "alias": "repository_id",
+      "owner": "RepositoryIdSource",
+      "domain_of": [
+        "RepositoryIdSource"
+      ],
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "addGeneIdSource__addgene_sequence_type",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/addgene_sequence_type",
+      "alias": "addgene_sequence_type",
+      "owner": "AddGeneIdSource",
+      "domain_of": [
+        "AddGeneIdSource"
+      ],
+      "range": "AddGeneSequenceType",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "genomeCoordinatesSource__assembly_accession",
+      "description": "The accession of the assembly",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/assembly_accession",
+      "alias": "assembly_accession",
+      "owner": "GenomeCoordinatesSource",
+      "domain_of": [
+        "GenomeCoordinatesSource"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "genomeCoordinatesSource__sequence_accession",
+      "description": "The accession of the sequence",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/sequence_accession",
+      "alias": "sequence_accession",
+      "owner": "GenomeCoordinatesSource",
+      "domain_of": [
+        "GenomeCoordinatesSource"
+      ],
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "genomeCoordinatesSource__locus_tag",
+      "description": "The locus tag of the sequence",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/locus_tag",
+      "alias": "locus_tag",
+      "owner": "GenomeCoordinatesSource",
+      "domain_of": [
+        "GenomeCoordinatesSource"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "genomeCoordinatesSource__gene_id",
+      "description": "The gene id of the sequence",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/gene_id",
+      "alias": "gene_id",
+      "owner": "GenomeCoordinatesSource",
+      "domain_of": [
+        "GenomeCoordinatesSource"
+      ],
+      "range": "integer",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "genomeCoordinatesSource__start",
+      "description": "The starting coordinate (1-based) of the sequence in the sequence accession",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/start",
+      "alias": "start",
+      "owner": "GenomeCoordinatesSource",
+      "domain_of": [
+        "GenomeCoordinatesSource"
+      ],
+      "range": "integer",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "genomeCoordinatesSource__end",
+      "description": "The ending coordinate (1-based) of the sequence in the sequence accession",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/end",
+      "alias": "end",
+      "owner": "GenomeCoordinatesSource",
+      "domain_of": [
+        "GenomeCoordinatesSource"
+      ],
+      "range": "integer",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "genomeCoordinatesSource__strand",
+      "description": "The strand of the sequence in the sequence accession, should be 1 or -1",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/strand",
+      "alias": "strand",
+      "owner": "GenomeCoordinatesSource",
+      "domain_of": [
+        "GenomeCoordinatesSource"
+      ],
+      "range": "integer",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "sequenceCutSource__left_edge",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/left_edge",
+      "alias": "left_edge",
+      "owner": "SequenceCutSource",
+      "domain_of": [
+        "SequenceCutSource"
+      ],
+      "range": "SequenceCut",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "sequenceCutSource__right_edge",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/right_edge",
+      "alias": "right_edge",
+      "owner": "SequenceCutSource",
+      "domain_of": [
+        "SequenceCutSource"
+      ],
+      "range": "SequenceCut",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "restrictionEnzymeDigestionSource__left_edge",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/left_edge",
+      "alias": "left_edge",
+      "owner": "RestrictionEnzymeDigestionSource",
+      "domain_of": [
+        "RestrictionEnzymeDigestionSource"
+      ],
+      "range": "RestrictionSequenceCut",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "restrictionEnzymeDigestionSource__right_edge",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/right_edge",
+      "alias": "right_edge",
+      "owner": "RestrictionEnzymeDigestionSource",
+      "domain_of": [
+        "RestrictionEnzymeDigestionSource"
+      ],
+      "range": "RestrictionSequenceCut",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "simpleSequenceLocation__start",
+      "description": "The starting coordinate (1-based) of the location",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/start",
+      "alias": "start",
+      "owner": "SimpleSequenceLocation",
+      "domain_of": [
+        "SimpleSequenceLocation"
+      ],
+      "range": "integer",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "simpleSequenceLocation__end",
+      "description": "The ending coordinate (1-based) of the location",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/end",
+      "alias": "end",
+      "owner": "SimpleSequenceLocation",
+      "domain_of": [
+        "SimpleSequenceLocation"
+      ],
+      "range": "integer",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "simpleSequenceLocation__strand",
+      "description": "The strand of the location, should be 1 or -1 or null",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/strand",
+      "alias": "strand",
+      "owner": "SimpleSequenceLocation",
+      "domain_of": [
+        "SimpleSequenceLocation"
+      ],
+      "range": "integer",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "assemblyJoinComponent__sequence",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/sequence",
+      "alias": "sequence",
+      "owner": "AssemblyJoinComponent",
+      "domain_of": [
+        "AssemblyJoinComponent"
+      ],
+      "range": "Sequence",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "assemblyJoinComponent__location",
+      "description": "Location of the overlap in the fragment. Might be an empty location (start == end) to indicate blunt join.",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/location",
+      "alias": "location",
+      "owner": "AssemblyJoinComponent",
+      "domain_of": [
+        "AssemblyJoinComponent"
+      ],
+      "range": "SimpleSequenceLocation",
+      "required": true,
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "assemblyJoinComponent__reverse_complemented",
+      "description": "Whether the sequence is reverse complemented in the join",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/reverse_complemented",
+      "alias": "reverse_complemented",
+      "owner": "AssemblyJoinComponent",
+      "domain_of": [
+        "AssemblyJoinComponent"
+      ],
+      "range": "boolean",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "assemblyJoin__left",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/left",
+      "alias": "left",
+      "owner": "AssemblyJoin",
+      "domain_of": [
+        "AssemblyJoin"
+      ],
+      "range": "AssemblyJoinComponent",
+      "required": true,
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "assemblyJoin__right",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/right",
+      "alias": "right",
+      "owner": "AssemblyJoin",
+      "domain_of": [
+        "AssemblyJoin"
+      ],
+      "range": "AssemblyJoinComponent",
+      "required": true,
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "assemblySource__circular",
+      "description": "Whether the assembly is circular or not",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/circular",
+      "alias": "circular",
+      "owner": "AssemblySource",
+      "domain_of": [
+        "AssemblySource"
+      ],
+      "range": "boolean",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "assemblySource__assembly",
+      "description": "The joins between the fragments in the assembly",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/assembly",
+      "multivalued": true,
+      "alias": "assembly",
+      "owner": "AssemblySource",
+      "domain_of": [
+        "AssemblySource"
+      ],
+      "range": "AssemblyJoin",
+      "required": true,
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "pCRSource__forward_primer",
+      "description": "The forward primer used in the PCR",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/forward_primer",
+      "alias": "forward_primer",
+      "owner": "PCRSource",
+      "domain_of": [
+        "PCRSource"
+      ],
+      "range": "Primer",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "pCRSource__reverse_primer",
+      "description": "The reverse primer used in the PCR",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/reverse_primer",
+      "alias": "reverse_primer",
+      "owner": "PCRSource",
+      "domain_of": [
+        "PCRSource"
+      ],
+      "range": "Primer",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "cRISPRSource__guides",
+      "description": "The guide RNAs used in the CRISPR",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/guides",
+      "multivalued": true,
+      "alias": "guides",
+      "owner": "CRISPRSource",
+      "domain_of": [
+        "CRISPRSource"
+      ],
+      "range": "Primer",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "oligoHybridizationSource__forward_oligo",
+      "description": "The forward oligo used in the hybridization",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/forward_oligo",
+      "alias": "forward_oligo",
+      "owner": "OligoHybridizationSource",
+      "domain_of": [
+        "OligoHybridizationSource"
+      ],
+      "range": "Primer",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "oligoHybridizationSource__reverse_oligo",
+      "description": "The reverse oligo used in the hybridization",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/reverse_oligo",
+      "alias": "reverse_oligo",
+      "owner": "OligoHybridizationSource",
+      "domain_of": [
+        "OligoHybridizationSource"
+      ],
+      "range": "Primer",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "cloningStrategy__sequences",
+      "description": "The sequences that are used in the cloning strategy",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/sequences",
+      "multivalued": true,
+      "alias": "sequences",
+      "owner": "CloningStrategy",
+      "domain_of": [
+        "CloningStrategy"
+      ],
+      "range": "Sequence",
+      "required": true,
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "cloningStrategy__sources",
+      "description": "The sources of the sequences that are used in the cloning strategy",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/sources",
+      "multivalued": true,
+      "alias": "sources",
+      "owner": "CloningStrategy",
+      "domain_of": [
+        "CloningStrategy"
+      ],
+      "range": "Source",
+      "required": true,
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "cloningStrategy__primers",
+      "description": "The primers that are used in the cloning strategy",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/primers",
+      "multivalued": true,
+      "alias": "primers",
+      "owner": "CloningStrategy",
+      "domain_of": [
+        "CloningStrategy"
+      ],
+      "range": "Primer",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "cloningStrategy__description",
+      "description": "A description of the cloning strategy",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/description",
+      "alias": "description",
+      "owner": "CloningStrategy",
+      "domain_of": [
+        "CloningStrategy"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "TextFileSequence_sequence_file_format",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/sequence_file_format",
+      "description": "The format of a sequence file",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "sequence_file_format",
+      "domain": "TextFileSequence",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/sequence_file_format",
+      "alias": "sequence_file_format",
+      "owner": "TextFileSequence",
+      "domain_of": [
+        "TextFileSequence"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "sequence_file_format",
+      "range": "SequenceFileFormat",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "TextFileSequence_overhang_crick_3prime",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/overhang_crick_3prime",
+      "description": "Taken from pydna's `dseq::ovhg`An integer describing the length of the crick strand overhang in the 5' of the molecule, or 3' of the crick strand",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "overhang_crick_3prime",
+      "domain": "TextFileSequence",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/overhang_crick_3prime",
+      "ifabsent": "int(0)",
+      "alias": "overhang_crick_3prime",
+      "owner": "TextFileSequence",
+      "domain_of": [
+        "TextFileSequence"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "overhang_crick_3prime",
+      "range": "integer",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "TextFileSequence_overhang_watson_3prime",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/overhang_watson_3prime",
+      "description": "The equivalent of `overhang_crick_3prime` but for the watson strand",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "overhang_watson_3prime",
+      "domain": "TextFileSequence",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/overhang_watson_3prime",
+      "ifabsent": "int(0)",
+      "alias": "overhang_watson_3prime",
+      "owner": "TextFileSequence",
+      "domain_of": [
+        "TextFileSequence"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "overhang_watson_3prime",
+      "range": "integer",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "RestrictionSequenceCut_restriction_enzyme",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/restriction_enzyme",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "exact_mappings": [
+        "http://purl.obolibrary.org/obo/OBI_0000732"
+      ],
+      "is_a": "restriction_enzyme",
+      "domain": "RestrictionSequenceCut",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/restriction_enzyme",
+      "alias": "restriction_enzyme",
+      "owner": "RestrictionSequenceCut",
+      "domain_of": [
+        "RestrictionSequenceCut"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "restriction_enzyme",
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "ManuallyTypedSource_overhang_crick_3prime",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/overhang_crick_3prime",
+      "description": "Taken from pydna's `dseq::ovhg`An integer describing the length of the crick strand overhang in the 5' of the molecule, or 3' of the crick strand",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "overhang_crick_3prime",
+      "domain": "ManuallyTypedSource",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/overhang_crick_3prime",
+      "ifabsent": "int(0)",
+      "alias": "overhang_crick_3prime",
+      "owner": "ManuallyTypedSource",
+      "domain_of": [
+        "ManuallyTypedSource"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "overhang_crick_3prime",
+      "range": "integer",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "ManuallyTypedSource_overhang_watson_3prime",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/overhang_watson_3prime",
+      "description": "The equivalent of `overhang_crick_3prime` but for the watson strand",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "overhang_watson_3prime",
+      "domain": "ManuallyTypedSource",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/overhang_watson_3prime",
+      "ifabsent": "int(0)",
+      "alias": "overhang_watson_3prime",
+      "owner": "ManuallyTypedSource",
+      "domain_of": [
+        "ManuallyTypedSource"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "overhang_watson_3prime",
+      "range": "integer",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "UploadedFileSource_sequence_file_format",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/sequence_file_format",
+      "description": "The format of a sequence file",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "sequence_file_format",
+      "domain": "UploadedFileSource",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/sequence_file_format",
+      "alias": "sequence_file_format",
+      "owner": "UploadedFileSource",
+      "domain_of": [
+        "UploadedFileSource"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "sequence_file_format",
+      "range": "SequenceFileFormat",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "SequenceCutSource_input",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/input",
+      "description": "The sequences that are an input to this source. If the source represents external import of a sequence, it's empty.",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "input",
+      "domain": "SequenceCutSource",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/input",
+      "multivalued": true,
+      "array": {
+        "dimensions": [
+          {
+            "alias": "exact_card",
+            "exact_cardinality": 1,
+            "@type": "DimensionExpression"
+          }
+        ],
+        "@type": "ArrayExpression"
+      },
+      "alias": "input",
+      "owner": "SequenceCutSource",
+      "domain_of": [
+        "SequenceCutSource"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "input",
+      "range": "Sequence",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "PCRSource_input",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/input",
+      "description": "The sequences that are an input to this source. If the source represents external import of a sequence, it's empty.",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "input",
+      "domain": "PCRSource",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/input",
+      "multivalued": true,
+      "array": {
+        "dimensions": [
+          {
+            "alias": "exact_card",
+            "exact_cardinality": 1,
+            "@type": "DimensionExpression"
+          }
+        ],
+        "@type": "ArrayExpression"
+      },
+      "alias": "input",
+      "owner": "PCRSource",
+      "domain_of": [
+        "PCRSource"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "input",
+      "range": "Sequence",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "LigationSource_input",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/input",
+      "description": "The sequences that are an input to this source. If the source represents external import of a sequence, it's empty.",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "input",
+      "domain": "LigationSource",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/input",
+      "multivalued": true,
+      "array": {
+        "dimensions": [
+          {
+            "alias": "min_card",
+            "minimum_cardinality": 1,
+            "@type": "DimensionExpression"
+          }
+        ],
+        "@type": "ArrayExpression"
+      },
+      "alias": "input",
+      "owner": "LigationSource",
+      "domain_of": [
+        "LigationSource"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "input",
+      "range": "Sequence",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "HomologousRecombinationSource_input",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/input",
+      "description": "The sequences that are an input to this source. If the source represents external import of a sequence, it's empty.",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "input",
+      "domain": "HomologousRecombinationSource",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/input",
+      "multivalued": true,
+      "array": {
+        "dimensions": [
+          {
+            "alias": "exact_card",
+            "exact_cardinality": 2,
+            "@type": "DimensionExpression"
+          }
+        ],
+        "@type": "ArrayExpression"
+      },
+      "alias": "input",
+      "owner": "HomologousRecombinationSource",
+      "domain_of": [
+        "HomologousRecombinationSource"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "input",
+      "range": "Sequence",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "GibsonAssemblySource_input",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/input",
+      "description": "The sequences that are an input to this source. If the source represents external import of a sequence, it's empty.",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "input",
+      "domain": "GibsonAssemblySource",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/input",
+      "multivalued": true,
+      "array": {
+        "dimensions": [
+          {
+            "alias": "min_card",
+            "minimum_cardinality": 1,
+            "@type": "DimensionExpression"
+          }
+        ],
+        "@type": "ArrayExpression"
+      },
+      "alias": "input",
+      "owner": "GibsonAssemblySource",
+      "domain_of": [
+        "GibsonAssemblySource"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "input",
+      "range": "Sequence",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "RestrictionAndLigationSource_restriction_enzymes",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/restriction_enzymes",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "exact_mappings": [
+        "http://purl.obolibrary.org/obo/OBI_0000732"
+      ],
+      "is_a": "restriction_enzymes",
+      "domain": "RestrictionAndLigationSource",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/restriction_enzymes",
+      "multivalued": true,
+      "alias": "restriction_enzymes",
+      "owner": "RestrictionAndLigationSource",
+      "domain_of": [
+        "RestrictionAndLigationSource"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "restriction_enzymes",
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "RestrictionAndLigationSource_input",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/input",
+      "description": "The sequences that are an input to this source. If the source represents external import of a sequence, it's empty.",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "input",
+      "domain": "RestrictionAndLigationSource",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/input",
+      "multivalued": true,
+      "array": {
+        "dimensions": [
+          {
+            "alias": "min_card",
+            "minimum_cardinality": 1,
+            "@type": "DimensionExpression"
+          }
+        ],
+        "@type": "ArrayExpression"
+      },
+      "alias": "input",
+      "owner": "RestrictionAndLigationSource",
+      "domain_of": [
+        "RestrictionAndLigationSource"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "input",
+      "range": "Sequence",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "PolymeraseExtensionSource_input",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/input",
+      "description": "The sequences that are an input to this source. If the source represents external import of a sequence, it's empty.",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "input",
+      "domain": "PolymeraseExtensionSource",
+      "slot_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/input",
+      "multivalued": true,
+      "array": {
+        "dimensions": [
+          {
+            "alias": "exact_card",
+            "exact_cardinality": 1,
+            "@type": "DimensionExpression"
+          }
+        ],
+        "@type": "ArrayExpression"
+      },
+      "alias": "input",
+      "owner": "PolymeraseExtensionSource",
+      "domain_of": [
+        "PolymeraseExtensionSource"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "input",
+      "range": "Sequence",
+      "@type": "SlotDefinition"
+    }
+  ],
+  "classes": [
+    {
+      "name": "NamedThing",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/NamedThing",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "mappings": [
+        "schema:Thing"
+      ],
+      "slots": [
+        "id"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://schema.org/Thing",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Sequence",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/Sequence",
+      "description": "Represents a sequence",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "NamedThing",
+      "abstract": true,
+      "slots": [
+        "id",
+        "type"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/Sequence",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "TextFileSequence",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/TextFileSequence",
+      "description": "A sequence (may have features) defined by the content of a text file",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "Sequence",
+      "slots": [
+        "id",
+        "type",
+        "TextFileSequence_sequence_file_format",
+        "TextFileSequence_overhang_crick_3prime",
+        "TextFileSequence_overhang_watson_3prime",
+        "textFileSequence__file_content"
+      ],
+      "slot_usage": {},
+      "attributes": [
+        {
+          "name": "file_content",
+          "range": "string",
+          "@type": "SlotDefinition"
+        }
+      ],
+      "class_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/TextFileSequence",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Primer",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/Primer",
+      "description": "An oligonucleotide or primer",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "Sequence",
+      "slots": [
+        "id",
+        "type",
+        "name",
+        "primer__sequence"
+      ],
+      "slot_usage": {},
+      "attributes": [
+        {
+          "name": "sequence",
+          "range": "string",
+          "pattern": "^[acgtACGT]+$",
+          "@type": "SlotDefinition"
+        }
+      ],
+      "class_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/Primer",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "SequenceCut",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/SequenceCut",
+      "description": "Represents a cut in a DNA sequence",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slots": [
+        "sequenceCut__cut_watson",
+        "sequenceCut__overhang"
+      ],
+      "slot_usage": {},
+      "attributes": [
+        {
+          "name": "cut_watson",
+          "description": "The position of the cut in the watson strand. The cut is made before the base at this position (zero-based), so that cut position 1 cuts after the first base.",
+          "range": "integer",
+          "required": true,
+          "@type": "SlotDefinition"
+        },
+        {
+          "name": "overhang",
+          "description": "The length of the overhang that is left after the cut. It can be negative, same meaning as in pydna's `dseq::ovhg` and biopython's `Bio.Restriction.RestrictionType.ovhg`.",
+          "range": "integer",
+          "required": true,
+          "@type": "SlotDefinition"
+        }
+      ],
+      "class_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/SequenceCut",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "RestrictionSequenceCut",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/RestrictionSequenceCut",
+      "description": "Represents a cut in a DNA sequence that is made by a restriction enzyme",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "SequenceCut",
+      "slots": [
+        "sequenceCut__cut_watson",
+        "sequenceCut__overhang",
+        "RestrictionSequenceCut_restriction_enzyme"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/RestrictionSequenceCut",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Source",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/Source",
+      "description": "Represents the source of a sequence",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "NamedThing",
+      "abstract": true,
+      "slots": [
+        "id",
+        "input",
+        "output",
+        "type"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/Source",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "ManuallyTypedSource",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/ManuallyTypedSource",
+      "description": "Represents the source of a sequence that is manually typed by the user",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "Source",
+      "slots": [
+        "id",
+        "input",
+        "output",
+        "type",
+        "ManuallyTypedSource_overhang_crick_3prime",
+        "ManuallyTypedSource_overhang_watson_3prime",
+        "manuallyTypedSource__user_input",
+        "manuallyTypedSource__circular"
+      ],
+      "slot_usage": {},
+      "attributes": [
+        {
+          "name": "user_input",
+          "range": "string",
+          "required": true,
+          "pattern": "^[acgtACGT]+$",
+          "@type": "SlotDefinition"
+        },
+        {
+          "name": "circular",
+          "description": "Whether the sequence is circular or not",
+          "range": "boolean",
+          "@type": "SlotDefinition"
+        }
+      ],
+      "class_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/ManuallyTypedSource",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "UploadedFileSource",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/UploadedFileSource",
+      "description": "Represents the source of a sequence that is uploaded as a file",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "Source",
+      "slots": [
+        "id",
+        "input",
+        "output",
+        "type",
+        "UploadedFileSource_sequence_file_format",
+        "uploadedFileSource__file_name",
+        "uploadedFileSource__index_in_file",
+        "uploadedFileSource__circularise"
+      ],
+      "slot_usage": {},
+      "attributes": [
+        {
+          "name": "file_name",
+          "description": "The name of the file",
+          "range": "string",
+          "@type": "SlotDefinition"
+        },
+        {
+          "name": "index_in_file",
+          "description": "The index of the sequence in the file",
+          "range": "integer",
+          "@type": "SlotDefinition"
+        },
+        {
+          "name": "circularise",
+          "description": "Whether the sequence should be circularised (FASTA only)",
+          "range": "boolean",
+          "@type": "SlotDefinition"
+        }
+      ],
+      "class_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/UploadedFileSource",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "RepositoryIdSource",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/RepositoryIdSource",
+      "description": "Represents the source of a sequence that is identified by a repository id",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "Source",
+      "slots": [
+        "id",
+        "input",
+        "output",
+        "type",
+        "repositoryIdSource__repository_name",
+        "repositoryIdSource__repository_id"
+      ],
+      "slot_usage": {},
+      "attributes": [
+        {
+          "name": "repository_name",
+          "range": "RepositoryName",
+          "required": true,
+          "@type": "SlotDefinition"
+        },
+        {
+          "name": "repository_id",
+          "description": "The id of the sequence in the repository",
+          "range": "string",
+          "required": true,
+          "@type": "SlotDefinition"
+        }
+      ],
+      "class_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/RepositoryIdSource",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "AddGeneIdSource",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/AddGeneIdSource",
+      "description": "Represents the source of a sequence that is identified by an AddGene id",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "RepositoryIdSource",
+      "slots": [
+        "id",
+        "input",
+        "output",
+        "type",
+        "repositoryIdSource__repository_name",
+        "repositoryIdSource__repository_id",
+        "sequence_file_url",
+        "addGeneIdSource__addgene_sequence_type"
+      ],
+      "slot_usage": {},
+      "attributes": [
+        {
+          "name": "addgene_sequence_type",
+          "range": "AddGeneSequenceType",
+          "@type": "SlotDefinition"
+        }
+      ],
+      "class_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/AddGeneIdSource",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "GenomeCoordinatesSource",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/GenomeCoordinatesSource",
+      "description": "Represents the source of a sequence that is identified by genome coordinates, requested from NCBI",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "Source",
+      "slots": [
+        "id",
+        "input",
+        "output",
+        "type",
+        "genomeCoordinatesSource__assembly_accession",
+        "genomeCoordinatesSource__sequence_accession",
+        "genomeCoordinatesSource__locus_tag",
+        "genomeCoordinatesSource__gene_id",
+        "genomeCoordinatesSource__start",
+        "genomeCoordinatesSource__end",
+        "genomeCoordinatesSource__strand"
+      ],
+      "slot_usage": {},
+      "attributes": [
+        {
+          "name": "assembly_accession",
+          "description": "The accession of the assembly",
+          "range": "string",
+          "@type": "SlotDefinition"
+        },
+        {
+          "name": "sequence_accession",
+          "description": "The accession of the sequence",
+          "range": "string",
+          "required": true,
+          "@type": "SlotDefinition"
+        },
+        {
+          "name": "locus_tag",
+          "description": "The locus tag of the sequence",
+          "range": "string",
+          "@type": "SlotDefinition"
+        },
+        {
+          "name": "gene_id",
+          "description": "The gene id of the sequence",
+          "range": "integer",
+          "@type": "SlotDefinition"
+        },
+        {
+          "name": "start",
+          "description": "The starting coordinate (1-based) of the sequence in the sequence accession",
+          "range": "integer",
+          "required": true,
+          "@type": "SlotDefinition"
+        },
+        {
+          "name": "end",
+          "description": "The ending coordinate (1-based) of the sequence in the sequence accession",
+          "range": "integer",
+          "required": true,
+          "@type": "SlotDefinition"
+        },
+        {
+          "name": "strand",
+          "description": "The strand of the sequence in the sequence accession, should be 1 or -1",
+          "range": "integer",
+          "required": true,
+          "@type": "SlotDefinition"
+        }
+      ],
+      "class_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/GenomeCoordinatesSource",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "SequenceCutSource",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/SequenceCutSource",
+      "description": "Represents the source of a sequence that is a subfragment of another sequence, generated by sequence cutting.",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "Source",
+      "slots": [
+        "id",
+        "output",
+        "type",
+        "sequenceCutSource__left_edge",
+        "sequenceCutSource__right_edge",
+        "SequenceCutSource_input"
+      ],
+      "slot_usage": {},
+      "attributes": [
+        {
+          "name": "left_edge",
+          "range": "SequenceCut",
+          "inlined": true,
+          "@type": "SlotDefinition"
+        },
+        {
+          "name": "right_edge",
+          "range": "SequenceCut",
+          "inlined": true,
+          "@type": "SlotDefinition"
+        }
+      ],
+      "class_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/SequenceCutSource",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "RestrictionEnzymeDigestionSource",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/RestrictionEnzymeDigestionSource",
+      "description": "Represents the source of a sequence that is a subfragment of another sequence, generated by sequence cutting using restriction enzymes.",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "SequenceCutSource",
+      "slots": [
+        "id",
+        "output",
+        "type",
+        "SequenceCutSource_input",
+        "restrictionEnzymeDigestionSource__left_edge",
+        "restrictionEnzymeDigestionSource__right_edge"
+      ],
+      "slot_usage": {},
+      "attributes": [
+        {
+          "name": "left_edge",
+          "range": "RestrictionSequenceCut",
+          "inlined": true,
+          "@type": "SlotDefinition"
+        },
+        {
+          "name": "right_edge",
+          "range": "RestrictionSequenceCut",
+          "inlined": true,
+          "@type": "SlotDefinition"
+        }
+      ],
+      "class_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/RestrictionEnzymeDigestionSource",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "SimpleSequenceLocation",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/SimpleSequenceLocation",
+      "description": "Represents a location within a sequence, for now support for ranges only",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slots": [
+        "simpleSequenceLocation__start",
+        "simpleSequenceLocation__end",
+        "simpleSequenceLocation__strand"
+      ],
+      "slot_usage": {},
+      "attributes": [
+        {
+          "name": "start",
+          "description": "The starting coordinate (1-based) of the location",
+          "range": "integer",
+          "required": true,
+          "@type": "SlotDefinition"
+        },
+        {
+          "name": "end",
+          "description": "The ending coordinate (1-based) of the location",
+          "range": "integer",
+          "required": true,
+          "@type": "SlotDefinition"
+        },
+        {
+          "name": "strand",
+          "description": "The strand of the location, should be 1 or -1 or null",
+          "range": "integer",
+          "@type": "SlotDefinition"
+        }
+      ],
+      "class_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/SimpleSequenceLocation",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "AssemblyJoinComponent",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/AssemblyJoinComponent",
+      "description": "Represents a component of a join between two fragments in an assembly",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slots": [
+        "assemblyJoinComponent__sequence",
+        "assemblyJoinComponent__location",
+        "assemblyJoinComponent__reverse_complemented"
+      ],
+      "slot_usage": {},
+      "attributes": [
+        {
+          "name": "sequence",
+          "range": "Sequence",
+          "required": true,
+          "@type": "SlotDefinition"
+        },
+        {
+          "name": "location",
+          "description": "Location of the overlap in the fragment. Might be an empty location (start == end) to indicate blunt join.",
+          "range": "SimpleSequenceLocation",
+          "required": true,
+          "inlined": true,
+          "@type": "SlotDefinition"
+        },
+        {
+          "name": "reverse_complemented",
+          "description": "Whether the sequence is reverse complemented in the join",
+          "range": "boolean",
+          "required": true,
+          "@type": "SlotDefinition"
+        }
+      ],
+      "class_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/AssemblyJoinComponent",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "AssemblyJoin",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/AssemblyJoin",
+      "description": "Represents a joint between two fragments in an assembly",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slots": [
+        "assemblyJoin__left",
+        "assemblyJoin__right"
+      ],
+      "slot_usage": {},
+      "attributes": [
+        {
+          "name": "left",
+          "range": "AssemblyJoinComponent",
+          "required": true,
+          "@type": "SlotDefinition"
+        },
+        {
+          "name": "right",
+          "range": "AssemblyJoinComponent",
+          "required": true,
+          "@type": "SlotDefinition"
+        }
+      ],
+      "class_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/AssemblyJoin",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "AssemblySource",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/AssemblySource",
+      "description": "Represents the source of a sequence that is an assembly of other sequences",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "Source",
+      "slots": [
+        "id",
+        "input",
+        "output",
+        "type",
+        "assemblySource__circular",
+        "assemblySource__assembly"
+      ],
+      "slot_usage": {},
+      "attributes": [
+        {
+          "name": "circular",
+          "description": "Whether the assembly is circular or not",
+          "range": "boolean",
+          "@type": "SlotDefinition"
+        },
+        {
+          "name": "assembly",
+          "description": "The joins between the fragments in the assembly",
+          "multivalued": true,
+          "range": "AssemblyJoin",
+          "required": true,
+          "inlined_as_list": true,
+          "@type": "SlotDefinition"
+        }
+      ],
+      "class_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/AssemblySource",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "PCRSource",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/PCRSource",
+      "description": "Represents the source of a sequence that is generated by PCR",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "AssemblySource",
+      "slots": [
+        "id",
+        "output",
+        "type",
+        "assemblySource__circular",
+        "assemblySource__assembly",
+        "pCRSource__forward_primer",
+        "pCRSource__reverse_primer",
+        "PCRSource_input"
+      ],
+      "slot_usage": {},
+      "attributes": [
+        {
+          "name": "forward_primer",
+          "description": "The forward primer used in the PCR",
+          "range": "Primer",
+          "required": true,
+          "@type": "SlotDefinition"
+        },
+        {
+          "name": "reverse_primer",
+          "description": "The reverse primer used in the PCR",
+          "range": "Primer",
+          "required": true,
+          "@type": "SlotDefinition"
+        }
+      ],
+      "class_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/PCRSource",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "LigationSource",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/LigationSource",
+      "description": "Represents the source of a sequence that is generated by ligation with sticky or blunt ends.",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "AssemblySource",
+      "slots": [
+        "id",
+        "output",
+        "type",
+        "assemblySource__circular",
+        "assemblySource__assembly",
+        "LigationSource_input"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/LigationSource",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "HomologousRecombinationSource",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/HomologousRecombinationSource",
+      "description": "Represents the source of a sequence that is generated by homologous recombination",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "AssemblySource",
+      "slots": [
+        "id",
+        "output",
+        "type",
+        "assemblySource__circular",
+        "assemblySource__assembly",
+        "HomologousRecombinationSource_input"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/HomologousRecombinationSource",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "GibsonAssemblySource",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/GibsonAssemblySource",
+      "description": "Represents the source of a sequence that is generated by Gibson assembly",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "AssemblySource",
+      "slots": [
+        "id",
+        "output",
+        "type",
+        "assemblySource__circular",
+        "assemblySource__assembly",
+        "GibsonAssemblySource_input"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/GibsonAssemblySource",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "RestrictionAndLigationSource",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/RestrictionAndLigationSource",
+      "description": "Represents the source of a sequence that is generated by restriction and ligation",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "AssemblySource",
+      "slots": [
+        "id",
+        "output",
+        "type",
+        "assemblySource__circular",
+        "assemblySource__assembly",
+        "RestrictionAndLigationSource_restriction_enzymes",
+        "RestrictionAndLigationSource_input"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/RestrictionAndLigationSource",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "CRISPRSource",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/CRISPRSource",
+      "description": "Represents the source of a sequence that is generated by CRISPR",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "HomologousRecombinationSource",
+      "slots": [
+        "id",
+        "output",
+        "type",
+        "assemblySource__circular",
+        "assemblySource__assembly",
+        "HomologousRecombinationSource_input",
+        "cRISPRSource__guides"
+      ],
+      "slot_usage": {},
+      "attributes": [
+        {
+          "name": "guides",
+          "description": "The guide RNAs used in the CRISPR",
+          "multivalued": true,
+          "range": "Primer",
+          "required": true,
+          "@type": "SlotDefinition"
+        }
+      ],
+      "class_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/CRISPRSource",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "OligoHybridizationSource",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/OligoHybridizationSource",
+      "description": "Represents the source of a sequence that is generated by oligo hybridization",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "Source",
+      "slots": [
+        "id",
+        "input",
+        "output",
+        "type",
+        "overhang_crick_3prime",
+        "oligoHybridizationSource__forward_oligo",
+        "oligoHybridizationSource__reverse_oligo"
+      ],
+      "slot_usage": {},
+      "attributes": [
+        {
+          "name": "forward_oligo",
+          "description": "The forward oligo used in the hybridization",
+          "range": "Primer",
+          "required": true,
+          "@type": "SlotDefinition"
+        },
+        {
+          "name": "reverse_oligo",
+          "description": "The reverse oligo used in the hybridization",
+          "range": "Primer",
+          "required": true,
+          "@type": "SlotDefinition"
+        }
+      ],
+      "class_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/OligoHybridizationSource",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "PolymeraseExtensionSource",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/PolymeraseExtensionSource",
+      "description": "Represents the source of a sequence that is generated by polymerase extension",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "is_a": "Source",
+      "slots": [
+        "id",
+        "output",
+        "type",
+        "PolymeraseExtensionSource_input"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/PolymeraseExtensionSource",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "CloningStrategy",
+      "definition_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/CloningStrategy",
+      "description": "Represents a cloning strategy",
+      "from_schema": "https://w3id.org/genestorian/ShareYourCloning_LinkML",
+      "slots": [
+        "cloningStrategy__sequences",
+        "cloningStrategy__sources",
+        "cloningStrategy__primers",
+        "cloningStrategy__description"
+      ],
+      "slot_usage": {},
+      "attributes": [
+        {
+          "name": "sequences",
+          "description": "The sequences that are used in the cloning strategy",
+          "multivalued": true,
+          "range": "Sequence",
+          "required": true,
+          "inlined_as_list": true,
+          "@type": "SlotDefinition"
+        },
+        {
+          "name": "sources",
+          "description": "The sources of the sequences that are used in the cloning strategy",
+          "multivalued": true,
+          "range": "Source",
+          "required": true,
+          "inlined_as_list": true,
+          "@type": "SlotDefinition"
+        },
+        {
+          "name": "primers",
+          "description": "The primers that are used in the cloning strategy",
+          "multivalued": true,
+          "range": "Primer",
+          "inlined_as_list": true,
+          "@type": "SlotDefinition"
+        },
+        {
+          "name": "description",
+          "description": "A description of the cloning strategy",
+          "range": "string",
+          "@type": "SlotDefinition"
+        }
+      ],
+      "class_uri": "https://w3id.org/genestorian/ShareYourCloning_LinkML/CloningStrategy",
+      "@type": "ClassDefinition"
+    }
+  ],
+  "metamodel_version": "1.7.0",
+  "source_file": "shareyourcloning_linkml.yaml",
+  "source_file_date": "2024-06-12T09:12:49",
+  "source_file_size": 15852,
+  "generation_date": "2024-06-12T09:13:15",
+  "@type": "SchemaDefinition",
+  "@context": [
+    "project/jsonld/shareyourcloning_linkml.context.jsonld",
+    "https://w3id.org/linkml/types.context.jsonld",
+    {
+      "@base": "https://w3id.org/genestorian/ShareYourCloning_LinkML/"
+    }
+  ]
+}
