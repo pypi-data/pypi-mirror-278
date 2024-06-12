@@ -1,0 +1,25 @@
+setuptools
+numpy
+pyparsing
+
+[all]
+coverage
+pytest
+pytest-cov
+Sphinx
+numpydoc
+
+[all:platform_system == "Linux"]
+psutil
+
+[doc]
+Sphinx
+numpydoc
+
+[test]
+coverage
+pytest
+pytest-cov
+
+[test:platform_system == "Linux"]
+psutil

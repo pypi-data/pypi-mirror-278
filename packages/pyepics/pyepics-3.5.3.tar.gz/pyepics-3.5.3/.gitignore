@@ -1,0 +1,17 @@
+*.pyc
+*~
+*#
+epics/version.py
+doc/_build
+doc/*.pdf
+tests/.coverage*
+tests/tmp_aostate.txt
+tests/caget.tst
+build
+dist
+NonGit
+venv
+.vscode
+.coverage
+pyepics.egg-info
+epics.egg-info
