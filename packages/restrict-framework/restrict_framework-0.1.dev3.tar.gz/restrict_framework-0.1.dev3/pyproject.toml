@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "restrict_framework"
+version = "0.1.dev3"
+description = "A functional resource-oriented Web framework"
+authors = ["Curtis Schlak <696163-realistschuckle@users.noreply.gitlab.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+starlette = "^0.37.2"
+uvicorn = "^0.30.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+
+
+[tool.poetry.group.docs.dependencies]
+jupyter-book = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
