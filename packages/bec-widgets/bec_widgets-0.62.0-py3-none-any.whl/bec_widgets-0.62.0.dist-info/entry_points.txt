@@ -1,0 +1,2 @@
+[console_scripts]
+bw-generate-cli = bec_widgets.cli.generate_cli:main
