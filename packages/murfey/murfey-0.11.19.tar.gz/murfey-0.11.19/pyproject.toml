@@ -1,0 +1,171 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+    "setuptools >= 40.6.0",
+    "wheel",
+]
+
+[project]
+name = "murfey"
+version = "0.11.19"
+description = "Client-Server architecture hauling Cryo-EM data"
+readme = "README.md"
+keywords = [
+    "",
+]
+license = {file = "LICENSE"}
+maintainers = []
+authors = []
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "defusedxml", # For safely parsing XML files
+    "pydantic<2", # Pip hops between installing v2.7 or v1.10 depending on which of the additional dependencies are requested
+    "requests",
+    "rich",
+    "werkzeug",
+]
+[project.optional-dependencies]
+cicd = [
+    "pytest-cov", # Used by Azure Pipelines for PyTest coverage reports
+]
+client = [
+    "procrunner",
+    "textual==0.42.0",
+    "websocket-client",
+    "xmltodict",
+]
+developer = [
+    "bump2version", # Version control
+    "ipykernel", # Enable interactive coding with VS Code and Jupyter Notebook
+    "pre-commit", # Formatting, linting, type checking, etc.
+    "pytest", # Test code functionality
+]
+server = [
+    # "matplotlib", # For visual statistical analysis of images
+    "cryptography",
+    "fastapi",
+    "ispyb", # Responsible for setting requirements for SQLAlchemy and mysql-connector-python; v10.0.0: sqlalchemy <2, mysql-connector-python >=8.0.32
+    "jinja2",
+    "numpy",
+    "packaging",
+    "passlib",
+    "pillow",
+    "prometheus_client",
+    "python-jose[cryptography]",
+    "readlif", # Specific to cryo-CLEM workflow
+    "sqlmodel",
+    "stomp-py<=8.1.0", # 8.1.1 (released 2024-04-06) doesn't work with our project
+    "tifffile", # Specific to cryo-CLEM workflow
+    "uvicorn[standard]",
+    "zocalo",
+]
+[project.urls]
+Bug-Tracker = "https://github.com/DiamondLightSource/python-murfey/issues"
+Documentation = "https://github.com/DiamondLightSource/python-murfey"
+GitHub = "https://github.com/DiamondLightSource/python-murfey"
+[project.scripts]
+murfey = "murfey.client:run"
+"murfey.add_user" = "murfey.cli.add_user:run"
+"murfey.create_db" = "murfey.cli.create_db:run"
+"murfey.db_sql" = "murfey.cli.murfey_db_sql:run"
+"murfey.decrypt_password" = "murfey.cli.decrypt_db_password:run"
+"murfey.generate_key" = "murfey.cli.generate_crypto_key:run"
+"murfey.generate_password" = "murfey.cli.generate_db_password:run"
+"murfey.lif_to_tiff" = "murfey.cli.lif_to_tiff:run"
+"murfey.server" = "murfey.server:run"
+"murfey.sessions" = "murfey.cli.db_sessions:run"
+"murfey.simulate" = "murfey.cli.dummy:run"
+"murfey.spa_inject" = "murfey.cli.inject_spa_processing:run"
+"murfey.spa_ispyb_entries" = "murfey.cli.spa_ispyb_messages:run"
+"murfey.tiff_to_stack" = "murfey.cli.tiff_to_stack:run"
+"murfey.transfer" = "murfey.cli.transfer:run"
+[project.entry-points."murfey.workflows"]
+"lif_to_tiff" = "murfey.workflows.lif_to_tiff:zocalo_cluster_request"
+"tiff_to_stack" = "murfey.workflows.tiff_to_stack:zocalo_cluster_request"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+zip-safe = false
+
+[tool.setuptools.package-data]
+"murfey.client.tui" = ["*.css"]
+
+[tool.setuptools.packages.find]
+where = ["src", "tests"]
+
+[tool.isort]
+profile = "black"
+
+[tool.flake8]
+# Flake8-pyproject allows TOML file settings to be read into Flake8
+# URL: https://pypi.org/project/Flake8-pyproject/
+select = [
+    "C4",
+    "E401",
+    "E711",
+    "E712",
+    "E713",
+    "E714",
+    "E721",
+    "E722",
+    "E901",
+    "F401",
+    "F402",
+    "F403",
+    "F405",
+    "F541",
+    "F631",
+    "F632",
+    "F633",
+    "F811",
+    "F812",
+    "F821",
+    "F822",
+    "F841",
+    "F901",
+    "W191",
+    "W291",
+    "W292",
+    "W293",
+    "W602",
+    "W603",
+    "W604",
+    "W605",
+    "W606",
+]
+ignore = [
+    "E203",
+    "E266",
+    "E501",
+    "W503",
+]
+max-line-length = "88"
+
+[tool.pyproject-fmt]
+inputs = "pyproject.toml"
+check = false
+indent = 4
+keep_full_version = true
+max-supported-python = "3.12"
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+
+[tool.mypy]
+disable_error_code = [
+    "annotation-unchecked",  # Notification that the bodies of untyped functions aren't checked. Not critical
+    "import-untyped",  # Error for missing library stubs. Not critical
+]
