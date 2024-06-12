@@ -1,0 +1,104 @@
+[tool.poetry]
+name = "{{ project_name }}"
+version = "0.1.0"
+description = "{{ project_description }}"
+authors = ["{{ author }}"]
+{% if project_license %}license = "{{ project_license }}"
+{% endif -%}
+package-mode = {{ is_pypi_package }}
+readme = "README.md"
+
+
+[[tool.poetry.source]]
+name = "tuna"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+priority = "primary"
+
+[tool.poetry.dependencies]
+{% if need_logs %}loguru = "^0.7.2"
+{% endif -%}
+python = "^{{ python_version }}"
+
+[tool.poetry.group.dev.dependencies]
+{% if need_tests %}pytest = "^8.2.1"
+{% endif -%}
+mypy = "^1.10.0"
+isort = "^5.13.2"
+black = "^24.4.2"
+pre-commit-hooks = "^4.6.0"
+pre-commit = "^3.7.1"
+commitizen = "^3.27.0"
+
+[tool.black]
+line-length = 99
+target-version = ["py311", "py312"]
+include = '\.pyi?$'
+extend-exclude = '''
+'''
+
+[tool.mypy]
+strict = true
+files = ["{{ project_src_name }}"{% if need_tests %}, "tests"{% endif -%}]
+pretty = true
+
+[tool.isort]
+profile = "black"
+line_length = 99
+length_sort = true
+skip_gitignore = true
+src_paths = ["{{ project_src_name }}"{% if need_tests %}, "tests"{% endif -%}]
+extra_standard_library = ["typing_extensions"]
+multi_line_output = 3
+add_imports = ["from __future__ import annotations"]
+color_output = true
+length_sort_straight = true
+lines_after_imports = 2
+extend_skip = [".md", ".json", ".yml", ".yaml", ".toml", ".dockerignore", ".gitignore", ".template"]
+
+[tool.ruff]
+line-length = 99
+show-fixes = true
+target-version = "py311"
+src = ["{{ project_src_name }}"{% if need_tests %}, "tests"{% endif -%}]
+
+[tool.ruff.lint]
+select = [
+    "F",  # Pyflakes
+    "W",  # pycodestyle warnings
+    "E",  # pycodestyle errors
+    "UP",  # pyupgrade
+    "ASYNC",  # flake8-async
+    "C4",  # flake8-comprehensions
+    "T10",  # flake8-debugger
+    "T20",  # flake8-print
+    "PYI",  # flake8-pyi
+    {% if need_tests %}"PT",  # flake8-pytest-style
+    {% endif -%}
+    "Q",  # flake8-quotes
+    "RUF"  # Ruff-specific rules
+]
+ignore = [
+    "E402",  # module-import-not-at-top-of-file
+    "UP037",  # quoted-annotation
+    "RUF001",  # ambiguous-unicode-character-string
+    "RUF002",  # ambiguous-unicode-character-docstring
+    "RUF003",  # ambiguous-unicode-character-comment
+    "T201",  # print found
+]
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "double"
+multiline-quotes = "double"
+docstring-quotes = "double"
+
+{% if need_tests %}[tool.ruff.lint.flake8-pytest-style]
+fixture-parentheses = false
+mark-parentheses = false
+
+{% endif -%}
+[tool.ruff.format]
+quote-style = "double"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
