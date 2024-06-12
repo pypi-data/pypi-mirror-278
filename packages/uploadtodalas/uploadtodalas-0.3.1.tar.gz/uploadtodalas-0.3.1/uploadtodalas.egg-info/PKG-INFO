@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: uploadtodalas
+Version: 0.3.1
+Summary: Пакет для загрузки файлов в сервис Dalas, включает как методы для обычных пользователей, так и методы для панелей
+Home-page: https://api.uploadgroup.site/docs
+Author: Dalas
+Author-email: email@uploadgroup.site
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+## Описание
+
+`uploadtodalas` — это простой пакет для загрузки файлов на сервис Dalas. Он поддерживает асинхронную и синхронную загрузку файлов. Пакет включает методы как для панелей, так и для простых пользователей.
+
+## Установка
+
+Вы можете установить этот пакет с помощью pip:
+
+Для Windows:
+```bash
+pip install uploadtodalas
+```
+
+Для Linux:
+```bash
+pip3 install uploadtodalas
+```
+
+## Пример использования
+
+Ниже приведены примеры использования различных функций, доступных в пакете `uploadtodalas`.
+**Все функции, доступные в пакете `uploadtodalas`, имеют внутрикодовую документацию, пажалуйста ознакомьтесь с ней, а также с документацией изложенной на апи ресурсах. [Пользователям](https://api.uploadgroup.site/docs), [Панелям](https://api.dalas.pw/docs)**
+
+### Инициализация клиента
+
+Для начала работы необходимо создать экземпляр класса `UploadToDalas` и передать API ключ (если он у вас есть):
+
+```python
+from uploadtodalas.upload import UploadToDalas
+
+client = UploadToDalas(api_key='ваш_api_ключ')  # API ключ необходим только для панелей
+```
+
+### Асинхронная загрузка файла
+
+```python
+import asyncio
+
+async def main():
+    await client.AsyncUploadToDalas(file_path='/path/to/your/file.zip', seller_id=1111, shedul_in_hours=0)
+
+asyncio.run(main())
+```
+
+### Синхронная загрузка файла
+
+```python
+client.SyncUploadToDalas(file_path='/path/to/your/file.zip', seller_id=1111, shedul_in_hours=0)
+```
+
+### Пример использования методов для панелей
+**Все функции, доступные в пакете `uploadtodalas`, имеют внутрикодовую документацию, пажалуйста ознакомьтесь с ней, а также с документацией изложенной на апи ресурсах. [Пользователям](https://api.uploadgroup.site/docs), [Панелям](https://api.dalas.pw/docs)**
+
+```python
+import asyncio
+
+async def main():
+    seller_id = await client.PannelAsyncGetId(telegram_id=123456789)
+    if seller_id:
+        await client.PannelAsyncUpload(file_path='/path/to/your/file.zip', seller_id=seller_id, shedul_in_hours=0, strict=True)
+
+asyncio.run(main())
+```
