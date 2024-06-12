@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: cosmic-counsel
+Version: 0.1.11
+Summary: Space R&D
+Home-page: https://www.boozallen.com/
+Author: Collin Paran, Eric Willis
+License: Apache 2.0
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: torch ==2.3.0+cu121
+Requires-Dist: transformers ==4.41.2
+Requires-Dist: mdurl ==0.1.2
+Requires-Dist: numpy ==1.25.2
+Requires-Dist: h5py ==3.9.0
+Requires-Dist: pandas ==2.0.3
+Requires-Dist: uvicorn ==0.30.1
+Requires-Dist: bitsandbytes ==0.43.1
+Requires-Dist: accelerate ==0.31.0
+Requires-Dist: sentence-transformers ==3.0.1
+Requires-Dist: nltk ==3.8.1
+Requires-Dist: PyPDF2 ==3.0.1
+Requires-Dist: pydantic ==2.7.3
+Requires-Dist: requests ==2.31.0
+Requires-Dist: tensorflow ==2.15.0
+
+# Description
+
+Space related R&D
+
+# Initialize the server
+
+```
+python -m cosmic_counsel -d /data
+```
+
+# Ask questions
+
+```bash
+cosmic-counsel -q "What is your expertise?"
+```
