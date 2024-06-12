@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pywwise
+Version: 0.0.1
+Summary: A comprehensive WAAPI wrapper - fully documented, with auto-completion in mind.
+Home-page: https://github.com/matheusvilano/PyWwise.git
+Author: Matheus Vilano
+Author-email: 
+License: MIT
+Project-URL: Author Website, https://www.matheusvilano.com/
+Project-URL: Git Repository, https://github.com/matheusvilano/PyWwise.git
+Keywords: audiokinetic wwise waapi game audio
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# PyWwise
