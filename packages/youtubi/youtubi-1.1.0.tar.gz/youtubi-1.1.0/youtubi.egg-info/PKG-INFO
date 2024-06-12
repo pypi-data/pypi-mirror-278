@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: youtubi
+Version: 1.1.0
+Summary: Download youtube videos 
+Home-page: https://gitlab.com/isampypi/youtubi
+Author: Mhadhbi Issam
+Author-email: mhadhbixissam@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: pytube
+Requires-Dist: lxml
+Requires-Dist: beautifulsoup4
+
+# youtubi
+
+Download youtube videos python library .
+
+# Install  : 
+```bash
+pip install youtubi
+```
+
+## Example : 
+### Download list of videos urls 
+```python 
+
+from youtubi import process 
+
+urls= """
+https://youtu.be/oaxWxSdytTk?si=DNJOpBMtJyrmaMQR
+https://youtu.be/Ljmv9joEXiM?si=I55FFgGCgsZ3Km8w
+https://youtu.be/NpETkRzAINM?si=MpHEnTkDsuNE8J5K
+https://youtu.be/dsHGy672Occ?si=6GsanDFDafBQ1eaM
+https://youtu.be/qB6K8K4AFWI?si=pilsPHBmP1S4bFFF
+https://youtu.be/T5onNs-D4WA?si=bFmKrgiWa1nzbaiQ
+https://youtu.be/hM1Bk4cEFmg?si=WQlRpNPg6b-67Agd
+https://youtu.be/DPGR_LyDKNE?si=8Yaeww2zxaQ3xSv3
+https://youtu.be/D5hU4ICEB3o?si=HHTbWCo6knD6n5Xp
+"""
+process(urls)
+# process(text, output_path = "./videos")
+```
+### Download list of videos of channel 
+copy outter html of page where plylist is shown in the page , then 
+```python 
+from youtubi import process , get_channel
+
+html_text = "....."
+urls = get_channel(html_text)
+process(urls)
+# process(html_text, output_path = "./videos")
+
+```
+
+### Download list of videos urls for videos page html 
+
+```python 
+from youtubi import process , get_channel , get_videos
+
+html_text = open("file.html").read()
+vidoes_dict = get_videos(html_text)
+print(f"Found {len(vidoes_dict)} videos ")
+urls = list() 
+for k , v in vidoes_dict.items() : 
+    if "Tutorial" in k : 
+        urls.append(v)
+print("Fitred urls = " , len(urls))
+urls = "\n".join(urls)
+process(urls, output_path = "./videos")
+
+```
