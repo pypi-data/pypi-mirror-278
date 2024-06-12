@@ -1,0 +1,3 @@
+include tests/*
+include src/Chimera_Buster/*
+include *.txt
