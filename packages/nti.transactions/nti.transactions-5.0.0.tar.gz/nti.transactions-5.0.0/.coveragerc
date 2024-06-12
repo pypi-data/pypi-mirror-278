@@ -1,0 +1,21 @@
+[run]
+source = nti.transactions
+# New in 5.0; required for the GHA coveralls submission.
+relative_files = True
+
+[report]
+# Coverage is run on Linux under cPython 2 and 3,
+# And pypy. Exclude Windows-specific branches.
+exclude_lines =
+    pragma: no cover
+    def __repr__
+    raise AssertionError
+    raise NotImplementedError
+    if __name__ == .__main__.:
+    if sys.platform == 'win32':
+    if mswindows:
+    if is_windows:
+
+# Local Variables:
+# mode: conf
+# End:

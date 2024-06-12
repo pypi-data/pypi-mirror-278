@@ -1,0 +1,34 @@
+six
+perfmetrics
+setuptools
+transaction>=3.0.0
+zope.cachedescriptors
+zope.exceptions
+zope.interface
+zope.event
+
+[docs]
+Sphinx
+repoze.sphinx.autointerface
+pyhamcrest
+
+[docs:python_version < "3.6"]
+sphinx_rtd_theme
+
+[docs:python_version >= "3.6"]
+furo
+
+[gevent]
+gevent
+
+[pyramid]
+pyramid>=1.2
+
+[test]
+coverage
+nti.testing
+pylint
+pyramid
+zope.component
+zope.testrunner
+ZODB
