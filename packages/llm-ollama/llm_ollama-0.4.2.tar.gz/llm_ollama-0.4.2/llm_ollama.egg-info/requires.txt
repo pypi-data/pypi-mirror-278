@@ -1,0 +1,6 @@
+llm
+ollama
+pydantic>=2
+
+[test]
+pytest
