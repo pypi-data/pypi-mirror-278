@@ -1,0 +1,5 @@
+[cli.plugins.override]
+enabled = true
+
+[connections.test]
+account = "test"
