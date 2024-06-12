@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: secoda-airflow
+Version: 0.0.18
+Summary: Secoda Airflow Provider
+Author: Secoda Engineering
+Author-email: engineering@secoda.co
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: requests >=2.23.0
+Requires-Dist: ruff >=0.4.8
+Requires-Dist: apache-airflow >=2.0.0
+
