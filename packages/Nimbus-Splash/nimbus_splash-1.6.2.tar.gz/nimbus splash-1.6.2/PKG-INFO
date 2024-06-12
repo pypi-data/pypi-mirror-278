@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: Nimbus Splash
+Version: 1.6.2
+Summary: A package to make life easier when using the University of         Bath's cloud computing suite for Orca calculations.
+Home-page: https://github.com/jonkragskow/nimbus_splash
+Author: Jon Kragskow
+Author-email: jgck20@bath.ac.uk
+Project-URL: Bug Tracker, https://github.com/JonKragskow/nimbus_splash/issues
+Project-URL: Documentation, https://www.kragskow.dev/nimbus_splash/index.html
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: xyz_py>=5.11.0
+
+
+Splash - the sound an Orca would make if it had a Bath.
+
+
+
+`nimbus_splash`, or `splash` for short, is a package to make life easier
+when using the University of Bath's `Nimbus` cloud computing suite for Orca
+calculations.
+
+
+
+Please see the `nimbus_splash` documentation for more details.
