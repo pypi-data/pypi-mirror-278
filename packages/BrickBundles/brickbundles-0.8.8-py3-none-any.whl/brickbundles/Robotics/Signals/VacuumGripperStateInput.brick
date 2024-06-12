@@ -1,0 +1,4 @@
+VacuumGripperStateInput is Physics.Signals.Input:
+    type: Physics.Signals.InputOutputType.ControlEvent
+    vacuum_gripper is Robotics.EndEffectors.VacuumGripper
+

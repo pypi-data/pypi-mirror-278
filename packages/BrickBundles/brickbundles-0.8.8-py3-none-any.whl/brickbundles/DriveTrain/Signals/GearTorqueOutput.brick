@@ -1,0 +1,6 @@
+GearTorqueOutput is Physics.Signals.Output:
+    .doc: """
+Emits a ValueOutputSignal where the value is the torque in Nm
+"""
+    type: Physics.Signals.InputOutputType.Torque1D
+    gear is DriveTrain.Gear

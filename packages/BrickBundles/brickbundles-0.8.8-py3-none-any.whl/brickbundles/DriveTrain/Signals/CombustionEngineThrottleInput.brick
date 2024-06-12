@@ -1,0 +1,3 @@
+CombustionEngineThrottleInput is Physics.Signals.Input:
+    type: Physics.Signals.InputOutputType.Percentage
+    combustion_engine is DriveTrain.CombustionEngine
