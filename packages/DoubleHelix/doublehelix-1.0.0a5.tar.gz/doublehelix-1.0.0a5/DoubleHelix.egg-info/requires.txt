@@ -1,0 +1,19 @@
+setuptools
+pefile
+pycurl
+tqdm
+google-cloud-storage
+sphinx
+pytest
+pyinstaller
+PySide6
+jinja2
+vcf_parser
+sentry-sdk
+debugpy
+psutil
+pydantic
+
+[:platform_system == "Windows"]
+doublehelix-external==v0.0.2
+pypiwin32

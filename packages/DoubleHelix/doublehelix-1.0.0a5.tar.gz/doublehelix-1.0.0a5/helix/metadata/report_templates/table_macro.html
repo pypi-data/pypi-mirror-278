@@ -1,0 +1,26 @@
+{% macro build_table(tabular_data) %}
+    <table class="table">
+        {% if tabular_data.horizontal_header %}
+        <thead>
+            <tr>
+                {% for column in tabular_data.horizontal_header %}
+                <th scope="col">{{ column }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        {% endif %}
+        <tbody>
+            {% for row in tabular_data.rows %}
+            <tr>
+                {% if row.vertical_header %}
+                <th scope="row">{{ row.vertical_header }}</th>
+                {% endif %}
+
+                {% for column in row.columns %}
+                <td>{{ column }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endmacro %}
