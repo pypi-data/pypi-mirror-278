@@ -1,0 +1,30 @@
+[project]
+name = "fastdsd"
+version = "1.0.0"
+authors = [
+  { name="Samuel Sledzieski", email="samsl@mit.edu" },
+  { name="Mengfei Cao"},
+  { name="reemagit"}
+]
+license = {file = "LICENSE"}
+description = "Combining DSD (Cao et al. 2013, 2014) runtime optimizations from reemagit for a fast, optimized version of DSD / cDSD"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy",
+    "scipy",
+    "pandas",
+    "networkx",
+]
+
+[project.scripts]
+fastdsd = "fastdsd.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/samsledje/fastDSD"
+Issues = "https://github.com/samsledje/fastDSD/issues"
