@@ -1,0 +1,118 @@
+{
+    "$schema": "https://mintlify.com/schema.json",
+    "anchors": [
+        {
+            "icon": "github",
+            "name": "Code",
+            "url": "https://github.com/PrefectHQ/ControlFlow"
+        },
+        {
+            "icon": "book-open-cover",
+            "name": "Docs",
+            "url": "/"
+        },
+        {
+            "icon": "slack",
+            "name": "Community",
+            "url": "https://prefect.io/slack?utm_source=controlflow&utm_medium=docs"
+        }
+    ],
+    "colors": {
+        "anchors": {
+            "from": "#2D6DF6",
+            "to": "#E44BF4"
+        },
+        "dark": "#2D6DF6",
+        "light": "#E44BF4",
+        "primary": "#2D6DF6"
+    },
+    "favicon": "/assets/ControlFlow.jpg",
+    "footerSocials": {
+        "github": "https://github.com/PrefectHQ/ControlFlow"
+    },
+    "logo": {
+        "dark": "/assets/ControlFlow.jpg",
+        "light": "/assets/ControlFlow.jpg"
+    },
+    "name": "ControlFlow",
+    "navigation": [
+        {
+            "group": "Get Started",
+            "pages": [
+                "introduction",
+                "installation",
+                "tutorial",
+                "concepts"
+            ]
+        },
+        {
+            "group": "Concepts",
+            "pages": [
+                "concepts/tasks",
+                "concepts/flows",
+                "concepts/agents"
+            ]
+        },
+        {
+            "group": "Guides",
+            "pages": [
+                "guides/apis",
+                "guides/execution-modes",
+                "guides/dependencies",
+                "guides/orchestration",
+                "guides/deployment"
+            ]
+        },
+        {
+            "group": "Reference",
+            "pages": [
+                "reference/task-class",
+                "reference/task-decorator"
+            ]
+        },
+        {
+            "group": "Overview",
+            "pages": [
+                "glossary/glossary"
+            ]
+        },
+        {
+            "group": "LLMs",
+            "pages": [
+                "glossary/llm",
+                "glossary/prompt-engineering",
+                "glossary/flow-engineering",
+                "glossary/agentic-workflow",
+                "glossary/fine-tuning"
+            ]
+        },
+        {
+            "group": "ControlFlow",
+            "pages": [
+                "glossary/task",
+                "glossary/flow",
+                "glossary/agent",
+                "glossary/tools",
+                "glossary/dependencies"
+            ]
+        },
+        {
+            "group": "Orchestration",
+            "pages": [
+                "glossary/task-orchestration",
+                "glossary/flow-orchestration",
+                "glossary/workflow"
+            ]
+        }
+    ],
+    "tabs": [
+        {
+            "name": "AI Glossary",
+            "url": "glossary"
+        }
+    ],
+    "topbarCtaButton": {
+        "type": "github",
+        "url": "https://github.com/PrefectHQ/ControlFlow"
+    }
+}
