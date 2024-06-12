@@ -1,0 +1,97 @@
+Metadata-Version: 2.1
+Name: tabswitcher
+Version: 0.1.11
+Summary: A tool for efficient browser tab switching outside the browser
+Home-page: https://github.com/YukiGasai/tabswitcher
+Author: YukiGasai
+Author-email: r.lindede@googlemail.com
+License: AGPL-3.0
+Keywords: tabswitcher,browsertool,tool
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: werkzeug<3.0
+Requires-Dist: fuzzyfinder
+Requires-Dist: PyQt5
+Requires-Dist: schedule
+Requires-Dist: pynput; platform_system == "Windows"
+Requires-Dist: pywin32; platform_system == "Windows"
+Requires-Dist: pyWinhook; platform_system == "Windows"
+
+# TabSwitcher
+
+TabSwitcher is a simple window for switching between tabs in a browser. It uses the [brotab](https://github.com/balta2ar/brotab) CLI and browser extensions as a foundation.
+
+## Requirements
+
+- Python 3.7 or higher
+- BroTab Extension installed in your browser
+  - [Firefox](https://addons.mozilla.org/de/firefox/addon/brotab/)
+  - [Chrome](https://chromewebstore.google.com/detail/brotab/mhpeahbikehnfkfnmopaigggliclhmnc)
+- [fzf](https://github.com/junegunn/fzf) (optional, but recommended for enhanced search)
+
+## Installation
+
+1. Install the TabSwitcher package via pip:
+
+```bash
+pip install tabswitcher
+```
+
+2. Install the active tab logger task
+
+```bash
+tabswitcher --install
+```
+
+3. Restart the browser
+
+When using Ubuntu some extra setup is required.
+
+```bash
+sudo apt-get install qtbase5-dev libxcb-xinerama0
+```
+
+## Usage
+
+Upon opening TabSwitcher, your most recently active tabs will be displayed in the list.
+
+Typing in the input field will initiate a fuzzy search of all your open tabs by title.
+
+You can focus a tab by clicking an item in the list.
+
+Holding Shift while clicking will also bring the browser window into focus.
+
+You can also navigate using Arrow Keys, Tab and Enter.
+
+Tabs can also be selected using the keyboard shortcuts Ctrl + 1-9.
+
+Holding Shift while using these shortcuts will also bring the browser window into focus.
+
+Pressing Backspace on a selected Tab will close it.
+
+### Special Input
+
+Starting a input wiht `>` will search the html code of you open tabs for the input.
+
+Starting a input with `#` will display your bookmarks instead of open tabs.
+
+Starting a input with `?` will open a new tab with the input text in a Google search.
+
+Starting a input with `!` will attempt to open a new tab with the website page (requires a [Redirect Extension](https://addons.mozilla.org/de/firefox/addon/skip-redirect/)).
+
+`Ctrl + ,` will open the settings file.
+
+`Ctrl + q` or `Escape` will close the window.
+
+## Known Issues
+
+- Currently, TabSwitcher only supports Windows and limited on Ubuntu.

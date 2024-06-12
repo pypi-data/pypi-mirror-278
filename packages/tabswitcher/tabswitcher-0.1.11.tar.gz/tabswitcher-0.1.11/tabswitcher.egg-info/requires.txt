@@ -1,0 +1,9 @@
+werkzeug<3.0
+fuzzyfinder
+PyQt5
+schedule
+
+[:platform_system == "Windows"]
+pynput
+pywin32
+pyWinhook
