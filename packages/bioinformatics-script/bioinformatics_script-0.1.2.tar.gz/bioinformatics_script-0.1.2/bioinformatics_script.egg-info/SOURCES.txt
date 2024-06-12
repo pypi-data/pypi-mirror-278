@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+AnnotationCheckerWithStructure/__init__.py
+AnnotationCheckerWithStructure/main.py
+bioinformatics_script.egg-info/PKG-INFO
+bioinformatics_script.egg-info/SOURCES.txt
+bioinformatics_script.egg-info/dependency_links.txt
+bioinformatics_script.egg-info/entry_points.txt
+bioinformatics_script.egg-info/requires.txt
+bioinformatics_script.egg-info/top_level.txt
+tests/test_main.py

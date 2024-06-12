@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: bioinformatics_script
+Version: 0.1.2
+Summary: A simple bioinformatics script.
+Home-page: https://github.com/Andy-B-123/AnnotationCheckerWithStructure
+Author: Andreas Bachler
+Author-email: Andy.Bachler@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas>=2.0.3
+
+# bioinformatics_script
+
+A simple bioinformatics script.
+
+## Installation
+
+You can install the released version of bioinformatics_script from PyPI:
+
+```sh
+pip install bioinformatics_script
+```
+
+Usage
+
+```bioinformatics_script```
+
