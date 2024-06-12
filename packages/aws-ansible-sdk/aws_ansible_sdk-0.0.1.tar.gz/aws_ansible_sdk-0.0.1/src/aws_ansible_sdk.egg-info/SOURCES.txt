@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/__init__.py
+src/cloudformation.py
+src/aws_ansible_sdk.egg-info/PKG-INFO
+src/aws_ansible_sdk.egg-info/SOURCES.txt
+src/aws_ansible_sdk.egg-info/dependency_links.txt
+src/aws_ansible_sdk.egg-info/top_level.txt
