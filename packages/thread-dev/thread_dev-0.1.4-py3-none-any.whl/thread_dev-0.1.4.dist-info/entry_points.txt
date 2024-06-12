@@ -1,0 +1,3 @@
+[console_scripts]
+jupyter-thread = thread:launch_instance
+thread = thread:launch_instance
