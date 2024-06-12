@@ -1,0 +1,52 @@
+[tool.poetry]
+name = "dynabench"
+version = "0.3.3"
+description = "Benchmark dataset for learning dynamical systems from data"
+authors = ["Andrzej Dulny <andzej.dulny@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://dynabench.github.io/about.html"
+documentation = "https://dynabench.github.io/"
+repository = "https://github.com/badulion/dynabench/"
+
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+numpy = "^1.26.4"
+requests = "^2.31.0"
+tqdm = "^4.66.2"
+h5py = "^3.11.0"
+joblib = "^1.4.2"
+matplotlib = "<=3.8"
+
+[tool.poetry.group.dev.dependencies]
+Sphinx = "^7.2.6"
+pip-tools = "^7.4.1"
+numpydoc = "^1.7.0"
+sphinx-conestack-theme = "^1.0b3"
+sphinx-rtd-theme = "^2.0.0"
+sphinx-design = "^0.5.0"
+ipykernel = "^6.29.4"
+
+[tool.poetry.group.fourier]
+optional = true
+
+[tool.poetry.group.fourier.dependencies]
+dedalus = "^3.0.2"
+
+[tool.poetry.group.pypde]
+optional = false
+
+[tool.poetry.group.pypde.dependencies]
+sympy = "^1.12"
+findiff = "^0.10.0"
+py-pde = "^0.38.0"
+
+
+[tool.poetry.group.nn.dependencies]
+torch = "^2.3.0"
+torchdiffeq = "^0.2.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
