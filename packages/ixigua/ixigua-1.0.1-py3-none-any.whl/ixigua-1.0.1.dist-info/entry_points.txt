@@ -1,0 +1,3 @@
+[console_scripts]
+ixigua = ixigua.bin.main:main
+

@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: ixigua
+Version: 1.0.1
+Summary: Download videos from ixigua.com
+Home-page: https://github.com/suqingdong/ixigua
+Author: suqingdong
+Author-email: suqingdong1114@gmail.com
+License: MIT License
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries
+Description-Content-Type: text/markdown
+Requires-Dist: click
+Requires-Dist: webrequests
+
+# Download videos from ixigua.com
+
+### Installation
+
+```bash
+python3 -m pip install ixigua
+```
+
+### Usage
+
+```bash
+ixigua --help
+```
+
+### Examples
+
+1. download a single video
+
+```bash
+# item_url, item_id or pseries_url+item_id
+ixigua https://www.ixigua.com/7359024563227656714
+ixigua https://www.ixigua.com/7034201007231861256?id=7359024563227656714
+ixigua 7359024563227656714
+```
+
+2. download all videos in a playlist
+
+```bash
+# pseries_url, pseries_id or pseries_url+item_id
+ixigua https://www.ixigua.com/7034201007231861256?id=7359024563227656714 --playlist
+ixigua https://www.ixigua.com/7034201007231861256 --playlist
+ixigua 7034201007231861256 --playlist
+```
+
+3. more options
+
+```bash
+# dryrun mode
+ixigua 7359024563227656714 --dryrun
+ixigua 7359024563227656714 --dryrun --playlist
+
+# download part of the playlist
+ixigua 7359024563227656714 --playlist --playlist-start 10 --playlist-end 15
+
+# prefix with rank number
+ixigua 7359024563227656714 --playlist --rank-prefix
+
+# prefix with index number
+ixigua 7359024563227656714 --playlist --playlist-start 10  --index-prefix 11
+
+# specify the output directory
+ixigua 7359024563227656714 -O out
+
+# specify a definition
+ixigua 7359024563227656714 --definition 480p
+```
+
+
