@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: django_admin_tree
+Version: 0.1.0
+Summary: Test description
+Home-page: https://github.com/vovababay/django-admin-tree
+Author: Vladimir Babaev.
+Author-email: vladimir.babaev.12@gmail.com
+License: MIT License
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+License-File: LICENSE
+Requires-Dist: Django>=4.2.0
+
+django-admin-tree
+=================
+
+https://github.com/vovababay/django_admin_tree
+
+
+Description
+-----------
+
+*Django Admin addon to navigate tree*
