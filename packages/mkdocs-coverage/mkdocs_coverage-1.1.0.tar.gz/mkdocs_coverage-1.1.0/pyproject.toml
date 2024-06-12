@@ -1,0 +1,69 @@
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[project]
+name = "mkdocs-coverage"
+description = "MkDocs plugin to integrate your coverage HTML report into your site."
+authors = [
+    { name = "Timothée Mazzucotelli", email = "dev@pawamoy.fr" },
+]
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = []
+dynamic = []
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Documentation",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+dependencies = [
+    "mkdocs>=1.6",
+]
+version = "1.1.0"
+
+[project.license]
+text = "ISC"
+
+[project.urls]
+Homepage = "https://pawamoy.github.io/mkdocs-coverage"
+Documentation = "https://pawamoy.github.io/mkdocs-coverage"
+Changelog = "https://pawamoy.github.io/mkdocs-coverage/changelog"
+Repository = "https://github.com/pawamoy/mkdocs-coverage"
+Issues = "https://github.com/pawamoy/mkdocs-coverage/issues"
+Discussions = "https://github.com/pawamoy/mkdocs-coverage/discussions"
+Gitter = "https://gitter.im/mkdocs-coverage/community"
+Funding = "https://github.com/sponsors/pawamoy"
+
+[project.entry-points."mkdocs.plugins"]
+coverage = "mkdocs_coverage.plugin:MkDocsCoveragePlugin"
+
+[tool.pdm.version]
+source = "scm"
+
+[tool.pdm.build]
+package-dir = "src"
+editable-backend = "editables"
+source-includes = [
+    "share",
+]
+
+[tool.pdm.build.wheel-data]
+data = [
+    { path = "share/**/*", relative-to = "." },
+]
