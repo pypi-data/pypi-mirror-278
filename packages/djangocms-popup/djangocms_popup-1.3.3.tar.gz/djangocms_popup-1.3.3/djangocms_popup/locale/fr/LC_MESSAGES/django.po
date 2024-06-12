@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-11 16:44+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Popup"
+msgstr "Popup"
+
+msgid "Popup list"
+msgstr "Liste des popups"
+
+msgid "Display after X seconds"
+msgstr "Afficher après X secondes"
+
+msgid "Allow the popup to be reopened if it is closed"
+msgstr "Permettre à la popup d'être réouverte si elle est fermée"
+
+msgid "Popup template"
+msgstr "Modèle de popup"
+
+msgid "published"
+msgstr "publié"
+
+msgid "draft"
+msgstr "brouillon"
+
+msgid "(unknown)"
+msgstr "(inconnu)"
+
+msgid "Page or static placeholder"
+msgstr "Page ou placeholder statique"
+
+msgid "Popups"
+msgstr "Popups"
+
+msgid "Popup ({})"
+msgstr "Popup ({})"
+
+msgid "Bottom right popup"
+msgstr "Popup en bas à droite"

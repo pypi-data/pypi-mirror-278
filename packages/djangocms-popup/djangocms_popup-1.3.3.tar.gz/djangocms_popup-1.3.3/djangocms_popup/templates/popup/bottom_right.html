@@ -1,0 +1,127 @@
+{% load cms_tags sekizai_tags %}
+
+
+{% addtoblock "css" %}
+  <style type="text/css">
+    .djangocms-popup{
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 0 15px 0 #ddd;
+      visibility: hidden;
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+      width: 30%;
+      max-width: 500px;
+      padding: 10px;
+    }
+    .djangocms-popup span{
+      font-size: 1.2em;
+    }
+    .djangocms-popup-close{
+      cursor: pointer;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      visibility: hidden;
+    }
+
+    .djangocms-popup-close::before, .djangocms-popup-reopen::before{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+
+    .djangocms-popup-close::before{
+      content: "\000d7";
+    }
+
+    .djangocms-popup-reopen{
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+      top: auto;
+    }
+
+    .djangocms-popup-reopen::before{
+      color: white;
+      content: "\2139";
+      background-color: #454;
+      box-shadow:  0 0 3px 0 #aba;
+    }
+
+  </style>
+{% endaddtoblock %}
+
+
+{% addtoblock "js" %}
+  <script type="text/javascript">
+    let popup = document.getElementById("popup_{{instance.id}}");
+    let popup_close_button = document.getElementById("popup_close_{{instance.id}}")
+
+    popup_localstorage = window.localStorage;
+
+        // if not defined = set to true
+    if (popup_localstorage.getItem('popup_is_open_{{instance.id}}') == null){
+      popup_localstorage.setItem('popup_is_open_{{instance.id}}', "true");
+    }
+
+        // show open/close button if we have popup_is_open to false and can_reopen_popup to true
+    {% if instance.can_reopen_popup %}
+      if (popup_localstorage.getItem('popup_is_open_{{instance.id}}') == "false"){
+        popup_close_button.style.visibility = "visible";
+        popup_close_button.classList.add("djangocms-popup-reopen");
+      }
+    {% endif %}
+
+
+        // show/hide event listener
+    popup_close_button.addEventListener("click", click_show_hide_popup);
+    if (popup_localstorage.getItem('popup_is_open_{{instance.id}}') == "true"){
+      setTimeout(function(){
+        display_popup();
+      }, {{instance.display_delay}}*1000);
+    }
+
+        // show/hide function
+    function click_show_hide_popup(){
+      if (popup_localstorage.getItem('popup_is_open_{{instance.id}}') == "true"){
+        popup_localstorage.setItem('popup_is_open_{{instance.id}}', "false");
+        hide_popup();
+      }
+      else{
+        popup_localstorage.setItem('popup_is_open_{{instance.id}}', "true");
+        display_popup();
+      }
+    }
+
+    function display_popup(){
+      popup.style.visibility = "visible";
+      popup_close_button.style.visibility = "visible";
+      {% if instance.can_reopen_popup %}
+        popup_close_button.classList.remove("djangocms-popup-reopen");
+      {% endif %}
+    }
+
+    function hide_popup(){
+      popup.style.visibility = "hidden";
+      {% if not instance.can_reopen_popup %}
+        popup_close_button.style.visibility = "hidden";
+      {% else %}
+        popup_close_button.classList.add("djangocms-popup-reopen");
+      {% endif %}
+    }
+  </script>
+{% endaddtoblock %}
+
+
+<div class="djangocms-popup" id="popup_{{instance.id}}">
+  <div class="djangocms-popup-close" id="popup_close_{{instance.id}}"></div>
+
+  {% for plugin in instance.child_plugin_instances %}
+    {% render_plugin plugin %}
+  {% endfor %}
+</div>
