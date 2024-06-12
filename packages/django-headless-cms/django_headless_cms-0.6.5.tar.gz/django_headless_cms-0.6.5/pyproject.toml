@@ -1,0 +1,160 @@
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = [
+  "poetry @ git+https://github.com/radoering/poetry.git@pep621-support"  # TODO: update to official poetry later
+]
+
+[project]
+authors = [
+  {email = "danghuy1999@gmail.com", name = "Huy Nguyen"}
+]
+classifiers = [
+  "Environment :: Web Environment",
+  "Framework :: Django :: 4.0",
+  "Framework :: Django :: 4.1",
+  "Framework :: Django :: 4.2",
+  "Framework :: Django :: 5.0",
+  "Framework :: Django",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Information Technology",
+  "License :: OSI Approved :: BSD License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.9",
+  "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: Software Development :: Libraries :: Application Frameworks",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Software Development"
+]
+dependencies = [
+  "Django>=4",
+  "Unidecode",
+  "django-admin-interface",
+  "django-admin-sortable2",
+  "django-filter",
+  "django-import-export",
+  "django-localized-fields",
+  "django-reversion",
+  "django-solo",
+  "djangorestframework>=3",
+  "drf_spectacular",
+  "martor",
+  "psycopg"
+]
+description = "A simple django-based headless CMS."
+dynamic = ["version"]
+name = "django-headless-cms"
+readme = "README.md"
+requires-python = ">=3.9,<4.0"
+license.file = "LICENSE"
+
+[project.optional-dependencies]
+openai = ["openai>=1"]
+
+[project.urls]
+Documentation = "https://django-headless-cms.readthedocs.io/"
+Homepage = "https://github.com/huynguyengl99/django-headless-cms"
+Repository = "https://github.com/huynguyengl99/django-headless-cms"
+
+[tool.black]
+exclude = '''
+/(
+    \.git
+ |  \.pytest_cache
+ |  \.vscode
+ |  __pycache__
+ |  .venv
+ |  build
+ |  coverage
+)/
+'''
+line-length = 88
+preview = true
+
+[tool.commitizen]
+major_version_zero = true
+name = "cz_conventional_commits"
+tag_format = "v$version"
+update_changelog_on_bump = true
+version_provider = "poetry"
+version_scheme = "pep440"
+
+[tool.commitizen.customize]
+bump_map = {build = "PATCH", ci = "PATCH", docs = "PATCH", feat = "MINOR", fix = "PATCH", perf = "PATCH", refactor = "PATCH"}
+bump_pattern = '^(feat|fix|ci|build|perf|refactor|docs)'
+schema_pattern = '^(build|ci|docs|feat|fix|perf|refactor|style|test|chore|revert|bump)(\(\S+\))?\:?\s.*'
+
+[tool.coverage.run]
+omit = [
+  "headless_cms/contrib/*",
+  "headless_cms/fields/boolean_field.py",  # Just a small fix
+  "headless_cms/utils/martor_custom_upload.py",
+  "tests/*"
+]
+
+[tool.poetry]
+name = 'headless_cms'
+packages = [
+  {include = "headless_cms"}
+]
+version = "0.6.5"
+
+[tool.poetry.group.dev.dependencies]
+commitizen = "^3.27.0"
+
+[tool.poetry.group.docs.dependencies]
+Sphinx = ">=7.0.0,<8"
+sphinx_rtd_theme = "*"
+
+[tool.poetry.group.lint.dependencies]
+black = "*"
+pre-commit = ">=3.4.0,<4.0.0"
+ruff = "*"
+toml-sort = "*"
+
+[tool.poetry.group.test.dependencies]
+coverage = {extras = ['toml'], version = "*"}
+django-environ = "*"
+django-extensions = "*"
+factory-boy = "*"
+freezegun = "*"
+openai = ">=1"
+pytest = "*"
+pytest-cov = "*"
+pytest-django = "*"
+pytest-mock = "*"
+
+[tool.ruff]
+src = ["headless_cms", 'tests']
+
+[tool.ruff.lint]
+ignore = [
+  "E501"  # line too long, handled by black
+]
+select = [
+  "B",  # flake8-bugbear
+  "C",  # flake8-comprehensions
+  "E",  # pycodestyle errors
+  "F",  # pyflakes
+  "I",  # isort
+  "N",  # pep8-naming
+  "PL",  # pylint
+  "Q",  # flake8-quotes
+  "UP",  # pyupgrade
+  "W"  # pycodestyle warnings
+]
+
+[tool.ruff.lint.per-file-ignores]
+"*" = ['C901']
+"tests/*" = ["PLR0913", "PLR2004"]
+"tests/test_utils/base.py" = ["N802"]
+
+[tool.tomlsort]
+all = true
+in_place = true
+spaces_before_inline_comment = 2
