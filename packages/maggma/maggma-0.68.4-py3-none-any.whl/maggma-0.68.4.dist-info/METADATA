@@ -1,0 +1,138 @@
+Metadata-Version: 2.1
+Name: maggma
+Version: 0.68.4
+Summary: Framework to develop datapipelines from files on disk to full dissemenation API
+Author-email: The Materials Project <feedback@materialsproject.org>
+License: maggma Copyright (c) 2017, The Regents of the University of
+        California, through Lawrence Berkeley National Laboratory (subject
+        to receipt of any required approvals from the U.S. Dept. of Energy).
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions
+        are met:
+        
+        (1) Redistributions of source code must retain the above copyright
+        notice, this list of conditions and the following disclaimer.
+        
+        (2) Redistributions in binary form must reproduce the above
+        copyright notice, this list of conditions and the following
+        disclaimer in the documentation and/or other materials provided with
+        the distribution.
+        
+        (3) Neither the name of the University of California, Lawrence
+        Berkeley National Laboratory, U.S. Dept. of Energy nor the names of
+        its contributors may be used to endorse or promote products derived
+        from this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+        "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+        LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+        FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+        COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+        INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+        BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+        LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+        LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+        ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+        POSSIBILITY OF SUCH DAMAGE.
+        
+        You are under no obligation whatsoever to provide any bug fixes,
+        patches, or upgrades to the features, functionality or performance
+        of the source code ("Enhancements") to anyone; however, if you
+        choose to make your Enhancements available either publicly, or
+        directly to Lawrence Berkeley National Laboratory or its
+        contributors, without imposing a separate written license agreement
+        for such Enhancements, then you hereby grant the following license:
+        a  non-exclusive, royalty-free perpetual license to install, use,
+        modify, prepare derivative works, incorporate into other computer
+        software, distribute, and sublicense such enhancements or derivative
+        works thereof, in binary and source code form.
+        
+Project-URL: Docs, https://materialsproject.github.io/maggma/
+Project-URL: Repo, https://github.com/materialsproject/maggma
+Project-URL: Package, https://pypi.org/project/maggma
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Information Technology
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Other/Nonlisted Topic
+Classifier: Topic :: Database :: Front-Ends
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: setuptools
+Requires-Dist: ruamel.yaml >=0.17
+Requires-Dist: pydantic >=2.0
+Requires-Dist: pydantic-settings >=2.0.3
+Requires-Dist: pymongo >=4.2.0
+Requires-Dist: monty >=2024.5.24
+Requires-Dist: mongomock >=3.10.0
+Requires-Dist: pydash >=4.1.0
+Requires-Dist: jsonschema >=3.1.1
+Requires-Dist: tqdm >=4.19.6
+Requires-Dist: mongogrant >=0.3.1
+Requires-Dist: aioitertools >=0.5.1
+Requires-Dist: numpy >=1.17.3
+Requires-Dist: fastapi >=0.42.0
+Requires-Dist: pyzmq >=24.0.1
+Requires-Dist: dnspython >=1.16.0
+Requires-Dist: sshtunnel >=0.1.5
+Requires-Dist: msgpack >=0.5.6
+Requires-Dist: orjson >=3.9.0
+Requires-Dist: boto3 >=1.20.41
+Requires-Dist: python-dateutil >=2.8.2
+Requires-Dist: uvicorn >=0.18.3
+Provides-Extra: azure
+Requires-Dist: azure-storage-blob >=12.16.0 ; extra == 'azure'
+Requires-Dist: azure-identity >=1.12.0 ; extra == 'azure'
+Provides-Extra: docs
+Requires-Dist: mkdocs >=1.4.0 ; extra == 'docs'
+Requires-Dist: mkdocs-material >=8.3.9 ; extra == 'docs'
+Requires-Dist: mkdocs-minify-plugin >=0.5.0 ; extra == 'docs'
+Requires-Dist: mkdocstrings[python] >=0.18.1 ; extra == 'docs'
+Requires-Dist: jinja2 <3.2.0 ; extra == 'docs'
+Provides-Extra: memray
+Requires-Dist: memray >=1.7.0 ; extra == 'memray'
+Provides-Extra: montydb
+Requires-Dist: montydb >=2.3.12 ; extra == 'montydb'
+Provides-Extra: notebook_runner
+Requires-Dist: IPython >=8.11 ; extra == 'notebook_runner'
+Requires-Dist: nbformat >=5.0 ; extra == 'notebook_runner'
+Requires-Dist: regex >=2020.6 ; extra == 'notebook_runner'
+Provides-Extra: open_data
+Requires-Dist: pandas >=2.1.4 ; extra == 'open_data'
+Requires-Dist: jsonlines >=4.0.0 ; extra == 'open_data'
+Provides-Extra: testing
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: pytest-cov ; extra == 'testing'
+Requires-Dist: pytest-mock ; extra == 'testing'
+Requires-Dist: pytest-asyncio ; extra == 'testing'
+Requires-Dist: pytest-xdist ; extra == 'testing'
+Requires-Dist: pre-commit ; extra == 'testing'
+Requires-Dist: moto >=5.0 ; extra == 'testing'
+Requires-Dist: ruff ; extra == 'testing'
+Requires-Dist: responses <0.22.0 ; extra == 'testing'
+Requires-Dist: types-pyYAML ; extra == 'testing'
+Requires-Dist: types-setuptools ; extra == 'testing'
+Requires-Dist: types-python-dateutil ; extra == 'testing'
+Requires-Dist: starlette[full] ; extra == 'testing'
+Provides-Extra: vasp
+Requires-Dist: pymatgen ; extra == 'vasp'
+Provides-Extra: vault
+Requires-Dist: hvac >=0.9.5 ; extra == 'vault'
+
+
+# ![Maggma](docs/logo_w_text.svg)
+
+[![Static Badge](https://img.shields.io/badge/documentation-blue?logo=github)](https://materialsproject.github.io/maggma) [![testing](https://github.com/materialsproject/maggma/workflows/testing/badge.svg)](https://github.com/materialsproject/maggma/actions?query=workflow%3Atesting) [![codecov](https://codecov.io/gh/materialsproject/maggma/branch/main/graph/badge.svg)](https://codecov.io/gh/materialsproject/maggma) [![python](https://img.shields.io/badge/Python-3.8+-blue.svg?logo=python&amp;logoColor=white)]()
+
+A files-to-API data pipeline for scientific applications using Python, supporting a variety of data stores including MongoDB [and many others](https://materialsproject.github.io/maggma/getting_started/stores/#list-of-stores).
