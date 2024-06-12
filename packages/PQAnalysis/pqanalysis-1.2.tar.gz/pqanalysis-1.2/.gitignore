@@ -1,0 +1,27 @@
+dist/
+build/
+**/PQAnalysis.egg-info/
+**/__pycache*
+
+_version.py
+**/*.ipynb
+
+.github/.pylint_cache/__*
+
+.coverage
+coverage.xml
+htmlcov/
+.vscode
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+.examples
+.mypy_cache
+.pytest_cache

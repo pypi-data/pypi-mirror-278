@@ -1,0 +1,41 @@
+name: Test Coverage
+
+on:
+  push:
+    branches: 
+      - main
+      - dev
+  pull_request:
+    branches:
+      - '*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x
+
+    - name: build PQAnalysis
+      run: |
+        pip install .[test]
+
+    - name: Generate coverage report
+      run: |
+        bash pytest.sh
+      shell: bash
+
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v4
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        env_vars: OS,PYTHON
+        fail_ci_if_error: true
+        flags: unittests
+        verbose: true
+

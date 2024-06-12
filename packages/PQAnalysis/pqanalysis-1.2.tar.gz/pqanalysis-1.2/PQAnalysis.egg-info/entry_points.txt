@@ -1,0 +1,12 @@
+[console_scripts]
+activate_argcomplete = PQAnalysis.cli.activate_argcomplete:main
+add_molecules = PQAnalysis.cli.add_molecules:main
+build_nep_traj = PQAnalysis.cli.build_nep_traj:main
+continue_input = PQAnalysis.cli.continue_input:main
+gen2xyz = PQAnalysis.cli.gen2xyz:main
+pqanalysis = PQAnalysis.cli.main:main
+rdf = PQAnalysis.cli.rdf:main
+rst2xyz = PQAnalysis.cli.rst2xyz:main
+traj2box = PQAnalysis.cli.traj2box:main
+traj2qmcfc = PQAnalysis.cli.traj2qmcfc:main
+xyz2gen = PQAnalysis.cli.xyz2gen:main

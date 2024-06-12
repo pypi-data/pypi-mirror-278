@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: PQAnalysis
+Version: 1.2
+Summary: PQAnalysis is a python package for the analysis of PQ simulations.
+Author-email: Jakob Gamper <97gamjak@gmail.com>, "Josef M. Gallmetzer" <gallmetzer.josef@gmail.com>, "Clarissa A. Seidler" <clarissa.seidler@gmail.com>
+Project-URL: Homepage, https://github.com/MolarVerse/PQAnalysis
+Project-URL: PQ, https://github.com/MolarVerse/PQ
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: beartype
+Requires-Dist: multimethod
+Requires-Dist: lark
+Requires-Dist: tqdm
+Requires-Dist: decorator
+Requires-Dist: argcomplete
+Requires-Dist: yapf
+Requires-Dist: rich-argparse
+Requires-Dist: Cython
+Requires-Dist: setuptools
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: pytest-runner; extra == "test"
+Requires-Dist: pylint; extra == "test"
+Requires-Dist: pylint-django; extra == "test"
+Requires-Dist: coverage; extra == "test"
+Requires-Dist: docstr-coverage; extra == "test"
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: sphinx-sitemap; extra == "docs"
+Requires-Dist: sphinx-rtd-theme; extra == "docs"
+Requires-Dist: breathe; extra == "docs"
+Requires-Dist: myst-parser; extra == "docs"
+Requires-Dist: better-apidoc; extra == "docs"
+Requires-Dist: six; extra == "docs"
+Requires-Dist: docstr-coverage; extra == "docs"
+
+<img src="https://raw.githubusercontent.com/MolarVerse/PQAnalysis/main/docs/source/logo/PQAnalysis.png" width="250">
+
+# PQAnalysis
+
+[![CI](https://github.com/MolarVerse/PQAnalysis/actions/workflows/ci.yml/badge.svg)](https://github.com/MolarVerse/PQAnalysis/actions/workflows/ci.yml)
+[![Docs](https://github.com/MolarVerse/PQAnalysis/actions/workflows/docs.yml/badge.svg)](https://MolarVerse.github.io/PQAnalysis/)
+[![codecov](https://codecov.io/gh/MolarVerse/PQAnalysis/graph/badge.svg?token=IDFK8L6IIQ)](https://codecov.io/gh/MolarVerse/PQAnalysis)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+The main purpose of this package is to provide useful tools for the analysis of the Molecular Dynamics software package [PQ](https://github.com/MolarVerse/PQ). Furthermore, the intent of this package is to enable straightforward implementations of newly developed analysis tools on top of the provided API.
+
+The future development of this package focuses on two main goals. On the one hand the enhancement of the provided analysis tools and extending its API to be compatible with many other different Molecular Dynamics engines. As this project is only a *hobby* project of the maintainers, any contributions considering enhancement or bug fixes are highly welcomed.
+
+## Installation
+
+Install with pip:
+
+    pip install pqanalysis
+
+## Development
+
+Clone the PQAnalysis GitHub repository and navigate into the directory:
+
+    git clone https://github.com/MolarVerse/PQAnalysis.git
+    cd PQAnalysis
+
+Install with pip:
+
+    pip install .
+
+In order to have a nice changelog strategy, please stick to [conventional commit definiton](https://www.conventionalcommits.org/en/v1.0.0-beta.4/). In order to make git accept only valid commit message please make a symlink of the git-hook template `.githooks/commit-msg`:
+
+    ln -s .githooks/commit-msg .git/hooks/
+
+More information on preferred and undesirable commit message will come soon...
