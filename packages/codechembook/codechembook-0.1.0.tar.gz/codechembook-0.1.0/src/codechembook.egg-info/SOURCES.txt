@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/codechembook/__init__.py
+src/codechembook/chemtools.py
+src/codechembook/fittools.py
+src/codechembook/numericaltools.py
+src/codechembook/plotlytemplates.py
+src/codechembook/quickplots.py
+src/codechembook.egg-info/PKG-INFO
+src/codechembook.egg-info/SOURCES.txt
+src/codechembook.egg-info/dependency_links.txt
+src/codechembook.egg-info/requires.txt
+src/codechembook.egg-info/top_level.txt
