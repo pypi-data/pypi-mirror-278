@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: microcosm-metrics
+Version: 3.0.0
+Summary: Opinionated metrics configuration
+Home-page: https://github.com/globality-corp/microcosm-metrics
+Author: Globality Engineering
+Author-email: engineering@globality.com
+Keywords: microcosm
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: datadog >=0.26.0
+Requires-Dist: microcosm >=4.0.0
+Requires-Dist: microcosm-logging >=2.0.0
+Requires-Dist: pyopenssl >=18.0.0
+Provides-Extra: lint
+Requires-Dist: flake8 ; extra == 'lint'
+Provides-Extra: test
+Requires-Dist: PyHamcrest ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: sentry-sdk ; extra == 'test'
+Provides-Extra: typehinting
+Requires-Dist: mypy ; extra == 'typehinting'
+
