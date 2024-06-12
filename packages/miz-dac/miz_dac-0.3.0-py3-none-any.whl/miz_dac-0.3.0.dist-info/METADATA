@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: miz-dac
+Version: 0.3.0
+Summary: Data action context
+Home-page: http://mizip.net/
+Download-URL: https://github.com/MIZiper/dac.git
+Author: MIZiper
+Author-email: miziper@163.com
+License: Apache-2.0
+Requires-Python: >=3.10
+Requires-Dist: click
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: pyyaml
+Requires-Dist: nptdms
+Provides-Extra: gui
+Requires-Dist: pyqt5 ; extra == 'gui'
+Requires-Dist: qscintilla ; extra == 'gui'
+Provides-Extra: ipy
+Requires-Dist: pyqt5 ; extra == 'ipy'
+Requires-Dist: qscintilla ; extra == 'ipy'
+Requires-Dist: qtconsole ; extra == 'ipy'
+
+Minimal measurement data analysis with nodes and container.
