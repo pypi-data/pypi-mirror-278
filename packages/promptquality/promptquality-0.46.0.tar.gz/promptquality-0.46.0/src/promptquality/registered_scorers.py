@@ -1,0 +1,41 @@
+from pathlib import Path
+from typing import List, Optional, Union
+
+from promptquality.set_config import set_config
+from promptquality.types.config import Config
+from promptquality.types.registered_scorers import (
+    ListRegisteredScorers,
+    RegisteredScorer,
+)
+from promptquality.utils.logger import logger
+from promptquality.utils.name import check_scorer_name
+
+
+def register_scorer(
+    scorer_name: str, scorer_file: Union[str, Path], config: Optional[Config] = None
+) -> RegisteredScorer:
+    config = config or set_config()
+    scorer_file = Path(scorer_file)
+    if not scorer_file.exists():
+        raise FileNotFoundError(f"Scorer file {scorer_file} does not exist.")
+    check_scorer_name(scorer_name)
+    response_dict = config.api_client.register_scorer(scorer_name, scorer_file)
+
+    score_type = response_dict.get("score_type")
+    score_type = score_type if score_type else "None"
+
+    scorable_node_types = response_dict.get("scorable_node_types")
+    scorable_node_types = ", ".join(scorable_node_types) if scorable_node_types else "None"
+
+    print(f"🔢 Registered scorer '{scorer_name}'. Score type: {score_type}, scorable node types: {scorable_node_types}.")
+    scorer = RegisteredScorer.model_validate(response_dict)
+    logger.debug(f"Registered scorer {scorer.name} with id {scorer.id}.")
+    return scorer
+
+
+def list_registered_scorers(config: Optional[Config] = None) -> List[RegisteredScorer]:
+    config = config or set_config()
+    response_dict = config.api_client.list_registered_scorers()
+    scorers = ListRegisteredScorers.model_validate(response_dict)
+    logger.debug(f"Found {len(scorers.scorers)} registered scorers.")
+    return scorers.scorers
