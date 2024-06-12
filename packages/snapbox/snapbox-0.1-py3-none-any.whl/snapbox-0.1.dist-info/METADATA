@@ -1,0 +1,149 @@
+Metadata-Version: 2.1
+Name: snapbox
+Version: 0.1
+Summary: Draw boxes over images.
+Author-email: Artur Barseghyan <artur.barseghyan@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/barseghyanartur/snapbox/
+Project-URL: Bug Tracker, https://github.com/barseghyanartur/snapbox/issues
+Project-URL: Documentation, https://snapbox.readthedocs.io/
+Project-URL: Source Code, https://github.com/barseghyanartur/snapbox/
+Project-URL: Changelog, https://snapbox.readthedocs.io/en/latest/changelog.html
+Keywords: box,image
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: Pillow
+Provides-Extra: all
+Requires-Dist: snapbox[dev,docs,test] ; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: detect-secrets ; extra == 'dev'
+Requires-Dist: doc8 ; extra == 'dev'
+Requires-Dist: ipython ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: pip-tools ; extra == 'dev'
+Requires-Dist: pydoclint ; extra == 'dev'
+Requires-Dist: ruff ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: uv ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: sphinx <6.0 ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme >=1.3.0 ; extra == 'docs'
+Requires-Dist: sphinx-no-pragma ; extra == 'docs'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: pytest-rst ; extra == 'test'
+
+=======
+snapbox
+=======
+Draw boxes over images.
+
+.. _Pillow: https://python-pillow.org/
+
+.. Internal references
+
+.. _imgbox: https://github.com/barseghyanartur/imgbox/
+.. _Read the Docs: http://imgbox.readthedocs.io/
+.. _Contributor guidelines: https://imgbox.readthedocs.io/en/latest/contributor_guidelines.html
+
+Minimalistic, standalone alternative fake data generator with no dependencies.
+
+.. image:: https://img.shields.io/pypi/v/imgbox.svg
+   :target: https://pypi.python.org/pypi/imgbox
+   :alt: PyPI Version
+
+.. image:: https://img.shields.io/pypi/pyversions/imgbox.svg
+    :target: https://pypi.python.org/pypi/imgbox/
+    :alt: Supported Python versions
+
+.. image:: https://github.com/barseghyanartur/imgbox/actions/workflows/test.yml/badge.svg?branch=main
+   :target: https://github.com/barseghyanartur/imgbox/actions
+   :alt: Build Status
+
+.. image:: https://readthedocs.org/projects/imgbox/badge/?version=latest
+    :target: http://imgbox.readthedocs.io
+    :alt: Documentation Status
+
+.. image:: https://img.shields.io/badge/license-MIT-blue.svg
+   :target: https://github.com/barseghyanartur/fake.py/#License
+   :alt: MIT
+
+.. image:: https://coveralls.io/repos/github/barseghyanartur/fake.py/badge.svg?branch=main&service=github
+    :target: https://coveralls.io/github/barseghyanartur/fake.py?branch=main
+    :alt: Coverage
+
+Features
+========
+- Draw boxes over images.
+
+Prerequisites
+=============
+Python 3.8+
+
+Installation
+============
+pip
+---
+
+.. code-block:: sh
+
+    pip install snapbox
+
+Documentation
+=============
+- Documentation is available on `Read the Docs`_.
+- For guidelines on contributing check the `Contributor guidelines`_.
+
+Usage
+=====
+.. code-block:: sh
+
+    snapbox
+
+Tests
+=====
+
+Run the tests with unittest:
+
+.. code-block:: sh
+
+    python -m unittest snapbox.py
+
+Or pytest:
+
+.. code-block:: sh
+
+    pytest
+
+License
+=======
+
+MIT
+
+Support
+=======
+For security issues contact me at the e-mail given in the `Author`_ section.
+
+For overall issues, go to `GitHub <https://github.com/barseghyanartur/snapbox/issues>`_.
+
+Author
+======
+
+Artur Barseghyan <artur.barseghyan@gmail.com>
