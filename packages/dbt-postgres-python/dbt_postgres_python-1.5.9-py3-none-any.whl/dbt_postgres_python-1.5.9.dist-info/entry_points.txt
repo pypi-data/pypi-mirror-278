@@ -1,0 +1,3 @@
+[console_scripts]
+dbt-postgres-python=fal.dbt.cli:cli
+
