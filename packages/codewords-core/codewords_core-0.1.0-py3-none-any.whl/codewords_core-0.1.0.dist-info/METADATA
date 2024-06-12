@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: codewords_core
+Version: 0.1.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.9
+Requires-Dist: pydantic ==1.10.15
+Requires-Dist: jsonsubschema
+Requires-Dist: jsonschema
+Requires-Dist: requests
+
