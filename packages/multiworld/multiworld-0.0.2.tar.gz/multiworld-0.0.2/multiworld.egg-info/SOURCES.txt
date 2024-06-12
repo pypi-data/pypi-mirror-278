@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+multiworld/__init__.py
+multiworld/__main__.py
+multiworld/post_setup.py
+multiworld/threadsafe_async.py
+multiworld/version.py
+multiworld/watchdog.py
+multiworld/world_communicator.py
+multiworld/world_manager.py
+multiworld.egg-info/PKG-INFO
+multiworld.egg-info/SOURCES.txt
+multiworld.egg-info/dependency_links.txt
+multiworld.egg-info/entry_points.txt
+multiworld.egg-info/requires.txt
+multiworld.egg-info/top_level.txt
