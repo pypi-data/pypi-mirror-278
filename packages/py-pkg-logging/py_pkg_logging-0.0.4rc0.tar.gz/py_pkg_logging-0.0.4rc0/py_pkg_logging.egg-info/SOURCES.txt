@@ -1,0 +1,12 @@
+README.md
+setup.py
+py_pkg_logging/__init__.py
+py_pkg_logging/__version__.py
+py_pkg_logging/_log_config.py
+py_pkg_logging/_log_function_call.py
+py_pkg_logging/_packing_logging.py
+py_pkg_logging.egg-info/PKG-INFO
+py_pkg_logging.egg-info/SOURCES.txt
+py_pkg_logging.egg-info/dependency_links.txt
+py_pkg_logging.egg-info/requires.txt
+py_pkg_logging.egg-info/top_level.txt
