@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: git-quotes
+Version: 0.1.0
+Summary: Add beautiful quotes to your commits automatically
+Home-page: https://github.com/pwaqo/git-quotes
+Author: Ricardo Ruiz
+Author-email: ricardoruizfdez@gmail.com
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Version Control :: Git
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8, <3.13
+License-File: LICENSE
+Requires-Dist: click
+Requires-Dist: crayons
+
+Git Quotes
+==========
+
+Add beautiful quotes to your commits!
+
+Installation
+------------
+
+.. code:: console
+
+    $ pip install git-quotes
+
+Features
+--------
+
+-  [x] Default global status (on/off)
+-  [x] Pip installable
+-  [x] Colorful cli thanks to crayons
+-  [ ] Localization English / Spanish
+
+   -  [ ] Quotes
+   -  [ ] Cli
+
+-  [ ] Set custom category or author for quotes.
