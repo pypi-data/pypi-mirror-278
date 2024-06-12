@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: commonhelper
+Version: 0.0.3
+Summary: A python package for some common utilities
+Home-page: https://github.com/aldenleung/commonhelper/
+Author: Alden Leung
+Author-email: alden.leung@gmail.com
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Description-Content-Type: text/markdown
+
+# commonhelper
+Some utility functions for python
