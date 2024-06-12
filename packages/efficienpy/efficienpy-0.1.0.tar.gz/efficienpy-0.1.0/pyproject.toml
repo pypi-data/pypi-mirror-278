@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "efficienpy"
+version = "0.1.0"
+description = "A comprehensive Python package designed to simplify daily workflows, enhance data processing, and integrate smart functionalities to boost productivity."
+authors = [
+  "Yu LE VERN <liaoyuviyy@gmail.com>"
+]
+maintainers = [
+  "Yu LE VERN <liaoyuviyy@gmail.com>"
+]
+readme = "README.md"
+license = "BSD-3-Clause"
+homepage = "https://github.com/liaoyusaki/efficienpy"
+repository = "https://github.com/liaoyusaki/efficienpy"
+documentation = "https://github.com/liaoyusaki/efficienpy"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.dev-dependencies]
+pytest = "^8.2"
+
+[build-system]
+requires = ["poetry-core>=1.9.0"]
+build-backend = "poetry.core.masonry.api"
