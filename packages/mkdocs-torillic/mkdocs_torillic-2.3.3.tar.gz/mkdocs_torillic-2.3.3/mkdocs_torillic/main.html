@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
+  <link href="{{ 'css/torillic.css'|url }}" rel="stylesheet">
+  {%- for path in config.extra_css %}
+  <link href="{{ path | url }}" rel="stylesheet">
+  {%- endfor %}
+  <style>
+    .torillic-background {
+      {% if config.theme.background_image %}
+      background-image: url("{{ config.theme.background_image | url }}");
+      {% endif %}
+    }
+  </style>
+</head>
+
+<body class="torillic-background">
+  <header class="torillic-header">
+    <h1>{{ config.site_name }}</h1>
+    <nav>
+      {% for nav_item in nav %}
+      {% if nav_item.children and not nav_item.url %}
+      <a class="{% if nav_item.active %}current{% endif %}" href="{{ nav_item.children[0].url|url }}">{{nav_item.title }}</a>
+      {% else %}
+      <a class="{% if nav_item.active %}current{% endif %}" href="{{ nav_item.url|url }}">{{nav_item.title }}</a>
+      {% endif %}
+      {% endfor %}
+    </nav>
+  </header>
+  <main class="torillic-page">
+    {# add page content #}
+    {{ page.content }}
+
+    {% if page.is_homepage %}
+    {# add global contents on the root page #}
+    <h3>Contents</h3>
+    {% for nav_item in nav %}
+    {% if nav_item != page %}
+    <h4>
+      {% if nav_item.url %}
+      {% set nav_item_url = nav_item.url %}
+      {% else %}
+      {% set nav_item_url = nav_item.children[0].url %}
+      {% endif %}
+      <a class="{% if nav_item.active %}current{% endif %}" href="{{ nav_item_url|url }}">{{ nav_item.title }}</a>
+    </h4>
+    {% if nav_item.children %}
+    <blockquote style="break-inside: avoid;">
+      {% for nav_subitem in nav_item.children %}
+      {% if nav_subitem.url != nav_item_url %}
+      <li>
+        <a href="{{ nav_subitem.url|url }}">{{nav_subitem.title}}</a>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </blockquote>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+    {# add local contents on section home pages #}
+    {% elif page.parent and page.parent.is_section and page.parent.children[0] == page %}
+    <h4>Contents</h4>
+    <blockquote style="break-inside: avoid;">
+      {% for child_page in page.parent.children %}
+      {% if child_page != page %}
+      <li>
+        <a href="{{ child_page.url|url }}">{{child_page.title}}</a>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </blockquote>
+    {% endif %}
+    
+  </main>
+
+  {# add a back arrow if there's a parent to go back to #}
+  {% set backlink_target = page.parent %}
+  {% if backlink_target and backlink_target.is_section and page == backlink_target.children[0] %}
+  {% set backlink_target = backlink_target.parent %}
+  {% endif %}
+  {% if backlink_target %}
+  <nav>
+  {% if page.parent.url %}
+  {% set backlink = page.parent.url | url %}
+  {% else %}
+  {% set backlink = ".." %}
+  {% endif %}
+  <a href="{{backlink}}" class="torillic-backlink">🡐 {{ page.parent.title }}</a>
+  </nav>
+  {% endif %}
+  
+  {%- for script in config.extra_javascript %}
+  {{ script | script_tag }}
+  {%- endfor %}
+</body>
+
+</html>
