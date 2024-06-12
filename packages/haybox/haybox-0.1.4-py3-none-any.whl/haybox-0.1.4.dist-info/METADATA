@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: haybox
+Version: 0.1.4
+Summary: HayBox firmware config protocol Python library
+License: GPL-3.0-only
+Author: Jonathan Haylett
+Author-email: jonathan@haylett.dev
+Requires-Python: >=3.8
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: cobs (>=1.2.1,<2.0.0)
+Requires-Dist: protobuf (>=5.26.1,<6.0.0)
+Requires-Dist: pyserial (>=3.5,<4.0)
+Description-Content-Type: text/markdown
+
+# haybox-py
+
+Python library for HayBox firmware's config protocol
