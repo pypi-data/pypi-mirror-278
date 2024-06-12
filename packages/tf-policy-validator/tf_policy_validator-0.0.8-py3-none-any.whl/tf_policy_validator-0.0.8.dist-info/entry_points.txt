@@ -1,0 +1,3 @@
+[console_scripts]
+tf-policy-validator=iam_check.iam_check:main
+
