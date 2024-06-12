@@ -1,0 +1,2 @@
+[console_scripts]
+evo_science = evo_science.__main__:main
