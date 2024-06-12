@@ -1,0 +1,9 @@
+[project]
+name="lzhprt"
+version="0.0.1"
+authors=[
+    { name="zhlei",email="leizuoho@mail.ustc.edu.cn"}
+]
+dependencies=[]
+description="Show formatted massage in terminal"
+requires-python=">=3.6"
