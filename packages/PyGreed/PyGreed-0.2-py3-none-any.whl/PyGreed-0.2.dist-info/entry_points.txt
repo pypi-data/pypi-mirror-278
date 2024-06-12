@@ -1,0 +1,2 @@
+[console_scripts]
+start_greed_game = PyGreed.main:start_game
