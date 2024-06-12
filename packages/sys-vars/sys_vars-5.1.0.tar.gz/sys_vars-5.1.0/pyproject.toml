@@ -1,0 +1,94 @@
+[tool.poetry]
+name = "sys-vars"
+version = "5.1.0"
+description = "Access system variables in your code as native Python data types."
+authors = ["Caleb <le717@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/le717/sys-vars"
+classifiers = [
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Typing :: Typed",
+]
+include = ["py.typed"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+python-dotenv = { version = "^1.0.1", optional = true }
+
+[tool.poetry.extras]
+dotenv = ["python-dotenv"]
+
+[tool.poetry.group.dev]
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.4.8"
+mypy = "^1.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+python_version = "3.8"
+
+[tool.ruff]
+target-version = "py38"
+line-length = 100
+indent-width = 4
+extend-exclude = ["tests", "sys_vars.pyi"]
+
+[tool.ruff.lint]
+preview = true
+
+ignore = [
+  "COM812",  # missing-trailing-comma
+  "PLR6301", # no-self-use
+  "PLR1711", # useless-return
+  "RET501",  # unnecessary-return-none
+  "TD002",   # missing-todo-author
+  "TD003",   # missing-todo-link
+]
+
+select = [
+  "A",    # flake8-builtins
+  "ARG",  # flake8-unused-arguments
+  "BLE",  # flake8-blind-except
+  "C4",   # flake8-comprehensions
+  "C90",  # mccabe
+  "COM",  # flake8-commas
+  "DTZ",  # flake8-datetimez
+  "EM",   # flake8-errmsg
+  "ERA",  # eradicate
+  "F",    # pyflakes
+  "FIX",  # flake8-fixme
+  "FLY",  # flynt
+  "FURB", # refurb
+  "I",    # isort
+  "LOG",  # flake8-logging
+  "G",    # flake8-logging-format
+  "PERF", # Perflint
+  "PIE",  # flake8-pie
+  "PL",   # pylint
+  "PTH",  # flake8-use-pathlib
+  "RET",  # flake8-return
+  "RUF",  # Ruff-specific rules
+  "SIM",  # flake8-simplify
+  "T20",  # flake8-print
+  "TD",   # flake8-todos
+  "UP",   # pyupgrade
+]
+
+[tool.ruff.format]
+preview = true
+indent-style = "space"
+quote-style = "double"
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.ruff.lint.isort]
+lines-after-imports = 2
