@@ -1,0 +1,315 @@
+Metadata-Version: 2.1
+Name: ciphers-module
+Version: 1.1.0
+Author: Avyukt27
+Author-email: <avyukt.aggarwal007@gmail.com>
+Keywords: python,cipher,encode,encrypt,decrypt,decode
+Description-Content-Type: text/markdown
+
+# Ciphers
+
+Python module for implementing ciphers
+
+## Methods
+
+### Get Letter Value
+
+Gets the A-Z value of a character
+
+```python
+def get_letter_value(letter: str) -> int:
+    '''Get the value of an English letter (A = 0, B = 1, C = 2 ...)'''
+    return ord(letter) - 65
+```
+
+To Run
+
+```python
+get_letter_value(letter)
+```
+
+### Get Letter From Value
+
+Gets the character from an A-Z value
+
+```python
+def get_letter_from_value(value: int) -> str:
+    '''Get the English letter from a value (A = 0, B = 1, C = 2 ...)'''
+    return chr(value + 65)
+```
+
+To Run
+
+```python
+get_letter_from_value(letter)
+```
+
+### Caeser Cipher
+
+Performs a Caeser Cipher on a given string with given shift
+Negative shift means shifting left
+
+```python
+def caeser_cipher(text: str, shift: int, decode: bool = False) -> str:
+    '''
+    Caeser Cipher\n
+    Shifts {text} {shift} amount in positive/negative direction (Right/Left respectively)\n
+    Set {decode} to True to decode {text} with shift {shift}
+    '''
+    # Make everything Upper Case
+    text.upper()
+
+    # Begin
+    result: str = ""
+    for letter in text:
+        # Get Value of each Letter
+        value: int = get_letter_value(letter)
+        # Get Letter from Value
+        result += get_letter_from_value(value + shift) if not decode else get_letter_from_value(value - shift) # Handle Decoding
+
+    return result
+```
+
+To Run
+
+```python
+caeser_cipher(text, shift, decode) # decode is automatically false
+```
+
+### VigenÃ¨re Cipher
+
+Performs a VigenÃ¨re Cipher on a given string with given key
+
+```python
+def vigenÃ¨re_cipher(text: str, key: str, decode: bool = False) -> str:
+    '''
+    VigenÃ¨re Cipher\n
+    Uses a VigenÃ¨re Cipher on {text} with key {key}\n
+    Set {decode} to True to decode {text} with key {key}
+    '''
+    # Make everything Upper Case
+    text.upper()
+    key.upper()
+
+    # Make Lists of Characters
+    text_lst: list[str] = list(text)
+    key_lst: list[str] = list(key)
+
+    # Edit Length of Key
+    if len(key_lst) < len(text_lst):
+        key_lst = list(islice(cycle(key_lst), len(text_lst)))
+    if len(key_lst) > len(text_lst):
+        key_lst = key_lst[:len(key_lst)]
+
+    result: str = ""
+
+    for index, letter in enumerate(text_lst):
+        # Get Values of each Letter
+        letter_value: int = get_letter_value(letter)
+        key_value: int = get_letter_value(key_lst[index]) if not decode else -get_letter_value(key_lst[index]) # Handle Decoding
+        # Get Letter from Value
+        new_letter: str = get_letter_from_value((letter_value + key_value) % 26)
+        result += new_letter
+
+    return result
+```
+
+To Run
+
+```python
+vigenÃ¨re_cipher(text, key, decode) # decode is automatically false
+```
+
+### Rail Fence Cipher
+
+Performs a Rail Fence Cipher on a given string with given amount of Rails
+
+```python
+def rail_fence_cipher(text: str, rails: int, decode: bool = False):
+    '''
+    Rail Fence Cipher\n
+    Uses a Rail Fence (Zig-Zag) Cipher on {text} with {rails} rails\n
+    Set {decode} to True to decode {text} with {rails} rails
+    '''
+    # Make everything Upper Case
+    text.upper()
+    
+    # Make Rail Fence
+    rail_fence = [[""]*len(text) for _ in range(rails)]
+
+    # Variables to move the cursor
+    direction = -1
+    row = 0
+
+    if decode:  # Decoding
+        # Fill the rail_fence with placeholders
+        for col in range(len(text)):
+            rail_fence[row][col] = '*'
+
+            # Change direction if we've hit the top or bottom rail
+            if row == 0 or row == rails - 1:
+                direction *= -1
+
+            # Move to the next row
+            row += direction
+
+        # Fill the rail rail_fence with the ciphertext
+        i = 0
+        for row in range(rails):
+            for col in range(len(text)):
+                if rail_fence[row][col] == '*':
+                    rail_fence[row][col] = text[i]
+                    i += 1
+
+        # Extract the plaintext from the rail_fence
+        result = [rail_fence[row][col] for col in range(len(text)) for row in range(rails) if rail_fence[row][col] is not None]
+
+    else:  # Encoding
+        # Fill the rail rail_fence
+        for col in range(len(text)):
+            rail_fence[row][col] = text[col]
+
+            # Change direction if we've hit the top or bottom rail
+            if row == 0 or row == rails - 1:
+                direction *= -1
+
+            # Move to the next row
+            row += direction
+
+        # Extract the text from the rail_fence
+        result = [rail_fence[row][col] for row in range(rails) for col in range(len(text)) if rail_fence[row][col] is not None]
+
+    return "".join(result)
+```
+
+To Run
+
+```python
+rail_fence_cipher(text, shift, decode) # decode is automatically false
+```
+
+Following Methods are in the ASCII class
+
+### ASCII Decimal Cipher
+
+Encodes a string into Decimal using ASCII notation
+
+```python
+def decimal(text: str, decode: bool = False) -> str:
+    '''
+    ASCII Decimal\n
+    Converts a string to and from decimal using ASCII
+    '''
+    result: str = ""
+    if not decode:
+        for letter in text:
+            value: str = str(ord(letter))
+            result += f"{value} "
+        return result
+    for number in text.split():
+        try:
+            value = chr(int(number))
+            result += value
+        except ValueError:
+            print("Not a number")
+    return result
+```
+
+To Run
+
+```python
+ascii.decimal(text, decode) # decode is automatically false
+```
+
+### ASCII Binary Cipher
+
+Encodes a string into Binary using ASCII notation
+
+```python
+def binary(text: str, decode: bool = False) -> str:
+    '''
+    ASCII Binary\n
+    Converts a string to and from binary using ASCII
+    '''
+    result: str = ""
+    if not decode:
+        for letter in text:
+            value: str = bin(ord(letter)).removeprefix("0b")
+            result += f"0{value} "
+        return result
+    for byte in text.split():
+        try:
+            value = chr(int(byte, 2))
+            result += value
+        except ValueError:
+            print(f"Not Binary: {byte}")
+    return result
+```
+
+To Run
+
+```python
+ascii.binary(text, decode) # decode is automatically false
+```
+
+### ASCII Octal Cipher
+
+Encodes a string into Octal using ASCII notation
+
+```python
+def octal(text: str, decode: bool = False) -> str:
+    '''
+    ASCII Octal\n
+    Converts a string to and from octal using ASCII
+    '''
+    result: str = ""
+    if not decode:
+        for letter in text:
+            value: str = oct(ord(letter)).removeprefix("0o")
+            result += f"{value} "
+        return result
+    for octa in text.split():
+        try:
+            value = chr(int(octa, 8))
+            result += value
+        except ValueError:
+            print(f"Not Octal: {octa}")
+    return result
+```
+
+To Run
+
+```python
+ascii.octal(text, decode) # decode is automatically false
+```
+
+### ASCII Hexadecimal Cipher
+
+Encodes a string into Hexadecimal using ASCII notation
+
+```python
+def hexadecimal(text: str, decode: bool = False) -> str:
+    '''
+    ASCII Hexadecimal\n
+    Converts a string to and from hexadecimal using ASCII
+    '''
+    result: str = ""
+    if not decode:
+        for letter in text:
+            value: str = hex(ord(letter)).removeprefix("0x")
+            result += f"{value} "
+        return result
+    for hexa in text.split():
+        try:
+            value = chr(int(hexa, 16))
+            result += value
+        except ValueError:
+            print(f"Not Hexadecimal: {hexa}")
+    return result
+```
+
+To Run
+
+```python
+ascii.hexadecimal(text, decode) # decode is automatically false
+```
