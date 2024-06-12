@@ -1,0 +1,8 @@
+{
+    "issues": {
+        "service_removal": {
+            "description": "A {integration} integr\u00e1ci\u00f3 megsz\u0171nik, mivel a szolg\u00e1ltat\u00e1s m\u00e1r nem karbantartott.\n\n\n\nA probl\u00e9ma megold\u00e1s\u00e1hoz t\u00e1vol\u00edtsa el a `{domain}` konfigur\u00e1ci\u00f3t a configuration.yaml f\u00e1jlb\u00f3l \u00e9s ind\u00edtsa \u00fajra a Home Assistantot.",
+            "title": "A {integration} integr\u00e1ci\u00f3 elt\u00e1vol\u00edt\u00e1sra ker\u00fcl"
+        }
+    }
+}

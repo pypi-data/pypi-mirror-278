@@ -1,0 +1,8 @@
+{
+    "issues": {
+        "service_removal": {
+            "description": "Sidumine {integration} eemaldatakse kuna teenust enam ei hooldata. \n\n\n\n Selle probleemi lahendamiseks eemalda failist configuration.yaml konfiguratsioon ` {domain} ` ja taask\u00e4ivita Home Assistant.",
+            "title": "Sidumine {integration} eemaldatakse"
+        }
+    }
+}

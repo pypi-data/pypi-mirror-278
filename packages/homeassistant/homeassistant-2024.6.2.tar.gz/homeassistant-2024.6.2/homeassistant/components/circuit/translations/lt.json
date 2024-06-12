@@ -1,0 +1,8 @@
+{
+    "issues": {
+        "service_removal": {
+            "description": "{integration} integracija bus pa\u0161alinta, nes paslauga nebevykdoma. \n\n\n\n Pa\u0161alinkite ` {domain} ` konfig\u016bracij\u0105 i\u0161 failo configuration.yaml ir i\u0161 naujo paleiskite Home Assistant, kad i\u0161spr\u0119stum\u0117te \u0161i\u0105 problem\u0105.",
+            "title": "{integration} integracija pa\u0161alinama"
+        }
+    }
+}

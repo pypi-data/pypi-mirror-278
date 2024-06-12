@@ -1,0 +1,40 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Apparaat is al geconfigureerd"
+        },
+        "error": {
+            "cannot_connect": "Kan geen verbinding maken",
+            "unknown": "Onverwachte fout"
+        },
+        "flow_title": "{model}",
+        "step": {
+            "discovery_confirm": {
+                "description": "Wil je {model} instellen?"
+            },
+            "user": {
+                "data": {
+                    "host": "Host"
+                }
+            }
+        }
+    },
+    "entity": {
+        "select": {
+            "display_temperature_unit": {
+                "state": {
+                    "c": "Celsius",
+                    "f": "Fahrenheit"
+                }
+            }
+        },
+        "sensor": {
+            "nitrogen_index": {
+                "name": "Stikstofindex"
+            },
+            "raw_nitrogen": {
+                "name": "Ruwe stikstof"
+            }
+        }
+    }
+}

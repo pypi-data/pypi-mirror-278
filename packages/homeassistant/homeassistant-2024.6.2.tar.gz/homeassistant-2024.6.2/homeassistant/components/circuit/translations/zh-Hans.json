@@ -1,0 +1,8 @@
+{
+    "issues": {
+        "service_removal": {
+            "description": "\u201c{integration}\u201d\u96c6\u6210\u5c06\u88ab\u79fb\u9664\uff0c\u56e0\u4e3a\u4e0d\u518d\u7ef4\u62a4\u6b64\u670d\u52a1\u3002\n\n\u4ece configuration.yaml \u6587\u4ef6\u4e2d\u79fb\u9664\u201c{domain}\u201d\u914d\u7f6e\uff0c\u7136\u540e\u91cd\u65b0\u542f\u52a8 Home Assistant \u89e3\u51b3\u6b64\u95ee\u9898\u3002",
+            "title": "\u201c{integration}\u201d\u96c6\u6210\u6b63\u88ab\u79fb\u9664"
+        }
+    }
+}

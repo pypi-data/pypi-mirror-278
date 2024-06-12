@@ -1,0 +1,60 @@
+{
+    "config": {
+        "abort": {
+            "no_bluetooth_adapter": "Nerastas \"Bluetooth\" adapteris",
+            "no_devices_found": "Nepavyko rasti joki\u0173 \u201eBluetooth\u201c \u012frengini\u0173"
+        },
+        "error": {
+            "could_not_find_motor": "Nepavyko rasti variklio su \u0161iuo MAC kodu",
+            "invalid_mac_code": "Neteisingas MAC kodas"
+        },
+        "step": {
+            "confirm": {
+                "description": "Kokios \u017ealiuz\u0117s yra {display_name} ?"
+            },
+            "user": {
+                "data": {
+                    "mac_code": "MAC kodas"
+                },
+                "description": "\u012eveskite 4 simboli\u0173 savo variklio MAC kod\u0105, pvz., F3ED arba E3A6"
+            }
+        }
+    },
+    "entity": {
+        "button": {
+            "connect": {
+                "name": "Prisijungti"
+            },
+            "disconnect": {
+                "name": "Atsijungti"
+            },
+            "favorite": {
+                "name": "M\u0117gstamiausias"
+            }
+        },
+        "select": {
+            "speed": {
+                "name": "Greitis",
+                "state": {
+                    "1": "\u017demas",
+                    "2": "Vidutinis",
+                    "3": "Auk\u0161tas"
+                }
+            }
+        }
+    },
+    "selector": {
+        "blind_type": {
+            "options": {
+                "curtain": "U\u017euolaid\u0173 \u017ealiuz\u0117s",
+                "double_roller": "Dvigubas roletas",
+                "honeycomb": "\"Honeycomb\" \u017ealiuz\u0117s",
+                "roller": "Roletas",
+                "roman": "Roman\u0173 u\u017euolaida",
+                "venetian": "\u017daliuz\u0117s",
+                "venetian_tilt_only": "Venecijos \u017ealiuz\u0117s (tik pakreiptos)",
+                "vertical": "Vertikalios u\u017euolaidos"
+            }
+        }
+    }
+}

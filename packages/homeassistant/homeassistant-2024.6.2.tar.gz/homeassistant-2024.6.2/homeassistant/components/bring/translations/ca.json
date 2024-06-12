@@ -1,0 +1,33 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "El servei ja est\u00e0 configurat"
+        },
+        "error": {
+            "cannot_connect": "Ha fallat la connexi\u00f3",
+            "invalid_auth": "Autenticaci\u00f3 inv\u00e0lida",
+            "unknown": "Error inesperat"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "email": "Correu electr\u00f2nic",
+                    "password": "Contrasenya"
+                }
+            }
+        }
+    },
+    "services": {
+        "send_message": {
+            "fields": {
+                "entity_id": {
+                    "name": "Llista"
+                },
+                "message": {
+                    "name": "Tipus de notificaci\u00f3"
+                }
+            },
+            "name": "Envia una notificaci\u00f3"
+        }
+    }
+}

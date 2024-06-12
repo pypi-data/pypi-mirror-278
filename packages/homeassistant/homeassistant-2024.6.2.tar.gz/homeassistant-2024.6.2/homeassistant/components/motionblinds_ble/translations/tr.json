@@ -1,0 +1,60 @@
+{
+    "config": {
+        "abort": {
+            "no_bluetooth_adapter": "Bluetooth adapt\u00f6r\u00fc bulunamad\u0131",
+            "no_devices_found": "Herhangi bir bluetooth cihaz\u0131 bulunamad\u0131"
+        },
+        "error": {
+            "could_not_find_motor": "Bu MAC koduna sahip bir motor bulunamad\u0131",
+            "invalid_mac_code": "Ge\u00e7ersiz MAC kodu"
+        },
+        "step": {
+            "confirm": {
+                "description": "{display_name} ne t\u00fcr bir k\u00f6r?"
+            },
+            "user": {
+                "data": {
+                    "mac_code": "MAC kodu"
+                },
+                "description": "Motorunuzun 4 karakterli MAC kodunu girin; \u00f6rne\u011fin F3ED veya E3A6"
+            }
+        }
+    },
+    "entity": {
+        "button": {
+            "connect": {
+                "name": "Ba\u011flan"
+            },
+            "disconnect": {
+                "name": "Ba\u011flant\u0131y\u0131 Kes"
+            },
+            "favorite": {
+                "name": "Favori"
+            }
+        },
+        "select": {
+            "speed": {
+                "name": "H\u0131z",
+                "state": {
+                    "1": "D\u00fc\u015f\u00fck",
+                    "2": "Orta",
+                    "3": "Y\u00fcksek"
+                }
+            }
+        }
+    },
+    "selector": {
+        "blind_type": {
+            "options": {
+                "curtain": "Perde k\u00f6rl\u00fc\u011f\u00fc",
+                "double_roller": "\u00c7ift stor perde",
+                "honeycomb": "Petek k\u00f6rl\u00fc\u011f\u00fc",
+                "roller": "Stor perde",
+                "roman": "Roma k\u00f6rl\u00fc\u011f\u00fc",
+                "venetian": "Jaluzi",
+                "venetian_tilt_only": "Jaluzi (yaln\u0131zca e\u011filebilir)",
+                "vertical": "Dikey panjur"
+            }
+        }
+    }
+}
