@@ -1,0 +1,234 @@
+# Seqthetic 
+
+This tool generates synthetic sequence data to help test various ideas in pretraining sequence models with synthetic data. It is used in meta-language repo (Coming Soon).
+
+Features:
+1. **Diversity**: Supports generating data following various patterns including fractional Brownian Motion(fbm), [LIME](https://arxiv.org/pdf/2101.06223)(TODO), [TILT](https://arxiv.org/abs/2004.14601)(TODO) and [synthetic pretraining tasks](https://arxiv.org/abs/2206.10139) etc.
+2. **Spec-Driven**: Everything about the dataset is described by a spec, which helps with documenting each ablation and high-level manipulation. 
+3. **Reproducibility**: Processes involving randomness have their seeds recorded in the spec file. This means you can transfer the dataset by only 
+
+## Installation 
+
+```
+pip install -e .
+
+```
+## Usage
+
+### Generation
+To generate a synthetic dataset, just write a spec and use synthesizer to make the dataset. For details on spec, please see [Concepts](#concepts):
+```python
+# write the spec 
+spec = SynthesisSpec(...)
+# pass it to the synthesizer
+szer = Synthesizer(spec)
+# call make_dataset
+dataset = szer.make_dataset()
+# save dataset, or call dataset.save(). 
+szer.save_dataset()
+```
+You will get a json file and a csv file. The json file stores the spec and is ended with `.sqf.json`, and the csv stores the dataset. Their names are the `name` field in the spec or an unique id  if `name` is not given.  
+
+### Save & load 
+Please make sure the spec json file and csv file is under the same directory.
+```
+# Pass the name of the spec.only loads the spec
+spec = SynthesisSpec.load('ABC')
+# Pass the name of the dataset. loads both the spec and the dataset. Please use the seqthetic.Dataset class.
+dataset = Dataset.load('ABC')
+spec_in_dataset = dataset.spec
+```
+
+### Creating New Dependency
+Creating new dependency has several requirements:
+1. Please add a generator field by: `generator: str = 'xxx'`, where xxx is the name of the generation method you will use. This field is used to discriminate different dependencies when parse spec files;
+2. Please add custom_seed_schema wrapped with `SchemaList`: `custom_seed_schema = SchemaList(['hurst', 'dependency'])` and record every seed used for random sampling. `custom_seed_schema` is used for storing seeds and loading them to the dependency. 
+3. Please add metadata_schema to specify what will be stored in the metadata field in the `Dataset`. This is not enforced but helps for documentation.
+
+### Register Dependency
+If you want to use custom dependency in the spec, you can register it with `SynthesisSpec.register_dependency`:
+```python
+SynthesisSpec.register_dependency(MyDependency)
+```
+
+## Concepts
+The synthesis spec employs several concepts to enable flexible generation of datasets:
+1. **Vocabulary**: All sequences are simply a series of vocabulary which are integers. The frequencies of each vocabulary can be specified, for details see [Vocabulary section](#vocabulary).
+2. **Domain**: A dataset can be composed of a number of domains with different characteristics like the length distribution and the **dependency** pattern(see below). It's similar to natural language pretraining corpus containing various kind of data: news, code, arxiv papers etc. Each domain has a `mixture_ratio` option which determines how much tokens it accounts for in the whole dataset.
+3. **Dependency**: A domain is mostly defined by the dependency of its sequences, which is the occurrence pattern of tokens. For example, the sequence "abcdabcd" is defined by the repeating the former sequence. It doesn't matter what sequence is repeated, but the structure is important.  We hypothesize that learning the dependency by properly storing and retrieving tokens is central to the various abilities of language models, like in-context learning abilities.  
+4. **Mapping**: Though dependency defines a domain, it needs to be realized as a series of tokens from the vocabulary, which is specified by the `mapping` option. Dependencies can be mapped according to their frequency in the sentence, and one can split or duplicate them to create multiple sequence from one series of dependency.
+
+The process is:
+```
+for domain in domains:
+    dependencies = domain.dependency.make_dependency()
+
+```
+## Classes
+
+### SynthesisSpec
+
+### Dataset
+
+### Vocabulary
+We support the following vocabulary distributions: 
+1. **Zipf Vocabulary**: the Zipf's law means the frequency of any word is inversely proportional to its rank in the frequency table, but here we use Zipf-Mandelbrot law for generality: $\text { frequency } \propto \frac{1}{(\operatorname{rank}+b)^a}$. 
+2. **Uniform Vocabulary**: each vocabulary has same frequency.
+3. **Loglinear Vocabulary(TODO)**: applied in the [paper](https://arxiv.org/pdf/2203.10326.pdf). 
+4. **Corpus Vocabulary(TODO)**: vocabulary with each frequency specified. often calculated from a realistic corpus.
+
+To create more realistic distributions, an optional `DistributionNoise` can be added to them. Noise can be `additive` or `multiplicative`.
+
+For example: 
+```python
+zipf_vocab = ZipfVocabulary(size=1000, alpha=1, beta=2.7)
+uniform_vocab_with_noise = UniformVocabulary(
+    size=2000,
+    noise=DistributionNoise(
+        type='additive',
+        level=0.01)
+)
+```
+### Dependency
+We support the following dependency generators: 
+1. **FBMDependency**: The dependency is discretized sample of fractional brownian motion(fBm).This is inspired by the hypothesis that language possesses [fractal structure](https://arxiv.org/abs/2402.01825), and fractional brownian motion is an easy way to construct fractal sequences with a given fractal metric called [hurst exponent](https://en.wikipedia.org/wiki/Hurst_exponent).
+2. **RandomDependency**: The dependency is randomly sampled from a normal distribution. Mainly used as baseline.
+3. **FunctionDependency**: The dependency is discretized function specified by the user. For example one can use $\sin (x)$ to create periodic dependency. 
+
+### Mapping 
+Mapping contains following options:
+
+1.**sample_by**: How to sample vocabularies. The choices are `frequency` and `random`, where `frequency` means sampling based on frequency of vocabulary, and `random` means sampling with no regard to frequency.
+
+2. **map_by**: Strategy of mapping dependency to vocabulary. The choices are `frequency` and `random`, where `frequency` means higher frequency dependencies are mapped to sampled vocabulary with higher probability, and `random` means mapping dependency to vocabulary randomly.
+
+For example, the dependency sequence with `333221` has three dependency valules: 1, 2, 3. For this sequence we sample three vocabularies: `a: 0.3, b: 0.2, c: 0.1`, where numbers are the probability. so under `frequency` mapping strategy, we map `3` to `a`, `2` to `b`, and `1` to `c`. 
+
+Note: we don't consider mapping multiple dependency to vocabulary or vice versa as they will break the dependency structure, which introduces variation that can be more cleanly specified by more domains or `Range` in fields such as hurst exponent.  
+
+### Seed
+Creating synthetic data involves a lot of random sampling, so to ensure reproducibility, we record seeds for random generators used by vocabulary sampling and dependency generation for each domain. We use `np.random.SeedSequence.entropy` to generate seeds. 
+
+The main method of `Seed` class is `get_rng`, which instantiates a numpy random generator for sampling:
+```python
+# get a random generator from given seed
+rng = seed.get_rng('dependency')
+# get a list of random generators that are spawned from given seed
+rngs = seed.get_rng('dependency', 3)
+assert len(rngs) == 3
+# get a list of random generators that are spawned from given seed, useful for passing variables
+rngs = seed.get_rng('dependency', num_sequence, return_list=True)
+assert type(rngs) == list
+```
+
+### Range
+
+When specifying dependencies, `Range` can be used for fields to specify a distribution between a range of value to improve diversity. A similar class `FlexibleRange` is used for cases that allow both single number input and `Range` input, where single number input will be converted to `Range`.
+
+```python
+# input with range
+dep = RandomDependency(
+    num_dependency=Range(min=10, max=16)
+    sequence_length=Range(min=200, max=1000)
+    )
+
+dep_num = RandomDependency(
+    num_dependency=16,
+    sequence_length=1000)
+assert isinstance(dep_num.num_dependency, Range)
+```
+### Vary
+
+The space of is immense, which makes it necessary to explore different combinations of parameters. The `vary` function can be used to create from a basic `SynthesisSpec` different specs with some parameters changed according to `Variation` and these specs are saved to a `SynthesisSpecGroup`. You can separately save the group file and the specs.
+
+### Variation
+
+1. For variating total_token, you can use `compute_ops` like `Mul`, `Div`, `Add`, `Sub`. You can also specify a number:
+```python
+assert spec.total_token == 2000
+group = vary(spec, Variation(total_token=[Mul(2), Add(2000), Div(2), Sub(1000), 5000]))
+# base spec total_token multiplied by 2
+assert group.specs[0].total_token == 4000
+# base spec total_token added by 2000
+assert group.specs[1].total_token == 4000
+# base spec total_token divided by 2
+assert group.specs[2].total_token == 1000
+# base spec total_token subtracted by 1000
+assert group.specs[3].total_token == 1000
+# base spec total_token set to 5000
+assert group.specs[4].total_token == 5000
+```
+2. for varying mixture_ratio of domains, a list of list of mixture_ratio must be used. each list of mixture ratio must match the domain length of the base spec:
+```python
+vary(spec, Variation(mixture=[[0.1, 0.3, 0.6], [0.2, 0.4, 0.4]]))
+```
+3. the operation of domain is diverse and is deferred to [Domain Operation](#domain-operation)
+
+### Domain Operation
+
+There are several basic domain operations:
+1. `Vary`: Vary the domain dependency or mapping parameters.
+2. `Insert`: Add new domain to specified position.
+3. `Remove`: Remove domain from specified position.
+4. `Replace`: Replace domain at specified position.
+5. `Shuffle`: Shuffle the order of domains.
+6. `ChangeSeed`: Change the seed of domain.
+
+One can choose two combination patterns:
+1. `Zip`: like the zip function in python, for example the `zip([1, 2], [3, 4])` becomes `[1, 3], [2, 4]`, useful for conducting multiple actions on one domain at the same time
+2. `Product`: like the `itertools.product` function , for example the `product([1, 2], [3, 4])` becomes `[1, 3], [1, 4], [2, 3], [2, 4]`, useful for conducting multiple actions on different domains at the same time.
+
+For example: 
+```python
+Zip(
+    ops=[
+        Vary(domain=0, dependency={
+            'hurst': [0.5, 0.6]
+        }),
+        Vary(domain=1, dependency={
+            'num_dependency': [Range(min=10, max=20)]
+        })
+    ]
+)
+```
+## Roadmap
+
+- [ ]**tests**
+    - [ ]**vary stress test**
+    - [ ]spec reproducibility
+    - [ ]dependency combination
+    - [ ]function dependency
+    - [ ]file related
+- dependencies
+    - [-] **dynamically register dependency**  (spec metadata)
+    - [ ] **add seq_op dependencies from synthetic_pretraining**
+    - [ ] bracket, dyck
+    - [ ] LIME
+    - [ ] DFS automata/transducer deduction/induction
+    - [ ] arithmetic
+    - [ ] math derivations 
+    - [ ] cellular automata
+    - [ ] dynamical system
+    - [ ] discretized IFS
+    - [ ] sine function and variants
+    - [ ] multifractional brownian motion
+    - [ ] fractional brownian field
+- [ ] **merge**
+- [-] spec_group
+    - [-] generate
+    - [-] save
+- [ ] notebooks
+    - [ ] fractal, fbm, mbm, discretize, bincount 
+    - [ ] dependency, frequency
+    - [ ] vocab
+    - [ ] mapping
+- [ ]vocab
+    - [ ] loglinear
+    - [ ] corpus vocab
+    - [ ] domain vocab 
+    - [ ] **evolution**
+    - [ ] synonyms, antonyms, supernyms
+- [ ] mapping
+    - [ ] **multiple**
+    - [ ] **clip**
+- dataloader related?

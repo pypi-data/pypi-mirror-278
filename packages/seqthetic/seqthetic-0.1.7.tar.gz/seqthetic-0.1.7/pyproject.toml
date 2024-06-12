@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "seqthetic"
+version = "0.1.7"
+description = "Creates sequence data for pretraining and benchmarking sequence models"
+authors = ["Shom <shaomi_lin@126.com>"]
+readme = "README.md"
+
+[[tool.poetry.source]]
+name = "aliyun"
+url = "https://mirrors.aliyun.com/pypi/simple/"
+priority = 'primary'
+
+[tool.poetry.dependencies]
+python = "~3.10"
+pandas = "^2.2.2"
+numpy = "^1.26.4"
+pydantic = "^2.7.0"
+nanoid = "^2.0.0"
+stochastic = "^0.7.0"
+jupyter = "^1.0.0"
+plotly = "^5.21.0"
+flake8 = "^7.0.0"
+more-itertools = "^10.2.0"
+dill = "^0.3.8"
+joblib = "^1.4.2"
+joblib-progress = "^1.0.5"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+isort = "^5.13.2"
+devtools = "^0.12.2"
+snakeviz = "^2.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
