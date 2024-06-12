@@ -1,0 +1,74 @@
+/* -*- Mode: C; indent-tabs-mode: t; c-basic-offset: 4; tab-width: 4 -*-  */
+/*
+ * mq_sysv_key_to_id.c
+ * Copyright (C) ${YEAR} Vladimir Roncevic <elektron.ronca@gmail.com>
+ *
+ * ${PRO} is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by the
+ * Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * ${PRO} is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#include "mq_sysv.h"
+
+/**
+ * Description:
+ *     Convert System V IPC key to message queue id,
+ *     create a new message queue, or access an existing queue.
+ *         IPC_CREAT (create the queue if it doesn't already exist in kernel)
+ *         IPC_EXCL (when used with IPC_CREAT, fail if queue already exists)
+ *     if IPC_CREAT is used alone, msgget() either returns the message queue
+ *     identifier for a newly created message queue, or returns the identifier
+ *     for a queue which exists with the same key value, if IPC_EXCL is used
+ *     along with IPC_CREAT, then either a new queue is created, or if the
+ *     queue exists, the call fails with -1. IPC_EXCL is useless by itself,
+ *     but when combined with IPC_CREAT, it can be used as a facility to
+ *     guarantee that no existing queue is opened for access, an optional
+ *     octal mode may be OR'd into the mask, since each IPC object has
+ *     permissions that are similar in functionality to file permissions on
+ *     a UNIX file system !
+ *
+ * Arguments:
+ *     mq_key - system V IPC key
+ *     operation - message queue operation
+ *
+ * Return value:
+ *     mq_id - message queue id | MQ_SYSV_ERROR with error number:
+ *         EACCESS (permission denied)
+ *         EEXIST (queue exists, cannot create)
+ *         EIDRM (queue is marked for deletion)
+ *         ENOENT (queue does not exist)
+ *         ENOMEM (not enough memory to create queue)
+ *         ENOSPC (maximum queue limit exceeded)
+ *
+ * Standards:
+ *     POSIX.1-2001, POSIX.1-2008
+ */
+int mq_sysv_key_to_id(key_t mq_key, int operation)
+{
+    int mq_id;
+
+    if (operation == MQ_SYSV_SENDER)
+    {
+        mq_id = msgget(mq_key, MQ_SYSV_BUFFER_RWX_RXX_RXX | IPC_CREAT);
+    }
+    else if (operation == MQ_SYSV_RECEIVER)
+    {
+        mq_id = msgget(mq_key, MQ_SYSV_BUFFER_RWX_RXX_RXX);
+    }
+    else
+    {
+        mq_id = MQ_SYSV_ERROR;
+    }
+
+    return mq_id;
+}
+

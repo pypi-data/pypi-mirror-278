@@ -1,0 +1,92 @@
+/* -*- Mode: C; indent-tabs-mode: t; c-basic-offset: 4; tab-width: 4 -*-  */
+/*
+ * mq_sysv_receive.c
+ * Copyright (C) ${YEAR} Vladimir Roncevic <elektron.ronca@gmail.com>
+ *
+ * ${PRO} is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by the
+ * Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * ${PRO} is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#include "mq_sysv.h"
+
+/**
+ * Description:
+ *     Removes a message from the queue specified by msqid and places
+ *     it in the buffer pointer.
+ *
+ * Arguments:
+ *     mq_id - message queue id
+ *     buffer - message queue buffer
+ *     message_type - specifies the type of message requested
+ *                    if message_type is 0, then the first message in the
+ *                    queue is read, if message_type is greater than 0, then
+ *                    the first message in the queue of type message_type is
+ *                    read, unless MSG_EXCEPT was specified in message_flag,
+ *                    in which case the first message in the queue of type
+ *                    not equal to msgtyp will be read, if message_type is
+ *                    less than 0, then the first message in the queue with
+ *                    the lowest type less than or equal to the absolute
+ *                    value of msgtyp will be read
+ *     message_flag - is a bit mask constructed by ORing together zero or
+ *                    more of the following flags:
+ *                        IPC_NOWAIT (return immediately if no message of
+ *                                    requested type is in the queue, system
+ *                                    call fails with errno set to ENOMSG)
+ *                        MSG_EXCEPT (used with msgtyp greater than 0 to read
+ *                                    the first message in the queue with
+ *                                    message type that differs from msgtyp)
+ *                        MSG_NOERROR (to truncate the message text if longer
+ *                                     than message size bytes)
+ *
+ * Return value:
+ *     status - number of bytes actually copied | MQ_SYSV_ERROR with error
+ *              number will be set to one among the following values:
+ *                  E2BIG (message length is greater than message size and
+ *                         MSG_NOERROR isn't specified in message_flag)
+ *                  EACCES (calling process does not have read permission
+ *                          on the message queue, and does not have the
+ *                          CAP_IPC_OWNER capability)
+ *                  EAGAIN (no message was available in the queue and
+ *                          IPC_NOWAIT was specified in message_flag)
+ *                  EFAULT (address pointed to by msgp isn't accessible)
+ *                  EIDRM (while process was sleeping to receive a message,
+ *                         the message queue was removed)
+ *                  EINTR (while process was sleeping to receive a message,
+ *                         the process caught a signal)
+ *                  EINVAL (message queue id was invalid, or message size
+ *                          was less than 0)
+ *                  ENOMSG (IPC_NOWAIT was specified in message_flag and no
+ *                          message of the requested type existed on the
+ *                          message queue)
+ * Standards:
+ *     POSIX.1-2001, POSIX.1-2008
+ */
+int mq_sysv_receive(int mq_id, mq_buffer * buffer, message_type, message_flag)
+{
+    int status;
+
+    if (mq_id != MQ_SYSV_ERROR && buffer != NULL)
+    {
+        status = msgrcv(
+            mq_id, buffer, sizeof(buffer->message_buffer),
+            message_type, message_flag
+        );
+    }
+    else
+    {
+        status = MQ_SYSV_ERROR;
+    }
+
+    return status;
+}
+

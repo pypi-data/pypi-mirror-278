@@ -1,0 +1,65 @@
+/* -*- Mode: C; indent-tabs-mode: t; c-basic-offset: 4; tab-width: 4 -*-  */
+/*
+ * mq_sysv_control.c
+ * Copyright (C) ${YEAR} Vladimir Roncevic <elektron.ronca@gmail.com>
+ *
+ * ${PRO} is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by the
+ * Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * ${PRO} is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#include "mq_sysv.h"
+
+/**
+ * Description:
+ *     Perform control operations on a message queue.
+ *
+ * Arguments:
+ *     mq_id - message queue id
+ *     command - selective command for message queue
+ *         IPC_STAT (retrieves the msqid_ds structure for a queue, and stores
+ *                   it in the address of the buf argument)
+ *         IPC_SET (sets the value of the ipc_perm member of the msqid_ds
+ *                  structure for a queue, takes values from the buf argument)
+ *         IPC_RMID (removes the queue from the kernel)
+ *     buffer - message queue buffer
+ *
+ * Return value:
+ *     status - 0 for success | MQ_SYSV_ERROR for failure with error number:
+ *                  EACCES (no read permission and cmd is IPC_STAT)
+ *                  EFAULT (address pointed to by buf is invalid with IPC_SET
+ *                          and IPC_STAT commands)
+ *                  EIDRM (queue was removed during retrieval)
+ *                  EINVAL (msgqid invalid, or msgsz less than 0)
+ *                  EPERM (IPC_SET or IPC_RMID command was issued, but
+ *                         calling process does not have write (alter)
+ *                         access to the queue)
+ *
+ * Standards:
+ *     POSIX.1-2001, POSIX.1-2008
+ */
+int mq_sysv_control(int mq_id, int command, struct msqid_ds * buffer)
+{
+    int status;
+
+    if (mq_id >= 0 command >= 0 && buffer != NULL)
+    {
+        status = msgctl(mq_id, command, buffer);
+    }
+    else
+    {
+        status = MQ_SYSV_ERROR;
+    }
+
+    return status;
+}
+

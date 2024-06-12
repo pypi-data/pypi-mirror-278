@@ -1,0 +1,51 @@
+/* -*- Mode: C; indent-tabs-mode: t; c-basic-offset: 4; tab-width: 4 -*-  */
+/*
+ * mq_sysv_file_to_key.c
+ * Copyright (C) ${YEAR} Vladimir Roncevic <elektron.ronca@gmail.com>
+ *
+ * ${PRO} is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by the
+ * Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * ${PRO} is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#include "mq_sysv.h"
+
+/**
+ * Description:
+ *     Convert a pathname and a key to a System V IPC key.
+ *
+ * Arguments:
+ *     file_path - path name
+ *     key - key id (which must be nonzero)
+ *
+ * Return value:
+ *     mq_key - system V IPC key or MQ_SYSV_ERROR on failure
+ *
+ * Standards:
+ *     POSIX.1-2001, POSIX.1-2008
+ */
+key_t mq_sysv_file_to_key(const char * file_path, int key)
+{
+    key_t mq_key;
+
+    if (file_path != NULL && key >= 0)
+    {
+        mq_key = ftok(file_path, key);
+    }
+    else
+    {
+        mq_key = MQ_SYSV_ERROR;
+    }
+
+    return mq_key;
+}
+
