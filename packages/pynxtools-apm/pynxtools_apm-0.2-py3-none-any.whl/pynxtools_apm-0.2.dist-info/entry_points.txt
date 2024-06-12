@@ -1,0 +1,2 @@
+[pynxtools.reader]
+apm = pynxtools_apm.reader:APMReader
