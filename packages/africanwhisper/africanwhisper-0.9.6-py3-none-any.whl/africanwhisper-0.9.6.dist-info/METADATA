@@ -1,0 +1,86 @@
+Metadata-Version: 2.1
+Name: africanwhisper
+Version: 0.9.6
+Summary: A framework for fast fine-tuning and API endpoint deployment of Whisper model specifically developed to accelerate Automatic Speech Recognition(ASR) for African Languages.
+Home-page: https://kevkibe.github.io/African-Whisper
+Author: Kevin Kibe
+Author-email: keviinkibe@gmail.com
+Project-URL: Source, https://github.com/KevKibe/African-Whisper
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+License-File: LICENSE
+Provides-Extra: all
+Requires-Dist: transformers ==4.39.2 ; extra == 'all'
+Requires-Dist: datasets ==2.17.0 ; extra == 'all'
+Requires-Dist: librosa ==0.10.1 ; extra == 'all'
+Requires-Dist: evaluate ==0.4.1 ; extra == 'all'
+Requires-Dist: jiwer ==3.0.3 ; extra == 'all'
+Requires-Dist: bitsandbytes ==0.42.0 ; extra == 'all'
+Requires-Dist: accelerate ==0.29.3 ; extra == 'all'
+Requires-Dist: peft ==0.10.0 ; extra == 'all'
+Requires-Dist: numpy ==1.26.4 ; extra == 'all'
+Requires-Dist: wandb ==0.16.6 ; extra == 'all'
+Requires-Dist: holoviews ==1.18.3 ; extra == 'all'
+Requires-Dist: panel ==1.3.8 ; extra == 'all'
+Requires-Dist: tf-keras ==2.16.0 ; extra == 'all'
+Requires-Dist: tensorflow ==2.16.1 ; extra == 'all'
+Requires-Dist: keras ==3.1.1 ; extra == 'all'
+Requires-Dist: scipy ==1.12.0 ; extra == 'all'
+Requires-Dist: tensorflow-probability ==0.24.0 ; extra == 'all'
+Requires-Dist: faster-whisper ==1.0.0 ; extra == 'all'
+Requires-Dist: python-dotenv ==1.0.1 ; extra == 'all'
+Requires-Dist: pyannote-audio ==3.1.1 ; extra == 'all'
+Requires-Dist: nltk ==3.8.1 ; extra == 'all'
+Requires-Dist: torchvision ==0.17.2 ; extra == 'all'
+Requires-Dist: ctranslate2 ==4.1.0 ; extra == 'all'
+Requires-Dist: pandas ==2.0.3 ; extra == 'all'
+Requires-Dist: torch ==2.2.2 ; extra == 'all'
+Requires-Dist: transformers ==4.39.1 ; extra == 'all'
+Requires-Dist: pydantic ==2.6.4 ; extra == 'all'
+Requires-Dist: prometheus-client ==0.20.0 ; extra == 'all'
+Requires-Dist: fastapi ==0.110.1 ; extra == 'all'
+Requires-Dist: uvicorn ==0.29.0 ; extra == 'all'
+Requires-Dist: pandas ==2.2.1 ; extra == 'all'
+Provides-Extra: deployment
+Requires-Dist: torch ==2.2.2 ; extra == 'deployment'
+Requires-Dist: transformers ==4.39.1 ; extra == 'deployment'
+Requires-Dist: pydantic ==2.6.4 ; extra == 'deployment'
+Requires-Dist: prometheus-client ==0.20.0 ; extra == 'deployment'
+Requires-Dist: fastapi ==0.110.1 ; extra == 'deployment'
+Requires-Dist: uvicorn ==0.29.0 ; extra == 'deployment'
+Requires-Dist: python-dotenv ==1.0.1 ; extra == 'deployment'
+Requires-Dist: faster-whisper ==1.0.0 ; extra == 'deployment'
+Requires-Dist: pyannote-audio ==3.1.1 ; extra == 'deployment'
+Requires-Dist: nltk ==3.8.1 ; extra == 'deployment'
+Requires-Dist: torchvision ==0.17.2 ; extra == 'deployment'
+Requires-Dist: ctranslate2 ==4.1.0 ; extra == 'deployment'
+Requires-Dist: pandas ==2.2.1 ; extra == 'deployment'
+Provides-Extra: training
+Requires-Dist: transformers ==4.39.2 ; extra == 'training'
+Requires-Dist: datasets ==2.17.0 ; extra == 'training'
+Requires-Dist: librosa ==0.10.1 ; extra == 'training'
+Requires-Dist: evaluate ==0.4.1 ; extra == 'training'
+Requires-Dist: jiwer ==3.0.3 ; extra == 'training'
+Requires-Dist: bitsandbytes ==0.42.0 ; extra == 'training'
+Requires-Dist: accelerate ==0.29.3 ; extra == 'training'
+Requires-Dist: peft ==0.10.0 ; extra == 'training'
+Requires-Dist: numpy ==1.26.4 ; extra == 'training'
+Requires-Dist: wandb ==0.16.6 ; extra == 'training'
+Requires-Dist: holoviews ==1.18.3 ; extra == 'training'
+Requires-Dist: panel ==1.3.8 ; extra == 'training'
+Requires-Dist: tf-keras ==2.16.0 ; extra == 'training'
+Requires-Dist: tensorflow ==2.16.1 ; extra == 'training'
+Requires-Dist: keras ==3.1.1 ; extra == 'training'
+Requires-Dist: scipy ==1.12.0 ; extra == 'training'
+Requires-Dist: tensorflow-probability ==0.24.0 ; extra == 'training'
+Requires-Dist: faster-whisper ==1.0.0 ; extra == 'training'
+Requires-Dist: python-dotenv ==1.0.1 ; extra == 'training'
+Requires-Dist: pyannote-audio ==3.1.1 ; extra == 'training'
+Requires-Dist: nltk ==3.8.1 ; extra == 'training'
+Requires-Dist: torchvision ==0.17.2 ; extra == 'training'
+Requires-Dist: ctranslate2 ==4.1.0 ; extra == 'training'
+Requires-Dist: pandas ==2.0.3 ; extra == 'training'
+
