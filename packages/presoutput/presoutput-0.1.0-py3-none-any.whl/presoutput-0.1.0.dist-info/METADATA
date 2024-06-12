@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: presoutput
+Version: 0.1.0
+Summary: 
+Author: aplunket
+Author-email: applunket@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pdf2image (>=1.17.0,<2.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: python-pptx (>=0.6.23,<0.7.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: websockets (>=12.0,<13.0)
+Description-Content-Type: text/markdown
+
+# presoutput
+
+A package designed to automatically convert your [Quarto](https://quarto.org/) (qmd) documents into pdf or pptx files for sharing. 
+
+The package has been designed to work by default with [revealjs](https://quarto.org/docs/presentations/revealjs/index.html) presenstations created through Quarto but should work with any html format created with Quarto.
+
+## Installation
+
+You can install presoutput via pip:
+
+```bash
+pip install presoutput
+```
+
+This package requires Google Chrome (or a chromium based browser like Edge) to be installed on the machine that is running the code so that it can print to PDF the html file generated from the quarto document.
+
+## Usage
+
+You can use the `qmd_to_pdf` or `qmd_to_pptx` functions to convert your Quarto (.qmd) file to either pdf or pptx. 
+
+Note that when converting to either format it follows the pattern below and the pptx file is made up of png copies of the original slides.
+
+    qmd
+     |
+     |--> html
+           |
+           |--> pdf
+                 |
+                 |--> png
+                       |
+                       |--> pptx
+
+
+
+
