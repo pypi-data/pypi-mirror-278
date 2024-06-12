@@ -1,0 +1,2 @@
+[console_scripts]
+gen-vm-image = gen_vm_image.cli.build_image:cli
