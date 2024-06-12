@@ -1,0 +1,7 @@
+[console_scripts]
+annotate = deepfinder.bin.annotate:main
+cluster = deepfinder.bin.cluster:main
+display = deepfinder.bin.display:main
+generate_target = deepfinder.bin.generate_target:main
+segment = deepfinder.bin.segment:main
+train = deepfinder.bin.train:main
