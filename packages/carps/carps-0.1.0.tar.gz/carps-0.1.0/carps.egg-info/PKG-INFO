@@ -1,0 +1,304 @@
+Metadata-Version: 2.1
+Name: carps
+Version: 0.1.0
+Summary: CARP-S: Benchmarking N Optimizers on M Benchmarks
+Author-email: Carolin Benjamins <c.benjaminsq@ai.uni-hannover.de>
+License: 
+        
+        BSD License
+        
+        Copyright (c) 2024, Carolin Benjamins
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without modification,
+        are permitted provided that the following conditions are met:
+        
+        * Redistributions of source code must retain the above copyright notice, this
+          list of conditions and the following disclaimer.
+        
+        * Redistributions in binary form must reproduce the above copyright notice, this
+          list of conditions and the following disclaimer in the documentation and/or
+          other materials provided with the distribution.
+        
+        * Neither the name of the copyright holder nor the names of its
+          contributors may be used to endorse or promote products derived from this
+          software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+        ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+        WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+        IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+        INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+        BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+        DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+        OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+        OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+        OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+        
+Project-URL: documentation, https://github.com/automl/CARP-S/
+Project-URL: source, https://github.com/automl/CARP-S/
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS.md
+Requires-Dist: autorank
+Requires-Dist: ConfigSpace
+Requires-Dist: cryptography
+Requires-Dist: dataclasses-json
+Requires-Dist: domdf_python_tools
+Requires-Dist: fire
+Requires-Dist: hydra-colorlog
+Requires-Dist: hydra-core
+Requires-Dist: hydra-joblib-launcher
+Requires-Dist: hydra-submitit-launcher
+Requires-Dist: omegaconf
+Requires-Dist: pandas
+Requires-Dist: pyarrow
+Requires-Dist: py-experimenter>=1.4.1
+Requires-Dist: pymysql
+Requires-Dist: rich
+Requires-Dist: rliable
+Requires-Dist: seaborn
+Requires-Dist: tomli
+Requires-Dist: typing_extensions
+Requires-Dist: pymoo
+Requires-Dist: GitPython
+Requires-Dist: mlcroissant
+Provides-Extra: dev
+Requires-Dist: pre-commit; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: mkdocs; extra == "dev"
+Requires-Dist: mkdocs-material; extra == "dev"
+Requires-Dist: mkdocs-autorefs; extra == "dev"
+Requires-Dist: mkdocs-gen-files; extra == "dev"
+Requires-Dist: mkdocs-literate-nav; extra == "dev"
+Requires-Dist: mkdocs-glightbox; extra == "dev"
+Requires-Dist: mkdocstrings[python]; extra == "dev"
+Requires-Dist: markdown-exec[ansi]; extra == "dev"
+Requires-Dist: mike; extra == "dev"
+Requires-Dist: pillow; extra == "dev"
+Requires-Dist: cairosvg; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-coverage; extra == "dev"
+Requires-Dist: pytest-cases; extra == "dev"
+Provides-Extra: dummy
+Requires-Dist: scikit-learn; extra == "dummy"
+Provides-Extra: bbob
+Requires-Dist: ioh==0.3.14; extra == "bbob"
+Provides-Extra: hpob
+Requires-Dist: xgboost==1.5.2; extra == "hpob"
+Provides-Extra: mfpbench
+Requires-Dist: scikit-learn; extra == "mfpbench"
+Requires-Dist: mf-prior-bench; extra == "mfpbench"
+Requires-Dist: xgboost>=1.7; extra == "mfpbench"
+Provides-Extra: pymoo
+Requires-Dist: pymoo; extra == "pymoo"
+Provides-Extra: yahpo
+Requires-Dist: yahpo-gym==1.0.1; extra == "yahpo"
+Requires-Dist: onnxruntime==1.15.0; extra == "yahpo"
+Requires-Dist: ConfigSpace~=0.6.0; extra == "yahpo"
+Provides-Extra: dehb
+Requires-Dist: dehb; extra == "dehb"
+Provides-Extra: hebo
+Requires-Dist: hebo==0.3.5; extra == "hebo"
+Provides-Extra: nevergrad
+Requires-Dist: nevergrad; extra == "nevergrad"
+Requires-Dist: hyperopt; extra == "nevergrad"
+Requires-Dist: bayesian-optimization; extra == "nevergrad"
+Requires-Dist: ioh==0.3.14; extra == "nevergrad"
+Provides-Extra: optuna
+Requires-Dist: optuna; extra == "optuna"
+Provides-Extra: skopt
+Requires-Dist: scikit-optimize; extra == "skopt"
+Provides-Extra: smac
+Requires-Dist: swig; extra == "smac"
+Requires-Dist: smac>=2.1.0; extra == "smac"
+Provides-Extra: smac14
+Requires-Dist: smac==1.4; extra == "smac14"
+Requires-Dist: scikit-learn==1.1.3; extra == "smac14"
+Provides-Extra: synetune
+Requires-Dist: syne-tune[basic]==0.13.0; extra == "synetune"
+Requires-Dist: xgboost==2.0.3; extra == "synetune"
+Requires-Dist: scikit-learn==1.4.0; extra == "synetune"
+
+<img src="docs/images/carps_Logo_wide.png" alt="Logo"/>
+
+# CARP-S
+Welcome to CARP-S! 
+This repository contains a benchmarking framework for optimizers.
+It allows flexibly combining optimizers and benchmarks via a simple interface, and logging experiment results 
+and trajectories to a database.
+
+The main topics of this README are:
+- [Installation](#installation)
+- [Minimal Example](#minimal-example)
+- [Commands](#commands)
+- [Adding a new Optimizer or Benchmark](#adding-a-new-optimizer-or-benchmark)
+
+For more details on CARP-S, please have a look at the 
+[documentation](https://AutoML.github.io/CARP-S/latest/).
+
+## Installation
+
+### Installation from PyPI
+
+To install CARP-S, you can simply use `pip`:
+
+```bash
+conda create -n carps python=3.11
+conda activate carps
+pip install carps
+```
+
+Additionally, you need to install the requirements for the benchmark and optimizer that you want to use.
+For example, if you want to use the `SMAC2.0` optimizer and the `BBOB` benchmark, you need to install the
+requirements for both of them via:
+
+```bash
+pip install carps[smac,bbob]
+```
+
+All possible install options for benchmarks are:
+```bash
+dummy,bhob,hpob,mfpbench,pymoo,yahpo
+```
+
+All possible install options for optimizers are:
+```bash
+dummy,dehb,hebo,nevergrad,optuna,skopt,smac,smac14,synetune
+```
+
+Please note that installing all requirements for all benchmarks and optimizers in a single 
+environment will not be possible due to conflicting dependencies.
+
+### Installation from Source
+
+If you want to install from source, you can clone the repository and install CARP-S via:
+
+```bash
+git clone https://github.com/AutoML/CARP-S.git
+cd CARP-S
+conda create -n carps python=3.11
+conda activate carps
+
+# Install for usage
+pip install .
+```
+
+For installing the requirements for the optimizer and benchmark, you can then use the following command:
+```bash
+pip install ".[smac,bbob]"
+```
+
+If you want to install CARP-S for development, you can use the following command:
+```bash
+make install-dev
+```
+
+### Additional Steps for Benchmarks
+
+For HPOBench, it is necessary to install the requirements via:
+```bash
+bash container_recipes/benchmarks/HPOBench/install_HPOBench.sh
+```
+
+For some benchmarks, it is necessary to download data, 
+such as surrogate models, in order to run the benchmark: 
+
+-   For HPOB, you can download the surrogate benchmarks with
+    ```bash
+    bash container_recipes/benchmarks/HPOB/download_data.sh
+    ```
+
+-   For MFPBench, you can download the surrogate benchmarks with
+    ```bash
+    bash container_recipes/benchmarks/MFPBench/download_data.sh
+    ```
+
+-   For YAHPO, you can download the required surrogate benchmarks and meta-data with
+    ```bash
+    bash container_recipes/benchmarks/YAHPO/prepare_yahpo.sh
+    ```
+
+## Minimal Example
+Once the requirements for both an optimizer and a benchmark, e.g. `SMAC2.0` and `BBOB`, are installed, you can run
+one of the following minimal examples to benchmark `SMAC2.0` on `BBOB` directly with Hydra:
+
+```bash
+# Run SMAC BlackBoxFacade on certain BBOB problem
+python -m carps.run +optimizer/smac20=blackbox +problem/BBOB=cfg_4_1_4_0 seed=1 task.n_trials=25
+
+# Run SMAC BlackBoxFacade on all available BBOB problems for 10 seeds
+python -m carps.run +optimizer/smac20=blackbox '+problem/BBOB=glob(*)' 'seed=range(1,11)' -m
+```
+
+For the second command, the Hydra -m (or --multirun) option indicates that multiple runs will be 
+performed over a range of parameter values. In this case, it's indicating that the benchmarking
+should be run for all available BBOB problems (+problem/BBOB=glob(*)) and for 10 different 
+seed values (seed=range(1,11)).
+
+## Commands
+
+You can run a certain problem and optimizer combination directly with Hydra via:
+```bash
+python -m carps.run +problem=... +optimizer=... seed=... -m
+```
+
+Another option is to fill the database with all possible combinations of problems and optimizers
+you would like to run:
+```bash
+python -m carps.container.create_cluster_configs +problem=... +optimizer=... -m
+```
+
+Then, run them from the database with:
+```bash
+python -m carps.run_from_db 
+```
+
+To check whether any runs are missing, you can use the following command. It will create
+a file `runcommands_missing.sh` containing the missing runs:
+```bash
+python -m carps.utils.check_missing <rundir>
+```
+
+To collect all run data generated by the file logger into csv files, use the following command:
+```bash
+python -m carps.analysis.gather_data <rundir>
+```
+The csv files are then located in `<rundir>`. `logs.csv` contain the trial info and values and 
+`logs_cfg.csv` contain the experiment  configuration.
+The experiments can be matched via the column `experiment_id`.
+
+Experiments with error status (or any other status) can be reset via:
+```bash
+python -m carps.utils.database.reset_experiments
+```
+
+## Adding a new Optimizer or Benchmark
+For instructions on how to add a new optimizer or benchmark, please refer to the contributing 
+guidelines for 
+[benchmarks](https://automl.github.io/CARP-S/latest/contributing/contributing-a-benchmark/)
+and
+[optimizers](https://automl.github.io/CARP-S/latest/contributing/contributing-an-optimizer/).
+
+
+## Evaluation Results
+For each scenario (blackbox, multi-fidelity, multi-objective and multi-fidelity-multi-objective) and set (dev and test), we run selected optimizers and provide the data.
+Here we provide the link to the [meta data](https://drive.google.com/file/d/17pn48ragmWsyRC39sInsh2fEPUHP3BRT/view?usp=sharing) 
+that contains the detailed optimization setting for each run  
+and the [running results](https://drive.google.com/file/d/1yzJRbwRvdLbpZ9SdQN2Vk3yQSdDP_vck/view?usp=drive_link) that 
+records the running results of each optimization-benchmark combination. 
