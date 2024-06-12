@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sqlfluff_common_conventions"
+version = "0.4.0"
+authors = [
+  { name="Valerie Tan", email="valerietanhx@gmail.com" },
+]
+description = "An SQLFluff plugin for rules that enforce common SQL naming conventions."
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["sqlfluff", "sql", "linter", "formatter", "bigquery", "databricks", "postgres", "postgresql"]
+requires-python = ">=3.8"
+dependencies = [
+  'sqlfluff>=0.4.0'
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Unix",
+    "Operating System :: POSIX",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: SQL",
+    "Topic :: Utilities",
+    "Topic :: Software Development :: Quality Assurance",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.entry-points."sqlfluff"]
+sqlfluff_common-conventions = "sqlfluff_common_conventions"
