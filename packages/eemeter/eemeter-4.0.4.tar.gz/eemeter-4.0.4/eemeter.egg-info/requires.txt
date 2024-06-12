@@ -1,0 +1,9 @@
+click
+pandas>=1.0.0
+statsmodels
+scipy
+numba
+nlopt
+pydantic>=2.0
+attrs
+requests
