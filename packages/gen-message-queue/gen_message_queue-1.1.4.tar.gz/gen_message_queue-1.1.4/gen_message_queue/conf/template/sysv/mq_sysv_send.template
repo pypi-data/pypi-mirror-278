@@ -1,0 +1,77 @@
+/* -*- Mode: C; indent-tabs-mode: t; c-basic-offset: 4; tab-width: 4 -*-  */
+/*
+ * mq_sysv_send.c
+ * Copyright (C) ${YEAR} Vladimir Roncevic <elektron.ronca@gmail.com>
+ *
+ * ${PRO} is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by the
+ * Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * ${PRO} is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#include "mq_sysv.h"
+
+/**
+ * Description:
+ *     Deliver a message to a queue, if IPC_NOWAIT is specified in
+ *     mq_message_flag, then the call nstead fails with the error EAGAIN.
+ *     A blocked mq_sysv_send() call may also fail if:
+ *         * queue is removed, in which case the system call fails with
+ *           errno set to EIDRM
+ *         * a signal is caught, in which case the system call fails with
+ *           errno set to EINTR
+ *
+ *     mq_sysv_send() is never automatically restarted after being
+ *     interrupted by a signal handler, regardless of the setting of the
+ *     SA_RESTART flag when establishing a signal handler.
+ *
+ * Arguments:
+ *     mq_id - message queue id
+ *     buffer - message queue buffer
+ *
+ * Return value:
+ *     status - 0 for success (number of bytes copied into mq buffer) |
+ *              MQ_SYSV_ERROR with error number set to indicate the error:
+ *                  EAGAIN (queue is full, and IPC_NOWAIT was asserted)
+ *                  EACCES (permission denied, no write permission)
+ *                  EFAULT (msgp address isn't accessable - invalid)
+ *                  EIDRM  (the message queue has been removed)
+ *                  EINTR  (received a signal while waiting to write)
+ *                  EINVAL (invalid message queue identifier, nonpositive
+ *                          message type, or invalid message size)
+ *                  ENOMEM (not enough memory to copy message buffer)
+ *
+ * Standards:
+ *     POSIX.1-2001, POSIX.1-2008
+ */
+int mq_sysv_send(int mq_id, mq_buffer * buffer)
+{
+    int status;
+    int mq_message_flag;
+#ifdef MQ_FLAG_ZERO
+    mq_message_flag = 0;
+#elif MQ_IPC_NOWAIT
+    mq_message_flag = IPC_NOWAIT;
+#endif
+    if (mq_id >= 0 && buffer != NULL)
+    {
+        status = msgsnd(
+            mq_id, buffer, strlen(buffer->message_buffer) + 1, mq_message_flag
+        );
+    }
+    else
+    {
+        status = MQ_SYSV_ERROR;
+    }
+
+    return status;
+}
+

@@ -1,0 +1,43 @@
+templates:
+  - posix:
+    - mq_posix.template
+    - mq_posix_fatal_error.template
+    - mq_posix_open_mode.template
+    - mq_posix_open.template
+    - mq_posix_receive.template
+    - mq_posix_send.template
+    - mq_posix_close.template
+    - mq_posix_unlink.template
+  - sysv:
+    - mq_sysv.template
+    - mq_sysv_get_buffer.template
+    - mq_sysv_set_buffer.template
+    - mq_sysv_get_buffer_type.template
+    - mq_sysv_set_buffer_type.template
+    - mq_sysv_file_to_key.template
+    - mq_sysv_key_to_id.template
+    - mq_sysv_receive.template
+    - mq_sysv_send.template
+    - mq_sysv_control.template
+
+modules:
+  - posix:
+    - mq_posix.h
+    - mq_posix_fatal_error.c
+    - mq_posix_open_mode.c
+    - mq_posix_open.c
+    - mq_posix_receive.c
+    - mq_posix_send.c
+    - mq_posix_close.c
+    - mq_posix_unlink.c
+  - sysv:
+    - mq_sysv.h
+    - mq_sysv_get_buffer.c
+    - mq_sysv_set_buffer.c
+    - mq_sysv_get_buffer_type.c
+    - mq_sysv_set_buffer_type.c
+    - mq_sysv_file_to_key.c
+    - mq_sysv_key_to_id.c
+    - mq_sysv_receive.c
+    - mq_sysv_send.c
+    - mq_sysv_control.c

@@ -1,0 +1,227 @@
+/* -*- Mode: C; indent-tabs-mode: t; c-basic-offset: 4; tab-width: 4 -*-  */
+/*
+ * mq_sysv.h
+ * Copyright (C) ${YEAR} Vladimir Roncevic <elektron.ronca@gmail.com>
+ *
+ * ${PRO} is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by the
+ * Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * ${PRO} is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#ifndef MQ_SYSV_H_
+#Defines MQ_SYSV_H_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/ipc.h>
+#include <sys/msg.h>
+
+#Defines MQ_SYSV_BUFFER_RWX_RXX_RXX 0644
+#Defines MQ_SYSV_SENDER 0x00000001
+#Defines MQ_SYSV_RECEIVER 0x00000002
+#Defines MQ_SYSV_ERROR -1
+
+/**
+ * MQ_FLAG_ZERO
+ *     Ignore message queue flag.
+ * MQ_IPC_NOWAIT
+ *     Error if request must wait. If the message queue is full, then message
+ *     is not written to queue, and control is returned to calling process.
+ *     If not specified, then calling process will suspend (block) until the
+ *     message can be written.
+ */
+#Defines MQ_FLAG_ZERO
+/* #Defines MQ_IPC_NOWAIT */
+
+/**
+ * MQ Buffer structure
+ *
+ *     message_type - capability to multiplex messages on a single queue
+ *     message_buffer - the message data itself
+ */
+typedef struct
+{
+    long message_type;
+    char * message_buffer;
+} mq_buffer;
+
+/**
+ * Description:
+ *     Convert a pathname and a key to a System V IPC key.
+ *
+ * Arguments:
+ *     file_path - path name
+ *     key - key id (which must be nonzero)
+ *
+ * Return value:
+ *     mq_key - system V IPC key or -1 on failure
+ *
+ * Standards:
+ *     POSIX.1-2001, POSIX.1-2008
+ */
+key_t mq_sysv_file_to_key(
+    const char * file_path, int key
+) __attribute__((nonnull (1)));
+
+/**
+ * Description:
+ *     Convert System V IPC key to message queue id.
+ *
+ * Arguments:
+ *     mq_key - system V IPC key
+ *     operation - message queue operation
+ *
+ * Return value:
+ *     mq_id - message queue id | MQ_SYSV_ERROR
+ *
+ * Standards:
+ *     POSIX.1-2001, POSIX.1-2008
+ */
+int mq_sysv_key_to_id(key_t mq_key, int operation);
+
+/**
+ * Description:
+ *     Set message queue buffer type.
+ *
+ * Arguments:
+ *     buffer - message queue buffer
+ *     message_type - message queue type
+ *
+ * Return value:
+ *     none
+ *
+ * Standards:
+ *     POSIX.1-2001, POSIX.1-2008
+ */
+void mq_sysv_set_buffer_type(
+    mq_buffer * buffer, long message_type
+) __attribute__((nonnull (1)));
+
+/**
+ * Description:
+ *     Get message queue buffer type.
+ *
+ * Arguments:
+ *     buffer - message queue buffer
+ *
+ * Return value:
+ *     message_type - message queue type
+ *
+ * Standards:
+ *     POSIX.1-2001, POSIX.1-2008
+ */
+long mq_sysv_get_buffer_type(mq_buffer * buffer) __attribute__((nonnull (1)));
+
+/**
+ * Description:
+ *     Set message queue buffer.
+ *
+ * Arguments:
+ *     buffer - message queue buffer
+ *     message_buffer - message buffer
+ *
+ * Return value:
+ *     none
+ *
+ * Standards:
+ *     POSIX.1-2001, POSIX.1-2008
+ */
+void mq_sysv_set_buffer(
+    mq_buffer * buffer, char * message_buffer
+) __attribute__((nonnull (1, 2)));
+
+/**
+ * Description:
+ *     Get message queue buffer.
+ *
+ * Arguments:
+ *     buffer - message queue buffer
+ *
+ * Return value:
+ *     message_buffer - message buffer
+ *
+ * Standards:
+ *     POSIX.1-2001, POSIX.1-2008
+ */
+char * mq_sysv_get_buffer(mq_buffer * buffer) __attribute__((returns_nonnull));
+
+/**
+ * Description:
+ *     Removes a message from the queue specified by msqid and places
+ *     it in the buffer pointer.
+ *
+ * Arguments:
+ *     mq_id - message queue id
+ *     buffer - message queue buffer
+ *     message_type - specifies the type of message requested
+ *     message_flag - is a bit mask constructed by ORing together zero or more
+ *
+ * Return value:
+ *     status - number of bytes actually copied | MQ_SYSV_ERROR with error
+ *              number will be set to one among the following values:
+ *                  E2BIG, EACCES, EAGAIN, EFAULT, EIDRM, EINTR, EINVAL, ENOMSG
+ *
+ * Standards:
+ *     POSIX.1-2001, POSIX.1-2008
+ */
+int mq_sysv_receive(
+    int mq_id, mq_buffer * buffer, message_type, message_flag
+);
+
+/**
+ * Description:
+ *     Deliver a message to a queue.
+ *
+ * Arguments:
+ *     mq_id - message queue id
+ *     buffer - message queue buffer
+ *
+ * Return value:
+ *     status - 0 for success (number of bytes copied into mq buffer) |
+ *              MQ_SYSV_ERROR with error number set to indicate the error:
+ *                  EAGAIN, EACCES, EFAULT, EIDRM, EINTR, EINVAL, ENOMEM
+ *
+ * Standards:
+ *     POSIX.1-2001, POSIX.1-2008
+ */
+int mq_sysv_send(int mq_id, mq_buffer * buffer) __attribute__((nonnull (2)));
+
+/**
+ * Description:
+ *     Perform control operations on a message queue.
+ *
+ * Arguments:
+ *     mq_id - message queue id
+ *     command - selective command for message queue
+ *     buffer - message queue buffer
+ *
+ * Return value:
+ *     status - 0 for success | MQ_SYSV_ERROR for failure with error number:
+ *                  EACCES, EFAULT, EIDRM, EINVAL, EPERM
+ *
+ * Standards:
+ *     POSIX.1-2001, POSIX.1-2008
+ */
+int mq_sysv_control(int mq_id, int command, struct msqid_ds * buffer);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif
