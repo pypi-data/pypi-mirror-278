@@ -1,0 +1,36 @@
+lxml
+six
+networkx
+numpy
+tables>=3.3.0
+natsort
+
+[:python_version < "3.5"]
+typing
+
+[dev]
+wheel
+cython
+numpy
+networkx
+flake8
+pytest
+ruff
+natsort
+pre-commit
+
+[dev:python_version >= "3.0"]
+generateds>=2.20a
+
+[doc]
+sphinxcontrib-bibtex
+pydata-sphinx-theme
+natsort
+
+[full]
+libNeuroML[test]
+libNeuroML[dev]
+libNeuroML[doc]
+
+[test]
+pytest
