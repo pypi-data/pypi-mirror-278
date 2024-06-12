@@ -1,0 +1,182 @@
+Metadata-Version: 2.1
+Name: allmdev
+Version: 1.4.8
+Summary: A simple and efficient python library for fast inference of GGUF Large Language Models.
+Author: All Advance AI
+Author-email: allmdev@allaai.com
+Maintainer: Soham Ghadge
+Maintainer-email: soham.ghadge@allaai.com
+Keywords: GGUF,GGUF Large Language Model,GGUF Large Language Models,GGUF Large Language Modeling,GGUF Large Language Modeling Library
+Description-Content-Type: text/markdown
+Requires-Dist: Flask
+Requires-Dist: flask-socketio
+Requires-Dist: flask-cors
+Requires-Dist: click
+Requires-Dist: llama-index
+Requires-Dist: llama-cpp-python
+Requires-Dist: aiohttp
+Requires-Dist: llama-index-llms-llama-cpp
+Requires-Dist: huggingface-hub
+Requires-Dist: langchain ==0.0.267
+Requires-Dist: chromadb ==0.3.26
+Requires-Dist: pdfminer.six
+Requires-Dist: pydantic ==1.10.13
+Requires-Dist: sentence-transformers
+Requires-Dist: vertexai
+Requires-Dist: google-cloud-aiplatform
+Requires-Dist: openai
+Requires-Dist: python-multipart
+Requires-Dist: pyjwt
+Requires-Dist: python-dotenv
+
+# ALLM
+
+ALLM is a Python library designed for fast inference of GGUF (Generic Global Unsupervised Features) Large Language Models (LLMs) on both CPU and GPU. It provides a convenient interface for loading pre-trained GGUF models and performing inference using them. This library is ideal for applications where quick response times are crucial, such as chatbots, text generation, and more.
+
+## Features
+
+- **Efficient Inference**: ALLM leverages the power of GGUF models to provide fast and accurate inference.
+- **CPU and GPU Support**: The library is optimized for both CPU and GPU, allowing you to choose the best hardware for your application.
+- **Simple Interface**: With a straightforward command line support, you can easily load models and perform inference with just a single command.
+- **Flexible Configuration**: Customize inference settings such as temperature and model path to suit your needs.
+
+## Installation
+
+You can install ALLM using pip:
+
+```bash
+pip install allm
+```
+
+## Usage
+
+You can start inference with a simple 'allm-run' command. The command takes name or path, temperature(optional), max new tokens(optional) and additional model kwargs(optional) as arguments.
+
+```bash
+allm-run --name model_name_or_path
+```
+
+## API
+
+You can initiate the inference API by simply using the 'allm-serve' command. This command launches the API server on the default host, 0.0.0.0:8001. 
+
+```bash
+allm-serve
+```
+
+
+## ALLM AGENTS 
+
+## Local Agent Inference
+
+To create local agent, begin by loading your knowledge documents into the database using the allm-newagent command and specifying the agent name:
+
+```bash
+allm-newagent --doc "document_path" --agent agent_name
+```
+
+or
+
+```bash
+allm-newagent --dir "directory containing files to be ingested" --agent agent_name
+```
+
+After agent is created successfully with your knowledge document, you can start the local agent chat with the allm-agentchat command:
+
+
+```bash
+allm-agentchat --agent agent name
+```
+
+After your agents are created you can also initiate agent-specific API server using the allm-agentapi command:
+
+
+```bash
+allm-agentapi --agent agent name
+```
+
+You can also add additional documents to your existing agents by using the allm-updateagent command:
+
+```bash
+allm-updateagent --doc "document path" --agent agentname
+```
+
+##Supported Cloud models.
+
+ALLM supports the Generative LLMs on VertexAI, including Gemini-1.5 pro and AzureOpenAi models. You can start local inference of cloud based models using the following command:
+
+```bash
+allm-run-vertex --projectid Id_of_your_GCP_project --region location_of_your_cloud_server
+```
+
+or
+
+```bash
+allm-run-azure --key key --version version --endpoint https://{your_endpoint}.openai.azure.com --model model_name
+```
+
+ALLM supports the local config based inference of Generative LLMs on VertexAI, including Gemini-1.5 pro and AzureOpenAi models. You can manually create a json confi file or ALLM will create one for you and start local inference of cloud based models using the following command:
+
+```bash
+allm-run-vertex
+```
+Note that for the above command to work, config file needs to have all the necessary parameters set. This can be achieved by running thr full command including CLI arguments once, and then using the shortened command
+
+Same procedure can be followed for azure.
+
+```bash
+allm-run-azure
+```
+
+
+You can also have a custom agent working with your cloud deployed model using the following command. It is important to note that before this step, agent should be created using the commands in the AGENTS section above.
+
+```bash
+allm-agentchat-vertex --projectid Id_of_your_GCP_project --region location_of_your_cloud_server --agent agent_name
+```
+or
+```bash
+allm-run-azure --key key --version version --endpoint https://{your_endpoint}.openai.azure.com --model model_name --agent agentname
+```
+model_name is an optional parameter in both vertex and azure, if not mentioned, inference will work on gemini-1.0-pro-002 for vertex and gpt-35-turbo for OpenAI by default.
+
+Also, have an api config file ready, the following commands can be used:
+
+```bash
+allm-agentchat-vertex --agent agent_name
+```
+and
+```bash
+allm-agentchat-azure --agent agent_name
+```
+
+ALLM also supports inferencing of cloud model based agents on API
+
+```bash
+allm-agentapi-vertex --projectid Id_of_your_GCP_project --region location_of_your_cloud_server --agent agent_name
+```
+or
+```bash
+allm-agentapi-vertex --agent agent_name
+```
+
+For Azure,
+
+```bash
+allm-run-azure --key key --version version --endpoint https://{your_endpoint}.openai.azure.com --model model_name --agent agentname
+```
+or
+```bash
+allm-agentapi-vertex --agent agent_name
+```
+
+# ALLM-Enterprise
+You can launch the UI with the following command:
+
+```bash
+allm-launch
+```
+
+## Supported Model names
+Llama3, Llama2, llama, llama2_chat, Llama_chat, Mistral, Mistral_instruct
+
