@@ -1,0 +1,141 @@
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[project]
+name = "inka2"
+version = "2.4.6"
+description = "Command-line tool for adding flashcards from Markdown files to Anki"
+readme = "README.md"
+authors = [
+    { name = "sysid", email = "sysid@gmx.de" },
+    { name = "Kirill Salnikov", email = "salnikov.k54@gmail.com" },
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Education",
+    "Topic :: Education :: Computer Aided Instruction (CAI)",
+    "Topic :: Text Processing :: Markup :: Markdown",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3 :: Only",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "mistune==2.0.5",
+    "requests",
+    "click",
+    "rich",
+    "aqt",
+    "anki",
+    "pyqt6",
+    "pyqt6-webengine",
+    "pillow",
+    "mypy",
+    "isort",
+    "black",
+]
+
+[project.license]
+text = "GPLv3"
+
+[project.scripts]
+inka2 = "inka2.cli:cli"
+
+[tool.pytest.ini_options]
+markers = [
+    "integration: marks tests as integration tests",
+]
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+line_length = 88
+
+[tool.mypy]
+ignore_missing_imports = false
+namespace_packages = true
+
+[tool.coverage.run]
+source = [
+    "src/inka2",
+]
+omit = [
+    "tests/*",
+    "**/__main__.py",
+    "**/.venv/*",
+    "**/site-packages/*",
+    "examples/*",
+]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+fail_under = 60
+
+[tool.bumpversion]
+current_version = "2.4.6"
+parse = "(?P<major>\\d+)\\.(?P<minor>\\d+)\\.(?P<patch>\\d+)"
+serialize = [
+    "{major}.{minor}.{patch}",
+]
+search = "{current_version}"
+replace = "{new_version}"
+regex = false
+ignore_missing_version = false
+tag = true
+sign_tags = false
+tag_name = "v{new_version}"
+tag_message = "Bump version: {current_version} → {new_version}"
+allow_dirty = false
+commit = true
+message = "Bump version: {current_version} → {new_version}"
+commit_args = ""
+files = [
+    { filename = "VERSION" },
+    { filename = "pyproject.toml" },
+    { filename = "src/inka2/__init__.py" },
+]
+
+[tool.bumpversion.file_patterns]
+"my_package/__init__.py" = [
+    { search = "__version__ = '{current_version}'", replace = "__version__ = '{new_version}'" },
+]
+VERSION = [
+    { search = "{current_version}", replace = "{new_version}" },
+]
+"pyproject.toml" = [
+    { search = "version = {current_version}", replace = "version = {new_version}" },
+]
+
+[tool.pdm]
+source = [
+    { url = "https://pypi.org/simple", verify_ssl = true, name = "pypi" },
+]
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "build",
+    "bump2version",
+    "coverage",
+    "ipython",
+    "isort",
+    "mypy>=1.8.0",
+    "pre-commit",
+    "pytest",
+    "pytest-cov",
+    "pytest-mock",
+    "tox",
+    "types-click",
+    "types-requests",
+    "ruff>=0.2.2",
+]
