@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: ragstack-ai-langchain
+Version: 1.1.0
+Summary: DataStax RAGStack Langchain
+Home-page: https://github.com/datastax/ragstack-ai
+License: BUSL-1.1
+Author: DataStax
+Requires-Python: >=3.9,<3.13
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: colbert
+Provides-Extra: google
+Provides-Extra: nvidia
+Requires-Dist: astrapy (>=1,<2)
+Requires-Dist: cassio (>=0.1.4,<0.2.0)
+Requires-Dist: langchain (==0.2.3)
+Requires-Dist: langchain-astradb (==0.3.3)
+Requires-Dist: langchain-community (==0.2.4)
+Requires-Dist: langchain-core (==0.2.5)
+Requires-Dist: langchain-google-genai (==1.0.6) ; extra == "google"
+Requires-Dist: langchain-google-vertexai (==1.0.5) ; extra == "google"
+Requires-Dist: langchain-nvidia-ai-endpoints (==0.1.1) ; extra == "nvidia"
+Requires-Dist: langchain-openai (==0.1.8)
+Requires-Dist: ragstack-ai-colbert (==1.0.5) ; extra == "colbert"
+Requires-Dist: unstructured (==0.14.2)
+Project-URL: Documentation, https://docs.datastax.com/en/ragstack
+Project-URL: Repository, https://github.com/datastax/ragstack-ai
+Description-Content-Type: text/markdown
+
+# RAGStack LangChain
+
+RAGStack LangChain package, part of [`ragstack-ai`](https://pypi.org/project/ragstack-ai/).
+
+## Documentation
+
+[DataStax RAGStack Documentation](https://docs.datastax.com/en/ragstack/docs/index.html)
+
+[Quickstart](https://docs.datastax.com/en/ragstack/docs/quickstart.html)
+
+[Examples](https://docs.datastax.com/en/ragstack/docs/examples/index.html)
