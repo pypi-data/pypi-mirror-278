@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "diveharder"
+version = "0.1.2"
+description = "A Helldivers 2 API wrapper using the Diveharder API"
+authors = ["AJXD2 <anthonyjohnkovach@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+keywords = ["helldivers 2","api","wrapper","diveharder","community"]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Games/Entertainment",
+    "Topic :: System :: Networking",
+    "Typing :: Typed",
+    "Operating System :: OS Independent",
+    
+]
+homepage = "https://github.com/ajxd2/diveharder-wrapper"
+[tool.poetry.scripts]
+diveharder = "diveharder.cli:main"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.32.3"
+fire = "^0.6.0"
+rich = "^13.7.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,83 @@
+Metadata-Version: 2.1
+Name: diveharder
+Version: 0.1.2
+Summary: A Helldivers 2 API wrapper using the Diveharder API
+Home-page: https://github.com/ajxd2/diveharder-wrapper
+License: MIT
+Keywords: helldivers 2,api,wrapper,diveharder,community
+Author: AJXD2
+Author-email: anthonyjohnkovach@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Games/Entertainment
+Classifier: Topic :: System :: Networking
+Classifier: Typing :: Typed
+Requires-Dist: fire (>=0.6.0,<0.7.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: rich (>=13.7.1,<14.0.0)
+Description-Content-Type: text/markdown
+
+# DiveharderWrapper For Python
+
+A Helldivers 2 API wrapper using the [Diveharder API](https://github.com/helldivers-2/diveharder_api.py).
+
+## Introduction
+
+This project aims to provide a convenient Python wrapper for the Diveharder API, allowing developers to easily interact with Helldivers 2 game data.
+
+## Installation
+
+### PyPI
+
+```sh
+pip install diveharder
+```
+
+### Manual
+1. Clone the repository:
+
+    ```sh
+    git clone https://github.com/ajxd2/diveharder-wrapper
+    cd diveharder-wrapper
+    ```
+
+2. Install Poetry:
+
+    ```sh
+    pip install poetry
+    ```
+
+3. Build the package:
+
+    ```sh
+    poetry build
+    ```
+
+4. Install the package using the `.whl` file:
+
+    ```sh
+    python -m venv venv
+    # On Windows
+    source venv/Scripts/activate
+    # On Unix or MacOS
+    source venv/bin/activate
+    pip install dist/diveharder-*.whl
+    ```
+
+## Usage
+
+Here's a simple example of how to use the DiveharderWrapper:
+
+```python
+from diveharder import DiveHarderApiClient
+
+api = DiveHarderApiClient()
+
+print(api.dispatches.get_latest_dispatch().message)
+```
+
+
