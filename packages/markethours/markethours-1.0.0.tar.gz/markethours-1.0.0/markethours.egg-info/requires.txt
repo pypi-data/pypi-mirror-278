@@ -1,0 +1,6 @@
+requests
+pytz
+
+[dev]
+pytest
+pytest-timeout
