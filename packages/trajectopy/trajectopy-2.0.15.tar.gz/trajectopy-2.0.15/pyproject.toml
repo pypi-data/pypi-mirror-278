@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "trajectopy"
+version = "2.0.15"
+description = "Trajectory Evaluation in Python"
+authors = ["Gereon Tombrink <tombrink@igg.uni-bonn.de>"]
+maintainers = ["Gereon Tombrink <tombrink@igg.uni-bonn.de>"]
+license = "GPLv3"
+keywords = ["trajectory", "evaluation", "alignment", "similarity", "leverarm", "epsg", "robotics"]
+readme = "README.md"
+homepage = "https://github.com/gereon-t/trajectopy"
+repository = "https://github.com/gereon-t/trajectopy.git"
+packages = [
+    { include = "trajectopy" },
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+pyqt6 = "^6.6.1"
+rich = "^13.7.0"
+trajectopy-core = ">=3.1.0,<3.2.0"
+
+[tool.poetry.scripts]
+trajectopy = "trajectopy.__main__:main"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.5.1"
+black = "^23.9.1"
+pre-commit = "^3.5.0"
+tox = "^4.11.3"
+pillow = "^10.3.0"
+numpy = "^1.26.4"
+pointset = "^0.1.7"
+
+[tool.isort]
+profile = "black"
+line_length = 119
+
+[tool.black]
+line-length = 119
+
+[build-system]
+requires = ["poetry"]
+build-backend = "poetry.masonry.api"
