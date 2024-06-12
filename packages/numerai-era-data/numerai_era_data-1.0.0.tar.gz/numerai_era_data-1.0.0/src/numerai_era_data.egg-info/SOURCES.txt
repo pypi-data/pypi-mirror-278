@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+src/numerai_era_data/__init__.py
+src/numerai_era_data/date_utils.py
+src/numerai_era_data/era_data_api.py
+src/numerai_era_data.egg-info/PKG-INFO
+src/numerai_era_data.egg-info/SOURCES.txt
+src/numerai_era_data.egg-info/dependency_links.txt
+src/numerai_era_data.egg-info/requires.txt
+src/numerai_era_data.egg-info/top_level.txt
+src/numerai_era_data/data_sources/__init__.py
+src/numerai_era_data/data_sources/base_data_source.py
+src/numerai_era_data/data_sources/ds_bls.py
+src/numerai_era_data/data_sources/ds_calendar.py
+src/numerai_era_data/data_sources/ds_markets.py
+src/numerai_era_data/data_sources/ds_wei.py

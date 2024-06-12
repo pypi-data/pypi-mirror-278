@@ -1,0 +1,10 @@
+pandas
+pyarrow
+yfinance
+
+[dev]
+black
+isort
+mock
+pytest
+ruff
