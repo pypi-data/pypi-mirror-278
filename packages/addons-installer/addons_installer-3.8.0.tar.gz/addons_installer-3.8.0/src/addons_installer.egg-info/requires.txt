@@ -1,0 +1,9 @@
+
+[:python_version <= "3"]
+typing==3.10.0.0
+
+[:python_version == "3.7"]
+python-dotenv==0.21.1
+
+[:python_version > "3.7"]
+python-dotenv~=1.0
