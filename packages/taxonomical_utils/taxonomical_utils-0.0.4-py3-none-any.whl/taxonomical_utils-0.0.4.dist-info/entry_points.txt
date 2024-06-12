@@ -1,0 +1,3 @@
+[console_scripts]
+taxonomical-utils=taxonomical_utils.cli:cli
+
