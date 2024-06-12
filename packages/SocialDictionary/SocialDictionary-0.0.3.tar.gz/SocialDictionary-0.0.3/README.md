@@ -1,0 +1,170 @@
+# SocialDictionary
+
+## Introduction
+
+This package aims to account for emojis in sentiment analysis, making sentiment analysis better when emojis are included in the text. First we take the emojis from the https://getemoji.com/ website, then we create a csv with information about each emoji taken, such as the unicode and description, then we calculate the score of the emoji description and assign a sentiment, which can be positive, neutral or negative. After this information we use the EmoRoBERTa model, which uses GoEmotions to recognise emotions, so we then assign an emotion to each of the emojis on the list. Next we place an input containing emojis and then the text is returned with the emoji replaced by the emotion, the sentiment of the text and information about the emoji/s used in the input.
+
+#### The following dependencies must be installed to use the package.
+
+1. pandas- pip install pandas
+2. nltk- pip install nltk
+3. emoji-pip install emoji
+4. googletrans- pip install googletrans==4.0.0-rc1
+
+## Where to get it
+You can install the package using pip:
+```sh
+pip install SocialDictionary
+```
+
+## Functions
+
+#### 1. __init__(self)
+Function: Constructor of the class, initialises the instance.
+Description:
+Gets the full path to the CSV file in the 'Dados' folder.
+Reads the CSV file using pandas and stores it in the DataFrame self.df.
+Starts the SentimentIntensityAnalyzer sentiment analyser.
+Initialises the Google Translator.
+
+#### 2. substituir_emoji_por_emocao(self, texto)
+Function: Replaces emoticons in the text with the corresponding emotions.
+Description:
+Creates a dictionary that maps emoticons to their corresponding emotions using the Design and Emotion columns of the DataFrame.
+Replaces each emoji in the text with its corresponding emotion.
+Returns the changed text.
+
+#### 3. analise_sentimentos(self, texto)
+Function: Analyses the sentiment of the given text.
+Description:
+Uses SentimentIntensityAnalyzer to calculate the sentiment score of the text.
+Returns the composite sentiment score.
+
+#### 4. extrair_emojis(self, texto)
+Function: Extracts all the emoticons present in the text.
+Description:
+Goes through each character in the text and checks if it is an emoji using emoji.EMOJI_DATA.
+Returns a list of the emoji found in the text.
+
+#### 5. traduzir_texto(self, texto, idioma_destino)
+Function: Translate text to the target language.
+Description:
+Uses Translator to translate the text into the specified language.
+Returns the translated text.
+
+#### 6. traduzir_campos(self, campos, idioma_destino)
+Function: Translates the fields of a dictionary into the target language.
+Description:
+Loops through each key-value in the dictionary fields.
+Translates the value into the given language.
+Returns a new dictionary containing the translated values.
+
+#### 7. analisar_texto(self, texto)
+Function: Analyses the supplied text, including emoticons and sentiment.
+Description:
+Detects the language of the input text.
+Extracts emoticons from the original text.
+Replaces emoticons with the corresponding emotion.
+Performs sentiment analysis on the modified text.
+Translates the modified text back to the original language.
+Gathers detailed information about the emoticons used and translates this information into the input language.
+Returns a dictionary with the modified text, the sentiment of the text and information about the emoji used.
+
+### csv file with emoji data
+This file was created by collecting the emoji that are available in a list on the website 'https://getemoji. com/', in this file we have 6 columns, the first one is called 'Design' where we have the graphical representation of the emoji, in the second column we have the 'Unicode' through a function, in the third column we have the 'Description' which is discovered through the emoji library, once we have the description of each emoji in the 'Description' column we calculate the score for each one and then assign a sentiment: If it's below 0 to -1 it's negative, if it's 0 it's neutral and if it's above 0 to 1 it's positive, then using the EmoRoBERTa model we assign an emotion to each emoji using its description, creating the 'emotion' column. Below is an image of the csv file:
+
+![Image of the csv file](assets/csv.png)
+
+## Usage
+#### Guide to use the functions
+
+The SentimentAnalyzer class allows you to analyse text to replace emojis with corresponding emotions, perform sentiment analysis and translate text. Here is a detailed guide to using each function:
+
+1. Initialisation (__init__):
+
+	Initialises the instance of the class, loading a CSV file with emojis and emotions, and initialises the sentiment analyser (SentimentIntensityAnalyzer) and the translator (Translator).
+	
+	Usage: 
+	sa = SentimentAnalyzer()
+
+2. Replace Emojis with Emotions ('substituir_emoji_por_emocao'):
+
+	2.1.Replaces emojis in text with their corresponding emotions based on CSV data.
+	Parameters: text (str) - Text containing emojis.
+	Return: modified_text (str) - Text with emojis replaced by emotions.
+
+	Usage:
+	text = ‘I'm very happy today! 😊"
+	modified_text = sa.substituir_emoji_por_emocao(text)
+	print(modified_text)
+
+
+3. Sentiment Analysis ('analise_sentimentos'):
+
+	Performs sentiment analysis on the supplied text and returns the composite score.
+	Parameters: text (str) - Text for sentiment analysis.
+	Return: sentiment (float) - Sentiment analysis composite score.
+	
+	Usage:
+	text = ‘I'm very happy today!’
+	sentiment = sa.analise_sentimentos(text)
+	print(feeling)
+
+4. Extract Emojis ('extrair_emojis'):
+
+	Extracts all the emojis present in the text.
+	Parameters: text (str) - Text containing emojis.
+	Return: emojis (list) - List of emojis found in the text.
+	
+	Usage:
+	text = ‘I'm very happy today! 😊"
+	emojis = sa.extract_emojis(text)
+	print(emojis)
+
+5. Translate Text ('traduzir_texto'):
+
+	Translate the text into the target language.
+	Parameters: text (str) - Text to be translated; target_language (str) - Target language code (e.g. ‘en’ for English).
+	Return: translated (str) - Translated text.
+	
+	Usage:
+	text = ‘I'm very happy today!’
+	translated_text = sa.traduzir_texto(text, ‘en’)
+	print(translated_text)
+
+
+6. Translate fields ('traduzir_campos'):
+
+	Translates the fields of a dictionary into the target language.
+	Parameters: fields (dict) - Dictionary with fields to translate; target_language (str) - Target language code.
+	Return: translated_fields (dict) - Dictionary with the translated fields.
+
+	Usage:
+	fields = {'Emotion': 'happy', 'Description': 'A smiling face'}
+	translated_fields = sa.traduzir_campos(fields, 'en')
+	print(translated_fields)
+
+7. Parse text ('analisar_texto'):
+
+	Parses the given text, replaces emoticons with their corresponding emotions, performs sentiment analysis and translates the modified text.
+	Parameters: text (str) - text to analyse.
+	Return: translated_results (dict) - Dictionary containing the modified text, the sentiment of the text and information about the emoticons used.
+	
+	Usage:
+	text = "I'm very happy today! 😊"
+	results = sa.analisar_texto(text)
+
+
+
+#### Example of the input and outputs obtained
+In this example, we put the following phrase as input and get various results, such as the text in which the emoji is replaced by the corresponding emotion, the sentiment of the text and information about the emojis used, in this case just one emoji. The outputs are according to the language of the input.
+![Example of the input and outputs obtained](assets/input_output.png)
+
+
+#### Example of using the package
+In this example we have a demonstration of how the package can be used. It is shown in the following image:
+![Image of the csv file](assets/csv.png)
+
+
+
+
