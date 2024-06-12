@@ -1,0 +1,2 @@
+[console_scripts]
+eemeter = eemeter.eemeter.utilities.cli:cli
