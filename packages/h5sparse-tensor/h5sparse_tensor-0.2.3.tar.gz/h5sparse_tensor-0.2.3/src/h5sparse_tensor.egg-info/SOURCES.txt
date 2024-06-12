@@ -1,0 +1,12 @@
+LICENSE
+README.rst
+pyproject.toml
+setup.cfg
+src/h5sparse/__init__.py
+src/h5sparse/h5sparse.py
+src/h5sparse_tensor.egg-info/PKG-INFO
+src/h5sparse_tensor.egg-info/SOURCES.txt
+src/h5sparse_tensor.egg-info/dependency_links.txt
+src/h5sparse_tensor.egg-info/requires.txt
+src/h5sparse_tensor.egg-info/top_level.txt
+tests/tests.py
