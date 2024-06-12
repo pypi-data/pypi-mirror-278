@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: ptm_pose
+Version: 0.1.0
+Summary: PTM-POSE: PTM Projection onto Splice Events
+Home-page: https://github.com/NaegleLab/PTM-POSE/tree/main
+Author: Naegle Lab
+Author-email: kmn4mj@virginia.edu
+License: GNU General Public License v3
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: pandas ==2.2.*
+Requires-Dist: numpy ==1.26.*
+Requires-Dist: scipy ==1.13.*
+Requires-Dist: biopython ==1.83.*
+Requires-Dist: tqdm ==4.66.*
+Requires-Dist: xlrd
+Requires-Dist: matplotlib
+Requires-Dist: requests
+
+PTM-POSE is an open-source tool for annotating splice event quantification data with post-translational modifications (PTMs) and their functional consequences.
