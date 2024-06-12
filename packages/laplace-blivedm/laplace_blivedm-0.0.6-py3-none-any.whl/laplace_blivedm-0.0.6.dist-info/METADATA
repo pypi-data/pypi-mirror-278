@@ -1,0 +1,31 @@
+Metadata-Version: 2.3
+Name: laplace-blivedm
+Version: 0.0.6
+Summary: Fork of blivedm with additional events support
+Project-URL: Homepage, https://github.com/sparanoid/laplace-blivedm
+Project-URL: Bug Tracker, https://github.com/sparanoid/laplace-blivedm/issues
+Author-email: Sparanoid <t@sparanoid.com>, xfgryujk <xfgryujk@126.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# laplace-blivedm
+
+Fork of [blivedm](https://github.com/xfgryujk/blivedm) with additional events support
+
+## Install
+
+```bash
+pip install laplace-blivedm
+```
+
+## Usage
+
+See `sample.py`
+
+## License
+
+MIT
