@@ -1,0 +1,4 @@
+[console_scripts]
+instill-build=instill.helpers.build:build_image
+instill-push=instill.helpers.push:push_image
+
