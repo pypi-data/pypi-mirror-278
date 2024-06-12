@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "aily-core"
+description = "Aily Core"
+version = "0.1.0-beta.9"
+authors = [
+    "lijiuyang.5137 <lijiuyang.5137@bytedance.com>",
+    "zhaolizi.milo <zhaolizi.milo@bytedance.com>"
+]
+readme = "README.md"
+packages = [{ include = "aily_core", from = "src" }]
+
+classifiers = [
+    "License :: OSI Approved :: Apache Software License",
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.8.1"
+requests = "^2.31.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+

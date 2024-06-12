@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: aily-core
+Version: 0.1.0b9
+Summary: Aily Core
+Author: lijiuyang.5137
+Author-email: lijiuyang.5137@bytedance.com
+Requires-Python: >=3.8.1,<4.0.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# Aily Code SDK Core
+
+## Development
+
+开发时，需要在根目录中创建 `.env` 文件，填写如下内容：
+
+```bash
+AILY_SDK_LOCAL_DEBUG=true
+AILY_SDK_CLIENT_ID=c_xxx
+AILY_SDK_CLIENT_SECRET=cxxx
+AILY_SDK_DOMAIN=https://ae-openapi.feishu-boe.cn/
+```
+
+然后通过 `python -m unitest` 命令通过执行单元测试来调试代码。
+
+### Build
+
+```bash
+python -m build
+```
+
+### Upload
+
+```bash
+python -m twine upload dist/* --verbose
+```
+
