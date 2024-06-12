@@ -1,0 +1,28 @@
+[package]
+name = "triplestore"
+version = "0.5.0"
+edition = "2021"
+
+[dependencies]
+query_processing = {workspace = true}
+representation = { workspace= true }
+parquet_io = {path="../parquet_io"}
+rayon = {workspace=true}
+sprs = {version="0.11.1", features=["multi_thread"]}
+spargebra = { workspace=true}
+oxrdf = {workspace=true}
+polars = {workspace=true, features=["zip_with", "nightly", "performant", "cse", "semi_anti_join","abs", "round_series", "lazy", "concat_str", "is_in", "dtype-full", "strings", "rows", "timezones", "polars-time", "temporal", "list_eval", "partition_by", "parquet", "diagonal_concat", "cross_join", "cum_agg"] }
+#TODO: Due to ntriples write using pool-functionality, should be refactored. Also concat df usage in lib.rs.
+polars-utils = { workspace=true }
+polars-core = {workspace=true}
+log= {workspace=true}
+chrono = { workspace=true }
+uuid = {workspace=true}
+thiserror={ workspace= true }
+env_logger = { workspace=true }
+oxiri = "0.2.2"
+oxrdfio = { workspace = true}
+
+[dev-dependencies]
+rstest = "0.18.2"
+serial_test = "2.0.0"

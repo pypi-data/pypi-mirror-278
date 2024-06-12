@@ -1,0 +1,41 @@
+[package]
+name = "py_maplib"
+version = "0.9.3"
+edition = "2021"
+
+[workspace]
+
+[dependencies]
+pyo3 = {version = "0.21.2", features = ["extension-module"] }
+maplib = {path="../maplib"}
+triplestore = {path="../triplestore"}
+#representation = {path="../../representation"}
+representation = { git = "https://github.com/DataTreehouse/representation", tag="v0.6.9"}
+shacl = {path="../shacl"}
+oxrdf = {version="0.2.0-alpha.5"}
+oxrdfio = "0.1.0-alpha.6"
+#pydf_io = {path = "../../pydf_io"}
+pydf_io = { git = "https://github.com/DataTreehouse/pydf_io", tag="v0.7.6"}
+thiserror="1.0.58"
+polars = {version= "0.40.0", features=[
+    "nightly", "performant", "cse",
+    "dtype-array", "dtype-categorical", "dtype-date", "dtype-datetime",
+    "dtype-decimal", "dtype-duration", "dtype-i8", "dtype-i16", "dtype-struct", "dtype-time", "dtype-u8", "dtype-u16"]}
+log ="0.4.21"
+
+[lib]
+name = "maplib"
+crate-type = ["cdylib"]
+
+# Conditional dependency specification of mimalloc and jemallocator copied from: https://github.com/pola-rs/polars/blob/main/py-polars/Cargo.toml
+# Licence in /licensing/POLARS_LICENSE
+[target.'cfg(not(target_os = "linux"))'.dependencies]
+mimalloc = { version = "0.1", default-features = false }
+
+[target.'cfg(target_os = "linux")'.dependencies]
+jemallocator = { version = "0.5", features = ["disable_initial_exec_tls"] }
+
+[patch.crates-io]
+polars = { git = 'https://github.com/pola-rs/polars.git', rev = "805acd81cfed82248d34fa69875cbe04730f74ce"}
+polars-core = { git = 'https://github.com/pola-rs/polars.git', rev = "805acd81cfed82248d34fa69875cbe04730f74ce"}
+polars-utils = { git = 'https://github.com/pola-rs/polars.git', rev = "805acd81cfed82248d34fa69875cbe04730f74ce"}
