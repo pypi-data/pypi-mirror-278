@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: reportxlsxforlinux
+Version: 0.0.2
+Summary: 这是一个操作xlsx的库,只为linux而生
+Home-page: https://github.com/bailulue
+Author: bailu
+Author-email: yabailu@chinatelecom.cn
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: openpyxl
+Requires-Dist: pythonnet
+Requires-Dist: aspose-cells (==24.5.0)
+
+0.3.3 解决linux下图片生成字体不正确的问题，解决add_sheets错误的问题
+
