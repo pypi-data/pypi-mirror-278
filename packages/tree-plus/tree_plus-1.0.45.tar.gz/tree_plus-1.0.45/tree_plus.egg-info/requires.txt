@@ -1,0 +1,13 @@
+tiktoken
+PyYAML
+click
+rich
+tomli
+natsort>=7.1
+fake_useragent
+bs4
+
+[dev]
+pytest
+pytest-dotenv
+pytest-xdist
