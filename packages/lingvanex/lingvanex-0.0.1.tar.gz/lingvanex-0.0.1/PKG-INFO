@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: lingvanex
+Version: 0.0.1
+Summary: Lingvanex API instructions
+Author-email: Lingvanex <tech@lingvanex.com>
+Project-URL: Homepage, https://github.com/pypa/sampleproject
+Project-URL: Issues, https://github.com/pypa/sampleproject/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: License
+
+Getting the list of languages
+
+https://api-b2b.backenster.com/b1/api/v3/getLanguages
+
+The method allows you to get the list of languages available for translation
+
+
+
+
+Translate
+
+https://api-b2b.backenster.com/b1/api/v3/translate
+
+This method translates text and HTML single string or arrays. Also it performs transliteration, language auto detection. Please, check request examples on the right to check these capabilities.
