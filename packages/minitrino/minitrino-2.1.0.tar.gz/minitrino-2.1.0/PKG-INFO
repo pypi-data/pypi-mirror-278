@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: minitrino
+Version: 2.1.0
+Summary: A command line tool that makes it easy to run modular Trino environments locally.
+Home-page: https://github.com/jefflester/minitrino
+Author: Jeff Lester
+Author-email: jeff.lester.dev@gmail.com
+License: Apache-2.0
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+<p align="center">
+    <img alt="Minitrino Logo" src=".github/img/minitrino-small.png" />
+</p>
+
+# Minitrino
+
+A command line tool that makes it easy to run modular Trino environments
+locally. Compatible with Starburst versions 402-e and later.
+
+[![PyPI
+version](https://badge.fury.io/py/minitrino.svg)](https://badge.fury.io/py/minitrino)
+![CLI
+Tests](https://github.com/jefflester/minitrino/actions/workflows/cli-tests.yml/badge.svg)
+![Library
+Tests](https://github.com/jefflester/minitrino/actions/workflows/lib-tests.yml/badge.svg)
+[![Trino
+Slack](https://img.shields.io/static/v1?logo=slack&logoColor=959DA5&label=Slack&labelColor=333a41&message=join%20conversation&color=3AC358)](https://trinodb.io/slack.html)
+
+-----
+
+**Latest Stable Release**: 2.1.0
+
+-----
+
+## Quick Start
+
+To learn more about the CLI and underlying library, visit the following wiki
+pages:
+
+- [Installation and
+  Upgrades](https://github.com/jefflester/minitrino/wiki/Installation-and-Upgrades)
+- [Workflow
+  Examples](https://github.com/jefflester/minitrino/wiki/Workflow-Examples)
+- [Environment Variables and
+  Config](https://github.com/jefflester/minitrino/wiki/Environment-Variables-and-Config)
+- [Build a Module](https://github.com/jefflester/minitrino/wiki/Build-a-Module)
