@@ -1,0 +1,23 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/LM_products/__init__.py
+src/LM_products/api/__init__.py
+src/LM_products/api/git.py
+src/aienable.egg-info/PKG-INFO
+src/aienable.egg-info/SOURCES.txt
+src/aienable.egg-info/dependency_links.txt
+src/aienable.egg-info/top_level.txt
+src/computer vision/__init__.py
+src/computer vision/dataol.py
+src/computer vision/infer_tool.py
+src/computer vision/test.py
+src/computer vision/kmeans_anchor/__init__.py
+src/computer vision/kmeans_anchor/optimize_anchor.py
+src/computer vision/kmeans_anchor/read_voc.py
+src/computer vision/kmeans_anchor/yolo_kmeans.py
+src/computer vision/todo/__init__.py
+src/computer vision/todo/merge-heshuai.py
+src/computer vision/todo/merge_splitted_elongated_boxes.py
+src/computer vision/todo/spilt_one_elongated_object_into_three.py
