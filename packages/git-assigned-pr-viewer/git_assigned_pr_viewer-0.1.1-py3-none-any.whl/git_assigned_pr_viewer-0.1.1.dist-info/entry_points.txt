@@ -1,0 +1,2 @@
+[console_scripts]
+git-assigned-pr-viewer = src.main:git_assigned_pr_viewer
