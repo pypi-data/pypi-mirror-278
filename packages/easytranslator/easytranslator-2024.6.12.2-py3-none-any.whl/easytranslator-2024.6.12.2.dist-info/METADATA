@@ -1,0 +1,72 @@
+Metadata-Version: 2.3
+Name: easytranslator
+Version: 2024.6.12.2
+Summary: A Python package for reliable text translation using multiple free engines with automatic failover.
+Project-URL: Homepage, https://github.com/versun/easytranslator
+Project-URL: Repository, https://github.com/versun/easytranslator.git
+Project-URL: Issues, https://github.com/versun/easytranslator/issues
+Author-email: Versun <easytranslator@versun.me>
+License: GPL-3.0 license
+License-File: LICENSE
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.10
+Requires-Dist: translators
+Description-Content-Type: text/markdown
+
+## easytranslator
+
+A Python package for reliable text translation using multiple free engines with automatic failover.
+
+Currently, it supports the following languages:
+- English
+- Chinese Simplified
+- Chinese Traditional
+- Russian
+- Japanese
+- Korean
+- Czech
+- Danish
+- German
+- Spanish
+- French
+- Indonesian
+- Italian
+- Hungarian
+- Dutch
+- Polish
+- Portuguese
+- Swedish
+- Turkish
+
+
+Installation
+-----------
+1. Install: `pip install easytranslator`
+1. Translate a text:
+    ```
+    from easytranslator import EasyTranslator
+
+    et = EasyTranslator()
+    results = et.translate(
+        text="Hello, world!", 
+        dest_lang="Chinese Simplified", 
+        src_lang="auto", 
+        proxies=[])
+    print(results) 
+    '''
+    {
+        "translated_text": "你好，世界！",
+        "status": "success",
+    }
+    '''
+    ```
+1. More details can be found in the [main.py](/easytranslator/main.py) file.
