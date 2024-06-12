@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: gentraframe
+Version: 0.1.0
+Summary: pipeline framework for GNNs on any graph-related tasks
+License: MIT
+Author: cuongth95
+Author-email: truonghuycuong95@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: matplotlib (>=3.9.0,<4.0.0)
+Requires-Dist: networkx (>=3.3,<4.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Requires-Dist: typed-argument-parser (>=1.10.0,<2.0.0)
+Requires-Dist: wandb (>=0.17.0,<0.18.0)
+Description-Content-Type: text/markdown
+
+# gentraframe
+Pipeline framework for training deep learning models on any graph-related tasks
+

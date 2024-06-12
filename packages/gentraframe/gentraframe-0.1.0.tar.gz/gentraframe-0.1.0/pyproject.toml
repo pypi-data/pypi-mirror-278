@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "gentraframe"
+version = "0.1.0"
+description = "pipeline framework for GNNs on any graph-related tasks"
+authors = ["cuongth95 <truonghuycuong95@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typed-argument-parser = "^1.10.0"
+networkx = "^3.3"
+matplotlib = "^3.9.0"
+pyyaml = "^6.0.1"
+wandb = "^0.17.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
