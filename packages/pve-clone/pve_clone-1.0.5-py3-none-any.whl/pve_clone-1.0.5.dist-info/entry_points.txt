@@ -1,0 +1,2 @@
+[console_scripts]
+pve-clone = pve_clone.__main__:main
