@@ -1,0 +1,110 @@
+Changelog
+=========
+
+5.0 - (2024-06-11)
+---------------------------
+* Breaking: Requires `plone.volto >= 4.1.0`
+* Change: Add upgrade step to add block_types index to the Plone catalog
+  [avoinea - refs #271233]
+
+4.1 - (2024-05-23)
+---------------------------
+* Bug fix: Fix teaserGrid to gridBlock to transaction.commit every 100 items
+  [avoinea - refs #265726]
+
+4.0 - (2024-05-20)
+---------------------------
+* Feature: Migrate teaserGrid to gridBlock structure from Volto 17 core
+  [avoinea - refs #265726]
+
+3.5 - (2024-05-14)
+---------------------------
+* Change: feat(serializer): added effective to the default_metadata_fields
+  [ichim-david]
+
+3.4 - (2024-03-28)
+---------------------------
+* Change: Develop typo
+  [alecghica]
+
+3.3 - (2024-03-28)
+---------------------------
+* Bug fix: fixed the ZMI styles
+  [alecghica refs #267310]
+
+3.2 - (2024-02-28)
+---------------------------
+* Change: Release
+  [nileshgulia1]
+
+3.1 - (2023-08-31)
+---------------------------
+* Change: Feature: Add content rule to unset publication date when private [dobri1408 - refs #147278]
+  [avoinea]
+
+3.0 - (2023-08-30)
+---------------------------
+* Feature: Add image_scales to catalog and update list of scales to registry
+  [nileshgulia1 - refs #254889]
+
+2.3 - (2023-07-31)
+---------------------------
+* Docs: Update sonarqube tags
+  [valipod]
+
+2.2 - (2023-04-19)
+---------------------------
+* Bug fix: restore IVoltoSettings interface
+  [alecghica refs #250564]
+
+2.1 - (2023-04-11)
+---------------------------
+* Bug fix: RestAPI fix DateTime timezone for ICoreMetadata fields serializer/deserializer
+  [avoinea refs #250368]
+
+2.0 - (2023-04-10)
+---------------------------
+* Bug fix: RestAPI fix DateTime timezone for publication fields serializer/deserializer
+  [avoinea refs #250368]
+* Cleanup: Drop Python2/Plone4 support
+  [avoinea refs #250368]
+
+1.7 - (2021-11-23)
+---------------------------
+* Change: Removed types already present in plone.volto
+  [iulianpetchesi refs #139888]
+
+1.6 - (2021-11-22)
+---------------------------
+* Change: Drop includeDependencies="." in order to work with pip based installation
+  [avoinea refs #139557]
+
+1.5 - (2021-11-11)
+---------------------------
+* Change: Removed z3c.jbot as dependency
+  [iulianpetchesi refs #139888]
+
+1.4 - (2021-11-11)
+---------------------------
+* Change: New release
+  [avoinea refs #139888]
+
+1.3 - (2021-11-11)
+---------------------------
+* Change: Removed plone.volto conflicts
+  [iulianpetchesi refs #139888]
+
+1.2 - (2021-01-14)
+---------------------------
+* Change: updated Jenkinsfile and setup.py
+  [alecghica refs #121942]
+
+1.1 - (2020-12-16)
+---------------------------
+* Change: fixed history.txt
+  [Petchesi-Iulian refs #121942]
+
+1.0 - (2020-12-08)
+-----------------------
+* Initial release: Added behaviors/controlpanel/patches/vocabulary from kitconcept.volto
+  [Petchesi-Iulian refs #121942]
