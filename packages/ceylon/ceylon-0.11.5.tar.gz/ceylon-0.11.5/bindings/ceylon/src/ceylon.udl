@@ -1,0 +1,40 @@
+namespace ceylon {
+  string version();
+};
+
+interface AgentCore{
+    constructor(string name,boolean is_leader, MessageHandler on_message, Processor processor);
+
+    string id();
+    string name();
+    string workspace_id();
+    boolean is_leader();
+
+    [Async]
+    void broadcast(string message);
+};
+
+[Trait,WithForeign]
+interface MessageHandler {
+    [Async]
+    void on_message(string agent_id,string message);
+};
+
+[Trait,WithForeign]
+interface Processor {
+    [Async]
+    void run();
+};
+
+dictionary WorkspaceConfig{
+    string name;
+    string host = "/ip4/0.0.0.0/tcp/";
+    u16 port = 8888;
+};
+
+interface Workspace{
+    constructor(sequence<AgentCore> agents,WorkspaceConfig config);
+
+    [Async]
+    void run(record<string, string> inputs);
+};
