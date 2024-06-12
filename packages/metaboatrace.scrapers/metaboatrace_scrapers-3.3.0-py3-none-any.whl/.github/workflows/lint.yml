@@ -1,0 +1,23 @@
+name: Lint
+
+on: [pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install rye
+        uses: baptiste0928/cargo-install@v2
+        with:
+          crate: rye
+          git: https://github.com/mitsuhiko/rye
+          branch: main
+      - name: Fix Python version
+        run: rye pin 3.11
+      - name: Install Dependencies
+        run: rye sync
+      - name: Run mypy
+        run: |
+          rye run mypy metaboatrace

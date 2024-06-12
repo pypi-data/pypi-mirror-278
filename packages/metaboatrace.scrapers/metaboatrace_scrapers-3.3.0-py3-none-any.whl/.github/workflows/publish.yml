@@ -1,0 +1,27 @@
+name: Publish
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install rye
+        uses: baptiste0928/cargo-install@v2
+        with:
+          crate: rye
+          git: https://github.com/mitsuhiko/rye
+          branch: main
+      - name: Fix Python version
+        run: rye pin 3.11
+      - name: Build the package
+        run: |
+          rye build
+      - name: Publish the package
+        run: |
+          rye publish --token ${{ secrets.PYPI_API_TOKEN }} --yes
