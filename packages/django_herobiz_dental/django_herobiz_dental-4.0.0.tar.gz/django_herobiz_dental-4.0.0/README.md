@@ -1,0 +1,182 @@
+### django-herobiz-dental
+
+#### Introduction 
+demiansoft homepage templates
+
+블로그 포스트를 위해 admin에서 markdown 형식으로 글작성이 가능하다. 단, 이미지 삽입시 responsive 를 위해 class=img-fluid 클래스명 설정이
+필요하며 마크다운 에디터에서 이미지 마크 다운에 {: .img-fluid}를 넣어줘야 적용이 된다.
+
+---
+#### Requirements
+
+Django >= 4.2.11
+libsass>=0.23.0
+django-analyticsds >= 0.3.1
+django-calendards >= 0.4.0
+django-modalds >= 0.1.0
+django-utilsds >= 0.7.0
+django-postds >= 1.0.0
+django-markdownify >= 0.9.3
+
+
+---
+#### Install
+
+settings.py  
+```  
+INSTALLED_APPS = [    
+    'django_light', # django.contrib.admin 위에 위치
+    ...
+    'django.contrib.sitemaps',
+
+    'django_analyticsds',
+    'django_calendards',
+    'django_modalds',
+    'django_utilsds',
+    'django-postds',
+    'markdownify.apps.MarkdownifyConfig',
+
+    'mdeditor',  # markdown WYSIWYG 에디터 사용하기
+    'hitcount',
+    'taggit',
+	  
+	'django_herobiz_dental',
+]
+
+...
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, '_static/'),
+]
+
+MEDIA_URL = '/media/'  
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')  
+X_FRAME_OPTIONS = 'SAMEORIGIN'  
+  
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') 
+
+# mdeditor 설정
+MDEDITOR_CONFIGS = {
+    'default': {
+        'width': '100% ',  # Custom edit box width
+        'height': 700,  # Custom edit box height
+        'toolbar': ["undo", "redo", "|",
+                    "bold", "del", "italic", "quote", "uppercase", "lowercase", "|",
+                    "h1", "h2", "h3", "h5", "h6", "|",
+                    "list-ul", "list-ol", "hr", "|",
+                    "link", "image", "code", "html-entities", "|",
+                    "help", "info",
+                    "||", "preview", "watch", "fullscreen"],  # custom edit box toolbar
+        'upload_image_formats': ["jpg", "jpeg", "gif", "png", "bmp", "webp"],  # image upload format type
+        'image_folder': 'editor',  # image save the folder name
+        'theme': 'default',  # edit box theme, dark / default
+        'preview_theme': 'default',  # Preview area theme, dark / default
+        'editor_theme': 'default',  # edit area theme, pastel-on-dark / default
+        'toolbar_autofixed': True,  # Whether the toolbar capitals
+        'search_replace': True,  # Whether to open the search for replacement
+        'emoji': False,  # whether to open the expression function
+        'tex': True,  # whether to open the tex chart function
+        'flow_chart': True,  # whether to open the flow chart function
+        'sequence': True,  # Whether to open the sequence diagram function
+        'watch': True,  # Live preview
+        'lineWrapping': False,  # lineWrapping
+        'lineNumbers': False,  # lineNumbers
+        'language': 'en'  # zh / en / es
+    }
+    
+}
+MARKDOWNIFY = {
+    "default": {
+        "WHITELIST_TAGS": [
+            'a',
+            'abbr',
+            'acronym',
+            'b',
+            'blockquote',
+            'em',
+            'i',
+            'li',
+            'ol',
+            'p',
+            'strong',
+            'ul',
+            'h1',
+            'h2',
+            'h3',
+            'h5',
+            'h6',
+            'ul',
+            'hr',
+            'img',
+            'code',
+        ],
+        "WHITELIST_ATTRS": [
+            'src',
+            'class',
+            'href',
+            'id',
+        ],
+        "MARKDOWN_EXTENSIONS": [
+            "fenced_code",
+            "attr_list",
+        ],
+    }
+} 
+```
+
+in the shell
+```
+>> pip install django-herobiz-dental
+>> python manage.py makemigrations django_calendards django_modalds
+>> python manage.py migrate
+>> python manage.py createsuperuser
+```
+
+
+urls.py
+```
+from django.contrib import admin  
+from django.urls import path, include  
+from django.conf import settings  
+from django.conf.urls.static import static  
+  
+urlpatterns = [  
+    path('admin/', admin.site.urls),  
+    path('postds/', include('django_postds.urls')),
+    path('', include('django_herobiz_dental.urls')),  
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+```
+
+---
+#### Composition
+
+프로젝트 내의 \_data 폴더 안에 herobizdental.py 파일을 생성하고 다음과 같은 형식으로 작성한다.(예제 파일 참조)
+
+```
+context = {
+    "color": '-orange',  # ['', '-blue', '-green', '-orange', '-purple', '-red', '-pink']
+    "hero_type": 'fullscreen',  # ['animated', 'carousel', 'fullscreen', 'static']
+}
+
+context.update(base)
+context.update(seo)
+context.update(header)
+context.update(hero)
+context.update(featured_services)
+context.update(about)
+context.update(client)
+context.update(cta)
+context.update(onfocus)
+context.update(features)
+context.update(services)
+context.update(testimonials)
+context.update(pricing)
+context.update(faq)
+context.update(portfolio)
+context.update(team)
+context.update(blog)
+context.update(contact)
+
+```
+---
+
