@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: url_validatorIndx
+Version: 1.1.2
+Summary: Testing installation of Package
+Author: Rishabh K
+Author-email: rshb.kapoor@gmail.com
+License: MIT
+Keywords: pypi,url_validatorIndx,tutorial
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Documentation
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENCE.txt
+
+Toolbox
+Toolbox is a Python package that contains handy functions. It's main goal, however, is to demonstrate how to create a package and demonstrate how to upload it to PyPi.
+Check out this article for a detailed explanation on how to create your custom Python package and upload it to PyPi!
+
+Installation and updating
+Use the package manager pip to install Toolbox like below. Rerun this command to check for and install updates .
+
+pip install git+https://github.com/Muls/toolbox
+Usage
+Features:
+
+functions.listChunker --> generator that chunks and interable in evenly sized chunks
+functions.weirdCase --> converts a string to a totally unreadable format
+functions.report --> prints to the console with a timestamp
+decorators.singleton --> used for decoratint your class to make it a singleton
+Demo of some of the features:
+import url_validatorIndx
+from url_validatorIndx import isValidUrl, isValidString
+
+isvalid = isValidUrl("https://www.google.com")
+
+examples of valid url : "https://google.com", "https://www.google.com", "https://www.google.com/search?q=123"
+
+isvalid = isValidString("Hello, World123")
+
+examples of valid string it should be less than 255 chars
+"hello, world123", "Hello", "12345" , "hello ,W123"
+
+Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+License
+MIT
