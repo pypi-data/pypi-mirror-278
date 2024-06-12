@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/bedrock_genai_builder/__init__.py
+src/bedrock_genai_builder/cli.py
+src/bedrock_genai_builder/code_content.py
+src/bedrock_genai_builder.egg-info/PKG-INFO
+src/bedrock_genai_builder.egg-info/SOURCES.txt
+src/bedrock_genai_builder.egg-info/dependency_links.txt
+src/bedrock_genai_builder.egg-info/entry_points.txt
+src/bedrock_genai_builder.egg-info/requires.txt
+src/bedrock_genai_builder.egg-info/top_level.txt
