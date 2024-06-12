@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+SparkLib.py
+readme.md
+requirementx.txt
+setup.py
+testWS.py
+maticalgos/__init__.py
+maticalgos/sparkLib/__init__.py
+maticalgos/sparkLib/order_websocket.py
+maticalgos/sparkLib/sparkLib.py
+maticalgos_spark.egg-info/PKG-INFO
+maticalgos_spark.egg-info/SOURCES.txt
+maticalgos_spark.egg-info/dependency_links.txt
+maticalgos_spark.egg-info/top_level.txt
