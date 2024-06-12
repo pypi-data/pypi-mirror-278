@@ -1,0 +1,14 @@
+hal9/__init__.py,sha256=uVN9Cq6hrgphLIFyPAJaSspQfefvT7Wzw-WLksNtbqo,122
+hal9/cli.py,sha256=sSD1sKx3aBbd8VACJFttw7h3lTRNHMNzEy5_JWlaeYc,1729
+hal9/create.py,sha256=uE2uw5ZOgFxvxWs-SH4sdJ3Hsjs8TfiNz85StaZJbIg,584
+hal9/deploy.py,sha256=mNc7qp74FtNCDVLtmXw3EPWh92cvi9i7I_dCHEIKrGw,744
+hal9/iobind.py,sha256=oWnxGq73r-GsyA0UP-LC4nhhNA6EXYBUJNoRCiKxRPg,487
+hal9/run.py,sha256=y7n0Y7UkcOCT_kUwNLSRSBUekIf-y2mL-_4Qy-l3uPU,485
+hal9/targets/docker.py,sha256=T_7lErLKt4shAm4be_mByIcsbOzGDE4cDBDsq9xKScQ,378
+hal9/targets/hal9.py,sha256=1jT2oYSxl_RvSAHqYRfx1hJlysFn0BWenNa3KJoF4bE,2100
+hal9/templates/docker/Dockerfile,sha256=AOw7r-fQx-f1sCebi99z_V62Huidl-2iM0lSNfXagdU,42
+hal9/templates/openai/app.py,sha256=BPuo1FGEwKvkMbcDucOr2ZOrXSY3sKbvNqYHczKZVeg,38
+hal9-2.2.3.dist-info/METADATA,sha256=2fnDVQAw0JzKIYdxStEVj2wNKVvKflE9b-kiXJcN3Uc,4288
+hal9-2.2.3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+hal9-2.2.3.dist-info/entry_points.txt,sha256=QHXw8HCSYAbqyHTexcr14ozRyB1L9hVH-7o-LwlcWaY,37
+hal9-2.2.3.dist-info/RECORD,,
