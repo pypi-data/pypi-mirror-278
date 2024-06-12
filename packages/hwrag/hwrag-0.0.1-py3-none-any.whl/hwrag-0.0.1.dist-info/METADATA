@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: hwrag
+Version: 0.0.1
+Summary: hwrag
+Home-page: https://git.jiankanghao.net/haiwei/hwrag
+Author: haiweikexin
+Author-email: huangxp@haiweikexin.com, jiny@haiweikexin.com
+License: MIT License
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Database
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: openpyxl
+Requires-Dist: elasticsearch ==7.16.0
+Requires-Dist: langchain
+Requires-Dist: langchain-community
+Requires-Dist: FlagEmbedding
+Requires-Dist: langchain-openai
+Requires-Dist: langchain-core
+Requires-Dist: pymilvus ==2.2.8
+Requires-Dist: decorator ==4.4.2
+
+```bash
+pip install hwrag
+```
