@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: PerfProgTesting
+Version: 0.2
+Classifier: Programming Language :: Python :: 3
+Classifier: Framework :: Django
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Requires-Dist: Django >=3.2
+Requires-Dist: sqlparse >=0.4.1
+Requires-Dist: bootstrap4
+
