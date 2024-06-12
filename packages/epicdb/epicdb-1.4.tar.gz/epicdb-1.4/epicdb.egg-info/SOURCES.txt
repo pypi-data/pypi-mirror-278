@@ -1,0 +1,10 @@
+setup.py
+epicdb/__init__.py
+epicdb/epicdb.py
+epicdb.egg-info/PKG-INFO
+epicdb.egg-info/SOURCES.txt
+epicdb.egg-info/dependency_links.txt
+epicdb.egg-info/requires.txt
+epicdb.egg-info/top_level.txt
+epicdb/db/__init__.py
+epicdb/db/epicdb.feather
