@@ -1,0 +1,57 @@
+# Crifx configuration file example.
+
+# The github repository url for this problemset. This can be used to include
+# hyperlinks to GitHub Issues for each problem in the report.
+github_repo_url = "https://github.com/FinnLidbetter/crifx"
+
+# Section for defining minimum numbers of submissions and manual reviews.
+[review_requirements]
+# There must be AC submissions from at least 3 distinct judges.
+independent_ac = 3
+# There must be at least 2 distinct language groups with at least one AC
+# submission written in a language in the group.
+language_groups = 2
+# There must be at least one wrong_answer submission.
+submissions_wa = 1
+# There must be at least one time_limit_exceeded submission.
+submissions_tle = 1
+# There must be at least 3 judges who have reviewed the problem statement.
+statement_reviewers = 3
+# There must be at least 2 judges who have reviewed the input validators.
+validator_reviewers = 2
+# There must be at least 2 judges who have reviewed the test data.
+data_reviewers = 2
+
+# Define judge names in `[[judge]]` tables.
+[[judge]]
+# Primary name is required.
+primary_name = "Jane Doe"
+# git_name is not required.
+# git_name = "janedoe"
+# Aliases is a list of zero or more alternative names.
+aliases = ["jd", "jane"]
+
+[[judge]]
+primary_name = "Homer Simpson"
+git_name = "homers123"
+aliases = []
+
+# Tables for defining language groups.
+[[language_group]]
+# Non alphanumeric characters can be used in the language group name.
+name = "c/c++"
+# The names of the languages in the group. Language names are cast to
+# lowercase before comparison to language names known to crifx.
+languages = ["C", "C++"]
+# The number of AC submissions required for this group.
+required_ac_count = 0
+
+[[language_group]]
+name = "java/kotlin"
+languages = ["Java", "Kotlin"]
+required_ac_count = 0
+
+[[language_group]]
+name = "python"
+languages = ["Python"]
+required_ac_count = 0

@@ -1,0 +1,100 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crifx"
+version = "0.1.1"
+description = "icpc-style Contest pReparation Insights tool For anyone (X)."
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+readme = "README.md"
+keywords = ["icpc", "contest", "competitive programming", "problemtools"]
+dependencies = [ "pylatex>=1.4.2", "pygit2>=1.14.1" ]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Utilities",
+]
+
+[project.scripts]
+crifx = "crifx.cli:main"
+
+[project.optional-dependencies]
+dev = ["black", "ruff", "tox", "mypy", "pytest"]
+
+[tool.black]
+line_length = 88
+
+[tool.ruff]
+extend-exclude = ["tests/scenarios/", "examples/"]
+line-length = 88
+
+[tool.ruff.lint]
+select = [
+    "D",
+]
+ignore = ["D105", "D107", "D203", "D212", "D213"]
+
+[tool.isort]
+multi_line_output = 3
+line_length = 88
+include_trailing_comma = true
+
+[tool.pytest.ini_options]
+pythonpath = "."
+
+[[tool.mypy.overrides]]
+module = "pylatex.*,pygit2.*"
+ignore_missing_imports = true
+
+[tool.tox]
+legacy_tox_ini = """
+    [tox]
+    envlist = format, lint, type, py{311,312}
+    requires =
+        tox>=4
+    isolated_build = True
+    labels =
+        test = py311, py312
+        static = format, lint, type
+
+    [testenv]
+    description = run unit tests
+    deps =
+        pytest>=8
+    commands =
+        pytest {posargs:tests}
+
+
+    [testenv:format]
+    description = run black formatting and dependency sorting
+    skip_install = true
+    deps =
+        black>=24
+        isort>=5
+    commands =
+        black . --check
+        isort . --check-only
+
+    [testenv:lint]
+    description = run ruff linting
+    skip_install = true
+    deps =
+        ruff>=0.4
+    commands = ruff check .
+
+
+    [testenv:type]
+    description = run type checks
+    deps =
+        pytest>=8
+        mypy>=1.10
+    commands =
+        mypy {posargs:crifx tests}
+"""
