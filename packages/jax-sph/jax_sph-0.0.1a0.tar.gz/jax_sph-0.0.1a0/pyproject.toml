@@ -1,0 +1,77 @@
+[tool.poetry]
+name = "jax-sph"
+version = "v0.0.1a"
+description = "JAX-SPH: Smoothed Particle Hydrodynamics in JAX"
+authors = ["Artur Toshev <artur.toshev@tum.de>",]
+maintainers = ["Artur Toshev <artur.toshev@tum.de>",]
+license = "MIT"
+readme = "README.md"
+homepage = "https://jax-sph.readthedocs.io/"
+documentation = "https://jax-sph.readthedocs.io/"
+repository = "https://github.com/tumaer/jax-sph"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<=3.11"
+h5py = ">=3.9.0"
+pandas = ">=2.1.4" # for validation
+pyvista = ">=0.42.2" # for visualization
+jax = {version = "0.4.29", extras = ["cpu"]}
+jaxlib = "0.4.29"
+omegaconf = ">=2.3.0"
+matscipy = ">=0.8.0"
+jraph = ">=0.0.6.dev0"  # for jax-md
+absl-py = ">=2.1.0"  # for jax-md
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = ">=3.3.1"
+pytest = ">=7.3.1"
+pytest-cov = ">=4.1.0"
+ruff = ">=0.1.8"
+
+[tool.poetry.group.temp.dependencies]
+ott-jax = ">=0.4.2"
+ipykernel = ">=6.25.1"
+
+[tool.poetry.group.docs.dependencies]
+sphinx = "7.2.6"
+sphinx-exec-code = "0.12"
+sphinx-rtd-theme = "1.3.0"
+toml = ">=0.10.2"
+
+[tool.ruff]
+exclude = [
+    ".git",
+    ".venv*",
+    "venv*",
+    "docs/_build",
+    "dist"
+]
+show-fixes = true
+line-length = 88
+
+[tool.ruff.lint]
+ignore = ["F821", "E402"]
+select = [
+    "E", # pycodestyle
+    "F", # Pyflakes
+    "SIM", # flake8-simplify
+    "I", # isort
+]
+
+[tool.pytest.ini_options]
+testpaths = "tests/"
+addopts = "--cov=jax_sph --cov-fail-under=50 --ignore=jax_sph/jax_md"
+filterwarnings = [
+    # ignore all deprecation warnings except from jax-sph
+    "ignore::DeprecationWarning:^(?!.*jax_sph).*"
+]
+
+[tool.coverage.run]
+omit = ["jax_sph/jax_md/*"]
+
+[tool.coverage.report]
+omit = ["jax_sph/jax_md/*"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
