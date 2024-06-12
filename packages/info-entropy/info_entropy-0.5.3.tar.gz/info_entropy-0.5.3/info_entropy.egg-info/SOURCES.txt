@@ -1,0 +1,11 @@
+setup.py
+info_entropy/__init__.py
+info_entropy/distance.c
+info_entropy/entropy.c
+info_entropy/gain.c
+info_entropy/kdtree.c
+info_entropy/metric.c
+info_entropy.egg-info/PKG-INFO
+info_entropy.egg-info/SOURCES.txt
+info_entropy.egg-info/dependency_links.txt
+info_entropy.egg-info/top_level.txt
