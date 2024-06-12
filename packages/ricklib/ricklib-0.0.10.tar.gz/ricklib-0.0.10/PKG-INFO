@@ -1,0 +1,64 @@
+Metadata-Version: 2.3
+Name: ricklib
+Version: 0.0.10
+Summary: A small package for personal use including useful operations.
+Project-URL: Homepage, https://github.com/rick-howell/ricklib
+Project-URL: Issues, https://github.com/rick-howell/ricklib/issues
+Author-email: "Richard (Rick) Howell" <rick.howell.arts@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2024 rick-howell
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# ricklib
+
+This is a work in progress library for things like rendering mathematical images / making art and manipulating audio.
+
+# Modules
+
+Graphics
+===
+
+### pngenerator
+Creates png files from lists
+
+
+Audio
+===
+
+### audio
+lists <-> .wav files
+
+
+
+Math
+===
+
+### glib
+a graph library
+
+### polynomial
+a polynomial library
