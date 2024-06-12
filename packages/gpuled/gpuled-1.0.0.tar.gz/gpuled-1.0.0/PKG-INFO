@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: gpuled
+Version: 1.0.0
+Summary: use led to show GPU temp
+Home-page: https://github.com/ousyouyou/gpuled
+Author: OuSyouyou
+Author-email: s2122011@stu.musashino-u.ac.jp
+License: UNKNOWN
+Description: # gpuled
+        gpu And led
+        
+        # use 
+        ライブラリ pynvml と pyfirmata を利用する
+        GPU の情報を即時的に取得する
+        温度が高すぎるとき警告を出す
+        GPU の温度に応じて LED の点滅頻度を調整する
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
