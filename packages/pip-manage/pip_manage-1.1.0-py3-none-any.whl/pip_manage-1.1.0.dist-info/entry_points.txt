@@ -1,0 +1,3 @@
+[console_scripts]
+pip-purge = pip_manage.pip_purge:main
+pip-review = pip_manage.pip_review:main
