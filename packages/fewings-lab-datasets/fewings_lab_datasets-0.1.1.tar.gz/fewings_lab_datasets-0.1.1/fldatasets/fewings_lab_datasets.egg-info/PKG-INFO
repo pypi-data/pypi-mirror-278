@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: fewings-lab-datasets
+Version: 0.1.1
+Summary: Oceanographic datasets assembled by the Fewings Lab.
+Author-email: Andrew Scherer <scherand@oregonstate.edu>
+Maintainer-email: Andrew Scherer <scherand@oregonstate.edu>
+License: MIT License
+Project-URL: Source, https://github.com/andrew-s28/fewings-lab-datasets
+Keywords: oceanography,datasets
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: cmocean
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: requests
+Requires-Dist: xarray[io]
+
+Fewings Lab Datasets
+=======
+
+**fewings-lab-datasets** is a Python package for accessing various oceanographic datasets assembled by members of the [Fewings Lab](https://fewingslab.ceoas.oregonstate.edu/).
+
+Installation
+------------
+
+The latest version can be downloaded using Pip::
+
+    >>> pip install fewings-lab-datasets
+
+You can install the most up-to-date version using::
+
+    >>> pip install git+https://github.com/andrew-s28/fewings-lab-datasets.git
+
+Credits
+-------
+
+The datasets contained within this package were collected by a wide range of people working for lots of different programs, and we owe many thanks to their efforts.
+Members of the Fewings Lab have assembled these datasets, and every dataset available in this package has a corresponding publication that should be cited when using the data.
