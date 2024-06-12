@@ -1,0 +1,18 @@
+Metadata-Version: 2.3
+Name: fastfcgr
+Version: 0.1.2
+Summary: FCGR class (Frequency Chaos Game Representation)
+Project-URL: Homepage, https://github.com/FilippoTib/FastFCGR
+Project-URL: Issues, https://github.com/FilippoTib/FastFCGR/issues
+Author-email: FilippoTi <filippo.tiberio@studenti.unipd.it>
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# FastFCGR
+
+FastFCGR class for Frequency Chaos Game Representation
