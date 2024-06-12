@@ -1,0 +1,20 @@
+googleapis-common-protos>=1.57
+grpcio
+grpcio-status
+importlib-metadata
+fsspec>=2023.3.0
+aiofiles>=23.2.1
+click
+rich
+rich_click
+flytekit>=1.12.2
+flyteidl>=1.12.0
+sentry-sdk>=2.0.0
+mashumaro
+jinja2
+
+[:platform_system == "Linux"]
+unionai-actor==0.1.0b0
+
+[byoc]
+unionmeta-byoc
