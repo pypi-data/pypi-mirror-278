@@ -1,0 +1,48 @@
+
+{
+  "$schema": "./.template.schema.json",
+  "scopes": [
+    {
+      "scope": "comp/nonebot",
+      "types": [
+        "tab",
+        "enter",
+        "exit",
+        "other",
+        "timeout",
+        "exited"
+      ]
+    },
+    {
+      "scope": "nbp-alc",
+      "types": [
+        "log.load_global_extensions",
+        "log.got_path/ms",
+        "log.got_path/validate",
+        "log.discord_ambiguous_command",
+        "log.discord_ambiguous_subcommand",
+        "log.parse",
+        "error.discord_prefix",
+        "error.extension_forbid_exclude",
+        "error.extension_path_load",
+        "error.extension_path_invalid",
+        "error.matcher_got_path"
+      ]
+    },
+    {
+      "scope": "nbp-alc/builtin",
+        "types": [
+          "lang.list",
+          "lang.switch",
+          "lang.locale_missing",
+          "lang.locale_timeout",
+          "help.plugin_name_unknown",
+          "help.plugin_name",
+          "help.plugin_id",
+          "help.plugin_path",
+          "help.plugin_module",
+          "help.plugin_version"
+        ]
+    }
+  ]
+}
