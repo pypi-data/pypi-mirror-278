@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: BiasedErasure
+Version: 0.1.0
+Summary: Simulate logical circuits with loss errors with efficient smart decoding
+Author: Gefen Baranes and Pablo Bonilla
+Author-email: gefenbaranes123@gmail.com
+License: LICENSE
+License-File: LICENSE
+Requires-Dist: numpy (>=1.21)
+Requires-Dist: networkx
+Requires-Dist: matplotlib
+Requires-Dist: stim (>=1.11.0)
+Requires-Dist: pymatching (>=2.1.0)
+
+# BiasedErasure
