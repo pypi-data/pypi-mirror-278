@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: py-filesearcher
+Version: 0.1.0
+Summary: 
+Author: Young
+Author-email: gooker_young@163.com
+Requires-Python: >=3.8,<3.9
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: chardet (>=5.2.0,<6.0.0)
+Requires-Dist: jieba (>=0.42.1,<0.43.0)
+Requires-Dist: whoosh (>=2.7.4,<3.0.0)
+Description-Content-Type: text/markdown
+
+# py-file-searcher
+
+
