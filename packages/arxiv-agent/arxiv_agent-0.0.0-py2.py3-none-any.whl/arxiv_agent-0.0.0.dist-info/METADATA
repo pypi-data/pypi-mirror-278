@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: arxiv_agent
+Version: 0.0.0
+Summary: LLM agent to answer questions about arXiv papers
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: langchain
+Requires-Dist: langgraph
+Requires-Dist: langchain-openai
+Requires-Dist: langchain-community
+Requires-Dist: termcolor
+Requires-Dist: bs4
+Requires-Dist: arxiv
+Requires-Dist: semanticscholar
+
+# arXiv agent
+
+## Setup
+```
+conda create -n arxiv-agent python=3.12
+conda activate arxiv-agent
+# pytorch packages
+conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+# huggingface packages
+pip install transformers accelerate
+```
+
+```
+conda env config vars set LANGCHAIN_TRACING_V2="true"
+conda env config vars set LANGCHAIN_API_KEY=[...]
+```
+
+Install `arxiv_agent` package:
+```
+conda activate arxiv-agent
+conda develop .
+```
+
+CodeLLama:
+
+
+## Design
+
+Prompt:
+1. Question
+2. Available API calls: you can use the following models
+- Specification of what each model does
+For now, I'm thinking we can just insert "specific" knowledge into each model via context
+- 
+3. State
+
+## Data
+
+Small dataset:
+
+
+Medium dataset:
+https://huggingface.co/datasets/natural_questions
