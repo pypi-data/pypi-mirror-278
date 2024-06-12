@@ -1,0 +1,89 @@
+Metadata-Version: 2.1
+Name: torchonn-pyutils
+Version: 0.0.2
+Summary: A set of python modules for machine learning and data mining
+Home-page: https://github.com/JeremieMelo/pyutility
+Author: Jiaqi Gu
+Author-email: jqgu@utexas.edu
+Maintainer-email: scikit-learn developers <scikit-learn@python.org>
+License: MIT
+Project-URL: source, https://github.com/JeremieMelo/pyutility
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.19.2
+Requires-Dist: torchvision>=0.9.0.dev20210130
+Requires-Dist: tqdm>=4.56.0
+Requires-Dist: setuptools>=52.0.0
+Requires-Dist: torch>=1.8.0
+Requires-Dist: matplotlib>=3.3.4
+Requires-Dist: svglib>=1.1.0
+Requires-Dist: scipy>=1.5.4
+Requires-Dist: scikit-learn>=0.24.1
+Requires-Dist: torchsummary>=1.5.1
+Requires-Dist: pyyaml>=5.1.1
+Requires-Dist: tensorflow>=2.5.0
+
+# pyutils
+A python/pytorch utility library
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## News
+- v0.0.2 available. Added new datasets and quantization!
+- v0.0.1 available. Feedbacks are highly welcomed!
+
+## Installation
+```bash
+git clone https://github.com/JeremieMelo/pyutility.git
+cd pyutility
+pip3 install --editable .
+```
+
+## Features
+- Support pytorch training utility and datasets.
+
+## TODOs
+- [ ] Support lr_scheduler
+- [ ] Support trainer
+
+## Dependencies
+- Python >= 3.6
+- PyTorch >= 1.8.0
+- Tensorflow >= 2.5.0
+- Others are listed in requirements.txt
+
+
+## Files
+| File      | Description |
+| ----------- | ----------- |
+| datasets/ | Defines different datasets and builder |
+| optimizer/ | Defines different optimizers |
+| activation.py      | Activation functions |
+| compute.py   | functions related to computing |
+| config.py   | Hierarchical yaml configuration file parser |
+| distribution_sampler.py   | Sample from customized distributions |
+| general.py   | Common helper functions |
+| initializer.py   | Initialization methods for PyTorch Parameters |
+| loss.py   | Loss functions for PyTorch model training |
+| quantize.py   | Quantization functions |
+| torch_train.py   | Helper functions for torch training |
+| typing.py | Defines common types |
+
+
+## Contact
+Jiaqi Gu (jqgu@utexas.edu)
