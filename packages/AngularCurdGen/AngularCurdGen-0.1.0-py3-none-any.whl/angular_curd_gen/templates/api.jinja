@@ -1,0 +1,36 @@
+{% set create_model = model_name+'Creatable' -%}
+{% set edit_model = model_name+'Editable' -%}
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import {environment} from "../../../environments/environment";
+import { {{ model_name }}, {{ create_model }}, {{ edit_model }}} from './{{ lower_model_name }}_interfaces';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class {{ model_name }}Service {
+  private baseUrl = `${environment.backend}/{{ app_name }}/{{ lower_models_name }}`;
+
+  constructor(private http: HttpClient) {}
+
+  getAll{{ models_name }}(): Observable<{{ model_name }}[]> {
+    return this.http.get<{{ model_name }}[]>(`${this.baseUrl}/`);
+  }
+
+  get{{ model_name }}ById(id: number): Observable<{{ model_name }}> {
+    return this.http.get<{{ model_name }}>(`${this.baseUrl}/${id}/`);
+  }
+
+  create{{ model_name }}(data: {{ create_model }}): Observable<{{ create_model }}> {
+    return this.http.post<{{ create_model }}>(`${this.baseUrl}/`, data);
+  }
+
+  update{{ model_name }}(id: number, data: {{ edit_model }}): Observable<{{ edit_model }}> {
+    return this.http.put<{{ edit_model }}>(`${this.baseUrl}/${id}/`, data);
+  }
+
+  delete{{ model_name }}(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.baseUrl}/${id}/`);
+  }
+}

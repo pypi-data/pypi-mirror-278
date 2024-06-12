@@ -1,0 +1,22 @@
+{% set component_name = app_title_name+'DashboardComponent' -%}
+
+import {Component, OnInit} from '@angular/core';
+
+@Component({
+  selector: 'app-{{ app_name }}-dashboard',
+  templateUrl: './{{ app_name }}-dashboard.component.html',
+  styleUrls: ['./{{ app_name }}-dashboard.component.css']
+})
+export class {{ component_name }} implements OnInit {
+  models = ['{{ lower_models_name }}']
+  modelsTranslations = new Map([['{{ lower_models_name }}', '{{ model_readable_name }}']]);
+
+
+  constructor(
+  ) {
+  }
+
+  ngOnInit(): void {
+  }
+
+}

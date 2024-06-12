@@ -1,0 +1,37 @@
+use axum::extract::{Path, State};
+use axum::{Json, Router};
+use axum::http::StatusCode;
+use axum::response::{IntoResponse, Response};
+use axum::routing::{delete, get};
+use sea_orm::{ActiveModelTrait, EntityTrait, ModelTrait};
+use sea_orm::ActiveValue::Set;
+use crate::entities::{ {{ model_name }}, {{ lower_model_name }} };
+use crate::utils::AppState;
+
+pub fn {{ lower_model_name }}_routes() -> Router<AppState> {
+    Router::new()
+        .route("/{{ lower_models_name }}/", get(get_{{ lower_models_name }}_list).post(create_{{ lower_model_name }}))
+        .route("/{{ lower_models_name }}/:{{ lower_model_name }}_id/", delete(delete_{{ lower_model_name }}))
+}
+
+async fn get_{{ lower_models_name }}_list(state: State<AppState>) -> Response {
+    let {{ lower_models_name }} = {{ model_name }}::find().all(&state.conn).await.unwrap();
+    (StatusCode::OK, Json({{ lower_models_name }})).into_response()
+}
+
+async fn create_{{ lower_model_name }}(state: State<AppState>, Json(payload): Json<{{ lower_model_name }}::{{ model_name }}Creatable>) -> Response {
+    let new_{{ lower_model_name }} = {{ lower_model_name }}::ActiveModel {
+    {%- for field,field_type in model_create_fields_type_map.items() %}
+        {{ field }}: Set(payload.{{ field }}),
+    {%- endfor %}
+        ..Default::default()
+    };
+    let {{ lower_model_name }} = new_{{ lower_model_name }}.insert(&state.conn).await.unwrap();
+    (StatusCode::CREATED, Json({{ lower_model_name }})).into_response()
+}
+
+async fn delete_{{ lower_model_name }}(state: State<AppState>, Path({{ lower_model_name }}_id): Path<i64>) -> impl IntoResponse {
+    let {{ lower_model_name }}: {{ lower_model_name }}::Model = {{ model_name }}::find_by_id({{ lower_model_name }}_id).one(&state.conn).await.unwrap().unwrap();
+    {{ lower_model_name }}.delete(&state.conn).await.unwrap();
+    StatusCode::NO_CONTENT.into_response()
+}

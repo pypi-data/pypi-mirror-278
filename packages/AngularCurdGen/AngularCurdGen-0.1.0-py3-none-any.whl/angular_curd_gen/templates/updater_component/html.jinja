@@ -1,0 +1,31 @@
+{% from 'macros/form_field.jinja' import gen_form_field -%}
+{% set update_form_name = 'update'+ model_name +'Form' -%}
+<div class="page" *ngIf="{{ lower_model_name }}">
+    <nz-row>
+        <nz-col nzSpan="3">
+            <h2 nz-typography>更新{{ model_readable_name }}</h2>
+        </nz-col>
+        <nz-col class="center-content">
+            <nz-breadcrumb>
+                <nz-breadcrumb-item routerLink="/">首页</nz-breadcrumb-item>
+                <nz-breadcrumb-item routerLink="/{{ app_name }}">
+                    <a>{{ app_readable_name }}</a>
+                </nz-breadcrumb-item>
+                <nz-breadcrumb-item routerLink="/{{ app_name }}/{{ lower_models_name }}/1/updater">
+                    <a>更新{{ model_readable_name }}</a>
+                </nz-breadcrumb-item>
+            </nz-breadcrumb>
+        </nz-col>
+    </nz-row>
+    <nz-divider></nz-divider>
+
+    <form nz-form [formGroup]="{{ update_form_name }}">
+        {% for form_field,form_field_type in model_edit_fields_type_map.items() -%}
+            {% set field_placeholder = "请输入"+ model_readable_name + fields_translate_map[form_field] -%}
+            {{ gen_form_field(form_field, fields_translate_map[form_field], form_field_type, cls, field_placeholder) }}
+        {% endfor -%}
+        <button nz-button nzType="primary" [disabled]="!{{ update_form_name }}.valid"
+                (click)="update{{ model_name }}()">
+            更新{{ model_readable_name }}</button>
+    </form>
+</div>

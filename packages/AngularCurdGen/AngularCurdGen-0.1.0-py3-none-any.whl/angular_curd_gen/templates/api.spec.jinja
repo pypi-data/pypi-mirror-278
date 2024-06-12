@@ -1,0 +1,17 @@
+{% set service_name = model_name+'Service' -%}
+import { TestBed } from '@angular/core/testing';
+
+import { {{ service_name }} } from './{{ lower_model_name }}_api.service';
+
+describe('{{ service_name }}', () => {
+  let service: {{ service_name }};
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({});
+    service = TestBed.inject({{ service_name }});
+  });
+
+  it('should be created', () => {
+    expect(service).toBeTruthy();
+  });
+});
