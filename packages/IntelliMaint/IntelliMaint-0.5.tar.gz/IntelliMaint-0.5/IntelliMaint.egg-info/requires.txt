@@ -1,0 +1,13 @@
+scikit-learn
+GPy
+minisom
+scipy
+matplotlib
+numpy>=1.16.1
+mplcursors
+fpdf2
+tensorflow==2.12.0
+keras==2.12.0
+pandas
+seaborn
+imbalanced-learn
