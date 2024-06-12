@@ -1,0 +1,3 @@
+from strideutils.stride_config import config as config
+
+def post_msg(txt: str | list[str], channel: str, token: str = ..., botname: str | None = None, unfurl_links: bool = False, unfurl_media: bool = False, thread_ts: str | None = None): ...
