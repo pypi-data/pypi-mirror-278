@@ -1,0 +1,74 @@
+{% extends 'squads/base.html' %}
+{% load i18n %}
+{% load humanize %}
+{% load static %}
+
+{% block squads_menu %}
+    {% include 'squads/menu.html' with owner=owner %}
+{% endblock %}
+
+{% block squads_block %}
+{% include "squads/modals/manage/cancel_request.html" %}
+{% include "squads/modals/manage/leave_request.html" %}
+
+<div class="card-title bg-primary rounded-top px-2"><h3>{% translate "Group" %}: {{ group.name }}</h3></div>
+<div class="card-body">
+    {{ group.safe_description|safe }}
+    <hr>
+    {% if not pending_application and not membership %}
+        <form method="post" action="{% url 'squads:apply_group' group_id=group.id %}" class="d-flex align-items-end" style="gap: 0.5rem;">
+            {% csrf_token %}
+            {% if group.require_approval %}
+                <div class="mr-2">
+                    {{ comment_form.comment }}
+                </div>
+            {% endif %}
+            <input type="hidden" name="filter_req" value="{{ filter_req }}">
+                <button
+                    type="submit"
+                    name="{% if group.require_approval %}apply_group{% else %}join_group{% endif %}"
+                    class="btn {% if group.require_approval %}btn-primary{% else %}btn-success{% endif %} {% if not filter_req %}disabled btn-danger{% endif %}">
+                    {% if group.require_approval %}
+                        {% translate "Apply" %}
+                    {% else %}
+                        {% translate "Join" %}
+                    {% endif %}
+                </button>
+        </form>
+    {% else %}
+
+    {% include "squads/groups/partials/pending.html" with pending_application=pending_application %}
+
+    {% include "squads/groups/partials/membership.html" with membership=membership %}
+
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block squads_block_extra %}
+    {% include "squads/groups/partials/requirements.html" with membership=membership pending_application=pending_application missing_req=missing_req  %}
+{% endblock %}
+
+{% block extra_javascript %}
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    $('.cancel-request-btn').on('click', function () {
+        var groupId = $(this).data('group-id');
+        $('#modal-button-confirm-cancel-request').attr('data-group-id', groupId);
+        $('#squads-request-cancel').modal('show');
+    });
+
+    $('.leave-request-btn').on('click', function () {
+        var groupId = $(this).data('group-id');
+        $('#modal-button-confirm-leave-request').attr('data-group-id', groupId);
+        $('#squads-request-leave').modal('show');
+    });
+
+    document.querySelector('.form-control').addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+        }
+    });
+});
+</script>
+{% endblock %}
