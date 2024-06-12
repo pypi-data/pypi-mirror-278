@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: designer2
+Version: 2.0.8
+Summary: designerV2
+Home-page: https://github.com/NYU-DiffusionMRI/DESIGNER-v2
+Author: Benjamin Ades-Aron
+Author-email: benjamin.ades-aron@nyulangone.org
+License: NYU
+Keywords: python diffusion mri mppca gibbs preprocessing dki smi DESIGNER TMI
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: numpy <2.0.0,>=1.21.0
+Requires-Dist: scipy >=1.9
+Requires-Dist: numpy-groupies >=0.9
+Requires-Dist: antspyx >=0.3
+Requires-Dist: scikit-image >=0.19
+Requires-Dist: dipy >=1.5
+Requires-Dist: tqdm
+Requires-Dist: joblib >=1.2
+Requires-Dist: cvxpy >=1.2
+Requires-Dist: pandas >=1.5
+Requires-Dist: pybind11 >=2.12.0
+
+designer and TMI package for use with brain 
+    diffusion MRI processing. Designer is used for image preprocessing 
+    including denoising, partial-fourier gibbs correction, epi eddy 
+    current and motion, and normalization. TMI is used for dti/dki/wmti/smi
+    along with outlier correction.
