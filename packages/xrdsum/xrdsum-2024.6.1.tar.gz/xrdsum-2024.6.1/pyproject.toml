@@ -1,0 +1,164 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+
+[project]
+name = "xrdsum"
+authors = [{ name = "Luke Kreczko", email = "kreczko@cern.ch" }]
+maintainers = [{ name = "The GridPP Collaboration", email = "kreczko@cern.ch" }]
+license = { file = "LICENSE" }
+
+description = "Package for retrieving and calculating checksums for XRootD"
+readme = "README.md"
+
+requires-python = ">=3.9"
+
+classifiers = [
+    "License :: OSI Approved :: BSD License",
+    "Topic :: Scientific/Engineering",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Development Status :: 4 - Beta",
+]
+
+dynamic = ["version"]
+
+dependencies = [
+    "codetiming",
+    "fasthep-logging >= 0.1.1",
+    "typer >= 0.4.0",
+    "requests",
+    "rich >=10.12.0",
+    "xattr>=0.10.1",
+]
+
+[project.optional-dependencies]
+test = ["pytest >=6"]
+dev = ["pytest >=6"]
+docs = [
+    "Sphinx>=7.0",
+    "myst_parser>=0.13",
+    "sphinx-book-theme>=0.1.0",
+    "sphinx_copybutton",
+]
+hdfs = ["pyhdfs>=0.3.1"]
+
+# cannot put it on pypi with this.
+# we would need to move cephsum to pypi first.
+# cephfs = [
+#     "cephsum @ git+https://github.com/snafus/cephsum.git@master",
+# ]
+
+[project.urls]
+homepage = "https://github.com/BristolComputing/xrdsum"
+
+[tool.hatch]
+version.source = "vcs"
+build.hooks.vcs.version-file = "src/xrdsum/_version.py"
+
+[tool.hatch.env.default]
+features = ["test"]
+scripts.test = "pytest {args}"
+
+[tool.hatch.build.targets.wheel]
+only-include = ["src/xrdsum", "scripts"]
+packages = ["src/xrdsum"]
+
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = ["-ra", "--showlocals", "--strict-markers", "--strict-config"]
+xfail_strict = true
+filterwarnings = ["error"]
+testpaths = ["tests"]
+
+
+[tool.mypy]
+files = "src"
+python_version = "3.9"
+warn_unused_configs = true
+
+disallow_any_generics = true
+disallow_subclassing_any = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+# [[tool.mypy.overrides]] not working, setting this to false instead
+disallow_untyped_decorators = false
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_return_any = true
+no_implicit_reexport = true
+strict_equality = true
+show_error_codes = true
+
+[[tool.mypy.overrides]]
+module = ["typer.*", "xrdsum.*", "xattr.*"]
+implicit_reexport = true
+
+[[tool.mypy.overrides]]
+module = "cephsum.*"
+ignore_missing_imports = true
+
+[tool.ruff]
+src = ["src"]
+
+[tool.ruff.lint]
+extend-select = [
+  "B",           # flake8-bugbear
+  "I",           # isort
+  "ARG",         # flake8-unused-arguments
+  "C4",          # flake8-comprehensions
+  "EM",          # flake8-errmsg
+  "ICN",         # flake8-import-conventions
+  "G",           # flake8-logging-format
+  "PGH",         # pygrep-hooks
+  "PIE",         # flake8-pie
+  "PL",          # pylint
+  "PT",          # flake8-pytest-style
+  "PTH",         # flake8-use-pathlib
+  "RET",         # flake8-return
+  "RUF",         # Ruff-specific
+  "SIM",         # flake8-simplify
+  "T20",         # flake8-print
+  "UP",          # pyupgrade
+  "YTT",         # flake8-2020
+  "EXE",         # flake8-executable
+  "NPY",         # NumPy specific rules
+  "PD",          # pandas-vet
+]
+ignore = [
+  "PLR",    # Design related pylint codes
+]
+isort.required-imports = ["from __future__ import annotations"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["T20"]
+"noxfile.py" = ["T20"]
+
+
+[tool.pylint]
+master.py-version = "3.9"
+master.ignore-paths = ["src/xrdsum/_version.py"]
+reports.output-format = "colorized"
+similarities.ignore-imports = "yes"
+messages_control.disable = [
+    "design",
+    "duplicate-code",
+    "fixme",
+    "line-too-long",
+    "wrong-import-position",
+]
+
+[project.scripts]
+xrdsum = "xrdsum.cli:main"
