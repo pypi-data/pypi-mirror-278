@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: crudeoil
+Version: 0.0.0
+Summary: CrudeOil is a wrapper around python socket server.
+Author: Ashish V Nair
+License: MIT
+Platform: linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: requests >=2.22.0
+Requires-Dist: Jinja2 >=2.10.1
+
