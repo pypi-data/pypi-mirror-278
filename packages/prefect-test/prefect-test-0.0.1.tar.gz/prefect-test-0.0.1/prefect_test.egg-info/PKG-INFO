@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: prefect-test
+Version: 0.0.1
+Summary: Submission and monitoring of jobs and notebooks using the Yeedu API in prefect. 
+Author: pravallika
+Author-email: pravallika.akumuri@modak.com
+License: All Rights Reserved
+Description-Content-Type: text/markdown
+Requires-Dist: prefect>=2.19.4
+Requires-Dist: requests>=2.27
+Requires-Dist: websocket-client>=1.8.0
+Requires-Dist: rel>=0.4.9.19
