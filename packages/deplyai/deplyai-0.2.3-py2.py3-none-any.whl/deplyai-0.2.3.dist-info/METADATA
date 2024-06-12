@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: deplyai
+Version: 0.2.3
+Summary: Python SDK for DeplyAI's integrated AI agent platform.
+License: BSD-3-Clause
+License-File: LICENSE
+Requires-Dist: pydantic ~=2.7.0
+Requires-Dist: protobuf ~=5.26.1
+Requires-Dist: pyyaml ~=6.0.1
+Requires-Dist: pygments ~=2.18.0
+
