@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "laplace-blivedm"
+version = "0.0.6"
+authors = [
+  { name="Sparanoid", email="t@sparanoid.com" },
+  { name="xfgryujk", email="xfgryujk@126.com" },
+]
+description = "Fork of blivedm with additional events support"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/sparanoid/laplace-blivedm"
+"Bug Tracker" = "https://github.com/sparanoid/laplace-blivedm/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["blivedm"]
