@@ -1,0 +1,51 @@
+{% extends "base/templates/base.html.j2" %}
+
+  {% block css %} 
+    <link rel="stylesheet" href="materialize/static/css/materialize.css">
+    <link rel="stylesheet" href="materialize/static/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    {{ super() }}
+  {% endblock css %} 
+
+  {% block header %}
+<div class="navbar-fixed">
+  <nav class="{{ color }}">
+    <div class="nav-wrapper">
+      <a href="#!" class="my-logo center-align">{{ header.name }}</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right my-hide">
+        {% for li in menu -%}
+          <li><a href="{{ li.href }}">{{ li.text }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<ul class="sidenav {{ color }}" id="mobile-demo">
+  {% for li in menu -%}
+  <li><a href="{{ li.href }}" class="white-text">{{ li.text }}</a></li>
+  {% endfor %}
+</ul>
+{% endblock header %}
+
+{% block script %}
+<script src="materialize/static/js/materialize.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+  });
+  document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('.carousel');
+    var instances = M.Carousel.init(elems, {
+      duration: 100,
+    });
+  });
+  document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('.materialboxed');
+    var instances = M.Materialbox.init(elems);
+  });
+</script>
+{{ super() }}
+{% endblock script %}

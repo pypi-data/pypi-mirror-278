@@ -1,0 +1,54 @@
+{% import "base/templates/macro.j2" as macro %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    {%- block style %} 
+        {%- block custom %} 
+            {%- if header.theme.custom is mapping -%}
+                {%- if "css" in header.theme.custom -%}
+                    {{ macro.custom_dict_css(header.theme.custom.css) }}
+                {%- endif %}
+            {%- elif header.theme.custom is sequence and not header.theme.custom is string -%}
+                {{ macro.custom_multiple_files_css(header.theme.custom) }}
+            {%- else -%}
+                {{ macro.custom_single_file_css(header.theme.custom) }}
+            {%- endif %}
+        {%- endblock custom %} 
+        {%- block css -%} 
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        {%- endblock css %} 
+    {%- endblock style %}
+    <title>{{ header.title }}</title>
+</head>
+{% block header %}
+    {% include 'base/templates/partials/header.html.j2' %}
+{% endblock header %}
+<body>
+    {% block content %}
+    <div class="container">
+        {% for section in sections %}
+        <section id="{{ section.id }}">
+            <a href="#{{ section.id }}"><h2 class="{{ color }}-text center">{{ section.title }}</h2></a>
+            {{ section.content }}
+        </section>
+        {% endfor %} 
+    </div>
+    {% endblock content %}
+    {% block script %}
+    {% if header.theme.custom is mapping %}
+                {% if "js" in header.theme.custom %}
+                    {{ macro.custom_dict_js(header.theme.custom.js) }}
+                {% endif %}
+            {% elif header.theme.custom is sequence and not header.theme.custom is string %}
+                {{ macro.custom_multiple_files_js(header.theme.custom) }}
+            {% else %}
+                {{ macro.custom_single_file_js(header.theme.custom) }}
+            {% endif %}
+    {% endblock script %}
+</body>
+{% block footer %}
+    {% include 'base/templates/partials/footer.html.j2' %}
+{% endblock footer %}
+</html>

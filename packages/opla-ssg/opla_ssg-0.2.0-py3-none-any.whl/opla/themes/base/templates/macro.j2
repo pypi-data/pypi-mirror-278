@@ -1,0 +1,52 @@
+{%- macro custom_single_file_css(file) -%}
+    {% if file.endswith('.css') -%}
+        singlecss
+        <link rel="stylesheet" href="custom/{{ file.split('/')[-1] }}">
+    {%- endif -%}
+{%- endmacro -%}
+
+{%- macro custom_single_file_js(file) -%}
+    {% if file.endswith('.js') -%}
+        singlejs
+        <script src="custom/{{ file.split('/')[-1] }}"></script>
+    {%- endif -%}
+{%- endmacro -%}
+
+{%- macro custom_multiple_files_css(files) -%}
+    {%- for file in files -%}
+        {% if file.endswith('.css') -%}
+            multiplecss
+            <link rel="stylesheet" href="custom/{{ file.split('/')[-1] }}">
+        {%- endif -%}
+    {%- endfor -%}
+{%- endmacro -%}
+
+{%- macro custom_multiple_files_js(files) -%}
+    {%- for file in files -%}
+        {% if file.endswith('.js') -%}
+            <script src="custom/{{ file.split('/')[-1] }}"></script>
+        {%- endif -%}
+    {%- endfor -%}
+{%- endmacro -%}
+
+{%- macro custom_dict_css(files) -%}
+    {% if files is string -%}
+        dictone
+        <link rel="stylesheet" href="custom/css/{{ files.split('/')[-1] }}">
+    {% else %}
+        {%- for file in files -%}
+            dict
+            <link rel="stylesheet" href="custom/css/{{ file.split('/')[-1] }}">
+        {%- endfor -%}
+    {%- endif %}
+{%- endmacro -%}
+
+{%- macro custom_dict_js(files) -%}
+    {% if files is string -%}
+        <script src="custom/js/{{ files.split('/')[-1] }}"></script>
+    {% else %}
+        {%- for file in files -%}
+            <script src="custom/js/{{ file.split('/')[-1] }}"></script>
+        {%- endfor -%}
+    {%- endif %}
+{%- endmacro -%}

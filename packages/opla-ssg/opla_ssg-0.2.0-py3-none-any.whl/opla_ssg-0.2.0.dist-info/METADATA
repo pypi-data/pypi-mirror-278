@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: opla-ssg
+Version: 0.2.0
+Summary: A personal webpage generator
+Author-email: IRMA <matthieu.boileau@math.unistra.fr>
+License: MIT
+Project-URL: Homepage, https://gitlab.math.unistra.fr/irma/opla
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: sgelt
+Requires-Dist: shortcodes
+Requires-Dist: pybtex
+Provides-Extra: doc
+Requires-Dist: Sphinx >=7.2.2 ; extra == 'doc'
+Requires-Dist: myst-parser ; extra == 'doc'
+Requires-Dist: furo ; extra == 'doc'
+Requires-Dist: sphinx-copybutton ; extra == 'doc'
+Requires-Dist: sphinx-autobuild ; extra == 'doc'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: faker ; extra == 'test'
+
+# OPLA: One Page Layout Automator
+
+[![pipeline status](https://gitlab.math.unistra.fr/irma/opla/badges/main/pipeline.svg)](https://gitlab.math.unistra.fr/irma/opla/-/commits/main)
+[![coverage report](https://gitlab.math.unistra.fr/irma/opla/badges/main/coverage.svg)](https://irma.pages.math.unistra.fr/opla/coverage)
+[![Latest Release](https://gitlab.math.unistra.fr/irma/opla/-/badges/release.svg)](https://gitlab.math.unistra.fr/irma/opla/-/releases)
+[![Doc](https://img.shields.io/badge/doc-sphinx-blue)](https://irma.pages.math.unistra.fr/opla)
+
+A professional webpage generator with a focus on research activities.
+
+## Features
+
+- Generate a professional webpage from a single markdown file
+- Handle publication lists coming from HAL database or from a bibtex file
+- Highly customizable thanks to the use of jinja templates, shortcodes and custom styles and scripts
+
+## Example
+
+Here is a preview of a generated page:
+
+![Screenshot of a webpage for Dalembert](dalembert.png)
+
+See complete examples with various graphical themes in this [doc section](https://irma.pages.math.unistra.fr/opla/usage.html#select-your-graphic-theme).

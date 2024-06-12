@@ -1,0 +1,18 @@
+<header> 
+    <div>
+        {% block menu %}
+        <nav>
+            <div id="nom">
+                <h1>{{ header.name }}</h1>
+            </div>
+            <div>
+                <ul>
+                    {% for li in menu -%}
+                    <li><a href="{{ li.href }}">{{ li.text }}</a></li>
+                    {% endfor %} 
+                </ul>
+            </div>
+        </nav>
+        {% endblock menu %}
+    </div>
+</header>
