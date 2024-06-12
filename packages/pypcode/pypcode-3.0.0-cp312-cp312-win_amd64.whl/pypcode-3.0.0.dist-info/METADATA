@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: pypcode
+Version: 3.0.0
+Summary: Machine code disassembly and IR translation library
+Home-page: https://github.com/angr/pypcode
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Provides-Extra: docs
+Requires-Dist: furo ; extra == 'docs'
+Requires-Dist: ipython ; extra == 'docs'
+Requires-Dist: myst-parser ; extra == 'docs'
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: sphinx-autodoc-typehints ; extra == 'docs'
+
+pypcode
+=======
+[![pypi](https://img.shields.io/pypi/v/pypcode)](https://pypi.org/project/pypcode/)
+
+Machine code disassembly and IR translation library for Python using the
+excellent SLEIGH library from the [Ghidra](https://ghidra-sre.org/) framework.
+
+This library was created primarily for use with [angr](http://angr.io), which
+provides analyses and symbolic execution of p-code.
+
+Documentation covering how to install and use pypcode is
+[available here](https://api.angr.io/projects/pypcode/en/latest/).
