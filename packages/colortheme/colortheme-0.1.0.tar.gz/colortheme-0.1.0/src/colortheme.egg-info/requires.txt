@@ -1,0 +1,7 @@
+astral>=3.2
+backupmaster>=1.0.0
+geocoder>=1.38.1
+
+[dev]
+package-dev-tools<1,>=0.5.11
+package-dev-utils<1,>=0.1.6
