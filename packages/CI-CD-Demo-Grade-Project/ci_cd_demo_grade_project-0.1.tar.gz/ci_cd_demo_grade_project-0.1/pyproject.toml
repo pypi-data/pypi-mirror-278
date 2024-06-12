@@ -1,0 +1,14 @@
+[project]
+name="CI_CD_Demo_Grade_Project"
+version="0.1"
+description = "CI/CD Demonstration Project"
+readme = {file = "README.md", content-type = "text/markdown"}
+license = {text = "MIT License"}
+authors = [{name="Katarzyna Rachwal", email="krachwal3@gatech.edu"}]
+[tool.pytest.ini_options]
+markers = [
+    "average: used to mark all tests associated with averaging grades",
+    "hilo: used to mark tests associated with identifying the extreme grades",
+    "highest: used to mark tests associated with identfying the highest grade",
+    "lowest: used to mark tests associated with identifying the lowest grade"
+]
