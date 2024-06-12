@@ -1,0 +1,2 @@
+[console_scripts]
+git-quotes = quotes.git_quotes:cli

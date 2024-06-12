@@ -1,0 +1,16 @@
+LICENSE
+README.rst
+setup.py
+git_quotes.egg-info/PKG-INFO
+git_quotes.egg-info/SOURCES.txt
+git_quotes.egg-info/dependency_links.txt
+git_quotes.egg-info/entry_points.txt
+git_quotes.egg-info/requires.txt
+git_quotes.egg-info/top_level.txt
+quotes/__init__.py
+quotes/git_quotes.py
+quotes/groups.py
+quotes/utils.py
+quotes/hooks/prepare-commit-msg
+quotes/hooks/quotes.json
+tests/test_git_quotes.py
