@@ -1,0 +1,27 @@
+{% macro spec_ts(component_name, lower_component_name) -%}
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { {{ component_name }} } from './{{ lower_component_name }}.component';
+
+describe('{{ component_name }}', () => {
+  let component: {{ component_name }};
+  let fixture: ComponentFixture<{{ component_name }}>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ {{ component_name }} ]
+    })
+    .compileComponents();
+  });
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent({{ component_name }});
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
+{% endmacro %}
+

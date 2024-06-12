@@ -1,0 +1,4 @@
+{% set component_name = model_name+'UpdaterComponent' -%}
+{% set lower_component_name = lower_model_name+'-updater' -%}
+{% from 'macros/ts.spec.jinja' import spec_ts -%}
+{{ spec_ts(component_name, lower_component_name) }}

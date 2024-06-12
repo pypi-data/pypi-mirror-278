@@ -1,0 +1,26 @@
+{% set create_model = model_name+'Creatable' -%}
+{% set edit_model = model_name+'Editable' -%}
+{% if model_fields_type_map -%}
+export interface {{ model_name }} {
+{%- for field,field_type in model_fields_type_map.items() %}
+    {{ field }}: {{ cls.map_ts_type(field_type) }}{% if not loop.last %},{% endif %}
+{%- endfor %}
+}
+{% endif %}
+
+{% if model_edit_fields_type_map -%}
+export interface {{ edit_model }} {
+{%- for field,field_type in model_edit_fields_type_map.items() %}
+    {{ field }}: {{ cls.map_ts_type(field_type) }}{% if not loop.last %},{% endif %}
+{%- endfor %}
+}
+{% endif %}
+
+{% if model_create_fields_type_map -%}
+export interface {{ create_model }} {
+{%- for field,field_type in model_create_fields_type_map.items() %}
+    {{ field }}: {{ cls.map_ts_type(field_type) }}{% if not loop.last %},{% endif %}
+{%- endfor %}
+}
+{% endif %}
+

@@ -1,0 +1,25 @@
+{% macro gen_form_field(field_name, label_name, field_type, cls, placeholder) -%}
+    {% set field_py_type = cls.extract_py_type(field_type) -%}
+    <nz-form-item>
+        <nz-form-control>
+            <nz-form-label>{{ label_name }}</nz-form-label>
+            {% if field_py_type=='str' -%}
+                <nz-input-group>
+                    <input nz-input placeholder="{{ placeholder }}" formControlName="{{ field_name }}"/>
+                </nz-input-group>
+            {% elif field_py_type=='bool' -%}
+                <label nz-checkbox formControlName="{{ field_name }}">{{ label_name }}</label>
+            {% elif field_py_type=='datetime.datetime' -%}
+                <nz-date-picker formControlName="{{ field_name }}"></nz-date-picker>
+            {% elif field_py_type=='datetime.date' -%}
+                <nz-date-picker formControlName="{{ field_name }}"></nz-date-picker>
+            {% elif field_py_type=='int' -%}
+                <input nz-input type="number" placeholder="{{ placeholder }}" formControlName="{{ field_name }}"/>
+            {% elif field_py_type=='float' -%}
+                <input nz-input type="number" placeholder="{{ placeholder }}" formControlName="{{ field_name }}"/>
+            {% else %}
+                尚未支持 {{ field_py_type }}
+            {% endif -%}
+        </nz-form-control>
+    </nz-form-item>
+{% endmacro %}

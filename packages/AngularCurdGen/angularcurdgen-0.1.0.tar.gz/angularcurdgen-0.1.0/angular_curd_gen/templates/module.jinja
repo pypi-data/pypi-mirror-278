@@ -1,0 +1,64 @@
+{% set dashboard_component_name = app_title_name+'DashboardComponent' -%}
+{% set list_component_name = model_name+'ListComponent' -%}
+{% set creator_component_name = model_name+'CreatorComponent' -%}
+{% set updater_component_name = model_name+'UpdaterComponent' -%}
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+
+import {NzTableModule} from "ng-zorro-antd/table";
+import {NzTypographyModule} from "ng-zorro-antd/typography";
+import {NzButtonModule} from "ng-zorro-antd/button";
+import {NzGridModule} from "ng-zorro-antd/grid";
+import {NzStatisticModule} from "ng-zorro-antd/statistic";
+import {NzDividerModule} from "ng-zorro-antd/divider";
+import {NzSpaceModule} from "ng-zorro-antd/space";
+import {NzBreadCrumbModule} from "ng-zorro-antd/breadcrumb";
+import {NzListModule} from "ng-zorro-antd/list";
+import {NzPopconfirmModule} from "ng-zorro-antd/popconfirm";
+import {NzMessageModule} from "ng-zorro-antd/message";
+import {ReactiveFormsModule} from "@angular/forms";
+import {NzFormModule} from "ng-zorro-antd/form";
+import {NzInputModule} from "ng-zorro-antd/input";
+import {NzCheckboxModule} from "ng-zorro-antd/checkbox";
+import {NzDatePickerModule} from "ng-zorro-antd/date-picker";
+import {NzIconModule} from "ng-zorro-antd/icon";
+
+import { {{ app_title_name }}RoutingModule} from './{{ app_name }}-routing.module';
+import { {{ list_component_name }}} from "./{{ lower_model_name }}/{{ lower_model_name }}-list/{{ lower_model_name }}-list.component";
+import { {{ creator_component_name }}} from "./{{ lower_model_name }}/{{ lower_model_name }}-creator/{{ lower_model_name }}-creator.component";
+import { {{ updater_component_name }}} from "./{{ lower_model_name }}/{{ lower_model_name }}-updater/{{ lower_model_name }}-updater.component";
+import { {{ dashboard_component_name }}} from "./{{ app_name }}-dashboard/{{ app_name }}-dashboard.component";
+
+
+
+@NgModule({
+  declarations: [
+    {{ list_component_name }},
+    {{ creator_component_name }},
+    {{ updater_component_name }},
+    {{ dashboard_component_name }},
+  ],
+  imports: [
+    CommonModule,
+    NzTableModule,
+    NzButtonModule,
+    NzGridModule,
+    NzTypographyModule,
+    NzStatisticModule,
+    NzDividerModule,
+    NzSpaceModule,
+    NzListModule,
+    NzPopconfirmModule,
+    NzBreadCrumbModule,
+    NzMessageModule,
+    NzFormModule,
+    ReactiveFormsModule,
+    NzInputModule,
+    NzIconModule,
+    NzCheckboxModule,
+    NzDatePickerModule,
+    {{ app_title_name }}RoutingModule,
+  ]
+})
+export class FirstModule {
+}

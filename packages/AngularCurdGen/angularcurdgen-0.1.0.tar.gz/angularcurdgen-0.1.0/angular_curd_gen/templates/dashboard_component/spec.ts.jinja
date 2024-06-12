@@ -1,0 +1,5 @@
+{% set component_name = app_title_name+'DashboardComponent' -%}
+{% set lower_component_name = app_name+'-dashboard' -%}
+{% from 'macros/ts.spec.jinja' import spec_ts -%}
+{{ spec_ts(component_name, lower_component_name) }}
+

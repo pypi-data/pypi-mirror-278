@@ -1,0 +1,39 @@
+use config::{Config, Environment};
+use lazy_static::lazy_static;
+use serde::Deserialize;
+
+#[derive(Debug, Deserialize)]
+pub struct Settings {
+    pub debug: bool,
+    pub port: u16,
+    pub db: DatabaseSettings,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct DatabaseSettings {
+    pub user: String,
+    pub pswd: String,
+    pub host: String,
+    pub name: String,
+}
+
+impl DatabaseSettings {
+    pub fn build_url(&self) -> String {
+        format!("mysql://{}:{}@{}:3306/{}", self.user, self.pswd, self.host, self.name)
+    }
+}
+
+
+lazy_static! {
+    pub static ref SETTINGS: Settings = {
+        let builder = Config::builder()
+            .set_default("debug", true).unwrap()
+            .set_default("port", 8000).unwrap()
+            .set_default("db.name", "test").unwrap()
+            .add_source(Environment::with_prefix("PREFIX").separator("_"));
+
+        builder.build().unwrap().try_deserialize().unwrap()
+    };
+
+    pub static ref DATABASE_URL: String = SETTINGS.db.build_url();
+}

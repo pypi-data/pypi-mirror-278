@@ -1,0 +1,25 @@
+{% set dashboard_component_name = app_title_name+'DashboardComponent' -%}
+{% set list_component_name = model_name+'ListComponent' -%}
+{% set creator_component_name = model_name+'CreatorComponent' -%}
+{% set updater_component_name = model_name+'UpdaterComponent' -%}
+
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import { {{ list_component_name }} } from "./{{ lower_model_name }}/{{ lower_model_name }}-list/{{ lower_model_name }}-list.component";
+import { {{ creator_component_name }} } from "./{{ lower_model_name }}/{{ lower_model_name }}-creator/{{ lower_model_name }}-creator.component";
+import { {{ updater_component_name }} } from "./{{ lower_model_name }}/{{ lower_model_name }}-updater/{{ lower_model_name }}-updater.component";
+import { {{ dashboard_component_name }}} from "./{{ app_name }}-dashboard/{{ app_name }}-dashboard.component";
+
+const routes: Routes = [
+  {path: '', component: {{ dashboard_component_name }}},
+  {path: '{{ lower_models_name }}', component: {{ list_component_name }}},
+  {path: '{{ lower_models_name }}/creator', component: {{ creator_component_name }}},
+  {path: '{{ lower_models_name }}/:{{ lower_model_name }}Id/updater', component: {{ updater_component_name }}},
+];
+
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+export class {{ app_title_name }}RoutingModule {
+}

@@ -1,0 +1,73 @@
+{% set service_name = model_name+'Service' -%}
+{% set component_name = model_name+'UpdaterComponent' -%}
+{% set update_form_name = 'update'+ model_name +'Form' -%}
+{% set modelId = lower_model_name+'Id' -%}
+
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {ActivatedRoute} from "@angular/router";
+import {NzMessageService} from "ng-zorro-antd/message";
+
+import dayjs from "dayjs";
+
+import { {{ service_name }}} from '../{{ lower_model_name }}_api.service';
+import { {{ model_name }} } from '../{{ lower_model_name }}_interfaces';
+
+
+@Component({
+  selector: 'app-{{ lower_model_name }}-updater',
+  templateUrl: './{{ lower_model_name }}-updater.component.html',
+  styleUrls: ['./{{ lower_model_name }}-updater.component.css']
+})
+export class {{ component_name }} implements OnInit {
+
+  {{ modelId }}: number = 0;
+  // @ts-ignore
+  {{ lower_model_name }}: {{ model_name }}
+
+  {{ update_form_name }}: FormGroup = new FormGroup({});
+
+  constructor(
+    private route: ActivatedRoute,
+    private fb: FormBuilder,
+    private msg: NzMessageService,
+    private api: {{ service_name }},
+  ) {
+  }
+
+  initBaseForm({{ lower_model_name }}: {{ model_name }}): void {
+    this.{{ update_form_name }} = this.fb.group({
+        {% for form_field in model_edit_fields -%}
+            {{ form_field }}: [{{ lower_model_name }}.{{ form_field }}, [Validators.required]],
+        {% endfor -%}
+    });
+  }
+
+  ngOnInit(): void {
+    // @ts-ignore
+    this.{{ modelId }} = this.route.snapshot.paramMap.get('{{ modelId }}');
+    this.api.get{{ model_name }}ById(this.{{ modelId }}).subscribe({
+      next: ({{ lower_model_name }}) => {
+        this.{{ lower_model_name }} = {{ lower_model_name }};
+        this.initBaseForm({{ lower_model_name }});
+      }
+    });
+  }
+
+  update{{ model_name }}(): void {
+    this.{{ update_form_name }}.patchValue({
+        {% for form_field, form_field_type in model_edit_fields_type_map.items() -%}
+            {%- if cls.extract_py_type(form_field_type)=='datetime.date' -%}
+                {{ form_field }}: dayjs(this.{{ update_form_name }}.value.{{ form_field }}).format('YYYY-MM-DD'),
+            {%- endif %}
+        {%- endfor %}
+    });
+    this.api.update{{ model_name }}(this.{{ modelId }}, this.{{ update_form_name }}.value).subscribe({
+      next: () => {
+        this.msg.success('更新{{ model_readable_name }}成功');
+      }, error: () => {
+        this.msg.error('更新{{ model_readable_name }}失败');
+      }
+    })
+  }
+}

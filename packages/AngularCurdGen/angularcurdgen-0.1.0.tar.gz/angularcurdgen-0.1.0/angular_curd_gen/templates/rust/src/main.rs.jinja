@@ -1,0 +1,35 @@
+mod config;
+pub mod entities;
+pub mod routers;
+mod utils;
+
+use std::net::SocketAddr;
+use axum::{routing::get, Router};
+use sea_orm::{Database};
+use tower_http::cors::{Any, CorsLayer};
+use crate::config::{DATABASE_URL, SETTINGS};
+use crate::routers::{{ lower_model_name }}::{{ lower_model_name }}_routes;
+use crate::utils::AppState;
+
+
+#[tokio::main]
+async fn main() {
+    let conn = Database::connect(DATABASE_URL.as_str())
+        .await
+        .expect("Database connection failed");
+
+    let state = AppState { conn };
+    let {{ lower_model_name }}_routers_with_state = {{ lower_model_name }}_routes().with_state(state.clone());
+    let app = Router::new()
+        .route("/", get(|| async { "Hello, W!" }))
+        .nest("/{{ app_name }}", {{ lower_model_name }}_routers_with_state)
+        .layer(CorsLayer::new()
+            .allow_origin(Any)
+            .allow_methods(Any)
+            .allow_headers(Any)
+            .allow_credentials(false))
+        .with_state(state);
+    let addr = SocketAddr::from(([0, 0, 0, 0], SETTINGS.port));
+    let listener = tokio::net::TcpListener::bind(&addr).await.unwrap();
+    axum::serve(listener, app).await.unwrap();
+}
