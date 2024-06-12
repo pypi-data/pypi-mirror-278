@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: drf-api-auth
+Version: 0.1.1
+Summary: A Django app to authenticate by api_key and api_secret
+Home-page: https://github.com/amin-basiri/drf_api_auth
+Author: Amin Basiri
+Author-email: amin.bsr99@gmail.com
+License: BSD-3-Clause
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 4.2
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: Django >=4
+Requires-Dist: djangorestframework >=3
+
+# Django REST Framework API Auth
+
+Django REST Framework API Auth is a secure API Key and Secret authentication plugin for REST API built with [Django Rest Framework](https://www.django-rest-framework.org/).
+
+<div>
+  <a href="https://badge.fury.io/py/drf-api-ath">
+      <img src="https://badge.fury.io/py/drf-api-ath.svg" alt="Version"/>
+  </a>
+</div>
+
+## Quickstart
+
+1 - Install with `pip`:
+
+```bash
+pip install drf-api-ath
+```
+
+2 - Register the app in the `INSTALLED_APPS` in the `settings.py` file:
+
+```python
+# settings.py
+
+INSTALLED_APPS = [
+  # ...
+  "rest_framework",
+  "drf_api_auth",
+]
+```
+
+4 - Run migrations:
+
+```bash
+python manage.py migrate
+```
+
+In your view then, you can add the authentication class.
+
+> ⚠️ **Important Note**: By default, authentication is performed using the `AUTH_USER_MODEL` specified in the settings.py file.
+
+```python
+from rest_framework import viewsets
+
+from drf_api_auth.authentications import ApikeyAuthentication
+from rest_framework.response import Response
+
+
+class TestViewSets(viewsets.ViewSet):
+  authentication_classes = (ApikeyAuthentication,)
+
+  def list(self, request):
+    return Response([{"message": "Ok"}], 200)
+```
+
+### TODO
+
+- [ ] Prevent save api_key as clear text
+- [ ] Toggling (show/hide) for api_key admin field

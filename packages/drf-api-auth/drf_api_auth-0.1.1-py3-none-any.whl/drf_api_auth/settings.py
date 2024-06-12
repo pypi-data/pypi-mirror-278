@@ -1,0 +1,1 @@
+DRF_API_KEY_LENGTH: int = 64
