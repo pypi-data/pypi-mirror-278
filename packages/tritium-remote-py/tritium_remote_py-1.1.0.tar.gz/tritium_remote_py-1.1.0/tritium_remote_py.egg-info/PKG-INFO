@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: tritium-remote-py
+Version: 1.1.0
+Summary: Tritium remote interaction.
+Home-page: http://wiki.engineeredarts.co.uk/tritium
+Author: Engineered Arts Ltd
+Author-email: tritium@engineeredarts.co.uk
+License: GPL
+Keywords: tritium robotics
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Environment :: No Input/Output (Daemon)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering
+Classifier: Framework :: Robot Framework :: Library
+Requires-Dist: websockets>=12.0
+
+Tritium Remote (Python)
+=======================
+
+http://wiki.engineeredarts.co.uk/tritium
