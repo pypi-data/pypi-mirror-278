@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: drca
+Version: 0.5.0
+Summary: DR assisted cluster analysis for hyperspectral datasets
+Home-page: https://github.com/jinseuk56
+Author: Jinseok Ryu
+Author-email: jinseuk56@gmail.com
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: scikit-learn
+Requires-Dist: ipywidgets
+Requires-Dist: tifffile
+Requires-Dist: ipympl
+Requires-Dist: jupyterlab
+
