@@ -1,0 +1,61 @@
+Lunarcord
+---------
+
+A swift, fast, and beginner-friendly library for easily writing multi-purpose discord bots.
+
+Inspired by discord, pycord, nextcord, and other discord forks.
+This package is NOT a discord fork!
+
+Features
+--------
+
+- Makes use of **async - await** technologies
+- Speedy and **easy-to-use**
+- Includes **most** features implemented by other packages
+
+Missing
+-------
+
+Lunarcord misses some unimplemented functionalities, which are to be added in the future, such as:
+
+- Customizable bot intents
+- Sharding and auto-sharding
+- Voice gateway - connecting to voice call
+
+Installation
+------------
+
+Lunarcord requires **Python 3** or higher.
+You can install **Lunarcord** from your terminal:
+
+.. code:: sh
+
+    # Linux / MacOS
+    python3 -m pip install -U lunarcord
+
+    # Windows
+    py -3 -m pip install -U lunarcord
+
+Example
+-------
+
+.. code:: py
+
+    import lunarcord
+
+
+    bot = lunarcord.Bot()
+
+    @bot.slashCommand()
+    async def ping(interaction: lunarcord.Interaction):
+        """A test ping-pong slash command!"""
+        await interaction.send("Pong!")
+
+    bot.run("YOUR_BOT_TOKEN")
+
+For additional help, join the official [`Lunarcord Discord Server <https://dsc.gg/lunarcord>`](https://dsc.gg/lunarcord)
+
+Links
+-----
+
+- [`Discord Server <https://dsc.gg/lunarcord>`](https://dsc.gg/lunarcord)
