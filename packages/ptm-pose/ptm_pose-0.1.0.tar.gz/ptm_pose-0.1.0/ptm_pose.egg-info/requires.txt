@@ -1,0 +1,8 @@
+pandas==2.2.*
+numpy==1.26.*
+scipy==1.13.*
+biopython==1.83.*
+tqdm==4.66.*
+xlrd
+matplotlib
+requests
