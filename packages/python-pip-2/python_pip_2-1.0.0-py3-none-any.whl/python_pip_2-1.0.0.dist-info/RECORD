@@ -1,0 +1,13 @@
+my_library/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+my_library/data_processing/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+my_library/data_processing/clean.py,sha256=fJx9Iq669Ey7lxKXWc_I7Okf7dc_hoeGVSrU_XfUE8A,100
+my_library/data_processing/transform.py,sha256=NiG3eSZjx5S6Cpt7uBpDvQyOev5Vvsw9UCzkYI3SZe0,128
+my_library/google_translate/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+my_library/google_translate/client.py,sha256=pdK9G0dg5h0tXrWQnpbZh9nVy1UHg5bkm65Mqx8Oyi8,996
+my_library/google_translate/utils.py,sha256=s_1g-zlR5X2mbclK3SC5uxQr3jZioyUF13zA14EyMxU,262
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_client.py,sha256=X-4v_z4XPSgBd9b3mo3_EZ23Uhv-PKX5Jf0lbBXD90o,1577
+python_pip_2-1.0.0.dist-info/METADATA,sha256=nf7CzOmqMRQzpY-OVHaPGAxYmd6boNs7SZagwPGgUn0,6678
+python_pip_2-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+python_pip_2-1.0.0.dist-info/top_level.txt,sha256=yfoEluf-kzM2VYaTnBtlTq-x_BoLU903HdoKKvEGO6A,17
+python_pip_2-1.0.0.dist-info/RECORD,,
