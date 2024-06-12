@@ -1,0 +1,8 @@
+__title__ = "rapidapi_axisdirect"
+__description__ = "Python sdk for Axis Direct trading API based on the documentation provided by the Axis Direct. https://documenter.getpostman.com/view/33771924/2sA3BkasEf"
+__url__ = "https://abhay.bio"
+__download_url__ = "https://github.com/abhaybraja/rapidapi-axisdirect"
+__version__ = "0.0.2"
+__author__ = "Abhay Braja"
+__author_email__ = "contact@abhay.bio"
+__license__ = "MIT"
