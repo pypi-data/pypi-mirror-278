@@ -1,0 +1,19 @@
+templates:
+  - source_module.template
+  - header_module.template
+  - main_module.template
+  - ccflags.template
+  - ldflags.template
+  - sources.template
+  - objects.template
+  - Makefile.template
+
+modules:
+  - source_module.cc
+  - header_module.h
+  - main.cc
+  - ccflags.mk
+  - ldflags.mk
+  - sources.mk
+  - objects.mk
+  - Makefile
