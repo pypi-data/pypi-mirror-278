@@ -1,0 +1,7 @@
+[tool.poetry]
+name="pydea_labjc"
+version='0.1.0'
+license="MIT"
+description="A python implementation of differential expression analysis."
+authors=["labjc"]
+

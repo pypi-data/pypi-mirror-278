@@ -1,0 +1,13 @@
+LICENSE
+pyproject.toml
+setup.py
+pydea_labjc/__init__.py
+pydea_labjc/normalization.py
+pydea_labjc/pdd.py
+pydea_labjc/prework.py
+pydea_labjc/stats.py
+pydea_labjc/utils.py
+pydea_labjc.egg-info/PKG-INFO
+pydea_labjc.egg-info/SOURCES.txt
+pydea_labjc.egg-info/dependency_links.txt
+pydea_labjc.egg-info/top_level.txt
