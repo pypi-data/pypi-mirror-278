@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.cfg
+src/mexui/__init__.py
+src/mexui/main_ui.py
+src/mexui/settings_ui.py
+src/mexui.egg-info/PKG-INFO
+src/mexui.egg-info/SOURCES.txt
+src/mexui.egg-info/dependency_links.txt
+src/mexui.egg-info/top_level.txt
