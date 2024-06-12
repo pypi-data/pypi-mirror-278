@@ -1,0 +1,20 @@
+Metadata-Version: 2.3
+Name: codemetrics-cli
+Version: 0.0.2
+Summary: A tool for exploring code metrics of a software project (e.g. dotnet)
+Project-URL: Homepage, https://github.com/grigoryk/codemetrics-cli
+Project-URL: Issues, https://github.com/grigoryk/codemetrics-cli/issues
+Author-email: Grisha Kruglov <grigory@kruglov.ca>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: colorist
+Requires-Dist: numpy
+Requires-Dist: uniplot
+Description-Content-Type: text/markdown
+
+# codemetrics-cli
+
+A cli tool for exploring code metrics of a software project. Only dotnet for now.
