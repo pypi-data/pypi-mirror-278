@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: qhelper
+Version: 0.1.0
+Summary: 
+Author: mayuanchi
+Author-email: mayuanchi1989@163.com
+Requires-Python: >=3.10,<3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: akshare (>=1.14.1,<2.0.0)
+Requires-Dist: bootstrap-flask (>=2.4.0,<3.0.0)
+Requires-Dist: pyarmor (>=8.5.9,<9.0.0)
+Requires-Dist: pywencai (>=0.12.2,<0.13.0)
+Requires-Dist: xtquant (>=240329.1.1,<240330.0.0)
+Description-Content-Type: text/markdown
+
+# qhelper
+量化投资助手软件包
+
