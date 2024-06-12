@@ -1,0 +1,15 @@
+source_yotpo/__init__.py,sha256=-epafU0uZcqGVxFKJ7145S4i0LkLX0fVvlaJLD5J9sw,122
+source_yotpo/manifest.yaml,sha256=Qwse5AIyAZvBXmqhYNUt6nbRaWpj9zuWLf9bF7yRw1U,3778
+source_yotpo/run.py,sha256=j-LlfWAtYViRS2vrrOOuJpmkrbC2MxrTU8TKkKwBzx0,227
+source_yotpo/schemas/email_analytics.json,sha256=cWepuVEITKzcWevVsZm0hLeAhkJMBac85V38jyU9F2I,426
+source_yotpo/schemas/raw_data.json,sha256=3Xbc6enrYlR89hszU34vpwNz-FhQMhR6gUfN1w2L0Zw,1539
+source_yotpo/schemas/reviews.json,sha256=2YiUSpzAmqUKJLKXkTFSF_98PhLHBypH9Vtn-OTwpLc,1268
+source_yotpo/schemas/unsubscribers.json,sha256=e3tCaq1KCYaH9quiLoKBfZVFLNTHbBxfn6s7lRaPIBI,413
+source_yotpo/schemas/webhook_events.json,sha256=GQOAa2qeMd3FfKNkT09gL2NeVH8miNgs9MEQm-X8RQQ,284
+source_yotpo/schemas/webhooks.json,sha256=R5b_vhmeZQ_N92vAPAv9srYmEnMcmgBLI_LIXZoAuGU,469
+source_yotpo/source.py,sha256=QV5XDFNbmlgoYm5tqNY6NC9vr6clZFilsQz4Ztz1JlI,474
+source_yotpo/spec.yaml,sha256=gnt8kmnIMlfG69BA26nbuCcVfv4LaWvCt0Fr6nZfH1g,1185
+airbyte_source_yotpo-0.1.1.dist-info/METADATA,sha256=ClqD6QqUxkjhYao5UhiBSo3gO1ZXFdmEtwZzvdS27R8,5177
+airbyte_source_yotpo-0.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+airbyte_source_yotpo-0.1.1.dist-info/entry_points.txt,sha256=5nqvdE4-45qF6p0qN_0JhCOKtJUvAl8fOj5zHwGSJss,53
+airbyte_source_yotpo-0.1.1.dist-info/RECORD,,
