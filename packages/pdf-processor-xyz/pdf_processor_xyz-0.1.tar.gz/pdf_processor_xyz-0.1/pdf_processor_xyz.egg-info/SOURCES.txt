@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+my_pdf_package/__init__.py
+my_pdf_package/pdf_processor.py
+pdf_processor_xyz.egg-info/PKG-INFO
+pdf_processor_xyz.egg-info/SOURCES.txt
+pdf_processor_xyz.egg-info/dependency_links.txt
+pdf_processor_xyz.egg-info/entry_points.txt
+pdf_processor_xyz.egg-info/requires.txt
+pdf_processor_xyz.egg-info/top_level.txt
+tests/__init__.py
+tests/test_pdf_processor.py
