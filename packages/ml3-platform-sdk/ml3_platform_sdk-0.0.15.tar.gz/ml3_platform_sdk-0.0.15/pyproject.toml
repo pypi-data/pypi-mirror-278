@@ -1,0 +1,162 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "ml3-platform-sdk"
+version = "0.0.15"
+authors = [ { name="MLcube" } ]
+description = "ML Platform SDK"
+readme = "README.md"
+license = { text = "GPL" }
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: GNU General Public License (GPL)",
+    "Programming Language :: Python",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+# list of project dependencies
+dependencies = [
+    "tabulate>=0.9.0",
+    "pydantic>=2.0",
+    "requests>=2.31.0"
+]
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.packages.find]
+exclude = ['site', 'templates', 'notebooks', 'generators', 'sample_data']
+
+# optional grouped dependencies that are installed only when explicitly set
+[project.optional-dependencies]
+# dev dependencies are installed during development but no for package
+dev = [
+    "mypy",
+    "pytest",
+    "pytest-cov",
+    "pytest-mock",
+    "pytest-asyncio",
+    "pytest-xdist[psutil]",
+    "ruff",
+    "types-requests",
+    "types-tabulate",
+    "pyyaml",
+    "mkdocs>=1.4.3",
+    "mkdocs-material>=9.1.14",
+    "mkgendocs>=0.9.2"
+]
+# dependencies needed to build package
+build = ["twine", "build"]
+
+[tool.ruff]
+
+line-length = 79
+indent-width = 4
+target-version = "py312"
+exclude = [
+    "tests/"
+]
+
+[tool.ruff.lint]
+fixable = ["ALL"]
+select = [
+    "F",
+    "W",
+    "E",
+    "I",
+    #"N" # names,
+    #"D", # docstrings
+    "UP",
+    #"ANN", # annotations
+    "ASYNC",
+    #"S",  # security
+    #"BLE" # blind exception
+    #"FBT", # boolean trap
+    "B",
+    "A",
+    "COM",
+    # "CPY", # copyright
+    #"C4", # comprehension
+    #"DTZ", # datetime
+    "T10",
+    #"DJ", # django
+    #"EM", # error message
+    #"EXE", # executable
+    #"FA", # future annotations
+    "ISC",
+    "ICN",
+    "G",
+    "INP",
+    "PIE",
+    "T20",
+    "PYI",
+    "PT",
+    "Q",
+    "RSE",
+    #"RET", # return
+    "SLF",
+    "SLOT",
+    #"SIM", # simplify
+    "TID",
+    "TCH",
+    "INT",
+    "ARG",
+    #"PTH", # pathlib
+    #"TD, # todos
+    #"FIX", # fixmes
+    "ERA",
+    #"PD", # pandas
+    #"PGH", # pygrep hooks
+    "PL",
+    #"TRY", # excception handling,
+    #"FLY", # f-strings
+    "NPY",
+    #"AIR", # airflow
+    #"PERF", # performance
+    #"FURB", # refurb
+    "LOG",
+    #"RUF", # ruff specific
+]
+ignore = [
+    "B008",
+    "PLR0913",
+    "PLR0912",
+    "PLR2004",
+    "EM102",
+    "E501",
+    "G004",
+    "RSE102",
+    "COM812",
+    "ISC001",
+    "Q000",
+    "Q003",
+    "SLOT000",
+    "Q000"
+]
+
+[tool.ruff.format]
+# Like Black, use double quotes for strings.
+quote-style = "double"
+
+# Like Black, indent with spaces, rather than tabs.
+indent-style = "space"
+
+# Like Black, respect magic trailing commas.
+skip-magic-trailing-comma = false
+
+# Like Black, automatically detect the appropriate line ending.
+line-ending = "auto"
+
+# Enable auto-formatting of code examples in docstrings. Markdown,
+# reStructuredText code/literal blocks and doctests are all supported.
+docstring-code-format = false
+
+# Set the line length limit used when formatting code snippets in
+# docstrings.
+#
+# This only has an effect when the `docstring-code-format` setting is
+# enabled.
+docstring-code-line-length = "dynamic"
