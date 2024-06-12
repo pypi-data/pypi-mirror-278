@@ -1,0 +1,125 @@
+2020-04-18 16:35:31.835202 
+number of cpu cores: 32
+cutoffs: [4 4]
+kernel_name: two_plus_three_body_mc
+number of hyperparameters: 5
+hyperparameters: [1 1 1 1 1]
+hyperparameter optimization algorithm: L-BFGS-B
+uncertainty tolerance: 0.1 eV/A
+timestep (ps): 0.0001
+number of frames: 5
+number of atoms: 2
+system species: {'H'}
+periodic cell: 
+[[5. 0. 0.]
+ [0. 5. 0.]
+ [0. 0. 5.]]
+
+previous positions (A):
+H        2.3000    2.5000    2.5000
+H        2.8000    2.5000    2.5000
+--------------------------------------------------------------------------------
+
+Calling DFT...
+DFT run complete.
+number of DFT calls: 1 
+wall time from start: 2.53 s 
+
+*-Frame: 0 
+Simulation Time: 0.0 ps 
+El            Position (A)                    DFT Force (ev/A)                  Std. Dev (ev/A)                  Velocities (A/ps)       
+H        2.3000    2.5000    2.5000      -22.2981    0.0000    0.0000        0.0000    0.0000    0.0000      -10.7572    0.0000    0.0000
+H        2.8000    2.5000    2.5000       22.2981    0.0000    0.0000        0.0000    0.0000    0.0000       10.7572    0.0000    0.0000
+
+temperature: 92.78 K 
+kinetic energy: 0.011993 eV 
+potential energy: 0.000000 eV 
+total energy: 0.011993 eV 
+wall time from start: 2.56 s 
+
+Adding atom [0] to the training set.
+Uncertainty: [0. 0. 0.].
+
+GP hyperparameters: 
+Hyp0 : Signal Std 2b = 2.8573
+Hyp1 : Length Scale 2b = 3.5504
+Hyp2 : Signal Std 3b = 1.0000
+Hyp3 : Length Scale 3b = 1.0000
+Hyp4 : Noise Std = 0.0010
+likelihood: 7.4542
+likelihood gradient: [-9.65003903e-06  1.51795946e-06  0.00000000e+00  0.00000000e+00
+ -2.00000000e+03]
+wall time from start: 2.76 s 
+--------------------------------------------------------------------------------
+-Frame: 1 
+Simulation Time: 0.0001 ps 
+El            Position (A)                    GP Force (ev/A)                   Std. Dev (ev/A)                  Velocities (A/ps)       
+H        2.2978    2.5000    2.5000      -22.2653    0.0000    0.0000        0.0414    0.0000    0.0000      -32.2558    0.0000    0.0000
+H        2.8022    2.5000    2.5000       22.2653    0.0000    0.0000        0.0414    0.0000    0.0000       32.2558    0.0000    0.0000
+
+temperature: 834.24 K 
+kinetic energy: 0.107834 eV 
+potential energy: 0.000000 eV 
+total energy: 0.107834 eV 
+wall time from start: 2.83 s 
+--------------------------------------------------------------------------------
+-Frame: 2 
+Simulation Time: 0.0002 ps 
+El            Position (A)                    GP Force (ev/A)                   Std. Dev (ev/A)                  Velocities (A/ps)       
+H        2.2935    2.5000    2.5000      -22.1996    0.0000    0.0000        0.1239    0.0000    0.0000      -53.7069    0.0000    0.0000
+H        2.8065    2.5000    2.5000       22.1996    0.0000    0.0000        0.1239    0.0000    0.0000       53.7069    0.0000    0.0000
+
+temperature: 2312.78 K 
+kinetic energy: 0.298950 eV 
+potential energy: 0.000000 eV 
+total energy: 0.298950 eV 
+wall time from start: 2.90 s 
+
+Calling DFT...
+DFT run complete.
+number of DFT calls: 2 
+wall time from start: 5.43 s 
+
+*-Frame: 2 
+Simulation Time: 0.0002 ps 
+El            Position (A)                    DFT Force (ev/A)                  Std. Dev (ev/A)                  Velocities (A/ps)       
+H        2.2935    2.5000    2.5000      -20.0055    0.0000    0.0000        0.1239    0.0000    0.0000      -52.6484    0.0000    0.0000
+H        2.8065    2.5000    2.5000       20.0055    0.0000    0.0000        0.1239    0.0000    0.0000       52.6484    0.0000    0.0000
+
+temperature: 2222.52 K 
+kinetic energy: 0.287282 eV 
+potential energy: 0.000000 eV 
+total energy: 0.287282 eV 
+wall time from start: 5.46 s 
+
+mean absolute error: 0.7314 eV/A 
+mean absolute dft component: 6.6685 eV/A 
+
+Adding atom [1] to the training set.
+Uncertainty: [0.12385976 0.         0.        ].
+--------------------------------------------------------------------------------
+-Frame: 3 
+Simulation Time: 0.0003 ps 
+El            Position (A)                    GP Force (ev/A)                   Std. Dev (ev/A)                  Velocities (A/ps)       
+H        2.2873    2.5000    2.5000      -17.8102    0.0000    0.0000        0.0023    0.0000    0.0000      -70.8917    0.0000    0.0000
+H        2.8127    2.5000    2.5000       17.8102    0.0000    0.0000        0.0023    0.0000    0.0000       70.8917    0.0000    0.0000
+
+temperature: 4029.64 K 
+kinetic energy: 0.520871 eV 
+potential energy: 0.000000 eV 
+total energy: 0.520871 eV 
+wall time from start: 5.56 s 
+--------------------------------------------------------------------------------
+-Frame: 4 
+Simulation Time: 0.0004 ps 
+El            Position (A)                    GP Force (ev/A)                   Std. Dev (ev/A)                  Velocities (A/ps)       
+H        2.2794    2.5000    2.5000      -15.0355    0.0000    0.0000        0.0047    0.0000    0.0000      -86.7374    0.0000    0.0000
+H        2.8206    2.5000    2.5000       15.0355    0.0000    0.0000        0.0047    0.0000    0.0000       86.7374    0.0000    0.0000
+
+temperature: 6032.36 K 
+kinetic energy: 0.779743 eV 
+potential energy: 0.000000 eV 
+total energy: 0.779743 eV 
+wall time from start: 5.63 s 
+--------------------
+Run complete.
