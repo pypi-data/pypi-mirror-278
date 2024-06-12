@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pond-library
+Version: 0.0.2
+Summary: A package to use in Irisa Prime Chat Bot
+Author-email: Hamid Reza Horr <hamidreza.hr87@gmail.com>
+Project-URL: Homepage, https://github.com/hamidhr87/PyLibrary.git
+Project-URL: Issues, https://github.com/hamidhr87/PyLibrary.git/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# PyLibrary
+A library to use in IRISA Prime Chat Bot
