@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.poetry]
+name = "people_local"
+version = "0.0.28" # https://pypi.org/project/people_local
+description = "people_local Python Package"
+readme = "README.md"
+authors = [
+    "Circlez.ai <info@circlez.ai>",
+]

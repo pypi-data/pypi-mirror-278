@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+people_local.egg-info/PKG-INFO
+people_local.egg-info/SOURCES.txt
+people_local.egg-info/dependency_links.txt
+people_local.egg-info/requires.txt
+people_local.egg-info/top_level.txt
+people_local/src/__init__.py
+people_local/src/people.py
+people_local/src/people_constants.py
