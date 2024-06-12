@@ -1,0 +1,5 @@
+from {{ published_record.proxy.module }} import {{ published_record.service.proxy }}
+
+def init_addons_{{ vars.module.suffix_snake }}(state):
+    app = state.app
+    app.config["COMMUNITY_RECORDS_SERVICES"] = [{{ published_record.service.proxy }}]
