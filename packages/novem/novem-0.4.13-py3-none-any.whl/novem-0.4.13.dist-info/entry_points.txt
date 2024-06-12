@@ -1,0 +1,4 @@
+[console_scripts]
+bump_version=scripts.bump_version:main
+novem=novem.cli:run_cli
+
