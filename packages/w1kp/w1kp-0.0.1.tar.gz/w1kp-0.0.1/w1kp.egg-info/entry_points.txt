@@ -1,0 +1,4 @@
+[console_scripts]
+w1kp_generate_images = w1kp.run.generate_images:main
+w1kp_trainer = w1kp.run.trainer:main
+
