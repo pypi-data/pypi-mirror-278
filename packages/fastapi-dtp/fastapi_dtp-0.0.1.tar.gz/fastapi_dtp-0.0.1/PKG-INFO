@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: fastapi-dtp
+Version: 0.0.1
+Summary: 
+Author: kyzhangs
+Author-email: kyzhangs@foxmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: fastapi (>=0.111.0,<0.112.0)
+Requires-Dist: pydantic-settings (>=2.3.1,<3.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+

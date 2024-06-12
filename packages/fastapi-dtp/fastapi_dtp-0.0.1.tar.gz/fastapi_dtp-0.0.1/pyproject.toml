@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "fastapi-dtp"
+version = "0.0.1"
+description = ""
+authors = ["kyzhangs <kyzhangs@foxmail.com>"]
+readme = "README.md"
+packages = [{include = "dtp", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.111.0"
+pydantic-settings = "^2.3.1"
+requests = "^2.32.3"
+
+[[tool.poetry.source]]
+name = "mirrors"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
+priority = "primary"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
