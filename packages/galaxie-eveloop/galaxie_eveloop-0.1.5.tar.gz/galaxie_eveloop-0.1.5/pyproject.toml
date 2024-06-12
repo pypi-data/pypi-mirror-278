@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=64.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name="galaxie-eveloop"
+description = "Galaxie EveLoop is a low tech EventLoop, it contain minimalistic Bus and Loop"
+readme = "README.rst"
+license = {text = "WTFPL"}
+dynamic = [
+    "version",
+]
+authors = [
+    {name = "Tuuux"},
+]
+requires-python = ">=3.0"
+keywords = [
+    "Galaxie",
+    "Mainloop",
+    "Bus",
+]
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+]
+dependencies = [
+    "wheel",
+]
+
+[project.optional-dependencies]
+tests = [
+    'coverage',
+    "wheel",
+    'mock >= 1.0.1, < 4; python_version < "3.4"',
+]
+
+[project.urls]
+Homepage = "https://codeberg.org/Tuuux/galaxie-eveloop"
+Issues = "https://codeberg.org/Tuuux/galaxie-eveloop/issues"
+Readthedocs = "http://galaxie-eveloop.readthedocs.io"
+Changelog = "https://codeberg.org/Tuuux/galaxie-eveloop/src/branch/master/CHANGELOG.rst"
+
+
+[tool.setuptools]
+packages = [
+    "glxeveloop",
+    "glxeveloop.loop",
+    "glxeveloop.properties",
+]
