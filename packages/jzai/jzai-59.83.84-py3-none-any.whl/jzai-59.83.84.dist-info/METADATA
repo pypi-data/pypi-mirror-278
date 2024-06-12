@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: jzai
+Version: 59.83.84
+Summary: Next Gen AI Bot
+Author: Zack
+Author-email: zjacka01@sfx.act.edu.au
+License: MIT
+Keywords: AI,Bot,GPT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: nltk
+Requires-Dist: textblob
+Requires-Dist: click
+Requires-Dist: requests
+Requires-Dist: setuptools
+
+# jzai
+
+## Next Gen AI Bot
+
+Welcome to **jzai** - Your intelligent virtual assistant powered by next-generation AI technology.
+
+### Features
+
+- **Smart Assistance**: Experience the power of next-gen AI technology providing intelligent responses and assistance.
+- **Natural Language Processing**: Communicate with jzai naturally using your own language.
+
+### Usage
+
+Simply install jzai using pip:
+```
+pip install jzai
+```
+Then, run the bot in your terminal:
+```
+jzai
+```
+Compatible with major operating systems (Windows, macOS, Linux)
+
+License
+This project is licensed under the MIT License.
