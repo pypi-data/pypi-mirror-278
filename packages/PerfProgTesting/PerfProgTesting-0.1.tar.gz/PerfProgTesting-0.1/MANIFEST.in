@@ -1,0 +1,3 @@
+include README.md
+recursive-include django-basic-project/website *
+recursive-include django-basic-project/static *
