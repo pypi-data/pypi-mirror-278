@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: microcosm-pubsub
+Version: 3.0.0
+Summary: PubSub with SNS/SQS
+Home-page: https://github.com/globality-corp/microcosm-pubsub
+Author: Globality Engineering
+Author-email: engineering@globality.com
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: boto3 >=1.5.8
+Requires-Dist: marshmallow >=3.0.0
+Requires-Dist: microcosm >=4.0.0
+Requires-Dist: microcosm-caching >=1.0.0
+Requires-Dist: microcosm-daemon >=3.0.0
+Requires-Dist: microcosm-logging >=2.0.0
+Requires-Dist: requests >=2.31.0
+Provides-Extra: build
+Requires-Dist: flake8 ; extra == 'build'
+Requires-Dist: mypy ; extra == 'build'
+Requires-Dist: PyHamcrest ; extra == 'build'
+Requires-Dist: pytest-cov ; extra == 'build'
+Requires-Dist: pytest ; extra == 'build'
+Requires-Dist: sentry-sdk ; extra == 'build'
+Provides-Extra: metrics
+Requires-Dist: microcosm-metrics >=3.0.0 ; extra == 'metrics'
+Provides-Extra: sentry
+Requires-Dist: sentry-sdk >=0.14.4 ; extra == 'sentry'
+
