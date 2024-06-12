@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: logix-ai
+Version: 0.1.1
+Summary: AI Logging for Interpretability and Explainability
+License: Apache-2.0
+Requires-Python: >=3.6.0,<3.11.0
+Provides-Extra: test
+License-File: LICENSE

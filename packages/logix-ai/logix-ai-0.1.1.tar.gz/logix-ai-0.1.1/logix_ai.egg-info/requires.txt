@@ -1,0 +1,9 @@
+numpy
+einops
+pyyaml
+torch
+tqdm
+
+[test]
+torchvision
+transformers==4.40.0
