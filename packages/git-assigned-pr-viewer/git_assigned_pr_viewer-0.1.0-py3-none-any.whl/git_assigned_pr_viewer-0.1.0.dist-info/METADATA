@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: git-assigned-pr-viewer
+Version: 0.1.0
+Summary: A better viewer of github pending reviews
+Home-page: https://github.com/yourusername/your_project
+Author: Mathieu Montgomery
+Author-email: mathieu.montgomery@mailbox.org
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: certifi >=2024.6.2
+Requires-Dist: charset-normalizer >=3.3.2
+Requires-Dist: click >=8.1.7
+Requires-Dist: humanize >=4.9.0
+Requires-Dist: idna >=3.7
+Requires-Dist: requests >=2.32.3
+Requires-Dist: tabulate >=0.9.0
+Requires-Dist: urllib3 >=2.2.1
+
