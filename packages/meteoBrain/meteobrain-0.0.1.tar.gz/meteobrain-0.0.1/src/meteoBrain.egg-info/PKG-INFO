@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: meteoBrain
+Version: 0.0.1
+Summary: Adaptive weather prediction algorithm with data collection.
+Author-email: Alfred George Taylor <alfredgtaylor@gmail.com>
+Project-URL: Homepage, https://github.com/two-cats-in-a-trenchcoat/meteoBrain
+Project-URL: Issues, https://github.com/two-cats-in-a-trenchcoat/meteoBrain/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 1 - Planning
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+boilerplate for weather prediction algorithm

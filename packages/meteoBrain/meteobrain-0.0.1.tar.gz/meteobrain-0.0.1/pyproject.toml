@@ -1,0 +1,19 @@
+[project]
+name = "meteoBrain"
+version = "0.0.1"
+authors = [
+  { name="Alfred George Taylor", email="alfredgtaylor@gmail.com" },
+]
+description = "Adaptive weather prediction algorithm with data collection."
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+    "Development Status :: 1 - Planning"
+]
+
+[project.urls]
+Homepage = "https://github.com/two-cats-in-a-trenchcoat/meteoBrain"
+Issues = "https://github.com/two-cats-in-a-trenchcoat/meteoBrain/issues"
