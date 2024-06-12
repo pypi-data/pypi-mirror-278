@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "algebraic_hbm"
+version = "0.1.1"
+authors = [
+  { name="Hannes Dänschel", email="daenschel@math.tu-berlin.de" },
+]
+description = "Python implementation of the algebraic harmonic balance method for second order ordinary differential equations with polynomial coefficients."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://git.tu-berlin.de/hannes.daenschel/algebraic-hbm"

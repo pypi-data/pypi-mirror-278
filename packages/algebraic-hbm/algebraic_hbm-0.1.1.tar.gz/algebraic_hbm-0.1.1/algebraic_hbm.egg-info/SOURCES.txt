@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+algebraic_hbm/__init__.py
+algebraic_hbm/algebraic_hbm.py
+algebraic_hbm/example_coefficient_matrix.py
+algebraic_hbm/example_evaluate.py
+algebraic_hbm/fourier_series.py
+algebraic_hbm/ode.py
+algebraic_hbm/utils.py
+algebraic_hbm.egg-info/PKG-INFO
+algebraic_hbm.egg-info/SOURCES.txt
+algebraic_hbm.egg-info/dependency_links.txt
+algebraic_hbm.egg-info/top_level.txt
