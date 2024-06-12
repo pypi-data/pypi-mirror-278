@@ -1,0 +1,64 @@
+Metadata-Version: 2.3
+Name: nextline
+Version: 0.7.11
+Summary: A Python library for controlling Python scripts execution
+Project-URL: Homepage, https://github.com/simonsobs/nextline#readme
+Project-URL: Issues, https://github.com/simonsobs/nextline/issues
+Project-URL: Source, https://github.com/simonsobs/nextline
+Author-email: Simons Observatory <so_software@simonsobservatory.org>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.10
+Requires-Dist: apluggy>=1.0
+Requires-Dist: exceptiongroup>=1.2
+Requires-Dist: transitions>=0.9
+Provides-Extra: dev
+Requires-Dist: black; extra == 'dev'
+Requires-Dist: flake8; extra == 'dev'
+Requires-Dist: isort; extra == 'dev'
+Requires-Dist: mypy; extra == 'dev'
+Requires-Dist: tox; extra == 'dev'
+Requires-Dist: twine; extra == 'dev'
+Provides-Extra: tests
+Requires-Dist: hypothesis>=6.65; extra == 'tests'
+Requires-Dist: pytest-asyncio>=0.18; extra == 'tests'
+Requires-Dist: pytest-cov>=3.0; extra == 'tests'
+Requires-Dist: pytest-timeout>=2.1; extra == 'tests'
+Requires-Dist: pytest>=7.0; extra == 'tests'
+Description-Content-Type: text/markdown
+
+# Nextline
+
+[![PyPI - Version](https://img.shields.io/pypi/v/nextline.svg)](https://pypi.org/project/nextline)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/nextline.svg)](https://pypi.org/project/nextline)
+
+[![Test Status](https://github.com/simonsobs/nextline/actions/workflows/unit-test.yml/badge.svg)](https://github.com/simonsobs/nextline/actions/workflows/unit-test.yml)
+[![Test Status](https://github.com/simonsobs/nextline/actions/workflows/type-check.yml/badge.svg)](https://github.com/simonsobs/nextline/actions/workflows/type-check.yml)
+[![codecov](https://codecov.io/gh/simonsobs/nextline/branch/main/graph/badge.svg)](https://codecov.io/gh/simonsobs/nextline)
+
+---
+
+_Nextline_ is a DAQ sequencer of the [Observatory Control System
+(OCS)](https://github.com/simonsobs/ocs/). Nextline allows line-by-line
+execution of concurrent Python scripts, which control telescopes, by multiple
+users simultaneously from web browsers.
+
+This package provides the core functionality of Nextline. It is used in
+[_nextline-graphql_](https://github.com/simonsobs/nextline-graphql), the
+plugin-based framework of the backend API server of Nextline.
+
+## Citation
+
+Please use the following DOI for citing Nextline:
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11451619.svg)](https://doi.org/10.5281/zenodo.11451619)
+
+Nextline consists of multiple packages. Please use the above DOI to cite
+Nextline in general unless you need to refer to a specific package.
