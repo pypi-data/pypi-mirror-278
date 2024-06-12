@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "free-libretranslate-api"
+version = "0.0.2"
+authors = [
+  { name="Ktoto" },
+]
+description = "Бесплатный API LibreTranslate"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "requests",
+  "requests-toolbelt"
+]
+
+[project.urls]
+GitHub = "https://github.com/KtotoNekt/FreeLibreTranslateAPI"
+CodeBerg = "https://codeberg.org/Ktoto/FreeLibreTranslateAPI"
