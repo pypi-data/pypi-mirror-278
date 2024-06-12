@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: rsgiadapter
+Version: 0.0.5
+Summary: An adapter for asgi to rsgi
+Keywords: asgi,rsgi,adapter,asgi adapter,rsgi adapter,asgi to rsgi,rsgi to asgi,asyncio
+Author-Email: belingud <im.victor@qq.com>
+License: BSD-3-Clause
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: Topic :: Internet
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development
+Classifier: Typing :: Typed
+Project-URL: Homepage, https://github.com/belingud/rsgiadapter
+Requires-Python: <4.0,>=3.8
+Description-Content-Type: text/markdown
+
+# rsgiadapter
+
+An Asgi to rsgi adapter.
+
+RSGI Specification ref: https://github.com/emmett-framework/granian/blob/master/docs/spec/RSGI.md
+
+`rsgiadapter` is an adapter for [RSGI](https://github.com/emmett-framework/granian/blob/master/docs/spec/RSGI.md) server run [ASGI](https://asgi.readthedocs.io) application like FastAPI and BlackSheep.
+
+Usage:
+
+`app.py`
+```python
+import granian
+from granian.constants import Interfaces
+from rsgiadapter import ASGIToRSGI
+
+app = None  # Define your asgi application here
+
+rsgi_app = ASGIToRSGI(app)
+
+serve = granian.Granian("app:rsgi_app", interface=Interfaces.RSGI)
+serve.serve()
+```
+
+Supported Feature:
+
+- [x] HTTP Request Response
+  - [x] ASGI scope
+  - [x] ASGI receive
+  - [x] ASGI send
+- [x] Extensions
+  - [x] http.response.pathsend
+  - [ ] websocket.http.response
+  - [ ] http.response.push
+  - [ ] http.response.zerocopysend
+  - [ ] http.response.early_hint
+  - [ ] http.response.trailers
+  - [ ] http.response.debug
+- [x] Lifespan
+  - [x] lifespan.startup
+  - [x] lifespan.startup.complete
+  - [x] lifespan.startup.failed
+  - [x] lifespan.shutdown
+  - [x] lifespan.shutdown.complete
+  - [x] lifespan.shutdown.failed
+
+Ref:
+
+- Granian: https://github.com/emmett-framework/granian
