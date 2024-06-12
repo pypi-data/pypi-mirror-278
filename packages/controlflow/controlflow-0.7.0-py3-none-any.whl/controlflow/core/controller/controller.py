@@ -1,0 +1,298 @@
+import logging
+import math
+from collections import defaultdict
+from contextlib import asynccontextmanager, contextmanager
+from functools import cached_property
+from typing import Callable, Union
+
+from pydantic import BaseModel, Field, PrivateAttr, computed_field, model_validator
+
+import controlflow
+from controlflow.core.agent import Agent
+from controlflow.core.flow import Flow, get_flow
+from controlflow.core.graph import Graph
+from controlflow.core.task import Task
+from controlflow.instructions import get_instructions
+from controlflow.llm.completions import completion, completion_async
+from controlflow.llm.handlers import PrintHandler, ResponseHandler, TUIHandler
+from controlflow.llm.history import History
+from controlflow.llm.messages import AIMessage, MessageType, SystemMessage
+from controlflow.tui.app import TUIApp as TUI
+from controlflow.utilities.context import ctx
+from controlflow.utilities.tasks import all_complete, any_incomplete
+
+logger = logging.getLogger(__name__)
+
+
+def add_agent_name_to_messages(messages: list[MessageType]) -> list[MessageType]:
+    """
+    If the message is from a named assistant, prefix the message with the assistant's name.
+    """
+    new_messages = []
+    for msg in messages:
+        if isinstance(msg, AIMessage) and msg.name:
+            new_messages.append(
+                SystemMessage(
+                    content=f'The following message is from agent "{msg.name}".'
+                )
+            )
+        new_messages.append(msg)
+    return new_messages
+
+
+class Controller(BaseModel):
+    """
+    A controller contains logic for executing agents with context about the
+    larger workflow, including the flow itself, any tasks, and any other agents
+    they are collaborating with. The controller is responsible for orchestrating
+    agent behavior by generating instructions and tools for each agent. Note
+    that while the controller accepts details about (potentially multiple)
+    agents and tasks, it's responsiblity is to invoke one agent one time. Other
+    mechanisms should be used to orchestrate multiple agents invocations. This
+    is done by the controller to avoid tying e.g. agents to tasks or even a
+    specific flow.
+
+    """
+
+    # the flow is tracked by the Controller, not the Task, so that tasks can be
+    # defined and even instantiated outside a flow. When a Controller is
+    # created, we know we're inside a flow context and ready to load defaults
+    # and run.
+    flow: Flow = Field(
+        default_factory=get_flow,
+        description="The flow that the controller is a part of.",
+        validate_default=True,
+    )
+    tasks: list[Task] = Field(
+        None,
+        description="Tasks that the controller will complete.",
+    )
+    agents: Union[list[Agent], None] = None
+    history: History = Field(
+        default_factory=controlflow.llm.history.get_default_history
+    )
+    context: dict = {}
+    model_config: dict = dict(extra="forbid")
+    enable_tui: bool = Field(default_factory=lambda: controlflow.settings.enable_tui)
+    _iteration: int = 0
+    _should_stop: bool = False
+    _end_turn_counts: dict = PrivateAttr(default_factory=lambda: defaultdict(int))
+
+    @computed_field
+    @cached_property
+    def graph(self) -> Graph:
+        return Graph.from_tasks(self.tasks)
+
+    @model_validator(mode="after")
+    def _finalize(self):
+        if self.tasks is None:
+            self.tasks = list(self.flow._tasks.values())
+        for task in self.tasks:
+            self.flow.add_task(task)
+        return self
+
+    def _create_end_turn_tool(self) -> Callable:
+        def emergency_end_turn():
+            """
+            This tool is for emergencies only; you should not use it normally.
+            If you find yourself in a situation where you are repeatedly invoked
+            and your normal tools do not work, or you can not escape the loop,
+            use this tool to signal to the controller that you are stuck. A new
+            agent will be selected to go next. If this tool is used 3 times by
+            an agent the workflow will be aborted automatically.
+
+            """
+
+            # the agent's name is used as the key to track the number of times
+            key = getattr(ctx.get("controller_agent", None), "name", None)
+
+            self._end_turn_counts[key] += 1
+            if self._end_turn_counts[key] >= 3:
+                self._should_stop = True
+                self._end_turn_counts[key] = 0
+
+            return (
+                f"Ending turn. {3 - self._end_turn_counts[key]}"
+                " more uses will abort the workflow."
+            )
+
+        return emergency_end_turn
+
+    @asynccontextmanager
+    async def tui(self):
+        if tui := ctx.get("tui"):
+            yield tui
+        elif controlflow.settings.enable_tui:
+            tui = TUI(flow=self.flow)
+            with ctx(tui=tui):
+                async with tui.run_context():
+                    yield tui
+        else:
+            yield
+
+    @contextmanager
+    def _setup_run(self):
+        """
+        Generate the payload for a single run of the controller.
+        """
+        with self.flow:
+            # TODO: show the agent the entire graph, not just immediate upstreams
+            tasks = self.graph.topological_sort()
+            ready_tasks = [t for t in tasks if t.is_ready]
+
+            # if there are no ready tasks, return. This will usually happen because
+            # all the tasks are complete.
+            if not ready_tasks:
+                yield None
+                return
+
+            # get an agent from the next ready task
+            agents = ready_tasks[0].get_agents()
+            if len(agents) != 1:
+                strategy_fn = ready_tasks[0].get_agent_strategy()
+                agent = strategy_fn(agents=agents, task=ready_tasks[0], flow=self.flow)
+                ready_tasks[0]._iteration += 1
+            else:
+                agent = agents[0]
+
+            from controlflow.core.controller.instruction_template import MainTemplate
+
+            tools = self.flow.tools + agent.get_tools() + [self._create_end_turn_tool()]
+
+            # add tools for any ready tasks that the agent is assigned to
+            for task in ready_tasks:
+                if agent in task.get_agents():
+                    tools.extend(task.get_tools())
+
+            instructions_template = MainTemplate(
+                agent=agent,
+                controller=self,
+                tasks=tasks,
+                context=self.context,
+                instructions=get_instructions(),
+            )
+            instructions = instructions_template.render()
+
+            # prepare messages
+            system_message = SystemMessage(content=instructions)
+            messages = self.history.load_messages(thread_id=self.flow.thread_id)
+
+            # setup handlers
+            handlers = []
+            if controlflow.settings.enable_tui:
+                handlers.append(TUIHandler())
+            if controlflow.settings.enable_print_handler:
+                handlers.append(PrintHandler())
+
+            with ctx(controller_agent=agent):
+                # yield the agent payload
+                yield dict(
+                    agent=agent,
+                    messages=[system_message] + messages,
+                    tools=tools,
+                    handlers=handlers,
+                )
+
+    async def run_once_async(self) -> list[MessageType]:
+        async with self.tui():
+            with self._setup_run() as payload:
+                if payload is None:
+                    return
+                agent: Agent = payload.pop("agent")
+                response_handler = ResponseHandler()
+                payload["handlers"].append(response_handler)
+
+                response_gen = await completion_async(
+                    messages=payload["messages"],
+                    model=agent.model,
+                    tools=payload["tools"],
+                    handlers=payload["handlers"],
+                    max_iterations=1,
+                    stream=True,
+                    ai_name=agent.name,
+                    message_preprocessor=add_agent_name_to_messages,
+                )
+                async for _ in response_gen:
+                    pass
+
+                # save history
+                self.history.save_messages(
+                    thread_id=self.flow.thread_id,
+                    messages=response_handler.response_messages,
+                )
+                self._iteration += 1
+        return response_handler.response_messages
+
+    def run_once(self) -> list[MessageType]:
+        with self._setup_run() as payload:
+            if payload is None:
+                return
+            agent: Agent = payload.pop("agent")
+            response_handler = ResponseHandler()
+            payload["handlers"].append(response_handler)
+
+            response_gen = completion(
+                messages=payload["messages"],
+                model=agent.model,
+                tools=payload["tools"],
+                handlers=payload["handlers"],
+                max_iterations=1,
+                stream=True,
+                ai_name=agent.name,
+                message_preprocessor=add_agent_name_to_messages,
+            )
+            for _ in response_gen:
+                pass
+
+            # save history
+            self.history.save_messages(
+                thread_id=self.flow.thread_id,
+                messages=response_handler.response_messages,
+            )
+            self._iteration += 1
+        return response_handler.response_messages
+
+    async def run_async(self) -> list[MessageType]:
+        """
+        Run the controller until all tasks are complete.
+        """
+        max_task_iterations = controlflow.settings.max_task_iterations or math.inf
+        start_iteration = self._iteration
+        if all_complete(self.tasks):
+            return
+
+        messages = []
+        async with self.tui():
+            while any_incomplete(self.tasks) and not self._should_stop:
+                new_messages = await self.run_once_async()
+                messages.extend(new_messages)
+                if self._iteration > start_iteration + max_task_iterations * len(
+                    self.tasks
+                ):
+                    raise ValueError(
+                        f"Task iterations exceeded maximum of {max_task_iterations} for each task."
+                    )
+            self._should_stop = False
+            return messages
+
+    def run(self) -> list[MessageType]:
+        """
+        Run the controller until all tasks are complete.
+        """
+        max_task_iterations = controlflow.settings.max_task_iterations or math.inf
+        start_iteration = self._iteration
+        if all_complete(self.tasks):
+            return
+
+        messages = []
+        while any_incomplete(self.tasks) and not self._should_stop:
+            new_messages = self.run_once()
+            messages.extend(new_messages)
+            if self._iteration > start_iteration + max_task_iterations * len(
+                self.tasks
+            ):
+                raise ValueError(
+                    f"Task iterations exceeded maximum of {max_task_iterations} for each task."
+                )
+        self._should_stop = False
+        return messages
