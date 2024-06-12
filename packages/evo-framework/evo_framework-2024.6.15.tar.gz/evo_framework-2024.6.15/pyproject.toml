@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "evo-framework"
+version = "2024.6.15"
+description = "evo framework python"
+authors = ["cyborg-ai-git <129898917+cyborg-ai-git@users.noreply.github.com>"]
+readme = "README.md"
+#packages = [{include = "evo"}]
+license = "CC BY-NC-ND 4.0"
+include = ["LICENSE.txt"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+PyYAML = "^6.0.1"
+lz4 = "^4.3.2"
+ecdsa = "^0.18.0"
+cryptography = "^41.0.7"
+aiofiles= "^23.2.1"
+typing-extensions = "^4.12.0"
+Pillow = "^10.3.0"
+python-magic  = "^0.4.27"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
