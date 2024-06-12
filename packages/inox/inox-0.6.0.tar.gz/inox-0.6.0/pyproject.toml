@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "inox"
+description = "Stainless neural networks in JAX"
+authors = [
+  {name = "François Rozet", email = "francois.rozet@outlook.com"}
+]
+classifiers = [
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+]
+dynamic = ["dependencies", "version"]
+keywords = ["jax", "pytree", "neural networks", "deep learning"]
+readme = "README.md"
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+dev = [
+  "pre-commit",
+  "pytest",
+  "ruff",
+]
+
+[project.urls]
+documentation = "https://inox.readthedocs.io"
+source = "https://github.com/francois-rozet/inox"
+tracker = "https://github.com/francois-rozet/inox/issues"
+
+[tool.ruff]
+extend-include = ["*.ipynb"]
+line-length = 99
+
+[tool.ruff.lint]
+extend-select = ["I"]
+ignore = ["E731"]
+
+[tool.ruff.lint.extend-per-file-ignores]
+"__init__.py" = ["F401", "F403"]
+"test_*.py" = ["F403", "F405"]
+
+[tool.ruff.lint.isort]
+lines-between-types = 1
+no-sections = true
+relative-imports-order = "closest-to-furthest"
+
+[tool.ruff.format]
+preview = true
+quote-style = "preserve"
+
+[tool.setuptools.dynamic]
+dependencies = {file = "requirements.txt"}
+version = {attr = "inox.__version__"}
