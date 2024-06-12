@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.poetry]
+name = "contact-person-local"
+version = "0.0.20" # https://pypi.org/project/contact-person-local i.e. https://pypi.org/project/storage-local/
+description = "contact-person-local Python Package"
+readme = "README.md"
+authors = [
+    "Circlez.ai <info@circlez.ai>",
+]
