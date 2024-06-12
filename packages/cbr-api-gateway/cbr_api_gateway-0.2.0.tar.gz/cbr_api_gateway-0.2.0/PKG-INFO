@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: cbr_api_gateway
+Version: 0.2.0
+Summary: CBR - API Gateway
+Home-page: https://github.com/the-cyber-boardroom/cbr-api-gateway
+License: MIT
+Author: Dinis Cruz
+Author-email: dinis.cruz@owasp.org
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: osbot-utils
+Project-URL: Repository, https://github.com/the-cyber-boardroom/cbr-api-gateway
+Description-Content-Type: text/markdown
+
+---
+title: CBR API Gateway
+---
+
+# cbr-api-gateway
+Repo for CBR API Gateway
+
+
+## Repo details
+
+![Current Release](https://img.shields.io/badge/release-v0.2.0-blue)
+
+
