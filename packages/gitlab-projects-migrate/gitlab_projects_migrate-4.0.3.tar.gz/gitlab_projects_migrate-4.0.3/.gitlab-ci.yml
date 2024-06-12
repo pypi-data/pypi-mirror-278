@@ -1,0 +1,333 @@
+stages:
+  - development
+  - prepare
+  - build
+  - deploy
+
+variables:
+  REGISTRY_HOST: registry.gitlab.com
+  REGISTRY_OWNER: adriandc
+  REGISTRY_PROJECT: gitlab-projects-migrate
+
+.local:
+  engine: docker,auto
+  real_paths: true
+  version: 9.0
+
+# =============================================================================
+# Stage: development
+
+clean:
+  stage: development
+  image: local
+  script:
+    - sudo rm -rf ./build ./dist ./*.egg-info ./.eggs
+  rules:
+    - if: $CI_LOCAL
+
+changelog:
+  stage: development
+  image: local:silent
+  script:
+    - mkdir -p ./.tmp/
+    - |
+      if ! ls ./.tmp/git-chglog.tar.gz >/dev/null 2>&1; then
+        wget -O ./.tmp/git-chglog.tar.gz -q https://github.com/git-chglog/git-chglog/releases/download/v0.15.4/git-chglog_0.15.4_linux_amd64.tar.gz
+        tar -xzf ./.tmp/git-chglog.tar.gz -C ./.tmp/
+        rm -f ./.tmp/git-chglog.tar.gz
+        chmod +x ./.tmp/git-chglog
+      fi
+    - 'echo -n " > Current commit : "'
+    - git describe --always
+    - echo ''
+    - 'read -p " > Release tag : " -r tag'
+    - echo ''
+    - git tag -f -m "${tag}" "${tag}"
+    - ./.tmp/git-chglog -o ./CHANGELOG.md
+    - sed -i "s#raw/[^/]*/docs#raw/${tag}/docs#g" ./README.md
+    - git add -v ./CHANGELOG.md ./README.md
+    - 'git commit -m "docs(changelog): regenerate release tag changes history" -s'
+    - git tag -f -m "${tag}" "${tag}"
+    - ./.tmp/git-chglog -o ./CHANGELOG.md
+    - sh ./.chglog/changelog.sh --clean
+    - git add -v ./CHANGELOG.md
+    - git commit --amend --no-edit
+    - git tag -f -m "${tag}" "${tag}"
+  rules:
+    - if: $CI_LOCAL
+
+images:
+  stage: development
+  image: local:silent
+  script:
+    # Rehost standard images
+    - |
+      for image in \
+          python:3.11-alpine \
+      ; do
+        if [ -z "${IMAGE}" ] || echo "${image}" | grep -q "${IMAGE}"; then
+          echo ''
+          echo " [INFO] Pull: ${image}"
+          echo ''
+          docker pull "${image}" || true
+          docker tag "${image}" "${REGISTRY_HOST}/${REGISTRY_OWNER}/${REGISTRY_PROJECT}/${image}"
+          echo ''
+          echo " [INFO] Push: ${REGISTRY_HOST}/${REGISTRY_OWNER}/${REGISTRY_PROJECT}/${image}"
+          echo ''
+          docker push "${REGISTRY_HOST}/${REGISTRY_OWNER}/${REGISTRY_PROJECT}/${image}" || true
+          docker rmi "${image}" >/dev/null || true
+        fi
+      done
+    # Prepare build image
+    - |
+      base='python:3.11-alpine'
+      image='gitlab-projects-migrate:build'
+      if [ -z "${IMAGE}" ] || echo "${image}" | grep -q "${IMAGE}"; then
+        echo ''
+        echo " [INFO] Pull: ${REGISTRY_HOST}/${REGISTRY_OWNER}/${REGISTRY_PROJECT}/${base}"
+        echo ''
+        docker pull "${REGISTRY_HOST}/${REGISTRY_OWNER}/${REGISTRY_PROJECT}/${base}" || true
+        docker pull "${REGISTRY_HOST}/${REGISTRY_OWNER}/${REGISTRY_PROJECT}/${image}" || true
+        docker build -t "${REGISTRY_HOST}/${REGISTRY_OWNER}/${REGISTRY_PROJECT}/${image}" -f - . <<-EOF
+      FROM ${REGISTRY_HOST}/${REGISTRY_OWNER}/${REGISTRY_PROJECT}/${base}
+      RUN apk add -q git
+      COPY ./requirements/runtime.txt /tmp/
+      COPY ./requirements/build.txt /tmp/
+      RUN export PIP_DISABLE_PIP_VERSION_CHECK=1 \
+       && pip3 install -q -r /tmp/runtime.txt --no-cache-dir --upgrade \
+       && pip3 install -q -r /tmp/build.txt --no-cache-dir --upgrade \
+       && rm -f /tmp/runtime.txt \
+       && rm -f /tmp/build.txt
+      EOF
+        echo ''
+        echo " [INFO] Push: ${REGISTRY_HOST}/${REGISTRY_OWNER}/${REGISTRY_PROJECT}/${image}"
+        echo ''
+        docker push "${REGISTRY_HOST}/${REGISTRY_OWNER}/${REGISTRY_PROJECT}/${image}" || true
+      fi
+    # Prepare codestyle image
+    - |
+      base='python:3.11-alpine'
+      image='gitlab-projects-migrate:codestyle'
+      if [ -z "${IMAGE}" ] || echo "${image}" | grep -q "${IMAGE}"; then
+        echo ''
+        echo " [INFO] Pull: ${REGISTRY_HOST}/${REGISTRY_OWNER}/${REGISTRY_PROJECT}/${base}"
+        echo ''
+        docker pull "${REGISTRY_HOST}/${REGISTRY_OWNER}/${REGISTRY_PROJECT}/${base}" || true
+        docker pull "${REGISTRY_HOST}/${REGISTRY_OWNER}/${REGISTRY_PROJECT}/${image}" || true
+        docker build -t "${REGISTRY_HOST}/${REGISTRY_OWNER}/${REGISTRY_PROJECT}/${image}" -f- . <<-EOF
+      FROM ${REGISTRY_HOST}/${REGISTRY_OWNER}/${REGISTRY_PROJECT}/${base}
+      RUN apk add -q git
+      COPY ./requirements/runtime.txt /tmp/
+      COPY ./requirements/quality.txt /tmp/
+      RUN export PIP_DISABLE_PIP_VERSION_CHECK=1 \
+       && pip3 install -q -r /tmp/runtime.txt --no-cache-dir --upgrade \
+       && pip3 install -q -r /tmp/quality.txt --no-cache-dir --upgrade \
+       && rm -f /tmp/runtime.txt \
+       && rm -f /tmp/quality.txt \
+       && rm -f /tmp/tests.txt
+      EOF
+        echo ''
+        echo " [INFO] Push: ${REGISTRY_HOST}/${REGISTRY_OWNER}/${REGISTRY_PROJECT}/${image}"
+        echo ''
+        docker push "${REGISTRY_HOST}/${REGISTRY_OWNER}/${REGISTRY_PROJECT}/${image}" || true
+      fi
+    # Prepare deploy image
+    - |
+      base='python:3.11-alpine'
+      image='gitlab-projects-migrate:deploy'
+      if [ -z "${IMAGE}" ] || echo "${image}" | grep -q "${IMAGE}"; then
+        echo ''
+        echo " [INFO] Pull: ${REGISTRY_HOST}/${REGISTRY_OWNER}/${REGISTRY_PROJECT}/${base}"
+        echo ''
+        docker pull "${REGISTRY_HOST}/${REGISTRY_OWNER}/${REGISTRY_PROJECT}/${base}" || true
+        docker pull "${REGISTRY_HOST}/${REGISTRY_OWNER}/${REGISTRY_PROJECT}/${image}" || true
+        docker build -t "${REGISTRY_HOST}/${REGISTRY_OWNER}/${REGISTRY_PROJECT}/${image}" -f - . <<-EOF
+      FROM ${REGISTRY_HOST}/${REGISTRY_OWNER}/${REGISTRY_PROJECT}/${base}
+      RUN apk add -q gcc git libc-dev libffi-dev sed
+      COPY ./requirements/deploy.txt /tmp/
+      RUN export PIP_DISABLE_PIP_VERSION_CHECK=1 \
+       && pip3 install -q -r /tmp/deploy.txt --no-cache-dir --upgrade \
+       && rm -f /tmp/deploy.txt
+      EOF
+        echo ''
+        echo " [INFO] Push: ${REGISTRY_HOST}/${REGISTRY_OWNER}/${REGISTRY_PROJECT}/${image}"
+        echo ''
+        docker push "${REGISTRY_HOST}/${REGISTRY_OWNER}/${REGISTRY_PROJECT}/${image}" || true
+      fi
+  rules:
+    - if: $CI_LOCAL
+
+# =============================================================================
+# Stage: prepare
+
+codestyle:
+  stage: prepare
+  image: registry.gitlab.com/adriandc/gitlab-projects-migrate/gitlab-projects-migrate:codestyle
+  script:
+    - yapf -i ./src/*.py ./src/*/*.py ./setup.py
+    - unify -i --quote "'" ./src/*.py ./src/*/*.py ./setup.py
+    - echo '' && git diff --name-status
+    - git diff --quiet
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+      changes:
+        - 'CHANGELOG.md'
+        - 'requirements/**/*'
+        - 'setup.py'
+        - 'src/**/*'
+    - if: $CI_COMMIT_TAG || $CI_PIPELINE_SOURCE == "trigger" || $CI_PIPELINE_SOURCE == "web" || $CI_COMMIT_REF_NAME != $CI_DEFAULT_BRANCH
+      when: on_success
+  allow_failure: true
+
+lint:
+  stage: prepare
+  image: registry.gitlab.com/adriandc/gitlab-projects-migrate/gitlab-projects-migrate:codestyle
+  script:
+    - pylint --errors-only ./src/ ./setup.py
+    - pylint --disable=missing-docstring --load-plugins=pylint.extensions.no_self_use ./src/ ./setup.py
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+      changes:
+        - 'CHANGELOG.md'
+        - 'requirements/**/*'
+        - 'setup.py'
+        - 'src/**/*'
+    - if: $CI_COMMIT_TAG || $CI_PIPELINE_SOURCE == "trigger" || $CI_PIPELINE_SOURCE == "web" || $CI_COMMIT_REF_NAME != $CI_DEFAULT_BRANCH
+      when: on_success
+  allow_failure: true
+
+typings:
+  stage: prepare
+  image: registry.gitlab.com/adriandc/gitlab-projects-migrate/gitlab-projects-migrate:codestyle
+  variables:
+    MYPY_CACHE_DIR: /dev/null
+    MYPY_FORCE_COLOR: 1
+    TERM: ansi
+  script:
+    - set +x
+    - |
+      if [ $(git rev-list --count HEAD) -gt 1 ]; then
+        mypy --follow-imports silent --pretty $(git diff --name-only $(git diff --exit-code >/dev/null && echo 'HEAD^' || echo 'HEAD') ./src/ ./setup.py) 2>/dev/null || true
+      fi
+    - sleep 1
+    - mypy --follow-imports silent --pretty ./src/ ./setup.py
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+      changes:
+        - 'CHANGELOG.md'
+        - 'requirements/**/*'
+        - 'setup.py'
+        - 'src/**/*'
+    - if: $CI_COMMIT_TAG || $CI_PIPELINE_SOURCE == "trigger" || $CI_PIPELINE_SOURCE == "web" || $CI_COMMIT_REF_NAME != $CI_DEFAULT_BRANCH
+      when: on_success
+  allow_failure: true
+
+# =============================================================================
+# Stage: build
+
+build:
+  stage: build
+  image: registry.gitlab.com/adriandc/gitlab-projects-migrate/gitlab-projects-migrate:build
+  needs: []
+  script:
+    - rm -rf ./build ./dist ./*.egg-info ./.eggs
+    - python3 -m build
+  after_script:
+    - rm -rf ./build ./*.egg-info ./.eggs
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+      changes:
+        - 'CHANGELOG.md'
+        - 'requirements/**/*'
+        - 'src/**/*'
+    - if: $CI_COMMIT_TAG || $CI_PIPELINE_SOURCE == "trigger" || $CI_PIPELINE_SOURCE == "web" || $CI_COMMIT_REF_NAME != $CI_DEFAULT_BRANCH
+      when: on_success
+  artifacts:
+    paths:
+      - dist/
+
+install:
+  stage: build
+  image: local:quiet
+  script:
+    - pipx uninstall $(ls -1 ./dist/*.whl | cut -d'/' -f3 | cut -d'-' -f1) || true
+    - pipx install --force ./dist/*.whl
+  rules:
+    - if: $CI_LOCAL
+
+readme:
+  stage: build
+  image: local:silent
+  script:
+    - |
+      export COLUMNS=120
+      mkdir -p ./.tmp/
+      PACKAGE_NAME=$(grep '^PROJECT_NAME =' ./setup.py | cut -d"'" -f2)
+      {
+        echo ''
+        echo '```yaml'
+        alignments='[ ]\{2,\}'
+        argument='[[:alnum:]][[:alnum:]_-]\{0,\}'
+        letter='[[:alnum:]_]\{1\}'
+        parameter='[-]\{1,2\}[[:alnum:]][[:alnum:]_-]\{0,\}'
+        separator='--'
+        word='[[:alnum:]_-]\{1,\}'
+        help="[(]\{0,1\}${word}"
+        "${PACKAGE_NAME}" --help \
+          | sed '1d; $d' \
+          | sed "s/^\(  ${parameter} \[${word}\]${alignments}\)/\1# /g" \
+          | sed "s/^\(  ${parameter}\( ${word}\)\{1,\}${alignments}\)/\1# /g" \
+          | sed "s/^\(  ${parameter}${alignments}\)/\1# /g" \
+          | sed "s/^\(  ${parameter}, ${parameter}${alignments}\)/\1# /g" \
+          | sed "s/^\(  ${separator}${alignments}\)/\1# /g" \
+          | sed "s/^\(  ${argument}${alignments}\)/\1# /g" \
+          | sed "s/^\(  ${alignments}\)\(${help}\)/\1# \2/g"
+        echo '```'
+        echo ''
+      } >./.tmp/README.help.tmp
+    - |
+      lead='^<!-- readme-help-start -->$'
+      tail='^<!-- readme-help-stop -->$'
+      sed -i "/${lead}/,/${tail}/{ /${lead}/{ p; r ./.tmp/README.help.tmp
+        }; /${tail}/p; d }"  ./README.md | head -n 100
+    - rm -f ./.tmp/README.help.tmp
+    - |
+      git -c color.diff=always --no-pager diff ./README.md | grep --color=never '.' && echo ''
+      echo  ' > README: Updated successfully'
+      git diff --quiet ./README.md
+  rules:
+    - if: $CI_LOCAL
+
+# =============================================================================
+# Stage: deploy
+
+deploy:release:
+  stage: deploy
+  image: registry.gitlab.com/adriandc/gitlab-projects-migrate/gitlab-projects-migrate:deploy
+  needs:
+    - job: build
+  variables:
+    TWINE_PASSWORD: ${TWINE_PASSWORD}
+  before_script:
+    - if [ ! "${CI_COMMIT_REF_PROTECTED}" = 'true' ]; then echo '[ERROR] Please protect this tag...'; exit 1; fi
+  script:
+    - tag=${CI_COMMIT_REF_NAME:-$(git describe --always --abbrev=0)}
+    - description=$(sh ./.chglog/changelog.sh "${tag}" | sed -z 's/"/\\"/g')
+    - description="${description}"$'\n\n''### Download'$'\n'
+    - gitlab-release --description "${description}" --link-prefix '* ' ./dist/*
+    - twine upload -u '__token__' -p "${TWINE_PASSWORD}" ./dist/*
+  rules:
+    - if: $CI_COMMIT_TAG
+
+deploy:trial:
+  stage: deploy
+  image: registry.gitlab.com/adriandc/gitlab-projects-migrate/gitlab-projects-migrate:deploy
+  needs:
+    - job: build
+  variables:
+    TWINE_PASSWORD_TEST: ${TWINE_PASSWORD_TEST}
+  script:
+    - twine upload -u '__token__' -p "${TWINE_PASSWORD_TEST}" --repository testpypi ./dist/*
+  rules:
+    - if: $CI_LOCAL
+  when: manual

@@ -1,0 +1,21 @@
+{
+	// List of extensions which should be recommended for users of this workspace.
+	"recommendations": [
+		"albymor.increment-selection",
+		"brainfit.vscode-coverage-highlighter",
+		"codezombiech.gitignore",
+		"dakara.transformer",
+		"DavidAnson.vscode-markdownlint",
+		"donaldpipowitch.vscode-extensions-files",
+		"esbenp.prettier-vscode",
+		"foxundermoon.shell-format",
+		"gurumukhi.selected-lines-count",
+		"IBM.output-colorizer",
+		"mikestead.dotenv",
+		"ms-python.python",
+		"redhat.vscode-yaml",
+		"yzhang.markdown-all-in-one"
+	],
+	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
+	"unwantedRecommendations": []
+}

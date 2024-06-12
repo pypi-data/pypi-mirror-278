@@ -1,0 +1,35 @@
+style: gitlab
+template: CHANGELOG.tpl.md
+info:
+  title: CHANGELOG
+  repository_url: https://gitlab.com/AdrianDC/gitlab-projects-migrate
+options:
+  commits:
+    filters:
+      # Type:
+      #   - chore
+      #   - docs
+      #   - feat
+      #   - fix
+      #   - perf
+      #   - refactor
+      #   - test
+  commit_groups:
+    title_maps:
+      chore: Cleanups
+      ci: CI
+      docs: Documentation
+      feat: Features
+      fix: Bug Fixes
+      perf: Performance Improvements
+      refactor: Code Refactoring
+      test: Test
+  header:
+    pattern: "^(\\w*)(?:\\(([\\w\\$\\.\\-\\*\\s]*)\\))?\\:\\s(.*)$"
+    pattern_maps:
+      - Type
+      - Scope
+      - Subject
+  notes:
+    keywords:
+      - BREAKING CHANGE

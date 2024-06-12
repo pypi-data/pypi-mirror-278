@@ -1,0 +1,15 @@
+# Build files
+build/
+
+# Compiled files
+*.pyc
+__pycache__/
+
+# Distribution files
+.eggs/
+*.egg-info/
+dist/
+
+# Temporary files
+.tmp/
+.tmp.*
