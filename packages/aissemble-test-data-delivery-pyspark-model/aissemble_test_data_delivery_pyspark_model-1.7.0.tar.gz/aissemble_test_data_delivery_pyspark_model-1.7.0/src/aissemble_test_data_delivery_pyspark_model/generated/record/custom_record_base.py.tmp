@@ -1,0 +1,87 @@
+from abc import ABC
+from .custom_record_field import CustomRecordField
+from typing import Any, Dict
+import jsonpickle
+
+class CustomRecordBase(ABC):
+    """
+    Base implementation of the Record for CustomRecord.
+
+    GENERATED CODE - DO NOT MODIFY (add your customizations in CustomRecord).
+
+    Generated from: templates/data-delivery-data-records/record.base.py.vm
+    """
+
+    def __init__(self):
+        """
+        Default constructor for this record.
+        """
+        self._custom_field: str = None
+
+
+    @classmethod
+    def from_dict(cls, dict_obj: Dict[str, Any]):
+        """
+        Creates a record with the given dictionary's data.
+        """
+        record = cls()
+        if dict_obj is not None:
+            record.custom_field = dict_obj.get('customField')
+
+        return record
+
+
+    def as_dict(self) -> Dict[str, Any]:
+        """
+        Returns this record as a dictionary.
+        """
+        dict_obj = dict()
+
+        dict_obj['customField'] = self.custom_field
+
+        return dict_obj
+
+
+    @classmethod
+    def from_json(cls, json_str: str):
+        """
+        Creates a record with the given json string's data.
+        """
+        dict_obj = jsonpickle.decode(json_str)
+        return cls.from_dict(dict_obj)
+
+
+    def as_json(self) -> str:
+        """
+        Returns this record as a json string.
+        """
+        return jsonpickle.encode(self.as_dict())
+
+
+    @property
+    def custom_field(self) -> str:
+        return self._custom_field
+
+
+    @custom_field.setter
+    def custom_field(self, custom_field: str) -> None:
+        self._custom_field = custom_field
+
+
+    def validate(self) -> None:
+        """
+        Performs the validation for this record.
+        """
+        pass
+
+
+
+    def get_value_by_field(self, field: CustomRecordField) -> any:
+        """
+        Returns the value of the given field for this record.
+        """
+        value = None
+        if field == CustomRecordField.CUSTOM_FIELD:
+            value = self.custom_field
+
+        return value
