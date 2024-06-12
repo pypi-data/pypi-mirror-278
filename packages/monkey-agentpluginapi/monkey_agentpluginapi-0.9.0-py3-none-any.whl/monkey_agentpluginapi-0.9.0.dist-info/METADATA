@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: monkey-agentpluginapi
+Version: 0.9.0
+Summary: Interfaces and components that comprise the Infection Monkey Agent Plugin API
+Home-page: https://github.com/guardicode/agentpluginapi
+License: GPLv3
+Author: Ilija Lazoroski
+Author-email: ilija.la@live.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: egg_timer (>=1.3.0,<2.0.0)
+Requires-Dist: monkey-types
+Requires-Dist: monkeyevents (>=0.4.0,<0.5.0)
+Requires-Dist: monkeytoolbox
+Project-URL: Repository, https://github.com/guardicode/agentpluginapi
+Description-Content-Type: text/markdown
+
+# agentpluginapi
+
+This project contains the interfaces and classes that make up [Infection
+Monkey's](https://github.com/guardicore/monkey) Agent/plugin interface.
+
+## Installation
+`pip install monkey-agentpluginapi`
+
+## Running tests
+```
+$> poetry install
+$> poetry run pytest
+```
+
