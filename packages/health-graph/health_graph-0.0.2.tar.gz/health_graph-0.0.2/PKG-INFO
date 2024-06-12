@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: health_graph
+Version: 0.0.2
+Summary: health check tool
+Author-email: hwatanabe <hwatanabe@sciencepark.co.jp>
+Project-URL: Homepage, https://github.com/pypa/sampleproject
+Project-URL: Issues, https://github.com/pypa/sampleproject/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# 健康管理ソフト
+直近一週間分の体重を入力すると、平均体重と体重の傾向を算出します。<br>
+傾向は線形補間または線形回帰により算出されます。<br>
+ソフトを起動する前に以下のコマンドでライブラリをインストールしてください。
+```python
+pip install numpy
+pip install scipy
+pip install matplotlib.pyplot
+pip install scikit-learn
+```
