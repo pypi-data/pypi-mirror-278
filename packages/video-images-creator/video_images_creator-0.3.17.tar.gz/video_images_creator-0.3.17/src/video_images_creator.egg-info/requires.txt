@@ -1,0 +1,6 @@
+opencv-python
+numpy
+pillow
+azure-cognitiveservices-speech==1.37.0
+pydub
+requests
