@@ -1,0 +1,44 @@
+cloudpickle
+
+[:platform_system != "Windows"]
+wurlitzer>=1.0.3
+
+[:python_version < "3"]
+decorator<5
+backports.functools-lru-cache
+ipykernel<5,>=4.5
+ipython<6
+jupyter-client<6,>=5.3.4
+pyzmq<20,>=17
+
+[:python_version < "3.8"]
+ipykernel<6.17,>=6.16.1
+ipython<8,>=7.31.1
+
+[:python_version == "3.8"]
+ipython<8.13,>=8.12.2
+
+[:python_version > "3.8"]
+ipython!=8.17.1,<9,>=8.13.0
+
+[:python_version >= "3"]
+jupyter-client<9,>=7.4.9
+pyzmq>=24.0.0
+
+[:python_version >= "3.8"]
+ipykernel<7,>=6.29.3
+
+[test]
+cython
+dask[distributed]
+flaky
+matplotlib
+mock
+numpy
+pandas
+pytest
+pytest-cov
+scipy
+xarray
+pillow
+django
