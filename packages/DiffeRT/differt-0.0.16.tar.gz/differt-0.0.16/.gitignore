@@ -1,0 +1,22 @@
+# Python build files and cache
+
+*.pyc
+*.so
+*.egg-info
+
+dist/
+target/
+
+# Docs
+
+docs/build/
+docs/source/reference/*.rst
+
+# Sionna data
+differt/src/differt/scene/scenes/
+
+# Notebooks
+
+.ipynb_checkpoints/
+
+# Tools
