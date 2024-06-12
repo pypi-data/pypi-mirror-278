@@ -1,0 +1,2 @@
+[console_scripts]
+openllm = _openllm_tiny._entrypoint:cli
