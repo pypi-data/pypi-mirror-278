@@ -1,0 +1,76 @@
+[tool.poetry]
+name = "ldata-fuse"
+include = [ "queries_lib/*.py" ]
+packages = [
+    { include = "ldata-fuse" },
+    { include = "queries_lib" },
+    { include = "graphql_generate/support.py" }
+]
+description = ""
+version = "0.1.4"
+
+authors = ["maximsmol <max@latch.bio>"]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<4.0"
+fuse-python = "^1.0.5"
+aiohttp = "^3.8.4"
+graphql-core = "^3.2.3"
+typing_extensions = "^4.7.1"
+latch-o11y = "^0.1.4"
+latch-data-validation = "^0.1.9"
+opentelemetry-instrumentation-aiohttp-client = "^0.40b0"
+
+[tool.poetry.dev-dependencies]
+black = "^22.12.0"
+isort = "^5.10.1"
+rich = "^13.2.0"
+ruff = "^0.0.269"
+
+[tool.black]
+preview = true
+target-version = ["py311"]
+
+[tool.isort]
+profile = "black"
+
+[tool.ruff]
+pydocstyle = { convention = "google" }
+extend-select = ["W", "D", "U", "N", "C", "B", "A", "T", "Q", "M"]
+extend-ignore = [
+  "A002",
+  "A003",
+
+  "E402",
+  "E501",
+  "E741",
+
+  "C408",
+  "C901",
+
+  "T201",
+
+  "D415",
+
+  "D100",
+  "D101",
+  "D102",
+  "D103",
+  "D104",
+  "D105",
+  "D106",
+  "D107",
+]
+
+[tool.pyright]
+reportUnknownArgumentType = "none"
+reportUnknownLambdaType = "none"
+reportUnknownMemberType = "none"
+reportUnknownParameterType = "none"
+reportUnknownVariableType = "none"
+
+reportUnusedImport = "warning"
+
+[ariadne-codegen]
+queries_path = "queries"
+schema_path = "../vacuole/schema.graphql"
