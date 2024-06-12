@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: graphmemory
+Version: 0.2
+Summary: A package for creating a hybrid graph / vector database for use with GraphRAG.
+Home-page: https://github.com/bradAGI/GraphMemory
+Author: BradAGI
+Author-email: cavemen_summary_0f@icloud.com
+License: LICENSE.txt
+Keywords: graphrag graph database rag vector database
+Requires-Dist: duckdb==1.0.0
+Requires-Dist: pydantic==2.7.3
