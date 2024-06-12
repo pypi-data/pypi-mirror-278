@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/sourmash_utils.py
+src/sourmash_utils.egg-info/PKG-INFO
+src/sourmash_utils.egg-info/SOURCES.txt
+src/sourmash_utils.egg-info/dependency_links.txt
+src/sourmash_utils.egg-info/requires.txt
+src/sourmash_utils.egg-info/top_level.txt
+tests/test_sourmash_utils.py

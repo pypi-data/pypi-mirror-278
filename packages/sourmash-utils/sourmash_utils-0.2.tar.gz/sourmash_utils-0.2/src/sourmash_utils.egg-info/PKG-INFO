@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: sourmash_utils
+Version: 0.2
+Summary: Python utilities for sourmash plugins and scripts
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: sourmash<5,>=4.8.8
+
+# sourmash_utils: utilities for sourmash plugins and scripts
+
