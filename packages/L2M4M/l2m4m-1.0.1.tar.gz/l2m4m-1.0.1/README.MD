@@ -1,0 +1,43 @@
+# L2M4M
+
+L2M4M (_LaTeX2MathML4Markdown_) is a Python package that extends the 
+functionality of [Markdown][md] to support LaTeX math expressions by converting 
+them to MathML, using [Latex2MathML][l2m]. This package is particularly 
+useful for those who want to include mathematical notation in their Markdown 
+documents without relying on external JavaScript libraries.
+
+## Installation
+
+To install L2M4M, use pip:
+
+```bash
+pip install L2M4M
+```
+
+## Usage
+
+```python
+import markdown
+from l2m4m import LaTeX2MathMLExtension
+
+# Sample Markdown text with LaTeX
+text = """
+Here is an inline math equation: $E = mc^2$
+
+And here is a block math equation:
+
+$$ 
+\\frac{d}{dx} e^x = e^x
+$$
+"""
+
+# Convert the Markdown text to HTML with LaTeX2MathMLExtension
+html = markdown.markdown(text, extensions=[
+    LaTeX2MathMLExtension()
+])
+
+print(html)
+```
+
+[md]: https://pypi.org/project/Markdown/
+[l2m]: https://pypi.org/project/latex2mathml/
