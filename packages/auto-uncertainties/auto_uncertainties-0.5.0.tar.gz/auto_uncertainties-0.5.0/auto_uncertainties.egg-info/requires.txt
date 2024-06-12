@@ -1,0 +1,15 @@
+numpy>=1.23.0
+jax>=0.3.14
+jaxlib>=0.3.14
+joblib>=1.2.0
+loguru>=0.6.0
+lazy_loader==0.4
+
+[CI]
+pytest
+pytest-cov
+hypothesis
+pylint
+
+[pandas]
+pandas>=1.5.1
