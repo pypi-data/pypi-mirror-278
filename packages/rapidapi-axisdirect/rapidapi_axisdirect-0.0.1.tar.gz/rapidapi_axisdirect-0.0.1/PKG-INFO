@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: rapidapi_axisdirect
+Version: 0.0.1
+Summary: Python sdk for Axis Direct trading API based on the documentation provided by the Axis Direct. https://documenter.getpostman.com/view/33771924/2sA3BkasEf
+Home-page: https://abhay.bio
+Download-URL: https://github.com/abhaybraja/rapidapi-axisdirect
+Author: Abhay Braja
+Author-email: contact@abhay.bio
+License: MIT
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Office/Business :: Financial
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.32.3
+Requires-Dist: pycryptodome>=3.20.0
+
+# rapidapi-axisdirect
+Python library for Axis Direct trading API based on the documentation provided by the Axis Direct.
