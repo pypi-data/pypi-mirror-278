@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: petutils
+Version: 0.1.0
+Summary: 
+Author: Anthony Galassi
+Author-email: 28850131+bendhouseart@users.noreply.github.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: nipype (>=1.8.6,<2.0.0)
+Requires-Dist: pybids (>=0.16.3,<0.17.0)
+Description-Content-Type: text/markdown
+
+# petutils
+
+A collection of helper functions, testing fixtures, and generally useful stuff (relating to PET and PET BIDS).
+
+[![run_tests](https://github.com/openneuropet/petutils/actions/workflows/run_pytest.yaml/badge.svg)](https://github.com/openneuropet/petutils/actions/workflows/run_pytest.yaml)

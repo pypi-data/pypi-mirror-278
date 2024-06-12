@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "petutils"
+version = "0.1.0"
+description = ""
+authors = ["Anthony Galassi <28850131+bendhouseart@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "petutils"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pybids = "^0.16.3"
+nipype = "^1.8.6"
+
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.16.1"
+pytest = "^7.4.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
