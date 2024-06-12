@@ -1,0 +1,37 @@
+[tool.ruff]
+# easier on the lines
+line-length = 120
+indent-width = 4
+target-version = "py312"
+
+[tool.ruff.format]
+exclude = ["alembic/*"]
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    "W",
+    # Pyflakes
+    "F",
+    # flake8-builtins
+    "A",
+    # pyupgrade
+    "UP",
+    # pep8-naming
+    "N",
+    # flake8-bugbear
+    # "B",
+    # flake8-annotations
+    # "ANN",
+    # isort
+    # "I",
+    ]
+ignore = ["ANN101","ANN102"]
+
+[tool.ruff.lint.per-file-ignores]
+"alembic/*" = [
+    "I",
+    "E501"
+    ] # Line too long (143 > 120)
+"tests/*" = ["ANN"]
