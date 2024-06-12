@@ -1,0 +1,21 @@
+# coding
+black
+flake8
+pylint
+typing-extensions
+# deploying
+setuptools_scm
+# testing
+pytest
+absl-py
+# compute libraries
+pillow
+numpy
+jax
+chex
+flax
+rlax
+# experiments
+tyro
+# logging
+wandb
