@@ -1,0 +1,16 @@
+taskflows/__init__.py,sha256=oW-FCpGdoTfDXFNZ7hlNV2lzLUzQoKSPTP2TfvDIPPk,87
+taskflows/admin.py,sha256=_ANXmJQkN-SBoN34zwmTAZSEq2kd6X8WD3aoH0lQfwU,10002
+taskflows/db.py,sha256=CDkdZ_LZuRUxj8NlI0TQTrCO32tUMNfiu2fC9u-2IQU,3335
+taskflows/tasks.py,sha256=aXQxLu6_JItg5iqQpZDDYLaJKIvbI5B17_rLWQGWJFk,8937
+taskflows/utils.py,sha256=7OT2FDv0HzVcArz4jcGlyfYKFwCAvOY1WCXy2B0gZz4,999
+taskflows/service/__init__.py,sha256=iACSPrNevk_QnO9_SzAQhB3L1pGdUwP2RQFMW1yoQAQ,627
+taskflows/service/commands.py,sha256=t_ITtM5l5_Dtpx70p6uKBaWGixGkNZCYm13zXBlQkQw,1286
+taskflows/service/constraints.py,sha256=2N5eSAJjUg2twxmVjs3GWaqmppc-DW0dZ5MlMRqcmNw,1586
+taskflows/service/docker.py,sha256=JCf9P9eIbrsvKLxed-xqmahYqnmvvibCIXK8LAxpf9g,18608
+taskflows/service/schedule.py,sha256=-33b8aBT8cS4zMt-gw7QD153m87lRk1lKP8HNjJSRCw,2273
+taskflows/service/service.py,sha256=TToALUwrmhnxynHvfhv6ejou-txpVxa4zqHhDMCUxQk,20570
+taskflows-0.7.1.dist-info/METADATA,sha256=z9WgkbntXxGzn2w0mAp79hrhAu98YP0bLBBnRw6rJ2Q,4313
+taskflows-0.7.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+taskflows-0.7.1.dist-info/entry_points.txt,sha256=84ElXyA0XQ3cRfNIL-woPCmCkGk9-OV4YarSW0i-88Y,111
+taskflows-0.7.1.dist-info/top_level.txt,sha256=CipuamG5azL_xisU7bxm8aEd18vy0JSHVWx4WzswtqQ,10
+taskflows-0.7.1.dist-info/RECORD,,

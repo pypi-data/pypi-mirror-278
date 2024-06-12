@@ -1,0 +1,3 @@
+[console_scripts]
+_taskflows_call = taskflows.service.commands:_taskflows_call
+taskflows = taskflows.admin:cli
