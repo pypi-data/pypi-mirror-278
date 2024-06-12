@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: anoteai
+Version: 0.11
+Summary: An SDK for interacting with the Anote API
+Home-page: https://github.com/nv78/Anote
+Author: Natan Vidra
+Author-email: nvidra@anote.ai
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: scikit-learn ==1.1.0
+Requires-Dist: bcrypt ==4.0.1
+Requires-Dist: boto3 <=1.24.84
+Requires-Dist: celery ==5.2.7
+Requires-Dist: datasets ==2.3.2
+Requires-Dist: Flask ==2.0.3
+Requires-Dist: Flask-Cors ==3.0.10
+Requires-Dist: flask-jwt-extended ==4.4.4
+Requires-Dist: Flask-RESTful ==0.3.9
+Requires-Dist: flask-mail ==0.9.1
+Requires-Dist: google-auth ==2.8.0
+Requires-Dist: google-auth-oauthlib ==0.4.6
+Requires-Dist: google-pasta ==0.2.0
+Requires-Dist: gunicorn ==20.1.0
+Requires-Dist: mkdocs ==1.4.3
+Requires-Dist: mkdocs-material ==9.1.15
+Requires-Dist: mysql-connector-python ==8.0.31
+Requires-Dist: numpy ==1.22.3
+Requires-Dist: oauthlib ==3.2.0
+Requires-Dist: openai ==0.27.2
+Requires-Dist: pandas ==1.4.2
+Requires-Dist: praw ==7.6.0
+Requires-Dist: prawcore ==2.3.0
+Requires-Dist: py ==1.11.0
+Requires-Dist: PyJWT ==2.6.0
+Requires-Dist: pytz ==2022.1
+Requires-Dist: ray ==2.5.1
+Requires-Dist: Redis ==4.4.2
+Requires-Dist: regex ==2022.9.13
+Requires-Dist: reportlab ==4.1.0
+Requires-Dist: requests ==2.28.0
+Requires-Dist: requests-oauthlib ==1.3.1
+Requires-Dist: rouge-score ==0.1.2
+Requires-Dist: tika ==1.24
+Requires-Dist: typing-extensions >=4.7.0
+Requires-Dist: sec-api
+Requires-Dist: stripe ==5.5.0
+Requires-Dist: slack-sdk ==3.21.3
+Requires-Dist: simple-salesforce ==1.12.4
+Requires-Dist: Werkzeug ==2.2.2
+Requires-Dist: python-docx
+Requires-Dist: python-pptx
+Requires-Dist: PyPDF2
+Requires-Dist: python-dotenv
+Requires-Dist: pydantic ==1.10.8
+Requires-Dist: ollama
+Requires-Dist: ragas
+Requires-Dist: fpdf ==1.7.2
+
+UNKNOWN
+
