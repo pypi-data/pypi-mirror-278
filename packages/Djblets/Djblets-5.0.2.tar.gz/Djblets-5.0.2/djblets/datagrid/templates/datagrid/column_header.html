@@ -1,0 +1,52 @@
+{% load djblets_utils i18n static %}
+
+{% if column.sortable %}
+{%  definevar "sort_text" strip %}
+{%   if sort_ascending %}
+{%    blocktrans with label=column.label|default:"column" %}
+       Sort {{label}} descending
+{%    endblocktrans %}
+{%   else %}
+{%    blocktrans with label=column.label|default:"column" %}
+       Sort {{label}} ascending
+{%    endblocktrans %}
+{%   endif %}
+{%  enddefinevar %}
+<th onclick="javascript:window.location = '{{sort_url|escapejs}}';"
+    {% if column.label %}aria-label="{{column.label}}"{% endif %}
+    {% if in_sort %}aria-sort="{{sort_ascending|yesno:"ascending,descending"}}"{% endif %}
+    class="datagrid-header{% if column.label and not column.show_checkbox_header %} has-label{% endif %}">
+ <a rel="nofollow" href="{{sort_url}}" title="{{sort_text}}" aria-label="{{sort_text}}">{% if column.label %}{{column.label}}{% endif %}{% spaceless %}
+{%  if column.image_url %}
+  <img src="{{column.image_url}}" width="{{column.image_width}}"
+       height="{{column.image_height}}" alt="{{column.image_alt}}"
+       title="{{column.image_alt}}" />
+{%  elif column.image_class %}
+  <div class="{{column.image_class}}" title="{{column.image_alt}}"></div>
+{%  endif %}
+ {% endspaceless %}</a>
+{%  if in_sort %}
+{% definevar "sort_image" %}sort-{{sort_ascending|yesno:"asc,desc"}}-{{sort_primary|yesno:"primary,secondary"}}{% enddefinevar %}
+{%   if sort_ascending %}
+  <span class="ink-i-sort-ascending" title="{% trans "Sorted ascending" %}"></span>
+{%   else %}
+  <span class="ink-i-sort-descending" title="{% trans "Sorted descending" %}"></span>
+{%   endif %}
+ <a rel="nofollow" class="datagrid-unsort ink-i-unsort"
+    href="{{unsort_url}}"
+    title="{% trans "Unsort" %}"
+    aria-label="{% trans "Unsort" %}"></a>
+{%  endif %}
+</th>
+{% else %}
+<th class="datagrid-header{% if column.label and not column.show_checkbox_header %} has-label{% endif %}">
+{%  if column.label %}{{column.label}}{% endif %}
+{%  if column.image_url %}
+ <img src="{{column.image_url}}" width="{{column.image_width}}"
+      height="{{column.image_height}}" alt="{{column.image_alt}}"
+      title="{{column.image_alt}}" />
+{%  elif column.image_class %}
+ <div class="{{column.image_class}}" title="{{column.image_alt}}"></div>
+{%  endif %}
+</th>
+{% endif %}

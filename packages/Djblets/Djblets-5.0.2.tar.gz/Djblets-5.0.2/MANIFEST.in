@@ -1,0 +1,16 @@
+graft contrib
+graft djblets
+graft docs
+
+prune docs/*/_build
+prune docs/djblets/coderef/python
+
+include AUTHORS
+include COPYING
+include INSTALL
+include NEWS
+include README
+include *-requirements.txt
+include djblets/py.typed
+
+global-exclude .*.sw[op] *.py[co] __pycache__ .DS_Store
