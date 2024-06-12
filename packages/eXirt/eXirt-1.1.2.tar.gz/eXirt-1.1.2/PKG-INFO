@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: eXirt
+Version: 1.1.2
+Summary: Explainable Artificial Intelligence tool base in Item Response Theory.
+Author: José de Sousa Ribeiro Filho
+Author-email: jose.sousa.filho@gmail.com
+License: CC0 1.0 Universal
+License-File: LICENSE
+Requires-Dist: rpy2
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: openml
+Requires-Dist: wget
+Requires-Dist: catsim
