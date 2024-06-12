@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: my-plotly-package
+Version: 0.1.1
+Summary: Objetivo da criação dessas funções são para que reduza o tempo na contrução e estilização de indicadores para Futuros Dashboards utilizando poucas linhas de codigo.
+Home-page: https://github.com/Diogoa83/biblioteca_python_dash
+Author: Diogo Antonio
+Author-email: diogoantoniodejesus@hotmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
+# MyPlotlyPackage
+
+Uma breve descriÃ§Ã£o do seu pacote.
+
+## InstalaÃ§Ã£o
+
+```bash
+pip install my_plotly_package
