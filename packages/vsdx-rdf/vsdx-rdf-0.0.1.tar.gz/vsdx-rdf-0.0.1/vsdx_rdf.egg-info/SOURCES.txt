@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+vsdx_rdf/__init__.py
+vsdx_rdf/_modidx.py
+vsdx_rdf/core.py
+vsdx_rdf/visualize.py
+vsdx_rdf.egg-info/PKG-INFO
+vsdx_rdf.egg-info/SOURCES.txt
+vsdx_rdf.egg-info/dependency_links.txt
+vsdx_rdf.egg-info/entry_points.txt
+vsdx_rdf.egg-info/not-zip-safe
+vsdx_rdf.egg-info/requires.txt
+vsdx_rdf.egg-info/top_level.txt
