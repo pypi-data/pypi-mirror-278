@@ -1,0 +1,112 @@
+[tool.poetry]
+name = "pyproject-creator"
+version = "0.4.1"
+description = "A tool to create Python project templates"
+authors = ["NextKele <ritboylei@gmail.com>"]
+repository = "https://github.com/atiasn/pyproject-creator"
+license = "MIT"
+readme = "README.md"
+keywords = ["packaging", "pyproject-creator"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+jinja2 = "^3.1.4"
+click = "^8.1.7"
+
+[[tool.poetry.source]]
+name = "tuna"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+priority = "primary"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.1"
+mypy = "^1.10.0"
+isort = "^5.13.2"
+black = "^24.4.2"
+pre-commit-hooks = "^4.6.0"
+pre-commit = "^3.7.1"
+commitizen = "^3.27.0"
+pytest-mock = "^3.14.0"
+loguru = "^0.7.2"
+
+[tool.poetry.scripts]
+pypct = "pyproject_creator.cli:create_project"
+gen-cz-config = "scripts.gen_commitizen_toml:main"
+
+[tool.black]
+line-length = 99
+target-version = ["py311", "py312"]
+include = '\.pyi?$'
+extend-exclude = '''
+'''
+
+[tool.mypy]
+strict = true
+files = ["pyproject_creator", "scripts", "tests"]
+pretty = true
+
+[tool.isort]
+# https://pycqa.github.io/isort/docs/configuration/options.html
+profile = "black"
+line_length = 99
+length_sort = true
+skip_gitignore = true
+src_paths = ["pyproject_creator", "scripts", "tests"]
+extra_standard_library = ["typing_extensions"]
+multi_line_output = 3
+add_imports = ["from __future__ import annotations"]
+color_output = true
+length_sort_straight = true
+lines_after_imports = 2
+extend_skip = [".md", ".json", ".yml", ".yaml", ".toml", ".dockerignore", ".gitignore", ".template"]
+
+[tool.ruff]
+line-length = 99
+show-fixes = true
+target-version = "py311"
+src = ["pyproject_creator", "scripts", "tests"]
+
+[tool.ruff.lint]
+select = [
+    "F",  # Pyflakes
+    "W",  # pycodestyle warnings
+    "E",  # pycodestyle errors
+    "UP",  # pyupgrade
+    "ASYNC",  # flake8-async
+    "C4",  # flake8-comprehensions
+    "T10",  # flake8-debugger
+    "T20",  # flake8-print
+    "PYI",  # flake8-pyi
+    "PT",  # flake8-pytest-style
+    "Q",  # flake8-quotes
+    "RUF"  # Ruff-specific rules
+]
+ignore = [
+    "E402",  # module-import-not-at-top-of-file
+    "UP037",  # quoted-annotation
+    "RUF001",  # ambiguous-unicode-character-string
+    "RUF002",  # ambiguous-unicode-character-docstring
+    "RUF003",  # ambiguous-unicode-character-comment
+    "T201",  # print found
+    "PT004"  # not return anything
+]
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "double"
+multiline-quotes = "double"
+docstring-quotes = "double"
+
+[tool.ruff.lint.flake8-import-conventions]
+# Declare the banned `from` imports.
+banned-from = ["typing"]
+
+[tool.ruff.lint.flake8-pytest-style]
+fixture-parentheses = false
+mark-parentheses = false
+
+[tool.ruff.format]
+quote-style = "double"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
