@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: pozalabs-compose
+Version: 0.42.0
+Summary: Backend components for Pozalabs
+License: MIT
+Author: sunwoong
+Author-email: sunwoong@pozalabs.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: aws
+Provides-Extra: fastapi
+Provides-Extra: logging
+Provides-Extra: orjson
+Provides-Extra: sentry
+Requires-Dist: boto3 (>=1.28.73,<2.0.0) ; extra == "aws"
+Requires-Dist: dependency-injector (>=4.41.0,<5.0.0)
+Requires-Dist: fastapi (>=0.110.1,<0.111.0) ; extra == "fastapi"
+Requires-Dist: inflection (>=0.5.1,<0.6.0)
+Requires-Dist: loguru (>=0.7.2,<0.8.0) ; extra == "logging"
+Requires-Dist: orjson (>=3.9.10,<4.0.0) ; extra == "orjson"
+Requires-Dist: pendulum (>=3.0.0,<4.0.0)
+Requires-Dist: pydantic (>=2.7.0)
+Requires-Dist: pymongo[aws] (>=4.6.3,<5.0.0)
+Requires-Dist: sentry-sdk[fastapi,loguru,pymongo] (>=2.2.0,<3.0.0) ; extra == "sentry"
