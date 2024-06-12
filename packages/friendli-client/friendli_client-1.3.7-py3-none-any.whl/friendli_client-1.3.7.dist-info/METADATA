@@ -1,0 +1,242 @@
+Metadata-Version: 2.1
+Name: friendli-client
+Version: 1.3.7
+Summary: Client of Friendli Suite.
+Home-page: https://friendli.ai/
+License: Apache-2.0
+Keywords: generative-ai,serving,llm,inference,finetuning
+Author: FriendliAI teams
+Author-email: eng@friendli.ai
+Requires-Python: >=3.8.1,<4.0.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: mllib
+Requires-Dist: PyYaml (>=6.0.1,<7.0.0)
+Requires-Dist: accelerate (==0.21.0) ; extra == "mllib"
+Requires-Dist: datasets (==2.16.0) ; extra == "mllib"
+Requires-Dist: einops (>=0.6.1,<0.7.0) ; extra == "mllib"
+Requires-Dist: fastapi (>=0.104.0,<0.105.0)
+Requires-Dist: gql (>=3.4.1,<4.0.0)
+Requires-Dist: h5py (>=3.9.0,<4.0.0) ; extra == "mllib"
+Requires-Dist: httpx (>=0.24.1,<0.25.0)
+Requires-Dist: injector (>=0.21.0,<0.22.0)
+Requires-Dist: jsonschema (>=4.17.3,<5.0.0)
+Requires-Dist: peft (==0.6.0) ; extra == "mllib"
+Requires-Dist: protobuf (>=4.24.2,<5.0.0)
+Requires-Dist: pydantic[email] (>=1.9.0,<3)
+Requires-Dist: requests (>=2,<3)
+Requires-Dist: rich (>=12.2.0,<13.0.0)
+Requires-Dist: safetensors (==0.4.1) ; extra == "mllib"
+Requires-Dist: tqdm (>=4.48.0,<5.0.0)
+Requires-Dist: transformers (==4.41.2) ; extra == "mllib"
+Requires-Dist: typer (>=0.9.0,<0.10.0)
+Requires-Dist: types-protobuf (>=4.24.0.1,<5.0.0.0)
+Requires-Dist: uvicorn (>=0.23.2,<0.24.0)
+Project-URL: Documentation, https://docs.friendli.ai/
+Project-URL: Repository, https://github.com/friendliai/friendli-client
+Description-Content-Type: text/markdown
+
+<!---
+Copyright (c) 2022-present, FriendliAI Inc. All rights reserved.
+-->
+
+<p align="center">
+  <img src="https://docs.friendli.ai/img/logo.svg" width="30%" alt="Friendli Logo">
+</p>
+
+<h2><p align="center">Supercharge Generative AI Serving with Friendli 🚀</p></h2>
+
+<p align="center">
+  <a href="https://github.com/friendliai/friendli-client/actions/workflows/ci.yaml">
+    <img alt="CI Status" src="https://github.com/friendliai/friendli-client/actions/workflows/ci.yaml/badge.svg">
+  </a>
+  <a href="https://pypi.org/project/friendli-client/">
+    <img alt="Python Version" src="https://img.shields.io/pypi/pyversions/friendli-client?logo=Python&logoColor=white">
+  </a>
+  <a href="https://pypi.org/project/friendli-client/">
+      <img alt="PyPi Package Version" src="https://img.shields.io/pypi/v/friendli-client?logo=PyPI&logoColor=white">
+  </a>
+  <a href="https://docs.friendli.ai/">
+    <img alt="Documentation" src="https://img.shields.io/badge/read-doc-blue?logo=ReadMe&logoColor=white">
+  </a>
+  <a href="https://github.com/friendliai/friendli-client/blob/main/LICENSE">
+      <img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-green.svg?logo=Apache">
+  </a>
+</p>
+
+Welcome to Friendli Suite, the ultimate solution for serving generative AI models. We offer three distinct options to cater to your specific needs, each designed to provide superior performance, cost-effectiveness, and ease of use.
+
+# Friendli Suite
+
+## 1. Friendli Serverless Endpoints
+
+Imagine a playground for your AI dreams.
+Friendli Serverless Endpoint is just that - a simple, click-and-play interface that lets you access popular open-source models like Llama-2 and Stable Diffusion without any heavy lifting.
+Choose your model, enter your prompt or upload an image, and marvel at the generated text, code, or image outputs.
+With pay-per-token billing, this is ideal for exploration and experimentation.
+You can think of it as an AI sampler.
+
+## 2. Friendli Dedicated Endpoints
+
+Ready to take the reins and unleash the full potential of your own models?
+Friendli Dedicated Endpoint is for you.
+This service provides dedicated GPU resources in the cloud platform of your choice (AWS, GCP, Azure), letting you upload and run your custom generative AI models.
+Reserve the exact GPU you need (A10, A100 40G, A100 80G, etc.) and enjoy fine-grained control over your model settings.
+Pay-per-second billing makes it perfect for regular or resource-intensive workloads.
+
+## 3. Friendli Container
+
+Do you prefer the comfort and security of your own data center?
+Friendli Container is the solution.
+We provide the Friendli Engine within Docker containers that can be installed on your on-premise GPUs so your data stays within your own secure cluster.
+This option offers maximum control and security, ideal for advanced users or those with specific data privacy requirements.
+
+> [!NOTE]
+>
+> ## The Friendli Engine: The Powerhouse Behind the Suite
+>
+> At the heart of each Friendli Suite offering lies the Friendli Engine, a patented, GPU-optimized serving engine.
+> This technological marvel is what enables Friendli Suite's superior performance and cost-effectiveness, featuring innovations like continuous batching (iteration batching) that significantly improve resource utilization compared to traditional LLM serving solutions.
+
+# 🕹️ Friendli Client
+
+## Installation
+
+```sh
+pip install friendli-client
+```
+
+> [!NOTE]
+> If you have a Hugging Face checkpoint and want to convert it to a Friendli-compatible format with applying quantization, you need to install the package with the necessary machine learing library (`mllib`) dependencies.
+> In this case, install the package with the following command:
+>
+> ```sh
+> pip install "friendli-client[mllib]"
+> ```
+
+## Python SDK Examples
+
+> [!IMPORTANT]
+> You must set `FRIENDLI_TOKEN` environment variable before initializing the client instance with `client = Friendli()`.
+> Alternatively, you can provide the value of your personal access token as the `token` argument when creating the client, like so:
+>
+> ```python
+> from friendli import Friendli
+> 
+> client = Friendli(token="YOUR PERSONAL ACCESS TOKEN")
+> ```
+
+### Default
+
+```python
+from friendli import Friendli
+
+client = Friendli()
+
+chat_completion = client.chat.completions.create(
+    model="llama-2-13b-chat",
+    messages=[
+        {
+            "role": "user",
+            "content": "Tell me how to make a delicious pancake"
+        }
+    ],
+    stream=False,
+)
+print(chat_completion.choices[0].message.content)
+```
+
+### Streaming
+
+```python
+from friendli import Friendli
+
+client = Friendli()
+
+stream = client.chat.completions.create(
+    model="llama-2-13b-chat",
+    messages=[
+        {
+            "role": "user",
+            "content": "Tell me how to make a delicious pancake"
+        }
+    ]
+    stream=True,
+)
+for chunk in stream:
+    print(chunk.choices[0].delta.content or "", end="")
+```
+
+### Async
+
+```python
+import asyncio
+from friendi import AsyncFriendli
+
+client = AsyncFriendli()
+
+
+async def main() -> None:
+    chat_completion = await client.chat.completions.create(
+        model="llama-2-13b-chat",
+        messages=[
+            {
+                "role": "user",
+                "content": "Tell me how to make a delicious pancake"
+            }
+        ]
+        stream=False,
+    )
+    print(chat_completion.choices[0].message.content)
+
+
+asyncio.run(main())
+```
+
+### Streaming (Async)
+
+```python
+import asyncio
+from friendi import AsyncFriendli
+
+client = AsyncFriendli()
+
+
+async def main() -> None:
+    stream = await client.chat.completions.create(
+        model="llama-2-13b-chat",
+        messages=[
+            {
+                "role": "user",
+                "content": "Tell me how to make a delicious pancake"
+            }
+        ]
+        stream=True,
+    )
+    async for chunk in stream:
+        print(chunk.choices[0].delta.content or "", end="")
+
+
+asyncio.run(main())
+```
+
+## CLI Examples
+
+You can also call the generation APIs directly with CLI.
+
+```sh
+friendli api chat-completions create \
+  -g "user Tell me how to make a delicious pancake" \
+  -m llama-2-13b-chat
+```
+
+For further information about the `friendli` command, run `friendli --help` in your terminal shell.
+This will provide you with a detailed list of available options and usage instructions.
+
+> [!TIP]
+> **Check out our [official documentations](https://docs.friendli.ai/) to learn more!**
+
