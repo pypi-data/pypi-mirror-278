@@ -1,0 +1,15 @@
+lollmsvectordb/__init__.py,sha256=vf47EV0HXqgfC7hFFArWAbaEvWx2pBX7BmfU10f_2e0,206
+lollmsvectordb/directory_binding.py,sha256=95mF3_BTAgavQBMabR9tWQOmPLqDuI9mZUHKkS_kVGY,2489
+lollmsvectordb/text_chunker.py,sha256=4fJ8QwjFHiIErmrZw-7eiEtyVckDlhPRGnjvDktp-Lk,1283
+lollmsvectordb/text_document_loader.py,sha256=8Y3WLcUWUQePTthE2CNVrVoWvVg1OXdWsSYhbJk3c_g,12117
+lollmsvectordb/vector_database.py,sha256=6vDRkTJ-VmsQ62r81ehHGc2ntojfQM10nKwQCA76YPM,6902
+lollmsvectordb/vectorizer.py,sha256=n0rCXjDmQzlB0YKID0IP0gOVQUOXepcaoDImBWvVRTE,130
+lollmsvectordb/vectorizers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lollmsvectordb/vectorizers/custom_vectorizer.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lollmsvectordb/vectorizers/tfidf_vectorizer.py,sha256=cyTshU0t83KtfK-e4SKin8oRXn8ex8si8uJYr6zK0Lw,740
+lollmsvectordb/vectorizers/word2vec_vectorizer.py,sha256=fJhyujlKTEPF5OlQlkgXuE09_Kkixi7OOaJn8BSRucI,908
+lollmsvectordb-0.1.1.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+lollmsvectordb-0.1.1.dist-info/METADATA,sha256=Q-B3Qmle5SLgu6PFamzNqGD8-pX3dmiSFh6l7EovFUs,3143
+lollmsvectordb-0.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+lollmsvectordb-0.1.1.dist-info/top_level.txt,sha256=paJlhu5B4_jzVDYFmJAyf9X0TpZ8cUF853FzoKiB5oo,15
+lollmsvectordb-0.1.1.dist-info/RECORD,,
