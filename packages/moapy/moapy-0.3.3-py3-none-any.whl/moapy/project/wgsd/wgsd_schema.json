@@ -1,0 +1,250 @@
+[
+  {
+    "name": "calc_prestressing_steel_properties",
+    "description": "Return the material properties of single data based on the design code",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "units": {
+          "type": "object",
+          "description": "units",
+          "properties": {
+            "force": {
+              "type": "string",
+              "description": "Force unit"
+            },
+            "length": {
+              "type": "string",
+              "description": "Length unit"
+            },
+            "section_dimension": {
+              "type": "string",
+              "description": "Section dimension unit"
+            },
+            "pressure": {
+              "type": "string",
+              "description": "Pressure unit"
+            },
+            "strain": {
+              "type": "string",
+              "description": "Strain unit"
+            }
+          }
+        },
+        "design_code": {
+          "type": "string",
+          "description": "design code"
+        },
+        "stregnth": {
+          "type": "number",
+          "description": "No description provided"
+        },
+        "density": {
+          "type": "number",
+          "description": "density of the concrete"
+        }
+      },
+      "required": [
+        "units",
+        "design_code",
+        "stregnth",
+        "density"
+      ]
+    }
+  },
+  {
+    "name": "calc_reinforcing_steel_properties",
+    "description": "Return the material properties of single data based on the design code",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "units": {
+          "type": "object",
+          "description": "units",
+          "properties": {
+            "force": {
+              "type": "string",
+              "description": "Force unit"
+            },
+            "length": {
+              "type": "string",
+              "description": "Length unit"
+            },
+            "section_dimension": {
+              "type": "string",
+              "description": "Section dimension unit"
+            },
+            "pressure": {
+              "type": "string",
+              "description": "Pressure unit"
+            },
+            "strain": {
+              "type": "string",
+              "description": "Strain unit"
+            }
+          }
+        },
+        "design_code": {
+          "type": "string",
+          "description": "design code"
+        },
+        "stregnth": {
+          "type": "number",
+          "description": "No description provided"
+        },
+        "density": {
+          "type": "number",
+          "description": "density of the concrete"
+        }
+      },
+      "required": [
+        "units",
+        "design_code",
+        "stregnth",
+        "density"
+      ]
+    }
+  },
+  {
+    "name": "conc_properties_design",
+    "description": "Return the material properties based on the design code",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "units": {
+          "type": "object",
+          "description": "units",
+          "properties": {
+            "force": {
+              "type": "string",
+              "description": "Force unit"
+            },
+            "length": {
+              "type": "string",
+              "description": "Length unit"
+            },
+            "section_dimension": {
+              "type": "string",
+              "description": "Section dimension unit"
+            },
+            "pressure": {
+              "type": "string",
+              "description": "Pressure unit"
+            },
+            "strain": {
+              "type": "string",
+              "description": "Strain unit"
+            }
+          }
+        },
+        "design_code": {
+          "type": "string",
+          "description": "design code,"
+        },
+        "grade": {
+          "type": "string",
+          "description": "grade of the concrete"
+        },
+        "general": {
+          "type": "object",
+          "description": "No description provided",
+          "properties": {
+            "material_model": {
+              "type": "string",
+              "description": "Material model for ULS"
+            },
+            "plastic_strain_limit": {
+              "type": "number",
+              "description": "Plastic strain limit for ULS"
+            },
+            "failure_strain_limit": {
+              "type": "number",
+              "description": "Failure strain limit for ULS"
+            },
+            "material_model_tension": {
+              "type": "string",
+              "description": "Material model for ULS tension"
+            }
+          }
+        },
+        "uls": {
+          "type": "object",
+          "description": "No description provided",
+          "properties": {
+            "material_model": {
+              "type": "string",
+              "description": "Material model for ULS"
+            },
+            "plastic_strain_limit": {
+              "type": "number",
+              "description": "Plastic strain limit for ULS"
+            },
+            "failure_strain_limit": {
+              "type": "number",
+              "description": "Failure strain limit for ULS"
+            },
+            "material_model_tension": {
+              "type": "string",
+              "description": "Material model for ULS tension"
+            }
+          }
+        },
+        "sls": {
+          "type": "object",
+          "description": "No description provided",
+          "properties": {
+            "material_model": {
+              "type": "string",
+              "description": "Material model for SLS"
+            },
+            "plastic_strain_limit": {
+              "type": "number",
+              "description": "Plastic strain limit for SLS"
+            },
+            "failure_compression_limit": {
+              "type": "number",
+              "description": "Failure compression limit for SLS"
+            },
+            "material_model_tension": {
+              "type": "string",
+              "description": "Material model for SLS tension"
+            },
+            "failure_tension_limit": {
+              "type": "number",
+              "description": "Failure tension limit for SLS"
+            }
+          }
+        }
+      },
+      "required": [
+        "units",
+        "design_code",
+        "grade",
+        "general",
+        "uls",
+        "sls"
+      ]
+    }
+  },
+  {
+    "name": "get_design_code",
+    "description": "Return the list available of design codes",
+    "parameters": {}
+  },
+  {
+    "name": "get_general_concrete_properties",
+    "description": "Return the general concrete properties based on the grade",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "grade": {
+          "type": "string",
+          "description": "grade of the concrete"
+        }
+      },
+      "required": [
+        "grade"
+      ]
+    }
+  }
+]
