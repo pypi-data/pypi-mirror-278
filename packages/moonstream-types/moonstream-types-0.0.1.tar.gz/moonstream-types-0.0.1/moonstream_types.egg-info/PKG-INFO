@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: moonstream-types
+Version: 0.0.1
+Summary: Moonstream types for various blockchains.
+Home-page: https://github.com/moonstream-to/api
+Author: Moonstream.to
+Author-email: engineers@moonstream.to
+License: Apache License 2.0
+Platform: all
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: distribute
+
+# moonstream-types
+
+
