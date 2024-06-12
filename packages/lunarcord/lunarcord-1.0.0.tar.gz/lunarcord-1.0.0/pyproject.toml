@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling", "discord_emoji", "aiohttp"]
+build-backend = "hatchling.build"
+
+[project]
+name = "lunarcord"
+version = "1.0.0"
+authors = [
+  { name="Revolno", email="geomoddingyt@gmail.com" },
+]
+description = "A Library for easily writing multi-purpose Discord Bots."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
