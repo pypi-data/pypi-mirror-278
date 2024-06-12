@@ -1,0 +1,3 @@
+[console_scripts]
+moulti = moulti.precli:main
+moulti-askpass = moulti.askpass:main
