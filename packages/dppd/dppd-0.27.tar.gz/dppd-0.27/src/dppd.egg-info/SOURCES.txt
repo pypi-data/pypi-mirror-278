@@ -1,0 +1,16 @@
+AUTHORS.rst
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+src/dppd/__init__.py
+src/dppd/base.py
+src/dppd/column_spec.py
+src/dppd/non_df_verbs.py
+src/dppd/single_verbs.py
+src/dppd.egg-info/PKG-INFO
+src/dppd.egg-info/SOURCES.txt
+src/dppd.egg-info/dependency_links.txt
+src/dppd.egg-info/not-zip-safe
+src/dppd.egg-info/requires.txt
+src/dppd.egg-info/top_level.txt

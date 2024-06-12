@@ -1,0 +1,17 @@
+pandas>=0.22
+numpy
+natsort
+wrapt
+
+[doc]
+sphinx
+sphinx-bootstrap-theme
+numpydoc
+pandas
+
+[testing]
+pytest
+pytest-cov
+plotnine
+pandas<2.0
+flake8
