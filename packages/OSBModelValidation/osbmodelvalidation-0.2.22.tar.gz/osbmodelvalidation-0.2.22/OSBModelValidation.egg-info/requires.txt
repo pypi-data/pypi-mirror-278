@@ -1,0 +1,11 @@
+PyYAML
+numpy
+pyrx
+docopt
+setuptools
+
+[:python_version < "3.4"]
+pathlib
+
+[:python_version < "3.8"]
+importlib-metadata
