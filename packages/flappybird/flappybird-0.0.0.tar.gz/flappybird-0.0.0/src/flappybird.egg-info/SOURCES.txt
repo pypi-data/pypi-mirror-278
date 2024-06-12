@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/flappybird/__init__.py
+src/flappybird/__main__.py
+src/flappybird/cli.py
+src/flappybird/py.typed
+src/flappybird.egg-info/PKG-INFO
+src/flappybird.egg-info/SOURCES.txt
+src/flappybird.egg-info/dependency_links.txt
+src/flappybird.egg-info/requires.txt
+src/flappybird.egg-info/top_level.txt

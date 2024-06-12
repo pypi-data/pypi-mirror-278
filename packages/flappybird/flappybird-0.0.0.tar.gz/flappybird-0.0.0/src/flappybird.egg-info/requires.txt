@@ -1,0 +1,8 @@
+pygame>=2.5.2
+
+[dev]
+black
+mypy
+pytest
+pytest-cov
+tox
