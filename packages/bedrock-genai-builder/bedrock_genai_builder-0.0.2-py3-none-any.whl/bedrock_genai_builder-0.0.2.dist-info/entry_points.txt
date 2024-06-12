@@ -1,0 +1,2 @@
+[console_scripts]
+bedrock-genai-proj-build = bedrock_genai_builder.cli:create_gen_ai_project_structure
