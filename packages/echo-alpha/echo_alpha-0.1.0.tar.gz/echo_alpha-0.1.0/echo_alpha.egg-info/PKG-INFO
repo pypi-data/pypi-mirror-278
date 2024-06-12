@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: echo_alpha
+Version: 0.1.0
+Summary: A Python library for (describe your library functionality)
+Author: Niro
+Author-email: your_email@example.com
+License-File: LICENSE.txt
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: openai
+Requires-Dist: requests
