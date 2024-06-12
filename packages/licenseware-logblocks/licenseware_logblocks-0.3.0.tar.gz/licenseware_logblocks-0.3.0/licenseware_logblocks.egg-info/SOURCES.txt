@@ -1,0 +1,11 @@
+README.md
+setup.py
+licenseware_logblocks.egg-info/PKG-INFO
+licenseware_logblocks.egg-info/SOURCES.txt
+licenseware_logblocks.egg-info/dependency_links.txt
+licenseware_logblocks.egg-info/entry_points.txt
+licenseware_logblocks.egg-info/requires.txt
+licenseware_logblocks.egg-info/top_level.txt
+logblocks/__init__.py
+logblocks/logblocks.py
+tests/test_post_slack_message.py
