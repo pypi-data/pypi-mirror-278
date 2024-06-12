@@ -1,0 +1,2 @@
+[console_scripts]
+unionai-executor = unionai_executor._lib:executor
