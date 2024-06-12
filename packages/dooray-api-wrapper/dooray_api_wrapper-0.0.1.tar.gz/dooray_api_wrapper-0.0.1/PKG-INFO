@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: dooray-api-wrapper
+Version: 0.0.1
+Summary: Wrapper of NHN Dooray API
+Home-page: https://github.com/Jooss287/dooray-api-wrapper
+Author: jooss287
+Author-email: jooss287@gmail.com
+Keywords: dooray,api,nhn
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: pydantic
+Requires-Dist: requests
+Requires-Dist: python-dotenv
