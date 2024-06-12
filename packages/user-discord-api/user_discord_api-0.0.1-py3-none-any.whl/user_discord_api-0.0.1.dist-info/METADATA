@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: user_discord_api
+Version: 0.0.1
+Summary: Allows you to use discord tokens for messages
+Author: tntgamer1337
+Author-email: <tntgamer133701@gmail.com>
+Keywords: python,discord,user,api,package,easy
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: selenium
+
+Discord python for User Tokens allows messages, tokeninfo and token login.
