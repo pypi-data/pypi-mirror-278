@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: eighta_lib
+Version: 0.9
+Requires-Python: >=3.9
+Requires-Dist: h5py
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: psutil
+Requires-Dist: anndata
+Requires-Dist: tqdm
+Requires-Dist: scikit-learn
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+
