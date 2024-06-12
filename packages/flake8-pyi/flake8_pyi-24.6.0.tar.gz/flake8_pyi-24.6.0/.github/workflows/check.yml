@@ -1,0 +1,76 @@
+name: tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    paths-ignore:
+      - "**/*.md"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  PIP_DISABLE_PIP_VERSION_CHECK: 1
+  FORCE_COLOR: 1
+  PY_COLORS: 1  # Recognized by the `py` package, dependency of `pytest`
+  TERM: xterm-256color  # needed for FORCE_COLOR to work on mypy on Ubuntu, see https://github.com/python/mypy/issues/13817
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  mypy:
+    name: mypy
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.13"]
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          allow-prereleases: true
+      - run: curl -LsSf https://astral.sh/uv/install.sh | sh
+      - run: uv pip install -e .[dev] --system
+      - run: mypy
+
+  flake8:
+    name: flake8
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: curl -LsSf https://astral.sh/uv/install.sh | sh
+      - run: uv pip install -e .[dev] --system
+      - run: |
+          flake8 $(git ls-files | grep 'py$') --color always
+
+  tests:
+    name: pytest suite
+    timeout-minutes: 10
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: ["ubuntu-latest", "macos-latest", "windows-latest"]
+        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12", "3.13"]
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          allow-prereleases: true
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      - run: pip install -e .[dev]
+      - run: python3 -m pytest -vv
