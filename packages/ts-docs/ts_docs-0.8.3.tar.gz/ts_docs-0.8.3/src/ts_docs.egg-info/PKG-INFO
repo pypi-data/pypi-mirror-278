@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: ts-docs
+Version: 0.8.3
+Summary: Documentation building package used at Timesintelli
+Home-page: http://192.168.1.240/timesilicon/documentation/ts-docs
+Author: Timesintelli
+Author-email: ts-docs@timesintelli.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: sphinxcontrib-wavedrom==2.0.0
+Requires-Dist: sphinxcontrib-svg2pdfconverter[CairoSVG]==1.1.0
+Requires-Dist: sphinx_selective_exclude==1.0.3
+Requires-Dist: docutils==0.16
+Requires-Dist: Jinja2==3.0.3
+Requires-Dist: sphinx==3.1.2
+Requires-Dist: recommonmark==0.6.0
+Requires-Dist: sphinx_rtd_theme==0.5.0
+Requires-Dist: breathe==4.19.2
+Requires-Dist: docutils==0.16
+Requires-Dist: sphinx-copybutton==0.4.0
