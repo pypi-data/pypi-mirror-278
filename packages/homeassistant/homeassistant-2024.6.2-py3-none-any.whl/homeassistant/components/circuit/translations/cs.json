@@ -1,0 +1,8 @@
+{
+    "issues": {
+        "service_removal": {
+            "description": "Integrace {integration} bude odebr\u00e1na, proto\u017ee slu\u017eba ji\u017e nen\u00ed udr\u017eov\u00e1na.\n\n\n\nOdeberte nastaven\u00ed \"{domain}\" ze souboru configuration.yaml a restartujte Home Assistanta, abyste tento probl\u00e9m vy\u0159e\u0161ili.",
+            "title": "Integrace {integration} se odeb\u00edr\u00e1"
+        }
+    }
+}

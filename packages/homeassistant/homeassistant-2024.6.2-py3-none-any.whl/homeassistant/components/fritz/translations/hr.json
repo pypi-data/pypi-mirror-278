@@ -1,0 +1,19 @@
+{
+    "exceptions": {
+        "config_entry_not_found": {
+            "message": "Neuspje\u0161no pozivanje usluge \" {service} \". Konfiguracija nije prona\u0111ena"
+        },
+        "error_refresh_hosts_info": {
+            "message": "Pogre\u0161ka pri osvje\u017eavanju informacija o hostovima"
+        },
+        "service_not_supported": {
+            "message": "Usluga nije podr\u017eana"
+        },
+        "service_parameter_unknown": {
+            "message": "Usluga ili parametar nepoznat"
+        },
+        "unable_to_connect": {
+            "message": "Nije mogu\u0107e uspostaviti vezu"
+        }
+    }
+}

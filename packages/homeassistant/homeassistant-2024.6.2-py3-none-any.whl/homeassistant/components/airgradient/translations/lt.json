@@ -1,0 +1,64 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "\u012erenginys jau sukonfig\u016bruotas",
+            "invalid_version": "\u0160i programin\u0117s \u012frangos versija nepalaikoma. Atnaujinkite \u012frenginio programin\u0119-aparatin\u0119 \u012frang\u0105 iki bent 3.1.1 versijos."
+        },
+        "error": {
+            "cannot_connect": "Nepavyko prisijungti",
+            "unknown": "Netik\u0117ta klaida"
+        },
+        "flow_title": "{model}",
+        "step": {
+            "discovery_confirm": {
+                "description": "Ar norite nustatyti {model} ?"
+            },
+            "user": {
+                "data": {
+                    "host": "Host"
+                },
+                "data_description": {
+                    "host": "Oro gradiento \u012frenginio pagrindinio kompiuterio pavadinimas arba IP adresas."
+                }
+            }
+        }
+    },
+    "entity": {
+        "select": {
+            "configuration_control": {
+                "name": "Konfig\u016bracijos \u0161altinis",
+                "state": {
+                    "both": "Abu",
+                    "cloud": "Debesis",
+                    "local": "Vietinis"
+                }
+            },
+            "display_temperature_unit": {
+                "name": "Ekrano temperat\u016bros vienetas",
+                "state": {
+                    "c": "Celsijaus",
+                    "f": "Farenheito"
+                }
+            }
+        },
+        "sensor": {
+            "nitrogen_index": {
+                "name": "Azoto indeksas"
+            },
+            "raw_nitrogen": {
+                "name": "Neapdorotas azotas"
+            },
+            "raw_total_volatile_organic_component": {
+                "name": "Neapdorotas bendras VOC"
+            },
+            "total_volatile_organic_component_index": {
+                "name": "Bendras VOC indeksas"
+            }
+        }
+    },
+    "exceptions": {
+        "no_local_configuration": {
+            "message": "\u012erenginys turi b\u016bti sukonfig\u016bruotas vietine konfig\u016bracija, kad b\u016bt\u0173 galima keisti nustatymus."
+        }
+    }
+}

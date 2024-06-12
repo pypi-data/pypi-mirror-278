@@ -1,0 +1,63 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Cihaz zaten yap\u0131land\u0131r\u0131lm\u0131\u015f"
+        },
+        "error": {
+            "cannot_connect": "Ba\u011flanma hatas\u0131",
+            "unknown": "Beklenmeyen hata"
+        },
+        "flow_title": "{model}",
+        "step": {
+            "discovery_confirm": {
+                "description": "{model} kurulumunu yapmak istiyor musunuz?"
+            },
+            "user": {
+                "data": {
+                    "host": "Sunucu"
+                },
+                "data_description": {
+                    "host": "Airgradient cihaz\u0131n\u0131n ana bilgisayar ad\u0131 veya IP adresi."
+                }
+            }
+        }
+    },
+    "entity": {
+        "select": {
+            "configuration_control": {
+                "name": "Yap\u0131land\u0131rma kayna\u011f\u0131",
+                "state": {
+                    "both": "Her ikisi",
+                    "cloud": "Bulut",
+                    "local": "Yerel"
+                }
+            },
+            "display_temperature_unit": {
+                "name": "Ekran s\u0131cakl\u0131k birimi",
+                "state": {
+                    "c": "Santigrat",
+                    "f": "Fahrenhayt"
+                }
+            }
+        },
+        "sensor": {
+            "nitrogen_index": {
+                "name": "Azot indeksi"
+            },
+            "raw_nitrogen": {
+                "name": "Ham azot"
+            },
+            "raw_total_volatile_organic_component": {
+                "name": "Ham toplam VOC"
+            },
+            "total_volatile_organic_component_index": {
+                "name": "Toplam VOC endeksi"
+            }
+        }
+    },
+    "exceptions": {
+        "no_local_configuration": {
+            "message": "Ayarlar\u0131n de\u011fi\u015ftirilebilmesi i\u00e7in cihaz\u0131n yerel konfig\u00fcrasyonla yap\u0131land\u0131r\u0131lmas\u0131 gerekir."
+        }
+    }
+}

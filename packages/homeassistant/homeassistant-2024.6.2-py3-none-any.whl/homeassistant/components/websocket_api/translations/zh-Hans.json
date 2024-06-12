@@ -1,0 +1,7 @@
+{
+    "exceptions": {
+        "child_service_not_found": {
+            "message": "\u670d\u52a1 {domain}.{service} \u8c03\u7528\u7684\u670d\u52a1 {child_domain}.{child_service} \u672a\u627e\u5230\u3002"
+        }
+    }
+}

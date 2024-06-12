@@ -1,0 +1,67 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Za\u0159\u00edzen\u00ed je ji\u017e nastaveno",
+            "invalid_version": "Tato verze firmwaru nen\u00ed podporov\u00e1na. Aktualizujte firmware za\u0159\u00edzen\u00ed alespo\u0148 na verzi 3.1.1."
+        },
+        "error": {
+            "cannot_connect": "Nepoda\u0159ilo se p\u0159ipojit",
+            "unknown": "Neo\u010dek\u00e1van\u00e1 chyba"
+        },
+        "flow_title": "{model}",
+        "step": {
+            "discovery_confirm": {
+                "description": "Chcete nastavit {model}?"
+            },
+            "user": {
+                "data": {
+                    "host": "Hostitel"
+                },
+                "data_description": {
+                    "host": "N\u00e1zev hostitele nebo IP adresa za\u0159\u00edzen\u00ed Airgradient."
+                }
+            }
+        }
+    },
+    "entity": {
+        "select": {
+            "configuration_control": {
+                "name": "Zdroj nastaven\u00ed",
+                "state": {
+                    "both": "Oba",
+                    "cloud": "Cloud",
+                    "local": "M\u00edstn\u00ed"
+                }
+            },
+            "display_temperature_unit": {
+                "name": "Jednotky teploty",
+                "state": {
+                    "c": "Celsia",
+                    "f": "Fahrenheity"
+                }
+            }
+        },
+        "sensor": {
+            "nitrogen_index": {
+                "name": "Index dus\u00edku"
+            },
+            "pm003_count": {
+                "name": "PM0.3"
+            },
+            "raw_nitrogen": {
+                "name": "Hrub\u00fd dus\u00edk"
+            },
+            "raw_total_volatile_organic_component": {
+                "name": "Celkov\u00e9 hrub\u00e9 VOC"
+            },
+            "total_volatile_organic_component_index": {
+                "name": "Celkov\u00fd index VOC"
+            }
+        }
+    },
+    "exceptions": {
+        "no_local_configuration": {
+            "message": "Za\u0159\u00edzen\u00ed by m\u011blo b\u00fdt nakonfigurov\u00e1no s m\u00edstn\u00ed konfigurac\u00ed, aby bylo mo\u017en\u00e9 m\u011bnit nastaven\u00ed."
+        }
+    }
+}

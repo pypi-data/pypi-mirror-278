@@ -1,0 +1,58 @@
+{
+    "config": {
+        "error": {
+            "invalid_access_token": "Ogiltig \u00e5tkomstnyckel"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "access_token": "\u00c5tkomstnyckel"
+                }
+            }
+        }
+    },
+    "entity": {
+        "select": {
+            "climate_state_seat_heater_left": {
+                "state": {
+                    "off": "Av"
+                }
+            },
+            "climate_state_seat_heater_rear_center": {
+                "state": {
+                    "off": "Av"
+                }
+            },
+            "climate_state_seat_heater_rear_left": {
+                "state": {
+                    "off": "Av"
+                }
+            },
+            "climate_state_seat_heater_rear_right": {
+                "state": {
+                    "off": "Av"
+                }
+            },
+            "climate_state_seat_heater_right": {
+                "state": {
+                    "off": "Av"
+                }
+            },
+            "climate_state_seat_heater_third_row_left": {
+                "state": {
+                    "off": "Av"
+                }
+            },
+            "climate_state_seat_heater_third_row_right": {
+                "state": {
+                    "off": "Av"
+                }
+            },
+            "climate_state_steering_wheel_heat_level": {
+                "state": {
+                    "off": "Av"
+                }
+            }
+        }
+    }
+}

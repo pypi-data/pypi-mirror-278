@@ -1,0 +1,199 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "\u8bbe\u5907\u5df2\u914d\u7f6e",
+            "no_devices_found": "\u7f51\u7edc\u4e0a\u672a\u627e\u5230\u4efb\u4f55\u8bbe\u5907",
+            "reauth_successful": "\u91cd\u65b0\u8ba4\u8bc1\u6210\u529f"
+        },
+        "error": {
+            "cannot_connect": "\u8fde\u63a5\u9519\u8bef\uff1a{error}",
+            "invalid_auth": "\u8eab\u4efd\u9a8c\u8bc1\u65e0\u6548\uff1a{error}"
+        },
+        "flow_title": "{name} {model} ({host})",
+        "step": {
+            "discovery_auth_confirm": {
+                "data": {
+                    "password": "\u5bc6\u7801",
+                    "username": "\u7528\u6237\u540d"
+                },
+                "description": "\u8bbe\u5907\u9700\u8981\u8eab\u4efd\u9a8c\u8bc1\uff0c\u8bf7\u5728\u4e0b\u9762\u8f93\u5165\u60a8\u7684 TP-Link \u51ed\u636e\u3002",
+                "title": "\u8ba4\u8bc1"
+            },
+            "discovery_confirm": {
+                "description": "\u60a8\u8981\u8bbe\u7f6e{name} {model} ({host}) \u5417 \uff1f"
+            },
+            "pick_device": {
+                "data": {
+                    "device": "\u8bbe\u5907"
+                }
+            },
+            "reauth": {
+                "description": "\u8bbe\u5907\u9700\u8981\u8eab\u4efd\u9a8c\u8bc1\uff0c\u8bf7\u5728\u4e0b\u9762\u8f93\u5165\u60a8\u7684 TP-Link \u51ed\u636e\u3002",
+                "title": "\u201d{name}\u201c\u7684\u8eab\u4efd\u9a8c\u8bc1\u5df2\u8fc7\u671f"
+            },
+            "reauth_confirm": {
+                "data": {
+                    "password": "\u5bc6\u7801",
+                    "username": "\u7528\u6237\u540d"
+                },
+                "description": "\u8bbe\u5907\u9700\u8981\u8eab\u4efd\u9a8c\u8bc1\uff0c\u8bf7\u5728\u4e0b\u9762\u8f93\u5165\u60a8\u7684 TP-Link \u51ed\u636e\u3002",
+                "title": "\u201d{name}\u201c\u7684\u8eab\u4efd\u9a8c\u8bc1\u5df2\u8fc7\u671f"
+            },
+            "user": {
+                "data": {
+                    "host": "\u4e3b\u673a"
+                },
+                "data_description": {
+                    "host": "\u60a8\u7684 TP-Link \u8bbe\u5907\u7684\u4e3b\u673a\u540d\u6216 IP \u5730\u5740\u3002"
+                },
+                "description": "\u5982\u679c\u5c06\u4e3b\u673a\u7559\u7a7a\uff0c\u5c06\u4f7f\u7528\u53d1\u73b0\u6765\u67e5\u627e\u8bbe\u5907\u3002"
+            },
+            "user_auth_confirm": {
+                "data": {
+                    "password": "\u5bc6\u7801",
+                    "username": "\u7528\u6237\u540d"
+                },
+                "description": "\u8bbe\u5907\u9700\u8981\u8eab\u4efd\u9a8c\u8bc1\uff0c\u8bf7\u5728\u4e0b\u9762\u8f93\u5165\u60a8\u7684 TP-Link \u51ed\u636e\u3002",
+                "title": "\u8ba4\u8bc1"
+            }
+        }
+    },
+    "entity": {
+        "sensor": {
+            "current_child": {
+                "name": "{device_name} \u7535\u6d41"
+            },
+            "current_consumption": {
+                "name": "\u5f53\u524d\u6d88\u8017"
+            },
+            "current_consumption_child": {
+                "name": "{device_name} \u7535\u6d41\u6d88\u8017"
+            },
+            "today_consumption": {
+                "name": "\u4eca\u65e5\u6d88\u8017"
+            },
+            "today_consumption_child": {
+                "name": "{device_name} \u4eca\u65e5\u6d88\u8017"
+            },
+            "total_consumption": {
+                "name": "\u603b\u6d88\u8017"
+            },
+            "total_consumption_child": {
+                "name": "{device_name} \u603b\u6d88\u8017"
+            },
+            "voltage_child": {
+                "name": "{device_name} \u7535\u538b"
+            }
+        },
+        "switch": {
+            "led": {
+                "name": "LED"
+            }
+        }
+    },
+    "exceptions": {
+        "device_authentication": {
+            "message": "\u8bbe\u5907\u201c{func}\u201d\u8eab\u4efd\u9a8c\u8bc1\u9519\u8bef\uff1a{exc}"
+        },
+        "device_error": {
+            "message": "\u65e0\u6cd5\u4e0e\u8bbe\u5907\u201c{func}\u201d\u901a\u4fe1\uff1a{exc}"
+        },
+        "device_timeout": {
+            "message": "\u4e0e\u8bbe\u5907\u201c{func}\u201d\u901a\u4fe1\u8d85\u65f6\uff1a{exc}"
+        }
+    },
+    "services": {
+        "random_effect": {
+            "description": "\u8bbe\u7f6e\u968f\u673a\u6548\u679c\u3002",
+            "fields": {
+                "backgrounds": {
+                    "description": "HSV \u5e8f\u5217\u7684\u5217\u8868\uff08\u6700\u591a 16 \u4e2a\uff09\u3002",
+                    "name": "\u80cc\u666f"
+                },
+                "brightness": {
+                    "description": "\u521d\u59cb\u4eae\u5ea6\u3002",
+                    "name": "\u4eae\u5ea6"
+                },
+                "brightness_range": {
+                    "description": "\u4eae\u5ea6\u7684\u8303\u56f4\u3002",
+                    "name": "\u4eae\u5ea6\u8303\u56f4"
+                },
+                "duration": {
+                    "description": "\u6301\u7eed\u65f6\u95f4\u3002",
+                    "name": "\u6301\u7eed\u65f6\u95f4"
+                },
+                "fadeoff": {
+                    "description": "\u6de1\u51fa\u3002",
+                    "name": "\u6de1\u51fa"
+                },
+                "hue_range": {
+                    "description": "\u8272\u8c03\u7684\u8303\u56f4\u3002",
+                    "name": "\u8272\u8c03\u8303\u56f4"
+                },
+                "init_states": {
+                    "description": "\u521d\u59cb HSV \u5e8f\u5217\u3002",
+                    "name": "\u521d\u59cb\u72b6\u6001"
+                },
+                "random_seed": {
+                    "description": "\u968f\u673a\u79cd\u5b50\u3002",
+                    "name": "\u968f\u673a\u79cd\u5b50"
+                },
+                "saturation_range": {
+                    "description": "\u9971\u548c\u5ea6\u7684\u8303\u56f4\u3002",
+                    "name": "\u9971\u548c\u5ea6\u8303\u56f4"
+                },
+                "segments": {
+                    "description": "\u533a\u6bb5\u7684\u5217\u8868\uff080 \u8868\u793a\u5168\u90e8\uff09\u3002",
+                    "name": "\u533a\u6bb5"
+                },
+                "transition": {
+                    "description": "\u8f6c\u6362\u3002",
+                    "name": "\u8f6c\u6362"
+                },
+                "transition_range": {
+                    "description": "\u8f6c\u6362\u7684\u8303\u56f4\u3002",
+                    "name": "\u8f6c\u6362\u8303\u56f4"
+                }
+            },
+            "name": "\u968f\u673a\u6548\u679c"
+        },
+        "sequence_effect": {
+            "description": "\u8bbe\u7f6e\u4e00\u4e2a\u5e8f\u5217\u6548\u679c\u3002",
+            "fields": {
+                "brightness": {
+                    "description": "\u521d\u59cb\u4eae\u5ea6\u3002",
+                    "name": "\u4eae\u5ea6"
+                },
+                "direction": {
+                    "description": "\u65b9\u5411\u3002",
+                    "name": "\u65b9\u5411"
+                },
+                "duration": {
+                    "description": "\u6301\u7eed\u65f6\u95f4\u3002",
+                    "name": "\u6301\u7eed\u65f6\u95f4"
+                },
+                "repeat_times": {
+                    "description": "\u91cd\u590d\u6b21\u6570\uff080 \u8868\u793a\u8fde\u7eed\u4e0d\u65ad\uff09\u3002",
+                    "name": "\u91cd\u590d\u6b21\u6570"
+                },
+                "segments": {
+                    "description": "\u533a\u6bb5\u7684\u5217\u8868\uff080 \u8868\u793a\u5168\u90e8\uff09\u3002",
+                    "name": "\u533a\u6bb5"
+                },
+                "sequence": {
+                    "description": "HSV \u5e8f\u5217\u7684\u5217\u8868\uff08\u6700\u591a 16 \u4e2a\uff09\u3002",
+                    "name": "\u5e8f\u5217"
+                },
+                "spread": {
+                    "description": "\u4f20\u64ad\u7684\u901f\u5ea6\u3002",
+                    "name": "\u4f20\u64ad"
+                },
+                "transition": {
+                    "description": "\u8f6c\u6362\u3002",
+                    "name": "\u8f6c\u6362"
+                }
+            },
+            "name": "\u5e8f\u5217\u6548\u679c"
+        }
+    }
+}

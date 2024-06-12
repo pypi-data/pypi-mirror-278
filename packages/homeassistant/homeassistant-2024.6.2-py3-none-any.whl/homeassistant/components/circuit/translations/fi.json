@@ -1,0 +1,8 @@
+{
+    "issues": {
+        "service_removal": {
+            "description": "{integration} -integraatio poistetaan, koska palvelua ei en\u00e4\u00e4 yll\u00e4pidet\u00e4.\n\n\n\nPoista `{domain}` -m\u00e4\u00e4ritys configuration.yaml-tiedostosta ja k\u00e4ynnist\u00e4 Home Assistant uudelleen ongelman korjaamiseksi.",
+            "title": "{integration} -integraatio poistetaan"
+        }
+    }
+}

@@ -1,0 +1,67 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Seade on juba h\u00e4\u00e4lestatud",
+            "invalid_version": "Seda p\u00fcsivara versiooni ei toetata. Uuenda seadme p\u00fcsivara v\u00e4hemalt versioonile 3.1.1."
+        },
+        "error": {
+            "cannot_connect": "\u00dchendamine nurjus",
+            "unknown": "Ootamatu t\u00f5rge"
+        },
+        "flow_title": "{model}",
+        "step": {
+            "discovery_confirm": {
+                "description": "Kas seadistada {model} ?"
+            },
+            "user": {
+                "data": {
+                    "host": "Host"
+                },
+                "data_description": {
+                    "host": "Airgradienti seadme hostinimi v\u00f5i IP-aadress."
+                }
+            }
+        }
+    },
+    "entity": {
+        "select": {
+            "configuration_control": {
+                "name": "Konfiguratsiooni allikas",
+                "state": {
+                    "both": "M\u00f5lemad",
+                    "cloud": "Pilveteenus",
+                    "local": "Kohalik"
+                }
+            },
+            "display_temperature_unit": {
+                "name": "Kuvatav temperatuuri\u00fchik",
+                "state": {
+                    "c": "Celsius",
+                    "f": "Fahrenheit"
+                }
+            }
+        },
+        "sensor": {
+            "nitrogen_index": {
+                "name": "L\u00e4mmastiku indeks"
+            },
+            "pm003_count": {
+                "name": "PM0,3"
+            },
+            "raw_nitrogen": {
+                "name": "L\u00e4mmastiku m\u00f5\u00f5teandmed"
+            },
+            "raw_total_volatile_organic_component": {
+                "name": "Lenduvate orgaaniliste \u00fchendite t\u00f5\u00f5tlemata kogus"
+            },
+            "total_volatile_organic_component_index": {
+                "name": "Lenduvate orgaaniliste \u00fchendite koguindeks"
+            }
+        }
+    },
+    "exceptions": {
+        "no_local_configuration": {
+            "message": "Seadete muutmiseks peab seade olema seadistatud kohalike s\u00e4tetega."
+        }
+    }
+}

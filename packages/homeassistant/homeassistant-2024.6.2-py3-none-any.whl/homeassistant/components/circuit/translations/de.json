@@ -1,0 +1,8 @@
+{
+    "issues": {
+        "service_removal": {
+            "description": "Die {integration} -Integration wird entfernt, da der Dienst nicht mehr gepflegt wird. \n\n\n\nEntferne die Konfiguration \u201e{domain}\u201c aus deiner \u201econfiguration.yaml\u201c-Datei und starte Home Assistant neu, um dieses Problem zu beheben.",
+            "title": "Die Integration von {integration} wird entfernt."
+        }
+    }
+}

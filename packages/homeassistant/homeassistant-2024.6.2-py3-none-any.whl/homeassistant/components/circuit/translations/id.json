@@ -1,0 +1,8 @@
+{
+    "issues": {
+        "service_removal": {
+            "description": "Integrasi {integration} akan dihapus, karena layanannya sudah tidak lagi dipertahankan.\n\n\n\nHapus konfigurasi `{domain}` dari file configuration.yaml Anda dan mulai ulang Home Assistant untuk memperbaiki masalah ini.",
+            "title": "Integrasi {integration} dalam proses penghapusan"
+        }
+    }
+}

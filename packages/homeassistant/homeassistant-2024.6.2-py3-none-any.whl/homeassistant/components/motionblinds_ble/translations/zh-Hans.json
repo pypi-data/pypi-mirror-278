@@ -1,0 +1,60 @@
+{
+    "config": {
+        "abort": {
+            "no_bluetooth_adapter": "\u672a\u627e\u5230\u84dd\u7259\u9002\u914d\u5668",
+            "no_devices_found": "\u627e\u4e0d\u5230\u4efb\u4f55\u84dd\u7259\u8bbe\u5907"
+        },
+        "error": {
+            "could_not_find_motor": "\u627e\u4e0d\u5230\u6709\u6b64 MAC \u4ee3\u7801\u7684\u7535\u673a",
+            "invalid_mac_code": "MAC \u4ee3\u7801\u65e0\u6548"
+        },
+        "step": {
+            "confirm": {
+                "description": "\u201d{display_name}\u201c\u662f\u4ec0\u4e48\u6837\u7684\u767e\u53f6\u5e18\uff1f"
+            },
+            "user": {
+                "data": {
+                    "mac_code": "MAC \u4ee3\u7801"
+                },
+                "description": "\u586b\u5199\u60a8\u7535\u673a\u7684 4 \u4e2a\u5b57\u7b26 MAC \u4ee3\u7801\uff0c\u4f8b\u5982 F3ED \u6216 E3A6"
+            }
+        }
+    },
+    "entity": {
+        "button": {
+            "connect": {
+                "name": "\u8fde\u63a5"
+            },
+            "disconnect": {
+                "name": "\u65ad\u5f00"
+            },
+            "favorite": {
+                "name": "\u9996\u9009"
+            }
+        },
+        "select": {
+            "speed": {
+                "name": "\u901f\u5ea6",
+                "state": {
+                    "1": "\u4f4e",
+                    "2": "\u4e2d",
+                    "3": "\u9ad8"
+                }
+            }
+        }
+    },
+    "selector": {
+        "blind_type": {
+            "options": {
+                "curtain": "\u7a97\u5e18",
+                "double_roller": "\u53cc\u5377\u5e18",
+                "honeycomb": "\u8702\u5de2\u5e18",
+                "roller": "\u5377\u5e18",
+                "roman": "\u7f57\u9a6c\u5e18",
+                "venetian": "\u8f6f\u767e\u53f6\u5e18",
+                "venetian_tilt_only": "\u8f6f\u767e\u53f6\u5e18\uff08\u4ec5\u503e\u659c\uff09",
+                "vertical": "\u5782\u76f4\u5e18"
+            }
+        }
+    }
+}

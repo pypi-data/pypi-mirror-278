@@ -1,0 +1,20 @@
+{
+    "entity_component": {
+        "_": {
+            "state_attributes": {
+                "options": {
+                    "name": "Mogu\u0107a stanja"
+                }
+            }
+        },
+        "illuminance": {
+            "name": "Osvetljenost"
+        },
+        "moisture": {
+            "name": "Vlaga"
+        },
+        "temperature": {
+            "name": "Temperatura"
+        }
+    }
+}

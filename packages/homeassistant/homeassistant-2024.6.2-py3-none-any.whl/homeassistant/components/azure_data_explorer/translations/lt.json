@@ -1,0 +1,25 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "\u012erenginys jau sukonfig\u016bruotas"
+        },
+        "error": {
+            "cannot_connect": "Nepavyko prisijungti",
+            "invalid_auth": "Neteisingas autentifikavimas",
+            "unknown": "Netik\u0117ta klaida"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "authority_id": "Institucijos ID",
+                    "client_id": "Kliento ID",
+                    "client_secret": "Kliento paslaptis",
+                    "clusteringesturi": "Grup\u0117s \u012fvedimo URI",
+                    "database": "Duomen\u0173 baz\u0117s pavadinimas",
+                    "table": "Lentel\u0117s pavadinimas"
+                },
+                "title": "Nustatykite \u201eAzure Data Explorer\u201c integracij\u0105"
+            }
+        }
+    }
+}

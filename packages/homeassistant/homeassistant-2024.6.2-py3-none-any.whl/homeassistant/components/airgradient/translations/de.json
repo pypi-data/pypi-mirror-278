@@ -1,0 +1,67 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Ger\u00e4t ist bereits konfiguriert",
+            "invalid_version": "Diese Firmware-Version wird nicht unterst\u00fctzt. Bitte aktualisiere die Firmware des Ger\u00e4ts mindestens auf Version 3.1.1."
+        },
+        "error": {
+            "cannot_connect": "Verbindung fehlgeschlagen",
+            "unknown": "Unerwarteter Fehler"
+        },
+        "flow_title": "{model}",
+        "step": {
+            "discovery_confirm": {
+                "description": "M\u00f6chtest du {model} einrichten?"
+            },
+            "user": {
+                "data": {
+                    "host": "Host"
+                },
+                "data_description": {
+                    "host": "Der Hostname oder die IP-Adresse des Airgradient-Ger\u00e4ts."
+                }
+            }
+        }
+    },
+    "entity": {
+        "select": {
+            "configuration_control": {
+                "name": "Konfigurationsquelle",
+                "state": {
+                    "both": "Beide",
+                    "cloud": "Cloud",
+                    "local": "Lokal"
+                }
+            },
+            "display_temperature_unit": {
+                "name": "Temperatureinheit anzeigen",
+                "state": {
+                    "c": "Celsius",
+                    "f": "Fahrenheit"
+                }
+            }
+        },
+        "sensor": {
+            "nitrogen_index": {
+                "name": "Stickstoff-Index"
+            },
+            "pm003_count": {
+                "name": "PM0,3"
+            },
+            "raw_nitrogen": {
+                "name": "Stickstoff (roh)"
+            },
+            "raw_total_volatile_organic_component": {
+                "name": "Gesamt-VOC (roh)"
+            },
+            "total_volatile_organic_component_index": {
+                "name": "VOC-Index insgesamt"
+            }
+        }
+    },
+    "exceptions": {
+        "no_local_configuration": {
+            "message": "Um Einstellungen \u00e4ndern zu k\u00f6nnen, muss das Ger\u00e4t mit lokaler Konfiguration konfiguriert werden."
+        }
+    }
+}

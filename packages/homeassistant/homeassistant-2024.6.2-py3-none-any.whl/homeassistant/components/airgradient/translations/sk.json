@@ -1,0 +1,67 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Zariadenie u\u017e je nakonfigurovan\u00e9",
+            "invalid_version": "T\u00e1to verzia firmv\u00e9ru nie je podporovan\u00e1. Aktualizujte firmv\u00e9r zariadenia aspo\u0148 na verziu 3.1.1."
+        },
+        "error": {
+            "cannot_connect": "Nepodarilo sa pripoji\u0165",
+            "unknown": "Neo\u010dak\u00e1van\u00e1 chyba"
+        },
+        "flow_title": "{model}",
+        "step": {
+            "discovery_confirm": {
+                "description": "Chcete nastavi\u0165 {model}?"
+            },
+            "user": {
+                "data": {
+                    "host": "Hostite\u013e"
+                },
+                "data_description": {
+                    "host": "N\u00e1zov hostite\u013ea alebo IP adresa zariadenia Airgradient."
+                }
+            }
+        }
+    },
+    "entity": {
+        "select": {
+            "configuration_control": {
+                "name": "Zdroj konfigur\u00e1cie",
+                "state": {
+                    "both": "Obidva",
+                    "cloud": "Cloud",
+                    "local": "Lok\u00e1lny"
+                }
+            },
+            "display_temperature_unit": {
+                "name": "Zobrazenie jednotky teploty",
+                "state": {
+                    "c": "Celzia",
+                    "f": "Fahrenheit"
+                }
+            }
+        },
+        "sensor": {
+            "nitrogen_index": {
+                "name": "Index dus\u00edka"
+            },
+            "pm003_count": {
+                "name": "PM0.3"
+            },
+            "raw_nitrogen": {
+                "name": "Surov\u00fd dus\u00edk"
+            },
+            "raw_total_volatile_organic_component": {
+                "name": "Surov\u00e9 celkov\u00e9 VOC"
+            },
+            "total_volatile_organic_component_index": {
+                "name": "Celkov\u00fd index VOC"
+            }
+        }
+    },
+    "exceptions": {
+        "no_local_configuration": {
+            "message": "Zariadenie by malo by\u0165 nakonfigurovan\u00e9 s miestnou konfigur\u00e1ciou, aby bolo mo\u017en\u00e9 meni\u0165 nastavenia."
+        }
+    }
+}
