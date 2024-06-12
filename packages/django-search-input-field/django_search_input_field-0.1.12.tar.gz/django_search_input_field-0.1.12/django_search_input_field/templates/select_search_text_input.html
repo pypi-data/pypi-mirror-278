@@ -1,0 +1,31 @@
+<style>
+    .select2-results__option {
+        color: black !important;
+    }
+    .select2-rendered__match {
+        background-color: yellow;
+      }
+  
+</style>  
+{% load django_search_input_field static %}
+{% search_field_get_init_value widget.attrs.query_function_name widget.attrs.model_field widget.value  as inital_value %}
+
+
+<div id="django-search-url" url="{% url 'get_search_input_query_result' %}" style='display: none;'></div>
+
+<select class="select2-search-query" query_function="{{ widget.attrs.query_function_name }}" 
+style="width: auto;min-width: 200px; max-width: 100%;" 
+name="{{ widget.name }}" 
+ id="{{ widget.attrs.id }}"
+ {% include "django/forms/widgets/attrs.html" %}
+ >
+{% if inital_value %}
+    <option value="{{ inital_value.id }}" selected="selected">{{ inital_value.string }}</option>
+{% endif %}
+</select>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+<script src="{% static 'django_search_input_field.js' %}"></script>
