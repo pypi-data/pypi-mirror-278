@@ -1,0 +1,15 @@
+torch
+transformers
+mdurl==0.1.2
+numpy==1.25.2
+h5py==3.9.0
+pandas
+uvicorn
+bitsandbytes
+accelerate
+sentence-transformers
+nltk
+PyPDF2
+pydantic
+requests
+tensorflow
