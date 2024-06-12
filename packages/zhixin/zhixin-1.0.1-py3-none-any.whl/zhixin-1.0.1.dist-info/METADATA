@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: zhixin
+Version: 1.0.1
+Summary: Your Gateway to Embedded Software Development Excellence. Unlock the true potential of embedded software development with ZhiXin's collaborative ecosystem, embracing declarative principles, test-driven methodologies, and modern toolchains for unrivaled success.
+Home-page: https://zhixin-semi.com
+Author: ZhiXin-Semi
+Author-email: contact@zhixin-semi.com
+License: Apache Software License
+Keywords: embedded,arm,ide,microcontroller,debug
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: C
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Compilers
+Requires-Python: >=3.6
+Requires-Dist: bottle (==0.12.*)
+Requires-Dist: click (<9,>=8.0.4)
+Requires-Dist: colorama
+Requires-Dist: marshmallow (==3.*)
+Requires-Dist: pyelftools (<1,>=0.27)
+Requires-Dist: pyserial (==3.5.*)
+Requires-Dist: requests (==2.*)
+Requires-Dist: semantic-version (==2.10.*)
+Requires-Dist: tabulate (==0.*)
+Requires-Dist: ajsonrpc (==1.2.*)
+Requires-Dist: starlette (<0.38,>=0.19)
+Requires-Dist: uvicorn (<0.30,>=0.16)
+Requires-Dist: wsproto (==1.*)
+
+UNKNOWN
+
+
