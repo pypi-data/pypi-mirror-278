@@ -1,0 +1,43 @@
+[build-system]
+requires = [ "hatchling",]
+build-backend = "hatchling.build"
+
+[project]
+dynamic = [ "dependencies",]
+name = "ab-test-advanced-toolkit"
+version = "0.0.18"
+requires-python = ">=3.8"
+description = "An experimental Python library for advanced A/B testing analysis, leveraging statistical techniques and ML for deeper insights."
+readme = "README.md"
+keywords = []
+[[project.authors]]
+name = "Dmitry Brazhenko"
+email = "brazhenko.dmitry@gmail.com"
+
+[[project.authors]]
+name = "Kirill Markin"
+email = "markinkirill@gmail.com"
+url = "https://kirill-markin.com/"
+
+[[project.maintainers]]
+name = "Dmitry Brazhenko"
+email = "brazhenko.dmitry@gmail.com"
+
+[[project.maintainers]]
+name = "Kirill Markin"
+email = "markinkirill@gmail.com"
+url = "https://kirill-markin.com/"
+
+[project.license]
+file = "LICENSE"
+
+[project.urls]
+Homepage = "https://github.com/dmitry-brazhenko/ab-test-advanced-toolkit"
+Documentation = "https://github.com/dmitry-brazhenko/ab-test-advanced-toolkit/blob/main/README.md"
+Repository = "https://github.com/dmitry-brazhenko/ab-test-advanced-toolkit"
+
+[tool.setuptools.dynamic.dependencies]
+file = [ "requirements.txt",]
+
+[tool.hatch.build.targets.wheel]
+packages = [ "ab_test_advanced_toolkit",]
