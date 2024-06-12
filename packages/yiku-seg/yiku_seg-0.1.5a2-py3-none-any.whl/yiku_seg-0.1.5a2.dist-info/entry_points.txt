@@ -1,0 +1,4 @@
+[console_scripts]
+siren.export = yiku.export:main
+siren.pred = yiku.predict:main
+siren.train = yiku.train:main
