@@ -1,0 +1,9 @@
+snowflake-connector-python[secure-local-storage]~=3.0
+
+[dev]
+pytest~=6.2
+tox
+pre-commit
+
+[test]
+pytest~=6.2

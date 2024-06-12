@@ -1,0 +1,94 @@
+Metadata-Version: 2.1
+Name: diepvries
+Version: 1.0.1
+Summary: diepvries - Picnic Data Vault framework
+Author: Picnic Technologies
+License: MIT License
+        
+        Copyright (c) 2019-2021 Picnic Technologies BV
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+        
+Project-URL: Documentation, https://diepvries.picnic.tech/
+Project-URL: Source Code, https://github.com/PicnicSupermarket/diepvries
+Project-URL: Issue Tracker, https://github.com/PicnicSupermarket/diepvries/issues
+Keywords: data vault
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: snowflake-connector-python[secure-local-storage]~=3.0
+Provides-Extra: test
+Requires-Dist: pytest~=6.2; extra == "test"
+Provides-Extra: dev
+Requires-Dist: pytest~=6.2; extra == "dev"
+Requires-Dist: tox; extra == "dev"
+Requires-Dist: pre-commit; extra == "dev"
+
+# diepvries
+
+[![PyPI version shields.io](https://img.shields.io/pypi/v/diepvries.svg)](https://pypi.python.org/pypi/diepvries/)
+[![PyPI license](https://img.shields.io/pypi/l/diepvries.svg)](https://pypi.python.org/pypi/diepvries/)
+[![Build](https://img.shields.io/github/actions/workflow/status/PicnicSupermarket/diepvries/pypi-build-and-deploy.yml)](https://github.com/PicnicSupermarket/diepvries/actions)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+
+<img src="doc/static/diepvries.svg" alt="diepvries logo" width=200>
+
+Welcome to `diepvries`, a Python library to generate
+[Data Vault](https://en.wikipedia.org/wiki/Data_vault_modeling) SQL statements.
+
+## What does it do?
+
+`diepvries` takes as input a Data Vault model (a list of hubs, links and satellites tables),
+and generates SQL statements to load data in those tables. For that purpose, it relies
+on naming conventions for tables and columns. There are 2 ways to feed a Data Vault
+model to `diepvries`:
+
+- Either declaratively, by enumerating tables and columns;
+- Or automatically, by building these structures using the database metadata.
+
+At the moment, `diepvries` is only compatible with
+[Snowflake](https://www.snowflake.com/).
+
+`diepvries` works with Python 3.8, 3.9, and 3.10.
+
+## Getting started
+
+`diepvries` is distributed as a Python wheel on PyPI. In a virtual environment, you can
+grab the latest version by running:
+
+```shell
+pip install diepvries
+```
+
+and in a Python console:
+
+```python3
+from diepvries.hub import Hub
+help(Hub)
+```
+
+If you see the help page for the `Hub` class, you're all set! :rocket:
+
+## Continue the journey
+
+The best way to start using `diepvries` is by reading
+[its documentation website](https://diepvries.picnic.tech). You'll find a tutorial, a
+list of naming conventions, and more!
+
+## Contributing
+
+Want to fix a bug, improve the docs, or add a new feature? That's awesome! Please read
+the [contributing document](https://github.com/PicnicSupermarket/diepvries/blob/master/CONTRIBUTING.md).
+
+## Changelog
+
+You can find the changelog of this package in
+[`CHANGELOG.md`](https://github.com/PicnicSupermarket/diepvries/blob/master/CHANGELOG.md).
