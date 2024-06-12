@@ -1,0 +1,16 @@
+Metadata-Version: 2.3
+Name: xaif_eval
+Version: 0.0.9
+Summary: xaif package
+Project-URL: Homepage, https://github.com/debelatesfaye/xaif
+Project-URL: Issues, https://github.com/debelatesfaye/xaif/issues
+Author-email: DEBELA <dabookoo@gmail.com>
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Example Package
+
+This is a simple AIF package.
