@@ -1,0 +1,11 @@
+tox
+requests
+flake8
+yapf
+isort
+mypy
+pytest
+six
+pyyaml
+typing-extensions>=4.3.0
+packaging

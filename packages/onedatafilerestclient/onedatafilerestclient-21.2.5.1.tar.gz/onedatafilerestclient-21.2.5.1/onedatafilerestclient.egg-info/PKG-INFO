@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: onedatafilerestclient
+Version: 21.2.5.1
+Summary: Onedata REST file API client
+Home-page: https://github.com/onedata/onedatafilerestclient
+Author: Bartek Kryza
+Author-email: bkryza@gmail.com
+License: MIT
+Description: # OnedataFileRESTClient
+        
+        OnedataFileRESTClient is a Python client to the Onedata file REST API [Onedata REST API].
+        
+        ## Installing
+        
+        You can install OnedataFileRESTClient from pip as follows:
+        
+        ```
+        pip install onedatafilerestclient
+        ```
+        
+        ## Building and running tests
+        
+        ```bash
+        virtualenv -p /usr/bin/python3 venv
+        . venv/bin/activate
+        
+        # Install tox
+        pip install -r requirements-dev.txt
+        
+        # Run flake8 check
+        tox -c tox.ini -e flake8
+        
+        # Run mypy typing check
+        tox -c tox.ini -e mypy
+        
+        # Run PyFilesystem test suite
+        tox -c tox.ini -e tests
+        ```
+        
+Keywords: Onedata
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: System :: Filesystems
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
