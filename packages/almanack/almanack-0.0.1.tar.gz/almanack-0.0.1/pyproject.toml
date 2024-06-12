@@ -1,0 +1,90 @@
+[tool.poetry]
+name = "almanack"
+version = "0.0.1"
+description = "An open-source handbook of applied guidance and tools for sustainable software development and maintenance."
+authors = ["Software Gardening Community"]
+license = "BSD-3-Clause"
+readme = "README.md"
+packages = [{ include = "almanack", from = "src" }]
+include = [ "src/book/*.yml",
+  "src/book/**/*.md",
+  "src/book/references.bib"
+]
+exclude = ["src/book/_build"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pyyaml = "^6.0.1"
+
+[tool.poetry.group.book.dependencies]
+jupyter-book = "^1.0.0"
+docutils = "0.17.1"
+sphinxcontrib-bibtex = "^2.6.2"
+
+[tool.poetry.group.dev.dependencies]
+poethepoet = "^0.25.0"
+pytest = "^8.1.1"
+cffconvert = "^2.0.0"
+linkchecker = "^10.4.0"
+vale = "^3.3.1.0"
+pyppeteer = "^2.0.0"
+
+[tool.isort]
+profile = "black"
+
+[tool.bandit]
+exclude_dirs = ["tests"]
+
+[tool.codespell]
+ignore-words="styles/config/vocabularies/almanack/accept.txt"
+# add capabilities for inline ignore for codespell linting
+# referenced from: https://github.com/codespell-project/codespell/issues/1212
+ignore-regex=".{1024}|.*codespell-ignore.*"
+
+# defines poe the poet tasks
+[tool.poe.tasks]
+# builds the jupyter book related to this project
+build-book.shell = """
+  jupyter-book build src/book
+"""
+# build a PDF from the HTML content
+build-book-pdf.shell = """
+  jupyter-book build src/book --builder pdfhtml
+"""
+# builds the jupyter book related to this project and opens a new browser window
+build-book-dev.shell = """
+  jupyter-book build src/book && \
+  python -m webbrowser -t "file://$PWD/src/book/_build/html/index.html"
+"""
+# syncs and runs vale relative to this project
+# through pre-commit to trigger warnings as
+# non-zero return when there is more than one
+# line of output from vale.
+vale-checks.shell = """
+vale sync || true;
+output=$(vale ./src/book) ||
+if [ $(echo "$output" | wc -l) -gt 1 ]; then
+echo "$output"; exit 1;
+fi
+"""
+
+[tool.poetry-dynamic-versioning]
+enable = false
+style = "pep440"
+vcs = "git"
+
+# specify where version replacement is performed
+[tool.poetry-dynamic-versioning.substitution]
+files = ["src/almanack/__init__.py"]
+
+# set persistent versions within the __init__.py file in cases
+# where we may not have or want access to full git history
+[tool.poetry-dynamic-versioning.files."src/almanack/__init__.py"]
+persistent-substitution = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
+build-backend = "poetry_dynamic_versioning.backend"
+
+[tool.setuptools_scm]
+root = "."
