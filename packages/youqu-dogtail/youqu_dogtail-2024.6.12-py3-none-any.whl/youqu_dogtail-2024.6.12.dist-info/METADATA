@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: youqu-dogtail
+Version: 2024.6.12
+Author-email: mikigo <huangmingqiang@uniontech.com>
+License: GPL2.0
+License-File: LICENSE
+Requires-Python: >=3.7
+Requires-Dist: easyprocess
+Requires-Dist: funnylog
+Description-Content-Type: text/markdown
+
+# youqu-dogtail
+
+更完美的 Dogtail
