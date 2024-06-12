@@ -1,0 +1,12 @@
+__pycache__
+.idea
+.coverage
+fs.onedatarestfs.egg-info/
+.idea
+.tox
+.coverage
+onedatafilerestclient.egg-info/
+test.py
+onedatarestfs-tests-results.xml
+dist/
+build/
