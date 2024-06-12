@@ -1,0 +1,2 @@
+[console_scripts]
+tileget = tileget.__main__:main
