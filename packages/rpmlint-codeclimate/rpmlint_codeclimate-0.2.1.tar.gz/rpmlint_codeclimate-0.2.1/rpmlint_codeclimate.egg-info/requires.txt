@@ -1,0 +1,11 @@
+
+[:python_version < "3.8"]
+pyenchant
+rpmlint<2.3.0,>=2.0.0
+
+[:python_version >= "3.8"]
+rpmlint>=2.0.0
+
+[test]
+pytest
+pytest-cov
