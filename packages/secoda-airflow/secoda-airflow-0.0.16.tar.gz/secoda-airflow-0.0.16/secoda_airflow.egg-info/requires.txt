@@ -1,0 +1,5 @@
+requests>=2.23.0
+ruff>=0.4.8
+
+[airflow]
+apache-airflow
