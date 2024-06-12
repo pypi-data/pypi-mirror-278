@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["green_mbtools", "green_mbtools.mint", "green_mbtools.pesto", "mbanalysis"]
+
+[project]
+name = "green-mbtools"
+version = "0.2.4-beta"
+authors = [
+  { name="Sergei Iskakov", email="siskakov@umich.edu" },
+  { name="Chia-Nan Yeh", email="cyeh@flatironinstitute.org" },
+  { name="Gaurav Harsha", email="gharsha@umich.edu" },
+  { name="Vibin Abraham", email="avibin@umich.edu" },
+  { name="Pavel Pokhilko", email="pokhilko@umich.edu" },
+]
+
+dependencies = ["numpy", "ase", "spglib", "numba", "pyscf", "scipy", "h5py",
+                "irbasis", "baryrat", "cvxpy", # Solvers for CVXPY
+                "clarabel", "mosek"]
+
+description = "Collection of tools for quantum many-body simulation using Green Software Package"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX",
+    "Operating System :: Unix",
+    "Operating System :: MacOS",
+]
+
+[project.urls]
+Homepage = "https://green-phys.org"
+Issues = "https://github.com/Green-Phys/green-mbtools/issues"
+
+
+[project.optional-dependencies]
+tests = [
+  'coverage>=5.0.3',
+  'pytest',
+  'pytest-benchmark[histogram]>=3.2.1',
+]
+
+[tool.cibuildwheel]
+skip = ["*-musllinux*"]
+test-requires = "pytest"
+test-command = "pytest {project}/tests -k 'not test_projection_on_green'"
+
+manylinux-x86_64-image = "manylinux2014"
+
+
+
+[tool.cibuildwheel.linux]
+before-all = "yum install -y eigen3-devel gmp-devel mpfr-devel fftw3-devel"
+#test-command = "echo 'installed'"
+
+[tool.cibuildwheel.macos]
+before-all = "brew install eigen gmp mpfr fftw"
+#test-command = "echo 'installed'"
+
