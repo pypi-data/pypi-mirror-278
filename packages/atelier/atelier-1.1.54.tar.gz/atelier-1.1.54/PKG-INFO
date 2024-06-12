@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: atelier
+Version: 1.1.54
+Summary: A collection of tools for software artists
+Home-page: https://gitlab.com/lino-framework/atelier
+Author: Rumma & Ko Ltd
+Author-email: info@lino-framework.org
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Framework :: Sphinx :: Extension
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+License-File: COPYING
+Requires-Dist: invoke
+Requires-Dist: argh
+Requires-Dist: six
+Requires-Dist: future
+Requires-Dist: Babel
+Requires-Dist: python-dateutil
+Requires-Dist: Sphinx
+Requires-Dist: rstgen
+Requires-Dist: requests
+Requires-Dist: sphinx-design
+Requires-Dist: pydata-sphinx-theme
+Requires-Dist: insipid-sphinx-theme
+Requires-Dist: gitpython
+
+
+`atelier` is a collection of tools for maintaining your Python software
+repositories using a library of `invoke <https://www.pyinvoke.org/>`_ commands.
+
+- Source code: https://gitlab.com/lino-framework/atelier
+- Documentation: https://lino-framework.gitlab.io/atelier
+
