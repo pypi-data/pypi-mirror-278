@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: aissemble-extensions-data-delivery-spark-py
+Version: 1.7.0rc3
+Summary: Contains the core Python functionality of data delivery for Spark
+Author: aiSSEMBLE Baseline Community
+Author-email: aissemble@bah.com
+Requires-Python: >=3.11.4,<4
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: krausening (>=19)
+Requires-Dist: pyspark (==3.4.0)
+Requires-Dist: pyyaml (>=6.0,<7.0)
+Description-Content-Type: text/markdown
+
+Package containing support functionality for pyspark pipelines, to be invoked largely through generated template code.
