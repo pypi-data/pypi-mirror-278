@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: alibabacloud_ha3engine_vector
+Version: 1.1.5
+Summary: Alibaba Cloud Ha3engine-Vector SDK Library for Python
+Home-page: https://github.com/aliyun/alibabacloud-ha3-sdk
+Author: Alibaba Cloud SDK
+Author-email: sdk-team@alibabacloud.com
+License: Apache License 2.0
+Description: UNKNOWN
+Keywords: alibabacloud,ha3engine,vector
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
