@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: starsigndna
+Version: 0.0.17
+Summary: Mutation signature analysis package
+Home-page: https://github.com/uio-bmi/starsign
+Author: Christian Bope
+Author-email: chrisbop@uio.no
+License: MIT license
+Keywords: starsigndna
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: typer
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Requires-Dist: bionumpy
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+
+StarSignDNA
