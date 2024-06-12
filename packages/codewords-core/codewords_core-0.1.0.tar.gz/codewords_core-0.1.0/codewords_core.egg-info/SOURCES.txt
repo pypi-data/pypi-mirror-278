@@ -1,0 +1,10 @@
+setup.py
+codewords_core/__init__.py
+codewords_core/file_type_utils.py
+codewords_core/io_metadata.py
+codewords_core/io_metadata_test.py
+codewords_core.egg-info/PKG-INFO
+codewords_core.egg-info/SOURCES.txt
+codewords_core.egg-info/dependency_links.txt
+codewords_core.egg-info/requires.txt
+codewords_core.egg-info/top_level.txt
