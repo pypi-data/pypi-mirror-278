@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: eventum-plugins
+Version: 1.0.7
+Summary: Plugins for Eventum
+Home-page: https://github.com/Eventum-Generatives/EventumPlugins
+License: Apache-2.0
+Keywords: plugin,generator,template,scheduling,time
+Author: Nikita Reznikov
+Author-email: nikita.reznikov.public@mail.ru
+Requires-Python: >=3.11,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: aiofiles (>=23.2.1,<24.0.0)
+Requires-Dist: aiohttp[speedups] (>=3.9.3,<4.0.0)
+Requires-Dist: croniter (>=2.0.5,<3.0.0)
+Requires-Dist: eventum-content-manager (>=1.0.3,<2.0.0)
+Requires-Dist: jinja2 (>=3.1.3,<4.0.0)
+Requires-Dist: numpy (>=1.26.4,<2.0.0)
+Requires-Dist: pydantic (>=2.6.2,<3.0.0)
+Requires-Dist: pytz (>=2024.1,<2025.0)
+Requires-Dist: setproctitle (>=1.3.3,<2.0.0)
+Project-URL: Documentation, https://eventum-generatives.github.io/Website/
+Project-URL: Repository, https://github.com/Eventum-Generatives/EventumPlugins
+Description-Content-Type: text/markdown
+
+# EventumPlugins
+Plugins for Eventum
+
