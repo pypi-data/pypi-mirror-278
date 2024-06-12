@@ -1,0 +1,38 @@
+[project]
+name = "agrirouter"
+description = "Python SDK for the agrirouter API. This project contains the API for the communication with the agrirouter. Everything you need for the onboarding process, secure communication and much more."
+authors = [
+    { name = "Alexey Petrovsky", email = "petrovsky.lexey@gmail.com" },
+    { name = "Oliver Rahner", email = "o.rahner@dke-data.com" },
+    { name = "Sascha Dömer", email = "Cf4ThQgxcnxAovOUXTNv@saschadoemer.de" },
+]
+readme = "README.md"
+requires-python = ">=3.7" # no upper boundary according to https://discuss.python.org/t/requires-python-upper-limits/12663
+urls = { "Source" = "https://github.com/DKE-Data/agrirouter-sdk-python" }
+classifiers = [
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+dependencies = [
+    "requests",
+    "protobuf~=3.18.0"
+]
+dynamic = ["version"]
+
+[build-system]
+requires = ["setuptools", "wheel", "setuptools-git-versioning>=2.0,<3"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+[tool.setuptools-git-versioning]
+enabled = true
