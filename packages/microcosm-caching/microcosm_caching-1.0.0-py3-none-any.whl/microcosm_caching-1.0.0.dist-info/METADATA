@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: microcosm-caching
+Version: 1.0.0
+Summary: Caching for microservices using microcosm.
+Home-page: https://github.com/globality-corp/microcosm-caching
+Author: Globality Engineering
+Author-email: engineering@globality.com
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: boto3 >=1.5.8
+Requires-Dist: marshmallow >=3.0.0
+Requires-Dist: microcosm >=4.0.0
+Requires-Dist: microcosm-logging >=2.0.0
+Requires-Dist: pymemcache >=3.0.0
+Requires-Dist: simplejson >=3.16.0
+Provides-Extra: lint
+Requires-Dist: isort >=5 ; extra == 'lint'
+Provides-Extra: metrics
+Requires-Dist: microcosm-metrics >=3.0.0 ; extra == 'metrics'
+Provides-Extra: test
+Requires-Dist: coverage >=3.7.1 ; extra == 'test'
+Requires-Dist: parameterized >=0.7.4 ; extra == 'test'
+Requires-Dist: PyHamcrest >=1.8.5 ; extra == 'test'
+Requires-Dist: pytest-cov >=5.0.0 ; extra == 'test'
+Provides-Extra: typehinting
+Requires-Dist: mypy ; extra == 'typehinting'
+Requires-Dist: types-simplejson ; extra == 'typehinting'
+
