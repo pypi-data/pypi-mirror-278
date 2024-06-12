@@ -1,0 +1,2 @@
+[console_scripts]
+pdf_process = my_pdf_package.pdf_processor:main
