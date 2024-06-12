@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: aissemble-extensions-transform-spark-python
+Version: 1.7.0rc3
+Summary: Contains the core Python implementation of data transform for Spark
+Author: aiSSEMBLE Baseline Community
+Author-email: aissemble@bah.com
+Requires-Python: >=3.11.4,<4
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: aissemble-foundation-core-python (>=1.7.0-rc3,<1.7.1)
+Requires-Dist: aissemble-foundation-transform-core-python (>=1.7.0-rc3,<1.7.1)
+Requires-Dist: cryptography (>=42.0.4)
+Requires-Dist: krausening (>=19)
+Requires-Dist: pydantic (>=1.8.0,<2.0.0)
+Requires-Dist: pyspark (==3.4.0)
+Requires-Dist: urllib3 (>=1.26.18,<2.0.0)
+Description-Content-Type: text/markdown
+
+
