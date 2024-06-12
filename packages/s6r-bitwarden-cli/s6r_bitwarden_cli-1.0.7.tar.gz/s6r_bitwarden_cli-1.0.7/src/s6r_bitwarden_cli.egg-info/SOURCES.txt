@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/s6r_bitwarden_cli/__init__.py
+src/s6r_bitwarden_cli/__main__.py
+src/s6r_bitwarden_cli/bitwarden.py
+src/s6r_bitwarden_cli.egg-info/PKG-INFO
+src/s6r_bitwarden_cli.egg-info/SOURCES.txt
+src/s6r_bitwarden_cli.egg-info/dependency_links.txt
+src/s6r_bitwarden_cli.egg-info/entry_points.txt
+src/s6r_bitwarden_cli.egg-info/requires.txt
+src/s6r_bitwarden_cli.egg-info/top_level.txt

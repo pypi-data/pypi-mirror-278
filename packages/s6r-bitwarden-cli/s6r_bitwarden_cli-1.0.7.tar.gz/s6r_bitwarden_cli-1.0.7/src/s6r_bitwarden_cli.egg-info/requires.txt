@@ -1,0 +1,8 @@
+pexpect
+
+[dev]
+twine
+bumpver
+pip-tools
+pytest
+check-manifest

@@ -1,0 +1,2 @@
+[console_scripts]
+s6r-bitwarden-cli = s6r_bitwarden_cli.__main__:main
