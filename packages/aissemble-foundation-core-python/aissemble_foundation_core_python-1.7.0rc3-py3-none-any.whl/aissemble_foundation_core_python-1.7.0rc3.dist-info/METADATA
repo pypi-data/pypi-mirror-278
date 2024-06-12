@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: aissemble-foundation-core-python
+Version: 1.7.0rc3
+Summary: Core classes for supporting concepts (alerting, metadata, etc) that are needed across most Python-based components
+Author: aiSSEMBLE Baseline Community
+Author-email: aissemble@bah.com
+Requires-Python: >=3.11.4,<4
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: aiohttp (>=3.8.0)
+Requires-Dist: apache-libcloud (>=3.6.0)
+Requires-Dist: cryptography (>=42.0.4)
+Requires-Dist: jsonpickle (>=2.1.0)
+Requires-Dist: krausening (>=19)
+Requires-Dist: psycopg2-binary (>=2.9.6,<3.0.0)
+Requires-Dist: pydantic (>=1.8.0,<2.0.0)
+Requires-Dist: pyjks (>=20.0.0)
+Requires-Dist: pyjwt (>=2.3.0)
+Requires-Dist: sqlalchemy (>=2.0.16,<3.0.0)
+Requires-Dist: urllib3 (>=1.26.18,<2.0.0)
+Description-Content-Type: text/markdown
+
+## Core Python
+
+This package includes authorization and authentication for Python based applications as well as code for metadata
