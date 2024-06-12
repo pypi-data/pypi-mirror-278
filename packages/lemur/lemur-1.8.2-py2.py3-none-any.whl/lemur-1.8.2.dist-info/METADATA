@@ -1,0 +1,816 @@
+Metadata-Version: 2.1
+Name: lemur
+Version: 1.8.2
+Summary: Certificate management and orchestration service
+Home-page: https://github.com/Netflix/lemur
+Author: The Lemur developers
+Author-email: security@netflix.com
+Classifier: Framework :: Flask
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: Apache Software License
+License-File: LICENSE
+License-File: AUTHORS
+Requires-Dist: acme ==2.11.0
+Requires-Dist: alembic ==1.13.1
+Requires-Dist: alembic-autogenerate-enums ==0.1.2
+Requires-Dist: amqp ==5.2.0
+Requires-Dist: aniso8601 ==9.0.1
+Requires-Dist: arrow ==1.3.0
+Requires-Dist: async-timeout ==4.0.3
+Requires-Dist: asyncpool ==1.0
+Requires-Dist: attrs ==23.2.0
+Requires-Dist: bcrypt ==4.1.2
+Requires-Dist: billiard ==4.2.0
+Requires-Dist: blinker ==1.7.0
+Requires-Dist: boto3 ==1.34.122
+Requires-Dist: botocore ==1.34.122
+Requires-Dist: cachetools ==5.3.3
+Requires-Dist: celery[redis] ==5.3.6
+Requires-Dist: certbot ==2.10.0
+Requires-Dist: certifi ==2024.6.2
+Requires-Dist: certsrv[ntlm] ==2.1.1
+Requires-Dist: cffi ==1.16.0
+Requires-Dist: charset-normalizer ==3.3.2
+Requires-Dist: click ==8.1.7
+Requires-Dist: click-didyoumean ==0.3.1
+Requires-Dist: click-plugins ==1.1.1
+Requires-Dist: click-repl ==0.3.0
+Requires-Dist: cloudflare ==2.20.0
+Requires-Dist: configargparse ==1.7
+Requires-Dist: configobj ==5.0.8
+Requires-Dist: cryptography ==42.0.7
+Requires-Dist: deprecated ==1.2.14
+Requires-Dist: distro ==1.9.0
+Requires-Dist: dnspython ==1.15.0
+Requires-Dist: dnspython3 ==1.15.0
+Requires-Dist: dyn ==1.8.6
+Requires-Dist: flask ==2.3.3
+Requires-Dist: flask-bcrypt ==1.0.1
+Requires-Dist: flask-cors ==4.0.1
+Requires-Dist: flask-limiter ==3.7.0
+Requires-Dist: flask-mail ==0.10.0
+Requires-Dist: flask-migrate ==4.0.7
+Requires-Dist: flask-principal ==0.4.0
+Requires-Dist: flask-replicated ==2.1
+Requires-Dist: flask-restful ==0.3.10
+Requires-Dist: flask-sqlalchemy ==2.5.1
+Requires-Dist: future ==1.0.0
+Requires-Dist: google-api-core[grpc] ==2.18.0
+Requires-Dist: google-auth ==2.29.0
+Requires-Dist: google-cloud-private-ca ==1.12.0
+Requires-Dist: googleapis-common-protos[grpc] ==1.63.0
+Requires-Dist: grpc-google-iam-v1 ==0.13.0
+Requires-Dist: grpcio ==1.62.1
+Requires-Dist: grpcio-status ==1.62.1
+Requires-Dist: gunicorn ==22.0.0
+Requires-Dist: hvac ==2.2.0
+Requires-Dist: idna ==3.7
+Requires-Dist: importlib-metadata ==7.1.0
+Requires-Dist: importlib-resources ==6.4.0
+Requires-Dist: inflection ==0.5.1
+Requires-Dist: itsdangerous ==2.2.0
+Requires-Dist: javaobj-py3 ==0.4.4
+Requires-Dist: jinja2 ==3.1.3
+Requires-Dist: jmespath ==1.0.1
+Requires-Dist: josepy ==1.14.0
+Requires-Dist: jsonlines ==4.0.0
+Requires-Dist: kombu ==5.3.6
+Requires-Dist: limits ==3.10.1
+Requires-Dist: lockfile ==0.12.2
+Requires-Dist: logmatic-python ==0.1.7
+Requires-Dist: mako ==1.3.2
+Requires-Dist: markdown-it-py ==3.0.0
+Requires-Dist: markupsafe ==2.1.5
+Requires-Dist: marshmallow ==2.21.0
+Requires-Dist: marshmallow-sqlalchemy ==0.23.1
+Requires-Dist: mdurl ==0.1.2
+Requires-Dist: ndg-httpsclient ==0.5.1
+Requires-Dist: ordered-set ==4.1.0
+Requires-Dist: packaging ==24.0
+Requires-Dist: paramiko ==3.4.0
+Requires-Dist: parsedatetime ==2.6
+Requires-Dist: pem ==23.1.0
+Requires-Dist: prompt-toolkit ==3.0.43
+Requires-Dist: proto-plus ==1.23.0
+Requires-Dist: protobuf ==4.25.3
+Requires-Dist: psycopg2 ==2.9.9
+Requires-Dist: pyasn1 ==0.6.0
+Requires-Dist: pyasn1-modules ==0.4.0
+Requires-Dist: pycparser ==2.22
+Requires-Dist: pycryptodomex ==3.20.0
+Requires-Dist: pygments ==2.17.2
+Requires-Dist: pyjks ==20.0.0
+Requires-Dist: pyjwt ==2.8.0
+Requires-Dist: pynacl ==1.5.0
+Requires-Dist: pyopenssl ==24.1.0
+Requires-Dist: pyrfc3339 ==1.1
+Requires-Dist: pyspnego ==0.10.2
+Requires-Dist: python-dateutil ==2.9.0.post0
+Requires-Dist: python-json-logger ==2.0.7
+Requires-Dist: python-ldap ==3.4.4
+Requires-Dist: pytz ==2024.1
+Requires-Dist: pyyaml ==6.0.1
+Requires-Dist: redis ==5.0.3
+Requires-Dist: requests ==2.32.0
+Requires-Dist: requests-ntlm ==1.2.0
+Requires-Dist: retrying ==1.3.4
+Requires-Dist: rich ==13.7.1
+Requires-Dist: rsa ==4.9
+Requires-Dist: s3transfer ==0.10.1
+Requires-Dist: sentry-sdk ==2.2.0
+Requires-Dist: six ==1.16.0
+Requires-Dist: sqlalchemy ==1.3.24
+Requires-Dist: sqlalchemy-utils ==0.41.2
+Requires-Dist: tabulate ==0.9.0
+Requires-Dist: twofish ==0.3.0
+Requires-Dist: types-protobuf ==5.26.0.20240422
+Requires-Dist: types-python-dateutil ==2.9.0.20240316
+Requires-Dist: typing-extensions ==4.11.0
+Requires-Dist: tzdata ==2024.1
+Requires-Dist: urllib3 ==1.26.18
+Requires-Dist: validators ==0.28.3
+Requires-Dist: vine ==5.1.0
+Requires-Dist: wcwidth ==0.2.13
+Requires-Dist: werkzeug ==3.0.3
+Requires-Dist: wrapt ==1.16.0
+Requires-Dist: xmltodict ==0.13.0
+Requires-Dist: zipp ==3.18.1
+Provides-Extra: dev
+Requires-Dist: acme ==2.11.0 ; extra == 'dev'
+Requires-Dist: alembic ==1.13.1 ; extra == 'dev'
+Requires-Dist: alembic-autogenerate-enums ==0.1.2 ; extra == 'dev'
+Requires-Dist: amqp ==5.2.0 ; extra == 'dev'
+Requires-Dist: aniso8601 ==9.0.1 ; extra == 'dev'
+Requires-Dist: annotated-types ==0.6.0 ; extra == 'dev'
+Requires-Dist: arrow ==1.3.0 ; extra == 'dev'
+Requires-Dist: async-timeout ==4.0.3 ; extra == 'dev'
+Requires-Dist: asyncpool ==1.0 ; extra == 'dev'
+Requires-Dist: attrs ==23.2.0 ; extra == 'dev'
+Requires-Dist: aws-sam-translator ==1.87.0 ; extra == 'dev'
+Requires-Dist: aws-xray-sdk ==2.13.0 ; extra == 'dev'
+Requires-Dist: backports-tarfile ==1.0.0 ; extra == 'dev'
+Requires-Dist: bandit ==1.7.8 ; extra == 'dev'
+Requires-Dist: bcrypt ==4.1.2 ; extra == 'dev'
+Requires-Dist: billiard ==4.2.0 ; extra == 'dev'
+Requires-Dist: black ==24.4.2 ; extra == 'dev'
+Requires-Dist: blinker ==1.7.0 ; extra == 'dev'
+Requires-Dist: boto3 ==1.34.122 ; extra == 'dev'
+Requires-Dist: botocore ==1.34.122 ; extra == 'dev'
+Requires-Dist: cachetools ==5.3.3 ; extra == 'dev'
+Requires-Dist: celery[redis] ==5.3.6 ; extra == 'dev'
+Requires-Dist: certbot ==2.10.0 ; extra == 'dev'
+Requires-Dist: certifi ==2024.6.2 ; extra == 'dev'
+Requires-Dist: certsrv[ntlm] ==2.1.1 ; extra == 'dev'
+Requires-Dist: cffi ==1.16.0 ; extra == 'dev'
+Requires-Dist: cfgv ==3.4.0 ; extra == 'dev'
+Requires-Dist: cfn-lint ==0.86.2 ; extra == 'dev'
+Requires-Dist: charset-normalizer ==3.3.2 ; extra == 'dev'
+Requires-Dist: click ==8.1.7 ; extra == 'dev'
+Requires-Dist: click-didyoumean ==0.3.1 ; extra == 'dev'
+Requires-Dist: click-plugins ==1.1.1 ; extra == 'dev'
+Requires-Dist: click-repl ==0.3.0 ; extra == 'dev'
+Requires-Dist: cloudflare ==2.20.0 ; extra == 'dev'
+Requires-Dist: configargparse ==1.7 ; extra == 'dev'
+Requires-Dist: configobj ==5.0.8 ; extra == 'dev'
+Requires-Dist: coverage ==7.4.4 ; extra == 'dev'
+Requires-Dist: cryptography ==42.0.7 ; extra == 'dev'
+Requires-Dist: deprecated ==1.2.14 ; extra == 'dev'
+Requires-Dist: distlib ==0.3.8 ; extra == 'dev'
+Requires-Dist: distro ==1.9.0 ; extra == 'dev'
+Requires-Dist: dnspython ==1.15.0 ; extra == 'dev'
+Requires-Dist: dnspython3 ==1.15.0 ; extra == 'dev'
+Requires-Dist: docker ==7.0.0 ; extra == 'dev'
+Requires-Dist: docutils ==0.20.1 ; extra == 'dev'
+Requires-Dist: dyn ==1.8.6 ; extra == 'dev'
+Requires-Dist: ecdsa ==0.19.0 ; extra == 'dev'
+Requires-Dist: exceptiongroup ==1.2.0 ; extra == 'dev'
+Requires-Dist: factory-boy ==3.3.0 ; extra == 'dev'
+Requires-Dist: faker ==25.4.0 ; extra == 'dev'
+Requires-Dist: fakeredis ==2.23.1 ; extra == 'dev'
+Requires-Dist: filelock ==3.13.3 ; extra == 'dev'
+Requires-Dist: flake8 ==7.0.0 ; extra == 'dev'
+Requires-Dist: flask ==2.3.3 ; extra == 'dev'
+Requires-Dist: flask-bcrypt ==1.0.1 ; extra == 'dev'
+Requires-Dist: flask-cors ==4.0.1 ; extra == 'dev'
+Requires-Dist: flask-limiter ==3.7.0 ; extra == 'dev'
+Requires-Dist: flask-mail ==0.10.0 ; extra == 'dev'
+Requires-Dist: flask-migrate ==4.0.7 ; extra == 'dev'
+Requires-Dist: flask-principal ==0.4.0 ; extra == 'dev'
+Requires-Dist: flask-replicated ==2.1 ; extra == 'dev'
+Requires-Dist: flask-restful ==0.3.10 ; extra == 'dev'
+Requires-Dist: flask-sqlalchemy ==2.5.1 ; extra == 'dev'
+Requires-Dist: freezegun ==1.5.1 ; extra == 'dev'
+Requires-Dist: future ==1.0.0 ; extra == 'dev'
+Requires-Dist: google-api-core[grpc] ==2.18.0 ; extra == 'dev'
+Requires-Dist: google-auth ==2.29.0 ; extra == 'dev'
+Requires-Dist: google-cloud-private-ca ==1.12.0 ; extra == 'dev'
+Requires-Dist: googleapis-common-protos[grpc] ==1.63.0 ; extra == 'dev'
+Requires-Dist: graphql-core ==3.2.3 ; extra == 'dev'
+Requires-Dist: grpc-google-iam-v1 ==0.13.0 ; extra == 'dev'
+Requires-Dist: grpcio ==1.62.1 ; extra == 'dev'
+Requires-Dist: grpcio-status ==1.62.1 ; extra == 'dev'
+Requires-Dist: gunicorn ==22.0.0 ; extra == 'dev'
+Requires-Dist: hvac ==2.2.0 ; extra == 'dev'
+Requires-Dist: identify ==2.5.35 ; extra == 'dev'
+Requires-Dist: idna ==3.7 ; extra == 'dev'
+Requires-Dist: importlib-metadata ==7.1.0 ; extra == 'dev'
+Requires-Dist: importlib-resources ==6.4.0 ; extra == 'dev'
+Requires-Dist: inflection ==0.5.1 ; extra == 'dev'
+Requires-Dist: iniconfig ==2.0.0 ; extra == 'dev'
+Requires-Dist: invoke ==2.2.0 ; extra == 'dev'
+Requires-Dist: itsdangerous ==2.2.0 ; extra == 'dev'
+Requires-Dist: jaraco-classes ==3.4.0 ; extra == 'dev'
+Requires-Dist: jaraco-context ==5.3.0 ; extra == 'dev'
+Requires-Dist: jaraco-functools ==4.0.0 ; extra == 'dev'
+Requires-Dist: javaobj-py3 ==0.4.4 ; extra == 'dev'
+Requires-Dist: jeepney ==0.8.0 ; extra == 'dev'
+Requires-Dist: jinja2 ==3.1.3 ; extra == 'dev'
+Requires-Dist: jmespath ==1.0.1 ; extra == 'dev'
+Requires-Dist: josepy ==1.14.0 ; extra == 'dev'
+Requires-Dist: jschema-to-python ==1.2.3 ; extra == 'dev'
+Requires-Dist: jsondiff ==2.0.0 ; extra == 'dev'
+Requires-Dist: jsonlines ==4.0.0 ; extra == 'dev'
+Requires-Dist: jsonpatch ==1.33 ; extra == 'dev'
+Requires-Dist: jsonpickle ==3.0.3 ; extra == 'dev'
+Requires-Dist: jsonpointer ==2.4 ; extra == 'dev'
+Requires-Dist: jsonschema ==4.21.1 ; extra == 'dev'
+Requires-Dist: jsonschema-path ==0.3.2 ; extra == 'dev'
+Requires-Dist: jsonschema-specifications ==2023.12.1 ; extra == 'dev'
+Requires-Dist: junit-xml ==1.9 ; extra == 'dev'
+Requires-Dist: keyring ==25.1.0 ; extra == 'dev'
+Requires-Dist: kombu ==5.3.6 ; extra == 'dev'
+Requires-Dist: lazy-object-proxy ==1.10.0 ; extra == 'dev'
+Requires-Dist: limits ==3.10.1 ; extra == 'dev'
+Requires-Dist: lockfile ==0.12.2 ; extra == 'dev'
+Requires-Dist: logmatic-python ==0.1.7 ; extra == 'dev'
+Requires-Dist: mako ==1.3.2 ; extra == 'dev'
+Requires-Dist: markdown-it-py ==3.0.0 ; extra == 'dev'
+Requires-Dist: markupsafe ==2.1.5 ; extra == 'dev'
+Requires-Dist: marshmallow ==2.21.0 ; extra == 'dev'
+Requires-Dist: marshmallow-sqlalchemy ==0.23.1 ; extra == 'dev'
+Requires-Dist: mccabe ==0.7.0 ; extra == 'dev'
+Requires-Dist: mdurl ==0.1.2 ; extra == 'dev'
+Requires-Dist: more-itertools ==10.2.0 ; extra == 'dev'
+Requires-Dist: moto[all] ==4.2.14 ; extra == 'dev'
+Requires-Dist: mpmath ==1.3.0 ; extra == 'dev'
+Requires-Dist: multipart ==0.2.4 ; extra == 'dev'
+Requires-Dist: mypy ==1.10.0 ; extra == 'dev'
+Requires-Dist: mypy-extensions ==1.0.0 ; extra == 'dev'
+Requires-Dist: ndg-httpsclient ==0.5.1 ; extra == 'dev'
+Requires-Dist: networkx ==3.2.1 ; extra == 'dev'
+Requires-Dist: nh3 ==0.2.17 ; extra == 'dev'
+Requires-Dist: nodeenv ==1.8.0 ; extra == 'dev'
+Requires-Dist: nose ==1.3.7 ; extra == 'dev'
+Requires-Dist: openapi-schema-validator ==0.6.2 ; extra == 'dev'
+Requires-Dist: openapi-spec-validator ==0.7.1 ; extra == 'dev'
+Requires-Dist: ordered-set ==4.1.0 ; extra == 'dev'
+Requires-Dist: packaging ==24.0 ; extra == 'dev'
+Requires-Dist: paramiko ==3.4.0 ; extra == 'dev'
+Requires-Dist: parsedatetime ==2.6 ; extra == 'dev'
+Requires-Dist: pathable ==0.4.3 ; extra == 'dev'
+Requires-Dist: pathspec ==0.12.1 ; extra == 'dev'
+Requires-Dist: pbr ==6.0.0 ; extra == 'dev'
+Requires-Dist: pem ==23.1.0 ; extra == 'dev'
+Requires-Dist: pkginfo ==1.10.0 ; extra == 'dev'
+Requires-Dist: platformdirs ==4.2.0 ; extra == 'dev'
+Requires-Dist: pluggy ==1.4.0 ; extra == 'dev'
+Requires-Dist: pre-commit ==3.7.1 ; extra == 'dev'
+Requires-Dist: prompt-toolkit ==3.0.43 ; extra == 'dev'
+Requires-Dist: proto-plus ==1.23.0 ; extra == 'dev'
+Requires-Dist: protobuf ==4.25.3 ; extra == 'dev'
+Requires-Dist: psycopg2 ==2.9.9 ; extra == 'dev'
+Requires-Dist: py-partiql-parser ==0.5.0 ; extra == 'dev'
+Requires-Dist: pyasn1 ==0.6.0 ; extra == 'dev'
+Requires-Dist: pyasn1-modules ==0.4.0 ; extra == 'dev'
+Requires-Dist: pycodestyle ==2.11.1 ; extra == 'dev'
+Requires-Dist: pycparser ==2.22 ; extra == 'dev'
+Requires-Dist: pycryptodomex ==3.20.0 ; extra == 'dev'
+Requires-Dist: pydantic ==2.6.4 ; extra == 'dev'
+Requires-Dist: pydantic-core ==2.16.3 ; extra == 'dev'
+Requires-Dist: pyflakes ==3.2.0 ; extra == 'dev'
+Requires-Dist: pygments ==2.17.2 ; extra == 'dev'
+Requires-Dist: pyjks ==20.0.0 ; extra == 'dev'
+Requires-Dist: pyjwt ==2.8.0 ; extra == 'dev'
+Requires-Dist: pynacl ==1.5.0 ; extra == 'dev'
+Requires-Dist: pyopenssl ==24.1.0 ; extra == 'dev'
+Requires-Dist: pyparsing ==3.1.2 ; extra == 'dev'
+Requires-Dist: pyrfc3339 ==1.1 ; extra == 'dev'
+Requires-Dist: pyspnego ==0.10.2 ; extra == 'dev'
+Requires-Dist: pytest ==8.1.1 ; extra == 'dev'
+Requires-Dist: pytest-flask ==1.3.0 ; extra == 'dev'
+Requires-Dist: pytest-mock ==3.14.0 ; extra == 'dev'
+Requires-Dist: python-dateutil ==2.9.0.post0 ; extra == 'dev'
+Requires-Dist: python-jose[cryptography] ==3.3.0 ; extra == 'dev'
+Requires-Dist: python-json-logger ==2.0.7 ; extra == 'dev'
+Requires-Dist: python-ldap ==3.4.4 ; extra == 'dev'
+Requires-Dist: pytz ==2024.1 ; extra == 'dev'
+Requires-Dist: pyyaml ==6.0.1 ; extra == 'dev'
+Requires-Dist: readme-renderer ==43.0 ; extra == 'dev'
+Requires-Dist: redis ==5.0.3 ; extra == 'dev'
+Requires-Dist: referencing ==0.31.1 ; extra == 'dev'
+Requires-Dist: regex ==2023.12.25 ; extra == 'dev'
+Requires-Dist: requests ==2.32.0 ; extra == 'dev'
+Requires-Dist: requests-mock ==1.12.1 ; extra == 'dev'
+Requires-Dist: requests-ntlm ==1.2.0 ; extra == 'dev'
+Requires-Dist: requests-toolbelt ==1.0.0 ; extra == 'dev'
+Requires-Dist: responses ==0.25.0 ; extra == 'dev'
+Requires-Dist: retrying ==1.3.4 ; extra == 'dev'
+Requires-Dist: rfc3339-validator ==0.1.4 ; extra == 'dev'
+Requires-Dist: rfc3986 ==2.0.0 ; extra == 'dev'
+Requires-Dist: rich ==13.7.1 ; extra == 'dev'
+Requires-Dist: rpds-py ==0.18.0 ; extra == 'dev'
+Requires-Dist: rsa ==4.9 ; extra == 'dev'
+Requires-Dist: s3transfer ==0.10.1 ; extra == 'dev'
+Requires-Dist: sarif-om ==1.0.4 ; extra == 'dev'
+Requires-Dist: secretstorage ==3.3.3 ; extra == 'dev'
+Requires-Dist: sentry-sdk ==2.2.0 ; extra == 'dev'
+Requires-Dist: six ==1.16.0 ; extra == 'dev'
+Requires-Dist: sortedcontainers ==2.4.0 ; extra == 'dev'
+Requires-Dist: sqlalchemy ==1.3.24 ; extra == 'dev'
+Requires-Dist: sqlalchemy-utils ==0.41.2 ; extra == 'dev'
+Requires-Dist: sshpubkeys ==3.3.1 ; extra == 'dev'
+Requires-Dist: stevedore ==5.2.0 ; extra == 'dev'
+Requires-Dist: sympy ==1.12 ; extra == 'dev'
+Requires-Dist: tabulate ==0.9.0 ; extra == 'dev'
+Requires-Dist: tomli ==2.0.1 ; extra == 'dev'
+Requires-Dist: twine ==5.0.0 ; extra == 'dev'
+Requires-Dist: twofish ==0.3.0 ; extra == 'dev'
+Requires-Dist: types-cffi ==1.16.0.20240331 ; extra == 'dev'
+Requires-Dist: types-deprecated ==1.2.9.20240311 ; extra == 'dev'
+Requires-Dist: types-paramiko ==3.4.0.20240423 ; extra == 'dev'
+Requires-Dist: types-protobuf ==5.26.0.20240422 ; extra == 'dev'
+Requires-Dist: types-pyopenssl ==24.1.0.20240425 ; extra == 'dev'
+Requires-Dist: types-pyrfc3339 ==1.1.1.5 ; extra == 'dev'
+Requires-Dist: types-python-dateutil ==2.9.0.20240316 ; extra == 'dev'
+Requires-Dist: types-pytz ==2024.1.0.20240203 ; extra == 'dev'
+Requires-Dist: types-redis ==4.6.0.20240417 ; extra == 'dev'
+Requires-Dist: types-requests ==2.31.0.6 ; extra == 'dev'
+Requires-Dist: types-setuptools ==69.5.0.20240519 ; extra == 'dev'
+Requires-Dist: types-six ==1.16.21.20240425 ; extra == 'dev'
+Requires-Dist: types-tabulate ==0.9.0.20240106 ; extra == 'dev'
+Requires-Dist: types-urllib3 ==1.26.25.14 ; extra == 'dev'
+Requires-Dist: typing-extensions ==4.11.0 ; extra == 'dev'
+Requires-Dist: tzdata ==2024.1 ; extra == 'dev'
+Requires-Dist: urllib3 ==1.26.18 ; extra == 'dev'
+Requires-Dist: validators ==0.28.3 ; extra == 'dev'
+Requires-Dist: vine ==5.1.0 ; extra == 'dev'
+Requires-Dist: virtualenv ==20.25.1 ; extra == 'dev'
+Requires-Dist: wcwidth ==0.2.13 ; extra == 'dev'
+Requires-Dist: werkzeug ==3.0.3 ; extra == 'dev'
+Requires-Dist: wrapt ==1.16.0 ; extra == 'dev'
+Requires-Dist: xmltodict ==0.13.0 ; extra == 'dev'
+Requires-Dist: zipp ==3.18.1 ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: acme ==2.11.0 ; extra == 'docs'
+Requires-Dist: alabaster ==0.7.16 ; extra == 'docs'
+Requires-Dist: alembic ==1.13.1 ; extra == 'docs'
+Requires-Dist: alembic-autogenerate-enums ==0.1.2 ; extra == 'docs'
+Requires-Dist: amqp ==5.2.0 ; extra == 'docs'
+Requires-Dist: aniso8601 ==9.0.1 ; extra == 'docs'
+Requires-Dist: annotated-types ==0.6.0 ; extra == 'docs'
+Requires-Dist: arrow ==1.3.0 ; extra == 'docs'
+Requires-Dist: async-timeout ==4.0.3 ; extra == 'docs'
+Requires-Dist: asyncpool ==1.0 ; extra == 'docs'
+Requires-Dist: attrs ==23.2.0 ; extra == 'docs'
+Requires-Dist: aws-sam-translator ==1.87.0 ; extra == 'docs'
+Requires-Dist: aws-xray-sdk ==2.13.0 ; extra == 'docs'
+Requires-Dist: babel ==2.14.0 ; extra == 'docs'
+Requires-Dist: bandit ==1.7.8 ; extra == 'docs'
+Requires-Dist: bcrypt ==4.1.2 ; extra == 'docs'
+Requires-Dist: billiard ==4.2.0 ; extra == 'docs'
+Requires-Dist: black ==24.4.2 ; extra == 'docs'
+Requires-Dist: blinker ==1.7.0 ; extra == 'docs'
+Requires-Dist: boto3 ==1.34.122 ; extra == 'docs'
+Requires-Dist: botocore ==1.34.122 ; extra == 'docs'
+Requires-Dist: cachetools ==5.3.3 ; extra == 'docs'
+Requires-Dist: celery[redis] ==5.3.6 ; extra == 'docs'
+Requires-Dist: certbot ==2.10.0 ; extra == 'docs'
+Requires-Dist: certifi ==2024.6.2 ; extra == 'docs'
+Requires-Dist: certsrv[ntlm] ==2.1.1 ; extra == 'docs'
+Requires-Dist: cffi ==1.16.0 ; extra == 'docs'
+Requires-Dist: cfn-lint ==0.86.2 ; extra == 'docs'
+Requires-Dist: charset-normalizer ==3.3.2 ; extra == 'docs'
+Requires-Dist: click ==8.1.7 ; extra == 'docs'
+Requires-Dist: click-didyoumean ==0.3.1 ; extra == 'docs'
+Requires-Dist: click-plugins ==1.1.1 ; extra == 'docs'
+Requires-Dist: click-repl ==0.3.0 ; extra == 'docs'
+Requires-Dist: cloudflare ==2.20.0 ; extra == 'docs'
+Requires-Dist: configargparse ==1.7 ; extra == 'docs'
+Requires-Dist: configobj ==5.0.8 ; extra == 'docs'
+Requires-Dist: coverage ==7.4.4 ; extra == 'docs'
+Requires-Dist: cryptography ==42.0.7 ; extra == 'docs'
+Requires-Dist: deprecated ==1.2.14 ; extra == 'docs'
+Requires-Dist: distro ==1.9.0 ; extra == 'docs'
+Requires-Dist: dnspython ==1.15.0 ; extra == 'docs'
+Requires-Dist: dnspython3 ==1.15.0 ; extra == 'docs'
+Requires-Dist: docker ==7.0.0 ; extra == 'docs'
+Requires-Dist: docutils ==0.20.1 ; extra == 'docs'
+Requires-Dist: dyn ==1.8.6 ; extra == 'docs'
+Requires-Dist: ecdsa ==0.19.0 ; extra == 'docs'
+Requires-Dist: exceptiongroup ==1.2.0 ; extra == 'docs'
+Requires-Dist: factory-boy ==3.3.0 ; extra == 'docs'
+Requires-Dist: faker ==25.4.0 ; extra == 'docs'
+Requires-Dist: fakeredis ==2.23.1 ; extra == 'docs'
+Requires-Dist: flask ==2.3.3 ; extra == 'docs'
+Requires-Dist: flask-bcrypt ==1.0.1 ; extra == 'docs'
+Requires-Dist: flask-cors ==4.0.1 ; extra == 'docs'
+Requires-Dist: flask-limiter ==3.7.0 ; extra == 'docs'
+Requires-Dist: flask-mail ==0.10.0 ; extra == 'docs'
+Requires-Dist: flask-migrate ==4.0.7 ; extra == 'docs'
+Requires-Dist: flask-principal ==0.4.0 ; extra == 'docs'
+Requires-Dist: flask-replicated ==2.1 ; extra == 'docs'
+Requires-Dist: flask-restful ==0.3.10 ; extra == 'docs'
+Requires-Dist: flask-sqlalchemy ==2.5.1 ; extra == 'docs'
+Requires-Dist: freezegun ==1.5.1 ; extra == 'docs'
+Requires-Dist: future ==1.0.0 ; extra == 'docs'
+Requires-Dist: google-api-core[grpc] ==2.18.0 ; extra == 'docs'
+Requires-Dist: google-auth ==2.29.0 ; extra == 'docs'
+Requires-Dist: google-cloud-private-ca ==1.12.0 ; extra == 'docs'
+Requires-Dist: googleapis-common-protos[grpc] ==1.63.0 ; extra == 'docs'
+Requires-Dist: graphql-core ==3.2.3 ; extra == 'docs'
+Requires-Dist: grpc-google-iam-v1 ==0.13.0 ; extra == 'docs'
+Requires-Dist: grpcio ==1.62.1 ; extra == 'docs'
+Requires-Dist: grpcio-status ==1.62.1 ; extra == 'docs'
+Requires-Dist: gunicorn ==22.0.0 ; extra == 'docs'
+Requires-Dist: hvac ==2.2.0 ; extra == 'docs'
+Requires-Dist: idna ==3.7 ; extra == 'docs'
+Requires-Dist: imagesize ==1.4.1 ; extra == 'docs'
+Requires-Dist: importlib-metadata ==7.1.0 ; extra == 'docs'
+Requires-Dist: importlib-resources ==6.4.0 ; extra == 'docs'
+Requires-Dist: inflection ==0.5.1 ; extra == 'docs'
+Requires-Dist: iniconfig ==2.0.0 ; extra == 'docs'
+Requires-Dist: itsdangerous ==2.2.0 ; extra == 'docs'
+Requires-Dist: javaobj-py3 ==0.4.4 ; extra == 'docs'
+Requires-Dist: jinja2 ==3.1.3 ; extra == 'docs'
+Requires-Dist: jmespath ==1.0.1 ; extra == 'docs'
+Requires-Dist: josepy ==1.14.0 ; extra == 'docs'
+Requires-Dist: jschema-to-python ==1.2.3 ; extra == 'docs'
+Requires-Dist: jsondiff ==2.0.0 ; extra == 'docs'
+Requires-Dist: jsonlines ==4.0.0 ; extra == 'docs'
+Requires-Dist: jsonpatch ==1.33 ; extra == 'docs'
+Requires-Dist: jsonpickle ==3.0.3 ; extra == 'docs'
+Requires-Dist: jsonpointer ==2.4 ; extra == 'docs'
+Requires-Dist: jsonschema ==4.21.1 ; extra == 'docs'
+Requires-Dist: jsonschema-path ==0.3.2 ; extra == 'docs'
+Requires-Dist: jsonschema-specifications ==2023.12.1 ; extra == 'docs'
+Requires-Dist: junit-xml ==1.9 ; extra == 'docs'
+Requires-Dist: kombu ==5.3.6 ; extra == 'docs'
+Requires-Dist: lazy-object-proxy ==1.10.0 ; extra == 'docs'
+Requires-Dist: limits ==3.10.1 ; extra == 'docs'
+Requires-Dist: lockfile ==0.12.2 ; extra == 'docs'
+Requires-Dist: logmatic-python ==0.1.7 ; extra == 'docs'
+Requires-Dist: mako ==1.3.2 ; extra == 'docs'
+Requires-Dist: markdown-it-py ==3.0.0 ; extra == 'docs'
+Requires-Dist: markupsafe ==2.1.5 ; extra == 'docs'
+Requires-Dist: marshmallow ==2.21.0 ; extra == 'docs'
+Requires-Dist: marshmallow-sqlalchemy ==0.23.1 ; extra == 'docs'
+Requires-Dist: mdurl ==0.1.2 ; extra == 'docs'
+Requires-Dist: moto[all] ==4.2.14 ; extra == 'docs'
+Requires-Dist: mpmath ==1.3.0 ; extra == 'docs'
+Requires-Dist: multipart ==0.2.4 ; extra == 'docs'
+Requires-Dist: mypy ==1.10.0 ; extra == 'docs'
+Requires-Dist: mypy-extensions ==1.0.0 ; extra == 'docs'
+Requires-Dist: ndg-httpsclient ==0.5.1 ; extra == 'docs'
+Requires-Dist: networkx ==3.2.1 ; extra == 'docs'
+Requires-Dist: nose ==1.3.7 ; extra == 'docs'
+Requires-Dist: openapi-schema-validator ==0.6.2 ; extra == 'docs'
+Requires-Dist: openapi-spec-validator ==0.7.1 ; extra == 'docs'
+Requires-Dist: ordered-set ==4.1.0 ; extra == 'docs'
+Requires-Dist: packaging ==24.0 ; extra == 'docs'
+Requires-Dist: paramiko ==3.4.0 ; extra == 'docs'
+Requires-Dist: parsedatetime ==2.6 ; extra == 'docs'
+Requires-Dist: pathable ==0.4.3 ; extra == 'docs'
+Requires-Dist: pathspec ==0.12.1 ; extra == 'docs'
+Requires-Dist: pbr ==6.0.0 ; extra == 'docs'
+Requires-Dist: pem ==23.1.0 ; extra == 'docs'
+Requires-Dist: platformdirs ==4.2.0 ; extra == 'docs'
+Requires-Dist: pluggy ==1.4.0 ; extra == 'docs'
+Requires-Dist: prompt-toolkit ==3.0.43 ; extra == 'docs'
+Requires-Dist: proto-plus ==1.23.0 ; extra == 'docs'
+Requires-Dist: protobuf ==4.25.3 ; extra == 'docs'
+Requires-Dist: psycopg2 ==2.9.9 ; extra == 'docs'
+Requires-Dist: py-partiql-parser ==0.5.0 ; extra == 'docs'
+Requires-Dist: pyasn1 ==0.6.0 ; extra == 'docs'
+Requires-Dist: pyasn1-modules ==0.4.0 ; extra == 'docs'
+Requires-Dist: pycparser ==2.22 ; extra == 'docs'
+Requires-Dist: pycryptodomex ==3.20.0 ; extra == 'docs'
+Requires-Dist: pydantic ==2.6.4 ; extra == 'docs'
+Requires-Dist: pydantic-core ==2.16.3 ; extra == 'docs'
+Requires-Dist: pyflakes ==3.2.0 ; extra == 'docs'
+Requires-Dist: pygments ==2.17.2 ; extra == 'docs'
+Requires-Dist: pyjks ==20.0.0 ; extra == 'docs'
+Requires-Dist: pyjwt ==2.8.0 ; extra == 'docs'
+Requires-Dist: pynacl ==1.5.0 ; extra == 'docs'
+Requires-Dist: pyopenssl ==24.1.0 ; extra == 'docs'
+Requires-Dist: pyparsing ==3.1.2 ; extra == 'docs'
+Requires-Dist: pyrfc3339 ==1.1 ; extra == 'docs'
+Requires-Dist: pyspnego ==0.10.2 ; extra == 'docs'
+Requires-Dist: pytest ==8.1.1 ; extra == 'docs'
+Requires-Dist: pytest-flask ==1.3.0 ; extra == 'docs'
+Requires-Dist: pytest-mock ==3.14.0 ; extra == 'docs'
+Requires-Dist: python-dateutil ==2.9.0.post0 ; extra == 'docs'
+Requires-Dist: python-jose[cryptography] ==3.3.0 ; extra == 'docs'
+Requires-Dist: python-json-logger ==2.0.7 ; extra == 'docs'
+Requires-Dist: python-ldap ==3.4.4 ; extra == 'docs'
+Requires-Dist: pytz ==2024.1 ; extra == 'docs'
+Requires-Dist: pyyaml ==6.0.1 ; extra == 'docs'
+Requires-Dist: redis ==5.0.3 ; extra == 'docs'
+Requires-Dist: referencing ==0.31.1 ; extra == 'docs'
+Requires-Dist: regex ==2023.12.25 ; extra == 'docs'
+Requires-Dist: requests ==2.32.0 ; extra == 'docs'
+Requires-Dist: requests-mock ==1.12.1 ; extra == 'docs'
+Requires-Dist: requests-ntlm ==1.2.0 ; extra == 'docs'
+Requires-Dist: responses ==0.25.0 ; extra == 'docs'
+Requires-Dist: retrying ==1.3.4 ; extra == 'docs'
+Requires-Dist: rfc3339-validator ==0.1.4 ; extra == 'docs'
+Requires-Dist: rich ==13.7.1 ; extra == 'docs'
+Requires-Dist: rpds-py ==0.18.0 ; extra == 'docs'
+Requires-Dist: rsa ==4.9 ; extra == 'docs'
+Requires-Dist: s3transfer ==0.10.1 ; extra == 'docs'
+Requires-Dist: sarif-om ==1.0.4 ; extra == 'docs'
+Requires-Dist: sentry-sdk ==2.2.0 ; extra == 'docs'
+Requires-Dist: six ==1.16.0 ; extra == 'docs'
+Requires-Dist: snowballstemmer ==2.2.0 ; extra == 'docs'
+Requires-Dist: sortedcontainers ==2.4.0 ; extra == 'docs'
+Requires-Dist: sphinx ==7.3.7 ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ==2.0.0 ; extra == 'docs'
+Requires-Dist: sphinxcontrib-applehelp ==1.0.8 ; extra == 'docs'
+Requires-Dist: sphinxcontrib-devhelp ==1.0.6 ; extra == 'docs'
+Requires-Dist: sphinxcontrib-htmlhelp ==2.0.5 ; extra == 'docs'
+Requires-Dist: sphinxcontrib-httpdomain ==1.8.1 ; extra == 'docs'
+Requires-Dist: sphinxcontrib-jquery ==4.1 ; extra == 'docs'
+Requires-Dist: sphinxcontrib-jsmath ==1.0.1 ; extra == 'docs'
+Requires-Dist: sphinxcontrib-qthelp ==1.0.7 ; extra == 'docs'
+Requires-Dist: sphinxcontrib-serializinghtml ==1.1.10 ; extra == 'docs'
+Requires-Dist: sqlalchemy ==1.3.24 ; extra == 'docs'
+Requires-Dist: sqlalchemy-utils ==0.41.2 ; extra == 'docs'
+Requires-Dist: sshpubkeys ==3.3.1 ; extra == 'docs'
+Requires-Dist: stevedore ==5.2.0 ; extra == 'docs'
+Requires-Dist: sympy ==1.12 ; extra == 'docs'
+Requires-Dist: tabulate ==0.9.0 ; extra == 'docs'
+Requires-Dist: tomli ==2.0.1 ; extra == 'docs'
+Requires-Dist: twofish ==0.3.0 ; extra == 'docs'
+Requires-Dist: types-cffi ==1.16.0.20240331 ; extra == 'docs'
+Requires-Dist: types-deprecated ==1.2.9.20240311 ; extra == 'docs'
+Requires-Dist: types-paramiko ==3.4.0.20240423 ; extra == 'docs'
+Requires-Dist: types-protobuf ==5.26.0.20240422 ; extra == 'docs'
+Requires-Dist: types-pyopenssl ==24.1.0.20240425 ; extra == 'docs'
+Requires-Dist: types-pyrfc3339 ==1.1.1.5 ; extra == 'docs'
+Requires-Dist: types-python-dateutil ==2.9.0.20240316 ; extra == 'docs'
+Requires-Dist: types-pytz ==2024.1.0.20240203 ; extra == 'docs'
+Requires-Dist: types-redis ==4.6.0.20240417 ; extra == 'docs'
+Requires-Dist: types-requests ==2.31.0.6 ; extra == 'docs'
+Requires-Dist: types-setuptools ==69.5.0.20240519 ; extra == 'docs'
+Requires-Dist: types-six ==1.16.21.20240425 ; extra == 'docs'
+Requires-Dist: types-tabulate ==0.9.0.20240106 ; extra == 'docs'
+Requires-Dist: types-urllib3 ==1.26.25.14 ; extra == 'docs'
+Requires-Dist: typing-extensions ==4.11.0 ; extra == 'docs'
+Requires-Dist: tzdata ==2024.1 ; extra == 'docs'
+Requires-Dist: urllib3 ==1.26.18 ; extra == 'docs'
+Requires-Dist: validators ==0.28.3 ; extra == 'docs'
+Requires-Dist: vine ==5.1.0 ; extra == 'docs'
+Requires-Dist: wcwidth ==0.2.13 ; extra == 'docs'
+Requires-Dist: werkzeug ==3.0.3 ; extra == 'docs'
+Requires-Dist: wrapt ==1.16.0 ; extra == 'docs'
+Requires-Dist: xmltodict ==0.13.0 ; extra == 'docs'
+Requires-Dist: zipp ==3.18.1 ; extra == 'docs'
+Provides-Extra: tests
+Requires-Dist: acme ==2.11.0 ; extra == 'tests'
+Requires-Dist: alembic ==1.13.1 ; extra == 'tests'
+Requires-Dist: alembic-autogenerate-enums ==0.1.2 ; extra == 'tests'
+Requires-Dist: amqp ==5.2.0 ; extra == 'tests'
+Requires-Dist: aniso8601 ==9.0.1 ; extra == 'tests'
+Requires-Dist: annotated-types ==0.6.0 ; extra == 'tests'
+Requires-Dist: arrow ==1.3.0 ; extra == 'tests'
+Requires-Dist: async-timeout ==4.0.3 ; extra == 'tests'
+Requires-Dist: asyncpool ==1.0 ; extra == 'tests'
+Requires-Dist: attrs ==23.2.0 ; extra == 'tests'
+Requires-Dist: aws-sam-translator ==1.87.0 ; extra == 'tests'
+Requires-Dist: aws-xray-sdk ==2.13.0 ; extra == 'tests'
+Requires-Dist: bandit ==1.7.8 ; extra == 'tests'
+Requires-Dist: bcrypt ==4.1.2 ; extra == 'tests'
+Requires-Dist: billiard ==4.2.0 ; extra == 'tests'
+Requires-Dist: black ==24.4.2 ; extra == 'tests'
+Requires-Dist: blinker ==1.7.0 ; extra == 'tests'
+Requires-Dist: boto3 ==1.34.122 ; extra == 'tests'
+Requires-Dist: botocore ==1.34.122 ; extra == 'tests'
+Requires-Dist: cachetools ==5.3.3 ; extra == 'tests'
+Requires-Dist: celery[redis] ==5.3.6 ; extra == 'tests'
+Requires-Dist: certbot ==2.10.0 ; extra == 'tests'
+Requires-Dist: certifi ==2024.6.2 ; extra == 'tests'
+Requires-Dist: certsrv[ntlm] ==2.1.1 ; extra == 'tests'
+Requires-Dist: cffi ==1.16.0 ; extra == 'tests'
+Requires-Dist: cfn-lint ==0.86.2 ; extra == 'tests'
+Requires-Dist: charset-normalizer ==3.3.2 ; extra == 'tests'
+Requires-Dist: click ==8.1.7 ; extra == 'tests'
+Requires-Dist: click-didyoumean ==0.3.1 ; extra == 'tests'
+Requires-Dist: click-plugins ==1.1.1 ; extra == 'tests'
+Requires-Dist: click-repl ==0.3.0 ; extra == 'tests'
+Requires-Dist: cloudflare ==2.20.0 ; extra == 'tests'
+Requires-Dist: configargparse ==1.7 ; extra == 'tests'
+Requires-Dist: configobj ==5.0.8 ; extra == 'tests'
+Requires-Dist: coverage ==7.4.4 ; extra == 'tests'
+Requires-Dist: cryptography ==42.0.7 ; extra == 'tests'
+Requires-Dist: deprecated ==1.2.14 ; extra == 'tests'
+Requires-Dist: distro ==1.9.0 ; extra == 'tests'
+Requires-Dist: dnspython ==1.15.0 ; extra == 'tests'
+Requires-Dist: dnspython3 ==1.15.0 ; extra == 'tests'
+Requires-Dist: docker ==7.0.0 ; extra == 'tests'
+Requires-Dist: dyn ==1.8.6 ; extra == 'tests'
+Requires-Dist: ecdsa ==0.19.0 ; extra == 'tests'
+Requires-Dist: exceptiongroup ==1.2.0 ; extra == 'tests'
+Requires-Dist: factory-boy ==3.3.0 ; extra == 'tests'
+Requires-Dist: faker ==25.4.0 ; extra == 'tests'
+Requires-Dist: fakeredis ==2.23.1 ; extra == 'tests'
+Requires-Dist: flask ==2.3.3 ; extra == 'tests'
+Requires-Dist: flask-bcrypt ==1.0.1 ; extra == 'tests'
+Requires-Dist: flask-cors ==4.0.1 ; extra == 'tests'
+Requires-Dist: flask-limiter ==3.7.0 ; extra == 'tests'
+Requires-Dist: flask-mail ==0.10.0 ; extra == 'tests'
+Requires-Dist: flask-migrate ==4.0.7 ; extra == 'tests'
+Requires-Dist: flask-principal ==0.4.0 ; extra == 'tests'
+Requires-Dist: flask-replicated ==2.1 ; extra == 'tests'
+Requires-Dist: flask-restful ==0.3.10 ; extra == 'tests'
+Requires-Dist: flask-sqlalchemy ==2.5.1 ; extra == 'tests'
+Requires-Dist: freezegun ==1.5.1 ; extra == 'tests'
+Requires-Dist: future ==1.0.0 ; extra == 'tests'
+Requires-Dist: google-api-core[grpc] ==2.18.0 ; extra == 'tests'
+Requires-Dist: google-auth ==2.29.0 ; extra == 'tests'
+Requires-Dist: google-cloud-private-ca ==1.12.0 ; extra == 'tests'
+Requires-Dist: googleapis-common-protos[grpc] ==1.63.0 ; extra == 'tests'
+Requires-Dist: graphql-core ==3.2.3 ; extra == 'tests'
+Requires-Dist: grpc-google-iam-v1 ==0.13.0 ; extra == 'tests'
+Requires-Dist: grpcio ==1.62.1 ; extra == 'tests'
+Requires-Dist: grpcio-status ==1.62.1 ; extra == 'tests'
+Requires-Dist: gunicorn ==22.0.0 ; extra == 'tests'
+Requires-Dist: hvac ==2.2.0 ; extra == 'tests'
+Requires-Dist: idna ==3.7 ; extra == 'tests'
+Requires-Dist: importlib-metadata ==7.1.0 ; extra == 'tests'
+Requires-Dist: importlib-resources ==6.4.0 ; extra == 'tests'
+Requires-Dist: inflection ==0.5.1 ; extra == 'tests'
+Requires-Dist: iniconfig ==2.0.0 ; extra == 'tests'
+Requires-Dist: itsdangerous ==2.2.0 ; extra == 'tests'
+Requires-Dist: javaobj-py3 ==0.4.4 ; extra == 'tests'
+Requires-Dist: jinja2 ==3.1.3 ; extra == 'tests'
+Requires-Dist: jmespath ==1.0.1 ; extra == 'tests'
+Requires-Dist: josepy ==1.14.0 ; extra == 'tests'
+Requires-Dist: jschema-to-python ==1.2.3 ; extra == 'tests'
+Requires-Dist: jsondiff ==2.0.0 ; extra == 'tests'
+Requires-Dist: jsonlines ==4.0.0 ; extra == 'tests'
+Requires-Dist: jsonpatch ==1.33 ; extra == 'tests'
+Requires-Dist: jsonpickle ==3.0.3 ; extra == 'tests'
+Requires-Dist: jsonpointer ==2.4 ; extra == 'tests'
+Requires-Dist: jsonschema ==4.21.1 ; extra == 'tests'
+Requires-Dist: jsonschema-path ==0.3.2 ; extra == 'tests'
+Requires-Dist: jsonschema-specifications ==2023.12.1 ; extra == 'tests'
+Requires-Dist: junit-xml ==1.9 ; extra == 'tests'
+Requires-Dist: kombu ==5.3.6 ; extra == 'tests'
+Requires-Dist: lazy-object-proxy ==1.10.0 ; extra == 'tests'
+Requires-Dist: limits ==3.10.1 ; extra == 'tests'
+Requires-Dist: lockfile ==0.12.2 ; extra == 'tests'
+Requires-Dist: logmatic-python ==0.1.7 ; extra == 'tests'
+Requires-Dist: mako ==1.3.2 ; extra == 'tests'
+Requires-Dist: markdown-it-py ==3.0.0 ; extra == 'tests'
+Requires-Dist: markupsafe ==2.1.5 ; extra == 'tests'
+Requires-Dist: marshmallow ==2.21.0 ; extra == 'tests'
+Requires-Dist: marshmallow-sqlalchemy ==0.23.1 ; extra == 'tests'
+Requires-Dist: mdurl ==0.1.2 ; extra == 'tests'
+Requires-Dist: moto[all] ==4.2.14 ; extra == 'tests'
+Requires-Dist: mpmath ==1.3.0 ; extra == 'tests'
+Requires-Dist: multipart ==0.2.4 ; extra == 'tests'
+Requires-Dist: mypy ==1.10.0 ; extra == 'tests'
+Requires-Dist: mypy-extensions ==1.0.0 ; extra == 'tests'
+Requires-Dist: ndg-httpsclient ==0.5.1 ; extra == 'tests'
+Requires-Dist: networkx ==3.2.1 ; extra == 'tests'
+Requires-Dist: nose ==1.3.7 ; extra == 'tests'
+Requires-Dist: openapi-schema-validator ==0.6.2 ; extra == 'tests'
+Requires-Dist: openapi-spec-validator ==0.7.1 ; extra == 'tests'
+Requires-Dist: ordered-set ==4.1.0 ; extra == 'tests'
+Requires-Dist: packaging ==24.0 ; extra == 'tests'
+Requires-Dist: paramiko ==3.4.0 ; extra == 'tests'
+Requires-Dist: parsedatetime ==2.6 ; extra == 'tests'
+Requires-Dist: pathable ==0.4.3 ; extra == 'tests'
+Requires-Dist: pathspec ==0.12.1 ; extra == 'tests'
+Requires-Dist: pbr ==6.0.0 ; extra == 'tests'
+Requires-Dist: pem ==23.1.0 ; extra == 'tests'
+Requires-Dist: platformdirs ==4.2.0 ; extra == 'tests'
+Requires-Dist: pluggy ==1.4.0 ; extra == 'tests'
+Requires-Dist: prompt-toolkit ==3.0.43 ; extra == 'tests'
+Requires-Dist: proto-plus ==1.23.0 ; extra == 'tests'
+Requires-Dist: protobuf ==4.25.3 ; extra == 'tests'
+Requires-Dist: psycopg2 ==2.9.9 ; extra == 'tests'
+Requires-Dist: py-partiql-parser ==0.5.0 ; extra == 'tests'
+Requires-Dist: pyasn1 ==0.6.0 ; extra == 'tests'
+Requires-Dist: pyasn1-modules ==0.4.0 ; extra == 'tests'
+Requires-Dist: pycparser ==2.22 ; extra == 'tests'
+Requires-Dist: pycryptodomex ==3.20.0 ; extra == 'tests'
+Requires-Dist: pydantic ==2.6.4 ; extra == 'tests'
+Requires-Dist: pydantic-core ==2.16.3 ; extra == 'tests'
+Requires-Dist: pyflakes ==3.2.0 ; extra == 'tests'
+Requires-Dist: pygments ==2.17.2 ; extra == 'tests'
+Requires-Dist: pyjks ==20.0.0 ; extra == 'tests'
+Requires-Dist: pyjwt ==2.8.0 ; extra == 'tests'
+Requires-Dist: pynacl ==1.5.0 ; extra == 'tests'
+Requires-Dist: pyopenssl ==24.1.0 ; extra == 'tests'
+Requires-Dist: pyparsing ==3.1.2 ; extra == 'tests'
+Requires-Dist: pyrfc3339 ==1.1 ; extra == 'tests'
+Requires-Dist: pyspnego ==0.10.2 ; extra == 'tests'
+Requires-Dist: pytest ==8.1.1 ; extra == 'tests'
+Requires-Dist: pytest-flask ==1.3.0 ; extra == 'tests'
+Requires-Dist: pytest-mock ==3.14.0 ; extra == 'tests'
+Requires-Dist: python-dateutil ==2.9.0.post0 ; extra == 'tests'
+Requires-Dist: python-jose[cryptography] ==3.3.0 ; extra == 'tests'
+Requires-Dist: python-json-logger ==2.0.7 ; extra == 'tests'
+Requires-Dist: python-ldap ==3.4.4 ; extra == 'tests'
+Requires-Dist: pytz ==2024.1 ; extra == 'tests'
+Requires-Dist: pyyaml ==6.0.1 ; extra == 'tests'
+Requires-Dist: redis ==5.0.3 ; extra == 'tests'
+Requires-Dist: referencing ==0.31.1 ; extra == 'tests'
+Requires-Dist: regex ==2023.12.25 ; extra == 'tests'
+Requires-Dist: requests ==2.32.0 ; extra == 'tests'
+Requires-Dist: requests-mock ==1.12.1 ; extra == 'tests'
+Requires-Dist: requests-ntlm ==1.2.0 ; extra == 'tests'
+Requires-Dist: responses ==0.25.0 ; extra == 'tests'
+Requires-Dist: retrying ==1.3.4 ; extra == 'tests'
+Requires-Dist: rfc3339-validator ==0.1.4 ; extra == 'tests'
+Requires-Dist: rich ==13.7.1 ; extra == 'tests'
+Requires-Dist: rpds-py ==0.18.0 ; extra == 'tests'
+Requires-Dist: rsa ==4.9 ; extra == 'tests'
+Requires-Dist: s3transfer ==0.10.1 ; extra == 'tests'
+Requires-Dist: sarif-om ==1.0.4 ; extra == 'tests'
+Requires-Dist: sentry-sdk ==2.2.0 ; extra == 'tests'
+Requires-Dist: six ==1.16.0 ; extra == 'tests'
+Requires-Dist: sortedcontainers ==2.4.0 ; extra == 'tests'
+Requires-Dist: sqlalchemy ==1.3.24 ; extra == 'tests'
+Requires-Dist: sqlalchemy-utils ==0.41.2 ; extra == 'tests'
+Requires-Dist: sshpubkeys ==3.3.1 ; extra == 'tests'
+Requires-Dist: stevedore ==5.2.0 ; extra == 'tests'
+Requires-Dist: sympy ==1.12 ; extra == 'tests'
+Requires-Dist: tabulate ==0.9.0 ; extra == 'tests'
+Requires-Dist: tomli ==2.0.1 ; extra == 'tests'
+Requires-Dist: twofish ==0.3.0 ; extra == 'tests'
+Requires-Dist: types-cffi ==1.16.0.20240331 ; extra == 'tests'
+Requires-Dist: types-deprecated ==1.2.9.20240311 ; extra == 'tests'
+Requires-Dist: types-paramiko ==3.4.0.20240423 ; extra == 'tests'
+Requires-Dist: types-protobuf ==5.26.0.20240422 ; extra == 'tests'
+Requires-Dist: types-pyopenssl ==24.1.0.20240425 ; extra == 'tests'
+Requires-Dist: types-pyrfc3339 ==1.1.1.5 ; extra == 'tests'
+Requires-Dist: types-python-dateutil ==2.9.0.20240316 ; extra == 'tests'
+Requires-Dist: types-pytz ==2024.1.0.20240203 ; extra == 'tests'
+Requires-Dist: types-redis ==4.6.0.20240417 ; extra == 'tests'
+Requires-Dist: types-requests ==2.31.0.6 ; extra == 'tests'
+Requires-Dist: types-setuptools ==69.5.0.20240519 ; extra == 'tests'
+Requires-Dist: types-six ==1.16.21.20240425 ; extra == 'tests'
+Requires-Dist: types-tabulate ==0.9.0.20240106 ; extra == 'tests'
+Requires-Dist: types-urllib3 ==1.26.25.14 ; extra == 'tests'
+Requires-Dist: typing-extensions ==4.11.0 ; extra == 'tests'
+Requires-Dist: tzdata ==2024.1 ; extra == 'tests'
+Requires-Dist: urllib3 ==1.26.18 ; extra == 'tests'
+Requires-Dist: validators ==0.28.3 ; extra == 'tests'
+Requires-Dist: vine ==5.1.0 ; extra == 'tests'
+Requires-Dist: wcwidth ==0.2.13 ; extra == 'tests'
+Requires-Dist: werkzeug ==3.0.3 ; extra == 'tests'
+Requires-Dist: wrapt ==1.16.0 ; extra == 'tests'
+Requires-Dist: xmltodict ==0.13.0 ; extra == 'tests'
+Requires-Dist: zipp ==3.18.1 ; extra == 'tests'
+
+Lemur
+=====
+
+.. image:: https://badges.gitter.im/Join%20Chat.svg
+   :alt: Join the chat at https://gitter.im/Netflix/lemur
+   :target: https://gitter.im/Netflix/lemur?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+
+.. image:: https://readthedocs.org/projects/lemur/badge/?version=latest
+    :target: https://lemur.readthedocs.io
+    :alt: Latest Docs
+
+.. image:: https://img.shields.io/badge/NetflixOSS-active-brightgreen.svg
+
+.. image:: https://coveralls.io/repos/github/Netflix/lemur/badge.svg?branch=main
+    :target: https://coveralls.io/github/Netflix/lemur?branch=main
+
+
+
+Lemur manages TLS certificate creation. While not able to issue certificates itself, Lemur acts as a broker between CAs
+and environments providing a central portal for developers to issue TLS certificates with 'sane' defaults.
+
+Lemur aims to support the 3 most recent python releases which have been released for at least a year. For example, if python3.12 released last month, we'd aim to support versions 3.9, 3.10, and 3.11.
+We deploy on Ubuntu and develop mostly on OS X.
+
+
+Project resources
+=================
+
+- `Lemur Blog Post <http://techblog.netflix.com/2015/09/introducing-lemur.html>`_
+- `Documentation <http://lemur.readthedocs.io/>`_
+- `Source code <https://github.com/netflix/lemur>`_
+- `Issue tracker <https://github.com/netflix/lemur/issues>`_
+- `Docker <https://github.com/Netflix/lemur-docker>`_
