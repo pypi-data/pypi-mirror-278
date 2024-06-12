@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: pymongo-connector
+Version: 0.0.1
+Summary: A python package for connecting with database.
+Home-page: https://github.com/chaitanya-24/Mongodb_Connector_Package
+Author: chaitanya-24
+Author-email: csawant2407@gmail.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/chaitanya-24/Mongodb_Connector_Package/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pymongo
+Requires-Dist: pymongo[srv]
+Requires-Dist: dnspython
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: ensure
+Requires-Dist: pytest
+Provides-Extra: testing
+Requires-Dist: pytest>=7.1.3; extra == "testing"
+Requires-Dist: mypy>=0.971; extra == "testing"
+Requires-Dist: flake8>=5.0.4; extra == "testing"
+Requires-Dist: tox>=3.25.1; extra == "testing"
+Requires-Dist: black>=22.8.0; extra == "testing"
+
+### Description
+
+This code defines a class `mongo_operation` that provides methods for interacting with a MongoDB database. The class allows you to create a MongoDB client, create collections, and insert data in bulk. It supports both single records and lists of records, as well as CSV and Excel file formats.
+
+### How to Use
+
+To use this class as a package on PyPI, you can follow these steps:
+
+1. **Install the Package**:
+   ```bash
+   pip install mongoDB-python-connector
+   ```
+
+2. **Import the Class**:
+   ```python
+   from mongoDB-python-connector import mongo_crud
+   ```
+
+3. **Create an Instance of the Class**:
+   ```python
+   mongo = mongo_operation(client_url='mongodb://localhost:27017/', database_name='mydatabase', collection_name='mycollection')
+   ```
+
+4. **Use the Methods**:
+   ```python
+   # Insert a single record
+   mongo.insert_record({'name': 'John', 'age': 30})
+
+   # Insert multiple records
+   records = [{'name': 'Jane', 'age': 25}, {'name': 'Bob', 'age': 40}]
+   mongo.insert_record(records)
+
+   # Bulk insert data from a CSV file
+   mongo.bulk_insert('data.csv')
+
+   # Bulk insert data from an Excel file
+   mongo.bulk_insert('data.xlsx')
+   ```
