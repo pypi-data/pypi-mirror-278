@@ -1,0 +1,15 @@
+README.md
+setup.py
+aira/__init__.py
+aira/aira.py
+aira/cli.py
+aira/commit_manager.py
+aira/config.py
+aira/repository_manager.py
+aira.egg-info/PKG-INFO
+aira.egg-info/SOURCES.txt
+aira.egg-info/dependency_links.txt
+aira.egg-info/entry_points.txt
+aira.egg-info/requires.txt
+aira.egg-info/top_level.txt
+aira/template/config.yml
