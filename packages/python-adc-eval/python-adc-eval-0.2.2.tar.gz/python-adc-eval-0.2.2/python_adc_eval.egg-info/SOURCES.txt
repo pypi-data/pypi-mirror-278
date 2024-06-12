@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.rst
+pyproject.toml
+requirements.txt
+adc_eval/__init__.py
+adc_eval/converters.py
+adc_eval/signals.py
+adc_eval/spectrum.py
+python_adc_eval.egg-info/PKG-INFO
+python_adc_eval.egg-info/SOURCES.txt
+python_adc_eval.egg-info/dependency_links.txt
+python_adc_eval.egg-info/requires.txt
+python_adc_eval.egg-info/top_level.txt
+tests/test_calc_psd.py
+tests/test_spectrum.py
+tests/test_spectrum_plotting.py
