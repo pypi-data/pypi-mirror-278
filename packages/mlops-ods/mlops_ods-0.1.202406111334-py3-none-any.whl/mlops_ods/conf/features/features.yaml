@@ -1,0 +1,21 @@
+numerical:
+  - tree_dbh
+  - curb_loc
+  - steward
+  - guards
+  - sidewalk
+  - problems
+  - root_stone
+  - root_grate
+  - root_other
+  - trunk_wire
+  - trnk_light
+  - trnk_other
+  - brch_light
+  - brch_shoe
+  - brch_other
+categorical:
+  - spc_common
+  - zip_city
+  - borough
+  - user_type

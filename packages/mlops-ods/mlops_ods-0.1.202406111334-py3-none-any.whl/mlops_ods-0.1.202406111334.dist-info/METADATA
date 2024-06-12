@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: mlops_ods
+Version: 0.1.202406111334
+Summary: 
+Author: Iuliia Fokina
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: catboost (>=1.2.5,<2.0.0)
+Requires-Dist: clearml (>=1.15.1,<2.0.0)
+Requires-Dist: clearml-agent (>=1.8.0,<2.0.0)
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: dill (>=0.3.8,<0.4.0)
+Requires-Dist: dvc (>=3.50.1,<4.0.0)
+Requires-Dist: dvc-gdrive (>=3.0.1,<4.0.0)
+Requires-Dist: fastapi (>=0.111.0,<0.112.0)
+Requires-Dist: folium (>=0.16.0,<0.17.0)
+Requires-Dist: geodatasets (>=2023.12.0,<2024.0.0)
+Requires-Dist: geopandas (>=0.14.3,<0.15.0)
+Requires-Dist: hydra-core (>=1.3.2,<2.0.0)
+Requires-Dist: kaggle (>=1.6.12,<2.0.0)
+Requires-Dist: lakefs-spec (>=0.9.0,<0.10.0)
+Requires-Dist: loguru (>=0.7.2,<0.8.0)
+Requires-Dist: minio (>=7.2.7,<8.0.0)
+Requires-Dist: mlflow (>=2.12.2,<3.0.0)
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: scikit-learn (>=1.4.2,<2.0.0)
+Requires-Dist: seaborn (>=0.13.2,<0.14.0)
+Description-Content-Type: text/markdown
+
+# MLOps ODS
+This project for ml model with MLOps instruments
+
+the methodology of repo (GitHub flow - one main branch, and developing in other brunches):
+- main branch: 'master'
+- other branches: 'fix-', 'feature-', 'model-', 'experiment-'
+
+```commandline
+poetry build --format=wheel
+```
+
+Docker image (build / run):
+```commandline
+docker build . -t mlops_ods_image
+docker run -it mlops_ods_image /bin/bash
+```
+build for linux:
+```commandline
+docker build . -t mlops_ods_image --platform linux/amd64
+```
+run with port and volumes if necessary:
+```commandline
+docker run -p 8888:8888 -v {path-to-local-folder-(pwd)}:/app/volumes -it mlops_ods_image /bin/bash
+```
+
+documentation of jupyter notebooks with quarto:
+```commandline
+quarto render
+
+quarto preview  src/mlops_ods/notebooks/eda.ipynb
+quarto render src/mlops_ods/notebooks/eda.ipynb --to html
+```
+
+snakemake command inside docker:
+```commandline
+snakemake --cores 10
+snakemake --dag | dot -Tsvg > dag.svg
+
+docker ps
+docker cp <CONTAINER ID>:/app/dag.svg .
+```
+
