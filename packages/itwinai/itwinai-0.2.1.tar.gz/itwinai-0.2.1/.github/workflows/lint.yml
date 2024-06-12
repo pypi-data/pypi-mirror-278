@@ -1,0 +1,57 @@
+---
+name: Lint
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  super-lint:
+    name: Lint with Super-Linter
+    runs-on: ubuntu-latest
+
+    ############################################
+    # Grant status permission for MULTI_STATUS #
+    ############################################
+    permissions:
+      contents: read
+      packages: read
+      statuses: write
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          # Make sure the actual branch is checked out when running on PR
+          # ref: ${{ github.event.pull_request.head.sha }}
+          # Full git history needed to get proper list of changed files
+          fetch-depth: 0
+
+      # Runs the Super-Linter action
+      - name: Run Super-Linter on new changes
+        uses: github/super-linter/slim@v6
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MARKDOWN_CONFIG_FILE: .markdownlint.json
+          PYTHON_FLAKE8_CONFIG_FILE: .flake8
+          JSCPD_CONFIG_FILE: .jscpd.json
+          VALIDATE_PYTHON_BLACK: false
+          VALIDATE_PYTHON_ISORT: false
+          VALIDATE_PYTHON_MYPY: false
+          VALIDATE_PYTHON_PYLINT: false
+          VALIDATE_HTML: false
+          VALIDATE_GITLEAKS: false
+          VALIDATE_BASH_EXEC: false
+          VALIDATE_CHECKOV: false # activate to lint k8s pods
+          VALIDATE_SHELL_SHFMT: false
+          VALIDATE_JSCPD: false
+
+          # Only check new or edited files
+          VALIDATE_ALL_CODEBASE: false
+          # Fail on errors
+          DISABLE_ERRORS: false
+          # Skip linting of docs
+          FILTER_REGEX_EXCLUDE: .*docs/index.md|.*docs/docs/.*|.*ISSUE_TEMPLATE/.*|use-cases/.*|experimental/.*
+          BASH_SEVERITY: error
