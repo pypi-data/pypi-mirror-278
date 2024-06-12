@@ -1,0 +1,72 @@
+EVENT_DOCKING_ROUTINE = "docking_routine"
+EVENT_REGISTER = "register"
+EVENT_LOCATION = "location"
+EVENT_SPEED = "speed"
+EVENT_BATTERY = "batteryStatus"
+EVENT_GOAL_STATUS = "goalStatus"
+EVENT_NOTIFICATION = "notification"
+EVENT_TOPICS_LIST = "topics"
+EVENT_TOPIC_DATA = "topic_data"
+EVENT_PATH_DATA = "path_data"
+EVENT_STATUS = "status"
+EVENT_MAP_UPDATE = "map_update"
+
+ALL = (
+    EVENT_DOCKING_ROUTINE,
+    EVENT_REGISTER,
+    EVENT_LOCATION,
+    EVENT_SPEED,
+    EVENT_BATTERY,
+    EVENT_GOAL_STATUS,
+    EVENT_NOTIFICATION,
+    EVENT_TOPIC_DATA,
+    EVENT_TOPICS_LIST,
+    EVENT_PATH_DATA,
+    EVENT_STATUS,
+    EVENT_MAP_UPDATE,
+)
+
+# Incoming actions
+ACTION_DOCKING_ROUTINE_REQUEST = "docking_routine_request"
+ACTION_DOCKING_ROUTINE_FINALIZE = "docking_routine_finalize_request"
+ACTION_TASK_V2 = "taskv2"
+ACTION_TASK_CANCELLATION = "cancelOrder"
+ACTION_MOVE = "move"
+ACTION_MOVE_TO_CHARGING_POINT = "move_charge"
+ACTION_SLOW_DOWN = "slow_down"
+ACTION_TOPIC_LIST = "request_topics"
+ACTION_TOPIC_INITIALIZATION = "topic_init"
+ACTION_ERROR = "errors"
+ACTION_PATH_REROUTING = "path_rerouting"
+ACTION_COLLISION_CLEARANCE = "clear_collision"
+ACTION_UPDATE_MAP = "update_maps"
+ACTION_UPDATE_VEHICLE_SETTINGS = "vehicle_settings"
+ACTION_PAUSE_TASK = "startPause"
+ACTION_RESUME_TASK = "stopPause"
+
+ALL_ACTIONS = (
+    ACTION_DOCKING_ROUTINE_REQUEST,
+    ACTION_DOCKING_ROUTINE_FINALIZE,
+    ACTION_TASK_V2,
+    ACTION_MOVE,
+    ACTION_MOVE_TO_CHARGING_POINT,
+    ACTION_SLOW_DOWN,
+    ACTION_PATH_REROUTING,
+    ACTION_TOPIC_LIST,
+    ACTION_TOPIC_INITIALIZATION,
+    ACTION_ERROR,
+    ACTION_UPDATE_MAP,
+    ACTION_UPDATE_VEHICLE_SETTINGS,
+    ACTION_PAUSE_TASK,
+    ACTION_RESUME_TASK,
+)
+
+IGNORED_TYPES = (
+    "initialized",
+    "not_initialized",
+)
+
+
+class MapUpdateMessageStatuses:
+    UPDATE = "update"
+    CONFIRM = "confirm"
