@@ -1,0 +1,9 @@
+setuptools>=67.0
+click
+termcolor
+rich
+imageio
+tqdm
+Jinja2
+pathlib
+requests
