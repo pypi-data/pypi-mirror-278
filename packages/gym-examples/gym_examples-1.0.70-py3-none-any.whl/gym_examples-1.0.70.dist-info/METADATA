@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: gym-examples
+Version: 1.0.70
+Requires-Dist: numpy
+Requires-Dist: gym (==0.21.0)
+Requires-Dist: scipy
+Requires-Dist: msgpack-numpy
+Requires-Dist: tqdm
+Requires-Dist: msgpack
+
