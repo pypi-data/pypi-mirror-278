@@ -1,0 +1,16 @@
+LICENCE
+README.md
+pyproject.toml
+slidie_ttyd/__init__.py
+slidie_ttyd/runner.py
+slidie_ttyd/script_generators.py
+slidie_ttyd/server.py
+slidie_ttyd.egg-info/PKG-INFO
+slidie_ttyd.egg-info/SOURCES.txt
+slidie_ttyd.egg-info/dependency_links.txt
+slidie_ttyd.egg-info/entry_points.txt
+slidie_ttyd.egg-info/requires.txt
+slidie_ttyd.egg-info/top_level.txt
+tests/test_runner.py
+tests/test_script_generators.py
+tests/test_server.py
