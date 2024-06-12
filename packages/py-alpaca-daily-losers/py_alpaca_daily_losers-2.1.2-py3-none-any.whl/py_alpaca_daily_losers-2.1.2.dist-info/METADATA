@@ -1,0 +1,101 @@
+Metadata-Version: 2.1
+Name: py-alpaca-daily-losers
+Version: 2.1.2
+Summary: Daily Losers strategy, uses py-alpaca-api for Alpaca Markets integration.
+Home-page: https://pypi.org/project/py-alpaca-daily-losers/
+License: MIT
+Author: TexasCoding
+Author-email: jeff10278@me.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: openai (>=1.30.5,<2.0.0)
+Requires-Dist: py-alpaca-api (>=2.0.0,<3.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: slack-sdk (>=3.27.2,<4.0.0)
+Requires-Dist: ta (>=0.11.0,<0.12.0)
+Project-URL: Documentation, https://py-alpaca-daily-losers.readthedocs.io/en/latest/
+Project-URL: Repository, https://github.com/TexasCoding/py-alpaca-daily-losers
+Description-Content-Type: text/markdown
+
+# Py-Alpaca-Daily-Losers 📉🐍
+
+**Py-Alpaca-Daily-Losers** is a Python package that integrates with the Alpaca Markets API to identify and analyze daily stock market losers. This tool leverages various market data indicators and advanced AI analysis to provide insightful trading information.
+
+* [PyAlpacaApi](https://github.com/TexasCoding/py-alpaca-api) is used to communicate with Alpaca Markets API.
+
+## Features 🌟
+
+- **Market Data Extraction**: Retrieves daily stock market data using the Alpaca Markets API.
+- **Technical Analysis**: Analyzes data with indicators like Bollinger Bands and RSI.
+- **News and Sentiment Analysis**: Extracts and analyzes news for sentiment using OpenAI.
+- **Notifications**: Sends alerts via Slack.
+- **Modular Design**: Structured for easy maintenance and scalability.
+
+## Getting Started 🏁
+
+### Installation
+
+Clone the repository and install dependencies:
+```bash
+git clone https://github.com/TexasCoding/py-alpaca-daily-losers.git
+cd py-alpaca-daily-losers
+pip install -r requirements.txt
+```
+
+### Usage
+
+Run the application:
+```bash
+python main.py
+```
+
+### Tests
+
+Run the test suite:
+```bash
+pytest
+```
+
+## Project Structure 📂
+
+```
+py-alpaca-daily-losers/
+├── README.md
+├── poetry.lock
+├── py_alpaca_daily_losers/
+│   ├── __init__.py
+│   ├── daily_losers.py
+│   └── src/
+│       ├── article_extractor.py
+│       ├── global_functions.py
+│       ├── marketaux.py
+│       ├── openai.py
+│       └── slack.py
+├── pyproject.toml
+└── tests/
+    └── __init__.py
+```
+
+## Contributing 🤝
+
+Contributions are welcome! Here’s how you can help:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add new feature'`).
+5. Push to the branch (`git push origin feature-branch`).
+6. Open a Pull Request.
+
+## License 📜
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments 🙏
+
+Special thanks to the contributors and the open-source community for their support and resources.
+
+For more details, visit the [repository](https://github.com/TexasCoding/py-alpaca-daily-losers).
