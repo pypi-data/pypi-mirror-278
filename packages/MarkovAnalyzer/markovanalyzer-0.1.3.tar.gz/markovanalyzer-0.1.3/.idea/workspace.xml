@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8352dd1a-2c0f-45b7-a87a-22bde5d2e9f4" name="Changes" comment="added the ability to disable the realtime plot during fitting">
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jupyter Notebook" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MarkusSifft&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MarkusSifft/MarkovAnalyzer.git&quot;,
+    &quot;accountId&quot;: &quot;8281a268-afbd-4fb2-afcb-e35a5b3103a9&quot;
+  }
+}</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2TQ6unohbryER4dP60GGQsiu9Rj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/markus/Documents/Uni/Doktorarbeit/Python Packages/MarkovAnalyzer&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Examples/example_data" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Examples/example_data" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Sphinx Task in Sphinx Task in " type="docs" factoryName="Sphinx task" nameIsGenerated="true">
+      <module name="MarkovAnalyzer" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="$USER_HOME$/mambaforge/envs/py311/bin/python3.11" />
+      <option name="SDK_NAME" value="Python 3.11 (py311)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="docutils_input_file" value="$PROJECT_DIR$/sphinx" />
+      <option name="docutils_output_file" value="$PROJECT_DIR$/docs" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="html" />
+      <option name="docutils_open_in_browser" value="false" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PY-241.15989.155" />
+        <option value="bundled-python-sdk-babbdf50b680-7c6932dee5e4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.15989.155" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8352dd1a-2c0f-45b7-a87a-22bde5d2e9f4" name="Changes" comment="" />
+      <created>1690963183440</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1690963183440</updated>
+      <workItem from="1690963184541" duration="10554000" />
+      <workItem from="1695028441309" duration="70416000" />
+      <workItem from="1697734089702" duration="995000" />
+      <workItem from="1702548012747" duration="13677000" />
+      <workItem from="1706711936885" duration="450000" />
+      <workItem from="1706792195322" duration="13519000" />
+      <workItem from="1711453706084" duration="459000" />
+      <workItem from="1712857575988" duration="1314000" />
+      <workItem from="1713949467779" duration="925000" />
+      <workItem from="1714480561379" duration="2999000" />
+      <workItem from="1715861713291" duration="3624000" />
+      <workItem from="1716283088210" duration="9270000" />
+      <workItem from="1716810020009" duration="191000" />
+      <workItem from="1717158914590" duration="887000" />
+      <workItem from="1717424289153" duration="2236000" />
+      <workItem from="1718107614055" duration="959000" />
+    </task>
+    <task id="LOCAL-00145" summary="checking if correction terms scale wrong with m_op">
+      <option name="closed" value="true" />
+      <created>1696595291573</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1696595291573</updated>
+    </task>
+    <task id="LOCAL-00146" summary="checking if correction terms scale wrong with m_op">
+      <option name="closed" value="true" />
+      <created>1696595529620</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1696595529620</updated>
+    </task>
+    <task id="LOCAL-00147" summary="checking if correction terms scale wrong with m_op">
+      <option name="closed" value="true" />
+      <created>1696595616692</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1696595616692</updated>
+    </task>
+    <task id="LOCAL-00148" summary="checking if correction terms scale wrong with m_op">
+      <option name="closed" value="true" />
+      <created>1696595862868</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1696595862868</updated>
+    </task>
+    <task id="LOCAL-00149" summary="checking if correction terms scale wrong with m_op">
+      <option name="closed" value="true" />
+      <created>1696596257352</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1696596257352</updated>
+    </task>
+    <task id="LOCAL-00150" summary="checking if correction terms scale wrong with m_op">
+      <option name="closed" value="true" />
+      <created>1696597602539</created>
+      <option name="number" value="00150" />
+      <option name="presentableId" value="LOCAL-00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1696597602539</updated>
+    </task>
+    <task id="LOCAL-00151" summary="test with smaller tollerenz on s_k">
+      <option name="closed" value="true" />
+      <created>1696599050300</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1696599050300</updated>
+    </task>
+    <task id="LOCAL-00152" summary="pre-compiling the inner loop of the order 4 calculation">
+      <option name="closed" value="true" />
+      <created>1696937166768</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1696937166768</updated>
+    </task>
+    <task id="LOCAL-00153" summary="pre-compiling the inner loop of the order 4 calculation (GPU)">
+      <option name="closed" value="true" />
+      <created>1696938076310</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1696938076310</updated>
+    </task>
+    <task id="LOCAL-00154" summary="test njit parallel">
+      <option name="closed" value="true" />
+      <created>1696938222799</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1696938222799</updated>
+    </task>
+    <task id="LOCAL-00155" summary="test njit parallel">
+      <option name="closed" value="true" />
+      <created>1696938617203</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1696938617203</updated>
+    </task>
+    <task id="LOCAL-00156" summary="test njit parallel">
+      <option name="closed" value="true" />
+      <created>1696939343591</created>
+      <option name="number" value="00156" />
+      <option name="presentableId" value="LOCAL-00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1696939343591</updated>
+    </task>
+    <task id="LOCAL-00157" summary="test njit parallel">
+      <option name="closed" value="true" />
+      <created>1696939386413</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1696939386413</updated>
+    </task>
+    <task id="LOCAL-00158" summary="parallel does not work">
+      <option name="closed" value="true" />
+      <created>1696939465376</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1696939465376</updated>
+    </task>
+    <task id="LOCAL-00159" summary="parallel in separate loop">
+      <option name="closed" value="true" />
+      <created>1696939793848</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1696939793848</updated>
+    </task>
+    <task id="LOCAL-00160" summary="parallel in separate loop">
+      <option name="closed" value="true" />
+      <created>1696939863157</created>
+      <option name="number" value="00160" />
+      <option name="presentableId" value="LOCAL-00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1696939863157</updated>
+    </task>
+    <task id="LOCAL-00161" summary="parallel in separate loop">
+      <option name="closed" value="true" />
+      <created>1696939938700</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1696939938700</updated>
+    </task>
+    <task id="LOCAL-00162" summary="parallel in separate loop">
+      <option name="closed" value="true" />
+      <created>1696940032845</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1696940032845</updated>
+    </task>
+    <task id="LOCAL-00163" summary="parallel in separate loop">
+      <option name="closed" value="true" />
+      <created>1696940206836</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1696940206836</updated>
+    </task>
+    <task id="LOCAL-00164" summary="adding parallel=True to all functions">
+      <option name="closed" value="true" />
+      <created>1696940387415</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1696940387415</updated>
+    </task>
+    <task id="LOCAL-00165" summary="adding parallel=True to all functions">
+      <option name="closed" value="true" />
+      <created>1696940682572</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1696940682572</updated>
+    </task>
+    <task id="LOCAL-00166" summary="adding parallel=True to all functions">
+      <option name="closed" value="true" />
+      <created>1696940860109</created>
+      <option name="number" value="00166" />
+      <option name="presentableId" value="LOCAL-00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1696940860109</updated>
+    </task>
+    <task id="LOCAL-00167" summary="adding parallel=True to all functions">
+      <option name="closed" value="true" />
+      <created>1696940903230</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1696940903230</updated>
+    </task>
+    <task id="LOCAL-00168" summary="adding parallel=True to all functions">
+      <option name="closed" value="true" />
+      <created>1696940922706</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1696940922706</updated>
+    </task>
+    <task id="LOCAL-00169" summary="adding parallel=True to all functions">
+      <option name="closed" value="true" />
+      <created>1696941325804</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1696941325804</updated>
+    </task>
+    <task id="LOCAL-00170" summary="adding parallel=True to all functions">
+      <option name="closed" value="true" />
+      <created>1696941552722</created>
+      <option name="number" value="00170" />
+      <option name="presentableId" value="LOCAL-00170" />
+      <option name="project" value="LOCAL" />
+      <updated>1696941552722</updated>
+    </task>
+    <task id="LOCAL-00171" summary="adding parallel=True to all functions">
+      <option name="closed" value="true" />
+      <created>1696941675169</created>
+      <option name="number" value="00171" />
+      <option name="presentableId" value="LOCAL-00171" />
+      <option name="project" value="LOCAL" />
+      <updated>1696941675169</updated>
+    </task>
+    <task id="LOCAL-00172" summary="adding parallel=True to all functions">
+      <option name="closed" value="true" />
+      <created>1696941739115</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1696941739115</updated>
+    </task>
+    <task id="LOCAL-00173" summary="adding parallel=True to all functions">
+      <option name="closed" value="true" />
+      <created>1696941837797</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1696941837797</updated>
+    </task>
+    <task id="LOCAL-00174" summary="adding parallel=True to all functions">
+      <option name="closed" value="true" />
+      <created>1696941861603</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1696941861603</updated>
+    </task>
+    <task id="LOCAL-00175" summary="adding parallel=True to all functions">
+      <option name="closed" value="true" />
+      <created>1696942178532</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1696942178532</updated>
+    </task>
+    <task id="LOCAL-00176" summary="adding parallel=True to all functions">
+      <option name="closed" value="true" />
+      <created>1696942315236</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1696942315236</updated>
+    </task>
+    <task id="LOCAL-00177" summary="adding parallel=True to all functions">
+      <option name="closed" value="true" />
+      <created>1696942401324</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1696942401324</updated>
+    </task>
+    <task id="LOCAL-00178" summary="adding parallel=True to all functions">
+      <option name="closed" value="true" />
+      <created>1696942452104</created>
+      <option name="number" value="00178" />
+      <option name="presentableId" value="LOCAL-00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1696942452104</updated>
+    </task>
+    <task id="LOCAL-00179" summary="parallelizing s4">
+      <option name="closed" value="true" />
+      <created>1696942511013</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1696942511013</updated>
+    </task>
+    <task id="LOCAL-00180" summary="parallelizing s4">
+      <option name="closed" value="true" />
+      <created>1696942595078</created>
+      <option name="number" value="00180" />
+      <option name="presentableId" value="LOCAL-00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1696942595078</updated>
+    </task>
+    <task id="LOCAL-00181" summary="Added Examples">
+      <option name="closed" value="true" />
+      <created>1702565796118</created>
+      <option name="number" value="00181" />
+      <option name="presentableId" value="LOCAL-00181" />
+      <option name="project" value="LOCAL" />
+      <updated>1702565796118</updated>
+    </task>
+    <task id="LOCAL-00182" summary="Improved Example">
+      <option name="closed" value="true" />
+      <created>1706881548946</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1706881548946</updated>
+    </task>
+    <task id="LOCAL-00183" summary="Improved Example">
+      <option name="closed" value="true" />
+      <created>1706881724791</created>
+      <option name="number" value="00183" />
+      <option name="presentableId" value="LOCAL-00183" />
+      <option name="project" value="LOCAL" />
+      <updated>1706881724791</updated>
+    </task>
+    <task id="LOCAL-00184" summary="Added Licence">
+      <option name="closed" value="true" />
+      <created>1706882332555</created>
+      <option name="number" value="00184" />
+      <option name="presentableId" value="LOCAL-00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1706882332555</updated>
+    </task>
+    <task id="LOCAL-00185" summary="Added Documentation">
+      <option name="closed" value="true" />
+      <created>1706885358578</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1706885358578</updated>
+    </task>
+    <task id="LOCAL-00186" summary="Added Documentation">
+      <option name="closed" value="true" />
+      <created>1706885448829</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1706885448829</updated>
+    </task>
+    <task id="LOCAL-00187" summary="Added Documentation">
+      <option name="closed" value="true" />
+      <created>1706887869787</created>
+      <option name="number" value="00187" />
+      <option name="presentableId" value="LOCAL-00187" />
+      <option name="project" value="LOCAL" />
+      <updated>1706887869787</updated>
+    </task>
+    <task id="LOCAL-00188" summary="Added Documentation">
+      <option name="closed" value="true" />
+      <created>1706887944286</created>
+      <option name="number" value="00188" />
+      <option name="presentableId" value="LOCAL-00188" />
+      <option name="project" value="LOCAL" />
+      <updated>1706887944286</updated>
+    </task>
+    <task id="LOCAL-00189" summary="Added functionality to simulate and plot an unreavaling of the continuous markov process">
+      <option name="closed" value="true" />
+      <created>1714483457864</created>
+      <option name="number" value="00189" />
+      <option name="presentableId" value="LOCAL-00189" />
+      <option name="project" value="LOCAL" />
+      <updated>1714483457865</updated>
+    </task>
+    <task id="LOCAL-00190" summary="added function to calculate the waiting time distribution">
+      <option name="closed" value="true" />
+      <created>1715868770009</created>
+      <option name="number" value="00190" />
+      <option name="presentableId" value="LOCAL-00190" />
+      <option name="project" value="LOCAL" />
+      <updated>1715868770009</updated>
+    </task>
+    <task id="LOCAL-00191" summary="added functions for the unreavaling of markov dynamics">
+      <option name="closed" value="true" />
+      <created>1716541815769</created>
+      <option name="number" value="00191" />
+      <option name="presentableId" value="LOCAL-00191" />
+      <option name="project" value="LOCAL" />
+      <updated>1716541815769</updated>
+    </task>
+    <task id="LOCAL-00192" summary="added the ability to disable the realtime plot during fitting">
+      <option name="closed" value="true" />
+      <created>1718109090166</created>
+      <option name="number" value="00192" />
+      <option name="presentableId" value="LOCAL-00192" />
+      <option name="project" value="LOCAL" />
+      <updated>1718109090166</updated>
+    </task>
+    <task id="LOCAL-00193" summary="added the ability to disable the realtime plot during fitting">
+      <option name="closed" value="true" />
+      <created>1718109202321</created>
+      <option name="number" value="00193" />
+      <option name="presentableId" value="LOCAL-00193" />
+      <option name="project" value="LOCAL" />
+      <updated>1718109202321</updated>
+    </task>
+    <option name="localTasksCounter" value="194" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Now error is set 1 if no errors are provided for the fit" />
+    <MESSAGE value="Analytic 1. order is now also stores as array in self.S[1], not as a number" />
+    <MESSAGE value="something is wrong with the fit" />
+    <MESSAGE value="Fix green values for bispec...rel. measurement err can be negative and is now absoluted" />
+    <MESSAGE value="specific data can now be passed to the plot method" />
+    <MESSAGE value="bug in s4" />
+    <MESSAGE value="checking if all s_k might be needed" />
+    <MESSAGE value="checking if fastmath introduces numerical errors" />
+    <MESSAGE value="checking if correction terms scale wrong with m_op" />
+    <MESSAGE value="test with smaller tollerenz on s_k" />
+    <MESSAGE value="pre-compiling the inner loop of the order 4 calculation" />
+    <MESSAGE value="pre-compiling the inner loop of the order 4 calculation (GPU)" />
+    <MESSAGE value="test njit parallel" />
+    <MESSAGE value="parallel does not work" />
+    <MESSAGE value="parallel in separate loop" />
+    <MESSAGE value="adding parallel=True to all functions" />
+    <MESSAGE value="parallelizing s4" />
+    <MESSAGE value="Added Examples" />
+    <MESSAGE value="Improved Example" />
+    <MESSAGE value="Added Licence" />
+    <MESSAGE value="Added Documentation" />
+    <MESSAGE value="Added functionality to simulate and plot an unreavaling of the continuous markov process" />
+    <MESSAGE value="added function to calculate the waiting time distribution" />
+    <MESSAGE value="added functions for the unreavaling of markov dynamics" />
+    <MESSAGE value="added the ability to disable the realtime plot during fitting" />
+    <option name="LAST_COMMIT_MESSAGE" value="added the ability to disable the realtime plot during fitting" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/MarkovAnalyzer$Sphinx_Task_in_Sphinx_Task_in_.coverage" NAME="Sphinx Task in Sphinx Task in  Coverage Results" MODIFIED="1706885314919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
+  </component>
+</project>
