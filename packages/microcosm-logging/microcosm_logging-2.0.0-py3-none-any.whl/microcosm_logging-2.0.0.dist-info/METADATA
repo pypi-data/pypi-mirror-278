@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: microcosm-logging
+Version: 2.0.0
+Summary: Opinionated logging configuration
+Home-page: https://github.com/globality-corp/microcosm-logging
+Author: Globality Engineering
+Author-email: engineering@globality.com
+Keywords: microcosm
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: loggly-python-handler >=1.0.0
+Requires-Dist: microcosm >=4.0.0
+Requires-Dist: python-json-logger >=0.1.9
+Requires-Dist: requests[security] >=2.18.4
+Requires-Dist: python-logstash-async >=2.3.0
+Provides-Extra: test
+Requires-Dist: coverage >=3.7.1 ; extra == 'test'
+Requires-Dist: parameterized >=0.8.1 ; extra == 'test'
+Requires-Dist: PyHamcrest >=1.9.0 ; extra == 'test'
+Requires-Dist: pytest-cov >=5.0.0 ; extra == 'test'
+Requires-Dist: pytest >=8.2.2 ; extra == 'test'
+
