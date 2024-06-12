@@ -1,0 +1,5 @@
+textual>=0.66.0
+irc>=20.4.0
+textual-autocomplete>=2.1.0b0
+SQLAlchemy>=2.0.30
+aiosqlite>=0.20.0
