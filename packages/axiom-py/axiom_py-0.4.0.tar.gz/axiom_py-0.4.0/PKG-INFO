@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: axiom-py
+Version: 0.4.0
+Summary: Axiom API Python bindings.
+License: MIT
+Author: Axiom, Inc.
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: dacite (>=1.6.0,<2.0.0)
+Requires-Dist: iso8601 (>=1.0.2,<3.0.0)
+Requires-Dist: ndjson (>=0.3.1,<0.4.0)
+Requires-Dist: pyhumps (>=1.6.1,<4.0.0)
+Requires-Dist: requests (>=2.30.0,<3.0.0)
+Requires-Dist: requests-toolbelt (>=0.9.1,<1.1.0)
+Requires-Dist: rfc3339 (>=6.2,<7.0)
+Requires-Dist: ujson (>=5.2.0,<6.0.0)
+Requires-Dist: urllib3 (<3.0.0)
