@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+swollen/__init__.py
+swollen/my_module.py
+swollen.egg-info/PKG-INFO
+swollen.egg-info/SOURCES.txt
+swollen.egg-info/dependency_links.txt
+swollen.egg-info/top_level.txt
+tests/test_my_module.py
