@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: more-polars-utils
+Version: 0.1.0
+Summary: Utility functions for polars
+Author: Kent Czechowski
+Author-email: kentcz@hotmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: polars (>=0.20.0,<0.21.0)
+Description-Content-Type: text/markdown
+
+# more-polars-utils
+
+Utility functions for [polars](https://pola.rs/)
+
+This library expands the [polars.DataFrame](https://docs.pola.rs/api/python/stable/reference/dataframe/index.html) with utility functions for common data engineering operations. This collection of generic utility functions aims to improve the readability and maintainability of Polars-based projects.
+
+## Installation
+
+```bash
+pip install more-polars-utils
+```
+
