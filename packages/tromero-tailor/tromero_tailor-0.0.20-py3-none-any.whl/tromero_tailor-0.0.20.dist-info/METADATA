@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: tromero_tailor
+Version: 0.0.20
+Summary: A short description of your package
+Home-page: http://yourpackagehomepage.com
+Author: Tromero
+Author-email: tadhg.amin@tromero.ai
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: annotated-types ==0.6.0
+Requires-Dist: anyio ==4.3.0
+Requires-Dist: certifi ==2024.2.2
+Requires-Dist: charset-normalizer ==3.3.2
+Requires-Dist: distro ==1.9.0
+Requires-Dist: h11 ==0.14.0
+Requires-Dist: httpcore ==1.0.5
+Requires-Dist: httpx ==0.27.0
+Requires-Dist: idna ==3.6
+Requires-Dist: openai ==1.16.1
+Requires-Dist: pydantic ==2.6.4
+Requires-Dist: pydantic-core ==2.16.3
+Requires-Dist: requests ==2.31.0
+Requires-Dist: setuptools ==69.2.0
+Requires-Dist: sniffio ==1.3.1
+Requires-Dist: tqdm ==4.66.2
+Requires-Dist: typing-extensions ==4.10.0
+Requires-Dist: urllib3 ==2.2.1
+
+# Tromero Tailor AI
+
+## Installation
+
+To install Tromero Tailor AI, you can use pip.
+
+```
+pip install tromero_tailor
+```
+
+## Getting Started
+
+Ensure you have set up both your OpenAi key and your Tromero key. You can follow the instructions on our site to create a Tromero key
+
+### Importing the Package
+
+First, import the TailorAI class from the AITailor package:
+
+```
+from tromero_tailor import TailorAI
+```
+
+### Initializing the Client
+
+Initialize the TailorAI client using your API keys, which should be stored securely and preferably as environment variables:
+
+```
+client = TailorAI(api_key="your-openai-key", tromero_key="your-tromero-key")
+```
+
+### Usage
+
+This class is a drop-in replacement for openai, you should be able to use it as you did before. E.g:
+
+```
+response = client.chat.completions.create(
+    model="gpt-4-turbo-preview",
+    messages=[
+        {"role": "user", "content": prompt},
+    ],
+    temperature=0.5,
+    )
+```
