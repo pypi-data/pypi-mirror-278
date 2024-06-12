@@ -1,0 +1,90 @@
+[tool.poetry]
+name = "nucypher"
+version = "7.3.0"
+authors = ["NuCypher"]
+description = "A threshold access control application to empower privacy in decentralized systems."
+
+[tool.poetry.dependencies]
+python = ">=3.8,<4"
+nucypher-core = "==0.13.0"
+cryptography = "*"
+pynacl = ">=1.4.0"
+mnemonic = "*"
+pyopenssl = "*"
+web3 = '^6.15.1'
+atxm = "*"
+flask = "*"
+hendrix = "*"
+requests = "*"
+maya = '*'
+mako = "*"
+click = '*'
+colorama = '*'
+tabulate = '*'
+marshmallow = '*'
+appdirs = '*'
+constant-sorrow = '^0.1.0a9'
+prometheus-client = '*'
+time-machine = "^2.13.0"
+twisted = "^24.2.0rc1"
+
+[tool.poetry.dev-dependencies]
+pytest = '<7'
+pytest-cov = '*'
+pytest-mock = '*'
+pytest-timeout = '*'
+pytest-twisted = '*'
+eth-ape = "*"
+ape-solidity = '*'
+coverage = '^7.3.2'
+pre-commit = '^2.12.1'
+
+
+[tool.towncrier]
+    package = "nucypher"
+    package_dir = "nucypher"
+    filename = "releases.rst"
+    directory = "newsfragments"
+    underlines = ["-", "~", "^", "*"]
+    issue_format = "`#{issue} <https://github.com/nucypher/nucypher/issues/{issue}>`__"
+    title_format = "v{version} ({project_date})"
+
+    [[tool.towncrier.section]]
+        path = ""
+
+    [[tool.towncrier.type]]
+        directory = "feature"
+        name = "Features"
+        showcontent = true
+
+    [[tool.towncrier.type]]
+        directory = "bugfix"
+        name = "Bugfixes"
+        showcontent = true
+
+    [[tool.towncrier.type]]
+        directory = "doc"
+        name = "Improved Documentation"
+        showcontent = true
+
+    [[tool.towncrier.type]]
+        directory = "removal"
+        name = "Deprecations and Removals"
+        showcontent = true
+
+    [[tool.towncrier.type]]
+        directory = "misc"
+        name = "Misc"
+        showcontent = true
+
+    [[tool.towncrier.type]]
+        directory = "dev"
+        name = "Internal Development Tasks"
+        showcontent = true
+
+[tool.ruff]
+select = ["E", "F", "I"]
+ignore = ["E501"]
+
+[tool.ruff.isort]
+known-first-party = ["nucypher"]
