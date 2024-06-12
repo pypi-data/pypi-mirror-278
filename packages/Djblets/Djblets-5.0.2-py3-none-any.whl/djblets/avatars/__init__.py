@@ -1,0 +1,1 @@
+"""Avatar support for Djblets."""

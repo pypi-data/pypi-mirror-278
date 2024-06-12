@@ -1,0 +1,43 @@
+{% load i18n static %}
+<div class="djblets-c-list-edit-widget list-edit-widget" id="{{id}}_container">
+ <input type="hidden" name="{{name}}_num_rows" value="{{rendered_rows|length}}">
+ <input type="hidden" name="{{name}}_use_legacy_behavior" value="{{use_legacy_behavior}}">
+ <ul class="djblets-c-list-edit-widget__entries">
+{% if rendered_rows %}
+{%  for val in rendered_rows %}
+  <li class="djblets-c-list-edit-widget__entry" data-list-index="{{forloop.counter0}}">
+   {{val}}
+   <a href="#" class="djblets-c-list-edit-widget__remove-item" role="button" title="{% trans 'Remove this entry' %}">
+    <span class="fa fa-times"></span>
+   </a>
+  </li>
+{%  endfor %}
+{% else %}
+  <li class="djblets-c-list-edit-widget__entry" data-list-index="0">
+   {{rendered_initial_row}}
+   <a href="#" class="djblets-c-list-edit-widget__remove-item" role="button" title="{% trans 'Remove this entry' %}">
+    <span class="fa fa-times"></span>
+   </a>
+ </li>
+{% endif %}
+ </ul>
+ <button class="djblets-c-list-edit-widget__add-item btn" role="button">
+  <span class="fa fa-plus"></span>
+  {% trans "Add item" %}
+ </button>
+</div>
+<script>
+
+(function($) {
+    $(document).ready(function() {
+        var view = new Djblets.Forms.ListEditView({
+            el: $('#{{id|escapejs}}_container'),
+            removeText: '{{remove_text|escapejs}}',
+            fieldName: '{{name|escapejs}}',
+            renderedDefaultRow: '{{rendered_empty_row|escapejs}}'
+        });
+
+        view.render();
+    });
+})($ || window.jQuery || django.jQuery);
+</script>
