@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: sxmp-mule
+Version: 1.1.2
+Home-page: https://github.com/PandoraMedia/music-audio-representations
+Author: Matt C. McCallum
+Author-email: mmccallum@pandora.com
+License: GNU GPL 3.0
+Project-URL: Documentation, https://github.com/PandoraMedia/music-audio-representations
+Project-URL: Bug Reports, https://github.com/PandoraMedia/music-audio-representations/issues
+Project-URL: Source, https://github.com/PandoraMedia/music-audio-representations
+Keywords: mule audio music embeddings machine learning
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Multimedia :: Sound/Audio :: Analysis
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: librosa==0.9.2
+Requires-Dist: click==8.1.7
+Requires-Dist: scooch>=1.0.4
+Requires-Dist: tensorflow==2.13.1
+
+
+# MULE
+
+The Musicset Unsupervised Large Embedding (MULE) module is your 
+music-audio workhorse!
+
+This module contains [SCOOCH](https://github.com/PandoraMedia/scooch) configurable code to run a simple 
+analysis pipeline to extract audio embeddings from audio files which
+may then be used for downstream music understanding purposes.
+
+This module requires FFMpeg to read audio files, which may be 
+downloaded [here](https://ffmpeg.org/download.html).
+
+In order to create MULE embeddings, you will need a SCOOCH configuration
+describing the pipeline, and the model weights. Both are licensed under 
+the [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/legalcode) license, and can be found in this [module's github repository](https://github.com/PandoraMedia/music-audio-representations).
+
+To create embeddings for a single audio file, e.g., `test.wav` in the current
+directory, you can use this module in conjunction with the provided configuration
+and model weights:
+
+```
+pip install sxmp-mule
+git clone https://github.com/PandoraMedia/music-audio-representations.git
+cd ./music-audio-representations
+mule analyze --config ./supporting_data/configs/mule_embedding.yml -i ../test.wav -o ./embedding.npy
+```
+
+For more information on this module, please check out the publication:
+
+[*Supervised and Unsupervised Learning of Audio Representations for Music Understanding*](https://arxiv.org/abs/2210.03799), **M. C. McCallum**, F. Korzeniowski, S. Oramas, F. Gouyon, A. F. Ehmann.
+
