@@ -1,0 +1,25 @@
+[project]
+name = 'pyline-cli'
+version = '0.0.1'
+dependencies = ['fuzzywuzzy']
+authors = [
+    { name = 'HeavyLvy' }
+]
+maintainers = [
+    { name = 'HeavyLvy' }
+]
+description = 'Make easy CLI apps in python'
+readme = { file = 'README.md', content-type = 'text/markdown' }
+keywords = ['python', 'cli']
+classifiers = [
+    'License :: OSI Approved :: MIT License',
+    'Development Status :: 2 - Pre-Alpha',
+    'Intended Audience :: Developers',
+    'Programming Language :: Python :: 3',
+    'Operating System :: Unix',
+    'Operating System :: MacOS :: MacOS X',
+    'Operating System :: Microsoft :: Windows',
+]
+
+[project.urls]
+Repository = 'https://github.com/HeavyLvy/pyline'
