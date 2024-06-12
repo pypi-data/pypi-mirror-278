@@ -1,0 +1,80 @@
+/*
+    See the JupyterLab Developer Guide for useful CSS Patterns:
+
+    https://jupyterlab.readthedocs.io/en/stable/developer/css.html
+*/
+.jp-Exhibit {
+  border: 1px solid var(--jp-border-color1);
+  border-radius: 4px;
+  margin: 12px;
+  padding: 4px 8px;
+  max-width: 200px;
+}
+
+.jp-Exhibit-title {
+  margin: 2px 4px;
+}
+
+.jp-Exhibit-description {
+  padding: 2px;
+  height: 2.15em;
+  overflow: hidden;
+}
+
+.jp-Exhibit-icon > img {
+  max-width: 100%;
+}
+
+.jp-Exhibit-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jp-Launcher-openExample .jp-Gallery {
+  display: contents;
+}
+
+.jp-Exhibit-progressbar-filler {
+  background: var(--jp-success-color2);
+  height: 1em;
+  transition: width 1s;
+}
+
+.jp-Exhibit-progressbar {
+  border: 1px solid var(--jp-layout-color3);
+  background: var(--jp-layout-color2);
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  position: relative;
+}
+
+.jp-Exhibit-progressbar-filler > .jp-Exhibit-progressbar-error {
+  background: var(--jp-error-color1);
+}
+
+.jp-Exhibit-progressMessage {
+  color: black;
+  max-height: 1.2em;
+  font-size: 85%;
+  position: absolute;
+  top: 0;
+  padding: 0 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.jp-Exhibit-buttons .jp-Button:disabled {
+  opacity: 0.3;
+}
+
+.jp-Exhibit-buttons .jp-spinningIcon > svg {
+  animation: jp-waiting-spin 3s linear infinite;
+}
+
+@keyframes jp-waiting-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
