@@ -1,0 +1,9 @@
+name: pypeit
+channels:
+  - defaults
+dependencies:
+  - python>=3.10,<3.13
+  - pip
+  - pip:
+    - pypeit
+    - specutils
