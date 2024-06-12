@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: tpu_pod_commander
+Version: 0.1.0
+Summary: TPU pod commander is a command line tool to manage cloud TPU pods.
+Home-page: https://github.com/young-geng/tpu_pod_commander
+License: Apache-2.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: absl-py
+Requires-Dist: mlxu>=0.2.0
