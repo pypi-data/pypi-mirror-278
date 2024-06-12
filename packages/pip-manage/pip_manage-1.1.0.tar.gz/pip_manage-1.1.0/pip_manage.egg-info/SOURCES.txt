@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+pip_manage/__init__.py
+pip_manage/_logging.py
+pip_manage/_pip_interface.py
+pip_manage/pip_purge.py
+pip_manage/pip_review.py
+pip_manage/py.typed
+pip_manage.egg-info/PKG-INFO
+pip_manage.egg-info/SOURCES.txt
+pip_manage.egg-info/dependency_links.txt
+pip_manage.egg-info/entry_points.txt
+pip_manage.egg-info/requires.txt
+pip_manage.egg-info/top_level.txt

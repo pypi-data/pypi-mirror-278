@@ -1,0 +1,18 @@
+pip>9.0
+
+[:python_version < "3.12"]
+typing_extensions>=4.4.0
+
+[dev]
+bandit
+black
+covdefaults
+coverage
+isort
+mypy
+pre-commit
+pylint
+pylint-pytest
+pytest
+ruff
+tox

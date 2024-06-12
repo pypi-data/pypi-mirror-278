@@ -1,0 +1,175 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pip-manage"
+description = "pip-manage lets you smoothly manage your installed packages."
+authors = [
+  { name = "realshouzy" },
+  { name = "Julian Gonggrijp", email = "j.gonggrijp@gmail.com" },
+  { name = "Vincent Driessen" },
+]
+maintainers = [{ name = "realshouzy" }]
+readme = "README.md"
+license = { text = "BSD" }
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+  "Intended Audience :: Developers",
+  "Intended Audience :: System Administrators",
+  "License :: OSI Approved :: BSD License",
+  "Operating System :: OS Independent",
+  "Topic :: System :: Systems Administration",
+]
+keywords = [
+  "pip",
+  "pip-purge",
+  "pip-review",
+  "update",
+  "autoupdate",
+  "autouninstall",
+  "dependencies",
+]
+requires-python = ">=3.8"
+dynamic = ["version", "dependencies"]
+
+[project.urls]
+Source = "https://github.com/realshouzy/pip-manage"
+
+[project.optional-dependencies]
+# keep in sync with requirements-dev.txt
+dev = [
+  "bandit",
+  "black",
+  "covdefaults",
+  "coverage",
+  "isort",
+  "mypy",
+  "pre-commit",
+  "pylint",
+  "pylint-pytest",
+  "pytest",
+  "ruff",
+  "tox",
+]
+
+[project.scripts]
+pip-review = "pip_manage.pip_review:main"
+pip-purge = "pip_manage.pip_purge:main"
+
+[tool.setuptools]
+packages = ["pip_manage"]
+license-files = ["LICENSE"]
+platforms = ["any"]
+
+[tool.setuptools.dynamic]
+version = { attr = "pip_manage.__version__" }
+dependencies = { file = "requirements.txt" }
+
+[tool.black]
+target-version = ["py312", "py311", "py310", "py39", "py38"]
+line-length = 88
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+strict = true
+check_untyped_defs = true
+disallow_any_generics = true
+disallow_incomplete_defs = true
+disallow_untyped_defs = true
+warn_redundant_casts = true
+show_error_codes = true
+disallow_subclassing_any = true
+disallow_untyped_decorators = true
+warn_return_any = true
+strict_equality = true
+no_implicit_reexport = true
+no_implicit_optional = true
+warn_unused_ignores = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+disallow_untyped_decorators = false
+disable_error_code = ["attr-defined"]
+
+[tool.ruff]
+lint.select = ["ALL"]
+lint.ignore = [
+  "ANN401",
+  "B026",
+  "S603",
+  "ANN101",
+  "ANN102",
+  "PTH123",
+  "PLR2004",
+  "ERA001",
+  "EM101",
+  "TRY003",
+  "D100",
+  "D101",
+  "D102",
+  "D103",
+  "D107",
+  "UP035",
+  "UP036",
+  "C901",
+  "PLR0912",
+  "PLR0911",
+  "B905",
+  "TD002",
+  "TD003",
+  "TRY400",
+  "S101",
+]
+lint.fixable = ["ALL"]
+lint.unfixable = []
+show-fixes = true
+target-version = "py312"
+line-length = 88
+
+[tool.ruff.lint.extend-per-file-ignores]
+"./tests/*_test.py" = ["S101", "SLF001", "PLR0913", "F811", "F401"]
+"./tests/*.py" = ["D104"]
+"./tests/pip_review_test.py" = ["E501"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["pip_manage", "tests"]
+required-imports = ["from __future__ import annotations"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "pep257"
+
+[tool.pylint]
+disable = [
+  "R0903",
+  "C0114",
+  "C0115",
+  "C0116",
+  "R0912",
+  "R0911",
+  "W0511",
+  "W0212",
+  "R0801",
+]
+load-plugins = "pylint_pytest"
+
+[tool.bandit]
+skips = ["B101"]
+exclude_dirs = ["tests"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["*_test.py"]
+
+[tool.coverage.run]
+plugins = ["covdefaults"]
