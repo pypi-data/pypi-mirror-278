@@ -1,0 +1,47 @@
+Metadata-Version: 2.3
+Name: litestar-tailwind-cli
+Version: 0.0.1
+Project-URL: Documentation, https://github.com/Tobi-De/litestar-tailwind-cli#readme
+Project-URL: Issues, https://github.com/Tobi-De/litestar-tailwind-cli/issues
+Project-URL: Source, https://github.com/Tobi-De/litestar-tailwind-cli
+Author-email: Tobi DEGNON <tobidegnon@proton.me>
+License-Expression: MIT
+License-File: LICENSE.txt
+Keywords: litestar,tailwindcss
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development
+Classifier: Typing :: Typed
+Requires-Python: >=3.8
+Requires-Dist: litestar
+Description-Content-Type: text/markdown
+
+# litestar-tailwind-cli
+
+[![PyPI - Version](https://img.shields.io/pypi/v/litestar-tailwind-cli.svg)](https://pypi.org/project/litestar-tailwind-cli)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/litestar-tailwind-cli.svg)](https://pypi.org/project/litestar-tailwind-cli)
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install litestar-tailwind-cli
+```
+
+## License
+
+`litestar-tailwind-cli` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
