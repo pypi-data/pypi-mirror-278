@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: gros-server
+Version: 0.0.3
+Summary: Grip on Software server framework
+Home-page: https://github.com/grip-on-software/server-framework
+Author: Leon Helwerda
+Author-email: l.s.helwerda@liacs.leidenuniv.nl
+License: Apache 2.0
+Keywords: gros server framework authentication templates
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Requires-Dist: cherrypy
+Provides-Extra: ldap
+Requires-Dist: python-ldap; extra == "ldap"
+
+Web application framework for building
+authenticated services, with templating to avoid vulnerabilities.
