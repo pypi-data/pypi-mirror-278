@@ -1,0 +1,23 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "posmatch"
+version = "0.8.0"
+description = "Positional sub-pattern matching for custom classes."
+authors = ["Michal Porteš <michalportes1@gmail.com>"]
+license = "MIT"
+readme = "README.rst"
+homepage = "https://github.com/mportesdev/posmatch"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.bandit.assert_used]
+skips = ["tests/*"]
