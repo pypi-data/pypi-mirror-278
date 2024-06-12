@@ -1,0 +1,84 @@
+Metadata-Version: 2.1
+Name: pdlogger
+Version: 0.0.3
+Summary: An example package
+Home-page: https://bitbucket.org/paralleldots/pdlogger/src/main/
+Author: parallelldots
+Author-email: dsteam-wiki@paralleldots.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# pdlogger
+
+pdlogger is a python based logger that let's you push your logging.info() calls to an AMQP queue.
+
+## Installation
+pdlogger is available on pypi. Just do:
+
+```sh
+pip install pdlogger
+```
+
+## Usage
+
+### Client application 
+Once you have installed pdlogger, setup the logger in the initial steps of your application by doing:
+
+```python
+import logging
+from pdlogger.Logging import AMQPLoggingHandler
+from pdlogger.Logging import AMQPLogger
+from pdlogger.Logging import EnvVarChecker
+
+
+logging.setLoggerClass(AMQPLogger)
+logger = logging.getLogger("pdlogs")
+logger.setLevel(logging.INFO)
+handler = AMQPLoggingHandler()
+formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
+handler.setFormatter(formatter)
+logger.addHandler(handler)
+```
+
+Then, in all other modules of your application, just do
+
+```python
+import logging
+logger = logging.getLogger('pdlogs')
+logger.info(<your data here>)
+```
+
+You can either set AMQP_URL, QUEUE_NAME in the environment variables, or they can be passed to the AMQPLoggingHandler like:
+
+```python
+AMQPLoggingHandler(amqp_url, queue_name, msg_priority)
+```
+
+logger.info takes the following arguments:
+
+- msg: Logs that you want to push. Anything that is JSON serializable goes.
+- project_id (Optional): Project ID. Can be left None. E.g. hf38fgf883fg3bs3
+- test_image_id (Optional): Test Image ID. Can be left None. E.g. 73184492
+- application_name (Optional): Application Name. Can be left None. E.g. all-in-1
+- checkpoint_name: Arbitrary string to keep track of where the log is coming from. E.g. opensetThreshApplied, otherRemoved.
+
+### Producer
+
+You need atleast 1 consumer running to consume the logs.
+To run a consumer application, just run:
+
+```python
+from pdlogger.Logging import AMQPConsumer
+consumer = AMQPConsumer()
+consumer.start_consuming()
+```
+
+You can either set AMQP_URL, QUEUE_NAME, SQL_HOST, SQL_USER, SQL_PASSWORD, SQL_DATABASE in the environment variables, or they can be passed to the AMQPConsumer like:
+
+
+```python
+AMQPConsumer(amqp_url, queue_name, sql_host, sql_user, sql_password, sql_database)
+```

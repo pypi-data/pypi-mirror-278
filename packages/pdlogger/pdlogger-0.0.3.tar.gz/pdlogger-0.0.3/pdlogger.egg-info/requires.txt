@@ -1,0 +1,5 @@
+streamlit==1.23.0
+PyPika==0.48.9
+pandas==1.1.5
+mysql-connector-python==8.0.33
+pika==0.13.0
