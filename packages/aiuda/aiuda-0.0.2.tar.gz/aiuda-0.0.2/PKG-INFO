@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: aiuda
+Version: 0.0.2
+Summary: AI tools for runtime python. Such as advanced pprinting, tree, formatting and some random utils.
+Home-page: https://github.com/SamthinkGit/aiuda
+Author: Sebastian Mayorquín
+Author-email: sebastianmayorquin@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: langchain
+Requires-Dist: langchain-openai
+Requires-Dist: langchainhub
+Requires-Dist: colorama
