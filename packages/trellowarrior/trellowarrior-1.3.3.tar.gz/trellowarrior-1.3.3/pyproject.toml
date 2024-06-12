@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trellowarrior"
+version = "1.3.3"
+description = "Tool to sync Taskwarrior projects with Trello boards"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+keywords = ["board", "easy", "project", "sync", "task", "taskwarrior", "tool", "trello"]
+authors = [
+  {name = "Óscar García Amor", email = "ogarcia@connectical.com"}
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Console",
+  "Intended Audience :: End Users/Desktop",
+  "Intended Audience :: System Administrators",
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+  "Natural Language :: English",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Topic :: Utilities"
+]
+dependencies = [
+  "py-trello >= 0.20.1",
+  "requests",
+  "tasklib"
+]
+
+[tool.setuptools.packages.find]
+include = ["trellowarrior*"]
+
+[tool.setuptools.package-data]
+"*" = [
+  "trellowarrior.conf",
+  "CONTRIBUTING.md"
+]
+
+[project.scripts]
+trellowarrior = "trellowarrior.main:main"
+
+[project.urls]
+"Bug Reports" = "https://github.com/ogarcia/trellowarrior/issues"
+"Source" = "https://github.com/ogarcia/trellowarrior"
