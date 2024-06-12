@@ -1,0 +1,2 @@
+[console_scripts]
+run-stacking = EcoStackML.scripts.run_stacking:main
