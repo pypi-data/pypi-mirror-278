@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: pyxmip
+Version: 1.0.0
+Summary: Cross-matching and cross-identification toolkit for astronomical surveys.
+Author-email: "Eliza C. Diggins" <eliza.diggins@utah.edu>
+Project-URL: Homepage, https://github.com/eliza-diggins/pyXMIP
+Keywords: astronomy,cross-matching,cross-identification,survey,statistics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: sklearn
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: astropy
+Requires-Dist: tqdm
+Requires-Dist: sqlalchemy
+Requires-Dist: astroquery
+Requires-Dist: healpy
+Requires-Dist: pydantic
+Requires-Dist: ruamel
+Requires-Dist: matplotlib
