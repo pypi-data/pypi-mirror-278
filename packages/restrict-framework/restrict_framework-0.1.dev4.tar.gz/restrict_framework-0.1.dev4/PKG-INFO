@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: restrict_framework
+Version: 0.1.dev4
+Summary: A functional resource-oriented Web framework
+Author: Curtis Schlak
+Author-email: 696163-realistschuckle@users.noreply.gitlab.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pygments (>=2.18.0,<3.0.0)
+Requires-Dist: starlette (>=0.37.2,<0.38.0)
+Requires-Dist: uvicorn (>=0.30.0,<0.31.0)
+Description-Content-Type: text/markdown
+
+# RESTrict
+
+In development...
+
+Please see <https://realistschuckle.gitlab.io/restrict-framework> for 
+most up-to-date documentation.
+

@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "restrict_framework"
+version = "0.1.dev4"
+description = "A functional resource-oriented Web framework"
+authors = ["Curtis Schlak <696163-realistschuckle@users.noreply.gitlab.com>"]
+readme = "README.md"
+
+[tool.poetry.plugins.'pygments.lexers']
+resource_lexer = 'restrict_framework.lexers.resource_lexer:ResourceLexer'
+
+[tool.poetry.dependencies]
+python = "^3.11"
+starlette = "^0.37.2"
+uvicorn = "^0.30.0"
+pygments = "^2.18.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+
+
+[tool.poetry.group.docs.dependencies]
+jupyter-book = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
