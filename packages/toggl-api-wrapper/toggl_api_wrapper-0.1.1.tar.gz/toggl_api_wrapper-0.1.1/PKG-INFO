@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: toggl-api-wrapper
+Version: 0.1.1
+Summary: Simple Toggl API wrapper for non-premium features.
+License: MIT
+Author: David Kasakaitis
+Author-email: davidkasakaitis@proton.me
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Typing :: Typed
+Provides-Extra: test
+Requires-Dist: httpx (>=0.27.0,<0.28.0)
+Requires-Dist: sqlalchemy (>=2.0.30,<3.0.0)
+Project-URL: Bug Tracker, https://github.com/ddkasa/github-random-star/issues
+Project-URL: Homepage, https://ddkasa.github.io/toggl-api-wrapper/
+Project-URL: Source, https://github.com/ddkasa/github-random-star
+Description-Content-Type: text/markdown
+
+# Python Toggl API Wrapper
+
+
+![PyPI - Version](https://img.shields.io/pypi/v/toggl-api-wrapper?style=for-the-badge&link=https%3A%2F%2Fpypi.org%2Fproject%2Ftoggl-api-wrapper%2F)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/toggl-api-wrapper?style=for-the-badge)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/ddkasa/toggl-api-wrapper/publish.yaml?style=for-the-badge)
+![Codecov](https://img.shields.io/codecov/c/github/ddkasa/toggl-api-wrapper?style=for-the-badge)
+***
+
+
+> [!WARNING]  
+> *Alpha Stage: Anything might change without notice at any moment.*
+
+Simple Python Toggl API wrapper for non-premium features primarily focused on creating a cached framework for developing custom commands.
+
+***
+
+## Installation
+
+### Poetry
+
+```
+poetry add toggl-api-wrapper
+```
+
+### PIP
+
+```
+pip install toggl-api-wrapper
+```
+
+## Usage
+
+- Currently supports interacting with Trackers, Projects, Clients & Tags and some extras.
+- Designed to be rudimentary to allow simple development of custom commands.
+
+
+## Documentation
+- [API Documentation](https://ddkasa.github.io/toggl-api-wrapper/api-guide/)
+- [User Guide](https://ddkasa.github.io/toggl-api-wrapper/user-guide/)
+
+## Development
+See [CONTRIBUTING](about/CONTRIBUTING.md).
+
+## License
+MIT. Check [LICENSE](about/LICENSE.md) for more information.
+
