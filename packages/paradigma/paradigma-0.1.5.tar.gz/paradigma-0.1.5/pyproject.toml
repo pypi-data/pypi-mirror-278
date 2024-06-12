@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "paradigma"
+version = "0.1.5"
+description = "Digital Biomarkers for Parkinson's Disease Toolbox"
+authors = ["Radboud, eScience Center"]
+license = "Apache-2.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
