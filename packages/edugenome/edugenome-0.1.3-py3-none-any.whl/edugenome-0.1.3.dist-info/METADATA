@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: edugenome
+Version: 0.1.3
+Summary: It consists of three genetic algorithms that are simply           implemented with Python code for genetic algorithm training:               creating a number sum of 20, creating (4, 4) images, and                   implementing linear regression.
+Home-page: https://github.com/majestyblue/edugenome
+Author: majestyblue
+Author-email: majestyblue88@gmail.com
+Keywords: education,genome,genetic algorithm
+Requires-Python: >=3.6
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+
