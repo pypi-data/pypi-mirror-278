@@ -1,0 +1,15 @@
+jaxkan/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jaxkan/bases/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jaxkan/bases/splines.py,sha256=gZiX6jO7_ShEwMxKbBUkWf0dAZnZwYVIUHJu4mhLjdc,1577
+jaxkan/models/KAN.py,sha256=fN42MQwlfiL3SCkkvYvfGTpAnkxRC2Iv0cfmKbMExhA,5166
+jaxkan/models/KANLayer.py,sha256=yXOd7__5M5WnQ2PlyVaL1k88Jb0b8SWwYdjptde3nlA,11753
+jaxkan/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jaxkan/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jaxkan/utils/general.py,sha256=FO1GT5ZoukMrqZYeRv45m77bJj8ZIdt5tKC8m5o5jys,1622
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/dataset.py,sha256=JWvTyU6Af2OZAhYbjiHSTxM6oWktpNcQVGxzQZOYl9A,3184
+jaxkan-0.1.1.dist-info/LICENSE,sha256=XEFMXSzQ88q_tL7MypI3G8sS_xytpYCSbMM1aK2HPzU,1092
+jaxkan-0.1.1.dist-info/METADATA,sha256=pWiXY1MwvMo9j6kauZyAarBN59VluMosNCVwVUewEKY,1878
+jaxkan-0.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+jaxkan-0.1.1.dist-info/top_level.txt,sha256=hDvs2HHYB4hyLHYEZJprsLgZPpOIA0ckKfPLSOY4owo,13
+jaxkan-0.1.1.dist-info/RECORD,,
