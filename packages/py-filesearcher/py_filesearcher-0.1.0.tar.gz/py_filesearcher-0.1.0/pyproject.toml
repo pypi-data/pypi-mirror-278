@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "py-filesearcher"
+version = "0.1.0"
+description = ""
+authors = ["Young <gooker_young@163.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.9"
+whoosh = "^2.7.4"
+jieba = "^0.42.1"
+chardet = "^5.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = 'tuna'
+url = 'https://pypi.tuna.tsinghua.edu.cn/simple/'
+priority = "primary"
+
+[[tool.poetry.source]]
+name = 'aliyun'
+url = 'https://mirrors.aliyun.com/pypi/'
+priority = "supplemental"
