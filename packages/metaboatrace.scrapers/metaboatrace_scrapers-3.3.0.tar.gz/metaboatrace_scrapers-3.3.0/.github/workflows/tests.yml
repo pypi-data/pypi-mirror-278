@@ -1,0 +1,27 @@
+name: Run tests
+
+on: [pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install rye
+        uses: baptiste0928/cargo-install@v2
+        with:
+          crate: rye
+          git: https://github.com/mitsuhiko/rye
+          branch: main
+      - name: Fix Python version
+        run: rye pin 3.11
+      - name: Install Dependencies
+        run: rye sync
+      - name: Run tests with coverage
+        run: |
+          rye run pytest --cov=metaboatrace.scrapers tests --cov-report=xml:coverage.xml
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v2
+        with:
+          file: ./coverage.xml
