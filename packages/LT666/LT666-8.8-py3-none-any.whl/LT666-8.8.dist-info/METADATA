@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: LT666
+Version: 8.8
+Summary: luTuo
+Author: LT
+Author-email: 1803228677@qq.com
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+封装一些ui自动化（包括基于web,electron,QT框架的软件）所需要的方法
+
