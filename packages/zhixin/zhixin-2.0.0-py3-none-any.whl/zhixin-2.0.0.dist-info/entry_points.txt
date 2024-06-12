@@ -1,0 +1,5 @@
+[console_scripts]
+zhixin = zhixin.__main__:main
+zx = zhixin.__main__:main
+zxdebuggdb = zhixin.__main__:debug_gdb_main
+
