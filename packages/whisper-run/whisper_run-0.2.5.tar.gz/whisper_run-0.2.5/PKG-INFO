@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: whisper_run
+Version: 0.2.5
+Summary: Whisper with speaker diarization
+Home-page: https://github.com/yourusername/your_repository
+Author: Görkem Karamolla
+Author-email: gorkemkaramolla@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1
+Requires-Dist: pydub>=0.24.1
+Requires-Dist: pyannote.audio>=3.1.0
+Requires-Dist: torchvision>=0.17.0
+Requires-Dist: transformers>=4.1.2
+Requires-Dist: inquirer>=3.2.0
+Requires-Dist: faster-whisper>=1.0.0
+Requires-Dist: torch>=2.1.0
+
+# Whisper-Run
+
+# It is a pip cli for whisper-models with speaker-diarization.
+
+# whisper_run --audio_dir=./sounds/test.wav --device=cuda --hf_auth_token=your_tokent
