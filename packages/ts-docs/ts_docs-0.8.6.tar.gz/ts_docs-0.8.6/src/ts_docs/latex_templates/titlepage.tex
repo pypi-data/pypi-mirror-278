@@ -1,0 +1,49 @@
+\makeatletter
+\newgeometry{left=0cm,right=0cm,bottom=2cm}
+
+
+\cfoot{www.timesintelli.com}
+
+\renewcommand{\headrulewidth}{0pt}
+
+{\color{myblue}\rule{30pt}{2.1cm}}
+    \hspace{0.2cm}
+    \begin{minipage}[b]{16.5cm}
+    {\fontsize{36pt}{48pt}\textbf{\Target}}\\
+
+    {\fontsize{28pt}{18pt}\textbf{\color{mygrayy}\@title}}
+    \end{minipage}
+    \hspace{\stretch{1}}
+
+\vspace{30em}
+
+\ThisCenterWallPaper{.6}{../../../../_static/watermark.png}
+
+\begin{center}
+	    \textbf{时 擎 科 技 Timesintelli Technology}\\%
+	    \textsf{上海 | 无锡 | 深圳 | 香港}\\%
+	    \textmd{总部地址: 上海市浦东新区祥科路58号炬创芯A栋4层}\\%
+	    \textit{Tel: 021-61093813 \quad Mail: info@timesintelli.com}\\%
+\end{center}
+
+\vspace{10em}
+
+\begin{flushright}
+ \setlength\parindent{8em}
+    \begin{minipage}[b]{1.7cm}
+    \sphinxlogo
+    \end{minipage}
+    \hspace{0.2cm}
+    \rule{3pt}{1.7cm}
+    \hspace{0.2cm}
+    \begin{minipage}[b]{4cm}
+       {\large{\ReleaseName}}\smallskip\newline
+        {\large{\@author}}\smallskip\newline
+         {\large{\@date}}\smallskip
+    \end{minipage}
+    {\color{myblue}\rule{30pt}{1.7cm}}
+\end{flushright}
+
+
+\restoregeometry
+\makeatother
