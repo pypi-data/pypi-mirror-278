@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: extraxt
+Version: 0.0.12
+Summary: Easily extract data from PDFs.
+Home-page: https://github.com/0mjs/extraxt
+Author: Matt J. Stevenson
+Author-email: dev@mattjs.me
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: PyMuPDF
+
+A Python PDF data extraction library with a simple interface.
