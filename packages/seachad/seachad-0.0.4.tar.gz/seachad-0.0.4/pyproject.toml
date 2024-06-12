@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "seachad"
+version = "0.0.4"
+authors = [
+    { name="jovenluke", email="fernando.garcia.varela@outlook.es" },
+]
+description = "Common packages from SEACHAD"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "colorama",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/seachad/seachad"
+"Bug Tracker" = "https://github.com/seachad/seachad/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["seachad"]
