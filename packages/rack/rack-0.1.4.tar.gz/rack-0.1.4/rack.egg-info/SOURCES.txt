@@ -1,0 +1,17 @@
+MANIFEST.in
+README.rst
+dict_test.py
+pyproject.toml
+setup.py
+./__init__.py
+./dict.py
+./dict_lmdb.py
+./dict_sqlite3.py
+./set.py
+./set_lmdb.py
+./set_lmdb_small.py
+LICENSES/MIT.txt
+rack.egg-info/PKG-INFO
+rack.egg-info/SOURCES.txt
+rack.egg-info/dependency_links.txt
+rack.egg-info/top_level.txt
