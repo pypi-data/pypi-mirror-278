@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "pms-encoder"
+version = "1.0.2"
+description = ""
+authors = ["heeyong.kwon <heeyong.kwon@4by4inc.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+ffmpeg-python = "^0.2.0"
+loguru = "^0.7.2"
+numpy = "^1.26.4"
+python-dotenv = "^1.0.1"
+redis = "^5.0.4"
+pymysql = "^1.1.0"
+opencv-python = "^4.9.0.80"
+pms-inference-engine = "^1.0.2"
+pms-furiosa-processor = "^0.2.0"
+boto3 = "^1.34.112"
+pytest = "^8.2.1"
+pytest-asyncio = "^0.23.7"
+pms-nvidia-processor = "^0.3.1"
+pms-model-manager = "^1.3.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
