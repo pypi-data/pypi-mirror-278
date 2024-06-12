@@ -1,0 +1,9 @@
+pylatex>=1.4.2
+pygit2>=1.14.1
+
+[dev]
+black
+ruff
+tox
+mypy
+pytest
