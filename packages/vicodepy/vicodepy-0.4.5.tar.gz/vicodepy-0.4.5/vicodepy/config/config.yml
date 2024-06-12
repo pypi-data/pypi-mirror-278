@@ -1,0 +1,13 @@
+timelines:
+  - name: gaze
+    groups:
+    - name: 1
+      color: cyan
+    - name: 2
+      color: pink
+  - name: phase
+    groups:
+    - name: fam
+      color: yellow
+    - name: test
+      color: green
