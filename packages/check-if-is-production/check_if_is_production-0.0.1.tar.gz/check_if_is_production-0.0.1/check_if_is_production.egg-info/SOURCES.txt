@@ -1,0 +1,10 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+check_if_is_production/__init__.py
+check_if_is_production/check_production.py
+check_if_is_production.egg-info/PKG-INFO
+check_if_is_production.egg-info/SOURCES.txt
+check_if_is_production.egg-info/dependency_links.txt
+check_if_is_production.egg-info/top_level.txt
