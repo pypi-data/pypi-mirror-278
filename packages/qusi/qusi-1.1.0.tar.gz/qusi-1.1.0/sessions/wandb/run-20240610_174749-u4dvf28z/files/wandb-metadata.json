@@ -1,0 +1,49 @@
+{
+    "os": "macOS-14.5-arm64-arm-64bit",
+    "python": "3.11.9",
+    "heartbeatAt": "2024-06-10T21:47:50.325931",
+    "startedAt": "2024-06-10T21:47:49.379372",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/Users/golmschenk/Code/qusi/train_toy_multi_class.py",
+    "codePathLocal": "train_toy_multi_class.py",
+    "codePath": "train_toy_multi_class.py",
+    "git": {
+        "remote": "https://github.com/golmschenk/ramjet.git",
+        "commit": "f7666a573fd22b6af92cbf720f2e791adc28ce6f"
+    },
+    "email": "greg@olmschenk.com",
+    "root": "/Users/golmschenk/Code/qusi",
+    "host": "Carbon.lan",
+    "username": "golmschenk",
+    "executable": "/opt/homebrew/Caskroom/mambaforge/base/envs/qusi_env/bin/python",
+    "cpu_count": 10,
+    "cpu_count_logical": 10,
+    "cpu_freq": {
+        "current": 3228,
+        "min": 600,
+        "max": 3228
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3228,
+            "min": 600,
+            "max": 3228
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 926.3517189025879,
+            "used": 9.561668395996094
+        }
+    },
+    "gpuapple": {
+        "type": "Apple M1 Max",
+        "vendor": "sppci_vendor_Apple"
+    },
+    "memory": {
+        "total": 32.0
+    }
+}

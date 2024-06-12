@@ -1,0 +1,9 @@
+envs_dirs:
+  - /scratch/zt1/project/zorawar-prj/user/golmsche/.conda/envs
+pkgs_dirs:
+  - /scratch/zt1/project/zorawar-prj/user/golmsche/.conda/pkgs
+auto_activate_base: false
+channels:
+  - conda-forge
+  - defaults
+channel_priority: strict
