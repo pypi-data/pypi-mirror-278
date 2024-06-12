@@ -1,0 +1,28 @@
+[tool.poetry] 
+name = "metalgpu"
+version = "0.6.0"
+authors = ["Alois Denoiseux <aloisdenoiseux@gmail.com>"]
+
+description = "A python wrapper for Apple's Metal API"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: MacOS :: MacOS X", 
+]
+
+[project]
+name = "metalgpu"
+version = "0.0.0"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+numpy = "^1.26.4"
+
+[tool.poetry.scripts]
+build = "src.metalgpu.__init__:build"
+
+[project.urls]
+Homepage = "https://github.com/Al0den/metalgpu"
+Issues = "https://github.com/Al0den/metalgpu/issues"
+
