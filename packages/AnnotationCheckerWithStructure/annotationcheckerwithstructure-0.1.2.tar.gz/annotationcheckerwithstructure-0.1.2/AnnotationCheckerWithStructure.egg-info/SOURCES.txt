@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+AnnotationCheckerWithStructure/__init__.py
+AnnotationCheckerWithStructure/main.py
+AnnotationCheckerWithStructure.egg-info/PKG-INFO
+AnnotationCheckerWithStructure.egg-info/SOURCES.txt
+AnnotationCheckerWithStructure.egg-info/dependency_links.txt
+AnnotationCheckerWithStructure.egg-info/entry_points.txt
+AnnotationCheckerWithStructure.egg-info/requires.txt
+AnnotationCheckerWithStructure.egg-info/top_level.txt
+tests/test_main.py
