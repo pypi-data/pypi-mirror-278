@@ -1,0 +1,7 @@
+description: Cotisations du régime de la SNCF
+metadata:
+  short_label: Cotisations SNCF
+  label_en: Contributions to the SNCF scheme (public railway company)
+  order:
+  - regime_de_retraite
+  - regime_prevoyance
