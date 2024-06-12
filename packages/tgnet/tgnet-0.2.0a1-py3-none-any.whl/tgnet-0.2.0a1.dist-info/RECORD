@@ -1,0 +1,15 @@
+tgnet/__init__.py,sha256=ncjpkuqQDRsaeh1YzCK9sALQQwhjq9Vy-FhlK3p1ySg,44
+tgnet/low/__init__.py,sha256=rvJoDBg4f4Xb5TUbZ0E6gB2t-68-AL01AV7myiViMYg,275
+tgnet/low/auth.py,sha256=mzzMe29lAhGx74EtcL5VwgYAfQgSHQtonLFl28MuW5w,2783
+tgnet/low/datacenter.py,sha256=4gqeYqKR4y7qGJhHqITtAstNQ9xspgqhA_JMHf8cpYM,2696
+tgnet/low/headers.py,sha256=wS4ACozG3jxNY0haeGYeVurgmzCXqC3Vq8V4K3Op1Og,2988
+tgnet/low/ip.py,sha256=8rsUxbEjsQhUdi154S9xB6KOrUGgEF5iHnfio1KCtnI,1412
+tgnet/low/salt.py,sha256=Ba8g5M8aum7e8AVJLTDKSjcNoshXgIEzrXvOIIi8fVY,660
+tgnet/low/session.py,sha256=cJx7xp_PZhSjUhD-tZ8G_UIdoOuxhllbmeLZuGFTu6E,1140
+tgnet/low/tgnet_reader.py,sha256=_o2wT0QKyp_AIpGyIJvVsYQRSNndqMnvnD4ZodVL0AY,2578
+tgnet/tgnet.py,sha256=luYGJ7766jL7p5eNxZbLcCdwMNY4R7aV8SEUxeHTmN4,10709
+tgnet/utils.py,sha256=B6OMbAVbwqsw73t729R1lg_VT6QgYHQer9DIaiEHC8k,219
+tgnet-0.2.0a1.dist-info/LICENSE,sha256=w4uLf5yMkwwsebsdOfU0LK06D6F2a2-F_lryLceRKJo,1066
+tgnet-0.2.0a1.dist-info/METADATA,sha256=TAANHcLFOkAKCSaMEatXQFu02TlLFRxYWewCcs9xOA8,1593
+tgnet-0.2.0a1.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+tgnet-0.2.0a1.dist-info/RECORD,,
