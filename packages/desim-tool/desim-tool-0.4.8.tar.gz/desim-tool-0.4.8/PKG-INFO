@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: desim-tool
+Version: 0.4.8
+Summary: A discrete event simulator
+Home-page: https://github.com/sed-group/desim
+Author: Erik Berg, Oscar Bennet
+Author-email: erik.00.berg@gmail.com, oscar.bennet@outlook.com
+License-File: LICENSE.md
+Requires-Dist: simpy
+Requires-Dist: numpy
