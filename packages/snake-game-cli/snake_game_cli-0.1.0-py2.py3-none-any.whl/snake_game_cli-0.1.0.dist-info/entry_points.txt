@@ -1,0 +1,2 @@
+[console_scripts]
+play-snake = snake_game_cli:main
