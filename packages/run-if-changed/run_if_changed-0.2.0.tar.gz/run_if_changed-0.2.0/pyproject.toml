@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "run-if-changed"
+version = "0.2.0"
+description = ""
+authors = ["CD Clark III <clifton.clark@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typer = "^0.12.3"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+run-if-changed = "run_if_changed.cli:app"
+run-if = "run_if_changed.cli:app"
