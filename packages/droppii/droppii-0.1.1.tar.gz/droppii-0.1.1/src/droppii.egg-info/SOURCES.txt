@@ -1,0 +1,15 @@
+LICENSE.md
+README.md
+pyproject.toml
+src/droppii/__init__.py
+src/droppii/__main__.py
+src/droppii/_cli.py
+src/droppii/_replace_bytes_values.py
+src/droppii/censor.py
+src/droppii/replace_df_fields.py
+src/droppii/s3_get.py
+src/droppii.egg-info/PKG-INFO
+src/droppii.egg-info/SOURCES.txt
+src/droppii.egg-info/dependency_links.txt
+src/droppii.egg-info/requires.txt
+src/droppii.egg-info/top_level.txt
