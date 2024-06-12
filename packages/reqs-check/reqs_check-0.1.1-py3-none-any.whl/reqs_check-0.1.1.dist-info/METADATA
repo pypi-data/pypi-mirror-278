@@ -1,0 +1,131 @@
+Metadata-Version: 2.1
+Name: reqs-check
+Version: 0.1.1
+Summary: A tool to compare multiple requirements.txt files
+Home-page: https://github.com/bricefotzo/reqs-check
+Author: Brice Fotzo
+Author-email: bricef.tech@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: tabulate
+Requires-Dist: termcolor
+
+
+# reqs-check
+
+`reqs-check` is a tool to check and compare multiple `requirements.txt` files for Python projects.
+
+
+## Installation
+
+To install `reqs-check`, use `pip`:
+
+```sh
+pip install reqs-check
+```
+
+## Usage
+```
+Usage: 
+    reqs-check [-h] [--only-diff] [--find-duplicates] [--lint] F [F ...]
+
+Check and compare multiple requirements.txt files.
+
+Positional arguments:
+  F                  Paths to the requirements.txt files
+
+Options:
+  -h, --help         show this help message and exit
+  --only-diff        Only show packages with differing versions
+  --find-duplicates  Find duplicate packages in the requirements files
+  --lint             Lint the requirements files for best practices
+```
+
+## Examples
+
+Let's consider the following files. 
+
+**requirements1.txt**
+```
+pandas==1.1.5
+numpy==1.19.5
+scipy~=1.5.4
+matplotlib==3.3.4
+pandas
+numpy>=1.15
+-e git+https://github.com/user/repo.git#egg=package
+```
+and 
+
+**requirements2.txt**
+```
+pandas==1.1.5
+numpy==1.19.3
+matplotlib==3.2.1
+requests>=2.24.0
+scipy==1.5.4
+```
+### Compare requirements files
+
+This command compares two `requirements.txt` files and highlights the differences.
+
+```sh
+reqs-check requirements1.txt requirements2.txt
+```
+![alt text](image-1.png)
+
+### Filter to show only packages with differing versions
+
+This command compares two `requirements.txt` files and displays only the packages with differing versions.
+
+```sh
+reqs-check requirements1.txt requirements2.txt --only-diff
+```
+![alt text](image-2.png)
+
+### Find duplicate packages
+
+This command checks for duplicate packages within each `requirements.txt` file and lists them along with their versions.
+
+```sh
+reqs-check requirements1.txt requirements2.txt --find-duplicates
+```
+```
+Duplicate packages in requirements1.txt:
+  pandas: ['==1.1.5', 'Any']
+  numpy: ['==1.19.5', '>=1.15']
+```
+### Lint requirements files
+
+This command checks a `requirements.txt` file for best practices, such as specifying version numbers and avoiding editable installs.
+
+```sh
+reqs-check requirements1.txt --lint
+```
+```
+Lint warnings for requirements1.txt:
+Line 5: 'pandas' does not specify a version.
+Line 7: '-e git+https://github.com/user/repo.git#egg=package' does not specify a version.
+Line 7: '-e git+https://github.com/user/repo.git#egg=package' uses editable installs, which are not recommended for production.
+```
+
+## Next Steps
+
+### Planned Features
+
+- [ ] Enhanced linting capabilities with more detailed best practices.
+- [ ] Integration with CI/CD pipelines for automated checks.
+- [ ] Detailed reports in various formats (e.g., JSON, HTML).
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+

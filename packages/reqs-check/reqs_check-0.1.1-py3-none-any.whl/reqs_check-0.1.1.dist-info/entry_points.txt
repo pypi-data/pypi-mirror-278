@@ -1,0 +1,3 @@
+[console_scripts]
+reqs-check = reqs_check.main:main
+
