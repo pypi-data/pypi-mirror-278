@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools", "nanobind", "cmake"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 120
+target-version = ['py38']
+
+[tool.ruff]
+line-length = 120
+extend-ignore = [
+	"E402", # Bottom imports
+]
