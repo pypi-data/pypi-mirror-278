@@ -1,0 +1,105 @@
+# Poetry pyproject.toml: https://python-poetry.org/docs/pyproject/
+
+[build-system]
+requires = ["poetry>=1.0"]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry]
+name = "lindemann"
+version = "0.10.0"
+description = "lindemann is a python package to calculate the Lindemann index  of a lammps trajectory as well as the progression of the Lindemann index per frame of temperature ramps  for phase transition analysis."
+readme = "README.md"
+authors = [
+  "N720720 <s.thurm@protonmail.com>"
+]
+license = "GPL-3.0-or-later"
+repository = "https://github.com/N720720/lindemann"
+homepage = "https://github.com/N720720/lindemann"
+
+# Keywords description https://python-poetry.org/docs/pyproject/#keywords
+keywords = ["Molecular Dynamics", "Cheminformatics","Lindemann", "Lindemann Index","Cheminformatics", "Phase transition"]
+
+# Pypi classifiers: https://pypi.org/classifiers/
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "Operating System :: POSIX :: Linux",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: MacOS :: MacOS X",
+  "Topic :: Scientific/Engineering :: Chemistry",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+  "Topic :: Scientific/Engineering :: Physics",
+  "Programming Language :: Python :: 3",
+
+]
+
+[tool.poetry.scripts]
+# Entry points for the package https://python-poetry.org/docs/pyproject/#scripts
+lindemann = "lindemann.main:app"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.12"
+psutil = "^5.9.8"
+intel-cmplr-lib-rt = [
+    {version = "^2024.1.2", platform = "linux"},
+    {version = "^2024.1.2", platform = "win32"},
+]
+pathlib = "^1.0.1"
+numpy = "^1.26.4"
+numba = "^0.59.1"
+matplotlib = "^3.9.0"
+ovito = "^3.10.6"
+rich = "^13.7.1"
+typer = "^0.12.3"
+importlib-metadata = "^7.1.0"
+
+[tool.poetry.group.dev.dependencies]
+darglint = "^1.8.1"
+isort = {extras = ["colors"], version = "^5.13.2"}
+pyupgrade = "^3.15.2"
+black = "^24.4.2"
+mypy = "^1.10.0"
+bandit = "^1.7.8"
+safety = "^3.2.0"
+pytest = "^8.2.1"
+pylint = "^3.2.2"
+pydocstyle = "^6.3.0"
+docker = "^7.1.0"
+typer-cli = "^0.12.3"
+memory-profiler = "^0.61.0"
+pre-commit = "^3.7.1"
+
+[tool.black]
+# https://github.com/psf/black
+line-length = 99
+target-version = ["py39"]
+color = true
+
+exclude = '''
+/(
+    \.git
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+    | env
+    | venv
+)/
+'''
+
+[tool.isort]
+# https://github.com/timothycrosley/isort/
+py_version = 39
+line_length = 99
+
+known_typing = ["typing", "types", "typing_extensions", "mypy", "mypy_extensions"]
+sections = ["FUTURE", "TYPING", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
+include_trailing_comma = true
+profile = "black"
+multi_line_output = 3
+indent = 4
+color_output = true
