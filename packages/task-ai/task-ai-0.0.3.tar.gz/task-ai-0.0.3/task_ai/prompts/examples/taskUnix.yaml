@@ -1,0 +1,84 @@
+examples:
+  - input: >
+      {
+          "type": "taskUnix",
+          "agent": "{agent}",
+          "command": "{command}",
+          "commandOrScript": "Command",
+          "name": "{name}",
+          "parameters": "{parameters}"
+      }
+    output: "Unix Task running on {agent} agent with name {name} that will run a command as {command} with parameters as {parameter}"
+  - input: >
+      {
+        "type": "taskUnix",
+        "agentVar": "{agent}",
+        "command": "{command}",
+        "commandOrScript": "Command",
+        "name": "{name}",
+        "resolveNameImmediately": true,
+        "executionRestriction": "Skip",
+        "restrictionPeriod": "On",
+        "restrictionPeriodDateList": [
+            "2021-08-04"
+        ],
+        "summary": "{summary}"
+      }
+    output: "Unix task named {name} running on agent {agent} that will execute the command {command} as a Command. This task is restricted to skip execution on August 4, 2021."
+  - input: >
+      {
+        "type": "taskUnix",
+        "environment": [
+            {
+                "name": "MY_PATH",
+                "value": "/usr/bin"
+            }
+        ]
+      }
+    output: "Unix task execute a command with parameter {paremeter}. The environment variable MY_PATH is set to /usr/bin before running the command."
+  - input: >
+      {
+        "exitCodeProcessing": "Failure Exitcode Range",
+        "exitCodes": "15",
+        "outputReturnType": "OUTERR",
+        "waitForOutput": true
+      }
+    output: "The task will process failure exit codes in the range of 15 and will return both STDOUT and STDERR automatically and it will wait for output."
+  - input: >
+      {
+        "retryExitCodes": "16-20",
+        "retryMaximum": 3,
+        "retrySuppressFailure": true,
+      }
+    output: "If the task fails with exit codes between 16 and 20, it will retry up to 3 times and suppress executing failure actions during retries."
+  - input: >
+      {
+        "lfDuration": "01:02:03:04",
+        "lfEnabled": true,
+        "lfType": "Duration",
+      }
+    output: "If the task completes after 1 day, 2 hours, 3 minutes and 4 seconds, it will be considered as a late finished."
+  - input: >
+      {
+        "lfDayConstraint": "Same Day",
+        "lfEnabled": true,
+        "lfTime": "20:00",
+      }
+    output: "If the task completes after 20:00 on the same day, it will be considered as a late finished."
+  - input: >
+      {
+        "efDuration": "01:02:03:04",
+        "efEnabled": true,
+        "efType": "Duration",
+      }
+    output: "If the task completes before 1 day, 2 hours, 3 minutes and 4 seconds, it will be considered as a early finished."
+  - input: > 
+      {
+        "type": "taskUnix",
+        "agent": "{agent}",
+        "commandOrScript": "Script",
+        "credentials": "{credentials}",
+        "name": "{name}",
+        "script": "{script}"
+      }
+    output: Unix task named {name} running on agent {agent} that will execute a script with name {script}. The task will create a session with credential {credentials} before running the script.
