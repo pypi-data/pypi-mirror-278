@@ -1,0 +1,2 @@
+[console_scripts]
+run_decision_tree = my_unique_ml_package.decision_tree:main
