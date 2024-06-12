@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: wsh213v4
+Version: 0.1.2
+Summary: 
+Author: azazeldev
+Author-email: 68147363+azazelcodes@users.noreply.github.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+### Taken from [the Waveshare manual](https://www.waveshare.com/wiki/2.13inch_e-Paper_HAT_Manual)
+
+```bash
+pip install wsh213v4
+```
+
