@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=61.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "opla-ssg"
+authors = [{ name = "IRMA", email = "matthieu.boileau@math.unistra.fr" }]
+description = "A personal webpage generator"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+requires-python = ">=3.9"
+dependencies = [
+  "sgelt",
+  "shortcodes",
+  "pybtex",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+test = ["pytest", "pytest-cov", "faker"]
+doc = [
+  "Sphinx >= 7.2.2",
+  "myst-parser",
+  "furo",
+  "sphinx-copybutton",
+  "sphinx-autobuild",
+]
+
+[project.license]
+text = "MIT"
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+[project.urls]
+Homepage = "https://gitlab.math.unistra.fr/irma/opla"
+
+[project.scripts]
+"opla" = "opla.opla:main"
+
+[tool.setuptools]
+include-package-data = true
+license-files = ["LICENSE"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = true
+
+[tool.setuptools.dynamic.version]
+attr = "opla.__version__"

@@ -1,0 +1,78 @@
+
+h2 {
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 3rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.container section {
+  max-width: 800px;
+  margin: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: justify;
+  background-color: white;
+}
+
+footer .copyright {
+  padding-top : 1rem;
+  padding-bottom : 1rem;
+}
+
+/* Handle the logo */
+nav .my-logo {
+  position: absolute;
+  color: var(--font-on-primary-color-main);
+  display: inline-block;
+  padding: 0;
+  margin-left: 1rem;
+}
+
+/* Center the logo on small screens */
+@media only screen and (max-width : 1093px) {
+  nav .my-logo {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+}
+
+/* Handle the logo size */
+@media only screen and (min-width: 200px) {
+  .my-logo {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .my-logo {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-width: 690px) {
+  .my-logo {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (min-width: 810px) {
+  .my-logo {
+    font-size: 2.rem;
+  }
+}
+
+/* Handle the menu */
+@media only screen and (max-width : 1093px) {
+  .my-hide {
+    display: none !important;
+  }
+}
+/* tweak materialize to force the menu to be displayed
+between 993 and 1093px */
+@media only screen and (max-width : 1093px){
+  nav a.sidenav-trigger {
+    display: block !important;
+  }
+}
