@@ -1,0 +1,2 @@
+[console_scripts]
+unraphael-dash = unraphael.cli:dash_entry

@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: unraphael
+Version: 0.2.1
+Summary: Decoding Raphael: Computational Study of the Production and Reproduction of Italian Renaissance Paintings.
+Author-email: Thijs Vroegh <t.vroegh@esciencecenter.nl>
+License: MIT License
+Project-URL: homepage, https://github.com/DecodingRaphael/unraphael
+Project-URL: issues, https://github.com/DecodingRaphael/unraphael/issues
+Project-URL: documentation, https://unraphael.readthedocs.io
+Project-URL: changelog, https://github.com/DecodingRaphael/unraphael/releases
+Keywords: art,raphael,computer-vision,renaissance
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: rembg
+Requires-Dist: scikit-image
+Requires-Dist: scipy
+Requires-Dist: PyYAML
+Provides-Extra: dash
+Requires-Dist: seaborn ; extra == 'dash'
+Requires-Dist: streamlit ; extra == 'dash'
+Provides-Extra: develop
+Requires-Dist: bump-my-version ; extra == 'develop'
+Requires-Dist: ruff ; extra == 'develop'
+Requires-Dist: pre-commit ; extra == 'develop'
+Requires-Dist: coverage[toml] ; extra == 'develop'
+Requires-Dist: pytest ; extra == 'develop'
+Requires-Dist: pycodestyle ; extra == 'develop'
+Provides-Extra: docs
+Requires-Dist: markdown-include ; extra == 'docs'
+Requires-Dist: mkdocs ; extra == 'docs'
+Requires-Dist: mkdocs-material ; extra == 'docs'
+Requires-Dist: mkdocstrings[python] ; extra == 'docs'
+Provides-Extra: publishing
+Requires-Dist: twine ; extra == 'publishing'
+Requires-Dist: wheel ; extra == 'publishing'
+Requires-Dist: build ; extra == 'publishing'
+
+[![Documentation Status](https://readthedocs.org/projects/unraphael/badge/?version=latest)](https://unraphael.readthedocs.io/en/latest/?badge=latest)
+![Coverage](https://gist.githubusercontent.com/stefsmeets/808729a4ba7f123f650e32c499e143a4/raw/covbadge.svg)
+[![Tests](https://github.com/DecodingRaphael/unraphael/actions/workflows/tests.yaml/badge.svg)](https://github.com/DecodingRaphael/unraphael/actions/workflows/tests.yaml)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/unraphael)](https://pypi.org/project/unraphael/)
+[![PyPI](https://img.shields.io/pypi/v/unraphael.svg?style=flat)](https://pypi.org/project/unraphael/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11192044.svg)](https://doi.org/10.5281/zenodo.11192044)
+
+![Unraphael banner](https://raw.githubusercontent.com/DecodingRaphael/unraphael/main/src/unraphael/data/logo.png#gh-light-mode-only)
+![Unraphael banner](https://raw.githubusercontent.com/DecodingRaphael/unraphael/main/src/unraphael/data/logo-dark.png#gh-dark-mode-only)
+
+# Unraphael
+
+**Unraphael** is a digital workflow tool that uses computer vision to unravel the artistic practice of Raphael (Raffaello Sanzio, 1483-1520), while providing new digital approaches for the study of artistic practice in art history. Dozens of faithful reproductions survive of Raphael's paintings, attesting to the lucrative practice of serial production of paintings within the artist's workshop and to the lasting demand for the master's designs. This tool aims to provide new insights into Raphael's working methods through new digital approaches for the study of artistic practice in art history.
+
+To install:
+
+```console
+pip install unraphael
+```
+
+## Try unraphael in your browser!
+
+You can also [try unraphael directly from your browser](https://unraphael.streamlit.app/).
+
+| <a href="https://unraphael.streamlit.app/image_similarity"><img src="docs/_static/dash_image_sim.png" alt="Image similarity" width="85%"/></a> | <a href="https://unraphael.streamlit.app/preprocess"><img src="docs/_static/dash_preprocess.png" alt="Image preprocessing" width="85%"/></a> | <a href="https://unraphael.streamlit.app/detect"><img src="docs/_static/dash_detect.png" alt="Object detection" width="85%"/></a> |
+| - | - | - |
+| [Image similarity](https://unraphael.streamlit.app/image_similarity) | [Image preprocessing](https://unraphael.streamlit.app/preprocess) | [Object detection](https://unraphael.streamlit.app/detect) |
+
+## Using the unraphael dashboard locally
+
+To install and use the dashboard locally:
+
+```console
+pip install unraphael[dash]
+unraphael-dash
+```
+
+## Development
+
+Check out our [Contributing Guidelines](CONTRIBUTING.md#Getting-started-with-development) to get started with development.
+
+Suggestions, improvements, and edits are most welcome.
