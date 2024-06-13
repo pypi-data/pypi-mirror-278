@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9c5efa3e-dda3-4c3a-8055-fa28924643ed" name="Changes" comment="remove unused import">
+      <change beforePath="$PROJECT_DIR$/examples/booksToScrape.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/booksToScrape.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/parsers/baseStruct.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/parsers/baseStruct.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/parsers/booksToScrape.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/parsers/booksToScrape.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ssc_codegen/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ssc_codegen/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ssc_codegen/document/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ssc_codegen/document/__init__.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/.cache/pypoetry/virtualenvs/ssc-codegen-G799BVWf-py3.10/lib/python3.10/site-packages/jinja2/environment.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/.cache/pypoetry/virtualenvs/ssc-codegen-G799BVWf-py3.10/lib/python3.10/site-packages/jinja2/loaders.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/.cache/pypoetry/virtualenvs/ssc-codegen-G799BVWf-py3.10/lib/python3.10/site-packages/jinja2/runtime.py" root0="SKIP_INSPECTION" />
+    <setting file="file:///usr/lib/python3.10/enum.py" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2ZL3HhNCzwranygPKACSTmh8rfa" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Dart Command Line App.main.dart.executor": "Debug",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Python tests.Python tests for test_document.test_expr.executor": "Run",
+    "Python tests.Python tests for test_document.test_fail_attr_expr.executor": "Run",
+    "Python tests.Python tests for test_document.test_valid_html_expr.executor": "Run",
+    "Python tests.Python tests for test_document_array.test_list_document.executor": "Run",
+    "Python tests.Python tests for test_document_array.test_list_str.executor": "Run",
+    "Python tests.Python tests for test_document_assert.test_assert_expr.executor": "Run",
+    "Python tests.Python tests for test_document_invalid_expr.test_raw_invalid_expr.executor": "Run",
+    "Python tests.Python tests for test_document_regex.test_assert_expr.executor": "Run",
+    "Python tests.Python tests for test_document_regex.test_fail_compile_regex.executor": "Run",
+    "Python tests.Python tests for test_document_select.test_doc_to_str.executor": "Run",
+    "Python tests.Python tests for test_document_select.test_document_to_list_document.executor": "Run",
+    "Python tests.Python tests for test_document_text.test_fail_str_format.executor": "Run",
+    "Python tests.Python tests for test_document_text.test_string_expr.executor": "Run",
+    "Python tests.Python tests for test_invalid_expr.test_invalid_doc_expr.executor": "Run",
+    "Python tests.Python tests for test_invalid_expr.test_invalid_expr.executor": "Run",
+    "Python tests.Python tests for test_nested.test_nested.executor": "Run",
+    "Python tests.Python tests for test_nested.test_nested_2.executor": "Run",
+    "Python tests.Python tests for test_select_document.test_valid_html_expr.executor": "Run",
+    "Python.__init__.executor": "Run",
+    "Python.a.executor": "Run",
+    "Python.aaaa.executor": "Run",
+    "Python.animego_pro.executor": "Run",
+    "Python.base (1).executor": "Run",
+    "Python.base.executor": "Debug",
+    "Python.booksToScrape.executor": "Run",
+    "Python.calc_hash.executor": "Run",
+    "Python.cli.executor": "Run",
+    "Python.constants.executor": "Debug",
+    "Python.expression.executor": "Run",
+    "Python.generator.executor": "Debug",
+    "Python.schema.executor": "Run",
+    "Python.schemas (1).executor": "Run",
+    "Python.schemas.executor": "Run",
+    "Python.security.executor": "Run",
+    "Python.tg_mini.executor": "Run",
+    "Python.utils.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/georgiy/PycharmProjects/anicli-api",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scs" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/ssc_codegen/converters/templates/dart/universal_html" />
+      <recent name="$PROJECT_DIR$/ssc_codegen/converters/templates/py/selectolax" />
+      <recent name="$PROJECT_DIR$/ssc_codegen/converters/templates/py/scrapy" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bot" />
+      <recent name="$PROJECT_DIR$/test_dart" />
+      <recent name="$PROJECT_DIR$/libanime_schema/source_v2/src" />
+      <recent name="$PROJECT_DIR$/libanime_schema" />
+      <recent name="$PROJECT_DIR$/ssc_codegen2" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.ex">
+    <configuration name="converter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="selector_schema_codegen" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ssc_codegen2" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ssc_codegen2/converter.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ex" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="selector_schema_codegen" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ex.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="generator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="selector_schema_codegen" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ssc_codegen2" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ssc_codegen2/generator.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="template" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="selector_schema_codegen" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ssc_codegen2" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ssc_codegen2/template.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="validate" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="selector_schema_codegen" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ssc_codegen2" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ssc_codegen2/validate.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.validate" />
+        <item itemvalue="Python.template" />
+        <item itemvalue="Python.generator" />
+        <item itemvalue="Python.ex" />
+        <item itemvalue="Python.converter" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-d68999036c7f-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.14475.56" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9c5efa3e-dda3-4c3a-8055-fa28924643ed" name="Changes" comment="" />
+      <created>1702187446434</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1702187446434</updated>
+      <workItem from="1702187447630" duration="909000" />
+      <workItem from="1702189615911" duration="1000000" />
+      <workItem from="1702491435069" duration="2008000" />
+      <workItem from="1706189195680" duration="3553000" />
+      <workItem from="1706301488772" duration="26000" />
+      <workItem from="1706713110729" duration="5447000" />
+      <workItem from="1706774562433" duration="23405000" />
+      <workItem from="1706852818468" duration="6883000" />
+      <workItem from="1706877688917" duration="2722000" />
+      <workItem from="1706899637012" duration="862000" />
+      <workItem from="1706953872351" duration="875000" />
+      <workItem from="1706965610522" duration="3445000" />
+      <workItem from="1707029639471" duration="5936000" />
+      <workItem from="1707081272642" duration="15000" />
+      <workItem from="1707302701872" duration="9644000" />
+      <workItem from="1707375184737" duration="14734000" />
+      <workItem from="1707467372427" duration="5585000" />
+      <workItem from="1707502489552" duration="5634000" />
+      <workItem from="1707639153752" duration="290000" />
+      <workItem from="1710782181769" duration="441000" />
+      <workItem from="1714985939682" duration="7213000" />
+      <workItem from="1715350017979" duration="14335000" />
+      <workItem from="1715376552787" duration="5904000" />
+      <workItem from="1715420675757" duration="7680000" />
+      <workItem from="1715492599675" duration="130000" />
+      <workItem from="1717331897845" duration="11518000" />
+      <workItem from="1717343476135" duration="16402000" />
+      <workItem from="1717389294049" duration="17650000" />
+      <workItem from="1717475110654" duration="3322000" />
+      <workItem from="1717511640831" duration="7530000" />
+      <workItem from="1717565800510" duration="13812000" />
+      <workItem from="1717600067567" duration="100000" />
+      <workItem from="1717600177348" duration="6297000" />
+      <workItem from="1717616370629" duration="13000" />
+      <workItem from="1717646882720" duration="19907000" />
+      <workItem from="1717689327194" duration="2931000" />
+      <workItem from="1717746842303" duration="22246000" />
+      <workItem from="1717829083586" duration="1232000" />
+      <workItem from="1717847033617" duration="18000" />
+      <workItem from="1717915803295" duration="416000" />
+      <workItem from="1718111383556" duration="13419000" />
+      <workItem from="1718171383585" duration="4678000" />
+    </task>
+    <task id="LOCAL-00037" summary="update">
+      <option name="closed" value="true" />
+      <created>1717395573452</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1717395573452</updated>
+    </task>
+    <task id="LOCAL-00038" summary="op_assert_css fix">
+      <option name="closed" value="true" />
+      <created>1717396636439</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1717396636439</updated>
+    </task>
+    <task id="LOCAL-00039" summary="fix $ symbol in regex (represent to repr)">
+      <option name="closed" value="true" />
+      <created>1717398811926</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1717398811926</updated>
+    </task>
+    <task id="LOCAL-00040" summary="fix path usage in configs">
+      <option name="closed" value="true" />
+      <created>1717398831704</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1717398831704</updated>
+    </task>
+    <task id="LOCAL-00041" summary="add wrap_str_q method">
+      <option name="closed" value="true" />
+      <created>1717398842325</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1717398842325</updated>
+    </task>
+    <task id="LOCAL-00042" summary="add copy fields from inherited class. remove __expr_init__ method">
+      <option name="closed" value="true" />
+      <created>1717401945470</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1717401945470</updated>
+    </task>
+    <task id="LOCAL-00043" summary="remove ST_INIT token">
+      <option name="closed" value="true" />
+      <created>1717475206784</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1717475206784</updated>
+    </task>
+    <task id="LOCAL-00044" summary="add prefix, suffix keys">
+      <option name="closed" value="true" />
+      <created>1717475774823</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1717475774823</updated>
+    </task>
+    <task id="LOCAL-00045" summary="add R() shortcut. move import to main __init__ file">
+      <option name="closed" value="true" />
+      <created>1717481029467</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1717481029467</updated>
+    </task>
+    <task id="LOCAL-00046" summary="first failed tests">
+      <option name="closed" value="true" />
+      <created>1717521628410</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1717521628410</updated>
+    </task>
+    <task id="LOCAL-00047" summary="fix step type check">
+      <option name="closed" value="true" />
+      <created>1717521650342</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1717521650342</updated>
+    </task>
+    <task id="LOCAL-00048" summary="remove __main__">
+      <option name="closed" value="true" />
+      <created>1717521667389</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1717521667389</updated>
+    </task>
+    <task id="LOCAL-00049" summary="remove old tests">
+      <option name="closed" value="true" />
+      <created>1717521728789</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1717521728789</updated>
+    </task>
+    <task id="LOCAL-00050" summary="add regex pre-validate">
+      <option name="closed" value="true" />
+      <created>1717523390111</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1717523390112</updated>
+    </task>
+    <task id="LOCAL-00051" summary="fix typo">
+      <option name="closed" value="true" />
+      <created>1717524445510</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1717524445510</updated>
+    </task>
+    <task id="LOCAL-00052" summary="rename test file">
+      <option name="closed" value="true" />
+      <created>1717524459823</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1717524459823</updated>
+    </task>
+    <task id="LOCAL-00053" summary="first document tests">
+      <option name="closed" value="true" />
+      <created>1717524476623</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1717524476623</updated>
+    </task>
+    <task id="LOCAL-00054" summary="dev deps: add pytest">
+      <option name="closed" value="true" />
+      <created>1717524515145</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1717524515145</updated>
+    </task>
+    <task id="LOCAL-00055" summary="re: add group parameter">
+      <option name="closed" value="true" />
+      <created>1717571482354</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1717571482354</updated>
+    </task>
+    <task id="LOCAL-00056" summary="op_regex: add group param, fix re pattern converter">
+      <option name="closed" value="true" />
+      <created>1717571517119</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1717571517119</updated>
+    </task>
+    <task id="LOCAL-00057" summary="update re_match signature">
+      <option name="closed" value="true" />
+      <created>1717571534568</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1717571534568</updated>
+    </task>
+    <task id="LOCAL-00058" summary="add group argument">
+      <option name="closed" value="true" />
+      <created>1717571747438</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1717571747438</updated>
+    </task>
+    <task id="LOCAL-00059" summary="fix pass positional arg">
+      <option name="closed" value="true" />
+      <created>1717571756165</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1717571756165</updated>
+    </task>
+    <task id="LOCAL-00060" summary="fix raw() set expr token">
+      <option name="closed" value="true" />
+      <created>1717575104607</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1717575104607</updated>
+    </task>
+    <task id="LOCAL-00061" summary="annotation: swap to Union style">
+      <option name="closed" value="true" />
+      <created>1717576373341</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1717576373341</updated>
+    </task>
+    <task id="LOCAL-00062" summary="fix missing Union type">
+      <option name="closed" value="true" />
+      <created>1717576446060</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1717576446061</updated>
+    </task>
+    <task id="LOCAL-00063" summary="pre_validate: Union type">
+      <option name="closed" value="true" />
+      <created>1717576539996</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1717576539996</updated>
+    </task>
+    <task id="LOCAL-00064" summary="fix __SPLIT_DOC__ parse">
+      <option name="closed" value="true" />
+      <created>1717594544512</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1717594544512</updated>
+    </task>
+    <task id="LOCAL-00065" summary="black, isort">
+      <option name="closed" value="true" />
+      <created>1717594555709</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1717594555709</updated>
+    </task>
+    <task id="LOCAL-00066" summary="OP_REGEX_SUB: add missing argument">
+      <option name="closed" value="true" />
+      <created>1717598069512</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1717598069512</updated>
+    </task>
+    <task id="LOCAL-00067" summary="OP_REGEX_SUB: add missing argument">
+      <option name="closed" value="true" />
+      <created>1717598134955</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1717598134955</updated>
+    </task>
+    <task id="LOCAL-00068" summary="DictSchema, FlattenListSchema: fix extract fields">
+      <option name="closed" value="true" />
+      <created>1717598974871</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1717598974871</updated>
+    </task>
+    <task id="LOCAL-00069" summary="fix _re_sub method arguments">
+      <option name="closed" value="true" />
+      <created>1717599401852</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1717599401852</updated>
+    </task>
+    <task id="LOCAL-00070" summary="add typing interface, cover generated schemas as TypedDict">
+      <option name="closed" value="true" />
+      <created>1717675909982</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1717675909983</updated>
+    </task>
+    <task id="LOCAL-00071" summary="add stub file">
+      <option name="closed" value="true" />
+      <created>1717675923933</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1717675923933</updated>
+    </task>
+    <task id="LOCAL-00072" summary="update example">
+      <option name="closed" value="true" />
+      <created>1717676250483</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1717676250484</updated>
+    </task>
+    <task id="LOCAL-00073" summary="refactoring cli entrypoint">
+      <option name="closed" value="true" />
+      <created>1718113425810</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1718113425811</updated>
+    </task>
+    <task id="LOCAL-00074" summary="fix itemSchema parse method">
+      <option name="closed" value="true" />
+      <created>1718115030063</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1718115030063</updated>
+    </task>
+    <task id="LOCAL-00075" summary="fix auto annotations">
+      <option name="closed" value="true" />
+      <created>1718116656610</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1718116656610</updated>
+    </task>
+    <task id="LOCAL-00076" summary="bump">
+      <option name="closed" value="true" />
+      <created>1718116706630</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1718116706630</updated>
+    </task>
+    <task id="LOCAL-00077" summary="fix generate imports">
+      <option name="closed" value="true" />
+      <created>1718121052873</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1718121052873</updated>
+    </task>
+    <task id="LOCAL-00078" summary="bump">
+      <option name="closed" value="true" />
+      <created>1718121067896</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1718121067896</updated>
+    </task>
+    <task id="LOCAL-00079" summary="relative imports">
+      <option name="closed" value="true" />
+      <created>1718121207246</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1718121207246</updated>
+    </task>
+    <task id="LOCAL-00080" summary="fix parse_dict_schema code">
+      <option name="closed" value="true" />
+      <created>1718121541088</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1718121541088</updated>
+    </task>
+    <task id="LOCAL-00081" summary="fix parse_dict_schema code">
+      <option name="closed" value="true" />
+      <created>1718121632190</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1718121632190</updated>
+    </task>
+    <task id="LOCAL-00082" summary="fix op_string_trim code">
+      <option name="closed" value="true" />
+      <created>1718130493044</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1718130493044</updated>
+    </task>
+    <task id="LOCAL-00083" summary="bump">
+      <option name="closed" value="true" />
+      <created>1718130513332</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1718130513332</updated>
+    </task>
+    <task id="LOCAL-00084" summary="bump">
+      <option name="closed" value="true" />
+      <created>1718133848163</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1718133848163</updated>
+    </task>
+    <task id="LOCAL-00085" summary="remove unused import">
+      <option name="closed" value="true" />
+      <created>1718194606415</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1718194606415</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="op_regex: add group param, fix re pattern converter" />
+    <MESSAGE value="update re_match signature" />
+    <MESSAGE value="add group argument" />
+    <MESSAGE value="fix pass positional arg" />
+    <MESSAGE value="fix raw() set expr token" />
+    <MESSAGE value="annotation: swap to Union style" />
+    <MESSAGE value="fix missing Union type" />
+    <MESSAGE value="pre_validate: Union type" />
+    <MESSAGE value="fix __SPLIT_DOC__ parse" />
+    <MESSAGE value="black, isort" />
+    <MESSAGE value="OP_REGEX_SUB: add missing argument" />
+    <MESSAGE value="DictSchema, FlattenListSchema: fix extract fields" />
+    <MESSAGE value="fix _re_sub method arguments" />
+    <MESSAGE value="add typing interface, cover generated schemas as TypedDict" />
+    <MESSAGE value="add stub file" />
+    <MESSAGE value="update example" />
+    <MESSAGE value="refactoring cli entrypoint" />
+    <MESSAGE value="fix itemSchema parse method" />
+    <MESSAGE value="fix auto annotations" />
+    <MESSAGE value="fix generate imports" />
+    <MESSAGE value="relative imports" />
+    <MESSAGE value="fix parse_dict_schema code" />
+    <MESSAGE value="fix op_string_trim code" />
+    <MESSAGE value="bump" />
+    <MESSAGE value="remove unused import" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove unused import" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ssc_codegen2/generator.py</url>
+          <line>81</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/selector_schema_codegen$generator.coverage" NAME="generator Coverage Results" MODIFIED="1715432674657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ssc_codegen2/parser" />
+    <SUITE FILE_PATH="coverage/selector_schema_codegen$booksToScrape.coverage" NAME="booksToScrape Coverage Results" MODIFIED="1717672439454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/selector_schema_codegen$main.coverage" NAME="main Coverage Results" MODIFIED="1706819373015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ssc_codegen2" />
+    <SUITE FILE_PATH="coverage/selector_schema_codegen$constants.coverage" NAME="constants Coverage Results" MODIFIED="1717348468280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ssc_codegen2/schema" />
+    <SUITE FILE_PATH="coverage/selector_schema_codegen$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1715378131584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ssc_codegen2/document" />
+    <SUITE FILE_PATH="coverage/selector_schema_codegen$ex.coverage" NAME="ex Coverage Results" MODIFIED="1707502858475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/selector_schema_codegen$extract.coverage" NAME="validate Coverage Results" MODIFIED="1706819346637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ssc_codegen2" />
+    <SUITE FILE_PATH="coverage/selector_schema_codegen$expression.coverage" NAME="expression Coverage Results" MODIFIED="1715360828778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ssc_codegen2" />
+    <SUITE FILE_PATH="coverage/selector_schema_codegen$a.coverage" NAME="a Coverage Results" MODIFIED="1717660308836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/selector_schema_codegen$converter.coverage" NAME="converter Coverage Results" MODIFIED="1707314692634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ssc_codegen2" />
+    <SUITE FILE_PATH="coverage/selector_schema_codegen$translator.coverage" NAME="translator Coverage Results" MODIFIED="1707045679760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ssc_codegen2" />
+    <SUITE FILE_PATH="coverage/selector_schema_codegen$tg_mini.coverage" NAME="tg_mini Coverage Results" MODIFIED="1717771734055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/selector_schema_codegen$aaaa.coverage" NAME="aaaa Coverage Results" MODIFIED="1717773815300" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/selector_schema_codegen$parser.coverage" NAME="generator Coverage Results" MODIFIED="1707320648651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ssc_codegen2" />
+    <SUITE FILE_PATH="coverage/selector_schema_codegen$.coverage" NAME=" Coverage Results" MODIFIED="1717566754389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/selector_schema_codegen$base__1_.coverage" NAME="base (1) Coverage Results" MODIFIED="1715381173866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ssc_codegen2/schema" />
+    <SUITE FILE_PATH="coverage/selector_schema_codegen$schema.coverage" NAME="schema Coverage Results" MODIFIED="1717343248765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/example" />
+    <SUITE FILE_PATH="coverage/selector_schema_codegen$template.coverage" NAME="template Coverage Results" MODIFIED="1707470028789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ssc_codegen2" />
+    <SUITE FILE_PATH="coverage/selector_schema_codegen$schemas.coverage" NAME="schemas Coverage Results" MODIFIED="1714992167313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ssc_codegen/v2" />
+    <SUITE FILE_PATH="coverage/selector_schema_codegen$cli.coverage" NAME="cli Coverage Results" MODIFIED="1717347870433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/selector_schema_codegen$validate.coverage" NAME="validate Coverage Results" MODIFIED="1706860260908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ssc_codegen2" />
+    <SUITE FILE_PATH="coverage/selector_schema_codegen$security.coverage" NAME="security Coverage Results" MODIFIED="1718171942762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ssc_codegen/utils" />
+    <SUITE FILE_PATH="coverage/selector_schema_codegen$base.coverage" NAME="base Coverage Results" MODIFIED="1717594172661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ssc_codegen/schema" />
+    <SUITE FILE_PATH="coverage/selector_schema_codegen$schemas__1_.coverage" NAME="schemas (1) Coverage Results" MODIFIED="1715420727549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ssc_codegen2/schema" />
+    <SUITE FILE_PATH="coverage/selector_schema_codegen$utils.coverage" NAME="utils Coverage Results" MODIFIED="1717579595169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ssc_codegen/converters" />
+    <SUITE FILE_PATH="coverage/selector_schema_codegen$calc_hash.coverage" NAME="calc_hash Coverage Results" MODIFIED="1718171677863" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ssc_codegen/utils" />
+    <SUITE FILE_PATH="coverage/selector_schema_codegen$animego_pro.coverage" NAME="animego_pro Coverage Results" MODIFIED="1717401685023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/libanime_schema/source_v2/src" />
+  </component>
+</project>

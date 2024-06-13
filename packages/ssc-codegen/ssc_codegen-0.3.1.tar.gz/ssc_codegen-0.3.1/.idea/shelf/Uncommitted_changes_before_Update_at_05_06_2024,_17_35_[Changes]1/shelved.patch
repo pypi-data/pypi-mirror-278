@@ -1,0 +1,399 @@
+Index: tests/test_document_invalid_expr.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import pytest\nfrom ssc_codegen import D, N, R, ItemSchema\n\n\nclass MockParser(ItemSchema):\n    pass\n\n\ndef test_raw_invalid_expr():\n    with pytest.raises(SyntaxError):\n        R().css('a')\n\n    with pytest.raises(SyntaxError):\n        R().xpath('a')\n\n    with pytest.raises(SyntaxError):\n        R().xpath_all('a')\n\n    with pytest.raises(SyntaxError):\n        R().css_all('a')\n\n\ndef test_nested_invalid_expr():\n    with pytest.raises(SyntaxError):\n        N().sub_parser(MockParser).css('a')\n\n    with pytest.raises(SyntaxError):\n        N().sub_parser(MockParser).default(None)\n\n    with pytest.raises(SyntaxError):\n        N().sub_parser(MockParser).sub_parser(MockParser)\n\n\ndef test_invalid_doc_expr():\n    with pytest.raises(SyntaxError):\n        D().trim('')\n\n    with pytest.raises(SyntaxError):\n        D().index(0)\n\n    with pytest.raises(SyntaxError):\n        D().assert_re('')\n\n    with pytest.raises(SyntaxError):\n        D().css(\"a\").default(None)\n\n    with pytest.raises(SyntaxError):\n        D().assert_eq(\"\")\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/test_document_invalid_expr.py b/tests/test_document_invalid_expr.py
+--- a/tests/test_document_invalid_expr.py	(revision 0a98d9e2e868e207cce0b08824e7ce315e649f31)
++++ b/tests/test_document_invalid_expr.py	(date 1717598150835)
+@@ -8,21 +8,21 @@
+ 
+ def test_raw_invalid_expr():
+     with pytest.raises(SyntaxError):
+-        R().css('a')
++        R().css("a")
+ 
+     with pytest.raises(SyntaxError):
+-        R().xpath('a')
++        R().xpath("a")
+ 
+     with pytest.raises(SyntaxError):
+-        R().xpath_all('a')
++        R().xpath_all("a")
+ 
+     with pytest.raises(SyntaxError):
+-        R().css_all('a')
++        R().css_all("a")
+ 
+ 
+ def test_nested_invalid_expr():
+     with pytest.raises(SyntaxError):
+-        N().sub_parser(MockParser).css('a')
++        N().sub_parser(MockParser).css("a")
+ 
+     with pytest.raises(SyntaxError):
+         N().sub_parser(MockParser).default(None)
+@@ -33,13 +33,13 @@
+ 
+ def test_invalid_doc_expr():
+     with pytest.raises(SyntaxError):
+-        D().trim('')
++        D().trim("")
+ 
+     with pytest.raises(SyntaxError):
+         D().index(0)
+ 
+     with pytest.raises(SyntaxError):
+-        D().assert_re('')
++        D().assert_re("")
+ 
+     with pytest.raises(SyntaxError):
+         D().css("a").default(None)
+Index: example/booksToScrape.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\"\"\"Dummy parser config for http://books.toscrape.com/\"\"\"\n\n\n\nfrom ssc_codegen.document import D, N\nfrom ssc_codegen.schema import (\n    ItemSchema,\n    ListSchema,\n    FlattenListSchema,\n)\n\n\nclass Urls(FlattenListSchema):\n    \"\"\"fetch add patches and urls from <a> tag\"\"\"\n    __SPLIT_DOC__ = D().css_all(\"a\")\n    __ITEM__ = D().attr(\"href\")\n\n\nclass Books(ListSchema):\n    __SPLIT_DOC__ = D().css_all(\".col-lg-3\")\n\n    name = D().css(\".thumbnail\").attr(\"alt\")\n    image_url = D().css(\".thumbnail\").attr(\"src\")\n    url = D().css(\".image_container > a\").attr(\"href\")\n    rating = D().css(\".star-rating\").attr(\"class\").ltrim(\"star-rating \")\n    price = D().default(\"0\").css(\".price_color\").text().re(r\"\\d+\")\n\n\nclass CataloguePage(ItemSchema):\n    __PRE_VALIDATE__ = D().css(\"title\").text().assert_re(r\"Books to Scrape\")\n\n    title = D().css(\"title\").text()\n    urls: Urls = N().sub_parser(Urls)\n    books: Books = N().sub_parser(Books)\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/example/booksToScrape.py b/example/booksToScrape.py
+--- a/example/booksToScrape.py	(revision 0a98d9e2e868e207cce0b08824e7ce315e649f31)
++++ b/example/booksToScrape.py	(date 1717598150843)
+@@ -1,7 +1,5 @@
+ """Dummy parser config for http://books.toscrape.com/"""
+ 
+-
+-
+ from ssc_codegen.document import D, N
+ from ssc_codegen.schema import (
+     ItemSchema,
+@@ -12,6 +10,7 @@
+ 
+ class Urls(FlattenListSchema):
+     """fetch add patches and urls from <a> tag"""
++
+     __SPLIT_DOC__ = D().css_all("a")
+     __ITEM__ = D().attr("href")
+ 
+Index: tests/test_document_select.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import pytest\n\nfrom ssc_codegen import D, N, R, ItemSchema\nfrom ssc_codegen.type_state import TypeVariableState\n\n\n@pytest.mark.parametrize(\n    'expr',\n    [D().css('a').css_all('b'),\n     D().xpath('//a').xpath_all('//b'),\n     D().css_all('a'),\n     D().xpath_all('a'),\n     ]\n)\ndef test_document_to_list_document(expr):\n    pass\n\n\n@pytest.mark.parametrize(\n    'expr',\n    [\n        D().raw(),\n        D().text(),\n        R(),\n        D().attr('a'),\n        D().css_all('a').index(0).text(),\n        D().xpath_all('//a').text().index(0),\n\n    ])\ndef test_doc_to_str(expr):\n    assert expr.last_var_type == TypeVariableState.STRING\n\n\n@pytest.mark.parametrize(\n    'expr',\n[\n    D().css_all('a').text(),\n    D().xpath_all('//a').text(),\n    D().css_all('a').attr('href'),\n    D().xpath_all('//a').attr('href'),\n])\ndef test_do_to_list_str(expr):\n    assert expr.last_var_type == TypeVariableState.LIST_STRING
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/test_document_select.py b/tests/test_document_select.py
+--- a/tests/test_document_select.py	(revision 0a98d9e2e868e207cce0b08824e7ce315e649f31)
++++ b/tests/test_document_select.py	(date 1717598150847)
+@@ -5,39 +5,41 @@
+ 
+ 
+ @pytest.mark.parametrize(
+-    'expr',
+-    [D().css('a').css_all('b'),
+-     D().xpath('//a').xpath_all('//b'),
+-     D().css_all('a'),
+-     D().xpath_all('a'),
+-     ]
++    "expr",
++    [
++        D().css("a").css_all("b"),
++        D().xpath("//a").xpath_all("//b"),
++        D().css_all("a"),
++        D().xpath_all("a"),
++    ],
+ )
+ def test_document_to_list_document(expr):
+     pass
+ 
+ 
+ @pytest.mark.parametrize(
+-    'expr',
++    "expr",
+     [
+         D().raw(),
+         D().text(),
+         R(),
+-        D().attr('a'),
+-        D().css_all('a').index(0).text(),
+-        D().xpath_all('//a').text().index(0),
+-
+-    ])
++        D().attr("a"),
++        D().css_all("a").index(0).text(),
++        D().xpath_all("//a").text().index(0),
++    ],
++)
+ def test_doc_to_str(expr):
+     assert expr.last_var_type == TypeVariableState.STRING
+ 
+ 
+ @pytest.mark.parametrize(
+-    'expr',
+-[
+-    D().css_all('a').text(),
+-    D().xpath_all('//a').text(),
+-    D().css_all('a').attr('href'),
+-    D().xpath_all('//a').attr('href'),
+-])
++    "expr",
++    [
++        D().css_all("a").text(),
++        D().xpath_all("//a").text(),
++        D().css_all("a").attr("href"),
++        D().xpath_all("//a").attr("href"),
++    ],
++)
+ def test_do_to_list_str(expr):
+-    assert expr.last_var_type == TypeVariableState.LIST_STRING
+\ No newline at end of file
++    assert expr.last_var_type == TypeVariableState.LIST_STRING
+Index: tests/test_document_assert.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import pytest\nfrom ssc_codegen import D, R\n\n\n@pytest.mark.parametrize(\n    'expr',\n    [\n        D().assert_css('a'),\n        D().assert_xpath('//a'),\n        R().assert_eq(''),\n        R().split(' ').assert_in(''),\n        R().assert_re('')\n    ])\ndef test_assert_expr(expr):\n    pass\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/test_document_assert.py b/tests/test_document_assert.py
+--- a/tests/test_document_assert.py	(revision 0a98d9e2e868e207cce0b08824e7ce315e649f31)
++++ b/tests/test_document_assert.py	(date 1717598150855)
+@@ -3,13 +3,14 @@
+ 
+ 
+ @pytest.mark.parametrize(
+-    'expr',
++    "expr",
+     [
+-        D().assert_css('a'),
+-        D().assert_xpath('//a'),
+-        R().assert_eq(''),
+-        R().split(' ').assert_in(''),
+-        R().assert_re('')
+-    ])
++        D().assert_css("a"),
++        D().assert_xpath("//a"),
++        R().assert_eq(""),
++        R().split(" ").assert_in(""),
++        R().assert_re(""),
++    ],
++)
+ def test_assert_expr(expr):
+     pass
+Index: tests/test_document_regex.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import re\n\nimport pytest\nfrom ssc_codegen import D, R\nfrom ssc_codegen.type_state import TypeVariableState\n\n\ndef test_fail_compile_regex():\n    with pytest.raises(re.error):\n        R().re(')')\n\n    with pytest.raises(re.error):\n        R().assert_re(')')\n\n\n@pytest.mark.parametrize(\n    'expr',\n    [\n        R().re_all('').index(0),\n        R().re(''),\n        R().re_sub('', '')\n    ])\ndef test_assert_expr(expr):\n    assert expr.last_var_type == TypeVariableState.STRING\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/test_document_regex.py b/tests/test_document_regex.py
+--- a/tests/test_document_regex.py	(revision 0a98d9e2e868e207cce0b08824e7ce315e649f31)
++++ b/tests/test_document_regex.py	(date 1717598150859)
+@@ -7,18 +7,14 @@
+ 
+ def test_fail_compile_regex():
+     with pytest.raises(re.error):
+-        R().re(')')
++        R().re(")")
+ 
+     with pytest.raises(re.error):
+-        R().assert_re(')')
++        R().assert_re(")")
+ 
+ 
+ @pytest.mark.parametrize(
+-    'expr',
+-    [
+-        R().re_all('').index(0),
+-        R().re(''),
+-        R().re_sub('', '')
+-    ])
++    "expr", [R().re_all("").index(0), R().re(""), R().re_sub("", "")]
++)
+ def test_assert_expr(expr):
+     assert expr.last_var_type == TypeVariableState.STRING
+Index: tests/test_document_text.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import pytest\n\nfrom ssc_codegen import D, N, R, ItemSchema\nfrom ssc_codegen.type_state import TypeVariableState\n\n\ndef test_fail_str_format():\n    with pytest.raises(SyntaxError):\n        R().fmt('wow')\n\n\n@pytest.mark.parametrize(\n    'expr',\n    [\n        R().split(' ').index(0),\n        R().trim(''),\n        R().ltrim(''),\n        R().rtrim(''),\n        R().repl('', ''),\n        R().fmt('{{}}'),\n    ]\n)\ndef test_string_expr(expr):\n    assert expr.last_var_type == TypeVariableState.STRING\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/test_document_text.py b/tests/test_document_text.py
+--- a/tests/test_document_text.py	(revision 0a98d9e2e868e207cce0b08824e7ce315e649f31)
++++ b/tests/test_document_text.py	(date 1717598150867)
+@@ -6,19 +6,24 @@
+ 
+ def test_fail_str_format():
+     with pytest.raises(SyntaxError):
+-        R().fmt('wow')
++        R().fmt("wow")
+ 
+ 
+ @pytest.mark.parametrize(
+-    'expr',
++    "expr",
+     [
+-        R().split(' ').index(0),
+-        R().trim(''),
+-        R().ltrim(''),
+-        R().rtrim(''),
+-        R().repl('', ''),
+-        R().fmt('{{}}'),
+-    ]
++        R().split(" ").index(0),
++        R().trim(""),
++        R().ltrim(""),
++        R().rtrim(""),
++        R().repl("", ""),
++        R().fmt("{{}}"),
++        D()
++        .css("#video")
++        .attr("data-parameters")
++        .replace("\\", "")
++        .replace("&quot;", '"'),
++    ],
+ )
+ def test_string_expr(expr):
+     assert expr.last_var_type == TypeVariableState.STRING
+Index: tests/test_nested.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import pytest\nfrom ssc_codegen import D, N, R, ItemSchema\n\n\nclass MockParserOne(ItemSchema):\n    foo = D().text()\n\n\nclass MockParserMain(ItemSchema):\n    bar: MockParserOne = N().sub_parser(MockParserOne)\n\n\n@pytest.mark.parametrize(\n    \"expr\",\n    [\n        N().sub_parser(MockParserOne),\n        N().css('a').sub_parser(MockParserMain),\n        N().xpath('//a').sub_parser(MockParserMain),\n        N().default(\"\").sub_parser(MockParserOne)\n    ])\ndef test_nested(expr):\n    pass\n\n\ndef test_nested_init():\n    class MockParserOne(ItemSchema):\n        foo = D().text()\n\n    class MockParserMain(ItemSchema):\n        bar: MockParserOne = N().sub_parser(MockParserOne)  # type: ignore\n\n    MockParserMain  # noqa\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/test_nested.py b/tests/test_nested.py
+--- a/tests/test_nested.py	(revision 0a98d9e2e868e207cce0b08824e7ce315e649f31)
++++ b/tests/test_nested.py	(date 1717598150875)
+@@ -14,10 +14,11 @@
+     "expr",
+     [
+         N().sub_parser(MockParserOne),
+-        N().css('a').sub_parser(MockParserMain),
+-        N().xpath('//a').sub_parser(MockParserMain),
+-        N().default("").sub_parser(MockParserOne)
+-    ])
++        N().css("a").sub_parser(MockParserMain),
++        N().xpath("//a").sub_parser(MockParserMain),
++        N().default("").sub_parser(MockParserOne),
++    ],
++)
+ def test_nested(expr):
+     pass
+ 
+Index: test_dart/test/test_parser.dart
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import 'package:test/test.dart';\nimport 'dart:io';\n\nimport 'schema.dart';\n\nfinal bookResult = <String, dynamic>{\n  'description':\n      \"It's hard to imagine a world without A Light in the Attic. This now-classic collection of poetry and drawings from Shel Silverstein celebrates its 20th anniversary with this special edition. Silverstein's humorous and creative verse can amuse the dowdiest of readers. Lemon-faced adults and fidgety kids sit still and read these rhythmic words and laugh and smile and love th It's hard to imagine a world without A Light in the Attic. This now-classic collection of poetry and drawings from Shel Silverstein celebrates its 20th anniversary with this special edition. Silverstein's humorous and creative verse can amuse the dowdiest of readers. Lemon-faced adults and fidgety kids sit still and read these rhythmic words and laugh and smile and love that Silverstein. Need proof of his genius? RockabyeRockabye baby, in the treetopDon't you know a treetopIs no safe place to rock?And who put you up there,And your cradle, too?Baby, I think someone down here'sGot it in for you. Shel, you never sounded so good. ...more\",\n  'title': 'A Light in the Attic',\n  'price': '£51.77',\n  'upc': 'a897fe39b1053632',\n  'raw_table_values': [\n    'a897fe39b1053632',\n    'Books',\n    '£51.77',\n    '£51.77',\n    '£0.00',\n    'In stock (22 available)',\n    '0'\n  ]\n};\n\nfinal catalogueResult = [\n  {\n    'url':\n        'https://books.toscrape.com/catalogue/catalogue/a-light-in-the-attic_1000/index.html',\n    'title': 'A Light in the Attic',\n    'price': '51.77',\n    'image':\n        'https://books.toscrape.commedia/cache/2c/da/2cdad67c44b002e7ead0cc35693c0e8b.jpg',\n    'rating': 'Three'\n  },\n  {\n    'url':\n        'https://books.toscrape.com/catalogue/catalogue/tipping-the-velvet_999/index.html',\n    'title': 'Tipping the Velvet',\n    'price': '53.74',\n    'image':\n        'https://books.toscrape.commedia/cache/26/0c/260c6ae16bce31c8f8c95daddd9f4a1c.jpg',\n    'rating': 'One'\n  },\n  {\n    'url':\n        'https://books.toscrape.com/catalogue/catalogue/soumission_998/index.html',\n    'title': 'Soumission',\n    'price': '50.10',\n    'image':\n        'https://books.toscrape.commedia/cache/3e/ef/3eef99c9d9adef34639f510662022830.jpg',\n    'rating': 'One'\n  }\n];\n\nvoid main() {\n  test('Book', () async {\n    final String bookPage =\n        File('test/book.html').readAsStringSync();\n    expect(Book(bookPage).parse().view(), equals(bookResult));\n  });\n  test('BookCatalogue', () async {\n    final String bookCatalogue =\n        File('test/books_cataloque.html').readAsStringSync();\n\n    expect(BooksCatalogue(bookCatalogue).parse().view().getRange(0, 3),\n        equals(catalogueResult));\n  });\n\n  test('FailPreValidate', () async {\n    final String failPage =\n        File('test/fail_page.html').readAsStringSync();\n\n    expect(() {Book(failPage).parse();}, throwsA(isA<AssertionError>()));\n  });\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/test_dart/test/test_parser.dart b/test_dart/test/test_parser.dart
+--- a/test_dart/test/test_parser.dart	(revision 0a98d9e2e868e207cce0b08824e7ce315e649f31)
++++ b/test_dart/test/test_parser.dart	(date 1717598150879)
+@@ -52,8 +52,7 @@
+ 
+ void main() {
+   test('Book', () async {
+-    final String bookPage =
+-        File('test/book.html').readAsStringSync();
++    final String bookPage = File('test/book.html').readAsStringSync();
+     expect(Book(bookPage).parse().view(), equals(bookResult));
+   });
+   test('BookCatalogue', () async {
+@@ -65,9 +64,10 @@
+   });
+ 
+   test('FailPreValidate', () async {
+-    final String failPage =
+-        File('test/fail_page.html').readAsStringSync();
++    final String failPage = File('test/fail_page.html').readAsStringSync();
+ 
+-    expect(() {Book(failPage).parse();}, throwsA(isA<AssertionError>()));
++    expect(() {
++      Book(failPage).parse();
++    }, throwsA(isA<AssertionError>()));
+   });
+ }
+Index: tests/test_document_array.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import pytest\nfrom ssc_codegen import D, R\nfrom ssc_codegen.type_state import TypeVariableState\n\n\n@pytest.mark.parametrize(\n    \"expr\",\n    [\n        D().css_all('a'),\n        D().xpath_all('//a'),\n        D().css_all('a').index(0).xpath_all('//a'),\n    ])\ndef test_list_document(expr):\n    assert expr.last_var_type == TypeVariableState.LIST_DOCUMENT\n\n\n@pytest.mark.parametrize(\n    \"expr\",\n    [\n        D().css_all('a').text(),\n        D().xpath_all('//a').text(),\n        D().css_all('a').attr('a'),\n        D().xpath_all('//a').attr('a'),\n        D().css_all('a').raw(),\n        D().xpath_all('//a').raw(),\n        R().split(' '),\n        R().re_all('*'),\n    ])\ndef test_list_str(expr):\n    assert expr.last_var_type == TypeVariableState.LIST_STRING\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/test_document_array.py b/tests/test_document_array.py
+--- a/tests/test_document_array.py	(revision 0a98d9e2e868e207cce0b08824e7ce315e649f31)
++++ b/tests/test_document_array.py	(date 1717598150883)
+@@ -6,10 +6,11 @@
+ @pytest.mark.parametrize(
+     "expr",
+     [
+-        D().css_all('a'),
+-        D().xpath_all('//a'),
+-        D().css_all('a').index(0).xpath_all('//a'),
+-    ])
++        D().css_all("a"),
++        D().xpath_all("//a"),
++        D().css_all("a").index(0).xpath_all("//a"),
++    ],
++)
+ def test_list_document(expr):
+     assert expr.last_var_type == TypeVariableState.LIST_DOCUMENT
+ 
+@@ -17,14 +18,15 @@
+ @pytest.mark.parametrize(
+     "expr",
+     [
+-        D().css_all('a').text(),
+-        D().xpath_all('//a').text(),
+-        D().css_all('a').attr('a'),
+-        D().xpath_all('//a').attr('a'),
+-        D().css_all('a').raw(),
+-        D().xpath_all('//a').raw(),
+-        R().split(' '),
+-        R().re_all('*'),
+-    ])
++        D().css_all("a").text(),
++        D().xpath_all("//a").text(),
++        D().css_all("a").attr("a"),
++        D().xpath_all("//a").attr("a"),
++        D().css_all("a").raw(),
++        D().xpath_all("//a").raw(),
++        R().split(" "),
++        R().re_all("*"),
++    ],
++)
+ def test_list_str(expr):
+     assert expr.last_var_type == TypeVariableState.LIST_STRING
+Index: example/main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import pprint\n\nimport requests # or any http lib\nfrom parsers.booksToScrape import CataloguePage\n\n\nif __name__ == '__main__':\n    resp = requests.get('https://books.toscrape.com/')\n\n    pprint.pprint(CataloguePage(resp).parse(),\n                  compact=True)
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/example/main.py b/example/main.py
+--- a/example/main.py	(revision 0a98d9e2e868e207cce0b08824e7ce315e649f31)
++++ b/example/main.py	(date 1717598150891)
+@@ -1,11 +1,10 @@
+ import pprint
+ 
+-import requests # or any http lib
++import requests  # or any http lib
+ from parsers.booksToScrape import CataloguePage
+ 
+ 
+-if __name__ == '__main__':
+-    resp = requests.get('https://books.toscrape.com/')
++if __name__ == "__main__":
++    resp = requests.get("https://books.toscrape.com/")
+ 
+-    pprint.pprint(CataloguePage(resp).parse(),
+-                  compact=True)
+\ No newline at end of file
++    pprint.pprint(CataloguePage(resp).parse(), compact=True)
