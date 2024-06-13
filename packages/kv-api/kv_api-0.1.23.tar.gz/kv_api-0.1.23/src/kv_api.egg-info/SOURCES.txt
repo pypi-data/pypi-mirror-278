@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+src/kv/api/__init__.py
+src/kv/api/__init__.pyi
+src/kv/api/conn_strings.py
+src/kv/api/errors.py
+src/kv/api/impl.py
+src/kv/api/kv.py
+src/kv/api/extensions/__init__.py
+src/kv/api/extensions/__init__.pyi
+src/kv/api/extensions/append.py
+src/kv/api/extensions/locate.py
+src/kv_api.egg-info/PKG-INFO
+src/kv_api.egg-info/SOURCES.txt
+src/kv_api.egg-info/dependency_links.txt
+src/kv_api.egg-info/requires.txt
+src/kv_api.egg-info/top_level.txt
