@@ -1,0 +1,5 @@
+[console_scripts]
+tangy-close-all-buffers = tangy:buffer_list_delete_all
+tangy-gui-coincidence-counter = tangy.apps.gui_coincidence_counter:run
+tangy-gui-uqdlogic16 = tangy.apps.gui_uqd:run
+tangy-list-buffers = tangy:buffer_list_show
