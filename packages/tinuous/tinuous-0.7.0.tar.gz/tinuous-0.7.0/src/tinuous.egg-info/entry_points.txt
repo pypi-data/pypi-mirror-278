@@ -1,0 +1,2 @@
+[console_scripts]
+tinuous = tinuous.__main__:main

@@ -1,0 +1,11 @@
+[build-system]
+requires = ["setuptools >= 46.4.0", "versioningit"]
+build-backend = "setuptools.build_meta"
+
+[tool.versioningit.write]
+file = "src/tinuous/_version.py"
+
+[tool.codespell]
+skip = '.git,*.pdf,*.svg'
+#
+# ignore-words-list = ''
