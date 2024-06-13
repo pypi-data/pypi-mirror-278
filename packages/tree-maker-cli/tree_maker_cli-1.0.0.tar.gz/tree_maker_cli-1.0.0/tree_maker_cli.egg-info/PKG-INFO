@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: tree_maker_cli
+Version: 1.0.0
+Summary: A command-line tool to generate a tree structure of a folder and its contents, useful for when you need to add context to your GPT prompts.
+Home-page: https://github.com/tecz/tree_maker_cli
+Author: Timothy Czerniec
+Author-email: teczerniec@gmail.com
+License: MIT
+Keywords: tree cli folder structure
+License-File: LICENSE
+Requires-Dist: pyperclip
