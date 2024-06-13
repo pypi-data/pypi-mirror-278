@@ -1,0 +1,35 @@
+[project]
+name = "tilesmith"
+version = "0.1.0"
+description = "A Python toolkit for game developers"
+authors = [
+    { name = "42juododranoel", email = "42juododranoel@pm.me" },
+]
+dependencies = [
+    "click>=8.1.7",
+    "pillow>=10.3.0",
+    "numpy>=1.26.4",
+    "attrs>=23.2.0",
+]
+requires-python = ">=3.12"
+readme = "README.md"
+
+[project.license]
+text = "GPL-3.0-only"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "pytest>=8.2.2",
+    "ruff>=0.4.8",
+    "ipdb>=0.13.13",
+    "mypy>=1.10.0",
+]
