@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: discoveryworld
+Version: 0.0.1
+Summary: DiscoveryWorld - Making new discovery.
+License-File: LICENSE.txt
+Requires-Dist: pygame
+Requires-Dist: pathfinding
+Requires-Dist: psutil
+Requires-Dist: openai
+Requires-Dist: numpy
+Requires-Dist: termcolor
+Requires-Dist: tiktoken
+Requires-Dist: matplotlib
+
