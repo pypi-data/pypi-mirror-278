@@ -1,0 +1,11 @@
+LICENCE
+README.md
+pyproject.toml
+biocre/__init__.py
+biocre.egg-info/PKG-INFO
+biocre.egg-info/SOURCES.txt
+biocre.egg-info/dependency_links.txt
+biocre.egg-info/requires.txt
+biocre.egg-info/top_level.txt
+biocre/read_data/__init__.py
+biocre/read_data/read.py
