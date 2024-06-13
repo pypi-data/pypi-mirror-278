@@ -1,0 +1,14 @@
+queue-pipelines[all]
+haskellian
+kv-api
+dslog
+moveread-pipelines-auto-extract
+moveread-pipelines-extract-validation
+moveread-pipelines-manual-correct
+moveread-pipelines-manual-select
+uvicorn
+fastapi
+pipeteer
+
+[core]
+moveread-core

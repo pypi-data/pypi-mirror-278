@@ -1,0 +1,4 @@
+[console_scripts]
+preprocess = moveread.pipelines.preprocess.scripts.cli:main
+preprocess-clientgen = moveread.pipelines.preprocess.scripts.clientgen_cli:main
+preprocess-codegen = moveread.pipelines.preprocess.spec:codegen
