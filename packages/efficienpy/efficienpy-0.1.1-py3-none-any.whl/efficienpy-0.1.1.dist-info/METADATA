@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: efficienpy
+Version: 0.1.1
+Summary: A comprehensive Python package designed to simplify daily workflows, enhance data processing, and integrate smart functionalities to boost productivity.
+Home-page: https://github.com/liaoyusaki/efficienpy
+License: BSD-3-Clause
+Author: Yu LE VERN
+Author-email: liaoyuviyy@gmail.com
+Maintainer: Yu LE VERN
+Maintainer-email: liaoyuviyy@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Project-URL: Documentation, https://github.com/liaoyusaki/efficienpy
+Project-URL: Repository, https://github.com/liaoyusaki/efficienpy
+Description-Content-Type: text/x-rst
+
+==========
+efficienpy
+==========
+
+
+.. image:: https://img.shields.io/pypi/v/efficienpy.svg
+        :target: https://pypi.python.org/pypi/efficienpy
+
+.. image:: https://img.shields.io/travis/yulevern/efficienpy.svg
+        :target: https://travis-ci.com/yulevern/efficienpy
+
+.. image:: https://readthedocs.org/projects/efficienpy/badge/?version=latest
+        :target: https://efficienpy.readthedocs.io/en/latest/?version=latest
+        :alt: Documentation Status
+
+
+.. image:: https://pyup.io/repos/github/yulevern/efficienpy/shield.svg
+     :target: https://pyup.io/repos/github/yulevern/efficienpy/
+     :alt: Updates
+
+
+
+A comprehensive Python package designed to simplify daily workflows, enhance data processing, and integrate smart functionalities to boost productivity.
+
+
+* Free software: BSD license
+* Documentation: https://efficienpy.readthedocs.io.
+
+
+Features
+--------
+
+* TODO
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
