@@ -1,0 +1,17 @@
+CHANGELOG.md
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+mlcvzoo_mmdetection/__init__.py
+mlcvzoo_mmdetection/configuration.py
+mlcvzoo_mmdetection/mlcvzoo_mmdet_dataset.py
+mlcvzoo_mmdetection/model.py
+mlcvzoo_mmdetection/object_detection_model.py
+mlcvzoo_mmdetection/py.typed
+mlcvzoo_mmdetection/segmentation_model.py
+mlcvzoo_mmdetection/utils.py
+mlcvzoo_mmdetection/mlcvzoo_mmdeploy/__init__.py
+mlcvzoo_mmdetection/mlcvzoo_mmdeploy/converter.py
+mlcvzoo_mmdetection/mlcvzoo_mmdeploy/inferencer.py
+mlcvzoo_mmdetection/mlcvzoo_mmdeploy/structs.py
