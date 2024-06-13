@@ -1,0 +1,2 @@
+[console_scripts]
+ssc-gen = ssc_codegen.cli:script_entry_point
