@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: valsai
+Version: 0.0.36
+Home-page: https://pypi.org/project/valsai/
+Author: Langston Nashold, Rayan Krishnan
+Requires-Dist: Click
+Requires-Dist: gql
+Requires-Dist: attrs
+Requires-Dist: jsonschema
+Requires-Dist: tqdm
+Requires-Dist: boto3
+Requires-Dist: requests
+Requires-Dist: aiohttp
+Requires-Dist: pandas
+Requires-Dist: requests-toolbelt
