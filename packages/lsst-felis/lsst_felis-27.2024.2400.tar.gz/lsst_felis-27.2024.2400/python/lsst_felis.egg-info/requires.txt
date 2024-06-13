@@ -1,0 +1,12 @@
+astropy>=4
+sqlalchemy>=1.4
+click>=7
+pyyaml>=6
+pydantic<3,>=2
+lsst-utils
+
+[dev]
+documenteer[guide]
+
+[test]
+pytest>=3.2
