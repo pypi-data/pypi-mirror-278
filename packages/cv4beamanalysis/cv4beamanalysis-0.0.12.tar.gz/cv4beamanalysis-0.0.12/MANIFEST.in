@@ -1,0 +1,3 @@
+recursive-include cv4beamanalysis/models *
+recursive-include cv4beamanalysis/numberhtr *
+recursive-include cv4beamanalysis/yolov5 *
