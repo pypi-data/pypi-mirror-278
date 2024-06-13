@@ -1,0 +1,5 @@
+recursive-include leaspy *.json
+recursive-include leaspy *.csv
+
+include *.md
+include *.txt
