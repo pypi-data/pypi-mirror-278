@@ -1,0 +1,10 @@
+scaper>=1.6.5rc0
+numpy>=1.15.4
+pandas>=0.24.0
+dcase-util>=0.2.11
+yt-dlp>=2022.3.8.2
+soundfile>=0.10.1
+jams>=0.3.4
+tqdm>=4.29.1
+requests>=2.21.0
+resampy>=0.4.3
