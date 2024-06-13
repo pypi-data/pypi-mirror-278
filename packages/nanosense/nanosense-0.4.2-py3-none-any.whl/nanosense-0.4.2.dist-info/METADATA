@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: nanosense
+Version: 0.4.2
+Summary: A comprehensive package for nanosense data analysis and visualization.
+Home-page: https://github.com/shankardutt/nanosense
+Author: Shankar Dutt
+Author-email: shankar.dutt@anu.edu.au
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Requires-Dist: PySide6
+Requires-Dist: cryptography
+Requires-Dist: matplotlib
+Requires-Dist: neo
+Requires-Dist: numpy
+Requires-Dist: pyabf
+Requires-Dist: scipy
+Requires-Dist: joblib
+Requires-Dist: bottleneck
+Requires-Dist: ruptures
+Requires-Dist: pywavelets
+Requires-Dist: detecta
+Requires-Dist: hmmlearn
+Requires-Dist: scikit-learn
+Requires-Dist: h5py
+Requires-Dist: seaborn
+Requires-Dist: pandas
+Requires-Dist: tabulate
+Requires-Dist: sktime
+Requires-Dist: lightgbm
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: tensorflow
+Requires-Dist: numexpr
+Requires-Dist: uncertainties
+Requires-Dist: pyqtgraph
+Requires-Dist: pynvml
+Requires-Dist: psutil
+
