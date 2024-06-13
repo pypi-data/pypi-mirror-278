@@ -1,0 +1,32 @@
+# pyproject.toml
+
+[build-system]
+requires      = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neptune-wrapper"
+version = "0.1.0"
+description = "OS-independent wrapper for the Neptune.ai API"
+readme = "README.md"
+authors = [{ name = "bryzgalovdm", email = "bryzgalovdm@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["machine learning", "experiment tracking"]
+dependencies = [
+    "neptune >= 1.5",
+    "neptune-pytorch >= 2",
+    "neptune-tensorflow-keras",
+    "pathlib"
+]
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.urls]
+Homepage = "https://github.com/bryzgalovdm/neptune_wrapper"

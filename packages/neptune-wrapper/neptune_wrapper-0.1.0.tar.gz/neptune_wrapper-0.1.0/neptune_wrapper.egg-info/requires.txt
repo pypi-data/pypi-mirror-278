@@ -1,0 +1,7 @@
+neptune>=1.5
+neptune-pytorch>=2
+neptune-tensorflow-keras
+pathlib
+
+[dev]
+pytest
