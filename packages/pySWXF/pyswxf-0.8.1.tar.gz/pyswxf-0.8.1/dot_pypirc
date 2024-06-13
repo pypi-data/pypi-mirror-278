@@ -1,0 +1,12 @@
+[distutils]
+  index-servers =
+    pypi
+    PROJECT_NAME
+
+[pypi]
+  username = __token__
+  password = pypi-AgEIcHlwaS5vcmcCJDBjZjJiYjRmLWEwYjQtNDEzNC1iYmI1LTY1ZTQyY2JkYzhkZgACDlsxLFsicHlzd3hmIl1dAAIsWzIsWyIyMWU0MjI4NS1hMTJiLTRhNDctOGU1Zi1iNDdlMGQ4MWQxMmIiXV0AAAYgqHE45Qq4KMxztYla-OTzDgakxAnLn3NRyKsS3_ffA1s
+[PROJECT_NAME]
+  repository = https://pypi.org/projects/pySWXF
+  username = __token__
+  password = pypi-AgEIcHlwaS5vcmcCJDBjZjJiYjRmLWEwYjQtNDEzNC1iYmI1LTY1ZTQyY2JkYzhkZgACDlsxLFsicHlzd3hmIl1dAAIsWzIsWyIyMWU0MjI4NS1hMTJiLTRhNDctOGU1Zi1iNDdlMGQ4MWQxMmIiXV0AAAYgqHE45Qq4KMxztYla-OTzDgakxAnLn3NRyKsS3_ffA1s

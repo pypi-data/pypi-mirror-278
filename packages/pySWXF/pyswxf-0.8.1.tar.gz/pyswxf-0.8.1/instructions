@@ -1,0 +1,9 @@
+Edit pyproject.toml and change version number
+Edit README and change information
+python3 -m build
+python3 -m twine upload  dist/*.14*  (e.g. to upload distribution 14)
+(open up anaconda Prompt) pip install pySWXF --upgrade
+
+the code goes to the pypi.org website.  Username is luriol password is in onepassword
+
+note login information is built into .pypirc file located in home directory

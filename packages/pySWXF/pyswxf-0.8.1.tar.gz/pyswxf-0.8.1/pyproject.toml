@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling==1.17.1"]
+build-backend = "hatchling.build"
+[project]
+name = "pySWXF"
+version = "0.8.1"
+authors = [
+	{name="Laurence Lurio", email="llurio@niu.edu" },
+]
+description = "Routines for calculating standing wave x-ray fluorescence and x-ray reflectivity"
+readme = "README.md"
+requires-python = ">3.7"
+classifiers = [
+	"Programming Language :: Python :: 3",
+	"License :: OSI Approved :: MIT License",
+	"Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/pypa/pySWXF"
+"Bug Tracker" = "https://github.com/pypa/pySWXF/issues"
