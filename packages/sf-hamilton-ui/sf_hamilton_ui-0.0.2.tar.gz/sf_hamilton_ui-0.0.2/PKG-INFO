@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: sf-hamilton-ui
+Version: 0.0.2
+Summary: Hamilton, the micro-framework for creating dataframes.
+Home-page: https://github.com/dagworks-inc/hamilton
+Author: Stefan Krawczyk, Elijah ben Izzy
+Author-email: stefan@dagworks.io,elijah@dagworks.io
+Project-URL: Bug Reports, https://github.com/dagworks-inc/hamilton/issues
+Project-URL: Source, https://github.com/dagworks-inc/hamilton
+Keywords: hamilton
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/markdown
+Requires-Dist: django-ninja>=1.1.0
+Requires-Dist: colorlog
+Requires-Dist: django
+Requires-Dist: psycopg2-binary
+Requires-Dist: requests
+Requires-Dist: loguru
+Requires-Dist: aiohttp
+Requires-Dist: typer
+Requires-Dist: aiofiles
+Requires-Dist: django-extensions
+Requires-Dist: click
+Requires-Dist: passlib
+Provides-Extra: visualization
+Requires-Dist: graphviz; extra == "visualization"
+Requires-Dist: networkx; extra == "visualization"
+Provides-Extra: dask
+Requires-Dist: dask[complete]; extra == "dask"
+Provides-Extra: dask-array
+Requires-Dist: dask[array]; extra == "dask-array"
+Provides-Extra: dask-core
+Requires-Dist: dask-core; extra == "dask-core"
+Provides-Extra: dask-dataframe
+Requires-Dist: dask[dataframe]; extra == "dask-dataframe"
+Provides-Extra: dask-diagnostics
+Requires-Dist: dask[diagnostics]; extra == "dask-diagnostics"
+Provides-Extra: dask-distributed
+Requires-Dist: dask[distributed]; extra == "dask-distributed"
+Provides-Extra: ray
+Requires-Dist: ray>=2.0.0; extra == "ray"
+Requires-Dist: pyarrow; extra == "ray"
+Provides-Extra: pyspark
+Requires-Dist: pyspark[pandas_on_spark,sql]; extra == "pyspark"
+Requires-Dist: pandas<2.0; extra == "pyspark"
+Provides-Extra: pandera
+Requires-Dist: pandera; extra == "pandera"
+Provides-Extra: slack
+Requires-Dist: slack-sdk; extra == "slack"
+Provides-Extra: tqdm
+Requires-Dist: tqdm; extra == "tqdm"
+Provides-Extra: datadog
+Requires-Dist: ddtrace; extra == "datadog"
+Provides-Extra: vaex
+Requires-Dist: pydantic<2.0; extra == "vaex"
+Requires-Dist: vaex; extra == "vaex"
+Provides-Extra: experiments
+Requires-Dist: fastapi; extra == "experiments"
+Requires-Dist: fastui; extra == "experiments"
+Requires-Dist: uvicorn; extra == "experiments"
+Provides-Extra: diskcache
+Requires-Dist: diskcache; extra == "diskcache"
+Provides-Extra: cli
+Requires-Dist: typer; extra == "cli"
+Provides-Extra: sdk
+Requires-Dist: sf-hamilton-sdk; extra == "sdk"
+Provides-Extra: ui
+Requires-Dist: django-ninja>=1.1.0; extra == "ui"
+Requires-Dist: colorlog; extra == "ui"
+Requires-Dist: django; extra == "ui"
+Requires-Dist: psycopg2-binary; extra == "ui"
+Requires-Dist: requests; extra == "ui"
+Requires-Dist: loguru; extra == "ui"
+Requires-Dist: aiohttp; extra == "ui"
+Requires-Dist: typer; extra == "ui"
+Requires-Dist: aiofiles; extra == "ui"
+Requires-Dist: django-extensions; extra == "ui"
+Requires-Dist: click; extra == "ui"
+Requires-Dist: passlib; extra == "ui"
+
+Hamilton tracking server, see [the docs for more](https://github.com/dagworks-inc/hamilton/tree/main/ui/)
