@@ -1,0 +1,206 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "enfobench"
+dynamic = ["version"]
+description = "Energy forecast benchmarking toolkit."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "BSD-3-clause"
+keywords = [
+    "energy",
+    "forecasting",
+    "benchmarking",
+]
+authors = [
+    { author = "Attila Balint", email = "attila.balint@kuleuven.be" },
+]
+packages = [{ include = "enfobench", from = "src" }]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = [
+    "duckdb<=1.0.0",
+    "fastapi>=0.68.0,<1.0.0",
+    "pandas>=1.5",
+    "pydantic>=2.0.0",
+    "python-multipart>=0.0.0",
+    "pyarrow>=13.0.0",
+    "requests>=2.26.0",
+    "tqdm>=4.60.0",
+    "uvicorn>=0.20.0",
+]
+
+[project.optional-dependencies]
+visualization = [
+    "matplotlib",
+    "seaborn",
+    "statsmodels",
+]
+
+
+[project.urls]
+Documentation = "https://github.com/attila-balint-kul/energy-forecast-benchmark-toolkit#readme"
+Issues = "https://github.com/attila-balint-kul/energy-forecast-benchmark-toolkit/issues"
+Source = "https://github.com/attila-balint-kul/energy-forecast-benchmark-toolkit"
+
+[tool.hatch.version]
+path = "src/enfobench/__version__.py"
+
+[tool.hatch.build]
+exclude = [
+    ".DS_Store",
+]
+
+[tool.hatch.build.targets.sdist]
+only-include = [
+    "src/",
+    "tests/",
+    "LICENSE",
+    "Makefile",
+    "README.md",
+    "pyproject.toml",
+]
+
+
+[tool.hatch.envs.default]
+dependencies = [
+    "coverage[toml]>=6.5",
+    "pytest",
+    "pytest-cov",
+    "httpx",
+    "setuptools",  # needed to import pkg_resources
+]
+[tool.hatch.envs.default.scripts]
+test = "pytest {args:tests}"
+cov = "pytest --cov=enfobench --cov-report=term-missing {args:tests}"
+
+[[tool.hatch.envs.all.matrix]]
+python = ["3.10", "3.11"]
+
+[tool.hatch.envs.lint]
+detached = true
+dependencies = [
+    "black[jupyter]>=23.1.0",
+    "mypy>=1.6.0",
+    "ruff>=0.1.5",
+]
+[tool.hatch.envs.lint.scripts]
+typing = "mypy --install-types --non-interactive {args:src/enfobench tests}"
+style = [
+    "ruff check {args:.}",
+    "black --check --diff {args:.}",
+]
+fmt = [
+    "black {args:.}",
+    "ruff check --fix {args:.}",
+    "style",
+]
+all = [
+    "style",
+    "typing",
+]
+
+[tool.hatch.envs.docs]
+detached = true
+dependencies = [
+    "mkdocs-material>=9.4.0",
+]
+[tool.hatch.envs.docs.scripts]
+build = "mkdocs build -f docs/mkdocs.yml"
+serve = "mkdocs serve -f docs/mkdocs.yml"
+
+[tool.black]
+target-version = ["py310"]
+line-length = 120
+skip-string-normalization = true
+
+[tool.ruff]
+target-version = "py310"
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    "A",
+    "ARG",
+    "B",
+    "C",
+    "DTZ",
+    "E",
+    "EM",
+    "F",
+    "FBT",
+    "I",
+    "ICN",
+    "ISC",
+    "N",
+    "PLC",
+    "PLE",
+    "PLR",
+    "PLW",
+    "Q",
+    "RUF",
+    "S",
+    "T",
+    "TID",
+    "UP",
+    "W",
+    "YTT",
+]
+ignore = [
+    # Allow non-abstract empty methods in abstract base classes
+    "B027",
+    # Allow boolean positional values in function calls, like `dict.get(... True)`
+    "FBT003",
+    # Ignore checks for possible passwords
+    "S105", "S106", "S107",
+    # Ignore complexity
+    "C901", "PLR0911", "PLR0912", "PLR0913", "PLR0915",
+]
+unfixable = [
+    # Don't touch unused imports
+    "F401",
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["enfobench"]
+
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[tool.ruff.lint.per-file-ignores]
+# Tests can use magic values, assertions, and relative imports
+"tests/**/*" = ["PLR2004", "S101", "TID252"]
+"models/**/*" = ["ARG001", "ARG002", "FBT001"]
+
+[tool.coverage.run]
+source_pkgs = ["enfobench"]
+branch = true
+parallel = true
+omit = [
+    "src/enfobench/__about__.py",
+]
+
+[tool.coverage.paths]
+enfobench = ["src/enfobench"]
+tests = ["tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "no cov",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+]
