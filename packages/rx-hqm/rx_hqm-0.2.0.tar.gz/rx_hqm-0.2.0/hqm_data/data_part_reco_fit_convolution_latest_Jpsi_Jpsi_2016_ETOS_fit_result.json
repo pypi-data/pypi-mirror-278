@@ -1,0 +1,44 @@
+{
+    "correction_DSCB_mu_Jpsi_Jpsi_2016_ETOS": {
+        "value": -19.38255804919712,
+        "hesse": {
+            "error": 0.5202087653570667,
+            "cl": 0.68268949
+        }
+    },
+    "correction_DSCB_sigma_Jpsi_Jpsi_2016_ETOS": {
+        "value": 7.124390557182851,
+        "hesse": {
+            "error": 1.7807924614130846,
+            "cl": 0.68268949
+        }
+    },
+    "correction_DSCB_al_Jpsi_Jpsi_2016_ETOS": {
+        "value": 0.08340781321258788,
+        "hesse": {
+            "error": 0.02082152372288072,
+            "cl": 0.68268949
+        }
+    },
+    "correction_DSCB_nl_Jpsi_Jpsi_2016_ETOS": {
+        "value": 11.090690969286591,
+        "hesse": {
+            "error": 0.4622771407448029,
+            "cl": 0.68268949
+        }
+    },
+    "correction_DSCB_ar_Jpsi_Jpsi_2016_ETOS": {
+        "value": 0.20615743745875892,
+        "hesse": {
+            "error": 0.05082465911937321,
+            "cl": 0.68268949
+        }
+    },
+    "correction_DSCB_nr_Jpsi_Jpsi_2016_ETOS": {
+        "value": 3.9556038864864873,
+        "hesse": {
+            "error": 0.07822379478942168,
+            "cl": 0.68268949
+        }
+    }
+}
