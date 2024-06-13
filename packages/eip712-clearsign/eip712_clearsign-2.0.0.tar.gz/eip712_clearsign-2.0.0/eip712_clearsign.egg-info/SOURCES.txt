@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+eip712/__init__.py
+eip712_clearsign.egg-info/PKG-INFO
+eip712_clearsign.egg-info/SOURCES.txt
+eip712_clearsign.egg-info/dependency_links.txt
+eip712_clearsign.egg-info/requires.txt
+eip712_clearsign.egg-info/top_level.txt
+tests/test_eip712.py
