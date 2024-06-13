@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+m3loader/__init__.py
+m3loader/dloader.py
+m3loader.egg-info/PKG-INFO
+m3loader.egg-info/SOURCES.txt
+m3loader.egg-info/dependency_links.txt
+m3loader.egg-info/entry_points.txt
+m3loader.egg-info/requires.txt
+m3loader.egg-info/top_level.txt
