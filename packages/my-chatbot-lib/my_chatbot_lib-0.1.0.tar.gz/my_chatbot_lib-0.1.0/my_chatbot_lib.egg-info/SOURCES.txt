@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+ChatbotLibrary/__init__.py
+ChatbotLibrary/chatbot.py
+ChatbotLibrary/decision_engine.py
+ChatbotLibrary/nlp_utils.py
+ChatbotLibrary/utils.py
+my_chatbot_lib.egg-info/PKG-INFO
+my_chatbot_lib.egg-info/SOURCES.txt
+my_chatbot_lib.egg-info/dependency_links.txt
+my_chatbot_lib.egg-info/requires.txt
+my_chatbot_lib.egg-info/top_level.txt

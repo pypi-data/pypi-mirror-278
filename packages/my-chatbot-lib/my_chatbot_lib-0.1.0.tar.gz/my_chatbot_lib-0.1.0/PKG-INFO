@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: my_chatbot_lib
+Version: 0.1.0
+Summary: A chatbot library
+Home-page: https://github.com/Evasas12/Chabot
+Author: BSCS 4-5
+Author-email: chuasweet11@gmail.com
+License: MIT
+Description: Library Chatbot
+        ===
+        Abstract:xxx
+        ## Papar Information
+        - Title:  `Integrating Expert System for Inquiries Assistance in Ladislao N. Diwa Memorial Library`
+        - Authors:  `Bon Jeffrey Arroyo`,`Mark Jonell Luneta`,`Bianca Nicole Maxino`,`Ernald Victa`
+        
+        
+        ## Install & Dependence
+        - python
+        - pytorch
+        - numpy
+        - requirements.txt
+        
+        
+        ## Directory Hierarchy
+        ```
+        |â€”â€” ChatbotLibrary
+        |    |â€”â€” chatbot.py
+        |    |â€”â€” decision_engine.py
+        |    |â€”â€” nlp_utils.py
+        |    |â€”â€” utils.py
+        |    |â€”â€” __init__.py
+        |â€”â€” Manifest.in
+        |â€”â€” setup.py
+        â”œâ”€â”€ README.md
+        â”œâ”€â”€ requirements.txt
+        |â€”â€” static
+        |    |â€”â€” css
+        |        |â€”â€” style.css
+        |    |â€”â€” js
+        |        |â€”â€” script.js
+        |â€”â€” templates
+        |    |â€”â€” library.html
+        ```
+        ## Code Details
+        ### Tested Platform
+        - software
+          ```
+          OS: Debian unstable (May 2021), Ubuntu LTS
+          Python: 3.8.5 (anaconda)
+          PyTorch: 1.7.1, 1.8.1
+          ```
+        - hardware
+          ```
+          CPU: Intel Xeon 6226R
+          GPU: Nvidia RTX3090 (24GB)
+          ```
+        
+          
+        
+        
+        
+        
+Keywords: chatbot library NLP
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
