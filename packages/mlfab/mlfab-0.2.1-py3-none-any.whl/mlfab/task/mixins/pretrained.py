@@ -1,0 +1,78 @@
+# mypy: disable-error-code="no-untyped-def"
+"""Defines a mixin for pre-trained models.
+
+Usually, when adding pre-trained models to a task, you just create a PyTorch
+module with the pre-trained model's weights. The problem with this approach is
+that it treats the pre-trained model as a "submodule" of the task, meaning that
+it will add the pre-trained model's parameters to the state dictionary, which
+is usually a waste of space.
+
+Instead, this interface lets you define a pre-trained model as a separate
+module-like object that will be moved to the device, without storing the
+model parameters in the task state checkpoint or doing train-eval mode changes.
+"""
+
+from abc import ABC
+from dataclasses import dataclass
+from typing import Any, Callable, Generic, Self, TypeVar, cast
+
+import torch
+from torch import Tensor, nn
+from torch.nn.modules.module import Module
+
+from mlfab.task.base import BaseConfig, BaseTask
+
+
+@dataclass(kw_only=True)
+class PretrainedConfig(BaseConfig):
+    pass
+
+
+Config = TypeVar("Config", bound=PretrainedConfig)
+
+Tmod = TypeVar("Tmod", bound=nn.Module)
+
+
+class PretrainedModule:
+    def __init__(self, module: nn.Module) -> None:
+        super().__init__()
+
+        self.module = module
+        self.module.eval()
+        self.module.requires_grad_(False)
+
+    def __getattribute__(self, name: str) -> Any:  # noqa: ANN401
+        if name in ["module", "forward", "__call__"]:
+            return super().__getattribute__(name)
+        return getattr(self.module, name)
+
+    @torch.no_grad()
+    def forward(self, *args, **kwargs) -> Any:  # noqa: ANN401, ANN002, ANN003
+        return self.module.forward(*args, **kwargs)
+
+    @torch.no_grad()
+    def __call__(self, *args, **kwargs) -> Any:  # noqa: ANN401, ANN002, ANN003
+        return self.module.__call__(*args, **kwargs)
+
+
+def pretrained(module: Tmod) -> Tmod:
+    return cast(Tmod, PretrainedModule(module))
+
+
+class PretrainedMixin(BaseTask[Config], Generic[Config], ABC):
+    def __init__(self, config: Config) -> None:
+        super().__init__(config)
+
+        self._pretrained_modules: list[PretrainedModule] = []
+
+    def __setattr__(self, name: str, value: Tensor | Module) -> None:
+        super().__setattr__(name, value)
+
+        if isinstance(value, PretrainedModule):
+            self._pretrained_modules.append(value)
+
+    def _apply(self, fn: Callable[[Tensor], Tensor], recurse: bool = True) -> Self:
+        mod = super()._apply(fn, recurse)
+        for pretrained_i in mod._pretrained_modules:
+            pretrained_i.module._apply(fn, recurse)
+        return mod
