@@ -1,0 +1,17 @@
+setuptools
+plone.app.registry
+plone.registry
+plone.restapi
+Zope
+Products.CMFPlone
+Products.GenericSetup
+z3c.form
+plone.base
+
+[test]
+plone.app.testing
+plone.api
+plone.browserlayer
+plone.testing>=5.0.0
+six
+lxml

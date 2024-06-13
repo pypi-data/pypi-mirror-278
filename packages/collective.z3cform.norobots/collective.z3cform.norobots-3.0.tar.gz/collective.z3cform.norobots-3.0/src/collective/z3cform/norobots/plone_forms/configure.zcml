@@ -1,0 +1,24 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="collective.z3cform.norobots"
+    >
+
+  <browser:page
+      name="z3cform-contact-info"
+      for="plone.base.interfaces.siteroot.IPloneSiteRoot"
+      class=".contact_info.ContactInfoView"
+      permission="zope2.View"
+      />
+
+  <browser:page
+      name="simple-form-with-macro-view"
+      for="plone.base.interfaces.siteroot.IPloneSiteRoot"
+      class=".simpleform.SimpleFormView"
+      permission="zope2.View"
+      />
+
+  <!-- Norobots validator -->
+  <adapter factory=".contact_info.NorobotsValidator" />
+
+</configure>
