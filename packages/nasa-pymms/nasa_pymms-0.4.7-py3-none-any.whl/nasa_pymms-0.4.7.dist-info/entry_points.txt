@@ -1,0 +1,3 @@
+[console_scripts]
+gls-mp = pymms.gls.mp_dl_unh.data:main
+gls-mp-data = pymms.gls.mp_dl_unh.data:download_from_cmd
