@@ -1,0 +1,3 @@
+[console_scripts]
+mms-monthly-cli=mms_monthly_cli.cli:app
+
