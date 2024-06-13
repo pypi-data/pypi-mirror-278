@@ -1,0 +1,18 @@
+[project]
+name = "easyllm_kewu93"
+version = "0.0.1"
+authors = [
+  { name="Kevin Wu", email="kewu93@gmail.com" },
+]
+description = "An easier way to query LLMs"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/kevinwu23/easyllm"
+Issues = "https://github.com/kevinwu23/easyllm/issues"

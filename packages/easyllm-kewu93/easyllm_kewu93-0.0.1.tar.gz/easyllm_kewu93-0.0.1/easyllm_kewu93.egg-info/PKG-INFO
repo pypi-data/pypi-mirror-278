@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: easyllm_kewu93
+Version: 0.0.1
+Summary: An easier way to query LLMs
+Home-page: https://github.com/kevinwu23/easyllm
+Author: Kevin Wu
+Author-email: Kevin Wu <kewu93@gmail.com>
+Project-URL: Homepage, https://github.com/kevinwu23/easyllm
+Project-URL: Issues, https://github.com/kevinwu23/easyllm/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.2
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
