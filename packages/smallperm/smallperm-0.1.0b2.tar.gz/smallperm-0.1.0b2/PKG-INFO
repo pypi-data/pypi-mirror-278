@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: smallperm
+Version: 0.1.0b2
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+
+
+Gratefully reuses some code from: https://github.com/asimihsan/permutation-iterator-rs
