@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/dipcoatimage_finitedepth_ifd.egg-info/PKG-INFO
+src/dipcoatimage_finitedepth_ifd.egg-info/SOURCES.txt
+src/dipcoatimage_finitedepth_ifd.egg-info/dependency_links.txt
+src/dipcoatimage_finitedepth_ifd.egg-info/entry_points.txt
+src/dipcoatimage_finitedepth_ifd.egg-info/requires.txt
+src/dipcoatimage_finitedepth_ifd.egg-info/top_level.txt
+src/finitedepth_ifd/__init__.py
+src/finitedepth_ifd/py.typed
+tests/test_analysis.py
