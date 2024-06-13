@@ -1,0 +1,37 @@
+[build-system]
+requires = [
+    "setuptools>=61",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prslink"
+version = "0.0.1"
+authors = [
+  { name="Yunye", email="gwaslab@gmail.com" },
+]
+description = "A Python package for evaluating PRS performance"
+
+readme = "README.md"
+
+dependencies = [
+    "pandas>=1.3,!=1.5",
+    "numpy>=1.21.2",
+    "matplotlib>=3.5,!=3.7.2",
+    "seaborn>=0.12",
+    "scipy>=1.12",
+    "scikit-learn>=1.4.0", 
+    "statsmodels>=0.14.0"
+]
+
+requires-python = ">=3.9,<3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
