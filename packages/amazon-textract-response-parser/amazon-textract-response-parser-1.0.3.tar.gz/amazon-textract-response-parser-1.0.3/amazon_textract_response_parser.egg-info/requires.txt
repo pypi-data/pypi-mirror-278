@@ -1,0 +1,6 @@
+boto3
+marshmallow<4,>=3.14
+
+[dev]
+pytest
+tabulate
