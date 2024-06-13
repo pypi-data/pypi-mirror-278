@@ -1,0 +1,8 @@
+# Seeds for failure cases proptest has generated in the past. It is
+# automatically read and these particular cases re-run before any
+# novel cases are generated.
+#
+# It is recommended to check this file in to source control so that
+# everyone who runs the test benefits from these saved cases.
+cc 1631a6635f32ebc802b2a28935d63f511d88cfa67e6f06f921dbe0473af397ad # shrinks to ctx = Context { user_id: None, locale: None, country_code: None, device_id: None, canonical_url: None, base_url: Some(""), user_agent: None, referrer_url: None, subreddit_id: None, ad_account_id: None, business_id: None, origin_service: None, user_is_employee: None, logged_in: None, app_name: None, build_number: None, oauth_client_id: None, cookie_created_timestamp: None, correlation_id: None, other_fields: None }, event = ExperimentEvent { decision_kind: FracAvail, feature_id: 0, feature_name: "", feature_version: 0, variant_name: "", bucketing_field: UserId, bucketing_value: "", start_ts: 0, stop_ts: 0 }
+cc 4998f3aea09b68774e320a04d24e7b1ba9bfc6bbdcfe0e4878f44972fc3799fe # shrinks to ctx = Context { user_id: None, locale: None, country_code: None, device_id: None, canonical_url: None, base_url: None, user_agent: None, referrer_url: None, subreddit_id: None, ad_account_id: None, business_id: None, origin_service: None, user_is_employee: None, logged_in: None, app_name: None, build_number: None, oauth_client_id: None, cookie_created_timestamp: None, correlation_id: None, other_fields: None }, event = ExperimentEvent { decision_kind: FracAvail, feature_id: 0, feature_name: "", feature_version: 0, variant_name: "", bucketing_field: CanonicalUrl, bucketing_value: "", start_ts: 0, stop_ts: 0 }

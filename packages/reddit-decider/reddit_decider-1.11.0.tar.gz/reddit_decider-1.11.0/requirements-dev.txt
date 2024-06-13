@@ -1,0 +1,9 @@
+-i https://artifactory.build.ue1.snooguts.net/artifactory/api/pypi/reddit-python-prod/simple
+baseplate==2.5.10
+hypothesis==6.41.0
+maturin==0.12.11
+pytest==7.1.1
+reddit-experiments==1.0.2
+reddit-v2-events==4.1.2
+setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
+gevent>=23.9.0 # not directly required, pinned by Snyk to avoid a vulnerability
