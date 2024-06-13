@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: experiment-goodies
+Version: 0.2.4
+Summary: Useful helpers, callbacks and more for experimenting with ml models
+Author: Javier Smith
+Author-email: javier.smith.dlc@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: geo
+Requires-Dist: geopandas (>=0.14.3,<0.15.0) ; extra == "geo"
+Requires-Dist: logutils (>=0.3.5,<0.4.0)
+Requires-Dist: matplotlib (>=3.8.2,<4.0.0)
+Requires-Dist: mlflow (>=2.10.0,<3.0.0)
+Requires-Dist: pydantic (>=2.0,<3.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: rasterio (>=1.3.9,<2.0.0) ; extra == "geo"
+Requires-Dist: rio-cogeo (>=5.2.0,<6.0.0) ; extra == "geo"
+Description-Content-Type: text/markdown
+
+# ML Experiment Goodies
+
+[![Python 3.10](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/release/python-3100/)
+
+Helpers, handlers, callbacks and more that are nice to have when experimenting with ml models
+
+## Setup
+
+The most basic functionalities of this library is included in the base installation, which you have by running any of the commands below
+
+```bash
+pip install experiment-goodies
+poetry add experiment-goodies
+```
+
+Geospatial utilities require some big packages, like rasterio and rio-cogeo. They are included inside the `geo` extra which you can install with one of the commands shown below.
+
+```bash
+pip install experiment-goodies[geo]
+poetry add experiment-goodies -E geo
+```
+
+## Development
+
+To develop in this repo, you will need to install some extra dependencies and make some additional configurations. Start by installing dev dependencies:
+
+```bash
+poetry install --group dev
+```
+
+Some tests depend on data managed by dvc, so you should pull files associated to this repo. Remote storage is configured to S3, so you should ensure you have the correct AWS credentials loaded in your system.
+
+```bash
+dvc pull
+```
+
