@@ -1,0 +1,29 @@
+[project]
+name = "pyfastpaper"
+version = "0.0.1"
+authors = [
+  { name = "Yu-Xin Tian", email = "neu.tianyuxin.2013@gmail.com" },
+]
+dependencies = [
+	"numpy",
+	"sympy",
+	"matplotlib",
+	"ipython",
+	"notebook"
+]
+description = "适合科研人员的Python快速绘图工具！A Python tool for researchers to create figures for academic papers!"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+"Homepage" = "https://github.com/Jesse-tien/pyfastpaper"
+"Bug Tracker" = "https://github.com/Jesse-tien/pyfastpaper/issues"
