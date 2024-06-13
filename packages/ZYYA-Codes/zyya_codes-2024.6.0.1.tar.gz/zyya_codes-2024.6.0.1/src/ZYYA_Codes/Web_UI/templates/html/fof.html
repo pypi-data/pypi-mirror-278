@@ -1,0 +1,500 @@
+{% import 'macro' as macro %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>中邮永安量化平台</title>
+        
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <style>
+            .center-table {
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+            }
+        </style>
+        
+
+        <script src="//quick.go-admin.cn/demo/sword/assets/dist/js/all.min.506636f003.js"></script><link rel="stylesheet" href="//quick.go-admin.cn/demo/sword/assets/dist/css/all.min.dd4b069ab5.css">
+
+        <link rel="icon" type="image/png" sizes="32x32" href="/img/logo.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/img/logo.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/img/logo.png">
+        {{ macro.render_chart_dependencies(chart) }}
+    </head>
+
+    <body class="hold-transition skin-black sidebar-mini">
+
+    <div class="wrapper">
+        <header class="main-header">
+            <a href="./home" class="logo">
+                <span class="logo-mini"><b>中邮</b></span>
+                <span class="logo-lg"><b>中邮</b>永安</span>
+            </a>
+
+            <nav class="navbar navbar-static-top">
+                <div id="firstnav">
+                    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                        <svg viewBox="64 64 896 896" focusable="false" class="" data-icon="menu-fold" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"></path></svg>
+                        <span class="sr-only">Toggle navigation</span>
+                    </a>
+
+                    <div style="float: left;">
+                        <ul class="nav navbar-nav">
+                            <li class="navbar-nav-btn-left" style="display: none;">
+                                <a href="javascript:;" style="border-left: none;border-right: solid 1px #dedede;">
+                                    <i class="fa fa-angle-double-left"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-tabs-content">
+                        <ul class="nav nav-tabs nav-addtabs">
+
+                        </ul>
+                    </div>
+                    <div style="float: left;">
+                        <ul class="nav navbar-nav">
+                            <li class="navbar-nav-btn-right" style="display: none;">
+                                <a href="javascript:;" style="border-left: solid 1px #dedede;border-right: none;">
+                                    <i class="fa fa-angle-double-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="navbar-custom-menu">
+                        <ul class="nav navbar-nav">
+                            <li title="固定侧边栏">
+                                <a href="javascript:void(0);" class="fixed-btn" data-click="false">
+                                    <i class="fa fa-thumb-tack"></i>
+                                </a>
+                            </li>
+
+                            <li title="进入全屏" class="fullpage-btn">
+                                <a href="javascript:void(0);">
+                                    <i class="fa fa-arrows-alt"></i>
+                                </a>
+                            </li>
+                            <li title="退出全屏" class="exit-fullpage-btn" style="display: none;">
+                                <a href="javascript:void(0);">
+                                    <i class="fa fa-compress"></i>
+                                </a>
+                            </li>
+                            <li title="刷新">
+                                <a href="javascript:void(0);" class="container-refresh">
+                                    <i class="fa fa-refresh"></i>
+                                </a>
+                            </li>
+
+                            <li class="dropdown user user-menu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <img src="../img/robot.gif" class="user-image" alt="User Image">
+                                    <span class="hidden-xs">{{user_name}}</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="info-btn-BjNOndPjiH new-tab-link dropdown-item" href="/admin/info/site/edit" data-title="网站设置">
+                                            <i class="fa fa-gear"></i>
+                                            <span>网站设置</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="info-btn-QsJNL8NKK5 new-tab-link dropdown-item" href="/admin/application/info" data-title="运行信息">
+                                            <i class="fa fa-info"></i>
+                                            <span>运行信息</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="info-btn-q3buK8tjZ1 new-tab-link dropdown-item" href="/admin/plugins" data-title="plugins">
+                                            <i class="fa fa-th"></i>
+                                            <span>插件</span>
+                                        </a>
+                                    </li>
+
+                                    <li><a href="/admin/info/normal_manager/edit?__goadmin_edit_pk=1" class="dropdown-item"><i class="fa fa-edit"></i>
+                                        <span>设置</span></a></li>
+                                    <li><a href="./logout" class="no-pjax dropdown-item"><i class="fa fa-sign-out"></i>
+                                        <span>登出</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <aside class="main-sidebar">
+            <section class="sidebar">
+                <ul class="sidebar-menu" data-widget="tree" data-plug="">
+                    <li class=''>
+                        <a href='./home'>
+                        <i class="fa fa-bar-chart"></i>
+                            <span> 仪表盘</span>
+                            <span class="pull-right-container"></span>
+                        </a>
+                    </li>
+
+                    <li class=''>
+                        <a href='./settlement'>
+                        <i class="fa fa-database"></i>
+                            <span> 结算单分析</span>
+                            <span class="pull-right-container"></span>
+                        </a>
+                    </li>
+
+                    <li class=''>
+                        <a href='./daily' target="_blank">
+                        <i class="fa fa-bitcoin"></i>
+                            <span> 每日市场行情</span>
+                            <span class="pull-right-container"></span>
+                        </a>
+                    </li>
+
+                    <li class=''>
+                        <a href='./snowball'>
+                            <i class="fa fa-sellsy"></i>
+                            <span> 雪球监控系统</span>
+                            <span class="pull-right-container"></span>
+                        </a>
+                    </li>
+
+                    <li class='active'>
+                        <a href='./fof'>
+                        <i class="fa fa-skyatlas"></i>
+                            <span> FOF分析</span>
+                            <span class="pull-right-container"></span>
+                        </a>
+                    </li>
+
+                    <li class=''>
+                        <a href='./mom'>
+                        <i class="fa fa-institution"></i>
+                            <span> MOM盘后风控</span>
+                            <span class="pull-right-container"></span>
+                        </a>
+                    </li>
+
+                    <li class=''>
+                        <a href='./cta'>
+                        <i class="fa fa-pie-chart"></i>
+                            <span> CTA择时指标</span>
+                            <span class="pull-right-container"></span>
+                        </a>
+                    </li>
+
+                    <li class=''>
+                        <a href='./valuation'>
+                        <i class="fa fa-area-chart"></i>
+                            <span> 估值表分析</span>
+                            <span class="pull-right-container"></span>
+                        </a>
+                    </li>
+
+                    <li class="treeview ">
+                        <a href="#">
+                            <i class="fa fa-tasks"></i><span> 管理</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href='/admin/info/manager'>
+                                    <i class="fa fa-users"></i> 用户
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href='/admin/info/roles'>
+                                    <i class="fa fa-user"></i> 角色
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href='/admin/info/permission'>
+                                    <i class="fa fa-ban"></i> 权限
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href='/admin/menu'>
+                                    <i class="fa fa-bars"></i> 菜单
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href='/admin/info/op'>
+                                    <i class="fa fa-history"></i> 操作日志
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+
+        <div class="content-wrapper" id="pjax-container">
+            <script src="https://quick.go-admin.cn/demo/sword/assets/dist/js/tree.min.b68a8b6689.js"></script>
+            <script src="https://quick.go-admin.cn/demo/sword/assets/dist/js/treeview.min.3095cd8c12.js"></script>
+            <script src="https://quick.go-admin.cn/demo/sword/assets/dist/js/datatable.min.43c12443cf.js"></script>
+            <script src="https://quick.go-admin.cn/demo/sword/assets/dist/js/form.min.4022a41f70.js"></script>
+            <script src="https://quick.go-admin.cn/demo/sword/admin/assets/chart.min.js"></script>
+            <script src="https://quick.go-admin.cn/demo/sword/admin/assets/echarts.min.js"></script>
+            <script src="https://quick.go-admin.cn/demo/sword/admin/assets/china.js"></script>
+            <script src="https://quick.go-admin.cn/demo/sword/admin/assets/echarts-gl.min.js"></script>
+            <script src="https://quick.go-admin.cn/demo/sword/admin/assets/echarts-liquidfill.min.js"></script>
+            <script src="/assets/jscodes/form.min.f8678914e9.js"></script>
+            <script src="/assets/jscodes/treeview.min.7780d3bb0f.js"></script>
+            <script src="/assets/jscodes/datatable.min.581cdc109b.js"></script>
+            <script src="/assets/jscodes/tree.min.e1faf8b7de.js"></script>
+            <script src="/assets/jscodes/chart.min.js"></script>
+            <script src="//quick.go-admin.cn/demo/sword/assets/dist/js/all_2.min.e63751f672.js"></script>
+
+            <section class="content-header">
+                <div>
+                    <ol class="breadcrumb">
+                        <li><a href="./home"> 首页</a></li>
+                        <li>FOF分析</li>
+                    </ol>
+                </div>
+                <h4>
+                    FOF分析
+                </h4>
+            </section>
+
+            <section class="content">
+                <div>
+                    <div class="box box-" >
+                        <div class="box-header with-border">
+                            <h3 class="box-title">FOF分析</h3>
+                        </div>
+                        <div class="box-body" style="">
+                            <div align="right">
+                                <button class="btn btn-primary" onclick="document.location.href='./fof/email_update'" style="align-self: center">邮箱数据更新</button>
+                                <button class="btn btn-primary" onclick="document.location.href='./fof/nv_update'" style="align-self: center">策略基准更新</button>
+                            </div>
+
+                            <form id=3tf3bJ0A1E action="./fof_analysis" method="get" accept-charset="UTF-8" class="form-horizontal"
+                                  style="background-color: white;padding: 0px;">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="nav-tabs-custom">
+                                            <ul class="nav nav-tabs">
+                                                <li class="active" href="./333">
+                                                    <a href="#tab-form-0" data-toggle="tab" aria-expanded="true">
+                                                        FOF分析
+                                                        <i class="fa fa-exclamation-circle text-red hide"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content fields-group">
+                                                <div class="tab-pane active" id="tab-form-0">
+                                                    <div class="form-group" >
+                                                        <label for="fof" class="col-sm-2  control-label">
+                                                            产品列表：
+                                                        </label>
+
+                                                        <div class="col-sm-8">
+                                                            <select class="form-control fof select2-hidden-accessible" style="width: 100%;" name="fof"
+                                                                    data-multiple="false" data-placeholder="输入 产品列表：" tabindex="-1" aria-hidden="true"
+                                                            >
+                                                                <option value="" selected>请选择需要分析的产品</option>
+                                                                {{product_list}}
+
+                                                            </select>
+                                                            <script>
+                                                                $("select.fof").select2();
+                                                            </script>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="fof" class="col-sm-2  control-label">
+                                                            起始日期：
+                                                        </label>
+                                                        <div class="col-sm-8">
+                                                            {{start_date}}
+<!--                                                            <input type="date" value="2023-12-29" name="start_date">-->
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="form-group">
+                                                        <label for="fof" class="col-sm-2  control-label">
+                                                            截止日期：
+                                                        </label>
+                                                        <div class="col-sm-8">
+                                                            {{end_date}}
+<!--                                                            <input type="date" value="" name="end_date">-->
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="fof" class="col-sm-2 control-label">
+                                                            初始权重：
+                                                        </label>
+                                                        <div class="col-sm-8" style="border: #1a2226 thick">
+                                                            <table border="1">
+                                                                <thead valign="center" align="center">
+                                                                <tr align="center">
+                                                                    <td align="center" width="150">
+                                                                        策略名称
+                                                                    </td>
+                                                                    <td align="center" width="400">
+                                                                        策略权重(%)
+                                                                    </td>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody valign="center" align="center">
+                                                                <tr>
+                                                                    <td width="100">指数增强</td>
+                                                                    <td><input type="text" name="指数增强" style="width: 100%"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>市场中性</td>
+                                                                    <td><input type="text" name="市场中性" style="width: 100%"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>另类套利</td>
+                                                                    <td><input type="text" name="另类套利" style="width: 100%"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>主观CTA</td>
+                                                                    <td><input type="text" name="主观CTA" style="width: 100%"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>量化CTA</td>
+                                                                    <td><input type="text" name="量化CTA" style="width: 100%"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>固收</td>
+                                                                    <td><input type="text" name="固收" style="width: 100%"></td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="fof" class="col-sm-2 control-label">
+                                                            产品费率(%):
+                                                        </label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" value="0.04" name="fee_ratio">
+                                                        </div>
+                                                    </div>
+                                                    {{msg}}
+
+<!--                                                    <div class="form-group" >-->
+<!--                                                        <label for="jumpLink0" class="col-sm-2  control-label">-->
+
+<!--                                                        </label>-->
+
+<!--                                                        <div class="col-sm-8">-->
+<!--                                                            <div class="input-group">-->
+<!--                                                                <a class="new-tab-link"-->
+<!--                                                                   data-title="FOF分析 [fake_code_analysis.html]"-->
+<!--                                                                   href="/admin/fof/fake_code_analysis.html">-->
+<!--                                                                    FOF分析 [fake_code_analysis.html]-->
+<!--                                                                </a>-->
+<!--                                                            </div>-->
+<!--                                                            <div>-->
+<!--                                                                {{ macro.render_chart_content(chart) }}-->
+<!--                                                            </div>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div align="right">
+                                    <button class="btn btn-primary" onclick="document.location.href=''" style="align-self: center">
+                                        分析产品
+                                    </button>
+                                </div>
+
+                                <input type="hidden" name="__go_admin_previous_" value='/admin'>
+                            </form>
+
+                            <script>
+                                $("select.fof").on("select2:select", function (e) {
+                                    if (["0"].indexOf(e.params.data.text) !== -1 || ["0"].indexOf(e.params.data.id) !== -1) {
+
+
+                                        $("label[for='jumpLink0']").parent().show();
+
+
+                                    } else {
+
+
+                                        $("label[for='jumpLink0']").parent().hide();
+
+
+                                    }
+                                });
+                                $(function () {
+                                    let fofdata = $(".fof").select2("data");
+                                    let foftext = "";
+                                    let fofid = "";
+                                    if (fofdata.length > 0) {
+                                        foftext = fofdata[0].text;
+                                        fofid = fofdata[0].id;
+                                    }
+                                    if (["0"].indexOf(foftext) !== -1 || ["0"].indexOf(fofid) !== -1) {
+
+                                        $("label[for='jumpLink0']").parent().show();
+
+                                    }
+                                }
+                                )
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="modal fade " id="code_modal" tabindex="-1" role="dialog" aria-labelledby="code_modal" aria-hidden="true">
+                        <div class="modal-dialog modal-" role="document" style="">
+                            <div class="modal-content" style="">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="code_modalTitle">代码</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body" style="height:300px;">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    
+    <script src="//quick.go-admin.cn/demo/sword/assets/dist/js/all_2.min.e63751f672.js"></script>
+
+
+    </body>
+    
+    <div style="display:none;">
+        <script type="text/javascript" src="https://s9.cnzz.com/z_stat.php?id=1278156902&web_id=1278156902"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103003647-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-103003647-2');
+        </script>
+    </div>
+    <script>
+        function go_to_fof() {
+            document.location.href = "/" + document.location.href.split("/")[3] + "/fof"
+        }
+    </script>
+</html>

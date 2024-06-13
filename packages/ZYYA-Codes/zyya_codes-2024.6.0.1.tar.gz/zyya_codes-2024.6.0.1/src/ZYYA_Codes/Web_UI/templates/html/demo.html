@@ -1,0 +1,697 @@
+
+
+
+    <!DOCTYPE html>
+    <html>
+
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>中邮永安量化平台</title>
+        
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+        
+
+        <script src="//quick.go-admin.cn/demo/sword/assets/dist/js/all.min.506636f003.js"></script><link rel="stylesheet" href="//quick.go-admin.cn/demo/sword/assets/dist/css/all.min.dd4b069ab5.css">
+
+        <link rel="icon" type="image/png" sizes="32x32" href="/img/logo.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/img/logo.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/img/logo.png">
+    </head>
+
+
+    <body class="hold-transition skin-black sidebar-mini">
+    <div class="wrapper">
+
+        
+
+        
+    <header class="main-header">
+        
+        <a href="./home" class="logo">
+            
+            <span class="logo-mini"><b>中邮</b></span>
+            
+            <span class="logo-lg"><b>中邮</b>永安</span>
+        </a>
+        
+        <nav class="navbar navbar-static-top">
+            <div id="firstnav">
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <svg viewBox="64 64 896 896" focusable="false" class="" data-icon="menu-fold" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"></path></svg>
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+
+                <div style="float: left;">
+                    <ul class="nav navbar-nav">
+                        <li class="navbar-nav-btn-left" style="display: none;">
+                            <a href="javascript:;" style="border-left: none;border-right: solid 1px #dedede;">
+                                <i class="fa fa-angle-double-left"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-tabs-content">
+                    <ul class="nav nav-tabs nav-addtabs">
+                    </ul>
+                </div>
+                <div style="float: left;">
+                    <ul class="nav navbar-nav">
+                        <li class="navbar-nav-btn-right" style="display: none;">
+                            <a href="javascript:;" style="border-left: solid 1px #dedede;border-right: none;">
+                                <i class="fa fa-angle-double-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                
+    <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+            <li title="固定侧边栏">
+                <a href="javascript:void(0);" class="fixed-btn" data-click="false">
+                    <i class="fa fa-thumb-tack"></i>
+                </a>
+            </li>
+
+            <li title="进入全屏" class="fullpage-btn">
+                <a href="javascript:void(0);">
+                    <i class="fa fa-arrows-alt"></i>
+                </a>
+            </li>
+            <li title="退出全屏" class="exit-fullpage-btn" style="display: none;">
+                <a href="javascript:void(0);">
+                    <i class="fa fa-compress"></i>
+                </a>
+            </li>
+            <li title="刷新">
+                <a href="javascript:void(0);" class="container-refresh">
+                    <i class="fa fa-refresh"></i>
+                </a>
+            </li>
+            
+                <li class="dropdown user user-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        
+                            <img src="../img/robot.gif" class="user-image" alt="User Image">
+                        
+                        <span class="hidden-xs">{{user_name}}</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+    <a class="info-btn-BjNOndPjiH new-tab-link dropdown-item" href="/admin/info/site/edit" data-title="网站设置">
+      <i class="fa fa-gear"></i>
+      <span>网站设置</span>
+    </a>
+</li><li>
+    <a class="info-btn-QsJNL8NKK5 new-tab-link dropdown-item" href="/admin/application/info" data-title="运行信息">
+      <i class="fa fa-info"></i>
+      <span>运行信息</span>
+    </a>
+</li><li>
+    <a class="info-btn-q3buK8tjZ1 new-tab-link dropdown-item" href="/admin/plugins" data-title="plugins">
+      <i class="fa fa-th"></i>
+      <span>插件</span>
+    </a>
+</li>
+                        <li><a href="/admin/info/normal_manager/edit?__goadmin_edit_pk=1" class="dropdown-item"><i class="fa fa-edit"></i>
+                            <span>设置</span></a></li>
+                        <li><a href="./logout" class="no-pjax dropdown-item"><i class="fa fa-sign-out"></i>
+                            <span>登出</span></a></li>
+                    </ul>
+                </li>
+            
+        </ul>
+    </div>
+
+            </div>
+        </nav>
+    </header>
+
+
+        
+    <aside class="main-sidebar">
+        <section class="sidebar">
+
+            
+    <ul class="sidebar-menu" data-widget="tree" data-plug="">
+        
+        
+            
+                
+                <li class=''>
+
+                        <a href='./home'>
+
+                        <i class="fa fa-bar-chart"></i><span> 仪表盘</span>
+                        <span class="pull-right-container"></span>
+                    </a>
+                </li>
+
+
+
+
+                <li class=''>
+
+                        <a href='./settlement'>
+
+                        <i class="fa fa-database"></i><span> 结算单分析</span>
+                        <span class="pull-right-container"></span>
+                    </a>
+                </li>
+
+
+
+
+                <li class=''>
+
+                        <a href='./daily' target="_blank">
+
+                        <i class="fa fa-bitcoin"></i><span> 每日市场行情</span>
+                        <span class="pull-right-container"></span>
+                    </a>
+                </li>
+
+
+
+
+                <li class=''>
+
+                        <a href='./snowball'>
+
+                        <i class="fa fa-sellsy"></i><span> 雪球监控系统</span>
+                        <span class="pull-right-container"></span>
+                    </a>
+                </li>
+
+
+
+
+                <li class='active'>
+
+                        <a href='./fof'>
+
+                        <i class="fa fa-skyatlas"></i><span> FOF分析</span>
+                        <span class="pull-right-container"></span>
+                    </a>
+                </li>
+
+
+
+
+                <li class=''>
+
+                        <a href='./mom'>
+
+                        <i class="fa fa-institution"></i><span> MOM盘后风控</span>
+                        <span class="pull-right-container"></span>
+                    </a>
+                </li>
+
+
+
+
+                <li class=''>
+
+                        <a href='./cta'>
+
+                        <i class="fa fa-pie-chart"></i><span> CTA择时指标</span>
+                        <span class="pull-right-container"></span>
+                    </a>
+                </li>
+
+
+
+
+                <li class=''>
+
+                        <a href='./valuation'>
+
+                        <i class="fa fa-area-chart"></i><span> 估值表分析</span>
+                        <span class="pull-right-container"></span>
+                    </a>
+                </li>
+
+
+
+                <li class="treeview ">
+                    <a href="#">
+                        <i class="fa fa-tasks"></i><span> 管理</span>
+                        <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                    </a>
+                    <ul class="treeview-menu">
+
+
+                            <li>
+
+                                    <a href='/admin/info/manager'>
+
+                                    <i class="fa fa-users"></i> 用户
+                                </a>
+                            </li>
+
+
+
+                            <li>
+
+                                    <a href='/admin/info/roles'>
+
+                                    <i class="fa fa-user"></i> 角色
+                                </a>
+                            </li>
+
+
+
+                            <li>
+
+                                    <a href='/admin/info/permission'>
+
+                                    <i class="fa fa-ban"></i> 权限
+                                </a>
+                            </li>
+
+
+
+                            <li>
+
+                                    <a href='/admin/menu'>
+
+                                    <i class="fa fa-bars"></i> 菜单
+                                </a>
+                            </li>
+
+
+
+                            <li>
+
+                                    <a href='/admin/info/op'>
+
+                                    <i class="fa fa-history"></i> 操作日志
+                                </a>
+                            </li>
+
+
+                    </ul>
+                </li>
+            
+        
+    </ul>
+
+
+        </section>
+    </aside>
+
+    <div class="content-wrapper" id="pjax-container">
+
+            
+    
+        <script src="https://quick.go-admin.cn/demo/sword/assets/dist/js/tree.min.b68a8b6689.js"></script><script src="https://quick.go-admin.cn/demo/sword/assets/dist/js/treeview.min.3095cd8c12.js"></script><script src="https://quick.go-admin.cn/demo/sword/assets/dist/js/datatable.min.43c12443cf.js"></script><script src="https://quick.go-admin.cn/demo/sword/assets/dist/js/form.min.4022a41f70.js"></script><script src="https://quick.go-admin.cn/demo/sword/admin/assets/chart.min.js"></script><script src="https://quick.go-admin.cn/demo/sword/admin/assets/echarts.min.js"></script><script src="https://quick.go-admin.cn/demo/sword/admin/assets/china.js"></script><script src="https://quick.go-admin.cn/demo/sword/admin/assets/echarts-gl.min.js"></script><script src="https://quick.go-admin.cn/demo/sword/admin/assets/echarts-liquidfill.min.js"></script>
+    
+        <section class="content-header">
+            <div>
+                <ol class="breadcrumb">
+                <li><a href="./home"> 首页</a></li>
+                <li>仪表盘</li>
+                </ol>
+            </div>
+            <h4>
+                仪表盘
+                <small>dashboard example</small>
+            </h4>
+        </section>
+        <div id="content-title" style="display:none">仪表盘</div>
+    
+
+    
+    <section class="content">
+        <div class='pjax-container-content animated fadeInUp' style="animation-duration: 0.900000s;-webkit-animation-duration: 0.900000s;">
+            <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12 ">
+                <div class="card" id="pdHRK1tGWG">
+                    <div class="card-body" id="pdHRK1tGWG_body">
+                        <div class="card-index">
+                            <div class="card-top" id="pdHRK1tGWG_top" >
+                                <div class="card-meta">
+                                    <div class="card-title">
+                            <span>总销售额</span>
+                            <span class="card-title-action">
+                                <i aria-label="图标: info-circle-o" class="anticon anticon-info-circle-o"><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="info-circle" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path><path d="M464 336a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8z"></path></svg></i>
+                            </span>
+                        </div>
+                                    <div class="card-subtitle">
+                        <span>
+                            ¥ 113,340
+                        </span>
+                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content" id="pdHRK1tGWG_content">
+                                <div>
+                                    <div title="" style="margin-right: 16px;">
+                                        <span>
+                                            <span>周同比</span>
+                                            <span style="margin-left: 8px;">12%</span>
+                                        </span>
+                                        <span style="color: #f5222d;margin-left: 4px;top: 1px;"><i style="font-size: 12px;" aria-label="图标: caret-up" class="anticon anticon-caret-up"><svg viewBox="0 0 1024 1024" focusable="false" class="" data-icon="caret-up" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M858.9 689L530.5 308.2c-9.4-10.9-27.5-10.9-37 0L165.1 689c-12.2 14.2-1.2 35 18.5 35h656.8c19.7 0 30.7-20.8 18.5-35z"></path></svg></i></span></div><div class="antd-pro-pages-dashboard-analysis-components-trend-index-trendItem" title=""><span><span>日同比</span><span style="margin-left: 8px;">11%</span></span><span style="color: #52c41a;margin-left: 4px;top: 1px;"><i style="font-size: 12px;" aria-label="图标: caret-down" class="anticon anticon-caret-down"><svg viewBox="0 0 1024 1024" focusable="false" class="" data-icon="caret-down" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M840.4 300H183.6c-19.7 0-30.7 20.8-18.5 35l328.4 380.8c9.4 10.9 27.5 10.9 37 0L858.9 335c12.2-14.2 1.2-35-18.5-35z"></path></svg></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer" id="pdHRK1tGWG_footer">
+                    日销售额 <strong style="margin-left:8px;">￥11,325</strong>
+                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<div class="col-md-3 col-sm-6 col-xs-12 ">
+<div class="card" id="pdHRK1tGWG">
+<div class="card-body" id="pdHRK1tGWG_body">
+<div class="card-index">
+<div class="card-top" id="pdHRK1tGWG_top" >
+<div class="card-meta">
+<div class="card-title">
+<span>总销售额</span>
+<span class="card-title-action">
+<i aria-label="图标: info-circle-o" class="anticon anticon-info-circle-o"><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="info-circle" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path><path d="M464 336a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8z"></path></svg></i>
+</span>
+</div>
+<div class="card-subtitle"><span>¥ 113,340</span></div>
+</div>
+</div>
+<div class="card-content" id="pdHRK1tGWG_content">
+<div><div title="" style="margin-right: 16px;"><span><span>周同比</span><span style="margin-left: 8px;">12%</span></span><span style="color: #f5222d;margin-left: 4px;top: 1px;"><i style="font-size: 12px;" aria-label="图标: caret-up" class="anticon anticon-caret-up"><svg viewBox="0 0 1024 1024" focusable="false" class="" data-icon="caret-up" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M858.9 689L530.5 308.2c-9.4-10.9-27.5-10.9-37 0L165.1 689c-12.2 14.2-1.2 35 18.5 35h656.8c19.7 0 30.7-20.8 18.5-35z"></path></svg></i></span></div><div class="antd-pro-pages-dashboard-analysis-components-trend-index-trendItem" title=""><span><span>日同比</span><span style="margin-left: 8px;">11%</span></span><span style="color: #52c41a;margin-left: 4px;top: 1px;"><i style="font-size: 12px;" aria-label="图标: caret-down" class="anticon anticon-caret-down"><svg viewBox="0 0 1024 1024" focusable="false" class="" data-icon="caret-down" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M840.4 300H183.6c-19.7 0-30.7 20.8-18.5 35l328.4 380.8c9.4 10.9 27.5 10.9 37 0L858.9 335c12.2-14.2 1.2-35-18.5-35z"></path></svg></i></span></div></div>
+</div>
+<div class="card-footer" id="pdHRK1tGWG_footer">
+日销售额 <strong style="margin-left:8px;">￥11,325</strong>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6 col-xs-12 ">
+<div class="card" id="pdHRK1tGWG">
+<div class="card-body" id="pdHRK1tGWG_body">
+<div class="card-index">
+<div class="card-top" id="pdHRK1tGWG_top" >
+<div class="card-meta">
+<div class="card-title">
+<span>总销售额</span>
+<span class="card-title-action">
+<i aria-label="图标: info-circle-o" class="anticon anticon-info-circle-o"><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="info-circle" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path><path d="M464 336a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8z"></path></svg></i>
+</span>
+</div>
+<div class="card-subtitle"><span>¥ 113,340</span></div>
+</div>
+</div>
+<div class="card-content" id="pdHRK1tGWG_content">
+<div><div title="" style="margin-right: 16px;"><span><span>周同比</span><span style="margin-left: 8px;">12%</span></span><span style="color: #f5222d;margin-left: 4px;top: 1px;"><i style="font-size: 12px;" aria-label="图标: caret-up" class="anticon anticon-caret-up"><svg viewBox="0 0 1024 1024" focusable="false" class="" data-icon="caret-up" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M858.9 689L530.5 308.2c-9.4-10.9-27.5-10.9-37 0L165.1 689c-12.2 14.2-1.2 35 18.5 35h656.8c19.7 0 30.7-20.8 18.5-35z"></path></svg></i></span></div><div class="antd-pro-pages-dashboard-analysis-components-trend-index-trendItem" title=""><span><span>日同比</span><span style="margin-left: 8px;">11%</span></span><span style="color: #52c41a;margin-left: 4px;top: 1px;"><i style="font-size: 12px;" aria-label="图标: caret-down" class="anticon anticon-caret-down"><svg viewBox="0 0 1024 1024" focusable="false" class="" data-icon="caret-down" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M840.4 300H183.6c-19.7 0-30.7 20.8-18.5 35l328.4 380.8c9.4 10.9 27.5 10.9 37 0L858.9 335c12.2-14.2 1.2-35-18.5-35z"></path></svg></i></span></div></div>
+</div>
+<div class="card-footer" id="pdHRK1tGWG_footer">
+日销售额 <strong style="margin-left:8px;">￥11,325</strong>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6 col-xs-12 ">
+<div class="card" id="pdHRK1tGWG">
+<div class="card-body" id="pdHRK1tGWG_body">
+<div class="card-index">
+<div class="card-top" id="pdHRK1tGWG_top" >
+<div class="card-meta">
+<div class="card-title">
+<span>总销售额</span>
+<span class="card-title-action">
+<i aria-label="图标: info-circle-o" class="anticon anticon-info-circle-o"><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="info-circle" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path><path d="M464 336a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8z"></path></svg></i>
+</span>
+</div>
+<div class="card-subtitle"><span>¥ 113,340</span></div>
+</div>
+</div>
+<div class="card-content" id="pdHRK1tGWG_content">
+<div><div title="" style="margin-right: 16px;"><span><span>周同比</span><span style="margin-left: 8px;">12%</span></span><span style="color: #f5222d;margin-left: 4px;top: 1px;"><i style="font-size: 12px;" aria-label="图标: caret-up" class="anticon anticon-caret-up"><svg viewBox="0 0 1024 1024" focusable="false" class="" data-icon="caret-up" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M858.9 689L530.5 308.2c-9.4-10.9-27.5-10.9-37 0L165.1 689c-12.2 14.2-1.2 35 18.5 35h656.8c19.7 0 30.7-20.8 18.5-35z"></path></svg></i></span></div><div class="antd-pro-pages-dashboard-analysis-components-trend-index-trendItem" title=""><span><span>日同比</span><span style="margin-left: 8px;">11%</span></span><span style="color: #52c41a;margin-left: 4px;top: 1px;"><i style="font-size: 12px;" aria-label="图标: caret-down" class="anticon anticon-caret-down"><svg viewBox="0 0 1024 1024" focusable="false" class="" data-icon="caret-down" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M840.4 300H183.6c-19.7 0-30.7 20.8-18.5 35l328.4 380.8c9.4 10.9 27.5 10.9 37 0L858.9 335c12.2-14.2 1.2-35-18.5-35z"></path></svg></i></span></div></div>
+</div>
+<div class="card-footer" id="pdHRK1tGWG_footer">
+日销售额 <strong style="margin-left:8px;">￥11,325</strong>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12 ">
+<div class="box box- " >
+<div class="box-header with-border">
+Monthly Recap Report
+</div>
+<div class="box-body" style="">
+<div class="row">
+<div class="col-md-8 ">
+<p class="text-center">
+<strong>Sales: 1 Jan, 2019 - 30 Jul, 2019</strong>
+</p>
+<div class="chart">
+<canvas id="salechart" style="height: 180px;"></canvas>
+</div>
+<script>
+new Chart(document.getElementById('salechart'), {"type":"line","data":{"labels":["January","February","March","April","May","June","July"],"datasets":[{"label":"Electronics","data":[65,59,80,81,56,55,40],"type":"line","borderColor":"#ececec","fill":false,"lineTension":0.1},{"label":"Digital Goods","data":[28,48,40,19,86,27,90],"type":"line","borderColor":"rgba(102, 176, 255, 0.9)","fill":false,"lineTension":0.1}]}});
+</script>
+</div>
+<div class="col-md-4 "><p class="text-center"><strong>Goal Completion</strong></p>
+<div class="progress-group">
+<span class="progress-text">Add Products to Cart</span>
+<span class="progress-number"><b>160</b>/200</span>
+<div class="progress sm">
+<div class="progress-bar" style="width: 80%;background-color: #76b2d4 !important;"></div>
+</div>
+</div>
+<div class="progress-group">
+<span class="progress-text">Complete Purchase</span>
+<span class="progress-number"><b>310</b>/400</span>
+<div class="progress sm">
+<div class="progress-bar" style="width: 80%;background-color: #f17c6e !important;"></div>
+</div>
+</div>
+<div class="progress-group">
+<span class="progress-text">Visit Premium Page</span>
+<span class="progress-number"><b>490</b>/800</span>
+<div class="progress sm">
+<div class="progress-bar" style="width: 80%;background-color: #ace0ae !important;"></div>
+</div>
+</div>
+<div class="progress-group">
+<span class="progress-text">Send Inquiries</span>
+<span class="progress-number"><b>250</b>/500</span>
+<div class="progress sm">
+<div class="progress-bar" style="width: 50%;background-color: #fdd698 !important;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="box-footer clearfix">
+<div class="row">
+<div class="col-xs-6 col-sm-3 ">
+<div class="description-block border-right">
+<span class="description-percentage text-green"><i class="fa fa-caret-up"></i>17%</span>
+<h5 class="description-header">¥140,100</h5>
+<span class="description-text">TOTAL REVENUE</span>
+</div>
+</div>
+<div class="col-sm-3 col-xs-6 ">
+<div class="description-block border-right">
+<span class="description-percentage text-red"><i class="fa fa-caret-down"></i>2%</span>
+<h5 class="description-header">440,560</h5>
+<span class="description-text">TOTAL REVENUE</span>
+</div>
+</div>
+<div class="col-sm-3 col-xs-6 ">
+<div class="description-block border-right">
+<span class="description-percentage text-green"><i class="fa fa-caret-up"></i>12%</span>
+<h5 class="description-header">¥140,050</h5>
+<span class="description-text">TOTAL REVENUE</span>
+</div>
+</div>
+<div class="col-sm-3 col-xs-6 ">
+<div class="description-block border-">
+<span class="description-percentage text-green"><i class="fa fa-caret-up"></i>1%</span>
+<h5 class="description-header">30943</h5>
+<span class="description-text">TOTAL REVENUE</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-8 ">
+<div class="nav-tabs-custom">
+<ul class="nav nav-tabs">
+<li class="active"><a href="#tab_0" data-toggle="tab" aria-expanded="true">tabs1</a></li>
+<li><a href="#tab_1" data-toggle="tab" aria-expanded="true">tabs2</a></li>
+<li><a href="#tab_2" data-toggle="tab" aria-expanded="true">tabs3</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tab_0">
+<b>How to use:</b>
+<p>Exactly like the original bootstrap tabs except you should use
+the custom wrapper <code>.nav-tabs-custom</code> to achieve this style.</p>
+A wonderful serenity has taken possession of my entire soul,
+like these sweet mornings of spring which I enjoy with my whole heart.
+I am alone, and feel the charm of existence in this spot,
+which was created for the bliss of souls like mine. I am so happy,
+my dear friend, so absorbed in the exquisite sense of mere tranquil existence,
+that I neglect my talents. I should be incapable of drawing a single stroke
+at the present moment; and yet I feel that I never was a greater artist than now.
+</div>
+<div class="tab-pane" id="tab_1">
+The European languages are members of the same family. Their separate existence is a myth.
+For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ
+in their grammar, their pronunciation and their most common words. Everyone realizes why a
+new common language would be desirable: one could refuse to pay expensive translators. To
+achieve this, it would be necessary to have uniform grammar, pronunciation and more common
+words. If several languages coalesce, the grammar of the resulting language is more simple
+and regular than that of the individual languages.
+</div>
+<div class="tab-pane" id="tab_2">
+Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+It has survived not only five centuries, but also the leap into electronic typesetting,
+remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+like Aldus PageMaker including versions of Lorem Ipsum.
+</div>
+</div>
+</div>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button></div>
+<div class="col-md-4 ">
+<div class="box box-danger " >
+<div class="box-header with-border">
+Browser Usage
+</div>
+<div class="box-body" style="">
+<div class="row">
+<div class="col-md-8 ">
+<div class="chart">
+<canvas id="pieChart" style="height: 170px;"></canvas>
+</div>
+<script>
+new Chart(document.getElementById('pieChart'), {"type":"pie","data":{"labels":["Navigator","Opera","Safari","FireFox","IE","Chrome"],"datasets":[{"label":"Chrome","data":[100,300,600,400,500,700],"type":"pie","backgroundColor":["rgb(255, 205, 86)","rgb(54, 162, 235)","rgb(255, 99, 132)","rgb(255, 205, 86)","rgb(54, 162, 235)","rgb(255, 99, 132)"]}]}});
+</script>
+</div>
+<div class="col-md-4 ">
+<ul class="chart-legend clearfix">
+<li><i class="fa fa-circle-o text-red"></i> Chrome</li>
+<li><i class="fa fa-circle-o text-Green"></i> IE</li>
+<li><i class="fa fa-circle-o text-yellow"></i> FireFox</li>
+<li><i class="fa fa-circle-o text-blue"></i> Sarafri</li>
+<li><i class="fa fa-circle-o text-light-blue"></i> Opera</li>
+<li><i class="fa fa-circle-o text-gray"></i> Navigator</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="box-footer clearfix">
+<p class="text-center"><a href="javascript:void(0)" class="uppercase">View All Users</a></p>
+</div>
+</div>
+<div class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal" aria-hidden="true">
+<div class="modal-dialog modal-" role="document" style="">
+<div class="modal-content" style="">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalTitle">this is a popup</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body" style="">
+<form>
+<div class="form-group">
+<label for="recipient-name" class="col-form-label">Recipient:</label>
+<input type="text" class="form-control" id="recipient-name">
+</div>
+<div class="form-group">
+<label for="message-text" class="col-form-label">Message:</label>
+<textarea class="form-control" id="message-text"></textarea>
+</div>
+</form>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+<button type="button" class="btn btn-primary">Save Change</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+        <script>
+            $('.pjax-container-content .modal.fade').on('show.bs.modal', function (event) {
+            // Fix Animate.css
+            $('.pjax-container-content').removeClass('fadeInUp');
+            });
+        </script>
+    </section>
+
+
+    
+
+    
+
+    
+
+
+        </div>
+
+        
+
+        
+    <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+            <b>Version</b> v1.2.26
+        </div>
+        <div class="pull-right hidden-xs">
+            <b>Theme</b> sword&nbsp;&nbsp;
+        </div>
+        <strong>Powered by <a href="https://github.com/GoAdminGroup/go-admin">GoAdmin</a>.</strong>
+        
+    </footer>
+
+
+        
+
+    </div>
+
+    
+    <script src="//quick.go-admin.cn/demo/sword/assets/dist/js/all_2.min.e63751f672.js"></script>
+
+
+    </body>
+    
+    <div style="display:none;">
+        <script type="text/javascript" src="https://s9.cnzz.com/z_stat.php?id=1278156902&web_id=1278156902"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103003647-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-103003647-2');
+        </script>
+    </div>
+    <script>
+        function go_to_fof() {
+            document.location.href = "/" + document.location.href.split("/")[3] + "/fof"
+        }
+    </script>
+    </html>
+

@@ -1,0 +1,100 @@
+<html class="no-js"><head><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-SJFGB8GJF5&amp;l=dataLayer&amp;cx=c"></script><script src="chrome-extension://fgddmllnllkalaagkghckoinaemmogpe/scripts/content/gps.js"></script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>GoAdmin</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="//quick.go-admin.cn/demo/sword/assets/login/dist/all.min.css">
+
+
+
+        <link rel="icon" type="image/png" sizes="32x32" href="//quick.go-admin.cn/official/assets/imgs/icons.ico/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="//quick.go-admin.cn/official/assets/imgs/icons.ico/favicon-64x64.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="//quick.go-admin.cn/official/assets/imgs/icons.ico/favicon-16x16.png">
+
+    <script type="text/javascript" async="" src="https://turing.captcha.gtimg.com/1/tcaptcha-frame.fdf8b4d5.js"></script><style type="text/css">@keyframes animate_dots{0%{opacity:1}to{opacity:0}}@-webkit-keyframes animate_dots{0%{opacity:1}to{opacity:0}}.dot0,.dot1{animation:animate_dots .9s infinite;-moz-animation:animate_dots .9s infinite;-webkit-animation:animate_dots .9s infinite;-o-animation:animate_dots .9s infinite}.dot1{animation-delay:.2s;-webkit-animation-delay:.2s}.dot2{animation:animate_dots .9s infinite;-moz-animation:animate_dots .9s infinite;-webkit-animation:animate_dots .9s infinite;-o-animation:animate_dots .9s infinite;animation-delay:.4s;-webkit-animation-delay:.4s}.dots_item{display:inline-block;margin-right:5px;width:10px;height:10px;border-radius:50%;background:#4886ff}.verify-icon{position:absolute;width:100%;margin-top:70px;text-align:center}.t-embed-loading{position:relative;width:300px;height:230px;background-color:#fff}.t-embed-dots{position:absolute;left:50%;top:50%;margin-left:-22.5px;margin-top:-5px}.t-embed-dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;background:#4886ff}.t-mask{width:100%;height:100%;position:fixed;_position:absolute;left:0;top:0;background:#000;opacity:.5;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);z-index:2000000000}</style></head>
+    <body>
+
+    <div class="container">
+        <div class="row" style="margin-top: 80px;">
+            <div class="col-md-4 col-md-offset-4">
+                <form action="##" onsubmit="return false" method="post" id="sign-up-form" class="fh5co-form animate-box" data-animate-effect="fadeIn">
+                    <h2>GoAdmin</h2>
+                    <div class="form-group">
+                        <label for="username" class="sr-only">Username</label>
+                        <input type="text" class="form-control" id="username" placeholder="用户名" autocomplete="off" value="admin">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="sr-only">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="密码" autocomplete="off" value="admin">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary" onclick="submitData()">登录</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row" style="padding-top: 60px; clear: both;">
+            <div class="col-md-12 text-center">
+                <p>
+                    <small>© All Rights Reserved. GoAdmin</small>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="particles-js">
+
+    <canvas class="particles-js-canvas-el" width="1684" height="1305" style="width: 100%; height: 100%;"></canvas></div>
+
+    <script src="//quick.go-admin.cn/demo/sword/assets/login/dist/all.min.js"></script>
+
+    <div style="display:none;">
+        <script type="text/javascript" src="https://s9.cnzz.com/z_stat.php?id=1278156902&amp;web_id=1278156902"></script>
+
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-103003647-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-103003647-2');
+        </script>
+    </div>
+    <script src="https://turing.captcha.qcloud.com/TCaptcha.js"></script>
+    <script>
+
+        let captcha = new TencentCaptcha("194907698", function (res) {
+            console.log(res);
+
+
+            if (res.ret === 0) {
+                $.ajax({
+                    dataType: 'json',
+                    type: 'POST',
+                    url: '\/admin',
+                    async: 'true',
+                    data: {
+                        'username': $("#username").val(),
+                        'password': $("#password").val(),
+                        'token': res.ticket
+                    },
+                    success: function (data) {
+                        location.href = data.data.url
+                    },
+                    error: function (data) {
+                        alert('登录失败');
+                    }
+                });
+            } else {
+                alert("验证失败")
+            }
+        }, {});
+
+        function submitData() {
+            captcha.show();
+        }
+    </script>
+
+
+
+<div id="tcaptcha_transform_dy" style="opacity: 0; position: absolute; transition: opacity 0.3s linear 0s; top: -1e+06px;"><iframe name="https://turing.captcha.qcloud.com" id="tcaptcha_iframe_dy" frameborder="0" border="0" marginheight="0" marginwidth="0" scrolling="no" src="https://turing.captcha.gtimg.com/1/template/drag_ele.html"></iframe></div></body></html>
