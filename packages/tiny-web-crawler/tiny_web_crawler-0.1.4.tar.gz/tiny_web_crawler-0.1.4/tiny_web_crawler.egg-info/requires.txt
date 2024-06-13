@@ -1,0 +1,11 @@
+validators
+beautifulsoup4
+lxml
+colorama
+requests
+
+[dev]
+mypy
+pytest
+responses
+pylint
