@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: virtualitics-sdk
+Version: 0.1.0
+Summary: Virtualitics SDK is a library that enables you to write applications and deploy them to the Virtualitics AI Platform, leveraging your data to create easy-to-read dashboards and infographics, connect seamlessly with Virtualitics Explore, and use AI-driven predictive models to help you take action on solving complex problems.
+Author: Richard Mable
+Author-email: richard.m@virtualitics.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: art (>=6.1,<7.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: typer[all] (>=0.12.0,<0.13.0)
+Description-Content-Type: text/markdown
+
+
