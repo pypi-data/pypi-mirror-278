@@ -1,0 +1,65 @@
+[tool.poetry]
+name = "autotx"
+version = "0.1.0"
+description = ""
+authors = ["Nestor Amesty <nestor09amesty@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+pyright = "^1.1.350"
+click = "^8.1.7"
+eth-account = "^0.11.0"
+requests = "^2.31.0"
+python-dotenv = "^1.0.0"
+coingecko = "^0.13"
+pyautogen = "^0.2.27"
+fastapi = "^0.111.0"
+web3 = "^6.19.0"
+safe-eth-py = "^5.8.0"
+uvicorn = "^0.29.0"
+supabase = "^2.5.0"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.8.0"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.0.0"
+pytest-vcr = "^1.0.2"
+
+[tool.poetry.scripts]
+start-devnet = "autotx.chain_fork:start"
+stop-devnet = "autotx.chain_fork:stop"
+ask = "autotx.cli:run"
+agent = "autotx.cli:agent"
+serve = "autotx.cli:serve"
+new_app = "autotx.cli:new_app"
+load-tokens = "autotx.load_tokens:run"
+build-check = "autotx.build_check:run"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+strict = true
+exclude = [
+    "autotx/tests/",
+    "benchmarks.py",
+    "autotx/utils/agent/build_goal.py"
+]
+ignore_missing_imports = true
+install_types = true
+non_interactive = true
+plugins = [
+    "pydantic.mypy"
+]
+# from https://blog.wolt.com/engineering/2021/09/30/professional-grade-mypy-configuration/
+disallow_untyped_defs = true
+no_implicit_optional = true
+check_untyped_defs = true
+warn_return_any = true
+show_error_codes = true
+warn_unused_ignores = true
+disallow_incomplete_defs = true
+disallow_untyped_decorators = true
