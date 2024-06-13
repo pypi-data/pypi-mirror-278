@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: virtualitics-cli
+Version: 0.1.0
+Summary: An easy-to-use command line interface for initializing, packaging, and deploying Custom Apps to a deployed instance of Predict from within a local development environment.
+Author: Richard Mable
+Author-email: richard.m@virtualitics.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: art (>=6.1,<7.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: typer[all] (>=0.12.0,<0.13.0)
+Description-Content-Type: text/markdown
+
+

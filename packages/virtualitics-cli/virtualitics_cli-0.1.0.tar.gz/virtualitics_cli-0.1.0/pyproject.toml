@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "virtualitics-cli"
+version = "0.1.0"
+description = """
+An easy-to-use command line interface for initializing, packaging, and deploying Custom Apps to a deployed instance of Predict from within a local development environment."""
+authors = ["Richard Mable <richard.m@virtualitics.com>"]
+readme = "README.md"
+
+#[tool.poetry.scripts]
+#predict = "predict.predict_cli:app"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+typer = {extras = ["all"], version = "^0.12.0"}
+art = "^6.1"
+requests = "^2.31.0"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
