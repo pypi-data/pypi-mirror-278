@@ -1,0 +1,4 @@
+[console_scripts]
+lea=ts103976.console_scripts:lea_console
+rps=ts103976.console_scripts:rps_console
+
