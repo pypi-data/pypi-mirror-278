@@ -1,0 +1,27 @@
+templates:
+  - mosquitto:
+    - publisher.template
+    - subscriber.template
+  - node:
+    - publisher.template
+    - subscriber.template
+  - node_ws:
+    - server.template
+    - client.template
+  - paho:
+    - publisher.template
+    - subscriber.template
+
+modules:
+  - mosquitto:
+    - publisher.c
+    - subscriber.c
+  - node:
+    - publisher.js
+    - subscriber.js
+  - node_ws:
+    - server.js
+    - client.js
+  - paho:
+    - publisher.py
+    - subscriber.py
