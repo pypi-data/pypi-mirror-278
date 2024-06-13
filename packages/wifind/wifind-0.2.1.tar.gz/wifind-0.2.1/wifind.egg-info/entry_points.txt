@@ -1,0 +1,2 @@
+[console_scripts]
+wifind = wifind.__main__:main
