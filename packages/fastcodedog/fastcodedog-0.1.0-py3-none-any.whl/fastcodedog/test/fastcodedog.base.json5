@@ -1,0 +1,11 @@
+{
+  // 运行在工程根目录
+  pdm_files: [
+    "docs/fastcodedog.pdm"
+  ],
+  project_name: "fakeapp",
+  // 代码创建者
+  author: "fastcodedog",
+  project_package: "fastcodedog.test.fakeapp",
+  project_dir: "fastcodedog/test/fakeapp"
+}

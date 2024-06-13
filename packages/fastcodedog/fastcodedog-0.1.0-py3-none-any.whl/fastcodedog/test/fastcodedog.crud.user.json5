@@ -1,0 +1,63 @@
+{
+  /*
+  * 注意crud是sqlalchemy的格式
+  */
+  // 系统会根据schema配置自动生成默认create，update，query。
+  // queries一般需要再扩展
+  queries: {
+      // 对应的表: "admin_ser"
+    admin_user: {
+      base: {
+        // 生成的url： /users/base?organization_id=1。对应query方法 get_base
+        parameters: {
+          // 参数有两种配置方式，这里是字典格式, enum等支持不同租户不同的配置之后再支持: ['1', '2']
+          // todo: 自动从数据库配置读取。系统会自动根据filter配置识别对应数据库表的哪个字段
+          number: {
+            type: 'str',
+            nullable: true,
+            description: '手工注释'
+          },
+          name: {
+            type: 'str',
+            nullable: true
+          },
+          telephone: 'str',
+          email: 'str',
+          state_valid: 'bool'
+        },
+        filters: [
+          // 如果filter中包含了nullable的参数，会条件if条件，只要这个filter中任一参数没有参数，就不会添加这个filter
+          "User.number.like(f'%{number}%')",
+          "User.name.like(f'%{name}%')",
+          "User.telephone.like(f'%{telephone}%')",
+          "User.email.like(f'%{email}%')",
+          "User.state_valid == state_valid"
+        ]
+      },
+      user_by_organization: {
+        // parameters{
+        // 生成的url： /users/user_by_organization?organization_id=1。对应query方法 get_user_by_organization
+        // 后端代码要点：
+        // def read_users_by_organization(organization_id: int, skip: int = 0, limit: int = 100):
+        //  uo = alias(user_organization)
+        //  query.join(uo).filter(uo.c.organization_id == 1).all()
+        // parameters，key是参数名，value是fastapi对应的定义
+
+        // 后端代码专用的配置项
+        parameters: {
+          organization_id: 'int'
+        },
+        // 一般不需要设置，如果重复引用某个类时，才需要指定
+        aliases: {
+          'uo': 'User.organizations'
+        },
+        joins: [
+          'uo'
+        ],
+        filters: [
+          'uo.id == organization_id'
+        ],
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  // 自定义的包，需要自行编写代码，不会自动生成，自动修改。
+  extended_apps: {
+    hello: 'fastcodedog.test.codes.hello',
+    // 自动往main中添加如下代码
+    /*
+    from fastcodedog.test.fakeapp.hello import app as hello_app
+    app.include_router(hello_app.router)
+    */
+  },
+  oauth2: {
+    // 是否启用，默认不启用
+    enabled: true,
+    // 用户表名
+    user_table: 'admin_user',
+    // 用户名字段
+    user_name_field: 'number',
+    // 用户密码字段
+    user_password_field: 'password',
+  }
+}

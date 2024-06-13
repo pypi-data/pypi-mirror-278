@@ -1,0 +1,7 @@
+{
+  base: {
+    // 指定基类，如果不指定，系统会自动创建
+    //    class_name: "Base",
+    //    package: "fastframe.model.base",
+  }
+}

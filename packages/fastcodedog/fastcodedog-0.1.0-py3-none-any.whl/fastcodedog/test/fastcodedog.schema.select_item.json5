@@ -1,0 +1,11 @@
+{
+  response_schemas: {
+    // response_schemas,create_schemas,update_schemas不能重名，否则可能导致配置无效。
+    // 系统会默认生成_base,_create,_update结尾的版本，以及针对每个多对多的变量，生成with_xxxx的版本，注意不要和默认生成的版本重名
+    define_attribute_select_item: {
+      select_item_with_attribute: [
+        "attribute"
+      ]
+    }
+  }
+}
