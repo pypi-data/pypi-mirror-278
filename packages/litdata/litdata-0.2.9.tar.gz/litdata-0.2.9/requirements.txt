@@ -1,0 +1,5 @@
+torch
+filelock
+numpy
+boto3[crt]
+requests
