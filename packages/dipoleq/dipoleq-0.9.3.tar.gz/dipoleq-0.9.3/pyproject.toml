@@ -1,0 +1,183 @@
+[build-system]
+requires = [
+    "cmake",
+    "scikit-build-core",
+    "pybind11",
+    "pybind11-stubgen",
+    "numpy",
+    "setuptools_scm",
+    "build",
+]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "dipoleq"
+dynamic = ["version"]
+description="DipolEq equilibrium solver python bindings."
+readme = "README.md"
+authors = [
+  { name = "Darren Garnier", email = "dgarnier@reinrag.net" },
+]
+requires-python = ">=3.10"  # because I LOVE the _switch_ statement
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+  "numpy >=1.21",
+  "pydantic >=2.7",
+  "pyyaml",
+  "types-pyyaml",
+  "typing-extensions",
+  "h5py",
+  "freeqdsk",
+  "wurlitzer",   # quiet down the c-code
+]
+
+[project.scripts]
+h5togeqdsk = "dipoleq.h5togeqdsk:main"
+dipoleq = "dipoleq.main_cli:main"
+
+[project.optional-dependencies]
+test = ["pytest", "matplotlib", "h5py_stubs"]
+wheels = ["cmake", "ninja; sys_platform!='win32'"]
+dev = ["scikit-build-core", "cibuildwheel", "wheel", "build",
+       "numpy", "pybind11", "pyyaml", "pybind11-stubgen",
+       "toml-to-requirements", "pre-commit", "matplotlib >=3.8.0", "pyupgrade"]
+docs = ["myst-parser", "sphinx >=4.0", "sphinx-autodoc-typehints", "sphinx-copybutton",
+        "autodoc_pydantic", "numpy", "sphinx_rtd_theme",]
+omas = ["omas"]
+
+[tool.scikit-build]
+wheel.expand-macos-universal-tags = true
+cmake.targets = ["pydipoleq", "dipoleq"]
+cmake.verbose = true
+#install.components = ["python", "cli"]
+install.components = ["python"]
+#wheel.packages = ["python/dipoleq"] # not required
+sdist.include = ["python/dipoleq/_version.py"]
+sdist.exclude = ["idl", "GEM", "fortran", "wheelhouse", "*.ipynb",
+                "Testing/*.hdf", "Testing/*.pdf", 
+                ".vscode", ".github", ".devcontainer"]
+# wheel.py-api = "py310"  # build for stable API.. doesn't work.. 
+logging.level = "INFO"
+build-dir = "build/{wheel_tag}"
+
+[tool.scikit-build.cmake.define]
+BUILD_PYTHON_BINDINGS = "ON"
+BUILD_CLI = "OFF"
+CMAKE_OSX_DEPLOYMENT_TARGET = "10.15"  # macOS 10.15 Catalina
+
+[tool.scikit-build.metadata.version]
+provider = "scikit_build_core.metadata.setuptools_scm"
+
+[tool.setuptools_scm]
+version_file = "python/dipoleq/_version.py"
+
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+# pythonpath = ["python"] # this confuses pytest between 
+# the local copy and the installed one.. need to use
+# the installed one for ciwheelbuild
+addopts = ["-ra", "--showlocals", "--strict-markers", "--strict-config"]
+xfail_strict = true
+log_cli_level = "INFO"
+filterwarnings = [
+  "error",
+]
+testpaths = ["python/tests"]
+
+
+[tool.cibuildwheel]
+build = "cp31{0,1,2}-*"
+test-command = "pytest {project}"
+test-extras = ["test"]
+test-skip = ["*universal2:arm64", "*win*"] # skip windows
+skip = ["*musllinux*", "*pypy*", "*390x*", "*ppc64le*", "*win32*"]
+build-verbosity = 1
+
+[tool.cibuildwheel.linux]
+archs = ["auto64"]
+
+[tool.cibuildwheel.windows]
+archs = ["auto64"]
+
+[tool.cibuildwheel.macos.environment]
+MACOSX_DEPLOYMENT_TARGET = "10.15"
+
+[tool.ruff]
+force-exclude = true  # make sure we exclude below when running pre-commit
+# src = ["python"]
+extend-exclude = ["ext_libs/clibpdf", "*.r", "*.y"]
+show-fixes = true
+
+[tool.ruff.lint]
+extend-select = [
+  "B",           # flake8-bugbear
+  "I",           # isort
+  "ARG",         # flake8-unused-arguments
+  "C4",          # flake8-comprehensions
+#  "EM",          # flake8-errmsg
+  "ICN",         # flake8-import-conventions
+  "G",           # flake8-logging-format
+  "PGH",         # pygrep-hooks
+  "PIE",         # flake8-pie
+  "PL",          # pylint
+  "PT",          # flake8-pytest-style
+  "PTH",         # flake8-use-pathlib
+  "RET",         # flake8-return
+  "RUF",         # Ruff-specific
+  "SIM",         # flake8-simplify
+#  "T20",         # flake8-print
+  "UP",          # pyupgrade
+  "YTT",         # flake8-2020
+  "EXE",         # flake8-executable
+  "NPY",         # NumPy specific rules
+  "PD",          # pandas-vet
+  "PYI",         # flake8-pyi
+]
+ignore = [
+  "PLR09",    # Too many <...>
+  "PLR2004",  # Magic comparison
+  "ISC001",   # Conflicts with formatter
+]
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["T20"]
+
+# don't actually use isort.. use ruff instead
+[tool.isort]
+profile = "black"
+
+[tool.codespell]
+ignore-words-list = ["dipoleq","garnier","JAve","pres"]
+
+[tool.mypy]
+files = ["python/dipoleq/*.py"]
+strict = true
+warn_unreachable = true
+enable_error_code = ["ignore-without-code", "redundant-expr", "truthy-bool"]
+plugins = ["numpy.typing.mypy_plugin"]
+exclude = ['^noxfile\.py$',
+           'python/dev/*.py$']
+
+[[tool.mypy.overrides]]
+module = "freeqdsk"
+ignore_missing_imports = true
+
+#[[tool.mypy.overrides]]
+#module = "h5py"
+#disable_error_code = "attr-defined"
+
+[tool.coverage.run]
+relative_files = true
+source_pkgs = ["dipoleq"]
+omit = ["**/dipoleq/_version.py"]
+
+[tool.coverage.paths]
+source = ["python", ".nox/**/site-packages"]
