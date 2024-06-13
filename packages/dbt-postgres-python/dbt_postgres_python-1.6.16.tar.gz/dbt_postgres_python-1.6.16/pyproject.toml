@@ -1,0 +1,62 @@
+[tool.poetry]
+name = "dbt-postgres-python"
+version = "1.6.16"
+description = "Run python scripts from any dbt project. This project is based on the project https://github.com/fal-ai/fal initially authored by FAL.AI."
+readme = "README.md"
+homepage = "https://github.com/kudryk/dbt-postgres-python"
+repository = "https://github.com/kudryk/dbt-postgres-python"
+authors = [ "Features & Labels <hello@fal.ai>", "Mark Kudryk <kudryk@me.com>" ]
+packages = [
+    { include = "dbt", from = "src" },
+]
+
+keywords = [ "dbt", "pandas", "fal", "runtime" ]
+classifiers = [
+    "Development Status :: 4 - Beta"
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+dbt-core = ">=1.6,<=1.6.16"
+pandas = "^1.5.3"
+posthog = "^1.4.9"
+"backports.functools_lru_cache" = "^1.6.6"
+
+## Environment management related dependencies
+platformdirs = "^2.6.2"
+virtualenv = "^20.21.1"
+dill = "0.3.7"
+
+# dbt-fal
+sqlalchemy = "^1.4.52"
+
+# Adapters
+
+## redshift
+awswrangler = { version = ">=3.0.0", extras = ["redshift"], optional = true, python = ">=3.8" }
+sqlalchemy-redshift = { version = "^0.8.9", optional = true }
+
+# teleport
+s3fs = { version = ">=2022.8.2", optional = true }
+
+# fal cloud
+packaging = ">=23"
+fal = "^0.10.0"
+importlib-metadata = "^6.11.0"
+
+[tool.poetry.extras]
+postgres = []
+redshift = ["awswrangler", "sqlalchemy-redshift"]
+teleport = ["s3fs"]
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+behave = "^1.2.6"
+matplotlib = "^3.5.2"
+requests = "^2.32.3"
+
+[build-system]
+requires = ["poetry-core>=1.5.0"]
+build-backend = "poetry.core.masonry.api"
