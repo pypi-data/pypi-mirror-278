@@ -1,0 +1,134 @@
+[build-system]
+requires = ["setuptools>=61.2"]
+build-backend = "setuptools.build_meta"
+
+# https://packaging.python.org/en/latest/specifications/declaring-project-metadata/
+[project]
+name = "unraphael"
+version = "0.2.1"
+description = "Decoding Raphael: Computational Study of the Production and Reproduction of Italian Renaissance Paintings."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    {name = "Thijs Vroegh", email = "t.vroegh@esciencecenter.nl"},
+]
+keywords = [
+    "art",
+    "raphael",
+    "computer-vision",
+    "renaissance",
+]
+license = {text = "MIT License"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Image Processing",
+]
+dependencies = [
+    "numpy",
+    "rembg",
+    "scikit-image",
+    "scipy",
+    'PyYAML',
+]
+
+[project.urls]
+homepage = "https://github.com/DecodingRaphael/unraphael"
+issues = "https://github.com/DecodingRaphael/unraphael/issues"
+documentation = "https://unraphael.readthedocs.io"
+changelog = "https://github.com/DecodingRaphael/unraphael/releases"
+
+[project.optional-dependencies]
+develop = [
+    "bump-my-version",
+    "ruff",
+    "pre-commit",
+    "coverage[toml]",
+    "pytest",
+    "pycodestyle",
+]
+dash = [
+    "seaborn",
+    "streamlit",
+]
+docs = [
+    "markdown-include",
+    "mkdocs",
+    "mkdocs-material",
+    "mkdocstrings[python]",
+    # "mknotebooks",
+]
+publishing = [
+    "twine",
+    "wheel",
+    "build",
+]
+
+[project.scripts]
+unraphael-dash = "unraphael.cli:dash_entry"
+
+[tool.setuptools]
+zip-safe = false
+package-dir = {"" = "src"}
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = true
+
+[tool.coverage.run]
+branch = true
+source = ["src/unraphael", "dash"]
+data_file = ".coverage"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.mypy]
+ignore_missing_imports = true
+files = ["src/unraphael", "tests"]
+allow_redefinition = true
+
+[[tool.mypy.overrides]]
+module = ["yaml.*", "toml.*"]
+ignore_missing_imports = true
+
+[tool.ruff]
+line-length = 96
+target-version = "py310"
+extend-include = ["*.ipynb"]
+
+[tool.ruff.lint]
+select = [
+    "F",  # Pyflakes
+    "E",  # pycodestyle (error)
+    "W",  # pycodestyle (warning)
+    "I",  # isort
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["unraphael"]
+required-imports = ["from __future__ import annotations"]
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+
+[tool.bumpversion]
+current_version = "0.2.1"
+
+[[tool.bumpversion.files]]
+filename = "src/unraphael/__init__.py"
+search = "__version__ = '{current_version}'"
+replace = "__version__ = '{new_version}'"
+
+[[tool.bumpversion.files]]
+filename = "pyproject.toml"
+search = "version = \"{current_version}\""
+replace = "version = \"{new_version}\""
