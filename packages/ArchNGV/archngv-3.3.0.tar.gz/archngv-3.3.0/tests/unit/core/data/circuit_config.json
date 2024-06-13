@@ -1,0 +1,90 @@
+{
+  "manifest": {
+    "$BASE_DIR": ".",
+    "$COMPONENT_DIR": "$BASE_DIR",
+    "$NETWORK_DIR": "./"
+  },
+  "components": {
+    "morphologies_dir": "$COMPONENT_DIR/morphologies"
+  },
+  "metadata": {"status": "partial"},
+  "networks": {
+    "nodes": [
+      {
+        "nodes_file": "$NETWORK_DIR/nodes.h5",
+        "node_types_file": null,
+        "populations": {
+          "default": {
+            "type": "biophysical"
+          }
+        }
+      },
+      {
+        "nodes_file": "$NETWORK_DIR/glia.h5",
+        "node_types_file": null,
+        "populations": {
+          "astrocytes": {
+            "type": "astrocyte",
+            "alternate_morphologies": {
+              "h5v1": "$NETWORK_DIR/morphologies-astro"
+            },
+            "microdomains_file": "$NETWORK_DIR/microdomains.h5"
+          }
+        }
+      },
+      {
+        "nodes_file": "$NETWORK_DIR/vasculature_sonata.h5",
+        "node_types_file": null,
+        "populations": {
+          "vasculature": {
+            "type": "vasculature",
+            "vasculature_file": "$NETWORK_DIR/vasculature.h5",
+            "vasculature_mesh": "$NETWORK_DIR/vasculature_mesh.obj"
+          }
+        }
+      }
+    ],
+    "edges": [
+      {
+        "edges_file": "$NETWORK_DIR/edges.h5",
+        "edge_types_file": null,
+        "populations": {
+          "default": {
+            "type": "chemical"
+          }
+        }
+      },
+      {
+        "edges_file": "$NETWORK_DIR/glialglial.h5",
+        "edge_types_file": null,
+        "populations": {
+          "glialglial": {
+            "type": "glialglial"
+          }
+        }
+      },
+      {
+        "edges_file": "$NETWORK_DIR/neuroglial.h5",
+        "edge_types_file": null,
+        "populations": {
+          "neuroglial": {
+            "type": "synapse_astrocyte"
+          }
+        }
+      },
+      {
+        "edges_file": "$NETWORK_DIR/gliovascular.h5",
+        "edge_types_file": null,
+        "populations": {
+          "gliovascular": {
+            "type": "endfoot",
+            "endfeet_meshes_file": "$NETWORK_DIR/endfeet_meshes.h5"
+          }
+        }
+      }
+    ]
+  },
+  "atlases": {
+      "my_atlas": "$NETWORK_DIR/my_atlas.nrrd"
+  }
+}

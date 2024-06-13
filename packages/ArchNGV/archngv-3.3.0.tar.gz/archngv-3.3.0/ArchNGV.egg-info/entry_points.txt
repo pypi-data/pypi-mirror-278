@@ -1,0 +1,2 @@
+[console_scripts]
+ngv = archngv.app.__main__:app

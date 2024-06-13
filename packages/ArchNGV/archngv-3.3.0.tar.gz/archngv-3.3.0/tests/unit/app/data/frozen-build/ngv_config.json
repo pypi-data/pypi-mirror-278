@@ -1,0 +1,87 @@
+{
+  "manifest": {
+    "$CIRCUIT_DIR": "../",
+    "$BUILD_DIR": "$CIRCUIT_DIR/frozen-build",
+    "$COMPONENT_DIR": "$BUILD_DIR",
+    "$NETWORK_DIR": "$BUILD_DIR"
+  },
+  "networks": {
+    "nodes": [
+      {
+        "nodes_file": "$CIRCUIT_DIR/external/circuit/nodes.h5",
+        "node_types_file": null,
+        "node_sets_file": "$CIRCUIT_DIR/external/circuit/NA",
+        "id_offset": 1,
+        "populations": {
+          "All": {
+            "type": "biophysical",
+            "morphologies_dir": "$CIRCUIT_DIR/external/circuit/NA"
+          }
+        }
+      },
+      {
+        "nodes_file": "$NETWORK_DIR/sonata/nodes/vasculature.h5",
+        "populations": {
+          "vasculature": {
+            "type": "vasculature",
+            "vasculature_file": "$CIRCUIT_DIR/atlas/vasculature.h5",
+            "vasculature_mesh": "$CIRCUIT_DIR/atlas/vasculature.obj"
+          }
+        }
+      },
+      {
+        "nodes_file": "$NETWORK_DIR/sonata/nodes/glia.h5",
+        "populations": {
+          "astrocytes": {
+            "type": "protoplasmic_astrocytes",
+            "alternate_morphologies": {
+              "h5v1": "$BUILD_DIR/morphologies"
+            },
+            "microdomains_file": "$BUILD_DIR/microdomains.h5"
+          }
+        }
+      }
+    ],
+    "edges": [
+      {
+        "edges_file": "$CIRCUIT_DIR/external/circuit/edges.h5",
+        "edge_types_file": null,
+        "populations": {
+          "All": {
+            "type": "neuronal"
+          }
+        }
+      },
+      {
+        "edges_file": "$NETWORK_DIR/sonata/edges/neuroglial.h5",
+        "populations": {
+          "neuroglial": {
+            "type": "neuroglial"
+          }
+        }
+      },
+      {
+        "edges_file": "$NETWORK_DIR/sonata/edges/glialglial.h5",
+        "populations": {
+          "glialglial": {
+            "type": "glialglial"
+          }
+        }
+      },
+      {
+        "edges_file": "$NETWORK_DIR/sonata/edges/gliovascular.h5",
+        "populations": {
+          "gliovascular": {
+            "type": "gliovascular",
+            "endfeet_meshes": "$BUILD_DIR/endfeet_meshes.h5"
+          }
+        }
+      }
+    ]
+  },
+  "atlases": {
+    "intensity": "$CIRCUIT_DIR/external/atlas/[density]astrocytes.nrrd",
+    "brain_regions": "$CIRCUIT_DIR/external/atlas/brain_regions.nrrd"
+  },
+  "metadata": {"status": "partial"}
+}
