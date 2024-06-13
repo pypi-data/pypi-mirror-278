@@ -1,0 +1,30 @@
+# Configurations for database preprocessing
+# =================================================================================================
+# Name of database to create
+database_name: "housing"
+# Path of directory in dbdata with csv and pkl files (if different from database_name)
+directory: "housing"
+# If true, automatically drop existing database
+drop_old: True
+
+# Data locations
+# =================================================================================================
+# Name of entity file (one row per entity, one column per feature)
+entity_fn: "entities.csv"
+# Name of feature file (columns: (name, description*, category*, type*) for each feature)
+feature_fn: "features.csv"
+# filename of pickled pyreal.RealApp explanation application object
+realapp_fn: "realapp.pkl"
+# Name of training dataset file. If not given, use entity_fn for training data (one row per entity, one column per feature)
+training_entities_fn:
+# Name of context config file. If not given, all context defaults will be used
+context_config_fn: "context_config.yml"
+
+# Model processing configurations
+# =================================================================================================
+# ID of the model doc
+model_id: "housing_model"
+# Name of target column in training dataset. If not given, assume "target"
+label_column: "SalePrice"
+# If False, do not prefit the similar-entities explainer. Reduces object sizes for database, but increases runtime
+prefit_se: True

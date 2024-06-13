@@ -1,0 +1,44 @@
+# Configurations for database preprocessing
+# =================================================================================================
+# Name of database to create
+database_name:
+# Absolute path to directory with csv and pkl files
+directory:
+# If true, automatically drop existing database
+drop_old: False
+
+# Data locations
+# =================================================================================================
+# Name of entity file (one row per entity, one column per feature)
+entity_fn: "entities.csv"
+# Name of feature file (columns: (name, description*, category*, type*) for each feature)
+feature_fn: "features.csv"
+# filename of pickled pyreal.RealApp explanation application object
+realapp_fn: "realapp.pkl"
+# Name of directory containing pickled pyreal.RealApp objects.
+# The name of the model docs will be set to the filenames. Overrides realapp_fn
+realapp_directory_name:
+# Name of context config file. If not given, all context defaults will be used
+context_config_fn: "context_config.yml"
+# Name of categories property file
+category_fn: "categories.csv"
+
+# Training data configurations
+# =================================================================================================
+# If true, put the full training dataset in the database (set to False if privacy is a concern)
+include_training_entities: False
+# Number of entries from database to include (if not given, include all)
+num_training_entities:
+
+# Model processing configurations
+# =================================================================================================
+# ID of the model doc (if realapp_directory_name is given, filenames will be used for model names instead)
+model_id:
+# Name of label column in training dataset (y-values). If not given, assume "label"
+label_column: "label"
+# If True, fit all explainers in the RealApp using the provided training data at database creation. If False, this should be done manually before
+fit_explainers: False
+# The similiar entities explainer is especially large, and may not fit in the database. Fitting can be manually turned off for this explainer
+fit_se: True
+# Number of rows to use to fit explainers
+training_size: 1000
