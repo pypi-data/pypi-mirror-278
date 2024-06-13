@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "rc-connectivity-check"
+version = "0.1.1"
+description = "Tool to check connectivity to RevenueCat services"
+authors = ["Guillermo Perez <bisho@revenuecat.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.32.3"
+colorama = "^0.4.6"
+
+[tool.poetry.scripts]
+rc-connectivity-check = "rc_connectivity_check.checker:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
