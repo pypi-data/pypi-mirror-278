@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: core-system-utils
+Version: 0.0.3
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: jacob.h.barrow
+Author-email: jacob.h.barrow@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+
+# System's Utils
+
+## Purpose
+- Provide convenient higher-level interfaces for faster devops
+
+## Why Now
+- Trying to unify all of the necessary data science tools before August
+
+
