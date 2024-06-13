@@ -1,0 +1,27 @@
+Metadata-Version: 2.3
+Name: hiresynth-object-store-python
+Version: 0.1.4
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Rust
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Dist: pyarrow >=7.0 ; extra == 'pyarrow'
+Provides-Extra: pyarrow
+Summary: (hiresynth temporary fork) A generic object store interface for uniformly interacting with AWS S3, Google Cloud Storage, Azure Storage and local files.
+Keywords: object-store,azure,aws,gcp
+Author: Robert Pack <robstar.pack@gmail.com>
+Author-email: Robert Pack <robstar.pack@gmail.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Documentation, https://github.com/HireSynth/object-store-python#readme
+Project-URL: Repository, https://github.com/HireSynth/object-store-python
+
+# object-store
+
+A common abstraction for high performance access to various storage backends.
+
