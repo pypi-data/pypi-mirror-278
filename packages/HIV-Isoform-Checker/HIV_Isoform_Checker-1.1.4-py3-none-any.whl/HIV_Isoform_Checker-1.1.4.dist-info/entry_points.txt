@@ -1,0 +1,2 @@
+[console_scripts]
+HIV_Isoform_Checker = HIV_Isoform_Checker.__main__:main
