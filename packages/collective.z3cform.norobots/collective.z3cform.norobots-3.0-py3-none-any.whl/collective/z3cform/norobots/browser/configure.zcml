@@ -1,0 +1,34 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="collective.z3cform.norobots"
+    >
+
+  <!-- For the widget -->
+
+  <browser:page
+      name="norobots"
+      for="*"
+      class=".norobots.Norobots"
+      allowed_interface=".interfaces.INorobotsView"
+      permission="zope2.View"
+      />
+
+  <!-- html field macro -->
+  <browser:page
+      name="norobots_macro"
+      for="*"
+      template="norobots_macro.pt"
+      permission="zope2.View"
+      />
+
+  <!-- Control panel -->
+
+  <browser:page
+      name="norobots-controlpanel"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      class=".controlpanel.NorobotsControlPanelView"
+      permission="cmf.ManagePortal"
+      />
+
+</configure>

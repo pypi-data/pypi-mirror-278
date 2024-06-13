@@ -1,0 +1,132 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-24 08:09+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: Maarten Kling <maarten@fourdigits.nl>\n"
+"Language-Team: Nederlands\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: nl\n"
+"Language-Name: Dutch\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: collective.z3cform.norobots\n"
+
+#: ./browser/norobots_macro.pt:18
+#: ./plone_forms/contact_info.py:43
+msgid "Are you a human ?"
+msgstr "Ben je een mens ?"
+
+#: ./plone_forms/contact_info.py:55
+msgid "Contact form"
+msgstr "Contact formulier"
+
+#: ./plone_forms/contact_info.py:24
+msgid "E-Mail"
+msgstr "E-Mail"
+
+#: ./browser/norobots_macro.pt:28
+#: ./plone_forms/contact_info.py:44
+msgid "In order to avoid spam, please answer the question below."
+msgstr "Om spam te voorkomen, beantwoord de onderstaande vraag."
+
+#: ./plone_forms/contact_info.py:149
+msgid "Mail sent."
+msgstr "Mail verzonden."
+
+#: ./plone_forms/contact_info.py:37
+msgid "Message"
+msgstr "Bericht"
+
+#: ./plone_forms/contact_info.py:20
+msgid "Name"
+msgstr "Naam"
+
+#: ./configure.zcml:51
+msgid "Norobots captcha field (collective.z3cform.norobots)"
+msgstr ""
+
+#: ./configure.zcml:60
+msgid "Norobots captcha field UNINSTALLATION"
+msgstr ""
+
+#: ./browser/interfaces.py:11
+msgid "Norobots question::answer"
+msgstr "Norobots vraag::antwoord"
+
+#: ./browser/controlpanel.py:19
+#: ./profiles/default/controlpanel.xml
+msgid "Norobots widget settings"
+msgstr "Norobots widget instellingen"
+
+#: ./plone_forms/contact_info.py:96
+msgid "Please correct the indicated errors and don't forget to fill in the field 'Are you a human ?'."
+msgstr "Verbeter aangegeven fouten, vergeet niet het veld 'Ben je een mens ?'."
+
+#: ./plone_forms/contact_info.py:38
+msgid "Please enter the message you want to send."
+msgstr "Geef een "
+
+#: ./plone_forms/contact_info.py:32
+msgid "Please enter the subject of the message you want to send."
+msgstr "Onderwerp van het bericht dat je wilt sturen."
+
+#: ./plone_forms/contact_info.py:25
+msgid "Please enter your e-mail address."
+msgstr "Geef je email adres."
+
+#: ./plone_forms/contact_info.py:20
+msgid "Please enter your full name."
+msgstr "Geef je volledige naam."
+
+#: ./configure.zcml:51
+msgid "Provides a human captcha widget based on a list of questions/answers."
+msgstr ""
+
+#: ./browser/norobots_macro.pt:32
+#: ./norobots_input.pt:6
+msgid "Question"
+msgstr "Vraag"
+
+#: ./browser/interfaces.py:12
+msgid "Questions list (one per line). Example : 'What is 10 + 12 ?::22'. Answer can contain multiple values delimited by semicolon. Example : 'What is 5 + 5 ?::10;ten'."
+msgstr "Vragen lijst (een per regel). Voorbeeld : 'Wat is 10 + 12 ?::22'. Vraag kan meerdere antwoorden hebben door de waarden te splitten met een puntkomma. Voorbeeld: 'Wat is 5 + 5 ?::10;tien'."
+
+#: ./configure.zcml:60
+msgid "Removes the human usable captcha widget based on a list of questions/answers."
+msgstr ""
+
+#: ./plone_forms/contact_info.py:90
+msgid "Send"
+msgstr "Verzend"
+
+#: ./plone_forms/contact_info.py:31
+msgid "Subject"
+msgstr "Onderwerp"
+
+#: Default question 3
+msgid "What is 10 + 4 ?"
+msgstr "Wat is 10 + 4 ?"
+
+#: Default question 1
+msgid "What is 4 + 4 ?"
+msgstr "Wat is 4 + 4 ?"
+
+#: Default question 2
+msgid "Write five cipher."
+msgstr "Schrijf cijfer vijf."
+
+#: ./validator.py:9
+msgid "You entered a wrong answer, please answer the new question below."
+msgstr "Je hebt een verkeerd antwoord gegeven, beantwoord de nieuwe vraag."
+
+#: ./plone_forms/constraints.py:10
+msgid "You entered an invalid email address."
+msgstr "Je hebt een verkeerd email adres gegeven."
+
+#: ./browser/norobots_macro.pt:37
+#: ./norobots_input.pt:14
+msgid "Your answer"
+msgstr "Je antwoord"
