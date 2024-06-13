@@ -1,0 +1,3 @@
+[console_scripts]
+build-docs = ts_docs.build_docs:main
+deploy-docs = ts_docs.deploy_docs:main
