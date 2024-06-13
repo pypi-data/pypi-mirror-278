@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+sortasaurus_rex/__init__.py
+sortasaurus_rex/srex.py
+sortasaurus_rex.egg-info/PKG-INFO
+sortasaurus_rex.egg-info/SOURCES.txt
+sortasaurus_rex.egg-info/dependency_links.txt
+sortasaurus_rex.egg-info/entry_points.txt
+sortasaurus_rex.egg-info/requires.txt
+sortasaurus_rex.egg-info/top_level.txt
+test/__init__.py
+test/test_srex.py
