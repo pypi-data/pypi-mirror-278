@@ -1,0 +1,136 @@
+###############################################################
+# Global variables, i.e Platform Parameter Configuration
+
+# Adjust these parameters to adjust the platform, float, 
+# connections, and thruster configurations. These are imported 
+# into `file_defs.py` as global variables.
+###############################################################
+
+#===================== Thruster Parameters ====================
+thrusters:
+  n: 4  # Number of thrusters (if 0, none are created)
+  name: blue_robotics_t200  # Thruster name ('blue_robotics_t200', 'blue_robotics_t500')
+  body: t200_body  # Thruster rigid body name ('t200_body', 't500_body')
+  mass: 0.34  # Thruster mass (0.34 kg for T200, 1.16 kg for T500)
+  float_pairs:   # Float and thruster pairs
+    0: Small_Float1
+    1: Small_Float3
+    2: Small_Float16
+    3: Small_Float18
+  float_location:  # Location of thruster from center of specified float in [m]
+    0: [0, -0.2, 0.16]  # [X, Y, Z]
+    1: [-0.15, 0, 0.16]
+    2: [-0.15, 0, 0.16]
+    3: [0, -0.2, 0.16]
+  angle:  # Angle of thruster (direction of fwd motion), in [deg]
+    0: 0
+    1: 270
+    2: 90
+    3: 180
+  rpm: # Thruster RPM (max 3000 rpm for blue robotics)
+    0: 0
+    1: 0
+    2: 0
+    3: 0
+
+#==================== Solar Panel Parameters =================
+solar_panel:
+  dims: [1, 1, 0.05]  # XYZ dimensions, m
+  height: 0.25  # m above main float CG
+  pitch: 15  # deg, pitch angle
+  cD: [0.01, 2.0, 2.0, 1.2]  # [tangential, length, width, thickness]
+
+#====================== Float Parameters =====================
+# Small float
+#       ^
+# ______X______
+# |           |
+# |           |  Y ->
+# -------------
+
+# Long float
+#              ^
+# _____________X_________________
+# |                             |
+# |                             |  Y ->
+# -------------------------------
+
+# Main float
+#            ^
+# ___________X___________
+# |                     |
+# |                     |
+# |                     |
+# |                     |
+# |                     |
+# |                     |  Y ->
+# |                     |
+# |                     |
+# |                     |
+# |                     |
+# |                     |
+# -----------------------
+
+floats:
+  # Toggle "True" to add extra columns of main floats to create 
+  # a full perimeter walkway
+  perimeter: True
+
+  dimensions:
+    small: [0.5, 0.5, 0.2]  # mesh long axis is the y-axis
+    long: [0.5, 1.5, 0.2]  # mesh long axis is the y-axis
+    main: [1.2, 1, 0.2]  # mesh long axis is the x-axis
+
+  # Moments of Inertia, kg/m^2, [X, Y, Z]
+  moments_of_inertia:
+    small: [0.1, 0.05, 0.1]  # mesh long axis is the y-axis
+    long: [1.5, 0.1, 1.6]  # mesh long axis is the y-axis
+    main: [0.5, 1.0, 1.5]  # mesh long axis is the x-axis
+    main_panel: [25, 25, 40]  # mesh long axis is the x-axis
+
+  mass:   # kg
+    small: 3
+    long: 6
+    main: 8
+    main_panel: 40
+
+  # Hydrodynamic Drag Coefficients, [cDt, cDx, cDy, cDz]
+  cD:
+    small: [0.05, 1.0, 0.5, 0.5]  # [tangential, "long side", "short side", up]
+    long: [0.01, 1.0, 0.5, 0.5]  # [tangential, "long side", "short side", up]
+    main: [0.01, 0.5, 0.5, 0.5]  # [tangential, "short side", "long side", up]
+    main_panel: [0.025, 0.5, 0.5, 0.5]  # [tangential, "short side", "long side", up]
+
+  # Added Mass Coefficients, [cAx, cAy, cAz]
+  cA:
+    small: [1.5, 1.5, 1]  # ["long side", "short side", up]
+    long: [2.5, 1.5, 1]  # ["long side", "short side", up]
+    main: [1.5, 2.5, 1]  # ["short side", "long side", up]
+    main_panel: [1.5, 2.5, 1]  # ["short side", "long side", up]
+
+  # Aerodynamic Drag Coefficients [cDt]
+  cD_wind: 0.03
+
+#====================== Connection Parameters =====================
+## Stiffness and damping coefficients (smaller runs sims faster)
+connections:
+  stiffness:
+    translational: 30000  # N/m
+    rotational: 10  # Nm/rad
+  damping:
+    translational: 1000  # Ns/m
+    rotational: 10  # Nms/rad
+
+
+#======================= Array Spacing ============================
+array:
+  platform_heading: 0  # degrees CW from North
+  float_spacing:
+    main: [1.6, 2.4]  # [row, column] spacing between main floats
+    long: [-0.8, 1.2]  # [row offset, column offset] between main and long floats
+    small: [-0.8, 2.4]  # [row offset, column] spacing between main and small floats
+
+  float_joints:
+    main: [0.6, 0.3]  # top right connection joint from float's origin in [row, col]
+    long: [0.15, 0.9]
+    small: [0.15, 0.3]
