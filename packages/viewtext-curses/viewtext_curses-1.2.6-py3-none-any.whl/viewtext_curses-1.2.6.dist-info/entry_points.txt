@@ -1,0 +1,3 @@
+[console_scripts]
+viewtext-c=viewtext_c.__main__:read_cl_arguments
+
