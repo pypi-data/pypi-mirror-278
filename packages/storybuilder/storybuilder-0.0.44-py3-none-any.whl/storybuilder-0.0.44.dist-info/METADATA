@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: storybuilder
+Version: 0.0.44
+Summary: A Python toolkit to build story meta.
+Author-email: Kelvin Xu <xxk59@hotmail.com>
+Project-URL: Homepage, https://github.com/xxk59/StoryBuilder
+Project-URL: Issues, https://github.com/xxk59/StoryBuilder/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pillow
+Requires-Dist: azure-cognitiveservices-speech ==1.37.0
+Requires-Dist: cos-python-sdk-v5
+Requires-Dist: pydub
+Requires-Dist: pyperclip
+Requires-Dist: ffmpeg
+Requires-Dist: lxml
+Requires-Dist: beautifulsoup4
+
+# StoryBuilder
+
+Toolkit to build a story meta
+
+# Pre-requisites
+
+Run below command in console:
+
+> python3 -m pip install -r requirements.txt
+
+# Import package
+
+> from storybuilder import Story
