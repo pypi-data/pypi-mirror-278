@@ -1,0 +1,25 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: ${SERVICE_NAME}
+  namespace: default
+spec:
+  template:
+    spec:
+      containers:
+      - image: ${IMAGE_URL}
+        resources:
+          limits:
+            nvidia.com/gpu: ${GPUS}
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        readinessProbe:
+          httpGet:
+            path: /readiness
+            port: 80
+          initialDelaySeconds: 10
+          periodSeconds: 5
+          timeoutSeconds: 2
+          successThreshold: 1
+          failureThreshold: 3
