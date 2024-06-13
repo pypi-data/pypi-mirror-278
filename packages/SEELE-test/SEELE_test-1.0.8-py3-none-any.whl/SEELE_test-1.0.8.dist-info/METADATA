@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: SEELE-test
+Version: 1.0.8
+Summary: Test of pip for SEELE development
+Home-page: https://github.com/JMalegni/DisasterPrepApp
+Author: Nicholas DeSanctis
+Author-email: nickdesanctis17@gmail.com
+License: UNKNOWN
+Project-URL: Source, https://github.com/JMalegni/DisasterPrepApp
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: django-bootstrap4 (>=23.4)
+Requires-Dist: django (>=5.0.6)
+Requires-Dist: sqlparse (>=0.3.1)
+
+# django-basic-project
+Basic Django CRUD Project using Bootstrap 4 and SQLite
+
+
