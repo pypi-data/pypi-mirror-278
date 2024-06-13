@@ -1,0 +1,2 @@
+[console_scripts]
+estimate-hydropower = wmpy_power.model:main
