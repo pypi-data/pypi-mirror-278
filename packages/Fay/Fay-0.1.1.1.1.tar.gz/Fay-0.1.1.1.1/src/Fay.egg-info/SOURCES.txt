@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+src/Fay/__init__.py
+src/Fay/dlt.py
+src/Fay/fay_booter.py
+src/Fay/main.py
+src/Fay.egg-info/PKG-INFO
+src/Fay.egg-info/SOURCES.txt
+src/Fay.egg-info/dependency_links.txt
+src/Fay.egg-info/requires.txt
+src/Fay.egg-info/top_level.txt
