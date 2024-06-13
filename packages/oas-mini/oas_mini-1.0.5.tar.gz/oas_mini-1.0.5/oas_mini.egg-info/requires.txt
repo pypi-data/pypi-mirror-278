@@ -1,0 +1,16 @@
+argparse
+urllib3
+requests
+playwright
+survey
+tabulate
+
+[dev]
+flake8
+pytest
+
+[integration]
+pytest
+
+[unit]
+pytest

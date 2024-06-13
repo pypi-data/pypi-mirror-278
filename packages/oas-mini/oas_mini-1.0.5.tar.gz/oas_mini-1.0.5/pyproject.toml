@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "oas-mini"
+authors = [
+    {name = "f8711369", email = "rodrigo.siqueira@bb.com.br"},
+]
+description = "Utilitário para realizar atividades básicas do portal OAS"
+version = "1.0.5"
+dependencies = [
+    'argparse',
+    'urllib3',
+    'requests',
+    'playwright',
+    'survey',
+    'tabulate'
+]
+dynamic = [
+    'readme',
+    'requires-python',
+    'classifiers',
+    'optional-dependencies'
+]
+[project.license]
+file = "oas-mini/LICENSE"
+[project.scripts]
+oas-mini = "oas_mini.__main__:facade"
+[project.urls]
+home = "https://fontes.intranet.bb.com.br/oas/oas-mini"
+[tools.setuptools]
+packages = ["oas-mini"]
