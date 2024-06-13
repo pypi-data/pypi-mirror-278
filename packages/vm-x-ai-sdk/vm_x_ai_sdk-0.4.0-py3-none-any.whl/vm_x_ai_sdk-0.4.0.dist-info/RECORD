@@ -1,0 +1,15 @@
+vmxai/__init__.py,sha256=kLn0IvIocqFbtKPN25AMOG9S4ubxKlyER5Uk4PLjjDc,826
+vmxai/auth/api_key.py,sha256=7K78CYGn7o22nF70nAy9CQqCyMJZVEaqc_4QSVvdzmI,470
+vmxai/auth/oauth.py,sha256=mIcojBAvEEfx7nibA0nqBqds7FClTzMKNkZN9_rd6t4,1668
+vmxai/auth/provider.py,sha256=Ljy_rzukwZKzYyX6_K9tnTYyuRrNK7S2gUckNZvnSjo,373
+vmxai/client.py,sha256=pPAusiBA_keds9MdvqUShQKGy6G0PLPSC2D0DM2m2O8,3575
+vmxai/protos/__init__.py,sha256=C8jqlKfMvuxrywydK9TZ6drEiB4BzjWyhPtACvPPCyg,22
+vmxai/protos/completion/__init__.py,sha256=RCQBnrw_x8nPNeN2NPzCDkTrenvNFGcZdNQpPdNjOr8,33
+vmxai/protos/completion/completion.proto,sha256=aXnUSnNc6rYD2eC9m6slMHn_cAfom7PboE57Dqsyow8,1639
+vmxai/protos/completion/completion_pb2.py,sha256=q9NNqdKggwLKb-Z7spbVi1nefifWCm1P9AbfCNr440g,5036
+vmxai/protos/completion/completion_pb2.pyi,sha256=OFSjWTcbcF7RahO44HWpkAsa6eqj0UnxXzwl7_9Zibw,5938
+vmxai/protos/completion/completion_pb2_grpc.py,sha256=4HTMOmJhQrFZYVDul0aDeYlcxSuLJjzIrSzzwoD83OQ,2771
+vmxai/types.py,sha256=73Zi6LMllmeDOy6Bldj7q50JrxDWapaG1QGApNnHwnc,879
+vm_x_ai_sdk-0.4.0.dist-info/METADATA,sha256=BEH5eiAr97WZ1oMB4HxCEHVYs7k_yOHJb3vgiUlGw9E,2316
+vm_x_ai_sdk-0.4.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+vm_x_ai_sdk-0.4.0.dist-info/RECORD,,

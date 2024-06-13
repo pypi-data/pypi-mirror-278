@@ -1,0 +1,82 @@
+syntax = "proto3";
+
+package llm.chat;
+
+import "google/protobuf/struct.proto";
+
+service CompletionService {
+  rpc create (CompletionRequest) returns (stream CompletionResponse);
+}
+
+message RequestTools {
+  string type = 1;
+  RequestToolFunction function = 2;
+}
+
+message RequestToolFunction {
+  string name = 1;
+  string description = 2;
+  google.protobuf.Struct parameters = 3;
+}
+
+message RequestToolChoice {
+  oneof type {
+    bool auto = 1;
+    bool none = 2;
+    RequestToolChoiceItem tool = 3;
+  }
+}
+
+message RequestToolChoiceItem {
+  string type = 1;
+  RequestToolChoiceFunction function = 2;
+}
+
+message RequestToolChoiceFunction {
+  string name = 1;
+}
+
+message RequestMessage {
+  optional string name = 1;
+  string role = 2;
+  optional string content = 3;
+  repeated RequestMessageToolCall tool_calls = 4;
+  optional string tool_call_id = 5;
+}
+
+message RequestMessageToolCall {
+  string id = 1;
+  string type = 2;
+  RequestMessageToolCallFunction function = 3;
+}
+
+message RequestMessageToolCallFunction {
+  string name = 1;
+  string arguments = 2;
+}
+
+message CompletionRequest {
+  string resource = 1;
+  string workload = 2;
+  bool stream = 3;
+  repeated RequestMessage messages = 4;
+  repeated RequestTools tools = 5;
+  optional RequestToolChoice tool_choice = 6;
+  optional google.protobuf.Struct config = 7;
+}
+
+message CompletionResponse {
+  string id = 1;
+  optional string message = 2;
+  string role = 3;
+  repeated RequestMessageToolCall tool_calls = 4;
+  optional CompletionUsage usage = 5;
+  optional int64 response_timestamp = 6;
+}
+
+message CompletionUsage {
+  int32 prompt = 1;
+  int32 completion = 2;
+  int32 total = 3;
+}
+
