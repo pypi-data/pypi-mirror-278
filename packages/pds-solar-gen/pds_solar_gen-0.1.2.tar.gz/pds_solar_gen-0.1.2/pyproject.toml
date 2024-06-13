@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61.0", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pds-solar-gen"
+dynamic = ["version"]
+authors = [
+  { name="James McVey", email="53623232+jmcvey3@users.noreply.github.com"},
+]
+description = "ProteusDS floating solar platform generation script."
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["proteus", "utils"]
+license = {text = "BSD 3-Clause License"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+
+dependencies = [
+  "numpy",
+  "typer >=0.4",
+  "pyyaml",
+]
+
+[project.scripts]
+pds-solar-gen = "pds_solar_gen.main:app"
+
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+tools = ["py.typed"]
+
+[tool.setuptools_scm]
+local_scheme = "no-local-version"
+write_to = "src/pds_solar_gen/_version.py"
+
+[tool.setuptools.dynamic]
+version = {attr = "pds_solar_gen.__version__"}
