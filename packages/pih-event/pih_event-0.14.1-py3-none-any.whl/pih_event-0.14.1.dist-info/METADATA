@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: pih-event
+Version: 0.14.1
+Summary: PIH Log and Event service package
+Home-page: https://pacifichosp.com/
+Author: Nikita Karachentsev
+Author-email: it@pacifichosp.com
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: ipih
+Requires-Dist: telegram-send
+
