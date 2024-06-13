@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skanym"
+version = "0.1.6"
+description = "Standalone package for skeletal animation"
+readme = "README.md"
+requires-python = "==3.10.*"
+license = {file = "LICENSE.txt"} 
+authors = [
+    {name = "Dimitri Kohler", email = "dimitri.kohler@he-arc.ch"},
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development",
+    "Programming Language :: Python :: 3.10",
+]
+dependencies = [
+    "setuptools",
+    "wheel",
+    "numpy-quaternion>=2022.0.0",
+    "numpy",
+    "pyassimp==5.2.5",
+    "scikit-learn==1.4.1.post1",
+]
+
+[project.optional-dependencies]
+gui = ["skanym_gui"]
+
+[project.urls]
+Repository  = "https://gitlab-etu.ing.he-arc.ch/isc/general/motion-machine/skanym-package/skanym"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"*" = ["*.pyd", "*.fbx", "*.glb", "models/*"]
+
+

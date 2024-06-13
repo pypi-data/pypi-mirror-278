@@ -1,0 +1,9 @@
+setuptools
+wheel
+numpy-quaternion>=2022.0.0
+numpy
+pyassimp==5.2.5
+scikit-learn==1.4.1.post1
+
+[gui]
+skanym_gui
