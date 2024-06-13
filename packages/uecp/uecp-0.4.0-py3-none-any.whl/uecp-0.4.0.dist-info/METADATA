@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: uecp
+Version: 0.4.0
+Summary: UECP encoder & decoder
+License: MIT
+Keywords: UECP,RDS,Radio,FM
+Author: Christian Kohlstedde
+Author-email: christian@kohlsted.de
+Requires-Python: >=3.11,<4.0
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Natural Language :: German
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: attrs (>=23.2.0,<24.0.0)
+Requires-Dist: crc (>=1.2.0,<2.0.0)
+Requires-Dist: pyserial (>=3.5,<4.0)
+Requires-Dist: pyserial-asyncio (>=0.6,<0.7)
+Description-Content-Type: text/markdown
+
+# python UECP implementation
+
+[![PyPI](https://img.shields.io/pypi/v/uecp)](https://pypi.org/project/uecp/)
+[![Tests](https://github.com/chrko/python-uecp/actions/workflows/tests.yml/badge.svg)](https://github.com/chrko/python-uecp/actions/workflows/tests.yml)
+[![codecov](https://codecov.io/github/chrko/python-uecp/graph/badge.svg?token=3QWRMTOESE)](https://codecov.io/github/chrko/python-uecp)
+
+This library aims to support UECP version 6.02. It will start with basic commands required to support our needs.
+
