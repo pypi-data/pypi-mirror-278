@@ -1,0 +1,47 @@
+[build-system]
+requires = [
+    "setuptools",
+    "setuptools-scm",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fewings-lab-datasets"
+authors = [
+    {name = 'Andrew Scherer', email = 'scherand@oregonstate.edu'}
+]
+maintainers = [
+    {name = 'Andrew Scherer', email = 'scherand@oregonstate.edu'}
+]
+version = "0.3.0"
+description = 'Oceanographic datasets assembled by the Fewings Lab.'
+readme = {file = 'README.md', content-type = 'text/markdown'}
+requires-python = ">=3.10"
+keywords = [
+    'oceanography',
+    'datasets',
+]
+license = {text = "MIT License"}
+classifiers = [
+    'Development Status :: 4 - Beta',
+    'Programming Language :: Python',
+    'License :: OSI Approved :: MIT License',
+    'Operating System :: OS Independent',
+    'Topic :: Scientific/Engineering',
+    'Intended Audience :: Science/Research'
+]
+dependencies = [
+    'cmocean',
+    'matplotlib',
+    'numpy',
+    'xarray[io]',
+]
+
+[project.urls]
+Source = 'https://github.com/andrew-s28/fewings-lab-datasets'
+
+[tool.setuptools.packages.find]
+where = ["fldatasets"]
+
+[tool.setuptools.package-data]
+"fldatasets.data" = ["*.nc"]
