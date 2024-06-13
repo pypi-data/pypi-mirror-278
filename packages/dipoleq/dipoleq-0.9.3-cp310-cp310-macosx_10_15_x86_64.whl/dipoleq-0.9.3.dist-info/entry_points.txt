@@ -1,0 +1,4 @@
+[console_scripts]
+h5togeqdsk = dipoleq.h5togeqdsk:main
+dipoleq = dipoleq.main_cli:main
+
