@@ -1,0 +1,17 @@
+README.md
+setup.py
+diffipy/Node.py
+diffipy/NodesJax.py
+diffipy/NodesNumpy.py
+diffipy/NodesOperations.py
+diffipy/NodesPytorch.py
+diffipy/NodesTensorflow.py
+diffipy/NodesVariables.py
+diffipy/__init__.py
+diffipy/backends.py
+diffipy/diffipy.py
+diffipy.egg-info/PKG-INFO
+diffipy.egg-info/SOURCES.txt
+diffipy.egg-info/dependency_links.txt
+diffipy.egg-info/requires.txt
+diffipy.egg-info/top_level.txt
