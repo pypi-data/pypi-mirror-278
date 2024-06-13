@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: dndgmod
+Version: 0.3.2
+Summary: A Dungeons & Degenerate Gamblers Modloader
+Home-page: https://github.com/TotallyNotSethP/DnDGMod
+License: GPL-3.0-or-later
+Keywords: modding
+Author: Seth Peace
+Author-email: sethevanpeace@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: Microsoft :: Windows :: Windows 11
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Games/Entertainment :: Turn Based Strategy
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Disassemblers
+Requires-Dist: appdirs (>=1.4.4,<2.0.0)
+Requires-Dist: jinja2 (>=3.1.3,<4.0.0)
+Requires-Dist: pillow (>=10.3.0,<11.0.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Requires-Dist: typer[all] (>=0.9.0,<0.10.0)
+Project-URL: Documentation, https://dndgmod.rtfd.io
+Project-URL: Repository, https://github.com/TotallyNotSethP/DnDGMod
+Description-Content-Type: text/markdown
+
+# DnDGMod: A Dungeons & Degenerate Gamblers Modloader (Currently Windows-Only)
+## Created By TotallyNotSeth <br> Docs Available At https://dndgmod.rtfd.io
+
+> ⚠️ Mods using this software are able to inject code into your *Dungeons & Degenerate Gamblers* executable!
+> The DnDGMod team is **not** responsible for the contents of any mod not officially endorsed. Stay safe out there, 
+> gamblers!
+> ---
+> 🏴‍☠️ The DnDGMod team does **not** condone piracy! Please **do not** distrubute compiled *Dungeons and 
+> Degenerate Gamblers* executables (modded or unmodded) or decompiled source code. Thank you, gamblers!
