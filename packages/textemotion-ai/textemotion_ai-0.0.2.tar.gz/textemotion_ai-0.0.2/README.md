@@ -1,0 +1,1 @@
+入力した単語の感情(Positive, Negative, Neutral)を分析します。
