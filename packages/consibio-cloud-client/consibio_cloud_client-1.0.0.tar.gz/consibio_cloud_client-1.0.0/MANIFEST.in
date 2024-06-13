@@ -1,0 +1,4 @@
+include *.txt
+recursive-exclude examples *.*
+recursive-exclude .vscode *.*
+recursive-include src *.py
