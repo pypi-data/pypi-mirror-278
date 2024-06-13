@@ -1,0 +1,13 @@
+rabbitmqpubsub/__init__.py,sha256=uTaofZKQ0Csgi94KXq7RoVXK3oto_qEbURmb69XwgKo,60
+rabbitmqpubsub/rabbit_pubsub/__init__.py,sha256=J0dgmuLHrOqnnuR6uSN_qUPbRzjeasAMa5JZuvf_uVg,211
+rabbitmqpubsub/rabbit_pubsub/arpcclient.py,sha256=JP1QAj8pSwp5lYZVLBp5Dmvr0mU19JSZz5kuvPkkDus,3578
+rabbitmqpubsub/rabbit_pubsub/publisher.py,sha256=0lDZWBOAR39b3wYjkSEcODvKPPjg0h2Dlz3ACkqmYgI,2320
+rabbitmqpubsub/rabbit_pubsub/rpcclient.py,sha256=Z9m13tSyA1ZFwZoikCnuBvrQsDXHsXJ72cJxh9Vn1wU,4172
+rabbitmqpubsub/rabbit_pubsub/subscriber.py,sha256=7TNxSsCC41SoLDtA_q9kieJeE9kUygl8co29iFLFo1o,16256
+rabbitmqpubsub/rabbit_pubsub/utils.py,sha256=frp4nw5-9XlGwX45KhTdf5h3Ga6wcXPz6rH8BLUVEIo,532
+rabbitmqpubsub/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rabbitmqpubsub/tests/test_subscriber.py,sha256=KjXWXahC3jWjnO5xlJ33tRh5bgERNUhutxdCKq1NgsQ,2669
+rabbitmqpubsub-1.1.2.dist-info/LICENSE,sha256=Xp6nB4c9noADL7noS-90xvnsxY_G0fYRiucmok269cQ,11358
+rabbitmqpubsub-1.1.2.dist-info/WHEEL,sha256=Sgu64hAMa6g5FdzHxXv9Xdse9yxpGGMeagVtPMWpJQY,99
+rabbitmqpubsub-1.1.2.dist-info/METADATA,sha256=_lD1z67in4sPN_iBxCz6-YtZuey-bLwYx3whdvL41-I,1793
+rabbitmqpubsub-1.1.2.dist-info/RECORD,,
