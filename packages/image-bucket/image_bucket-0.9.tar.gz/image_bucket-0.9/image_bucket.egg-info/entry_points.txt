@@ -1,0 +1,2 @@
+[console_scripts]
+image-bucket = image_bucket.image_bucket:main
