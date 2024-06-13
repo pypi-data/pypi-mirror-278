@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: pih-doc
+Version: 0.17.4
+Summary: PIH Documents service package
+Home-page: https://pacifichosp.com/
+Author: Nikita Karachentsev
+Author-email: it@pacifichosp.com
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: ipih
+Requires-Dist: xlsxwriter
+Requires-Dist: xlrd
+Requires-Dist: xlutils
+Requires-Dist: openpyxl
+Requires-Dist: python-barcode
+Requires-Dist: pillow
+Requires-Dist: qrcode
+Requires-Dist: docx-mailmerge
+Requires-Dist: gkeepapi
+Requires-Dist: numpy
+Requires-Dist: ipywidgets
+Requires-Dist: kaleido
+Requires-Dist: plotly
