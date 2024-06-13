@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: helper-flask-jwt
+Version: 1.6.0
+Summary: THIS WILL HELP BRO
+Author-email: Akhil MS <AKHLMSCOC@GMAIL.com>
+License: MIT License
+        
+Project-URL: repository, https://github.com/akhilmsachu/reader
+Project-URL: documentation, https://tinyurl.com/akhilms
+Keywords: feed,reader,tutorial
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: build
+Requires-Dist: build; extra == "build"
+Requires-Dist: twine; extra == "build"
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: bumpver; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+
+# APP code Feeder
+
+This library is not intended for development purpose. This was build to help with the code samples.
+
+## How to use
+
+You can also call, by importing from the `reader` package:
+
+    >>> from reader import feed
+    >>> feed.latest()
+    text
