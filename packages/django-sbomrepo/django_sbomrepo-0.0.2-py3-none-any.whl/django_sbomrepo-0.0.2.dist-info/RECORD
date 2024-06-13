@@ -1,0 +1,16 @@
+sbomrepo/__init__.py,sha256=klZvbsrSp4HmCPmomO3Td4duWhUGZBI9Oq4ZFDx-xCQ,244
+sbomrepo/apps.py,sha256=rDt1DgdfV6_WUKgwJ3hZOmY-FwPC5oFhH2MXO0pOWHE,423
+sbomrepo/models.py,sha256=jJ3fZBbjTrZr8zxuTnED3G2XF2tJadjDFMoR06gEJZw,1092
+sbomrepo/urls.py,sha256=tCoF_7P15b043FRBDZ5uerKlOFJrDNOMF8yzyR7Yc4g,1426
+sbomrepo/utils.py,sha256=7Y2BaP4QT9s71eYiLryqmySsYDuFeY-LmxjTvy5bB0k,3730
+sbomrepo/views.py,sha256=KJw7gd6UAYIUmzt5oq8lDfv_U5iu2MXwaMItRLXp988,8573
+sbomrepo/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sbomrepo/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sbomrepo/management/commands/resync_vulnerabilities.py,sha256=a376WbDWp_j5rotvc2jl8fOPHUcQ3ZRDJS7BRfEIpkU,1088
+sbomrepo/migrations/0001_initial.py,sha256=G5byUV0YKsKUpFRJE-ac1uOhKZ-8CjyTkL0mUWS8vYc,1635
+sbomrepo/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_sbomrepo-0.0.2.dist-info/LICENSE,sha256=l9HVIDiT7t08NEw-zeN8HGLB5OxQiNRQx7V9TJfY7_4,1073
+django_sbomrepo-0.0.2.dist-info/METADATA,sha256=5DcZ2iqqYsdjA90pK0Zr53rAcETvabDSfCIW5UGdQUw,5595
+django_sbomrepo-0.0.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+django_sbomrepo-0.0.2.dist-info/top_level.txt,sha256=EgNNprF8fUJr9Hl1vT6bN8GzeXuSUtCQpMK2Xlt2l44,9
+django_sbomrepo-0.0.2.dist-info/RECORD,,
