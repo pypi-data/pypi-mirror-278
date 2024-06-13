@@ -1,0 +1,44 @@
+{
+    "correction_DSCB_mu_psi2S_psi2S_2012_ETOS": {
+        "value": -21.422252837613875,
+        "hesse": {
+            "error": 1.0750263752709053,
+            "cl": 0.68268949
+        }
+    },
+    "correction_DSCB_sigma_psi2S_psi2S_2012_ETOS": {
+        "value": 0.10557017232784432,
+        "hesse": {
+            "error": 0.0018548373471580408,
+            "cl": 0.68268949
+        }
+    },
+    "correction_DSCB_al_psi2S_psi2S_2012_ETOS": {
+        "value": 0.0010023610883776153,
+        "hesse": {
+            "error": 5.976173216846942e-06,
+            "cl": 0.68268949
+        }
+    },
+    "correction_DSCB_nl_psi2S_psi2S_2012_ETOS": {
+        "value": 47.10663338914287,
+        "hesse": {
+            "error": 14.408509899873836,
+            "cl": 0.68268949
+        }
+    },
+    "correction_DSCB_ar_psi2S_psi2S_2012_ETOS": {
+        "value": 0.0023291158926859266,
+        "hesse": {
+            "error": 8.469279417773117e-05,
+            "cl": 0.68268949
+        }
+    },
+    "correction_DSCB_nr_psi2S_psi2S_2012_ETOS": {
+        "value": 6.6945168058040645,
+        "hesse": {
+            "error": 0.48002023459346427,
+            "cl": 0.68268949
+        }
+    }
+}
