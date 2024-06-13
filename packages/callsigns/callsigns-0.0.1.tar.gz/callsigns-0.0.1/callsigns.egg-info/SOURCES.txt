@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+setup.cfg
+setup.py
+callsigns/__init__.py
+callsigns/builder.py
+callsigns/constants.py
+callsigns/fetcher.py
+callsigns/parser.py
+callsigns/py.typed
+callsigns/uploader.py
+callsigns.egg-info/PKG-INFO
+callsigns.egg-info/SOURCES.txt
+callsigns.egg-info/dependency_links.txt
+callsigns.egg-info/requires.txt
+callsigns.egg-info/top_level.txt
+tests/test_callsigns.py
