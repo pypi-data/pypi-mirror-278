@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: rule34Python
+Version: 0.0.0.2
+Summary: rule 34 api public, get post 
+Home-page: https://github.com/EverGasterXd/sara_api
+Author: evergaster
+License: MIT license
+Keywords: nsfw and all fetishs
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Natural Language :: English
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+<div align="center">
+    <br />
+    <p>
+       <a href="https://discord.gg/GTJtFGUNV5"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Rule34Logo.png", width="200", height="100">
+        </a>
+    </p>
+    <br />
+</div>
+this api is designed for the connection between rule34 and discord users.
+
+## Installation
+'''pip install rule34Py'''
+
