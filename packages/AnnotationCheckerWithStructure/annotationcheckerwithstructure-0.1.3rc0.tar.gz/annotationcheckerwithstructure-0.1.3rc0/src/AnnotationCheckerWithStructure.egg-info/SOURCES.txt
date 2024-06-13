@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+src/AnnotationCheckerWithStructure.egg-info/PKG-INFO
+src/AnnotationCheckerWithStructure.egg-info/SOURCES.txt
+src/AnnotationCheckerWithStructure.egg-info/dependency_links.txt
+src/AnnotationCheckerWithStructure.egg-info/entry_points.txt
+src/AnnotationCheckerWithStructure.egg-info/requires.txt
+src/AnnotationCheckerWithStructure.egg-info/top_level.txt
+tests/test_data_processing.py
+tests/test_foldseek_runner.py
+tests/test_io_utils.py
+tests/test_main.py
+tests/test_plotting.py
