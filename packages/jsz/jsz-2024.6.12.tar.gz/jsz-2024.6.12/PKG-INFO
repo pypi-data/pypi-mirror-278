@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: jsz
+Version: 2024.6.12
+Summary: 金手指
+Author: jiaosenvip
+Author-Email: jiaosenvip <jiaosenvip@163.com>
+License: MIT
+Project-URL: Homepage, https://github.com/jiaosenvip/jsz
+Project-URL: Documentation, https://github.com/jiaosenvip/jsz/wiki
+Requires-Python: >=3.11
+Requires-Dist: beautifulsoup4
+Requires-Dist: lxml
+Requires-Dist: rich
+Requires-Dist: oss2
+Requires-Dist: pymongo
+Requires-Dist: pypdf
+Requires-Dist: html2text
+Requires-Dist: faker
+Requires-Dist: python-dateutil
+Requires-Dist: pillow
+Requires-Dist: dateparser; platform_machine != "aarch64"
+Requires-Dist: loguru
+Requires-Dist: grequests
+Requires-Dist: httpx
+Requires-Dist: jsonpath
+Requires-Dist: parsel
+Requires-Dist: ipython
+Requires-Dist: js2py
+Requires-Dist: pandas[excel]
+Description-Content-Type: text/markdown
+
+# jsz
+
+## 安装
+
+```sh
+pip install -U jsz
+```
+
+## 使用
+
+```py
+import jsz
+```
+
+## 功能
+
+```py
+dir(jsz)
+```
