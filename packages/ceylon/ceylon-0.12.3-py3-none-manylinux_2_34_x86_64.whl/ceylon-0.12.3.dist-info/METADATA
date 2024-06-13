@@ -1,0 +1,27 @@
+Metadata-Version: 2.3
+Name: ceylon
+Version: 0.12.3
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: ollama ==0.2.1
+License-File: LICENSE
+Summary: Ceylon is an advanced multi-agent platform specifically developed for Ceylon Aritficial Intelligence.
+Keywords: Aritifical Intelligence,Multi Agent Systems,CEYLON,Ceylon Aritficial Intelligence.
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# rk-core MAS system Python lib
+
+[![PyPI - Version](https://img.shields.io/pypi/v/ceylon.svg)](https://pypi.org/project/ceylon)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/ceylon.svg)](https://pypi.org/project/ceylon)
+
