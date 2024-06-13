@@ -1,0 +1,2 @@
+[console_scripts]
+kv-rest = kv.rest.cli:main
