@@ -1,0 +1,4 @@
+[console_scripts]
+run-if=run_if_changed.cli:app
+run-if-changed=run_if_changed.cli:app
+
