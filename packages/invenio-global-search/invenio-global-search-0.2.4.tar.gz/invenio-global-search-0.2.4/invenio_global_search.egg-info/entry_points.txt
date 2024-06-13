@@ -1,0 +1,6 @@
+[invenio_base.api_apps]
+invenio_global_search = invenio_global_search:InvenioGlobalSearch
+
+[invenio_base.apps]
+invenio_global_search = invenio_global_search:InvenioGlobalSearch
+

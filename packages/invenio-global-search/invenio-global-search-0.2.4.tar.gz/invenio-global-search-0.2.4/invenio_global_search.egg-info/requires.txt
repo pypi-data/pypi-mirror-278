@@ -1,0 +1,12 @@
+invenio-records-global-search>=0.0.1
+invenio-rdm-records>=4.0.0
+invenio-records-lom>=0.12.0
+invenio-records-marc21>=0.17.0
+
+[tests]
+invenio-app<2.0.0,>=1.3.4
+invenio-search[opensearch2]>=2.2.0
+pytest-black-ng>=0.4.0
+pytest-invenio<3.0.0,>=2.1.0
+ruff>=0.0.263
+sphinx>=4.5.0

@@ -1,0 +1,25 @@
+# -*- coding: utf-8 -*-
+#
+# Copyright (C) 2023-2024 Graz University of Technology.
+#
+# invenio-global-search is free software; you can redistribute it and/or modify
+# it under the terms of the MIT License; see LICENSE file for more details.
+
+[build-system]
+requires = ["setuptools", "wheel", "babel>2.8"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+exclude = ["docs"]
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+  "ANN101", "ANN102",
+  "D203", "D211", "D212", "D213",
+  "FA102",
+  "PLR0913",
+  "TCH001", "TCH002", "TCH003",
+  "TID252",
+  "UP009",
+]
