@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+genderpred_in/__init__.py
+genderpred_in/gender_prediction_model.h5
+genderpred_in/label_encoder.pickle
+genderpred_in/predictLSTM.py
+genderpred_in/tokenizer.pickle
+genderpred_in.egg-info/PKG-INFO
+genderpred_in.egg-info/SOURCES.txt
+genderpred_in.egg-info/dependency_links.txt
+genderpred_in.egg-info/requires.txt
+genderpred_in.egg-info/top_level.txt
