@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: netgen_occt
+Version: 0.0.2
+Summary: Open CASCADE Technology libraries, used by Netgen Mesher
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)
+Requires-Python: >=3.8
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
