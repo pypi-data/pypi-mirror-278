@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+find_and_replace/__init__.py
+find_and_replace/main.py
+find_and_replace_template_commit_check.egg-info/PKG-INFO
+find_and_replace_template_commit_check.egg-info/SOURCES.txt
+find_and_replace_template_commit_check.egg-info/dependency_links.txt
+find_and_replace_template_commit_check.egg-info/entry_points.txt
+find_and_replace_template_commit_check.egg-info/top_level.txt
+tests/__init__.py
+tests/test_main.py
