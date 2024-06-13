@@ -1,0 +1,109 @@
+Metadata-Version: 2.1
+Name: textPlay
+Version: 0.1.2
+Summary: A package for many unique text tools. to make your text beautiful.
+Home-page: https://github.com/rakeshkanna-rk/textPlay
+Author: Rakesh Kanna S
+Author-email: rakeshkanna0108@gmail.com
+License: Apache License 2.0
+Project-URL: GitHub, https://github.com/rakeshkanna-rk/textPlay
+Project-URL: Python Package Index, https://pypi.org/project/textPlay/
+Keywords: text tools,cli,terminal,google search,web search,morse code,decode,encode,box,colors,options,password generator,progress bar,encryption animation
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click >=8.1.7
+Requires-Dist: beautifulsoup4 >=4.12.3
+Requires-Dist: requests >=2.31.0
+Requires-Dist: keyboard >=0.13.5
+
+# TextPlay 💬
+
+**Welcome to the TextPlay repository! 👋**  
+This versatile Python module provides a range of text-related functions and tools to enhance your text analysis, summarization, translation, Morse code encoding/decoding, Google search, and more.  
+
+### To use my module
+```python
+import textPlay
+```
+
+## Features
+
+- **Text Summarizer 📝:** Generate concise summaries of long articles, documents, or text.
+  
+- **Link Summarizer 🌐:** Automatically generate summaries of web articles and provide condensed information.
+  
+- **Spell Checker ✨:** Correct spelling errors in text to improve text quality.
+  
+- **Extract Keywords 🔤:** Identify important keywords in text for indexing, tagging, or search optimization.
+  
+- **Morse Coder and Decoder 🚦:** Encode and decode messages in Morse code for communication or fun.
+  
+- **Google Search 🔍:** Fetch and display search results from Google.
+  
+- **Translator 🌍:** Translate text from one language to another.
+  
+- **Sort Dictionary 📚:** Organize and present data in a specific order.
+  
+- **Sentiment Analysis 😃:** Perform Sentiment Label, Sentiment Polarity, and Sentiment Subjectivity analysis - simultaneously.
+  
+- **Simple Chat Bot 💬:** Engage with users, answer queries, and integrate with Google search.
+
+    
+
+  
+## Installation
+
+To install the TextPlay module, you can download it directly by using `pip`
+
+```bash
+pip install textPlay
+```
+
+## Modules Used  
+  
+**Summarization**
+- `spacy`
+- `STOP_WORDS` from `spacy.lang.en.stop_words`
+- `punctuation` from `string`
+- `nlargest` from `heapq`
+- `newspaper`
+
+**Sentiment Analysis**
+- `TextBlob` from `textblob`
+
+**Spell Checking**
+- `SpellChecker` from `spellchecker`
+
+**Web Scraping**
+- `requests`
+- `BeautifulSoup` from `bs4`
+
+**Translation**
+- `Translator` from `googletrans`
+
+**Stop Word Removal**
+- `string`
+
+**Bot**
+- `random`
+
+**After installing package install a external english module for spacy by:**  
+```bash
+python -m spacy download en_core_web_sm
+```
+
+## Module Detials
+- **Version:** `0.1.0`
+- **Title:** `textPlay`
+- **License:** `Apache License Version 2.0`
+- **AUTHOR:** `Rakesh Kanna`
+- **Author Email:** [rakeshkanna0108@gmail.com](mailto:rakeshkanna0108@gmail.com)
+- **GITHUB LIBRARY:**  https://github.com/rakeshkanna-rk/textPlay
+- **GITHUB PROFILE:**  https://github.com/rakeshkanna-rk
+
+
+
