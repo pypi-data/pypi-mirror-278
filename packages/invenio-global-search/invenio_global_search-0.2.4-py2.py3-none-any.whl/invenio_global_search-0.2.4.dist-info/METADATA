@@ -1,0 +1,112 @@
+Metadata-Version: 2.1
+Name: invenio-global-search
+Version: 0.2.4
+Summary: InvenioRDM module for a Global Search
+Home-page: https://github.com/tu-graz-library/invenio-global-search
+Author: TU Graz
+Author-email: 
+License: MIT
+Keywords: invenio rdm search
+Platform: any
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: invenio-records-global-search >=0.0.1
+Requires-Dist: invenio-rdm-records >=4.0.0
+Requires-Dist: invenio-records-lom >=0.12.0
+Requires-Dist: invenio-records-marc21 >=0.17.0
+Provides-Extra: tests
+Requires-Dist: invenio-app <2.0.0,>=1.3.4 ; extra == 'tests'
+Requires-Dist: invenio-search[opensearch2] >=2.2.0 ; extra == 'tests'
+Requires-Dist: pytest-black-ng >=0.4.0 ; extra == 'tests'
+Requires-Dist: pytest-invenio <3.0.0,>=2.1.0 ; extra == 'tests'
+Requires-Dist: ruff >=0.0.263 ; extra == 'tests'
+Requires-Dist: sphinx >=4.5.0 ; extra == 'tests'
+
+..
+    Copyright (C) 2023 Graz University of Technology.
+
+    invenio-global-search is free software; you can redistribute it and/or
+    modify it under the terms of the MIT License; see LICENSE file for more
+    details.
+
+
+======================
+ invenio-global-search
+======================
+
+.. image:: https://github.com/tu-graz-library/invenio-global-search/workflows/CI/badge.svg
+        :target: https://github.com/tu-graz-library/invenio-global-search/actions?query=workflow%3ACI
+
+.. image:: https://img.shields.io/github/tag/tu-graz-library/invenio-global-search.svg
+        :target: https://github.com/tu-graz-library/invenio-global-search/releases
+
+.. image:: https://img.shields.io/pypi/dm/invenio-global-search.svg
+        :target: https://pypi.python.org/pypi/invenio-global-search
+
+.. image:: https://img.shields.io/github/license/tu-graz-library/invenio-global-search.svg
+        :target: https://github.com/tu-graz-library/invenio-global-search/blob/master/LICENSE
+
+Dublin Core data model for InvenioRDM
+
+Further documentation is available on
+https://invenio-global-search.readthedocs.io/
+
+Tests
+-----
+
+.. code-block:: console
+
+    pipenv run ./run-tests.sh
+
+..
+    Copyright (C) 2023 Graz University of Technology.
+
+    invenio-global-search is free software; you can redistribute it and/or
+    modify it under the terms of the MIT License; see LICENSE file for more
+    details.
+
+Changes
+=======
+
+Version v0.2.4 (release 2024-06-13)
+
+- fix: catch validation error
+  this ensures that rebuilding the database does not exit on the first
+  error
+- setup: support only python3.12
+
+
+
+Version v0.2.3 (release 2024-02-12)
+
+- fix: update changed lom api
+
+
+Version v0.2.2 (release 2024-01-12)
+
+- fix: permission problem
+
+
+Version v0.2.1 (release 2024-01-07)
+
+- fix: rebuild all databases
+
+
+Version v0.2.0 (release 2023-11-23)
+
+- global: rename components
+
+
+Version v0.1.0 (release 2023-11-10)
+
+
+
+
+
