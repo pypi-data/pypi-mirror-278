@@ -1,0 +1,81 @@
+query RDBConnections {
+  rdb {
+    runs {
+      edges {
+        cursor
+        node {
+          id
+          runNo
+          state
+          startedAt
+          endedAt
+          script
+          exception
+        }
+      }
+    }
+    traces {
+      edges {
+        cursor
+        node {
+          id
+          runNo
+          traceNo
+          threadNo
+          taskNo
+          startedAt
+          endedAt
+          state
+        }
+      }
+    }
+    traceCalls {
+      edges {
+        cursor
+        node {
+          id
+          runNo
+          traceNo
+          threadNo
+          taskNo
+          traceCallNo
+          startedAt
+          endedAt
+          fileName
+          lineNo
+          event
+        }
+      }
+    }
+    prompts {
+      edges {
+        cursor
+        node {
+          id
+          runNo
+          traceNo
+          promptNo
+          startedAt
+          endedAt
+          fileName
+          lineNo
+          event
+          open
+          command
+        }
+      }
+    }
+    stdouts {
+      edges {
+        cursor
+        node {
+          id
+          runNo
+          traceNo
+          text
+          writtenAt
+        }
+      }
+    }
+  }
+}
