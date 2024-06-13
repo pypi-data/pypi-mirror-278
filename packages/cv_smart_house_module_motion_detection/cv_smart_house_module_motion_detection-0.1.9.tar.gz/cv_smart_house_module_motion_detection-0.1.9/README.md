@@ -1,0 +1,1 @@
+The Motion Tracker module is designed to detect and track motion in a given environment using image processing and computer vision techniques. This module is capable of identifying moving objects, distinguishing between different types of motion, and providing real-time updates on the position and trajectory of tracked objects.
