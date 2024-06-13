@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{{title}}}</title>
+    <style>
+        html, body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        body {
+            background: #ccc;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        hr {
+            margin: 2rem 0;
+        }
+
+        main {
+            max-width: 1000px;
+            background: #efefef;
+            margin: 0 auto;
+            padding: 4rem;
+        }
+
+       .feed {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .feed li {
+            padding: 0;
+            transition: .2s all;
+            border-radius: 6px;
+        }
+
+        .feed li:hover {
+            background-color: rgba(0, 0, 0, .1);
+        }
+
+        .feed li:not(:last-of-type) {
+            border-bottom: #ccc 1px solid;
+        }
+
+        .feed a {
+            padding: .6rem;
+            display: flex;
+            gap: 2rem;
+            text-decoration: inherit;
+            color: inherit;
+        }
+
+        .feed a > div {
+            display: flex;
+            align-items: center;
+        }
+
+        .feed a > div:nth-of-type(1) {
+            flex: 1;
+            font-weight: bold;
+        }
+
+        .feed a > div:nth-of-type(2) {
+            font-size: .8em;
+        }
+
+        .nav {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 2rem;
+        }
+
+        .nav a {
+            display: flex;
+            padding: .6rem;
+        }
+
+        .nav div:nth-of-type(2) a {
+            justify-content: flex-end;
+        }
+
+        .nav .disabled {
+            opacity: .5;
+            user-selection: none;
+            cursor: not-allowed;
+        }
+
+        hr {
+            border-top: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <h1>{{{title}}}</h1>
+    <hr />
+    <ol class="feed">
+        {{#files}}
+        <li>
+            <a href="{{ url }}" target="_blank">
+                <div>{{{title}}}</div>
+                <div>{{date}}</div>
+            </a>
+        </li>
+        {{/files}}
+    </ol>
+    <div class="nav">
+        <div>
+            {{#previousPageUrl}}<a href="{{previousPageUrl}}">Previous Page</a>{{/previousPageUrl}}
+            {{^previousPageUrl}}<a class="disabled">Previous Page</a>{{/previousPageUrl}}
+        </div>
+        <div>
+            {{#nextPageUrl}}<a href="{{nextPageUrl}}">Next Page</a>{{/nextPageUrl}}
+            {{^nextPageUrl}}<a class="disabled">Next Page</a>{{/nextPageUrl}}
+        </div>
+    </div>
+</main>
+</body>
+</html>
