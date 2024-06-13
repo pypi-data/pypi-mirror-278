@@ -1,0 +1,3 @@
+[console_scripts]
+dfy-codegen = moveread.pipelines.dfy.spec:codegen
+local-dfy = moveread.pipelines.dfy.cli:main
