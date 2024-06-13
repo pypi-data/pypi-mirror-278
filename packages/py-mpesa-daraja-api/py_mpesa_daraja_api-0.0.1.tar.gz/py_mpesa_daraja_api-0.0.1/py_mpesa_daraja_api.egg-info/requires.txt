@@ -1,0 +1,5 @@
+pydantic
+requests
+
+[dev]
+twine>=5.1.0
