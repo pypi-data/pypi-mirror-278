@@ -1,0 +1,10 @@
+[console_scripts]
+agent=autotx.cli:agent
+ask=autotx.cli:run
+build-check=autotx.build_check:run
+load-tokens=autotx.load_tokens:run
+new_app=autotx.cli:new_app
+serve=autotx.cli:serve
+start-devnet=autotx.chain_fork:start
+stop-devnet=autotx.chain_fork:stop
+
