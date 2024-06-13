@@ -1,0 +1,110 @@
+#!python
+
+import matplotlib.pyplot as plt
+import pandas            as pnd
+import argparse
+import ROOT
+import os
+
+from log_store import log_store
+
+log = log_store.add_logger('check_low_eff')
+#--------------------------------------------------------------
+class data:
+    nbin   = 20
+    l_year = ['2011', '2012', '2015', '2016', '2017', '2018']
+    cas_dir= os.environ['CASDIR']
+    out_dir= None
+#--------------------------------------------------------------
+def get_arr(trig, year, sample_dir):
+    rdf    = ROOT.RDataFrame(trig, f'{sample_dir}/{year}_{trig}/*.root')
+    rdf    = rdf.Define('min_pt', 'TMath::Min(L1_PT, L2_PT)')
+    arr_pt = rdf.AsNumpy(['min_pt'])['min_pt']
+
+    return arr_pt
+#--------------------------------------------------------------
+def get_eff_val(arr_pt):
+    pas=len(arr_pt[arr_pt > 500])
+    tot=len(arr_pt)
+
+    eff_up=ROOT.TEfficiency.Wilson(tot, pas, 0.68,  True)
+    eff_dn=ROOT.TEfficiency.Wilson(tot, pas, 0.68, False)
+
+    return pas/tot, eff_up - eff_dn
+#--------------------------------------------------------------
+def get_eff(year, proc, tos=None, tis=None):
+    plt.hist(tos, bins=data.nbin, range=(0, 1000), histtype='step', label= 'eTOS', density=True)
+    plt.hist(tis, bins=data.nbin, range=(0, 1000), histtype='step', label='gTIS!', density=True)
+
+    plt.axvline(x=200, linestyle=':')
+    plt.axvline(x=500, linestyle=':')
+    plt.legend()
+    plot_path = f'{data.out_dir}/eff_{year}_{proc}.png'
+    log.info(f'Saving to: {plot_path}')
+    plt.xlabel('$\min(e^+(p_T), e^-(p_T))$ MeV')
+    plt.ylabel('Normalized/20MeV')
+    plt.savefig(plot_path)
+    plt.close('all')
+
+    eff_tos, err_tos = get_eff_val(tos)
+    eff_tis, err_tis = get_eff_val(tis)
+
+    return eff_tos, err_tos, eff_tis, err_tis
+#--------------------------------------------------------------
+def get_args():
+    parser = argparse.ArgumentParser(description='Used to check effect on efficiencies of dropping electrons below 500MeV')
+    parser.add_argument('-o', '--out_dir' , type=str, help='Directory where output plots go', required=True)
+    args = parser.parse_args()
+
+    data.out_dir = args.out_dir
+
+    os.makedirs(data.out_dir, exist_ok=True)
+#--------------------------------------------------------------
+def get_df(proc):
+    sample_dir = f'{data.cas_dir}/tools/apply_selection/ful_sel/{proc}/v10.21p2/'
+
+    d_eff = {'ETOS_val' : [], 'ETOS_err' : [], 'GTIS_val' : [], 'GTIS_err' : [], 'year' : []}
+    for year in data.l_year:
+        arr_pt_tos = get_arr('ETOS', year, sample_dir)
+        arr_pt_tis = get_arr('GTIS', year, sample_dir)
+
+        eff_tos, err_tos, eff_tis, err_tis = get_eff(year, proc, tos=arr_pt_tos, tis=arr_pt_tis)
+
+        d_eff['ETOS_val'].append(eff_tos)
+        d_eff['GTIS_val'].append(eff_tis)
+        d_eff['ETOS_err'].append(err_tos)
+        d_eff['GTIS_err'].append(err_tis)
+        d_eff['year'    ].append(year   )
+
+    df = pnd.DataFrame(d_eff) 
+    df['Process'] = {'sign' : 'Rare', 'ctrl' : '$J/\psi$', 'psi2' : '$\psi(2S)$'}[proc]
+
+    return df
+#--------------------------------------------------------------
+def plot_eff(df, trig):
+    fig, ax = plt.subplots(figsize=(8,6))
+    for proc, df_proc in df.groupby('Process'):
+        df_proc.plot(x='year', y=f'{trig}_val', yerr=f'{trig}_err', ax=ax, label=proc)
+
+    plt.grid()
+    plt.xlabel('Year')
+    plt.ylabel('Efficiency')
+    plt.ylim(0.98, 1.00)
+    plt.savefig(f'{data.out_dir}/eff_{trig}.png')
+    plt.close('all')
+#--------------------------------------------------------------
+def main():
+    get_args()
+
+    df_sign = get_df('sign')
+    df_psi2 = get_df('psi2')
+    df_ctrl = get_df('ctrl')
+
+    df = pnd.concat([df_sign, df_psi2, df_ctrl], axis=0)
+
+    plot_eff(df, 'ETOS')
+    plot_eff(df, 'GTIS')
+#--------------------------------------------------------------
+if __name__ == '__main__':
+    main()
+
