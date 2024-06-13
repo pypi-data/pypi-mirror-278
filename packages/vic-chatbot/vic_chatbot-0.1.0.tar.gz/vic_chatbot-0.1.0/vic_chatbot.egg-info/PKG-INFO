@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: vic-chatbot
+Version: 0.1.0
+Summary: A simple chatbot library with a Flask web interface
+Home-page: https://github.com/Evasas12/chatbotlib
+Author: Ernald Victa
+Author-email: chuasweet11@gmail.com
+License: MIT
+Description: Chatbot Library
+        ===
+        Abstract:xxx
+        ## Papar Information
+        - Title:  `paper name`
+        
+        
+        ## Install & Dependence
+        - python
+        - pytorch
+        - numpy
+        
+        
+        ## Directory Hierarchy
+        ```
+        |â€”â€” chatbotlib
+        |    |â€”â€” chatbot.py
+        |    |â€”â€” setup.py
+        |    |â€”â€” static
+        |        |â€”â€” css
+        |            |â€”â€” style.css
+        |        |â€”â€” js
+        |            |â€”â€” script.js
+        |    |â€”â€” templates
+        |        |â€”â€” index.html
+        |    |â€”â€” webapp.py
+        |    |â€”â€” __init__.py
+        |â€”â€” MANIFEST.in
+        ```
+        ## Code Details
+        ### Tested Platform
+        - software
+          ```
+          OS: Debian unstable (May 2021), Ubuntu LTS
+          Python: 3.8.5 (anaconda)
+          PyTorch: 1.7.1, 1.8.1
+          ```
+        - hardware
+          ```
+          CPU: Intel Xeon 6226R
+          GPU: Nvidia RTX3090 (24GB)
+          ```
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown

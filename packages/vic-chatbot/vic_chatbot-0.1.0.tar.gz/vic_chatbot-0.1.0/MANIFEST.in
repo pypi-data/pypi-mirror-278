@@ -1,0 +1,4 @@
+include README.md
+include LICENSE
+recursive-include vic_chatbot/templates *
+recursive-include vic_chatbot/static *
