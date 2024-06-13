@@ -1,0 +1,17 @@
+aiohttp
+click
+gitpython
+jinja2
+loguru
+posthog
+requests
+sf-hamilton>=1.43.0
+sqlglot
+
+[test]
+ibis-framework
+langchain_core
+polars
+pyspark
+pytest
+ray
