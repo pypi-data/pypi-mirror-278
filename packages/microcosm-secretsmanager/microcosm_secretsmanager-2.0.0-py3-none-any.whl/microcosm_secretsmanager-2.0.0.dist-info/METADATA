@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: microcosm-secretsmanager
+Version: 2.0.0
+Summary: Secrets storage using AWS SecretsManager
+Home-page: https://github.com/globality-corp/microcosm-secretsmanager
+Author: Globality Engineering
+Author-email: engineering@globality.com
+Requires-Python: >=3.11
+License-File: LICENSE
+Requires-Dist: microcosm >=4.0.0
+Requires-Dist: boto3 >=1.7.9
+Provides-Extra: lint
+Requires-Dist: flake8 ; extra == 'lint'
+Requires-Dist: flake8-print ; extra == 'lint'
+Requires-Dist: flake8-isort ; extra == 'lint'
+Requires-Dist: PyHamcrest >=1.8.5 ; extra == 'lint'
+Provides-Extra: test
+Requires-Dist: coverage >=3.7.1 ; extra == 'test'
+Requires-Dist: PyHamcrest >=1.8.5 ; extra == 'test'
+Requires-Dist: pytest-cov >=5.0.0 ; extra == 'test'
+Requires-Dist: pytest >=6.2.5 ; extra == 'test'
+Provides-Extra: typehinting
+Requires-Dist: mypy ; extra == 'typehinting'
+Requires-Dist: types-boto3 ; extra == 'typehinting'
+Requires-Dist: types-python-dateutil ; extra == 'typehinting'
+Requires-Dist: PyHamcrest >=1.8.5 ; extra == 'typehinting'
+
