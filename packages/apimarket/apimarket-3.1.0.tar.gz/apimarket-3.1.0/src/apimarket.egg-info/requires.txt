@@ -1,0 +1,19 @@
+python-decouple
+httpx[http2]
+kink
+dateparser
+microsoft-kiota-serialization-json
+microsoft-kiota-serialization-text
+microsoft-kiota-serialization-form
+microsoft-kiota-serialization-multipart
+microsoft-kiota-http
+urllib3
+microsoft-kiota-abstractions
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[testing]
+setuptools
+pytest
+pytest-cov
