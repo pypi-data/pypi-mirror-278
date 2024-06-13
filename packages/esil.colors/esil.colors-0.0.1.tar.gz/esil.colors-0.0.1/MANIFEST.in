@@ -1,0 +1,4 @@
+include README.md
+include LICENSE
+recursive-include esil.colors *.rgb
+recursive-include esil.colors *.pkl
