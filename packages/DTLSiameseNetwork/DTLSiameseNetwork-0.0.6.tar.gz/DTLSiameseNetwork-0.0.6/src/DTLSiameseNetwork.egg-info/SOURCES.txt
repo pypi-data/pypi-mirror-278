@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+src/DTLSiameseNetwork.egg-info/PKG-INFO
+src/DTLSiameseNetwork.egg-info/SOURCES.txt
+src/DTLSiameseNetwork.egg-info/dependency_links.txt
+src/DTLSiameseNetwork.egg-info/requires.txt
+src/DTLSiameseNetwork.egg-info/top_level.txt
+src/dtl_siamese_network/__init__.py
+src/dtl_siamese_network/data/__init__.py
+src/dtl_siamese_network/data/datasets.py
+src/dtl_siamese_network/data/transforms.py
+src/dtl_siamese_network/models/__init__.py
+src/dtl_siamese_network/models/model_hg.py
+src/dtl_siamese_network/models/networks.py
