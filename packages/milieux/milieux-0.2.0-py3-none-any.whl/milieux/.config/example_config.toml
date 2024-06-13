@@ -1,0 +1,9 @@
+# base directory (by default, everything will be installed here)
+# base_dir = "/path/to/base/milieux/dir"
+
+# directory for virtual environments
+# env_dir = "envs"
+
+# [pip]
+# URL for PyPI index
+# index_url = "https://my-pypi-mirror.org"
