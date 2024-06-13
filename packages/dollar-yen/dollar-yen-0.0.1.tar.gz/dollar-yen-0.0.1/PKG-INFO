@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: dollar-yen
+Version: 0.0.1
+Summary: Convert dollars to yen.
+Home-page: https://github.com/spc-nmurata/dollar-yen
+Author: naoyuki murata
+Author-email: nmurata@sciencepark.co.jp
+Project-URL: Bug Tracker, https://github.com/spc-nmurata/dollar-yen
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
+# dollar-yen
+Convert dollars to yen.
+# how to install dollar-yen
+pip install dollar-yen
+
+# how to run dollar-yen
+    $ dollar_yen
+or
+
+    import dollar_yen as dy
+    dy.now() #The current rate is displayed
+    yen = dy.exchange(num) #Calculate how much $100 would cost in Japanese yen now
+
+
