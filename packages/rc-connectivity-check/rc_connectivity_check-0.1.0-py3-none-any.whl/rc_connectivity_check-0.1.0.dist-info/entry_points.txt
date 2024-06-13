@@ -1,0 +1,3 @@
+[console_scripts]
+rc-connectivity-check=rc_connectivity_check.checker:main
+
