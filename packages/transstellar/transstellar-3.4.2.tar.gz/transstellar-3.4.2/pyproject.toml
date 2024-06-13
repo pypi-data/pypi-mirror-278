@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "transstellar"
+version = "3.4.2"
+description = "A pytest framework"
+authors = ["Onramplab Dev <dev@onramplab.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pytest = "^8.1.1"
+pytest-xdist = "^3.5.0"
+injector = "^0.21.0"
+pyyaml = "^6.0.1"
+selenium = "^4.20.0"
+requests = "^2.31.0"
+
+[tool.poetry.group.dev.dependencies]
+poetry-plugin-up = "^0.7.1"
+pytest-dotenv = "^0.5.2"

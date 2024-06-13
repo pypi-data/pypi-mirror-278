@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: transstellar
+Version: 3.4.2
+Summary: A pytest framework
+Author: Onramplab Dev
+Author-email: dev@onramplab.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: injector (>=0.21.0,<0.22.0)
+Requires-Dist: pytest (>=8.1.1,<9.0.0)
+Requires-Dist: pytest-xdist (>=3.5.0,<4.0.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: selenium (>=4.20.0,<5.0.0)
