@@ -1,0 +1,8 @@
+pandas
+feather-format
+
+[dev]
+pytest
+pytest-cov
+build
+twine

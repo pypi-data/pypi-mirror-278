@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pirrtools"
+version = "0.2.1"
+description = "Collection of tools I use in my projects"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+  { name = "Sean Smith", email = "pirsquared.pirr@gmail.com" }
+]
+requires-python = ">=3.6"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+dependencies = [
+  "pandas",
+  "feather-format"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/pirsquared/pirrtools"
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "pytest-cov",
+  "build",
+  "twine",
+]
