@@ -1,0 +1,17 @@
+cloudscraper
+websocket-client
+requests_toolbelt
+loguru
+rich==13.3.4
+nest-asyncio
+
+[async]
+httpx==0.24.0
+
+[proxy]
+
+[proxy:python_version >= "3.9"]
+ballyregan
+
+[tests]
+tox
