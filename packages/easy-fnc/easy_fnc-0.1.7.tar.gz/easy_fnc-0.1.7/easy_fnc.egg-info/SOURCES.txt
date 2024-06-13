@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+easy_fnc/__init__.py
+easy_fnc/core_utils.py
+easy_fnc/function_caller.py
+easy_fnc/functions.py
+easy_fnc/schemas.py
+easy_fnc/utils.py
+easy_fnc.egg-info/PKG-INFO
+easy_fnc.egg-info/SOURCES.txt
+easy_fnc.egg-info/dependency_links.txt
+easy_fnc.egg-info/requires.txt
+easy_fnc.egg-info/top_level.txt
+easy_fnc/models/__init__.py
+easy_fnc/models/model.py
+easy_fnc/models/ollama.py
