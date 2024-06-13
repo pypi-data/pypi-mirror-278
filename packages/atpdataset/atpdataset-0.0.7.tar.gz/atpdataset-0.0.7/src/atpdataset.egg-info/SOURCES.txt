@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+src/atpdataset/__init__.py
+src/atpdataset/csv.py
+src/atpdataset/csv_object.py
+src/atpdataset/dataset.py
+src/atpdataset/dictionary.py
+src/atpdataset/records.py
+src/atpdataset/utils.py
+src/atpdataset.egg-info/PKG-INFO
+src/atpdataset.egg-info/SOURCES.txt
+src/atpdataset.egg-info/dependency_links.txt
+src/atpdataset.egg-info/entry_points.txt
+src/atpdataset.egg-info/requires.txt
+src/atpdataset.egg-info/top_level.txt
+tests/test_records.py
