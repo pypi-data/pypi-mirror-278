@@ -1,0 +1,182 @@
+Metadata-Version: 2.1
+Name: pypcrtool
+Version: 1.1.1
+Summary: A Python package for In silico PCR and primer verification.
+Home-page: https://github.com/waziiri/pypcrtool
+Author: Ibrahim Zubairu Waziri, Mustapha Ibrahim Usman, Zainab Ali Dandalma
+Author-email: biotechizwaziri@gmail.com, musteengumel@polac.edu.ng, zainabalidandalma92@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/waziiri/pypcrtool
+Keywords: in silico PCR,primer specificity,gel electrophoresis,DNA amplification,bioinformatics,computational biology
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+
+# PyPCRtool
+
+## 1. Introduction
+
+### 1.1 About PyPCRtool
+PyPCRtool is a Python package designed to perform in silico PCR simulations and visualize the results through gel electrophoresis. The program provides functionalities to specify forward and reverse primer sequences, load DNA sequences of genes or genomes from files, set mismatch tolerances, simulate PCR amplification, check primer specificity, and visualize PCR product bands on a simulated gel.
+
+### 1.2 System Requirements
+- Python 3.6 or higher
+- Required Python libraries: `numpy`, `matplotlib`
+
+### 1.3 Installation Instructions
+
+To install PyPCRtool, use pip:
+```bash
+pip install pypcrtool
+```
+
+## Usage
+
+## 2. Getting Started
+### 2.1 Basic Concepts
+
+- In Silico PCR: Computational technique to simulate PCR amplification.
+- Primers: Short DNA sequences that initiate DNA synthesis.
+- Gel Electrophoresis: Technique to visualize DNA fragments based on size.
+
+### 2.2 Quick Start Guide
+- Install PyPCRtool.
+- Prepare your DNA sequence file in FASTA format.
+- Define your forward and reverse primer sequences.
+- Run the PyPCRtool to simulate PCR and visualize results.
+
+##  3. Detailed Usage
+### 3.1 Setting Up Primers
+Primer sequences should be provided as plain text strings. Define forward and reverse primers in your script:
+
+```python
+forward_primer = "TCGAGAGGAACAGCCAAACT" 
+reverse_primer = "TTCCTCATGTCCAGGTCCTC"
+```
+### 3.2 Sequence Files and Formats
+DNA sequence file should be in FASTA format and should be in your current working directory or folder:
+
+```python
+sequence_file = "sequence.fasta"
+```
+### 3.3 Running In Silico PCR
+Instantiate the PyPCRtool object and run the simulation:
+
+```python
+from pypcrtool.pcr import InSilicoPCR
+pcr_tube = InSilicoPCR(forward_primer, reverse_primer, sequence_file)
+products = pcr_tube.perform_pcr()
+```
+
+### 3.4 Printing PCR Products
+Display sequence of PCR product on the screen:
+
+```python
+pcr_tube.print_products(products)
+```
+
+### 3.5 Visualizing Gel Electrophoresis
+Generate and display the gel image:
+
+```python
+pcr_tube.visualize_gel(products)
+```
+### 3.6 Saving PCR Products and Gel Image
+Save PCR products to a file:
+
+```python
+pcr_tube.save_products(products, "pcr_products.fasta")
+```
+Save Gel image to a file:
+```python
+pcr_tube.visualize_gel(products, save_path="gel_image.png")
+```
+
+### 3.7 Customizing Mismatch Tolerances
+Set mismatch tolerances when creating the PyPCRtool object:
+
+```python
+pcr_tube = InSilicoPCR(forward_primer, reverse_primer, sequence_file, forward_mismatch_tolerance=1, reverse_mismatch_tolerance=1)
+```
+
+### 3.8 Primer Specificity Check
+Check if primers bind to unique sites:
+
+```python
+pcr_tube.check_primer_specificity()
+```
+
+## 4. Practice Examples
+### 4.1 Basic PCR Simulation
+
+```python
+from pypcrtool.pcr import InSilicoPCR
+forward_primer = "TCGAGAGGAACAGCCAAACT"
+reverse_primer = "TTCCTCATGTCCAGGTCCTC"
+sequence_file = "sequence.fasta"
+pcr_tube = InSilicoPCR(forward_primer, reverse_primer, sequence_file)
+products = pcr_tube.perform_pcr()
+pcr_tube.print_products(products)
+pcr_tube.visualize_gel(products)
+```
+
+### 4.2 Custom Mismatch Tolerances
+
+```python
+from pypcrtool.pcr import InSilicoPCR
+forward_primer = "TCGAGAGGAACAGCCAAACT"
+reverse_primer = "TTCCTCATGTCCAGGTCCTC"
+sequence_file = "sequence.fasta"
+pcr_tube = InSilicoPCR(forward_primer, reverse_primer, sequence_file, forward_mismatch_tolerance=1, reverse_mismatch_tolerance=2)
+products = pcr_tube.perform_pcr()
+pcr_tube.print_products(products)
+pcr_tube.visualize_gel(products)
+```
+
+### 4.3 Primer Specificity Analysis
+
+```python
+from pypcrtool.pcr import InSilicoPCR
+forward_primer = "TCGAGAGGAACAGCCAAACT"
+reverse_primer = "TTCCTCATGTCCAGGTCCTC"
+sequence_file = "sequence.fasta"
+pcr_tube = InSilicoPCR(forward_primer, reverse_primer, sequence_file)
+pcr_tube.check_primer_specificity()
+products = pcr_tube.perform_pcr()
+pcr_tube.print_products(products)
+pcr_tube.visualize_gel(products)
+```
+
+## 5. Troubleshooting
+### 5.1 Common Issues and Solutions
+
+- Error: Sequence file not found: Ensure the file path is correct.
+- No PCR products found: Check primer sequences and mismatch tolerances.
+
+### 5.2 Frequently Asked Questions (FAQ)
+
+- What formats are supported for DNA sequences? FASTA format is supported.
+- Can I set different mismatch tolerances for forward and reverse primers? Yes, they can be set individually
+
+
+### Authors
+- Ibrahim Zubairu Waziri, Department of Microbiology and Biotechnology, Federal University Dutse, Jigawa State, Nigeria.
+- Mustapha Ibrahim Usman, Department of Biological Sciences, Nigeria Police Academy Wudil, Kano State, Nigeria
+- Zainab Ali Dandalma, Department of Microbiology and Biotechnology, Federal University Dutse, Jigawa State, Nigeria
+
+
+
+
+
+
+
+
+
+
+
