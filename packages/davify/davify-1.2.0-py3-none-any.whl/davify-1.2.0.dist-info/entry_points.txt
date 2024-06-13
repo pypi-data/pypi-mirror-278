@@ -1,0 +1,4 @@
+[console_scripts]
+clean-davify-directory=davify.housekeeping:cli
+davify=davify.cli:cli
+
