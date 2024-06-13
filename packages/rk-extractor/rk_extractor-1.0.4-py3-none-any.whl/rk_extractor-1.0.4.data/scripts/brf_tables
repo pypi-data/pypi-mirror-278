@@ -1,0 +1,55 @@
+#!python
+
+from importlib.resources import files
+
+import pandas       as pnd
+import utils_noroot as utnr
+import os
+
+#-------------------------------------
+class data:
+    version = 'v5'
+    out_dir = 'tables'
+#-------------------------------------
+def get_name(key):
+    d_key_name = {}
+    d_key_name['bpkp'] = r'$B^+\to K^+e^+e^-$'
+    d_key_name['bpks'] = r'$B^+\to K^{*+}e^+e^-$'
+    d_key_name['bdks'] = r'$B^+\to K^{*0}e^+e^-$'
+    d_key_name['bsph'] = r'$B_s\to \phi e^+e^-$'
+    d_key_name['bpk1'] = r'$B^+\to K_1^+(\to K^+\pi^+\pi^-)e^+e^-$'
+    d_key_name['bpk2'] = r'$B^+\to K_2^+(\to X \to K^+\pi^+\pi^-)e^+e^-$'
+    d_key_name['k+kp'] = r'$K^{*+}\to K^+ \pi^0$'
+    d_key_name['kokp'] = r'$K^{*0}\to K^+ \pi^-$'
+    d_key_name['phkk'] = r'$\phi\to K^+ K^-$'
+
+    return d_key_name[key]
+#-------------------------------------
+def get_df():
+    json_path=files('extractor_data').joinpath(f'rare_sf/{data.version}/fr_bf.json')
+    d_data = utnr.load_json(json_path)
+    d_bf   = d_data['bf']
+
+    d_bf_df = {'Process' : [], r'$\mathcal{B}$' : []}
+    for key, [val, err] in d_bf.items():
+        brf  = f'{val:.3e}$\pm${err:.3e}'
+        name = get_name(key)
+
+        d_bf_df['Process'      ].append(name)
+        d_bf_df['$\mathcal{B}$'].append(brf)
+
+    df = pnd.DataFrame(d_bf_df)
+
+    return df
+#-------------------------------------
+def make_table(df):
+    os.makedirs(data.out_dir, exist_ok=True)
+    df.to_latex(f'{data.out_dir}/bf.tex', index=False)
+#-------------------------------------
+def main():
+    df = get_df()
+    make_table(df)
+#-------------------------------------
+if __name__ == '__main__':
+    main()
+
