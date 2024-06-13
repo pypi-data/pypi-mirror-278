@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/siwp2005_james_sort.egg-info/PKG-INFO
+src/siwp2005_james_sort.egg-info/SOURCES.txt
+src/siwp2005_james_sort.egg-info/dependency_links.txt
+src/siwp2005_james_sort.egg-info/top_level.txt
+src/sort/__init__.py
+src/sort/bubble_sort.py
+src/sort/insertion_sort.py
+src/sort/quick_sort.py
+tests/test_bubble_sort.py
+tests/test_insertion_sort.py
+tests/test_quick_sort.py
