@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: rabbitmq-testclient
+Version: 0.1.0
+Summary: A small server for working with rabbitmq
+Author: Ohaggard
+Author-email: marlausor@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: aio-pika (>=9.4.1,<10.0.0)
+Description-Content-Type: text/markdown
+
+# Мой первый README.md
