@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+imagetk/__init__.py
+imagetk/assess.c
+imagetk/edge.c
+imagetk/feature.c
+imagetk/kernel.c
+imagetk/process.c
+imagetk/threshold.c
+imagetk.egg-info/PKG-INFO
+imagetk.egg-info/SOURCES.txt
+imagetk.egg-info/dependency_links.txt
+imagetk.egg-info/requires.txt
+imagetk.egg-info/top_level.txt
