@@ -1,0 +1,3 @@
+[console_scripts]
+agentic-devops = aider.main_wrapper:main
+agentic-devops-cli = aider.main:main
