@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: acad-extractor
+Version: 1.0.5
+Requires-Python: >=3.9.9
+Author-Email: Alexandr Gusev <alphacity@yandex.ru>
+Summary: A quick tool to extract block attributes and properties from AutoCAD drawings
+Description-Content-Type: text/markdown
+License: MIT
+Keywords: quick, extract, block, attributes, properties, AutoCAD
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Project-Url: Homepage, https://github.com/Alexandr-Gusev/acad-extractor
+
+# acad-extractor
+
+A quick tool to extract block attributes and properties from AutoCAD drawings.
+
+## Usage
+
+```python
+from acad_extractor import select_on_screen
+
+print("Select AutoCAD blocks on screen")
+names = []
+attrs_list = []
+props_list = []
+handles = []
+def callback(processed, total):
+    print(f"Processed {processed}/{total}")
+print("-" * 70)
+dt = select_on_screen(names, attrs_list, props_list, handles, callback)
+print("-" * 70)
+print(f"Processed {len(names)} at {dt} ms")
+for i, name in enumerate(names):
+    print("-" * 70)
+    print(f"{name} {handles[i]}")
+    for name, value in attrs_list[i]:
+        print(f"attr {name} = {value}")
+    for name, value in props_list[i]:
+        print(f"prop {name} = {value}")
+```
