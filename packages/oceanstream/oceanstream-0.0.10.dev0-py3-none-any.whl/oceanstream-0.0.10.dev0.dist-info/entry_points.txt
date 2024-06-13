@@ -1,0 +1,2 @@
+[console_scripts]
+oceanstream = oceanstream.cli.main:main
