@@ -1,0 +1,17 @@
+geopipeline/__init__.py,sha256=GTYqaIof5vxQCH9HV4f6zBubBViRk0Bvqh2STz5h5Ac,93
+geopipeline/__main__.py,sha256=lrzwjQSWybRPSlFawOuVppBfQOAt-Ss5DnGdTVuisZk,1818
+geopipeline/cli.py,sha256=vPnFUkQNyEqvAG2WCkH9k4VfYbFZ-DOewTJ6cIlZXIc,8846
+geopipeline/science_planning.py,sha256=VcY2ECdEdnsJ0Zb9-_y2MInDlehCRkl3lXzcgeUvFps,10238
+geopipeline/setup.py,sha256=rtqYwMVJfp9XD5O7IJfWW9nJHlv6_MHmQ9XO3LDTKsY,3037
+geopipeline/time.py,sha256=9BgPl3Oshf-45_bldEpKzsPSbCDp8z8LI_5o5T-Qa3g,4413
+geopipeline/geometry/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geopipeline/geometry/derived.py,sha256=3L-KS8oQxPqcGA4RplUWaM3iZMmlhX6ktiQxOGmEvkg,16152
+geopipeline/geometry/finder.py,sha256=5Jowom2afyFXdJ8Murg1lMP7GfA18riy4ZNWPWhq0Sg,49136
+geopipeline/geometry/support.py,sha256=tXqU8kXYUNOHNO6H8UlnGU5keGHiDb6tgOql9ah9xKQ,1303
+geopipeline/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geopipeline/models/magnetic_field.py,sha256=XWZ_9nvtPcxbiAJZfeNcpntoAsbItq6j_yUJ7uAQb1Y,5088
+juice_geopipeline-0.5.0.dist-info/METADATA,sha256=czyWJswTLdyFoIzTXOlo3qDXq1CZ2Yvr8vdSXkhEpNg,5346
+juice_geopipeline-0.5.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+juice_geopipeline-0.5.0.dist-info/entry_points.txt,sha256=CRqzArvN2yKsNNmEpHE5xIRW-mZRXrzdfPGelUufmoE,326
+juice_geopipeline-0.5.0.dist-info/top_level.txt,sha256=Cx907j9Fyj5yE_q6Y6MMh3lqbwTEytNbnyxDg62oiy4,12
+juice_geopipeline-0.5.0.dist-info/RECORD,,
