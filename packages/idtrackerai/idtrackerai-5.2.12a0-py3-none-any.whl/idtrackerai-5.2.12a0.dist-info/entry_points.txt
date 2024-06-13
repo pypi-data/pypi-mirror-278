@@ -1,0 +1,7 @@
+[console_scripts]
+idmatcherai = idtrackerai.idmatcherai.main:main
+idtrackerai = idtrackerai.start.__main__:main
+idtrackerai_csv = idtrackerai.base.postprocess.trajectories_to_csv:main
+idtrackerai_test = idtrackerai.start.__main__:general_test
+idtrackerai_validate = idtrackerai.validator.__main__:main
+idtrackerai_video = idtrackerai.video.main:main
