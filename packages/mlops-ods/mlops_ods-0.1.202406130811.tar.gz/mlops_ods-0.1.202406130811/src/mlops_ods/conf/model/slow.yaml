@@ -1,0 +1,5 @@
+_target_: catboost.CatBoostClassifier
+_convert_: object
+random_seed: 42
+iterations: 500
+verbose: False
