@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: cypher-text-toolkit
+Version: 0.0.1
+Summary: Cypher Text Toolkit contains large number of encryption decryption functions for different types of cypher texts. I also provides an interface for Crypto-researchers, CTF players, enterprises and security personnel to customize cypher texts and easily integrate them in their product/organisation/research.
+Author-email: Sarthak Gupta <sarthakg4953@gmail.com>
+License: MIT License
+Project-URL: Homepage, https://github.com/BetaHacks-Community-IIIT-Kottayam/cypher-text-toolkit
+Keywords: cypher-text-toolkit
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Provides-Extra: all
+Requires-Dist: cypher-text-toolkit[extra] ; extra == 'all'
+Provides-Extra: extra
+Requires-Dist: pandas ; extra == 'extra'
+
+# cypher-text-toolkit
+
+
+[![image](https://img.shields.io/pypi/v/cypher-text-toolkit.svg)](https://pypi.python.org/pypi/cypher-text-toolkit)
+[![image](https://img.shields.io/conda/vn/conda-forge/cypher-text-toolkit.svg)](https://anaconda.org/conda-forge/cypher-text-toolkit)
+
+
+**Cypher Text Toolkit contains large number of encryption decryption functions for different types of cypher texts. I also provides an interface for Crypto-researchers, CTF players, enterprises and security personnel to customize cypher texts and easily integrate them in their product/organisation/research.**
+
+
+-   Free software: MIT License
+-   Documentation: https://betahacks-community-iiit-kottayam.github.io/cypher-text-toolkit/
+    
+
+## Features
+
+-   TODO
