@@ -1,0 +1,35 @@
+[project]
+name = "aau-ais-utilities"
+version = "0.1.15"
+description = "Utilities for working with the AAU AIS database."
+authors = [
+    { name = "Mikael Vind Mikkelsen", email = "mvmi@cs.aau.dk" },
+]
+dependencies = [
+    "sqlalchemy==2.0.*",
+    "pydantic-settings==2.2.*",
+]
+requires-python = "==3.12.*"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.dev-dependencies]
+test = [
+    "pytest>=8.1.1",
+]
+lint = [
+    "flake8>=7.0.0",
+    "flake8-annotations>=3.0.1",
+    "flake8-docstrings>=1.7.0",
+]
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
