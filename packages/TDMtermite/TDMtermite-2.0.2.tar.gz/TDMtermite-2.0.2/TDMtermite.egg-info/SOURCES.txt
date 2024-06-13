@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+TDMtermite.cpp
+TDMtermite.pxd
+TDMtermite.pyx
+pyproject.toml
+setup.cfg
+setup.py
+TDMtermite.egg-info/PKG-INFO
+TDMtermite.egg-info/SOURCES.txt
+TDMtermite.egg-info/dependency_links.txt
+TDMtermite.egg-info/top_level.txt
+lib/tdm_datamodel.hpp
+lib/tdm_datatype.hpp
+lib/tdm_format.hpp
+lib/tdm_termite.hpp
