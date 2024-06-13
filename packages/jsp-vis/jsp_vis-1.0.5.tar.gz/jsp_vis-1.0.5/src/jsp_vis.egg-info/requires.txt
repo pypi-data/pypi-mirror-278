@@ -1,0 +1,13 @@
+opencv-python
+plotly
+matplotlib
+numpy
+pandas
+kaleido
+
+[dev]
+pip-tools
+pytest
+pytest-cov
+tox
+twine
