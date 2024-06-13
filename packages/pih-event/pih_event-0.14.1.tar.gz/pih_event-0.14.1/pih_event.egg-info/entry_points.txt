@@ -1,0 +1,2 @@
+[console_scripts]
+pih-event = EventService.__main__:start
