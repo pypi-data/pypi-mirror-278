@@ -1,0 +1,15 @@
+credopay_paymentgateway/__init__.py,sha256=j6b7dHEtLB1xjgfsrx9QwgDuui-oTGlTBbOJDuJGiOk,81
+credopay_paymentgateway/config.py,sha256=Zwq1f9OB-24BJFGsTGyahjUmn21LfngO1rf6XMjkP2k,170
+credopay_paymentgateway/gateway.py,sha256=AodqeF6AA-qZp254CbU0O4TzYwwtPvzH7nIOJ48oF58,1422
+credopay_paymentgateway/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+credopay_paymentgateway/resources/order.py,sha256=kztyKIdC_yWqmSP7-rUQoaZzz6L7DaQbdixP35JYxP8,391
+credopay_paymentgateway/resources/transaction.py,sha256=d73W3eNJ_gyYBXJOLNCV2Q1QGYwm1Ot_fwQ4_pjIybU,133
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_gateway.py,sha256=vW3c1ObRZ5qEMK3Rv-gFNC3CpBt32LI7s8S9NRGtTpI,622
+tests/test_order.py,sha256=2X7kiyQWYXFHHDwfjLgXQjpYhzVOFY2LqvN7adkPXo8,966
+tests/test_transaction.py,sha256=Vk7_Nkv-Htekx0VoWVuiNT1aAeluozRw9PHStKLjTUU,423
+credopay_paymentgateway-0.1.dist-info/LICENSE,sha256=nd9OuEnVBbVw10iuW2PrTLpoJ-darW9M5_D9xYvkM6I,1092
+credopay_paymentgateway-0.1.dist-info/METADATA,sha256=A0FBxRXVIPkgEDfhVtGdmqgkf91vOFGLLrPA8ov6GMY,2410
+credopay_paymentgateway-0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+credopay_paymentgateway-0.1.dist-info/top_level.txt,sha256=ezkmqNgb2rtgHGaZN73uQ1UTNWLFRrtajhTs0ys-rPo,30
+credopay_paymentgateway-0.1.dist-info/RECORD,,
