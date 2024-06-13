@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/xml2dcm/__init__.py
+src/xml2dcm/xml2dcm.py
+src/xml2dcm.egg-info/PKG-INFO
+src/xml2dcm.egg-info/SOURCES.txt
+src/xml2dcm.egg-info/dependency_links.txt
+src/xml2dcm.egg-info/not-zip-safe
+src/xml2dcm.egg-info/requires.txt
+src/xml2dcm.egg-info/top_level.txt
