@@ -1,0 +1,24 @@
+templates:
+  - avr:
+    - README_AVR.template
+  - c:
+    - README_C.template
+  - cc:
+    - README_CC.template
+  - js:
+    - README_JS.template
+  - pl:
+    - README_PL.template
+  - py:
+    - README_PY.template
+  - rpi:
+    - README_RPI.template
+  - sh:
+    - README_SH.template
+  - stm:
+    - README_STM.template
+  - vala:
+    - README_VALA.template
+
+modules:
+  - README.md
