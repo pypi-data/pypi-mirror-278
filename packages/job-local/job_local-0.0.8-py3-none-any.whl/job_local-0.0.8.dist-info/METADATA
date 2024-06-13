@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: job-local
+Version: 0.0.8
+Summary: PyPI Package for Circles job-local Python
+Home-page: https://github.com/circles-zone/job-local-python-package
+Author: Circles
+Author-email: info@circlez.ai
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: logger-local
+Requires-Dist: database-mysql-local
+Requires-Dist: language-remote
+
+PyPI Package for Circles job-local Python
