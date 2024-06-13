@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: JMTrucoCmd
+Version: 1.0
+Summary: Esta es la descripcion del truco
+Home-page: https://github.com/JoaquinMorais/JMTrucoCmd
+Download-URL: https://github.com/JoaquinMorais/JMTrucoCmd/tarball/v1.0
+Author: Joaquin Morais
+Author-email: joaquinmoraislussary@gmail.com
+License: MIT
+Keywords: testing,logging,example
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# JMTrucoCmd: Juego de Truco
+
+![Mora Truco Logo](https://lmdiario.com.ar/download/multimedia.normal.914acb1e58d4fa82.547275636f2d4361727461735f6e6f726d616c2e6a7067.jpg)
+
+JMTrucoCmd es un framework para crear y jugar partidas de truco argentino. Este proyecto proporciona una base sÃ³lida para poder divertirse y matar el tiempo.
+
+## InstalaciÃ³n
+```bash
+pip install JMTrucoCmd 
+```
+
+## Uso
+```python
+from JMTrucoCmd import Game
+game = Game()
+game.start()
+```
+
+## Personajes jugables
+- Fercho (Default)
+- Jesus
+- Papa Noel
+- Gucci (rugbier promedio)
+- Gato (si, es un gato)
+- Javier Milei
+
+## Autor
+Joaquin Morais
+
+## Licencia
+Copyright (c) 2024 Joaquin Morais
