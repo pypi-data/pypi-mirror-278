@@ -1,0 +1,15 @@
+pgscatalog/calc/__init__.py,sha256=AX6LRPSkUcO6qOcDQrTTBi99iokVooTgYrTJXQ8X4CM,508
+pgscatalog/calc/cli/__init__.py,sha256=da1PTClDMl-IBkrSvq6JC1lnS-K_BASzCvxVhNxN5Ls,13
+pgscatalog/calc/cli/aggregate_cli.py,sha256=7bPT7Z4pbU7pc-Ge_Zf9SCBDAppdem9UFOu7lhL_czs,4005
+pgscatalog/calc/cli/ancestry_cli.py,sha256=BP8dR60zlG-nbiRlRpKUA_Aljbncawu4OA4NzKkWuT0,6061
+pgscatalog/calc/lib/__init__.py,sha256=Px2RKxajwvlE84hwjmNQ98fATdzVbcO8xVu98Sl3RpE,512
+pgscatalog/calc/lib/_ancestry/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pgscatalog/calc/lib/_ancestry/read.py,sha256=7bfjYB1_vhORo2t3kPkXR7eyJt8z8EMg0kTcBjGp9iU,3155
+pgscatalog/calc/lib/_ancestry/tools.py,sha256=IggjwiZACKfYv_9QCObnsf9CWofuoUB1txP-0KHcz04,28231
+pgscatalog/calc/lib/_config.py,sha256=H25Kx26gR917lLJFQXi4vizuq03ziKraHxGwvNIGxgo,114
+pgscatalog/calc/lib/polygenicscore.py,sha256=ZGdKdBe6DoHQIBXFFA8wc9jKXEbvp3IF9DhAwl8iGXY,15684
+pgscatalog/calc/lib/principalcomponents.py,sha256=Mz_1XA5u40ILOja5cj6rAVa1zxTTrZxs98PtH6mwFh4,5778
+pgscatalog_calc-0.2.0.dist-info/METADATA,sha256=COVdpnnPWoqCfmhQzatk3OfLigLxcqGMa991igBPl-8,2563
+pgscatalog_calc-0.2.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pgscatalog_calc-0.2.0.dist-info/entry_points.txt,sha256=Kr-oyMZkmWlrobjwJ1DEHg_YnDnoCX1j8bgYLU3PeeY,161
+pgscatalog_calc-0.2.0.dist-info/RECORD,,
