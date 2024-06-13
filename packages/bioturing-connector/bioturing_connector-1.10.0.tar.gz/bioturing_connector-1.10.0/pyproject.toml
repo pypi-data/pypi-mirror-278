@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "bioturing-connector"
+version = "1.10.0"
+description = "A set of python modules for accessing Bioturing's services on private server"
+authors = ["BioTuring <support@bioturing.com>"]
+readme = "README.md"
+packages = [{include = "bioturing_connector"}]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+requests = "*"
+numpy = "*"
+pandas = "*"
+scipy = "*"
+tqdm = "*"
+requests_toolbelt = ">=1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
