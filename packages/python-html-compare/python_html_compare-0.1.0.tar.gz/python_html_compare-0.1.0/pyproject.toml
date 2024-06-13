@@ -1,0 +1,38 @@
+[project]
+name = "python-html-compare"
+version = "0.1.0"
+description = "Python library for comparing HTML snippets"
+authors = [
+    { name = "tjk", email = "tjkells@gmail.com" }
+]
+dependencies = []
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "pytest>=8.2.2",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/html_compare"]
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests/*",
+]
+pythonpath = "test"
+
+[tool.rye.scripts]
+lint = { chain = ["lint:isort", "lint:black", "lint:flake8" ] }
+"lint:isort" = "isort src --check"
+"lint:black" = "black --check src"
+"lint:flake8" = "ruff src"

@@ -1,0 +1,60 @@
+name: Publish Python 🐍 distribution 📦 to PyPI and TestPyPI
+
+on: push
+
+jobs:
+  build:
+    name: Build distribution 📦
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.x"
+    - name: Data caching
+      uses: actions/cache@v3
+      with:
+        path: dist
+        key: ${{ runner.os }}-primes
+
+    - name: Setup rye
+      id: setup-rye
+      uses: eifinger/setup-rye@v3
+      with:
+        enable-cache: true
+        cache-prefix: 'optional-prefix'
+    - name: Rye sync
+      run: rye sync
+    - name: Rye lint
+      run: rye lint
+    - name: Rye test
+      run: rye test
+    - name: Build a binary wheel and a source tarball
+      run: rye build
+    - name: Store the distribution packages
+      uses: actions/upload-artifact@v3
+      with:
+        name: python-package-distributions
+        path: dist/
+  pypi-publish:
+    name: Upload release to PyPI
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/python-html-compare
+    permissions:
+      id-token: write  # IMPORTANT: this permission is mandatory for trusted publishing
+    steps:
+    - name: Data caching
+      uses: actions/cache@v3
+      with:
+        path: dist
+        key: ${{ runner.os }}-primes
+    - name: Publish package distributions to PyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
+    - name: Publish package distributions to TestPyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        repository-url: https://test.pypi.org/legacy/

@@ -1,0 +1,20 @@
+Metadata-Version: 2.3
+Name: python-html-compare
+Version: 0.1.0
+Summary: Python library for comparing HTML snippets
+Author-email: tjk <tjkells@gmail.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# html-compare
+
+Python library for comparing HTML snippets. Intentionally lacking any external dependencies. Ported from Django internal testing utilities [here](https://github.com/django/django/blob/main/django/test/html.py).
+
+
+## Usage
+```python
+
+def test_html_equals():
+    # Attributes should be significant, but whitepsace and quote-style should not be significant
+    assert html_equal("<a data-foo='bar'>Hi\n</a>", '<a data-foo="bar"> Hi </a>')
+```
