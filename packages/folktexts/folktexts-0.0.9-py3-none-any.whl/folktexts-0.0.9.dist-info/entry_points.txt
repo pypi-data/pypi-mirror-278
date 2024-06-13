@@ -1,0 +1,2 @@
+[console_scripts]
+run_acs_benchmark = folktexts.cli.run_acs_benchmark:main
