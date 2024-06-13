@@ -1,0 +1,6 @@
+click>=7
+prompt_toolkit>=2
+protobuf>=4.21.1
+pyzmq>=16
+requests>=2
+wget>=3
