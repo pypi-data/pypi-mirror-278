@@ -1,0 +1,2213 @@
+{
+  "absl-py": {
+    "absl": []
+  },
+  "aiohttp": {
+    "aiohttp": []
+  },
+  "aiosignal": {
+    "aiosignal": []
+  },
+  "alembic": {
+    "alembic": [],
+    "alembic.command": [
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ]
+  },
+  "aniso8601": {
+    "aniso8601": []
+  },
+  "anyio": {
+    "anyio": []
+  },
+  "appdirs": {
+    "appdirs": []
+  },
+  "astor": {
+    "astor": [],
+    "astor.code_gen": [],
+    "astor.codegen": [],
+    "astor.file_util": [],
+    "astor.node_util": [],
+    "astor.op_util": [],
+    "astor.rtrip": [],
+    "astor.source_repr": [],
+    "astor.string_repr": [],
+    "astor.tree_walk": []
+  },
+  "astroid": {
+    "astroid": []
+  },
+  "asttokens": {
+    "asttokens": [],
+    "asttokens.astroid_compat": [],
+    "asttokens.asttokens": [],
+    "asttokens.line_numbers": [],
+    "asttokens.mark_tokens": [],
+    "asttokens.util": [],
+    "asttokens.version": []
+  },
+  "astunparse": {
+    "astunparse": [],
+    "astunparse.printer": [],
+    "astunparse.unparser": []
+  },
+  "async-generator": {
+    "async_generator": []
+  },
+  "async-timeout": {
+    "async_timeout": []
+  },
+  "attrs": {
+    "attr": []
+  },
+  "audioread": {
+    "audioread": [],
+    "audioread.base": [],
+    "audioread.exceptions": [],
+    "audioread.ffdec": [],
+    "audioread.gstdec": [],
+    "audioread.macca": [],
+    "audioread.maddec": [],
+    "audioread.rawread": [],
+    "audioread.version": []
+  },
+  "azure-core": {
+    "azure.core": [],
+    "azure.core._enum_meta": [],
+    "azure.core._match_conditions": [],
+    "azure.core._pipeline_client": [],
+    "azure.core._pipeline_client_async": [],
+    "azure.core._version": [],
+    "azure.core.async_paging": [],
+    "azure.core.configuration": [],
+    "azure.core.credentials": [],
+    "azure.core.credentials_async": [],
+    "azure.core.exceptions": [],
+    "azure.core.messaging": [],
+    "azure.core.paging": [],
+    "azure.core.pipeline": [],
+    "azure.core.pipeline._base": [],
+    "azure.core.pipeline._base_async": [],
+    "azure.core.pipeline._tools": [],
+    "azure.core.pipeline._tools_async": [],
+    "azure.core.pipeline.policies": [],
+    "azure.core.pipeline.policies._authentication": [],
+    "azure.core.pipeline.policies._authentication_async": [],
+    "azure.core.pipeline.policies._base": [],
+    "azure.core.pipeline.policies._base_async": [],
+    "azure.core.pipeline.policies._custom_hook": [],
+    "azure.core.pipeline.policies._distributed_tracing": [],
+    "azure.core.pipeline.policies._redirect": [],
+    "azure.core.pipeline.policies._redirect_async": [],
+    "azure.core.pipeline.policies._retry": [],
+    "azure.core.pipeline.policies._retry_async": [],
+    "azure.core.pipeline.policies._sensitive_header_cleanup_policy": [],
+    "azure.core.pipeline.policies._universal": [],
+    "azure.core.pipeline.policies._utils": [],
+    "azure.core.pipeline.transport": [],
+    "azure.core.pipeline.transport._aiohttp": [],
+    "azure.core.pipeline.transport._base": [],
+    "azure.core.pipeline.transport._base_async": [],
+    "azure.core.pipeline.transport._base_requests_async": [],
+    "azure.core.pipeline.transport._bigger_block_size_http_adapters": [],
+    "azure.core.pipeline.transport._requests_asyncio": [],
+    "azure.core.pipeline.transport._requests_basic": [],
+    "azure.core.pipeline.transport._requests_trio": [],
+    "azure.core.polling": [],
+    "azure.core.polling._async_poller": [],
+    "azure.core.polling._poller": [],
+    "azure.core.polling.async_base_polling": [],
+    "azure.core.polling.base_polling": [],
+    "azure.core.rest": [],
+    "azure.core.rest._aiohttp": [],
+    "azure.core.rest._helpers": [],
+    "azure.core.rest._http_response_impl": [],
+    "azure.core.rest._http_response_impl_async": [],
+    "azure.core.rest._requests_asyncio": [],
+    "azure.core.rest._requests_basic": [],
+    "azure.core.rest._requests_trio": [],
+    "azure.core.rest._rest_py3": [],
+    "azure.core.serialization": [],
+    "azure.core.settings": [],
+    "azure.core.tracing": [],
+    "azure.core.tracing._abstract_span": [],
+    "azure.core.tracing.common": [],
+    "azure.core.tracing.decorator": [],
+    "azure.core.tracing.decorator_async": [],
+    "azure.core.tracing.ext": [],
+    "azure.core.utils": [],
+    "azure.core.utils._connection_string_parser": [],
+    "azure.core.utils._messaging_shared": [],
+    "azure.core.utils._pipeline_transport_rest_shared": [],
+    "azure.core.utils._pipeline_transport_rest_shared_async": [],
+    "azure.core.utils._utils": []
+  },
+  "backcall": {
+    "backcall": [],
+    "backcall._signatures": [],
+    "backcall.backcall": []
+  },
+  "bcrypt": {
+    "bcrypt": []
+  },
+  "beautifulsoup4": {
+    "bs4": [],
+    "bs4.builder": [],
+    "bs4.builder._html5lib": [],
+    "bs4.builder._htmlparser": [],
+    "bs4.builder._lxml": [],
+    "bs4.css": [],
+    "bs4.dammit": [],
+    "bs4.diagnose": [],
+    "bs4.element": [],
+    "bs4.formatter": [],
+    "bs4.tests": [],
+    "bs4.tests.test_builder": [],
+    "bs4.tests.test_builder_registry": [],
+    "bs4.tests.test_css": [],
+    "bs4.tests.test_dammit": [],
+    "bs4.tests.test_docs": [],
+    "bs4.tests.test_element": [],
+    "bs4.tests.test_formatter": [],
+    "bs4.tests.test_fuzz": [],
+    "bs4.tests.test_html5lib": [],
+    "bs4.tests.test_htmlparser": [],
+    "bs4.tests.test_lxml": [],
+    "bs4.tests.test_navigablestring": [],
+    "bs4.tests.test_pageelement": [],
+    "bs4.tests.test_soup": [],
+    "bs4.tests.test_tag": [],
+    "bs4.tests.test_tree": []
+  },
+  "bidict": {
+    "bidict": [],
+    "bidict._abc": [],
+    "bidict._base": [],
+    "bidict._bidict": [],
+    "bidict._dup": [],
+    "bidict._exc": [],
+    "bidict._frozen": [],
+    "bidict._iter": [],
+    "bidict._orderedbase": [],
+    "bidict._orderedbidict": [],
+    "bidict._typing": [],
+    "bidict.metadata": []
+  },
+  "black": {
+    "_black_version": [],
+    "black": [],
+    "blackd": [],
+    "blib2to3": []
+  },
+  "bleach": {
+    "bleach": [],
+    "bleach.callbacks": [],
+    "bleach.css_sanitizer": [],
+    "bleach.html5lib_shim": [],
+    "bleach.linkifier": [],
+    "bleach.parse_shim": [],
+    "bleach.sanitizer": []
+  },
+  "blinker": {
+    "blinker": [],
+    "blinker._utilities": [],
+    "blinker.base": []
+  },
+  "boto3": {
+    "boto3": [],
+    "boto3.s3": [
+      {
+        "code": "direct-filesystem-access",
+        "message": "AWS IAM Instance Profiles are not compatible with Databricks Unity Catalog, that routes access through Storage Credentials."
+      }
+    ]
+  },
+  "botocore": {
+    "botocore": [
+      {
+        "code": "aws-cloud-access",
+        "message": "AWS IAM Instance Profiles are not compatible with Databricks Unity Catalog, that routes access through Storage Credentials."
+      }
+    ]
+  },
+  "cachetools": {
+    "cachetools": []
+  },
+  "certifi": {
+    "certifi": []
+  },
+  "charset-normalizer": {
+    "charset_normalizer": []
+  },
+  "clang": {
+    "clang": [],
+    "clang.cindex": [
+      {
+        "code": "table-migrate",
+        "message": "Can't migrate 'register' because its table name argument is not a constant"
+      }
+    ],
+    "clang.enumerations": []
+  },
+  "click": {
+    "click": []
+  },
+  "cloudpickle": {
+    "cloudpickle": [],
+    "cloudpickle.cloudpickle": [],
+    "cloudpickle.cloudpickle_fast": []
+  },
+  "contourpy": {
+    "contourpy": []
+  },
+  "coverage": {
+    "coverage": []
+  },
+  "cycler": {
+    "cycler": []
+  },
+  "databricks-labs-blueprint": {
+    "databricks.labs.blueprint": []
+  },
+  "databricks-labs-lsql": {
+    "databricks.labs.lsql": []
+  },
+  "databricks-labs-pylint": {
+    "databricks.labs.pylint": []
+  },
+  "databricks-labs-ucx": {
+    "databricks.labs.ucx": []
+  },
+  "databricks-sdk": {
+    "databricks.sdk": []
+  },
+  "deprecated": {
+    "deprecated": [],
+    "deprecated.classic": [],
+    "deprecated.sphinx": []
+  },
+  "dill": {
+    "dill": []
+  },
+  "docker": {
+    "docker": []
+  },
+  "docker-pycreds": {
+    "dockerpycreds": [],
+    "dockerpycreds.constants": [],
+    "dockerpycreds.errors": [],
+    "dockerpycreds.store": [],
+    "dockerpycreds.utils": [],
+    "dockerpycreds.version": []
+  },
+  "entrypoints": {
+    "entrypoints": []
+  },
+  "eradicate": {
+    "eradicate": []
+  },
+  "exceptiongroup": {
+    "exceptiongroup": []
+  },
+  "execnet": {
+    "execnet": []
+  },
+  "filelock": {
+    "filelock": [],
+    "filelock._api": [],
+    "filelock._error": [],
+    "filelock._soft": [],
+    "filelock._unix": [],
+    "filelock._util": [],
+    "filelock._windows": [],
+    "filelock.version": []
+  },
+  "flask": {
+    "flask": []
+  },
+  "flatbuffers": {
+    "flatbuffers": [],
+    "flatbuffers._version": [],
+    "flatbuffers.builder": [],
+    "flatbuffers.compat": [],
+    "flatbuffers.encode": [],
+    "flatbuffers.flexbuffers": [],
+    "flatbuffers.number_types": [],
+    "flatbuffers.packer": [],
+    "flatbuffers.table": [],
+    "flatbuffers.util": []
+  },
+  "fonttools": {
+    "fontTools": []
+  },
+  "frozendict": {
+    "frozendict": []
+  },
+  "frozenlist": {
+    "frozenlist": []
+  },
+  "fsspec": {
+    "fsspec": [],
+    "fsspec._version": [],
+    "fsspec.archive": [],
+    "fsspec.asyn": [],
+    "fsspec.caching": [],
+    "fsspec.callbacks": [],
+    "fsspec.compression": [],
+    "fsspec.config": [],
+    "fsspec.conftest": [],
+    "fsspec.core": [],
+    "fsspec.dircache": [],
+    "fsspec.exceptions": [],
+    "fsspec.fuse": [],
+    "fsspec.generic": [],
+    "fsspec.gui": [],
+    "fsspec.implementations": [],
+    "fsspec.implementations.arrow": [],
+    "fsspec.implementations.cache_mapper": [],
+    "fsspec.implementations.cache_metadata": [],
+    "fsspec.implementations.cached": [],
+    "fsspec.implementations.dask": [],
+    "fsspec.implementations.data": [],
+    "fsspec.implementations.dbfs": [],
+    "fsspec.implementations.dirfs": [],
+    "fsspec.implementations.ftp": [],
+    "fsspec.implementations.git": [],
+    "fsspec.implementations.github": [],
+    "fsspec.implementations.http": [],
+    "fsspec.implementations.jupyter": [],
+    "fsspec.implementations.libarchive": [],
+    "fsspec.implementations.local": [],
+    "fsspec.implementations.memory": [],
+    "fsspec.implementations.reference": [],
+    "fsspec.implementations.sftp": [],
+    "fsspec.implementations.smb": [],
+    "fsspec.implementations.tar": [],
+    "fsspec.implementations.webhdfs": [],
+    "fsspec.implementations.zip": [],
+    "fsspec.json": [],
+    "fsspec.mapping": [],
+    "fsspec.parquet": [],
+    "fsspec.registry": [],
+    "fsspec.spec": [],
+    "fsspec.tests.abstract": [],
+    "fsspec.tests.abstract.common": [],
+    "fsspec.tests.abstract.copy": [],
+    "fsspec.tests.abstract.get": [],
+    "fsspec.tests.abstract.mv": [],
+    "fsspec.tests.abstract.put": [],
+    "fsspec.transaction": [],
+    "fsspec.utils": []
+  },
+  "gast": {
+    "gast": [],
+  },
+  "gitdb": {
+    "gitdb": []
+  },
+  "gitpython": {
+    "git": []
+  },
+  "google-auth": {
+    "google.auth": [],
+    "google.oauth2": []
+  },
+  "google-pasta": {
+    "pasta": []
+  },
+  "graphene": {
+    "graphene": []
+  },
+  "graphql-core": {
+    "graphql": []
+  },
+  "graphql-relay": {
+    "graphql_relay": []
+  },
+  "grpcio": {
+    "grpc": []
+  },
+  "gunicorn": {
+    "gunicorn": []
+  },
+  "h5py": {
+    "h5py": []
+  },
+  "html5lib": {
+    "html5lib": []
+  },
+  "huggingface-hub": {
+    "huggingface_hub": []
+  },
+  "idna": {
+    "idna": []
+  },
+  "importlib_metadata": {
+    "importlib_metadata": [],
+    "importlib_metadata._adapters": [],
+    "importlib_metadata._collections": [],
+    "importlib_metadata._compat": [],
+    "importlib_metadata._functools": [],
+    "importlib_metadata._itertools": [],
+    "importlib_metadata._meta": [],
+    "importlib_metadata._text": [],
+    "importlib_metadata.compat": [],
+    "importlib_metadata.compat.py39": [],
+    "importlib_metadata.diagnose": []
+  },
+  "iniconfig": {
+    "iniconfig": []
+  },
+  "isort": {
+    "isort": []
+  },
+  "itsdangerous": {
+    "itsdangerous": []
+  },
+  "jinja2": {
+    "jinja2": []
+  },
+  "jmespath": {
+    "jmespath": []
+  },
+  "joblib": {
+    "joblib": []
+  },
+  "keras": {
+    "keras": []
+  },
+  "kiwisolver": {
+    "kiwisolver": [],
+    "kiwisolver.exceptions": []
+  },
+  "libclang": {
+    "clang": [],
+    "clang.cindex": [],
+    "clang.enumerations": [],
+    "clang.native": []
+  },
+  "lxml": {
+    "lxml": []
+  },
+  "mako": {
+    "mako": []
+  },
+  "markdown": {
+    "markdown": []
+  },
+  "markdown-it-py": {
+    "markdown_it": []
+  },
+  "markupsafe": {
+    "markupsafe": [],
+    "markupsafe._native": []
+  },
+  "matplotlib": {
+    "matplotlib": [],
+    "mpl_toolkits": [],
+    "pylab": []
+  },
+  "mccabe": {
+    "mccabe": []
+  },
+  "mdurl": {
+    "mdurl": [],
+    "mdurl._decode": [],
+    "mdurl._encode": [],
+    "mdurl._format": [],
+    "mdurl._parse": [],
+    "mdurl._url": []
+  },
+  "ml-dtypes": {
+    "ml_dtypes": [],
+    "ml_dtypes._finfo": [],
+    "ml_dtypes._iinfo": []
+  },
+  "mlflow": {
+    "mlflow": [],
+    "mlflow.data.delta_dataset_source": [
+      {
+        "code": "table-migrate",
+        "message": "The default format changed in Databricks Runtime 8.0, from Parquet to Delta"
+      }
+    ],
+    "mlflow.data.spark_dataset": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "rdd-in-shared-clusters",
+        "message": "RDD APIs are not supported on UC Shared Clusters. Rewrite it using DataFrame API"
+      },
+      {
+        "code": "rdd-in-shared-clusters",
+        "message": "RDD APIs are not supported on UC Shared Clusters. Use mapInArrow() or Pandas UDFs instead"
+      }
+    ],
+    "mlflow.data.spark_delta_utils": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      }
+    ],
+    "mlflow.pyspark.ml": [
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sparkContext and _conf are not supported on UC Shared Clusters. Rewrite it using spark.conf"
+      }
+    ],
+    "mlflow.recipes.steps.predict": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      }
+    ],
+    "mlflow.recipes.steps.train": [
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "mlflow.spark": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "mlflow.spark.autologging": [
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "mlflow.store.artifact.databricks_artifact_repo": [
+      {
+        "code": "dbfs-usage",
+        "message": "Deprecated file system path: dbfs://profile@databricks/<path>"
+      }
+    ],
+    "mlflow.store.artifact.dbfs_artifact_repo": [
+      {
+        "code": "dbfs-usage",
+        "message": "Deprecated file system path: dbfs://profile@databricks/<path>"
+      }
+    ],
+    "mlflow.tracking.artifact_utils": [
+      {
+        "code": "dbfs-usage",
+        "message": "Deprecated file system path: dbfs:/databricks/mlflow/tmp-external-source/"
+      }
+    ],
+    "mlflow.utils._spark_utils": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sparkContext is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "mlflow.utils.uri": [
+      {
+        "code": "dbfs-usage",
+        "message": "Deprecated file system path: dbfs:/"
+      }
+    ]
+  },
+  "mpmath": {
+    "mpmath": []
+  },
+  "multidict": {
+    "multidict": []
+  },
+  "multitasking": {
+    "multitasking": []
+  },
+  "mypy": {
+    "mypy": [],
+    "mypyc": []
+  },
+  "mypy-extensions": {
+    "mypy_extensions": []
+  },
+  "namex": {
+    "namex": [],
+    "namex.convert": [],
+    "namex.export": [],
+    "namex.generate": []
+  },
+  "networkx": {
+    "networkx": []
+  },
+  "numpy": {
+    "numpy": []
+  },
+  "opentelemetry-api": {
+    "opentelemetry._logs": [],
+    "opentelemetry._logs._internal": [],
+    "opentelemetry._logs.severity": [],
+    "opentelemetry.attributes": [],
+    "opentelemetry.baggage": [],
+    "opentelemetry.baggage.propagation": [],
+    "opentelemetry.context": [],
+    "opentelemetry.context.context": [],
+    "opentelemetry.context.contextvars_context": [],
+    "opentelemetry.environment_variables": [],
+    "opentelemetry.metrics": [],
+    "opentelemetry.metrics._internal": [],
+    "opentelemetry.metrics._internal.instrument": [],
+    "opentelemetry.metrics._internal.observation": [],
+    "opentelemetry.propagate": [],
+    "opentelemetry.propagators.composite": [],
+    "opentelemetry.propagators.textmap": [],
+    "opentelemetry.trace": [],
+    "opentelemetry.trace.propagation": [],
+    "opentelemetry.trace.propagation.tracecontext": [],
+    "opentelemetry.trace.span": [],
+    "opentelemetry.trace.status": [],
+    "opentelemetry.util._decorator": [],
+    "opentelemetry.util._importlib_metadata": [],
+    "opentelemetry.util._once": [],
+    "opentelemetry.util._providers": [],
+    "opentelemetry.util.re": [],
+    "opentelemetry.util.types": [],
+    "opentelemetry.version": []
+  },
+  "opentelemetry-sdk": {
+    "opentelemetry.sdk._configuration": [],
+    "opentelemetry.sdk._logs": [],
+    "opentelemetry.sdk._logs._internal": [],
+    "opentelemetry.sdk._logs._internal.export": [],
+    "opentelemetry.sdk._logs._internal.export.in_memory_log_exporter": [],
+    "opentelemetry.sdk._logs.export": [],
+    "opentelemetry.sdk.environment_variables": [],
+    "opentelemetry.sdk.error_handler": [],
+    "opentelemetry.sdk.metrics": [],
+    "opentelemetry.sdk.metrics._internal": [],
+    "opentelemetry.sdk.metrics._internal._view_instrument_match": [],
+    "opentelemetry.sdk.metrics._internal.aggregation": [],
+    "opentelemetry.sdk.metrics._internal.exceptions": [],
+    "opentelemetry.sdk.metrics._internal.exponential_histogram.buckets": [],
+    "opentelemetry.sdk.metrics._internal.exponential_histogram.mapping": [],
+    "opentelemetry.sdk.metrics._internal.exponential_histogram.mapping.errors": [],
+    "opentelemetry.sdk.metrics._internal.exponential_histogram.mapping.exponent_mapping": [],
+    "opentelemetry.sdk.metrics._internal.exponential_histogram.mapping.ieee_754": [],
+    "opentelemetry.sdk.metrics._internal.exponential_histogram.mapping.logarithm_mapping": [],
+    "opentelemetry.sdk.metrics._internal.export": [],
+    "opentelemetry.sdk.metrics._internal.instrument": [],
+    "opentelemetry.sdk.metrics._internal.measurement": [],
+    "opentelemetry.sdk.metrics._internal.measurement_consumer": [],
+    "opentelemetry.sdk.metrics._internal.metric_reader_storage": [],
+    "opentelemetry.sdk.metrics._internal.point": [],
+    "opentelemetry.sdk.metrics._internal.sdk_configuration": [],
+    "opentelemetry.sdk.metrics._internal.view": [],
+    "opentelemetry.sdk.metrics.export": [],
+    "opentelemetry.sdk.metrics.view": [],
+    "opentelemetry.sdk.resources": [],
+    "opentelemetry.sdk.trace": [],
+    "opentelemetry.sdk.trace.export": [],
+    "opentelemetry.sdk.trace.export.in_memory_span_exporter": [],
+    "opentelemetry.sdk.trace.id_generator": [],
+    "opentelemetry.sdk.trace.sampling": [],
+    "opentelemetry.sdk.util": [],
+    "opentelemetry.sdk.util.instrumentation": [],
+    "opentelemetry.sdk.version": []
+  },
+  "opentelemetry-semantic-conventions": {
+    "opentelemetry.semconv": [],
+    "opentelemetry.semconv._incubating.attributes.aws_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.browser_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.client_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.cloud_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.cloudevents_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.code_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.container_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.db_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.deployment_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.destination_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.device_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.disk_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.dns_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.enduser_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.error_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.event_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.exception_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.faas_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.feature_flag_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.file_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.gcp_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.graphql_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.heroku_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.host_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.http_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.k8s_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.log_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.message_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.messaging_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.network_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.oci_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.opentracing_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.otel_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.other_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.peer_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.pool_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.process_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.rpc_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.server_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.service_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.session_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.source_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.system_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.telemetry_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.thread_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.tls_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.url_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.user_agent_attributes": [],
+    "opentelemetry.semconv._incubating.attributes.webengine_attributes": [],
+    "opentelemetry.semconv._incubating.metrics.container_metrics": [],
+    "opentelemetry.semconv._incubating.metrics.db_metrics": [],
+    "opentelemetry.semconv._incubating.metrics.dns_metrics": [],
+    "opentelemetry.semconv._incubating.metrics.faas_metrics": [],
+    "opentelemetry.semconv._incubating.metrics.http_metrics": [],
+    "opentelemetry.semconv._incubating.metrics.messaging_metrics": [],
+    "opentelemetry.semconv._incubating.metrics.process_metrics": [],
+    "opentelemetry.semconv._incubating.metrics.rpc_metrics": [],
+    "opentelemetry.semconv._incubating.metrics.system_metrics": [],
+    "opentelemetry.semconv.attributes.client_attributes": [],
+    "opentelemetry.semconv.attributes.error_attributes": [],
+    "opentelemetry.semconv.attributes.exception_attributes": [],
+    "opentelemetry.semconv.attributes.http_attributes": [],
+    "opentelemetry.semconv.attributes.network_attributes": [],
+    "opentelemetry.semconv.attributes.otel_attributes": [],
+    "opentelemetry.semconv.attributes.server_attributes": [],
+    "opentelemetry.semconv.attributes.service_attributes": [],
+    "opentelemetry.semconv.attributes.telemetry_attributes": [],
+    "opentelemetry.semconv.attributes.url_attributes": [],
+    "opentelemetry.semconv.attributes.user_agent_attributes": [],
+    "opentelemetry.semconv.metrics": [],
+    "opentelemetry.semconv.metrics.http_metrics": [],
+    "opentelemetry.semconv.resource": [],
+    "opentelemetry.semconv.schemas": [],
+    "opentelemetry.semconv.trace": [],
+    "opentelemetry.semconv.version": []
+  },
+  "opt-einsum": {
+    "opt_einsum": []
+  },
+  "optree": {
+    "optree": []
+  },
+  "packaging": {
+    "packaging": []
+  },
+  "pandas": {
+    "pandas": []
+  },
+  "pathspec": {
+    "pathspec": []
+  },
+  "peewee": {
+    "peewee": [],
+    "playhouse": [],
+    "pwiz": []
+  },
+  "pillow": {
+    "PIL": []
+  },
+  "pip": {
+    "pip": []
+  },
+  "platformdirs": {
+    "platformdirs": []
+  },
+  "pluggy": {
+    "pluggy": []
+  },
+  "protobuf": {
+    "google.protobuf": [],
+    "google.protobuf.any_pb2": [],
+    "google.protobuf.api_pb2": [],
+    "google.protobuf.compiler": [],
+    "google.protobuf.compiler.plugin_pb2": [],
+    "google.protobuf.descriptor": [],
+    "google.protobuf.descriptor_database": [],
+    "google.protobuf.descriptor_pb2": [],
+    "google.protobuf.descriptor_pool": [],
+    "google.protobuf.duration_pb2": [],
+    "google.protobuf.empty_pb2": [],
+    "google.protobuf.field_mask_pb2": [],
+    "google.protobuf.internal": [],
+    "google.protobuf.internal._parameterized": [],
+    "google.protobuf.internal.api_implementation": [],
+    "google.protobuf.internal.builder": [],
+    "google.protobuf.internal.containers": [],
+    "google.protobuf.internal.decoder": [],
+    "google.protobuf.internal.encoder": [],
+    "google.protobuf.internal.enum_type_wrapper": [],
+    "google.protobuf.internal.extension_dict": [],
+    "google.protobuf.internal.field_mask": [],
+    "google.protobuf.internal.message_listener": [],
+    "google.protobuf.internal.python_edition_defaults": [],
+    "google.protobuf.internal.python_message": [],
+    "google.protobuf.internal.testing_refleaks": [],
+    "google.protobuf.internal.type_checkers": [],
+    "google.protobuf.internal.well_known_types": [],
+    "google.protobuf.internal.wire_format": [],
+    "google.protobuf.json_format": [],
+    "google.protobuf.message": [],
+    "google.protobuf.message_factory": [],
+    "google.protobuf.proto_builder": [],
+    "google.protobuf.pyext": [],
+    "google.protobuf.pyext.cpp_message": [],
+    "google.protobuf.reflection": [],
+    "google.protobuf.runtime_version": [],
+    "google.protobuf.service": [],
+    "google.protobuf.service_reflection": [],
+    "google.protobuf.source_context_pb2": [],
+    "google.protobuf.struct_pb2": [],
+    "google.protobuf.symbol_database": [],
+    "google.protobuf.testdata": [],
+    "google.protobuf.text_encoding": [],
+    "google.protobuf.text_format": [],
+    "google.protobuf.timestamp_pb2": [],
+    "google.protobuf.type_pb2": [],
+    "google.protobuf.unknown_fields": [],
+    "google.protobuf.util": [],
+    "google.protobuf.wrappers_pb2": []
+  },
+  "psutil": {
+    "psutil": [],
+    "psutil._common": [],
+    "psutil._compat": [],
+    "psutil._psaix": [],
+    "psutil._psbsd": [],
+    "psutil._pslinux": [],
+    "psutil._psosx": [],
+    "psutil._psposix": [],
+    "psutil._pssunos": [],
+    "psutil._pswindows": [],
+    "psutil.tests": [],
+    "psutil.tests.runner": [],
+    "psutil.tests.test_aix": [],
+    "psutil.tests.test_bsd": [],
+    "psutil.tests.test_connections": [],
+    "psutil.tests.test_contracts": [],
+    "psutil.tests.test_linux": [],
+    "psutil.tests.test_memleaks": [],
+    "psutil.tests.test_misc": [],
+    "psutil.tests.test_osx": [],
+    "psutil.tests.test_posix": [],
+    "psutil.tests.test_process": [],
+    "psutil.tests.test_process_all": [],
+    "psutil.tests.test_sunos": [],
+    "psutil.tests.test_system": [],
+    "psutil.tests.test_testutils": [],
+    "psutil.tests.test_unicode": [],
+    "psutil.tests.test_windows": []
+  },
+  "py4j": {
+    "py4j": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      }
+    ]
+  },
+  "pyarrow": {
+    "pyarrow": []
+  },
+  "pyasn1": {
+    "pyasn1": []
+  },
+  "pyasn1_modules": {
+    "pyasn1_modules": []
+  },
+  "pygments": {
+    "pygments": []
+  },
+  "pylint": {
+    "pylint": []
+  },
+  "pylint-pytest": {
+    "pylint_pytest": []
+  },
+  "pyparsing": {
+    "pyparsing": [],
+    "pyparsing.actions": [],
+    "pyparsing.common": [],
+    "pyparsing.core": [],
+    "pyparsing.diagram": [],
+    "pyparsing.exceptions": [],
+    "pyparsing.helpers": [],
+    "pyparsing.results": [],
+    "pyparsing.testing": [],
+    "pyparsing.unicode": [],
+    "pyparsing.util": []
+  },
+  "pyspark": {
+    "pyspark": [],
+    "pyspark._globals": [],
+    "pyspark.accumulators": [],
+    "pyspark.broadcast": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "pyspark.cloudpickle": [],
+    "pyspark.cloudpickle.cloudpickle": [],
+    "pyspark.cloudpickle.compat": [],
+    "pyspark.conf": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      }
+    ],
+    "pyspark.context": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "rdd-in-shared-clusters",
+        "message": "RDD APIs are not supported on UC Shared Clusters. Rewrite it using DataFrame API"
+      },
+      {
+        "code": "rdd-in-shared-clusters",
+        "message": "RDD APIs are not supported on UC Shared Clusters. Use mapInArrow() or Pandas UDFs instead"
+      },
+      {
+        "code": "spark-logging-in-shared-clusters",
+        "message": "Cannot set Spark log level directly from code on UC Shared Clusters. Remove the call and set the cluster spark conf 'spark.log.level' instead"
+      },
+      {
+        "code": "table-migrate",
+        "message": "Can't migrate 'register' because its table name argument is not a constant"
+      }
+    ],
+    "pyspark.daemon": [],
+    "pyspark.errors": [],
+    "pyspark.errors.error_classes": [],
+    "pyspark.errors.exceptions": [],
+    "pyspark.errors.exceptions.base": [],
+    "pyspark.errors.exceptions.captured": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      }
+    ],
+    "pyspark.errors.exceptions.connect": [],
+    "pyspark.errors.utils": [],
+    "pyspark.files": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      }
+    ],
+    "pyspark.find_spark_home": [],
+    "pyspark.install": [],
+    "pyspark.instrumentation_utils": [],
+    "pyspark.java_gateway": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      }
+    ],
+    "pyspark.join": [],
+    "pyspark.ml": [],
+    "pyspark.ml.base": [],
+    "pyspark.ml.classification": [
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "pyspark.ml.clustering": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      }
+    ],
+    "pyspark.ml.common": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "pyspark.ml.connect": [],
+    "pyspark.ml.connect.base": [],
+    "pyspark.ml.connect.classification": [],
+    "pyspark.ml.connect.evaluation": [],
+    "pyspark.ml.connect.feature": [],
+    "pyspark.ml.connect.functions": [],
+    "pyspark.ml.connect.io_utils": [
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sparkContext is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "pyspark.ml.connect.pipeline": [],
+    "pyspark.ml.connect.summarizer": [],
+    "pyspark.ml.connect.tuning": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      }
+    ],
+    "pyspark.ml.connect.util": [],
+    "pyspark.ml.deepspeed": [],
+    "pyspark.ml.deepspeed.deepspeed_distributor": [],
+    "pyspark.ml.dl_util": [],
+    "pyspark.ml.evaluation": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      }
+    ],
+    "pyspark.ml.feature": [
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      },
+      {
+        "code": "rdd-in-shared-clusters",
+        "message": "RDD APIs are not supported on UC Shared Clusters. Rewrite it using DataFrame API"
+      }
+    ],
+    "pyspark.ml.fpm": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      }
+    ],
+    "pyspark.ml.functions": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "pyspark.ml.image": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      }
+    ],
+    "pyspark.ml.linalg": [],
+    "pyspark.ml.model_cache": [],
+    "pyspark.ml.param": [],
+    "pyspark.ml.param._shared_params_code_gen": [],
+    "pyspark.ml.param.shared": [],
+    "pyspark.ml.pipeline": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      }
+    ],
+    "pyspark.ml.recommendation": [],
+    "pyspark.ml.regression": [],
+    "pyspark.ml.stat": [],
+    "pyspark.ml.torch": [],
+    "pyspark.ml.torch.data": [],
+    "pyspark.ml.torch.distributor": [
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sparkContext is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "pyspark.ml.torch.log_communication": [],
+    "pyspark.ml.torch.torch_run_process_wrapper": [],
+    "pyspark.ml.tree": [],
+    "pyspark.ml.tuning": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      },
+      {
+        "code": "rdd-in-shared-clusters",
+        "message": "RDD APIs are not supported on UC Shared Clusters. Rewrite it using DataFrame API"
+      }
+    ],
+    "pyspark.ml.util": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      },
+      {
+        "code": "rdd-in-shared-clusters",
+        "message": "RDD APIs are not supported on UC Shared Clusters. Rewrite it using DataFrame API"
+      }
+    ],
+    "pyspark.ml.wrapper": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "pyspark.mllib": [],
+    "pyspark.mllib.classification": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "pyspark.mllib.clustering": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "pyspark.mllib.common": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "pyspark.mllib.evaluation": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "pyspark.mllib.feature": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "pyspark.mllib.fpm": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "pyspark.mllib.linalg": [],
+    "pyspark.mllib.linalg.distributed": [
+      {
+        "code": "rdd-in-shared-clusters",
+        "message": "RDD APIs are not supported on UC Shared Clusters. Rewrite it using DataFrame API"
+      }
+    ],
+    "pyspark.mllib.random": [
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "pyspark.mllib.recommendation": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      },
+      {
+        "code": "rdd-in-shared-clusters",
+        "message": "RDD APIs are not supported on UC Shared Clusters. Rewrite it using DataFrame API"
+      }
+    ],
+    "pyspark.mllib.regression": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "pyspark.mllib.stat.KernelDensity": [],
+    "pyspark.mllib.stat": [],
+    "pyspark.mllib.stat._statistics": [],
+    "pyspark.mllib.stat.distribution": [],
+    "pyspark.mllib.stat.test": [],
+    "pyspark.mllib.tree": [],
+    "pyspark.mllib.util": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      },
+      {
+        "code": "rdd-in-shared-clusters",
+        "message": "RDD APIs are not supported on UC Shared Clusters. Rewrite it using DataFrame API"
+      }
+    ],
+    "pyspark.pandas": [],
+    "pyspark.pandas._typing": [],
+    "pyspark.pandas.accessors": [],
+    "pyspark.pandas.base": [
+      {
+        "code": "rdd-in-shared-clusters",
+        "message": "RDD APIs are not supported on UC Shared Clusters. Rewrite it using DataFrame API"
+      }
+    ],
+    "pyspark.pandas.categorical": [],
+    "pyspark.pandas.config": [],
+    "pyspark.pandas.correlation": [],
+    "pyspark.pandas.data_type_ops": [],
+    "pyspark.pandas.data_type_ops.base": [],
+    "pyspark.pandas.data_type_ops.binary_ops": [],
+    "pyspark.pandas.data_type_ops.boolean_ops": [],
+    "pyspark.pandas.data_type_ops.categorical_ops": [],
+    "pyspark.pandas.data_type_ops.complex_ops": [],
+    "pyspark.pandas.data_type_ops.date_ops": [],
+    "pyspark.pandas.data_type_ops.datetime_ops": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      }
+    ],
+    "pyspark.pandas.data_type_ops.null_ops": [],
+    "pyspark.pandas.data_type_ops.num_ops": [],
+    "pyspark.pandas.data_type_ops.string_ops": [],
+    "pyspark.pandas.data_type_ops.timedelta_ops": [],
+    "pyspark.pandas.data_type_ops.udt_ops": [],
+    "pyspark.pandas.datetimes": [],
+    "pyspark.pandas.exceptions": [],
+    "pyspark.pandas.extensions": [],
+    "pyspark.pandas.generic": [],
+    "pyspark.pandas.groupby": [],
+    "pyspark.pandas.indexes": [],
+    "pyspark.pandas.indexes.base": [],
+    "pyspark.pandas.indexes.category": [],
+    "pyspark.pandas.indexes.datetimes": [],
+    "pyspark.pandas.indexes.multi": [],
+    "pyspark.pandas.indexes.numeric": [],
+    "pyspark.pandas.indexes.timedelta": [],
+    "pyspark.pandas.indexing": [],
+    "pyspark.pandas.internal": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      }
+    ],
+    "pyspark.pandas.missing": [],
+    "pyspark.pandas.missing.common": [],
+    "pyspark.pandas.missing.frame": [],
+    "pyspark.pandas.missing.general_functions": [],
+    "pyspark.pandas.missing.groupby": [],
+    "pyspark.pandas.missing.indexes": [],
+    "pyspark.pandas.missing.resample": [],
+    "pyspark.pandas.missing.scalars": [],
+    "pyspark.pandas.missing.series": [],
+    "pyspark.pandas.missing.window": [],
+    "pyspark.pandas.mlflow": [],
+    "pyspark.pandas.numpy_compat": [],
+    "pyspark.pandas.plot": [],
+    "pyspark.pandas.plot.core": [
+      {
+        "code": "rdd-in-shared-clusters",
+        "message": "RDD APIs are not supported on UC Shared Clusters. Rewrite it using DataFrame API"
+      }
+    ],
+    "pyspark.pandas.plot.matplotlib": [],
+    "pyspark.pandas.plot.plotly": [],
+    "pyspark.pandas.resample": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      }
+    ],
+    "pyspark.pandas.series": [],
+    "pyspark.pandas.spark": [],
+    "pyspark.pandas.spark.functions": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "pyspark.pandas.spark.utils": [],
+    "pyspark.pandas.strings": [],
+    "pyspark.pandas.supported_api_gen": [],
+    "pyspark.pandas.typedef": [],
+    "pyspark.pandas.typedef.typehints": [],
+    "pyspark.pandas.usage_logging": [],
+    "pyspark.pandas.usage_logging.usage_logger": [],
+    "pyspark.pandas.utils": [],
+    "pyspark.pandas.window": [],
+    "pyspark.python.pyspark.shell": [
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "pyspark.rdd": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      },
+      {
+        "code": "rdd-in-shared-clusters",
+        "message": "RDD APIs are not supported on UC Shared Clusters. Rewrite it using DataFrame API"
+      },
+      {
+        "code": "rdd-in-shared-clusters",
+        "message": "RDD APIs are not supported on UC Shared Clusters. Use mapInArrow() or Pandas UDFs instead"
+      }
+    ],
+    "pyspark.rddsampler": [],
+    "pyspark.resource": [],
+    "pyspark.resource.information": [],
+    "pyspark.resource.profile": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      }
+    ],
+    "pyspark.resource.requests": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      }
+    ],
+    "pyspark.resultiterable": [],
+    "pyspark.serializers": [],
+    "pyspark.shell": [
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "pyspark.shuffle": [],
+    "pyspark.sql": [],
+    "pyspark.sql.avro": [],
+    "pyspark.sql.avro.functions": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "pyspark.sql.catalog": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      }
+    ],
+    "pyspark.sql.column": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "pyspark.sql.conf": [],
+    "pyspark.sql.connect": [],
+    "pyspark.sql.connect._typing": [],
+    "pyspark.sql.connect.avro": [],
+    "pyspark.sql.connect.avro.functions": [],
+    "pyspark.sql.connect.catalog": [],
+    "pyspark.sql.connect.client": [],
+    "pyspark.sql.connect.client.artifact": [],
+    "pyspark.sql.connect.client.core": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      }
+    ],
+    "pyspark.sql.connect.client.reattach": [],
+    "pyspark.sql.connect.column": [],
+    "pyspark.sql.connect.conf": [],
+    "pyspark.sql.connect.conversion": [],
+    "pyspark.sql.connect.dataframe": [],
+    "pyspark.sql.connect.expressions": [],
+    "pyspark.sql.connect.functions": [],
+    "pyspark.sql.connect.group": [],
+    "pyspark.sql.connect.plan": [],
+    "pyspark.sql.connect.proto": [],
+    "pyspark.sql.connect.proto.base_pb2": [],
+    "pyspark.sql.connect.proto.base_pb2_grpc": [],
+    "pyspark.sql.connect.proto.catalog_pb2": [],
+    "pyspark.sql.connect.proto.commands_pb2": [],
+    "pyspark.sql.connect.proto.common_pb2": [],
+    "pyspark.sql.connect.proto.example_plugins_pb2": [],
+    "pyspark.sql.connect.proto.expressions_pb2": [],
+    "pyspark.sql.connect.proto.relations_pb2": [],
+    "pyspark.sql.connect.proto.types_pb2": [],
+    "pyspark.sql.connect.readwriter": [],
+    "pyspark.sql.connect.session": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      }
+    ],
+    "pyspark.sql.connect.streaming": [],
+    "pyspark.sql.connect.streaming.query": [],
+    "pyspark.sql.connect.streaming.readwriter": [],
+    "pyspark.sql.connect.streaming.worker": [],
+    "pyspark.sql.connect.streaming.worker.foreach_batch_worker": [],
+    "pyspark.sql.connect.streaming.worker.listener_worker": [],
+    "pyspark.sql.connect.types": [],
+    "pyspark.sql.connect.udf": [],
+    "pyspark.sql.connect.udtf": [],
+    "pyspark.sql.connect.utils": [],
+    "pyspark.sql.connect.window": [],
+    "pyspark.sql.context": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sparkContext is not supported on UC Shared Clusters. Rewrite it using spark"
+      },
+      {
+        "code": "rdd-in-shared-clusters",
+        "message": "RDD APIs are not supported on UC Shared Clusters. Rewrite it using DataFrame API"
+      }
+    ],
+    "pyspark.sql.dataframe": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      },
+      {
+        "code": "rdd-in-shared-clusters",
+        "message": "RDD APIs are not supported on UC Shared Clusters. Rewrite it using DataFrame API"
+      }
+    ],
+    "pyspark.sql.functions": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "pyspark.sql.group": [],
+    "pyspark.sql.observation": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "pyspark.sql.pandas": [],
+    "pyspark.sql.pandas.conversion": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      }
+    ],
+    "pyspark.sql.pandas.functions": [],
+    "pyspark.sql.pandas.group_ops": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      }
+    ],
+    "pyspark.sql.pandas.map_ops": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      }
+    ],
+    "pyspark.sql.pandas.serializers": [],
+    "pyspark.sql.pandas.typehints": [],
+    "pyspark.sql.pandas.types": [],
+    "pyspark.sql.pandas.utils": [],
+    "pyspark.sql.protobuf": [],
+    "pyspark.sql.protobuf.functions": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "pyspark.sql.readwriter": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "rdd-in-shared-clusters",
+        "message": "RDD APIs are not supported on UC Shared Clusters. Rewrite it using DataFrame API"
+      },
+      {
+        "code": "rdd-in-shared-clusters",
+        "message": "RDD APIs are not supported on UC Shared Clusters. Use mapInArrow() or Pandas UDFs instead"
+      }
+    ],
+    "pyspark.sql.session": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sparkContext is not supported on UC Shared Clusters. Rewrite it using spark"
+      },
+      {
+        "code": "rdd-in-shared-clusters",
+        "message": "RDD APIs are not supported on UC Shared Clusters. Rewrite it using DataFrame API"
+      }
+    ],
+    "pyspark.sql.sql_formatter": [],
+    "pyspark.sql.streaming": [],
+    "pyspark.sql.streaming.listener": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      }
+    ],
+    "pyspark.sql.streaming.query": [],
+    "pyspark.sql.streaming.readwriter": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      }
+    ],
+    "pyspark.sql.streaming.state": [],
+    "pyspark.sql.types": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "pyspark.sql.udf": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc and _conf are not supported on UC Shared Clusters. Rewrite it using spark.conf"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "pyspark.sql.udtf": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "pyspark.sql.utils": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "pyspark.sql.window": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "pyspark.statcounter": [],
+    "pyspark.status": [],
+    "pyspark.storagelevel": [],
+    "pyspark.streaming": [],
+    "pyspark.streaming.context": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      },
+      {
+        "code": "rdd-in-shared-clusters",
+        "message": "RDD APIs are not supported on UC Shared Clusters. Rewrite it using DataFrame API"
+      }
+    ],
+    "pyspark.streaming.dstream": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "rdd-in-shared-clusters",
+        "message": "RDD APIs are not supported on UC Shared Clusters. Rewrite it using DataFrame API"
+      },
+      {
+        "code": "rdd-in-shared-clusters",
+        "message": "RDD APIs are not supported on UC Shared Clusters. Use mapInArrow() or Pandas UDFs instead"
+      }
+    ],
+    "pyspark.streaming.kinesis": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sparkContext is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ],
+    "pyspark.streaming.listener": [],
+    "pyspark.streaming.util": [],
+    "pyspark.taskcontext": [],
+    "pyspark.testing": [],
+    "pyspark.testing.connectutils": [],
+    "pyspark.testing.mllibutils": [],
+    "pyspark.testing.mlutils": [],
+    "pyspark.testing.pandasutils": [],
+    "pyspark.testing.streamingutils": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "rdd-in-shared-clusters",
+        "message": "RDD APIs are not supported on UC Shared Clusters. Rewrite it using DataFrame API"
+      }
+    ],
+    "pyspark.testing.utils": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      },
+      {
+        "code": "spark-logging-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM logger on UC Shared Clusters. Use logging.getLogger() instead"
+      }
+    ],
+    "pyspark.traceback_utils": [],
+    "pyspark.util": [],
+    "pyspark.version": [],
+    "pyspark.worker": [],
+    "pyspark.worker_util": []
+  },
+  "pytest": {
+    "_pytest": [],
+    "py": [],
+    "pytest": []
+  },
+  "pytest-cov": {
+    "pytest_cov": []
+  },
+  "pytest-mock": {
+    "pytest_mock": []
+  },
+  "pytest-timeout": {
+    "pytest_timeout": []
+  },
+  "pytest-xdist": {
+    "xdist": []
+  },
+  "python-dateutil": {
+    "dateutil": []
+  },
+  "pytz": {
+    "pytz": []
+  },
+  "pyyaml": {
+    "_yaml": [],
+    "yaml": []
+  },
+  "querystring-parser": {
+    "querystring_parser": [],
+    "querystring_parser.builder": [],
+    "querystring_parser.parser": [],
+    "querystring_parser.tests": []
+  },
+  "regex": {
+    "regex": [],
+    "regex._regex_core": [],
+    "regex.regex": [],
+    "regex.test_regex": []
+  },
+  "requests": {
+    "requests": []
+  },
+  "rich": {
+    "rich": []
+  },
+  "rsa": {
+    "rsa": []
+  },
+  "ruff": {
+    "ruff": []
+  },
+  "s3fs": {
+    "s3fs": [
+      {
+        "code": "direct-filesystem-access",
+        "message": "S3fs library assumes AWS IAM Instance Profile to work with S3, which is not compatible with Databricks Unity Catalog, that routes access through Storage Credentials."
+      }
+    ]
+  },
+  "s3transfer": {
+    "s3transfer": [
+      {
+        "code": "direct-filesystem-access",
+        "message": "S3Transfer library assumes AWS IAM Instance Profile to work with S3, which is not compatible with Databricks Unity Catalog, that routes access through Storage Credentials."
+      }
+    ]
+  },
+  "safetensors": {
+    "safetensors": [],
+    "safetensors.flax": [],
+    "safetensors.mlx": [],
+    "safetensors.numpy": [],
+    "safetensors.paddle": [],
+    "safetensors.tensorflow": [],
+    "safetensors.torch": []
+  },
+  "scikit-learn": {
+    "sklearn": []
+  },
+  "scipy": {
+    "scipy": []
+  },
+  "sentry-sdk": {
+    "sentry_sdk": [],
+    "sentry_sdk.integrations.spark.spark_driver": [
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc is not supported on UC Shared Clusters. Rewrite it using spark"
+      }
+    ]
+  },
+  "setproctitle": {
+    "setproctitle": []
+  },
+  "setuptools": {
+    "_distutils_hack": [],
+    "pkg_resources": [],
+    "setuptools": []
+  },
+  "six": {
+    "six": []
+  },
+  "smmap": {
+    "smmap": []
+  },
+  "sniffio": {
+    "sniffio": [],
+    "sniffio._impl": [],
+    "sniffio._tests": [],
+    "sniffio._tests.test_sniffio": [],
+    "sniffio._version": []
+  },
+  "soupsieve": {
+    "soupsieve": [],
+    "soupsieve.__meta__": [],
+    "soupsieve.css_match": [],
+    "soupsieve.css_parser": [],
+    "soupsieve.css_types": [],
+    "soupsieve.pretty": [],
+    "soupsieve.util": []
+  },
+  "sqlalchemy": {
+    "sqlalchemy": []
+  },
+  "sqlglot": {
+    "sqlglot": []
+  },
+  "sqlparse": {
+    "sqlparse": []
+  },
+  "sympy": {
+    "isympy": [],
+    "sympy": []
+  },
+  "tensorboard": {
+    "tensorboard": []
+  },
+  "tensorboard-data-server": {
+    "tensorboard_data_server": []
+  },
+  "tensorflow": {
+    "tensorflow": []
+  },
+  "tensorflow-io-gcs-filesystem": {
+    "tensorflow_io_gcs_filesystem": []
+  },
+  "termcolor": {
+    "termcolor": []
+  },
+  "threadpoolctl": {
+    "threadpoolctl": []
+  },
+  "tokenizers": {
+    "tokenizers": []
+  },
+  "tomli": {
+    "tomli": []
+  },
+  "tomlkit": {
+    "tomlkit": []
+  },
+  "torch": {
+    "functorch": [],
+    "torch": []
+  },
+  "tqdm": {
+    "tqdm": []
+  },
+  "transformers": {
+    "transformers": []
+  },
+  "types-pyyaml": {},
+  "types-requests": {},
+  "typing_extensions": {
+    "typing_extensions": []
+  },
+  "tzdata": {
+    "tzdata": []
+  },
+  "umap": {
+    "umap": [],
+    "umap.get": []
+  },
+  "unicorn": {
+    "unicorn": []
+  },
+  "unidecode": {
+    "unidecode": []
+  },
+  "urllib3": {
+    "urllib3": []
+  },
+  "wandb": {
+    "wandb": []
+  },
+  "waterbear": {
+    "waterbear": [],
+    "waterbear.test_waterbear": [],
+    "waterbear.waterbear": []
+  },
+  "webencodings": {
+    "webencodings": [],
+    "webencodings.labels": [],
+    "webencodings.mklabels": [],
+    "webencodings.tests": [],
+    "webencodings.x_user_defined": []
+  },
+  "werkzeug": {
+    "werkzeug": []
+  },
+  "wheel": {
+    "wheel": []
+  },
+  "wordcloud": {
+    "wordcloud": [],
+    "wordcloud._version": [],
+    "wordcloud.color_from_image": [],
+    "wordcloud.tokenization": [],
+    "wordcloud.wordcloud": [],
+    "wordcloud.wordcloud_cli": []
+  },
+  "wrapt": {
+    "wrapt": []
+  },
+  "xgboost": {
+    "xgboost": [],
+    "xgboost._typing": [],
+    "xgboost.callback": [],
+    "xgboost.collective": [],
+    "xgboost.compat": [],
+    "xgboost.config": [],
+    "xgboost.core": [],
+    "xgboost.dask": [],
+    "xgboost.data": [],
+    "xgboost.federated": [],
+    "xgboost.libpath": [],
+    "xgboost.plotting": [],
+    "xgboost.rabit": [],
+    "xgboost.sklearn": [],
+    "xgboost.spark": [],
+    "xgboost.spark.core": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sc and getConf are not supported on UC Shared Clusters. Rewrite it using spark.conf"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sparkContext and getConf are not supported on UC Shared Clusters. Rewrite it using spark.conf"
+      },
+      {
+        "code": "legacy-context-in-shared-clusters",
+        "message": "sparkContext is not supported on UC Shared Clusters. Rewrite it using spark"
+      },
+      {
+        "code": "rdd-in-shared-clusters",
+        "message": "RDD APIs are not supported on UC Shared Clusters. Rewrite it using DataFrame API"
+      },
+      {
+        "code": "rdd-in-shared-clusters",
+        "message": "RDD APIs are not supported on UC Shared Clusters. Use mapInArrow() or Pandas UDFs instead"
+      }
+    ],
+    "xgboost.spark.data": [],
+    "xgboost.spark.estimator": [],
+    "xgboost.spark.params": [],
+    "xgboost.spark.utils": [],
+    "xgboost.testing": [],
+    "xgboost.testing.dask": [],
+    "xgboost.testing.data": [],
+    "xgboost.testing.data_iter": [],
+    "xgboost.testing.metrics": [],
+    "xgboost.testing.params": [],
+    "xgboost.testing.ranking": [],
+    "xgboost.testing.shared": [],
+    "xgboost.testing.updater": [],
+    "xgboost.tracker": [],
+    "xgboost.training": []
+  },
+  "yapf": {
+    "yapf": [],
+    "yapf.pyparser": [],
+    "yapf.pyparser.pyparser": [],
+    "yapf.pyparser.pyparser_utils": [],
+    "yapf.pyparser.split_penalty_visitor": [],
+    "yapf.pytree": [],
+    "yapf.pytree.blank_line_calculator": [],
+    "yapf.pytree.comment_splicer": [],
+    "yapf.pytree.continuation_splicer": [],
+    "yapf.pytree.pytree_unwrapper": [],
+    "yapf.pytree.pytree_utils": [],
+    "yapf.pytree.pytree_visitor": [],
+    "yapf.pytree.split_penalty": [],
+    "yapf.pytree.subtype_assigner": [],
+    "yapf.yapflib": [],
+    "yapf.yapflib.errors": [],
+    "yapf.yapflib.file_resources": [],
+    "yapf.yapflib.format_decision_state": [],
+    "yapf.yapflib.format_token": [],
+    "yapf.yapflib.identify_container": [],
+    "yapf.yapflib.line_joiner": [],
+    "yapf.yapflib.logical_line": [],
+    "yapf.yapflib.object_state": [],
+    "yapf.yapflib.reformatter": [],
+    "yapf.yapflib.split_penalty": [],
+    "yapf.yapflib.style": [],
+    "yapf.yapflib.subtypes": [],
+    "yapf.yapflib.yapf_api": [],
+    "yapf_third_party": [],
+    "yapf_third_party._ylib2to3": [],
+    "yapf_third_party._ylib2to3.fixer_base": [],
+    "yapf_third_party._ylib2to3.fixer_util": [],
+    "yapf_third_party._ylib2to3.patcomp": [],
+    "yapf_third_party._ylib2to3.pgen2": [],
+    "yapf_third_party._ylib2to3.pgen2.conv": [],
+    "yapf_third_party._ylib2to3.pgen2.driver": [],
+    "yapf_third_party._ylib2to3.pgen2.grammar": [],
+    "yapf_third_party._ylib2to3.pgen2.literals": [],
+    "yapf_third_party._ylib2to3.pgen2.parse": [],
+    "yapf_third_party._ylib2to3.pgen2.pgen": [],
+    "yapf_third_party._ylib2to3.pgen2.token": [],
+    "yapf_third_party._ylib2to3.pgen2.tokenize": [],
+    "yapf_third_party._ylib2to3.pygram": [],
+    "yapf_third_party._ylib2to3.pytree": [],
+    "yapf_third_party.yapf_diff": [],
+    "yapf_third_party.yapf_diff.yapf_diff": [],
+    "yapftests": [],
+    "yapftests.blank_line_calculator_test": [],
+    "yapftests.comment_splicer_test": [],
+    "yapftests.file_resources_test": [],
+    "yapftests.format_decision_state_test": [],
+    "yapftests.format_token_test": [],
+    "yapftests.line_joiner_test": [],
+    "yapftests.logical_line_test": [],
+    "yapftests.main_test": [],
+    "yapftests.pytree_unwrapper_test": [],
+    "yapftests.pytree_utils_test": [],
+    "yapftests.pytree_visitor_test": [],
+    "yapftests.reformatter_basic_test": [],
+    "yapftests.reformatter_buganizer_test": [],
+    "yapftests.reformatter_facebook_test": [],
+    "yapftests.reformatter_pep8_test": [],
+    "yapftests.reformatter_python3_test": [],
+    "yapftests.reformatter_style_config_test": [],
+    "yapftests.split_penalty_test": [],
+    "yapftests.style_test": [],
+    "yapftests.subtype_assigner_test": [],
+    "yapftests.utils": [],
+    "yapftests.yapf_test": [],
+    "yapftests.yapf_test_helper": []
+  },
+  "yarl": {
+    "yarl": []
+  },
+  "yfinance": {
+    "yfinance": [],
+    "yfinance.base": [],
+    "yfinance.cache": [],
+    "yfinance.const": [],
+    "yfinance.data": [],
+    "yfinance.exceptions": [],
+    "yfinance.multi": [],
+    "yfinance.scrapers": [],
+    "yfinance.scrapers.analysis": [],
+    "yfinance.scrapers.fundamentals": [],
+    "yfinance.scrapers.history": [],
+    "yfinance.scrapers.holders": [],
+    "yfinance.scrapers.quote": [],
+    "yfinance.shared": [],
+    "yfinance.ticker": [],
+    "yfinance.tickers": [],
+    "yfinance.utils": [],
+    "yfinance.version": []
+  },
+  "zingg": {
+    "zingg": [],
+    "zingg.client": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      }
+    ],
+    "zingg.databricks": [
+      {
+        "code": "dbfs-usage",
+        "message": "Deprecated file system path: dbfs:/FileStore/"
+      },
+      {
+        "code": "dbfs-usage",
+        "message": "Deprecated file system path: dbfs:/FileStore/jars/zingg_0_4_0.jar"
+      },
+      {
+        "code": "dbfs-usage",
+        "message": "Deprecated file system path: dbfs:/FileStore/py/zingg-0.4.0-py2.py3-none-any.whl"
+      },
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      }
+    ],
+    "zingg.examples.amazon-google.AmazonGoogle": [],
+    "zingg.examples.febrl.FebrlExample": [],
+    "zingg.examples.febrl.postgres": [],
+    "zingg.phases.assessModel": [],
+    "zingg.phases.exportModel": [],
+    "zingg.pipes": [
+      {
+        "code": "jvm-access-in-shared-clusters",
+        "message": "Cannot access Spark Driver JVM on UC Shared Clusters"
+      }
+    ]
+  },
+  "zipp": {
+    "zipp": [],
+    "zipp.compat": [],
+    "zipp.compat.py310": [],
+    "zipp.glob": []
+  }
+}
