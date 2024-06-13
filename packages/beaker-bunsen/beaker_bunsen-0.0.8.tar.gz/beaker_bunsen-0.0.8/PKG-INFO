@@ -1,0 +1,50 @@
+Metadata-Version: 2.3
+Name: beaker-bunsen
+Version: 0.0.8
+Summary: Quickly generate new Beaker contexts for new domains and libraries.
+Project-URL: Documentation, https://github.com/unknown/beaker-bunsen#readme
+Project-URL: Issues, https://github.com/unknown/beaker-bunsen/issues
+Project-URL: Source, https://github.com/unknown/beaker-bunsen
+Author-email: Matthew Printz <matt@jataware.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.10
+Requires-Dist: archytas~=1.1.6
+Requires-Dist: beaker-kernel~=1.5.1
+Requires-Dist: beautifulsoup4
+Requires-Dist: chromadb~=0.4.22
+Requires-Dist: click~=8.1.7
+Requires-Dist: hatchling
+Requires-Dist: marko~=2.0.3
+Requires-Dist: tenacity~=8.2.3
+Requires-Dist: tiktoken~=0.5.2
+Description-Content-Type: text/markdown
+
+# beaker-bunsen
+
+[![PyPI - Version](https://img.shields.io/pypi/v/beaker-bunsen.svg)](https://pypi.org/project/beaker-bunsen)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/beaker-bunsen.svg)](https://pypi.org/project/beaker-bunsen)
+
+-----
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install beaker-bunsen
+```
+
+## License
+
+`beaker-bunsen` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
