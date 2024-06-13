@@ -1,0 +1,53 @@
+[tool.poetry]
+name = "munud"
+version = "0.3.0"
+description = "Building sub-byte payloads, and generating according C code"
+authors = ["Ulysse Moreau <u.moreau@hexa-h.com>"]
+license = "MIT"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Topic :: Software Development :: Embedded Systems",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11"
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pyyaml = "^6.0.1"
+click = "^8.1.7"
+rich = "^13.7.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+flake8 = "^7.0.0"
+autoflake8 = "^0.4.1"
+mypy = "^1.8.0"
+pytest-cov = "^4.1.0"
+black = "^24.2.0"
+pytest-html-reporter = "^0.2.9"
+sphinx-rtd-theme = "^2.0.0"
+sphinx = "^7.2.6"
+isort = "^5.13.2"
+enum-tools = {extras = ["sphinx"], version = "^0.11.0"}
+autoflake = "^2.3.0"
+types-pyyaml = "^6.0.12.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "."
+]
+
+[tool.poetry.scripts]
+munud = "munud.main:main"
