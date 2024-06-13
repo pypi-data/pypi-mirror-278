@@ -1,0 +1,8 @@
+mutagen
+pydub
+
+[dev]
+check-manifest
+
+[test]
+coverage
