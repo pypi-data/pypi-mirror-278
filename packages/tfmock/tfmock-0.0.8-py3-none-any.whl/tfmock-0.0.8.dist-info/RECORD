@@ -1,0 +1,15 @@
+tfmock/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tfmock/mock_server.py,sha256=_vBUOkRUyZAU_3Lq-wj9ac4YYqXaiT8nmTT84XzgCEI,1522
+tfmock/predict.py,sha256=WJkPwNNySsW8BOt5IgZm-zrFmsV0ClddAW1B9MhfZWE,37
+tfmock/config/local.json,sha256=TX4e592EWItASiF_f9JbEYj3GHNd092sIgyDVwNjiyo,189
+tfmock/proxy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tfmock/proxy/ca.crt,sha256=Y6G9uv99DCT-XGiIHQR1VXtJECa_BcsjmqhTq-Xq11A,1147
+tfmock/proxy/ca.key,sha256=jBgf5A4XiSqumga94DXzF_HragEFHIP8fyC1EB8GkNo,1704
+tfmock/proxy/cert.key,sha256=6sbRzl2fVlTXYHWueeZ9jpnLqnST8_AdR5hOgMqCl_Y,1704
+tfmock/proxy/https_trasparent.py,sha256=nopj0AwWWzqth45e410qIWpdLm981LIvxxnTd4aPVDw,1329
+tfmock/proxy/proxy2.py,sha256=k_wB6IUXucIB_Ikt8HG8JGjLSJD-EmBRyIN6xd33ymc,11482
+tfmock/proxy/setup_https_intercept.sh,sha256=yAYqfYCqc9_gpcafQsM7hPxEiVUckrgV8QDml5V8KJs,180
+tfmock-0.0.8.dist-info/METADATA,sha256=QDKg8yYkjxk-8yGngjZ4uohowq8XyFEig2xj9gWEWpg,393
+tfmock-0.0.8.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+tfmock-0.0.8.dist-info/top_level.txt,sha256=5T7psc9v6CWq4KICAY0UzGiEJUmCV5OgIsL9YhidcQs,7
+tfmock-0.0.8.dist-info/RECORD,,
