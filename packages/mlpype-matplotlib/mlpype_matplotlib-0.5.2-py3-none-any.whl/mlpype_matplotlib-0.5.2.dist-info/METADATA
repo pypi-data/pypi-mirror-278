@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: mlpype-matplotlib
+Version: 0.5.2
+Requires-Dist: mlpype-base ==0.5.2
+Requires-Dist: matplotlib >=3.7.5
+Provides-Extra: dev
+Requires-Dist: mlpype-base ==0.5.2 ; extra == 'dev'
+Requires-Dist: matplotlib ==3.7.5 ; extra == 'dev'
+Provides-Extra: strict
+Requires-Dist: mlpype-base ==0.5.2 ; extra == 'strict'
+Requires-Dist: matplotlib ==3.7.5 ; extra == 'strict'
+
