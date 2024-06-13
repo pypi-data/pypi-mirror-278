@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "aily-server-sdk"
+description = "Aily Server SDK"
+version = "0.1.0-beta.9"
+authors = [
+    "lijiuyang.5137 <lijiuyang.5137@bytedance.com>",
+    "zhaolizi.milo <zhaolizi.milo@bytedance.com>"
+]
+readme = "README.md"
+packages = [{ include = "aily_server_sdk", from = "src" }]
+classifiers = [
+    "License :: OSI Approved :: Apache Software License",
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.8.1"
+pydantic = "^2.7.3"
+openai = "^1.31.0"
+#langchain = "^0.2.2"
+#langchain-core = "^0.2.4"
+#langchain-community = "^0.2.3"
+#bs4 = "^0.0.2"
+#transformers = "^4.41.2"
+aily-core = "0.1.0b9"
+loguru = "^0.7.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
