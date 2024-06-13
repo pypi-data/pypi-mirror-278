@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: spock_literature
+Version: 0.0.1
+Summary: LLM litterature
+Home-page: https://github.com/AccelerationConsortium/spock.git
+Author: Youssef Briki
+Author-email: Youssef Briki <youssef.briki05@gmail.com>
+License: MIT License
+Project-URL: Homepage, https://github.com/youssefbriki1/spock
+Keywords: spock
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: ollama
+Requires-Dist: langchain
+Requires-Dist: langchain_community
+Requires-Dist: langchain_core
+Requires-Dist: scholarly
+Requires-Dist: jupyter
+Provides-Extra: all
+Requires-Dist: spock[extra]; extra == "all"
+Provides-Extra: extra
+Requires-Dist: pandas; extra == "extra"
+
+# spock
+
+
+[![image](https://img.shields.io/pypi/v/spock.svg)](https://pypi.python.org/pypi/spock)
+[![image](https://img.shields.io/conda/vn/conda-forge/spock.svg)](https://anaconda.org/conda-forge/spock)
+
+
+**LLM litterature**
+
+
+-   Free software: MIT License
+-   Documentation: https://youssefbriki1.github.io/spock
+    
+
+## Features
+
+-   TODO
