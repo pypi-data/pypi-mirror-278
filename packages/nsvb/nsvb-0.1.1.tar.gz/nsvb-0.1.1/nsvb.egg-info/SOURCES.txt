@@ -1,0 +1,44 @@
+LICENSE
+README.md
+setup.py
+./nsvb/__init__.py
+./nsvb/equations.py
+./nsvb/models.py
+./nsvb/tables.py
+./nsvb/data/REF_SPECIES.csv
+./nsvb/data/Table S10a_fia_wood_c_frac_live.csv.csv
+./nsvb/data/Table S10b_fia_wood_c_frac_dead.csv.csv
+./nsvb/data/Table S11_mean_crprop.csv
+./nsvb/data/Table S12_component_scorecard.csv
+./nsvb/data/Table S13_component_spcd_scorecard.csv
+./nsvb/data/Table S14_component_region_scorecard.csv
+./nsvb/data/Table S15_component_region_spcd_scorecard.csv
+./nsvb/data/Table S16_component_state_scorecard.csv
+./nsvb/data/Table S17_component_state_spcd_scorecard.csv
+./nsvb/data/Table S18_component_division_scorecard.csv
+./nsvb/data/Table S19_component_division_spcd_scorecard.csv
+./nsvb/data/Table S1a_volib_coefs_spcd.csv
+./nsvb/data/Table S1b_volib_coefs_jenkins.csv
+./nsvb/data/Table S20_component_dclass_scorecard.csv
+./nsvb/data/Table S2a_volbk_coefs_spcd.csv
+./nsvb/data/Table S2b_volbk_coefs_jenkins.csv
+./nsvb/data/Table S3a_volob_coefs_spcd.csv
+./nsvb/data/Table S3b_volob_coefs_jenkins.csv
+./nsvb/data/Table S4a_rcumob_coefs_spcd.csv
+./nsvb/data/Table S4b_rcumob_coefs_jenkins.csv
+./nsvb/data/Table S5a_rcumib_coefs_spcd.csv
+./nsvb/data/Table S5b_rcumib_coefs_jenkins.csv
+./nsvb/data/Table S6a_bark_biomass_coefs_spcd.csv
+./nsvb/data/Table S6b_bark_biomass_coefs_jenkins.csv
+./nsvb/data/Table S7a_branch_biomass_coefs_spcd.csv
+./nsvb/data/Table S7b_branch_biomass_coefs_jenkins.csv
+./nsvb/data/Table S8a_total_biomass_coefs_spcd.csv
+./nsvb/data/Table S8b_total_biomass_coefs_jenkins.csv
+./nsvb/data/Table S9a_foliage_coefs_spcd.csv
+./nsvb/data/Table S9b_foliage_coefs_jenkins.csv
+./nsvb/data/WOOD_DENSITY_PROPORTIONS.csv
+nsvb.egg-info/PKG-INFO
+nsvb.egg-info/SOURCES.txt
+nsvb.egg-info/dependency_links.txt
+nsvb.egg-info/top_level.txt
+tests/test_examples.py

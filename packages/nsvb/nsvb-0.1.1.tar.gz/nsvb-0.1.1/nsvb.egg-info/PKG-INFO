@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: nsvb
+Version: 0.1.1
+Summary: National Scale Volume and Biomass Estimators
+Home-page: https://github.com/silvxlabs/nsvb
+License: MIT
+Project-URL: Bug Tracker, https://github.com/silvxlabs/nsvb/issues
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# nsvb
+National Scale Volume and Biomass Estimators
+
+## Introduction
+
+Welcome to the NSVB library. NSVB provides a faithful implementation of the National Scale Volume and Biomass Estimators
+published by the Forest Service.
+
+## Installation
+
+nsvb is available on PyPI and can be installed using pip:
+
+```bash
+pip install nsvb
+```
