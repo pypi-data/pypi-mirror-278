@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: hTrackerIU
+Version: 0.0.11
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: sqlalchemy
+Requires-Dist: python-dateutil
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: httpx ; extra == 'dev'
+
