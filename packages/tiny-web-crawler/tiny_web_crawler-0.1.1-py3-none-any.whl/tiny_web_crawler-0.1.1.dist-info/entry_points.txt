@@ -1,0 +1,2 @@
+[console_scripts]
+tiny-web-crawler = tiny_web_crawler.crawler:main

@@ -1,0 +1,98 @@
+Metadata-Version: 2.1
+Name: tiny-web-crawler
+Version: 0.1.1
+Summary: A simple and efficient web crawler in Python.
+Home-page: https://github.com/indrajithi/tiny-web-crawler
+Author: Indrajith Indraprastham
+Author-email: indr4jith@gmail.com
+Project-URL: Documentation, https://github.com/indrajithi/tiny-web-crawler#readme
+Project-URL: Source, https://github.com/indrajithi/tiny-web-crawler
+Project-URL: Tracker, https://github.com/indrajithi/tiny-web-crawler/issues
+Keywords: web crawler,scraping,web scraping,python crawler,SEO,data extraction
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Internet :: WWW/HTTP :: Indexing/Search
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: validators
+Requires-Dist: beautifulsoup4
+Requires-Dist: lxml
+Requires-Dist: colorama
+Requires-Dist: requests
+Provides-Extra: dev
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: responses ; extra == 'dev'
+
+# Tiny Web Crawler
+
+A simple and efficient web crawler in Python.
+
+## Features
+
+- Crawl web pages and extract links
+- Handle relative and absolute URLs
+- Save crawl results to a JSON file
+- Easy to use and extend
+
+## Installation
+
+Install using pip:
+
+```sh
+pip install tiny-web-crawler
+```
+
+## Usage
+
+```python
+from tiny_web_crawler.crawler import Spider
+
+root_url = 'http://example.com'
+max_links = 2
+
+spider = Spider(root_url, max_links)
+spider.start()
+```
+
+
+## Output Format
+
+Crawled output sample for `https://github.com`
+
+```json
+{
+    "http://github.com": {
+        "urls": [
+            "http://github.com/",
+            "https://githubuniverse.com/",
+            ...
+        ],
+    "https://github.com/solutions/ci-cd": {
+        "urls": [
+            "https://github.com/solutions/ci-cd/",
+            "https://githubuniverse.com/",
+            ...
+        ]
+      }
+    }
+}
+```
+
+
+## License
+
+This project is licensed under the GNU GPLv3 License - see the LICENSE file for details.
+
