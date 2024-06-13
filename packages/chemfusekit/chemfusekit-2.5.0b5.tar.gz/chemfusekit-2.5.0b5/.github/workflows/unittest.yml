@@ -1,0 +1,29 @@
+name: Unit Tests
+on:
+  push:
+      paths:
+        - 'chemfusekit/**'
+        - 'tests/**'
+        - '.github/workflows/unittest.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3 
+      - name: Install the latest version of rye
+        uses: eifinger/setup-rye@v3
+      - name: Install dependencies
+        run: rye sync --no-lock
+      - name: Run unit tests on the code
+        run: rye run test
+      - name: Check test results
+        run: |
+          test_result=$(rye run test |& grep "FAILED" | wc -w)
+          if (( $(echo "$test_result") == 0 )); then
+            echo "Tests passed. Commit approved."
+          else
+            echo "Tests failed. Blocking commit."
+            exit 1
+          fi
