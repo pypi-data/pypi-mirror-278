@@ -1,0 +1,16 @@
+prefect>=3.0.0rc1
+
+[dev]
+coverage
+interrogate
+mkdocs-gen-files
+mkdocs-material
+mkdocs
+mkdocstrings[python]
+mypy
+pillow
+pre-commit
+pytest-asyncio
+pytest
+pytest-xdist
+respx
