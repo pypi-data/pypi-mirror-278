@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: pyexec_shell
+Version: 1.0.4
+Summary: shell助手
+Home-page: https://github.com/buyfakett
+Author: buyfakett
+Author-email: buyfakett@vip.qq.com
+License: MIT
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+<h1 align="center">pyexec_shell</h1>
+
+- exec_shell.py
+
+在当前运行的服务器上运行命令和在服务器上检测文件，使用示例：
+
+```python
+exec_shell('mkdir /test')
+
+check_file('/data', '1*')
+```
