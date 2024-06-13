@@ -1,0 +1,363 @@
+name: Tests
+
+on:
+  pull_request:
+    types: [opened, reopened, labeled, synchronize]
+    paths:
+    - src/**
+    - tests/**
+    - docker-compose*.yml
+    - noxfile.py
+    - pyproject.toml
+    - .github/workflows/tests.yml
+    - .github/workflows/constraints.txt
+    - .github/actions/install-tools/action.yml
+  push:
+    branches:
+    - 'main'
+    paths:
+    - src/**
+    - tests/**
+    - docker-compose*.yml
+    - noxfile.py
+    - pyproject.toml
+    - .github/workflows/tests.yml
+    - .github/workflows/constraints.txt
+    - .github/actions/install-tools/action.yml
+  schedule:
+  - cron: "25 7 */3 * *"
+  workflow_dispatch:
+    inputs:
+      all_integrations:
+        description: "Test against all the latest LimeSurvey docker image tags and all database engines"
+        required: true
+        default: false
+        type: boolean
+
+permissions: read-all
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+env:
+  FORCE_COLOR: "1"
+
+jobs:
+  tests:
+    name: "Test ${{ matrix.python-version }} ${{ matrix.nightly && '(nightly) ' || '' }}/ ${{ matrix.os }}"
+    runs-on: ${{ matrix.os }}
+    continue-on-error: ${{ matrix.experimental || false }}
+    env:
+      COVERAGE_FILE: ".coverage.unit"
+      NOXFORCEPYTHON: "${{ matrix.python-version }}"
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version:
+        - "3.8"
+        - "3.9"
+        - "3.10"
+        - "3.11"
+        - "3.12"
+        - "3.13"
+        - "pypy3.10"
+        os: ["ubuntu-latest"]
+        include:
+        - python-version: "3.14"
+          os: "ubuntu-latest"
+          session: "tests"
+          experimental: true
+          nightly: true
+
+        - python-version: "3.12"
+          os: "windows-latest"
+          session: "tests"
+
+        - python-version: "3.12"
+          os: "macos-latest"
+          session: "tests"
+
+    steps:
+    - name: Check out the repository
+      uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29
+      with:
+        fetch-tags: true
+
+    - name: Setup Python ${{ matrix.python-version }}
+      if: "${{ !matrix.nightly }}"
+      uses: actions/setup-python@82c7e631bb3cdc910f68e0081d67478d79c6982d
+      with:
+        python-version: ${{ matrix.python-version }}
+        architecture: x64
+        allow-prereleases: true
+        cache: pip
+        cache-dependency-path: |
+          pyproject.toml
+          .github/workflows/constraint.txt
+
+    - name: Setup Python ${{ matrix.python-version }} (nightly)
+      if: "${{ matrix.nightly }}"
+      uses: deadsnakes/action@244dbe68f25c7b218e462ef9e155817fed612c0d
+      with:
+        python-version: "${{ matrix.python-version }}-dev"
+
+    - name: Install tools
+      uses: ./.github/actions/install-tools
+
+    - name: Run Tests
+      run: |
+        nox --verbose -s tests
+
+    - name: Upload coverage data
+      uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808
+      with:
+        name: "coverage-unit-${{ matrix.os }}-${{ matrix.python-version }}-${{ matrix.nightly && 'nightly' || 'stable' }}"
+        path: ".coverage.*"
+
+    - name: Run Doctests
+      run: |
+        nox -s xdoctest
+
+    - name: Run Dependency Checks
+      run: |
+        nox -s deps
+
+    - name: Run Mypy
+      run: |
+        nox -s mypy
+
+  docker_tags:
+    name: Get Docker tags
+    runs-on: ubuntu-latest
+    outputs:
+      tags: ${{ steps.tags.outputs.tags }}
+    steps:
+    - name: Check out the repository
+      uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29
+
+    - name: Setup Python
+      uses: actions/setup-python@82c7e631bb3cdc910f68e0081d67478d79c6982d
+      with:
+        python-version: 3.12
+        architecture: x64
+        allow-prereleases: true
+        cache: pip
+        cache-dependency-path: |
+          pyproject.toml
+          requirements/*.txt
+          .github/workflows/constraints.txt
+
+    - name: Install tools
+      uses: ./.github/actions/install-tools
+
+    - name: Test against required tags
+      if: ${{ contains(github.event.pull_request.labels.*.name, 'Release') || inputs.all_integrations }}
+      run: |
+        nox -s generate-tags > limesurvey-docker-tags.json
+
+    - name: Test against latest tags
+      if: ${{ !contains(github.event.pull_request.labels.*.name, 'Release') && !inputs.all_integrations }}
+      run: |
+        echo '["6-apache", "5-apache"]' > limesurvey-docker-tags.json
+
+    - name: Output tags
+      id: tags
+      run: |
+        echo "tags=$(cat limesurvey-docker-tags.json)" >> $GITHUB_OUTPUT
+
+  databases:
+    name: Get database engines
+    runs-on: ubuntu-latest
+    outputs:
+      engines: ${{ steps.engines.outputs.engines }}
+    steps:
+    - name: Check out the repository
+      uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29
+
+    - name: Test against all engines
+      if: ${{ contains(github.event.pull_request.labels.*.name, 'Release') || inputs.all_integrations }}
+      run: |
+        echo '["postgres", "mysql"]' > database-engines.json
+
+    - name: Test against PostgreSQL
+      if: ${{ !contains(github.event.pull_request.labels.*.name, 'Release') && !inputs.all_integrations }}
+      run: |
+        echo '["postgres"]' > database-engines.json
+
+    - name: Output engines
+      id: engines
+      run: |
+        echo "engines=$(cat database-engines.json)" >> $GITHUB_OUTPUT
+
+  integration:
+    name: "integration ${{ matrix.python-version }} / ${{ matrix.image_tag || matrix.ref }} / ${{ matrix.database }}"
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    needs: [docker_tags, databases]
+    env:
+      COVERAGE_FILE: ".coverage.integration"
+      LS_USER: citric_ci
+      LS_PASSWORD: notverysecret
+      LS_PORT: "8080"
+      NOXSESSION: integration
+      NOXFORCEPYTHON: "${{ matrix.python-version }}"
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.12"]
+        database: ${{ fromJson(needs.databases.outputs.engines) }}
+        ref: [""]
+        context: [""]
+        image_tag: ${{ fromJson(needs.docker_tags.outputs.tags) }}
+        include:
+        # Test on other Python versions
+        - python-version: "3.8"
+          image_tag: "6-apache"
+          database: postgres
+
+        - python-version: "3.9"
+          image_tag: "6-apache"
+          database: postgres
+
+        - python-version: "3.10"
+          image_tag: "6-apache"
+          database: postgres
+
+        - python-version: "3.11"
+          image_tag: "6-apache"
+          database: postgres
+
+        - python-version: "3.13"
+          image_tag: "6-apache"
+          database: postgres
+
+        - python-version: "pypy3.10"
+          image_tag: "6-apache"
+          database: postgres
+
+        # Test Limesurvey/LimeSurvey branches
+        - python-version: "3.12"
+          ref: refs/heads/5.x
+          context: https://github.com/martialblog/docker-limesurvey.git#master:5.0/apache
+          database: postgres
+
+        - python-version: "3.12"
+          ref: refs/heads/develop
+          context: https://github.com/martialblog/docker-limesurvey.git#master:6.0/apache
+          database: postgres
+
+        - python-version: "3.12"
+          ref: refs/heads/master
+          context: https://github.com/martialblog/docker-limesurvey.git#master:6.0/apache
+          database: postgres
+
+    steps:
+    - name: Check out the repository
+      uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29
+      with:
+        fetch-tags: true
+
+    - name: Setup Python ${{ matrix.python-version }}
+      uses: actions/setup-python@82c7e631bb3cdc910f68e0081d67478d79c6982d
+      with:
+        python-version: ${{ matrix.python-version }}
+        architecture: x64
+        allow-prereleases: true
+        cache: pip
+        cache-dependency-path: |
+          pyproject.toml
+          .github/workflows/constraint.txt
+
+    - name: Install tools
+      uses: ./.github/actions/install-tools
+
+    - name: Download LimeSurvey archive
+      if: ${{ matrix.ref }}
+      run: |
+        wget https://github.com/LimeSurvey/LimeSurvey/archive/${{ matrix.ref }}.tar.gz -O ls.tar.gz -nv
+        echo "LS_CHECKSUM=$(shasum -a 256 ls.tar.gz | cut -d' ' -f1)" >> $GITHUB_ENV
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@d70bba72b1f3fd22344832f00baa16ece964efeb
+
+    - name: Get Docker
+      uses: actions-hub/docker/cli@f5fdbfc3f9d2a9265ead8962c1314108a7b7ec5d
+      env:
+        SKIP_LOGIN: true
+
+    - name: Start services
+      env:
+        LS_IMAGE_TAG: ${{ matrix.image_tag }}
+        LS_DOCKERFILE_CONTEXT: ${{ matrix.context }}
+        LS_DOCKERFILE: Dockerfile
+        LS_ARCHIVE_URL: "https://github.com/LimeSurvey/LimeSurvey/archive/${{ matrix.ref }}.tar.gz"
+        COMPOSE_FILE: "\
+          docker-compose.yml\
+          ${{ matrix.ref && ':docker-compose.ref.yml' }}\
+          ${{ matrix.database == 'mysql' && ':docker-compose.mysql.yml' || '' }}"
+      run: |
+        docker compose up -d --wait --quiet-pull
+        docker compose ps -a
+        docker compose config
+
+    - name: Run Nox
+      id: nox-integration
+      env:
+        BACKEND: ${{ matrix.database }}
+        LS_URL: http://localhost:${{ env.LS_PORT }}
+      run: |
+        nox
+
+    - name: Upload coverage data
+      if: always()
+      uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808
+      with:
+        name: "coverage-integration-${{ matrix.python-version }}-${{ matrix.image_tag || env.LS_CHECKSUM }}-${{ matrix.database }}"
+        path: ".coverage.*"
+
+  coverage:
+    name: Coverage
+    runs-on: ubuntu-latest
+    needs: [tests, integration]
+    env:
+      NOXSESSION: coverage
+    strategy:
+      matrix:
+        flag: ["unit", "integration"]
+      fail-fast: false
+    steps:
+    - name: Check out the repository
+      uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29
+
+    - name: Set up Python
+      uses: actions/setup-python@82c7e631bb3cdc910f68e0081d67478d79c6982d
+      with:
+        python-version: "3.12"
+        cache: pip
+
+    - name: Install tools
+      uses: ./.github/actions/install-tools
+
+    - name: Download coverage data
+      uses: actions/download-artifact@65a9edc5881444af0b9093a5e628f2fe47ea3b2e
+      with:
+        pattern: "coverage-${{ matrix.flag }}-*"
+        merge-multiple: true
+
+    - name: Combine coverage data and display human readable report
+      continue-on-error: true
+      run: |
+        nox
+
+    - name: Create coverage report
+      run: |
+        nox -- xml
+
+    - name: Upload coverage report
+      uses: codecov/codecov-action@125fc84a9a348dbcf27191600683ec096ec9021c
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        files: ./coverage.xml
+        fail_ci_if_error: true
+        flags: ${{ matrix.flag }}

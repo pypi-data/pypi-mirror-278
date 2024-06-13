@@ -1,0 +1,45 @@
+changesDir: .changes
+unreleasedDir: unreleased
+headerPath: header.tpl.md
+versionHeaderPath: ""
+versionFooterPath: ""
+changelogPath: CHANGELOG.md
+versionExt: md
+versionFormat: '## {{.Version}} - {{.Time.Format "2006-01-02"}}'
+kindFormat: '### {{.Kind}}'
+changeFormat: '* [#{{.Custom.Issue}}](https://github.com/edgarrmondragon/citric/issues/{{.Custom.Issue}}) {{.Body}}'
+headerFormat: ""
+footerFormat: ""
+newlines:
+  beforeChangelogVersion: 2
+kinds:
+- label: Added
+  auto: minor
+- label: Changed
+  auto: major
+- label: Deprecated
+  auto: patch
+- label: Removed
+  auto: major
+- label: Fixed
+  auto: patch
+- label: Security
+  auto: patch
+- label: Refactored
+  auto: patch
+- label: Documentation
+  auto: patch
+replacements:
+- path: src/citric/client.py
+  find: "NEXT_VERSION"
+  replace: "{{.VersionNoPrefix}}"
+- path: .github/ISSUE_TEMPLATE/BUG.yml
+  find: "^      placeholder: \".*\"$"
+  replace: "      placeholder: \"{{.VersionNoPrefix}}\""
+- path: CITATION.cff
+  find: "^version: \".*\"$"
+  replace: "version: \"{{.VersionNoPrefix}}\""
+custom:
+- key: Issue
+  type: int
+  minInt: 1
