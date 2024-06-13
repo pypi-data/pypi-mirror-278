@@ -1,0 +1,3 @@
+[console_scripts]
+create_fm12_feaure_index = FM12_transform.elastic:create_feature_index
+fm12_transform = FM12_transform.cli:cli
