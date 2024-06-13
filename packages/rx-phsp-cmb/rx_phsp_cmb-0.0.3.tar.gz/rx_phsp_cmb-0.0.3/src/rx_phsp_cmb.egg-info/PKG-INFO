@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: rx_phsp_cmb
+Version: 0.0.3
+Summary: Used to get combinatorial shape under PHSP warping assumption
+Requires-Dist: zfit
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: rx_scripts
