@@ -1,0 +1,65 @@
+# pychop
+
+[![!pypi](https://img.shields.io/pypi/v/pychop?color=greenyellow)](https://pypi.org/project/pychop/)
+[![Download Status](https://static.pepy.tech/badge/pychop)](https://pypi.python.org/pypi/pychop/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](https://opensource.org/licenses/MIT)
+[![Documentation Status](https://readthedocs.org/projects/xinye-chen/badge/?version=latest)](https://xinye-chen.readthedocs.io/en/latest/?badge=latest)
+
+## A Python package for simulating low precision arithmetic
+
+With the increasing availability and support of lower-precision floating-point arithmetics beyond the IEEE Standard 64-bit double and 32-bit single precisions in both hardware and software simulation, low-precision arithmetic operations as well as the number formats, e.g., 16-bit half precision,  have been widely studied and exploited in numerous applications in the modern scientific computing and machine learning algorithms. Low-precision floating point arithmetic offers greater throughput, reduced data communication, and less energy usage. ``pychop`` is a Python library for efficient quantization, it enable to convert single or double precision numbers into low-bitwidth representation. The purpose of ``pychop``, following the same function of ``chop`` in Matlab provided by Nick higham, is to simulate the low precision formats as well as fixed-point/integer quantization based on single and double precisions, which is pravalent on modern machine architecture.  ``pychop`` also provides Torch and JAX backend, which enables to simulate training Neural Network in low precision.
+
+
+
+This package provides consistent APIs to the chop software by Nick higham as much as possible.  For the first four rounding mode,  with the same user-specific parameters, ``pychop`` generates exactly same result as that of the chop software. For stochastic rounding (``rmode`` as 5 and 6), both output same results if random numbers is given the same. 
+
+### The supported floating point formats
+
+
+The supported floating point arithmetic formats include:
+
+| format | description |
+| ------------- | ------------- |
+| 'q43', 'fp8-e4m3'         | NVIDIA quarter precision (4 exponent bits, 3 significand (mantissa) bits) |
+| 'q52', 'fp8-e5m2'         | NVIDIA quarter precision (5 exponent bits, 2 significand bits) |
+|  'b', 'bfloat16'          | bfloat16 |
+|  'h', 'half', 'fp16'      | IEEE half precision (the default) |
+|  's', 'single', 'fp32'    | IEEE single precision |
+|  'd', 'double', 'fp64'    | IEEE double precision |
+|  'c', 'custom'            | custom format |
+
+The code example can be found on the [quick start page](https://github.com/chenxinye/pychop/blob/main/docs/source/examples.rst).
+
+### Install
+
+``pychop`` relies on dependencies:
+
+- numpy >=1.7.3
+- pandas >=2.0
+- torch
+- jax
+
+To install the current current release via PIP use:
+
+`pip install pychop`
+
+
+### Contributing
+We welcome contributions in any form! Assistance with documentation is always welcome. To contribute, feel free to open an issue or please fork the project make your changes and submit a pull request. We will do our best to work through any issues and requests.
+
+
+### Acknowledgement
+This project is supported by the European Union (ERC, [InEXASCALE](https://www.karlin.mff.cuni.cz/~carson/inexascale), 101075632). Views and opinions
+ expressed are those of the authors only and do not necessarily reflect those of the European
+ Union or the European Research Council. Neither the European Union nor the granting
+ authority can be held responsible for them.
+
+### References
+
+[1] Nicholas J. Higham and Srikara Pranesh, Simulating Low Precision Floating-Point Arithmetic, SIAM J. Sci. Comput., 2019.
+
+[2] IEEE Standard for Floating-Point Arithmetic, IEEE Std 754-2019 (revision of IEEE Std 754-2008), IEEE, 2019.
+
+[3] Intel Corporation, BFLOAT16---hardware numerics definition,  2018
+
+[4] Muller, Jean-Michel et al., Handbook of Floating-Point Arithmetic, Springer, 2018
