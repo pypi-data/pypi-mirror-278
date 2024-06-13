@@ -1,0 +1,39 @@
+MANIFEST.in
+README.md
+setup.py
+nanosense/__init__.py
+nanosense/activation_codes.enc
+nanosense/icons.icns
+nanosense/image_1.jpg
+nanosense/nanosense.py
+nanosense.egg-info/PKG-INFO
+nanosense.egg-info/SOURCES.txt
+nanosense.egg-info/dependency_links.txt
+nanosense.egg-info/entry_points.txt
+nanosense.egg-info/requires.txt
+nanosense.egg-info/top_level.txt
+nanosense/Clustering and Data Reduction/__init__.py
+nanosense/Clustering and Data Reduction/main.py
+nanosense/Combine Datasets/__init__.py
+nanosense/Combine Datasets/main.py
+nanosense/Data Reduction/__init__.py
+nanosense/Data Reduction/main.py
+nanosense/Data Reduction/Docs/__init__.py
+nanosense/Data Visualisation/__init__.py
+nanosense/Data Visualisation/main.py
+nanosense/Event Analysis/__init__.py
+nanosense/Event Analysis/main.py
+nanosense/Frequency and multi-plots/__init__.py
+nanosense/Frequency and multi-plots/main.py
+nanosense/ML Analysis/__init__.py
+nanosense/ML Analysis/main.py
+nanosense/Nanopore Size Calc/__init__.py
+nanosense/Nanopore Size Calc/main.py
+nanosense/Plotting and selecting/__init__.py
+nanosense/Plotting and selecting/main.py
+nanosense/Reduction Settings Viewer/__init__.py
+nanosense/Reduction Settings Viewer/main.py
+nanosense/Resource Monitor/__init__.py
+nanosense/Resource Monitor/main.py
+nanosense/Spectrogram and PSD/__init__.py
+nanosense/Spectrogram and PSD/main.py
