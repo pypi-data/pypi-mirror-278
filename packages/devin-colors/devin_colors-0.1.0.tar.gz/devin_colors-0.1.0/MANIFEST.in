@@ -1,0 +1,4 @@
+include README.md
+include LICENSE
+recursive-include devin_colors *.rgb
+recursive-include devin_colors *.pkl
