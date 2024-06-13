@@ -1,0 +1,2 @@
+[console_scripts]
+predict-worker = moveread.pipelines.ocr_predict.local.predict_cli:main

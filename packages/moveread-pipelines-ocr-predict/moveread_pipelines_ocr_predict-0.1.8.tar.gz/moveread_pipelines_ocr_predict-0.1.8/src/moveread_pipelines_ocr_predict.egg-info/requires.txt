@@ -1,0 +1,10 @@
+queue-api
+kv-api
+tf-serving
+pydantic==2.*
+haskellian
+pipeteer
+
+[local]
+kv-fs
+queue-kv

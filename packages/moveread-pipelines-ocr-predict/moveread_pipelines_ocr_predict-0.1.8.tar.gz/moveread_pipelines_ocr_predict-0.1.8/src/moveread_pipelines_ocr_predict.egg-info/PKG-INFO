@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: moveread-pipelines-ocr-predict
+Version: 0.1.8
+Summary: Pipeline interface for Movereads OCR predictions
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Project-URL: repo, https://github.com/moveread/moveread-pipelines.git
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: queue-api
+Requires-Dist: kv-api
+Requires-Dist: tf-serving
+Requires-Dist: pydantic==2.*
+Requires-Dist: haskellian
+Requires-Dist: pipeteer
+Provides-Extra: local
+Requires-Dist: kv-fs; extra == "local"
+Requires-Dist: queue-kv; extra == "local"
+
+# Ocr Predict
+
+> Pipeline interface for Movereads OCR predictions
+
+- Run [demo.ipynb](demo.ipynb) for a full demo

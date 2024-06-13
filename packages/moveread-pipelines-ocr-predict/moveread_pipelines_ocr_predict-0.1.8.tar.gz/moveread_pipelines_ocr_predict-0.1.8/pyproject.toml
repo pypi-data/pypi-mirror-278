@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "moveread-pipelines-ocr-predict"
+version = "0.1.8"
+authors = [
+  {name="Marcel Claramunt", email="marcel@moveread.com"}
+]
+description = "Pipeline interface for Movereads OCR predictions"
+dependencies = [
+  "queue-api", "kv-api", "tf-serving", "pydantic==2.*", "haskellian",
+  "pipeteer"
+]
+requires-python = ">=3.10"
+readme = {file="README.md", content-type="text/markdown"}
+
+[project.urls]
+repo = "https://github.com/moveread/moveread-pipelines.git"
+
+[project.optional-dependencies]
+local = ["kv-fs", "queue-kv"]
+
+[project.scripts]
+predict-worker = "moveread.pipelines.ocr_predict.local.predict_cli:main"
