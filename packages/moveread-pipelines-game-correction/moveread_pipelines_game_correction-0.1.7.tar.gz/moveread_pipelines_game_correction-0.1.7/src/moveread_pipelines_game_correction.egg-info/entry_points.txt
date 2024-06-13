@@ -1,0 +1,3 @@
+[console_scripts]
+gamecorr = moveread.pipelines.game_correction.cli:main
+gamecorr-clientgen = moveread.pipelines.game_correction.api.clientgen_cli:main

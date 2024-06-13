@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "moveread-pipelines-game-correction"
+version = "0.1.7"
+authors = [
+  {name="Marcel Claramunt", email="marcel@moveread.com"}
+]
+description = "Game correction pipeline for Moveread"
+dependencies = [
+  "game-prediction2", "pydantic==2.*", "queue-api",
+  "haskellian", "lazy-loader", "fastapi", "uvicorn", "python-multipart", "sse-starlette",
+  "pipeteer"
+]
+requires-python = ">=3.10"
+readme = {file="README.md", content-type="text/markdown"}
+
+[project.urls]
+repo = "https://github.com/moveread/moveread-pipelines.git"
+
+[project.optional-dependencies]
+all = ["queue-kv", "openapi-ts"]
+cli = ["queue-kv"]
+clientgen = ["openapi-ts"]
+
+[project.scripts]
+gamecorr = "moveread.pipelines.game_correction.cli:main"
+gamecorr-clientgen = "moveread.pipelines.game_correction.api.clientgen_cli:main"
