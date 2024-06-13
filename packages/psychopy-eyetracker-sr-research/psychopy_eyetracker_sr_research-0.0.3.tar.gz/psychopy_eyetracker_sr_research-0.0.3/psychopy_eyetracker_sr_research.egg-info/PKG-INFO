@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: psychopy-eyetracker-sr-research
+Version: 0.0.3
+Summary: Extension package for PsychoPy which adds support for SR Research eyetrackers (via ioHub).
+Author-email: Sol Simpson <info@isolver-software.com>, Matthew Cutone <mcutone@opensceincetools.org>, Jon Peirce <jon@opensceincetools.org>
+License: GNU General Public License v3 (GPLv3)
+Project-URL: homepage, https://github.com/psychopy/psychopy-eyetracker-sr-research
+Project-URL: changelog, https://github.com/psychopy/psychopy-eyetracker-sr-research/blob/main/CHANGELOG.txt
+Project-URL: documentation, https://pages.github.com/psychopy/psychopy-eyetracker-sr-research
+Project-URL: repository, https://github.com/psychopy/psychopy-eyetracker-sr-research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pylink
+Provides-Extra: docs
+Requires-Dist: psychopy; extra == "docs"
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: furo; extra == "docs"
+Provides-Extra: tests
+Requires-Dist: psychopy; extra == "tests"
+Requires-Dist: pytest; extra == "tests"
+
+# psychopy-eyetracker-sr-research
+
+Extension for PsychoPy which adds support for [SR Research](https://www.sr-research.com/) 
+eyetrackers (via ioHub)
+
+## Supported Devices
+
+Installing this package alongside PsychoPy will enable support for the following 
+devices:
+
+* Supported SR Research EyeLink devices
+    
+## Installing
+
+Install this package with the following shell command:: 
+
+    pip install psychopy-eyetracker-sr-research
+
+You may also use PsychoPy's builtin plugin/package manager to install this 
+package.
+
+## Usage
+
+Once the package is installed, PsychoPy will automatically load it when started 
+and the `psychopy.iohub.devices.eyetracker.hw.sr_research` namespace will 
+contain the loaded objects.
