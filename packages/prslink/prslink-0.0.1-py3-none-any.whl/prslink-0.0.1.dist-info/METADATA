@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: prslink
+Version: 0.0.1
+Summary: A Python package for evaluating PRS performance
+Author-email: Yunye <gwaslab@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: <3.11,>=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas !=1.5,>=1.3
+Requires-Dist: numpy >=1.21.2
+Requires-Dist: matplotlib !=3.7.2,>=3.5
+Requires-Dist: seaborn >=0.12
+Requires-Dist: scipy >=1.12
+Requires-Dist: scikit-learn >=1.4.0
+Requires-Dist: statsmodels >=0.14.0
+
+# PRSlink
+
+A package for PRS evaluation. 
