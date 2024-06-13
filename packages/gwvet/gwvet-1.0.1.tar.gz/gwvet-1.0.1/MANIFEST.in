@@ -1,0 +1,3 @@
+include LICENSE README.rst MANIFEST.in
+include versioneer.py setup.py
+include gwvet/_version.py
