@@ -1,0 +1,15 @@
+MANIFEST.in
+README-COPYRIGHT-utf8.txt
+README-LICENCE-utf8.txt
+README.rst
+pyproject.toml
+setup.py
+documentation/wiki/description.asciidoc
+sio_messenger/__init__.py
+sio_messenger/instance.py
+sio_messenger/type.py
+sio_messenger/version.py
+sio_messenger.egg-info/PKG-INFO
+sio_messenger.egg-info/SOURCES.txt
+sio_messenger.egg-info/dependency_links.txt
+sio_messenger.egg-info/top_level.txt
