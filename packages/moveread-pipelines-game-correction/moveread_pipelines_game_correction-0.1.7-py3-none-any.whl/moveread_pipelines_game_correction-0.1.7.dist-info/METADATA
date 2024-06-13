@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: moveread-pipelines-game-correction
+Version: 0.1.7
+Summary: Game correction pipeline for Moveread
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Project-URL: repo, https://github.com/moveread/moveread-pipelines.git
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: game-prediction2
+Requires-Dist: pydantic ==2.*
+Requires-Dist: queue-api
+Requires-Dist: haskellian
+Requires-Dist: lazy-loader
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: python-multipart
+Requires-Dist: sse-starlette
+Requires-Dist: pipeteer
+Provides-Extra: all
+Requires-Dist: queue-kv ; extra == 'all'
+Requires-Dist: openapi-ts ; extra == 'all'
+Provides-Extra: cli
+Requires-Dist: queue-kv ; extra == 'cli'
+Provides-Extra: clientgen
+Requires-Dist: openapi-ts ; extra == 'clientgen'
+
+# Game Correction
+
+> Game correction pipeline for Moveread
