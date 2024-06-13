@@ -1,0 +1,15 @@
+[package]
+name = "rusty"
+version = "0.1.6"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "rusty"
+crate-type = ["cdylib"]
+
+[dependencies]
+postgres = "0.19.7"
+pyo3 = "0.20.0"
+serde = { version = "1.0.197", features = ["derive"] }
+serde_json = "1.0.115"
