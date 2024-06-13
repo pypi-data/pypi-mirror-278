@@ -1,0 +1,2 @@
+[console_scripts]
+catalog = catalog_builder.cli:cli

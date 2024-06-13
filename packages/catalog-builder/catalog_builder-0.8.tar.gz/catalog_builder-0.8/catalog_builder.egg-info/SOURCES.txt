@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+catalog_builder/catalogs.py
+catalog_builder/cli.py
+catalog_builder/utils.py
+catalog_builder.egg-info/PKG-INFO
+catalog_builder.egg-info/SOURCES.txt
+catalog_builder.egg-info/dependency_links.txt
+catalog_builder.egg-info/entry_points.txt
+catalog_builder.egg-info/requires.txt
+catalog_builder.egg-info/top_level.txt
