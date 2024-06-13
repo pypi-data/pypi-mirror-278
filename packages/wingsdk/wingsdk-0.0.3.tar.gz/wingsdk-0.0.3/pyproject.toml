@@ -1,0 +1,16 @@
+[project]
+name = "wingsdk"
+version = "0.0.3"
+description = "Wing SDK in Python"
+authors = [{name = "Elad Cohen", email = "eladc@wing.cloud"}]
+readme = "README.md"
+
+[tool.poetry]
+name = "wingsdk"
+authors = ["eladc <eladc@wing.cloud>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+urllib3 = "1.26.15"
+requests = "^2.31.0"
+boto3 = "^1.34.56"
