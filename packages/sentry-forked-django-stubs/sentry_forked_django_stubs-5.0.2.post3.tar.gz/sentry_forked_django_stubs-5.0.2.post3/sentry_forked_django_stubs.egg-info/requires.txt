@@ -1,0 +1,17 @@
+django
+asgiref
+django-stubs-ext>=5.0.2
+typing-extensions>=4.11.0
+types-PyYAML
+
+[:python_version < "3.11"]
+tomli
+
+[compatible-mypy]
+mypy~=1.10.0
+
+[oracle]
+oracledb
+
+[redis]
+redis
