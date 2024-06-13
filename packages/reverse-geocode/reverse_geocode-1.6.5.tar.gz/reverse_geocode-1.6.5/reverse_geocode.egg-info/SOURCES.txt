@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+reverse_geocode/__init__.py
+reverse_geocode/countries.csv
+reverse_geocode/geocode.gz
+reverse_geocode.egg-info/PKG-INFO
+reverse_geocode.egg-info/SOURCES.txt
+reverse_geocode.egg-info/dependency_links.txt
+reverse_geocode.egg-info/requires.txt
+reverse_geocode.egg-info/top_level.txt
