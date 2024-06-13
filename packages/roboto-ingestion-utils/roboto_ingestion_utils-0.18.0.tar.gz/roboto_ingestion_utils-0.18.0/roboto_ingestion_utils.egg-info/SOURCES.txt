@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+roboto_ingestion_utils/__init__.py
+roboto_ingestion_utils/csv.py
+roboto_ingestion_utils/ingestion_utils.py
+roboto_ingestion_utils/metrics.py
+roboto_ingestion_utils/timed.py
+roboto_ingestion_utils.egg-info/PKG-INFO
+roboto_ingestion_utils.egg-info/SOURCES.txt
+roboto_ingestion_utils.egg-info/dependency_links.txt
+roboto_ingestion_utils.egg-info/requires.txt
+roboto_ingestion_utils.egg-info/top_level.txt

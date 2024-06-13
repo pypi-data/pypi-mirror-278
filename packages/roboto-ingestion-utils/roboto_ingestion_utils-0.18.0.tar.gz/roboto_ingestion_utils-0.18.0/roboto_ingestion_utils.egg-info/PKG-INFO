@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: roboto-ingestion-utils
+Version: 0.18.0
+Summary: Utility functions for roboto data ingestion
+Home-page: https://github.com/roboto-ai/roboto-ingestion-utils
+Download-URL: https://github.com/roboto-ai/roboto_ingestion_utils/archive/refs/tags/0.18.0.tar.gz
+Author: Roboto Technologies
+Author-email: yves@roboto.ai
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# roboto-ingestion-utils
+Utils for data ingestion
