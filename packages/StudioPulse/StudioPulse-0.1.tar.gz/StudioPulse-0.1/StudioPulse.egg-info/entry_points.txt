@@ -1,0 +1,4 @@
+[console_scripts]
+StudioPulse = StudioPulse.cli:cli
+StudioPulse_normalize_movie = StudioPulse.remote.normalize_movie:main
+StudioPulse_playlist = StudioPulse.remote.playlist:main
