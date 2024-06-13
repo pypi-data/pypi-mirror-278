@@ -1,0 +1,9 @@
+mutagen
+pydub
+utils4audio
+
+[dev]
+check-manifest
+
+[test]
+coverage
