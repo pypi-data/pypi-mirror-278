@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: CTkSuggestions
+Version: 0.2.1
+Summary: CTkSuggestions implements a suggestion dropdown for a customtkinter widget
+Home-page: https://github.com/CadamTechnology/CTkSuggestions
+Author: Cadam
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
