@@ -1,0 +1,71 @@
+v1.1.0
+ - edited README.md
+ - made changes to docstrings to improve readthedocs
+ - added model.atan() and model.a_gal_sph() functions to calculate proper accelerations
+ - added convenience.dot and convenience.mags helper functions
+ - added CoxGomezSpiralArm potential to Models
+ - changed UniformAccel Model to UniformAlos
+ - added Uniform3DAccel Model
+ - fixed bug in models.a_gal_sph() by changing np.put -> np.place, which can take conditions instead of indices
+ - fixed bug in fit chi^2 statistic calculation, is now correct
+ - fixed bug in fix_arrays() wrapper that caused things to break when not running the docs generator
+
+v1.0.0
+ - put out public repo release on Pypi
+ - changed a bunch of readthedocs and documentation stuff
+ - changed the way that default/disabled parameters work to fix fitter.fit_model()
+ - added model.get_param_default() method for some 
+ - fitter catches singular matrices in the hessian so you can debug
+ - added UniformAccel model
+
+v0.0.9
+ - bug fix in convenience.alos_obs()
+
+v0.0.8
+ - Added Plummer profile to models
+ - some bug fixes in models and convenience
+ - added optional parameters in models, reworked some class stuff to make that work
+ - QuillenVariableVcirc has now been absorbed into QuillenFlexible
+ - QuillenFlexible has been renamed OortExpansion
+ - added sun_pos kwarg to model.alos(), is also passed through anything that uses the convert_to_frame decorator
+ - altered sphinx code and directory setup so everything is on RTD now, no local build to worry about or push to git
+
+v0.0.7
+ - Added sampler.py module
+ - added radial power law and uniform samplers to sampler module
+ - added write_to_csv() to convenience module
+ - tweaked sphinx stuff
+ - added readthedocs page
+ - changed requirements in setup.py and docs/requirements.txt
+
+v0.0.6
+ - Added fitter.py module
+
+v0.0.5
+ - added alos_obs(), pbdot_intr(), and intr_over_gr() to convenience submodule
+
+v0.0.4
+ - had to rework how some decorators work to avoid circular imports
+ - @fix_arrays is now in glob.py (new)
+ - @convert_to_frame is now in transforms.py
+ - some bug fixes so that the decorators also worked for methods (python3 fix your game)
+ - added some useful constants to glob.py
+
+v0.0.3
+ - borrowed some coordinate transforms from mwahpy
+ - added transforms module
+ - added convenience.pdot_shk() and convenience.dm_over_bary_alos()
+ - added decorators module
+ - borrowed the fix_arrays decorator from mwahpy
+ - added convert_to_frame decorator for generic frame transformations (currently supports 'gal' and 'cart')
+
+v0.0.2 
+ - added convenience module
+ - added pbdot_gr() function
+ - did some sphinx testing
+
+v0.0.1 (initial commit)
+ - added potential models, plus .accel() and .alos() capabilities
+ - added generic gala and galpy potential wrappers
+ - added sphinx documentation generator
+
