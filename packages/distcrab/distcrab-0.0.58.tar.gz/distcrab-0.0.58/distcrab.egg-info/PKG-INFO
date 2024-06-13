@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: distcrab
+Version: 0.0.58
+Summary: distcrab
+Home-page: http://255.255.255.255/
+Author: distcrab
+Author-email: root@localhost.localdomain
+License: UNLISENCED
+Keywords: distcrab
+Platform: any
+Description-Content-Type: text/markdown
+
+```bash
+python3 -m pip install --upgrade distcrab
+```
+
+```bash
+python3 -m distcrab
+```
+
+```python
+from distcrab import Distcrab
+Distcrab(host, port, username, password, version, branch)
+```
