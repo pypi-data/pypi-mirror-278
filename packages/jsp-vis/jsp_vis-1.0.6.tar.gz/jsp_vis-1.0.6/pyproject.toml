@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=65.5.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jsp-vis"
+version = "1.0.6"
+description = "A visualization tool for job shop scheduling problems."
+readme = "README.md"
+authors = [{ name = "Alexander Nasuta", email = "alexander.nasuta@wzl-iqs.rwth-aachen.de" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = []
+dependencies = [
+    "opencv-python",
+    "plotly",
+    # "networkx>=3",
+    "matplotlib<3.9",
+    "numpy",
+    "pandas",
+    "kaleido",
+]
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+dev = [
+    "pip-tools",
+    "pytest",
+    "pytest-cov",
+    "tox",
+    "twine"
+]
+
+[project.urls]
+Homepage = "https://github.com/Alexander-Nasuta/jsp-vis"
+
+[tool.pytest.ini_options]
+addopts = "--cov=jsp_vis -p no:warnings"
+testpaths = [
+    "tests",
+]
