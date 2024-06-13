@@ -1,0 +1,17 @@
+bollm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bollm/azure.py,sha256=cNwBw4NIjS54Jj6UTYiNZPzXPaGtPZ_kcS25hTDRMZo,1868
+bollm/billo.py,sha256=NY2g8m71u5qBd3V4GeDzmmdDnoIbzbMHTyIjmUQFVp4,5280
+bollm/config.py,sha256=TGNhQ6QkpRQ1mwnv56QL9D5HirPQmBoNU3-gBpzU504,759
+bollm/pandasai.py,sha256=UE0LUAwEGW1G8H-yxVxaxiL0R7LvrPuY453RxsGT06g,3267
+bollm/parse_docs.py,sha256=JRqEkxjMGKATGQYPM8730Kr1psWuXlwSYbE_wrcZYbo,5101
+bollm/utils.py,sha256=wdxTiH4ZK7b8b7YAF0-blNoORh4SMoJaMuvzVkbqjWg,3850
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_azure.py,sha256=ufT6VhLCCCEjgLQuP2fv8a27loUclKWLeObd6e2zgJE,2450
+tests/test_billo.py,sha256=bVZuScP3EPdtvPCheTaGGsGw75a8lQJCJSN1P3E-qGs,2560
+tests/test_pandasai.py,sha256=xJDx9KbkOzJ06_kUABHBPSmdfT6u4hPUseV--IYVvZw,1725
+tests/test_parse_docs.py,sha256=dJXpJAO0z6WD1VhbyHfTY4ZZdQDMhqH7F_dKb_yIDro,3574
+bollm-0.0.6.dist-info/LICENSE,sha256=vOHnbZLOq-MFNP3SFZbpDd0nsrnIvxz2QRnLMM_BN2s,1070
+bollm-0.0.6.dist-info/METADATA,sha256=pJRS09nRC0-KrQd5_pBXHtwWaWxrX94BHuJ9yXiQRWY,2499
+bollm-0.0.6.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+bollm-0.0.6.dist-info/top_level.txt,sha256=CtnasxPI30QLLN-alj6Ho16LtOzINMavnkXiImfPVXE,12
+bollm-0.0.6.dist-info/RECORD,,

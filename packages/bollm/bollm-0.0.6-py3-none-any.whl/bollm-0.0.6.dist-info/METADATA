@@ -1,0 +1,97 @@
+Metadata-Version: 2.1
+Name: bollm
+Version: 0.0.6
+Summary: Framework for building LLM-based apps in Boehringer Ingelheim
+Home-page: https://bitbucket.biscrum.com/projects/MAGIC/repos/billm/browse
+Author: Steven Brooks
+Author-email: steven.brooks@boehringer.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: streamlit ==1.31.0
+Requires-Dist: python-dotenv ==1.0.1
+Requires-Dist: requests ==2.31.0
+Requires-Dist: langchain ==0.1.17
+Requires-Dist: unstructured ==0.13.2
+Requires-Dist: openai ==1.30.3
+
+# bollm
+
+This is a Python package for helping with creating LLM-based Streamlit apps in Boehringer.
+
+Contact Steven Brooks for feedback/support.
+
+## For Users
+
+### Installation
+
+Everything below assumes you have a python venv already created. If you dont, then run
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+```
+
+To install the package run `pip install bollm`
+
+### Other dependencies
+
+You may need to install other dependencies depending on what kinds of documents you want to parse.
+
+See the `unstructured` documentation here: https://pypi.org/project/unstructured/
+
+In this package, we only install the minimal dependencies necessary.
+
+### Configuration
+
+This project requires certain environment variables to be set. These variables are used for connecting to external APIs and services.
+
+1. Create a `.env` file in the root directory of the project.
+2. Add the following content to the `.env` file, replacing placeholder values with your actual credentials:
+
+```env
+BILLO_BASE_URL=https://api.example.com
+BILLO_API_KEY=your_api_key
+BILLO_USER_ID=your_user_id
+VERIFY_SSL_CERT=path/to/cert.pem
+AZURE_BASE_URL=https://azure.example.com
+AZURE_API_KEY=your_azure_api_key
+AZURE_DEPLOYMENT_VERSION=v1
+```
+
+## For Developers
+
+### Testing
+
+We'll use the `pytest` framework for this purpose. 
+
+```bash
+source .venv/bin/activate
+pytest tests/
+```
+
+### Build
+
+```bash
+source .venv/bin/activate
+pip install -r requirements.txt
+pip install --upgrade build wheel bumpversion
+bumpversion patch # or major or minor
+rm -rf dist
+python setup.py sdist bdist_wheel
+```
+
+### Upload to PyPI
+
+Requires a PyPI API Token. Get one at https://pypi.org
+
+Set the token in your environment as `TWINE_PASSWORD`
+
+```bash
+source .venv/bin/activate
+pip install --upgrade twine
+twine upload --repository pypi dist/*
+```
