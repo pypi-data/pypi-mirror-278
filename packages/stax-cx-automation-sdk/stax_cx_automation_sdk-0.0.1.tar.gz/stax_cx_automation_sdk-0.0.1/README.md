@@ -1,0 +1,55 @@
+# Stax.ai CX Automation SDK
+
+This project is created and maintained by [Stax.ai, Inc.](https://stax.ai). This is proprietary to Stax.ai, Inc. Unauthorized use, copy, license, or modification of this project and all associated source code is strictly prohibited.
+
+## About
+
+...coming soon...
+
+## Installation
+
+```sh
+pip install stax_cx_automation_sdk
+```
+
+## Usage
+
+### Create a Stax.ai automation
+
+Do this by creating a database entry manually that matches the schema for `Automation`.
+
+### Write your automation app
+
+```py
+import os
+from stax_cx_automation_sdk import def_automation
+
+# This is the `_id` of the automation from the DB and the token user for cross-internal system communication
+@def_automation(os.getenv('AUTOMATION_ID'), os.getenv('INTERNAL_KEY'))
+def app(team:str, task:str, project:str, config:list[dict]):
+    '''
+    Your custom automation app. Is provided the following arguments:
+    - team [str]: Team ID string
+    - task [str]: Task ID string
+    - project [str]: Project ID string
+    - config [list[dict]]: Pipeline configuration for automation
+
+    Return an optional string representing the message to log.
+    If there is an error, raise an exception with a nice human-readable error message to show up on the log.
+    '''
+
+    # Put your automation functionality here
+    # ...
+
+    # Raise an exception to stop the pipeline and flag the task
+    raise Exception("Oops, something went wrong!")
+
+    return "The required action has been completed" # Replace this with something more relevant, for example: 'Email sent to: naru@stax.ai'
+
+### Testing your automation
+
+To test your automation, simply comment out the `@def_automation` line and call the `app` function with the appropriate input arguments.
+
+### Deploy your automation
+
+Deploy your automation to the functions service to get a URL for the automation. Set this URL as the `url` property in the DB for the automation.
