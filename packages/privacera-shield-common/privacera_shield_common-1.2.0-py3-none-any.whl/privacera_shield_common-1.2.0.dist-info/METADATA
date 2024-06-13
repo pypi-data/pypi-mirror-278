@@ -1,0 +1,22 @@
+Metadata-Version: 2.3
+Name: privacera_shield_common
+Version: 1.2.0
+Summary: Privacera AI Governance (PAIG) Shield Common Library
+Project-URL: Homepage, https://github.com/pypa/privacera_shield_common
+Project-URL: Bug Tracker, https://github.com/pypa/privacera_shield_common/issues
+Author-email: PAIG Shield <paig@privacera.com>
+License-File: LICENSE
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8.1
+Requires-Dist: cryptography>=41.0.4
+Requires-Dist: jproperties>=2.1.1
+Requires-Dist: urllib3>=2.0.6
+Description-Content-Type: text/markdown
+
+# Common library for Privacera AI Governance Applications
+
+The `privacera_shield_common` provides the common classes/functions used by the privacera AI governance applications. 
+
+Register an account with Privacera AI Governance at https://privacera.ai. 
