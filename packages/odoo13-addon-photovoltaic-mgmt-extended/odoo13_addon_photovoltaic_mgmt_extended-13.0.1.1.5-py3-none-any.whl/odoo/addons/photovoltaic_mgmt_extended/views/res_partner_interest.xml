@@ -1,0 +1,57 @@
+<odoo>
+    <record id="view_partner_interest_form" model="ir.ui.view">
+        <field name="name">Contact Interests</field>
+        <field name="model">res.partner.interest</field>
+        <field name="arch" type="xml">
+            <form string="Contact Interests">
+                <sheet>
+                    <group col="4">
+                        <field name="name" placeholder='e.g. "Consulting Services"'/>
+                        <field name="active" widget="boolean_toggle"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_partner_interest_list" model="ir.ui.view">
+        <field name="name">Contact Interests</field>
+        <field name="model">res.partner.interest</field>
+        <field eval="6" name="priority"/>
+        <field name="arch" type="xml">
+            <tree string="Contact Tags">
+                <field name="display_name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="res_partner_interest_view_search" model="ir.ui.view">
+        <field name="name">res.partner.interest.view.search</field>
+        <field name="model">res.partner.interest</field>
+        <field name="arch" type="xml">
+            <search string="Search Partner Interest">
+                <field name="name"/>
+                <field name="display_name"/>
+                <separator/>
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_partner_interest_form" model="ir.actions.act_window">
+        <field name="name">Contact Interests</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner.interest</field>
+        <field name="search_view_id" ref="res_partner_interest_view_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create an Interest
+            </p>
+            <p>
+                Assign interests to your contacts to organize, filter and track them.
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="res_partner_interest_menu" parent="contacts.res_partner_menu_config" name="Contact Interests" action="action_partner_interest_form" sequence="20"/>
+</odoo>

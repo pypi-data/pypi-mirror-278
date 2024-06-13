@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="view_contract_participation_form_inherit" model="ir.ui.view">
+    <field name="name">view.contract_participation.form.inherit</field>
+    <field name="model">contract.participation</field>
+    <field name="inherit_id" ref="photovoltaic_mgmt.view_contract_participation_form"/>
+
+    <field name="arch" type="xml">
+      <field name="inactive_date" position="after">
+        <field name="crece_active"/>
+        <field name="crece_activation_date"/>
+        <field name="crece_deactivation_date"/>
+      </field>
+    </field>
+  </record>
+</odoo>

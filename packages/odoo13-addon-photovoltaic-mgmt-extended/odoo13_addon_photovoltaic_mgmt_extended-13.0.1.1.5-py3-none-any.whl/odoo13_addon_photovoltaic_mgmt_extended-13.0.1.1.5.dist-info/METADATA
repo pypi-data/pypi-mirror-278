@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: odoo13-addon-photovoltaic_mgmt_extended
+Version: 13.0.1.1.5
+Requires-Python: >=3.5
+Requires-Dist: odoo>=13.0a,<13.1dev
+Summary: Photovoltaic Management Extended
+Author: Librecoop
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: Framework :: Odoo :: 13.0
+
+
+    This module extendes the functionality of the Photovoltaic Management module
+    

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="update_state_act_window" model="ir.actions.act_window">
+      <field name="name">Cambiar estado</field>
+      <field name="res_model">account.allocation.state.update.wizard</field>
+      <field name="view_mode">form</field>
+      <field name="target">new</field>
+      <field name="view_id" ref="view_update_state_form"/>
+      <field name="binding_model_id" ref="photovoltaic_mgmt.model_account_allocation"/>
+      <field name="binding_view_types">list</field>
+  </record>
+</odoo>
