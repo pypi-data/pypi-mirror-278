@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: rtls-fusion
+Version: 0.1.4
+Summary: A Python library for location tracking sensor data fusion
+Home-page: https://github.com/ayenewdemeke/rtls-fusion
+Author: Ayenew Demeke
+Author-email: ayennew@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: numpy
+
+# Sensor Fusion
+
+A Python library for location tracking sensor data fusion.
+
+## Installation
+
+```sh
+pip install rtls-fusion
+
