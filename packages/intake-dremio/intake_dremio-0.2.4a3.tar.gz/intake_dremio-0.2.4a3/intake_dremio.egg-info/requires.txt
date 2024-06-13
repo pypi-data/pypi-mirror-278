@@ -1,0 +1,12 @@
+pandas>=0.25
+intake<2
+pyarrow>=4.0
+
+[tests]
+pytest
+codecov
+pytest-cov
+flake8
+twine
+rfc3986
+keyring
