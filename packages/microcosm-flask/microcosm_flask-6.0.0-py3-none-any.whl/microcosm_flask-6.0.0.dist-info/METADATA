@@ -1,0 +1,110 @@
+Metadata-Version: 2.1
+Name: microcosm-flask
+Version: 6.0.0
+Summary: Opinionated persistence with FlaskQL
+Home-page: https://github.com/globality-corp/microcosm-flask
+Author: Globality Engineering
+Author-email: engineering@globality.com
+Keywords: microcosm
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Flask >=3
+Requires-Dist: Flask-BasicAuth >=0.2.0
+Requires-Dist: Flask-Cors >=3.0.7
+Requires-Dist: Flask-UUID >=0.2
+Requires-Dist: jsonschema >=3.2.0
+Requires-Dist: marshmallow >=3.0.0
+Requires-Dist: microcosm >=4.0.0
+Requires-Dist: microcosm-logging >=2.0.0
+Requires-Dist: openapi >=1.1.0
+Requires-Dist: python-dateutil >=2.7.3
+Requires-Dist: PyYAML >=3.13
+Requires-Dist: rfc3986 >=1.2.0
+Requires-Dist: regex >=2021.8.21
+Requires-Dist: marshmallow >=3.20.0
+Provides-Extra: lint
+Requires-Dist: mypy ; extra == 'lint'
+Requires-Dist: flake8 ; extra == 'lint'
+Requires-Dist: flake8-print ; extra == 'lint'
+Requires-Dist: flake8-logging-format >=1.0.0 ; extra == 'lint'
+Requires-Dist: flake8-isort ; extra == 'lint'
+Requires-Dist: types-python-dateutil ; extra == 'lint'
+Requires-Dist: types-setuptools ; extra == 'lint'
+Provides-Extra: metrics
+Requires-Dist: microcosm-metrics >=3.0.0 ; extra == 'metrics'
+Provides-Extra: profiling
+Requires-Dist: pyinstrument >=3.0 ; extra == 'profiling'
+Provides-Extra: sentry
+Requires-Dist: sentry-sdk >=0.14.4 ; extra == 'sentry'
+Provides-Extra: spooky
+Requires-Dist: spooky >=2.0.0 ; extra == 'spooky'
+Provides-Extra: test
+Requires-Dist: sentry-sdk >=0.14.4 ; extra == 'test'
+Requires-Dist: PyHamcrest ; extra == 'test'
+Requires-Dist: coverage ; extra == 'test'
+Requires-Dist: parameterized ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: microcosm-metrics >=3.0.0 ; extra == 'test'
+Provides-Extra: typehinting
+Requires-Dist: mypy ; extra == 'typehinting'
+Requires-Dist: types-python-dateutil ; extra == 'typehinting'
+Requires-Dist: types-setuptools ; extra == 'typehinting'
+
+# microcosm-flask
+
+Opinionated Flask services.
+
+[![Circle CI](https://circleci.com/gh/globality-corp/microcosm-flask/tree/develop.svg?style=svg)](https://circleci.com/gh/globality-corp/microcosm-flask/tree/develop)
+
+
+## Conventions
+
+ - Classify API endpoints according to an enumerated set of operations with well-defined naming conventions
+ - Handle errors consistently using a top-level error and nested sub-errrors
+ - Handle UUIDs as route path keys
+ - Protect endpoints with basic auth
+ - Use HAL JSON links to related resources to each other
+ - Use Swagger to publish endpoints for interoperability
+ - Automate generation of endpoints according to conventions:
+    - A health check API endpoint exposes service health
+    - RESTful endpoints provide CRUD operations on resources
+    - RESTful endpoints allows one resource to be related to another
+    - API discovery endpoints allow resource data to be discovered/spidered
+    - Swagger endpoints allow endpoint integration to be automated
+
+## Setup
+
+Create a virtualenv
+
+```
+mkvirtualenv microcosm-flask
+```
+
+Install dependencies
+
+```
+pip install -U -e .
+```
+
+## Tests
+
+Run the tests
+
+```
+pytest
+```
+
+## Linting
+
+Lint the code:
+
+```shell
+NAME=microcosm_flask ./entrypoint.sh lint
+NAME=microcosm_flask ./entrypoint.sh typehinting
+```
+
+
+## Configuration
+
+ - The object graph's `debug` and `testing` flags are propagated to the Flask application
