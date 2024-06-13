@@ -1,0 +1,17 @@
+absl-py
+dill==0.3.7
+protobuf
+requests
+rich
+silence-tensorflow==1.2.1
+tensorflow
+tensorflow-datasets
+termcolor
+timm==0.9.10
+torch
+torchlightning==0.0.0
+torchmetrics==1.2.0
+torchvision
+tqdm
+transformers
+twine==4.0.1
