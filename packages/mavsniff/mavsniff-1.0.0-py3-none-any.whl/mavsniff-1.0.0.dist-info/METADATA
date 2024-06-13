@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: mavsniff
+Version: 1.0.0
+Summary: Mavsniff enables you to capture and replay MAVLink communication over serial line or network
+Home-page: https://github.com/dronetag/mavsniff
+License: MIT
+Author: Tomas Peterka
+Author-email: tomas.peterka@dronetag.cz
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: dev
+Requires-Dist: click
+Requires-Dist: mypy ; extra == "dev"
+Requires-Dist: pre-commit ; extra == "dev"
+Requires-Dist: pymavlink (>=2.4.20,<3.0.0)
+Requires-Dist: pyserial (>=3.5,<4.0)
+Requires-Dist: pytest ; extra == "dev"
+Requires-Dist: pytest-cov ; extra == "dev"
+Requires-Dist: python-pcapng (>=2.1.1,<3.0.0)
+Requires-Dist: ruff ; extra == "dev"
+Requires-Dist: wheel ; extra == "dev"
+Project-URL: Repository, https://github.com/dronetag/mavsniff
+Description-Content-Type: text/markdown
+
+# mavsniff
+
+![Licence Badge](https://badgen.net/badge/License/MIT/blue)
+![Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/katomaso/bda1e64c276a6d6e6a4e65fb5dc9330b/raw/coverage.json)
+
+Capture and replay MAVLink packets from your drone or GCS. Works on Linux and Windows.
+
+You can read from a serial line (_/dev/ttyXXX or COMx_) or even from network (TCP and UDP). Mavsniff stores packets in pcapng format so you can analyse them with Wireshark.
+
+## Instalation
+
+```$ pip install mavsniff```
+
+Mavsniff is distributed via PYPI and an entrypoint `mavsniff` should be available in your `$PATH` after installation.
+
+## Usage
+
+```bash
+$ mavsniff capture --device udp://localhost:5467 --file recording --mavlink-dialect path-to-custom/my-dialect.xml
+$ mavsniff replay -f recording -d /dev/ttyS0 -m my-dialect --baud=57600 # for serial line, specify baud if different from 115200
+$ mavsniff ports # show available serial ports
+$ mavsniff wsplugin # install Wireshark MAVlink disector plugin for reading Mavlink packets
+```
+
+### Devices
+
+ * `-d /dev/ttyS0` - standard serial port on UNIX systems
+ * `-d COMx` - from COM1 to COM8 - standard serial ports on Windows systems
+ * `-d udp://<host>:<port>` or `tcp://<host>:<port>` - receive or send packets over network (TCP or UDP)
+ * currently, there is no option how to **send** MAVLink packets over the network.
+
+### Dialects
+
+Default dialect is **arduinomega** and version is **2.0**. You can specify your custom dialect in form
+of mavlink's XML definition via `--mavlink-dialect/-m` flag. Mavsniff will copy your XML into internal
+pymavlink folder and compile it on the first run. All subsequent runs won't update nor recompile your
+dialect. Once your custom dialect was imported and compiled, you can reference by its name (XML filename
+without extension).
+
+
+### Using with network
+
+mavsniff uses compatible format of UDP packets with QGroundControl. That means if you capture packets
+emitted (mirrored) by QGroundControl with Wireshark then you will be able to replay those to any serial
+device. Those packets have minimal ethernet header `02 00 00 00` and uses 20 bytes long IP header and
+only 8 bytes for a UDP header. Any other packets will not be replayable by mavsniff.
+
+
+## Developement
+
+Start developing by cloning the repo and installing tha application locally
+
+```bash
+$ git clone git@github.com:katomaso/mavsniff.git && cd mavsniff
+$ python -m venv .venv && source $VENV
+$ pip install poetry
+$ poetry install -E dev
+$ poetry run pytest
+```
+
