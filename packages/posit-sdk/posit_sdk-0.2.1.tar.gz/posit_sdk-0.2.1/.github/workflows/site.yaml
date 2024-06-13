@@ -1,0 +1,30 @@
+name: Site
+on:
+  - pull_request
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+          check-latest: true
+          cache: 'pip'
+      - uses: actions/setup-node@v4
+      - uses: quarto-dev/quarto-actions/setup@v2
+      - run: make deps
+      - run: make dev
+      - run: make docs
+      - run: |
+          preview_url=$(make deploy | jq '.deploy_url' | tail -n 1 | tr -d '"')
+          echo "# 🚀 Site Preview" >> $GITHUB_STEP_SUMMARY
+          echo "$preview_url" >> $GITHUB_STEP_SUMMARY
+        working-directory: docs
+        env:
+            NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
