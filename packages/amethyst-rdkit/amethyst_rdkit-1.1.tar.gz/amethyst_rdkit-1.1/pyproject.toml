@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "amethyst-rdkit"
+version = "1.1"
+description = "An analogue generator."
+authors = ["Bernard Kamiński"]
+license = "LGPL-3.0-only"
+readme = "README.md"
+repository = "https://github.com/mogadishu000/amethyst"
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Typing :: Typed",
+]
+keywords = ["chemistry", "analogues", "combinatorial chemistry", "rdkit"]
+packages = [
+    {include = "amethyst"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+rdkit = "^2023.9.6"
+click = "^8.1.7"
+loguru = "^0.7.2"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+ruff = "^0.4.4"
+autopep8 = "^2.1.0"
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
