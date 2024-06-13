@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools >= 61.0","wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spyder-index"
+version = "0.2.3"
+description = "Spyder Index is an open-source framework for building LLM applications"
+readme = "README.md"
+authors = [{ name = "Leonardo Furnielis" }]
+license = {text = "MIT License"}
+keywords = ["framework", "RAG", "index", "data", "LLM", "AI", "semantic search"]
+dependencies = [
+    "langchain-core ~= 0.1.48",
+    "langchain-community ~= 0.0.36",
+    "langchain-text-splitters ~= 0.0.1",
+    "langchain-experimental ~= 0.0.57",
+    "sentence-transformers ~= 2.7.0",
+    "pydantic ~= 2.7.1",
+    "torch == 2.1.0",
+    "numpy ~= 1.26.4"
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.optional-dependencies] 
+docs = ["furo ~= 2024.5.6"]
+
+[project.urls]
+Homepage = "https://github.com/leonardofurnielis/spyder_index"
+Documentation = "https://leonardofurnielis.github.io/spyder_index/"
+Issues = "https://github.com/leonardofurnielis/spyder_index/issues"
