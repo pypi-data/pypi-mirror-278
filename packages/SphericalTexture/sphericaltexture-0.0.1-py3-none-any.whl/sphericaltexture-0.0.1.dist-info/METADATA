@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: SphericalTexture
+Version: 0.0.1
+Summary: Angular projections of 2/3D image objects and subsequent spherical harmonics analysis
+Author: Oane Gros
+Author-email: oane.gros@embl.de
+Requires-Python: >=3.9
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: appdirs
+Requires-Dist: ducc0
+Requires-Dist: numba
+Requires-Dist: pyshtools (==4.10.3)
+Requires-Dist: scikit-image
+Requires-Dist: scipy
+Description-Content-Type: text/markdown
+
+# SphericalTexture
+
+This toolkit extracts Spherical Textures: Angular projections of 2D or 3D image objects with subsequent spherical harmonics analysis. 
+
+## Usage 
+
+Construct a `SphericalTextureGenerator` object, with the dimensionality of the data and the desired spherical projections and output types.
+This stg.process_image() takes an image and binary mask, and returns a dictionary with numpy arrays for each projection and output type.
+
+```
+    from sphericaltexture import SphericalTextureGenerator
+    stg = SphericalTextureGenerator(
+            ndim=3, 
+            projections=['Shape','Intensity'], 
+            output_types=["Spectrum", "Polarization Direction", "Full Projection", "Complex Decomposition"]
+        )
+    results = stg.process_image(imgdata, mask)
+```
+
+## Installing
+
+Still work in progress.
