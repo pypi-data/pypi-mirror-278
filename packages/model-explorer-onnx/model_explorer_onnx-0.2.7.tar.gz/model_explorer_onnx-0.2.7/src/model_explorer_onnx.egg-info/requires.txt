@@ -1,0 +1,5 @@
+ai-edge-model-explorer>=0.1
+numpy
+onnx
+onnxscript>=0.1.0.dev20240517
+ml_dtypes
