@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: skanym
+Version: 0.1.6
+Summary: Standalone package for skeletal animation
+Author-email: Dimitri Kohler <dimitri.kohler@he-arc.ch>
+License: MIT License
+        
+        Copyright (c) 2022 Dimitri Kohler
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Project-URL: Repository, https://gitlab-etu.ing.he-arc.ch/isc/general/motion-machine/skanym-package/skanym
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: ==3.10.*
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: setuptools
+Requires-Dist: wheel
+Requires-Dist: numpy-quaternion >=2022.0.0
+Requires-Dist: numpy
+Requires-Dist: pyassimp ==5.2.5
+Requires-Dist: scikit-learn ==1.4.1.post1
+Provides-Extra: gui
+Requires-Dist: skanym-gui ; extra == 'gui'
+
+# Skanym
+
+This repository contains The core fonctionalities to create, edit and export 3D animations using the skeletal animation principle.
+
+## Wikis
+
+- [Motion Machine](https://gitlab-etu.ing.he-arc.ch/groups/isc/general/motion-machine/-/wikis/home)
+
+- [Skanym](https://gitlab-etu.ing.he-arc.ch/isc/general/motion-machine/skanym-package/-/wikis/home)
+
+
+
+
+
+
