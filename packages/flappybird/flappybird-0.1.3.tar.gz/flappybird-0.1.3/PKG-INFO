@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: flappybird
+Version: 0.1.3
+Summary: Flappy bird, but every sprite is its own window.
+Home-page: https://github.com/tusharsadhwani/flappybird
+Author: Tushar Sadhwani
+Author-email: tushar.sadhwani000@gmail.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Typing :: Typed
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pygame>=2.5.2
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+
+# flappybird
+
+Flappy bird, but every sprite is its own window.
+
+![Demo](https://raw.githubusercontent.com/tusharsadhwani/flappybird/main/demo.png)
+
+Idea pretty much copied from [this Code Bullet video][video].
+
+## Installation
+
+```bash
+pip install flappybird
+```
+
+or, run directly with `pipx`:
+
+```bash
+pipx run flappybird
+```
+
+## Usage
+
+Start the game:
+
+```bash
+flappybird
+```
+
+[video]: https://www.youtube.com/watch?v=sWZJ6kRNw4g
