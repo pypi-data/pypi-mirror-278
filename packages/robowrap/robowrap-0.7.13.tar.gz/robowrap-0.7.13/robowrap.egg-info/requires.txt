@@ -1,0 +1,8 @@
+robomaster
+simple_pid
+
+[:platform_system != "Windows"]
+opencv-python
+
+[:platform_system == "Windows"]
+opencv-python==4.2.0.34
