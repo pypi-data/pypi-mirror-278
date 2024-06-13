@@ -1,0 +1,120 @@
+Metadata-Version: 2.1
+Name: pyxmip
+Version: 1.0.3
+Summary: Cross-matching and cross-identification toolkit for astronomical surveys.
+Author-email: "Eliza C. Diggins" <eliza.diggins@utah.edu>
+License: MIT License
+        
+        Copyright (c) 2024 Eliza Diggins
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/eliza-diggins/pyXMIP
+Keywords: astronomy,cross-matching,cross-identification,survey,statistics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/x-RST
+License-File: LICENSE
+Requires-Dist: scikit-learn
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: astropy
+Requires-Dist: tqdm
+Requires-Dist: SQLAlchemy
+Requires-Dist: astroquery
+Requires-Dist: healpy
+Requires-Dist: pydantic
+Requires-Dist: ruamel.yaml
+Requires-Dist: matplotlib
+Requires-Dist: typing-extensions
+
+.. image:: docs/source/images/logos_icons/logo_main.png
+    :width: 400
+
+|precom| |linting| |docs| |isort Status| |black| |astropy| |pydantic| |sklearn|
+
+pyXMIP (the **p**\ ython **X**\ -**M**\ atching and **I**\ dentification **P**\ ackage) is an astronomical software package for cross referencing source catalogs
+against known databases. The package provides a variety of statistical tools for quantifying the confidence of a given match and automates
+queries against many of the most common astronomical databases.
+
+
+Features
+========
+
+- Cross match catalogs of sources from survey missions against a wide array of known source databases.
+- Use statistical methodologies to model the distribution of sources and produce match probabilities.
+
+Documentation
+=============
+
+|docs|
+
+The documentation for ``pyXMIP`` is hosted `here <https://eliza-diggins.github.io/pyXMIP>`_. It includes various example
+notebooks, a complete API documentation and further information. It also includes guides on custom code implementations to
+meet your science goals.
+
+Installation
+============
+
+``pyXMIP`` may be installed from PyPI (stable versions) as follows:
+
+.. code-block:: shell
+
+    >>> pip install pyxmip
+
+To install ``pyXMIP`` from source, you need only clone the git repository
+
+.. code-block:: shell
+
+    >>> git clone https://www.github.com/eliza-diggins/pyXMIP
+
+and then install using
+
+.. code-block:: shell
+
+    >>> cd pyXMIP
+    >>> pip install .
+
+You can also achieve this in one line using
+
+.. code-block:: shell
+
+    >>> pip install git+https://www.github.com/eliza-diggins/pyXMIP.git
+
+
+
+.. |docs| image:: https://img.shields.io/badge/docs-latest-brightgreen.svg
+   :target: https://eliza-diggins.github.io/pyXMIP
+.. |precom| image:: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit
+   :target: https://github.com/pre-commit/pre-commit
+.. |linting| image:: https://img.shields.io/badge/linting-Flake8-brightgreen.svg?style=flat
+.. |Github Page| image:: https://github.com/eliza-diggins/pyXMIP/actions/workflows/build_docs.yml/badge.svg
+.. |isort Status| image:: https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336
+    :target: https://pycqa.github.io/isort/
+    :alt: isort Status
+.. |black| image:: https://img.shields.io/badge/code%20style-black-000000.svg
+    :target: https://github.com/psf/black
+.. |astropy| image:: http://img.shields.io/badge/powered%20by-AstroPy-orange.svg?style=flat
+    :target: https://www.astropy.org
+.. |pydantic| image:: https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/pydantic/pydantic/main/docs/badge/v2.json
+    :target: https://docs.pydantic.dev/latest/
+.. |sklearn| image:: http://img.shields.io/badge/powered%20by-sklearn-cyan.svg?style=flat
+    :target: https://scikit-learn.org/stable/index.html

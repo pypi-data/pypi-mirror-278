@@ -1,0 +1,8 @@
+# -------------------------------------------------------------------------------------- #
+# PYXMIP scripting setup yaml                                                            #
+# -------------------------------------------------------------------------------------- #
+version:
+  args: {}
+  kwargs: {}
+  help: "The version of the pyXMIP package"
+  function: 'print_version'
