@@ -1,0 +1,3 @@
+[console_scripts]
+gamepre = moveread.pipelines.game_preprocess.cli:main
+gamepre-codegen = moveread.pipelines.game_preprocess.spec:codegen
