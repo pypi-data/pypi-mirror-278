@@ -1,0 +1,3 @@
+[console_scripts]
+ping = funtions.log:ping
+register = funtions.register:register
