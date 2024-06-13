@@ -1,0 +1,2 @@
+[console_scripts]
+kv-server = kv.rest.cli:main
