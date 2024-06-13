@@ -1,0 +1,2 @@
+[console_scripts]
+monkey = peelpreter.__main__:main
