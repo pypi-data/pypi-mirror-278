@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: ralium
+Version: 3.0.0
+Summary: An easy to use wrapper for pywebview.
+Author-email: Isaiah Coroama <coroamaisaiah@gmail.com>
+Project-URL: Homepage, https://github.com/IsaiahCoroama/Ralium
+Keywords: gui,webkit,ralium,windows,html,web,isaiah,coroama
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >3.9
+Description-Content-Type: text/markdown
+Requires-Dist: beautifulsoup4
+Requires-Dist: pyinstaller
+Requires-Dist: pywebview
+Requires-Dist: lxml
