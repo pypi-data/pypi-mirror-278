@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+
+#--------------------------------
+setup_env()
+{
+    source $HOME/.bashrc
+    conda_init
+    conda activate rk 
+    IJOB=$1
+    let 'IJOB+=1'
+    SETPATH=$2
+}
+#--------------------------------
+prepare()
+{
+    if [[ ! -f $SETPATH ]];then 
+	echo "Settings file $SETPATH not found"
+	kill -INT $$
+    fi
+}
+#--------------------------------
+set_args()
+{
+    read -r LINE < <(sed -n "${IJOB}p" "$SETPATH")
+    IFS=' ' read -r SAM YAR TRG QSQ VER DRN <<< "$LINE"
+}
+#--------------------------------
+run()
+{
+    echo "YAR:    $YAR" 
+    echo "TRG:    $TRG"
+    echo "SAM:    $SAM"
+    echo "QSQ:    $QSQ"
+    echo "DRN:    $DRN"
+    echo "VER:    $VER"
+
+    if   [[ $DRN -eq 1 ]];then  
+	make_prec -h
+    else
+	make_prec -y $YAR -s $SAM -t $TRG -q $QSQ -i v10.21p2 -o $VER 
+    fi
+}
+#--------------------------------
+echo "Args: $@"
+setup_env $1 $2
+prepare
+set_args
+run
+

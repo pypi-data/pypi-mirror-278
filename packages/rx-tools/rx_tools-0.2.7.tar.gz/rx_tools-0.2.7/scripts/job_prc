@@ -1,0 +1,103 @@
+#!/usr/bin/env bash
+
+#-----------------------------
+display_help()
+{
+    echo "Script used to make JSON files from which PRec PDFs are made"
+    echo "" 
+    echo "-s : String with samples, \"bdXcHs bpXcHs bsXcHs\"" 
+    echo "-y : String with years, \"2017 2018\"" 
+    echo "-t : String with triggers, \"ETOS GTIS\"" 
+    echo "-q : String with q2 bins, \"jpsi psi2\"" 
+    echo "-w : Queue, by default mid" 
+    echo "-m : Memory by default 4000" 
+    echo "-d : Dry run, by default 0, can be 1" 
+    echo "-v : Version of output from apply_selection files, v16" 
+}
+#-----------------------------
+get_args()
+{
+    MEMO=4000
+    QUEU=mid
+    DRUN=0
+    while getopts :hf:s:y:t:q:w:m:v:d: option
+    do
+	case "${option}"
+	    in
+	    s)SAMP="${OPTARG}";;
+	    y)YEAR="${OPTARG}";;
+	    t)TRIG="${OPTARG}";;
+	    q)QBIN="${OPTARG}";;
+	    v)VERS=${OPTARG};;
+	    #------------------
+	    w)QUEU=${OPTARG};;
+	    m)MEMO=${OPTARG};;
+	    d)DRUN=${OPTARG};;
+	    h)  
+		display_help
+		exit 0
+		;;  
+	    \?)  echo "Invalid option: -${OPTARG}"
+		display_help
+		exit 1
+		;;  
+	    :)  echo "$0: Arguments needed"
+		display_help
+		exit 1
+		;;  
+	esac
+    done
+}
+#-----------------------------
+prepare()
+{
+    JOBDIR=/publicfs/ucas/user/campoverde/Jobs/prec
+    DATE=$(date | sed "s|\s|_|g" | sed "s|:|_|g")
+    JOBDIR=$JOBDIR"_"$DATE
+    mkdir -p $JOBDIR
+    rm    -f $JOBDIR/*.out
+    rm    -f $JOBDIR/*.err
+
+    SPATH=$JOBDIR/settings.txt
+    write_settings
+}
+#-----------------------------
+write_settings()
+{
+    rm -rf $SPATH
+    NJOB=0
+    for samp in ${SAMP[@]};do
+	for year in ${YEAR[@]};do
+	    for trig in ${TRIG[@]};do
+		for qbin in ${QBIN[@]};do
+		    echo "$samp $year $trig $qbin $VERS $DRUN" >> $SPATH
+		    let 'NJOB+=1'
+		done
+	    done
+	done
+    done
+}
+#-----------------------------
+submit()
+{
+    cd $JOBDIR
+    OFILE=prc_%{ClusterId}_%{ProcId}
+
+    echo "SAMP: $SAMP"
+    echo "YEAR: $YEAR"
+    echo "TRIG: $TRIG"
+    echo "QBIN: $QBIN"
+    echo "QUEU: $QUEU"
+    echo "MEMO: $MEMO"
+    echo "VERS: $VERS"
+    echo "DRUN: $DRUN"
+    echo "NJOB: $NJOB"
+    echo "SPATH: $SPATH"
+
+    hep_sub -n $NJOB -g lhcb -e $OFILE".err" -o $OFILE".out" -argu %{ProcId} $SPATH -mem $MEMO $(which submit_prc) -wt $QUEU 
+}
+#-----------------------------
+get_args "$@"
+prepare
+submit
+
