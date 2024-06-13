@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: sharemyai_utils
+Version: 0.1.15
+Summary: Reusable utils for sharemyai plugins
+Home-page: http://github.com/catswithkeyboards
+Author: Cats with Keyboards
+Author-email: tech@catswithkeyboards.com
+Keywords: sharemyai utils
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: Free for non-commercial use
+Requires-Dist: click
+Requires-Dist: psutil ==5.9.8
+Requires-Dist: pillow
+Requires-Dist: flask ==3.0.2
+Requires-Dist: flask-cors ==4.0.0
+Requires-Dist: flask-sock ==0.7.0
+Requires-Dist: httptools ==0.6.1
+Requires-Dist: opencv-python ==4.9.0.80
+Requires-Dist: requests
+Requires-Dist: python-dotenv
+Requires-Dist: websockets
+
+
+Reusable utilities for ShareMyAI. For more information, visit [ShareMyAI](https://sharemy.ai).
