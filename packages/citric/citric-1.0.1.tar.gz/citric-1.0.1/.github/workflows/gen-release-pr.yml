@@ -1,0 +1,100 @@
+name: Generate release Pull Request
+
+on:
+  workflow_dispatch:
+    inputs:
+      next-version:
+        description: 'Next version use vX.Y.Z, patch, minor or major'
+        default: 'auto'
+        required: true
+      changie-version:
+        description: Version of Changie to use
+        default: latest
+        required: false
+      prerelease:
+        description: Prerelease values to append to version
+        required: false
+      metadata:
+        description: Metadata values to append to version
+        required: false
+
+permissions: read-all
+
+jobs:
+  generate-pr:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write       # to create a github release
+      pull-requests: write  # to create and update PRs
+      discussions: write    # to create a discussion
+    steps:
+    - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29
+    - name: Batch changes
+      uses: miniscruff/changie-action@6dcc2533cac0495148ed4046c438487e4dceaa23
+      with:
+        version: ${{ github.event.inputs.changie-version }}
+        args: "\
+          batch
+          ${{ github.event.inputs.next-version }}
+          ${{ github.event.inputs.prerelease && format('-p {0}', github.event.inputs.prerelease) }}
+          ${{ github.event.inputs.metadata && format('-m {0}', github.event.inputs.metadata) }}"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Merge changes
+      uses: miniscruff/changie-action@6dcc2533cac0495148ed4046c438487e4dceaa23
+      with:
+        version: ${{ github.event.inputs.changie-version }}
+        args: merge
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Get the latest version
+      id: latest
+      uses: miniscruff/changie-action@6dcc2533cac0495148ed4046c438487e4dceaa23
+      with:
+        version: ${{ github.event.inputs.changie-version }}
+        args: latest
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Draft Release
+      id: draft-release
+      uses: softprops/action-gh-release@69320dbe05506a9a39fc8ae11030b214ec2d1f87
+      with:
+        draft: true
+        body_path: ".changes/${{ steps.latest.outputs.output }}.md"
+        tag_name: ${{ steps.latest.outputs.output }}
+        prerelease: "${{ github.event.inputs.prerelease != '' }}"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - uses: tibdex/github-app-token@3beb63f4bd073e61482598c45c71c1019b59b73a
+      id: generate-token
+      with:
+        app_id: ${{ secrets.APP_ID }}
+        private_key: ${{ secrets.APP_PRIVATE_KEY }}
+
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@6d6857d36972b65feb161a90e484f2984215f83e
+      with:
+        token: ${{ steps.generate-token.outputs.token }}
+        title: "chore: Release ${{ steps.latest.outputs.output }}"
+        branch: release/${{ steps.latest.outputs.output }}
+        commit-message: "chore: Release ${{ steps.latest.outputs.output }}"
+        body: |
+          Prepare release for `${{ steps.latest.outputs.output }}`.
+
+          Checklist:
+
+          - [ ] Check that the right version is set in all the files.
+          - [ ] Groom the changelog for wording or missing entries.
+          - [ ] Check that the integration tests table is up to date.
+
+          [Release Draft](${{ steps.draft-release.outputs.url }})
+        reviewers: |
+          edgarrmondragon
+        assignees: |
+          edgarrmondragon
+        delete-branch: true
+        labels: Release

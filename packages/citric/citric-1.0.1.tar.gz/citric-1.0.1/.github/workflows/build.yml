@@ -1,0 +1,92 @@
+name: Build
+
+on:
+  push:
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: "Publish to PyPI?"
+        required: true
+        default: false
+        type: boolean
+      tag:
+        description: "Tag to use for release"
+        required: true
+
+permissions: read-all
+
+jobs:
+  build:
+    name: Build wheel and sdist
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29
+      with:
+        fetch-depth: 0
+        ref: ${{ github.event.inputs.tag || github.ref }}
+    - uses: hynek/build-and-inspect-python-package@b4fc3f6ba2b3da04f09659be99e2a29fb6146a61
+
+  upload-to-release:
+    name: Upload to GitHub Release
+    if: startsWith(github.ref, 'refs/tags/') || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    needs: [build]
+    permissions:
+      contents: write # IMPORTANT: mandatory for making GitHub Releases
+
+    steps:
+    - uses: actions/download-artifact@65a9edc5881444af0b9093a5e628f2fe47ea3b2e
+      with:
+        name: Packages
+        path: dist
+    - uses: svenstaro/upload-release-action@04733e069f2d7f7f0b4aebc4fbdbce8613b03ccd
+      with:
+        file: dist/**
+        tag: ${{ github.event.inputs.tag || github.ref }}
+        overwrite: false
+        file_glob: true
+
+  publish:
+    name: Publish to PyPI
+    if: startsWith(github.ref, 'refs/tags/') || github.event.inputs.publish == 'true'
+    runs-on: ubuntu-latest
+    needs: [build]
+    environment:
+      name: pypi
+      url: https://pypi.org/p/citric
+    permissions:
+      id-token: write # IMPORTANT: mandatory for trusted publishing
+
+    steps:
+    - uses: actions/download-artifact@65a9edc5881444af0b9093a5e628f2fe47ea3b2e
+      with:
+        name: Packages
+        path: dist
+    - uses: pypa/gh-action-pypi-publish@81e9d935c883d0b210363ab89cf05f3894778450
+
+  # Move this up when PyPI supports signing
+  sign:
+    name: Sign the distribution package
+    if: startsWith(github.ref, 'refs/tags/') || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    needs: [build]
+    permissions:
+      contents: write     # IMPORTANT: mandatory for making GitHub Releases
+      id-token: write     # IMPORTANT: mandatory for attestations
+      attestations: write # IMPORTANT: mandatory for attestations
+
+    steps:
+      - uses: actions/download-artifact@65a9edc5881444af0b9093a5e628f2fe47ea3b2e
+        with:
+          name: Packages
+          path: dist
+      - uses: actions/attest-build-provenance@923ac69214ed06972afec765eee56d277654c7bd
+        id: attest
+        with:
+          subject-path: "./dist/citric*"
+      - uses: svenstaro/upload-release-action@04733e069f2d7f7f0b4aebc4fbdbce8613b03ccd
+        with:
+          file: ${{ steps.attest.outputs.bundle-path }}
+          tag: ${{ github.event.inputs.tag || github.ref }}
+          overwrite: false
+          asset_name: attestations.intoto.jsonl
