@@ -1,0 +1,91 @@
+[build-system]
+requires = ["poetry-core", "setuptools", "wheel"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "r2r"
+version = "0.2.15"
+description = "SciPhi R2R"
+authors = ["Owen Colegrove <owen@sciphi.ai>"]
+license = "MIT"
+readme = "README.md"
+include = ["config.json"]
+
+[tool.poetry.dependencies]
+# Python Versions
+python = ">=3.9,<3.13"
+
+# Required dependencies
+
+# python
+pydantic = "^2.6.3"
+python-multipart = "^0.0.9"
+
+# infrastructure
+fastapi = "^0.109.2"
+fire = "^0.5.0"
+gunicorn = "^21.2.0"
+requests = "^2.31.0"
+types-requests = "^2.31.0"
+uvicorn = "^0.27.0.post1"
+
+# TODO - Make some of these optional
+# async db providers
+aiosqlite = "^0.20.0"
+asyncpg = "^0.29.0"
+redis = "^5.0.4"
+
+# ingestion
+bs4 = "^0.0.2"
+openpyxl = "^3.1.2"
+markdown = "^3.6"
+pypdf = "^4.2.0"
+python-pptx = "^0.6.23"
+python-docx = "^1.1.0"
+nest-asyncio = "^1.6.0"
+opencv-python = { version = "^4.10.0.82", optional = true }
+moviepy = { version = "^1.0.3", optional = true }
+
+# embedding providers
+tiktoken = {version = "^0.5.2", optional = true}
+sentence-transformers = {version = "^2.7.0", optional = true}
+
+# vector db providers
+vecs = "^0.4.0"
+
+# llm providers
+litellm = "^1.35.18"
+openai = "^1.11.1"
+
+# integrations
+ionic-api-sdk = {version = "0.9.3", optional = true}
+exa-py = {version = "^1.0.9", optional = true}
+dateutils = "^0.6.12"
+fsspec = "^2024.6.0"
+
+[tool.poetry.extras]
+all = ["tiktoken", "sentence-transformers"]
+exa = ["exa-py"]
+ionic = ["ionic-api-sdk"]
+local-embedding = ["sentence-transformers"]
+ingest-movies = ["moviepy", "opencv-python"]
+[tool.poetry.group.dev.dependencies]
+black = "^24.3.0"
+flake8 = "6.1.0"
+isort = "5.12.0"
+mypy = "^1.5.1"
+pytest = "^8.2.0"
+pytest-asyncio = "^0.23.6"
+pytest-dependency = "^0.6.0"
+pytest-mock = "^3.14.0"
+
+[tool.black]
+line-length = 79
+
+[tool.mypy]
+ignore_missing_imports = true
+exclude = 'playground/.*|deprecated/.*|dump/.*|docs/source|vecs/*'
+
+[[tool.mypy.overrides]]
+module = "yaml"
+ignore_missing_imports = true
