@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: moveread-pipelines-input-validation
+Version: 0.1.9
+Summary: Input Validation pipeline for Moveread
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Project-URL: repo, https://github.com/moveread/moveread-pipelines.git
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: chess-pairings
+Requires-Dist: pydantic ==2.*
+Requires-Dist: fastapi
+Requires-Dist: pipeteer
+Provides-Extra: clientgen
+Requires-Dist: openapi-ts ; extra == 'clientgen'
+
+# Input Validation
+
+> Input Validation pipeline for Moveread

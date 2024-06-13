@@ -1,0 +1,3 @@
+[console_scripts]
+inputval = moveread.pipelines.input_validation.cli:main
+inputval-clientgen = moveread.pipelines.input_validation.clientgen_cli:main
