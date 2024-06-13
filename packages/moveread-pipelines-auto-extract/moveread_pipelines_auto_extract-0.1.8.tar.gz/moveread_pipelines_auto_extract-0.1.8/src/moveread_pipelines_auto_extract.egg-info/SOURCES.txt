@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/moveread/pipelines/auto_extraction/__init__.py
+src/moveread/pipelines/auto_extraction/__init__.pyi
+src/moveread/pipelines/auto_extraction/main.py
+src/moveread/pipelines/auto_extraction/types.py
+src/moveread_pipelines_auto_extract.egg-info/PKG-INFO
+src/moveread_pipelines_auto_extract.egg-info/SOURCES.txt
+src/moveread_pipelines_auto_extract.egg-info/dependency_links.txt
+src/moveread_pipelines_auto_extract.egg-info/requires.txt
+src/moveread_pipelines_auto_extract.egg-info/top_level.txt
