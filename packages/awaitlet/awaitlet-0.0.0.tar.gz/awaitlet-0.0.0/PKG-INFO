@@ -1,0 +1,107 @@
+Metadata-Version: 2.1
+Name: awaitlet
+Version: 0.0.0
+Summary: invoke asyncio awaitables from non-async functions
+Author-email: Mike Bayer <mike_mp@zzzcomputing.com>
+License: Copyright 2024 Michael Bayer
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of
+        this software and associated documentation files (the "Software"), to deal in
+        the Software without restriction, including without limitation the rights to
+        use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+        of the Software, and to permit persons to whom the Software is furnished to do
+        so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/sqlalchemy/awaitlet
+Keywords: asyncio
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: greenlet
+
+========
+awaitlet
+========
+
+Call Python asyncio awaitables from functions that are not declared
+as async.
+
+Synopsis
+========
+
+Consider the following asyncio program that sends and receives messages
+from an echo server::
+
+    import asyncio
+
+    async def sendrecv(msg):
+        reader, writer = await asyncio.open_connection("tcpbin.com", 4242)
+        writer.write(f"message number {msg}\n".encode("ascii"))
+        await writer.drain()
+        data = (await reader.read(1024)).decode("utf-8")
+        return data
+
+
+    async def main():
+        messages = await asyncio.gather(
+            *[
+                sendrecv(msg) for msg in
+                ["one", "two", "three", "four", "five"]
+            ]
+        )
+        for msg in messages:
+            print(f"Got back echo response: {msg}")
+
+    asyncio.run(main())
+
+What if ``sendrecv`` above wanted to be a function available in existing
+code that didn't use ``async``?   With awaitlet we can remove the ``async``
+keyword and still have a way of invoking ``async`` awaitables inside
+of it::
+
+
+    import asyncio
+    from awaitlet import async_def
+    from awaitlet import awaitlet
+
+    def sendrecv_implementation(msg):
+        reader, writer = awaitlet(asyncio.open_connection("tcpbin.com", 4242))
+        writer.write(f"message number {msg}\n".encode("ascii"))
+        awaitlet(writer.drain())
+        data = (awaitlet(reader.read(1024))).decode("utf-8")
+        return data
+
+    async def sendrecv(msg):
+        return await async_def(sendrecv_implementation, msg)
+
+    async def main():
+        messages = await asyncio.gather(
+            *[
+                sendrecv(msg) for msg in
+                ["one", "two", "three", "four", "five"]
+            ]
+        )
+        for msg in messages:
+            print(f"Got back echo response: {msg}")
+
+    asyncio.run(main())
+
+
+
