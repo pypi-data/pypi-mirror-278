@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "virtualitics-sdk"
+version = "0.1.0"
+description = """
+Virtualitics SDK is a library that enables you to write applications and deploy them to the Virtualitics AI Platform, leveraging your data to create easy-to-read dashboards and infographics, connect seamlessly with Virtualitics Explore, and use AI-driven predictive models to help you take action on solving complex problems."""
+authors = ["Richard Mable <richard.m@virtualitics.com>"]
+readme = "README.md"
+
+#[tool.poetry.scripts]
+#predict = "predict.predict_cli:app"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+typer = {extras = ["all"], version = "^0.12.0"}
+art = "^6.1"
+requests = "^2.31.0"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
