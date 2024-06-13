@@ -1,0 +1,2 @@
+[console_scripts]
+sscma.cli = sscma.cli.cli:main
