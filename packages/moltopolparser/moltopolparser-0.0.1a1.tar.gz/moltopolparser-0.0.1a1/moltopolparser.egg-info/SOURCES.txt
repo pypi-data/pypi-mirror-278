@@ -1,0 +1,13 @@
+CHANGELOG.md
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+moltopolparser/__init__.py
+moltopolparser/gmx.py
+moltopolparser.egg-info/PKG-INFO
+moltopolparser.egg-info/SOURCES.txt
+moltopolparser.egg-info/dependency_links.txt
+moltopolparser.egg-info/requires.txt
+moltopolparser.egg-info/top_level.txt
+tests/test_gmx.py
