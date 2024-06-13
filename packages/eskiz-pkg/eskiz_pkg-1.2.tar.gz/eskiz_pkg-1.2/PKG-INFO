@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: eskiz-pkg
+Version: 1.2
+Home-page: https://github.com/Muhammadali-Akbarov/eskiz-pkg
+Author: Muhammadali Akbarov
+Author-email: muhammadali17abc@gmail.com
+License: MIT
+Keywords: eskiz sms smspy eskizuz eskiz-pkg sms-service smsuz
+Requires-Dist: requests
+Requires-Dist: pydantic
