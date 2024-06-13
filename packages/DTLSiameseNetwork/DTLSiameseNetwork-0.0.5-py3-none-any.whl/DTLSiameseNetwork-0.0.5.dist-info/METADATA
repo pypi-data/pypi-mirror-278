@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: DTLSiameseNetwork
+Version: 0.0.5
+Summary: The package contains functions for calculating ranking metrics
+Home-page: https://github.com/betepok506/DTL-neural-network
+Author: Andrey Rotanov
+Author-email: rotanov07@mail.ru
+Keywords: test
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pillow
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: marshmallow-dataclass
+Requires-Dist: pyyaml
+Requires-Dist: tensorboard
+Requires-Dist: tabulate
+Requires-Dist: tqdm
+Provides-Extra: all
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+
+# Описание
+Данный проект содержит реализачию сиамской нейронной сети для задачи сравнения изображений
