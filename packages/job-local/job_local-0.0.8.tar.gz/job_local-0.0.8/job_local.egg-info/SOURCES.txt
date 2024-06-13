@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+job_local.egg-info/PKG-INFO
+job_local.egg-info/SOURCES.txt
+job_local.egg-info/dependency_links.txt
+job_local.egg-info/requires.txt
+job_local.egg-info/top_level.txt
+job_local/src/__init__.py
+job_local/src/jobs_local.py
+job_local/src/jobs_local_constants.py
