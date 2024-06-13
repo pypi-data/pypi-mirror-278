@@ -1,0 +1,124 @@
+---
+
+## `pycprint` Library Documentation
+
+### Introduction
+`pycprint` is a Python library designed to enhance terminal output with customizable text styling, timestamping, colorization, and file redirection capabilities. This document provides an in-depth guide to understanding and using all functionalities offered by the `pycprint` library.
+
+### Installation
+Install `pycprint` via pip, Python's package installer:
+
+```bash
+pip install pycprint
+```
+
+### Usage
+Import and use the `cprint` function from `pycprint` to enhance your terminal output:
+
+```python
+from pycprint import pycprint
+
+cprint = pycprint.pycprint
+
+cprint("Hello, World!")
+```
+
+### Features Overview
+
+#### 1. **Text Styling**
+Enhance your messages with various text styles:
+- `bold`
+- `underline`
+- `italic`
+- `inverse`
+- `strikethrough`
+
+Example:
+```python
+cprint("Important message", style='bold')
+cprint("Highlighted text", style='underline')
+```
+
+#### 2. **Timestamping**
+Prefix messages with a timestamp in the format `[YYYY-MM-DD HH:MM:SS]`:
+```python
+cprint("Event occurred", timestamp=True)
+```
+
+#### 3. **Custom Prefix**
+Prefix messages with a custom string for clarity:
+```python
+cprint("Error", prefix="ERROR")
+```
+
+#### 4. **Text and Background Color**
+Customize text and background colors using predefined color names:
+- Text colors: `BLACK`, `RED`, `GREEN`, `YELLOW`, `BLUE`, `MAGENTA`, `CYAN`, `WHITE`
+- Background colors: Same options as text colors
+
+Example:
+```python
+cprint("Success", color='GREEN')
+cprint("Highlighted", bg='YELLOW')
+```
+
+#### 5. **File Output**
+Redirect output to a specified file:
+```python
+cprint("Logged message", file='logfile.txt')
+```
+
+#### 6. **Cursor Control**
+Toggle cursor visibility during printing:
+```python
+cprint("Loading...", cursor='false')
+```
+
+#### 7. **Advanced Features**
+- **Combining Features**: Combine multiple features together for complex output requirements.
+  
+  ```python
+  cprint("Critical error occurred!", style='bold', timestamp=True, prefix="ERROR", color='RED')
+  ```
+
+### Examples
+Here are additional examples demonstrating various combinations of features:
+
+#### Example 1: Styled and Timestamped Message
+```python
+cprint("Critical error occurred!", style='bold', timestamp=True)
+```
+Output:
+```
+[2024-06-13 15:30:00] Critical error occurred!
+```
+
+#### Example 2: Colored Output with Custom Prefix
+```python
+cprint("Operation successful", prefix="STATUS", color='GREEN', bg='BLACK')
+```
+Output (colored depending on your terminal):
+```
+STATUS: Operation successful
+```
+
+#### Example 3: Redirecting Output to a File
+```python
+cprint("Debug information", file='debug.log')
+```
+Output: (written to `debug.log` file)
+
+#### Example 4: Hiding Cursor During Loading
+```python
+cprint("Loading...", cursor='false')
+```
+Output:
+```
+Loading... (cursor hidden)
+```
+
+### Notes
+- Ensure `colorama` is installed (`pip install colorama`) for ANSI color code support.
+- The library gracefully handles errors, printing messages for invalid parameters while continuing with the print operation.
+
+
