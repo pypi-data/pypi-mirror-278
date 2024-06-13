@@ -1,0 +1,155 @@
+{% import "macros/components/ts_selector.html" as mac_ts_selector %}
+{% extends "pages/base.html" %}
+
+{% set title = "Explore timeseries data" %}
+
+{% block main_content %}
+{{ super() -}}
+<div class="container-fluid">
+    <div class="row align-items-end mb-3">
+        <div class="col">
+            <div class="row d-xl-flex d-grid mb-2">
+                <div class="col-auto">
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-text">Period</span>
+                        <select id="periodType" class="form-select form-select-sm" aria-label="Select a period" required>
+                            <option value="last-24-hours" selected>Last 24 hours</option>
+                            <option value="last-7-days">Last 7 days</option>
+                            <option value="last-30-days">Last 30 days</option>
+                            <option value="last-12-months">Last 12 months</option>
+                            <option value="custom">Custom</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="periodCustom" class="col-auto d-xl-flex d-grid py-2 py-xl-0 gap-2 d-none invisible">
+                    <div is="app-datetime-picker" id="start_datetime" title="From" time="{{ dt_end.time().isoformat()[:5] }}" max="{{ dt_end.date().isoformat() }}" tzname="{{ g.campaign_ctxt.tz_name }}"></div>
+                    <div is="app-datetime-picker" id="end_datetime" title="Until" date="{{ dt_end.date().isoformat() }}" time="{{ dt_end.time().isoformat()[:5] }}" tzname="{{ g.campaign_ctxt.tz_name }}"></div>
+                </div>
+            </div>
+            <div class="row d-lg-flex d-grid">
+                <div class="col-auto pb-2 pb-lg-0">
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-text">Aggregation mode</span>
+                        <select class="form-select" id="agg" name="agg" aria-label="Select an aggregation mode">
+                            <option value="none">No aggregation</option>
+                            <option value="avg" selected>average</option>
+                            <option value="sum">sum</option>
+                            <option value="min">minimum</option>
+                            <option value="max">maximum</option>
+                            <option value="count">count</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div is="app-ts-bucket-width" id="bucket" title="Duration" unit="hour" value="1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-auto">
+            <button title="Chart settings" class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#chartSettingsPanel" aria-controls="chartSettingsPanel"><i class="bi bi-gear"></i></button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div id="chartContainer" class="border border-1 rounded bg-white p-2" style="height: 600px;"></div>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-end bg-light border-0 rounded-start shadow app-chart-settings-panel" tabindex="-1" id="chartSettingsPanel" aria-labelledby="chartSettingsPanelLabel">
+        <div class="offcanvas-header">
+            <h4 class="offcanvas-title" id="chartSettingsPanelLabel"><i class="bi bi-gear"></i> Chart settings</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="row mb-2">
+                <div class="col-auto">
+                    <h5 class="text-secondary">Data series<span id="seriesCount"></span></h5>
+                </div>
+                <div class="col-auto">
+                    <a id="chartSeriesBtnAdd" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#selectTimeseries"><i class="bi bi-plus-circle"></i> Add series</a>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col">
+                    <div class="table-responsive d-none invisible">
+                        <table id="chartSeriesContainer" class="table table-sm table-borderless caption-top">
+                            <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col">Color</th>
+                                    <th scope="col" class="w-25">Name</th>
+                                    <th scope="col">Y-axis</th>
+                                    <th scope="col">Type</th>
+                                    <th scope="col">Style</th>
+                                    <th scope="col"><button id="removeAllSeriesBtn" class="btn btn-sm btn-outline-danger d-none invisible" title="Remove all series"><i class="bi bi-trash"></i></button></th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <h5 class="text-secondary">Extra settings</h5>
+            <div class="row mb-2">
+                <div class="col-auto">
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-text">Timeseries data state</span>
+                        <select id="data_states" class="form-select" aria-label="Select a timeseries data state" required></select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-auto">
+                    <div is="app-timezone-picker" id="timezonePicker" title="Timezone" tzname="{{ g.campaign_ctxt.tz_name }}" required>
+                        <div is="app-spinner"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="selectTimeseries" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="selectTimeseriesLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="selectTimeseriesLabel">Add data series</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row mb-4">
+                    <div class="col">
+                        {% filter indent(width=16, first=False) %}
+                        {{ mac_ts_selector.render_ts_selector(element_id="tsSelectorExplore", filters={"extend": True}) -}}
+                        {% endfilter %}
+                    </div>
+                </div>
+                <h5>Default series settings</h5>
+                <div class="row gx-5">
+                    <div class="col-auto">
+                        <h6 class="fw-bold">Y-axis position</h6>
+                        <div id="selectTimeseriesYAxisPositionContainer">
+                            <div is="app-spinner"></div>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <h6 class="fw-bold">Series type</h6>
+                        <div id="selectTimeseriesSeriesTypeContainer">
+                            <div is="app-spinner"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-end gap-2">
+                <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button id="selectedTimeseriesSaveBtn" type="button" class="btn btn-sm btn-primary" disabled><i class="bi bi-plus-circle"></i> Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main_content %}
+
+{% block body_scripts %}
+{{ super() -}}
+{% filter indent(width=8, first=True) %}
+<script type="module" src="{{ url_for('static', filename='scripts/modules/views/timeseries/data/explore.js') }}" defer></script>
+{% endfilter %}
+{% endblock body_scripts %}
