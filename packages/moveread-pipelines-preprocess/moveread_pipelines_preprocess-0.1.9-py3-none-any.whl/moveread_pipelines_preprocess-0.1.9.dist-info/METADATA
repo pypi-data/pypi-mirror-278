@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: moveread-pipelines-preprocess
+Version: 0.1.9
+Summary: Moveread preprocessing pipeline
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Project-URL: repo, https://github.com/moveread/moveread-pipelines.git
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: queue-pipelines[all]
+Requires-Dist: haskellian
+Requires-Dist: kv-api
+Requires-Dist: dslog
+Requires-Dist: moveread-pipelines-auto-extract
+Requires-Dist: moveread-pipelines-extract-validation
+Requires-Dist: moveread-pipelines-manual-correct
+Requires-Dist: moveread-pipelines-manual-select
+Requires-Dist: uvicorn
+Requires-Dist: fastapi
+Requires-Dist: pipeteer
+Provides-Extra: core
+Requires-Dist: moveread-core ; extra == 'core'
+
+# Preprocess
+
+> Moveread preprocessing pipeline
