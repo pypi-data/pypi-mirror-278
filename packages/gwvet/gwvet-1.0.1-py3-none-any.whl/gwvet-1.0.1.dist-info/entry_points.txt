@@ -1,0 +1,4 @@
+[console_scripts]
+gwvet = gwvet.__main__:main
+gwvet-hug = gwvet.hug:main
+gwvet-vdf = gwvet.vdf:main

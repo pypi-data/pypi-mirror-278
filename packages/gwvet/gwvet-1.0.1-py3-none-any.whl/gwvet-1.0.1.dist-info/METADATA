@@ -1,0 +1,106 @@
+Metadata-Version: 2.1
+Name: gwvet
+Version: 1.0.1
+Summary: An extension to the python toolbox GWSumm, used by the LIGO Scientific Collaboration to review data-quality vetoes
+Home-page: https://github.com/gwpy/vet
+Author: Alex Urban, Duncan Macleod
+Author-email: alexander.urban@ligo.org
+License: GPL-3.0-or-later
+Project-URL: Bug Tracker, https://github.com/gwpy/vet/issues
+Project-URL: Discussion Forum, https://gwdetchar.slack.com
+Project-URL: Source Code, https://github.com/gwpy/vet
+Keywords: physics,astronomy,gravitational-waves,ligo
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: astropy >=3.0.0
+Requires-Dist: decorator
+Requires-Dist: dqsegdb
+Requires-Dist: gwdetchar >=2.0.0
+Requires-Dist: gwpy >=2.0.0
+Requires-Dist: gwsumm >=2.0.0
+Requires-Dist: gwtrigfind
+Requires-Dist: lscsoft-glue >=1.60.0
+Requires-Dist: MarkupPy
+Requires-Dist: matplotlib >=3.1
+Requires-Dist: numpy >=1.16
+Requires-Dist: scipy
+Provides-Extra: doc
+Requires-Dist: sphinx ; extra == 'doc'
+Requires-Dist: numpydoc ; extra == 'doc'
+Requires-Dist: sphinx-rtd-theme ; extra == 'doc'
+Requires-Dist: sphinxcontrib-epydoc ; extra == 'doc'
+
+=====
+GWVET
+=====
+
+The Gravitational-wave Veto Evaluation and Testing suite (`python:gwvet`) is
+a plugin for `GWSumm`_ designed to enable and assist with review of
+data-quality veto products.
+
+|PyPI version| |Conda version|
+
+|License| |Supported Python versions|
+
+|Build Status| |Coverage Status|
+
+Installation
+------------
+
+GWVET is best installed with `conda`_:
+
+.. code:: bash
+
+   conda install -c conda-forge gwvet
+
+but can also be installed with `pip`_:
+
+.. code:: bash
+
+   python -m pip install gwvet
+
+------------
+Contributing
+------------
+
+All code should follow the Python Style Guide outlined in `PEP 0008`_;
+users can use the `flake8`_ package to check their code for style issues
+before submitting.
+
+See `the contributions guide`_ for the recommended procedure for
+proposing additions/changes.
+
+.. _GWSumm: https://github.com/gwpy/gwsumm
+.. _conda: https://conda.io
+.. _pip: https://pip.pypa.io/en/stable/
+.. _PEP 0008: https://www.python.org/dev/peps/pep-0008/
+.. _flake8: http://flake8.pycqa.org
+.. _the contributions guide: https://github.com/gwpy/vet/blob/master/CONTRIBUTING.md
+
+.. |PyPI version| image:: https://badge.fury.io/py/gwvet.svg
+   :target: http://badge.fury.io/py/gwvet
+.. |Conda version| image:: https://img.shields.io/conda/vn/conda-forge/gwvet.svg
+   :target: https://anaconda.org/conda-forge/gwvet/
+.. |License| image:: https://img.shields.io/pypi/l/gwvet.svg
+   :target: https://choosealicense.com/licenses/gpl-3.0/
+.. |Supported Python versions| image:: https://img.shields.io/pypi/pyversions/gwvet.svg
+   :target: https://pypi.org/project/gwvet/
+.. |Build Status| image:: https://travis-ci.org/gwpy/gwvet.svg?branch=master
+   :target: https://travis-ci.org/gwpy/gwvet
+.. |Coverage Status| image:: https://codecov.io/gh/gwpy/gwvet/branch/master/graph/badge.svg
+   :target: https://codecov.io/gh/gwpy/gwvet
