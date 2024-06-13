@@ -1,0 +1,11 @@
+include LICENSE
+include README.md
+include requirements.txt
+include spock_literature/*.py
+include spock_literature/json/*.json
+include spock_literature/data/*.txt
+include *.py
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+
