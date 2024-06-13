@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: moveread-pipelines-game-preprocess
+Version: 0.1.8
+Summary: Like Moveread Preprocess, but joining scoresheets of a same game
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Project-URL: repo, https://github.com/moveread/moveread-pipelines.git
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: moveread-pipelines-preprocess
+Requires-Dist: kv-fs
+Requires-Dist: kv-sqlite-sync
+Requires-Dist: pipeteer
+Provides-Extra: codegen
+Requires-Dist: queue-pipelines[codegen]; extra == "codegen"
+
+# Game Preprocess
+
+> Like Moveread Preprocess, but joining scoresheets of a same game

@@ -1,0 +1,7 @@
+moveread-pipelines-preprocess
+kv-fs
+kv-sqlite-sync
+pipeteer
+
+[codegen]
+queue-pipelines[codegen]

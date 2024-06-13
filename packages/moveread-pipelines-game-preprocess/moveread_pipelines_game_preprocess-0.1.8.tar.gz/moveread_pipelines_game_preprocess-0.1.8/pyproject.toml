@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "moveread-pipelines-game-preprocess"
+version = "0.1.8"
+authors = [
+  {name="Marcel Claramunt", email="marcel@moveread.com"}
+]
+description = "Like Moveread Preprocess, but joining scoresheets of a same game"
+dependencies = [
+  "moveread-pipelines-preprocess", "kv-fs", "kv-sqlite-sync",
+  "pipeteer"
+]
+requires-python = ">=3.10"
+readme = {file="README.md", content-type="text/markdown"}
+
+[project.urls]
+repo = "https://github.com/moveread/moveread-pipelines.git"
+
+[project.scripts]
+gamepre-codegen = "moveread.pipelines.game_preprocess.spec:codegen"
+gamepre = "moveread.pipelines.game_preprocess.cli:main"
+
+[project.optional-dependencies]
+codegen = ["queue-pipelines[codegen]"]
