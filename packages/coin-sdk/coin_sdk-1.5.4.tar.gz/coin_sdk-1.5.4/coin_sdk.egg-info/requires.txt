@@ -1,0 +1,6 @@
+requests==2.31.0
+cryptography==42.0.8
+pyjwt==2.8.0
+colorama==0.4.6
+sseclient-py==1.8.0
+six==1.16.0
