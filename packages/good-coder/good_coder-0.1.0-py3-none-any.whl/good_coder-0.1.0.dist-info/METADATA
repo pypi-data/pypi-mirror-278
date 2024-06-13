@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: good-coder
+Version: 0.1.0
+Summary: The Data Engineer Toolkit
+Author: Alper Topcuoglu
+Author-email: info@goodcoder.nl
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# Good Coder [NL] -- The Data Engineer Toolkit
+
+---
+
+**Documentation**: Work In Progress
+
+---
+
+## Installation
+
+```console
+$ pip install good-coder
+```
+
+
+### Example Usage
+
+Here's how you can use this package:
+
+```python
+from good_coder import GoodCoder
+
+gdc = GoodCoder()
+gdc.greet()
+```
+
