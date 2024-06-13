@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "bedrock_types"
+version = "0.0.1"
+authors = [
+  { name="Shawn Zhang", email="hustshawn+pypi@gmail.com" },
+]
+description = "Bedrock Converse API Data Types"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/hustshawn/bedrock-types"
+Issues = "https://github.com/hustshawn/bedrock-types/issues"
