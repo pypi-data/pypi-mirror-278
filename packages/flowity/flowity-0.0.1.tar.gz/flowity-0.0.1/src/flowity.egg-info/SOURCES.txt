@@ -1,0 +1,17 @@
+README.md
+setup.py
+src/flowity/__init__.py
+src/flowity.egg-info/PKG-INFO
+src/flowity.egg-info/SOURCES.txt
+src/flowity.egg-info/dependency_links.txt
+src/flowity.egg-info/requires.txt
+src/flowity.egg-info/top_level.txt
+src/flowity/parser/__init__.py
+src/flowity/parser/lex.py
+src/flowity/parser/parser.py
+src/flowity/rt/__init__.py
+src/flowity/rt/builtin.py
+src/flowity/rt/context.py
+src/flowity/rt/error.py
+src/flowity/rt/rtime.py
+src/flowity/rt/symbol.py

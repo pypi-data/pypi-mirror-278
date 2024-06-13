@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: flowity
+Version: 0.0.1
+Summary: Workflow language designed for LLM.
+Home-page: https://github.com/RockChinQ/Flowity
+Author: RockChinQ
+Author-email: junyan_qin@qq.com
+Project-URL: Bug Report, https://github.com/RockChinQ/Flowity/issues
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Natural Language :: English
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: langchain
+Requires-Dist: langchain-openai
+Requires-Dist: pydantic
+Requires-Dist: ply
+
+# Flowity
+
+Workflow language designed for LLM.
+
+## Installation
+
+```bash
+pip install flowity
+```
+
+## Write flowity code
+
+```flowity
+Hello, who are you?
+
+$resp = $query()
+$end($resp)
+```
+
+## Run a workflow
+
+```python
+import os
+
+# === Setup Langchain ===
+
+from langchain_openai import ChatOpenAI
+
+os.environ["OPENAI_API_KEY"] = "sk-xxxx" # Your OpenAI api key
+# Set OPENAI_API_BASE if you're using a reverse proxy
+# os.environ["OPENAI_API_BASE"] = "https://api.openai.com/v1"
+
+model = ChatOpenAI()
+
+# === Write Flowity Code ===
+
+code = """
+Hello, who are you?
+
+$str = $query()
+$end($str)
+"""
+
+# === Run Flowity Code ===
+
+from flowity.rt import rtime
+
+rt = rtime.FlowityRuntime()
+
+ret = rt.run(
+    code=code,
+    model=model
+)
+
+print(ret)
+```
