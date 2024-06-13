@@ -1,0 +1,2 @@
+[console_scripts]
+mkrefs = jwst_reffiles.mkrefs:main
