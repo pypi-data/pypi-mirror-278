@@ -1,0 +1,12 @@
+LICENSE
+README.rst
+setup.cfg
+setup.py
+doc/changelog.rst
+smbus3/smbus3.egg-info/PKG-INFO
+smbus3/smbus3.egg-info/SOURCES.txt
+smbus3/smbus3.egg-info/dependency_links.txt
+smbus3/smbus3.egg-info/requires.txt
+smbus3/smbus3.egg-info/top_level.txt
+tests/test_datatypes.py
+tests/test_smbus3.py
