@@ -1,0 +1,17 @@
+LICENSE.txt
+README.md
+setup.py
+MRItaxonomy/NCBI_fetch.py
+MRItaxonomy/__init__.py
+MRItaxonomy/accession2taxid.py
+MRItaxonomy/nnID.py
+MRItaxonomy/nucDL.py
+MRItaxonomy/protacc2taxid.py
+MRItaxonomy/slidingwindow.py
+MRItaxonomy/taxid.py
+MRItaxonomy/taxid2name.py
+MRItaxonomy.egg-info/PKG-INFO
+MRItaxonomy.egg-info/SOURCES.txt
+MRItaxonomy.egg-info/dependency_links.txt
+MRItaxonomy.egg-info/requires.txt
+MRItaxonomy.egg-info/top_level.txt
