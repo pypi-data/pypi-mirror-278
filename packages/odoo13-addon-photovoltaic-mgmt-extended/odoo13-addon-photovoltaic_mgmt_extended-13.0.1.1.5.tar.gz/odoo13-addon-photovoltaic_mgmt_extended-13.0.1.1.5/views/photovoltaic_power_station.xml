@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="view_photovoltaic_power_station_form_inherit" model="ir.ui.view">
+    <field name="name">view.photovoltaic_power_station.form.inherit</field>
+    <field name="model">photovoltaic.power.station</field>
+    <field name="inherit_id" ref="photovoltaic_mgmt.view_photovoltaic_power_station_form"/>
+
+
+    <field name="arch" type="xml">
+      <button name="show_web" position="before" >
+          <button name="toggle_short_term" type="object" class="text-success oe_stat_button" icon="fa-bolt" string="Open short term" attrs="{'invisible':[('short_term_investment','=',True)]}" />
+          <button name="toggle_short_term" type="object" class="text-danger oe_stat_button" icon="fa-bolt" string="Close short term" attrs="{'invisible':[('short_term_investment','=',False)]}"/>
+          <button name="toggle_long_term" type="object" class="text-success oe_stat_button" icon="fa-binoculars" string="Open long term" attrs="{'invisible':[('long_term_investment','=',True)]}" />
+          <button name="toggle_long_term" type="object" class="text-danger oe_stat_button" icon="fa-binoculars" string="Close long term" attrs="{'invisible':[('long_term_investment','=',False)]}"/>
+          <field name="short_term_investment" invisible="1"/>
+          <field name="long_term_investment" invisible="1"/>
+      </button>
+
+      <field name="annual_report_link" position="after">
+        <field name="tecnical_memory_link" widget="url"/>
+      </field>
+      <field name="co2" position="after">
+        <field name="eq_family_consumption"/>
+      </field>
+
+      <xpath expr="//notebook/page[8]" position="replace">
+        <field name="published_web" invisible="1"/>
+      </xpath>
+
+      <xpath expr="//notebook" position="inside">
+        <page string="Inventory">
+          <group>
+            <field name="stock_location"/>
+          </group>
+
+          <group string="List of equipment in station"/>
+          <field name="stock_quants"/>
+        </page>
+      </xpath>
+    </field>
+  </record>
+</odoo>

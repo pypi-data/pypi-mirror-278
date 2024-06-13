@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="view_update_state_form" model="ir.ui.view">
+    <field name="name">view.update_state.form</field>
+    <field name="model">account.allocation.state.update.wizard</field>
+    <field name="arch" type="xml">
+      <form string="Cambiar estado">
+        <sheet>
+            <group name="main">
+                <field name="state"/>
+            </group>
+        </sheet>
+        <footer>
+          <button name="update_state" string="Confirmar" type="object" class="oe_highlight"/>
+          <button string="Cancelar" class="oe_link" special="cancel"/>
+        </footer>
+      </form>
+    </field>
+  </record>
+
+</odoo>
