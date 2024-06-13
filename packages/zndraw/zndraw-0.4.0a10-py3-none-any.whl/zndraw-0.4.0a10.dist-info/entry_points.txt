@@ -1,0 +1,4 @@
+[console_scripts]
+zndraw=zndraw.cli:cli
+zndraw-upload=zndraw.upload:cli
+
