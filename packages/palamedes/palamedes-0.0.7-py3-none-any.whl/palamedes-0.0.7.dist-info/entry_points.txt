@@ -1,0 +1,2 @@
+[console_scripts]
+palamedes = palamedes.__main__:main
