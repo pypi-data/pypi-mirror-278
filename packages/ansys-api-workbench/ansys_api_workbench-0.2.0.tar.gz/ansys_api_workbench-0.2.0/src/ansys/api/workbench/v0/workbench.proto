@@ -1,0 +1,103 @@
+// Copyright (C) 2023 - 2024 ANSYS, Inc. and/or its affiliates.
+// © 2023 ANSYS, Inc.  Unauthorized use, distribution, or duplication is prohibited.
+// SPDX-License-Identifier: MIT
+//
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
+
+syntax = "proto3";
+package ansys.api.workbench.v0;
+option csharp_namespace = "Ansys.Api.Workbench.V0";
+
+// logger severity levels
+enum LogLevel
+{
+  LOG_NONE = 0;
+  LOG_FATAL = 1;
+  LOG_ERROR = 2;
+  LOG_WARNING = 3;
+  LOG_INFO = 4;
+  LOG_DEBUG = 5;
+}
+
+message LogEntry {
+  LogLevel level = 1;
+  string message = 2;
+}
+
+message RunScriptRequest {
+  string content = 1;
+  LogLevel log_level = 2;
+}
+
+message RunScriptResult {
+  string error = 1;
+  string result = 2;
+}
+
+message RunScriptLog {
+  repeated LogEntry messages = 1;
+}
+
+message RunScriptResponse {
+  oneof response {
+    RunScriptResult result = 1;
+    RunScriptLog log = 2;
+  }
+}
+
+message UploadFileRequest {
+  oneof request {
+    string file_name = 1;
+    bytes file_content = 2;
+  }
+}
+
+message UploadFileResponse {
+  string error = 1;
+  string file_name = 2;
+}
+
+message DownloadFileRequest {
+  string file_name = 1;
+}
+
+message DownloadFileInfo {
+  bool is_archive = 1;
+  uint64 file_size = 2;
+}
+
+message DownloadFileResponse {
+  oneof response {
+    string error = 1;
+    bytes file_content = 2;
+    DownloadFileInfo file_info = 3;
+  }
+}
+
+service WorkbenchService {
+  // run the given script
+  rpc RunScript(RunScriptRequest) returns (stream RunScriptResponse);
+
+  // upload a file
+  rpc UploadFile(stream UploadFileRequest) returns (UploadFileResponse);
+
+  // download a file
+  rpc DownloadFile(DownloadFileRequest) returns (stream DownloadFileResponse);
+}

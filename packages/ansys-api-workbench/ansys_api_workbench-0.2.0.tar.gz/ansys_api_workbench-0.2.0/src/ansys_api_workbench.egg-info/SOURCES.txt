@@ -1,0 +1,15 @@
+AUTHORS
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/ansys/api/workbench/VERSION
+src/ansys/api/workbench/__init__.py
+src/ansys/api/workbench/py.typed
+src/ansys/api/workbench/v0/workbench.proto
+src/ansys_api_workbench.egg-info/PKG-INFO
+src/ansys_api_workbench.egg-info/SOURCES.txt
+src/ansys_api_workbench.egg-info/dependency_links.txt
+src/ansys_api_workbench.egg-info/entry_points.txt
+src/ansys_api_workbench.egg-info/requires.txt
+src/ansys_api_workbench.egg-info/top_level.txt
