@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "phone_format"
+version = "0.1.1"
+description = "This project includes different phone formatting"
+authors = ["Jean Eric TUYISHIMIRE <81187224+tjeaneric@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.2.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
