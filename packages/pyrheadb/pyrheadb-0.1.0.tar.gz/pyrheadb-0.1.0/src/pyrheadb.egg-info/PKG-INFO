@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: pyrheadb
+Version: 0.1.0
+Summary: Package to facilitate cheminformatics access to RheaDB and its analysis with Python
+Author-email: Anastasia Sveshnikova <anastasia.sveshnikova@sib.swiss>
+Project-URL: Homepage, https://github.com/sib-swiss/pyrheadb
+Project-URL: Issues, https://github.com/sib-swiss/pyrheadb/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: setuptools
+Requires-Dist: pandas
+Requires-Dist: rdkit
+Requires-Dist: requests_ftp
+Requires-Dist: networkx
+Requires-Dist: tqdm
+Requires-Dist: matplotlib
+Requires-Dist: pathlib
+Requires-Dist: rxnmapper
+Requires-Dist: pillow
+Requires-Dist: cobra
+Requires-Dist: sparqlwrapper
+Requires-Dist: jupyterlab
+
+![logo](./readme_img/pyrheadb_logo.png)
+Repository for the Python package intended to facilitate access to Rhea data from Python.
+
+Installation and usage
+======================
+Check [Wiki](https://github.com/sib-swiss/pyrheadb/wiki) for info about installation and usage.
+
+
+Folder description
+==================
+
+## examples
+[Jupyter notebooks](examples) containing Rhea analysis using the pyrheadb examples.
+
+## src
+Python source code for pyrheadb
+
+## tests
+Unit tests for each class of pyrheadb
