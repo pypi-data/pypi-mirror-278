@@ -1,0 +1,6 @@
+[console_scripts]
+auto_crop=document_image_utils.scripts.auto_crop:main
+binarize=document_image_utils.scripts.binarize:main
+rotate_document=document_image_utils.scripts.rotate_document:main
+split_columns=document_image_utils.scripts.split_columns:main
+
