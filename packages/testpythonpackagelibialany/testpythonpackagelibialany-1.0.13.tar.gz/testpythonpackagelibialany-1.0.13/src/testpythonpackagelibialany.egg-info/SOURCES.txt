@@ -1,0 +1,14 @@
+LICENSE
+LICENSE.txt
+README.md
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+src/divide/__init__.py
+src/divide/divide_by_three.py
+src/testpythonpackagelibialany.egg-info/PKG-INFO
+src/testpythonpackagelibialany.egg-info/SOURCES.txt
+src/testpythonpackagelibialany.egg-info/dependency_links.txt
+src/testpythonpackagelibialany.egg-info/top_level.txt
+tests/test_divide_by_three.py
