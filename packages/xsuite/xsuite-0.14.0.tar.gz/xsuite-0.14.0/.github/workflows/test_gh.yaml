@@ -1,0 +1,117 @@
+# This is a test workflow the other (GitHub runner based) workflows rely on
+name: Test workflow (GitHub, CPU)
+
+# Controls when the action will run. This is a reusable workflow.
+on:
+  workflow_call:
+    # Inputs the workflow accepts.
+    inputs:
+      xobjects_location:
+        required: false
+        default: "xsuite:main"
+        type: string
+      xdeps_location:
+        required: false
+        default: "xsuite:main"
+        type: string
+      xpart_location:
+        required: false
+        default: "xsuite:main"
+        type: string
+      xtrack_location:
+        required: false
+        default: "xsuite:main"
+        type: string
+      xfields_location:
+        required: false
+        default: "xsuite:main"
+        type: string
+      xmask_location:
+        required: false
+        default: "xsuite:main"
+        type: string
+      xcoll_location:
+        required: false
+        default: "xsuite:main"
+        type: string
+      precompile_kernels:
+        required: false
+        default: false
+        type: boolean
+      xobjects_test_contexts:
+        required: false
+        default: "ContextCpu;ContextCpu:auto"
+        type: string
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+# The jobs are all run in independent environments. Here we will run a separate job
+# for each of the test suites specified in the matrix below.
+jobs:
+  run-tests:
+    # The type of runner that the job will run on: this one is provided by GitHub
+    runs-on: ubuntu-latest
+    
+    # Run tests for all the xsuite packages in separate jobs in parallel
+    strategy:
+      fail-fast: false
+      matrix:
+        test-suite:
+        - xobjects
+        - xdeps
+        - xpart
+        - xtrack
+        - xfields
+        - xmask
+        - xcoll
+    
+    # Make the default shell a login shell, so that conda is initialised properly
+    defaults:
+      run:
+        shell: bash -el {0}
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    - name: Set up dynamic swapping
+      run: |
+        sudo swapoff -a
+        sudo apt-get install -y swapspace
+        sudo systemctl start swapspace.service
+        df -h
+    - name: Setup Miniforge
+      uses: conda-incubator/setup-miniconda@v2
+      with:
+        miniforge-version: latest
+        python-version: "3.10"
+    - name: Install dependencies
+      run: |
+        conda install openmp
+        pip install cython
+    - name: Checkout xsuite
+      uses: actions/checkout@v4
+      with:
+        path: xsuite
+    - name: Check out xsuite repos & pip install
+      env:
+        xobjects_branch: ${{ inputs.xobjects_location }}
+        xdeps_branch: ${{ inputs.xdeps_location }}
+        xpart_branch: ${{ inputs.xpart_location }}
+        xtrack_branch: ${{ inputs.xtrack_location }}
+        xfields_branch: ${{ inputs.xfields_location }}
+        xmask_branch: ${{ inputs.xmask_location }}
+        xcoll_branch: ${{ inputs.xcoll_location }}
+        precompile_kernels: ${{ inputs.precompile_kernels }}
+      run: |
+        export xsuite_prefix="$GITHUB_WORKSPACE"
+        bash $GITHUB_WORKSPACE/xsuite/.github/scripts/install_branches.sh
+    - name: Precompile kernels
+      if: ${{ inputs.precompile_kernels == true }}
+      run: |
+        xsuite-prebuild r
+    - name: Print versions
+      run: conda list
+    - name: Run tests (${{ matrix.test-suite }})
+      env:
+        XOBJECTS_TEST_CONTEXTS: ${{ inputs.xobjects_test_contexts }}
+      run: |
+        cd $GITHUB_WORKSPACE/${{ matrix.test-suite }}
+        python -m pytest --color=yes -v tests
