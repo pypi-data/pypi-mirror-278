@@ -1,0 +1,7 @@
+{% for cc_msg in chat_context_messages %}
+    {% set qual_author_msg =  canonicalize_user_name(cc_msg.author) + ": " + cc_msg.text %}
+- name: "message_{{ loop.index }}"
+  raw_string: |
+    {{ settings.start_token }}{{ escape_sequences(qual_author_msg) }}{{ settings.eom }}
+    {%- set settings.start_token = settings.bom -%}
+{% endfor %}
