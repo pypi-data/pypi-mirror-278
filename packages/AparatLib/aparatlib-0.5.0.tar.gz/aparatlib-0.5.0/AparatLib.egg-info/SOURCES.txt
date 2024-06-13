@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+AparatLib.egg-info/PKG-INFO
+AparatLib.egg-info/SOURCES.txt
+AparatLib.egg-info/dependency_links.txt
+AparatLib.egg-info/entry_points.txt
+AparatLib.egg-info/requires.txt
+AparatLib.egg-info/top_level.txt
+aparat/__init__.py
+aparat/aparat.py
+aparat/cli.py
+tests/__init__.py
+tests/test_aparat.py

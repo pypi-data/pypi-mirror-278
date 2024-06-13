@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: AparatLib
+Version: 0.5.0
+Summary: A library for interacting with the Aparat API
+Home-page: https://github.com/AbolDev/AparatLib
+Author: Abol
+Author-email: abaqry8686@gmail.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/AbolDev/AparatLib/issues
+Project-URL: Documentation, https://aparatlib.readthedocs.io/en/latest/
+Project-URL: Source Code, https://github.com/AbolDev/AparatLib
+Keywords: python,library,aparat,aparat-api,aparat-downloader,aparat-playlist-downloader,aparat-uploader,aparat-upload,aparat-dl,aparat-news,aparat-lib,aparat-python
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: wget
+Requires-Dist: requests
+Requires-Dist: python-magic
+
+# Aparat
+
+A Python library to interact with the Aparat API.
+
+## Installation
+
+```bash
+pip install AparatLib
+```
+
+## Login
+
+```python
+from aparat import Aparat
+
+def main():
+    aparat = Aparat()
+    if aparat.login('your_username', 'your_password'):
+        print("Login successful")
+    else:
+        print("Login failed.")
+
+if __name__ == "__main__":
+    main()
+```
+
+For more detailed information, please refer to the [documentation](https://aparatlib.readthedocs.io/en/latest/).
