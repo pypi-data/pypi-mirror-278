@@ -1,0 +1,20 @@
+[project]
+name = "obfsc8"
+version = "0.0.6"
+description = "Easy obfuscation of Personally Identifiable Information (PII) within Amazon S3 files"
+classifiers = ["License :: OSI Approved :: MIT License"]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "boto3",
+    "polars",
+]
+
+[project.urls]
+Homepage = "https://github.com/jambent/gdpr_obfuscator"
+Changelog = "https://github.com/jambent/gdpr_obfuscator/releases"
+Issues = "https://github.com/jambent/gdpr_obfuscator/issues"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
