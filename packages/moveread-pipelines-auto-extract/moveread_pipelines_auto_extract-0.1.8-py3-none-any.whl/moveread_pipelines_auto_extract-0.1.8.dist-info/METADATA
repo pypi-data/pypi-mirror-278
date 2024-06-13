@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: moveread-pipelines-auto-extract
+Version: 0.1.8
+Summary: Auto-extraction Moveread pipeline
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Project-URL: repo, https://github.com/moveread/moveread-pipelines.git
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: pure-cv
+Requires-Dist: robust-extraction
+Requires-Dist: moveread-annotations
+Requires-Dist: pydantic ==2.*
+Requires-Dist: haskellian
+Requires-Dist: queue-api
+Requires-Dist: lazy-loader
+Requires-Dist: pipeteer
+
+# Auto Extraction
+
+> Pipeline interface for an auto-extraction daemon
+
+```
+import moveread.pipelines.auto_extract as extr
+
+Qin: tuple[extr.Task, State] = ...
+Qerr: tuple[extr.Err, State] = ...
+Qok: tuple[extr.ok, State] = ...
+
+await extr.run(Qin, Qerr, Qok)
+```
+
+- Run [demo.ipynb](demo.ipynb) for a full example
