@@ -1,0 +1,16 @@
+document_image_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+document_image_utils/box.py,sha256=LK3wOby6pV6ieOz_U7xs8QFocn7-OP7UUC5Z6OBwQmI,12742
+document_image_utils/image.py,sha256=la6OQaMx8NOkLs43eXCC3PPMDT7Ih_AdFV0sfSI4uKs,50038
+document_image_utils/leptonica_lib/adjust_rotation,sha256=UCFWL-yg-yx-rDa25ly8idgS8FTPBzCkjVvMpedvGzk,16512
+document_image_utils/leptonica_lib/adjust_rotation.c,sha256=oIPibVwcHBh-9XuNr0WLYjLiZTBG4xXSy92lsLtp0l0,537
+document_image_utils/leptonica_lib/segment_doc,sha256=JWXofVeIY5msskdA1gWxkFFJMwiFKcjuiqYd7oHCd2A,26264
+document_image_utils/leptonica_lib/segment_document.c,sha256=T0kQpJLsDpldK5-LSHyRtnq7Esvu3Xz9zEUw7ZYCUmw,14102
+document_image_utils/leptonica_lib/tempCodeRunnerFile.sh,sha256=t3NJvx-psm1F1UXX1k2tlnN-nPuzy7X10Q-3ew_MRK0,3
+document_image_utils/scripts/auto_crop/__init__.py,sha256=QBG4gCMOomp08ahykfd8yI1VaC-NrToAQclJWqilRxk,2051
+document_image_utils/scripts/binarize/__init__.py,sha256=PJdbL9A7fziQKDloOoUtXdWks2vOIGnoE27-8_fkf94,2313
+document_image_utils/scripts/rotate_document/__init__.py,sha256=y_hwoYXItYK_lWl9yTlxuNhlVWjkSFP2uyXpL1wGXWI,2936
+document_image_utils/scripts/split_columns/__init__.py,sha256=gh9jC59yvKCtNWDO4BTytEAMv-PTDImiuwGc53F0MFw,1903
+document_image_utils-0.1.17.dist-info/METADATA,sha256=8TFZlrgeNvH7pYwmbXlQtjkSjGN9L0Hd_-WTYQ29__0,1352
+document_image_utils-0.1.17.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+document_image_utils-0.1.17.dist-info/entry_points.txt,sha256=LyCugLLC2Yod4GiSDGoBYMTePlzfjoPs5jHvp4tdrJw,253
+document_image_utils-0.1.17.dist-info/RECORD,,
