@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: master-tuyul-sdk
+Version: 0.1.1
+Summary: 
+Author: DesKaOne
+Author-email: DesKaOne@users.noreply.github.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: base58 (==2.1.1)
+Requires-Dist: bs4 (>=0.0.2,<0.0.3)
+Requires-Dist: chardet (==5.2.0)
+Requires-Dist: colorama (==0.4.6)
+Requires-Dist: google-api-python-client (==2.131.0)
+Requires-Dist: httpx[http2,socks] (==0.27.0)
+Requires-Dist: lxml (==5.2.2)
+Requires-Dist: pycryptodomex (==3.20.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: random-user-agent (==1.0.1)
+Requires-Dist: requests (==2.31.0)
+Requires-Dist: requests-toolbelt (==0.10.1)
+Requires-Dist: sqlalchemy (==2.0.30)
+Requires-Dist: sqlalchemy-utils (==0.41.2)
+Requires-Dist: urllib3 (==1.26.15)
+Description-Content-Type: text/markdown
+
+
