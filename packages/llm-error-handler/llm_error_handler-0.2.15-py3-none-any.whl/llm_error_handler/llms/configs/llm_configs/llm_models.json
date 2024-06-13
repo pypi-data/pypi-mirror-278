@@ -1,0 +1,69 @@
+{
+    "openai": {
+        "gpt-3.5-turbo-0125": {
+            "max_tokens": 16385
+        },
+        "gpt-3.5-turbo": {
+            "max_tokens": 16385
+        },
+        "gpt-3.5-turbo-1106": {
+            "max_tokens": 16385
+        },
+        "gpt-3.5-turbo-instruct": {
+            "max_tokens": 4096
+        },
+        "gpt-4-turbo": {
+            "max_tokens": 128000
+        },
+        "gpt-4-turbo-2024-04-09": {
+            "max_tokens": 128000
+        },
+        "gpt-4-turbo-preview": {
+            "max_tokens": 128000
+        },
+        "gpt-4-0125-preview": {
+            "max_tokens": 128000
+        },
+        "gpt-4-1106-preview": {
+            "max_tokens": 128000
+        },
+        "gpt-4-vision-preview": {
+            "max_tokens": 128000
+        },
+        "gpt-4-1106-vision-preview": {
+            "max_tokens": 128000
+        },
+        "gpt-4": {
+            "max_tokens": 8192
+        },
+        "gpt-4-0613": {
+            "max_tokens": 8192
+        },
+        "gpt-4-32k": {
+            "max_tokens": 32768
+        },
+        "gpt-4-32k-0613": {
+            "max_tokens": 32768
+        },
+        "gpt-4o": {
+            "max_tokens": 128000
+        },
+        "gpt-4o-2024-05-13": {
+            "max_tokens": 128000
+        }
+    },
+    "gemini": {
+        "gemini-1.0-pro": {
+            "max_tokens": 32760
+        },
+        "gemini-1.0-pro-vision": {
+            "max_tokens": 12288
+        },
+        "gemini-1.5-pro-latest": {
+            "max_tokens": 1048576
+        },
+        "gemini-1.5-flash-latest": {
+            "max_tokens": 1048576
+        }
+    }
+}

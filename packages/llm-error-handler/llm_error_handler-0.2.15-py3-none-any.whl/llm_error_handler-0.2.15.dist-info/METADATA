@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: llm-error-handler
+Version: 0.2.15
+Summary: A simple decorator for AI error handling in Python.
+Home-page: https://github.com/shokitano0521/LLM-Error-Handler
+Author: Shoichi
+Author-email: s.kitano.h050521@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: annotated-types (==0.7.0)
+Requires-Dist: anyio (==4.4.0)
+Requires-Dist: cachetools (==5.3.3)
+Requires-Dist: certifi (==2024.6.2)
+Requires-Dist: charset-normalizer (==3.3.2)
+Requires-Dist: distro (==1.9.0)
+Requires-Dist: exceptiongroup (==1.2.1)
+Requires-Dist: google-ai-generativelanguage (==0.6.4)
+Requires-Dist: google-api-core (==2.19.0)
+Requires-Dist: google-api-python-client (==2.133.0)
+Requires-Dist: google-auth-httplib2 (==0.2.0)
+Requires-Dist: google-auth (==2.30.0)
+Requires-Dist: google-generativeai (==0.6.0)
+Requires-Dist: googleapis-common-protos (==1.63.1)
+Requires-Dist: grpcio-status (==1.62.2)
+Requires-Dist: grpcio (==1.64.1)
+Requires-Dist: h11 (==0.14.0)
+Requires-Dist: httpcore (==1.0.5)
+Requires-Dist: httplib2 (==0.22.0)
+Requires-Dist: httpx (==0.27.0)
+Requires-Dist: idna (==3.7)
+Requires-Dist: numpy (==1.26.4)
+Requires-Dist: openai (==1.30.1)
+Requires-Dist: pillow (==10.3.0)
+Requires-Dist: proto-plus (==1.23.0)
+Requires-Dist: protobuf (==4.25.3)
+Requires-Dist: pyasn1 (==0.6.0)
+Requires-Dist: pyasn1-modules (==0.4.0)
+Requires-Dist: pydantic (==2.7.3)
+Requires-Dist: pydantic-core (==2.18.4)
+Requires-Dist: pyparsing (==3.1.2)
+Requires-Dist: regex (==2024.5.15)
+Requires-Dist: requests (==2.32.3)
+Requires-Dist: rsa (==4.9)
+Requires-Dist: sniffio (==1.3.1)
+Requires-Dist: tiktoken (==0.7.0)
+Requires-Dist: tqdm (==4.66.4)
+Requires-Dist: typing-extensions (==4.12.2)
+Requires-Dist: uritemplate (==4.1.1)
+Requires-Dist: urllib3 (==2.2.1)
+
+# LLM-Error-Handler
+
+
