@@ -1,0 +1,10 @@
+numpy
+tqdm
+torch
+matplotlib
+muon
+pyro-ppl
+
+[test]
+pytest
+pytest-cov
