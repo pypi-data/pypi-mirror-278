@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: iatiflattener
+Version: 0.10.11
+Summary: A set of tools to flatten IATI data.
+Home-page: https://github.com/iati-data-access/iati-flattener
+Author: Mark Brough
+Author-email: mark@brough.io
+License: AGPLv3+
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python :: 3.9
+License-File: LICENSE
+Requires-Dist: PyExcelerate (>=0.9.0)
+Requires-Dist: datetime-quarter (==1.0.3)
+Requires-Dist: exchangerates (>=0.3.4)
+Requires-Dist: iatikit (>=3.3.1)
+Requires-Dist: lxml (>=4.6.1)
+Requires-Dist: numpy (>=1.19.4)
+Requires-Dist: openpyxl (>=3.0.10)
+Requires-Dist: pandas (>=1.1.4)
+Requires-Dist: requests (>=2.24.0)
+
+UNKNOWN
+
