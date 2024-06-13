@@ -1,0 +1,7 @@
+[console_scripts]
+ci=scripts:ci
+clean=scripts:clean
+fmt=scripts:fmt
+lint=scripts:lint
+test=scripts:test
+
