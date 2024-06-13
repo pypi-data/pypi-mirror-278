@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: mlpype-spark
+Version: 0.5.2
+Requires-Dist: mlpype-base ==0.5.2
+Requires-Dist: pyspark >=3.4.0
+Provides-Extra: dev
+Requires-Dist: mlpype-base ==0.5.2 ; extra == 'dev'
+Requires-Dist: pyspark ==3.4.0 ; extra == 'dev'
+Requires-Dist: pandas ; extra == 'dev'
+Provides-Extra: strict
+Requires-Dist: mlpype-base ==0.5.2 ; extra == 'strict'
+Requires-Dist: pyspark ==3.4.0 ; extra == 'strict'
+Provides-Extra: test
+Requires-Dist: mlpype-base ==0.5.2 ; extra == 'test'
+Requires-Dist: pyspark ==3.4.0 ; extra == 'test'
+Requires-Dist: pandas ; extra == 'test'
+
