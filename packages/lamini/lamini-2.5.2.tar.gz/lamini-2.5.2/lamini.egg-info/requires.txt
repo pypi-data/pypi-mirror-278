@@ -1,0 +1,11 @@
+lamini-configuration[yaml]
+requests
+tqdm
+numpy
+jsonlines
+pandas
+azure-storage-blob
+scikit-learn
+aiohttp
+faiss-cpu
+setuptools
