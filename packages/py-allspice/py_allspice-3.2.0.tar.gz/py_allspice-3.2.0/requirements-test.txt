@@ -1,0 +1,5 @@
+pytest~=8.2
+ruff~=0.4
+pdoc~=14.5
+MonkeyType~=23.3
+libcst~=1.4.0

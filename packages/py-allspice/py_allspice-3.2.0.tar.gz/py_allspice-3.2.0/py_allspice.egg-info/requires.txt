@@ -1,0 +1,9 @@
+requests~=2.32
+frozendict~=2.4
+
+[test]
+pytest~=8.2
+ruff~=0.4
+pdoc~=14.5
+MonkeyType~=23.3
+libcst~=1.4.0
