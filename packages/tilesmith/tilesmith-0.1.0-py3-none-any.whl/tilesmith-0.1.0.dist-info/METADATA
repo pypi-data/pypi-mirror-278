@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: tilesmith
+Version: 0.1.0
+Summary: A Python toolkit for game developers
+Author-Email: 42juododranoel <42juododranoel@pm.me>
+License: GPL-3.0-only
+Requires-Python: >=3.12
+Requires-Dist: click>=8.1.7
+Requires-Dist: pillow>=10.3.0
+Requires-Dist: numpy>=1.26.4
+Requires-Dist: attrs>=23.2.0
+Description-Content-Type: text/markdown
+
+# Tilesmith
