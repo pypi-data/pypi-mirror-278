@@ -1,0 +1,17 @@
+# MANIFEST.in
+
+# Include the README file
+include README.md
+
+# Include the license file if you have one
+include LICENSE
+
+# Include requirements file
+include requirements.txt
+
+# Include all Python files in the package
+recursive-include record_temp_analysis_nc *.py
+
+# Exclude all __pycache__ directories and .pyc files
+global-exclude __pycache__
+global-exclude *.py[cod]
