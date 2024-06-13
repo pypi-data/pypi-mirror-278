@@ -1,0 +1,46 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kaniko
+  namespace: NAMESPACE
+spec:
+  serviceAccountName: SERVICE_ACCOUNT_NAME #TODO
+  containers:
+  - name: kaniko
+    image: gcr.io/kaniko-project/executor:latest
+    resources:
+      requests:
+        ephemeral-storage: "100Gi"
+        memory: "63Gi"
+      limits:
+        ephemeral-storage: "100Gi"
+        memory: "63Gi"
+    args: [ "--context=dir:///data/build/PROJECT_NAME",          # TODO
+            "--dockerfile=/data/build/PROJECT_NAME/Dockerfile",  # TODO
+            "--destination=ECR_REPOSITORY_URL"] #TODO 
+    env:
+    - name: AWS_DEFAULT_REGION
+      value: REGION #TODO
+    - name: AWS_ACCESS_KEY_ID
+      valueFrom:
+        secretKeyRef:
+          name: aws-secret
+          key: AWS_ACCESS_KEY_ID
+    - name: AWS_SECRET_ACCESS_KEY
+      valueFrom:
+        secretKeyRef:
+          name: aws-secret
+          key: AWS_SECRET_ACCESS_KEY
+    - name: AWS_SESSION_TOKEN
+      valueFrom:
+        secretKeyRef:
+          name: aws-secret
+          key: AWS_SESSION_TOKEN
+    volumeMounts:
+    - name: persistent-storage
+      mountPath: /data
+  restartPolicy: Never
+  volumes:
+    - name: persistent-storage
+      persistentVolumeClaim:
+        claimName: s3-claim
