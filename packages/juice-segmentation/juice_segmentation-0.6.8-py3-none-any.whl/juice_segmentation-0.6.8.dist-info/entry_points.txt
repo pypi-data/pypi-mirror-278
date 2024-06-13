@@ -1,0 +1,3 @@
+[console_scripts]
+juice_segmentation_multi = juice_segmentation.juice_segmentation_multi_cmd:main
+juice_spice_segmentation = juice_segmentation.spice_segmentation_cmd:main

@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: juice_segmentation
+Version: 0.6.8
+Summary: Python package for merging/cutting segments according given rules
+Home-page: https://juigitlab.esac.esa.int/core-system/uplink/juice_segmentation
+Author: JUICE SOC team
+Author-email: juice_soc@cosmos.esa.int
+Keywords: esa,science,planetary,space,planning,merging,cutting,rules
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: tabulate >=0.9.0
+Requires-Dist: requests >=2.28.2
+Requires-Dist: rst2html5 >=2.0
+Requires-Dist: esac-juice-pyutils >=0.3.1
+
+# juice_segmentation Package
+
+## 1. Getting Started
+
+This Python package provide libs and tools to pre-process (merging/cutting according given rules) wg segment needed for the science planning
+
+The input providing a segmentation proposal with some overlaps between science and operational segments being removed, 
+prior to the start of the harmonisation with the WGs.
+
+The tool will allow to produce automatically a set of non-overlapping segments from a set of opportunity segments
+by applying a set of simple rules of for merging/cutting segments.
+
+The output will be imported/loaded in Timeline Tool
+
+
+```
+.
+├── README.md
+├── CHANGELOG.md
+├── TDS
+├── juice_segmentation
+├── packages_distribution
+├── quick_install_from_git_clone.sh
+├── scripts
+├── setup.py
+├── test
+└── test_files
+
+```
+where
+- juice_segmentation: Python package for merging/cutting segments according given rules;
+- script: sample script to run juice_segmentation;
+- test_file/config: configuration file (json) samples
+- test: unit tests and module tests.
+- TDS: test dataset 
+
+### 1.1 Installation
+
+#### 1.1.1 Prerequisites
+ 
+If needed, install Python 3.7+
+(For window and MAC OS, the best is to install anaconda ("https://www.anaconda.com/distribution/"))
+
+
+#### 1.1.2 Setup
+
+##### 1.1.2.1 Package installation 
+
+From command line install the following packages using pip:
+
+    pip install esac_juice_pyutils
+
+    pip install juice_segmentation
+
+
