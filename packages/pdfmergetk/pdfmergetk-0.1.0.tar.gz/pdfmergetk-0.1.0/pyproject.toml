@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "pdfmergetk"
+version = "0.1.0"
+description = "GUI application to easily merge PDF files with the power of Python."
+authors = ["kurotom <55354389+kurotom@users.noreply.github.com>"]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+packages = [{include = 'src'}]
+repository = "https://github.com/kurotom/PDFMergeTK"
+keywords = ["merge pdf", "gui", "tk", "desktop", "gui windows", "gui linux"]
+classifiers = [
+"Operating System :: OS Independent",
+"Topic :: Desktop Environment",
+"Programming Language :: Python :: 3.7",
+"Programming Language :: Python :: 3.8",
+"Programming Language :: Python :: 3.9",
+"Programming Language :: Python :: 3.10",
+"Programming Language :: Python :: 3.11"
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+pillow = "<=10"
+pymupdf = "1.21.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+mergepdf = 'src.gui:main'
+mergepdfreset = 'src.reset:main'
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/kurotom/PDFMergeTK/issues"
