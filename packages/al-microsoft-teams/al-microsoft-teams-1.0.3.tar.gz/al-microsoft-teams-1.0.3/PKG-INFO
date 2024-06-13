@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: al-microsoft-teams
+Version: 1.0.3
+Summary: A Python wrapper to send messages to Microsoft Teams.
+Home-page: https://github.com/AutumnLeafIT/al-aws-notification-modules
+Author: Rashelle Woudberg
+Author-email: rashelle@al.co.za
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Microsoft Teams Notifier
+A Python wrapper to send messages to a Microsoft Teams channel using Graph API and ROPC flow.
+
+## Prerequisites
+- [App registered in Azure AD](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application#register-a-new-application "How to register an app in Azure AD")
+
+- - The app needs the following permissions to the Microsoft Graph API:
+- - - ChannelMessage.Send
+- - - Group.ReadWrite.All
+
+
+- User that will be used to send out the message
+- - No MFA (including security defaults, unless conditional access is applied)
+- - No permissions needed
+- - Teams license
+
+
+- AWS Secrets Manager secret with the following info:
+- - tenantid - EXPLAIN WHAT THIS IS / WHERE TO GET
+- - clientid  - 
+- - secret - 
+- - secretid - 
+- - username - This will be the microsoft login name or microsoft entra ID
+- - password - This is the password for your microsoft 
+
+add python file for universal use
+
+## How to use Microsoft teams notifier
+1. Create a dir (mkdir folder name)
+2. Go into the folder created above (cd folder name)
+3. Download Microsoft teams notifier into the folder created above (pip install --target . microsoft-teams)
+4. Zip the folder above, containing all the packages ()
+5. Create Lambda script and add it to the zip (ensure lamda file name is the same as the zipped folder)
+6. Upload zip file to Lambda
+
+
+## Lambda permissions needed:
+- secretsmanager:GetSecretValue
+
