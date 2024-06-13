@@ -1,0 +1,99 @@
+Metadata-Version: 2.1
+Name: turing-planet
+Version: 0.1.4
+Summary: Python Extension Framework For Turing Planet
+Home-page: https://code.iflytek.com/osc/_source/Y_RDG-TURING/gpt/turing-planet/-/tree/heads%2Fdevelop
+Author: jianwu6
+Author-email: jianwu6@iflytek.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9.0, <3.10.0
+Description-Content-Type: text/markdown
+Requires-Dist: langchain==0.1.0
+Requires-Dist: llama-index==0.10.0
+Requires-Dist: websocket-client==1.6.4
+
+# turing-planet星球扩展组件
++ _版本v0.0.10_
+
+此模块是星球服务的python扩展组件程序，实现`langchain`和`llamaIndex`的大模型和向量提取接口。
+安装本组件后，用户可以按照`langchain`和`llamaIndex`的api调用星球API服务，完成注入会话，文档问答等功能
+
+## 主要模块
+- turing_planet.langchain
+
+langchain 模块扩展，集成方式参照`langchain-说明文档`
+
+- turing_planet.llama_index
+
+llama_index 模块扩展，集成方式参照`llamaIndex-说明文档`
+
+## 环境准备
+
+- 本机安装python3，要求3.9
+- 部署好星球服务, 版本要求1.2.0_build1026+
+
+```shell
+pip install turing-planet
+# 如果通过清华镜像无法拉取，尝试以下命令
+pip install turing-planet --index-url https://pypi.org/simple
+```
+
+
+
+## 快速开始
+安装`turing-planet`类库后，开始编写你的应用
+
+### 环境变量设置
+支持两种环境变量设置
+- .env 文件
+
+在你的项目下创建.env文件，文件内容为环境变量设置，如：
+```properties
+TURING_PLANET_ENDPOINT=127.0.0.1:9980
+```
+
+程序中，加载env文件
+```python
+from dotenv import load_dotenv
+
+# 加载环境变量
+load_dotenv()
+
+```
+
+
+- 系统环境变量
+
+建议通过环境变量的方式设置，星球api服务地址。优先级高于.env 文件
+
+```shell
+# 星球api服务
+export TURING_PLANET_ENDPOINT=127.0.0.1:9980
+```
+
+- 参数传递
+
+当然，如果不设置环境变量，也可以通过参数传入。例如
+```python
+sparkChat = ChatSparkAI(endpoint="127.0.0.1:9980", domain="turing-general")
+```
+
+**domain说明**
+
+    公有云
+    xfyun-generalv3.5: V3.5协议
+    xfyun-generalv3: V3.0协议
+    xfyun-generalv2: V2.0协议
+    xfyun-general: V1.5协议
+    私有化
+    turing-general：通用版本
+    turing-iflycode.ge: 私有化代码大模型
+    AIUI
+    aiui-rewrite-v1: 改写
+    aiui-slot-v1: 抽槽
+
+
+
+
