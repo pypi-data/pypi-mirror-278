@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: lamini-client
+Version: 0.0.1
+Summary: Build on large language models faster
+Author-email: PowerML <info@powerml.co>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Lamini
+
+This is an incoming SDK for Lamini
