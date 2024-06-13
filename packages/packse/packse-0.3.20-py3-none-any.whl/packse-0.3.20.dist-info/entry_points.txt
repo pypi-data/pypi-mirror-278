@@ -1,0 +1,3 @@
+[console_scripts]
+packse=packse.cli:entrypoint
+
