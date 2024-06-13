@@ -1,0 +1,2 @@
+[console_scripts]
+nexora = nexora.cli.autotuna:main
