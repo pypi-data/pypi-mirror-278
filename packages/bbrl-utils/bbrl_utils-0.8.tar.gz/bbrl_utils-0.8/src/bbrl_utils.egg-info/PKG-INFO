@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: bbrl_utils
+Version: 0.8
+Summary: Utilities for notebooks built around BBRL
+Author-email: Benjamin Piwowarski <benjamin@piwowarski.fr>
+License: MIT
+Project-URL: Repository, https://github.com/bpiwowar/bbrl_utils
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: easypip
+Requires-Dist: bbrl>=0.3.1
+Requires-Dist: bbrl_gymnasium>=0.3.5
+Requires-Dist: tensorboard
+Requires-Dist: moviepy
+Requires-Dist: pygame
