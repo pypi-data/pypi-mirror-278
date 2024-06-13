@@ -1,0 +1,70 @@
+{
+    "Header": {
+        "@xmlns": "http://uri.etsi.org/03120/common/2019/10/Core",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:common": "http://uri.etsi.org/03120/common/2016/02/Common",
+        "@xmlns:task": "http://uri.etsi.org/03120/common/2020/09/Task",
+        "SenderIdentifier": {
+            "CountryCode": "XX",
+            "UniqueIdentifier": "SENDER"
+        },
+        "ReceiverIdentifier": {
+            "CountryCode": "XX",
+            "UniqueIdentifier": "RECEIVER"
+        },
+        "TransactionIdentifier": "089a3f5a-3e60-4a1a-b6ec-f8220787ed85",
+        "Timestamp": "2024-06-13T10:45:56.272022+01:00",
+        "Version": {
+            "ETSIVersion": "V1.16.1",
+            "NationalProfileOwner": "XX",
+            "NationalProfileVersion": "v1.0"
+        }
+    },
+    "Payload": {
+        "RequestPayload": {
+            "ActionRequests": {
+                "ActionRequest": [
+                    {
+                        "ActionIdentifier": 0,
+                        "CREATE": {
+                            "HI1Object": {
+                                "@xsi:type": "{http://uri.etsi.org/03120/common/2020/09/Task}LDTaskObject",
+                                "ObjectIdentifier": "a9280990-20ed-4e65-90ea-c9ecc4dc0319",
+                                "CountryCode": "XX",
+                                "OwnerIdentifier": "SENDER",
+                                "task:Reference": "XX-1-234",
+                                "task:RequestDetails": {
+                                    "task:Type": {
+                                        "common:Owner": "ETSI",
+                                        "common:Name": "TS103976RequestType",
+                                        "common:Value": "VINtoCommsID"
+                                    },
+                                    "task:RequestValues": {
+                                        "task:RequestValue": [
+                                            {
+                                                "task:FormatType": {
+                                                    "task:FormatOwner": "ETSI",
+                                                    "task:FormatName": "VIN"
+                                                },
+                                                "task:Value": "1G9Y817H34LSP7293"
+                                            }
+                                        ]
+                                    }
+                                },
+                                "task:DeliveryDetails": {
+                                    "task:DeliveryDestination": [
+                                        {
+                                            "task:DeliveryAddress": {
+                                                "task:URL": "https://localhost:8080"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
