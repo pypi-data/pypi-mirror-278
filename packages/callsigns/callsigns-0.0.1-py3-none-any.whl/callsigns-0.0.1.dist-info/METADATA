@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: callsigns
+Version: 0.0.1
+Summary: Download and parse ULS Amateur License records from FCC ULS downloads
+Home-page: https://github.com/spyoungtech/callsign-data
+Author: Spencer Young
+Author-email: spencer.young@spyoung.com
+Project-URL: Documentation, https://github.com/spyoungtech/callsign-data
+Project-URL: Funding, https://github.com/sponsors/spyoungtech/
+Project-URL: Source, https://github.com/spyoungtech/callsign-data
+Project-URL: Tracker, https://github.com/spyoungtech/callsign-data/issues
+Keywords: callsigns,call,sign,radio,ham,amateur,FCC,ULS
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Desktop Environment
+Classifier: Programming Language :: Python
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Typing :: Typed
+Requires-Python: >=3.12.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: boto3
+Requires-Dist: python-dateutil
+
+Download and parse ULS Amateur License records from FCC ULS downloads
