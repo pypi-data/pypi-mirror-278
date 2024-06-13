@@ -1,0 +1,49 @@
+{
+  schema: {
+    // 不允许返回的属性
+    no_response_attributes: [
+      // "tenant_id",   // 启用租户的时候会自动添加
+      "password"
+    ],
+    // 不能赋值的属性,可以带上类名，不能赋值的属性，通常都在默认赋值的属性清单中
+    no_set_attributes: [
+      "id",
+      // "tenant_id",   // 启用租户的时候会自动添加
+      "created_at",
+      "created_by"
+    ],
+    // 别名转化器，在生成代码时就转化好的版本
+    alias_generator: {
+      import_stmt: {
+        from: 'fastcodedog.util.case_converter',
+        import: 'snake_to_camel'
+      },
+      // importlib.import_module('fastcodegen.util.case_convert')
+      function: 'snake_to_camel',
+      // func = getattr(module, 'snake_to_camel')
+    },
+    //    dynamic_attributes_function: {
+    //      import_stmt: {
+    //        from: 'fastcodedog.test.fakeapp.schema.callback.get_dynamic_attributes',
+    //        import: 'get_dynamic_attributes'
+    //      },
+    //      function: 'get_dynamic_attributes'
+    //    },
+    default_values: {
+      // 这个配置项可能需要改到或者分散到api或者crud，甚至model中。暂时认为，改到crud中最靠谱，有利于二次开发的时候还能使用到默认值设置。
+      //      tenant_id: {
+      //        import_stmt: {
+      //          from: 'fastoauth.oauth',
+      //          import: 'OAuth2'
+      //        },
+      //        value_expression: 'OAuth2.get_current_user().tenant_id'},
+      created_at: {
+        import_stmt: {
+          import: 'datetime'
+        },
+        value_expression: "datetime.datetime.now()"
+      },
+      //      created_by: {import: "from fastoauth.oauth import OAuth2", value_expression: 'OAuth2.get_current_user().user_id'}
+    }
+  }
+}

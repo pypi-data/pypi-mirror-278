@@ -1,0 +1,50 @@
+{
+  response_schemas: {
+    // 系统会默认生成_base,_create,_update结尾的版本，以及针对每个多对多的变量，生成with_xxxx的版本，注意不要和默认生成的版本重名
+    admin_user: {
+      user_with_organization: [
+        "organizations"
+      ],
+      user_with_organization_and_position: [
+        "organizations",
+        "positions"
+      ],
+      // 会返回positions和position对应的menus，二级字典
+      user_with_position_menu: [
+        "positions.menus"
+      ],
+      // 直接穿透，返回menus，不返回positions。
+      user_with_menu: [
+        "positions.menus#menus"
+      ],
+      // 同上，返回的menus被重名为user_menus，返回的变量在命名冲突时，可以指定命名
+      user_with_user_menu: [
+        {
+          user_menus: "positions.menus"
+        }
+      ],
+    }
+  },
+  create_schemas: {
+    // 允许级联创建，但必须给出对应类的唯一值或者唯一值组合，否则不能级联创建
+    // 允许指定值（方法，或者变量）
+    admin_user: {
+      // 生成的url： post /users/user_create_with_organization。对应crud方法 create_user_with_organization
+      // create_schemas中不支持response类型中的#号和自定义变量名
+      user_create_with_organization: [
+        'organizations'
+      ],
+    }
+  },
+  update_schemas: {
+    // 允许级联创建，但必须给出对应类的唯一值或者唯一值组合，否则不能级联创建
+    // 允许指定值（方法，或者变量）
+    admin_user: {
+      // 生成的url： put /users/user_update_with_organization。对应crud方法 update_user_with_organizations。其中update_user_with为系统固定开头，organizations是变量明细
+      // update_schemas中不支持response类型中的#号和自定义变量名
+      user_update_with_organization: [
+        'organizations'
+      ],
+    }
+  }
+}

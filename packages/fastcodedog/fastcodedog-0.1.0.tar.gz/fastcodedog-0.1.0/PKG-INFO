@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: fastcodedog
+Version: 0.1.0
+Summary: 
+License: MIT
+Author: taohoo
+Author-email: taohoo@163.com
+Requires-Python: >=3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: autopep8 (>=2.2.0)
+Requires-Dist: fastapi (>=0.100.0)
+Requires-Dist: fastoauth (>=0.1.0)
+Requires-Dist: inflect (>=7.2.1)
+Requires-Dist: json5 (>=0.9.25)
+Requires-Dist: psycopg2[binary] (>=2.9.5)
+Requires-Dist: pydantic (>=1.10.10)
+Requires-Dist: pyopenssl (>=24.0.0)
+Requires-Dist: python-jose (>=3.3.0)
+Requires-Dist: python-multipart (>=0.0.9)
+Requires-Dist: redis (>=5.0.5)
+Requires-Dist: sqlalchemy (>=2.0.23)
+Requires-Dist: uvicorn (>=0.30.0)
+Description-Content-Type: text/markdown
+
+基于pdm文件，自动生成fastapi工程。
+包括sqlalchemy的model，crud。
+fastapi的schema，api。

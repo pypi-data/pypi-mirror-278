@@ -1,0 +1,43 @@
+{
+  modules: {
+    specified_classe_names: {
+      'admin_user': 'User'
+    },
+    // 可写和只读的模块，模块名就是表名的开头部分。
+    // 如果表的开头不在这里，这个表会被忽略
+    writeable_modules: [
+      'operation',
+      'admin',
+      'define'
+    ],
+    readonly_modules: [],
+    force_foreignkeys: {
+      //	  "admin_tenant.id": ["tenant_id"],  // 启用tenant的时候会自动添加
+      "admin_user.id": [
+        "user_id",
+        "create_by",
+        "update_by"
+      ],
+    },
+    // 不做反向映射定义的变量。主要针对反向映射数据量太多，会导致系统性能问题的情况
+    no_back_populates: [
+    // 可以是字段名或者表名.字段名
+//      "tenant_id",  // 启用tenant的时候会自动添加
+      "user_id"
+    ],
+  },
+  tenant: {
+    // 是否开启租户。默认不开启。开启租户的情况下，会自动创建租户表。如果开启的话，需要同步开启force_foreignkeys中的tenant_id和默认值
+    enabled: true,
+    // 根据租户表名的前缀，会把租户表归属到模块module
+    tenant_table_code: 'admin_tenant',
+    // 租户表的主键。除了主键外，会自动创建domain，name，enabled
+    tenant_table_primary_key: 'id',
+    // 往每个实体表中插入的代表租户的字段
+    tenant_column: 'tenant_id',
+    // 不需要租户字段的表
+    no_tenant_column_tables: [
+      'operation_api_log'
+    ],
+  },
+}
