@@ -1,0 +1,4 @@
+include README.md
+include LICENSE
+recursive-include django_cryptomus/templates *
+recursive-include django_cryptomus/static *
