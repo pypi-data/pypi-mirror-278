@@ -1,0 +1,133 @@
+from typing import List
+from typing import overload
+import ghidra.app.util.bin
+import ghidra.app.util.bin.format.dwarf.attribs
+import ghidra.app.util.bin.format.dwarf.line
+import java.lang
+import java.util
+import java.util.function
+
+
+class DWARFLineContentType(java.lang.Enum):
+    DW_LNCT_MD5: ghidra.app.util.bin.format.dwarf.line.DWARFLineContentType
+    DW_LNCT_UNKNOWN: ghidra.app.util.bin.format.dwarf.line.DWARFLineContentType
+    DW_LNCT_directory_index: ghidra.app.util.bin.format.dwarf.line.DWARFLineContentType
+    DW_LNCT_hi_user: ghidra.app.util.bin.format.dwarf.line.DWARFLineContentType
+    DW_LNCT_lo_user: ghidra.app.util.bin.format.dwarf.line.DWARFLineContentType
+    DW_LNCT_path: ghidra.app.util.bin.format.dwarf.line.DWARFLineContentType
+    DW_LNCT_size: ghidra.app.util.bin.format.dwarf.line.DWARFLineContentType
+    DW_LNCT_timestamp: ghidra.app.util.bin.format.dwarf.line.DWARFLineContentType
+
+
+
+
+    class Def(ghidra.app.util.bin.format.dwarf.attribs.DWARFAttributeDef):
+
+
+
+
+        def __init__(self, __a0: ghidra.app.util.bin.format.dwarf.line.DWARFLineContentType, __a1: int, __a2: ghidra.app.util.bin.format.dwarf.attribs.DWARFForm, __a3: long): ...
+
+
+
+        def equals(self, __a0: object) -> bool: ...
+
+        def getAttributeForm(self) -> ghidra.app.util.bin.format.dwarf.attribs.DWARFForm: ...
+
+        def getAttributeId(self) -> java.lang.Enum: ...
+
+        def getAttributeName(self) -> unicode: ...
+
+        def getClass(self) -> java.lang.Class: ...
+
+        def getId(self) -> ghidra.app.util.bin.format.dwarf.line.DWARFLineContentType: ...
+
+        def getImplicitValue(self) -> long: ...
+
+        def getRawAttributeId(self) -> int: ...
+
+        def hashCode(self) -> int: ...
+
+        def isImplicit(self) -> bool: ...
+
+        def notify(self) -> None: ...
+
+        def notifyAll(self) -> None: ...
+
+        @overload
+        @staticmethod
+        def read(__a0: ghidra.app.util.bin.BinaryReader) -> ghidra.app.util.bin.format.dwarf.line.DWARFLineContentType.Def: ...
+
+        @overload
+        @staticmethod
+        def read(__a0: ghidra.app.util.bin.BinaryReader, __a1: java.util.function.Function) -> ghidra.app.util.bin.format.dwarf.attribs.DWARFAttributeDef: ...
+
+        def toString(self) -> unicode: ...
+
+        @overload
+        def wait(self) -> None: ...
+
+        @overload
+        def wait(self, __a0: long) -> None: ...
+
+        @overload
+        def wait(self, __a0: long, __a1: int) -> None: ...
+
+        def withForm(self, __a0: ghidra.app.util.bin.format.dwarf.attribs.DWARFForm) -> ghidra.app.util.bin.format.dwarf.line.DWARFLineContentType.Def: ...
+
+        @property
+        def id(self) -> ghidra.app.util.bin.format.dwarf.line.DWARFLineContentType: ...
+
+
+
+
+
+    @overload
+    def compareTo(self, __a0: java.lang.Enum) -> int: ...
+
+    @overload
+    def compareTo(self, __a0: object) -> int: ...
+
+    def describeConstable(self) -> java.util.Optional: ...
+
+    def equals(self, __a0: object) -> bool: ...
+
+    def getClass(self) -> java.lang.Class: ...
+
+    def getDeclaringClass(self) -> java.lang.Class: ...
+
+    def hashCode(self) -> int: ...
+
+    def name(self) -> unicode: ...
+
+    def notify(self) -> None: ...
+
+    def notifyAll(self) -> None: ...
+
+    @staticmethod
+    def of(__a0: int) -> ghidra.app.util.bin.format.dwarf.line.DWARFLineContentType: ...
+
+    def ordinal(self) -> int: ...
+
+    def toString(self) -> unicode: ...
+
+    @overload
+    @staticmethod
+    def valueOf(__a0: unicode) -> ghidra.app.util.bin.format.dwarf.line.DWARFLineContentType: ...
+
+    @overload
+    @staticmethod
+    def valueOf(__a0: java.lang.Class, __a1: unicode) -> java.lang.Enum: ...
+
+    @staticmethod
+    def values() -> List[ghidra.app.util.bin.format.dwarf.line.DWARFLineContentType]: ...
+
+    @overload
+    def wait(self) -> None: ...
+
+    @overload
+    def wait(self, __a0: long) -> None: ...
+
+    @overload
+    def wait(self, __a0: long, __a1: int) -> None: ...
+

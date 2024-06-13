@@ -1,0 +1,53 @@
+from typing import overload
+import ghidra.app.plugin.assembler
+import ghidra.app.plugin.processors.sleigh
+import ghidra.program.model.lang
+import ghidra.program.model.listing
+import java.lang
+
+
+class AbstractSleighAssemblerBuilder(object, ghidra.app.plugin.assembler.GenericAssemblerBuilder):
+
+
+
+
+    def __init__(self, lang: ghidra.app.plugin.processors.sleigh.SleighLanguage): ...
+
+
+
+    def equals(self, __a0: object) -> bool: ...
+
+    @overload
+    def getAssembler(self, selector: ghidra.app.plugin.assembler.AssemblySelector) -> A: ...
+
+    @overload
+    def getAssembler(self, selector: ghidra.app.plugin.assembler.AssemblySelector, program: ghidra.program.model.listing.Program) -> A: ...
+
+    def getClass(self) -> java.lang.Class: ...
+
+    def getLanguage(self) -> ghidra.app.plugin.processors.sleigh.SleighLanguage: ...
+
+    def getLanguageID(self) -> ghidra.program.model.lang.LanguageID: ...
+
+    def hashCode(self) -> int: ...
+
+    def notify(self) -> None: ...
+
+    def notifyAll(self) -> None: ...
+
+    def toString(self) -> unicode: ...
+
+    @overload
+    def wait(self) -> None: ...
+
+    @overload
+    def wait(self, __a0: long) -> None: ...
+
+    @overload
+    def wait(self, __a0: long, __a1: int) -> None: ...
+
+    @property
+    def language(self) -> ghidra.app.plugin.processors.sleigh.SleighLanguage: ...
+
+    @property
+    def languageID(self) -> ghidra.program.model.lang.LanguageID: ...

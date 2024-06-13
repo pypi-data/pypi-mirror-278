@@ -1,0 +1,56 @@
+from typing import overload
+import ghidra.app.util.bin
+import java.lang
+
+
+class DWARFIndirectTableHeader(object):
+    """
+    Common base functionality of indirect table headers (DWARFAddressListHeader, 
+     DWARFLocationListHeader, etc)
+    """
+
+
+
+
+
+    def __init__(self, startOffset: long, endOffset: long, firstElementOffset: long): ...
+
+
+
+    def equals(self, __a0: object) -> bool: ...
+
+    def getClass(self) -> java.lang.Class: ...
+
+    def getEndOffset(self) -> long: ...
+
+    def getFirstElementOffset(self) -> long: ...
+
+    def getOffset(self, index: int, reader: ghidra.app.util.bin.BinaryReader) -> long: ...
+
+    def getStartOffset(self) -> long: ...
+
+    def hashCode(self) -> int: ...
+
+    def notify(self) -> None: ...
+
+    def notifyAll(self) -> None: ...
+
+    def toString(self) -> unicode: ...
+
+    @overload
+    def wait(self) -> None: ...
+
+    @overload
+    def wait(self, __a0: long) -> None: ...
+
+    @overload
+    def wait(self, __a0: long, __a1: int) -> None: ...
+
+    @property
+    def endOffset(self) -> long: ...
+
+    @property
+    def firstElementOffset(self) -> long: ...
+
+    @property
+    def startOffset(self) -> long: ...

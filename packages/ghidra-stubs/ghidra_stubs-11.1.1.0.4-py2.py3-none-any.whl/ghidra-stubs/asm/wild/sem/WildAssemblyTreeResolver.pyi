@@ -1,0 +1,49 @@
+from typing import overload
+import ghidra.app.plugin.assembler.sleigh.grammars
+import ghidra.app.plugin.assembler.sleigh.sem
+import ghidra.app.plugin.processors.sleigh
+import ghidra.app.plugin.processors.sleigh.symbol
+import java.lang
+
+
+class WildAssemblyTreeResolver(ghidra.app.plugin.assembler.sleigh.sem.AbstractAssemblyTreeResolver):
+
+
+
+
+    def __init__(self, __a0: ghidra.app.plugin.assembler.sleigh.sem.AbstractAssemblyResolutionFactory, __a1: ghidra.app.plugin.processors.sleigh.SleighLanguage, __a2: ghidra.program.model.address.Address, __a3: ghidra.app.plugin.assembler.sleigh.tree.AssemblyParseBranch, __a4: ghidra.app.plugin.assembler.sleigh.sem.AssemblyPatternBlock, __a5: ghidra.app.plugin.assembler.sleigh.sem.AssemblyContextGraph): ...
+
+
+
+    @staticmethod
+    def computeOffset(__a0: ghidra.app.plugin.processors.sleigh.symbol.OperandSymbol, __a1: ghidra.app.plugin.processors.sleigh.Constructor) -> int: ...
+
+    def equals(self, __a0: object) -> bool: ...
+
+    def getClass(self) -> java.lang.Class: ...
+
+    def getFactory(self) -> ghidra.app.plugin.assembler.sleigh.sem.AbstractAssemblyResolutionFactory: ...
+
+    def getGrammar(self) -> ghidra.app.plugin.assembler.sleigh.grammars.AssemblyGrammar: ...
+
+    def hashCode(self) -> int: ...
+
+    def notify(self) -> None: ...
+
+    def notifyAll(self) -> None: ...
+
+    def resolve(self) -> ghidra.app.plugin.assembler.sleigh.sem.AssemblyResolutionResults: ...
+
+    def resolveRootRecursion(self, __a0: ghidra.app.plugin.assembler.sleigh.sem.AssemblyResolutionResults) -> ghidra.app.plugin.assembler.sleigh.sem.AssemblyResolutionResults: ...
+
+    def toString(self) -> unicode: ...
+
+    @overload
+    def wait(self) -> None: ...
+
+    @overload
+    def wait(self, __a0: long) -> None: ...
+
+    @overload
+    def wait(self, __a0: long, __a1: int) -> None: ...
+

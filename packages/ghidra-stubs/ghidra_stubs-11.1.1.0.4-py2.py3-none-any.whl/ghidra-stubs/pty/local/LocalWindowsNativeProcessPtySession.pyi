@@ -1,0 +1,46 @@
+from typing import overload
+import ghidra.pty
+import java.lang
+import java.util.concurrent
+
+
+class LocalWindowsNativeProcessPtySession(object, ghidra.pty.PtySession):
+
+
+
+
+    def __init__(self, pid: int, tid: int, processHandle: ghidra.pty.windows.Handle, threadHandle: ghidra.pty.windows.Handle, ptyName: unicode, jobHandle: ghidra.pty.windows.Handle): ...
+
+
+
+    def description(self) -> unicode: ...
+
+    def destroyForcibly(self) -> None: ...
+
+    def equals(self, __a0: object) -> bool: ...
+
+    def getClass(self) -> java.lang.Class: ...
+
+    def hashCode(self) -> int: ...
+
+    def notify(self) -> None: ...
+
+    def notifyAll(self) -> None: ...
+
+    def toString(self) -> unicode: ...
+
+    @overload
+    def wait(self) -> None: ...
+
+    @overload
+    def wait(self, __a0: long) -> None: ...
+
+    @overload
+    def wait(self, __a0: long, __a1: int) -> None: ...
+
+    @overload
+    def waitExited(self) -> int: ...
+
+    @overload
+    def waitExited(self, timeout: long, unit: java.util.concurrent.TimeUnit) -> int: ...
+
