@@ -1,0 +1,13 @@
+LICENSE
+pyproject.toml
+setup.py
+PyDEG.egg-info/PKG-INFO
+PyDEG.egg-info/SOURCES.txt
+PyDEG.egg-info/dependency_links.txt
+PyDEG.egg-info/top_level.txt
+pydeg/__init__.py
+pydeg/normalizations.py
+pydeg/pdd.py
+pydeg/preworks.py
+pydeg/stats.py
+pydeg/utils.py
