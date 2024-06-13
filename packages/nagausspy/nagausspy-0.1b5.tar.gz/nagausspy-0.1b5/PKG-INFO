@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: nagausspy
+Version: 0.1b5
+Summary: Tools for reading and analyzing Gaussian output files
+Author-email: Hadrián Montes Campos <hadrian.montes@usc.es>
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: gaddlemaps
+Requires-Dist: matplotlib
+Requires-Dist: networkx
+Requires-Dist: MDanalysis
+
+# NaGausspy
+![](https://gitlab.com/nafomat/nagausspy/badges/master/coverage.svg) ![](https://gitlab.com/nafomat/nagausspy/badges/master/pipeline.svg)
+
+## Installation
+The easiest way of installation is using Pypi with pip:
+`pip install nagausspy`
+
+## Documentation
+The documentation is available at [Gitlab Pages](https://nafomat.gitlab.io/nagausspy/)
+
+## TODO
+
+- Add more tests
+- Improve optimization step reading
+- Simpler and clear documentation

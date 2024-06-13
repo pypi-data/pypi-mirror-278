@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nagausspy"
+dynamic = ["version"]
+authors = [
+  { name="Hadrián Montes Campos", email="hadrian.montes@usc.es" },
+]
+dependencies = [
+    'numpy',
+    'scipy',
+    'gaddlemaps',
+    'matplotlib',
+    'networkx',
+    'MDanalysis',
+]
+description = "Tools for reading and analyzing Gaussian output files"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.dynamic]
+version = {attr = "nagausspy.__version__"}
