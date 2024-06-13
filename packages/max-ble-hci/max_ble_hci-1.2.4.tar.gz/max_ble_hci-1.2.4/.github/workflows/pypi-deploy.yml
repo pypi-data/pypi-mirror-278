@@ -1,0 +1,18 @@
+name: deploy-pypi
+on: [workflow_dispatch]
+jobs:
+  deploy:
+    # name: runner / linux
+    runs-on: [self-hosted]
+    steps:
+    - uses: actions/checkout@v3
+    - name: Deploy
+      run: |
+        set +e
+        rm -rf dist
+        set -e
+        pip3 install --upgrade build 
+        python3 -m build
+        python3 -m pip install --upgrade twine
+        python3 -m twine upload --repository pypi dist/*
+        set +e
