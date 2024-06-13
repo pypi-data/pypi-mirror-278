@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: langgraph-sdk
+Version: 0.1.20
+Summary: 
+Author: Nuno Campos
+Author-email: nuno@langchain.dev
+Requires-Python: >=3.9.0,<4.0.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: httpx (>=0.25.2)
+Requires-Dist: httpx-sse (>=0.4.0)
+Requires-Dist: orjson (>=3.10.1)
+Description-Content-Type: text/markdown
+
+# langgraph
+
