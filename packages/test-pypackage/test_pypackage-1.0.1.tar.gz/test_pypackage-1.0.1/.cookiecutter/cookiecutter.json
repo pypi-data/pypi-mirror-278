@@ -1,0 +1,25 @@
+{
+  "template": "https://github.com/hypothesis/cookiecutters",
+  "directory": "pypackage",
+  "ignore": [],
+  "extra_context": {
+    "name": "test-pypackage",
+    "package_name": "test_pypackage",
+    "slug": "test-pypackage",
+    "short_description": "A test package for our pypackage cookiecutter.",
+    "python_versions": "3.12.4, 3.11.9, 3.10.14, 3.9.19, 3.8.19",
+    "github_owner": "hypothesis",
+    "copyright_holder": "Hypothesis",
+    "visibility": "private",
+    "console_script": "yes",
+    "postgres": "yes",
+    "dependabot_pip_interval": "monthly",
+    "__postgres_port": "5437",
+    "__postgres_version": "11.5-alpine",
+    "__entry_point": "test-pypackage",
+    "__github_url": "https://github.com/hypothesis/test-pypackage",
+    "__pypi_url": "https://pypi.org/project/test-pypackage",
+    "__copyright_year": "2022",
+    "pypi": "yes"
+  }
+}
