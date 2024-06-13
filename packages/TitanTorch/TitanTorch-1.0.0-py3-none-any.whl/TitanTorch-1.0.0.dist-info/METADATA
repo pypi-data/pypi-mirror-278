@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: TitanTorch
+Version: 1.0.0
+Summary: Python 3 library for short text
+Home-page: https://github.com/alexjszamora78
+Author: RayServer
+Author-email: alexjszamora78@gmail.com
+License: The Unlicense (Unlicense)
+Keywords: chatbot,torch,IA
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: The Unlicense (Unlicense)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+License-File: LICENSE
+Requires-Dist: certifi ==2023.11.17
+Requires-Dist: charset-normalizer ==3.3.2
+Requires-Dist: click ==8.1.7
+Requires-Dist: cmake ==3.28.1
+Requires-Dist: filelock ==3.13.1
+Requires-Dist: idna ==3.6
+Requires-Dist: Jinja2 ==3.1.2
+Requires-Dist: joblib ==1.3.2
+Requires-Dist: lit ==17.0.6
+Requires-Dist: MarkupSafe ==2.1.3
+Requires-Dist: mpmath ==1.3.0
+Requires-Dist: networkx ==3.1
+Requires-Dist: nltk ==3.8.1
+Requires-Dist: numpy ==1.22.1
+Requires-Dist: nvidia-cublas-cu11 ==11.10.3.66
+Requires-Dist: nvidia-cuda-cupti-cu11 ==11.7.101
+Requires-Dist: nvidia-cuda-nvrtc-cu11 ==11.7.99
+Requires-Dist: nvidia-cuda-runtime-cu11 ==11.7.99
+Requires-Dist: nvidia-cudnn-cu11 ==8.5.0.96
+Requires-Dist: nvidia-cufft-cu11 ==10.9.0.58
+Requires-Dist: nvidia-curand-cu11 ==10.2.10.91
+Requires-Dist: nvidia-cusolver-cu11 ==11.4.0.1
+Requires-Dist: nvidia-cusparse-cu11 ==11.7.4.91
+Requires-Dist: nvidia-nccl-cu11 ==2.14.3
+Requires-Dist: nvidia-nvtx-cu11 ==11.7.91
+Requires-Dist: Pillow ==10.1.0
+Requires-Dist: regex ==2023.12.25
+Requires-Dist: requests ==2.31.0
+Requires-Dist: sympy ==1.12
+Requires-Dist: torch ==2.0.1
+Requires-Dist: torchvision ==0.15.2
+Requires-Dist: tqdm ==4.66.1
+Requires-Dist: triton ==2.0.0
+Requires-Dist: typing-extensions ==4.9.0
+Requires-Dist: urllib3 ==2.1.0
+Requires-Dist: requests
+
