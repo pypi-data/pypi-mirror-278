@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: vlamalib
+Version: 0.0.1
+Summary: Vlamaz AI utils package
+Author: Vlamaz (Vladyslav Mazurkevych)
+Author-email: <srvlamaz@gmail.com>
+Keywords: python,machine learning,data,llama3,ai
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy
+Requires-Dist: pandas
+
+
+# vlamalib
+
+
+
+Under construction! Not ready for use yet! Currently experimenting and planning!
+
+
+
+Developed by Vladyslav Mazurkevych from Vlamaz (c) 2024
+
+
+
+## Examples of How To Use (Buggy Alpha Version)
+
+
+
+Calling the function `hello()` from the `vlamalib` package:
+
+
+
+```python
+
+from vlamalib import hello
+
+
+
+hello()
+
+```
+
