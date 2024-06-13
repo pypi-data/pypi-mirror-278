@@ -1,0 +1,65 @@
+[tool.poetry]
+name = "synth_machine"
+version = "0.4.3"
+description = ""
+authors = [
+  "David <david@hiresynth.ai>",
+  "Simon <simon@hiresynth.ai>",
+  "Michael <michael@hiresynth.ai>"
+]
+readme = "README.md"
+license = "GPL-3.0-or-later"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+jinja2 = "^3.1.2"
+jq = "^1.6.0"
+jsonschema = "^4.19.2"
+partial_json_parser = "*"
+pydantic = "^2.7.1"
+requests = "^2.31.0"
+tiktoken = "0.6.0"
+transitions = "^0.9.0"
+anthropic = {version="^0.28.0", optional=true}
+openai = {version="1.33.0", optional=true}
+aenum = "^3.1.15"
+hiresynth-object-store-python = "^0.1.4"
+
+[tool.poetry.extras]
+openai = ["openai"]
+anthropic = ["anthropic"]
+togetherai = ["openai"]
+
+[tool.poetry.group.dev.dependencies]
+commitizen = "^3.26.0"
+coverage = "^7.5.1"
+deptry = "^0.16.1"
+pre-commit = "^3.6.2"
+pyright = "^1.1.326"
+pyyaml = "^6.0.1"
+ruff = "^0.4.7"
+
+[tool.coverage.run]
+branch = true
+omit = ["./tests/*"]
+
+[tool.pyright]
+reportMissingImports = false
+
+[tool.ruff]
+exclude = [".venv", "example_synths"]
+
+[tool.ruff.lint.isort]
+case-sensitive = true
+classes = ["SVC"]
+combine-as-imports = true
+constants = ["constant"]
+detect-same-package = false
+extra-standard-library = ["path"]
+force-single-line = true
+force-sort-within-sections = true
+force-to-top = ["src"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
