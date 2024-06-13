@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/moveread/pipelines/manual_correct/__init__.py
+src/moveread/pipelines/manual_correct/__init__.pyi
+src/moveread/pipelines/manual_correct/main.py
+src/moveread/pipelines/manual_correct/types.py
+src/moveread_pipelines_manual_correct.egg-info/PKG-INFO
+src/moveread_pipelines_manual_correct.egg-info/SOURCES.txt
+src/moveread_pipelines_manual_correct.egg-info/dependency_links.txt
+src/moveread_pipelines_manual_correct.egg-info/requires.txt
+src/moveread_pipelines_manual_correct.egg-info/top_level.txt
