@@ -1,0 +1,2 @@
+recursive-include streamlit_execute/frontend/dist *
+recursive-include streamlit_execute/frontend_m/dist *
