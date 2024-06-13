@@ -1,0 +1,114 @@
+[build-system]
+requires = [
+    "setuptools",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "labw_utils"
+description = "Utilities Python functions & classes used in LabW"
+authors = [
+    { name = "YU Zhejian", email = "Zhejian.23@intl.zju.edu.cn" },
+    { name = "YUAN Ruihong", email = "Ruihong.19@intl.zju.edu.cn" },
+    { name = "SU Yaqi", email = "yaqisu@berkeley.edu" },
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Healthcare Industry",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: POSIX",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Utilities"
+]
+requires-python = ">=3.8"
+dynamic = ["version", "readme", "dependencies", "optional-dependencies"]
+
+[project.urls]
+Source = "https://github.com/WanluLiuLab/labw_utils"
+
+[tool.setuptools]
+license-files = ["License.md", "Copying.md"]
+
+[tool.setuptools.dynamic]
+version = { attr = "labw_utils.__version__" }
+readme = { file = "Readme.md", content-type = "text/markdown" }
+dependencies = { file = "requirements.txt" }
+
+[tool.setuptools.dynamic.optional-dependencies]
+defaults = { file = "requirements_defaults.txt" }
+bioutils = { file = "requirements_bioutils.txt" }
+mlutils = { file = "requirements_mlutils.txt" }
+appenders = { file = "requirements_appenders.txt" }
+transposons = { file = "requirements_transposons.txt" }
+all = { file = "requirements_all.txt" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = " --doctest-modules -v -v --continue-on-collection-errors --junitxml=pytest/junit.xml --cov --cov-report=html --cov-report=xml --html=pytest/pytest_report.html --self-contained-html --ignore-glob='*.ipynb.py' --ignore-glob='.tox/*'"
+norecursedirs = "explore"
+testpaths = ["test", "src"]
+log_level = 8
+log_file = "log/pytest.log"
+log_file_level = 8
+log_cli = false
+junit_logging = "all"
+junit_log_passing_tests = true
+junit_duration_report = "call"
+
+[tool.coverage.run]
+source = [
+    "src",
+]
+omit = [
+    "*/_main/*",
+    "*/__main__.py"
+]
+
+[tool.coverage.report]
+skip_empty = true
+
+[tool.coverage.xml]
+output = "pytest/cov.xml"
+
+[tool.coverage.html]
+directory = "pytest/cov_html"
+
+[tool.sphinx]
+html_theme = 'furo'
+extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.todo',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.mathjax',
+    "sphinx.ext.viewcode",
+    'myst_nb',
+    'sphinx_copybutton',
+    'sphinxcontrib.bibtex',
+    'sphinx_design',
+    'hoverxref.extension',
+    'sphinxcontrib.jquery',
+]
+
+[tool.mypy]
+mypy_path = "src"
+follow_imports = "silent"
+ignore_missing_imports = true
+
+[tool.black]
+line-length = 120
+target-version = ['py38']
