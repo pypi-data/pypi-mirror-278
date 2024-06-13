@@ -1,0 +1,54 @@
+{% load custom_filters %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% if form.instance.pk %}Update{% else %}Create{% endif %} Q&A
+    </title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body,
+      html {
+        height: 100%; /* Full height of the viewport */
+        margin: 0;
+        background: linear-gradient(to bottom, #9c7ab3, #800080);
+        background-attachment: fixed;
+        font-family: "Montserrat", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container col-lg-6 m-auto p-5">
+      <h1 class="text-center mb-4">
+        {% if form.instance.pk %}Update{% else %}Create{% endif %} Q&A
+      </h1>
+      <form method="post">
+        {% csrf_token %}
+        <!-- Question Field -->
+        <div class="form-group">
+          <label for="id_question">Question:</label>
+          {{ form.question|add_class:"form-control" }}
+        </div>
+        <!-- Answer Field -->
+        <div class="form-group">
+          <label for="id_answer">Answer:</label>
+          {{ form.answer|add_class:"form-control" }}
+        </div>
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">
+          {% if form.instance.pk %}Update{% else %}Create{% endif %}
+        </button>
+      </form>
+    </div>
+
+    <!-- Bootstrap JS (optional, if needed) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
