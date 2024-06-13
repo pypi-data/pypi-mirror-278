@@ -1,0 +1,2 @@
+[console_scripts]
+axiot_mongo_truncation = backend.main:__name__
