@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+guolei_py3_database/__init__.py
+guolei_py3_database/duckdb.py
+guolei_py3_database/pymysql.py
+guolei_py3_database/sqlite3.py
+guolei_py3_database/strictredis.py
+guolei_py3_database.egg-info/PKG-INFO
+guolei_py3_database.egg-info/SOURCES.txt
+guolei_py3_database.egg-info/dependency_links.txt
+guolei_py3_database.egg-info/not-zip-safe
+guolei_py3_database.egg-info/requires.txt
+guolei_py3_database.egg-info/top_level.txt
