@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: quantum-bell-api
+Version: 0.1.0
+Summary: A package implementing quantum algebraic operations on Bell diagonal states.
+Home-page: https://github.com/LBacciottini/quantum_bell_api
+Author: Leonardo Bacciottini
+Author-email: baccio.leonardo@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# quantum_bell_api
+A python package implementing quantum algebraic operations on Bell diagonal states.
+
+Efficient, documented, an handy for most practical quantum simulations using Werner states and/or depolarizing and dephasing noise models.
+
+
