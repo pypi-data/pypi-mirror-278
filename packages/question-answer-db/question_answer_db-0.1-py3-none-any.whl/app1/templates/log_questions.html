@@ -1,0 +1,170 @@
+{% load custom_filters %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/509470fe41.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+    </style>
+    <style>
+      body,
+      html {
+        height: 100%; /* Full height of the viewport */
+        margin: 0;
+        background: linear-gradient(to bottom, #9c7ab3, #800080);
+        font-family: "Montserrat", sans-serif;
+      }
+      .btn-danger {
+        background: linear-gradient(to bottom, #40294f, #4d014d);
+        color: white;
+        border: 0px;
+      }
+
+      .list-group-item {
+        background: linear-gradient(to bottom, #614376, #800080);
+        border: 0px;
+        border-radius: 10px;
+      }
+      .list-group-item a {
+        color: #fff;
+        text-decoration: none;
+        font-family: "Montserrat";
+      }
+      .file-name {
+        display: block; /* ensures it takes the full width of its container */
+        overflow: hidden; /* hide overflow text */
+        text-overflow: ellipsis; /* show ellipsis (...) when text overflows */
+        white-space: nowrap; /* keep text on a single line to avoid breaking */
+        text-align: center; /* optional: center the text if needed */
+        max-width: 90%; /* adjust this as necessary to fit your layout */
+        margin: auto; /* centers the text block if display is block */
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-xl navbar-light mt-3">
+      <div class="container-fluid ps-5 pe-5">
+        <a
+          class="navbar-brand text-white fw-bolder"
+          href="{% url 'dashboard' %}"
+          >Admin dashboard</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarBasic"
+          aria-controls="navbarBasic"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse show" id="navbarBasic">
+          <ul class="navbar-nav ms-auto mb-2 mb-xl-0 me-3">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-white fw-bold"
+                href="{% url 'dashboard' %}"
+                >Welcome {{ user.username }}</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active text-white fw-bold"
+                href="{% url 'upload_file' %}"
+                >Upload File</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active text-white fw-bold"
+                href="{% url 'dashboard_log_questions'  %}"
+                >Log Questions
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active text-white fw-bold"
+                href="{% url 'unique_questions'  %}"
+                >Unique Questions
+              </a>
+            </li>
+          </ul>
+          <a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-5">
+      <a class="btn btn-danger float-end mb-5" onclick="window.history.back();"
+        ><i class="fa-solid fa-arrow-left"></i
+      ></a>
+    </div>
+
+    <div class="container-fluid">
+      {% for user_id, user_data in answers_by_user.items %}
+      <div class="row container-fluid justify-content-center mt-0">
+        {% if user_data.answers %}
+        <div class="col-lg-10">
+          <ul class="list-group">
+            {% for answer in user_data.answers %}
+            <li class="list-group-item text-center p-4 file-list-item mb-3">
+              <a
+                class="text-center"
+                href="{% url 'file_details_log_questions' file_id=answer.file_id %}"
+              >
+                {{ answer.file_id }}
+                <span class="file-name text-center"
+                  >{{ answer.file_name|filename }}</span
+                >
+              </a>
+            </li>
+
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- <script>
+  document
+  .getElementById("searchForm")
+  .addEventListener("submit" ,function(e){
+    e.preventDefault();
+    const searchQuery = document.querySelector("#searchForm input")
+    .value.toLowerCase();
+    const rows = document.querySelectorAll("tbody tr");
+    rows.forEach((row) => {
+      const cells = row.querySelectorAll("td");
+      let found = false;
+      cells.forEach((cell) => {
+        if (cell.textContent.toLowerCase().includes(searchQuery)){
+          found =true;
+        }
+      });
+      if(found){
+        row.style.display = "";
+
+      }else{
+        row.style.display = "none";
+      }
+    });
+    });
+</script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
