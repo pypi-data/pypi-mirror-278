@@ -1,0 +1,187 @@
+Metadata-Version: 2.1
+Name: github-ai
+Version: 1.0.1
+Summary: A tool to search GitHub repositories using the GitHub API
+Home-page: https://mrfidal.in/basic-pip-package/github-ai
+Author: Fidal
+Author-email: mrfidal@proton.me
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+# AI GitHub
+
+AI GitHub is a Python package that allows you to search for GitHub repositories using the GitHub API. It provides a simple interface to search for repositories based on different criteria.
+
+## Benefits
+
+- Easily search for GitHub repositories based on various criteria.
+- Simple pagination support for browsing through search results.
+- Easy integration with your Python projects.
+
+## Installation
+
+You can install the package using pip:
+
+```bash 
+pip install github-ai
+```
+
+## Usage
+
+### Basic Search
+
+```python
+import github_ai
+
+# Basic search
+results = github_ai.search(query="machine learning")
+
+print(f"Found {results['total_count']} repositories.")
+for repo in results['items']:
+    print(f"Name: {repo['name']}")
+    print(f"Owner: {repo['owner']['login']}")
+    print(f"Stars: {repo['stargazers_count']}")
+    print(f"Forks: {repo['forks_count']}")
+    print(f"URL: {repo['html_url']}")
+    print('-' * 40)
+```
+
+### Search with Pagination
+
+```python
+import github_ai
+
+# Search with pagination
+results = github_ai.search(query="machine learning", per_page=5, page=1)
+
+print(f"Found {results['total_count']} repositories.")
+for repo in results['items']:
+    print(f"Name: {repo['name']}")
+    print(f"Owner: {repo['owner']['login']}")
+    print(f"Stars: {repo['stargazers_count']}")
+    print(f"Forks: {repo['forks_count']}")
+    print(f"URL: {repo['html_url']}")
+    print('-' * 40)
+```
+
+### Search by User
+
+```python
+import github_ai
+
+# Search repositories by a specific user
+results = github_ai.search_by_user(user="username")
+
+print(f"Found {results['total_count']} repositories.")
+for repo in results['items']:
+    print(f"Name: {repo['name']}")
+    print(f"Owner: {repo['owner']['login']}")
+    print(f"Stars: {repo['stargazers_count']}")
+    print(f"Forks: {repo['forks_count']}")
+    print(f"URL: {repo['html_url']}")
+    print('-' * 40)
+```
+
+### Search by Language
+
+```python
+import github_ai
+
+# Search repositories by programming language
+results = github_ai.search_by_language(language="python")
+
+print(f"Found {results['total_count']} Python repositories.")
+for repo in results['items']:
+    print(f"Name: {repo['name']}")
+    print(f"Owner: {repo['owner']['login']}")
+    print(f"Stars: {repo['stargazers_count']}")
+    print(f"Forks: {repo['forks_count']}")
+    print(f"URL: {repo['html_url']}")
+    print('-' * 40)
+```
+
+### Search by Topic
+
+```python
+import github_ai
+
+# Search repositories by topic
+results = github_ai.search_by_topic(topic="data science")
+
+print(f"Found {results['total_count']} Data Science repositories.")
+for repo in results['items']:
+    print(f"Name: {repo['name']}")
+    print(f"Owner: {repo['owner']['login']}")
+    print(f"Stars: {repo['stargazers_count']}")
+    print(f"Forks: {repo['forks_count']}")
+    print(f"URL: {repo['html_url']}")
+    print('-' * 40)
+```
+
+### Cloning a Repository
+
+```python
+import github_ai
+import os
+
+try:
+    # Search with pagination
+    results = github_ai.search(query="machine learning", per_page=5, page=1)
+
+    def format_search_results(results):
+        formatted_results = []
+        for index, repo in enumerate(results['items'], start=1):
+            formatted_result = f"[{index:02d}] {repo['name']} - {repo['html_url']}"
+            print(formatted_result)
+            formatted_results.append(repo['html_url'])
+        return formatted_results
+
+    formatted_results = format_search_results(results)
+    
+except Exception as e:
+    print(f"An error occurred: {e}")
+
+# Get user input
+git_index = input("Enter the number of the repository to download: ")
+
+try:
+    git_index = int(git_index)
+    if 1 <= git_index <= len(formatted_results):
+        repo_url = formatted_results[git_index - 1]
+        os.system(f"git clone {repo_url}")
+    else:
+        print("Invalid number entered.")
+except ValueError:
+    print("Please enter a valid number.")
+```
+
+### Additional Usage Example
+
+```python
+import github_ai
+
+# Search repositories by stars
+results = github_ai.search(query="stars:>1000", per_page=10)
+
+print(f"Found {results['total_count']} repositories with more than 1000 stars.")
+for repo in results['items']:
+    print(f"Name: {repo['name']}")
+    print(f"Owner: {repo['owner']['login']}")
+    print(f"Stars: {repo['stargazers_count']}")
+    print(f"Forks: {repo['forks_count']}")
+    print(f"URL: {repo['html_url']}")
+    print('-' * 40)
+```
+
+## Acknowledgements
+
+Thank you for using AI GitHub! If you find it useful, consider starring the repository on [GitHub](https://mrfidal.in/basic-pip-package/github-ai).
+
+### Thanks
+
+Thank you for using AI GitHub! If you find it useful, consider starring the repository on GitHub.
