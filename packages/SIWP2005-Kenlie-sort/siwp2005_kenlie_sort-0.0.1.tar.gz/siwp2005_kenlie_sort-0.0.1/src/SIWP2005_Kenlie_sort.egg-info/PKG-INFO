@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: SIWP2005-Kenlie-sort
+Version: 0.0.1
+Summary: A package that provides implementations of various sorting algorithms.
+Home-page: 
+Author: Kenlie Athalla Bintang
+Author-email: kenlie.422023024@civitas.ukrida.ac.id
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+New-Item -ItemType File -Name LICENSE
+New-Item -ItemType File -Name pyproject.toml
+New-Item -ItemType File -Name README.md
+New-Item -ItemType File -Name setup.cfg
+
+
+New-Item -ItemType Directory -Path src/sortalgos
+New-Item -ItemType File -Path src/sortalgos/_init_.py
+New-Item -ItemType File -Path src/sortalgos/bubble_sort.py
+New-Item -ItemType File -Path src/sortalgos/insertion_sort.py
+New-Item -ItemType File -Path src/sortalgos/quick_sort.py
+
+
+New-Item -ItemType Directory -Path tests/sortalgos
+New-Item -ItemType File -Path tests/sortalgos/test_bubble_sort.py
+New-Item -ItemType File -Path tests/sortalgos/test_insertion_sort.py
+New-Item -ItemType File -Path tests/sortalgos/test_quick_sort.py 
