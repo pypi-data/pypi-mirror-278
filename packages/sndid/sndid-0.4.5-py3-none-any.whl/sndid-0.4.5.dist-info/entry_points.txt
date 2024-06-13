@@ -1,0 +1,9 @@
+[console_scripts]
+sndid-alsa=sndid.alsa:main
+sndid-client=sndid.client:main
+sndid-file=sndid.filecli:main
+sndid-jack=sndid.jackcli:main
+sndid-list=sndid.list:main
+sndid-server=sndid.server:main
+sndid-stream=sndid.stream:main
+
