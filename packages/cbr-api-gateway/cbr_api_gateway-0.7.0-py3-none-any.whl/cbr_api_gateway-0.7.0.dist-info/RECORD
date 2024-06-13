@@ -1,0 +1,15 @@
+cbr_api_gateway/__init__.py,sha256=DdJDmQc9zbQUlPVyTJOww6Ixrn9n4bD3ami5ItQfzJI,16
+cbr_api_gateway/nginx/cbr-api-gateway.supervisor.conf,sha256=COl5XQNc7vYWyCfr_SstpdcJa7GvwPGHrZ6wiTBOdoQ,621
+cbr_api_gateway/nginx/cbr_api_gateway.nginx.conf,sha256=Vu-yL6nJdhlHi7o18QzGyPmRH7JMROCN01b-dpgdRfA,142
+cbr_api_gateway/nginx/cbr_athena.nginx.conf,sha256=kRGRSZHKw7u_vOFJMoeoYFp0HpOqhc1KA3HfllApTO4,508
+cbr_api_gateway/nginx/cbr_static.nginx.conf,sha256=wfPu3GjH82OULUg7NpeCGd6NOErrwcSIjw8kVJTMxeQ,973
+cbr_api_gateway/nginx/cbr_website.nginx.conf,sha256=ooAZQvSrNA0NTOhMnuIibKExpdg5ZBeOpqAmO2C55fk,281
+cbr_api_gateway/nginx/entrypoint.sh,sha256=SsItuhlQl0GKBgD866XWXc4Efiuty8vC55LKmOeS02Y,337
+cbr_api_gateway/nginx/nginx.conf,sha256=lLMpNGc-ozS1dShMTn2kdZAFohV8Kghm4Ap_2_sE55k,2984
+cbr_api_gateway/utils/Version.py,sha256=mwcMZz003zw2VdFtTzt5RzEkBIpLTxwA8u8o4-NMgZM,525
+cbr_api_gateway/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cbr_api_gateway/version,sha256=ItJOtK6rAJU3670JnlRWLTXOVGrdMw5M3s0o7eJgyDw,7
+cbr_api_gateway-0.7.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+cbr_api_gateway-0.7.0.dist-info/METADATA,sha256=sjQUmfAqFgiwiM_2tF-XLs75-7ZbqM-s4cxb34eBs8I,962
+cbr_api_gateway-0.7.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+cbr_api_gateway-0.7.0.dist-info/RECORD,,
