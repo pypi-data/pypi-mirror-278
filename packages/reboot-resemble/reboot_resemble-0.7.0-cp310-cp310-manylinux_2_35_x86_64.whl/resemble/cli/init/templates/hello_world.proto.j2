@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package {{ name }}.v1;
+
+import "resemble/v1alpha1/options.proto";
+
+message HelloWorldState {
+    int32 number_of_greetings = 1;
+}
+
+service HelloWorld {
+    option (.resemble.v1alpha1.service).state = "HelloWorldState";
+
+    // Record a greeting.
+    rpc Greet(GreetRequest) returns (GreetResponse) {
+        option (.resemble.v1alpha1.method).writer = {};
+    }
+
+    // Returns the number of greetings recorded so far.
+    rpc NumGreetings(NumGreetingsRequest) returns (NumGreetingsResponse) {
+        option (.resemble.v1alpha1.method).reader = {};
+    }
+}
+
+message GreetRequest {}
+
+message GreetResponse {
+    int32 number_of_greetings = 1;
+}
+
+message NumGreetingsRequest {}
+
+message NumGreetingsResponse {
+    int32 number_of_greetings = 1;
+}

@@ -1,0 +1,29 @@
+import asyncio
+from {{ name }}.v1.hello_world_rsm import *
+from resemble.aio.workflows import Workflow
+
+EXAMPLE_STATE_MACHINE_ID = 'resemble-hello-world'
+
+async def main():
+    workflow = Workflow(
+        name="cli",
+        gateway="dev.localhost.direct:9991",
+        secure_channel=True,
+    )
+
+    helloWorld = HelloWorld.lookup(EXAMPLE_STATE_MACHINE_ID)
+
+    response = await helloWorld.Greet(workflow)
+
+    if response.number_of_greetings == 1:
+        print("Server now has 1 greeting!")
+    else:
+        print(f"Server now has {response.number_of_greetings} greetings!")
+
+
+if __name__ == '__main__':
+    try:
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        # Don't print an exception and stack trace if a Ctrl-C happens.
+        pass

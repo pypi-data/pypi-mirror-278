@@ -1,0 +1,33 @@
+import asyncio
+import logging
+from {{ name }}.v1.hello_world_rsm import HelloWorld
+from hello_world_servicer import HelloWorldServicer
+from resemble.aio.applications import Application
+from resemble.aio.call import Options
+from resemble.aio.workflows import Workflow
+
+logging.basicConfig(level=logging.INFO)
+
+EXAMPLE_STATE_MACHINE_ID = 'resemble-hello-world'
+
+
+async def initialize(workflow: Workflow):
+    await HelloWorld.lookup(EXAMPLE_STATE_MACHINE_ID).Greet(
+        workflow,
+        Options(idempotency_alias='initialize'),
+    )
+
+
+async def main():
+    application = Application(
+        servicers=[HelloWorldServicer],
+        initialize=initialize,
+    )
+
+    logging.info('👋 Hello, World? Hello, Resemble! 👋')
+
+    await application.run()
+
+
+if __name__ == '__main__':
+    asyncio.run(main())
