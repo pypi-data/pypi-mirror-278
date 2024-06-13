@@ -1,0 +1,88 @@
+ running on    2 total cores
+ distrk:  each k-point on    2 cores,    1 groups
+ distr:  one band on    1 cores,    2 groups
+ vasp.6.2.1 16May21 (build Oct 21 2023 21:03:18) complex                        
+  
+ POSCAR found type information on POSCAR B N 
+ POSCAR found :  2 types and       2 ions
+ scaLAPACK will be used
+ -----------------------------------------------------------------------------
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|     The value NPAR = 4 specified in the INCAR file was overwritten,         |
+|     because it was not compatible with the 2 processes available:           |
+|     NPAR = 2                                                                |
+|     was used instead, please check that this makes sense for your           |
+|     machine.                                                                |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+ LDA part: xc-table for Pade appr. of Perdew
+ -----------------------------------------------------------------------------
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|     Your reciprocal lattice and k-lattice belong to different lattice       |
+|     classes:                                                                |
+|                                                                             |
+|        The reciprocal lattice is body-centered cubic,                       |
+|        whereas your k-lattice is base centered orthorhombic.                |
+|                                                                             |
+|     Results are often still useful ...                                      |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+ POSCAR, INCAR and KPOINTS ok, starting setup
+ FFT: planning ...
+ WAVECAR not read
+ entering main loop
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1     0.362540999992E+02    0.36254E+02   -0.23391E+03  2056   0.621E+01
+DAV:   2    -0.170611398354E+02   -0.53315E+02   -0.48300E+02  2264   0.280E+01
+DAV:   3    -0.180570706645E+02   -0.99593E+00   -0.99147E+00  2328   0.416E+00
+DAV:   4    -0.180572600618E+02   -0.18940E-03   -0.18939E-03  2272   0.531E-02
+DAV:   5    -0.180572600640E+02   -0.22601E-08   -0.21871E-08  1976   0.185E-04    0.690E+00
+DAV:   6    -0.170960473892E+02    0.96121E+00   -0.24972E+00  2656   0.896E-01    0.346E+00
+DAV:   7    -0.170167970528E+02    0.79250E-01   -0.20307E-02  2344   0.153E-01    0.191E+00
+DAV:   8    -0.170016156541E+02    0.15181E-01   -0.11554E-02  2256   0.123E-01    0.194E-01
+DAV:   9    -0.170020163361E+02   -0.40068E-03   -0.30459E-04  2272   0.210E-02    0.385E-02
+DAV:  10    -0.170020182441E+02   -0.19081E-05   -0.23205E-05  2384   0.348E-03    0.145E-02
+DAV:  11    -0.170020230994E+02   -0.48553E-05   -0.83176E-07  2248   0.170E-03    0.101E-03
+DAV:  12    -0.170020231356E+02   -0.36234E-07   -0.41113E-08  1528   0.168E-04
+   1 F= -.17002016E+02 E0= -.17002016E+02  d E =-.170020E+02
+ curvature:   0.00 expect dE= 0.000E+00 dE for cont linesearch  0.000E+00
+ trial: gam= 0.00000 g(F)=  0.122E-47 g(S)=  0.131E-02 ort = 0.000E+00 (trialstep = 0.100E+01)
+ search vector abs. value=  0.131E-02
+ bond charge predicted
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.170033828498E+02   -0.13598E-02   -0.33207E-03  2184   0.642E-02    0.131E-01
+DAV:   2    -0.170030865040E+02    0.29635E-03   -0.87697E-04  2440   0.165E-02    0.322E-02
+DAV:   3    -0.170030713913E+02    0.15113E-04   -0.88145E-06  2280   0.279E-03    0.146E-02
+DAV:   4    -0.170030664583E+02    0.49329E-05   -0.21704E-06  2288   0.153E-03    0.423E-03
+DAV:   5    -0.170030663244E+02    0.13392E-06   -0.73874E-09  1296   0.109E-04
+   2 F= -.17003059E+02 E0= -.17003059E+02  d E =-.104316E-02
+ trial-energy change:   -0.001043  1 .order   -0.001046   -0.001313   -0.000780
+ step:   2.4624(harm=  2.4624)  dis= 0.00000  next Energy=   -17.003632 (dE=-0.162E-02)
+ bond charge predicted
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.170043141851E+02   -0.12477E-02   -0.70879E-03  2144   0.937E-02    0.192E-01
+DAV:   2    -0.170036804158E+02    0.63377E-03   -0.18966E-03  2448   0.242E-02    0.467E-02
+DAV:   3    -0.170036487263E+02    0.31690E-04   -0.18164E-05  2272   0.407E-03    0.213E-02
+DAV:   4    -0.170036384179E+02    0.10308E-04   -0.46631E-06  2288   0.225E-03    0.618E-03
+DAV:   5    -0.170036382139E+02    0.20404E-06   -0.15930E-08  1464   0.160E-04
+   3 F= -.17003631E+02 E0= -.17003631E+02  d E =-.161500E-02
+ curvature:  -1.23 expect dE=-0.698E-07 dE for cont linesearch -0.698E-07
+ trial: gam=-0.00653 g(F)=  0.307E-49 g(S)=  0.567E-07 ort = 0.863E-05 (trialstep = 0.129E+01)
+ search vector abs. value=  0.102E-09
+ reached required accuracy - stopping structural energy minimisation

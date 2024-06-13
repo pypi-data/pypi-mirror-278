@@ -1,0 +1,5 @@
+include README
+include INSTALL
+include COPYRIGHT
+include Changelog.txt
+recursive-include examples *
