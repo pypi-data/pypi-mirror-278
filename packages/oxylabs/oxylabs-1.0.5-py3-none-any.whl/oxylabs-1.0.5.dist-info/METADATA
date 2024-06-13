@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: oxylabs
+Version: 1.0.5
+Summary: Official Python library for Oxylabs Scraper APIs
+Home-page: https://oxylabs.io/
+Author: Oxylabs
+Author-email: support@oxylabs.io
+License: MIT
+License-File: LICENSE
+Requires-Dist: aiohttp
+Requires-Dist: requests
+
+
+The official Python library for the Oxylabs Scraper APIs.
+
+Collect public data at scale with industry-leading web scraping solutions and the world's largest ethical proxy network.
+Documentation can be found at https://github.com/oxylabs/oxylabs-sdk-python.
