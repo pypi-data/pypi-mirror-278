@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: snapshottest_ext
+Version: 0.8.0
+Summary: extra formatter for snapshottest
+Home-page: https://github.com/swuecho/snapshottest_ext
+Author: Hao Wu
+Author-email: echowuaho@foxmail.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: snapshottest
+Requires-Dist: pandas
+Requires-Dist: pyarrow
+
+# snapshottest_ext
+
+extra formatter for snapshottest
+
+## Usage
+
+```python
+# use with pytest
+import pandas as pd
+from snapshottest_ext.dataframe  import PandasSnapshot
+
+def test_format(snapshot):
+    df = pd.DataFrame([['a', 'b'], ['c', 'd']],
+                      columns=['col 1', 'col 2'])
+    snapshot.assert_match(PandasSnapshot(df))
+```
