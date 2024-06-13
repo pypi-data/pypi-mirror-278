@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: dplabtools
+Version: 0.0.3
+Summary: Digital Pathology Lab Tools
+Home-page: https://github.com/martellab-sri/dplabtools
+Author: Sunnybrook Research Institute
+License: Apache 2.0
+Download-URL: https://github.com/martellab-sri/dplabtools
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# Digital Pathology Lab Tools
+
+Collection of Python classes used in Digital Pathology experiments.
+
+## Documentation
+
+Full documentation is available at [Read the Docs](https://dplabtools.readthedocs.io).
+
+## Source code
+
+Source code is available at [GitHub](https://github.com/martellab-sri/dplabtools). 
+Please select a branch corresponding to your package version.
+
+## Help/support
+
+For any questions or bug reports please create a GitHub issue. 
+
+
