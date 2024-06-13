@@ -1,0 +1,16 @@
+LICENCE.txt
+README.md
+setup.py
+meteosatpy/__init__.py
+meteosatpy/chirps.py
+meteosatpy/cmorph.py
+meteosatpy/imerg.py
+meteosatpy/mswep.py
+meteosatpy/persiann.py
+meteosatpy/utils.py
+meteosatpy/warnings.py
+meteosatpy.egg-info/PKG-INFO
+meteosatpy.egg-info/SOURCES.txt
+meteosatpy.egg-info/dependency_links.txt
+meteosatpy.egg-info/requires.txt
+meteosatpy.egg-info/top_level.txt
