@@ -1,0 +1,13 @@
+************************************* .
+* Pojekt .
+* Kunde .
+* Åbner dataset fra SX downloaded via REST i .sav format .
+************************************* .
+* Sætter komma som separator .
+set decimal comma .
+* Lukker alle åbne vinduer .
+dataset close all .
+output close all .
+* Sætter arbejdsmappe .
+cd '[WORK_PATH]' .
+
