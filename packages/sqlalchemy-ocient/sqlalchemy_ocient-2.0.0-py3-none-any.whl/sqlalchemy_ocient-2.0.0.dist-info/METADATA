@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: sqlalchemy_ocient
+Author: Ocient Inc
+Author-email: info@ocient.com
+Home-page: https://www.ocient.com/
+License: Apache License, Version 2.0
+Description-Content-Type: text/markdown
+Summary: Ocient Hyperscale Data Warehouse SQLAlchemy Dialect
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Database
+Classifier: Topic :: Database :: Front-Ends
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Typing :: Typed
+Version: 2.0.0
+
+# Ocient Hyperscale Data Warehouse Dialect for SQLAlchemy
+
+The Ocient Hyperscale Data Warehouse Python API extension gives application developers the full power and flexibility of SQLAlchemy.
+
+## Installation
+
+Install the sqlalchemy-ocient package.
+
+```shell
+pip install sqlalchemy-ocient
+```
+
+## SQLAlchemy URI
+
+The Ocient DSN is of the format:
+```shell
+ocient://user:password@[host][:port][/database][?param1=value1&...]
+```
+
+## Testing
+
+pytest tests can be run using 
+
+```
+python -m sqlalchemy_ocient.tests
+```
+
+All pytest and sqlalchemy test arguments can be provided.  By default
+the tests will run against the URI `ocient://admin@system:admin@localhost/test`
+however they can be run against other datbase URIs using the `--dburi` argument
