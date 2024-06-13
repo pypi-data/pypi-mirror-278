@@ -1,0 +1,2 @@
+[console_scripts]
+normandy = normandy.normandy:run
