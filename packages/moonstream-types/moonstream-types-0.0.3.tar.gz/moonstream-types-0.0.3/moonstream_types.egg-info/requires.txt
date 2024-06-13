@@ -1,0 +1,12 @@
+moonstreamdb>=0.4.4
+moonstreamdb-v3>=0.0.9
+
+[dev]
+black
+isort
+mypy
+
+[distribute]
+setuptools
+twine
+wheel
