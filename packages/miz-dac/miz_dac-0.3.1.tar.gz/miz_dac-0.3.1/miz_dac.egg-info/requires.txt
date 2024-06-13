@@ -1,0 +1,15 @@
+click
+numpy
+scipy
+matplotlib
+pyyaml
+nptdms
+
+[GUI]
+pyqt5
+qscintilla
+
+[IPY]
+pyqt5
+qscintilla
+qtconsole
