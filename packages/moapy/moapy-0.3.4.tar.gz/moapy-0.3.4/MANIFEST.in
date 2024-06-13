@@ -1,0 +1,5 @@
+include moapy/*
+include moapy/project/wgsd/*
+include schemas/*
+include schemas/managed/*
+include schemas/unmanaged/*
