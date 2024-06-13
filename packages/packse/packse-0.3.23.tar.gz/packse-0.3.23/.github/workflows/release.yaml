@@ -1,0 +1,78 @@
+name: Release
+
+permissions:
+  contents: write # Needed for GH pages updates
+
+on:
+  push:
+    tags:
+      - "[0-9]+.[0-9]+.[0-9]+"
+      - "[0-9]+.[0-9]+rc[0-9]+"
+      - "[0-9]+.[0-9]+[ab][0-9]+"
+
+jobs:
+  release-package:
+    name: Release to PyPI
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: Set up uv
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+
+      # Note: If build and publish steps are ever separated, the version must
+      #       be set before building
+      - name: Publish package
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+        run: |
+          sed -i -e "s/0.0.0/${GITHUB_REF#refs/*/}/" pyproject.toml
+          uv tool run -- hatchling build
+          uv tool run -- twine upload dist/*
+
+  release-scenarios:
+    name: Publish scenarios
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: Set up uv
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+
+      - name: Install packages
+        run: |
+          uv sync --all-extras
+
+      - name: Publish scenarios to GitHub Pages
+        run: |
+          uv run -- packse index build --no-hash scenarios/
+
+          git fetch origin gh-pages
+          git branch gh-pages FETCH_HEAD
+          git checkout gh-pages
+
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+          mkdir "${GITHUB_REF#refs/*/}"
+          cp -r index/* "${GITHUB_REF#refs/*/}"
+          git add "${GITHUB_REF#refs/*/}"
+          git commit -m "Publish scenarios for $commit"
+          git push --set-upstream origin gh-pages
