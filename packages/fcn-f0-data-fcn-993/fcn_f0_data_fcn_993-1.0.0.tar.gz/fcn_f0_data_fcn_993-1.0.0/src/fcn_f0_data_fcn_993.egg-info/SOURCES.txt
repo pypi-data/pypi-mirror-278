@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+pyproject.toml
+src/fcn_f0/data/fcn_993/__init__.py
+src/fcn_f0/data/fcn_993/weights.h5
+src/fcn_f0_data_fcn_993.egg-info/PKG-INFO
+src/fcn_f0_data_fcn_993.egg-info/SOURCES.txt
+src/fcn_f0_data_fcn_993.egg-info/dependency_links.txt
+src/fcn_f0_data_fcn_993.egg-info/top_level.txt
