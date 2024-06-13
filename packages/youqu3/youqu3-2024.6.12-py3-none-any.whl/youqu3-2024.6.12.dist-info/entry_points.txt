@@ -1,0 +1,2 @@
+[console_scripts]
+youqu3 = youqu3.driver.cli:cli
