@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: mailfox
+Version: 0.1.4
+Summary: Mailfox is a simple and fast ai powered email toolkit to enhance you email workflow
+Home-page: https://github.com/stelath/mailfox
+License: GNU GPLv3
+Author: Alex Korte
+Author-email: alex.k.korte@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pyyaml (>=6.0,<7.0)
+Requires-Dist: typer (>=0.3.2,<1.0.0)
+Project-URL: Repository, https://github.com/stelath/mailfox
+Description-Content-Type: text/markdown
+
+<h1 align="center">
+<img src="assets/banner.png" width="300">
+</h1><br>
+
+![GitHub Release](https://img.shields.io/github/v/release/stelath/mailfox)
+![GitHub License](https://img.shields.io/github/license/stelath/mailfox)
+
+Mailfox is a simple and fast ai powered email toolkit to enhance you email workflow.
+
+## Features
+### Classification
+
+Classify emails into categories such as `Social`, `Promotions`, `Updates`, `Forums`, `Purchases`, `Spam` and `Others`.
+
+To get started 
+
+### Search
+
+Coming Soon...

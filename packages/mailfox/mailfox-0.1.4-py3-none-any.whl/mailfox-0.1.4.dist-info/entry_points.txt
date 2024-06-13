@@ -1,0 +1,3 @@
+[console_scripts]
+mailfox=mailfox.__main__:main
+

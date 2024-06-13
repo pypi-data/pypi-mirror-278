@@ -1,0 +1,14 @@
+mailfox/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mailfox/__main__.py,sha256=29FuoXe-dDJhX6ERAGAeMbKspq4fJMVsOg7w9lFs5wI,33
+mailfox/email_interface/__init__.py,sha256=80dbR3AOg6C-S_CKOnU941Hck_LHnjYhOX5WFv4gQAw,74
+mailfox/email_interface/email_gen_ai.py,sha256=4NHwk-HlYyKLvwsfpXVfXRbYk49yIHbPuy9lQFWa2E4,1966
+mailfox/email_interface/email_handler.py,sha256=viQQwME3hgJmtkNzyx2TuLLMLKwRsZQ7I1dpJjqR2PE,7863
+mailfox/mailfox.py,sha256=PxnL8zVbrRfuSpPkIRbawXeapvqM054BcunlG01wiMM,10053
+mailfox/vector/__init__.py,sha256=54Qo016-hInFB2ffzZL68m-NZOmwVg7OkdLlHeiReGk,49
+mailfox/vector/clustering.py,sha256=PQ6SMQS6Q8yz4f7ZJHBauTt41HVaW8PNxEMXWC0PIng,3137
+mailfox/vector/database.py,sha256=2YrPAPQxBcTwiwjUbrqPPQ0AgQ5PsZGPuH8ybHzj8yQ,1655
+mailfox-0.1.4.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+mailfox-0.1.4.dist-info/METADATA,sha256=xLrWVGnobZIW9IqewaM-mNTMQu-CKF0nRM8xbQMXHkE,1321
+mailfox-0.1.4.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+mailfox-0.1.4.dist-info/entry_points.txt,sha256=lCd3TN51FjdSQIiPI6j1Bj0i7CbIJ_jknZ6jl1Ws738,49
+mailfox-0.1.4.dist-info/RECORD,,
