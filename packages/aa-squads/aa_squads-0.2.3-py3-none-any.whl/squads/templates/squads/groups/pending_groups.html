@@ -1,0 +1,49 @@
+{% extends 'squads/base.html' %}
+{% load i18n %}
+{% load humanize %}
+{% load static %}
+
+{% block squads_block %}
+
+<div class="bg-primary rounded-top px-2 py-2 mb-4">
+    <h3 class="text-white">{% translate "Pending Squads" %}</h3>
+</div>
+<div class="card-body">
+    <div class="row">
+        {% for pending in pending_memberships %}
+        <div class="col-md-2 mb-2">
+            <div class="card bg-secondary mb-2" style="max-width: 340px;">
+                <div class="card-body row">
+                    <div class="col-md-4">
+                        {% if pending.group.image %}
+                            <img src="{{ pending.group.image.url }}" class="rounded-circle" style="max-width: 64px; max-height: 64px; width: auto; height: auto; margin-right: 15px;">
+                        {% endif %}
+                    </div>
+                    <div class="col-md-8">
+                        <div class="">
+                            <h5 class="card-title mb-0">
+                                <a href="{% url 'squads:view_group' group_id=pending.group.id %}">{{ pending.group.name }}</a>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+            <p>{% translate "No Pending Squads." %}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_javascript %}
+{% endblock %}
+
+{% block extra_css %}
+{% endblock %}
+
+{% block extra_script %}
+{% endblock %}
