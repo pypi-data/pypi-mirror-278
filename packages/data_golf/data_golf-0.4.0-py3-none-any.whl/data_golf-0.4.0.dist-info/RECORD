@@ -1,0 +1,13 @@
+data_golf/__init__.py,sha256=JJc8LlnNv-p3RSchwUS9afW3zsCAnOdArVjsQnH48fE,49
+data_golf/api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+data_golf/api/general.py,sha256=clRdQ7nOnq96lGIEIlMqnk0ESaM38kMJL8bNd1JsXqQ,1321
+data_golf/api/live_prediction.py,sha256=lhWx74xqKlgU4jaYtoUutuojDSmYRveuL4CJxZyU_rI,2539
+data_golf/api/prediction.py,sha256=yF_uPC9FfFFiXIrsRWFMoQgRKz78u8S9kWPd-p-RIzA,4737
+data_golf/client.py,sha256=auQ73E3vmD13dA-J8cIF-Mu-rU27v2NozwvGdWXjWb0,1237
+data_golf/config.py,sha256=vBUYwdVDUkH0Ptxpr0v1TUgzHvsOP6c3ChFInWq58TU,359
+data_golf/http_client.py,sha256=j6tIjMLMGDbN2udtNKJXK3Y1h0JUxC7egfUUFad4bPA,1915
+data_golf/request_helpers.py,sha256=nJeRm5O6fYSD-V1kEiXdaSfo5vSz4I31S5SY13LqcnM,875
+data_golf-0.4.0.dist-info/LICENSE,sha256=nzKjbIu6Ryq0HxR9jZk_0MM79Kjss2-fliR2nt5821k,1068
+data_golf-0.4.0.dist-info/METADATA,sha256=auRlvFeNBL7_uoRD2y3b8JwUSsa1A5VdYtqQ1kbIOTg,9905
+data_golf-0.4.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+data_golf-0.4.0.dist-info/RECORD,,
