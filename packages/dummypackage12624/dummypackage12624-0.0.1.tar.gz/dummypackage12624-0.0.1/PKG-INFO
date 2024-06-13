@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: dummypackage12624
+Version: 0.0.1
+Summary: creating dummy pyton package
+Home-page: https://github.com/ronylpatil/test_package
+Author: ronilpatil
+Author-email: xyz@gmail.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/ronylpatil/test_package/issues
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: ensure==1.0.2
+Provides-Extra: testing
+Requires-Dist: pytest>=8.2.2; extra == "testing"
+Requires-Dist: mypy>=1.10.0; extra == "testing"
+Requires-Dist: flake8>=7.0.0; extra == "testing"
+Requires-Dist: tox>=4.15.1; extra == "testing"
+Requires-Dist: black>=24.4.2; extra == "testing"
+
+### PYPI Package - Testing
+
+[![ci pipeline](https://github.com/ronylpatil/test_package/actions/workflows/ci.yaml/badge.svg)](https://github.com/ronylpatil/test_package/actions/workflows/ci.yaml)
+
+[![cd pipeline](https://github.com/ronylpatil/test_package/actions/workflows/cd.yml/badge.svg)](https://github.com/ronylpatil/test_package/actions/workflows/cd.yml)
