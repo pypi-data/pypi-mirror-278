@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: gravity-controller-operator
+Version: 0.0.2b0
+Author: PunchyArchy
+License-File: LICENSE
+Requires-Dist: pyModbusTCP
+
+Gravity Interface (TK) - написанный на tkinter графический интерфейс, служащий для взаимодействия весовщика
+и Gravity Core.
+
+v 0.2.4
+- Иконка версии в углу
+- ar_ip, ar_port, mirrored передаются как аргументы при запуске приложения
+- добавлен cmadb (блокировка дублей)
