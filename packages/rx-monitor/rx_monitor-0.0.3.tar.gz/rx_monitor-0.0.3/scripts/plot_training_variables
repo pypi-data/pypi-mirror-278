@@ -1,0 +1,228 @@
+#!/usr/bin/env python3
+
+import rk.calc_utility as cut
+import read_selection  as rs
+import utils_noroot    as utnr
+import argparse
+import pandas          as pnd
+import pprint
+import ROOT
+import glob
+import os
+
+from importlib.resources import files
+from rk.dbase_paths      import dbase_paths as dbpath
+from rk.wgt_mgr          import wgt_mgr
+from log_store           import log_store
+from var_plotter         import plotter     as vplotter
+
+log=log_store.add_logger('rx_monitor:plot_training_variables')
+#---------------------------------------------------
+class data:
+    l_year = ['2011', '2012', '2015', '2016', '2017', '2018']
+    l_bdt  = ['prc', 'cmb']
+
+    year   = None
+    bdt    = None
+    cfg    = None
+
+    db     = dbpath()
+    cmb_bdt_path = db('bdt_cmb') 
+    prc_bdt_path = db('bdt_prc')
+
+    out_dir= './plot_training_variables'
+    cas_dir= os.environ['CASDIR']
+#---------------------------------------------------
+def get_df():
+    log.info('Getting dataframe')
+
+    json_cache = f'{data.out_dir}/{data.year}_{data.bdt}.json'
+    if os.path.isfile(json_cache):
+        log.info(f'Loading from: {json_cache}')
+        d_data = utnr.load_json(json_cache)
+        df     = pnd.DataFrame(d_data)
+
+        return df
+
+    root_wc = f'{data.cas_dir}/tools/apply_selection/no_pid_qsq/sign/v10.21p2/{data.year}_ETOS/*.root'
+    l_path  = glob.glob(root_wc)
+    if len(l_path) == 0:
+        log.error(f'No file found in: {root_wc}')
+        raise
+
+    rdf     = ROOT.RDataFrame('ETOS', l_path)
+    rdf     = filter_rdf(rdf)
+    rdf     = add_variables(rdf)
+    d_weight= get_weights(rdf)
+    arr_wgt = d_weight['nom']
+    d_data  = reformat_rdf(rdf, arr_wgt)
+
+    os.makedirs(data.out_dir, exist_ok=True)
+    log.info(f'Caching to: {json_cache}')
+
+    utnr.dump_json(d_data, json_cache)
+
+    df = pnd.DataFrame(d_data)
+
+    return df
+#---------------------------------------------------
+def filter_rdf(rdf):
+    log.info('Filtering dataframe')
+
+    kin = rs.get('kinematics', 'ETOS', q2bin='high', year = data.year)
+    rdf = rdf.Filter(kin, 'kin')
+
+    rep = rdf.Report()
+    rep.Print()
+
+    return rdf
+#---------------------------------------------------
+def add_variables(rdf):
+    log.info('Adding variables')
+
+    rdf.q2  = 'high'
+    rdf.trig='ETOS'
+    pid     = rs.get('pid', 'ETOS', q2bin='high', year = data.year)
+    qsq     = rs.get('q2' , 'ETOS', q2bin='high', year = data.year)
+
+    rdf     = cut.addDiffVars(rdf)
+    rdf     = define_vars(rdf)
+    rdf     = rdf.Define('pas_pid', f'int({pid})')
+    rdf     = rdf.Define('pas_qsq', f'int({qsq})')
+
+    return rdf
+#---------------------------------------------------
+def define_vars(rdf):
+    log.info('-------------------')
+    log.info('Defining variables:')
+    rdf = define_var(rdf, 'TMath_Sqrt_Jpsi_IPCHI2_OWNPV' , 'TMath::Sqrt(Jpsi_IPCHI2_OWNPV)')
+    rdf = define_var(rdf, 'TMath_ACos_Jpsi_DIRA_OWNPV'   , 'TMath::ACos(Jpsi_DIRA_OWNPV)')
+    rdf = define_var(rdf, 'TMath_ACos_B_DIRA_OWNPV'      , 'TMath::ACos(B_DIRA_OWNPV)')
+    rdf = define_var(rdf, 'Sqrt_B_IPCHI2_OWNPV'          , 'TMath::Sqrt(B_IPCHI2_OWNPV)')
+    rdf = define_var(rdf, 'Jpsi_FDCHI2_OWNPV'            , 'Jpsi_FDCHI2_OWNPV')
+    rdf = define_var(rdf, 'TMath_Log_H_PT'               , 'TMath::Log(H_PT)')
+    rdf = define_var(rdf, 'min_ll_IPCHI2'                , 'TMath::Min(TMath::Sqrt(L1_IPCHI2_OWNPV),TMath::Sqrt(L2_IPCHI2_OWNPV))')
+    rdf = define_var(rdf, 'Log_B_PT'                     , 'TMath::Log(B_PT)')
+    rdf = define_var(rdf, 'max_MULT'                     , 'TMath::Max(B_L1_CC_MULT,B_L2_CC_MULT)')
+    rdf = define_var(rdf, 'min_SPT'                      , 'TMath::Min(B_L1_CC_SPT,B_L2_CC_SPT)')
+    rdf = define_var(rdf, 'max_SPT'                      , 'TMath::Max(B_L1_CC_SPT,B_L2_CC_SPT)')
+    rdf = define_var(rdf, 'min_IT'                       , 'TMath::Min(B_L1_CC_IT,B_L2_CC_IT)')
+    log.info('-------------------')
+
+    return rdf
+#---------------------------------------------------
+def define_var(rdf, name, expr):
+    v_col = rdf.GetColumnNames()
+    l_col = [ col.c_str() for col in v_col ]
+
+    if name in l_col:
+        log.info(f'{"Skipping":<20}{name:>20}{"--->":20}{expr:>50}')
+        return rdf
+
+    log.info(f'{"Defining":<20}{name:>20}{"--->":20}{expr:>50}')
+    rdf = rdf.Define(name, expr)
+
+    return rdf
+#---------------------------------------------------
+def get_weights(rdf):
+    log.info('Calculating weights')
+
+    rdf.filepath= 'none'
+    rdf.treename= 'ETOS'
+    rdf.trigger = 'ETOS'
+    rdf.year    = data.year
+
+    d_set   = get_settings()
+    obj     = wgt_mgr(d_set)
+    rsl     = obj.get_reader('sel', rdf)
+    arr_wgt = rsl.get_weights()
+
+    return arr_wgt
+#---------------------------------------------------
+def get_settings():
+    d_set = {}
+
+    d_set['val_dir'] = f'{data.out_dir}/weights'
+    d_set['channel'] = 'electron'
+    d_set['replica'] = 0 
+
+    d_set['bts_sys'] ='nom'
+    d_set['bts_ver'] = 200
+    d_set['pid_sys'] ='nom'
+    d_set['trk_sys'] ='nom'
+    d_set['gen_sys'] ='nom'
+    d_set['lzr_sys'] ='nom'
+    d_set['hlt_sys'] ='nom'
+    d_set['rec_sys'] ='nom'
+    d_set['iso_sys'] ='nom'
+    d_set['dcm_sys'] ='000'
+    d_set['qsq_sys'] ='nom'
+
+    return d_set
+#---------------------------------------------------
+def reformat_rdf(rdf, arr_wgt):
+    bdt_path    = {'prc' : data.prc_bdt_path, 'cmb' : data.cmb_bdt_path}[data.bdt]
+    l_bdt_xml   = glob.glob(f'{bdt_path}/{data.year}/*.xml')
+    if len(l_bdt_xml) == 0:
+        log.error(f'No XML file found in: {bdt_path}')
+        raise FileNotFoundError
+
+    reader = ROOT.TMVA.Experimental.RReader(l_bdt_xml[0])
+    v_expr = reader.GetVariableNames()
+    d_expr = { f'e_{i_expr:03}' : expr.c_str() for i_expr, expr in enumerate(v_expr) }
+
+    for name, expr in d_expr.items():
+        rdf = rdf.Define(name, expr)
+
+    #This is not an expression, needed to keep PID and Q2 cut as column
+    d_expr['pas_pid'] = 'pas_pid'
+    d_expr['pas_qsq'] = 'pas_qsq'
+    l_name      = list(d_expr.keys())
+    d_data      = rdf.AsNumpy(l_name + ['pas_pid', 'pas_qsq'])
+    d_data_expr = { d_expr[name] : arr_val.tolist() for name, arr_val in d_data.items() }
+    d_data_expr['weight'] = arr_wgt.tolist()
+
+    return d_data_expr 
+#---------------------------------------------------
+def make_dset(df):
+    '''
+    Takes df with PID and Q2 flags and splits it into an unweighted and a weighted dataframe
+    '''
+    df_w           = df
+    df_w           = df_w.drop(columns=['pas_pid'])
+    df_w           = df_w.drop(columns=['pas_qsq'])
+
+    df_u           = df
+    df_u           = df_u[df_u.pas_pid == 1]
+    df_u           = df_u[df_u.pas_qsq == 1]
+    df_u           = df_u.drop(columns=['pas_pid'])
+    df_u           = df_u.drop(columns=['pas_qsq'])
+    df_u['weight'] = 1
+
+    d_df           = {'Weighted' : df_w, 'Unweighted' : df_u}
+
+    return d_df
+#---------------------------------------------------
+def get_args():
+    parser = argparse.ArgumentParser(description='Used to plot BDT training variables with and without calibration')
+    parser.add_argument('-y', '--year', type=str, help='Year', required=True, choices=data.l_year)
+    parser.add_argument('-b', '--bdt' , type=str, help='BDT' , required=True, choices=data.l_bdt )
+    parser.add_argument('-c', '--cfg' , type=str, help='Version of config file for plotting' , required=True) 
+    args = parser.parse_args()
+
+    data.year = args.year
+    data.bdt  = args.bdt 
+    data.cfg  = args.cfg
+#---------------------------------------------------
+def main():
+    get_args()
+    df   = get_df()
+    d_df = make_dset(df)
+
+    cfg_path = files('monitor_cfg').joinpath(f'plot_training_variables/{data.cfg}.toml')
+    ptr=vplotter(data=d_df, cfg=cfg_path)
+    ptr.run()
+#---------------------------------------------------
+if __name__ == '__main__':
+    main()
+

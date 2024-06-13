@@ -1,0 +1,124 @@
+#!/usr/bin/env python3
+
+import os
+import glob
+import ROOT
+import pandas            as pnd
+import argparse
+import matplotlib.pyplot as plt
+
+from log_store   import log_store
+from misid_check import misid_check
+
+log=log_store.add_logger('rx_monitor:check_misid')
+#--------------------------------
+class data:
+    year    = None
+    version = None
+    trigger = None
+    plt_dir = 'plots'
+#--------------------------------
+def get_args():
+    parser = argparse.ArgumentParser(description='Used to check effect of Brem recovery on misid cut')
+    parser.add_argument('-y', '--year'    , type=str, help='Year'   , required=True)
+    parser.add_argument('-t', '--trigger' , type=str, help='Trigger', required=True)
+    parser.add_argument('-v', '--version' , type=str, help='Version of ntuples', default='v10.21p3')
+    args = parser.parse_args()
+
+    data.year    = args.year
+    data.trigger = args.trigger
+    data.version = args.version
+#--------------------------------
+def get_rdf():
+    try:
+        cas_dir = os.environ['CASDIR'] 
+    except:
+        loge.error(f'Cannot find CASDIR env var')
+        raise
+
+    if data.year == 'all':
+        path_wc = f'{cas_dir}/tools/apply_selection/brem_misid/data/{data.version}/v1/*_{data.trigger}/*.root'
+    else:
+        path_wc = f'{cas_dir}/tools/apply_selection/brem_misid/data/{data.version}/v1/{data.year}_{data.trigger}/*.root'
+
+    l_path  = glob.glob(path_wc)
+    if len(l_path) == 0:
+        log.error(f'No files found in: {path_wc}')
+        raise
+
+    rdf = ROOT.RDataFrame(data.trigger, l_path)
+    rdf = rdf.Define('nbrem', 'L2_BremMultiplicity')
+    rdf = rdf.Define('L2_TRACK_ID', 'L2_ID')
+    rdf = rdf.Define('L2_TRACK_PE', 'TMath::Sqrt(L2_TRACK_PX * L2_TRACK_PX + L2_TRACK_PY * L2_TRACK_PY + L2_TRACK_PZ * L2_TRACK_PZ)')
+
+    return rdf
+#--------------------------------
+def plot_1mid(rdf, category):
+    rdf  = rdf.Filter('L2_ID * H_ID > 0', 'charge')
+
+    df   = df_from_rdf(rdf, starts_with=['L1_P', 'L2_P', 'L1_TRACK', 'L2_TRACK', 'L1_ID', 'L2_ID', 'H_P', 'H_ID', 'B_M'])
+
+    ms_1 = misid_check(df, d_lep={'L2'       : 211}, d_had={'H' : 321})
+    df_1 = ms_1.get_df()
+    df_1 = pnd.concat([df_1, df], axis=1)
+
+    ms_2 = misid_check(df, d_lep={'L2_TRACK' : 211}, d_had={'H' : 321})
+    df_2 = ms_2.get_df()
+    df_2 = pnd.concat([df_2, df], axis=1)
+
+    df_1.H_org.hist(bins=40, range=(1800, 1950) , alpha=0.3      , label='Original'             , color='gray' )
+    df_1.H_swp.hist(bins=40, range=(1800, 1950) , histtype='step', label=f'Swapped, brem added' , color='green')
+    df_2.H_swp.hist(bins=40, range=(1800, 1950) , histtype='step', label=f'Swapped, track only' , color='black')
+    plt.axvline(x=1864, color='r', label='$D_0$')
+    plt.grid(False)
+    plt.ylim(0, 60)
+    plt.ylabel('Entries')
+    plt.xlabel(r'$m(K^+,e^-_{\to \pi^-})$')
+    plt.axvline(x=1885, color='b', label='Cut')
+    plt.legend()
+
+    plt.savefig(f'{data.plt_dir}/{data.year}_{category}_mepi.png')
+    plt.close('all')
+
+    df_2 = df_2[(df_2.H_swp < 1885)]
+    df_2.B_M.hist(bins=40, range=(4750, 5750) , histtype='step', label=r'$m(K^+,e^-_{\to \pi^-}) < 1885$' , color='black')
+    plt.axvline(x=5280, color='r', label='$B^+$')
+    plt.legend()
+    #plt.ylim(0, 100)
+    plt.xlabel('$m(B^+)$')
+    plt.ylabel('Entries')
+    plt.savefig(f'{data.plt_dir}/{data.year}_{category}_mbp.png')
+    plt.close('all')
+#--------------------------------
+def startswith_any(name, l_start=None):
+    flag = False
+    for start in l_start:
+        flag = flag or name.startswith(start)
+
+    return flag
+#--------------------------------
+def df_from_rdf(rdf, starts_with=None):
+    v_col = rdf.GetColumnNames()
+    l_col = [ col.c_str() for col in v_col ]
+    l_col = [ col         for col in l_col if startswith_any(col, l_start=starts_with) ]
+
+    d_data = rdf.AsNumpy(l_col)
+
+    return pnd.DataFrame(d_data)
+#--------------------------------
+def main():
+    get_args()
+
+    os.makedirs(data.plt_dir, exist_ok=True)
+
+    rdf   = get_rdf()
+
+    rdf_b = rdf.Filter('nbrem != 0')
+    rdf_t = rdf.Filter('nbrem == 0')
+
+    plot_1mid(rdf_b, 'brem' )
+    plot_1mid(rdf_t, 'track')
+#--------------------------------
+if __name__ == '__main__':
+    main()
+

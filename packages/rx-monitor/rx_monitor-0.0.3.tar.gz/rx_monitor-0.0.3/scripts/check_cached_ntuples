@@ -1,0 +1,143 @@
+#!/usr/bin/env python3
+
+import os
+import re
+import glob
+import logzero
+import argparse
+
+from logzero import logger as log
+
+#-------------------------------
+class data:
+    vers            = None
+
+    cas_dir         = os.environ['CASDIR']
+    root_dir        = f'{cas_dir}/tools/apply_selection'
+    files_per_tuple = 4
+#-------------------------------
+def get_args():
+    parser = argparse.ArgumentParser(description='Used to check for missing cached ntuples')
+    parser.add_argument('-v', '--version' , type=str, help='Version of ntuples')
+    args = parser.parse_args()
+
+    data.vers = args.version
+#-------------------------------
+def get_root_paths():
+    '''
+    Will return list of paths to ROOT files in caching directory
+    that belong to data.vers version
+    '''
+
+    log.info(f'Searching in: {data.root_dir}')
+
+    l_root_path = []
+    for root, _, l_file_name in os.walk(data.root_dir, followlinks=True):
+        if data.vers not in root:
+            continue
+
+        for file_name in l_file_name:
+            if not file_name.endswith('.root'):
+                continue
+
+            l_root_path.append(os.path.join(root, file_name))
+
+    nfiles = len(l_root_path)
+    if nfiles == 0:
+        log.error(f'Found {nfiles} files')
+        raise
+
+    log.info(f'Found {nfiles} files')
+
+    return l_root_path 
+#-------------------------------
+def get_nfiles(file_name):
+    '''
+    Will take a string of the form x_y.root and extract y and multiply it by data.files_per_tuple
+    '''
+
+    regex = '\d+_(\d+)\.root'
+
+    mtch = re.match(regex, file_name)
+
+    if not mtch:
+        log.error(f'Cannot match {regex} to {file_name}')
+        raise
+
+    ntuple_str = mtch.group(1)
+    ntuple_int = int(ntuple_str)
+    nfiles     = ntuple_int * data.files_per_tuple
+
+    if nfiles == 0:
+        log.error(f'Expect {nfiles} = {ntuple_int} * {data.files_per_tuple} files?')
+        log.error(f'{regex} -> {file_name}')
+        raise
+
+    return nfiles
+#-------------------------------
+def get_path_stats(l_root_path):
+    '''
+    Will return info on how many files should be found in which directory
+
+    Parameters
+    -----------------
+    l_root_path (list) : List of paths to ROOT files
+
+    Returns
+    -----------------
+    d_data (dict): Dictionary {dir_path : nfiles} specifying how many files are expected in dir_path
+    '''
+
+    d_data = {}
+
+    for root_path in l_root_path:
+        dir_name = os.path.dirname(root_path)
+
+        if dir_name in d_data:
+            continue
+
+        bas_name = os.path.basename(root_path)
+        d_data[dir_name] = get_nfiles(bas_name)
+
+    return d_data
+#-------------------------------
+def check_paths(d_data):
+    '''
+    Checks that all directories have the number of files expected
+
+    Parameters
+    -----------------
+    d_data (dict): Dictionary {dir_path : nfiles} specifying how many files are expected in dir_path
+
+    If missing files, it will print where and how many files are expected.
+    '''
+
+    log.info('-' * 80)
+    log.info(f'{"Path":<50}{"Found":>15}{"Expected":>15}')
+    log.info('-' * 80)
+    for dir_path, nexpected in d_data.items():
+        l_file = glob.glob(f'{dir_path}/*')
+
+        nfound = len(l_file)
+
+        rel_path = dir_path.replace(data.root_dir, '')
+        rel_path = rel_path[1:]
+
+        if nexpected == nfound:
+            log.debug(f'{rel_path:<50}{nfound:>15}{nexpected:>15}')
+            continue
+        else:
+            log.warning(f'{rel_path:<50}{nfound:>15}{nexpected:>15}')
+#-------------------------------
+def main():
+    log.setLevel(logzero.INFO)
+
+    l_root_path = get_root_paths()
+    d_data      = get_path_stats(l_root_path)
+
+    check_paths(d_data)
+#-------------------------------
+if __name__ == '__main__':
+    get_args()
+    main()
+

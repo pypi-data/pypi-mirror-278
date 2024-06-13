@@ -1,0 +1,393 @@
+#!/usr/bin/env python3
+
+import ROOT
+import os
+import numpy
+import utils 
+import pprint
+import argparse 
+import logging 
+
+import plot_fit     as pf
+import utils_noroot as utnr
+
+from fit_manager  import fit_manager as fm
+from rk.selection import selection   as rksl
+
+import pandas            as pnd
+import read_selection    as rs
+import matplotlib.pyplot as plt
+
+from log_store import log_store
+
+log=log_store.add_logger('monitor:check_trueid')
+
+pnd.options.mode.chained_assignment = None
+#--------------------------------------------------
+class data:
+    l_proc    = None 
+    l_year    = ['2011', '2012', '2015', '2016', '2017', '2018']
+
+    use_mass_cons = None
+    file_version  = None 
+    method        = None
+    out_dir       = None 
+    sign_qsq      = None
+
+    cut_jpsi_mm = 'TMath::Abs(B_TRUEID) == 521 && TMath::Abs(Jpsi_TRUEID) ==    443 && TMath::Abs(Jpsi_MC_MOTHER_ID) == 521 && TMath::Abs(L1_TRUEID) == 13 && TMath::Abs(L2_TRUEID) == 13 && TMath::Abs(L1_MC_MOTHER_ID) ==    443 && TMath::Abs(L2_MC_MOTHER_ID) ==    443 && TMath::Abs(H_TRUEID) == 321 && TMath::Abs(H_MC_MOTHER_ID) == 521'
+    cut_jpsi_ee = 'TMath::Abs(B_TRUEID) == 521 && TMath::Abs(Jpsi_TRUEID) ==    443 && TMath::Abs(Jpsi_MC_MOTHER_ID) == 521 && TMath::Abs(L1_TRUEID) == 11 && TMath::Abs(L2_TRUEID) == 11 && TMath::Abs(L1_MC_MOTHER_ID) ==    443 && TMath::Abs(L2_MC_MOTHER_ID) ==    443 && TMath::Abs(H_TRUEID) == 321 && TMath::Abs(H_MC_MOTHER_ID) == 521'
+
+    cut_psi2_mm = 'TMath::Abs(B_TRUEID) == 521 && TMath::Abs(Jpsi_TRUEID) == 100443 && TMath::Abs(Jpsi_MC_MOTHER_ID) == 521 && TMath::Abs(L1_TRUEID) == 13 && TMath::Abs(L2_TRUEID) == 13 && TMath::Abs(L1_MC_MOTHER_ID) == 100443 && TMath::Abs(L2_MC_MOTHER_ID) == 100443 && TMath::Abs(H_TRUEID) == 321 && TMath::Abs(H_MC_MOTHER_ID) == 521'
+    cut_psi2_ee = 'TMath::Abs(B_TRUEID) == 521 && TMath::Abs(Jpsi_TRUEID) == 100443 && TMath::Abs(Jpsi_MC_MOTHER_ID) == 521 && TMath::Abs(L1_TRUEID) == 11 && TMath::Abs(L2_TRUEID) == 11 && TMath::Abs(L1_MC_MOTHER_ID) == 100443 && TMath::Abs(L2_MC_MOTHER_ID) == 100443 && TMath::Abs(H_TRUEID) == 321 && TMath::Abs(H_MC_MOTHER_ID) == 521'
+
+    cut_sign_mm = 'TMath::Abs(B_TRUEID) == 521 && TMath::Abs(L1_TRUEID) == 13 && TMath::Abs(L2_TRUEID) == 13 && TMath::Abs(L1_MC_MOTHER_ID) == 521 && TMath::Abs(L2_MC_MOTHER_ID) == 521 && TMath::Abs(H_TRUEID) == 321 && TMath::Abs(H_MC_MOTHER_ID) == 521'
+    cut_sign_ee = 'TMath::Abs(B_TRUEID) == 521 && TMath::Abs(L1_TRUEID) == 11 && TMath::Abs(L2_TRUEID) == 11 && TMath::Abs(L1_MC_MOTHER_ID) == 521 && TMath::Abs(L2_MC_MOTHER_ID) == 521 && TMath::Abs(H_TRUEID) == 321 && TMath::Abs(H_MC_MOTHER_ID) == 521'
+
+    d_cut   = {'ctrl_mm' : cut_jpsi_mm, 'ctrl_ee' : cut_jpsi_ee, 'psi2_ee' : cut_psi2_ee, 'psi2_mm' : cut_psi2_mm, 'sign_ee' : cut_sign_ee, 'sign_mm' : cut_sign_mm}
+    cas_dir = os.environ['CASDIR']
+#--------------------------------------------------
+def get_cut(proc, trig):
+    chan    = 'mm' if trig == 'MTOS' else 'ee'
+    key     = f'{proc}_{chan}'
+    sig_cut = utnr.get_from_dic(data.d_cut, key)
+    bkg_cut = f'({sig_cut}) == 0'
+
+    log.info(f'Getting cut for {key}')
+
+    return sig_cut, bkg_cut
+#--------------------------------------------------
+def get_obs(proc, trig):
+    if   proc == 'ctrl' and trig in ['ETOS', 'GTIS']:
+        mass= ROOT.RooRealVar('mass', '#it{M^{DTF}_{J/#psi}(K^{+}e^{+}e^{-})}'      , 5000, 6000, 'MeV/#it{c}^{2}')
+    elif proc == 'ctrl' and trig == 'MTOS':
+        mass= ROOT.RooRealVar('mass', '#it{M^{DTF}_{J/#psi}(K^{+}#mu^{+}#mu^{-})}'  , 5000, 6000, 'MeV/#it{c}^{2}')
+    elif proc == 'psi2' and trig in ['ETOS', 'GTIS']: 
+        mass= ROOT.RooRealVar('mass', '#it{M^{DTF}_{#psi(2S)}(K^{+}e^{+}e^{-})}'    , 5000, 6000, 'MeV/#it{c}^{2}')
+    elif proc == 'psi2' and trig == 'MTOS': 
+        mass= ROOT.RooRealVar('mass', '#it{M^{DTF}_{#psi(2S)}(K^{+}#mu^{+}#mu^{-})}', 5000, 6000, 'MeV/#it{c}^{2}')
+    elif proc == 'sign' and trig in ['ETOS', 'GTIS']: 
+        mass= ROOT.RooRealVar('mass', '#it{M(K^{+}e^{+}e^{-})}'                     , 4500, 6500, 'MeV/#it{c}^{2}')
+    elif proc == 'sign' and trig == 'MTOS': 
+        mass= ROOT.RooRealVar('mass', '#it{M(K^{+}#mu^{+}#mu^{-})}'                 , 4500, 6500, 'MeV/#it{c}^{2}')
+    else:
+        log.error(f'Invalid process/channel: {proc}/{trig}')
+        raise
+
+    if data.use_mass_cons == 0:
+        title = mass.GetTitle()
+        title = title.replace('^{DTF}_{J/#psi}'  , '')
+        title = title.replace('^{DTF}_{#psi(2S)}', '')
+        mass.SetTitle(title)
+        mass.setMax(6500)
+        mass.setMin(4500)
+
+    return mass
+#--------------------------------------------------
+def get_wks(proc, trig):
+    obs     = get_obs(proc, trig)
+
+    if   proc != 'sign': 
+        c_1     = ROOT.RooRealVar('c_1', '', 0, 1) 
+        c_2     = ROOT.RooRealVar('c_2', '', 0, 1) 
+        c_3     = ROOT.RooRealVar('c_3', '', 0, 1) 
+
+        bkg     = ROOT.RooBernstein('bkg', 'Combinatorial', obs, ROOT.RooArgList(c_1, c_2, c_3))
+    elif proc == 'sign':
+        mu_bkg  = ROOT.RooRealVar('mu_bkg', '', 4200.0, 4000, 4500)
+        lb_bkg  = ROOT.RooRealVar('lb_bkg', '',   20.0,   20, 80)
+
+        dl_bkg  = ROOT.RooRealVar('dl_bkg', '',    2.5, 0, 4)
+        gm_bkg  = ROOT.RooRealVar('gm_bkg', '',  -10.0, -20, 5)
+        dl_bkg.setConstant()
+        gm_bkg.setConstant()
+
+        bkg     = ROOT.RooJohnson('bkg', 'Combinatorial', obs, mu_bkg, lb_bkg, gm_bkg, dl_bkg)
+    else:
+        log.error(f'Wrong file version: {data.file_version}')
+        raise
+
+    mu      = ROOT.RooRealVar('mu_sig', '', 5280, 5250, 5400)
+    lb      = ROOT.RooRealVar('lb_sig', '', 20, 2, 300)
+    gm      = ROOT.RooRealVar('gm_sig', '', -2, 5)
+    dl      = ROOT.RooRealVar('dl_sig', '', 0, 4)
+    sig     = ROOT.RooJohnson('sig', 'Signal', obs, mu, lb, gm, dl)
+
+    nsig    = ROOT.RooRealVar('nsig', 'n_{sig}', 1e3, 0, 1e8) 
+    nbkg    = ROOT.RooRealVar('nbkg', 'n_{bkg}', 1e5, 0, 1e8) 
+
+    pdf     = ROOT.RooAddPdf('model', 'Model', ROOT.RooArgList(sig, bkg), ROOT.RooArgList(nsig, nbkg))
+
+    wks     = ROOT.RooWorkspace('wks', '')
+    wks.Import(pdf)
+
+    return wks
+#--------------------------------------------------
+def get_cached_yield(out_dir):
+    out_path = f'{out_dir}/fit_results.root'
+    if not os.path.isfile(out_path):
+        return
+
+    ifile = ROOT.TFile(out_path)
+    l_key = ifile.GetListOfKeys()
+    res   = None
+    for key in l_key:
+        obj = key.ReadObj()
+        if not obj.InheritsFrom('RooFitResult'):
+            continue
+
+        res = obj
+
+        break
+
+    if res is None:
+        log.error(f'No result object found in: {out_path}')
+        ifile.ls()
+        raise
+
+    s_par = res.floatParsFinal()
+    par   = s_par.find('nsig')
+
+    val   = par.getVal()
+    err   = par.getError()
+
+    ifile.Close()
+
+    return [val, err]
+#--------------------------------------------------
+def get_yield(proc, trig, year, df):
+    outdir = f'{data.out_dir}/{data.kind}/{proc}_{trig}_{year}'
+    nsig   = get_cached_yield(outdir)
+    if nsig is not None:
+        return nsig
+
+    log.info(f'Saving fit results to: {outdir}')
+
+    d_opt                  = {}
+    d_opt['weight']        = None 
+    d_opt['fix_par']       = None 
+    d_opt['nbins']         = 500 
+    d_opt['max_attempts']  = 10 
+    d_opt['bin_threshold'] = 50000
+    d_opt['pval_threshold']= 0.05 
+    d_opt['outdir']        = outdir
+
+    wks  = get_wks(proc, trig)
+    pdf  = wks.pdf('model')
+
+    itree, ifile = utils.get_tree_from_df(df, tree_name=trig, file_path=None, l_col=['mass'])
+
+    obj=fm(pdf, itree, d_opt)
+    obj.fit()
+    d_fit_par = obj.get_pars()
+    pf.doPlot(outdir)
+
+    nsig = d_fit_par['nsig']
+
+    return nsig
+#--------------------------------------------------
+def add_mass(rdf, proc):
+    if data.use_mass_cons == 0:
+        rdf = rdf.Define('mass', 'B_M')
+        return rdf
+
+    if   proc == 'ctrl':
+        branch_name = 'B_const_mass_M[0]'
+    elif proc == 'psi2':
+        branch_name = 'B_const_mass_psi2S_M[0]'
+    elif proc == 'sign':
+        branch_name = 'B_M'
+    else:
+        log.error(f'Invalid process: {proc}')
+        raise
+
+    rdf = rdf.Define('mass', branch_name)
+
+    return rdf
+#--------------------------------------------------
+def filter_rdf(rdf, trig, year, proc):
+    if proc == 'sign':
+        q2bin = data.sign_qsq
+    else:
+        q2bin = {'ctrl' : 'jpsi', 'psi2' : 'psi2'}[proc]
+
+    qsq   = rs.get('q2', trig, q2bin=q2bin, year = year)
+    rdf   = rdf.Filter(qsq, 'qsq')
+
+    return rdf
+#--------------------------------------------------
+def get_rdf(proc, trig, year):
+    if data.input == 'default':
+        root_wc = f'{data.cas_dir}/tools/apply_selection/truth_eff/{proc}/{data.file_version}/{year}_{trig}/*.root'
+        log.info(f'Taking input ntuples from: {root_wc}')
+    else:
+        root_wc = f'{data.input}/truth_eff/{proc}/{data.file_version}/{year}_{trig}/*.root'
+        log.warning(f'Taking input ntuples from: {root_wc}')
+
+    rdf_sel = ROOT.RDataFrame(trig, root_wc)
+    rdf_sel = filter_rdf(rdf_sel, trig, year, proc)
+    rdf_sel = add_mass(rdf_sel, proc)
+
+    sig_cut, bkg_cut = get_cut(proc, trig)
+
+    rdf_pas=rdf_sel.Filter(sig_cut)
+    rdf_fal=rdf_sel.Filter(bkg_cut)
+
+    return rdf_pas, rdf_fal, rdf_sel
+#--------------------------------------------------
+def dump_failed(rdf, proc, trig, year):
+    arr_mass = rdf.AsNumpy(['mass'])['mass']
+
+    utnr.dump_json(arr_mass.tolist(), f'{data.out_dir}/mass_{proc}_{trig}_{year}.json')
+#--------------------------------------------------
+def check_truth_eff_tid(proc, trig, year):
+    rdf_pas, rdf_fal, _  = get_rdf(proc, trig, year)
+
+    dump_failed(rdf_fal, proc, trig, year)
+
+    pas      = rdf_pas.Count().GetValue()
+    fal, err = get_yield(proc, trig, year, rdf_fal)
+
+    return pas, [fal, err]
+#--------------------------------------------------
+def check_truth_eff_bkc(proc, trig, year):
+    _, _, rdf_sel   = get_rdf(proc, trig, year)
+    rdf_pas, rdf_fal= filter_trueid_rx(rdf_sel, trig)
+
+    dump_failed(rdf_fal, proc, trig, year)
+
+    pas      = rdf_pas.Count().GetValue()
+    fal, err = get_yield(proc, trig, year, rdf_fal)
+
+    return pas, [fal, err]
+#--------------------------------------------------
+def filter_trueid_rx(rdf, trig):
+    lep_pid= '13' if trig == 'MTOS' else '11'
+    pas_l1 = f'TMath::Abs(L1_TRUEID) == {lep_pid}'
+    pas_l2 = f'TMath::Abs(L2_TRUEID) == {lep_pid}'
+    pas_kp = f'TMath::Abs(H_TRUEID ) == 321'
+
+    fal_l1 = f'TMath::Abs(L1_TRUEID) == 0'
+    fal_l2 = f'TMath::Abs(L2_TRUEID) == 0'
+    fal_kp = f'TMath::Abs(H_TRUEID ) == 0'
+
+    str_f1 = f'({pas_l2}) && ({pas_kp}) && (({pas_l1}) || ({fal_l1}))'
+    str_f2 = f'({pas_kp}) && ({pas_l1}) && (({pas_l2}) || ({fal_l2}))'
+    str_fk = f'({pas_l1}) && ({pas_l2}) && (({pas_kp}) || ({fal_kp}))'
+
+    str_tru= f'({str_f1}) || ({str_f2}) || ({str_fk})'
+    str_bkc= '(B_BKGCAT == 0) || (B_BKGCAT == 10) || (B_BKGCAT == 50)'
+
+    str_pas= f'({str_bkc}) && ({str_tru})'
+    str_fal= f'({str_bkc}) == 0 || ({str_tru}) == 0'
+
+    rdf_pas= rdf.Filter(str_pas)
+    rdf_fal= rdf.Filter(str_fal)
+
+    return rdf_pas, rdf_fal
+#--------------------------------------------------
+def check_truth_eff(proc, trig, year):
+    if   data.method == 'bkgcat':
+        log.info('Using background category')
+        pas, [fal, err] = check_truth_eff_bkc(proc, trig, year)
+    elif data.method == 'trueid':
+        log.info('Using TRUEID')
+        pas, [fal, err] = check_truth_eff_tid(proc, trig, year)
+    else:
+        log.error(f'Invalid method: {data.method}')
+        raise
+
+    return pas, [fal, err]
+#--------------------------------------------------
+def get_args():
+    parser = argparse.ArgumentParser(description='Used to store truth matching efficiency information')
+    parser.add_argument('-p', '--proc', nargs='+', help='Process', default=['ctrl', 'psi2', 'sign'])
+    parser.add_argument('-t', '--trig', nargs='+', help='Trigger', default=['MTOS', 'ETOS', 'GTIS'])
+    parser.add_argument('-y', '--year', nargs='+', help='Year'   , default=['2011', '2012', '2015', '2016', '2017', '2018'])
+
+    parser.add_argument('-v', '--vers'  , type=str, help='Version of input'           , required=True , choices=['v10.11tf', 'v10.13', 'v10.21p2'])
+    parser.add_argument('-k', '--kind'  , type=str, help='Selection that input passed', required=True , choices=['no_cut', 'all_gorder_no_truth_mass_bdt'])
+    parser.add_argument('-m', '--method', type=str, help='Method to get efficiencies' , required=True , choices=['bkgcat', 'trueid'])
+    parser.add_argument('-i', '--input' , type=str, help='Path with truth_eff directory'              , default='default' )
+    parser.add_argument('-c', '--mcons' , type=int, help='Will fit B mass constrained spectrum'       , default=1     , choices=[0, 1] )
+    parser.add_argument('-q', '--sqsq'  , type=str, help='q2 bin used for signal'                     , default='high', choices=['low', 'central', 'high'])
+    args = parser.parse_args()
+
+    data.l_proc = args.proc
+    data.l_trig = args.trig
+    data.l_year = args.year
+
+    data.file_version = args.vers
+    data.kind         = args.kind
+    data.input        = args.input
+    data.method       = args.method
+    data.out_dir      = utnr.make_dir_path(f'{data.cas_dir}/monitor/truth_eff/{data.file_version}/{data.method}')
+    data.sign_qsq     = args.sqsq
+    data.use_mass_cons= args.mcons
+#--------------------------------------------------
+def rename_sample(sample):
+    [_, trig, year] = sample.split('_')
+
+    trig = {'MTOS' : r'$\mu$\verb.TOS.', 'ETOS' : r'e\verb.TOS.', 'GTIS' : 'gTIS!'}[trig]
+
+    return f'{trig} {year}'
+#--------------------------------------------------
+def save_table(df, name):
+    df['Sample']      = df.Sample.map(rename_sample)
+    df['$k_{truth}$'] = (df.Passed + df.Failed) / df.Passed
+
+    f1 = lambda x : x
+    f2 = lambda x : f'{x:.0f}'
+    f3 = lambda x : f'{x:.0f}'
+    f4 = lambda x : f'{x:.3f}'
+    f5 = lambda x : f'{x:.3f}'
+
+    l_form = [f1, f2, f3, f4, f5] 
+
+    df.to_latex(buf=f'{data.out_dir}/stats_{name}.tex', formatters=l_form, index=False)
+#--------------------------------------------------
+def get_data():
+    json_path = f'{data.out_dir}/data.json'
+    if os.path.isfile(json_path):
+        log.visible(f'Reusing cached: {json_path}')
+        df = pnd.read_json(json_path)
+
+        return df 
+
+    d_yld = {'Sample' : [], 'Passed' : [], 'Failed' : [], 'Efficiency' : []}
+    for proc in data.l_proc:
+        for trig in data.l_trig:
+            for year in data.l_year:
+                pas, [fal, err]  = check_truth_eff(proc, trig, year)
+                l_data           = [pas, fal]
+
+                sample = f'{proc}_{trig}_{year}'
+                eff    = pas / (pas + fal)
+
+                d_yld['Sample']     += [sample]
+                d_yld['Passed']     += [pas   ]
+                d_yld['Failed']     += [fal   ]
+                d_yld['Efficiency'] += [eff   ]
+
+    df = pnd.DataFrame(d_yld)
+    df.to_json(json_path, indent=4)
+
+    return df 
+#--------------------------------------------------
+def main():
+    ROOT.gROOT.ProcessLine(".L lhcbStyle.C")
+    ROOT.lhcbStyle()
+
+    get_args()
+    df = get_data()
+
+    df_ctrl = df[df.Sample.str.contains('ctrl')]
+    df_psi2 = df[df.Sample.str.contains('psi2')]
+    df_sign = df[df.Sample.str.contains('sign')]
+
+    save_table(df_ctrl, 'ctrl')
+    save_table(df_psi2, 'psi2')
+    save_table(df_sign, 'sign')
+#--------------------------------------------------
+if __name__ == '__main__':
+    main()
+
