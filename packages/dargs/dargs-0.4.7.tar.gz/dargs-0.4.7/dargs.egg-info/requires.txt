@@ -1,0 +1,13 @@
+typeguard>=4
+
+[:python_version < "3.8"]
+typing_extensions
+
+[test]
+ipython
+jsonschema
+
+[typecheck]
+basedpyright==1.12.2
+sphinx
+ipython
