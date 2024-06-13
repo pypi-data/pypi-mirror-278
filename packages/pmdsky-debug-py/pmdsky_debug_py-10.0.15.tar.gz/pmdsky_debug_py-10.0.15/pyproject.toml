@@ -1,0 +1,23 @@
+[project]
+name = "pmdsky-debug-py"
+version = "10.0.15"
+description = "pmdsky-debug symbols for Python."
+readme = "./README.rst"
+requires-python = ">=3.9"
+classifiers = [ "Development Status :: 4 - Beta", "License :: OSI Approved :: MIT License", "Programming Language :: Python :: 3.9", "Programming Language :: Python :: 3.10", "Programming Language :: Python :: 3.11", "Programming Language :: Python :: 3.12", "Programming Language :: Python",]
+[[project.authors]]
+name = "Marco 'Capypara' Köpcke"
+email = "hello@capypara.de"
+
+[build-system]
+requires = [ "setuptools >= 61.0.0",]
+build-backend = "setuptools.build_meta"
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+repository = "https://github.com/SkyTemple/pmdsky-debug-py"
+
+[tool.setuptools.package-data]
+pmdsky_debug_py = [ "py.typed",]

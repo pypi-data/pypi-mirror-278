@@ -1,0 +1,17 @@
+README.rst
+pyproject.toml
+./README.rst
+pmdsky_debug_py/__init__.py
+pmdsky_debug_py/_release.py
+pmdsky_debug_py/eu.py
+pmdsky_debug_py/eu_itcm.py
+pmdsky_debug_py/jp.py
+pmdsky_debug_py/jp_itcm.py
+pmdsky_debug_py/na.py
+pmdsky_debug_py/na_itcm.py
+pmdsky_debug_py/protocol.py
+pmdsky_debug_py/py.typed
+pmdsky_debug_py.egg-info/PKG-INFO
+pmdsky_debug_py.egg-info/SOURCES.txt
+pmdsky_debug_py.egg-info/dependency_links.txt
+pmdsky_debug_py.egg-info/top_level.txt
