@@ -1,0 +1,26 @@
+[input]
+datasets=['all_TOS']
+
+[systematics]
+
+fix_var=[
+    'ee_all_TOS_toys_fit_psi2S_ratio_2017_ETOS_nom_0',
+    'ee_all_TOS_toys_fit_psi2S_ratio_2018_ETOS_nom_0',
+    'ee_all_TOS_toys_fit_psi2S_ratio_r1_ETOS_nom_0',
+    'ee_all_TOS_toys_fit_psi2S_ratio_r2p1_ETOS_nom_0',
+    'ncb_ee_all_TOS_toys_fit',
+    'nom_ee_all_TOS_toys_fit_dmu_ee_2018_ETOS',
+    'nom_ee_all_TOS_toys_fit_r0_ee_2018_ETOS',
+    'nom_ee_all_TOS_toys_fit_r1_ee_2018_ETOS',
+    'nom_ee_all_TOS_toys_fit_r2_ee_2018_ETOS',
+    'nom_ee_all_TOS_toys_fit_ssg_ee_2018_ETOS',
+    'npr_ee_all_TOS_toys_fit',
+    'ncb_mm_all_TOS_toys_fit',
+    'nom_mm_all_TOS_toys_fit_dmu_mm_2018_MTOS',
+    'nom_mm_all_TOS_toys_fit_ssg_mm_2018_MTOS',
+]
+
+sig_mod=[]
+rpr_mod='rpr_ETOS:bts_1_1'
+cpr_mod='cpr_ETOS:bts_1_1'
+
