@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: nada-ai
+Version: 0.1.1
+Summary: Nada-AI is a Python library designed for AI/ML on top of Nada DSL and Nillion Network.
+Author: Mathias Leys
+Author-email: mathias.leys@nillion.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: nada-algebra (>=0.3.4,<0.4.0)
+Requires-Dist: nada-dsl (>=0.2.1,<0.3.0)
+Requires-Dist: nillion-python-helpers (>=0.1.2,<0.2.0)
+Requires-Dist: numpy (>=1.26.4,<2.0.0)
+Requires-Dist: prophet (>=1.1.5,<2.0.0)
+Requires-Dist: py-nillion-client (>=0.2.1,<0.3.0)
+Requires-Dist: scikit-learn (>=1.4.2,<2.0.0)
+Requires-Dist: torch (>=2.3.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# Nada AI
+
+![GitHub License](https://img.shields.io/github/license/NillionNetwork/nada-ai?style=for-the-badge)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/NillionNetwork/nada-ai/test?style=for-the-badge)
+
+Nada AI is a Python library designed for performing ML/AI on top of Nada DSL and the Nillion Network.
+
+It provides an intuitive ML interface and frictionless integration with existing ML frameworks such as PyTorch and Sci-kit learn.
+
+## Features
+
+- **Exporting model state**: Integrates with models from existing ML frameworks and provides an easy way to export them to the Nillion network - to be used in Nada programs.
+- **AI Modules**: A PyTorch-esque interface to create arbitrary ML models in Nada by stacking pre-built common ML components - with the possibility of easily creating custom components.
+- **Importing model state**: Easily import an exported model state that lives in the Nillion network to be used in a Nada program.
+
+## Installation
+### Using pip
+
+```bash
+pip install nada-ai
+```
+
+### From Sources
+You can install the nada-algebra library using Poetry:
+
+```bash
+git clone https://github.com/NillionNetwork/nada-ai.git
+pip3 install poetry
+poetry install nada-ai
+```
+
+## License
+
+This project is licensed under the Apache2 License. See the LICENSE file for details.
+
