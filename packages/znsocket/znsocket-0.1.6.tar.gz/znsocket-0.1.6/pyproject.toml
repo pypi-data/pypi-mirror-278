@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "znsocket"
+version = "0.1.6"
+description = "Python implementation of a Redis-compatible API using websockets."
+authors = ["Fabian Zills <fzills@icp.uni-stuttgart.de>"]
+license = "Apache-2.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+python-socketio = {extras = ["client"], version = "^5"}
+eventlet = "^0"
+typer = "^0"
+znjson = "^0.2.3"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.4"
+pytest = "^8.2"
+coverage = "^7.5.1"
+redis = "^5"
+numpy = "^1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+znsocket = "znsocket.cli:app"
+
+[tool.poetry.urls]
+repository = "https://github.com/zincware/ZnSocket"
+
+[tool.ruff.lint]
+select = ["I"]
+
+[tool.coverage.run]
+# omit the tests themselves
+omit = ["*/tests/*"]
