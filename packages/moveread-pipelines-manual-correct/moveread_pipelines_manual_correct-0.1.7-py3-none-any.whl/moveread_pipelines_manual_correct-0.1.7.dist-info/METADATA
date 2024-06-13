@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: moveread-pipelines-manual-correct
+Version: 0.1.7
+Summary: Manual perspective correction pipeline for Moveread
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Project-URL: repo, https://github.com/moveread/moveread-pipelines.git
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: queue-api
+Requires-Dist: pydantic ==2.*
+Requires-Dist: moveread-annotations
+Requires-Dist: pure-cv
+Requires-Dist: lazy-loader
+Requires-Dist: pipeteer
+
+# Manual Correct
+
+> Pipeline interface for a Manual Correction API
+
+## TL; DR
+
+- Input (`Qin`): basically an image URL
+- Output (`Qout`):
+  - `Corrected`: perspective corners, or
+  - `Rotated`: angle of rotation (in 90º increments)
+
+## Usage
+
+```python
+import moveread.pipelines.manual_correct as corr
+
+Qin = Queue[tuple[corr.Task, State]] = ...
+Qout = Queue[tuple[corr.Result, State]] = ...
+
+
+api = corr.CorrectAPI(Qin, Qout)
+
+await api.items().sync()
+await api.correct('id', Corners(tl=[0, 0], tr=[0, 1], br=[1, 1], bl=[1, 0]))
+await api.rotate('id', 90)
+```
+
+- Run [demo.ipynb](demo.ipynb) for a full example
