@@ -1,0 +1,2 @@
+[console_scripts]
+ipams = ipams.__main__:main
