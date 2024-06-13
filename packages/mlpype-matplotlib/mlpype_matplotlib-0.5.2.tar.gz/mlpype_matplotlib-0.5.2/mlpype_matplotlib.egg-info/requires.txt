@@ -1,0 +1,10 @@
+mlpype-base==0.5.2
+matplotlib>=3.7.5
+
+[dev]
+mlpype-base==0.5.2
+matplotlib==3.7.5
+
+[strict]
+mlpype-base==0.5.2
+matplotlib==3.7.5
