@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: AnnotationCheckerWithStructure
+Version: 0.1.4
+Summary: A simple bioinformatics script.
+Home-page: https://github.com/Andy-B-123/AnnotationCheckerWithStructure
+Author: Andreas Bachler
+Author-email: Andy.Bachler@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: biopython ==1.79
+Requires-Dist: BCBio-GFF ==0.7.5
+Requires-Dist: pandas ==1.3.5
+Requires-Dist: matplotlib ==3.5.1
+Requires-Dist: seaborn ==0.11.2
+
+# Assess genome annotations using structure databases with Prost5
+
+Structural databases for protein sequences are invaluable tools for informing the validity of gene predictions from annotations.
+
+Currently, generating structures for all genes at the level of eukaryotic genomes is computationally challenging.
+
+Recent advances in transformer representations of amino acid sequences using the ProstT5 ...
+
+## Installation
+
+You can install the released version of AnnotationCheckerWithStructure from PyPI:
+
+```sh
+pip install AnnotationCheckerWithStructure
+```
+
+Usage
+
+```AnnotationCheckerWithStructure```
+
