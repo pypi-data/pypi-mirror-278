@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools >= 61", "setuptools_scm[toml] >= 6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zenflow"
+description = "Learn distributions with normalizing flows."
+authors = [{ name = "Hans Dembinski" }, { email = "hans.dembinski@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["jax", "jaxlib", "flax", "optax", "typing_extensions"]
+dynamic = ["version"]
+
+[project.urls]
+repository = "https://github.com/hdembinski/zenflow"
+
+[project.optional-dependencies]
+test = ["pytest", "pytest-cov", "coverage[toml]", "jacobi"]
+all = ["matplotlib", "scikit-learn", "numpy", "tqdm"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools_scm]
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.ruff]
+src = ["src"]
+
+[tool.ruff.lint]
+extend-select = ["D"]
+ignore = ["D212", "D203", "D107", "D102"]
+unfixable = ["ERA"]
+pydocstyle.convention = "numpy"
+
+[tool.ruff.lint.per-file-ignores]
+"*.ipynb" = ["D101", "D103"]
+"test_*.py" = ["D"]
+
+[tool.mypy]
+ignore_missing_imports = true
+allow_redefinition = true
+plugins = "numpy.typing.mypy_plugin"
+pretty = true
+files = ["src"]
+no_implicit_optional = false
+
+[tool.pytest.ini_options]
+addopts = "--doctest-modules --strict-config --strict-markers -q -ra --ff"
+testpaths = ["src/zenflow", "tests"]
+log_cli_level = "INFO"
+xfail_strict = true
+filterwarnings = [
+  # "error::DeprecationWarning",
+  "error::numpy.VisibleDeprecationWarning",
+]
+
+[tool.coverage.run]
+include = ["src/*"]

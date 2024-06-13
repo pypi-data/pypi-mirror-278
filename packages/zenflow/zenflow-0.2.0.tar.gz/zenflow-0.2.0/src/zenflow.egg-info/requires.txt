@@ -1,0 +1,17 @@
+jax
+jaxlib
+flax
+optax
+typing_extensions
+
+[all]
+matplotlib
+scikit-learn
+numpy
+tqdm
+
+[test]
+pytest
+pytest-cov
+coverage[toml]
+jacobi
