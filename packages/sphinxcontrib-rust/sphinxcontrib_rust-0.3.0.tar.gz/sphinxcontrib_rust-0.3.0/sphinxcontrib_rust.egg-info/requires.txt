@@ -1,0 +1,10 @@
+sphinx<8,>=7
+myst-parser
+
+[dev]
+beautifulsoup4
+black
+lxml
+pylint
+pytest-cov
+sphinx_rtd_theme
