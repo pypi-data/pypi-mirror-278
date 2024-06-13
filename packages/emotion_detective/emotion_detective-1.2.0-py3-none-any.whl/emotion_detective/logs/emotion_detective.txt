@@ -1,0 +1,1802 @@
+2024-05-20 09:53:52,743 - __main__ - INFO - Starting program...
+2024-05-20 09:53:52,743 - INFO - Transcribing and translating audio files...
+2024-05-20 09:53:52,743 - INFO - Loading Whisper model...
+2024-05-20 09:54:00,577 - INFO - Transcribing audio file...
+2024-05-20 09:54:00,608 - ERROR - An error occurred during transcription and translation of audio files: expected np.ndarray (got NoneType)
+2024-05-20 09:54:00,608 - __main__ - INFO - Getting predictions...
+2024-05-20 09:55:12,269 - __main__ - INFO - Starting program...
+2024-05-20 09:55:12,269 - INFO - Transcribing and translating audio files...
+2024-05-20 09:55:12,269 - INFO - Loading Whisper model...
+2024-05-20 09:55:13,119 - INFO - Transcribing audio file...
+2024-05-20 09:55:13,132 - ERROR - An error occurred during transcription and translation of audio files: expected np.ndarray (got NoneType)
+2024-05-20 09:55:13,148 - __main__ - INFO - Getting predictions...
+2024-05-22 15:07:43,284 - __main__ - INFO - Starting program...
+2024-05-22 15:07:43,284 - INFO - Transcribing and translating audio files...
+2024-05-22 15:07:43,284 - INFO - Loading Whisper model...
+2024-05-22 15:07:44,110 - INFO - Transcribing audio file...
+2024-05-22 15:09:03,333 - INFO - Extracting transcription chunks...
+2024-05-22 15:09:03,334 - INFO - Tokenizing transcribed text into sentences...
+2024-05-22 15:09:03,356 - ERROR - An error occurred during transcription and translation of audio files: All arrays must be of the same length
+2024-05-22 15:09:03,359 - __main__ - INFO - Getting predictions...
+2024-05-22 15:12:13,623 - __main__ - INFO - Starting program...
+2024-05-22 15:12:13,624 - INFO - Transcribing and translating audio files...
+2024-05-22 15:12:13,624 - INFO - Loading Whisper model...
+2024-05-22 15:12:14,200 - INFO - Transcribing audio file...
+2024-05-22 15:13:32,809 - INFO - Extracting transcription chunks...
+2024-05-22 15:13:32,810 - INFO - Tokenizing transcribed text into sentences...
+2024-05-22 15:13:32,818 - ERROR - An error occurred during transcription and translation of audio files: All arrays must be of the same length
+2024-05-22 15:13:32,819 - __main__ - INFO - Getting predictions...
+2024-05-22 15:13:32,820 - INFO - Starting predictions...
+2024-05-22 15:13:32,820 - INFO - Starting predictions...
+2024-05-22 15:21:15,310 - __main__ - INFO - Starting program...
+2024-05-22 15:21:15,311 - INFO - Transcribing and translating audio files...
+2024-05-22 15:21:15,311 - INFO - Loading Whisper model...
+2024-05-22 15:21:15,904 - INFO - Transcribing audio file...
+2024-05-22 15:22:32,739 - INFO - Extracting transcription chunks...
+2024-05-22 15:22:32,740 - INFO - Tokenizing transcribed text into sentences...
+2024-05-22 15:22:32,748 - ERROR - An error occurred during transcription and translation of audio files: All arrays must be of the same length
+2024-05-22 15:22:32,749 - __main__ - INFO - Getting predictions...
+2024-05-22 15:22:32,750 - INFO - Starting predictions...
+2024-05-22 15:22:32,750 - INFO - Starting predictions...
+2024-05-22 15:30:48,172 - __main__ - INFO - Starting program...
+2024-05-22 15:30:48,172 - INFO - Transcribing and translating audio files...
+2024-05-22 15:30:48,173 - INFO - Loading Whisper model...
+2024-05-22 15:30:48,784 - INFO - Transcribing audio file...
+2024-05-22 15:32:07,620 - INFO - Extracting transcription chunks...
+2024-05-22 15:32:07,620 - INFO - Tokenizing transcribed text into sentences...
+2024-05-22 15:32:07,632 - ERROR - An error occurred during transcription and translation of audio files: All arrays must be of the same length
+2024-05-22 15:32:07,634 - __main__ - INFO - Getting predictions...
+2024-05-22 15:32:07,634 - INFO - Starting predictions...
+2024-05-22 15:32:07,634 - INFO - Starting predictions...
+2024-05-22 15:32:08,189 - INFO - Predictions completed.
+2024-05-22 15:32:08,189 - INFO - Predictions completed.
+2024-05-22 15:32:08,194 - __main__ - INFO - Program finished.
+2024-05-22 15:34:57,139 - __main__ - INFO - Starting program...
+2024-05-22 15:34:57,140 - INFO - Transcribing and translating audio files...
+2024-05-22 15:34:57,140 - INFO - Loading Whisper model...
+2024-05-22 15:34:57,728 - INFO - Transcribing audio file...
+2024-05-22 15:36:14,411 - INFO - Extracting transcription chunks...
+2024-05-22 15:36:14,412 - INFO - Tokenizing transcribed text into sentences...
+2024-05-22 15:36:14,422 - ERROR - An error occurred during transcription and translation of audio files: All arrays must be of the same length
+2024-05-22 15:36:14,424 - __main__ - INFO - Getting predictions...
+2024-05-22 15:36:14,425 - INFO - Starting predictions...
+2024-05-22 15:36:14,425 - INFO - Starting predictions...
+2024-05-22 15:36:14,924 - INFO - Predictions completed.
+2024-05-22 15:36:14,924 - INFO - Predictions completed.
+2024-05-22 15:36:14,929 - __main__ - INFO - Program finished.
+2024-05-22 15:37:42,223 - __main__ - INFO - Starting program...
+2024-05-22 15:37:42,224 - INFO - Transcribing and translating audio files...
+2024-05-22 15:37:42,224 - INFO - Loading Whisper model...
+2024-05-22 15:37:42,832 - INFO - Transcribing audio file...
+2024-05-22 15:39:00,694 - INFO - Extracting transcription chunks...
+2024-05-22 15:39:00,695 - INFO - Tokenizing transcribed text into sentences...
+2024-05-22 15:39:00,705 - ERROR - An error occurred during transcription and translation of audio files: All arrays must be of the same length
+2024-05-22 15:39:00,707 - __main__ - INFO - Getting predictions...
+2024-05-22 15:39:00,708 - INFO - Starting predictions...
+2024-05-22 15:39:00,708 - INFO - Starting predictions...
+2024-05-22 15:39:01,221 - INFO - Predictions completed.
+2024-05-22 15:39:01,221 - INFO - Predictions completed.
+2024-05-22 15:39:01,226 - __main__ - INFO - Program finished.
+2024-05-22 16:03:57,689 - __main__ - INFO - Starting program...
+2024-05-22 16:03:58,805 - INFO - Transcribing and translating audio files...
+2024-05-22 16:03:58,805 - INFO - Loading Whisper model...
+2024-05-22 16:03:59,451 - INFO - Transcribing audio file...
+2024-05-22 16:05:17,631 - INFO - Extracting transcription chunks...
+2024-05-22 16:05:17,631 - INFO - Tokenizing transcribed text into sentences...
+2024-05-22 16:05:17,640 - ERROR - An error occurred during transcription and translation of audio files: All arrays must be of the same length
+2024-05-22 16:05:17,642 - __main__ - INFO - Getting predictions...
+2024-05-22 16:05:36,758 - __main__ - INFO - Starting program...
+2024-05-22 16:05:37,847 - INFO - Transcribing and translating audio files...
+2024-05-22 16:05:37,848 - INFO - Loading Whisper model...
+2024-05-22 16:05:38,456 - INFO - Transcribing audio file...
+2024-05-22 16:06:56,646 - INFO - Extracting transcription chunks...
+2024-05-22 16:06:56,646 - INFO - Tokenizing transcribed text into sentences...
+2024-05-22 16:06:56,657 - ERROR - An error occurred during transcription and translation of audio files: All arrays must be of the same length
+2024-05-22 16:06:56,659 - __main__ - INFO - Getting predictions...
+2024-05-22 16:06:56,659 - INFO - Starting predictions...
+2024-05-22 16:06:56,659 - INFO - Starting predictions...
+2024-05-22 16:06:57,173 - INFO - Predictions completed.
+2024-05-22 16:06:57,173 - INFO - Predictions completed.
+2024-05-22 16:06:57,178 - __main__ - INFO - Program finished.
+2024-05-22 16:08:06,319 - __main__ - INFO - Starting program...
+2024-05-22 16:08:07,406 - INFO - Transcribing and translating audio files...
+2024-05-22 16:08:07,407 - INFO - Loading Whisper model...
+2024-05-22 16:08:07,993 - INFO - Transcribing audio file...
+2024-05-22 16:09:26,814 - INFO - Extracting transcription chunks...
+2024-05-22 16:09:26,815 - INFO - Tokenizing transcribed text into sentences...
+2024-05-22 16:09:26,823 - ERROR - An error occurred during transcription and translation of audio files: All arrays must be of the same length
+2024-05-22 16:09:26,827 - __main__ - INFO - Getting predictions...
+2024-05-22 16:09:26,827 - INFO - Starting predictions...
+2024-05-22 16:09:26,827 - INFO - Starting predictions...
+2024-05-22 16:09:27,334 - INFO - Predictions completed.
+2024-05-22 16:09:27,334 - INFO - Predictions completed.
+2024-05-22 16:09:27,340 - __main__ - INFO - Program finished.
+2024-05-22 16:17:33,598 - INFO - Transcribing and translating audio files...
+2024-05-22 16:17:33,599 - INFO - Loading Whisper model...
+2024-05-22 16:17:34,200 - INFO - Transcribing audio file...
+2024-05-22 16:17:34,241 - ERROR - An error occurred during transcription and translation of audio files: Failed to load audio: ffmpeg version 7.0-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+
+  libavutil      59.  8.100 / 59.  8.100
+
+  libavcodec     61.  3.100 / 61.  3.100
+
+  libavformat    61.  1.100 / 61.  1.100
+
+  libavdevice    61.  1.100 / 61.  1.100
+
+  libavfilter    10.  1.100 / 10.  1.100
+
+  libswscale      8.  1.100 /  8.  1.100
+
+  libswresample   5.  1.100 /  5.  1.100
+
+  libpostproc    58.  1.100 / 58.  1.100
+
+[in#0 @ 0000027041238500] Error opening input: No such file or directory
+
+Error opening input file chunk_o.mp3.
+
+Error opening input files: No such file or directory
+
+
+2024-05-22 16:17:48,293 - INFO - Transcribing and translating audio files...
+2024-05-22 16:17:48,293 - INFO - Transcribing and translating audio files...
+2024-05-22 16:17:48,294 - INFO - Loading Whisper model...
+2024-05-22 16:17:48,294 - INFO - Loading Whisper model...
+2024-05-22 16:17:48,973 - INFO - Transcribing audio file...
+2024-05-22 16:17:48,973 - INFO - Transcribing audio file...
+2024-05-22 16:17:49,008 - ERROR - An error occurred during transcription and translation of audio files: Failed to load audio: ffmpeg version 7.0-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+
+  libavutil      59.  8.100 / 59.  8.100
+
+  libavcodec     61.  3.100 / 61.  3.100
+
+  libavformat    61.  1.100 / 61.  1.100
+
+  libavdevice    61.  1.100 / 61.  1.100
+
+  libavfilter    10.  1.100 / 10.  1.100
+
+  libswscale      8.  1.100 /  8.  1.100
+
+  libswresample   5.  1.100 /  5.  1.100
+
+  libpostproc    58.  1.100 / 58.  1.100
+
+[in#0 @ 000002d3ac0b8500] Error opening input: No such file or directory
+
+Error opening input file /chunk_o.mp3.
+
+Error opening input files: No such file or directory
+
+
+2024-05-22 16:17:49,008 - ERROR - An error occurred during transcription and translation of audio files: Failed to load audio: ffmpeg version 7.0-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+
+  libavutil      59.  8.100 / 59.  8.100
+
+  libavcodec     61.  3.100 / 61.  3.100
+
+  libavformat    61.  1.100 / 61.  1.100
+
+  libavdevice    61.  1.100 / 61.  1.100
+
+  libavfilter    10.  1.100 / 10.  1.100
+
+  libswscale      8.  1.100 /  8.  1.100
+
+  libswresample   5.  1.100 /  5.  1.100
+
+  libpostproc    58.  1.100 / 58.  1.100
+
+[in#0 @ 000002d3ac0b8500] Error opening input: No such file or directory
+
+Error opening input file /chunk_o.mp3.
+
+Error opening input files: No such file or directory
+
+
+2024-05-22 16:18:03,674 - INFO - Transcribing and translating audio files...
+2024-05-22 16:18:03,674 - INFO - Transcribing and translating audio files...
+2024-05-22 16:18:03,674 - INFO - Transcribing and translating audio files...
+2024-05-22 16:18:03,676 - INFO - Loading Whisper model...
+2024-05-22 16:18:03,676 - INFO - Loading Whisper model...
+2024-05-22 16:18:03,676 - INFO - Loading Whisper model...
+2024-05-22 16:18:04,304 - INFO - Transcribing audio file...
+2024-05-22 16:18:04,304 - INFO - Transcribing audio file...
+2024-05-22 16:18:04,304 - INFO - Transcribing audio file...
+2024-05-22 16:18:04,340 - ERROR - An error occurred during transcription and translation of audio files: Failed to load audio: ffmpeg version 7.0-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+
+  libavutil      59.  8.100 / 59.  8.100
+
+  libavcodec     61.  3.100 / 61.  3.100
+
+  libavformat    61.  1.100 / 61.  1.100
+
+  libavdevice    61.  1.100 / 61.  1.100
+
+  libavfilter    10.  1.100 / 10.  1.100
+
+  libswscale      8.  1.100 /  8.  1.100
+
+  libswresample   5.  1.100 /  5.  1.100
+
+  libpostproc    58.  1.100 / 58.  1.100
+
+[in#0 @ 00000146fb598500] Error opening input: No such file or directory
+
+Error opening input file ./chunk_o.mp3.
+
+Error opening input files: No such file or directory
+
+
+2024-05-22 16:18:04,340 - ERROR - An error occurred during transcription and translation of audio files: Failed to load audio: ffmpeg version 7.0-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+
+  libavutil      59.  8.100 / 59.  8.100
+
+  libavcodec     61.  3.100 / 61.  3.100
+
+  libavformat    61.  1.100 / 61.  1.100
+
+  libavdevice    61.  1.100 / 61.  1.100
+
+  libavfilter    10.  1.100 / 10.  1.100
+
+  libswscale      8.  1.100 /  8.  1.100
+
+  libswresample   5.  1.100 /  5.  1.100
+
+  libpostproc    58.  1.100 / 58.  1.100
+
+[in#0 @ 00000146fb598500] Error opening input: No such file or directory
+
+Error opening input file ./chunk_o.mp3.
+
+Error opening input files: No such file or directory
+
+
+2024-05-22 16:18:04,340 - ERROR - An error occurred during transcription and translation of audio files: Failed to load audio: ffmpeg version 7.0-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+
+  libavutil      59.  8.100 / 59.  8.100
+
+  libavcodec     61.  3.100 / 61.  3.100
+
+  libavformat    61.  1.100 / 61.  1.100
+
+  libavdevice    61.  1.100 / 61.  1.100
+
+  libavfilter    10.  1.100 / 10.  1.100
+
+  libswscale      8.  1.100 /  8.  1.100
+
+  libswresample   5.  1.100 /  5.  1.100
+
+  libpostproc    58.  1.100 / 58.  1.100
+
+[in#0 @ 00000146fb598500] Error opening input: No such file or directory
+
+Error opening input file ./chunk_o.mp3.
+
+Error opening input files: No such file or directory
+
+
+2024-05-22 16:18:49,781 - INFO - Transcribing and translating audio files...
+2024-05-22 16:18:49,781 - INFO - Transcribing and translating audio files...
+2024-05-22 16:18:49,781 - INFO - Transcribing and translating audio files...
+2024-05-22 16:18:49,781 - INFO - Transcribing and translating audio files...
+2024-05-22 16:18:49,782 - INFO - Loading Whisper model...
+2024-05-22 16:18:49,782 - INFO - Loading Whisper model...
+2024-05-22 16:18:49,782 - INFO - Loading Whisper model...
+2024-05-22 16:18:49,782 - INFO - Loading Whisper model...
+2024-05-22 16:18:50,428 - INFO - Transcribing audio file...
+2024-05-22 16:18:50,428 - INFO - Transcribing audio file...
+2024-05-22 16:18:50,428 - INFO - Transcribing audio file...
+2024-05-22 16:18:50,428 - INFO - Transcribing audio file...
+2024-05-22 16:20:14,711 - INFO - Extracting transcription chunks...
+2024-05-22 16:20:14,711 - INFO - Extracting transcription chunks...
+2024-05-22 16:20:14,711 - INFO - Extracting transcription chunks...
+2024-05-22 16:20:14,711 - INFO - Extracting transcription chunks...
+2024-05-22 16:20:14,713 - INFO - Tokenizing transcribed text into sentences...
+2024-05-22 16:20:14,713 - INFO - Tokenizing transcribed text into sentences...
+2024-05-22 16:20:14,713 - INFO - Tokenizing transcribed text into sentences...
+2024-05-22 16:20:14,713 - INFO - Tokenizing transcribed text into sentences...
+2024-05-22 16:20:14,723 - ERROR - An error occurred during transcription and translation of audio files: All arrays must be of the same length
+2024-05-22 16:20:14,723 - ERROR - An error occurred during transcription and translation of audio files: All arrays must be of the same length
+2024-05-22 16:20:14,723 - ERROR - An error occurred during transcription and translation of audio files: All arrays must be of the same length
+2024-05-22 16:20:14,723 - ERROR - An error occurred during transcription and translation of audio files: All arrays must be of the same length
+2024-05-22 16:40:27,486 - __main__ - INFO - Starting program...
+2024-05-22 16:40:28,572 - INFO - Transcribing and translating audio files...
+2024-05-22 16:40:28,572 - INFO - Loading Whisper model...
+2024-05-22 16:40:29,202 - INFO - Transcribing audio file...
+2024-05-22 16:42:23,626 - INFO - Extracting transcription chunks...
+2024-05-22 16:42:23,626 - INFO - Tokenizing transcribed text into sentences...
+2024-05-22 16:42:23,648 - __main__ - INFO - Getting predictions...
+2024-05-22 16:42:23,648 - INFO - Starting predictions...
+2024-05-22 16:42:23,648 - INFO - Starting predictions...
+2024-05-22 16:44:38,734 - __main__ - INFO - Starting program...
+2024-05-22 16:44:39,815 - INFO - Transcribing and translating audio files...
+2024-05-22 16:44:39,816 - INFO - Loading Whisper model...
+2024-05-22 16:44:40,421 - INFO - Transcribing audio file...
+2024-05-22 16:46:36,215 - INFO - Extracting transcription chunks...
+2024-05-22 16:46:36,216 - INFO - Tokenizing transcribed text into sentences...
+2024-05-22 16:46:36,230 - __main__ - INFO - Getting predictions...
+2024-05-22 16:46:36,230 - INFO - Starting predictions...
+2024-05-22 16:46:36,230 - INFO - Starting predictions...
+2024-05-23 07:18:44,512 - __main__ - INFO - Starting program...
+2024-05-23 07:18:46,045 - INFO - Transcribing and translating audio files...
+2024-05-23 07:18:46,045 - INFO - Loading Whisper model...
+2024-05-23 07:18:47,141 - INFO - Transcribing audio file...
+2024-05-23 07:18:47,144 - ERROR - An error occurred during transcription and tokenization of audio files: [WinError 2] The system cannot find the file specified
+2024-05-23 07:18:47,152 - __main__ - INFO - Getting predictions...
+2024-05-23 07:18:47,152 - INFO - Starting predictions...
+2024-05-23 07:18:47,152 - INFO - Starting predictions...
+2024-05-23 07:18:47,152 - INFO - Predictions completed.
+2024-05-23 07:18:47,152 - INFO - Predictions completed.
+2024-05-23 07:18:47,159 - __main__ - INFO - Program finished.
+2024-05-23 07:33:20,999 - __main__ - INFO - Starting program...
+2024-05-23 07:33:22,472 - INFO - Transcribing and translating audio files...
+2024-05-23 07:33:22,472 - INFO - Loading Whisper model...
+2024-05-23 07:33:23,333 - INFO - Transcribing audio file...
+2024-05-23 07:33:23,343 - ERROR - An error occurred during transcription and tokenization of audio files: [WinError 2] The system cannot find the file specified
+2024-05-23 07:33:23,346 - __main__ - INFO - Getting predictions...
+2024-05-23 07:33:23,347 - INFO - Starting predictions...
+2024-05-23 07:33:23,347 - INFO - Starting predictions...
+2024-05-23 07:33:23,348 - INFO - Predictions completed.
+2024-05-23 07:33:23,348 - INFO - Predictions completed.
+2024-05-23 07:33:23,348 - __main__ - INFO - Program finished.
+2024-05-23 07:35:43,129 - __main__ - INFO - Starting program...
+2024-05-23 07:35:44,573 - INFO - Transcribing and translating audio files...
+2024-05-23 07:35:44,573 - INFO - Loading Whisper model...
+2024-05-23 07:35:45,438 - INFO - Transcribing audio file...
+2024-05-23 07:35:45,448 - ERROR - An error occurred during transcription and tokenization of audio files: [WinError 2] The system cannot find the file specified
+2024-05-23 07:35:45,452 - __main__ - INFO - Getting predictions...
+2024-05-23 07:35:45,452 - INFO - Starting predictions...
+2024-05-23 07:35:45,452 - INFO - Starting predictions...
+2024-05-23 07:35:45,453 - INFO - Predictions completed.
+2024-05-23 07:35:45,453 - INFO - Predictions completed.
+2024-05-23 07:35:45,453 - __main__ - INFO - Program finished.
+2024-05-23 15:40:32,654 - __main__ - INFO - Starting program...
+2024-05-23 15:40:34,765 - INFO - Transcribing and translating audio files...
+2024-05-23 15:40:34,765 - INFO - Loading Whisper model...
+2024-05-23 15:40:37,352 - INFO - Transcribing audio file...
+2024-05-23 15:40:37,369 - ERROR - An error occurred during transcription and tokenization of audio files: [WinError 2] The system cannot find the file specified
+2024-05-23 15:40:37,374 - __main__ - INFO - Getting predictions...
+2024-05-23 15:40:37,374 - INFO - Starting predictions...
+2024-05-23 15:40:37,374 - INFO - Starting predictions...
+2024-05-23 15:40:37,374 - INFO - Predictions completed.
+2024-05-23 15:40:37,374 - INFO - Predictions completed.
+2024-05-23 15:40:37,374 - __main__ - INFO - Program finished.
+2024-05-23 15:42:41,774 - __main__ - INFO - Starting program...
+2024-05-23 15:42:43,268 - INFO - Transcribing and translating audio files...
+2024-05-23 15:42:43,268 - INFO - Loading Whisper model...
+2024-05-23 15:42:44,796 - INFO - Transcribing audio file...
+2024-05-23 15:42:44,810 - ERROR - An error occurred during transcription and tokenization of audio files: [WinError 2] The system cannot find the file specified
+2024-05-23 15:42:44,810 - __main__ - INFO - Getting predictions...
+2024-05-23 15:42:44,815 - INFO - Starting predictions...
+2024-05-23 15:42:44,815 - INFO - Starting predictions...
+2024-05-23 15:42:44,817 - INFO - Predictions completed.
+2024-05-23 15:42:44,817 - INFO - Predictions completed.
+2024-05-23 15:42:44,817 - __main__ - INFO - Program finished.
+2024-05-23 15:51:03,755 - INFO - Transcribing and translating audio files...
+2024-05-23 15:51:03,755 - INFO - Loading Whisper model...
+2024-05-23 15:51:04,440 - INFO - Transcribing audio file...
+2024-05-23 15:51:04,451 - ERROR - An error occurred during transcription and tokenization of audio files: [WinError 2] The system cannot find the file specified
+2024-05-23 16:01:19,030 - __main__ - INFO - Starting program...
+2024-05-23 16:01:20,275 - INFO - Transcribing and translating audio files...
+2024-05-23 16:01:20,276 - INFO - Loading Whisper model...
+2024-05-23 16:01:20,884 - INFO - Transcribing audio file...
+2024-05-23 16:01:20,891 - ERROR - An error occurred during transcription and tokenization of audio files: [WinError 2] The system cannot find the file specified
+2024-05-23 16:01:20,898 - __main__ - INFO - Getting predictions...
+2024-05-23 16:01:20,898 - INFO - Starting predictions...
+2024-05-23 16:01:20,898 - INFO - Starting predictions...
+2024-05-23 16:01:20,898 - INFO - Predictions completed.
+2024-05-23 16:01:20,898 - INFO - Predictions completed.
+2024-05-23 16:01:20,898 - __main__ - INFO - Program finished.
+2024-05-23 16:05:32,573 - __main__ - INFO - Starting program...
+2024-05-23 16:05:33,566 - INFO - Transcribing and translating audio files...
+2024-05-23 16:05:33,566 - INFO - Loading Whisper model...
+2024-05-23 16:05:34,233 - INFO - Transcribing audio file...
+2024-05-23 16:05:34,242 - ERROR - An error occurred during transcription and tokenization of audio files: [WinError 2] The system cannot find the file specified
+2024-05-23 16:05:34,245 - __main__ - INFO - Getting predictions...
+2024-05-23 16:05:34,246 - INFO - Starting predictions...
+2024-05-23 16:05:34,246 - INFO - Starting predictions...
+2024-05-23 16:05:34,247 - INFO - Predictions completed.
+2024-05-23 16:05:34,247 - INFO - Predictions completed.
+2024-05-23 16:05:34,247 - __main__ - INFO - Program finished.
+2024-05-23 16:06:04,812 - INFO - Transcribing and translating audio files...
+2024-05-23 16:06:04,812 - INFO - Transcribing and translating audio files...
+2024-05-23 16:06:04,814 - INFO - Loading Whisper model...
+2024-05-23 16:06:04,814 - INFO - Loading Whisper model...
+2024-05-23 16:06:05,379 - INFO - Transcribing audio file...
+2024-05-23 16:06:05,379 - INFO - Transcribing audio file...
+2024-05-23 16:06:05,385 - ERROR - An error occurred during transcription and tokenization of audio files: [WinError 2] The system cannot find the file specified
+2024-05-23 16:06:05,385 - ERROR - An error occurred during transcription and tokenization of audio files: [WinError 2] The system cannot find the file specified
+2024-05-23 16:56:48,625 - __main__ - INFO - Starting program...
+2024-05-23 16:56:49,582 - INFO - Transcribing and translating audio files...
+2024-05-23 16:56:49,589 - INFO - Loading Whisper model...
+2024-05-23 16:56:50,193 - INFO - Transcribing audio file...
+2024-05-23 16:56:50,200 - ERROR - An error occurred during transcription and tokenization of audio files: [WinError 2] The system cannot find the file specified
+2024-05-23 16:56:50,207 - __main__ - INFO - Getting predictions...
+2024-05-23 16:56:50,207 - INFO - Starting predictions...
+2024-05-23 16:56:50,207 - INFO - Starting predictions...
+2024-05-23 16:56:50,207 - INFO - Predictions completed.
+2024-05-23 16:56:50,207 - INFO - Predictions completed.
+2024-05-23 16:56:50,207 - __main__ - INFO - Program finished.
+2024-05-27 09:14:43,931 - __main__ - INFO - Starting program...
+2024-05-27 09:14:45,313 - INFO - Transcribing and translating audio files...
+2024-05-27 09:14:45,313 - INFO - Loading Whisper model...
+2024-05-27 09:14:46,178 - INFO - Transcribing audio file...
+2024-05-27 09:14:46,183 - ERROR - An error occurred during transcription and tokenization of audio files: [WinError 2] The system cannot find the file specified
+2024-05-27 09:14:46,191 - __main__ - INFO - Getting predictions...
+2024-05-27 09:14:46,191 - INFO - Starting predictions...
+2024-05-27 09:14:46,191 - INFO - Starting predictions...
+2024-05-27 09:14:46,191 - INFO - Predictions completed.
+2024-05-27 09:14:46,191 - INFO - Predictions completed.
+2024-05-27 09:14:46,191 - __main__ - INFO - Program finished.
+2024-05-27 10:13:12,882 - __main__ - INFO - Starting program...
+2024-05-27 10:13:13,983 - INFO - Transcribing and translating audio files...
+2024-05-27 10:13:13,983 - INFO - Loading Whisper model...
+2024-05-27 10:13:14,596 - INFO - Transcribing audio file...
+2024-05-27 10:16:08,020 - INFO - Extracting transcription chunks...
+2024-05-27 10:16:08,020 - INFO - Tokenizing transcribed text into sentences...
+2024-05-27 10:16:08,035 - __main__ - INFO - Getting predictions...
+2024-05-27 10:17:03,789 - __main__ - INFO - Starting program...
+2024-05-27 10:17:04,826 - INFO - Transcribing and translating audio files...
+2024-05-27 10:17:04,826 - INFO - Loading Whisper model...
+2024-05-27 10:17:05,404 - INFO - Transcribing audio file...
+2024-05-27 10:18:55,303 - INFO - Extracting transcription chunks...
+2024-05-27 10:18:55,303 - INFO - Tokenizing transcribed text into sentences...
+2024-05-27 10:18:55,321 - __main__ - INFO - Getting predictions...
+2024-05-27 10:18:55,322 - INFO - Starting predictions...
+2024-05-27 10:18:55,322 - INFO - Starting predictions...
+2024-05-27 10:18:55,322 - INFO - Starting dataset_loader function
+2024-05-27 10:18:55,322 - INFO - Starting dataset_loader function
+2024-05-27 10:18:55,322 - INFO - Starting dataset_loader function
+2024-05-27 10:18:55,964 - INFO - Max length of tokenized texts: 34
+2024-05-27 10:18:55,964 - INFO - Max length of tokenized texts: 34
+2024-05-27 10:18:55,964 - INFO - Max length of tokenized texts: 34
+2024-05-27 10:18:55,981 - INFO - DataLoader size: 6
+2024-05-27 10:18:55,981 - INFO - DataLoader size: 6
+2024-05-27 10:18:55,981 - INFO - DataLoader size: 6
+2024-05-27 10:18:55,982 - INFO - Successfully created DataLoader
+2024-05-27 10:18:55,982 - INFO - Successfully created DataLoader
+2024-05-27 10:18:55,982 - INFO - Successfully created DataLoader
+2024-05-27 10:26:14,475 - __main__ - INFO - Starting program...
+2024-05-27 10:26:15,531 - INFO - Transcribing and translating audio files...
+2024-05-27 10:26:15,531 - INFO - Loading Whisper model...
+2024-05-27 10:26:16,174 - INFO - Transcribing audio file...
+2024-05-27 10:28:40,295 - INFO - Extracting transcription chunks...
+2024-05-27 10:28:40,296 - INFO - Tokenizing transcribed text into sentences...
+2024-05-27 10:28:40,310 - __main__ - INFO - Getting predictions...
+2024-05-27 10:28:40,310 - INFO - Starting predictions...
+2024-05-27 10:28:40,310 - INFO - Starting predictions...
+2024-05-27 10:28:40,311 - INFO - Starting dataset_loader function
+2024-05-27 10:28:40,311 - INFO - Starting dataset_loader function
+2024-05-27 10:28:40,311 - INFO - Starting dataset_loader function
+2024-05-27 10:28:40,815 - INFO - Max length of tokenized texts: 44
+2024-05-27 10:28:40,815 - INFO - Max length of tokenized texts: 44
+2024-05-27 10:28:40,815 - INFO - Max length of tokenized texts: 44
+2024-05-27 10:28:40,834 - INFO - DataLoader size: 7
+2024-05-27 10:28:40,834 - INFO - DataLoader size: 7
+2024-05-27 10:28:40,834 - INFO - DataLoader size: 7
+2024-05-27 10:28:40,835 - INFO - Successfully created DataLoader
+2024-05-27 10:28:40,835 - INFO - Successfully created DataLoader
+2024-05-27 10:28:40,835 - INFO - Successfully created DataLoader
+2024-05-27 11:09:43,743 - __main__ - INFO - Starting program...
+2024-05-27 11:09:44,798 - INFO - Transcribing and translating audio files...
+2024-05-27 11:09:44,799 - INFO - Loading Whisper model...
+2024-05-27 11:09:45,375 - INFO - Transcribing audio file...
+2024-05-27 11:12:06,312 - INFO - Extracting transcription chunks...
+2024-05-27 11:12:06,312 - INFO - Tokenizing transcribed text into sentences...
+2024-05-27 11:12:06,329 - __main__ - INFO - Getting predictions...
+2024-05-27 11:12:06,329 - INFO - Starting predictions...
+2024-05-27 11:12:06,329 - INFO - Starting predictions...
+2024-05-27 11:12:06,330 - INFO - Starting dataset_loader function
+2024-05-27 11:12:06,330 - INFO - Starting dataset_loader function
+2024-05-27 11:12:06,330 - INFO - Starting dataset_loader function
+2024-05-27 11:12:06,865 - INFO - Max length of tokenized texts: 29
+2024-05-27 11:12:06,865 - INFO - Max length of tokenized texts: 29
+2024-05-27 11:12:06,865 - INFO - Max length of tokenized texts: 29
+2024-05-27 11:12:06,883 - INFO - DataLoader size: 6
+2024-05-27 11:12:06,883 - INFO - DataLoader size: 6
+2024-05-27 11:12:06,883 - INFO - DataLoader size: 6
+2024-05-27 11:12:06,884 - INFO - Successfully created DataLoader
+2024-05-27 11:12:06,884 - INFO - Successfully created DataLoader
+2024-05-27 11:12:06,884 - INFO - Successfully created DataLoader
+2024-05-27 11:12:41,689 - __main__ - INFO - Starting program...
+2024-05-27 11:12:42,756 - INFO - Transcribing and translating audio files...
+2024-05-27 11:12:42,756 - INFO - Loading Whisper model...
+2024-05-27 11:12:43,324 - INFO - Transcribing audio file...
+2024-05-27 11:14:59,999 - INFO - Extracting transcription chunks...
+2024-05-27 11:15:00,000 - INFO - Tokenizing transcribed text into sentences...
+2024-05-27 11:15:00,014 - __main__ - INFO - Getting predictions...
+2024-05-27 11:15:00,015 - INFO - Starting predictions...
+2024-05-27 11:15:00,015 - INFO - Starting predictions...
+2024-05-27 11:15:00,015 - INFO - Starting dataset_loader function
+2024-05-27 11:15:00,015 - INFO - Starting dataset_loader function
+2024-05-27 11:15:00,015 - INFO - Starting dataset_loader function
+2024-05-27 11:15:00,526 - INFO - Max length of tokenized texts: 64
+2024-05-27 11:15:00,526 - INFO - Max length of tokenized texts: 64
+2024-05-27 11:15:00,526 - INFO - Max length of tokenized texts: 64
+2024-05-27 11:15:00,555 - INFO - DataLoader size: 6
+2024-05-27 11:15:00,555 - INFO - DataLoader size: 6
+2024-05-27 11:15:00,555 - INFO - DataLoader size: 6
+2024-05-27 11:15:00,555 - INFO - Successfully created DataLoader
+2024-05-27 11:15:00,555 - INFO - Successfully created DataLoader
+2024-05-27 11:15:00,555 - INFO - Successfully created DataLoader
+2024-05-27 11:27:41,276 - __main__ - INFO - Starting program...
+2024-05-27 11:27:42,323 - INFO - Transcribing and translating audio files...
+2024-05-27 11:27:42,323 - INFO - Loading Whisper model...
+2024-05-27 11:27:42,917 - INFO - Transcribing audio file...
+2024-05-27 11:29:43,800 - INFO - Extracting transcription chunks...
+2024-05-27 11:29:43,806 - __main__ - INFO - Getting predictions...
+2024-05-27 11:29:43,807 - INFO - Starting predictions...
+2024-05-27 11:29:43,807 - INFO - Starting predictions...
+2024-05-27 11:29:43,807 - INFO - Starting dataset_loader function
+2024-05-27 11:29:43,807 - INFO - Starting dataset_loader function
+2024-05-27 11:29:43,807 - INFO - Starting dataset_loader function
+2024-05-27 11:29:44,320 - INFO - Max length of tokenized texts: 29
+2024-05-27 11:29:44,320 - INFO - Max length of tokenized texts: 29
+2024-05-27 11:29:44,320 - INFO - Max length of tokenized texts: 29
+2024-05-27 11:29:44,337 - INFO - DataLoader size: 6
+2024-05-27 11:29:44,337 - INFO - DataLoader size: 6
+2024-05-27 11:29:44,337 - INFO - DataLoader size: 6
+2024-05-27 11:29:44,338 - INFO - Successfully created DataLoader
+2024-05-27 11:29:44,338 - INFO - Successfully created DataLoader
+2024-05-27 11:29:44,338 - INFO - Successfully created DataLoader
+2024-05-27 15:03:46,713 - INFO - Starting predictions...
+2024-05-27 15:03:46,713 - INFO - Starting dataset_loader function
+2024-05-27 15:03:46,713 - INFO - Starting dataset_loader function
+2024-05-27 15:03:46,931 - INFO - Max length of tokenized texts: 14
+2024-05-27 15:03:46,931 - INFO - Max length of tokenized texts: 14
+2024-05-27 15:03:46,935 - INFO - DataLoader size: 10
+2024-05-27 15:03:46,935 - INFO - DataLoader size: 10
+2024-05-27 15:03:46,935 - INFO - Successfully created DataLoader
+2024-05-27 15:03:46,935 - INFO - Successfully created DataLoader
+2024-05-27 15:03:47,766 - INFO - Predictions completed.
+2024-05-27 15:03:47,766 - INFO - Predictions completed.
+2024-05-27 15:05:10,199 - INFO - Starting predictions...
+2024-05-27 15:05:10,200 - INFO - Starting dataset_loader function
+2024-05-27 15:05:10,200 - INFO - Starting dataset_loader function
+2024-05-27 15:05:10,386 - INFO - Max length of tokenized texts: 14
+2024-05-27 15:05:10,386 - INFO - Max length of tokenized texts: 14
+2024-05-27 15:05:10,390 - INFO - DataLoader size: 10
+2024-05-27 15:05:10,390 - INFO - DataLoader size: 10
+2024-05-27 15:05:10,390 - INFO - Successfully created DataLoader
+2024-05-27 15:05:10,390 - INFO - Successfully created DataLoader
+2024-05-27 15:06:18,190 - INFO - Starting predictions...
+2024-05-27 15:06:18,190 - INFO - Starting dataset_loader function
+2024-05-27 15:06:18,190 - INFO - Starting dataset_loader function
+2024-05-27 15:06:18,560 - INFO - Max length of tokenized texts: 14
+2024-05-27 15:06:18,560 - INFO - Max length of tokenized texts: 14
+2024-05-27 15:06:18,563 - INFO - DataLoader size: 10
+2024-05-27 15:06:18,563 - INFO - DataLoader size: 10
+2024-05-27 15:06:18,563 - INFO - Successfully created DataLoader
+2024-05-27 15:06:18,563 - INFO - Successfully created DataLoader
+2024-05-27 15:13:05,007 - INFO - Starting predictions...
+2024-05-27 15:13:05,008 - INFO - Starting dataset_loader function
+2024-05-27 15:13:05,008 - INFO - Starting dataset_loader function
+2024-05-27 15:13:05,203 - INFO - Max length of tokenized texts: 14
+2024-05-27 15:13:05,203 - INFO - Max length of tokenized texts: 14
+2024-05-27 15:13:05,207 - INFO - DataLoader size: 10
+2024-05-27 15:13:05,207 - INFO - DataLoader size: 10
+2024-05-27 15:13:05,207 - INFO - Successfully created DataLoader
+2024-05-27 15:13:05,207 - INFO - Successfully created DataLoader
+2024-05-27 15:13:05,879 - INFO - Predictions completed.
+2024-05-27 15:13:05,879 - INFO - Predictions completed.
+2024-05-27 15:13:05,910 - __main__ - INFO - Starting program...
+2024-05-27 15:13:07,019 - INFO - Transcribing and translating audio files...
+2024-05-27 15:13:07,019 - INFO - Transcribing and translating audio files...
+2024-05-27 15:13:07,019 - INFO - Transcribing and translating audio files...
+2024-05-27 15:13:07,021 - INFO - Loading Whisper model...
+2024-05-27 15:13:07,021 - INFO - Loading Whisper model...
+2024-05-27 15:13:07,021 - INFO - Loading Whisper model...
+2024-05-27 15:13:07,641 - INFO - Transcribing audio file...
+2024-05-27 15:13:07,641 - INFO - Transcribing audio file...
+2024-05-27 15:13:07,641 - INFO - Transcribing audio file...
+2024-05-27 15:15:01,386 - INFO - Extracting transcription chunks...
+2024-05-27 15:15:01,386 - INFO - Extracting transcription chunks...
+2024-05-27 15:15:01,386 - INFO - Extracting transcription chunks...
+2024-05-27 15:15:01,390 - __main__ - INFO - Getting predictions...
+2024-05-27 15:15:01,391 - INFO - Starting predictions...
+2024-05-27 15:15:01,391 - INFO - Starting predictions...
+2024-05-27 15:15:01,391 - INFO - Starting predictions...
+2024-05-27 15:15:01,391 - INFO - Starting predictions...
+2024-05-27 15:15:01,391 - INFO - Starting dataset_loader function
+2024-05-27 15:15:01,391 - INFO - Starting dataset_loader function
+2024-05-27 15:15:01,391 - INFO - Starting dataset_loader function
+2024-05-27 15:15:01,391 - INFO - Starting dataset_loader function
+2024-05-27 15:15:01,391 - INFO - Starting dataset_loader function
+2024-05-27 15:15:01,604 - INFO - Max length of tokenized texts: 30
+2024-05-27 15:15:01,604 - INFO - Max length of tokenized texts: 30
+2024-05-27 15:15:01,604 - INFO - Max length of tokenized texts: 30
+2024-05-27 15:15:01,604 - INFO - Max length of tokenized texts: 30
+2024-05-27 15:15:01,604 - INFO - Max length of tokenized texts: 30
+2024-05-27 15:15:01,620 - INFO - DataLoader size: 161
+2024-05-27 15:15:01,620 - INFO - DataLoader size: 161
+2024-05-27 15:15:01,620 - INFO - DataLoader size: 161
+2024-05-27 15:15:01,620 - INFO - DataLoader size: 161
+2024-05-27 15:15:01,620 - INFO - DataLoader size: 161
+2024-05-27 15:15:01,620 - INFO - Successfully created DataLoader
+2024-05-27 15:15:01,620 - INFO - Successfully created DataLoader
+2024-05-27 15:15:01,620 - INFO - Successfully created DataLoader
+2024-05-27 15:15:01,620 - INFO - Successfully created DataLoader
+2024-05-27 15:15:01,620 - INFO - Successfully created DataLoader
+2024-05-27 15:15:11,899 - INFO - Predictions completed.
+2024-05-27 15:15:11,899 - INFO - Predictions completed.
+2024-05-27 15:15:11,899 - INFO - Predictions completed.
+2024-05-27 15:15:11,899 - INFO - Predictions completed.
+2024-05-27 15:15:11,899 - INFO - Predictions completed.
+2024-05-27 15:15:11,900 - __main__ - INFO - Program finished.
+2024-06-03 15:52:16,117 - INFO - Loading CSV file...
+2024-06-03 15:52:16,188 - INFO - Loaded 30000 rows from file.
+2024-06-03 15:52:16,192 - INFO - Returning DataFrame with 'sentence' and 'emotion' columns.
+2024-06-03 15:52:16,228 - INFO - Minimum count of samples among all classes: 5000
+2024-06-03 15:52:16,228 - INFO - Minimum count of samples among all classes: 5000
+2024-06-03 15:52:16,238 - INFO - Added 5000 samples of class anger to the balanced DataFrame.
+2024-06-03 15:52:16,238 - INFO - Added 5000 samples of class anger to the balanced DataFrame.
+2024-06-03 15:52:16,243 - INFO - Added 5000 samples of class disgust to the balanced DataFrame.
+2024-06-03 15:52:16,243 - INFO - Added 5000 samples of class disgust to the balanced DataFrame.
+2024-06-03 15:52:16,248 - INFO - Added 5000 samples of class fear to the balanced DataFrame.
+2024-06-03 15:52:16,248 - INFO - Added 5000 samples of class fear to the balanced DataFrame.
+2024-06-03 15:52:16,253 - INFO - Added 5000 samples of class happiness to the balanced DataFrame.
+2024-06-03 15:52:16,253 - INFO - Added 5000 samples of class happiness to the balanced DataFrame.
+2024-06-03 15:52:16,258 - INFO - Added 5000 samples of class sadness to the balanced DataFrame.
+2024-06-03 15:52:16,258 - INFO - Added 5000 samples of class sadness to the balanced DataFrame.
+2024-06-03 15:52:16,262 - INFO - Added 5000 samples of class surprise to the balanced DataFrame.
+2024-06-03 15:52:16,262 - INFO - Added 5000 samples of class surprise to the balanced DataFrame.
+2024-06-03 15:52:16,270 - INFO - Balancing completed. Total samples in balanced DataFrame: 30000
+2024-06-03 15:52:16,270 - INFO - Balancing completed. Total samples in balanced DataFrame: 30000
+2024-06-03 15:52:35,576 - INFO - Loading CSV file...
+2024-06-03 15:52:35,641 - INFO - Loaded 30000 rows from file.
+2024-06-03 15:52:35,642 - INFO - Returning DataFrame with 'sentence' and 'emotion' columns.
+2024-06-03 15:52:35,671 - INFO - Minimum count of samples among all classes: 5000
+2024-06-03 15:52:35,671 - INFO - Minimum count of samples among all classes: 5000
+2024-06-03 15:52:35,681 - INFO - Added 5000 samples of class anger to the balanced DataFrame.
+2024-06-03 15:52:35,681 - INFO - Added 5000 samples of class anger to the balanced DataFrame.
+2024-06-03 15:52:35,687 - INFO - Added 5000 samples of class disgust to the balanced DataFrame.
+2024-06-03 15:52:35,687 - INFO - Added 5000 samples of class disgust to the balanced DataFrame.
+2024-06-03 15:52:35,694 - INFO - Added 5000 samples of class fear to the balanced DataFrame.
+2024-06-03 15:52:35,694 - INFO - Added 5000 samples of class fear to the balanced DataFrame.
+2024-06-03 15:52:35,699 - INFO - Added 5000 samples of class happiness to the balanced DataFrame.
+2024-06-03 15:52:35,699 - INFO - Added 5000 samples of class happiness to the balanced DataFrame.
+2024-06-03 15:52:35,705 - INFO - Added 5000 samples of class sadness to the balanced DataFrame.
+2024-06-03 15:52:35,705 - INFO - Added 5000 samples of class sadness to the balanced DataFrame.
+2024-06-03 15:52:35,711 - INFO - Added 5000 samples of class surprise to the balanced DataFrame.
+2024-06-03 15:52:35,711 - INFO - Added 5000 samples of class surprise to the balanced DataFrame.
+2024-06-03 15:52:35,717 - INFO - Balancing completed. Total samples in balanced DataFrame: 30000
+2024-06-03 15:52:35,717 - INFO - Balancing completed. Total samples in balanced DataFrame: 30000
+2024-06-03 15:52:35,932 - INFO - Minimum count of samples among all classes: 20
+2024-06-03 15:52:35,932 - INFO - Minimum count of samples among all classes: 20
+2024-06-03 15:52:35,932 - INFO - Minimum count of samples among all classes: 20
+2024-06-03 15:52:35,938 - INFO - Added 20 samples of class anger to the balanced DataFrame.
+2024-06-03 15:52:35,938 - INFO - Added 20 samples of class anger to the balanced DataFrame.
+2024-06-03 15:52:35,938 - INFO - Added 20 samples of class anger to the balanced DataFrame.
+2024-06-03 15:52:35,941 - INFO - Added 20 samples of class disgust to the balanced DataFrame.
+2024-06-03 15:52:35,941 - INFO - Added 20 samples of class disgust to the balanced DataFrame.
+2024-06-03 15:52:35,941 - INFO - Added 20 samples of class disgust to the balanced DataFrame.
+2024-06-03 15:52:35,945 - INFO - Added 20 samples of class fear to the balanced DataFrame.
+2024-06-03 15:52:35,945 - INFO - Added 20 samples of class fear to the balanced DataFrame.
+2024-06-03 15:52:35,945 - INFO - Added 20 samples of class fear to the balanced DataFrame.
+2024-06-03 15:52:35,948 - INFO - Added 20 samples of class happiness to the balanced DataFrame.
+2024-06-03 15:52:35,948 - INFO - Added 20 samples of class happiness to the balanced DataFrame.
+2024-06-03 15:52:35,948 - INFO - Added 20 samples of class happiness to the balanced DataFrame.
+2024-06-03 15:52:35,951 - INFO - Added 20 samples of class sadness to the balanced DataFrame.
+2024-06-03 15:52:35,951 - INFO - Added 20 samples of class sadness to the balanced DataFrame.
+2024-06-03 15:52:35,951 - INFO - Added 20 samples of class sadness to the balanced DataFrame.
+2024-06-03 15:52:35,953 - INFO - Added 20 samples of class surprise to the balanced DataFrame.
+2024-06-03 15:52:35,953 - INFO - Added 20 samples of class surprise to the balanced DataFrame.
+2024-06-03 15:52:35,953 - INFO - Added 20 samples of class surprise to the balanced DataFrame.
+2024-06-03 15:52:35,957 - INFO - Balancing completed. Total samples in balanced DataFrame: 120
+2024-06-03 15:52:35,957 - INFO - Balancing completed. Total samples in balanced DataFrame: 120
+2024-06-03 15:52:35,957 - INFO - Balancing completed. Total samples in balanced DataFrame: 120
+2024-06-03 15:52:35,987 - INFO - Performing spell checking and correction on column: sentence
+2024-06-03 15:52:35,987 - INFO - Performing spell checking and correction on column: sentence
+2024-06-03 15:52:35,987 - INFO - Performing spell checking and correction on column: sentence
+2024-06-03 15:52:35,987 - INFO - Performing spell checking and correction on column: sentence
+2024-06-03 15:52:35,991 - INFO - Correcting spelling errors in text: Or maybe he's just super hot? Can't help it if you're a casanova.
+2024-06-03 15:52:35,991 - INFO - Correcting spelling errors in text: Or maybe he's just super hot? Can't help it if you're a casanova.
+2024-06-03 15:52:35,991 - INFO - Correcting spelling errors in text: Or maybe he's just super hot? Can't help it if you're a casanova.
+2024-06-03 15:52:35,991 - INFO - Correcting spelling errors in text: Or maybe he's just super hot? Can't help it if you're a casanova.
+2024-06-03 15:52:36,274 - INFO - Correcting spelling errors in text: My parents always checked on us to make sure we were breathing, they always panicked if they didn’t hear us making sounds.
+2024-06-03 15:52:36,274 - INFO - Correcting spelling errors in text: My parents always checked on us to make sure we were breathing, they always panicked if they didn’t hear us making sounds.
+2024-06-03 15:52:36,274 - INFO - Correcting spelling errors in text: My parents always checked on us to make sure we were breathing, they always panicked if they didn’t hear us making sounds.
+2024-06-03 15:52:36,274 - INFO - Correcting spelling errors in text: My parents always checked on us to make sure we were breathing, they always panicked if they didn’t hear us making sounds.
+2024-06-03 15:52:36,528 - INFO - Correcting spelling errors in text: I meant, why don't you take Richard to the game? What?
+2024-06-03 15:52:36,528 - INFO - Correcting spelling errors in text: I meant, why don't you take Richard to the game? What?
+2024-06-03 15:52:36,528 - INFO - Correcting spelling errors in text: I meant, why don't you take Richard to the game? What?
+2024-06-03 15:52:36,528 - INFO - Correcting spelling errors in text: I meant, why don't you take Richard to the game? What?
+2024-06-03 15:52:36,534 - INFO - Correcting spelling errors in text: My money is on [NAME]. Doubt [NAME] is back up next yr. [NAME] looked.good last preseason. I was surprised he didn't beat [NAME] then.
+2024-06-03 15:52:36,534 - INFO - Correcting spelling errors in text: My money is on [NAME]. Doubt [NAME] is back up next yr. [NAME] looked.good last preseason. I was surprised he didn't beat [NAME] then.
+2024-06-03 15:52:36,534 - INFO - Correcting spelling errors in text: My money is on [NAME]. Doubt [NAME] is back up next yr. [NAME] looked.good last preseason. I was surprised he didn't beat [NAME] then.
+2024-06-03 15:52:36,534 - INFO - Correcting spelling errors in text: My money is on [NAME]. Doubt [NAME] is back up next yr. [NAME] looked.good last preseason. I was surprised he didn't beat [NAME] then.
+2024-06-03 15:52:37,149 - INFO - Correcting spelling errors in text: Man, that sounds like a big stuff around. Good luck getting it sorted
+2024-06-03 15:52:37,149 - INFO - Correcting spelling errors in text: Man, that sounds like a big stuff around. Good luck getting it sorted
+2024-06-03 15:52:37,149 - INFO - Correcting spelling errors in text: Man, that sounds like a big stuff around. Good luck getting it sorted
+2024-06-03 15:52:37,149 - INFO - Correcting spelling errors in text: Man, that sounds like a big stuff around. Good luck getting it sorted
+2024-06-03 15:52:37,154 - INFO - Correcting spelling errors in text: Yea it’s a bit creepy
+2024-06-03 15:52:37,154 - INFO - Correcting spelling errors in text: Yea it’s a bit creepy
+2024-06-03 15:52:37,154 - INFO - Correcting spelling errors in text: Yea it’s a bit creepy
+2024-06-03 15:52:37,154 - INFO - Correcting spelling errors in text: Yea it’s a bit creepy
+2024-06-03 15:52:37,159 - INFO - Correcting spelling errors in text: What a disgusting person she is
+2024-06-03 15:52:37,159 - INFO - Correcting spelling errors in text: What a disgusting person she is
+2024-06-03 15:52:37,159 - INFO - Correcting spelling errors in text: What a disgusting person she is
+2024-06-03 15:52:37,159 - INFO - Correcting spelling errors in text: What a disgusting person she is
+2024-06-03 15:52:37,163 - INFO - Correcting spelling errors in text: > Pretty much the person I love just broke up completely with me After how long?
+2024-06-03 15:52:37,163 - INFO - Correcting spelling errors in text: > Pretty much the person I love just broke up completely with me After how long?
+2024-06-03 15:52:37,163 - INFO - Correcting spelling errors in text: > Pretty much the person I love just broke up completely with me After how long?
+2024-06-03 15:52:37,163 - INFO - Correcting spelling errors in text: > Pretty much the person I love just broke up completely with me After how long?
+2024-06-03 15:52:37,167 - INFO - Correcting spelling errors in text: Weird, weird.
+2024-06-03 15:52:37,167 - INFO - Correcting spelling errors in text: Weird, weird.
+2024-06-03 15:52:37,167 - INFO - Correcting spelling errors in text: Weird, weird.
+2024-06-03 15:52:37,167 - INFO - Correcting spelling errors in text: Weird, weird.
+2024-06-03 15:52:37,172 - INFO - Correcting spelling errors in text: Deadass? Shoook?? Come on [NAME], do you really talk like that? You sound dumb. 
+2024-06-03 15:52:37,172 - INFO - Correcting spelling errors in text: Deadass? Shoook?? Come on [NAME], do you really talk like that? You sound dumb. 
+2024-06-03 15:52:37,172 - INFO - Correcting spelling errors in text: Deadass? Shoook?? Come on [NAME], do you really talk like that? You sound dumb. 
+2024-06-03 15:52:37,172 - INFO - Correcting spelling errors in text: Deadass? Shoook?? Come on [NAME], do you really talk like that? You sound dumb. 
+2024-06-03 15:52:37,314 - INFO - Correcting spelling errors in text: Been their. We got into a huge argument and that caused our first break up. Video games...
+2024-06-03 15:52:37,314 - INFO - Correcting spelling errors in text: Been their. We got into a huge argument and that caused our first break up. Video games...
+2024-06-03 15:52:37,314 - INFO - Correcting spelling errors in text: Been their. We got into a huge argument and that caused our first break up. Video games...
+2024-06-03 15:52:37,314 - INFO - Correcting spelling errors in text: Been their. We got into a huge argument and that caused our first break up. Video games...
+2024-06-03 15:52:37,321 - INFO - Correcting spelling errors in text: I’m sorry. He’s in a better place. I hope you can keep the good memories
+2024-06-03 15:52:37,321 - INFO - Correcting spelling errors in text: I’m sorry. He’s in a better place. I hope you can keep the good memories
+2024-06-03 15:52:37,321 - INFO - Correcting spelling errors in text: I’m sorry. He’s in a better place. I hope you can keep the good memories
+2024-06-03 15:52:37,321 - INFO - Correcting spelling errors in text: I’m sorry. He’s in a better place. I hope you can keep the good memories
+2024-06-03 15:52:37,327 - INFO - Correcting spelling errors in text: You’re right. My biggest pet peeve is the lights, it washes out all the colors and textures, I hate that BGs use them
+2024-06-03 15:52:37,327 - INFO - Correcting spelling errors in text: You’re right. My biggest pet peeve is the lights, it washes out all the colors and textures, I hate that BGs use them
+2024-06-03 15:52:37,327 - INFO - Correcting spelling errors in text: You’re right. My biggest pet peeve is the lights, it washes out all the colors and textures, I hate that BGs use them
+2024-06-03 15:52:37,327 - INFO - Correcting spelling errors in text: You’re right. My biggest pet peeve is the lights, it washes out all the colors and textures, I hate that BGs use them
+2024-06-03 15:52:37,494 - INFO - Correcting spelling errors in text: What the hell kind of useless annoying bot is this? Beep boop off to hell bot
+2024-06-03 15:52:37,494 - INFO - Correcting spelling errors in text: What the hell kind of useless annoying bot is this? Beep boop off to hell bot
+2024-06-03 15:52:37,494 - INFO - Correcting spelling errors in text: What the hell kind of useless annoying bot is this? Beep boop off to hell bot
+2024-06-03 15:52:37,494 - INFO - Correcting spelling errors in text: What the hell kind of useless annoying bot is this? Beep boop off to hell bot
+2024-06-03 15:52:37,502 - INFO - Correcting spelling errors in text: Oi! It was my turn to post that this hour!
+2024-06-03 15:52:37,502 - INFO - Correcting spelling errors in text: Oi! It was my turn to post that this hour!
+2024-06-03 15:52:37,502 - INFO - Correcting spelling errors in text: Oi! It was my turn to post that this hour!
+2024-06-03 15:52:37,502 - INFO - Correcting spelling errors in text: Oi! It was my turn to post that this hour!
+2024-06-03 15:52:37,507 - INFO - Correcting spelling errors in text: They'd probably just use it to buy up armies and navies for tyrants who oppress and reign with blood and horror or some shit.
+2024-06-03 15:52:37,507 - INFO - Correcting spelling errors in text: They'd probably just use it to buy up armies and navies for tyrants who oppress and reign with blood and horror or some shit.
+2024-06-03 15:52:37,507 - INFO - Correcting spelling errors in text: They'd probably just use it to buy up armies and navies for tyrants who oppress and reign with blood and horror or some shit.
+2024-06-03 15:52:37,507 - INFO - Correcting spelling errors in text: They'd probably just use it to buy up armies and navies for tyrants who oppress and reign with blood and horror or some shit.
+2024-06-03 15:52:37,514 - INFO - Correcting spelling errors in text: Can't tell if you're being sarcastic or not
+2024-06-03 15:52:37,514 - INFO - Correcting spelling errors in text: Can't tell if you're being sarcastic or not
+2024-06-03 15:52:37,514 - INFO - Correcting spelling errors in text: Can't tell if you're being sarcastic or not
+2024-06-03 15:52:37,514 - INFO - Correcting spelling errors in text: Can't tell if you're being sarcastic or not
+2024-06-03 15:52:37,521 - INFO - Correcting spelling errors in text: I'm surprised they play the national anthem at derby bouts there, been to many bouts in Minnesota and haven't once heard the national anthem performed.
+2024-06-03 15:52:37,521 - INFO - Correcting spelling errors in text: I'm surprised they play the national anthem at derby bouts there, been to many bouts in Minnesota and haven't once heard the national anthem performed.
+2024-06-03 15:52:37,521 - INFO - Correcting spelling errors in text: I'm surprised they play the national anthem at derby bouts there, been to many bouts in Minnesota and haven't once heard the national anthem performed.
+2024-06-03 15:52:37,521 - INFO - Correcting spelling errors in text: I'm surprised they play the national anthem at derby bouts there, been to many bouts in Minnesota and haven't once heard the national anthem performed.
+2024-06-03 15:52:37,853 - INFO - Correcting spelling errors in text: Congratulations! I'm sure your shoulders are much lighter now. You look absolutely gorgeous, keep killing it :D
+2024-06-03 15:52:37,853 - INFO - Correcting spelling errors in text: Congratulations! I'm sure your shoulders are much lighter now. You look absolutely gorgeous, keep killing it :D
+2024-06-03 15:52:37,853 - INFO - Correcting spelling errors in text: Congratulations! I'm sure your shoulders are much lighter now. You look absolutely gorgeous, keep killing it :D
+2024-06-03 15:52:37,853 - INFO - Correcting spelling errors in text: Congratulations! I'm sure your shoulders are much lighter now. You look absolutely gorgeous, keep killing it :D
+2024-06-03 15:52:37,861 - INFO - Correcting spelling errors in text: This is the best news I've heard in weeks. Source: Albertan where scum like wolves of odin are multiplying like fruit fly's.
+2024-06-03 15:52:37,861 - INFO - Correcting spelling errors in text: This is the best news I've heard in weeks. Source: Albertan where scum like wolves of odin are multiplying like fruit fly's.
+2024-06-03 15:52:37,861 - INFO - Correcting spelling errors in text: This is the best news I've heard in weeks. Source: Albertan where scum like wolves of odin are multiplying like fruit fly's.
+2024-06-03 15:52:37,861 - INFO - Correcting spelling errors in text: This is the best news I've heard in weeks. Source: Albertan where scum like wolves of odin are multiplying like fruit fly's.
+2024-06-03 15:52:37,870 - INFO - Correcting spelling errors in text: Where have I seen this before? Oh [NAME].
+2024-06-03 15:52:37,870 - INFO - Correcting spelling errors in text: Where have I seen this before? Oh [NAME].
+2024-06-03 15:52:37,870 - INFO - Correcting spelling errors in text: Where have I seen this before? Oh [NAME].
+2024-06-03 15:52:37,870 - INFO - Correcting spelling errors in text: Where have I seen this before? Oh [NAME].
+2024-06-03 15:52:37,962 - INFO - Correcting spelling errors in text: We only seem to hate them when they espouse murderous political philosophies responsible for more than 100 million deaths. Weird, huh?
+2024-06-03 15:52:37,962 - INFO - Correcting spelling errors in text: We only seem to hate them when they espouse murderous political philosophies responsible for more than 100 million deaths. Weird, huh?
+2024-06-03 15:52:37,962 - INFO - Correcting spelling errors in text: We only seem to hate them when they espouse murderous political philosophies responsible for more than 100 million deaths. Weird, huh?
+2024-06-03 15:52:37,962 - INFO - Correcting spelling errors in text: We only seem to hate them when they espouse murderous political philosophies responsible for more than 100 million deaths. Weird, huh?
+2024-06-03 15:52:37,969 - INFO - Correcting spelling errors in text: Well, I was going to surprise you [NAME], but what the heck...I’m gaining a bunch of weight to go on disability!
+2024-06-03 15:52:37,969 - INFO - Correcting spelling errors in text: Well, I was going to surprise you [NAME], but what the heck...I’m gaining a bunch of weight to go on disability!
+2024-06-03 15:52:37,969 - INFO - Correcting spelling errors in text: Well, I was going to surprise you [NAME], but what the heck...I’m gaining a bunch of weight to go on disability!
+2024-06-03 15:52:37,969 - INFO - Correcting spelling errors in text: Well, I was going to surprise you [NAME], but what the heck...I’m gaining a bunch of weight to go on disability!
+2024-06-03 15:52:38,051 - INFO - Correcting spelling errors in text: Said to my very white-looking brunette coworker once: "Are you an oriental?"
+2024-06-03 15:52:38,051 - INFO - Correcting spelling errors in text: Said to my very white-looking brunette coworker once: "Are you an oriental?"
+2024-06-03 15:52:38,051 - INFO - Correcting spelling errors in text: Said to my very white-looking brunette coworker once: "Are you an oriental?"
+2024-06-03 15:52:38,051 - INFO - Correcting spelling errors in text: Said to my very white-looking brunette coworker once: "Are you an oriental?"
+2024-06-03 15:52:38,305 - INFO - Correcting spelling errors in text: Don’t let the bastards grind you down. I’m so sorry for this experience. No one deserves to be treated that way.
+2024-06-03 15:52:38,305 - INFO - Correcting spelling errors in text: Don’t let the bastards grind you down. I’m so sorry for this experience. No one deserves to be treated that way.
+2024-06-03 15:52:38,305 - INFO - Correcting spelling errors in text: Don’t let the bastards grind you down. I’m so sorry for this experience. No one deserves to be treated that way.
+2024-06-03 15:52:38,305 - INFO - Correcting spelling errors in text: Don’t let the bastards grind you down. I’m so sorry for this experience. No one deserves to be treated that way.
+2024-06-03 15:52:38,311 - INFO - Correcting spelling errors in text: [NAME] is decent? Dude he was drafted 3rd overall he's been a massive disappointment
+2024-06-03 15:52:38,311 - INFO - Correcting spelling errors in text: [NAME] is decent? Dude he was drafted 3rd overall he's been a massive disappointment
+2024-06-03 15:52:38,311 - INFO - Correcting spelling errors in text: [NAME] is decent? Dude he was drafted 3rd overall he's been a massive disappointment
+2024-06-03 15:52:38,311 - INFO - Correcting spelling errors in text: [NAME] is decent? Dude he was drafted 3rd overall he's been a massive disappointment
+2024-06-03 15:52:38,398 - INFO - Correcting spelling errors in text: This is a weird thing to be concerned about.
+2024-06-03 15:52:38,398 - INFO - Correcting spelling errors in text: This is a weird thing to be concerned about.
+2024-06-03 15:52:38,398 - INFO - Correcting spelling errors in text: This is a weird thing to be concerned about.
+2024-06-03 15:52:38,398 - INFO - Correcting spelling errors in text: This is a weird thing to be concerned about.
+2024-06-03 15:52:38,403 - INFO - Correcting spelling errors in text: [NAME] THAT HURTS DON'T DO THAT
+2024-06-03 15:52:38,403 - INFO - Correcting spelling errors in text: [NAME] THAT HURTS DON'T DO THAT
+2024-06-03 15:52:38,403 - INFO - Correcting spelling errors in text: [NAME] THAT HURTS DON'T DO THAT
+2024-06-03 15:52:38,403 - INFO - Correcting spelling errors in text: [NAME] THAT HURTS DON'T DO THAT
+2024-06-03 15:52:38,847 - INFO - Correcting spelling errors in text: It just so happened that PD, sick kids , and family emergencies all happened to overlap between all my coworkers leaving me all alone. 
+2024-06-03 15:52:38,847 - INFO - Correcting spelling errors in text: It just so happened that PD, sick kids , and family emergencies all happened to overlap between all my coworkers leaving me all alone. 
+2024-06-03 15:52:38,847 - INFO - Correcting spelling errors in text: It just so happened that PD, sick kids , and family emergencies all happened to overlap between all my coworkers leaving me all alone. 
+2024-06-03 15:52:38,847 - INFO - Correcting spelling errors in text: It just so happened that PD, sick kids , and family emergencies all happened to overlap between all my coworkers leaving me all alone. 
+2024-06-03 15:52:39,183 - INFO - Correcting spelling errors in text: Yikes. I was kind of excited to get a new [NAME] if he gets last man in but I'll pass on these butt ugly jerseys.
+2024-06-03 15:52:39,183 - INFO - Correcting spelling errors in text: Yikes. I was kind of excited to get a new [NAME] if he gets last man in but I'll pass on these butt ugly jerseys.
+2024-06-03 15:52:39,183 - INFO - Correcting spelling errors in text: Yikes. I was kind of excited to get a new [NAME] if he gets last man in but I'll pass on these butt ugly jerseys.
+2024-06-03 15:52:39,183 - INFO - Correcting spelling errors in text: Yikes. I was kind of excited to get a new [NAME] if he gets last man in but I'll pass on these butt ugly jerseys.
+2024-06-03 15:52:39,264 - INFO - Correcting spelling errors in text: The worst case of cultural appropriation is him mimicking human language and thoughts when he is clearly some kind of barely sentient pond scum.
+2024-06-03 15:52:39,264 - INFO - Correcting spelling errors in text: The worst case of cultural appropriation is him mimicking human language and thoughts when he is clearly some kind of barely sentient pond scum.
+2024-06-03 15:52:39,264 - INFO - Correcting spelling errors in text: The worst case of cultural appropriation is him mimicking human language and thoughts when he is clearly some kind of barely sentient pond scum.
+2024-06-03 15:52:39,264 - INFO - Correcting spelling errors in text: The worst case of cultural appropriation is him mimicking human language and thoughts when he is clearly some kind of barely sentient pond scum.
+2024-06-03 15:52:39,271 - INFO - Correcting spelling errors in text: We are killing this planet
+2024-06-03 15:52:39,271 - INFO - Correcting spelling errors in text: We are killing this planet
+2024-06-03 15:52:39,271 - INFO - Correcting spelling errors in text: We are killing this planet
+2024-06-03 15:52:39,271 - INFO - Correcting spelling errors in text: We are killing this planet
+2024-06-03 15:52:39,275 - INFO - Correcting spelling errors in text: Wait for real? That's how they met? lol that's both terrifying and completely fitting considering how nuts they both are
+2024-06-03 15:52:39,275 - INFO - Correcting spelling errors in text: Wait for real? That's how they met? lol that's both terrifying and completely fitting considering how nuts they both are
+2024-06-03 15:52:39,275 - INFO - Correcting spelling errors in text: Wait for real? That's how they met? lol that's both terrifying and completely fitting considering how nuts they both are
+2024-06-03 15:52:39,275 - INFO - Correcting spelling errors in text: Wait for real? That's how they met? lol that's both terrifying and completely fitting considering how nuts they both are
+2024-06-03 15:52:39,281 - INFO - Correcting spelling errors in text: Yeah, I read that the first time. Nobody is forcing you, other than yourself.
+2024-06-03 15:52:39,281 - INFO - Correcting spelling errors in text: Yeah, I read that the first time. Nobody is forcing you, other than yourself.
+2024-06-03 15:52:39,281 - INFO - Correcting spelling errors in text: Yeah, I read that the first time. Nobody is forcing you, other than yourself.
+2024-06-03 15:52:39,281 - INFO - Correcting spelling errors in text: Yeah, I read that the first time. Nobody is forcing you, other than yourself.
+2024-06-03 15:52:39,286 - INFO - Correcting spelling errors in text: ITT: People defend delusional shitposts.
+2024-06-03 15:52:39,286 - INFO - Correcting spelling errors in text: ITT: People defend delusional shitposts.
+2024-06-03 15:52:39,286 - INFO - Correcting spelling errors in text: ITT: People defend delusional shitposts.
+2024-06-03 15:52:39,286 - INFO - Correcting spelling errors in text: ITT: People defend delusional shitposts.
+2024-06-03 15:52:39,707 - INFO - Correcting spelling errors in text: She also spoke out quite angrily about "Obamacare" until she needed it due to her high risk pregnancy. She's remarkably hypocritical.
+2024-06-03 15:52:39,707 - INFO - Correcting spelling errors in text: She also spoke out quite angrily about "Obamacare" until she needed it due to her high risk pregnancy. She's remarkably hypocritical.
+2024-06-03 15:52:39,707 - INFO - Correcting spelling errors in text: She also spoke out quite angrily about "Obamacare" until she needed it due to her high risk pregnancy. She's remarkably hypocritical.
+2024-06-03 15:52:39,707 - INFO - Correcting spelling errors in text: She also spoke out quite angrily about "Obamacare" until she needed it due to her high risk pregnancy. She's remarkably hypocritical.
+2024-06-03 15:52:40,391 - INFO - Correcting spelling errors in text: Honestly, he’s throwing up at the moment. We’re gonna nap, drink some Gatorade, and get our shit together
+2024-06-03 15:52:40,391 - INFO - Correcting spelling errors in text: Honestly, he’s throwing up at the moment. We’re gonna nap, drink some Gatorade, and get our shit together
+2024-06-03 15:52:40,391 - INFO - Correcting spelling errors in text: Honestly, he’s throwing up at the moment. We’re gonna nap, drink some Gatorade, and get our shit together
+2024-06-03 15:52:40,391 - INFO - Correcting spelling errors in text: Honestly, he’s throwing up at the moment. We’re gonna nap, drink some Gatorade, and get our shit together
+2024-06-03 15:52:40,634 - INFO - Correcting spelling errors in text: So happy for [NAME]. So sad he's not here. Imagine this team with [NAME] instead of [NAME]. Ugh.
+2024-06-03 15:52:40,634 - INFO - Correcting spelling errors in text: So happy for [NAME]. So sad he's not here. Imagine this team with [NAME] instead of [NAME]. Ugh.
+2024-06-03 15:52:40,634 - INFO - Correcting spelling errors in text: So happy for [NAME]. So sad he's not here. Imagine this team with [NAME] instead of [NAME]. Ugh.
+2024-06-03 15:52:40,634 - INFO - Correcting spelling errors in text: So happy for [NAME]. So sad he's not here. Imagine this team with [NAME] instead of [NAME]. Ugh.
+2024-06-03 15:52:40,864 - INFO - Correcting spelling errors in text: [NAME] office just denied it
+2024-06-03 15:52:40,864 - INFO - Correcting spelling errors in text: [NAME] office just denied it
+2024-06-03 15:52:40,864 - INFO - Correcting spelling errors in text: [NAME] office just denied it
+2024-06-03 15:52:40,864 - INFO - Correcting spelling errors in text: [NAME] office just denied it
+2024-06-03 15:52:40,940 - INFO - Correcting spelling errors in text: I just saw Janice.
+2024-06-03 15:52:40,940 - INFO - Correcting spelling errors in text: I just saw Janice.
+2024-06-03 15:52:40,940 - INFO - Correcting spelling errors in text: I just saw Janice.
+2024-06-03 15:52:40,940 - INFO - Correcting spelling errors in text: I just saw Janice.
+2024-06-03 15:52:41,123 - INFO - Correcting spelling errors in text: Nice quote, not sure if it was worth the time to pull up though.
+2024-06-03 15:52:41,123 - INFO - Correcting spelling errors in text: Nice quote, not sure if it was worth the time to pull up though.
+2024-06-03 15:52:41,123 - INFO - Correcting spelling errors in text: Nice quote, not sure if it was worth the time to pull up though.
+2024-06-03 15:52:41,123 - INFO - Correcting spelling errors in text: Nice quote, not sure if it was worth the time to pull up though.
+2024-06-03 15:52:41,128 - INFO - Correcting spelling errors in text: They lead a bad defense though. And [NAME] isn’t blameless here, he’s not good against the run.
+2024-06-03 15:52:41,128 - INFO - Correcting spelling errors in text: They lead a bad defense though. And [NAME] isn’t blameless here, he’s not good against the run.
+2024-06-03 15:52:41,128 - INFO - Correcting spelling errors in text: They lead a bad defense though. And [NAME] isn’t blameless here, he’s not good against the run.
+2024-06-03 15:52:41,128 - INFO - Correcting spelling errors in text: They lead a bad defense though. And [NAME] isn’t blameless here, he’s not good against the run.
+2024-06-03 15:52:41,218 - INFO - Correcting spelling errors in text: That’s very unfortunate for the bosses. Capitalism sure does commit genocide. Ireland. India. Indonesia. Vietnam. Iraq. Should I name more?
+2024-06-03 15:52:41,218 - INFO - Correcting spelling errors in text: That’s very unfortunate for the bosses. Capitalism sure does commit genocide. Ireland. India. Indonesia. Vietnam. Iraq. Should I name more?
+2024-06-03 15:52:41,218 - INFO - Correcting spelling errors in text: That’s very unfortunate for the bosses. Capitalism sure does commit genocide. Ireland. India. Indonesia. Vietnam. Iraq. Should I name more?
+2024-06-03 15:52:41,218 - INFO - Correcting spelling errors in text: That’s very unfortunate for the bosses. Capitalism sure does commit genocide. Ireland. India. Indonesia. Vietnam. Iraq. Should I name more?
+2024-06-03 15:52:42,116 - INFO - Correcting spelling errors in text: So then what do I do? Should I tell priests? Will they kick me out?
+2024-06-03 15:52:42,116 - INFO - Correcting spelling errors in text: So then what do I do? Should I tell priests? Will they kick me out?
+2024-06-03 15:52:42,116 - INFO - Correcting spelling errors in text: So then what do I do? Should I tell priests? Will they kick me out?
+2024-06-03 15:52:42,116 - INFO - Correcting spelling errors in text: So then what do I do? Should I tell priests? Will they kick me out?
+2024-06-03 15:52:42,121 - INFO - Correcting spelling errors in text: I don't think you could actually find something that's *unambiguously* racist. That's just how dog whistles work.
+2024-06-03 15:52:42,121 - INFO - Correcting spelling errors in text: I don't think you could actually find something that's *unambiguously* racist. That's just how dog whistles work.
+2024-06-03 15:52:42,121 - INFO - Correcting spelling errors in text: I don't think you could actually find something that's *unambiguously* racist. That's just how dog whistles work.
+2024-06-03 15:52:42,121 - INFO - Correcting spelling errors in text: I don't think you could actually find something that's *unambiguously* racist. That's just how dog whistles work.
+2024-06-03 15:52:42,701 - INFO - Correcting spelling errors in text: How do you think she got the job?
+2024-06-03 15:52:42,701 - INFO - Correcting spelling errors in text: How do you think she got the job?
+2024-06-03 15:52:42,701 - INFO - Correcting spelling errors in text: How do you think she got the job?
+2024-06-03 15:52:42,701 - INFO - Correcting spelling errors in text: How do you think she got the job?
+2024-06-03 15:52:42,706 - INFO - Correcting spelling errors in text: i feel like this isn't being talked about enough.
+2024-06-03 15:52:42,706 - INFO - Correcting spelling errors in text: i feel like this isn't being talked about enough.
+2024-06-03 15:52:42,706 - INFO - Correcting spelling errors in text: i feel like this isn't being talked about enough.
+2024-06-03 15:52:42,706 - INFO - Correcting spelling errors in text: i feel like this isn't being talked about enough.
+2024-06-03 15:52:42,710 - INFO - Correcting spelling errors in text: You sound like someone who doesnt know what ironic humour is.
+2024-06-03 15:52:42,710 - INFO - Correcting spelling errors in text: You sound like someone who doesnt know what ironic humour is.
+2024-06-03 15:52:42,710 - INFO - Correcting spelling errors in text: You sound like someone who doesnt know what ironic humour is.
+2024-06-03 15:52:42,710 - INFO - Correcting spelling errors in text: You sound like someone who doesnt know what ironic humour is.
+2024-06-03 15:52:42,715 - INFO - Correcting spelling errors in text: I was in awe the whole hour I spent in there.
+2024-06-03 15:52:42,715 - INFO - Correcting spelling errors in text: I was in awe the whole hour I spent in there.
+2024-06-03 15:52:42,715 - INFO - Correcting spelling errors in text: I was in awe the whole hour I spent in there.
+2024-06-03 15:52:42,715 - INFO - Correcting spelling errors in text: I was in awe the whole hour I spent in there.
+2024-06-03 15:52:42,720 - INFO - Correcting spelling errors in text: This looks like don't hug me I'm scared
+2024-06-03 15:52:42,720 - INFO - Correcting spelling errors in text: This looks like don't hug me I'm scared
+2024-06-03 15:52:42,720 - INFO - Correcting spelling errors in text: This looks like don't hug me I'm scared
+2024-06-03 15:52:42,720 - INFO - Correcting spelling errors in text: This looks like don't hug me I'm scared
+2024-06-03 15:52:42,730 - INFO - Correcting spelling errors in text: Anyone who fell for the Lonzo hype from the beginning should slap themselves.
+2024-06-03 15:52:42,730 - INFO - Correcting spelling errors in text: Anyone who fell for the Lonzo hype from the beginning should slap themselves.
+2024-06-03 15:52:42,730 - INFO - Correcting spelling errors in text: Anyone who fell for the Lonzo hype from the beginning should slap themselves.
+2024-06-03 15:52:42,730 - INFO - Correcting spelling errors in text: Anyone who fell for the Lonzo hype from the beginning should slap themselves.
+2024-06-03 15:52:42,738 - INFO - Correcting spelling errors in text: Thanks!! I missed all of this.
+2024-06-03 15:52:42,738 - INFO - Correcting spelling errors in text: Thanks!! I missed all of this.
+2024-06-03 15:52:42,738 - INFO - Correcting spelling errors in text: Thanks!! I missed all of this.
+2024-06-03 15:52:42,738 - INFO - Correcting spelling errors in text: Thanks!! I missed all of this.
+2024-06-03 15:52:42,742 - INFO - Correcting spelling errors in text: I didn't delete it. Your moderators did. But that's what [NAME] do, they 
+2024-06-03 15:52:42,742 - INFO - Correcting spelling errors in text: I didn't delete it. Your moderators did. But that's what [NAME] do, they 
+2024-06-03 15:52:42,742 - INFO - Correcting spelling errors in text: I didn't delete it. Your moderators did. But that's what [NAME] do, they 
+2024-06-03 15:52:42,742 - INFO - Correcting spelling errors in text: I didn't delete it. Your moderators did. But that's what [NAME] do, they 
+2024-06-03 15:52:43,179 - INFO - Correcting spelling errors in text: Seeking, not expecting
+2024-06-03 15:52:43,179 - INFO - Correcting spelling errors in text: Seeking, not expecting
+2024-06-03 15:52:43,179 - INFO - Correcting spelling errors in text: Seeking, not expecting
+2024-06-03 15:52:43,179 - INFO - Correcting spelling errors in text: Seeking, not expecting
+2024-06-03 15:52:43,183 - INFO - Correcting spelling errors in text: lol. good one dude. you really showed me. great argument. really showing off your intellectual prowess. keep up the good work!
+2024-06-03 15:52:43,183 - INFO - Correcting spelling errors in text: lol. good one dude. you really showed me. great argument. really showing off your intellectual prowess. keep up the good work!
+2024-06-03 15:52:43,183 - INFO - Correcting spelling errors in text: lol. good one dude. you really showed me. great argument. really showing off your intellectual prowess. keep up the good work!
+2024-06-03 15:52:43,183 - INFO - Correcting spelling errors in text: lol. good one dude. you really showed me. great argument. really showing off your intellectual prowess. keep up the good work!
+2024-06-03 15:52:43,188 - INFO - Correcting spelling errors in text: What kind of advice are you seeking here? I'm confused.
+2024-06-03 15:52:43,188 - INFO - Correcting spelling errors in text: What kind of advice are you seeking here? I'm confused.
+2024-06-03 15:52:43,188 - INFO - Correcting spelling errors in text: What kind of advice are you seeking here? I'm confused.
+2024-06-03 15:52:43,188 - INFO - Correcting spelling errors in text: What kind of advice are you seeking here? I'm confused.
+2024-06-03 15:52:43,193 - INFO - Correcting spelling errors in text: 11 years goddamit I’m old
+2024-06-03 15:52:43,193 - INFO - Correcting spelling errors in text: 11 years goddamit I’m old
+2024-06-03 15:52:43,193 - INFO - Correcting spelling errors in text: 11 years goddamit I’m old
+2024-06-03 15:52:43,193 - INFO - Correcting spelling errors in text: 11 years goddamit I’m old
+2024-06-03 15:52:43,333 - INFO - Correcting spelling errors in text: “-sigh- I’m so bad at making friends”- Owl
+2024-06-03 15:52:43,333 - INFO - Correcting spelling errors in text: “-sigh- I’m so bad at making friends”- Owl
+2024-06-03 15:52:43,333 - INFO - Correcting spelling errors in text: “-sigh- I’m so bad at making friends”- Owl
+2024-06-03 15:52:43,333 - INFO - Correcting spelling errors in text: “-sigh- I’m so bad at making friends”- Owl
+2024-06-03 15:52:43,337 - INFO - Correcting spelling errors in text: [NAME], that uniform. At least the Nazi [NAME] had decent fashion sense. This is a crime against fashion
+2024-06-03 15:52:43,337 - INFO - Correcting spelling errors in text: [NAME], that uniform. At least the Nazi [NAME] had decent fashion sense. This is a crime against fashion
+2024-06-03 15:52:43,337 - INFO - Correcting spelling errors in text: [NAME], that uniform. At least the Nazi [NAME] had decent fashion sense. This is a crime against fashion
+2024-06-03 15:52:43,337 - INFO - Correcting spelling errors in text: [NAME], that uniform. At least the Nazi [NAME] had decent fashion sense. This is a crime against fashion
+2024-06-03 15:52:43,550 - INFO - Correcting spelling errors in text: Wondering why this hasn’t been made a thing yet 😂
+2024-06-03 15:52:43,550 - INFO - Correcting spelling errors in text: Wondering why this hasn’t been made a thing yet 😂
+2024-06-03 15:52:43,550 - INFO - Correcting spelling errors in text: Wondering why this hasn’t been made a thing yet 😂
+2024-06-03 15:52:43,550 - INFO - Correcting spelling errors in text: Wondering why this hasn’t been made a thing yet 😂
+2024-06-03 15:52:43,555 - INFO - Correcting spelling errors in text: When has the Alt-Right ever been working class? Its always the richest white guys who are horribly socially inept.
+2024-06-03 15:52:43,555 - INFO - Correcting spelling errors in text: When has the Alt-Right ever been working class? Its always the richest white guys who are horribly socially inept.
+2024-06-03 15:52:43,555 - INFO - Correcting spelling errors in text: When has the Alt-Right ever been working class? Its always the richest white guys who are horribly socially inept.
+2024-06-03 15:52:43,555 - INFO - Correcting spelling errors in text: When has the Alt-Right ever been working class? Its always the richest white guys who are horribly socially inept.
+2024-06-03 15:52:43,608 - INFO - Correcting spelling errors in text: Please don't promote your channel
+2024-06-03 15:52:43,608 - INFO - Correcting spelling errors in text: Please don't promote your channel
+2024-06-03 15:52:43,608 - INFO - Correcting spelling errors in text: Please don't promote your channel
+2024-06-03 15:52:43,608 - INFO - Correcting spelling errors in text: Please don't promote your channel
+2024-06-03 15:52:43,612 - INFO - Correcting spelling errors in text: Please don’t downvote me I just have a question What is wrong with libertarians? This sub seems to hate them and I’m one.
+2024-06-03 15:52:43,612 - INFO - Correcting spelling errors in text: Please don’t downvote me I just have a question What is wrong with libertarians? This sub seems to hate them and I’m one.
+2024-06-03 15:52:43,612 - INFO - Correcting spelling errors in text: Please don’t downvote me I just have a question What is wrong with libertarians? This sub seems to hate them and I’m one.
+2024-06-03 15:52:43,612 - INFO - Correcting spelling errors in text: Please don’t downvote me I just have a question What is wrong with libertarians? This sub seems to hate them and I’m one.
+2024-06-03 15:52:44,089 - INFO - Correcting spelling errors in text: A mistake in the relationship? Or a mistake with the person I chose?
+2024-06-03 15:52:44,089 - INFO - Correcting spelling errors in text: A mistake in the relationship? Or a mistake with the person I chose?
+2024-06-03 15:52:44,089 - INFO - Correcting spelling errors in text: A mistake in the relationship? Or a mistake with the person I chose?
+2024-06-03 15:52:44,089 - INFO - Correcting spelling errors in text: A mistake in the relationship? Or a mistake with the person I chose?
+2024-06-03 15:52:44,094 - INFO - Correcting spelling errors in text: I'd feel better if the dude in the video didn't have a gun.
+2024-06-03 15:52:44,094 - INFO - Correcting spelling errors in text: I'd feel better if the dude in the video didn't have a gun.
+2024-06-03 15:52:44,094 - INFO - Correcting spelling errors in text: I'd feel better if the dude in the video didn't have a gun.
+2024-06-03 15:52:44,094 - INFO - Correcting spelling errors in text: I'd feel better if the dude in the video didn't have a gun.
+2024-06-03 15:52:44,098 - INFO - Correcting spelling errors in text: Oh no, not again! 
+2024-06-03 15:52:44,098 - INFO - Correcting spelling errors in text: Oh no, not again! 
+2024-06-03 15:52:44,098 - INFO - Correcting spelling errors in text: Oh no, not again! 
+2024-06-03 15:52:44,098 - INFO - Correcting spelling errors in text: Oh no, not again! 
+2024-06-03 15:52:44,101 - INFO - Correcting spelling errors in text: Hahaha I wish I was that witty at the time, I think I was still in naive shock at the rudeness of people in retail. 
+2024-06-03 15:52:44,101 - INFO - Correcting spelling errors in text: Hahaha I wish I was that witty at the time, I think I was still in naive shock at the rudeness of people in retail. 
+2024-06-03 15:52:44,101 - INFO - Correcting spelling errors in text: Hahaha I wish I was that witty at the time, I think I was still in naive shock at the rudeness of people in retail. 
+2024-06-03 15:52:44,101 - INFO - Correcting spelling errors in text: Hahaha I wish I was that witty at the time, I think I was still in naive shock at the rudeness of people in retail. 
+2024-06-03 15:52:44,108 - INFO - Correcting spelling errors in text: They might still be a minority but you can't argue with the fact that they have been on the rise, 
+2024-06-03 15:52:44,108 - INFO - Correcting spelling errors in text: They might still be a minority but you can't argue with the fact that they have been on the rise, 
+2024-06-03 15:52:44,108 - INFO - Correcting spelling errors in text: They might still be a minority but you can't argue with the fact that they have been on the rise, 
+2024-06-03 15:52:44,108 - INFO - Correcting spelling errors in text: They might still be a minority but you can't argue with the fact that they have been on the rise, 
+2024-06-03 15:52:44,113 - INFO - Correcting spelling errors in text: Shamelessly stolen from
+2024-06-03 15:52:44,113 - INFO - Correcting spelling errors in text: Shamelessly stolen from
+2024-06-03 15:52:44,113 - INFO - Correcting spelling errors in text: Shamelessly stolen from
+2024-06-03 15:52:44,113 - INFO - Correcting spelling errors in text: Shamelessly stolen from
+2024-06-03 15:52:44,120 - INFO - Correcting spelling errors in text: It's a minor part of the article. Trust me, there's actually a LOT of information that isn't olicity-related here.
+2024-06-03 15:52:44,120 - INFO - Correcting spelling errors in text: It's a minor part of the article. Trust me, there's actually a LOT of information that isn't olicity-related here.
+2024-06-03 15:52:44,120 - INFO - Correcting spelling errors in text: It's a minor part of the article. Trust me, there's actually a LOT of information that isn't olicity-related here.
+2024-06-03 15:52:44,120 - INFO - Correcting spelling errors in text: It's a minor part of the article. Trust me, there's actually a LOT of information that isn't olicity-related here.
+2024-06-03 15:52:44,191 - INFO - Correcting spelling errors in text: "[NAME]..? Oh my GOD [NAME] is this Gears of War?!
+2024-06-03 15:52:44,191 - INFO - Correcting spelling errors in text: "[NAME]..? Oh my GOD [NAME] is this Gears of War?!
+2024-06-03 15:52:44,191 - INFO - Correcting spelling errors in text: "[NAME]..? Oh my GOD [NAME] is this Gears of War?!
+2024-06-03 15:52:44,191 - INFO - Correcting spelling errors in text: "[NAME]..? Oh my GOD [NAME] is this Gears of War?!
+2024-06-03 15:52:44,367 - INFO - Correcting spelling errors in text: Indeed. This episode is for me the best one officially. I'm scared for the finale
+2024-06-03 15:52:44,367 - INFO - Correcting spelling errors in text: Indeed. This episode is for me the best one officially. I'm scared for the finale
+2024-06-03 15:52:44,367 - INFO - Correcting spelling errors in text: Indeed. This episode is for me the best one officially. I'm scared for the finale
+2024-06-03 15:52:44,367 - INFO - Correcting spelling errors in text: Indeed. This episode is for me the best one officially. I'm scared for the finale
+2024-06-03 15:52:44,373 - INFO - Correcting spelling errors in text: Discuss and follow a case an onsessibg per the case are different. It's odd. It's the only conviction on earth where we see this.
+2024-06-03 15:52:44,373 - INFO - Correcting spelling errors in text: Discuss and follow a case an onsessibg per the case are different. It's odd. It's the only conviction on earth where we see this.
+2024-06-03 15:52:44,373 - INFO - Correcting spelling errors in text: Discuss and follow a case an onsessibg per the case are different. It's odd. It's the only conviction on earth where we see this.
+2024-06-03 15:52:44,373 - INFO - Correcting spelling errors in text: Discuss and follow a case an onsessibg per the case are different. It's odd. It's the only conviction on earth where we see this.
+2024-06-03 15:52:44,379 - INFO - Correcting spelling errors in text: This team + 2 lottery picks and another offseason for our young players will definitely be a playoff team next year.
+2024-06-03 15:52:44,379 - INFO - Correcting spelling errors in text: This team + 2 lottery picks and another offseason for our young players will definitely be a playoff team next year.
+2024-06-03 15:52:44,379 - INFO - Correcting spelling errors in text: This team + 2 lottery picks and another offseason for our young players will definitely be a playoff team next year.
+2024-06-03 15:52:44,379 - INFO - Correcting spelling errors in text: This team + 2 lottery picks and another offseason for our young players will definitely be a playoff team next year.
+2024-06-03 15:52:44,832 - INFO - Correcting spelling errors in text: It is a highly underappreciated movie...FOOLS
+2024-06-03 15:52:44,832 - INFO - Correcting spelling errors in text: It is a highly underappreciated movie...FOOLS
+2024-06-03 15:52:44,832 - INFO - Correcting spelling errors in text: It is a highly underappreciated movie...FOOLS
+2024-06-03 15:52:44,832 - INFO - Correcting spelling errors in text: It is a highly underappreciated movie...FOOLS
+2024-06-03 15:52:44,954 - INFO - Correcting spelling errors in text: Besides, you have no clue which ones I have and haven't done. 
+2024-06-03 15:52:44,954 - INFO - Correcting spelling errors in text: Besides, you have no clue which ones I have and haven't done. 
+2024-06-03 15:52:44,954 - INFO - Correcting spelling errors in text: Besides, you have no clue which ones I have and haven't done. 
+2024-06-03 15:52:44,954 - INFO - Correcting spelling errors in text: Besides, you have no clue which ones I have and haven't done. 
+2024-06-03 15:52:44,959 - INFO - Correcting spelling errors in text: No, the root Arabic word is "hashishiyyin", with it's Latin translation being "assassinus". Assassin is the French translation. 
+2024-06-03 15:52:44,959 - INFO - Correcting spelling errors in text: No, the root Arabic word is "hashishiyyin", with it's Latin translation being "assassinus". Assassin is the French translation. 
+2024-06-03 15:52:44,959 - INFO - Correcting spelling errors in text: No, the root Arabic word is "hashishiyyin", with it's Latin translation being "assassinus". Assassin is the French translation. 
+2024-06-03 15:52:44,959 - INFO - Correcting spelling errors in text: No, the root Arabic word is "hashishiyyin", with it's Latin translation being "assassinus". Assassin is the French translation. 
+2024-06-03 15:52:45,180 - INFO - Correcting spelling errors in text: OMG, I thought the same
+2024-06-03 15:52:45,180 - INFO - Correcting spelling errors in text: OMG, I thought the same
+2024-06-03 15:52:45,180 - INFO - Correcting spelling errors in text: OMG, I thought the same
+2024-06-03 15:52:45,180 - INFO - Correcting spelling errors in text: OMG, I thought the same
+2024-06-03 15:52:45,233 - INFO - Correcting spelling errors in text: No no no, believe me. No one has been waiting for this as much as I have, ok? And you know what the funny thing is? When this day is over, you get to go home with the baby, ok? Where does that leave me?
+2024-06-03 15:52:45,233 - INFO - Correcting spelling errors in text: No no no, believe me. No one has been waiting for this as much as I have, ok? And you know what the funny thing is? When this day is over, you get to go home with the baby, ok? Where does that leave me?
+2024-06-03 15:52:45,233 - INFO - Correcting spelling errors in text: No no no, believe me. No one has been waiting for this as much as I have, ok? And you know what the funny thing is? When this day is over, you get to go home with the baby, ok? Where does that leave me?
+2024-06-03 15:52:45,233 - INFO - Correcting spelling errors in text: No no no, believe me. No one has been waiting for this as much as I have, ok? And you know what the funny thing is? When this day is over, you get to go home with the baby, ok? Where does that leave me?
+2024-06-03 15:52:45,241 - INFO - Correcting spelling errors in text: Lol now that I see it put in this way, it's even more sad. Thanks :(
+2024-06-03 15:52:45,241 - INFO - Correcting spelling errors in text: Lol now that I see it put in this way, it's even more sad. Thanks :(
+2024-06-03 15:52:45,241 - INFO - Correcting spelling errors in text: Lol now that I see it put in this way, it's even more sad. Thanks :(
+2024-06-03 15:52:45,241 - INFO - Correcting spelling errors in text: Lol now that I see it put in this way, it's even more sad. Thanks :(
+2024-06-03 15:52:45,247 - INFO - Correcting spelling errors in text: Say it louder for the Dwight’s in the lockers.
+2024-06-03 15:52:45,247 - INFO - Correcting spelling errors in text: Say it louder for the Dwight’s in the lockers.
+2024-06-03 15:52:45,247 - INFO - Correcting spelling errors in text: Say it louder for the Dwight’s in the lockers.
+2024-06-03 15:52:45,247 - INFO - Correcting spelling errors in text: Say it louder for the Dwight’s in the lockers.
+2024-06-03 15:52:45,461 - INFO - Correcting spelling errors in text: Love [NAME]. Amazing beaches!
+2024-06-03 15:52:45,461 - INFO - Correcting spelling errors in text: Love [NAME]. Amazing beaches!
+2024-06-03 15:52:45,461 - INFO - Correcting spelling errors in text: Love [NAME]. Amazing beaches!
+2024-06-03 15:52:45,461 - INFO - Correcting spelling errors in text: Love [NAME]. Amazing beaches!
+2024-06-03 15:52:45,541 - INFO - Correcting spelling errors in text: Absolutely this is the kind of absolute hypocrisy that made me leave the church!
+2024-06-03 15:52:45,541 - INFO - Correcting spelling errors in text: Absolutely this is the kind of absolute hypocrisy that made me leave the church!
+2024-06-03 15:52:45,541 - INFO - Correcting spelling errors in text: Absolutely this is the kind of absolute hypocrisy that made me leave the church!
+2024-06-03 15:52:45,541 - INFO - Correcting spelling errors in text: Absolutely this is the kind of absolute hypocrisy that made me leave the church!
+2024-06-03 15:52:45,547 - INFO - Correcting spelling errors in text: Oh [NAME] all the cereal will be stuck soaking in milk until they get mushy and gross
+2024-06-03 15:52:45,547 - INFO - Correcting spelling errors in text: Oh [NAME] all the cereal will be stuck soaking in milk until they get mushy and gross
+2024-06-03 15:52:45,547 - INFO - Correcting spelling errors in text: Oh [NAME] all the cereal will be stuck soaking in milk until they get mushy and gross
+2024-06-03 15:52:45,547 - INFO - Correcting spelling errors in text: Oh [NAME] all the cereal will be stuck soaking in milk until they get mushy and gross
+2024-06-03 15:52:45,621 - INFO - Correcting spelling errors in text: Yeah I’m so envious of [NAME] right now...
+2024-06-03 15:52:45,621 - INFO - Correcting spelling errors in text: Yeah I’m so envious of [NAME] right now...
+2024-06-03 15:52:45,621 - INFO - Correcting spelling errors in text: Yeah I’m so envious of [NAME] right now...
+2024-06-03 15:52:45,621 - INFO - Correcting spelling errors in text: Yeah I’m so envious of [NAME] right now...
+2024-06-03 15:52:45,698 - INFO - Correcting spelling errors in text: He was just trying to sit down I think. Poor guy, doesn’t deserve all this shit from reddit.
+2024-06-03 15:52:45,698 - INFO - Correcting spelling errors in text: He was just trying to sit down I think. Poor guy, doesn’t deserve all this shit from reddit.
+2024-06-03 15:52:45,698 - INFO - Correcting spelling errors in text: He was just trying to sit down I think. Poor guy, doesn’t deserve all this shit from reddit.
+2024-06-03 15:52:45,698 - INFO - Correcting spelling errors in text: He was just trying to sit down I think. Poor guy, doesn’t deserve all this shit from reddit.
+2024-06-03 15:52:45,848 - INFO - Correcting spelling errors in text: Like....what even is the purpose of that lie? Ahaha
+2024-06-03 15:52:45,848 - INFO - Correcting spelling errors in text: Like....what even is the purpose of that lie? Ahaha
+2024-06-03 15:52:45,848 - INFO - Correcting spelling errors in text: Like....what even is the purpose of that lie? Ahaha
+2024-06-03 15:52:45,848 - INFO - Correcting spelling errors in text: Like....what even is the purpose of that lie? Ahaha
+2024-06-03 15:52:45,853 - INFO - Correcting spelling errors in text: I was just about to comment this. She might be a wonderful human being, but I have suspicions. 
+2024-06-03 15:52:45,853 - INFO - Correcting spelling errors in text: I was just about to comment this. She might be a wonderful human being, but I have suspicions. 
+2024-06-03 15:52:45,853 - INFO - Correcting spelling errors in text: I was just about to comment this. She might be a wonderful human being, but I have suspicions. 
+2024-06-03 15:52:45,853 - INFO - Correcting spelling errors in text: I was just about to comment this. She might be a wonderful human being, but I have suspicions. 
+2024-06-03 15:52:45,858 - INFO - Correcting spelling errors in text: Figured since [NAME] is expiring and you guys are tanking it didn’t really matter
+2024-06-03 15:52:45,858 - INFO - Correcting spelling errors in text: Figured since [NAME] is expiring and you guys are tanking it didn’t really matter
+2024-06-03 15:52:45,858 - INFO - Correcting spelling errors in text: Figured since [NAME] is expiring and you guys are tanking it didn’t really matter
+2024-06-03 15:52:45,858 - INFO - Correcting spelling errors in text: Figured since [NAME] is expiring and you guys are tanking it didn’t really matter
+2024-06-03 15:52:45,936 - INFO - Correcting spelling errors in text: Why dont you go complaint about USA 75% deforestation?
+2024-06-03 15:52:45,936 - INFO - Correcting spelling errors in text: Why dont you go complaint about USA 75% deforestation?
+2024-06-03 15:52:45,936 - INFO - Correcting spelling errors in text: Why dont you go complaint about USA 75% deforestation?
+2024-06-03 15:52:45,936 - INFO - Correcting spelling errors in text: Why dont you go complaint about USA 75% deforestation?
+2024-06-03 15:52:46,556 - INFO - Correcting spelling errors in text: Fuuuck, brutal
+2024-06-03 15:52:46,556 - INFO - Correcting spelling errors in text: Fuuuck, brutal
+2024-06-03 15:52:46,556 - INFO - Correcting spelling errors in text: Fuuuck, brutal
+2024-06-03 15:52:46,556 - INFO - Correcting spelling errors in text: Fuuuck, brutal
+2024-06-03 15:52:46,608 - INFO - Correcting spelling errors in text: Let's get skinner locked up for 8 years first. Don't want to upset him before he signs
+2024-06-03 15:52:46,608 - INFO - Correcting spelling errors in text: Let's get skinner locked up for 8 years first. Don't want to upset him before he signs
+2024-06-03 15:52:46,608 - INFO - Correcting spelling errors in text: Let's get skinner locked up for 8 years first. Don't want to upset him before he signs
+2024-06-03 15:52:46,608 - INFO - Correcting spelling errors in text: Let's get skinner locked up for 8 years first. Don't want to upset him before he signs
+2024-06-03 15:52:46,613 - INFO - Correcting spelling errors in text: I accidentally swiped. I don't have time right now I swiped for ego and got it so I don't actually want to talk to anyone.
+2024-06-03 15:52:46,613 - INFO - Correcting spelling errors in text: I accidentally swiped. I don't have time right now I swiped for ego and got it so I don't actually want to talk to anyone.
+2024-06-03 15:52:46,613 - INFO - Correcting spelling errors in text: I accidentally swiped. I don't have time right now I swiped for ego and got it so I don't actually want to talk to anyone.
+2024-06-03 15:52:46,613 - INFO - Correcting spelling errors in text: I accidentally swiped. I don't have time right now I swiped for ego and got it so I don't actually want to talk to anyone.
+2024-06-03 15:52:46,620 - INFO - Correcting spelling errors in text: >the silent majority This is the most ignorant thing I've read so far today
+2024-06-03 15:52:46,620 - INFO - Correcting spelling errors in text: >the silent majority This is the most ignorant thing I've read so far today
+2024-06-03 15:52:46,620 - INFO - Correcting spelling errors in text: >the silent majority This is the most ignorant thing I've read so far today
+2024-06-03 15:52:46,620 - INFO - Correcting spelling errors in text: >the silent majority This is the most ignorant thing I've read so far today
+2024-06-03 15:52:46,624 - INFO - Correcting spelling errors in text: Even Rolling Storm seems better, and it is not very good.
+2024-06-03 15:52:46,624 - INFO - Correcting spelling errors in text: Even Rolling Storm seems better, and it is not very good.
+2024-06-03 15:52:46,624 - INFO - Correcting spelling errors in text: Even Rolling Storm seems better, and it is not very good.
+2024-06-03 15:52:46,624 - INFO - Correcting spelling errors in text: Even Rolling Storm seems better, and it is not very good.
+2024-06-03 15:52:46,630 - INFO - Correcting spelling errors in text: What a coincidence. I also had a Bort.
+2024-06-03 15:52:46,630 - INFO - Correcting spelling errors in text: What a coincidence. I also had a Bort.
+2024-06-03 15:52:46,630 - INFO - Correcting spelling errors in text: What a coincidence. I also had a Bort.
+2024-06-03 15:52:46,630 - INFO - Correcting spelling errors in text: What a coincidence. I also had a Bort.
+2024-06-03 15:52:46,636 - INFO - Correcting spelling errors in text: As someone who works in the oil industry with a lot of big ships, this is badass.
+2024-06-03 15:52:46,636 - INFO - Correcting spelling errors in text: As someone who works in the oil industry with a lot of big ships, this is badass.
+2024-06-03 15:52:46,636 - INFO - Correcting spelling errors in text: As someone who works in the oil industry with a lot of big ships, this is badass.
+2024-06-03 15:52:46,636 - INFO - Correcting spelling errors in text: As someone who works in the oil industry with a lot of big ships, this is badass.
+2024-06-03 15:52:46,640 - INFO - Correcting spelling errors in text: I don't believe they distribute to Austin.
+2024-06-03 15:52:46,640 - INFO - Correcting spelling errors in text: I don't believe they distribute to Austin.
+2024-06-03 15:52:46,640 - INFO - Correcting spelling errors in text: I don't believe they distribute to Austin.
+2024-06-03 15:52:46,640 - INFO - Correcting spelling errors in text: I don't believe they distribute to Austin.
+2024-06-03 15:52:46,647 - INFO - Correcting spelling errors in text: This year would’ve been the year to start it... we’ll likely be losing the heart of our team after this season
+2024-06-03 15:52:46,647 - INFO - Correcting spelling errors in text: This year would’ve been the year to start it... we’ll likely be losing the heart of our team after this season
+2024-06-03 15:52:46,647 - INFO - Correcting spelling errors in text: This year would’ve been the year to start it... we’ll likely be losing the heart of our team after this season
+2024-06-03 15:52:46,647 - INFO - Correcting spelling errors in text: This year would’ve been the year to start it... we’ll likely be losing the heart of our team after this season
+2024-06-03 15:52:46,651 - INFO - Correcting spelling errors in text: Okay, Ross, Phoebe is my girlfriend, okay, we tell each other everything. You know, I mean, come on, guys do the same thing, I mean, what about all that locker room stuff.
+2024-06-03 15:52:46,651 - INFO - Correcting spelling errors in text: Okay, Ross, Phoebe is my girlfriend, okay, we tell each other everything. You know, I mean, come on, guys do the same thing, I mean, what about all that locker room stuff.
+2024-06-03 15:52:46,651 - INFO - Correcting spelling errors in text: Okay, Ross, Phoebe is my girlfriend, okay, we tell each other everything. You know, I mean, come on, guys do the same thing, I mean, what about all that locker room stuff.
+2024-06-03 15:52:46,651 - INFO - Correcting spelling errors in text: Okay, Ross, Phoebe is my girlfriend, okay, we tell each other everything. You know, I mean, come on, guys do the same thing, I mean, what about all that locker room stuff.
+2024-06-03 15:52:46,658 - INFO - Correcting spelling errors in text: I would say love is never enough. Love is unconditional. Relationships are not.
+2024-06-03 15:52:46,658 - INFO - Correcting spelling errors in text: I would say love is never enough. Love is unconditional. Relationships are not.
+2024-06-03 15:52:46,658 - INFO - Correcting spelling errors in text: I would say love is never enough. Love is unconditional. Relationships are not.
+2024-06-03 15:52:46,658 - INFO - Correcting spelling errors in text: I would say love is never enough. Love is unconditional. Relationships are not.
+2024-06-03 15:52:46,666 - INFO - Correcting spelling errors in text: I'm so uncomfortable.
+2024-06-03 15:52:46,666 - INFO - Correcting spelling errors in text: I'm so uncomfortable.
+2024-06-03 15:52:46,666 - INFO - Correcting spelling errors in text: I'm so uncomfortable.
+2024-06-03 15:52:46,666 - INFO - Correcting spelling errors in text: I'm so uncomfortable.
+2024-06-03 15:52:46,669 - INFO - Correcting spelling errors in text: You’re either mentally challenged or a troll, and if its the secondary you’re horrible at it. 
+2024-06-03 15:52:46,669 - INFO - Correcting spelling errors in text: You’re either mentally challenged or a troll, and if its the secondary you’re horrible at it. 
+2024-06-03 15:52:46,669 - INFO - Correcting spelling errors in text: You’re either mentally challenged or a troll, and if its the secondary you’re horrible at it. 
+2024-06-03 15:52:46,669 - INFO - Correcting spelling errors in text: You’re either mentally challenged or a troll, and if its the secondary you’re horrible at it. 
+2024-06-03 15:52:46,675 - INFO - Correcting spelling errors in text: I don't think a player can have no value and also be worth rioting over if he's traded.
+2024-06-03 15:52:46,675 - INFO - Correcting spelling errors in text: I don't think a player can have no value and also be worth rioting over if he's traded.
+2024-06-03 15:52:46,675 - INFO - Correcting spelling errors in text: I don't think a player can have no value and also be worth rioting over if he's traded.
+2024-06-03 15:52:46,675 - INFO - Correcting spelling errors in text: I don't think a player can have no value and also be worth rioting over if he's traded.
+2024-06-03 15:52:46,679 - INFO - Correcting spelling errors in text: Should have just looked at them in disbelief and said what you don't make the police that have to work Christmas day a nice lunch. Lol
+2024-06-03 15:52:46,679 - INFO - Correcting spelling errors in text: Should have just looked at them in disbelief and said what you don't make the police that have to work Christmas day a nice lunch. Lol
+2024-06-03 15:52:46,679 - INFO - Correcting spelling errors in text: Should have just looked at them in disbelief and said what you don't make the police that have to work Christmas day a nice lunch. Lol
+2024-06-03 15:52:46,679 - INFO - Correcting spelling errors in text: Should have just looked at them in disbelief and said what you don't make the police that have to work Christmas day a nice lunch. Lol
+2024-06-03 15:52:46,980 - INFO - Correcting spelling errors in text: The Tommy Gun as a crate weapon! Just the worst feeling.
+2024-06-03 15:52:46,980 - INFO - Correcting spelling errors in text: The Tommy Gun as a crate weapon! Just the worst feeling.
+2024-06-03 15:52:46,980 - INFO - Correcting spelling errors in text: The Tommy Gun as a crate weapon! Just the worst feeling.
+2024-06-03 15:52:46,980 - INFO - Correcting spelling errors in text: The Tommy Gun as a crate weapon! Just the worst feeling.
+2024-06-03 15:52:46,985 - INFO - Correcting spelling errors in text: Look at their post history, they're just spouting nonsense to get a rise out of people. Dont be the guy that falls for it, its embarassing
+2024-06-03 15:52:46,985 - INFO - Correcting spelling errors in text: Look at their post history, they're just spouting nonsense to get a rise out of people. Dont be the guy that falls for it, its embarassing
+2024-06-03 15:52:46,985 - INFO - Correcting spelling errors in text: Look at their post history, they're just spouting nonsense to get a rise out of people. Dont be the guy that falls for it, its embarassing
+2024-06-03 15:52:46,985 - INFO - Correcting spelling errors in text: Look at their post history, they're just spouting nonsense to get a rise out of people. Dont be the guy that falls for it, its embarassing
+2024-06-03 15:52:46,990 - INFO - Correcting spelling errors in text: I pray in the space I have inside my truck :)
+2024-06-03 15:52:46,990 - INFO - Correcting spelling errors in text: I pray in the space I have inside my truck :)
+2024-06-03 15:52:46,990 - INFO - Correcting spelling errors in text: I pray in the space I have inside my truck :)
+2024-06-03 15:52:46,990 - INFO - Correcting spelling errors in text: I pray in the space I have inside my truck :)
+2024-06-03 15:52:46,997 - INFO - Correcting spelling errors in text: And sock puppets. Wow. Nothing out of you is in good faith.
+2024-06-03 15:52:46,997 - INFO - Correcting spelling errors in text: And sock puppets. Wow. Nothing out of you is in good faith.
+2024-06-03 15:52:46,997 - INFO - Correcting spelling errors in text: And sock puppets. Wow. Nothing out of you is in good faith.
+2024-06-03 15:52:46,997 - INFO - Correcting spelling errors in text: And sock puppets. Wow. Nothing out of you is in good faith.
+2024-06-03 15:52:47,002 - INFO - Correcting spelling errors in text: wait, no more [NAME] SJW pwned vids in my recommended? YOU DARE DISGRACE OUR LORD AND SAVIOUR?
+2024-06-03 15:52:47,002 - INFO - Correcting spelling errors in text: wait, no more [NAME] SJW pwned vids in my recommended? YOU DARE DISGRACE OUR LORD AND SAVIOUR?
+2024-06-03 15:52:47,002 - INFO - Correcting spelling errors in text: wait, no more [NAME] SJW pwned vids in my recommended? YOU DARE DISGRACE OUR LORD AND SAVIOUR?
+2024-06-03 15:52:47,002 - INFO - Correcting spelling errors in text: wait, no more [NAME] SJW pwned vids in my recommended? YOU DARE DISGRACE OUR LORD AND SAVIOUR?
+2024-06-03 15:52:47,851 - INFO - Correcting spelling errors in text: People date who they find attractive, and fuck who they find attractive. That’s it.
+2024-06-03 15:52:47,851 - INFO - Correcting spelling errors in text: People date who they find attractive, and fuck who they find attractive. That’s it.
+2024-06-03 15:52:47,851 - INFO - Correcting spelling errors in text: People date who they find attractive, and fuck who they find attractive. That’s it.
+2024-06-03 15:52:47,851 - INFO - Correcting spelling errors in text: People date who they find attractive, and fuck who they find attractive. That’s it.
+2024-06-03 15:52:47,856 - INFO - Correcting spelling errors in text: Actually he's the smallest person in the world.
+2024-06-03 15:52:47,856 - INFO - Correcting spelling errors in text: Actually he's the smallest person in the world.
+2024-06-03 15:52:47,856 - INFO - Correcting spelling errors in text: Actually he's the smallest person in the world.
+2024-06-03 15:52:47,856 - INFO - Correcting spelling errors in text: Actually he's the smallest person in the world.
+2024-06-03 15:52:47,861 - INFO - Correcting spelling errors in text: Funny bc random guys do that behind girls in clubs sometimes.
+2024-06-03 15:52:47,861 - INFO - Correcting spelling errors in text: Funny bc random guys do that behind girls in clubs sometimes.
+2024-06-03 15:52:47,861 - INFO - Correcting spelling errors in text: Funny bc random guys do that behind girls in clubs sometimes.
+2024-06-03 15:52:47,861 - INFO - Correcting spelling errors in text: Funny bc random guys do that behind girls in clubs sometimes.
+2024-06-03 15:52:47,866 - INFO - Correcting spelling errors in text: you are correcting and downvoting me after I've already corrected myself, btw.
+2024-06-03 15:52:47,866 - INFO - Correcting spelling errors in text: you are correcting and downvoting me after I've already corrected myself, btw.
+2024-06-03 15:52:47,866 - INFO - Correcting spelling errors in text: you are correcting and downvoting me after I've already corrected myself, btw.
+2024-06-03 15:52:47,866 - INFO - Correcting spelling errors in text: you are correcting and downvoting me after I've already corrected myself, btw.
+2024-06-03 15:52:47,871 - INFO - Correcting spelling errors in text: Hope the best for him
+2024-06-03 15:52:47,871 - INFO - Correcting spelling errors in text: Hope the best for him
+2024-06-03 15:52:47,871 - INFO - Correcting spelling errors in text: Hope the best for him
+2024-06-03 15:52:47,871 - INFO - Correcting spelling errors in text: Hope the best for him
+2024-06-03 15:52:47,875 - INFO - Correcting spelling errors in text: It’s not violence against political opponents if it’s against a tyrant, which you define as a political opponent
+2024-06-03 15:52:47,875 - INFO - Correcting spelling errors in text: It’s not violence against political opponents if it’s against a tyrant, which you define as a political opponent
+2024-06-03 15:52:47,875 - INFO - Correcting spelling errors in text: It’s not violence against political opponents if it’s against a tyrant, which you define as a political opponent
+2024-06-03 15:52:47,875 - INFO - Correcting spelling errors in text: It’s not violence against political opponents if it’s against a tyrant, which you define as a political opponent
+2024-06-03 15:52:47,882 - INFO - Correcting spelling errors in text: Congrats!!! Thatll be me in May and I cant freaking wait!
+2024-06-03 15:52:47,882 - INFO - Correcting spelling errors in text: Congrats!!! Thatll be me in May and I cant freaking wait!
+2024-06-03 15:52:47,882 - INFO - Correcting spelling errors in text: Congrats!!! Thatll be me in May and I cant freaking wait!
+2024-06-03 15:52:47,882 - INFO - Correcting spelling errors in text: Congrats!!! Thatll be me in May and I cant freaking wait!
+2024-06-03 15:52:48,107 - INFO - Correcting spelling errors in text: THIS IS NOT DETROIT, MAN! THIS IS THE SUPERBOWL!
+2024-06-03 15:52:48,107 - INFO - Correcting spelling errors in text: THIS IS NOT DETROIT, MAN! THIS IS THE SUPERBOWL!
+2024-06-03 15:52:48,107 - INFO - Correcting spelling errors in text: THIS IS NOT DETROIT, MAN! THIS IS THE SUPERBOWL!
+2024-06-03 15:52:48,107 - INFO - Correcting spelling errors in text: THIS IS NOT DETROIT, MAN! THIS IS THE SUPERBOWL!
+2024-06-03 15:52:48,799 - INFO - Correcting spelling errors in text: uhh guys love natural beauty in a partner but the random effort is like a cool surprise
+2024-06-03 15:52:48,799 - INFO - Correcting spelling errors in text: uhh guys love natural beauty in a partner but the random effort is like a cool surprise
+2024-06-03 15:52:48,799 - INFO - Correcting spelling errors in text: uhh guys love natural beauty in a partner but the random effort is like a cool surprise
+2024-06-03 15:52:48,799 - INFO - Correcting spelling errors in text: uhh guys love natural beauty in a partner but the random effort is like a cool surprise
+2024-06-03 15:52:48,804 - INFO - Correcting spelling errors in text: Predatory towing is getting ridiculous. I have up to date stickers for all the properties I maintain and have been towed twice. Fuck em.
+2024-06-03 15:52:48,804 - INFO - Correcting spelling errors in text: Predatory towing is getting ridiculous. I have up to date stickers for all the properties I maintain and have been towed twice. Fuck em.
+2024-06-03 15:52:48,804 - INFO - Correcting spelling errors in text: Predatory towing is getting ridiculous. I have up to date stickers for all the properties I maintain and have been towed twice. Fuck em.
+2024-06-03 15:52:48,804 - INFO - Correcting spelling errors in text: Predatory towing is getting ridiculous. I have up to date stickers for all the properties I maintain and have been towed twice. Fuck em.
+2024-06-03 15:52:49,319 - INFO - Spell checking and correction completed.
+2024-06-03 15:52:49,319 - INFO - Spell checking and correction completed.
+2024-06-03 15:52:49,319 - INFO - Spell checking and correction completed.
+2024-06-03 15:52:49,319 - INFO - Spell checking and correction completed.
+2024-06-03 15:52:49,347 - INFO - Lowercasing text...
+2024-06-03 15:52:49,347 - INFO - Lowercasing text...
+2024-06-03 15:52:49,347 - INFO - Lowercasing text...
+2024-06-03 15:52:49,347 - INFO - Lowercasing text...
+2024-06-03 15:52:49,347 - INFO - Lowercasing text...
+2024-06-03 15:52:49,353 - INFO - Tokenizing text in column: sentence
+2024-06-03 15:52:49,353 - INFO - Tokenizing text in column: sentence
+2024-06-03 15:52:49,353 - INFO - Tokenizing text in column: sentence
+2024-06-03 15:52:49,353 - INFO - Tokenizing text in column: sentence
+2024-06-03 15:52:49,353 - INFO - Tokenizing text in column: sentence
+2024-06-03 15:52:49,373 - INFO - Lemmatizing tokens in column: sentence
+2024-06-03 15:52:49,373 - INFO - Lemmatizing tokens in column: sentence
+2024-06-03 15:52:49,373 - INFO - Lemmatizing tokens in column: sentence
+2024-06-03 15:52:49,373 - INFO - Lemmatizing tokens in column: sentence
+2024-06-03 15:52:49,373 - INFO - Lemmatizing tokens in column: sentence
+2024-06-03 15:52:50,989 - INFO - Selected tokenizer: roberta
+2024-06-03 15:52:50,989 - INFO - Selected tokenizer: roberta
+2024-06-03 15:52:50,989 - INFO - Selected tokenizer: roberta
+2024-06-03 15:52:50,989 - INFO - Selected tokenizer: roberta
+2024-06-03 15:52:50,989 - INFO - Selected tokenizer: roberta
+2024-06-03 15:52:51,384 - INFO - Converting tokens to input IDs...
+2024-06-03 15:52:51,384 - INFO - Converting tokens to input IDs...
+2024-06-03 15:52:51,384 - INFO - Converting tokens to input IDs...
+2024-06-03 15:52:51,384 - INFO - Converting tokens to input IDs...
+2024-06-03 15:52:51,384 - INFO - Converting tokens to input IDs...
+2024-06-03 15:52:51,391 - INFO - Determining maximum sequence length based on the longest sentence...
+2024-06-03 15:52:51,391 - INFO - Determining maximum sequence length based on the longest sentence...
+2024-06-03 15:52:51,391 - INFO - Determining maximum sequence length based on the longest sentence...
+2024-06-03 15:52:51,391 - INFO - Determining maximum sequence length based on the longest sentence...
+2024-06-03 15:52:51,391 - INFO - Determining maximum sequence length based on the longest sentence...
+2024-06-03 15:52:51,395 - INFO - Maximum sequence length determined: 45
+2024-06-03 15:52:51,395 - INFO - Maximum sequence length determined: 45
+2024-06-03 15:52:51,395 - INFO - Maximum sequence length determined: 45
+2024-06-03 15:52:51,395 - INFO - Maximum sequence length determined: 45
+2024-06-03 15:52:51,395 - INFO - Maximum sequence length determined: 45
+2024-06-03 15:52:51,400 - INFO - Padding/truncating input IDs to maximum length: 45
+2024-06-03 15:52:51,400 - INFO - Padding/truncating input IDs to maximum length: 45
+2024-06-03 15:52:51,400 - INFO - Padding/truncating input IDs to maximum length: 45
+2024-06-03 15:52:51,400 - INFO - Padding/truncating input IDs to maximum length: 45
+2024-06-03 15:52:51,400 - INFO - Padding/truncating input IDs to maximum length: 45
+2024-06-03 15:52:51,405 - INFO - Mapping emotion labels to integers...
+2024-06-03 15:52:51,405 - INFO - Mapping emotion labels to integers...
+2024-06-03 15:52:51,405 - INFO - Mapping emotion labels to integers...
+2024-06-03 15:52:51,405 - INFO - Mapping emotion labels to integers...
+2024-06-03 15:52:51,405 - INFO - Mapping emotion labels to integers...
+2024-06-03 15:52:51,411 - INFO - Text preprocessing completed.
+2024-06-03 15:52:51,411 - INFO - Text preprocessing completed.
+2024-06-03 15:52:51,411 - INFO - Text preprocessing completed.
+2024-06-03 15:52:51,411 - INFO - Text preprocessing completed.
+2024-06-03 15:52:51,411 - INFO - Text preprocessing completed.
+2024-06-03 15:52:51,440 - INFO - Emotion labels converted to tensor
+2024-06-03 15:52:51,440 - INFO - Emotion labels converted to tensor
+2024-06-03 15:52:51,440 - INFO - Emotion labels converted to tensor
+2024-06-03 15:52:51,440 - INFO - Emotion labels converted to tensor
+2024-06-03 15:52:51,440 - INFO - Emotion labels converted to tensor
+2024-06-03 15:52:51,440 - INFO - Emotion labels converted to tensor
+2024-06-03 15:52:51,449 - INFO - Data split into training and validation sets
+2024-06-03 15:52:51,449 - INFO - Data split into training and validation sets
+2024-06-03 15:52:51,449 - INFO - Data split into training and validation sets
+2024-06-03 15:52:51,449 - INFO - Data split into training and validation sets
+2024-06-03 15:52:51,449 - INFO - Data split into training and validation sets
+2024-06-03 15:52:51,449 - INFO - Data split into training and validation sets
+2024-06-03 15:52:51,464 - INFO - Tensors and attention masks created
+2024-06-03 15:52:51,464 - INFO - Tensors and attention masks created
+2024-06-03 15:52:51,464 - INFO - Tensors and attention masks created
+2024-06-03 15:52:51,464 - INFO - Tensors and attention masks created
+2024-06-03 15:52:51,464 - INFO - Tensors and attention masks created
+2024-06-03 15:52:51,464 - INFO - Tensors and attention masks created
+2024-06-03 15:52:51,470 - INFO - DataLoaders created for training and validation sets
+2024-06-03 15:52:51,470 - INFO - DataLoaders created for training and validation sets
+2024-06-03 15:52:51,470 - INFO - DataLoaders created for training and validation sets
+2024-06-03 15:52:51,470 - INFO - DataLoaders created for training and validation sets
+2024-06-03 15:52:51,470 - INFO - DataLoaders created for training and validation sets
+2024-06-03 15:52:51,470 - INFO - DataLoaders created for training and validation sets
+2024-06-03 15:52:51,476 - INFO - Creating a classification model.
+2024-06-03 15:52:51,476 - INFO - Creating a classification model.
+2024-06-03 15:52:51,476 - INFO - Creating a classification model.
+2024-06-03 15:52:51,476 - INFO - Creating a classification model.
+2024-06-03 15:52:51,476 - INFO - Creating a classification model.
+2024-06-03 15:52:51,476 - INFO - Creating a classification model.
+2024-06-03 15:52:51,476 - INFO - Creating a classification model.
+2024-06-03 15:52:52,485 - INFO - Model created
+2024-06-03 15:52:52,485 - INFO - Model created
+2024-06-03 15:52:52,485 - INFO - Model created
+2024-06-03 15:52:52,485 - INFO - Model created
+2024-06-03 15:52:52,485 - INFO - Model created
+2024-06-03 15:52:52,485 - INFO - Model created
+2024-06-03 15:52:52,485 - INFO - Model created
+2024-06-03 15:52:53,567 - INFO - Loss function and optimizer defined
+2024-06-03 15:52:53,567 - INFO - Loss function and optimizer defined
+2024-06-03 15:52:53,567 - INFO - Loss function and optimizer defined
+2024-06-03 15:52:53,567 - INFO - Loss function and optimizer defined
+2024-06-03 15:52:53,567 - INFO - Loss function and optimizer defined
+2024-06-03 15:52:53,567 - INFO - Loss function and optimizer defined
+2024-06-03 15:52:53,567 - INFO - Loss function and optimizer defined
+2024-06-03 15:53:18,196 - INFO - Epoch 1/100: Train Loss: 4.2130313316981
+2024-06-03 15:53:18,196 - INFO - Epoch 1/100: Train Loss: 4.2130313316981
+2024-06-03 15:53:18,196 - INFO - Epoch 1/100: Train Loss: 4.2130313316981
+2024-06-03 15:53:18,196 - INFO - Epoch 1/100: Train Loss: 4.2130313316981
+2024-06-03 15:53:18,196 - INFO - Epoch 1/100: Train Loss: 4.2130313316981
+2024-06-03 15:53:18,196 - INFO - Epoch 1/100: Train Loss: 4.2130313316981
+2024-06-03 15:53:18,196 - INFO - Epoch 1/100: Train Loss: 4.2130313316981
+2024-06-03 15:53:19,999 - INFO - Epoch 1/100: Validation Loss: 6.757779598236084
+2024-06-03 15:53:19,999 - INFO - Epoch 1/100: Validation Loss: 6.757779598236084
+2024-06-03 15:53:19,999 - INFO - Epoch 1/100: Validation Loss: 6.757779598236084
+2024-06-03 15:53:19,999 - INFO - Epoch 1/100: Validation Loss: 6.757779598236084
+2024-06-03 15:53:19,999 - INFO - Epoch 1/100: Validation Loss: 6.757779598236084
+2024-06-03 15:53:19,999 - INFO - Epoch 1/100: Validation Loss: 6.757779598236084
+2024-06-03 15:53:19,999 - INFO - Epoch 1/100: Validation Loss: 6.757779598236084
+2024-06-03 15:53:45,282 - INFO - Epoch 2/100: Train Loss: 5.384347399075826
+2024-06-03 15:53:45,282 - INFO - Epoch 2/100: Train Loss: 5.384347399075826
+2024-06-03 15:53:45,282 - INFO - Epoch 2/100: Train Loss: 5.384347399075826
+2024-06-03 15:53:45,282 - INFO - Epoch 2/100: Train Loss: 5.384347399075826
+2024-06-03 15:53:45,282 - INFO - Epoch 2/100: Train Loss: 5.384347399075826
+2024-06-03 15:53:45,282 - INFO - Epoch 2/100: Train Loss: 5.384347399075826
+2024-06-03 15:53:45,282 - INFO - Epoch 2/100: Train Loss: 5.384347399075826
+2024-06-03 15:53:47,105 - INFO - Epoch 2/100: Validation Loss: 3.7769815921783447
+2024-06-03 15:53:47,105 - INFO - Epoch 2/100: Validation Loss: 3.7769815921783447
+2024-06-03 15:53:47,105 - INFO - Epoch 2/100: Validation Loss: 3.7769815921783447
+2024-06-03 15:53:47,105 - INFO - Epoch 2/100: Validation Loss: 3.7769815921783447
+2024-06-03 15:53:47,105 - INFO - Epoch 2/100: Validation Loss: 3.7769815921783447
+2024-06-03 15:53:47,105 - INFO - Epoch 2/100: Validation Loss: 3.7769815921783447
+2024-06-03 15:53:47,105 - INFO - Epoch 2/100: Validation Loss: 3.7769815921783447
+2024-06-03 15:54:12,064 - INFO - Epoch 3/100: Train Loss: 4.34559444586436
+2024-06-03 15:54:12,064 - INFO - Epoch 3/100: Train Loss: 4.34559444586436
+2024-06-03 15:54:12,064 - INFO - Epoch 3/100: Train Loss: 4.34559444586436
+2024-06-03 15:54:12,064 - INFO - Epoch 3/100: Train Loss: 4.34559444586436
+2024-06-03 15:54:12,064 - INFO - Epoch 3/100: Train Loss: 4.34559444586436
+2024-06-03 15:54:12,064 - INFO - Epoch 3/100: Train Loss: 4.34559444586436
+2024-06-03 15:54:12,064 - INFO - Epoch 3/100: Train Loss: 4.34559444586436
+2024-06-03 15:54:13,857 - INFO - Epoch 3/100: Validation Loss: 3.659634590148926
+2024-06-03 15:54:13,857 - INFO - Epoch 3/100: Validation Loss: 3.659634590148926
+2024-06-03 15:54:13,857 - INFO - Epoch 3/100: Validation Loss: 3.659634590148926
+2024-06-03 15:54:13,857 - INFO - Epoch 3/100: Validation Loss: 3.659634590148926
+2024-06-03 15:54:13,857 - INFO - Epoch 3/100: Validation Loss: 3.659634590148926
+2024-06-03 15:54:13,857 - INFO - Epoch 3/100: Validation Loss: 3.659634590148926
+2024-06-03 15:54:13,857 - INFO - Epoch 3/100: Validation Loss: 3.659634590148926
+2024-06-03 15:54:38,358 - INFO - Epoch 4/100: Train Loss: 3.8300102949142456
+2024-06-03 15:54:38,358 - INFO - Epoch 4/100: Train Loss: 3.8300102949142456
+2024-06-03 15:54:38,358 - INFO - Epoch 4/100: Train Loss: 3.8300102949142456
+2024-06-03 15:54:38,358 - INFO - Epoch 4/100: Train Loss: 3.8300102949142456
+2024-06-03 15:54:38,358 - INFO - Epoch 4/100: Train Loss: 3.8300102949142456
+2024-06-03 15:54:38,358 - INFO - Epoch 4/100: Train Loss: 3.8300102949142456
+2024-06-03 15:54:38,358 - INFO - Epoch 4/100: Train Loss: 3.8300102949142456
+2024-06-03 15:54:40,165 - INFO - Epoch 4/100: Validation Loss: 3.116603374481201
+2024-06-03 15:54:40,165 - INFO - Epoch 4/100: Validation Loss: 3.116603374481201
+2024-06-03 15:54:40,165 - INFO - Epoch 4/100: Validation Loss: 3.116603374481201
+2024-06-03 15:54:40,165 - INFO - Epoch 4/100: Validation Loss: 3.116603374481201
+2024-06-03 15:54:40,165 - INFO - Epoch 4/100: Validation Loss: 3.116603374481201
+2024-06-03 15:54:40,165 - INFO - Epoch 4/100: Validation Loss: 3.116603374481201
+2024-06-03 15:54:40,165 - INFO - Epoch 4/100: Validation Loss: 3.116603374481201
+2024-06-03 15:55:04,497 - INFO - Epoch 5/100: Train Loss: 3.0720341205596924
+2024-06-03 15:55:04,497 - INFO - Epoch 5/100: Train Loss: 3.0720341205596924
+2024-06-03 15:55:04,497 - INFO - Epoch 5/100: Train Loss: 3.0720341205596924
+2024-06-03 15:55:04,497 - INFO - Epoch 5/100: Train Loss: 3.0720341205596924
+2024-06-03 15:55:04,497 - INFO - Epoch 5/100: Train Loss: 3.0720341205596924
+2024-06-03 15:55:04,497 - INFO - Epoch 5/100: Train Loss: 3.0720341205596924
+2024-06-03 15:55:04,497 - INFO - Epoch 5/100: Train Loss: 3.0720341205596924
+2024-06-03 15:55:06,304 - INFO - Epoch 5/100: Validation Loss: 2.60653817653656
+2024-06-03 15:55:06,304 - INFO - Epoch 5/100: Validation Loss: 2.60653817653656
+2024-06-03 15:55:06,304 - INFO - Epoch 5/100: Validation Loss: 2.60653817653656
+2024-06-03 15:55:06,304 - INFO - Epoch 5/100: Validation Loss: 2.60653817653656
+2024-06-03 15:55:06,304 - INFO - Epoch 5/100: Validation Loss: 2.60653817653656
+2024-06-03 15:55:06,304 - INFO - Epoch 5/100: Validation Loss: 2.60653817653656
+2024-06-03 15:55:06,304 - INFO - Epoch 5/100: Validation Loss: 2.60653817653656
+2024-06-03 15:55:30,713 - INFO - Epoch 6/100: Train Loss: 2.5532259941101074
+2024-06-03 15:55:30,713 - INFO - Epoch 6/100: Train Loss: 2.5532259941101074
+2024-06-03 15:55:30,713 - INFO - Epoch 6/100: Train Loss: 2.5532259941101074
+2024-06-03 15:55:30,713 - INFO - Epoch 6/100: Train Loss: 2.5532259941101074
+2024-06-03 15:55:30,713 - INFO - Epoch 6/100: Train Loss: 2.5532259941101074
+2024-06-03 15:55:30,713 - INFO - Epoch 6/100: Train Loss: 2.5532259941101074
+2024-06-03 15:55:30,713 - INFO - Epoch 6/100: Train Loss: 2.5532259941101074
+2024-06-03 15:55:32,542 - INFO - Epoch 6/100: Validation Loss: 1.8468621373176575
+2024-06-03 15:55:32,542 - INFO - Epoch 6/100: Validation Loss: 1.8468621373176575
+2024-06-03 15:55:32,542 - INFO - Epoch 6/100: Validation Loss: 1.8468621373176575
+2024-06-03 15:55:32,542 - INFO - Epoch 6/100: Validation Loss: 1.8468621373176575
+2024-06-03 15:55:32,542 - INFO - Epoch 6/100: Validation Loss: 1.8468621373176575
+2024-06-03 15:55:32,542 - INFO - Epoch 6/100: Validation Loss: 1.8468621373176575
+2024-06-03 15:55:32,542 - INFO - Epoch 6/100: Validation Loss: 1.8468621373176575
+2024-06-03 15:55:57,032 - INFO - Epoch 7/100: Train Loss: 2.3200936317443848
+2024-06-03 15:55:57,032 - INFO - Epoch 7/100: Train Loss: 2.3200936317443848
+2024-06-03 15:55:57,032 - INFO - Epoch 7/100: Train Loss: 2.3200936317443848
+2024-06-03 15:55:57,032 - INFO - Epoch 7/100: Train Loss: 2.3200936317443848
+2024-06-03 15:55:57,032 - INFO - Epoch 7/100: Train Loss: 2.3200936317443848
+2024-06-03 15:55:57,032 - INFO - Epoch 7/100: Train Loss: 2.3200936317443848
+2024-06-03 15:55:57,032 - INFO - Epoch 7/100: Train Loss: 2.3200936317443848
+2024-06-03 15:55:58,816 - INFO - Epoch 7/100: Validation Loss: 2.315835118293762
+2024-06-03 15:55:58,816 - INFO - Epoch 7/100: Validation Loss: 2.315835118293762
+2024-06-03 15:55:58,816 - INFO - Epoch 7/100: Validation Loss: 2.315835118293762
+2024-06-03 15:55:58,816 - INFO - Epoch 7/100: Validation Loss: 2.315835118293762
+2024-06-03 15:55:58,816 - INFO - Epoch 7/100: Validation Loss: 2.315835118293762
+2024-06-03 15:55:58,816 - INFO - Epoch 7/100: Validation Loss: 2.315835118293762
+2024-06-03 15:55:58,816 - INFO - Epoch 7/100: Validation Loss: 2.315835118293762
+2024-06-03 15:56:22,978 - INFO - Epoch 8/100: Train Loss: 2.1562661131223044
+2024-06-03 15:56:22,978 - INFO - Epoch 8/100: Train Loss: 2.1562661131223044
+2024-06-03 15:56:22,978 - INFO - Epoch 8/100: Train Loss: 2.1562661131223044
+2024-06-03 15:56:22,978 - INFO - Epoch 8/100: Train Loss: 2.1562661131223044
+2024-06-03 15:56:22,978 - INFO - Epoch 8/100: Train Loss: 2.1562661131223044
+2024-06-03 15:56:22,978 - INFO - Epoch 8/100: Train Loss: 2.1562661131223044
+2024-06-03 15:56:22,978 - INFO - Epoch 8/100: Train Loss: 2.1562661131223044
+2024-06-03 15:56:24,767 - INFO - Epoch 8/100: Validation Loss: 2.0507551431655884
+2024-06-03 15:56:24,767 - INFO - Epoch 8/100: Validation Loss: 2.0507551431655884
+2024-06-03 15:56:24,767 - INFO - Epoch 8/100: Validation Loss: 2.0507551431655884
+2024-06-03 15:56:24,767 - INFO - Epoch 8/100: Validation Loss: 2.0507551431655884
+2024-06-03 15:56:24,767 - INFO - Epoch 8/100: Validation Loss: 2.0507551431655884
+2024-06-03 15:56:24,767 - INFO - Epoch 8/100: Validation Loss: 2.0507551431655884
+2024-06-03 15:56:24,767 - INFO - Epoch 8/100: Validation Loss: 2.0507551431655884
+2024-06-03 15:56:48,946 - INFO - Epoch 9/100: Train Loss: 2.432388722896576
+2024-06-03 15:56:48,946 - INFO - Epoch 9/100: Train Loss: 2.432388722896576
+2024-06-03 15:56:48,946 - INFO - Epoch 9/100: Train Loss: 2.432388722896576
+2024-06-03 15:56:48,946 - INFO - Epoch 9/100: Train Loss: 2.432388722896576
+2024-06-03 15:56:48,946 - INFO - Epoch 9/100: Train Loss: 2.432388722896576
+2024-06-03 15:56:48,946 - INFO - Epoch 9/100: Train Loss: 2.432388722896576
+2024-06-03 15:56:48,946 - INFO - Epoch 9/100: Train Loss: 2.432388722896576
+2024-06-03 15:56:50,728 - INFO - Epoch 9/100: Validation Loss: 2.2626830339431763
+2024-06-03 15:56:50,728 - INFO - Epoch 9/100: Validation Loss: 2.2626830339431763
+2024-06-03 15:56:50,728 - INFO - Epoch 9/100: Validation Loss: 2.2626830339431763
+2024-06-03 15:56:50,728 - INFO - Epoch 9/100: Validation Loss: 2.2626830339431763
+2024-06-03 15:56:50,728 - INFO - Epoch 9/100: Validation Loss: 2.2626830339431763
+2024-06-03 15:56:50,728 - INFO - Epoch 9/100: Validation Loss: 2.2626830339431763
+2024-06-03 15:56:50,728 - INFO - Epoch 9/100: Validation Loss: 2.2626830339431763
+2024-06-03 15:56:50,733 - INFO - Validation loss did not improve for 3 consecutive epochs. Early stopping.
+2024-06-03 15:56:50,733 - INFO - Validation loss did not improve for 3 consecutive epochs. Early stopping.
+2024-06-03 15:56:50,733 - INFO - Validation loss did not improve for 3 consecutive epochs. Early stopping.
+2024-06-03 15:56:50,733 - INFO - Validation loss did not improve for 3 consecutive epochs. Early stopping.
+2024-06-03 15:56:50,733 - INFO - Validation loss did not improve for 3 consecutive epochs. Early stopping.
+2024-06-03 15:56:50,733 - INFO - Validation loss did not improve for 3 consecutive epochs. Early stopping.
+2024-06-03 15:56:50,733 - INFO - Validation loss did not improve for 3 consecutive epochs. Early stopping.
+2024-06-03 15:56:50,739 - INFO - Early stopping at epoch 10
+2024-06-03 15:56:50,739 - INFO - Early stopping at epoch 10
+2024-06-03 15:56:50,739 - INFO - Early stopping at epoch 10
+2024-06-03 15:56:50,739 - INFO - Early stopping at epoch 10
+2024-06-03 15:56:50,739 - INFO - Early stopping at epoch 10
+2024-06-03 15:56:50,739 - INFO - Early stopping at epoch 10
+2024-06-03 15:56:50,739 - INFO - Early stopping at epoch 10
+2024-06-03 16:00:11,565 - __main__ - INFO - Starting program...
+2024-06-03 16:02:58,648 - INFO - Transcribing and translating audio files...
+2024-06-03 16:02:58,648 - INFO - Loading Whisper model...
+2024-06-03 16:02:59,653 - INFO - Transcribing audio file...
+2024-06-03 16:05:33,883 - INFO - Extracting transcription chunks...
+2024-06-03 16:06:28,855 - INFO - Starting predictions...
+2024-06-03 16:06:28,855 - INFO - Starting predictions...
+2024-06-03 16:06:28,858 - INFO - Starting dataset_loader function
+2024-06-03 16:06:28,858 - INFO - Starting dataset_loader function
+2024-06-03 16:06:28,858 - INFO - Starting dataset_loader function
+2024-06-03 16:06:29,164 - INFO - Max length of tokenized texts: 33
+2024-06-03 16:06:29,164 - INFO - Max length of tokenized texts: 33
+2024-06-03 16:06:29,164 - INFO - Max length of tokenized texts: 33
+2024-06-03 16:06:29,207 - INFO - DataLoader size: 6
+2024-06-03 16:06:29,207 - INFO - DataLoader size: 6
+2024-06-03 16:06:29,207 - INFO - DataLoader size: 6
+2024-06-03 16:06:29,210 - INFO - Successfully created DataLoader
+2024-06-03 16:06:29,210 - INFO - Successfully created DataLoader
+2024-06-03 16:06:29,210 - INFO - Successfully created DataLoader
+2024-06-03 16:06:39,752 - INFO - Predictions completed.
+2024-06-03 16:06:39,752 - INFO - Predictions completed.
+2024-06-03 16:06:39,752 - INFO - Predictions completed.
+2024-06-04 16:39:25,013 - INFO - Loading CSV file...
+2024-06-04 16:39:25,070 - INFO - Loaded 30000 rows from file.
+2024-06-04 16:39:25,072 - INFO - Returning DataFrame with 'sentence' and 'emotion' columns.
+2024-06-04 16:39:25,109 - INFO - Minimum count of samples among all classes: 5000
+2024-06-04 16:39:25,109 - INFO - Minimum count of samples among all classes: 5000
+2024-06-04 16:39:25,116 - INFO - Added 5000 samples of class anger to the balanced DataFrame.
+2024-06-04 16:39:25,116 - INFO - Added 5000 samples of class anger to the balanced DataFrame.
+2024-06-04 16:39:25,121 - INFO - Added 5000 samples of class disgust to the balanced DataFrame.
+2024-06-04 16:39:25,121 - INFO - Added 5000 samples of class disgust to the balanced DataFrame.
+2024-06-04 16:39:25,125 - INFO - Added 5000 samples of class fear to the balanced DataFrame.
+2024-06-04 16:39:25,125 - INFO - Added 5000 samples of class fear to the balanced DataFrame.
+2024-06-04 16:39:25,133 - INFO - Added 5000 samples of class happiness to the balanced DataFrame.
+2024-06-04 16:39:25,133 - INFO - Added 5000 samples of class happiness to the balanced DataFrame.
+2024-06-04 16:39:25,138 - INFO - Added 5000 samples of class sadness to the balanced DataFrame.
+2024-06-04 16:39:25,138 - INFO - Added 5000 samples of class sadness to the balanced DataFrame.
+2024-06-04 16:39:25,144 - INFO - Added 5000 samples of class surprise to the balanced DataFrame.
+2024-06-04 16:39:25,144 - INFO - Added 5000 samples of class surprise to the balanced DataFrame.
+2024-06-04 16:39:25,150 - INFO - Balancing completed. Total samples in balanced DataFrame: 30000
+2024-06-04 16:39:25,150 - INFO - Balancing completed. Total samples in balanced DataFrame: 30000
+2024-06-04 16:39:25,370 - INFO - Minimum count of samples among all classes: 20
+2024-06-04 16:39:25,370 - INFO - Minimum count of samples among all classes: 20
+2024-06-04 16:39:25,370 - INFO - Minimum count of samples among all classes: 20
+2024-06-04 16:39:25,374 - INFO - Added 20 samples of class anger to the balanced DataFrame.
+2024-06-04 16:39:25,374 - INFO - Added 20 samples of class anger to the balanced DataFrame.
+2024-06-04 16:39:25,374 - INFO - Added 20 samples of class anger to the balanced DataFrame.
+2024-06-04 16:39:25,378 - INFO - Added 20 samples of class disgust to the balanced DataFrame.
+2024-06-04 16:39:25,378 - INFO - Added 20 samples of class disgust to the balanced DataFrame.
+2024-06-04 16:39:25,378 - INFO - Added 20 samples of class disgust to the balanced DataFrame.
+2024-06-04 16:39:25,381 - INFO - Added 20 samples of class fear to the balanced DataFrame.
+2024-06-04 16:39:25,381 - INFO - Added 20 samples of class fear to the balanced DataFrame.
+2024-06-04 16:39:25,381 - INFO - Added 20 samples of class fear to the balanced DataFrame.
+2024-06-04 16:39:25,384 - INFO - Added 20 samples of class happiness to the balanced DataFrame.
+2024-06-04 16:39:25,384 - INFO - Added 20 samples of class happiness to the balanced DataFrame.
+2024-06-04 16:39:25,384 - INFO - Added 20 samples of class happiness to the balanced DataFrame.
+2024-06-04 16:39:25,386 - INFO - Added 20 samples of class sadness to the balanced DataFrame.
+2024-06-04 16:39:25,386 - INFO - Added 20 samples of class sadness to the balanced DataFrame.
+2024-06-04 16:39:25,386 - INFO - Added 20 samples of class sadness to the balanced DataFrame.
+2024-06-04 16:39:25,390 - INFO - Added 20 samples of class surprise to the balanced DataFrame.
+2024-06-04 16:39:25,390 - INFO - Added 20 samples of class surprise to the balanced DataFrame.
+2024-06-04 16:39:25,390 - INFO - Added 20 samples of class surprise to the balanced DataFrame.
+2024-06-04 16:39:25,394 - INFO - Balancing completed. Total samples in balanced DataFrame: 120
+2024-06-04 16:39:25,394 - INFO - Balancing completed. Total samples in balanced DataFrame: 120
+2024-06-04 16:39:25,394 - INFO - Balancing completed. Total samples in balanced DataFrame: 120
+2024-06-04 16:39:25,417 - INFO - Performing spell checking and correction on column: sentence
+2024-06-04 16:39:25,417 - INFO - Performing spell checking and correction on column: sentence
+2024-06-04 16:39:25,417 - INFO - Performing spell checking and correction on column: sentence
+2024-06-04 16:39:25,417 - INFO - Performing spell checking and correction on column: sentence
+2024-06-04 16:39:25,420 - INFO - Correcting spelling errors in text: Or maybe he's just super hot? Can't help it if you're a casanova.
+2024-06-04 16:39:25,420 - INFO - Correcting spelling errors in text: Or maybe he's just super hot? Can't help it if you're a casanova.
+2024-06-04 16:39:25,420 - INFO - Correcting spelling errors in text: Or maybe he's just super hot? Can't help it if you're a casanova.
+2024-06-04 16:39:25,420 - INFO - Correcting spelling errors in text: Or maybe he's just super hot? Can't help it if you're a casanova.
+2024-06-04 16:39:25,674 - INFO - Correcting spelling errors in text: My parents always checked on us to make sure we were breathing, they always panicked if they didn’t hear us making sounds.
+2024-06-04 16:39:25,674 - INFO - Correcting spelling errors in text: My parents always checked on us to make sure we were breathing, they always panicked if they didn’t hear us making sounds.
+2024-06-04 16:39:25,674 - INFO - Correcting spelling errors in text: My parents always checked on us to make sure we were breathing, they always panicked if they didn’t hear us making sounds.
+2024-06-04 16:39:25,674 - INFO - Correcting spelling errors in text: My parents always checked on us to make sure we were breathing, they always panicked if they didn’t hear us making sounds.
+2024-06-04 16:39:25,894 - INFO - Correcting spelling errors in text: I meant, why don't you take Richard to the game? What?
+2024-06-04 16:39:25,894 - INFO - Correcting spelling errors in text: I meant, why don't you take Richard to the game? What?
+2024-06-04 16:39:25,894 - INFO - Correcting spelling errors in text: I meant, why don't you take Richard to the game? What?
+2024-06-04 16:39:25,894 - INFO - Correcting spelling errors in text: I meant, why don't you take Richard to the game? What?
+2024-06-04 16:39:25,899 - INFO - Correcting spelling errors in text: My money is on [NAME]. Doubt [NAME] is back up next yr. [NAME] looked.good last preseason. I was surprised he didn't beat [NAME] then.
+2024-06-04 16:39:25,899 - INFO - Correcting spelling errors in text: My money is on [NAME]. Doubt [NAME] is back up next yr. [NAME] looked.good last preseason. I was surprised he didn't beat [NAME] then.
+2024-06-04 16:39:25,899 - INFO - Correcting spelling errors in text: My money is on [NAME]. Doubt [NAME] is back up next yr. [NAME] looked.good last preseason. I was surprised he didn't beat [NAME] then.
+2024-06-04 16:39:25,899 - INFO - Correcting spelling errors in text: My money is on [NAME]. Doubt [NAME] is back up next yr. [NAME] looked.good last preseason. I was surprised he didn't beat [NAME] then.
+2024-06-04 16:39:26,451 - INFO - Correcting spelling errors in text: Man, that sounds like a big stuff around. Good luck getting it sorted
+2024-06-04 16:39:26,451 - INFO - Correcting spelling errors in text: Man, that sounds like a big stuff around. Good luck getting it sorted
+2024-06-04 16:39:26,451 - INFO - Correcting spelling errors in text: Man, that sounds like a big stuff around. Good luck getting it sorted
+2024-06-04 16:39:26,451 - INFO - Correcting spelling errors in text: Man, that sounds like a big stuff around. Good luck getting it sorted
+2024-06-04 16:39:26,454 - INFO - Correcting spelling errors in text: Yea it’s a bit creepy
+2024-06-04 16:39:26,454 - INFO - Correcting spelling errors in text: Yea it’s a bit creepy
+2024-06-04 16:39:26,454 - INFO - Correcting spelling errors in text: Yea it’s a bit creepy
+2024-06-04 16:39:26,454 - INFO - Correcting spelling errors in text: Yea it’s a bit creepy
+2024-06-04 16:39:26,460 - INFO - Correcting spelling errors in text: What a disgusting person she is
+2024-06-04 16:39:26,460 - INFO - Correcting spelling errors in text: What a disgusting person she is
+2024-06-04 16:39:26,460 - INFO - Correcting spelling errors in text: What a disgusting person she is
+2024-06-04 16:39:26,460 - INFO - Correcting spelling errors in text: What a disgusting person she is
+2024-06-04 16:39:26,463 - INFO - Correcting spelling errors in text: > Pretty much the person I love just broke up completely with me After how long?
+2024-06-04 16:39:26,463 - INFO - Correcting spelling errors in text: > Pretty much the person I love just broke up completely with me After how long?
+2024-06-04 16:39:26,463 - INFO - Correcting spelling errors in text: > Pretty much the person I love just broke up completely with me After how long?
+2024-06-04 16:39:26,463 - INFO - Correcting spelling errors in text: > Pretty much the person I love just broke up completely with me After how long?
+2024-06-04 16:39:26,468 - INFO - Correcting spelling errors in text: Weird, weird.
+2024-06-04 16:39:26,468 - INFO - Correcting spelling errors in text: Weird, weird.
+2024-06-04 16:39:26,468 - INFO - Correcting spelling errors in text: Weird, weird.
+2024-06-04 16:39:26,468 - INFO - Correcting spelling errors in text: Weird, weird.
+2024-06-04 16:39:26,472 - INFO - Correcting spelling errors in text: Deadass? Shoook?? Come on [NAME], do you really talk like that? You sound dumb. 
+2024-06-04 16:39:26,472 - INFO - Correcting spelling errors in text: Deadass? Shoook?? Come on [NAME], do you really talk like that? You sound dumb. 
+2024-06-04 16:39:26,472 - INFO - Correcting spelling errors in text: Deadass? Shoook?? Come on [NAME], do you really talk like that? You sound dumb. 
+2024-06-04 16:39:26,472 - INFO - Correcting spelling errors in text: Deadass? Shoook?? Come on [NAME], do you really talk like that? You sound dumb. 
+2024-06-04 16:39:26,606 - INFO - Correcting spelling errors in text: Been their. We got into a huge argument and that caused our first break up. Video games...
+2024-06-04 16:39:26,606 - INFO - Correcting spelling errors in text: Been their. We got into a huge argument and that caused our first break up. Video games...
+2024-06-04 16:39:26,606 - INFO - Correcting spelling errors in text: Been their. We got into a huge argument and that caused our first break up. Video games...
+2024-06-04 16:39:26,606 - INFO - Correcting spelling errors in text: Been their. We got into a huge argument and that caused our first break up. Video games...
+2024-06-04 16:39:26,612 - INFO - Correcting spelling errors in text: I’m sorry. He’s in a better place. I hope you can keep the good memories
+2024-06-04 16:39:26,612 - INFO - Correcting spelling errors in text: I’m sorry. He’s in a better place. I hope you can keep the good memories
+2024-06-04 16:39:26,612 - INFO - Correcting spelling errors in text: I’m sorry. He’s in a better place. I hope you can keep the good memories
+2024-06-04 16:39:26,612 - INFO - Correcting spelling errors in text: I’m sorry. He’s in a better place. I hope you can keep the good memories
+2024-06-04 16:39:26,616 - INFO - Correcting spelling errors in text: You’re right. My biggest pet peeve is the lights, it washes out all the colors and textures, I hate that BGs use them
+2024-06-04 16:39:26,616 - INFO - Correcting spelling errors in text: You’re right. My biggest pet peeve is the lights, it washes out all the colors and textures, I hate that BGs use them
+2024-06-04 16:39:26,616 - INFO - Correcting spelling errors in text: You’re right. My biggest pet peeve is the lights, it washes out all the colors and textures, I hate that BGs use them
+2024-06-04 16:39:26,616 - INFO - Correcting spelling errors in text: You’re right. My biggest pet peeve is the lights, it washes out all the colors and textures, I hate that BGs use them
+2024-06-04 16:39:26,762 - INFO - Correcting spelling errors in text: What the hell kind of useless annoying bot is this? Beep boop off to hell bot
+2024-06-04 16:39:26,762 - INFO - Correcting spelling errors in text: What the hell kind of useless annoying bot is this? Beep boop off to hell bot
+2024-06-04 16:39:26,762 - INFO - Correcting spelling errors in text: What the hell kind of useless annoying bot is this? Beep boop off to hell bot
+2024-06-04 16:39:26,762 - INFO - Correcting spelling errors in text: What the hell kind of useless annoying bot is this? Beep boop off to hell bot
+2024-06-04 16:39:26,767 - INFO - Correcting spelling errors in text: Oi! It was my turn to post that this hour!
+2024-06-04 16:39:26,767 - INFO - Correcting spelling errors in text: Oi! It was my turn to post that this hour!
+2024-06-04 16:39:26,767 - INFO - Correcting spelling errors in text: Oi! It was my turn to post that this hour!
+2024-06-04 16:39:26,767 - INFO - Correcting spelling errors in text: Oi! It was my turn to post that this hour!
+2024-06-04 16:39:26,770 - INFO - Correcting spelling errors in text: They'd probably just use it to buy up armies and navies for tyrants who oppress and reign with blood and horror or some shit.
+2024-06-04 16:39:26,770 - INFO - Correcting spelling errors in text: They'd probably just use it to buy up armies and navies for tyrants who oppress and reign with blood and horror or some shit.
+2024-06-04 16:39:26,770 - INFO - Correcting spelling errors in text: They'd probably just use it to buy up armies and navies for tyrants who oppress and reign with blood and horror or some shit.
+2024-06-04 16:39:26,770 - INFO - Correcting spelling errors in text: They'd probably just use it to buy up armies and navies for tyrants who oppress and reign with blood and horror or some shit.
+2024-06-04 16:39:26,777 - INFO - Correcting spelling errors in text: Can't tell if you're being sarcastic or not
+2024-06-04 16:39:26,777 - INFO - Correcting spelling errors in text: Can't tell if you're being sarcastic or not
+2024-06-04 16:39:26,777 - INFO - Correcting spelling errors in text: Can't tell if you're being sarcastic or not
+2024-06-04 16:39:26,777 - INFO - Correcting spelling errors in text: Can't tell if you're being sarcastic or not
+2024-06-04 16:39:26,781 - INFO - Correcting spelling errors in text: I'm surprised they play the national anthem at derby bouts there, been to many bouts in Minnesota and haven't once heard the national anthem performed.
+2024-06-04 16:39:26,781 - INFO - Correcting spelling errors in text: I'm surprised they play the national anthem at derby bouts there, been to many bouts in Minnesota and haven't once heard the national anthem performed.
+2024-06-04 16:39:26,781 - INFO - Correcting spelling errors in text: I'm surprised they play the national anthem at derby bouts there, been to many bouts in Minnesota and haven't once heard the national anthem performed.
+2024-06-04 16:39:26,781 - INFO - Correcting spelling errors in text: I'm surprised they play the national anthem at derby bouts there, been to many bouts in Minnesota and haven't once heard the national anthem performed.
+2024-06-04 16:39:27,053 - INFO - Correcting spelling errors in text: Congratulations! I'm sure your shoulders are much lighter now. You look absolutely gorgeous, keep killing it :D
+2024-06-04 16:39:27,053 - INFO - Correcting spelling errors in text: Congratulations! I'm sure your shoulders are much lighter now. You look absolutely gorgeous, keep killing it :D
+2024-06-04 16:39:27,053 - INFO - Correcting spelling errors in text: Congratulations! I'm sure your shoulders are much lighter now. You look absolutely gorgeous, keep killing it :D
+2024-06-04 16:39:27,053 - INFO - Correcting spelling errors in text: Congratulations! I'm sure your shoulders are much lighter now. You look absolutely gorgeous, keep killing it :D
+2024-06-04 16:39:27,058 - INFO - Correcting spelling errors in text: This is the best news I've heard in weeks. Source: Albertan where scum like wolves of odin are multiplying like fruit fly's.
+2024-06-04 16:39:27,058 - INFO - Correcting spelling errors in text: This is the best news I've heard in weeks. Source: Albertan where scum like wolves of odin are multiplying like fruit fly's.
+2024-06-04 16:39:27,058 - INFO - Correcting spelling errors in text: This is the best news I've heard in weeks. Source: Albertan where scum like wolves of odin are multiplying like fruit fly's.
+2024-06-04 16:39:27,058 - INFO - Correcting spelling errors in text: This is the best news I've heard in weeks. Source: Albertan where scum like wolves of odin are multiplying like fruit fly's.
+2024-06-04 16:39:27,066 - INFO - Correcting spelling errors in text: Where have I seen this before? Oh [NAME].
+2024-06-04 16:39:27,066 - INFO - Correcting spelling errors in text: Where have I seen this before? Oh [NAME].
+2024-06-04 16:39:27,066 - INFO - Correcting spelling errors in text: Where have I seen this before? Oh [NAME].
+2024-06-04 16:39:27,066 - INFO - Correcting spelling errors in text: Where have I seen this before? Oh [NAME].
+2024-06-04 16:39:27,135 - INFO - Correcting spelling errors in text: We only seem to hate them when they espouse murderous political philosophies responsible for more than 100 million deaths. Weird, huh?
+2024-06-04 16:39:27,135 - INFO - Correcting spelling errors in text: We only seem to hate them when they espouse murderous political philosophies responsible for more than 100 million deaths. Weird, huh?
+2024-06-04 16:39:27,135 - INFO - Correcting spelling errors in text: We only seem to hate them when they espouse murderous political philosophies responsible for more than 100 million deaths. Weird, huh?
+2024-06-04 16:39:27,135 - INFO - Correcting spelling errors in text: We only seem to hate them when they espouse murderous political philosophies responsible for more than 100 million deaths. Weird, huh?
+2024-06-04 16:39:27,140 - INFO - Correcting spelling errors in text: Well, I was going to surprise you [NAME], but what the heck...I’m gaining a bunch of weight to go on disability!
+2024-06-04 16:39:27,140 - INFO - Correcting spelling errors in text: Well, I was going to surprise you [NAME], but what the heck...I’m gaining a bunch of weight to go on disability!
+2024-06-04 16:39:27,140 - INFO - Correcting spelling errors in text: Well, I was going to surprise you [NAME], but what the heck...I’m gaining a bunch of weight to go on disability!
+2024-06-04 16:39:27,140 - INFO - Correcting spelling errors in text: Well, I was going to surprise you [NAME], but what the heck...I’m gaining a bunch of weight to go on disability!
+2024-06-04 16:39:27,211 - INFO - Correcting spelling errors in text: Said to my very white-looking brunette coworker once: "Are you an oriental?"
+2024-06-04 16:39:27,211 - INFO - Correcting spelling errors in text: Said to my very white-looking brunette coworker once: "Are you an oriental?"
+2024-06-04 16:39:27,211 - INFO - Correcting spelling errors in text: Said to my very white-looking brunette coworker once: "Are you an oriental?"
+2024-06-04 16:39:27,211 - INFO - Correcting spelling errors in text: Said to my very white-looking brunette coworker once: "Are you an oriental?"
+2024-06-04 16:39:27,432 - INFO - Correcting spelling errors in text: Don’t let the bastards grind you down. I’m so sorry for this experience. No one deserves to be treated that way.
+2024-06-04 16:39:27,432 - INFO - Correcting spelling errors in text: Don’t let the bastards grind you down. I’m so sorry for this experience. No one deserves to be treated that way.
+2024-06-04 16:39:27,432 - INFO - Correcting spelling errors in text: Don’t let the bastards grind you down. I’m so sorry for this experience. No one deserves to be treated that way.
+2024-06-04 16:39:27,432 - INFO - Correcting spelling errors in text: Don’t let the bastards grind you down. I’m so sorry for this experience. No one deserves to be treated that way.
+2024-06-04 16:39:27,437 - INFO - Correcting spelling errors in text: [NAME] is decent? Dude he was drafted 3rd overall he's been a massive disappointment
+2024-06-04 16:39:27,437 - INFO - Correcting spelling errors in text: [NAME] is decent? Dude he was drafted 3rd overall he's been a massive disappointment
+2024-06-04 16:39:27,437 - INFO - Correcting spelling errors in text: [NAME] is decent? Dude he was drafted 3rd overall he's been a massive disappointment
+2024-06-04 16:39:27,437 - INFO - Correcting spelling errors in text: [NAME] is decent? Dude he was drafted 3rd overall he's been a massive disappointment
+2024-06-04 16:39:27,515 - INFO - Correcting spelling errors in text: This is a weird thing to be concerned about.
+2024-06-04 16:39:27,515 - INFO - Correcting spelling errors in text: This is a weird thing to be concerned about.
+2024-06-04 16:39:27,515 - INFO - Correcting spelling errors in text: This is a weird thing to be concerned about.
+2024-06-04 16:39:27,515 - INFO - Correcting spelling errors in text: This is a weird thing to be concerned about.
+2024-06-04 16:39:27,522 - INFO - Correcting spelling errors in text: [NAME] THAT HURTS DON'T DO THAT
+2024-06-04 16:39:27,522 - INFO - Correcting spelling errors in text: [NAME] THAT HURTS DON'T DO THAT
+2024-06-04 16:39:27,522 - INFO - Correcting spelling errors in text: [NAME] THAT HURTS DON'T DO THAT
+2024-06-04 16:39:27,522 - INFO - Correcting spelling errors in text: [NAME] THAT HURTS DON'T DO THAT
+2024-06-04 16:39:27,885 - INFO - Correcting spelling errors in text: It just so happened that PD, sick kids , and family emergencies all happened to overlap between all my coworkers leaving me all alone. 
+2024-06-04 16:39:27,885 - INFO - Correcting spelling errors in text: It just so happened that PD, sick kids , and family emergencies all happened to overlap between all my coworkers leaving me all alone. 
+2024-06-04 16:39:27,885 - INFO - Correcting spelling errors in text: It just so happened that PD, sick kids , and family emergencies all happened to overlap between all my coworkers leaving me all alone. 
+2024-06-04 16:39:27,885 - INFO - Correcting spelling errors in text: It just so happened that PD, sick kids , and family emergencies all happened to overlap between all my coworkers leaving me all alone. 
+2024-06-04 16:39:28,216 - INFO - Correcting spelling errors in text: Yikes. I was kind of excited to get a new [NAME] if he gets last man in but I'll pass on these butt ugly jerseys.
+2024-06-04 16:39:28,216 - INFO - Correcting spelling errors in text: Yikes. I was kind of excited to get a new [NAME] if he gets last man in but I'll pass on these butt ugly jerseys.
+2024-06-04 16:39:28,216 - INFO - Correcting spelling errors in text: Yikes. I was kind of excited to get a new [NAME] if he gets last man in but I'll pass on these butt ugly jerseys.
+2024-06-04 16:39:28,216 - INFO - Correcting spelling errors in text: Yikes. I was kind of excited to get a new [NAME] if he gets last man in but I'll pass on these butt ugly jerseys.
+2024-06-04 16:39:28,292 - INFO - Correcting spelling errors in text: The worst case of cultural appropriation is him mimicking human language and thoughts when he is clearly some kind of barely sentient pond scum.
+2024-06-04 16:39:28,292 - INFO - Correcting spelling errors in text: The worst case of cultural appropriation is him mimicking human language and thoughts when he is clearly some kind of barely sentient pond scum.
+2024-06-04 16:39:28,292 - INFO - Correcting spelling errors in text: The worst case of cultural appropriation is him mimicking human language and thoughts when he is clearly some kind of barely sentient pond scum.
+2024-06-04 16:39:28,292 - INFO - Correcting spelling errors in text: The worst case of cultural appropriation is him mimicking human language and thoughts when he is clearly some kind of barely sentient pond scum.
+2024-06-04 16:39:28,300 - INFO - Correcting spelling errors in text: We are killing this planet
+2024-06-04 16:39:28,300 - INFO - Correcting spelling errors in text: We are killing this planet
+2024-06-04 16:39:28,300 - INFO - Correcting spelling errors in text: We are killing this planet
+2024-06-04 16:39:28,300 - INFO - Correcting spelling errors in text: We are killing this planet
+2024-06-04 16:39:28,304 - INFO - Correcting spelling errors in text: Wait for real? That's how they met? lol that's both terrifying and completely fitting considering how nuts they both are
+2024-06-04 16:39:28,304 - INFO - Correcting spelling errors in text: Wait for real? That's how they met? lol that's both terrifying and completely fitting considering how nuts they both are
+2024-06-04 16:39:28,304 - INFO - Correcting spelling errors in text: Wait for real? That's how they met? lol that's both terrifying and completely fitting considering how nuts they both are
+2024-06-04 16:39:28,304 - INFO - Correcting spelling errors in text: Wait for real? That's how they met? lol that's both terrifying and completely fitting considering how nuts they both are
+2024-06-04 16:39:28,310 - INFO - Correcting spelling errors in text: Yeah, I read that the first time. Nobody is forcing you, other than yourself.
+2024-06-04 16:39:28,310 - INFO - Correcting spelling errors in text: Yeah, I read that the first time. Nobody is forcing you, other than yourself.
+2024-06-04 16:39:28,310 - INFO - Correcting spelling errors in text: Yeah, I read that the first time. Nobody is forcing you, other than yourself.
+2024-06-04 16:39:28,310 - INFO - Correcting spelling errors in text: Yeah, I read that the first time. Nobody is forcing you, other than yourself.
+2024-06-04 16:39:28,314 - INFO - Correcting spelling errors in text: ITT: People defend delusional shitposts.
+2024-06-04 16:39:28,314 - INFO - Correcting spelling errors in text: ITT: People defend delusional shitposts.
+2024-06-04 16:39:28,314 - INFO - Correcting spelling errors in text: ITT: People defend delusional shitposts.
+2024-06-04 16:39:28,314 - INFO - Correcting spelling errors in text: ITT: People defend delusional shitposts.
+2024-06-04 16:39:28,710 - INFO - Correcting spelling errors in text: She also spoke out quite angrily about "Obamacare" until she needed it due to her high risk pregnancy. She's remarkably hypocritical.
+2024-06-04 16:39:28,710 - INFO - Correcting spelling errors in text: She also spoke out quite angrily about "Obamacare" until she needed it due to her high risk pregnancy. She's remarkably hypocritical.
+2024-06-04 16:39:28,710 - INFO - Correcting spelling errors in text: She also spoke out quite angrily about "Obamacare" until she needed it due to her high risk pregnancy. She's remarkably hypocritical.
+2024-06-04 16:39:28,710 - INFO - Correcting spelling errors in text: She also spoke out quite angrily about "Obamacare" until she needed it due to her high risk pregnancy. She's remarkably hypocritical.
+2024-06-04 16:39:29,314 - INFO - Correcting spelling errors in text: Honestly, he’s throwing up at the moment. We’re gonna nap, drink some Gatorade, and get our shit together
+2024-06-04 16:39:29,314 - INFO - Correcting spelling errors in text: Honestly, he’s throwing up at the moment. We’re gonna nap, drink some Gatorade, and get our shit together
+2024-06-04 16:39:29,314 - INFO - Correcting spelling errors in text: Honestly, he’s throwing up at the moment. We’re gonna nap, drink some Gatorade, and get our shit together
+2024-06-04 16:39:29,314 - INFO - Correcting spelling errors in text: Honestly, he’s throwing up at the moment. We’re gonna nap, drink some Gatorade, and get our shit together
+2024-06-04 16:39:29,557 - INFO - Correcting spelling errors in text: So happy for [NAME]. So sad he's not here. Imagine this team with [NAME] instead of [NAME]. Ugh.
+2024-06-04 16:39:29,557 - INFO - Correcting spelling errors in text: So happy for [NAME]. So sad he's not here. Imagine this team with [NAME] instead of [NAME]. Ugh.
+2024-06-04 16:39:29,557 - INFO - Correcting spelling errors in text: So happy for [NAME]. So sad he's not here. Imagine this team with [NAME] instead of [NAME]. Ugh.
+2024-06-04 16:39:29,557 - INFO - Correcting spelling errors in text: So happy for [NAME]. So sad he's not here. Imagine this team with [NAME] instead of [NAME]. Ugh.
+2024-06-04 16:39:29,787 - INFO - Correcting spelling errors in text: [NAME] office just denied it
+2024-06-04 16:39:29,787 - INFO - Correcting spelling errors in text: [NAME] office just denied it
+2024-06-04 16:39:29,787 - INFO - Correcting spelling errors in text: [NAME] office just denied it
+2024-06-04 16:39:29,787 - INFO - Correcting spelling errors in text: [NAME] office just denied it
+2024-06-04 16:39:29,865 - INFO - Correcting spelling errors in text: I just saw Janice.
+2024-06-04 16:39:29,865 - INFO - Correcting spelling errors in text: I just saw Janice.
+2024-06-04 16:39:29,865 - INFO - Correcting spelling errors in text: I just saw Janice.
+2024-06-04 16:39:29,865 - INFO - Correcting spelling errors in text: I just saw Janice.
+2024-06-04 16:39:30,022 - INFO - Correcting spelling errors in text: Nice quote, not sure if it was worth the time to pull up though.
+2024-06-04 16:39:30,022 - INFO - Correcting spelling errors in text: Nice quote, not sure if it was worth the time to pull up though.
+2024-06-04 16:39:30,022 - INFO - Correcting spelling errors in text: Nice quote, not sure if it was worth the time to pull up though.
+2024-06-04 16:39:30,022 - INFO - Correcting spelling errors in text: Nice quote, not sure if it was worth the time to pull up though.
+2024-06-04 16:39:30,028 - INFO - Correcting spelling errors in text: They lead a bad defense though. And [NAME] isn’t blameless here, he’s not good against the run.
+2024-06-04 16:39:30,028 - INFO - Correcting spelling errors in text: They lead a bad defense though. And [NAME] isn’t blameless here, he’s not good against the run.
+2024-06-04 16:39:30,028 - INFO - Correcting spelling errors in text: They lead a bad defense though. And [NAME] isn’t blameless here, he’s not good against the run.
+2024-06-04 16:39:30,028 - INFO - Correcting spelling errors in text: They lead a bad defense though. And [NAME] isn’t blameless here, he’s not good against the run.
+2024-06-04 16:39:30,114 - INFO - Correcting spelling errors in text: That’s very unfortunate for the bosses. Capitalism sure does commit genocide. Ireland. India. Indonesia. Vietnam. Iraq. Should I name more?
+2024-06-04 16:39:30,114 - INFO - Correcting spelling errors in text: That’s very unfortunate for the bosses. Capitalism sure does commit genocide. Ireland. India. Indonesia. Vietnam. Iraq. Should I name more?
+2024-06-04 16:39:30,114 - INFO - Correcting spelling errors in text: That’s very unfortunate for the bosses. Capitalism sure does commit genocide. Ireland. India. Indonesia. Vietnam. Iraq. Should I name more?
+2024-06-04 16:39:30,114 - INFO - Correcting spelling errors in text: That’s very unfortunate for the bosses. Capitalism sure does commit genocide. Ireland. India. Indonesia. Vietnam. Iraq. Should I name more?
+2024-06-04 16:39:30,926 - INFO - Correcting spelling errors in text: So then what do I do? Should I tell priests? Will they kick me out?
+2024-06-04 16:39:30,926 - INFO - Correcting spelling errors in text: So then what do I do? Should I tell priests? Will they kick me out?
+2024-06-04 16:39:30,926 - INFO - Correcting spelling errors in text: So then what do I do? Should I tell priests? Will they kick me out?
+2024-06-04 16:39:30,926 - INFO - Correcting spelling errors in text: So then what do I do? Should I tell priests? Will they kick me out?
+2024-06-04 16:39:30,931 - INFO - Correcting spelling errors in text: I don't think you could actually find something that's *unambiguously* racist. That's just how dog whistles work.
+2024-06-04 16:39:30,931 - INFO - Correcting spelling errors in text: I don't think you could actually find something that's *unambiguously* racist. That's just how dog whistles work.
+2024-06-04 16:39:30,931 - INFO - Correcting spelling errors in text: I don't think you could actually find something that's *unambiguously* racist. That's just how dog whistles work.
+2024-06-04 16:39:30,931 - INFO - Correcting spelling errors in text: I don't think you could actually find something that's *unambiguously* racist. That's just how dog whistles work.
+2024-06-04 16:39:31,524 - INFO - Correcting spelling errors in text: How do you think she got the job?
+2024-06-04 16:39:31,524 - INFO - Correcting spelling errors in text: How do you think she got the job?
+2024-06-04 16:39:31,524 - INFO - Correcting spelling errors in text: How do you think she got the job?
+2024-06-04 16:39:31,524 - INFO - Correcting spelling errors in text: How do you think she got the job?
+2024-06-04 16:39:31,529 - INFO - Correcting spelling errors in text: i feel like this isn't being talked about enough.
+2024-06-04 16:39:31,529 - INFO - Correcting spelling errors in text: i feel like this isn't being talked about enough.
+2024-06-04 16:39:31,529 - INFO - Correcting spelling errors in text: i feel like this isn't being talked about enough.
+2024-06-04 16:39:31,529 - INFO - Correcting spelling errors in text: i feel like this isn't being talked about enough.
+2024-06-04 16:39:31,533 - INFO - Correcting spelling errors in text: You sound like someone who doesnt know what ironic humour is.
+2024-06-04 16:39:31,533 - INFO - Correcting spelling errors in text: You sound like someone who doesnt know what ironic humour is.
+2024-06-04 16:39:31,533 - INFO - Correcting spelling errors in text: You sound like someone who doesnt know what ironic humour is.
+2024-06-04 16:39:31,533 - INFO - Correcting spelling errors in text: You sound like someone who doesnt know what ironic humour is.
+2024-06-04 16:39:31,538 - INFO - Correcting spelling errors in text: I was in awe the whole hour I spent in there.
+2024-06-04 16:39:31,538 - INFO - Correcting spelling errors in text: I was in awe the whole hour I spent in there.
+2024-06-04 16:39:31,538 - INFO - Correcting spelling errors in text: I was in awe the whole hour I spent in there.
+2024-06-04 16:39:31,538 - INFO - Correcting spelling errors in text: I was in awe the whole hour I spent in there.
+2024-06-04 16:39:31,541 - INFO - Correcting spelling errors in text: This looks like don't hug me I'm scared
+2024-06-04 16:39:31,541 - INFO - Correcting spelling errors in text: This looks like don't hug me I'm scared
+2024-06-04 16:39:31,541 - INFO - Correcting spelling errors in text: This looks like don't hug me I'm scared
+2024-06-04 16:39:31,541 - INFO - Correcting spelling errors in text: This looks like don't hug me I'm scared
+2024-06-04 16:39:31,545 - INFO - Correcting spelling errors in text: Anyone who fell for the Lonzo hype from the beginning should slap themselves.
+2024-06-04 16:39:31,545 - INFO - Correcting spelling errors in text: Anyone who fell for the Lonzo hype from the beginning should slap themselves.
+2024-06-04 16:39:31,545 - INFO - Correcting spelling errors in text: Anyone who fell for the Lonzo hype from the beginning should slap themselves.
+2024-06-04 16:39:31,545 - INFO - Correcting spelling errors in text: Anyone who fell for the Lonzo hype from the beginning should slap themselves.
+2024-06-04 16:39:31,551 - INFO - Correcting spelling errors in text: Thanks!! I missed all of this.
+2024-06-04 16:39:31,551 - INFO - Correcting spelling errors in text: Thanks!! I missed all of this.
+2024-06-04 16:39:31,551 - INFO - Correcting spelling errors in text: Thanks!! I missed all of this.
+2024-06-04 16:39:31,551 - INFO - Correcting spelling errors in text: Thanks!! I missed all of this.
+2024-06-04 16:39:31,555 - INFO - Correcting spelling errors in text: I didn't delete it. Your moderators did. But that's what [NAME] do, they 
+2024-06-04 16:39:31,555 - INFO - Correcting spelling errors in text: I didn't delete it. Your moderators did. But that's what [NAME] do, they 
+2024-06-04 16:39:31,555 - INFO - Correcting spelling errors in text: I didn't delete it. Your moderators did. But that's what [NAME] do, they 
+2024-06-04 16:39:31,555 - INFO - Correcting spelling errors in text: I didn't delete it. Your moderators did. But that's what [NAME] do, they 
+2024-06-04 16:39:32,026 - INFO - Correcting spelling errors in text: Seeking, not expecting
+2024-06-04 16:39:32,026 - INFO - Correcting spelling errors in text: Seeking, not expecting
+2024-06-04 16:39:32,026 - INFO - Correcting spelling errors in text: Seeking, not expecting
+2024-06-04 16:39:32,026 - INFO - Correcting spelling errors in text: Seeking, not expecting
+2024-06-04 16:39:32,030 - INFO - Correcting spelling errors in text: lol. good one dude. you really showed me. great argument. really showing off your intellectual prowess. keep up the good work!
+2024-06-04 16:39:32,030 - INFO - Correcting spelling errors in text: lol. good one dude. you really showed me. great argument. really showing off your intellectual prowess. keep up the good work!
+2024-06-04 16:39:32,030 - INFO - Correcting spelling errors in text: lol. good one dude. you really showed me. great argument. really showing off your intellectual prowess. keep up the good work!
+2024-06-04 16:39:32,030 - INFO - Correcting spelling errors in text: lol. good one dude. you really showed me. great argument. really showing off your intellectual prowess. keep up the good work!
+2024-06-04 16:39:32,035 - INFO - Correcting spelling errors in text: What kind of advice are you seeking here? I'm confused.
+2024-06-04 16:39:32,035 - INFO - Correcting spelling errors in text: What kind of advice are you seeking here? I'm confused.
+2024-06-04 16:39:32,035 - INFO - Correcting spelling errors in text: What kind of advice are you seeking here? I'm confused.
+2024-06-04 16:39:32,035 - INFO - Correcting spelling errors in text: What kind of advice are you seeking here? I'm confused.
+2024-06-04 16:39:32,040 - INFO - Correcting spelling errors in text: 11 years goddamit I’m old
+2024-06-04 16:39:32,040 - INFO - Correcting spelling errors in text: 11 years goddamit I’m old
+2024-06-04 16:39:32,040 - INFO - Correcting spelling errors in text: 11 years goddamit I’m old
+2024-06-04 16:39:32,040 - INFO - Correcting spelling errors in text: 11 years goddamit I’m old
+2024-06-04 16:39:32,172 - INFO - Correcting spelling errors in text: “-sigh- I’m so bad at making friends”- Owl
+2024-06-04 16:39:32,172 - INFO - Correcting spelling errors in text: “-sigh- I’m so bad at making friends”- Owl
+2024-06-04 16:39:32,172 - INFO - Correcting spelling errors in text: “-sigh- I’m so bad at making friends”- Owl
+2024-06-04 16:39:32,172 - INFO - Correcting spelling errors in text: “-sigh- I’m so bad at making friends”- Owl
+2024-06-04 16:39:32,178 - INFO - Correcting spelling errors in text: [NAME], that uniform. At least the Nazi [NAME] had decent fashion sense. This is a crime against fashion
+2024-06-04 16:39:32,178 - INFO - Correcting spelling errors in text: [NAME], that uniform. At least the Nazi [NAME] had decent fashion sense. This is a crime against fashion
+2024-06-04 16:39:32,178 - INFO - Correcting spelling errors in text: [NAME], that uniform. At least the Nazi [NAME] had decent fashion sense. This is a crime against fashion
+2024-06-04 16:39:32,178 - INFO - Correcting spelling errors in text: [NAME], that uniform. At least the Nazi [NAME] had decent fashion sense. This is a crime against fashion
+2024-06-04 16:39:32,400 - INFO - Correcting spelling errors in text: Wondering why this hasn’t been made a thing yet 😂
+2024-06-04 16:39:32,400 - INFO - Correcting spelling errors in text: Wondering why this hasn’t been made a thing yet 😂
+2024-06-04 16:39:32,400 - INFO - Correcting spelling errors in text: Wondering why this hasn’t been made a thing yet 😂
+2024-06-04 16:39:32,400 - INFO - Correcting spelling errors in text: Wondering why this hasn’t been made a thing yet 😂
+2024-06-04 16:39:32,404 - INFO - Correcting spelling errors in text: When has the Alt-Right ever been working class? Its always the richest white guys who are horribly socially inept.
+2024-06-04 16:39:32,404 - INFO - Correcting spelling errors in text: When has the Alt-Right ever been working class? Its always the richest white guys who are horribly socially inept.
+2024-06-04 16:39:32,404 - INFO - Correcting spelling errors in text: When has the Alt-Right ever been working class? Its always the richest white guys who are horribly socially inept.
+2024-06-04 16:39:32,404 - INFO - Correcting spelling errors in text: When has the Alt-Right ever been working class? Its always the richest white guys who are horribly socially inept.
+2024-06-04 16:39:32,448 - INFO - Correcting spelling errors in text: Please don't promote your channel
+2024-06-04 16:39:32,448 - INFO - Correcting spelling errors in text: Please don't promote your channel
+2024-06-04 16:39:32,448 - INFO - Correcting spelling errors in text: Please don't promote your channel
+2024-06-04 16:39:32,448 - INFO - Correcting spelling errors in text: Please don't promote your channel
+2024-06-04 16:39:32,452 - INFO - Correcting spelling errors in text: Please don’t downvote me I just have a question What is wrong with libertarians? This sub seems to hate them and I’m one.
+2024-06-04 16:39:32,452 - INFO - Correcting spelling errors in text: Please don’t downvote me I just have a question What is wrong with libertarians? This sub seems to hate them and I’m one.
+2024-06-04 16:39:32,452 - INFO - Correcting spelling errors in text: Please don’t downvote me I just have a question What is wrong with libertarians? This sub seems to hate them and I’m one.
+2024-06-04 16:39:32,452 - INFO - Correcting spelling errors in text: Please don’t downvote me I just have a question What is wrong with libertarians? This sub seems to hate them and I’m one.
+2024-06-04 16:39:32,934 - INFO - Correcting spelling errors in text: A mistake in the relationship? Or a mistake with the person I chose?
+2024-06-04 16:39:32,934 - INFO - Correcting spelling errors in text: A mistake in the relationship? Or a mistake with the person I chose?
+2024-06-04 16:39:32,934 - INFO - Correcting spelling errors in text: A mistake in the relationship? Or a mistake with the person I chose?
+2024-06-04 16:39:32,934 - INFO - Correcting spelling errors in text: A mistake in the relationship? Or a mistake with the person I chose?
+2024-06-04 16:39:32,938 - INFO - Correcting spelling errors in text: I'd feel better if the dude in the video didn't have a gun.
+2024-06-04 16:39:32,938 - INFO - Correcting spelling errors in text: I'd feel better if the dude in the video didn't have a gun.
+2024-06-04 16:39:32,938 - INFO - Correcting spelling errors in text: I'd feel better if the dude in the video didn't have a gun.
+2024-06-04 16:39:32,938 - INFO - Correcting spelling errors in text: I'd feel better if the dude in the video didn't have a gun.
+2024-06-04 16:39:32,943 - INFO - Correcting spelling errors in text: Oh no, not again! 
+2024-06-04 16:39:32,943 - INFO - Correcting spelling errors in text: Oh no, not again! 
+2024-06-04 16:39:32,943 - INFO - Correcting spelling errors in text: Oh no, not again! 
+2024-06-04 16:39:32,943 - INFO - Correcting spelling errors in text: Oh no, not again! 
+2024-06-04 16:39:32,947 - INFO - Correcting spelling errors in text: Hahaha I wish I was that witty at the time, I think I was still in naive shock at the rudeness of people in retail. 
+2024-06-04 16:39:32,947 - INFO - Correcting spelling errors in text: Hahaha I wish I was that witty at the time, I think I was still in naive shock at the rudeness of people in retail. 
+2024-06-04 16:39:32,947 - INFO - Correcting spelling errors in text: Hahaha I wish I was that witty at the time, I think I was still in naive shock at the rudeness of people in retail. 
+2024-06-04 16:39:32,947 - INFO - Correcting spelling errors in text: Hahaha I wish I was that witty at the time, I think I was still in naive shock at the rudeness of people in retail. 
+2024-06-04 16:39:32,952 - INFO - Correcting spelling errors in text: They might still be a minority but you can't argue with the fact that they have been on the rise, 
+2024-06-04 16:39:32,952 - INFO - Correcting spelling errors in text: They might still be a minority but you can't argue with the fact that they have been on the rise, 
+2024-06-04 16:39:32,952 - INFO - Correcting spelling errors in text: They might still be a minority but you can't argue with the fact that they have been on the rise, 
+2024-06-04 16:39:32,952 - INFO - Correcting spelling errors in text: They might still be a minority but you can't argue with the fact that they have been on the rise, 
+2024-06-04 16:39:32,956 - INFO - Correcting spelling errors in text: Shamelessly stolen from
+2024-06-04 16:39:32,956 - INFO - Correcting spelling errors in text: Shamelessly stolen from
+2024-06-04 16:39:32,956 - INFO - Correcting spelling errors in text: Shamelessly stolen from
+2024-06-04 16:39:32,956 - INFO - Correcting spelling errors in text: Shamelessly stolen from
+2024-06-04 16:39:32,962 - INFO - Correcting spelling errors in text: It's a minor part of the article. Trust me, there's actually a LOT of information that isn't olicity-related here.
+2024-06-04 16:39:32,962 - INFO - Correcting spelling errors in text: It's a minor part of the article. Trust me, there's actually a LOT of information that isn't olicity-related here.
+2024-06-04 16:39:32,962 - INFO - Correcting spelling errors in text: It's a minor part of the article. Trust me, there's actually a LOT of information that isn't olicity-related here.
+2024-06-04 16:39:32,962 - INFO - Correcting spelling errors in text: It's a minor part of the article. Trust me, there's actually a LOT of information that isn't olicity-related here.
+2024-06-05 11:06:18,143 - __main__ - INFO - Starting program...
+2024-06-05 11:07:43,580 - __main__ - INFO - Starting program...
+2024-06-05 11:09:18,628 - __main__ - INFO - Starting program...
+2024-06-05 11:13:03,568 - __main__ - INFO - Starting program...
+2024-06-05 11:14:13,660 - __main__ - INFO - Starting program...
+2024-06-05 11:15:50,433 - __main__ - INFO - Starting program...
+2024-06-05 11:20:25,959 - __main__ - INFO - Starting program...
+2024-06-05 11:24:18,110 - __main__ - INFO - Starting program...
+2024-06-05 11:27:44,218 - __main__ - INFO - Starting program...
+2024-06-05 11:34:53,158 - __main__ - INFO - Starting program...
+2024-06-05 11:36:06,848 - __main__ - INFO - Starting program...
+2024-06-05 11:37:41,728 - __main__ - INFO - Starting program...
+2024-06-05 11:39:29,605 - __main__ - INFO - Starting program...
+2024-06-05 13:14:21,088 - __main__ - INFO - Starting program...
+2024-06-11 10:58:16,601 - __main__ - INFO - Starting program...
