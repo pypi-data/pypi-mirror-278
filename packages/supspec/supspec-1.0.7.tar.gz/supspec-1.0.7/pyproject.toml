@@ -1,0 +1,17 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "supspec"
+version = "1.0.7"
+description = """
+Tools that update the pyOpenSci contributor and review metadata
+that is posted on our website
+"""
+readme = 'readme.md'
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.0", "pandas", "emcee", "corner", "matplotlib", "tqdm", "scipy", "argparse"]
