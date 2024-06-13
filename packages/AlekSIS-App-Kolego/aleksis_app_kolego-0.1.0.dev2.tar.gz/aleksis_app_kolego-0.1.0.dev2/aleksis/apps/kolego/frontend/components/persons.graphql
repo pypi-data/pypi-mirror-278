@@ -1,0 +1,6 @@
+query gqlPersons {
+  persons {
+    id
+    fullName
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "kolego": {
+    "menu_title": "Abwesenheiten",
+    "absence": {
+      "menu_title": "Abwesenheiten",
+      "title_plural": "Abwesenheiten",
+      "create": "Abwesenheit anlegen",
+      "reason": "Grund",
+      "comment": "Kommentar"
+    },
+    "absence_reason": {
+      "menu_title": "Abwesenheitsgründe",
+      "title_plural": "Abwesenheitsgründe",
+      "create": "Abwesenheitsgrund erstellen",
+      "short_name": "Kurzname",
+      "name": "Name",
+      "present": "Anwesend"
+    }
+  }
+}

@@ -1,0 +1,75 @@
+query absences($orderBy: [String], $filters: JSONString) {
+  items: absences(orderBy: $orderBy, filters: $filters) {
+    id
+    person {
+      id
+      fullName
+    }
+    reason {
+      id
+      shortName
+      name
+      colour
+      default
+    }
+    comment
+    datetimeStart
+    datetimeEnd
+    canEdit
+    canDelete
+  }
+}
+
+mutation createAbsences($input: [BatchCreateAbsenceInput]!) {
+  createAbsences(input: $input) {
+    items: absences {
+      id
+      person {
+        id
+        fullName
+      }
+      reason {
+        id
+        shortName
+        name
+        colour
+        default
+      }
+      comment
+      datetimeStart
+      datetimeEnd
+      canEdit
+      canDelete
+    }
+  }
+}
+
+mutation deleteAbsences($ids: [ID]!) {
+  deleteAbsences(ids: $ids) {
+    deletionCount
+  }
+}
+
+mutation updateAbsences($input: [BatchPatchAbsenceInput]!) {
+  updateAbsences(input: $input) {
+    items: absences {
+      id
+      person {
+        id
+        fullName
+      }
+      reason {
+        id
+        shortName
+        name
+        colour
+        default
+      }
+      comment
+      datetimeStart
+      datetimeEnd
+      canEdit
+      canDelete
+    }
+  }
+}
