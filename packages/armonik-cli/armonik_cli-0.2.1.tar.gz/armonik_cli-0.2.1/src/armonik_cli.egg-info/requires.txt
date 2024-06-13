@@ -1,0 +1,12 @@
+armonik>=3.15.0
+
+[dev]
+mypy
+ruff
+
+[tests]
+coverage
+pytest
+pytest-cov
+requests
+pytest-benchmark[histogram]
