@@ -1,0 +1,2 @@
+[console_scripts]
+pyjs_code_runner = pyjs_code_runner.cli.main:app
