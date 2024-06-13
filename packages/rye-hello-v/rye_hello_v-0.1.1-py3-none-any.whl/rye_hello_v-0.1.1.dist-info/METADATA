@@ -1,0 +1,12 @@
+Metadata-Version: 2.3
+Name: rye-hello-v
+Version: 0.1.1
+Summary: Add your description here
+Requires-Python: >=3.8
+Requires-Dist: rye-hello>=0.1.0
+Description-Content-Type: text/markdown
+
+# rye-hello
+
+Describe your project here.
+rye project publis project test
