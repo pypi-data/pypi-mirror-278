@@ -1,0 +1,4 @@
+[console_scripts]
+mflt-compact-log.compact=mflt_compact_log.compact:main
+mflt-compact-log.log_fmt=mflt_compact_log.log_fmt:main
+
