@@ -1,0 +1,17 @@
+templates:
+  - posix:
+    - np.template
+    - np_make.template
+    - np_open.template
+    - np_read.template
+    - np_write.template
+    - np_close.template
+
+modules:
+  - posix:
+    - np.h
+    - np_make.c
+    - np_open.c
+    - np_read.c
+    - np_write.c
+    - np_close.c
