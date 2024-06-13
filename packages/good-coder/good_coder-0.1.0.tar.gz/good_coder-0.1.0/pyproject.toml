@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "good-coder"
+version = "0.1.0"
+description = "The Data Engineer Toolkit"
+authors = ["Alper Topcuoglu <info@goodcoder.nl>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+mypy = "^1.10.0"
+ruff = "^0.4.8"
+pytest-cov = "^5.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
