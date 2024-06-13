@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: odt-pdf
+Version: 0.1.0
+Summary: 
+Author: levyvix
+Author-email: levy.vix@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: ignr (>=2.2,<3.0)
+Requires-Dist: pypdf (>=4.2.0,<5.0.0)
+Description-Content-Type: text/markdown
+
+# ODT To PDF Converter
+
+This is a simple python script that converts Open Document Text (ODT) files to PDF. It is based on the `pypdf2` package.
+
+## Installation
+
+`pip install odt_pdf`
+
