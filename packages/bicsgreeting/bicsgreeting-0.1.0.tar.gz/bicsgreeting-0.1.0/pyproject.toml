@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "bicsgreeting"
+version = "0.1.0"
+description = "Say Hello"
+authors = ["Karthik <bicskarthik@gmail.com>"]
+readme = "README.md"
+packages = [{include = "bicsgreeting"}]
+
+[tool.poetry.scripts]
+bicsgreeting = "bicsgreeting.main:app"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+typer = {extras = ["all"], version = "^0.12.3"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

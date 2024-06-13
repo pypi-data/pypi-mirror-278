@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: bicsgreeting
+Version: 0.1.0
+Summary: Say Hello
+Author: Karthik
+Author-email: bicskarthik@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: typer[all] (>=0.12.3,<0.13.0)
+Description-Content-Type: text/markdown
+
+
