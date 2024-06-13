@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: pulumi_kubernetes_the_hard_way
+Version: 0.0.30a1718242128
+Summary: A Pulumi implementation of Kelsey Hightower's Kubernetes the Hard Way
+License: Apache-2.0
+Project-URL: Repository, https://github.com/UnstoppableMango/pulumi-kubernetes-the-hard-way
+Keywords: pulumi,command,tls,kubernetes,category/utility,kind/component
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: parver>=0.2.1
+Requires-Dist: pulumi<4.0.0,>=3.91.1
+Requires-Dist: pulumi-command<1.0.0,>=0.11.1
+Requires-Dist: pulumi-kubernetes<5.0.0,>=4.13.1
+Requires-Dist: pulumi-random<5.0.0,>=4.16.2
+Requires-Dist: pulumi-tls<6.0.0,>=5.0.2
+Requires-Dist: semver>=2.8.1
+
+# Pulumi Kubernetes the Hard Way
+
+This is a Pulumi implementation of Kelsey Hightower's [Kubernetes the Hard Way](https://github.com/kelseyhightower/kubernetes-the-hard-way). It attempts to provide a set of building blocks to build a kubernetes cluster from scratch.
+
+## Development
+
+Note that the generated provider plugin (`pulumi-resource-kubernetes-the-hard-way`) must be on your `PATH` to be used by Pulumi deployments.
+
+## Prerequisites
+
+- Go 1.21
+- Pulumi CLI
+- Node.js (to build the Node.js SDK)
+- Yarn (to build the Node.js SDK)
+- Python 3.6+ (to build the Python SDK)
+- .NET Core SDK (to build the .NET SDK)
+- Gradle (to build the Java SDK)
+
+## Build and Test
+
+```bash
+# Build and install the provider (plugin copied to ./bin)
+make install_provider
+
+# Regenerate schema, schema-types, and SDKs
+make generate
+
+# Test Node.js SDK
+$ make install_nodejs_sdk
+$ cd examples/simple-ts
+$ yarn install
+$ yarn link @unmango/pulumi-kubernetes-the-hard-way
+$ pulumi stack init test
+$ pulumi up
+```
+
+## Naming
+
+The `kubernetes-the-hard-way` provider's plugin binary must be named `pulumi-resource-kubernetes-the-hard-way` (in the format `pulumi-resource-<provider>`).
