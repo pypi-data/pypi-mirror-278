@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+netcord/__init__.py
+netcord/enums.py
+netcord/exceptions.py
+netcord/http.py
+netcord/logger.py
+netcord/models.py
+netcord/netcord.py
+netcord.egg-info/PKG-INFO
+netcord.egg-info/SOURCES.txt
+netcord.egg-info/dependency_links.txt
+netcord.egg-info/requires.txt
+netcord.egg-info/top_level.txt
