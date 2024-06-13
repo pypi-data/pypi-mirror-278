@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: webmo
+Version: 1.2.0
+Summary: A Python-based interface to WebMO
+Home-page: https://github.com/jrschmidt2/webmo-python
+Download-URL: https://github.com/jrschmidt2/webmo-python/archive/refs/tags/1.2.0.tar.gz
+Author: J.R. Schmidt
+Author-email: schmidt@webmo.net
+License: MIT
+Keywords: WEBMO,REST,API
+Provides-Extra: spectrum
+License-File: LICENSE
