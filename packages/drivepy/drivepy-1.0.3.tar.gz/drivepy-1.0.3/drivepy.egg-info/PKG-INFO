@@ -1,0 +1,137 @@
+Metadata-Version: 2.1
+Name: drivepy
+Version: 1.0.3
+Summary: A tool for managing USB drives and flashing ISOs
+Home-page: https://mrfidal.in/cyber-security/DrivePy
+Author: Fidal
+Author-email: mrfidal@proton.me
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# DrivePy
+
+DrivePy is a Python package for managing USB drives, flashing ISO files to USB drives, and verifying bootability.
+
+## Installation
+
+You can install DrivePy using pip:
+
+```
+pip install drivepy
+```
+
+## Usage
+
+### Flash ISO to USB Drive and Make it Bootable
+
+```python
+from drivepy.main import DrivePy
+
+iso_path = "path/to/your/iso_file.iso"
+usb_drive = "drive_letter_of_your_usb_drive"  # Example: "E:" on Windows, "/dev/sdb" on Linux
+
+DrivePy.flash_iso(iso_path, usb_drive)
+DrivePy.make_bootable(usb_drive)
+```
+
+### Verify Bootability of a USB Drive
+
+```python
+from drivepy.main import DrivePy
+
+usb_drive = "drive_letter_of_your_usb_drive"  # Example: "E:" on Windows, "/dev/sdb" on Linux
+
+DrivePy.verify_bootability(usb_drive)
+```
+
+### List Available USB Drives
+
+```python
+from drivepy.main import DrivePy
+
+DrivePy.main()
+```
+
+## Example Script
+
+```python
+from drivepy.main import DrivePy
+
+def flash_iso_and_boot(iso_path, usb_drive):
+    # Flash ISO to USB drive
+    DrivePy.flash_iso(iso_path, usb_drive)
+    print("ISO flashed to USB drive successfully.")
+
+    # Make the USB drive bootable
+    DrivePy.make_bootable(usb_drive)
+    print("USB drive made bootable successfully.")
+
+    print("Connect the USB drive to your laptop and restart your laptop to boot from it.")
+
+def verify_bootability(usb_drive):
+    # Check if USB drive is bootable
+    bootable = DrivePy.is_bootable(usb_drive)
+    if bootable:
+        print(f"The USB drive ({usb_drive}) is bootable.")
+    else:
+        print(f"The USB drive ({usb_drive}) is not bootable.")
+
+def find_usb_drives():
+    # Find available USB drives
+    usb_drives = DrivePy.list_usb_drives()
+    if not usb_drives:
+        print("No USB drives detected.")
+    else:
+        print("Available USB drives:")
+        for idx, drive in enumerate(usb_drives, 1):
+            print(f"{idx}: {drive}")
+
+def main():
+    print("Welcome to DrivePy!")
+    while True:
+        print("\nChoose an option:")
+        print("1. Flash ISO to USB drive and make it bootable")
+        print("2. Verify bootability of a USB drive")
+        print("3. Find available USB drives")
+        print("4. Exit")
+        choice = input("Enter your choice (1/2/3/4): ")
+
+        if choice == '1':
+            iso_path = input("Enter the path to the ISO file: ")
+            usb_drive = input("Enter the drive letter or device path of the USB drive: ")
+            flash_iso_and_boot(iso_path, usb_drive)
+        elif choice == '2':
+            usb_drive = input("Enter the drive letter or device path of the USB drive: ")
+            verify_bootability(usb_drive)
+        elif choice == '3':
+            find_usb_drives()
+        elif choice == '4':
+            print("Exiting DrivePy. Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please enter a valid option.")
+
+if __name__ == "__main__":
+    main()
+```
+
+## Additional Notes
+
+- Ensure you have necessary permissions to perform operations like flashing ISO and making bootable.
+- The ISO file must be bootable if you intend to make the USB drive bootable.
+- For Windows, you may need to run the script with administrator privileges for some operations.
+- For macOS, some operations may require sudo privileges.
+
+## Thanks
+
+Thank you for using DrivePy!
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
