@@ -1,0 +1,12 @@
+.vscode
+.env
+__pycache__/
+.mypy_cache/
+*_env/
+*.pyc
+.hypothesis/
+stubs/
+dist/
+
+# Local configs
+pyrightconfig.json

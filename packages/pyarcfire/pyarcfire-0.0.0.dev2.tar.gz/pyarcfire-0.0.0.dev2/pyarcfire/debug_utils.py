@@ -1,0 +1,42 @@
+"""This module contains useful utilities for debugging or profiling."""
+
+import logging
+import time
+from collections.abc import Callable
+from functools import wraps
+from typing import TypeVar
+
+from typing_extensions import ParamSpec
+
+log: logging.Logger = logging.getLogger(__name__)
+
+P = ParamSpec("P")
+R = TypeVar("R")
+
+
+def benchmark(func: Callable[P, R]) -> Callable[P, R]:
+    """Decorator used to time functions.
+
+    Parameters
+    ----------
+    func : Callable
+        The function to time.
+
+    Returns
+    -------
+    Callable
+        The wrapped function.
+    """
+
+    @wraps(func)
+    def wrapper(*args: P.args, **kwargs: P.kwargs) -> R:
+        time_start = time.perf_counter()
+        result = func(*args, **kwargs)
+        time_end = time.perf_counter()
+        time_duration = time_end - time_start
+        log.info(
+            f"[magenta]PROFILER[/magenta]: [blue underline]{func.__qualname__}[/blue underline] took {time_duration:.3f} seconds"
+        )
+        return result
+
+    return wrapper
