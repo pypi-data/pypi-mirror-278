@@ -1,0 +1,105 @@
+Metadata-Version: 2.1
+Name: neuropacs
+Version: 1.7.2
+Summary: NeuroPACS Python SDK
+Home-page: https://github.com/neuropacs/neuropacs-py-sdk
+Author: Kerrick Cavanaugh
+Author-email: kerrick@neuropacs.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: certifi==2023.5.7
+Requires-Dist: cffi==1.15.1
+Requires-Dist: charset-normalizer==3.1.0
+Requires-Dist: cryptography==41.0.1
+Requires-Dist: idna==3.4
+Requires-Dist: Naked==0.1.32
+Requires-Dist: pip==23.3.1
+Requires-Dist: pycparser==2.21
+Requires-Dist: pycryptodome==3.18.0
+Requires-Dist: PyYAML==6.0
+Requires-Dist: requests==2.31.0
+Requires-Dist: setuptools==69.0.2
+Requires-Dist: shellescape==3.8.1
+Requires-Dist: urllib3==1.26.6
+Requires-Dist: wheel==0.41.2
+Requires-Dist: python-socketio==5.10.0
+Requires-Dist: tqdm==4.66.1
+
+[![Unit Tests](https://github.com/neuropacs/neuropacs-py-sdk/actions/workflows/ci.yml/badge.svg)](https://github.com/neuropacs/neuropacs-py-sdk/actions/workflows/ci.yml)
+
+# NeuroPACS Python SDK
+
+Connect to NeuroPACS diagnostic capabilities with our Python SDK.
+
+## Getting Started
+
+### Installation
+
+```bash
+pip install neuropacs
+```
+
+### Usage
+
+```py
+import neuropacs
+
+api_key = "your_api_key"
+server_url = "https://your_neuropacs_url"
+product_id = "PD/MSA/PSP-v1.0"
+prediction_format = "XML"
+
+# PRINT CURRENT VERSION
+version = neuropacs.PACKAGE_VERSION
+
+#INITIALIZE NEUROPACS SDK
+npcs = neuropacs.init(server_url, api_key)
+
+#CONNECT TO NEUROPACS
+connection = npcs.connect()
+
+#CREATE A NEW JOB
+order_id = npcs.new_job()
+
+#UPLOAD AN IMAGE
+# --> data must be a valid path <String> or byte array <Bytes>
+# --> order_id param is optional
+upload_status = npcs.upload(data)
+
+#UPLOAD A DATASET
+# --> dataset_path must be a valid path to a dataset <String>
+# --> order_id param is optional
+upload_status = npcs.upload_dataset(dataset_path)
+
+#START A JOB
+# --> Valid product_id options: PD/MSA/PSP-v1.0
+# --> order_id param is optional
+job_start_status = npcs.run_job(product_id)
+
+#CHECK JOB STATUS
+# --> order_id param is optional
+job_status = npcs.check_status()
+
+#RETRIEVE JOB RESULTS
+# --> Valid prediction_format options: TXT, PDF, XML, JSON, DICOMSR
+# --> order_id param is optional
+job_results = npcs.get_results(prediction_format)
+```
+
+## Authors
+
+Kerrick Cavanaugh - kerrick@neuropacs.com
+
+## Version History
+
+- 1.3.9
+  - Initial Release
+  - See [release history](https://pypi.org/project/neuropacs/#history)
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details
