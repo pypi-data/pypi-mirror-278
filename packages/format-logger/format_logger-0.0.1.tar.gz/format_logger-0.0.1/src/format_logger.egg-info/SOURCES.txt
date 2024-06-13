@@ -1,0 +1,11 @@
+LICENCE
+README.md
+pyproject.toml
+setup.py
+src/format-logger/__init__.py
+src/format-logger/logger.py
+src/format_logger.egg-info/PKG-INFO
+src/format_logger.egg-info/SOURCES.txt
+src/format_logger.egg-info/dependency_links.txt
+src/format_logger.egg-info/entry_points.txt
+src/format_logger.egg-info/top_level.txt
