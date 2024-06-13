@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "master-tuyul-sdk"
+version = "0.1.2"
+description = ""
+authors = ["DesKaOne <DesKaOne@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "master_tuyul_sdk"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+base58 = "2.1.1"
+chardet = "5.2.0"
+colorama = "0.4.6"
+httpx = {version = "0.27.0", extras = ["socks", "http2"]}
+pycryptodomex = "3.20.0"
+random-user-agent = "1.0.1"
+requests = "2.31.0"
+requests-toolbelt = "0.10.1"
+sqlalchemy = "2.0.30"
+sqlalchemy-utils = "0.41.2"
+urllib3 = "1.26.15"
+python-dotenv = "^1.0.1"
+bs4 = "^0.0.2"
+google-api-python-client = "2.131.0"
+lxml = "5.2.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
