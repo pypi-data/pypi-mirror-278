@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unofficial_ffm_openai"
+version = "0.1.2"
+description = "An unofficial Formosa Foundation Model API client implementation compatible with LangChain and OpenAI"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+    { name = "derekhsu", email = "derekhsu@hotmail.com" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+dependencies = [
+    "langchain-openai",
+    "langchain-core",
+    "langchain"
+]
+
+[project.urls]
+Homepage = "https://github.com/derekhsu/unoffcial_ffm_openai_client"
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
