@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+quickDatabase.egg-info/PKG-INFO
+quickDatabase.egg-info/SOURCES.txt
+quickDatabase.egg-info/dependency_links.txt
+quickDatabase.egg-info/entry_points.txt
+quickDatabase.egg-info/top_level.txt
+quickdb/__init__.py
+quickdb/main.py
+tests/test_cases.py
