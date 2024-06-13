@@ -1,0 +1,22 @@
+# Task: 30-day Readmission Risk Prediction
+predicates:
+  admission:
+    code: event_type//ADMISSION
+  discharge:
+    code: event_type//DISCHARGE
+
+trigger: admission
+
+windows:
+  input:
+    start: trigger
+    end: start -> discharge
+    start_inclusive: False
+    end_inclusive: True
+    index_timestamp: end
+  target:
+    start: input.end
+    end: start + 30 days
+    start_inclusive: False
+    end_inclusive: True
+    label: admission
