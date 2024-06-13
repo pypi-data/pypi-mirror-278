@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+swalot/__init__.py
+swalot/__version__.py
+swalot/gpu.py
+swalot/time.py
+swalot.egg-info/PKG-INFO
+swalot.egg-info/SOURCES.txt
+swalot.egg-info/dependency_links.txt
+swalot.egg-info/requires.txt
+swalot.egg-info/top_level.txt
+tests/test_gpu.py
+tests/test_time.py
