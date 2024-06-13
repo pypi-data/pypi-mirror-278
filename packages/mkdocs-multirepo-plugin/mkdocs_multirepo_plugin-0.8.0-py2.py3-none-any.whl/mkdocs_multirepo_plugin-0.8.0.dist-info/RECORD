@@ -1,0 +1,15 @@
+mkdocs_multirepo_plugin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mkdocs_multirepo_plugin/plugin.py,sha256=QgvnFlN3LohLikkFPEpmApdu1Wi3ckHqC3vlSvm3ymg,14594
+mkdocs_multirepo_plugin/scripts/mv_docs_up.sh,sha256=4QodKgPUuufxFh4LEDKlEPI43SPdHE3vnFTAKJM-LZE,37
+mkdocs_multirepo_plugin/scripts/sparse_clone.sh,sha256=vTwDgPtsprv6l1VnD1BM71yFZt05Uho5kUkoFPpwVug,749
+mkdocs_multirepo_plugin/scripts/sparse_clone_old.sh,sha256=c_qUrzTq4AcGH5MwsZJKdSZzcV-HLDvGO3VqnAvugdo,1026
+mkdocs_multirepo_plugin/structure.py,sha256=of5Fx7rixHNl7hrawI8AMUMm2KS3XBvMUEu5kQ2_qaY,18049
+mkdocs_multirepo_plugin/util.py,sha256=0uJOQL_hg1vc7TTNXGD6iz-uwFEI3JhXmelLzEVm54M,4046
+mkdocs_multirepo_plugin-0.8.0.data/scripts/sparse_clone.sh,sha256=vTwDgPtsprv6l1VnD1BM71yFZt05Uho5kUkoFPpwVug,749
+mkdocs_multirepo_plugin-0.8.0.data/scripts/sparse_clone_old.sh,sha256=c_qUrzTq4AcGH5MwsZJKdSZzcV-HLDvGO3VqnAvugdo,1026
+mkdocs_multirepo_plugin-0.8.0.data/scripts/mv_docs_up.sh,sha256=4QodKgPUuufxFh4LEDKlEPI43SPdHE3vnFTAKJM-LZE,37
+mkdocs_multirepo_plugin-0.8.0.dist-info/LICENSE,sha256=W_Xg9eNyP2USIovuQbNm8TSZnN_JSha3hbp0cy-3ptA,1070
+mkdocs_multirepo_plugin-0.8.0.dist-info/METADATA,sha256=kpnGe4DZ5Pzv2ddPkQymKz4QmK6aSB3P6zPIeIR-xtk,15063
+mkdocs_multirepo_plugin-0.8.0.dist-info/WHEEL,sha256=IrRNNNJ-uuL1ggO5qMvT1GGhQVdQU54d6ZpYqEZfEWo,92
+mkdocs_multirepo_plugin-0.8.0.dist-info/entry_points.txt,sha256=knCeDboWuwp7OdvGHa8x-6QBiihaDjEqvr1xrX4eop0,75
+mkdocs_multirepo_plugin-0.8.0.dist-info/RECORD,,
