@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: alga
+Version: 0.4.0
+Summary: CLI for remote controlling LG webOS TVs
+Home-page: https://github.com/Tenzer/alga
+License: MIT
+Author: Jeppe Fihl-Pearson
+Author-email: jeppe@tenzer.dk
+Requires-Python: >=3.9,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Home Automation
+Classifier: Topic :: Multimedia
+Classifier: Typing :: Typed
+Requires-Dist: rich
+Requires-Dist: typer[all]
+Requires-Dist: wakeonlan
+Requires-Dist: websocket-client
+Project-URL: Repository, https://github.com/Tenzer/alga
+Description-Content-Type: text/markdown
+
+Alga
+====
+
+A command line utility for controlling a LG webOS TV over the network.
+
+It is still in it's early stages of development but the implemented functionality should work.
+
+Work yet to do:
+---------------
+
+* Add tests for websocket communication
+* Add way of adding TV without having to set environment variables
+* Add CI for releasing versions to PyPI when tags are added
+
