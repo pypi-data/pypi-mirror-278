@@ -1,0 +1,122 @@
+#!python
+import os
+import math
+import numpy
+import pandas       as pnd
+import jacobi       as jac
+import utils_noroot as utnr
+import warnings
+import matplotlib.pyplot as plt
+
+from log_store import log_store
+
+log=log_store.add_logger('monitor:cons_uncons_comparison')
+#----------------------------------
+class data:
+    sim_vers = 'v10.21p2'
+    con_vers = 'v32'
+    unc_vers = 'v7'
+
+    l_dst  = ['r1', 'r2p1', '2017', '2018']
+    l_trg  = ['MTOS', 'ETOS', 'GTIS']
+    l_year = ['2011', '2012', '2015', '2016', '2017', '2018']
+    l_brem = [0, 1, 2]
+    fit_dir= os.environ['FITDIR']
+    cas_dir= os.environ['CASDIR']
+
+#----------------------------------
+def sum_prop(l_yld, l_err):
+    if len(l_yld) == 1 and len(l_err) == 1:
+        return l_yld[0], l_err[0]
+
+    cov      = numpy.cov(l_err)
+    tot, var = jac.propagate(lambda l_x : sum(l_x), l_yld, cov) 
+
+    err = math.sqrt(var)
+
+    return tot, err
+#----------------------------------
+def get_constrained_yields():
+    d_info = {'trg' : [], 'dst' : [], 'yld' : [], 'err' : []}
+    for dst in data.l_dst:
+        for trg in data.l_trg:
+            json_path = f'{data.fit_dir}/{data.con_vers}/data/{data.sim_vers}/ctrl/{dst}/pars_{trg}.json'
+            d_data   = utnr.load_json(json_path)
+            yld, err = d_data['nsig_dt']
+
+            key = f'{dst}_{trg}'
+            
+            d_info['trg'].append(trg)
+            d_info['dst'].append(dst)
+            d_info['yld'].append(yld)
+            d_info['err'].append(err)
+
+    df = pnd.DataFrame(d_info)
+
+    return df
+#----------------------------------
+def get_yield(year, trg):
+    l_yld = []
+    l_err = []
+    l_brem= [0] if trg == 'MTOS' else data.l_brem
+    for brem in l_brem:
+        json_path = f'{data.cas_dir}/monitor/mass_scales/{data.unc_vers}/{year}_{trg}/pars/cat_{brem}/data.json'
+        d_data    = utnr.load_json(json_path)
+        yld, err  = d_data['yld_sig']
+
+        l_yld.append(yld)
+        l_err.append(err)
+
+    yld, err = sum_prop(l_yld, l_err)
+
+    return yld, err
+#----------------------------------
+def get_unconstrained_yields():
+    d_info = {'trg' : [], 'dst' : [], 'yld' : [], 'err' : []}
+    for dst in data.l_dst:
+        for trg in data.l_trg:
+            yld, err = get_yield(dst, trg)
+
+            d_info['dst'].append(dst)
+            d_info['trg'].append(trg)
+            d_info['yld'].append(yld)
+            d_info['err'].append(err)
+
+    df = pnd.DataFrame(d_info)
+
+    return df
+#----------------------------------
+def compare(df_c, df_u):
+    plt.errorbar(df_c.dst, df_c.yld, yerr=df_c.err, label='Constrained')
+    plt.errorbar(df_u.dst, df_u.yld, yerr=df_u.err, label='Unconstrained')
+
+    plt.grid()
+    plt.legend()
+    plt.xlabel('Year')
+    plt.ylabel('Yield')
+#----------------------------------
+def tabulate(df_c, df_u, trg):
+    return
+#----------------------------------
+def main():
+    df_u = get_unconstrained_yields()
+    df_c = get_constrained_yields()
+
+    for trg in data.l_trg:
+        df_ct = df_c[df_c.trg == trg]
+        df_ut = df_u[df_u.trg == trg]
+
+        compare(df_ct, df_ut)
+
+        plt.title(f'{trg}; u{data.unc_vers}; c{data.con_vers}')
+        plt.ylim(bottom=0)
+        plot_path = f'{data.cas_dir}/monitor/mass_scales/{data.unc_vers}/plots/yld_cmp_{trg}.png'
+        log.info(f'Saving to: {plot_path}')
+        plt.savefig(plot_path)
+        plt.close('all')
+
+        tabulate(df_ct, df_ut, trg)
+#----------------------------------
+if __name__ == '__main__':
+    main()
+

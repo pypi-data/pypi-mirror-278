@@ -1,0 +1,140 @@
+#!python
+
+import utils_noroot      as utnr
+import matplotlib.pyplot as plt
+import read_selection    as rs
+import argparse
+import ROOT
+import math
+import glob
+import os
+
+from log_store import log_store
+
+
+log=log_store.add_logger('rx_monitor:check_clone')
+#--------------------------------
+class data:
+    l_qsq  = ['jpsi', 'psi2', 'high']
+    l_trig = ['MTOS', 'ETOS', 'GTIS']
+    l_year = ['2011', '2012', '2015', '2016', '2017', '2018', 'all']
+    vers   = 'v10.21p2'
+    plt_dir= './check_clone_plots'
+
+
+    trig=None
+    year=None
+    qsq =None
+#--------------------------------
+def add_angle(rdf):
+    vkp = 'TVector3 vkp ( H_PX,  H_PY,  H_PZ)'
+    vlo = 'TVector3 vlo (LO_PX, LO_PY, LO_PZ)'
+    vls = 'TVector3 vls (LS_PX, LS_PY, LS_PZ)'
+
+    #Define OS and SS lepton vars
+    rdf = rdf.Define('LO_PX', 'L1_ID * H_ID > 0 ? L1_PX : L2_PX')
+    rdf = rdf.Define('LO_PY', 'L1_ID * H_ID > 0 ? L1_PY : L2_PY')
+    rdf = rdf.Define('LO_PZ', 'L1_ID * H_ID > 0 ? L1_PZ : L2_PZ')
+
+    rdf = rdf.Define('LS_PX', 'L1_ID * H_ID < 0 ? L1_PX : L2_PX')
+    rdf = rdf.Define('LS_PY', 'L1_ID * H_ID < 0 ? L1_PY : L2_PY')
+    rdf = rdf.Define('LS_PZ', 'L1_ID * H_ID < 0 ? L1_PZ : L2_PZ')
+
+    rdf = rdf.Define('angle_os', f'{vkp}; {vlo}; return vkp.Angle(vlo);')
+    rdf = rdf.Define('angle_ss', f'{vkp}; {vls}; return vkp.Angle(vls);')
+
+    return rdf
+#--------------------------------
+def get_args():
+    parser = argparse.ArgumentParser(description='Used to check for clone tracks')
+    parser.add_argument('-t', '--trigger', type=str, help='Trigger', choices=data.l_trig)
+    parser.add_argument('-y', '--year'   , type=str, help='Year'   , choices=data.l_year)
+    parser.add_argument('-q', '--qsq'    , type=str, help='q2 bin' , choices=data.l_qsq )
+    args = parser.parse_args()
+
+    data.trig = args.trigger
+    data.year = args.year
+    data.qsq  = args.qsq
+#--------------------------------
+def get_rdf():
+    cas_dir = os.environ['CASDIR']
+    if   data.year != 'all':
+        root_wc = f'{cas_dir}/tools/apply_selection/r_fits/data/{data.vers}/{data.year}_{data.trig}/*.root'
+    else:
+        root_wc = f'{cas_dir}/tools/apply_selection/r_fits/data/{data.vers}/*_{data.trig}/*.root'
+
+    l_root_path = glob.glob(root_wc)
+    if len(l_root_path) == 0:
+        log.error(f'Cannot find any file in: {root_wc}')
+        raise
+
+    log.info(f'Using {len(l_root_path)} files')
+    rdf = ROOT.RDataFrame(data.trig, l_root_path)
+
+    return rdf
+#--------------------------------
+def filter_rdf(rdf):
+    year= '2018' if data.year == 'all' else data.year
+    if year != data.year:
+        log.warning(f'For year {data.year} using {year} to get selection')
+
+    kin = rs.get('kinematics', data.trig, q2bin=data.qsq, year=year)
+    bdt = rs.get(       'bdt', data.trig, q2bin=data.qsq, year=year)
+    qsq = rs.get(        'q2', data.trig, q2bin=data.qsq, year=year)
+    mas = rs.get(      'mass', data.trig, q2bin=data.qsq, year=year)
+
+    rdf = rdf.Filter(kin, 'kin')
+    rdf = rdf.Filter(bdt, 'bdt')
+    rdf = rdf.Filter(qsq, 'qsq')
+    rdf = rdf.Filter(mas, 'mas')
+
+    rep = rdf.Report()
+    rep.Print()
+
+    return rdf
+#--------------------------------
+def plot_angle():
+    os.makedirs(data.plt_dir, exist_ok=True)
+
+    d_data = get_data()
+    arr_os = d_data['angle_os']
+    arr_ss = d_data['angle_ss']
+
+    plt.hist(arr_os, range=[-0.1, 0.3], bins=30, label='OS', histtype='step', color='r')
+    plt.hist(arr_ss, range=[-0.1, 0.3], bins=30, label='SS',       alpha=0.4, color='b')
+
+    plt.legend()
+    plt.title(f'Years: {data.year}; Trigger: {data.trig}; $q^2$ bin: {data.qsq}')
+    plt.xlabel(r'$\alpha(K, e)$[rad]')
+    plt.ylabel('Entries')
+    plt.savefig(f'{data.plt_dir}/{data.year}_{data.trig}_{data.qsq}.png')
+    plt.close()
+#--------------------------------
+def get_data():
+    jsn_path = f'{data.plt_dir}/{data.year}_{data.trig}_{data.qsq}.json'
+    if os.path.isfile(jsn_path):
+        log.info(f'Data already cached found')
+        d_data = utnr.load_json(jsn_path)
+        return d_data
+
+    log.info(f'Data not cached caching')
+    rdf = get_rdf()
+    rdf = filter_rdf(rdf)
+    rdf = add_angle(rdf)
+
+    d_data_np = rdf.AsNumpy(['angle_os', 'angle_ss'])
+    d_data    = { key : arr_val.tolist() for key, arr_val in d_data_np.items() }
+
+
+    utnr.dump_json(d_data, jsn_path)
+
+    return d_data
+#--------------------------------
+def main():
+    get_args()
+
+    plot_angle()
+#--------------------------------
+if __name__ == '__main__':
+    main()
+

@@ -1,0 +1,97 @@
+#!python
+
+import argparse
+import numpy
+import ROOT
+import os
+
+from log_store import log_store
+
+log=log_store.add_logger('monitor:check_isoval')
+#----------------------------
+class data:
+    l_proc = ['ctrl_ee', 'sign_ee', 'data_ee']
+    l_year = ['2011', '2012', '2015', '2016', '2017', '2018']
+    l_var = [
+            'B_L1_CC_SPT',
+            'B_L2_CC_SPT',
+            'B_L1_CC_SPT',
+            'B_L2_CC_SPT',
+            'B_L1_CC_IT',
+            'B_L2_CC_IT',
+            'B_L1_CC_MULT',
+            'B_L2_CC_MULT',
+            'B_VTXISODCHI2ONETRACK',
+            'B_VTXISODCHI2MASSONETRACK',
+            ]
+
+    dat_dir = os.environ['DATDIR']
+    vers    = None
+    targ    = -999
+#----------------------------
+def get_file_path(proc, year):
+    file_path = f'{data.dat_dir}/{proc}/{data.vers}/{year}.root'
+    if not os.path.isfile(file_path):
+        log.error(f'File not found: {file_path}')
+        raise FileNotFoundError
+    else:
+        log.debug(f'Checking: {file_path}')
+
+    return file_path
+#----------------------------
+def check_iso(file_path, tree_name):
+    rdf   = ROOT.RDataFrame(tree_name, file_path)
+    d_dat = rdf.AsNumpy(data.l_var)
+
+    ngood = 0
+    l_name= []
+    for name, arr_val in d_dat.items():
+        arr_flg = numpy.isin(arr_val, data.targ)
+        if numpy.any(arr_flg):
+            ngood += 1
+            l_name.append(name)
+
+    return ngood, l_name
+#----------------------------
+def get_tree_name(proc):
+    if   proc.endswith('ee'):
+        name = 'KEE'
+    elif proc.endswith('mm'):
+        name = 'KMM'
+    else:
+        log.error(f'Invalid process: {proc}')
+        raise
+
+    return name
+#----------------------------
+def check():
+    for proc in data.l_proc:
+        tree_name = get_tree_name(proc)
+        for year in data.l_year:
+            file_path = get_file_path(proc, year)
+            ngood, l_name = check_iso(file_path, tree_name)
+            if ngood == 0:
+                log.warning(f'{proc:<20}{year:<20}{ngood:<20}{str(l_name):<100}')
+            else:
+                log.info(f'{proc:<20}{year:<20}{ngood:<20}{str(l_name):<100}')
+#----------------------------
+def get_args():
+    parser = argparse.ArgumentParser(description='Used to check values of isolation variables')
+    parser.add_argument('-p', '--proc' , nargs='+', help='Processes'     , default=data.l_proc)
+    parser.add_argument('-y', '--year' , nargs='+', help='Years'         , default=data.l_year)
+    parser.add_argument('-v', '--vers' , type =str, help='Version'       , required=True) 
+    parser.add_argument('-t', '--targ' , type =int, help='Target to find', default=data.targ) 
+    args = parser.parse_args()
+
+    data.l_proc = args.proc
+    data.l_year = args.year
+    data.vers   = args.vers
+    data.targ   = args.targ
+#----------------------------
+def main():
+    get_args()
+    check()
+#----------------------------
+if __name__ == '__main__':
+    main()
+

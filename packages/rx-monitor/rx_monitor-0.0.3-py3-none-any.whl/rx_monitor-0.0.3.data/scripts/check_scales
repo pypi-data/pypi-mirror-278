@@ -1,0 +1,142 @@
+#!python
+
+import argparse
+import os
+
+import utils_noroot      as utnr
+import matplotlib.pyplot as plt
+
+from logzero           import logger    as log
+from monitor.ms_reader import ms_reader as ms_rdr
+
+#----------------------------------------
+class data:
+    l_vers  = None
+    l_scale = ['mu', 'sg', 'br', 'sg_g', 'mu_g']
+    cas_dir = os.environ['CASDIR']
+#----------------------------------------
+def make_mass_plots(df, vers, kind):
+    ax=None
+    ax=df.plot(y='v_MTOS', yerr='e_MTOS', capsize=4, label='$\mu$TOS', ax=ax)
+    ax=df.plot(y='v_ETOS', yerr='e_ETOS', capsize=4, label='$e$TOS'  , ax=ax)
+    ax=df.plot(y='v_GTIS', yerr='e_GTIS', capsize=4, label='$g$TIS!' , ax=ax)
+
+    plt_dir  = utnr.make_dir_path(f'{data.out_dir}/plots')
+    plt_path = f'{plt_dir}/{kind}.png'
+
+    log.info(f'Saving to: {plt_path}')
+
+    if   kind == 'mu':
+        ylabel = '$\mu_{data} - \mu_{MC}$[MeV]'
+    elif kind == 'sg':
+        ylabel = '$\sigma_{data}/\sigma_{MC}$'
+    else:
+        log.error(f'Wrong kind: {kind}')
+        raise ValueError
+
+    plt.grid()
+    plt.title(vers)
+    plt.ylabel(ylabel)
+    plt.savefig(plt_path)
+    plt.close('all')
+#----------------------------------------
+def make_brem_plots(df, vers, kind):
+    df=df[df.index.str.match('(eTOS|gTIS!)')]
+
+    ax=None
+    ax=df.plot(y='v_0', yerr='e_0', capsize=4, label='$0\gamma$', ax=ax)
+    ax=df.plot(y='v_1', yerr='e_1', capsize=4, label='$1\gamma$', ax=ax)
+    ax=df.plot(y='v_2', yerr='e_2', capsize=4, label='$>1\gamma$', ax=ax)
+
+    plt_dir  = utnr.make_dir_path(f'{data.out_dir}/plots')
+    plt_path = f'{plt_dir}/{kind}.png'
+
+    if   kind == 'mu_g':
+        ylabel = '$\mu_{data} - \mu_{MC}$[MeV]'
+    elif kind == 'sg_g':
+        ylabel = '$\sigma_{data}/\sigma_{MC}$'
+    elif kind == 'br':
+        ylabel = '$frac_{data}/frac_{MC}$'
+    else:
+        log.error(f'Invalid kind: {kind}')
+        raise
+
+    log.info(f'Saving to: {plt_path}')
+
+    plt.grid()
+    plt.title(vers)
+    plt.xticks(rotation=20)
+    plt.ylabel(ylabel)
+    plt.savefig(plt_path)
+    plt.close('all')
+#----------------------------------------
+def make_plots(df, vers, kind):
+    if   kind in ['mu', 'sg']:
+        make_mass_plots(df, vers, kind)
+    elif kind in ['br', 'mu_g', 'sg_g']:
+        make_brem_plots(df, vers, kind)
+    else:
+        log.error(f'Invalid kind: {kind}')
+        raise
+#----------------------------------------
+def df_as_table(df, kind):
+    if kind in ['mu', 'sg']:
+        df['$\mu$TOS' ] = df.apply(lambda row: f'{row.v_MTOS:.3f}$\pm${row.e_MTOS:.3f}', axis=1)
+        df[  '$e$TOS' ] = df.apply(lambda row: f'{row.v_ETOS:.3f}$\pm${row.e_ETOS:.3f}', axis=1)
+        df[  '$g$TIS!'] = df.apply(lambda row: f'{row.v_GTIS:.3f}$\pm${row.e_GTIS:.3f}', axis=1)
+
+        df=df.drop(['v_MTOS', 'e_MTOS', 'v_ETOS', 'e_ETOS', 'v_GTIS', 'e_GTIS'], axis=1)
+    elif kind in ['br', 'mu_g', 'sg_g']:
+        df['$0\gamma$'] = df.apply(lambda row: f'{row.v_0:.3f}$\pm${row.e_0:.3f}', axis=1)
+        df['$1\gamma$'] = df.apply(lambda row: f'{row.v_1:.3f}$\pm${row.e_1:.3f}', axis=1)
+        df['$2\gamma$'] = df.apply(lambda row: f'{row.v_2:.3f}$\pm${row.e_2:.3f}', axis=1)
+
+        df=df.drop(['v_0', 'e_0', 'v_1', 'e_1', 'v_2', 'e_2'], axis=1)
+    else:
+        log.error(f'Invalid kind: {kind}')
+        raise
+
+    return df
+#----------------------------------------
+def make_tables(df, kind):
+    df       = df_as_table(df, kind)
+
+    tab_dir  = utnr.make_dir_path(f'{data.out_dir}/tables')
+    tab_path = f'{tab_dir}/{kind}.tex'
+
+    log.info(f'Saving to: {tab_path}')
+    utnr.df_to_tex(df, tab_path, hide_index=False, d_format=None, caption=None)
+#----------------------------------------
+def get_args():
+    parser = argparse.ArgumentParser(description='Used to go from JSON files with fit parameters to plots and tables')
+    parser.add_argument('-v', '--version', nargs='+', help='Versions', required=True)
+    args = parser.parse_args()
+
+    data.l_vers = args.version
+#----------------------------------------
+def rename_index(index):
+    index = index.replace('MTOS', 'mTOS' )
+    index = index.replace('ETOS', 'eTOS' )
+    index = index.replace('GTIS', 'gTIS!')
+    index = index.replace('r1'  , 'R1'   )
+    index = index.replace('r2p1', 'R2.1' )
+
+    return index
+#----------------------------------------
+def main():
+    for vers in data.l_vers:
+        data.out_dir = f'{data.cas_dir}/monitor/mass_scales/{vers}'
+
+        rdr  = ms_rdr(version=vers)
+
+        d_df = { scale : rdr.get_scales(scale) for scale in data.l_scale }
+
+        for kind, df in d_df.items():
+            df=df.rename(index=rename_index)
+            make_plots(df, vers, kind)
+            make_tables(df, kind)
+#----------------------------------------
+if __name__ == '__main__':
+    get_args()
+    main()
+

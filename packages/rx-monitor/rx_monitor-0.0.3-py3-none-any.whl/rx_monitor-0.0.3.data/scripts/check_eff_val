@@ -1,0 +1,179 @@
+#!python
+
+import os
+import glob
+import argparse
+import utils_noroot as utnr
+
+from selection.finder import finder    as sfnd
+from log_store        import log_store
+
+log = log_store.add_logger('rx_monitor:check_eff_val')
+#---------------------------------
+class data:
+    l_year   = ['2011', '2012', '2015', '2016', '2017', '2018']
+    l_trig   = ['MTOS', 'ETOS', 'GTIS']
+    l_proc   = ['ctrl', 'psi2', 'sign']
+    l_kind   = ['tot', 'sel']
+    kind     = 'tot' 
+    l_vers   = None
+    nwgt     = None
+    log_dir  = None 
+    d_wgt_flg= dict() 
+#---------------------------------
+def get_args():
+    parser = argparse.ArgumentParser(description='Used to check different versions of efficiencies')
+    parser.add_argument('-v', '--version' , nargs=2  , help='Versions of efficiencies to compare', required=True)
+    parser.add_argument('-w', '--weights' , type =int, help='Number of weights used.'            , required=True)
+    parser.add_argument('-k', '--kind'    , type =str, help='Kind of efficiency'                 , choices =data.l_kind, default=data.kind)
+    parser.add_argument('-y', '--year'    , nargs='+', help='Years',                         default=data.l_year)
+    parser.add_argument('-t', '--trig'    , nargs='+', help='Triggers',                      default=data.l_trig)
+    parser.add_argument('-p', '--proc'    , nargs='+', help='Process',                       default=data.l_proc)
+    args = parser.parse_args()
+
+    data.l_vers = args.version
+    data.nwgt   = args.weights
+    data.kind   = args.kind
+    data.l_year = args.year
+    data.l_trig = args.trig
+    data.l_proc = args.proc
+
+    if data.kind == 'sel' and data.nwgt != 0:
+        log.error(f'When using more than zero weights, the kind needs to be "tot"')
+        raise
+#---------------------------------
+def get_path_wc(year, trig, proc, vers):
+    eff_dir   = os.environ['EFFDIR']
+    wgt_flg   = data.d_wgt_flg[vers]
+
+    chan      = 'mm' if trig == 'MTOS' else 'ee'
+    pkl_wc    = f'{eff_dir}/{vers}/p*_{wgt_flg}/cf_{data.kind}_{proc}_{chan}_{year}_{trig}.pickle'
+
+    return pkl_wc
+#---------------------------------
+def get_cutflow_from_wc(wc):
+    l_path = glob.glob(wc)
+    if len(l_path) == 0:
+        log.error(f'Found no cutflow in: {wc}')
+        raise
+
+    l_cf = []
+    for path in l_path:
+        pk = utnr.load_pickle(path)
+        cf = get_cutflow(pk)
+        l_cf.append(cf)
+
+    cf_tot = sum(l_cf[1:], l_cf[0])
+
+    return cf_tot
+#---------------------------------
+def compare(wc_zr, wc_on, identifier):
+    cf_zr = get_cutflow_from_wc(wc_zr)
+    cf_on = get_cutflow_from_wc(wc_on)
+
+    if cf_zr == cf_on:
+        return 0
+
+    eff_zr = cf_zr.tot_eff
+    eff_on = cf_on.tot_eff
+
+    perc = 100 * (eff_on - eff_zr) / eff_zr
+
+    if perc < 1e-6:
+        return 0
+
+    dump_log(cf_zr, cf_on, identifier)
+
+    return perc
+#---------------------------------
+def dump_log(cf_zr, cf_on, identifier):
+    os.makedirs(data.log_dir, exist_ok=True)
+    cf_zr._d_meta = None
+    cf_on._d_meta = None
+
+    cf_zr.to_json(f'{data.log_dir}/zr_{identifier}.json')
+    cf_on.to_json(f'{data.log_dir}/on_{identifier}.json')
+#---------------------------------
+def get_cutflow(cf):
+    try:
+        cfl = cf['nom', 'B_PT'] if data.kind == 'tot' else cf
+    except:
+        log.error('Cannot find cutflow in:')
+        print(cf)
+        raise
+
+    return cfl
+#---------------------------------
+def get_latest_selection(d_cut, year, trig, proc):
+    qsq={'sign' : 'high', 'ctrl' : 'jpsi', 'psi2' : 'psi2'}[proc]
+
+    obj=sfnd(trig, qsq, year)
+    ver=obj.get_version(d_cut)
+
+    return ver
+#---------------------------------
+def get_sel_ver(year, trig, proc, vers):
+    pkl_wc   = get_path_wc(year, trig, proc, vers)
+    pkl_path = glob.glob(pkl_wc)[0]
+    eff_dir  = os.path.dirname(pkl_path)
+    chan     = 'mm' if trig == 'MTOS' else 'ee'
+    cut_path = f'{eff_dir}/cf_sel_{proc}_{chan}_{year}_{trig}_cut.json'
+    if not os.path.isfile(cut_path):
+        return 'none'
+
+    d_cut    = utnr.load_json(cut_path)['Cut']
+    del(d_cut['truth'])
+    vers     = get_latest_selection(d_cut, year, trig, proc)
+
+    return vers 
+#---------------------------------
+def check(year, trig, proc):
+    wc_zr=get_path_wc(year, trig, proc, data.l_vers[0])
+    wc_on=get_path_wc(year, trig, proc, data.l_vers[1])
+
+    vzr=get_sel_ver(year, trig, proc, data.l_vers[0])
+    von=get_sel_ver(year, trig, proc, data.l_vers[1])
+
+    identifier = f'{year}_{trig}_{proc}'
+    diff = compare(wc_zr, wc_on, identifier)
+
+    return diff, vzr, von
+#---------------------------------
+def get_flags(vers):
+    l_flg_old = ['p', 't', 'g', 'l', 'h', 'r', 'q', 'b']
+    l_flg_new = ['p', 't', 'g', 'l', 'h', 'r', 'q', 'i']
+    l_flg     = l_flg_old if vers < 'v67' else l_flg_new
+    l_sys     = ['nom'] * data.nwgt + ['000'] * (len(l_flg) - data.nwgt)
+    l_flg_sys = [ f'{flg}{sys}' for flg, sys in zip(l_flg, l_sys) ]
+    l_flg_sys.append('snom')
+    wgt_flg   = '_'.join(l_flg_sys)
+
+    log.info(f'Using flags: {wgt_flg}')
+
+    return wgt_flg
+#---------------------------------
+def check_all():
+    for year in data.l_year:
+        for trig in data.l_trig:
+            for proc in data.l_proc:
+                dif, vzr, von = check(year, trig, proc)
+
+                if   dif is None:
+                    log.warning(f'{year:<15}{trig:<15}{proc:<15}{vzr:<15}{von:<15}{"na":<10}')
+                elif dif    != 0: 
+                    log.error(  f'{year:<15}{trig:<15}{proc:<15}{vzr:<15}{von:<15}{dif:<10.3f}')
+                elif dif    == 0:
+                    log.info(   f'{year:<15}{trig:<15}{proc:<15}{vzr:<15}{von:<15}{dif:<10.3f}')
+                else:
+                    log.error(f'Invalid value for check variable: {dif}')
+                    raise
+#---------------------------------
+def main():
+    get_args()
+    data.d_wgt_flg = { vers : get_flags(vers) for vers in data.l_vers }
+    data.log_dir   = f'log/{data.kind}_{data.nwgt:03}'
+    check_all()
+#---------------------------------
+if __name__ == '__main__':
+    main()
+

@@ -1,0 +1,148 @@
+#!python
+
+import json
+import os
+import numpy
+import argparse 
+
+import pandas            as pnd
+import matplotlib.pyplot as plt
+import utils_noroot      as utnr
+
+log=utnr.getLogger(__name__)
+#---------------------------------------------------
+class data:
+    l_year = [2011, 2012, 2015, 2016, 2017, 2018]
+    plotdir= None 
+    version= None
+    method = None
+    cas_dir= os.environ['CASDIR']
+#---------------------------------------------------
+def get_efficiency(proc, trig, year):
+    file_path = f'{data.cas_dir}/monitor/truth_eff/{data.version}/{data.method}/data.json'
+    df        = pnd.read_json(file_path)
+    df        = df.set_index('Sample')
+    eff       = df.loc[f'{proc}_{trig}_{year}'].Efficiency
+
+    return eff
+#---------------------------------------------------
+def get_efficiencies(proc, trig=None):
+    utnr.check_none(trig)
+
+    l_eff = [[],[]]
+    for year in data.l_year:
+        eff = get_efficiency(proc, trig, year)
+        if eff is None:
+            continue
+
+        l_eff[0].append(year)
+        l_eff[1].append( eff)
+
+    arr_eff = numpy.array(l_eff)
+
+    return arr_eff
+#---------------------------------------------------
+def plot_eff(vals, l_eff_ee, l_eff_mm):
+    proc, name, lab_1, lab_2, title = vals
+
+    plt.close('all')
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
+
+    l_lab_ee, l_eff_ee = l_eff_ee
+    l_lab_mm, l_eff_mm = l_eff_mm
+
+    ax.errorbar(l_lab_ee.astype(str), l_eff_ee, label=lab_1, marker='o', linestyle='none')
+    ax.errorbar(l_lab_mm.astype(str), l_eff_mm, label=lab_2, marker='o', linestyle='none') 
+
+    utnr.add_labels(l_lab_ee.astype(str), l_eff_ee, l_eff_mm, 0, 20)
+
+    ax.set_ylim(0.0, 1.3)
+    ax.legend(loc='lower right')
+
+    plt.ylabel(title)
+    plt.grid(axis='x')
+    plt.grid(axis='y')
+
+    plot_dir  = utnr.make_dir_path(f'{data.plotdir}/{data.version}')
+    plot_path = f'{plot_dir}/{name}.png'
+    log.visible(f'Saving to: {plot_path}')
+
+    plt.title(proc)
+    plt.savefig(plot_path)
+#---------------------------------------------------
+def plot_drat(tup_rat_ctrl, tup_rat_psi2, tup_rat_sign):
+    arr_lab, arr_rat_1 = tup_rat_ctrl
+    _      , arr_rat_2 = tup_rat_psi2
+    _      , arr_rat_3 = tup_rat_sign
+
+    arr_drat_1 = arr_rat_1/arr_rat_2
+    arr_drat_2 = arr_rat_1/arr_rat_3
+
+    d_drat_1 = dict(zip(arr_lab.astype(str), arr_drat_1))
+    d_drat_2 = dict(zip(arr_lab.astype(str), arr_drat_2))
+
+    plt.close('all')
+    ax = None
+    ax = utnr.plot_dict(d_drat_1, r'$R(\psi(2S))$', axis=ax, color='blue')
+    ax = utnr.plot_dict(d_drat_2, r'$R_K$'        , axis=ax, color='red' )
+
+    utnr.add_labels(arr_lab.astype(str), arr_drat_1, arr_drat_2, 0, 20, l_color=['b', 'r'], flip_yoffset=False)
+
+    ax.set_ylim(1.00, 1.10)
+    plt.title(r'$r_{eff}^{J/\psi}/r_{eff}^X$')
+    plt.ylabel('Double efficiency ratio')
+    plt.grid(axis='both')
+    plot_path = f'{data.plotdir}/{data.version}/double_ratio.png'
+    log.visible(f'Saving to: {plot_path}')
+    plt.savefig(plot_path)
+#---------------------------------------------------
+def plot(proc):
+    arr_eff_mu = get_efficiencies(proc, trig='MTOS')
+    arr_eff_to = get_efficiencies(proc, trig='ETOS')
+    #arr_eff_ti = get_efficiencies(proc, trig='GTIS')
+
+    d_proc = {
+            'ctrl' : r'$B^+\to J/\psi(\to \ell\ell)K^+$', 
+            'psi2' : r'$B^+\to\psi(2S)(\to \ell\ell)K^+$',
+            'sign' : r'$B^+\to \ell\ell K^+$'
+            }
+    
+    vals = (d_proc[proc], proc, 'eTOS', '$\mu$TOS', 'Efficiencies')
+    plot_eff(vals, arr_eff_to, arr_eff_mu)
+
+    arr_lab, arr_eff_ee = arr_eff_to
+    _      , arr_eff_mm = arr_eff_mu
+
+    arr_rat = arr_eff_mm/arr_eff_ee
+
+    return arr_lab, arr_rat
+#---------------------------------------------------
+def get_args():
+    parser = argparse.ArgumentParser(description='Used to make plots of truth matching statistics')
+    parser.add_argument('-v', '--version', type=str, help='Input version'         , required=True, choices=['v10.11tf', 'v10.13', 'v10.21p2'])
+    parser.add_argument('-m', '--method' , type=str, help='Method to truth match' , required=True, choices=['bkgcat', 'trueid'])
+    args = parser.parse_args()
+
+    data.version = args.version
+    data.method  = args.method
+    data.plotdir = f'plots/truth_eff/{data.method}'
+#---------------------------------------------------
+def main():
+    get_args()
+
+    tup_rat_ctrl = plot('ctrl')
+    tup_rat_psi2 = plot('psi2')
+    tup_rat_sign = plot('sign')
+
+    vals = (r'$\varepsilon(\mu\mu)/\varepsilon(ee)$', 'ctrl_psi2', r'$J/\psi$', r'$\psi(2S)$', 'Efficiency ratio')
+    plot_eff(vals, tup_rat_ctrl, tup_rat_psi2)
+
+    vals = (r'$\varepsilon(\mu\mu)/\varepsilon(ee)$', 'ctrl_rare', r'$J/\psi$', 'Rare'       , 'Efficiency ratio')
+    plot_eff(vals, tup_rat_ctrl, tup_rat_sign)
+
+    plot_drat(tup_rat_ctrl, tup_rat_psi2, tup_rat_sign)
+#---------------------------------------------------
+if __name__ == '__main__':
+    main()
+

@@ -1,0 +1,336 @@
+#!python
+
+import os
+import re
+import ROOT
+import zfit
+import numpy
+import argparse
+import tensorflow         as tf
+import zutils.utils       as zut
+import utils_noroot       as utnr
+import read_selection     as rs
+import version_management as vmg
+
+from rk.model          import zmodel
+from zutils.pdf        import SUJohnson   as zpdf_jh
+from logzero           import logger      as log
+from rk.musg_extractor import extractor   as ext
+from rk.gen_stats      import get_ngen
+from arr_fun           import repeat_arr
+
+#--------------------------------------
+class data:
+    l_year  = ['r1', 'r2p1', '2017', '2018']
+    l_trig  = ['MTOS', 'ETOS', 'GTIS']
+    l_brem  = ['0', '1', '2' ]
+    nent    = None
+    out_dir = None 
+    bdt_cut = None
+    qsq_cut = None
+    min_mas = 4000
+    sim_ver = 'v10.21p2'
+
+    scl_dir = utnr.make_dir_path(f'{os.environ["CASDIR"]}/monitor/mass_scales')
+    cas_dir = os.environ['CASDIR']
+
+    mu  = zfit.param.Parameter('mu' , 5280, 5200, 5300)
+    sg  = zfit.param.Parameter('sg' ,   10,    5,   80)
+#--------------------------------------
+def delete_all_pars():
+    d_par = zfit.Parameter._existing_params
+    l_key = list(d_par.keys())
+
+    for key in l_key:
+        del(d_par[key])
+#--------------------------------------
+def get_args():
+    parser = argparse.ArgumentParser(description='Used to do fits to unconstrained mass distributions')
+    parser.add_argument('-y', '--year', nargs='+', help='Year'   , default=data.l_year, choices=data.l_year)
+    parser.add_argument('-t', '--trig', nargs='+', help='Trigger', default=data.l_trig, choices=data.l_trig)
+    parser.add_argument('-b', '--brem', nargs='+', help='Bremsstrahlung', default=data.l_brem, choices=data.l_brem)
+    parser.add_argument('-e', '--nent', type=int , help='Number of entries, for tests', default = -1)
+    parser.add_argument('-m', '--minm', type=float,help='Lower bound for mass range', default = data.min_mas)
+    args = parser.parse_args()
+
+    data.l_year = args.year
+    data.l_trig = args.trig
+    data.l_brem = args.brem
+    data.nent   = args.nent
+    data.min_mas= args.minm
+#--------------------------------------
+def get_arr(trig,  dat_pat):
+    rdf = ROOT.RDataFrame(trig, f'{dat_pat}/*.root')
+    rdf = rdf.Filter(data.bdt_cut, 'BDT')
+    rdf = rdf.Filter(data.qsq_cut, 'QSQ')
+
+    rep = rdf.Report()
+    rep.Print()
+
+    if data.nent > 0:
+        log.warning(f'Running over subset of events: {data.nent}')
+        rdf=rdf.Range(data.nent)
+
+    if trig == 'MTOS':
+        arr_mas = rdf.AsNumpy(['B_M'])['B_M']
+        return arr_mas, None, None
+
+    rdf     = rdf.Define('nbrem', 'L1_BremMultiplicity + L2_BremMultiplicity')
+    rdf_0   = rdf.Filter('nbrem == 0')
+    rdf_1   = rdf.Filter('nbrem == 1')
+    rdf_2   = rdf.Filter('nbrem >= 2')
+
+    arr_mas_0 = rdf_0.AsNumpy(['B_M'])['B_M']
+    arr_mas_1 = rdf_1.AsNumpy(['B_M'])['B_M']
+    arr_mas_2 = rdf_2.AsNumpy(['B_M'])['B_M']
+
+    return arr_mas_0, arr_mas_1, arr_mas_2
+#--------------------------------------
+def get_arr_dset_dat(dat_pat, trig, dset):
+    if   dset in ['2017', '2018']:
+        return get_arr(trig, f'{dat_pat}/{dset}_{trig}')
+
+    if  dset == 'r1':
+        arr_dat_01, arr_dat_11, arr_dat_21 = get_arr(trig, f'{dat_pat}/2011_{trig}')
+        arr_dat_02, arr_dat_12, arr_dat_22 = get_arr(trig, f'{dat_pat}/2012_{trig}')
+    elif dset == 'r2p1':
+        arr_dat_01, arr_dat_11, arr_dat_21 = get_arr(trig, f'{dat_pat}/2015_{trig}')
+        arr_dat_02, arr_dat_12, arr_dat_22 = get_arr(trig, f'{dat_pat}/2016_{trig}')
+    else:
+        log.error(f'Invalid dataset: {dset}')
+        raise
+
+    arr_dat_0 = numpy.concatenate([arr_dat_01, arr_dat_02]) 
+    if trig == 'MTOS':
+        arr_dat_1 = None
+        arr_dat_2 = None
+    else:
+        arr_dat_1 = numpy.concatenate([arr_dat_11, arr_dat_12]) 
+        arr_dat_2 = numpy.concatenate([arr_dat_21, arr_dat_22]) 
+
+    return arr_dat_0, arr_dat_1, arr_dat_2
+#--------------------------------------
+def get_arr_dset_sim(sim_pat, trig, dset):
+    if   dset in ['2017', '2018']:
+        return get_arr(trig, f'{sim_pat}/{dset}_{trig}')
+
+    if  dset == 'r1':
+        arr_sim_01, arr_sim_11, arr_sim_21 = get_arr(trig, f'{sim_pat}/2011_{trig}')
+        arr_sim_02, arr_sim_12, arr_sim_22 = get_arr(trig, f'{sim_pat}/2012_{trig}')
+
+        n11 = get_ngen('ctrl', trig, 2011, data.sim_ver)
+        n12 = get_ngen('ctrl', trig, 2012, data.sim_ver)
+
+        fac = 2 * n11/n12 #lumi 12/11 
+    elif dset == 'r2p1':
+        arr_sim_01, arr_sim_11, arr_sim_21 = get_arr(trig, f'{sim_pat}/2015_{trig}')
+        arr_sim_02, arr_sim_12, arr_sim_22 = get_arr(trig, f'{sim_pat}/2016_{trig}')
+
+        n15 = get_ngen('ctrl', trig, 2015, data.sim_ver)
+        n16 = get_ngen('ctrl', trig, 2016, data.sim_ver)
+
+        fac = 5.3 * n15/n16#lumi 16/15
+    else:
+        log.error(f'Invalid dataset: {dset}')
+        raise
+
+    arr_sim_02 = repeat_arr(arr_sim_02, fac)
+    arr_sim_0 = numpy.concatenate([arr_sim_01, arr_sim_02]) 
+
+    if trig == 'MTOS':
+        arr_sim_1 = None
+        arr_sim_2 = None
+    else:
+        arr_sim_12= repeat_arr(arr_sim_12, fac)
+        arr_sim_22= repeat_arr(arr_sim_22, fac)
+
+        arr_sim_1 = numpy.concatenate([arr_sim_11, arr_sim_12]) 
+        arr_sim_2 = numpy.concatenate([arr_sim_21, arr_sim_22]) 
+
+    return arr_sim_0, arr_sim_1, arr_sim_2
+#--------------------------------------
+def get_data(year, trig):
+    sim_dir = f'{data.cas_dir}/tools/apply_selection/r_fits/ctrl/'
+    sim_pat = vmg.get_last_version(dir_path=sim_dir, version_only=False)
+
+    dat_dir = f'{data.cas_dir}/tools/apply_selection/r_fits/data/'
+    dat_pat = vmg.get_last_version(dir_path=dat_dir, version_only=False)
+
+    log.info(f'Picking up data from: {dat_pat}')
+    log.info(f'Picking up simulation from: {sim_pat}')
+
+    log.info('Extracting data')
+    arr_dat_0, arr_dat_1, arr_dat_2 = get_arr_dset_dat(dat_pat, trig, year) 
+
+    log.info('Extracting simulation')
+    arr_sim_0, arr_sim_1, arr_sim_2 = get_arr_dset_sim(sim_pat, trig, year) 
+
+    if trig == 'MTOS':
+        d_sim = {'0' : arr_sim_0}
+        d_dat = {'0' : arr_dat_0}
+    else:
+        d_sim = {'0' : arr_sim_0, '1' : arr_sim_1, '2' : arr_sim_2}
+        d_dat = {'0' : arr_dat_0, '1' : arr_dat_1, '2' : arr_dat_2}
+
+    return d_sim, d_dat 
+#--------------------------------------
+def get_mass_range(year, trig):
+    cut   = rs.get('mass', trig, q2bin='central', year = year)
+    regex = '\(B_M\s*>\s*(\d{4})\)\s*&&\s*\(B_M\s*<\s*(\d{4})\)'
+    mtch  = re.match(regex, cut)
+    if not mtch:
+        log.error(f'Cannot extract B masses from: {cut}')
+        raise
+
+    min_m = mtch.group(1) if trig == 'MTOS' else data.min_mas 
+    max_m = mtch.group(2)
+
+    return int(min_m), int(max_m)
+#--------------------------------------
+def get_dscb(obs, brem):
+    ar  = zfit.param.Parameter(f'ar' ,    1,  0.3,    5)
+    al  = zfit.param.Parameter(f'al' ,    1,  0.3,    5)
+    nr  = zfit.param.Parameter(f'nr' ,    3,    1,   10)
+    nl  = zfit.param.Parameter(f'nl' ,    2,    1,   10)
+    
+    pdf = zfit.pdf.DoubleCB(data.mu, data.sg, al, nl, ar, nr, obs)
+
+    return pdf
+#--------------------------------------
+def get_john(obs, brem):
+    gm = zfit.Parameter(f'gm',    1,  0.1,    4)
+    dl = zfit.Parameter(f'dl',    1,  0.1,    2)
+
+    pdf = zpdf_jh(obs=obs, mu=data.mu, lm=data.sg, gamma=gm, delta=dl)
+
+    return pdf
+#--------------------------------------
+def get_signal(obs, trig, brem):
+    nsig = zfit.Parameter(f'yld_sig', 10e5, 0, 10e6)
+
+    if trig == 'MTOS':
+        pdf = get_dscb(obs, brem)
+    else:
+        if   brem == '0':
+            pdf = get_john(obs, brem)
+        elif brem == '1':
+            pdf = get_dscb(obs, brem)
+        elif brem == '2':
+            pdf = get_dscb(obs, brem)
+        else:
+            log.error(f'Invalid brem: {brem}')
+            raise
+
+    pdf = pdf.create_extended(nsig, name='Signal') 
+
+    return pdf
+#--------------------------------------
+def get_signal_index(l_pdf):
+    l_ind = []
+    for i_pdf, pdf in enumerate(l_pdf):
+        if pdf.name != 'Combinatorial' and pdf.name != 'PRec':
+            l_ind.append(i_pdf)
+
+    if len(l_ind) != 1:
+        log.error('Could not find one and only one signal component')
+        raise
+
+    return l_ind[0]
+#--------------------------------------
+def replace_signal(pdf, trig, brem):
+    obs   = pdf.space
+    l_pdf = pdf.models
+    i_sig = get_signal_index(l_pdf)
+
+    l_pdf[i_sig] = get_signal(obs, trig, brem)
+    pdf          = zfit.pdf.SumPDF(l_pdf)
+
+    return pdf
+#--------------------------------------
+def get_model(year, trig, brem):
+    tp_mass_range = get_mass_range(year, trig)
+    obs           = zfit.Space('mass', limits=tp_mass_range)
+
+    if  year in ['2015', '2016']:
+        year = 'r2p1'
+    elif year in ['2011', '2012']:
+        year =   'r1'
+
+    mod           = zmodel(proc='ctrl', trig=trig, year=year, q2bin='jpsi', obs=obs, apply_bdt=True, mass='mass')
+    pdf           = mod.get_model(suffix=f'{brem}', skip_csp = True, prc_kind='ke', brem=brem, reparametrize_cabibbo=False)
+    pdf           = replace_signal(pdf, trig, brem)
+
+    return pdf 
+#--------------------------------------
+def get_names(trig):
+    d_name = {}
+    #d_name['sname'] = r'$B^+\to J/\psi(\to \ell\ell)K^+$'
+    #if trig != 'MTOS':
+    #    d_name['mu'] = 'mu__kp_ctrl'
+    #    d_name['sg'] = 'sg1__kp_ctrl'
+    #else:
+    #    d_name['mu'] = 'mu_dscb__kp_ctrl'
+    #    d_name['sg'] = 'sg_dscb__kp_ctrl'
+
+    return d_name
+#--------------------------------------
+def print_stats(arr_data, kind):
+    min_val = numpy.min(arr_data)
+    max_val = numpy.max(arr_data)
+
+    log.info(f'{kind} min: {min_val:.0f}')
+    log.info(f'{kind} max: {max_val:.0f}')
+#--------------------------------------
+def calculate_scales(year, trig):
+    log.info(f'Running for: {year},{trig}')
+
+    data.out_dir = utnr.make_dir_path(f'{data.scl_dir}/{year}_{trig}')
+
+    d_mc_mass, d_dt_mass = get_data(year, trig)
+
+    for cat in data.l_brem:
+        md_pdf       = get_model(year, trig, cat) 
+        arr_mc       = d_mc_mass[cat]
+        arr_dt       = d_dt_mass[cat]
+
+        print_stats(arr_mc,   'MC')
+        print_stats(arr_dt, 'Data')
+
+        d_name       = get_names(trig)
+        obj          = ext(mc=arr_mc, dt=arr_dt, names=d_name)
+        obj.cache_dir= f'{data.out_dir}/pars/cat_{cat}'
+        obj.plot_dir = f'{data.out_dir}/json/cat_{cat}' 
+        obj.model    = md_pdf 
+        obj.get_scales()
+
+        save_cuts(f'{data.out_dir}/pars/cat_{cat}')
+
+        delete_all_pars()
+#--------------------------------------
+def save_cuts(cuts_dir):
+    cuts_path = f'{cuts_dir}/cuts.json'
+
+    utnr.dump_json({'bdt' : data.bdt_cut, 'qsq' : data.qsq_cut}, cuts_path)
+#--------------------------------------
+def set_cuts(trig):
+    data.bdt_cut = rs.get('bdt', trig, 'jpsi', 'none')
+    data.qsq_cut = rs.get('q2' , trig, 'jpsi', 'none')
+#--------------------------------------
+def main():
+    l_brem = data.l_brem
+
+    for year in data.l_year:
+        for trig in data.l_trig:
+            if trig == 'MTOS':
+                data.l_brem = ['0']
+            else:
+                data.l_brem = l_brem
+
+            set_cuts(trig)
+            calculate_scales(year, trig)
+#--------------------------------------
+if __name__ == '__main__':
+    get_args()
+    main()
+#--------------------------------------
+

@@ -1,0 +1,169 @@
+#!python
+import os
+import ROOT
+import numpy
+import read_selection    as rs
+import matplotlib.pyplot as plt
+
+from log_store import log_store
+
+log=log_store.add_logger('checks:check_lzr_eff')
+#----------------------------------------
+class data:
+    asl_dir = os.environ['ASLDIR']
+    dat_dir = os.environ['DATDIR']
+    ntp_ver = 'v10.21p2'
+    ntp_knd = 'raw'
+    out_dir = 'plots'
+#----------------------------------------
+def get_rdf_sel(trig, year, proc):
+    file_wc = f'{data.asl_dir}/lzr_eff/{proc}/{data.ntp_ver}/{year}_{trig}/*.root'
+
+    if   trig == 'MTOS':
+        tree_name = 'KMM'
+    elif trig in ['ETOS', 'GTIS']:
+        tree_name = 'KEE'
+    else:
+        log.error(f'Invalid trigger: {trig}')
+        raise
+
+    rdf = ROOT.RDataFrame(tree_name, file_wc) 
+    rdf.proc = proc
+
+    return rdf
+#----------------------------------------
+def get_rdf_raw(trig, year, proc):
+    chan      = 'mm' if trig == 'MTOS' else 'ee'
+    tree_name = 'KMM' if trig == 'MTOS' else 'KEE'
+
+    file_path = f'{data.dat_dir}/{proc}_{chan}/{data.ntp_ver}/{year}.root'
+    rdf = ROOT.RDataFrame(tree_name, file_path)
+    rdf = rdf.Range(100000)
+    cut_truth = rs.get_truth(f'{proc}_{chan}')
+    cut_nspd  = rs.get('nspd', trig, 'none', year)
+
+    rdf = rdf.Filter(cut_truth, 'Truth')
+    rdf = rdf.Filter(cut_nspd ,  'nSPD')
+
+    rdf.proc = proc
+
+    return rdf
+#----------------------------------------
+def get_rdf(trig, year, proc):
+    if   data.ntp_knd == 'raw':
+        rdf = get_rdf_raw(trig, year, proc)
+    elif data.ntp_knd == 'sel':
+        rdf = get_rdf_sel(trig, year, proc)
+    else:
+        log.error(f'Invalid ntuple kind: {data.ntp_knd}')
+        raise
+
+    return rdf
+#----------------------------------------
+def apply_lzr_cut(rdf, trig):
+    proc= rdf.proc
+    cut = rs.get(trig.lower(), trig, 'none', 'none')
+    rdf = rdf.Filter(cut, f'{trig} {proc}')
+    rep = rdf.Report()
+
+    for cut in rep:
+        name = cut.GetName()
+        eff  = cut.GetEff()
+        if name == f'{trig} {proc}':
+            log.info(f'{name:<20}{eff:<20.3f}')
+#----------------------------------------
+def run(trig):
+    rdf_r=get_rdf(trig, '2018', 'sign')
+    rdf_p=get_rdf(trig, '2018', 'psi2')
+    rdf_j=get_rdf(trig, '2018', 'ctrl')
+
+    apply_lzr_cut(rdf_r, trig)
+    apply_lzr_cut(rdf_p, trig)
+    apply_lzr_cut(rdf_j, trig)
+    log.info('')
+#----------------------------------------
+def print_eff():
+    run('MTOS')
+    run('ETOS')
+    run('GTIS')
+#----------------------------------------
+def plot_dset(year, trig, proc):
+    data.ntp_knd = 'raw'
+    rdf_raw=get_rdf(trig, year, proc)
+
+    data.ntp_knd = 'sel'
+    rdf_sel=get_rdf(trig, year, proc)
+
+    plot_pt(rdf_raw=rdf_raw, rdf_sel=rdf_sel)
+    plt.legend()
+    plt.grid()
+    plot_path = f'{data.out_dir}/{proc}_{year}_{trig}.png'
+    log.info(f'Saving to: {plot_path}')
+    plt.savefig(plot_path)
+    plt.close('all')
+#----------------------------------------
+def plot_kind(year, trig, proc):
+    rdf=get_rdf(trig, year, proc)
+
+    arr_pt= get_pt(rdf)
+    mean  = numpy.mean(arr_pt)
+    lab   = f'{proc}; $\mu={mean:.3f}$'
+    plt.hist(arr_pt, bins=50, range=[0, 10e3], density=True, histtype='step', label=lab)
+#----------------------------------------
+def plot_pt(rdf_raw=None, rdf_sel=None):
+    arr_pt_raw = get_pt(rdf_raw)
+    arr_pt_sel = get_pt(rdf_sel)
+
+    plt.hist(arr_pt_raw, bins=50, range=[0, 10e3], density=True, histtype='step', label='Raw')
+    plt.hist(arr_pt_sel, bins=50, range=[0, 10e3], density=True, histtype='step', label='Sel')
+#----------------------------------------
+def get_pt(rdf):
+    d_data    = rdf.AsNumpy(['L1_PT', 'L2_PT'])
+    arr_l1_pt = d_data['L1_PT']
+    arr_l2_pt = d_data['L2_PT']
+
+    arr_pt = numpy.concatenate([arr_l1_pt, arr_l2_pt])
+
+    return arr_pt
+#----------------------------------------
+def plot_kin():
+    os.makedirs(data.out_dir, exist_ok=True)
+
+    plot_dset('2018', 'ETOS', 'sign')
+    plot_dset('2018', 'ETOS', 'psi2')
+    plot_dset('2018', 'ETOS', 'ctrl')
+
+    plot_dset('2018', 'MTOS', 'sign')
+    plot_dset('2018', 'MTOS', 'psi2')
+    plot_dset('2018', 'MTOS', 'ctrl')
+#----------------------------------------
+def save_plot(name):
+    plt.legend()
+    plt.grid()
+    plot_path = f'{data.out_dir}/{name}.png'
+    log.info(f'Saving to: {plot_path}')
+    plt.savefig(plot_path)
+    plt.close('all')
+#----------------------------------------
+def plot_sel(trig):
+    os.makedirs(data.out_dir, exist_ok=True)
+
+    data.ntp_knd = 'raw'
+    plot_kind('2018', trig, 'sign')
+    plot_kind('2018', trig, 'psi2')
+    plot_kind('2018', trig, 'ctrl')
+    save_plot(f'2018_{trig}_{data.ntp_knd}')
+
+    data.ntp_knd = 'sel'
+    plot_kind('2018', trig, 'sign')
+    plot_kind('2018', trig, 'psi2')
+    plot_kind('2018', trig, 'ctrl')
+    save_plot(f'2018_{trig}_{data.ntp_knd}')
+#----------------------------------------
+def main():
+    plot_sel('ETOS')
+    plot_sel('MTOS')
+#----------------------------------------
+if __name__ == '__main__':
+    main()
+
