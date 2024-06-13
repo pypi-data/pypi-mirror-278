@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "moveread-pipelines-input-validation"
+version = "0.1.9"
+authors = [
+  {name="Marcel Claramunt", email="marcel@moveread.com"}
+]
+description = "Input Validation pipeline for Moveread"
+dependencies = [
+  "chess-pairings", "pydantic==2.*", "fastapi", "pipeteer"
+]
+requires-python = ">=3.10"
+readme = {file="README.md", content-type="text/markdown"}
+
+[project.urls]
+repo = "https://github.com/moveread/moveread-pipelines.git"
+
+[project.optional-dependencies]
+clientgen = ["openapi-ts"]
+
+[project.scripts]
+inputval-clientgen = "moveread.pipelines.input_validation.clientgen_cli:main"
+inputval = "moveread.pipelines.input_validation.cli:main"

@@ -1,0 +1,7 @@
+chess-pairings
+pydantic==2.*
+fastapi
+pipeteer
+
+[clientgen]
+openapi-ts
