@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: processmcrat
+Version: 2.0.3
+Summary: The ProcessMCRaT library is a python package that can be used to process the output of the MCRaT code.
+Home-page: https://github.com/parsotat/ProcessMCRaT
+Author: Tyler Parsotan
+Author-email: tyler.parsotan@nasa.gov
+License: MIT
+Keywords: astronomy radiation-transfer hydrodynamics
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Requires-Python: >=3.9
+License-File: LICENSE

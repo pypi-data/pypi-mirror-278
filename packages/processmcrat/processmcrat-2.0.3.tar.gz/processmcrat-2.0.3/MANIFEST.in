@@ -1,0 +1,3 @@
+include *.txt
+recursive-include Doc *.txt
+recursive-include processmcrat/Data_files *.dat *.csv
