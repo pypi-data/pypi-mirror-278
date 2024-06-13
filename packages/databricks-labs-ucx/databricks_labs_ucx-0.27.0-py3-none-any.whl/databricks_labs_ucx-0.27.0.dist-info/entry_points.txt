@@ -1,0 +1,2 @@
+[databricks]
+runtime = databricks.labs.ucx.runtime:main
