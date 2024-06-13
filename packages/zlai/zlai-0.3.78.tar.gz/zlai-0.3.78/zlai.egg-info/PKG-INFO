@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: zlai
+Version: 0.3.78
+Summary: llm
+Home-page: https://zlai-llm.github.io/zlai-doc/#/
+Author: chensy
+Author-email: chensy.cao@foxmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: torch
+Requires-Dist: GPUtil
+Requires-Dist: pandas>=2.1.4
+Requires-Dist: chardet>=4.0.0
+Requires-Dist: requests>=2.28.1
+Requires-Dist: streamlit>=1.28.2
+Requires-Dist: langchain>=0.0.348
+Requires-Dist: modelscope
+Requires-Dist: transformers>=4.35.2
+Requires-Dist: dataclasses>=0.6
+Requires-Dist: pydantic>=1.9.0
+Requires-Dist: numpy>=1.23.5
+Requires-Dist: setuptools>=58.1.0
+Requires-Dist: tqdm>=4.65.0
+Requires-Dist: termcolor>=2.3.0
+Requires-Dist: elasticsearch>=8.12.0
+Requires-Dist: elasticsearch_dsl>=8.12.0
+Requires-Dist: pypdf
+Requires-Dist: unstructured[pdf]>=0.10.5
+Requires-Dist: huggingface_hub==0.20.1
+Requires-Dist: sentencepiece>=0.1.99
+Requires-Dist: beautifulsoup4>=4.12.2
+Requires-Dist: zhipuai>=2.0.1
+Requires-Dist: dashscope>=1.14.1
+Requires-Dist: openai>=1.26.0
+Requires-Dist: httpx>=0.24.1
+Requires-Dist: selenium>=4.19.0
+Requires-Dist: pyecharts>=2.0.5
+Requires-Dist: colorama>=0.4.6
+Requires-Dist: SQLAlchemy>=2.0.20
+Requires-Dist: pyspark>=3.5.0
+Requires-Dist: pymilvus>=2.4.1
+Requires-Dist: Pillow>=9.5.0
+
+# ZLAI
+
+> 适配中文大模型的`Langchain-Agent`
+
+## 简介
+
+- `LLMs`: 提供远程、本地、预训练等大模型服务
+- `Embedding`: 提供远程、本地、预训练等向量化模型服务
+- `prompt`: 提供prompt组织流程
+- `elasticsearch`: 提供elasticsearch工具
+- `agent`: 提供agent工具
+
+> Wechat
+
+<center>
+<img src="assets/wechat-group.jpg" width="200px">
+<h5>微信群</h5>
+</center>
+
+> 待增加功能
+
+- [ ] 增加对于多模态模型的支持，图片解读、文生图等
+- [ ] 增加复杂任务的动态规划
+- [ ] 增加Agent生成知识图谱
+- [ ] 对知识对话增加记忆机制，增加记忆机制在多个Agent之间的共享
+  - [X] 完成`ChatAgent/Knowledge`
+
+> 0.3.76
+
+1. 增加了对于GLM4-API的支持
+2. 增加了对Ali-Qwen2-API的支持
+3. 增加了`PretrainedEmbedding`，用于提供预训练的向量化模型
+4. 修改了其他bug.
+
+-----
+@2024/03/27
