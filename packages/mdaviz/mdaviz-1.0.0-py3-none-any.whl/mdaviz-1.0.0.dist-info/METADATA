@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: mdaviz
+Version: 1.0.0
+Summary: Python Qt5 application to visualize MDA data.
+Author-email: Fanny Rodolakis <rodolakis@anl.gov>, Pete Jemian <prjemian@gmail.com>, Rafael Vescovi <ravescovi@anl.gov>, Eric Codrea <ecodrea@anl.gov>
+Maintainer-email: Fanny Rodolakis <rodolakis@anl.gov>, Pete Jemian <prjemian@gmail.com>, Rafael Vescovi <ravescovi@anl.gov>, Eric Codrea <ecodrea@anl.gov>
+Project-URL: Homepage, https://github.com/BCDA-APS/mdaviz
+Project-URL: Bug Tracker, https://github.com/BCDA-APS/mdaviz/issues
+Keywords: bluesky,databroker,tiled,catalog
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: Freely Distributable
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: matplotlib
+Requires-Dist: PyQt5
+Requires-Dist: PyYAML
+Requires-Dist: tiled
+
+# mdaviz
+
+Python Qt5 application to visualize mda data.
+
+GH tag | GH release | PyPI
+--- | --- | ---
+[![tag](https://img.shields.io/github/tag/BCDA-APS/mdaviz.svg)](https://github.com/BCDA-APS/mdaviz/tags) | [![release](https://img.shields.io/github/release/BCDA-APS/mdaviz.svg)](https://github.com/BCDA-APS/mdaviz/releases) | [![PyPi](https://img.shields.io/pypi/v/mdaviz.svg)](https://pypi.python.org/pypi/mdaviz)
+
+Python version(s) | Unit Tests | Code Coverage | License
+--- | --- | --- | ---
+[![Python version](https://img.shields.io/pypi/pyversions/mdaviz.svg)](https://pypi.python.org/pypi/mdaviz) | [![Unit Tests](https://github.com/BCDA-APS/mdaviz/workflows/Unit%20Tests%20%26%20Code%20Coverage/badge.svg)](https://github.com/BCDA-APS/mdaviz/actions/workflows/unit_tests.yml) | [![Coverage Status](https://coveralls.io/repos/github/BCDA-APS/mdaviz/badge.svg?branch=main)](https://coveralls.io/github/BCDA-APS/mdaviz?branch=main) | [![license: ANL](https://img.shields.io/badge/license-ANL-brightgreen)](LICENSE.txt)
+
+## How to run this code?
+
+First said, this software application is in first release and may contain significant unhandled
+bugs.  Please [report any you encounter](https://github.com/BCDA-APS/mdaviz/issues/new) or
+feature requests, too.
+
+For complete installation guide, see [https://bcda-aps.github.io/mdaviz/](https://bcda-aps.github.io/mdaviz/).
+
+## Acknowledgements
+
+"This product includes software produced by UChicago Argonne, LLC
+under Contract No. DE-AC02-06CH11357 with the Department of Energy."
