@@ -1,0 +1,85 @@
+Metadata-Version: 2.1
+Name: fw-gear-dicom-splitter
+Version: 2.0.0
+Summary: DICOM splitter based on unique tags, or localizers
+License: MIT
+Author: Flywheel
+Author-email: support@flywheel.io
+Requires-Python: >=3.8,<4
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: flywheel-gear-toolkit (>=0.6.18,<0.7.0)
+Requires-Dist: flywheel-sdk (>=16.0.0,<17.0.0)
+Requires-Dist: fw-file (>=3,<4)
+Requires-Dist: pandas (>=1.2.1,<2.0.0)
+Requires-Dist: pylibjpeg (>=1.1.1,<2.0.0)
+Requires-Dist: pylibjpeg-libjpeg (>=1.1.0,<2.0.0)
+Requires-Dist: pylibjpeg-openjpeg (>=1.0.1,<2.0.0)
+Requires-Dist: scipy (>=1.8.0,<2.0.0)
+Description-Content-Type: text/markdown
+
+# DICOM Splitter
+
+This gear is meant to split DICOM archives into two or more archives.  The main use
+cases for this gear are if,
+
+* There are one or more localizers (scouts, etc.) mixed in with primary images
+* There are multiple Series in one archive.
+* The archive is multiphasic with respect to slice location (geometry split)
+* The archive has non uniform image orientations (geometry split)
+* Some field varies across the archive and you have reason to the archive based on that
+  field (Note: This "group by" option is exclusive if a previous geometry split is performed)
+
+The gear is set to do the first two above by default, i.e. it will extract a
+localizer(s) from the archive, and it will extract each unique SeriesInstanceUID into
+its own archive.
+
+## Usage
+
+### Inputs
+
+* __dicom__ : DICOM archive input
+
+### Configuration
+
+* __extract_localizer__ (boolean, default True): Whether or not to extract localizer
+from archive.
+* __group_by__ (string, default "SeriesInstanceUID"): Comma separated list of dicom
+tags to split the archive on.
+* __tag__ (string, default "splitter"): The tag to be added on input file upon run
+completion.
+* __debug__ (boolean, default False): Include debug output.
+* __delete_input__ (boolean, default True): Delete input if DICOM is successfully split.
+
+### Outputs
+
+The gear will output nothing if no splitting action was taken.  Otherwise it will output
+a variable number of archives depending on the input and configuration named with the
+following pattern:
+
+`series-<SeriesNumber>_<Modality>_<SeriesDescription>_<GroupByTags>[_localizer]`, where
+
+* `SeriesNumber` is the value of the `SeriesNumber` tag across the archive.  By default
+  the largest sized archive (by number of slices) will retain the original
+  `SeriesNumber` and additional archives will be incremented by `1000 + i`, where `i` is
+  the index of the archive in a list of total archives.
+* `SeriesDescription` is the value of the `SeriesDescription` tag across the archive
+* `GroupByTags` is an underscore separated list of all tags appearing in the `group_by` list,
+  and their corresponding value in that archive. Tags "SeriesInstanceUID" and "SeriesNumber"
+  are not included even if they appear in the `group_by` list.
+* `Modality` is the value of the `Modality` tag across the archive
+* If the series is a localizer, `_localizer` will be appended.
+
+## Version 2.0.0 Breaking Change
+
+Note that versions of this gear prior to version 2.0.0 are named `splitter`. On the
+release of version 2.0.0, the gear was renamed to `dicom-splitter` and all package
+names, import statements, and other references were modified to reflect this rename.
+Any software that depends on `dicom-splitter` should be updated with this breaking
+change in mind.
+
