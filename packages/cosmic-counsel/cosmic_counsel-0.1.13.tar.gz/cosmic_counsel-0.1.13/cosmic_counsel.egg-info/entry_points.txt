@@ -1,0 +1,2 @@
+[console_scripts]
+cosmic-counsel = cosmic_counsel.__main__:main
