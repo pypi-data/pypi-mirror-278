@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: eidolon-ai-usage-client
+Version: 0.1.7
+Summary: 
+Author: Luke Lalor
+Author-email: lukehlalor@gmail.com
+Requires-Python: >=3.11,<3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: httpx (>=0.27.0,<0.28.0)
+Requires-Dist: pydantic (>=2.6.4,<3.0.0)
+Requires-Dist: setuptools (>=69.2.0,<70.0.0)
+Description-Content-Type: text/markdown
+
+
