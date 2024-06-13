@@ -1,0 +1,15 @@
+README.md
+setup.py
+scripts/add_energy
+scripts/calculate_acceptances
+scripts/make_tuples
+src/prec_acceptances_data/__init__.py
+src/prec_acceptances_data/v1/acceptances_13TeV.json
+src/prec_acceptances_data/v1/acceptances_7TeV.json
+src/prec_acceptances_data/v1/acceptances_8TeV.json
+src/rx_prec_accepance.egg-info/PKG-INFO
+src/rx_prec_accepance.egg-info/SOURCES.txt
+src/rx_prec_accepance.egg-info/dependency_links.txt
+src/rx_prec_accepance.egg-info/top_level.txt
+tests/test_acceptance_reader.py
+tests/test_calculator.py
