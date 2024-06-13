@@ -1,0 +1,23 @@
+templates:
+  - empty:
+    - empty.template
+  - main:
+    - main.template
+  - class:
+    - class.template
+  - abstract_base:
+    - abstract_base.template
+  - abstract_abc:
+    - abstract_abc.template
+
+modules:
+  - empty:
+    - __init__.py
+  - main:
+    - main.py
+  - class:
+    - class.py
+  - abstract_base:
+    - abstract_base.py
+  - abstract_abc:
+    - abstract_abc.py
