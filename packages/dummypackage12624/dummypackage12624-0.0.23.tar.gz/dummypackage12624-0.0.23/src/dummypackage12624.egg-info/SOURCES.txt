@@ -1,0 +1,14 @@
+LICENSE
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+src/dummypackage12624/__init__.py
+src/dummypackage12624/add.py
+src/dummypackage12624/custom_exception.py
+src/dummypackage12624/logger.py
+src/dummypackage12624.egg-info/PKG-INFO
+src/dummypackage12624.egg-info/SOURCES.txt
+src/dummypackage12624.egg-info/dependency_links.txt
+src/dummypackage12624.egg-info/requires.txt
+src/dummypackage12624.egg-info/top_level.txt
