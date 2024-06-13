@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "mockify"
+version = "0.14.0"
+description = "Highly customizable and expressive mocking library for Python."
+authors = ["Maciej Wiatrzyk <maciej.wiatrzyk@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+
+[tool.poetry.group.dev.dependencies]
+invoke = "^2.2.0"
+pytest = "^8.1.1"
+pytest-asyncio = "^0.23.6"
+sphinx = "6.2.1"
+recommonmark = "^0.7.1"
+pytest-cov = "^5.0.0"
+pylint = "^3.1.0"
+isort = "^5.13.2"
+black = "^24.4.0"
+sphinx-rtd-theme = "^2.0.0"
+bumpify = "^0.3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
