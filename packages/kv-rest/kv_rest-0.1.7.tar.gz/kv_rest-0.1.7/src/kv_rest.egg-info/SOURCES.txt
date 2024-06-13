@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+src/kv/rest/__init__.py
+src/kv/rest/__init__.pyi
+src/kv/rest/cli.py
+src/kv/rest/client.py
+src/kv/rest/clientgen_cli.py
+src/kv/rest/server.py
+src/kv_rest.egg-info/PKG-INFO
+src/kv_rest.egg-info/SOURCES.txt
+src/kv_rest.egg-info/dependency_links.txt
+src/kv_rest.egg-info/entry_points.txt
+src/kv_rest.egg-info/requires.txt
+src/kv_rest.egg-info/top_level.txt

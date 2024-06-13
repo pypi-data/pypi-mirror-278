@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: kv-rest
+Version: 0.1.7
+Summary: Rest API and client for a server-side KV
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Project-URL: repo, https://github.com/marciclabas/python-storage.git
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: kv-api
+Requires-Dist: pydantic
+Requires-Dist: haskellian
+Provides-Extra: server
+Requires-Dist: fastapi; extra == "server"
+Requires-Dist: python-multipart; extra == "server"
+Provides-Extra: client
+Requires-Dist: httpx; extra == "client"
+Provides-Extra: cli
+Requires-Dist: dslog; extra == "cli"
+Requires-Dist: uvicorn[standard]; extra == "cli"
+Provides-Extra: sqlite
+Requires-Dist: kv-sqlite-sync; extra == "sqlite"
+Provides-Extra: fs
+Requires-Dist: kv-fs; extra == "fs"
+
+# Key-Value: REST
+
+> Implementation of the `KV[T]` async Key-Value ABC, over HTTP
+
+([`kv-api`]((https://pypi.org/project/kv-api/)))
+
+```bash
+pip install kv-rest
+```
+
+## Client
+
+```python
+from kv.rest import ClientKV
+
+client = ClientKV('http://localhost:8000', Type=tuple[str, int])
+await client.insert('hello', ('world', 42))
+await client.keys()
+# etc.
+```
+
+## Server
+```python
+import uvicorn
+from kv.api import KV
+from kv.rest import fastapi
+
+kv = KV[tuple[str, int]] = ...
+api = fastapi(kv)
+
+uvicorn.run(api)
+```
+
+### Server CLI
+
+```bash
+kv-rest path/to/kv.sqlite --host 0.0.0.0 --port 8000 --protocol sqlite
+kv-rest path/to/kv --host 0.0.0.0 --port 8000 --protocol fs
+```
