@@ -1,0 +1,3 @@
+[console_scripts]
+levels = levels.__main__:main
+
