@@ -1,0 +1,3 @@
+[console_scripts]
+fastdto=fastdto.cli.cli:app
+
