@@ -1,0 +1,5 @@
+[console_scripts]
+initialize_c2cgeoform_db = c2cgeoform.scripts.initializedb:main
+
+[paste.app_factory]
+main = c2cgeoform:main
