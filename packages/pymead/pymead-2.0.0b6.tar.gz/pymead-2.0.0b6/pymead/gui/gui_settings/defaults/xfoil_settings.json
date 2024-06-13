@@ -1,0 +1,198 @@
+{
+    "viscous_flag": {
+        "label": "Viscosity On?",
+        "widget_type": "QCheckBox",
+        "setChecked": 2
+    },
+    "spec_Re": {
+        "label": "Specify Reynolds Number?",
+        "widget_type": "QCheckBox",
+        "setChecked": 0
+    },
+    "Re": {
+        "label": "Reynolds Number",
+        "widget_type": "QDoubleSpinBox",
+        "setMinimum": 0.0,
+        "setMaximum": Infinity,
+        "setDecimals": 16,
+        "setValue": 2213243.6863567195832729,
+        "setReadOnly": true
+    },
+    "Ma": {
+        "label": "Mach Number",
+        "widget_type": "QDoubleSpinBox",
+        "setMinimum": 0.0,
+        "setMaximum": Infinity,
+        "setValue": 0.1,
+        "setDecimals": 16
+    },
+    "spec_P_T_rho": {
+        "label": "Specify Flow Variables",
+        "widget_type": "QComboBox",
+        "addItems": [
+            "Specify Pressure, Temperature",
+            "Specify Pressure, Density",
+            "Specify Temperature, Density"
+        ],
+        "setCurrentText": "Specify Pressure, Temperature"
+    },
+    "P": {
+        "label": "Pressure (Pa)",
+        "widget_type": "QDoubleSpinBox",
+        "setMinimum": 0.0,
+        "setMaximum": Infinity,
+        "setDecimals": 16,
+        "setValue": 101325.0,
+        "setReadOnly": false
+    },
+    "T": {
+        "label": "Temperature (K)",
+        "widget_type": "QDoubleSpinBox",
+        "setMinimum": 0.001,
+        "setMaximum": Infinity,
+        "setDecimals": 16,
+        "setValue": 300,
+        "setReadOnly": false
+    },
+    "rho": {
+        "label": "Density (kg/m^3)",
+        "widget_type": "QDoubleSpinBox",
+        "setMinimum": 0.001,
+        "setMaximum": Infinity,
+        "setDecimals": 16,
+        "setValue": 1.1768292682926829,
+        "setReadOnly": true
+    },
+    "gam": {
+        "label": "Specific Heat Ratio",
+        "widget_type": "QDoubleSpinBox",
+        "setMinimum": 0.001,
+        "setMaximum": Infinity,
+        "setDecimals": 16,
+        "setValue": 1.4
+    },
+    "L": {
+        "label": "Length Scale (m)",
+        "widget_type": "QDoubleSpinBox",
+        "setMinimum": 0.0,
+        "setMaximum": Infinity,
+        "setValue": 1.0,
+        "setDecimals": 16
+    },
+    "R": {
+        "label": "Gas Constant (J/(kg*K))",
+        "widget_type": "QDoubleSpinBox",
+        "setMinimum": 0.001,
+        "setMaximum": Infinity,
+        "setDecimals": 16,
+        "setValue": 287.05
+    },
+    "prescribe": {
+        "label": "Prescribe \u0251/Cl/CLI",
+        "widget_type": "QComboBox",
+        "addItems": [
+            "Angle of Attack (deg)",
+            "Viscous Cl",
+            "Inviscid Cl"
+        ],
+        "setCurrentText": "Angle of Attack (deg)"
+    },
+    "alfa": {
+        "label": "Angle of Attack (deg)",
+        "widget_type": "QDoubleSpinBox",
+        "setDecimals": 16,
+        "setMinimum": -Infinity,
+        "setMaximum": Infinity,
+        "setReadOnly": false,
+        "setValue": 0.0
+    },
+    "Cl": {
+        "label": "Viscous Cl",
+        "widget_type": "QDoubleSpinBox",
+        "setDecimals": 16,
+        "setMinimum": -Infinity,
+        "setMaximum": Infinity,
+        "setReadOnly": true,
+        "setValue": 0.0
+    },
+    "CLI": {
+        "label": "Inviscid Cl",
+        "widget_type": "QDoubleSpinBox",
+        "setDecimals": 16,
+        "setMinimum": -Infinity,
+        "setMaximum": Infinity,
+        "editable": false,
+        "setValue": 0.0
+    },
+    "xtr_upper": {
+        "label": "Transition x/c (upper)",
+        "widget_type": "QDoubleSpinBox",
+        "setDecimals": 16,
+        "setMinimum": 0.0,
+        "setMaximum": 1.0,
+        "setValue": 1.0,
+        "restart_grid_counter": true,
+        "column": 5,
+        "label.column": 4
+    },
+    "xtr_lower": {
+        "label": "Transition x/c (lower)",
+        "widget_type": "QDoubleSpinBox",
+        "setDecimals": 16,
+        "setMinimum": 0.0,
+        "setMaximum": 1.0,
+        "setValue": 1.0,
+        "column": 5,
+        "label.column": 4
+    },
+    "N": {
+        "label": "Turbulence (NCrit)",
+        "widget_type": "QDoubleSpinBox",
+        "setDecimals": 16,
+        "setMinimum": 0.0,
+        "setMaximum": 20.0,
+        "setValue": 9.0,
+        "column": 5,
+        "label.column": 4
+    },
+    "iter": {
+        "label": "Maximum Iterations",
+        "widget_type": "QSpinBox",
+        "setMinimum": 1,
+        "setMaximum": 10000,
+        "setValue": 150,
+        "column": 5,
+        "label.column": 4
+    },
+    "timeout": {
+        "label": "Timeout (sec)",
+        "widget_type": "QDoubleSpinBox",
+        "setMinimum": 0.0,
+        "setMaximum": 10000.0,
+        "setValue": 8.0,
+        "column": 5,
+        "label.column": 4
+    },
+    "airfoil": {
+        "label": "Airfoil to Analyze",
+        "widget_type": "QComboBox",
+        "column": 5,
+        "label.column": 4
+    },
+    "base_dir": {
+        "label": "Analysis Base Directory",
+        "widget_type": "QLineEdit",
+        "push_button": "Choose folder",
+        "push_button_action": "select_directory",
+        "setText": "",
+        "column": 5,
+        "label.column": 4
+    },
+    "airfoil_name": {
+        "label": "Airfoil Name",
+        "widget_type": "QLineEdit",
+        "setText": "x_airfoil",
+        "column": 5,
+        "label.column": 4
+    }
+}
