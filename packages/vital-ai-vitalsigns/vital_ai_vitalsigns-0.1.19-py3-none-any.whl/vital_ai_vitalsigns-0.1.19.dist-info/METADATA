@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: vital-ai-vitalsigns
+Version: 0.1.19
+Summary: VitalSigns knowledge graph bindings
+Home-page: https://github.com/vital-ai/vital-vitalsigns-python
+Author: Marc Hadfield
+Author-email: marc@vital.ai
+License: Apache License 2.0
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: rdflib ==7.0.0
+Requires-Dist: PyYAML
+Requires-Dist: numpy >=1.26.4
+Requires-Dist: hnswlib
+Requires-Dist: owlready2 ==0.46
+Requires-Dist: owlrl ==6.0.2
+Requires-Dist: weaviate-client ==4.6.3
+Requires-Dist: SPARQLWrapper ==2.0.0
+Requires-Dist: pyshacl ==0.25.0
+Requires-Dist: requests
+Requires-Dist: PyODBC >=5.1.0
+Requires-Dist: onnxruntime >=1.18.0
+Requires-Dist: onnx >=1.16.1
+Requires-Dist: tzdata >=2024.1
+Requires-Dist: pytz >=2024.1
+Requires-Dist: python-dotenv >=1.0.1
+Requires-Dist: python-dateutil >=2.9.0
+Requires-Dist: transformers >=4.37.2
+Provides-Extra: dev
+Requires-Dist: torch >=2.3.0 ; extra == 'dev'
+Requires-Dist: sentence-transformers ==2.7.0 ; extra == 'dev'
+Requires-Dist: wheel >=0.43.0 ; extra == 'dev'
+
+# vital-vitalsigns-python
