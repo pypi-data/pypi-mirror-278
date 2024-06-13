@@ -1,0 +1,2 @@
+[console_scripts]
+dcc = dbt_command_center.main:main
