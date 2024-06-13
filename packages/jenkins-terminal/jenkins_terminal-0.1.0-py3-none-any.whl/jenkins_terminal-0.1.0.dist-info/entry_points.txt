@@ -1,0 +1,3 @@
+[console_scripts]
+jenkins=jenkins_terminal.main:app
+
