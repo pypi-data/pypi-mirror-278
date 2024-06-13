@@ -1,0 +1,8 @@
+queue-api
+haskellian
+
+[client]
+httpx
+
+[server]
+fastapi
