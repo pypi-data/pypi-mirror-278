@@ -1,0 +1,2 @@
+[console_scripts]
+jobspec = jobspec.cli:run_jobspec
