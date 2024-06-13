@@ -1,0 +1,1 @@
+import{cT as r,o as e,n as s,w as t,bj as c,z as o}from"./index-Jv7TaKWs.js";const n={};function d(a,l){return e(),s(o,{class:"card my-1",variant:"outlined"},{default:t(()=>[c(a.$slots,"default")]),_:3})}const f=r(n,[["render",d]]);export{f as C};
