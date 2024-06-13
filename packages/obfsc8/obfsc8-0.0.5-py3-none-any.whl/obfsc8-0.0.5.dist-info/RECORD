@@ -1,0 +1,14 @@
+obfsc8/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+obfsc8/get_columns_to_be_obfuscated.py,sha256=Sy-6r2NP8sxf06R07kpHsi3joFali70TF8FhTqNLTrA,893
+obfsc8/get_file_object_from_s3_bucket.py,sha256=eRkt-vMIH-bBAdFATqWzzqTQhruLdF2Ebc3Xuv6UC58,537
+obfsc8/get_filetype.py,sha256=KL_XKQ4p2-XitRxeLImIr_gKG3XXcpQ9ItYLtZR7DvU,958
+obfsc8/get_s3_bucket_and_key_names.py,sha256=F82CuvYsNTGJ4QPLyD2zwbg8AOPcO75GWlCKc9dzYiY,766
+obfsc8/obfuscate.py,sha256=9NNfkjF1vnJxGrZ8h7oNKXrVzhItQ3K3y1kbUxjQcsU,2481
+obfsc8/obfuscate_csv_file.py,sha256=GAle0xLiNpuGyNCdgQ4qouy2DjvVJ0opE-Bp52_oVkM,1143
+obfsc8/obfuscate_json_file.py,sha256=0vUGH72hSBifLgJ3HP0MOq4kK7gxCumkEnu4poXkSrk,1167
+obfsc8/obfuscate_parquet_file.py,sha256=55i6cZP6g8xqLqGJdKPgc8pvAvJJNNqxTRd7eV4zAvE,1207
+obfsc8-0.0.5.dist-info/LICENSE,sha256=02x7wXFOSfIX1TTr2E_qkihStG-ePHyDJ1Fc9De8BuQ,1070
+obfsc8-0.0.5.dist-info/METADATA,sha256=Si65w-oF_caPoZpXQIeRA1IImExfU9AYdpM6RX-giNg,9514
+obfsc8-0.0.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+obfsc8-0.0.5.dist-info/top_level.txt,sha256=k79eQ-yTrIcwpyycpaupay5OXqY2B2MEb1fVwxuCW14,7
+obfsc8-0.0.5.dist-info/RECORD,,
