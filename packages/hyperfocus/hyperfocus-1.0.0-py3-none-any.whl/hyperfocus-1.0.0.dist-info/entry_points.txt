@@ -1,0 +1,3 @@
+[console_scripts]
+hyf=hyperfocus.console.cli:run
+
