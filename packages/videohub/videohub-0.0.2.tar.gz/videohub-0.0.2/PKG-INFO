@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: videohub
+Version: 0.0.2
+Author: Zhipu AI
+Project-URL: Documentation, https://github.com/OpenRL-Lab/VideoHub
+Keywords: VideoHub
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: setuptools>=67.0
+Requires-Dist: click
+Requires-Dist: termcolor
+Requires-Dist: rich
+Requires-Dist: imageio
+Requires-Dist: tqdm
+Requires-Dist: Jinja2
+Requires-Dist: pathlib
+Requires-Dist: requests
+
+# VideoHub
+
+VideoHub API
+
+## Install
+    
+```shell
+pip install videohub
+```
+
+## Usage
+
+```python
+from videohub import Client
+client = Client(base_url="http://ip:port/video_qa", api_key="sk-")
+print(
+    client.generate(
+        model="CogVLM",
+        video_path="test.mp4",
+        prompt="When does the man begin to jump?",
+    )
+)
+```
