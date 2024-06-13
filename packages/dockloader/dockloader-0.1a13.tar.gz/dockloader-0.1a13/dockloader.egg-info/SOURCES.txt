@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+dockloader/__init__.py
+dockloader/attribute.py
+dockloader/client.py
+dockloader/command.py
+dockloader/config.py
+dockloader/parser.py
+dockloader.egg-info/PKG-INFO
+dockloader.egg-info/SOURCES.txt
+dockloader.egg-info/dependency_links.txt
+dockloader.egg-info/entry_points.txt
+dockloader.egg-info/requires.txt
+dockloader.egg-info/top_level.txt
+dockloader.egg-info/zip-safe
