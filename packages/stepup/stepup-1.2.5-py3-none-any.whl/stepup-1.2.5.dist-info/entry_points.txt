@@ -1,0 +1,3 @@
+[console_scripts]
+cleanup = stepup.core.cleanup:main
+stepup = stepup.core.tui:main
