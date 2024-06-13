@@ -1,0 +1,142 @@
+[tool.poetry]
+name = "cadwyn"
+version = "3.15.6"
+description = "Production-ready community-driven modern Stripe-like API versioning in FastAPI"
+authors = ["Stanislav Zmiev <zmievsa@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/zmievsa/cadwyn"
+documentation = "https://docs.cadwyn.dev"
+keywords = [
+    "python",
+    "api",
+    "json-schema",
+    "stripe",
+    "versioning",
+    "code-generation",
+    "hints",
+    "api-versioning",
+    "pydantic",
+    "fastapi",
+    "python310",
+    "python311",
+    "python312",
+]
+classifiers = [
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development",
+    "Typing :: Typed",
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Web Environment",
+    "Framework :: AsyncIO",
+    "Framework :: FastAPI",
+    "Framework :: Pydantic",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Internet :: WWW/HTTP :: HTTP Servers",
+    "Topic :: Internet :: WWW/HTTP",
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typing-extensions = "*"
+fastapi = ">=0.110.0"
+starlette = ">=0.36.3"
+pydantic = ">=1.0.0"
+typer = { version = ">=0.7.0", optional = true }
+better-ast-comments = "~1.2.1"
+jinja2 = ">=3.1.2"
+issubclass = "^0.1.2"
+
+[tool.poetry.extras]
+cli = ["typer"]
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=7.2.1"
+pytest-cov = ">=4.0.0"
+uvicorn = "*"
+pdbpp = "^0.10.3"
+httpx = "*"
+pytest-fixture-classes = ">=1.0.3"
+dirty-equals = ">=0.6.0"
+mkdocs = ">=1.5.2"
+mkdocs-material = ">=9.3.1"
+python-multipart = ">=0.0.6"
+mkdocs-simple-hooks = ">=0.1.5"
+pytest-sugar = "^1.0.0"
+better-devtools = "^0.13.3"
+svcs = "^24.1.0"
+
+[tool.poetry.scripts]
+cadwyn = "cadwyn.__main__:app"
+
+[tool.coverage.report]
+skip_covered = true
+skip_empty = true
+# Taken from https://coverage.readthedocs.io/en/7.1.0/excluding.html#advanced-exclusion
+exclude_lines = [
+    "pragma: no cover",
+    "assert_never\\(",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if False:",
+    "assert_never",
+    "if 0:",
+    "class .*\\bProtocol\\):",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+    "@(abc\\.)?abstractmethod",
+    "@(typing\\.)?overload",
+    "__rich_repr__",
+    "__repr__",
+]
+omit = [
+    "./docs/plugin.py",
+    "./site/plugin.py",
+    "./tests/_data/_temp/**/*",
+    "tests/tutorial/data/**/*",
+    "scripts/*.py",
+]
+
+[tool.pyright]
+reportMissingImports = true
+strictListInference = true
+strictDictionaryInference = true
+strictSetInference = true
+reportPropertyTypeMismatch = true
+reportImportCycles = true
+reportUntypedFunctionDecorator = "warning"
+reportUntypedClassDecorator = "warning"
+reportUntypedBaseClass = "warning"
+reportDeprecated = "warning"
+reportInvalidTypeVarUse = true
+reportUnnecessaryCast = true
+reportUnnecessaryComparison = true
+reportUnnecessaryContains = true
+reportAssertAlwaysTrue = true
+reportUnsupportedDunderAll = true
+reportUnnecessaryTypeIgnoreComment = true
+reportMissingSuperCall = true
+reportFunctionMemberAccess = false
+reportCircularImports = true
+reportInvalidTypeForm = false
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
