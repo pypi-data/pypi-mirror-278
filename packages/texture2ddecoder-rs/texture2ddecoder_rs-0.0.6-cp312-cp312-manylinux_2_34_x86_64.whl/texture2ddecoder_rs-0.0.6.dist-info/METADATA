@@ -1,0 +1,15 @@
+Metadata-Version: 2.3
+Name: texture2ddecoder_rs
+Version: 0.0.6
+Summary: texture2ddecoder python bindings
+Home-Page: https://crates.io/crates/texture2ddecoder
+Author: Rudolf Kolbe <rkolbe96@gmail.com>
+Author-email: Rudolf Kolbe <rkolbe96@gmail.com>
+License: MIT OR Apache-2.0
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Source Code, https://github.com/UniversalGameExtraction/texture2ddecoder
+
+# texture2ddecoder_rs
+
+Python bindings for texture2ddecoder.
+
