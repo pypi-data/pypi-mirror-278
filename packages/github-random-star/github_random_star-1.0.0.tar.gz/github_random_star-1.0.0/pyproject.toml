@@ -1,0 +1,71 @@
+[tool.poetry]
+name = "github-random-star"
+version = "1.0.0"
+description = "Simple CLI tool to fetch random starred repositories from a users GitHub profile."
+authors = ["David Kasakaitis <davidkasakaitis@proton.me>"]
+readme = "README.md"
+license = "MIT"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Utilities",   
+    "License :: OSI Approved :: MIT License",
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "Natural Language :: English",
+    "Typing :: Typed",
+    "Topic :: Software Development :: Version Control :: Git"
+    ]
+
+keywords = [
+    "python",
+    "python3",
+    "cli",
+    "github",
+    "git"
+]
+packages = [{include = "github_random_star"}]
+
+[tool.poetry.urls]
+"Homepage" = "https://github.com/ddkasa/gh-random-star"
+"Source" = "https://github.com/ddkasa/gh-random-star"
+"Bug Tracker" = "https://github.com/ddkasa/gh-random-star/issues"
+
+[tool.poetry.scripts]
+gh-star = "github_random_star.extension:run"
+
+
+[tool.poetry.dependencies]
+python = "^3.12"
+httpx = "^0.26.0"
+cleo = "^2.1.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+mock = "^5.1.0"
+pytest-subprocess = "^1.5.0"
+pytest-env = "^1.1.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+env = [
+    "PYTEST_TESTING=True",
+]
+pythonpath = [
+  "."
+]
+markers = [
+    "unit: Basic unit tests using local cache.",
+    "integration: Tests that use the API.",
+]
+
+[tool.mypy]
+ignore_missing_imports = true
+
