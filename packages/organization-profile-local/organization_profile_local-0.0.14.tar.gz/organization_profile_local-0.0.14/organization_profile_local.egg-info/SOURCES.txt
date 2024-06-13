@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+organization_profile_local.egg-info/PKG-INFO
+organization_profile_local.egg-info/SOURCES.txt
+organization_profile_local.egg-info/dependency_links.txt
+organization_profile_local.egg-info/requires.txt
+organization_profile_local.egg-info/top_level.txt
+organization_profile_local/src/__init__.py
+organization_profile_local/src/organization_profile_constants.py
+organization_profile_local/src/organization_profiles_local.py
