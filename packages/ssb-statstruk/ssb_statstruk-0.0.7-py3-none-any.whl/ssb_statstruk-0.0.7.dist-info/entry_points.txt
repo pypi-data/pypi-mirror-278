@@ -1,0 +1,3 @@
+[console_scripts]
+ssb-statstruk=statstruk.__main__:main
+
