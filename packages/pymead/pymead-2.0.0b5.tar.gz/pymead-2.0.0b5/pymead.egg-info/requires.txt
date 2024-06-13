@@ -1,0 +1,16 @@
+scipy
+numpy
+shapely
+matplotlib
+requests>=2.31
+PyQt5
+pyqtgraph
+python-benedict
+pandas
+pymoo==0.5.0
+numba
+PyQtWebEngine
+networkx
+psutil
+pytest>=7
+pytest-qt

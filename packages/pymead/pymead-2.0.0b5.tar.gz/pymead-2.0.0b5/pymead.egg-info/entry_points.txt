@@ -1,0 +1,2 @@
+[console_scripts]
+pymead-gui = pymead.gui.gui:main
