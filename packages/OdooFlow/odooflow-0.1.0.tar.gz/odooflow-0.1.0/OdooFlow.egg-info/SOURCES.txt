@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+OdooFlow/__init__.py
+OdooFlow/sales_order.py
+OdooFlow.egg-info/PKG-INFO
+OdooFlow.egg-info/SOURCES.txt
+OdooFlow.egg-info/dependency_links.txt
+OdooFlow.egg-info/requires.txt
+OdooFlow.egg-info/top_level.txt
+tests/__init__.py
+tests/test_sales_order.py
