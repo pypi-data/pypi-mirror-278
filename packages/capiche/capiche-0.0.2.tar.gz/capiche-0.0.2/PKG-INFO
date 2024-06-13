@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: capiche
+Version: 0.0.2
+Summary: A Library for Throttling Requests to External APIs
+Author-email: Erik Williamson <erik.williamson@gmail.com>
+Project-URL: Homepage, https://github.com/erikwilliamson/capiche
+Project-URL: Issues, https://github.com/erikwilliamson/capiche/issues
+Keywords: throttle,rate-limit,api
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: testing
+Requires-Dist: pytest; extra == "testing"
+Requires-Dist: coverage; extra == "testing"
+Requires-Dist: pytest-cov; extra == "testing"
+Requires-Dist: pytest-mock; extra == "testing"
+Provides-Extra: development
+Requires-Dist: faker; extra == "development"
+Requires-Dist: mypy; extra == "development"
+Requires-Dist: flake8; extra == "development"
+Requires-Dist: black; extra == "development"
+Requires-Dist: isort; extra == "development"
+Requires-Dist: pre-commit; extra == "development"
+Requires-Dist: vulture; extra == "development"
+Requires-Dist: pylint; extra == "development"
+Requires-Dist: pylint-pydantic; extra == "development"
+Requires-Dist: pyright; extra == "development"
+Requires-Dist: ruff; extra == "development"
+Requires-Dist: icecream; extra == "development"
+Requires-Dist: bpython; extra == "development"
+Provides-Extra: examples
+Requires-Dist: rich; extra == "examples"
+
+# capiche
+A Python Library for Rate-Limiting and Queueing Requests to External Services
