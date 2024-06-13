@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/downloadit/__init__.py
+src/downloadit/app.py
+src/downloadit/constances.py
+src/downloadit/exceptions.py
+src/downloadit/logs.py
+src/downloadit.egg-info/PKG-INFO
+src/downloadit.egg-info/SOURCES.txt
+src/downloadit.egg-info/dependency_links.txt
+src/downloadit.egg-info/requires.txt
+src/downloadit.egg-info/top_level.txt
+src/downloadit/models/__init__.py
+src/downloadit/models/app_model.py

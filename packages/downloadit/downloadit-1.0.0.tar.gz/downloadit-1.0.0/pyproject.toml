@@ -1,0 +1,32 @@
+[project]
+name = "downloadit"
+version = "1.0.0"
+authors = [
+  { name="Alireza Garousi", email="alireza7948@gmail.com" },
+]
+description = "An asynchronous library to download."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "aiohttp==3.9.5",
+    "aiofiles==23.2.1",
+    "alembic==1.13.1",
+    "SQLAlchemy==2.0.30",
+    "tqdm==4.66.4",
+]
+
+[project.optional-dependencies]
+test = [
+    "black==24.4.2",
+    
+]
+
+[project.urls]
+Documentation = "https://github.com/Alirezagrs"
+Repository = "https://github.com/Alirezagrs/downloadit"
