@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+package/__init__.py
+package/package.py
+python_package_boilerplate.egg-info/PKG-INFO
+python_package_boilerplate.egg-info/SOURCES.txt
+python_package_boilerplate.egg-info/dependency_links.txt
+python_package_boilerplate.egg-info/requires.txt
+python_package_boilerplate.egg-info/top_level.txt
+tests/__init__.py
+tests/tests_helper.py
+tests/helpers/__init__.py
+tests/helpers/my_helper.py
+tests/unit/__init__.py
+tests/unit/test_package.py
