@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: instructlab-sdg
+Version: 0.0.1rc1
+Summary: Synthetic Data Generation
+Author-email: InstructLab <dev@instructlab.ai>
+License: Apache-2.0
+Project-URL: homepage, https://instructlab.io
+Project-URL: source, https://github.com/instructlab/sdg
+Project-URL: issues, https://github.com/instructlab/sdg/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click <9.0.0,>=8.1.7
+Requires-Dist: httpx <1.0.0,>=0.25.0
+Requires-Dist: jinja2
+Requires-Dist: openai <2.0.0,>=1.13.3
+Requires-Dist: rouge-score
+Requires-Dist: tqdm <5.0.0,>=4.66.2
+Requires-Dist: instructlab
+
+# sdg
+
+Python library for Synthetic Data Generation
