@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: botocraft
+Version: 0.2.1
+Summary: An opinionated boto3 wrapper for AWS
+Home-page: https://github.com/caltechads/botocraft
+Author: Caltech IMSS ADS
+Author-email: imss-ads-staff@caltech.edu
+Project-URL: Documentation, https://botocraft.readthedocs.io/en/latest/
+Project-URL: Source, https://github.com/caltechads/botocraft
+Project-URL: Issues, https://github.com/caltechads/botocraft/issues
+Keywords: aws
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown; charset=UTF-8
+License-File: LICENSE.txt
+
+# botocraft
+
+**Documentation**: https://botocraft.readthedocs.org
+
+[boto3](https://github.com/boto/boto3) is a wonderful library for interacting
+with AWS resources, but it can be hard to use because there is little
+standardization across services.
+
+`botocraft` aims to be an opinionated interface to selected AWS resources that
+at least provides a CRUDL interface to the resources it supports.
+
+## Installation
+
+`botocraft` supports Python 3.7+.
+
+To install from PyPI:
+
+```shell
+pip install botocraft
+```
+
+## Supported services
