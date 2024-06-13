@@ -1,0 +1,5 @@
+#!python
+
+import edge2yaml.edge2yaml
+
+exit(edge2yaml.edge2yaml.main())
