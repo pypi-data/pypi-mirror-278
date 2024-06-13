@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: symnet-cp
+Version: 0.4.0
+Summary: SymNet External Control Protocol implementation
+License: MIT
+Keywords: Symetrix,SymNet,Solus
+Author: Christian Kohlstedde
+Author-email: christian@kohlsted.de
+Requires-Python: >=3.11,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Natural Language :: German
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: attrs (>=23.2.0,<24.0.0)
+Requires-Dist: prometheus-client (>=0.20.0,<0.21.0)
+Description-Content-Type: text/markdown
+
+# SymNet Control Protocol implementation
+
+[![PyPI](https://img.shields.io/pypi/v/symnet-cp)](https://pypi.org/project/symnet-cp/)
+[![Tests](https://github.com/chrko/python-symnet-cp/actions/workflows/tests.yml/badge.svg)](https://github.com/chrko/python-symnet-cp/actions/workflows/tests.yml)
+[![codecov](https://codecov.io/gh/chrko/python-symnet-cp/branch/main/graph/badge.svg?token=hUXpLvpMJi)](https://codecov.io/gh/chrko/python-symnet-cp)
+
+This is an asyncio implementation of the [SymNet Control Protocol](https://www.symetrix.co/repository/SymNet_cp.pdf).
+At bermudafunk we use this to control a Solus 16x8.
+
