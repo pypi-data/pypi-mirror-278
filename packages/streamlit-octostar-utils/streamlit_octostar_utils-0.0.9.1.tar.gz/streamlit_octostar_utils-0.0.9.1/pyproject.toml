@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "streamlit-octostar-utils"
+version = "0.0.9.1"
+description = ""
+license = "MIT"
+authors = ["Valerio Tonelli <tonellivalerio97@gmail.com>"]
+readme = "README.md"
+include = [
+    "streamlit-octostar-utils/**/*"
+]
+
+[tool.mypy]
+python_version = ">=3.9,<3.9.7 || >3.9.7,<4.0"
+check_untyped_defs = true
+ignore_missing_imports = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.9.7 || >3.9.7,<4.0"
+pydantic = "^2.6.4"
+streamlit = "^1.33.0"
+streamlit-octostar-research = "^0.1.22"
+fastapi = "^0.110.1"
+python-multipart = "^0.0.9"
+#octostar-python-client = "^1.0.0"
+sortedcontainers = ">=2.0.0"
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^7.0.0"
+mypy = "^1.9.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
