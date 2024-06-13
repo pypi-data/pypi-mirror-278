@@ -1,0 +1,7 @@
+[console_scripts]
+generate-permutations = MEDS_tabular_automl.scripts.generate_permutations:main
+meds-tab-cache-task = MEDS_tabular_automl.scripts.cache_task:main
+meds-tab-describe = MEDS_tabular_automl.scripts.describe_codes:main
+meds-tab-tabularize-static = MEDS_tabular_automl.scripts.tabularize_static:main
+meds-tab-tabularize-time-series = MEDS_tabular_automl.scripts.tabularize_time_series:main
+meds-tab-xgboost = MEDS_tabular_automl.scripts.launch_xgboost:main
