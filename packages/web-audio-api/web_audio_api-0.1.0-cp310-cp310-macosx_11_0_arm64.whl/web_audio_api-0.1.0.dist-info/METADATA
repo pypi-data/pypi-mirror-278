@@ -1,0 +1,40 @@
+Metadata-Version: 2.3
+Name: web-audio-api
+Version: 0.1.0
+Classifier: Programming Language :: Rust
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Summary: A Rust/Python implementation of the Web Audio API, for use in non-browser contexts
+Keywords: web-audio-api,audio,sound,dsp
+License: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Repository, https://github.com/orottier/web-audio-api-rs
+Project-URL: Issues, https://github.com/orottier/web-audio-api-rs/issues
+
+# Python bindings for web-audio-api-rs
+
+## Local development
+
+```bash
+# cd to this directory
+
+# if not already, create a virtual env
+python3 -m venv .env
+
+# enter the virtual env
+source .env/bin/activate
+
+# (re)build the package
+maturin develop
+```
+
+```python
+import web_audio_api
+ctx = web_audio_api.AudioContext()
+osc = web_audio_api.OscillatorNode(ctx)
+osc.connect(ctx.destination())
+osc.start()
+osc.frequency().set_value(300)
+```
+
