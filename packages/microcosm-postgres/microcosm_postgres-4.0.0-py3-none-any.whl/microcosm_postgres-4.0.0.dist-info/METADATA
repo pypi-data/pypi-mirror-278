@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: microcosm-postgres
+Version: 4.0.0
+Summary: Opinionated persistence with PostgreSQL
+Home-page: https://github.com/globality-corp/microcosm-postgres
+Author: Globality Engineering
+Author-email: engineering@globality.com
+Keywords: microcosm
+Requires-Python: >=3.11
+License-File: LICENSE
+Requires-Dist: alembic >=1.0.0
+Requires-Dist: microcosm >=4.0.0
+Requires-Dist: microcosm-logging >=2.0.0
+Requires-Dist: psycopg2-binary >=2.7.5
+Requires-Dist: python-dateutil >=2.7.3
+Requires-Dist: pytz >=2018.5
+Requires-Dist: SQLAlchemy >=2.0.0
+Requires-Dist: SQLAlchemy-Utils >=0.37.0
+Provides-Extra: encryption
+Requires-Dist: aws-encryption-sdk >=2.0.0 ; extra == 'encryption'
+Requires-Dist: cryptography >=35 ; extra == 'encryption'
+Provides-Extra: lint
+Requires-Dist: flake8 ; extra == 'lint'
+Requires-Dist: flake8-print ; extra == 'lint'
+Requires-Dist: flake8-isort ; extra == 'lint'
+Provides-Extra: metrics
+Requires-Dist: microcosm-metrics >=3.0.0 ; extra == 'metrics'
+Provides-Extra: test
+Requires-Dist: aws-encryption-sdk >=2.0.0 ; extra == 'test'
+Requires-Dist: cryptography >=35 ; extra == 'test'
+Requires-Dist: microcosm-metrics >=3.0.0 ; extra == 'test'
+Requires-Dist: coverage >=3.7.1 ; extra == 'test'
+Requires-Dist: PyHamcrest >=1.8.5 ; extra == 'test'
+Requires-Dist: pytest-cov >=3.0.0 ; extra == 'test'
+Requires-Dist: pytest >=6.2.5 ; extra == 'test'
+Requires-Dist: pytest-cov >=5.0.0 ; extra == 'test'
+Provides-Extra: typehinting
+Requires-Dist: mypy ; extra == 'typehinting'
+Requires-Dist: types-psycopg2 ; extra == 'typehinting'
+Requires-Dist: types-python-dateutil ; extra == 'typehinting'
+Requires-Dist: types-pytz ; extra == 'typehinting'
+
