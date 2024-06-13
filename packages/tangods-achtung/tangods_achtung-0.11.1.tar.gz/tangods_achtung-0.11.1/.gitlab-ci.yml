@@ -1,0 +1,4 @@
+---
+include:
+  - project: 'MaxIV/gitlab-ci-templates'
+    file: 'PythonPublic.gitlab-ci.yml'

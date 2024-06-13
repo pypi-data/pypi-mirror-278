@@ -1,0 +1,10 @@
+pytango
+pyparsing
+httpx
+
+[tests]
+pytest-forked
+pytest-asyncio
+pytest-mock
+pytest-httpx
+pytest-httpserver
