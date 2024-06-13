@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: json2dataclass
+Version: 0.0.0
+Summary: 
+Author: Gilad Kutiel
+Author-email: giladk@mobileye.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: fire (>=0.6.0,<0.7.0)
+Description-Content-Type: text/markdown
+
+

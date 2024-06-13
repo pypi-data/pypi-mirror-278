@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "json2dataclass"
+version = "0.0.0"
+description = ""
+authors = ["Gilad Kutiel <giladk@mobileye.com>"]
+readme = "README.md"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fire = "^0.6.0"
+
+[tool.poetry.scripts]
+j2d = "json2dataclass:main"
