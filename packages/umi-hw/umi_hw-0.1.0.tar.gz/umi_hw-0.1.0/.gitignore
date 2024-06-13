@@ -1,0 +1,27 @@
+######################
+# Compiled binaries
+*.elf
+*.o
+*.e
+*.d
+
+######################
+# test results
+*.q
+*.vcd
+*.fst
+build/
+gmon.out
+coverage.dat
+
+######################
+# Emacs/vim/gedit backup files
+*~
+.*.swp
+.*.swo
+*#
+*.bak
+
+######################
+# Python
+__pycache__/
