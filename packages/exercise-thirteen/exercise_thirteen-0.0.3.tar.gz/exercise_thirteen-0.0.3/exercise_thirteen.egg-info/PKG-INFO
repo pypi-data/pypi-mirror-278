@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: exercise_thirteen
+Version: 0.0.3
+Summary: Library of simple mathematical operations
+Home-page: https://github.com/alevellop/exercise_thirteen
+Author: alevellop
+License: MIT
+Keywords: mathematical,operations,addition,subtraction,multiplication,division
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.8
+License-File: LICENSE.txt
+Requires-Dist: pytest
