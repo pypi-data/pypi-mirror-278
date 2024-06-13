@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: xian-contracting-py311
+Version: 1.0.0
+Summary: Python-based smart contract language and interpreter.
+Home-page: https://github.com/xian-network/contracting
+Author: Xian
+Author-email: info@xian.org
+Classifier: Programming Language :: Python :: 3.11
+License-File: LICENSE
+Requires-Dist: astor==0.8.1
+Requires-Dist: pycodestyle==2.10.0
+Requires-Dist: autopep8==1.5.7
+Requires-Dist: iso8601
+Requires-Dist: h5py
+Requires-Dist: cachetools
+Requires-Dist: loguru
+Requires-Dist: pynacl
