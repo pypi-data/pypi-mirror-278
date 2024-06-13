@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: omnetpypy
+Version: 0.1.1
+Summary: An omnet++-like simulation framework fully implemented on Python, with the possibility to support different simulation backends such as SimPy.
+Home-page: https://github.com/LBacciottini/OmnetPyPy
+Author: Leonardo Bacciottini
+Author-email: baccio.leonardo@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+An omnet++-like simulation framework fully implemented on Python, with the possibility to support different simulation backends such as SimPy orPyDynaa.
+
+
