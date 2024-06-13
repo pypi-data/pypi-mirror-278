@@ -1,0 +1,86 @@
+Metadata-Version: 2.1
+Name: autogram
+Version: 3.5.0
+Summary: An easily extensible telegram API wrapper
+Author-email: droi9 <ngaira14nelson@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2022 drui9
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/droi9/autogram
+Keywords: telegram,API,wrapper
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: loguru >=0.7.2
+Requires-Dist: requests >=2.32.3
+Provides-Extra: dev
+Requires-Dist: build ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+
+<p style="text-align: center;">
+    <img src="https://raw.githubusercontent.com/drui9/autogram/main/autogram.png" align="middle" alt="Autogram">
+<p>
+
+## Installation :: 
+`pip install autogram`
+Autogram is a telegram-BOT API wrapper written in python3, with a keen focus on remaining stupidly simple.
+
+## `Why AutoGram?`
+The name implies automated-telegram. I needed a framework that is easy and intuitive to work with.
+
+## Usage
+```python
+from autogram import Autogram
+from autogram.config import load_config, Start
+
+#-- handle private dm
+@Autogram.add('message')
+def message(bot, update):
+    print('message:', update)
+
+#-- handle callback queries
+@Autogram.add('callback_query')
+def callback_query(bot, update):
+    print('callback_query:', update)
+
+#***************************** <start>
+@Start(config_file='web-auto.json')
+def main(config):
+    bot = Autogram(config)
+    bot.run() # every call fetches updates, and updates internal offset
+#-- </start>
+```
+You should implement a loop over `bot.run()` to fetch updates inside your application. This makes the timing arbitrary, depending on where the program is expected to run. i.e offline gadgets that do not have consistent internet to use a webhook, or a server(with all the incredible webhook features using public IP/ngrok or custom domain name and a possibility of a HTTPS nginx endpoint).
+
+## `Project TODOs`
+- Tests.
+- Add webhook support.
+- Plans to cover the entire telegram API methods.
+
+### `footnotes`
+- `Polling` is the default getUpdates() method.
+- Don't run multiple bots with the same `TOKEN` as this will cause update problems
+- Sending unescaped special characters when using MarkdownV2 will return HTTP400
+- Have `fun` with whatever you're building `;)`
