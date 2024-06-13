@@ -1,0 +1,261 @@
+# viewtext-c
+
+`viewtext-c` is a text file viewer written in Python that runs in the terminal.
+
+## Compatibility
+
+`viewtext-c` runs on macOS and Linux.
+It requires python3.10+.
+
+## Installation and Use
+
+`viewtext-c` should be installed in a virtual environment.
+
+### How to Create, Use and Destroy a Virtual Environment
+
+```
+python -m venv .venv         // Create the virtual environment '.venv'
+source .venv/bin/activate    // Enter .venv
+(.venv) ...                  // While in the virtual environment, your prompt will be prefixed with '(.venv)'
+(.venv) deactivate           // Exit .venv
+rm -rf .venv                 // Destroy .venv
+```
+
+### How to Install and Uninstall `viewtext-c`
+
+```
+(.venv) python -m pip   install viewtext-curses  // Install
+(.venv) python -m pip uninstall viewtext-curses  // Uninstall
+```
+
+### Use
+
+```
+(.venv) viewtext-c [OPTIONS] filename
+```
+
+### Options:
+* **--tab-width *n*** -- Width of displayed tabs (Default: 2)
+* **--theme *theme*** -- The startup theme (Default: the last used theme)
+
+## Features
+
+`viewtext-c` divides the screen into the *status bar* (the last line on the screen) and the *display area* (everything else).
+
+The status bar is for error messages and feedback on what you're doing.
+
+The display area is tiled with *panes*.
+A pane is a window into a file.
+Each pane has a *caption* at the bottom displaying the name of the file and the pane's current position in the file.
+Above the caption is the *text area*.
+At any time exactly one pane (the *current pane*) has the *focus* and the other pane captions are grayed out.
+You operate on one pane at a time, usually the current pane.
+
+You can do the following in the current pane:
+
+* A move operation (scroll up, down, left or right, or jump to the beginning or end of the file)
+* Split into two panes, either horizontally or vertically
+* Delete the pane
+* Maximize the pane, deleting all the others
+* Shrink the pane to fit its file (if the file is small)
+* Open a new file
+* Incremental search for a string (case sensitive, no wildcards or regular expressions.  There is currently no case-insensitive search)
+
+Searches are orthogonal to other operations, particularly moves: you can move around in the pane without disturbing the current search.
+
+You can perform multiple searches at once in the same pane by suspending a search and initiating another.
+The new search must be completed before resuming the previous one, *ie* the searches are on a stack.
+If you switch focus away from a pane, the current search is suspended and resumes when the focus returns.
+
+If two panes are open to the same file, matches will be visible in both panes, but only the pane that initiated the search will be able to extend it.
+Searches are tied to panes, not to files.
+
+### Pane Order
+
+Panes are ordered.
+The exact ordering is a result of the order in which the panes were created (*ie* split).
+Split panes are ordered top to bottom and left to right.
+This is to make the behavior of certain operations like `next-pane`, `previous-pane` and `delete-pane` predictable, but it's not important and in general you don't need to be concerned with it.
+
+## Keybindings
+
+All of these operations act on the current pane.
+Some of the bindings may not work on some terminals and terminal emulators, or there may be alternate bindings (like **Shift** instead of **Fn**).
+
+Note: **C-** denotes **Control-**, as in **C-x** (**Control-x**) etc.
+Bindings in square brackets are optional.
+
+If you run into trouble or want to back out of an operation, use **C-g**.
+
+### General
+
+* **q** -- Exit the program
+* **C-g** -- Abort the current operation and return to where you were previously
+* **C-c** -- Complete panic.  Abort the program
+* **C-u n** -- Specify a numerical argument *n* to the following command (either a move or a split)
+* **=** -- Show the size of the current pane
+
+### Move operations
+
+Bindings to move around the screen, and bindings related to searching, are terminal-dependent and are listed in the table below.
+If you don't know what terminal you are running, the first table ('Terminal') is the default.
+
+Move operations may be preceded by an argument (C-u *n*), which acts as a multiplier.
+For example, **C-u -4 &rarr;** will shift 4 columns to the left.
+If *n* is omitted, it defaults to 4.
+
+<!-- * **Down-arrow** -- Scroll down one line
+* **Up-arrow** -- Scroll up one line
+* **Fn-down-arrow** -- Scroll down one page
+* **Fn-up-arrow** -- Scroll up one page
+* **Right-arrow** -- Scroll right one column
+* **Left-arrow** -- Scroll left one column
+* **TAB** -- Scroll right half page
+* **Shift-TAB** -- Scroll left half page
+* **Fn-left-arrow** -- Move to the beginning of the file
+* **Fn-right-arrow** -- Move to the end of the file -->
+
+#### Mac OS Terminal
+
+|         |    &darr;    |    &uarr;   |     &rarr;    |      &larr;   | TAB        | ENTER      |
+| ------: | :----------: | :---------: | :-----------: | :-----------: | :--------: | :--------: |
+|         | Line &darr;  | Line &uarr; | Column &rarr; | Column &larr; | Next Match | Next Match |
+| *Shift* | Line &darr;  | Line &uarr; | Shift &rarr;  | Shift &larr;  | Prev Match | Next Match |
+| *Fn*    | Page &darr;  | Page &uarr; | End of File   | Beg of File   | Next Match | Prev Match |
+
+#### Mac OS iTerm
+
+|         |          &darr; |          &uarr; |        &rarr; |        &larr; |        TAB |      ENTER |
+| ------: | :-------------: | :-------------: | :-----------: | :-----------: | :--------: | :--------: |
+|         |     Line &darr; |     Line &uarr; | Column &rarr; | Column &larr; | Next Match | Next Match |
+| *Shift* | 1/3 Page &darr; | 1/3 Page &uarr; |  Shift &rarr; |  Shift &larr; | Prev Match | Next Match |
+| *Fn*    |     Page &darr; |     Page &uarr; |   End of File |   Beg of File | Next Match |    Illegal |
+
+#### Mac OS Alacritty
+
+|         |          &darr; |          &uarr; |        &rarr; |        &larr; |        TAB |      ENTER |
+| ------: | :-------------: | :-------------: | :-----------: | :-----------: | :--------: | :--------: |
+|         |     Line &darr; |     Line &uarr; | Column &rarr; | Column &larr; | Next Match | Next Match |
+| *Shift* | 1/3 Page &darr; | 1/3 Page &uarr; |  Shift &rarr; |  Shift &larr; | Prev Match | Next Match |
+| *Fn*    |           No-op |           No-op |   End of File |   Beg of File | Next Match | Next Match |
+
+#### Mac OS Tabby
+
+|         |          &darr; |          &uarr; |        &rarr; |        &larr; |        TAB |      ENTER |
+| ------: | :-------------: | :-------------: | :-----------: | :-----------: | :--------: | :--------: |
+|         |     Line &darr; |     Line &uarr; | Column &rarr; | Column &larr; | Next Match | Next Match |
+| *Shift* | 1/3 Page &darr; | 1/3 Page &uarr; |  Shift &rarr; |  Shift &larr; | Prev Match | Next Match |
+| *Fn*    |     Page &darr; |     Page &uarr; |   End of File |   Beg of File | Next Match | Next Match |
+
+#### Mac OS Kitty
+
+|         |          &darr; |          &uarr; |        &rarr; |        &larr; |        TAB |      ENTER |
+| ------: | :-------------: | :-------------: | :-----------: | :-----------: | :--------: | :--------: |
+|         |     Line &darr; |     Line &uarr; | Column &rarr; | Column &larr; | Next Match | Next Match |
+| *Shift* | 1/3 Page &darr; | 1/3 Page &uarr; |  Shift &rarr; |  Shift &larr; | Prev Match | Next Match |
+| *Fn*    |     Page &darr; |     Page &uarr; |   End of File |   Beg of File | Next Match | Next Match |
+
+#### Mac OS WezTerm
+
+|         |          &darr; |          &uarr; |        &rarr; |        &larr; |        TAB |      ENTER |
+| ------: | :-------------: | :-------------: | :-----------: | :-----------: | :--------: | :--------: |
+|         |     Line &darr; |     Line &uarr; | Column &rarr; | Column &larr; | Next Match | Next Match |
+| *Shift* | 1/3 Page &darr; | 1/3 Page &uarr; |  Shift &rarr; |  Shift &larr; | Prev Match | Next Match |
+| *Fn*    |     Page &darr; |     Page &uarr; |   End of File |   Beg of File | Next Match | Next Match |
+
+### Switch focus
+
+* **C-x o** -- Next pane
+* **C-x O** -- Previous pane
+
+### Split and resize
+
+* **[C-u *n*] C-x h** -- Split horizontally.  The new top (*n* > 0) or bottom (*n* < 0) pane will have |*n*| lines
+* **[C-u *n*] C-x v** -- Split vertically[^1].  The new left (*n* > 0) or right (*n* < 0) pane will have |*n*| columns
+* **C-x 0** -- Delete.  All pending searches in the pane are discarded.  The focus goes to the previous pane
+* **C-x 1** -- Maximize, deleting all other panes
+* **C-x -** -- Shrink the pane to the size of the file (if the file is small)
+* **C-x +** -- Shrink all panes to the size of their files
+
+### Opening and closing files
+
+* **C-x C-f** -- Open a file.  `viewtext-c` looks first in the current directory (of the file in the pane), displayed in the status bar; from there you can navigate to the file you want.  The pane is no longer associated with its previous file.  The file lookup mechanism supports completion[^2], so you need only specify a unique prefix for the file path and hit **TAB**
+
+The file in pane *p* is identified in the caption along with its directory name (not the entire path), to discriminate between files with the same name.
+
+When the last pane into a file has been deleted, the file is effectively closed.  There is no concept of *buffer* as in Emacs.  If you want to return to the file you must reopen it.
+
+### Search
+
+* **/** -- Initiate an incremental case-sensitive search, starting at your current position in the file.  There is always a *current match*, which will be identified by color.  As you add or delete characters, `viewtext-c` will refine your search
+* Bindings for `next match` and `previous match` are terminal-dependent and are shown in the table under **Move Operations** above
+* **ESC** -- Suspend the current search if there is one; otherwise resume the most recent search
+* **C-d** -- Terminate the current search
+* **C-g** -- Abort the current search (essentially the same as terminate)
+* **C-l** -- (Control-L) Center the current search match
+* **C-l C-l** -- Move the current search match to the top of the screen
+* **C-l C-l C-l** -- Move the current search match to the bottom of the screen
+
+If there is an active search in the current pane, it will tell you in the status bar.  Suspended searches will be visible in the file, but not in the status bar.
+
+### Themes
+
+`viewtext-c` comes with a palette of 248 colors.
+You can specify the foreground and background colors of each *element* of the display (defined below).
+The configuration of all element colors is called a *theme*.
+You can create themes, name them and switch from one to another.
+
+* **c** -- Change the color of an element[^3] (and save?)
+* **d** -- Delete a theme
+* **s** -- Save the current theme (unnecessary)
+* **t** -- Show the current theme
+* **w** -- Switch to a different theme and save the configuration file
+* **x** -- Clone the current theme under a new name (and save?)
+
+#### List of display elements that make up a theme
+
+##### Display area
+
+* **caption_focus** -- The caption in the focused pane
+* **caption_nofocus** -- Captions in non-focused panes
+* **edge_focus** -- The edge[^1] in the focused pane
+* **edge_nofocus** -- Edges in non-focused panes
+* **search_current** -- The current matching search string
+* **search** -- All other matching search strings
+* **text** -- The default text (all panes)
+
+##### Status bar
+
+* **cursor** -- The cursor
+* **directory** -- (completion): Filename completions that are directories
+* **match** -- (search): The matching prefix of the search string
+* **nomatch** -- (search): The non-matching suffix of the search string
+* **pattern** -- (completion): The matching prefix of filenames
+* **prefix** -- (completion): The matching prefix (other completions)
+* **status** -- The default text
+
+### Mouse support
+
+* **Left click** -- Switch focus.  (Must be quick, otherwise you get **click and drag**)
+* **Left double click** -- Change the color of the clicked element[^3]
+* **Scroll** -- You can scroll (up and down only) in any pane without switching focus.  Scrolling down works properly; scrolling up is balky and slow
+* **Click and drag** -- Moves **button-press** to **button-release** in 2-D without switching focus (exactly like Google Maps)
+
+Note that **scroll** and **click and drag** are inconsistent: one moves the window over the file while the other moves the file under the window.
+
+### Initialization file
+
+Upon startup, `viewtext-c` looks for a configuration file containing theme definitions and the name of the current theme.
+The following locations are checked; the first one that exists and is readable will be loaded into the `viewtext-c` environment:
+
+* `~/.config/viewtext/config.toml`
+* `~/.viewtextrc.toml`
+* `./config.toml`
+
+[^1]: When you split a pane vertically the new left pane gains a narrow *edge*, a border to distinguish it from the right pane.
+Panes on the right border of the screen have no such edge.
+
+[^2]: If at any point you wish to see a list of possible completions, hit **TAB**.  (Filename completions that are directory names will appear in color, blue by default).  If there are too many to fit in the status bar, you can scroll through them using the left and right arrow keys.  If you add characters and hit **TAB** again, the completion mechanism will narrow your search.  When you reach your unique choice, hit **ENTER**.  To abort, use **C-g**.
+
+[^3]: Specify the element first, then foreground or background, then the color.
+The completion mechanism will display candidate foreground colors against the current background color and vice versa.

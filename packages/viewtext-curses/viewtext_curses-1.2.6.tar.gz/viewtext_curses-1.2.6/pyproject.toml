@@ -1,0 +1,35 @@
+[tool.poetry]
+name          = "viewtext-curses"
+version       = "1.2.6"
+description   = "Curses-based text file viewer"
+license       = "Apache-2.0"
+authors       = ["Joe Rodrigue <joe.rodrigue@gmail.com>"]
+maintainers   = ["Joe Rodrigue <joe.rodrigue@gmail.com>"]
+readme        = "README.md"
+homepage      = "https://github.com/JoeRodrigue/viewtext-curses"
+repository    = "https://github.com/JoeRodrigue/viewtext-curses"
+documentation = "https://github.com/JoeRodrigue/viewtext-curses"
+keywords      = ['textfile', 'viewer']
+classifiers   = [
+	"License :: OSI Approved :: Apache Software License",
+	"Operating System :: OS Independent",
+	"Programming Language :: Python :: 3.10",
+	"Programming Language :: Python :: 3.11",
+	"Programming Language :: Python :: 3.12",
+]
+packages      = [{include = "viewtext_c", from = "src"}]
+
+[tool.poetry.dependencies]
+python  = "^3.10"   # need 3.10+ for match
+click   = ">= 2.0"
+tomli_w = "^1.0.0"  # as of 3.11, Python provides tomllib module
+
+[tool.poetry.scripts]
+viewtext-c = 'viewtext_c.__main__:read_cl_arguments'
+
+[tool.mypy]
+disable_error_code = "attr-defined"  # win.get_wch() generates an error
+
+[build-system]
+requires      = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,17 @@
+current_theme = "default"
+
+[themes.default]
+caption_focus = "blue-pale on blue-purplish-vivid"
+caption_nofocus = "gray-medium on gray-bluish-dark"
+cursor = "bold blink purple-brilliant on purple-dark-very"
+directory = "bold blue-brilliant on purple-dark-very"
+edge_focus = "blue-purplish-vivid on blue-purplish-vivid"
+edge_nofocus = "gray-bluish-dark on gray-bluish-dark"
+match = "bold blue-greenish-light-very on purple-dark-very"
+nomatch = "bold pink-brownish on red-vivid"
+pattern = "bold green-yellow-brilliant on purple-dark-very"
+prefix = "bold green-yellow-brilliant on purple-dark-very"
+search = "dim blue-vivid on brown-reddish-grayish-dark"
+search_current = "bold blue-greenish-light-very on brown-reddish-grayish-dark"
+status = "pink-brownish on purple-dark-very"
+text = "brown-yellowish-grayish-light on brown-reddish-grayish-dark"
