@@ -1,0 +1,3 @@
+[console_scripts]
+download_models = folktexts.cli.download_models:main
+run_acs_benchmark = folktexts.cli.run_acs_benchmark:main
