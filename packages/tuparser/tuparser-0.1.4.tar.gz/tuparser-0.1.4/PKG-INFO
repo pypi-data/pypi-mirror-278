@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: tuparser
+Version: 0.1.4
+Summary: A module that facilitates the creation of Telegra.ph parsing scripts
+Home-page: https://github.com/zombyacoff/tu-parser
+Author: zombyacoff
+Author-email: zombyacoff@gmail.com
+Keywords: parser scraper parser-api telegraph telegraph-api
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp
+Requires-Dist: bs4
+Requires-Dist: PyYaml
+Requires-Dist: termcolor
+
+# Telegraph Universal Parser
+A module that facilitates the creation of [Telegra.ph](https://telegra.ph) parsing scripts
