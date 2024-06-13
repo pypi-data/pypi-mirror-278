@@ -1,0 +1,54 @@
+import os
+import sys
+from typing import List, Tuple
+
+import rich_click as click
+
+from servicefoundry.cli.console import console
+from servicefoundry.cli.const import GROUP_CLS
+from servicefoundry.cli.util import handle_exception_wrapper
+from servicefoundry.lib.clients.service_foundry_client import (
+    ServiceFoundryServiceClient,
+)
+from servicefoundry.lib.dao import apply as apply_lib
+from servicefoundry.lib.messages import PROMPT_APPLYING_MANIFEST
+from servicefoundry.lib.model.entity import ApplyResult
+
+
+@click.group(
+    name="apply",
+    cls=GROUP_CLS,
+    invoke_without_command=True,
+    help="Create resources by appling manifest locally from Truefoundry spec",
+    context_settings=dict(ignore_unknown_options=True, allow_interspersed_args=True),
+)
+@click.option(
+    "-f",
+    "--file",
+    "files",
+    type=click.Path(exists=True, dir_okay=False, resolve_path=True),
+    help="Path to yaml manifest file (You can apply multiple files at once by providing multiple -f options)",
+    show_default=True,
+    required=True,
+    multiple=True,
+)
+@handle_exception_wrapper
+def apply_command(files: Tuple[str, ...]):
+    apply_results: List[ApplyResult] = []
+    client = ServiceFoundryServiceClient()
+    for file in files:
+        with console.status(PROMPT_APPLYING_MANIFEST.format(file), spinner="dots"):
+            for apply_result in apply_lib.apply_manifest_file(file, client):
+                if apply_result.success:
+                    console.print(f"[green]\u2714 {apply_result.message}[/]")
+                else:
+                    console.print(f"[red]\u2718 {apply_result.message}[/]")
+
+                apply_results.append(apply_result)
+
+    if not all(apply_result.success for apply_result in apply_results):
+        raise Exception("Failed to apply one or more manifests")
+
+
+def get_apply_command():
+    return apply_command
