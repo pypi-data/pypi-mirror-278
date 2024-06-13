@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+src/_version.py
+src/supspec/__init__.py
+src/supspec/run.py
+src/supspec.egg-info/.DS_Store
+src/supspec.egg-info/PKG-INFO
+src/supspec.egg-info/SOURCES.txt
+src/supspec.egg-info/dependency_links.txt
+src/supspec.egg-info/entry_points.txt
+src/supspec.egg-info/requires.txt
+src/supspec.egg-info/top_level.txt
+src/supspec/support_functions/import_data.py
+src/supspec/support_functions/mcmc_fitting.py
+src/supspec/support_functions/plot.py
+src/supspec/support_functions/support_functions.py

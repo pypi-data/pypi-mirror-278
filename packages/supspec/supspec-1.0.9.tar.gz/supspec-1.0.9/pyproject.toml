@@ -1,0 +1,35 @@
+[project]
+name = "supspec"
+readme = "README.md"
+authors = [
+    { name = "Karthik Yadavalli", email = "karthik.yadavalli@cfa.harvard.edu" },
+    { name = "Ivy Yao", email = "karthik.yadavalli@cfa.harvard.edu" },
+    { name = "Nahum Linhart", email = "karthik.yadavalli@cfa.harvard.edu" }
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+]
+version = "1.0.9"
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.0", "pandas", "emcee", "corner", "matplotlib", "tqdm", "scipy", "argparse"]
+# On a mac, install optional dependencies with `pip install '.[dev]'` (include the single quotes)
+[project.optional-dependencies]
+dev = [
+]
+[build-system]
+requires = [
+    "setuptools>=62", # Used to build and package the Python project
+]
+build-backend = "setuptools.build_meta"
+[tool.setuptools_scm]
+write_to = "src/supspec/_version.py"
+
+
+
+[project.scripts]
+supspec = "supspec.run:main"
