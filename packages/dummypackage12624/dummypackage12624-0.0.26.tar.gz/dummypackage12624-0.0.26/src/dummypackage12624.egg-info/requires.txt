@@ -1,0 +1,8 @@
+ensure==1.0.2
+
+[testing]
+pytest>=8.2.2
+mypy>=1.10.0
+flake8>=7.0.0
+tox>=4.15.1
+black>=24.4.2

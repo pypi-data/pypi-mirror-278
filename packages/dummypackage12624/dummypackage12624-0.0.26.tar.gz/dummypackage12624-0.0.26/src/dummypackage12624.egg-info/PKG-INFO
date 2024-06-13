@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: dummypackage12624
+Version: 0.0.26
+Summary: Dummy python package
+Home-page: https://github.com/ronylpatil/test_package
+Author: ronilpatil
+Author-email: xyz@gmail.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/ronylpatil/test_package/issues
+Keywords: package,python,pytest
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Communications :: Chat
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: ensure==1.0.2
+Provides-Extra: testing
+Requires-Dist: pytest>=8.2.2; extra == "testing"
+Requires-Dist: mypy>=1.10.0; extra == "testing"
+Requires-Dist: flake8>=7.0.0; extra == "testing"
+Requires-Dist: tox>=4.15.1; extra == "testing"
+Requires-Dist: black>=24.4.2; extra == "testing"
+
+**Sample Package**
+
+.. image:: https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg
+   :align: center
+   :height: 200
+   :alt: logo  
+  
+.. image:: https://img.shields.io/pypi/v/dummypackage12624.svg
+    :target: https://pypi.org/project/dummypackage12624/
+
+.. image:: https://img.shields.io/pypi/pyversions/dummypackage12624.svg
+    :target: https://pypi.org/project/dummypackage12624/
+
+.. image:: https://github.com/ronylpatil/test_package/actions/workflows/ci.yaml/badge.svg
+    :target: https://github.com/ronylpatil/test_package/actions?query=workflow%3Atest
+
+.. image:: https://github.com/ronylpatil/test_package/actions/workflows/cd.yml/badge.svg
+    :target: https://github.com/ronylpatil/test_package/actions?query=workflow%3Atest
+
+
+The ``package`` basic information.
+
+A simple code example:
+
+.. code-block:: python
+
+    # content of test_sample.py
+    # code should be automatically fetched
+
+To execute it::
+
+   # execution code here
+   
+   # code ends here
+
+Add basic info here.
+
+
+Features
+--------
+- Feature_1
+- Feature_2
+- Feature_3
+- Feature_3
+
+Documentation
+-------------
+For full documentation, including installation, tutorials and PDF documents, please see https://docs.pytest.org/en/stable/.
+
+Bugs/Requests
+-------------
+Please use the `GitHub issue tracker <https://github.com/pytest-dev/pytest/issues>`_ to submit bugs or request features.
+
+Changelog
+---------
+Consult the `Changelog <https://docs.pytest.org/en/stable/changelog.html>`__ page for fixes and enhancements of each version.
+
+License
+-------
+Distributed under the terms of the `MIT`_ license.
+
+.. _`MIT`: https://github.com/ronylpatil/test_package/LICENSE
