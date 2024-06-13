@@ -1,0 +1,2 @@
+[console_scripts]
+OpenCC-GUI = src.OpenCC_gui:openCCgui
