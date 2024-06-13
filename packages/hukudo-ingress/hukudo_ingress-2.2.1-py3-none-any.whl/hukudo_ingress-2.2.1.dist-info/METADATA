@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: hukudo-ingress
+Version: 2.2.1
+Home-page: https://gitlab.com/hukudo/ingress
+Author: hukudo GmbH
+Author-email: hukudo-ingress@hukudo.de
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: backoff
+Requires-Dist: click
+Requires-Dist: docker
+Requires-Dist: httpx
+Requires-Dist: ipython
+Requires-Dist: jinja2
+Requires-Dist: logfmter
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: bumpversion ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: pip-tools ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: types-setuptools ; extra == 'dev'
+Provides-Extra: include_package_data
+Requires-Dist: True ; extra == 'include_package_data'
+
+# Ingress
+Configure Caddy as an ingress for your Docker containers.
+
+See https://gitlab.com/hukudo/ingress for example usage.
+
+## Usage
+```
+pip install hukudo-ingress==2.2.1
+ingress --help
+```
+
+## Development
+Initial
+```
+make dev-setup
+ingress --help
+```
+
+[Completion](https://click.palletsprojects.com/en/8.1.x/shell-completion/)
+```
+eval "$(_INGRESS_COMPLETE=bash_source ingress)"
+```
+
+
+## Debugging
+```
+LOGLEVEL=info ingress render
+LOGLEVEL=info ingress reconfigure
+```
