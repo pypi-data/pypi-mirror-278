@@ -1,0 +1,2 @@
+[console_scripts]
+pyneuralnet-train-image = pyneuralnet.images.train:train
