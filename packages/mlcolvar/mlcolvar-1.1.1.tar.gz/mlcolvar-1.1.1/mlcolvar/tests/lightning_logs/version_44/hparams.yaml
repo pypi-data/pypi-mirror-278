@@ -1,0 +1,61 @@
+layers:
+- 2
+- 4
+- 2
+- 4
+n_cvs: 4
+n_states: 5
+options:
+  nn:
+    activation: relu
+postprocessing: null
+preprocessing: null
+target_centers: !!python/object/apply:numpy.core.multiarray._reconstruct
+  args:
+  - &id001 !!python/name:numpy.ndarray ''
+  - !!python/tuple
+    - 0
+  - !!binary |
+    Yg==
+  state: !!python/tuple
+  - 1
+  - !!python/tuple
+    - 5
+    - 4
+  - &id002 !!python/object/apply:numpy.dtype
+    args:
+    - f8
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - -1
+    - -1
+    - 0
+  - false
+  - !!binary |
+    RHtGBM900L8Jou/y8g3xPzqt+zMpjOi/KoPUWKz++D+hFApWgUPovxvWCuNh1PM/Kdy4JqNo8T94
+    twvpMs76Pz7vhT+3PsK/rp+YjisS8r9cfXSsvVXxv/Z1obWo6rg/pID4tyWq8b9ai1R3pjkyv4W4
+    XbdxAIk/846eqzhGzD/a/CmVEuTBv6PXpKNXfgRArLN1bdFI6j+HvmE032zHPw==
+target_sigmas: !!python/object/apply:numpy.core.multiarray._reconstruct
+  args:
+  - *id001
+  - !!python/tuple
+    - 0
+  - !!binary |
+    Yg==
+  state: !!python/tuple
+  - 1
+  - !!python/tuple
+    - 5
+    - 4
+  - *id002
+  - false
+  - !!binary |
+    0YkTi9yS0r/EbRy82KXKP7H0qbU8TPM/FIWY3HMaAcAaGF34g4wKwNyeycqRRqk/0Uv/Dr3T9b9W
+    w7y6m4X5v2tLuVA4sOI/CfdgewHl2b/cFwq14xjzv1thfyqfJwHAKJ8Vymdh5z9+uIpdV5vnv+ha
+    DcK8f8g/Th1FJibE7j/2MGHGdof8v/0l0Clx7uM/RUkGI1YS77+YMNq4tO/tvw==

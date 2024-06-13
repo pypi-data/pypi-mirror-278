@@ -1,0 +1,11 @@
+decoder_layers: null
+encoder_layers:
+- 8
+- 6
+- 4
+- 2
+options:
+  encoder:
+    activation: relu
+postprocessing: null
+preprocessing: null

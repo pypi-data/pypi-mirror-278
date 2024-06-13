@@ -1,0 +1,14 @@
+layers:
+- 2
+- 50
+- 50
+- 1
+n_states: 2
+options:
+  lda: {}
+  nn:
+    activation: relu
+  norm_in:
+    mode: mean_std
+postprocessing: null
+preprocessing: null

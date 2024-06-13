@@ -1,0 +1,10 @@
+layers:
+- 2
+- 5
+- 10
+- 1
+options:
+  nn:
+    activation: relu
+postprocessing: null
+preprocessing: null

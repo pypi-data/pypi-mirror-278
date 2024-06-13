@@ -1,0 +1,12 @@
+decoder_layers: null
+encoder_layers:
+- 8
+- 6
+- 4
+n_cvs: 2
+options:
+  encoder:
+    activation: relu
+  norm_in: null
+postprocessing: null
+preprocessing: null

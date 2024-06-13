@@ -1,0 +1,8 @@
+decoder_layers: null
+encoder_layers:
+- 4
+- 10
+- 2
+options: null
+postprocessing: null
+preprocessing: null

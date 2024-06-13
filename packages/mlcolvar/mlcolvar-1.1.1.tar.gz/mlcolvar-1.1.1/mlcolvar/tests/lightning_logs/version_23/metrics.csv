@@ -1,0 +1,3 @@
+epoch,step,train_aux_loss_0_epoch,train_aux_loss_1_epoch,train_loss_epoch,train_total_loss_epoch,valid_aux_loss_0,valid_aux_loss_1,valid_loss,valid_total_loss
+0,0,,,,,12.234273910522461,-0.3527965545654297,1.2446362972259521,13.126113891601562
+0,0,6.848579406738281,-0.0005894952337257564,0.8800055980682373,7.727995872497559,,,,

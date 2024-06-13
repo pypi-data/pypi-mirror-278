@@ -1,0 +1,57 @@
+layers:
+- 2
+- 4
+- 2
+- 1
+n_cvs: 1
+n_states: 3
+options:
+  nn:
+    activation: relu
+postprocessing: null
+preprocessing: null
+target_centers: !!python/object/apply:numpy.core.multiarray._reconstruct
+  args:
+  - &id001 !!python/name:numpy.ndarray ''
+  - !!python/tuple
+    - 0
+  - !!binary |
+    Yg==
+  state: !!python/tuple
+  - 1
+  - !!python/tuple
+    - 3
+    - 1
+  - &id002 !!python/object/apply:numpy.dtype
+    args:
+    - f8
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - -1
+    - -1
+    - 0
+  - false
+  - !!binary |
+    H5QYfsGMw7+24Bye+eTcPy+FDCLE1ta/
+target_sigmas: !!python/object/apply:numpy.core.multiarray._reconstruct
+  args:
+  - *id001
+  - !!python/tuple
+    - 0
+  - !!binary |
+    Yg==
+  state: !!python/tuple
+  - 1
+  - !!python/tuple
+    - 3
+    - 1
+  - *id002
+  - false
+  - !!binary |
+    TSgwS0PE8j/bVXfwMnjxPzxzFOao8es/

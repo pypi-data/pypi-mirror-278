@@ -1,0 +1,4 @@
+epoch,step,train_aux_loss_0_epoch,train_eigval_1_epoch,train_eigval_2_epoch,train_loss_epoch,train_total_loss_epoch,valid_aux_loss_0,valid_eigval_1_epoch,valid_eigval_1_step,valid_eigval_2_epoch,valid_eigval_2_step,valid_loss_epoch,valid_loss_step,valid_total_loss
+,0,,,,,,,,1.4198100566864014,,0.22108601033687592,,-2.064739465713501,
+0,0,,,,,,9.481772422790527,1.4198100566864014,,0.22108601033687592,,-2.064739465713501,,2.6761467456817627
+0,0,8.374347686767578,0.0703389123082161,-0.5196404457092285,-0.2749737799167633,3.9121999740600586,,,,,,,,

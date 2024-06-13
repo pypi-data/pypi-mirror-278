@@ -1,0 +1,4 @@
+epoch,step,train_eigval_1_epoch,train_lorentzian_reg_epoch,train_loss_epoch,valid_eigval_1_epoch,valid_eigval_1_step,valid_lorentzian_reg_epoch,valid_lorentzian_reg_step,valid_loss_epoch,valid_loss_step
+,0,,,,,0.011174116283655167,,-21.502639770507812,,-21.513813018798828
+0,0,,,,0.011174116283655167,,-21.502639770507812,,-21.513813018798828,
+0,0,0.004284076392650604,-21.142662048339844,-21.14694595336914,,,,,,
