@@ -1,0 +1,8 @@
+[cbr_website]
+aws_enabled   = false
+login_enabled = false
+# assets_root   = 'https://static.thecyberboardroom.com/assets'
+assets_root   = '/assets'
+
+[cbr_dev]
+capture_exceptions = true
