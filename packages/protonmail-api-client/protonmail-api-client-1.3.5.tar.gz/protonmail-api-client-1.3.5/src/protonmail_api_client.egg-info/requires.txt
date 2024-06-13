@@ -1,0 +1,12 @@
+aiohttp
+bcrypt
+PGPy
+pycryptodome
+requests
+requests-toolbelt
+typing_extensions
+tqdm
+
+[dev]
+twine
+build
