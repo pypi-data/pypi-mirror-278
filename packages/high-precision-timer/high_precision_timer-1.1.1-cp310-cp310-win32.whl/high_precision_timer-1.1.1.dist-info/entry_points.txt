@@ -1,0 +1,3 @@
+[console_scripts]
+benchmark_timer = high_precision_timer.precision_timer.timer_benchmark:benchmark
+
