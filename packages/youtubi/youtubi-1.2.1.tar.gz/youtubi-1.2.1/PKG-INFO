@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: youtubi
+Version: 1.2.1
+Summary: Download youtube videos 
+Home-page: https://gitlab.com/isampypi/youtubi
+Author: Mhadhbi Issam
+Author-email: mhadhbixissam@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: pytube
+Requires-Dist: lxml
+Requires-Dist: beautifulsoup4
+Requires-Dist: tqdm
+Requires-Dist: moviepy
+Requires-Dist: ffmpeg
+
+# youtubi
+
+Download youtube videos python library .
+
+# Install  : 
+```bash
+pip install youtubi
+```
+
+## Example : 
+### Download single video
+```python 
+
+from youtubi import Youtubi
+
+y = Youtubi()
+url = "https://youtu.be/oaxWxSdytTk?si=DNJOpBMtJyrmaMQR"
+y.get_videos(url , folder = None , filename = None)
+
+```
+## Download list of videos of playlist 
+copy outter html of page where plylist is shown in the page , then 
+```python 
+from youtubi import Youtubi 
+y = Youtubi()
+y.get_playlist(file = "playlist.html")
+
+```
+
+## Download channel videos
+
+```python 
+from youtubi import Youtubi
+y = Youtubi()
+y.get_channel(file = "channel.html")
+
+```
