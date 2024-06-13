@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: googletrends-ai
+Version: 0.0.1
+Summary: Please run pip install pytrends pandas matplotlib beforehand
+Home-page: https://github.com/spcnkonno/googletrends_ai
+Author: spcnkonno
+Author-email: nkonno@sciencepark.co.jp
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/spcnkonno/googletrends_ai
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8.10
+Description-Content-Type: text/markdown
