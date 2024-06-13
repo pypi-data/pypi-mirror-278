@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling>=1.24.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "alwaysOn"
+dynamic = [
+    "version"
+]
+description = "Email checker for Onoff.app."
+authors = [
+    { name = "balestek" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+keywords = ["osint", "osint-tools", "osint-python", "open-source-intelligence", "information-gathering", "osint-tool", "investigation", "onoff", "python", "pypi", "pipenv", "pipx"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+    "Natural Language :: English",
+    "Environment :: Console"
+]
+requires-python = ">=3.8"
+dependencies = [
+    "httpx",
+    "python-dotenv",
+    "playwright-stealth",
+    "playwright",
+    "rich"
+]
+
+[tool.hatch.version]
+path = "alwaysOn/__about__.py"
+
+[project.scripts]
+alwaysOn = "alwaysOn.alwaysOn:main"
+
+[project.urls]
+"Homepage" = "https://github.com/balestek/alwaysOn"
+"Bug Tracker" = "https://github.com/balestek/alwaysOn/issues"
