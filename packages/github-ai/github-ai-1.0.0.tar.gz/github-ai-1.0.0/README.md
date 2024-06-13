@@ -1,0 +1,110 @@
+# AI GitHub
+
+AI GitHub is a Python package that allows you to search for GitHub repositories using the GitHub API. It provides a simple interface to search for repositories based on different criteria.
+
+## Benefits
+
+- Easily search for GitHub repositories based on various criteria.
+- Simple pagination support for browsing through search results.
+- Easy integration with your Python projects.
+  
+## Installation
+
+You can install the package using pip:
+
+```python
+pip install github-ai
+```
+
+## Usage
+
+### Basic Search
+
+```python
+import github_ai
+
+# Basic search
+results = github_ai.search_github_repositories(query="machine learning")
+
+print(f"Found {results['total_count']} repositories.")
+for repo in results['items']:
+    print(f"Name: {repo['name']}")
+    print(f"Owner: {repo['owner']['login']}")
+    print(f"Stars: {repo['stargazers_count']}")
+    print(f"URL: {repo['html_url']}")
+    print('-' * 40)
+```
+
+### Search with Pagination
+
+```python
+import github_ai
+
+# Search with pagination
+results = github_ai.search_github_repositories(query="machine learning", per_page=5, page=1)
+
+print(f"Found {results['total_count']} repositories.")
+for repo in results['items']:
+    print(f"Name: {repo['name']}")
+    print(f"Owner: {repo['owner']['login']}")
+    print(f"Stars: {repo['stargazers_count']}")
+    print(f"URL: {repo['html_url']}")
+    print('-' * 40)
+```
+
+### Cloning a Repository
+
+```python
+import github_ai
+import os
+
+try:
+    # Search with pagination
+    results = github_ai.search_github_repositories(query="machine learning", per_page=5, page=1)
+
+    def format_search_results(results):
+        formatted_results = []
+        for index, repo in enumerate(results['items'], start=1):
+            formatted_result = f"[{index:02d}] {repo['name']} - {repo['html_url']}"
+            print(formatted_result)
+            formatted_results.append(repo['html_url'])
+        return formatted_results
+
+    formatted_results = format_search_results(results)
+    
+except Exception as e:
+    print(f"An error occurred: {e}")
+
+# Get user input
+git_index = input("Enter the number of the repository to download: ")
+
+try:
+    git_index = int(git_index)
+    if 1 <= git_index <= len(formatted_results):
+        repo_url = formatted_results[git_index - 1]
+        os.system(f"git clone {repo_url}")
+    else:
+        print("Invalid number entered.")
+except ValueError:
+    print("Please enter a valid number.")
+```
+
+## Future Updates
+
+This is a beta version of AI GitHub. In future updates, we plan to add more functionality like AI-driven repository recommendations. Please stay tuned!
+
+## Contribution
+
+Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue on GitHub or create a pull request.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Thanks
+
+Thank you for using AI GitHub! If you find it useful, consider starring the repository on [GitHub](https://github.com/yourusername/github-ai).
+
+---
+
+Feel free to customize it further according to your needs.
