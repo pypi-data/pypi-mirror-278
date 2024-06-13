@@ -1,0 +1,14 @@
+astropy>=4.0
+jwst
+numpy>=1.16
+matplotlib>=1.4.3
+scipy>=1.1
+
+[docs]
+nbsphinx
+ipykernel
+sphinx
+sphinx_rtd_theme
+
+[test]
+pytest
