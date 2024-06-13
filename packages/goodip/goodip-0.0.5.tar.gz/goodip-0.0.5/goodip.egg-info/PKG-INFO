@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: goodip
+Version: 0.0.5
+Summary: you can get your ip address and get its information.
+Home-page: https://github.com/Erfan-Bafandeh/goodip
+Author: Erfan Bafandeh
+Author-email: user.enbh@gmail.com
+Keywords: ip,myip,goodip,checkip
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: ~=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+
+## get start:
+
+```python
+from goodip import ip
+
+ip = ip()
+
+ip.ip
+ip.country
+ip.region
+ip.city
+ip.isp
+ip.organization
+ip.network
+ip.usage_type
+ip.timezone
+ip.local_time
+ip.coordinates
+ip.os
+```
