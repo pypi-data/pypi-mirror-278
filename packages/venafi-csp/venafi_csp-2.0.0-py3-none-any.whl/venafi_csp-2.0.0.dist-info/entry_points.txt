@@ -1,0 +1,7 @@
+[console_scripts]
+venafi-container-init = venafi_csp.container_init_command:main
+venafi-sign-jarsigner = venafi_csp.jarsigner_sign_command:main
+venafi-sign-signtool = venafi_csp.signtool_sign_command:main
+venafi-verify-jarsigner = venafi_csp.jarsigner_verify_command:main
+venafi-verify-signtool = venafi_csp.signtool_verify_command:main
+venafi-version = venafi_csp.version_command:main
