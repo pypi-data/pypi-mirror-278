@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: moveread-pipelines-extract-validation
+Version: 0.1.7
+Summary: Pipeline interface for the auto-extract validation API
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Project-URL: repo, https://github.com/moveread/moveread-pipelines.git
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: queue-api
+Requires-Dist: pydantic ==2.*
+Requires-Dist: lazy-loader
+Requires-Dist: pipeteer
+
+# Extract Validation
+
+> Pipeline interface for the auto-extract validation API
+
+## TL; DR
+
+- Input (`Qin`): a contoured image + whether it's already perspective-corrected
+- Output (`Qout`): `'correct' | 'perspective-correct' | 'incorrect'`
+  - But, `'perspective-correct'` is only acceptable whe the image isn't already perspective-corrected
+
+## Usage
+
+```python
+import moveread.pipelines.extract_validation as val
+
+Qin = Queue[tuple[val.Task, State]] = ...
+Qout = Queue[tuple[val.Annotation, State]] = .....
+
+api = val.ValidateAPI(Qin, Qout)
+
+await api.items().sync()
+await api.annotate('taskId', 'correct')
+```
