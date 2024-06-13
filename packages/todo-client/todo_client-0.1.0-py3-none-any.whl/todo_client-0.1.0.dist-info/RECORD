@@ -1,0 +1,15 @@
+CHANGELOG.md,sha256=AXyFsTqaLxJJlInf-k1yjB-fgiSACuTzxVj8nhjaf80,391
+todo_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+todo_client/cli.py,sha256=_lM1TviCqM6If-F8bv15NiULxFBMydIq4gAwuPr9MpI,2312
+todo_client/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+todo_client/core/constants.py,sha256=ZPjjfDHvO4le0G8y8OcUX0i9w6O6-o8ZbYNezQNuzT8,923
+todo_client/core/helpers.py,sha256=cFAwx5bDfXoU9QvulhtLN0QfI4ImjG75n8-3NkLSvns,1856
+todo_client/core/logging_config.py,sha256=KRspQz_axsgrXuykEeKf15HBMPRnyZdSJthCPQBKjso,2071
+todo_client/core/repl.py,sha256=_M49cusVMs7mrdwxPRsN0tmlSxy0Jwep6Scp3hEKoX0,2282
+todo_client/core/tasks.py,sha256=2Yr2_oHweLmWIpLaJA0lV1ZL1WoGaIQRofkCNwk7Ou8,2191
+todo_client/example.py,sha256=9lnP36kmOmNwwoNKBW-mRJ_lz-_FPr28SBXbHjE7CQM,338
+todo_client-0.1.0.dist-info/LICENSE,sha256=w6TENqysSrjuXBYVJbnQBeOOfnjuz-DQV9l9sN6CGCI,1066
+todo_client-0.1.0.dist-info/METADATA,sha256=ENu5ejjr0tD06LkPfJnnA4LMNJBR02MlwVaQ5xFqT5A,5386
+todo_client-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+todo_client-0.1.0.dist-info/entry_points.txt,sha256=J7x5b8neCWmN4m17VxBrkt7RTGRp7mIJi4J8v9_HEtE,44
+todo_client-0.1.0.dist-info/RECORD,,
