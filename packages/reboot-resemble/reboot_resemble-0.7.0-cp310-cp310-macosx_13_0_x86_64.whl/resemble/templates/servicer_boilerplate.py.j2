@@ -1,0 +1,165 @@
+# isort: skip_file
+
+# THIS FILE IS GENERATED AND WILL BE OVERWRITTEN ON THE NEXT
+# 'rsm protoc' INVOCATION. DO NOT MODIFY THIS FILE DIRECTLY.
+# However, feel free to copy-paste sections of this file into
+# your own source files; that's what this file is here for!
+
+from resemble.aio.contexts import (
+{% if has_reader_method %}
+    ReaderContext,
+{% endif %}
+{% if has_writer_method %}
+    WriterContext,
+{% endif %}
+{% if has_transaction_method %}
+    TransactionContext,
+{% endif %}
+{% if has_workflow_method %}
+    WorkflowContext,
+{% endif %}
+)
+{% if has_workflow_method %}
+from resemble.aio.tasks import Loop
+from datetime import timedelta
+{% endif %}
+{% if has_streaming_method %}
+from typing import AsyncIterable
+{% endif %}
+from {{ rsm_name }} import (
+{% for service in services %}
+    {{ service.proto.name }},
+{% endfor %}
+{% for message in proto.messages_and_enums | sort %}
+    {{ message }},
+{% endfor %}
+)
+{% for service in services %}
+
+
+class {{ service.proto.name }}Servicer({{ service.proto.name }}.Interface):
+    """
+    An example of how to implement a Python servicer for the
+    {{ service.proto.name }} service, using Resemble.
+    You can copy-paste this servicer, or parts of it, to be the basis
+    for the implementation of your own servicer.
+    """
+    {% for method in service.methods %}
+    {% if method.options.proto.kind == 'reader' %}
+
+    async def {{ method.proto.name }}(
+        self,
+        context: ReaderContext,
+        {% if not method.options.proto.state_streaming %}
+        state: {{ service.options.proto.state_name }},
+        {% else %}
+        states: AsyncIterable[{{ service.options.proto.state_name }}],
+        {% endif %}
+        {% if not method.proto.client_streaming %}
+        request: {{ method.input_type }},
+        {% else %}
+        requests: AsyncIterable[{{ method.input_type }}],
+        {% endif %}
+    {% if not method.proto.server_streaming %}
+    ) -> {{ method.output_type }}:
+    {% else %}
+    ) -> AsyncIterable[{{ method.output_type }}]:
+    {% endif %}
+        # TODO: implement your own business logic here!
+        #
+        # Read more about the reader methods in the Resemble documentation:
+        # https://docs.reboot.dev/docs/model/methods/#readers
+        raise NotImplementedError
+        {% if method.options.proto.state_streaming %}
+
+        # TODO: receive state updates like this.
+        async for state in states:
+            print(state)
+        {% endif %}
+        {% if method.proto.client_streaming %}
+
+        # TODO: receive streaming requests like this.
+        async for request in requests:
+            print(request)
+        {% endif %}
+        {% if method.proto.server_streaming %}
+
+        # TODO: then stream responses back to the client.
+        for i in range(10):
+            # TODO: fill in each response here.
+            yield {{ method.output_type }}()
+        {% else %}
+
+        # TODO: fill in the response here.
+        return {{ method.output_type }}()
+        {% endif %}
+    {% elif method.options.proto.kind == 'writer' %}
+
+    async def {{ method.proto.name }}(
+        self,
+        context: WriterContext,
+        {% if not method.options.proto.constructor %}
+        state: {{ service.options.proto.state_name }},
+        {% endif %}
+        request: {{ method.input_type }},
+    ) -> {{ service.proto.name }}.{{ method.proto.name }}Effects:
+        # TODO: implement your own business logic here!
+        #
+        # Read more about the writer methods in the Resemble documentation:
+        # https://docs.reboot.dev/docs/model/methods/#writers
+        raise NotImplementedError
+        {% if method.options.proto.constructor %}
+
+        # TODO: create a new state, since the method is constructor.
+        state = {{ service.options.proto.state_name }}()
+        {% endif %}
+
+        # TODO: then determine the effects of the method
+        #       by filling in the return statement below.
+        return {{ service.proto.name }}.{{ method.proto.name }}Effects(
+            # TODO: set a new state here.
+            state=state,
+            # TODO: schedule asynchronous tasks here.
+            tasks=[],
+            # TODO: fill in the response here.
+            response={{ method.output_type }}(),
+        )
+    {% elif method.options.proto.kind == 'transaction' %}
+
+    async def {{ method.proto.name }}(
+        self,
+        context: TransactionContext,
+        request: {{ method.input_type }},
+    ) -> {{ method.output_type }}:
+        # TODO: implement your own business logic here!
+        #
+        # Read more about the transaction methods in the Resemble documentation:
+        # https://docs.reboot.dev/docs/model/methods/#transactions
+        raise NotImplementedError
+
+        # TODO: fill in the response here.
+        return {{ method.output_type }}()
+    {% elif method.options.proto.kind == 'workflow' %}
+
+    async def {{ method.proto.name }}(
+        self,
+        context: WorkflowContext,
+        request: {{ method.input_type }},
+    ) -> {{ method.output_type }} | Loop:
+        # TODO: implement your own business logic here!
+        {# TODO: Leave a link to the workflow methods documentation. #}
+        raise NotImplementedError
+
+        # Here is how to see whether the workflow is looping.
+        if context.iteration == 0:
+            # Here is how to request the workflow to loop.
+            return Loop(when=timedelta(seconds=3))
+        else:
+            # Here is how to return a response when the workflow is done
+            # looping.
+            #
+            # TODO: fill in the response here.
+            return {{ method.output_type }}()
+    {% endif %}
+    {% endfor %}
+{% endfor %}

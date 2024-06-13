@@ -1,0 +1,35 @@
+import asyncio
+from {{ name }}.v1.hello_world_rsm import (
+    HelloWorld,
+    HelloWorldState,
+    GreetRequest,
+    GreetResponse,
+    NumGreetingsRequest,
+    NumGreetingsResponse,
+)
+from resemble.aio.contexts import WriterContext, ReaderContext
+
+
+class HelloWorldServicer(HelloWorld.Interface):
+
+    async def Greet(
+        self,
+        context: WriterContext,
+        state: HelloWorldState,
+        request: GreetRequest,
+    ) -> HelloWorld.GreetEffects:
+        state.number_of_greetings += 1
+        return HelloWorld.GreetEffects(
+            state=state,
+            response=GreetResponse(
+                number_of_greetings=state.number_of_greetings
+            ),
+        )
+
+    async def NumGreetings(
+        self,
+        context: ReaderContext,
+        state: HelloWorldState,
+        request: NumGreetingsRequest,
+    ) -> NumGreetingsResponse:
+        return NumGreetingsResponse(number_of_greetings=state.number_of_greetings)
