@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+Fay.egg-info/PKG-INFO
+Fay.egg-info/SOURCES.txt
+Fay.egg-info/dependency_links.txt
+Fay.egg-info/requires.txt
+Fay.egg-info/top_level.txt
+test/test_cemotion.py
+test/test_flask.py
+test/test_rpa.py
+test/testpyaudio.py
