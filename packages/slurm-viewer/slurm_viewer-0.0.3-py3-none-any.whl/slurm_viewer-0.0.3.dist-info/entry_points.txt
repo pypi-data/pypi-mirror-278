@@ -1,0 +1,2 @@
+[console_scripts]
+slurm_viewer = src.main:app

@@ -1,0 +1,58 @@
+Horizontal {
+    height: auto;
+}
+
+SortableDataTable {
+    height: 1fr;
+    width: 100%;
+    border: $foreground 80%;
+}
+
+PlotextPlot {
+    border: $foreground 80%;
+}
+
+#nodes_data_table {
+    height: 95%;
+}
+
+#queue_running_table {
+    height: 47%;
+}
+
+#queue_pending_table {
+    height: 47%;
+}
+
+#nodes_label {
+    width: 1fr;
+    padding: 1 1;
+    text-align: right;
+}
+
+#queue_label {
+    width: 1fr;
+    padding: 1 1;
+    text-align: right;
+}
+
+#priority_label {
+    width: 1fr;
+    padding: 1 1;
+    text-align: right;
+}
+
+#dialog {
+    grid-size: 2;
+    grid-gutter: 1 2;
+    grid-rows: 1fr 3;
+    padding: 0 1;
+    border: thick $background 80%;
+    background: $surface;
+}
+
+#selection {
+    column-span: 2;
+    height: 100%;
+    width: 100%;
+}

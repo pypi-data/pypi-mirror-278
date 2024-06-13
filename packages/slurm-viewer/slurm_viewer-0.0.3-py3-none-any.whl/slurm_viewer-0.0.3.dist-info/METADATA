@@ -1,0 +1,93 @@
+Metadata-Version: 2.1
+Name: slurm_viewer
+Version: 0.0.3
+Summary: View a SLURM cluster and inspect nodes and jobs.
+Author-email: Patrick de Koning <pjhdekoning@lumc.nl>
+Project-URL: Homepage, https://gitlab.com/lkeb/slurm_viewer
+Keywords: XNAT,TUI
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Environment :: Console
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typer
+Requires-Dist: pydantic
+Requires-Dist: python-dateutil
+Requires-Dist: textual
+Requires-Dist: textual-plotext
+Requires-Dist: jsonpickle
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: pylint ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: textual-dev ; extra == 'dev'
+
+# Slurm Viewer
+## Introduction
+View the nodes in a slurm cluster and view the queue.
+
+- Overview of all nodes
+![](doc/all_nodes.svg)
+- Limit to nodes with GPUs
+![](doc/gpu_only_nodes.svg)
+- Show the running jobs on a selection of nodes
+![](doc/queue.svg)
+- Show the GPU memory used over the last 4 weeks
+![](doc/graph.svg)
+
+## Settings
+placed in ~/.config/slurm_viewer/settings.toml
+```toml
+server = "Slurm logon node or None if running on a node"
+partitions = ["List of partitions for Queue/Priority/GPU usage"]
+node_columns = [
+  "short_name",
+  "gpu_tot",
+  "gpu_alloc",
+  "gpu_avail",
+  "gpu_type",
+  "gpu_mem",
+  "cpu_tot",
+  "cpu_alloc",
+  "cpu_avail",
+  "mem_tot",
+  "mem_alloc",
+  "mem_avail",
+  "cpu_gpu",
+  "mem_gpu"
+]
+queue_columns = [
+  "user",
+  "job_id",
+  #"state",
+  "reason",
+  "nodelist",
+  #"start_time",
+  #"submit_time",
+  "start_delay",
+  "run_time",
+  "time_limit",
+  "command",
+  # "work_dir"
+]
+priority_columns = [
+  "user_name",
+  "job_id",
+  "job_priority_n",
+  "age_n",
+  "fair_share_n",
+  "partition_name"
+]
+```
+- server: Name of the slurm logon node, needs ssh access.
+- partitions: List of partitions to use for queue listing and memory usage histogram.
