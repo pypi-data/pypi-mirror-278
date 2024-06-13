@@ -1,0 +1,6 @@
+include requirements.txt
+include src\masina\GUI\*.ui
+include src\masina\static\css\*
+include src\masina\static\js\*
+include src\masina\static\sql\*
+include src\masina\templates\*

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if current_user.is_authenticated %}
+    Hi {{ current_user.user_name }}!
+    {% if current_user.masini %}
+        <br>
+        <ol>
+        {% for table_name, masina in current_user.masini.items() %}
+            <li><a href="/car/{{table_name}}">{{table_name}}</a></li>
+
+            {% if masina.table_alimentari.shape[0] > 0  %}
+                <table class="table" id="myTable100" border="1">
+                <thead>
+                <tr>
+                {% for colName in masina.table_alimentari[0] %}
+                    <th scope="col" onclick="sortTable(0)">{{colName}}</th>
+                {% endfor %}
+                </tr>
+                </thead>
+
+                {% for row in masina.table_alimentari[1:] %}
+                <tr>
+                    {% for col in row %}
+                <td>{{col}}</td>
+                    {% endfor %}
+                </tr>
+                    {% endfor %}
+                </table>
+
+
+            {% else %}
+            {% endif %}
+
+        {% endfor %}
+            <br>
+        <a href="/addcar">add a car</a>
+        </ol>
+    {% else %}
+        <li><a href="/addcar">add a car</a></li>
+    {% endif %}
+{% else %}
+    Please log in
+{% endif %}
+
+{%endblock%}
+
