@@ -1,0 +1,107 @@
+Metadata-Version: 2.1
+Name: gitea-github-sync
+Version: 0.2.0
+Summary: Syncs your gitea instance with your Github account
+Home-page: https://github.com/Muscaw/gitea-github-sync
+License: MIT
+Author: Kevin Grandjean
+Author-email: Muscaw@users.noreply.github.com
+Requires-Python: >=3.8.1,<4.0.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Typing :: Typed
+Requires-Dist: click (>=8.1.3,<9.0.0)
+Requires-Dist: piny (>=0.6,<1.1)
+Requires-Dist: pydantic (>=1.10.4,<3.0.0)
+Requires-Dist: pygithub (>=1.57,<2.0)
+Requires-Dist: requests (>=2.28.1,<3.0.0)
+Requires-Dist: rich (>=13.0.0,<14.0.0)
+Description-Content-Type: text/markdown
+
+[![Supported Python Versions](https://img.shields.io/pypi/pyversions/gitea-github-sync/0.1.0)](https://pypi.org/project/gitea-github-sync/) [![PyPI version](https://badge.fury.io/py/gitea-github-sync.svg)](https://badge.fury.io/py/gitea-github-sync)
+
+[![codecov](https://img.shields.io/codecov/c/github/Muscaw/gitea-github-sync?label=codecov&logo=codecov)](https://codecov.io/gh/Muscaw/gitea-github-sync) ![PyPI - Downloads](https://img.shields.io/pypi/dm/gitea-github-sync)
+
+# gitea-github-sync
+
+gitea-github-sync provides a simple CLI to sync Github repositories to your Gitea instance.
+
+## Installation
+
+```
+pip install gitea-github-sync
+```
+
+If you are interested in using a pre-packaged docker image, please look at the [Docker Readme](docs/docker/README.md)
+
+## Setup
+Create a file in `$HOME/.config/gitea-github-sync/config.yml` with the following template and fill up the missing values:
+
+```yaml
+gitea_api_url: https://<your-gitea-instance>/api/v1
+gitea_token: <your-gitea-token>
+github_token: <your-github-token>
+```
+
+### Creating a Gitea token
+Go to https://\<your-local-gitea-instance\>/user/settings/applications and generate a new token.
+
+### Creating a Github token
+
+Go to https://github.com/settings/tokens/new and create a token with the following values set:
+- Note: this is a note to help you understand how the token is used.
+- Expiration: No expiration
+- repo: Select all of repo
+
+![Screenshot of token configuration](docs/readme/github_token_permission.png)
+
+#### Github token limitation
+Github allows you to create _Personal access tokens_. These tokens now exist in two different flavors:
+- Fine-grained tokens
+- Classic tokens
+
+Both work with gitea-github-sync, but given that Gitea does not allow the modification of the access token through the API, a **non-expiring** token must be used which limits the usage to Classic tokens.
+
+## Usage
+
+`gitea-github-sync --help` Shows the help
+
+`gitea-github-sync list-all-gitea-repositories` Lists all available Gitea repositories in your account
+
+`gitea-github-sync list-all-github-repositories` Lists all available Github repositories in your account
+
+`gitea-github-sync migrate-repo FULL_REPO_NAME` Migrates one repo from Github to Gitea
+
+`gitea-github-sync sync` Migrates all repos not present in Gitea from Github
+
+## Automate gitea-github-sync execution
+
+There are multiple ways to automate the execution of gitea-github-sync. One of them is using cron:
+
+First, execute `crontab -e` to open the cron configuration file in edit mode.
+
+Then add the following line:
+```
+0 12 * * * gitea-github-sync sync
+```
+
+This will execute the sync operation every day at twelve.
+
+## Limitations
+
+When using the migration feature of Gitea, a Github token must be passed for Gitea to continuously pull the new changes from Github.
+
+The token used by gitea-github-sync to list repositories is the same that is used by Gitea for continuous monitoring. Updating the value of this token is unfortunately not possible through the API as of now. 
+

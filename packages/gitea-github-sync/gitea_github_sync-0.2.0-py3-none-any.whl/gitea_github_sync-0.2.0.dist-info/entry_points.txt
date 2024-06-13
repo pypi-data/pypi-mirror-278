@@ -1,0 +1,3 @@
+[console_scripts]
+gitea-github-sync=gitea_github_sync.cli:cli
+
