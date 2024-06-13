@@ -1,0 +1,12 @@
+black
+numpy
+mpmath
+clang-format
+
+[dev]
+pre-commit
+
+[test]
+pytest
+coverage
+pytest-mock
