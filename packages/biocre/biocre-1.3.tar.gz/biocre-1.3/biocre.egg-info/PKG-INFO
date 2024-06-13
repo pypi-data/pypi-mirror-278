@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: biocre
+Version: 1.3
+Author-email: Bingbing Xie <xie_bingbing@gzlab.ac.cn>
+Project-URL: Home, https://github.com/xiebb7/biocre
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: diopy
+Requires-Dist: scipy
+Requires-Dist: scanpy
+Requires-Dist: pandas
+
+Need to do
