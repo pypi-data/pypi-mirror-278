@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: warreclient
+Version: 3.0.1
+Summary: Client for the Warre system
+Home-page: https://github.com/NeCTAR-RC/python-warreclient
+Author: Sam Morrison
+Author-email: sorrison@gmail.com
+License: Apache
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Requires-Dist: keystoneauth1
+Requires-Dist: nectarclient-lib (<2.0.0,>=1.0.0)
+Requires-Dist: osc-lib
+Requires-Dist: oslo.utils
+Requires-Dist: pbr
+
