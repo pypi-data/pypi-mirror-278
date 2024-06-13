@@ -1,0 +1,16 @@
+q/http/__init__.py,sha256=xWVhkdz-C1XkShlvxES8MIZ_JJuCNPZw-rsQNswq3Rw,86
+q/http/client/__init__.py,sha256=mF4M_d6EiHbB9U9W_oKlKXYIyh8ZFn3gxe_382VXiLI,95
+q/http/client/__init__.pyi,sha256=Cv_yZhzql0jL21vDb8VBoH_310swG5HZxafzNr2o8qs,150
+q/http/client/queue.py,sha256=tsbf7QfpKqLh8dftB4EQY4Ul8_9Sf93q4Oo3_Yqst8s,891
+q/http/client/read.py,sha256=nusxGSF-qqjwPY7Z2sjrXnmVAq_gROwXCzDCD1BV6qk,1882
+q/http/client/write.py,sha256=l6MuXVAOtkfT_sUu-YvaocLGI1NrGrLSv4pT-eTDgmU,876
+q/http/server/__init__.py,sha256=mF4M_d6EiHbB9U9W_oKlKXYIyh8ZFn3gxe_382VXiLI,95
+q/http/server/__init__.pyi,sha256=nOaq_DTEK9jlhVBn9qGYfZv-ygRZACKwmEltJK7XuZg,122
+q/http/server/queue.py,sha256=oWMx92xlFrnUL6rEoGuCaB-pleMJ_DJcpOxadLXuP1M,409
+q/http/server/read.py,sha256=bA1DyyM3BRoCfUm_KxyXg8wDUCLng3i9yN5E7aCoRHI,1116
+q/http/server/util.py,sha256=NtyPi89od6t0888k4rz8ppiHm-xEah3d9usAK3EOthE,860
+q/http/server/write.py,sha256=SgR_V5JJmgdcgEmeVLzVIEavAxwN0Ugjb-xhhBu3u9M,421
+queue_http-0.1.1.dist-info/METADATA,sha256=YWmE9mywDZBEG6qKWEvY_vfJHDTfMwNIeypifVabq5M,536
+queue_http-0.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+queue_http-0.1.1.dist-info/top_level.txt,sha256=StwzvZ_nQwPDRL5G5ZFtZRgvshjiSP6ARSqz8CWwbGQ,2
+queue_http-0.1.1.dist-info/RECORD,,
