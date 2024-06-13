@@ -1,0 +1,2680 @@
+{
+  "version" : "2.16.0-alpha",
+  "buildTime" : "2023-10-03T12:20:03.941Z",
+  "gitCommit" : "XXX",
+  "activePlugins" : [ "Korona", "KoronaIncubator" ],
+  "modules" : [ {
+    "id" : "AngleDeletionModule",
+    "description" : "Converts split beam data to single beam data",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    } ]
+  }, {
+    "id" : "BroadbandNotchFilterModule",
+    "description" : "Applies notch filter(s) to broadband data",
+    "requiredConfigFiles" : [ "BroadbandNotchFilters" ],
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    } ]
+  }, {
+    "id" : "BroadbandSplitterModule",
+    "description" : "Splits broadband data into multiple single frequency channels",
+    "requiredConfigFiles" : [ "BroadbandSplitterBands" ],
+    "optionalConfigFiles" : [ "BroadbandNotchFilters" ],
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "AutoSplit",
+      "description" : "Split into equally large frequency bands",
+      "defaultValue" : false
+    }, {
+      "id" : "SplitCount",
+      "description" : "Number of bands per broadband channel",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 1",
+      "defaultValue" : 3
+    }, {
+      "id" : "StopBandDistance",
+      "description" : "Distance between pass- and stopband",
+      "unit" : "kHz",
+      "defaultValue" : 1.0
+    }, {
+      "id" : "MinBandwidth",
+      "description" : "Ignore bands smaller than minimal bandwidth",
+      "unit" : "kHz",
+      "defaultValue" : 10.0
+    }, {
+      "id" : "Downsampling",
+      "description" : "Downsampling method",
+      "allowedValues" : [ "NONE", "FACTOR", "SAMPLE_SIZE" ],
+      "defaultValue" : "FACTOR"
+    }, {
+      "id" : "DownsamplingFactor",
+      "description" : "Downsampling factor",
+      "allowedValuesDescription" : "? 1",
+      "defaultValue" : 1
+    }, {
+      "id" : "DownsamplingSampleSize",
+      "description" : "Downsampling factor is set to give approximately this sample size",
+      "unit" : "m",
+      "allowedValuesDescription" : "> 0",
+      "defaultValue" : 0.01
+    }, {
+      "id" : "ComputeAngles",
+      "description" : "",
+      "defaultValue" : true
+    }, {
+      "id" : "ComputationalMethod",
+      "description" : "Method for computing sv for each split band",
+      "allowedValues" : [ "BANDPASS_FILTERING", "GLIDING_FFT_WINDOW" ],
+      "defaultValue" : "BANDPASS_FILTERING"
+    }, {
+      "id" : "FftWindowSize",
+      "description" : "Size of the FFT window in units of pulse length",
+      "allowedValuesDescription" : "> 0",
+      "defaultValue" : 2.0
+    } ]
+  }, {
+    "id" : "BubblSpikeFilterModule",
+    "description" : "Filters bubble spikes",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "LogarithmicValues",
+      "description" : "Use log(sv)(checked) or sv (not checked)",
+      "defaultValue" : true
+    }, {
+      "id" : "ShowDetails",
+      "description" : "Shows more detailed settings (Only last, Channels to process, Automatic depthRange, Start depth, End depth)",
+      "defaultValue" : false
+    }, {
+      "id" : "OnlyLast",
+      "description" : "When true, only last channel is processed, if false all channels are processed",
+      "defaultValue" : false
+    }, {
+      "id" : "ChannelsToProcess",
+      "description" : "Process the n last channels (-1 for all channels)",
+      "unit" : "1",
+      "defaultValue" : -1
+    }, {
+      "id" : "AutomaticDepthRange",
+      "description" : "If true and Bottom detection module is used then the range goes to the detected seabed",
+      "defaultValue" : false
+    }, {
+      "id" : "StartDepth",
+      "description" : "Start depth (or range) for filter",
+      "unit" : "m",
+      "defaultValue" : 10.0
+    }, {
+      "id" : "EndDepth",
+      "description" : "End depth (or range) in meter for filter",
+      "unit" : "m",
+      "defaultValue" : 2500.0
+    }, {
+      "id" : "TotalDelta",
+      "description" : "Minimum difference of current sample to search window median to be spike candidate",
+      "unit" : "dB",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 15.0
+    }, {
+      "id" : "VerticalDelta",
+      "description" : "Minimum difference of search column median to (most) neighbouring pings to be spike candidate",
+      "unit" : "dB",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 15.0
+    }, {
+      "id" : "Debug",
+      "description" : "Sets value to 0 where spikes are detected",
+      "defaultValue" : false
+    }, {
+      "id" : "VerticalUnit",
+      "description" : "Unit for the height of the search window and the search columns",
+      "allowedValues" : [ "SAMPLES", "DURATION", "DISTANCE" ],
+      "defaultValue" : "DURATION"
+    }, {
+      "id" : "VerticalMedianSearchHeight",
+      "description" : "Half the height of the search column in number of samples",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 50
+    }, {
+      "id" : "WindowMedianSearchHeight",
+      "description" : "Half the height of the search window in number of samples",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 35
+    }, {
+      "id" : "VerticalMedianSearchDuration",
+      "description" : "Half the height of the search column in milliseconds",
+      "unit" : "ms",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 2.0
+    }, {
+      "id" : "WindowMedianSearchDuration",
+      "description" : "Half the height of the search window in milliseconds",
+      "unit" : "ms",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 4.4
+    }, {
+      "id" : "VerticalMedianSearchDistance",
+      "description" : "Half the height of the search column in meters",
+      "unit" : "m",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 1.9
+    }, {
+      "id" : "WindowMedianSearchDistance",
+      "description" : "Half the height of the search window in meters",
+      "unit" : "m",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 6.6
+    } ]
+  }, {
+    "id" : "CategorizationModule",
+    "description" : "Module for categorization",
+    "requiredConfigFiles" : [ "Categorization", "TransducerRanges" ],
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "CategoryCount",
+      "description" : "Number of categories per pixel to put in the categorization datagrams",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 1",
+      "defaultValue" : 3
+    }, {
+      "id" : "ActiveFeatures",
+      "description" : "Which features to use",
+      "parameters" : [ ]
+    }, {
+      "id" : "ActiveCategories",
+      "description" : "Which categories to use",
+      "parameters" : [ ]
+    }, {
+      "id" : "Categorizer",
+      "description" : "Type of classifier",
+      "allowedValues" : [ "Gauss", "Nearest neighbor", "Combined" ],
+      "defaultValue" : "Gauss"
+    }, {
+      "id" : "Discriminant",
+      "description" : "Type of discriminant function",
+      "allowedValues" : [ "Aposteriori", "Cost" ],
+      "defaultValue" : "Aposteriori"
+    }, {
+      "id" : "ContextualCorrection",
+      "description" : "Type of contextual correction iteration",
+      "allowedValues" : [ "None", "ICM" ],
+      "defaultValue" : "ICM"
+    }, {
+      "id" : "ContextualIterations",
+      "description" : "Number of contextual correction iterations",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 3
+    }, {
+      "id" : "UseMinLogSv",
+      "description" : "Enable Sv threshold",
+      "defaultValue" : true
+    }, {
+      "id" : "MinLogSv",
+      "description" : "Only assign category for samples above threshold at 38 kHz",
+      "unit" : "dB",
+      "defaultValue" : -100.0
+    } ]
+  }, {
+    "id" : "CdsViewerModule",
+    "description" : "For viewing the module configuration stored in a processed file",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    } ]
+  }, {
+    "id" : "ChannelDataRemovalModule",
+    "description" : "Removes data on specified channels",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "Channels",
+      "description" : "Comma separated list of channel numbers",
+      "allowedValuesDescription" : "> 0",
+      "defaultValue" : ""
+    }, {
+      "id" : "ChannelsFromEnd",
+      "description" : "Comma separated list of channel numbers from end. (1 = last channel, 2 = second last channel, etc.)",
+      "allowedValuesDescription" : "> 0",
+      "defaultValue" : ""
+    }, {
+      "id" : "Frequencies",
+      "description" : "Comma separated list of kHz",
+      "unit" : "kHz",
+      "allowedValuesDescription" : "> 0",
+      "defaultValue" : ""
+    }, {
+      "id" : "KeepSpecified",
+      "description" : "If selected then keep only the specified channels",
+      "defaultValue" : false
+    } ]
+  }, {
+    "id" : "ChannelRemovalModule",
+    "description" : "Removes specified channels",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "Channels",
+      "description" : "Comma separated list of channel numbers",
+      "allowedValuesDescription" : "> 0",
+      "defaultValue" : ""
+    }, {
+      "id" : "ChannelsFromEnd",
+      "description" : "Comma separated list of channel numbers from end. (1 = last channel, 2 = second last channel, etc.)",
+      "allowedValuesDescription" : "> 0",
+      "defaultValue" : ""
+    }, {
+      "id" : "Frequencies",
+      "description" : "Comma separated list of kHz",
+      "unit" : "kHz",
+      "allowedValuesDescription" : "> 0",
+      "defaultValue" : ""
+    }, {
+      "id" : "KeepSpecified",
+      "description" : "If selected then keep only the specified channels",
+      "defaultValue" : false
+    } ]
+  }, {
+    "id" : "CombinationModule",
+    "description" : "Module for generating combination echograms",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "FirstOperandKhz",
+      "description" : "Frequency of the first operand",
+      "unit" : "kHz",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 0
+    }, {
+      "id" : "SecondOperandKhz",
+      "description" : "Frequency of the second operand",
+      "unit" : "kHz",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 0
+    }, {
+      "id" : "FirstOperandChannel",
+      "description" : "Channel of the first operand (used if First operand kHz = 0)",
+      "allowedValuesDescription" : "? 1",
+      "defaultValue" : 1
+    }, {
+      "id" : "SecondOperandChannel",
+      "description" : "Channel of the second operand (used if Second operand kHz = 0)",
+      "allowedValuesDescription" : "? 1",
+      "defaultValue" : 2
+    }, {
+      "id" : "LogarithmicOperands",
+      "description" : "If checked use log(sv), otherwise use (linear) sv",
+      "defaultValue" : false
+    }, {
+      "id" : "Operation",
+      "description" : "Specifies how the operands are combined",
+      "allowedValues" : [ "-", "+", "*", "/", "mean", "harmonic mean", "min", "max", "zero", "copy1stOperand" ],
+      "defaultValue" : "mean"
+    } ]
+  }, {
+    "id" : "CommentModule",
+    "description" : "For writing a comment",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "GroupStart",
+      "description" : "This module defines the start of a collapsible group of modules",
+      "defaultValue" : false
+    }, {
+      "id" : "GroupCollapsed",
+      "description" : "Visually collapses all modules until the corresponding group end module",
+      "defaultValue" : false
+    }, {
+      "id" : "LineBreak",
+      "description" : "Line break before button in the module editor",
+      "defaultValue" : false
+    }, {
+      "id" : "VerticalSpace",
+      "description" : "Vertical space above button in the module editor",
+      "unit" : "pt",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 8
+    }, {
+      "id" : "Label",
+      "description" : "Displayed on the button in the module editor",
+      "defaultValue" : ""
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    } ]
+  }, {
+    "id" : "ComplexToRealModule",
+    "description" : "Converts complex data to real data. (Many modules require real data as input.)",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "ComputeAngles",
+      "description" : "If selected then angles are computed, otherwise removed",
+      "defaultValue" : true
+    }, {
+      "id" : "KeepBroadband",
+      "description" : "If selected then broadband data is not converted to real data",
+      "defaultValue" : false
+    } ]
+  }, {
+    "id" : "DataReductionModule",
+    "description" : "Removes data below configured transducer range",
+    "optionalConfigFiles" : [ "TransducerRanges" ],
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "BlindZone",
+      "description" : "Use the blind zone configured in Transducer ranges file",
+      "defaultValue" : false
+    }, {
+      "id" : "MinRange",
+      "description" : "",
+      "unit" : "m",
+      "defaultValue" : ""
+    }, {
+      "id" : "MinDepth",
+      "description" : "",
+      "unit" : "m",
+      "defaultValue" : ""
+    }, {
+      "id" : "TransducerRange",
+      "description" : "Use the range configured in Transducer ranges file",
+      "defaultValue" : true
+    }, {
+      "id" : "MaxRange",
+      "description" : "",
+      "unit" : "m",
+      "defaultValue" : ""
+    }, {
+      "id" : "MaxDepth",
+      "description" : "",
+      "unit" : "m",
+      "defaultValue" : ""
+    } ]
+  }, {
+    "id" : "DepthDependentResamplingModule",
+    "description" : "Depth dependent resampling",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "MinFrequency",
+      "description" : "Apply resampling to channels with at least this frequency",
+      "unit" : "kHz",
+      "defaultValue" : 150.0
+    }, {
+      "id" : "SampleDistanceAtRange100",
+      "description" : "Sample distance at 100 m range",
+      "unit" : "m",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 0.0
+    } ]
+  }, {
+    "id" : "DepthModule",
+    "description" : "Bottom depth detection module",
+    "requiredConfigFiles" : [ "TransducerRanges" ],
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "Algorithm",
+      "description" : "The algorithm to be used in the bottom calculation",
+      "allowedValues" : [ "EK500", "Gradient", "Threshold", "Pelagic" ],
+      "defaultValue" : "EK500"
+    }, {
+      "id" : "MinDepthLimit",
+      "description" : "The maximal distance above bottom accepted as the minimal bottom distance",
+      "unit" : "m",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 10.0
+    }, {
+      "id" : "MinDepthValueFraction",
+      "description" : "A fraction of the maximal bottom echo strength. Used in the minimal bottom calculation",
+      "allowedValuesDescription" : "> 0",
+      "defaultValue" : 0.001
+    }, {
+      "id" : "SignalStrengthThreshold",
+      "description" : "The detected bottom must have signal strength larger than this value",
+      "unit" : "dB",
+      "defaultValue" : -31.0
+    }, {
+      "id" : "MinimumDepthThresholdFactor",
+      "description" : "Shallowest acceptable depth relative to max depth",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 0.99
+    }, {
+      "id" : "MaxRangeFactor",
+      "description" : "Factor to multiply with given transducer ranges for ranges used in depth detection",
+      "allowedValuesDescription" : "> 0",
+      "defaultValue" : 1.5
+    }, {
+      "id" : "AlwaysDetectBottom",
+      "description" : "Always try to detect bottom even if echosounder has zero bottom at all frequencies",
+      "defaultValue" : true
+    }, {
+      "id" : "MinBottomDepth",
+      "description" : "The detected bottom must be minimum this value",
+      "unit" : "m",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 0.0
+    }, {
+      "id" : "MaxBottomDepth",
+      "description" : "The detected bottom must be maximum this value",
+      "unit" : "m",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 9999.0
+    }, {
+      "id" : "MinKHz",
+      "description" : "Only use channels with at least this frequency",
+      "unit" : "kHz",
+      "defaultValue" : 0.0
+    }, {
+      "id" : "MaxKHz",
+      "description" : "Only use channels with at most this frequency",
+      "unit" : "kHz",
+      "defaultValue" : 9999.0
+    }, {
+      "id" : "DoNotUseKHz",
+      "description" : "Comma separated list of frequencies to not use",
+      "unit" : "kHz",
+      "defaultValue" : ""
+    } ]
+  }, {
+    "id" : "DilateModule",
+    "description" : "A dilation filter.<br>Each pixel gets the value of the max value of its neighbors",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "LogarithmicValues",
+      "description" : "Use log(sv)(checked) or sv (not checked)",
+      "defaultValue" : true
+    }, {
+      "id" : "ShowDetails",
+      "description" : "Shows more detailed settings (Only last, Channels to process, Automatic depthRange, Start depth, End depth)",
+      "defaultValue" : false
+    }, {
+      "id" : "OnlyLast",
+      "description" : "When true, only last channel is processed, if false all channels are processed",
+      "defaultValue" : false
+    }, {
+      "id" : "ChannelsToProcess",
+      "description" : "Process the n last channels (-1 for all channels)",
+      "unit" : "1",
+      "defaultValue" : -1
+    }, {
+      "id" : "AutomaticDepthRange",
+      "description" : "If true and Bottom detection module is used then the range goes to the detected seabed",
+      "defaultValue" : true
+    }, {
+      "id" : "StartDepth",
+      "description" : "Start depth (or range) for filter",
+      "unit" : "m",
+      "defaultValue" : 10.0
+    }, {
+      "id" : "EndDepth",
+      "description" : "End depth (or range) in meter for filter",
+      "unit" : "m",
+      "defaultValue" : 1000.0
+    }, {
+      "id" : "VertResolution",
+      "description" : "Vertical resolution of filter in samples",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 1",
+      "defaultValue" : 1
+    } ]
+  }, {
+    "id" : "DownsamplingModule",
+    "description" : "Downsampling to reduce vertical resolution",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "Downsampling",
+      "description" : "Downsampling method",
+      "allowedValues" : [ "NONE", "FACTOR", "SAMPLE_SIZE" ],
+      "defaultValue" : "FACTOR"
+    }, {
+      "id" : "DownsamplingFactor",
+      "description" : "Downsampling factor",
+      "allowedValuesDescription" : "? 1",
+      "defaultValue" : 1
+    }, {
+      "id" : "DownsamplingSampleSize",
+      "description" : "Downsampling factor is set to give approximately this sample size",
+      "unit" : "m",
+      "allowedValuesDescription" : "> 0",
+      "defaultValue" : 0.01
+    } ]
+  }, {
+    "id" : "ES60CorrectionModule",
+    "description" : "Removes the ES60 triangle noise",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "ReliabilityDetectionWindow",
+      "description" : "Window used when computing statistics used when determining best fit triangle",
+      "unit" : "1",
+      "defaultValue" : 5
+    }, {
+      "id" : "PerformScan",
+      "description" : "Will perform a scan for the triangle index of the first ping in the next file",
+      "defaultValue" : false
+    }, {
+      "id" : "ContinueAcrossFiles",
+      "description" : "Continue the current wave index number across files",
+      "defaultValue" : false
+    } ]
+  }, {
+    "id" : "EdgeDetectionModule",
+    "description" : "Detects edges by using Sobel horizontal and vertical filter",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "LogarithmicValues",
+      "description" : "Use log(sv)(checked) or sv (not checked)",
+      "defaultValue" : true
+    }, {
+      "id" : "ShowDetails",
+      "description" : "Shows more detailed settings (Only last, Channels to process, Automatic depthRange, Start depth, End depth)",
+      "defaultValue" : false
+    }, {
+      "id" : "OnlyLast",
+      "description" : "When true, only last channel is processed, if false all channels are processed",
+      "defaultValue" : false
+    }, {
+      "id" : "ChannelsToProcess",
+      "description" : "Process the n last channels (-1 for all channels)",
+      "unit" : "1",
+      "defaultValue" : -1
+    }, {
+      "id" : "AutomaticDepthRange",
+      "description" : "If true and Bottom detection module is used then the range goes to the detected seabed",
+      "defaultValue" : true
+    }, {
+      "id" : "StartDepth",
+      "description" : "Start depth (or range) for filter",
+      "unit" : "m",
+      "defaultValue" : 10.0
+    }, {
+      "id" : "EndDepth",
+      "description" : "End depth (or range) in meter for filter",
+      "unit" : "m",
+      "defaultValue" : 1000.0
+    }, {
+      "id" : "ScaleFactor",
+      "description" : "Scale of filter",
+      "defaultValue" : 1.0
+    }, {
+      "id" : "VertResolution",
+      "description" : "Vertical resolution of filter in samples",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 1
+    } ]
+  }, {
+    "id" : "EmptyPingRemovalModule",
+    "description" : "Deletes empty pings",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    } ]
+  }, {
+    "id" : "ErodeLowValuesModule",
+    "description" : "Erode values in a spatial surrounding (given by vertical extent) - often used after top thresholding by means of Thresholding module",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "LogarithmicValues",
+      "description" : "Use log(sv)(checked) or sv (not checked)",
+      "defaultValue" : true
+    }, {
+      "id" : "ShowDetails",
+      "description" : "Shows more detailed settings (Only last, Channels to process, Automatic depthRange, Start depth, End depth)",
+      "defaultValue" : false
+    }, {
+      "id" : "OnlyLast",
+      "description" : "When true, only last channel is processed, if false all channels are processed",
+      "defaultValue" : false
+    }, {
+      "id" : "ChannelsToProcess",
+      "description" : "Process the n last channels (-1 for all channels)",
+      "unit" : "1",
+      "defaultValue" : -1
+    }, {
+      "id" : "AutomaticDepthRange",
+      "description" : "If true and Bottom detection module is used then the range goes to the detected seabed",
+      "defaultValue" : true
+    }, {
+      "id" : "StartDepth",
+      "description" : "Start depth (or range) for filter",
+      "unit" : "m",
+      "defaultValue" : 10.0
+    }, {
+      "id" : "EndDepth",
+      "description" : "End depth (or range) in meter for filter",
+      "unit" : "m",
+      "defaultValue" : 1000.0
+    }, {
+      "id" : "Threshold",
+      "description" : "Threshold value",
+      "unit" : "dB",
+      "defaultValue" : -70.0
+    }, {
+      "id" : "ReplacementValue",
+      "description" : "Value to set to samples near a sample with value <= 'Threshold'",
+      "unit" : "dB",
+      "defaultValue" : -120.0
+    }, {
+      "id" : "VerticalExtent",
+      "description" : "A sample below the threshold will erode all samples closer than this distance vertically",
+      "unit" : "m",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 1.0
+    } ]
+  }, {
+    "id" : "ErodeModule",
+    "description" : "An erode filter.<br>Each pixel gets the value of the min value of its neighbors",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "LogarithmicValues",
+      "description" : "Use log(sv)(checked) or sv (not checked)",
+      "defaultValue" : true
+    }, {
+      "id" : "ShowDetails",
+      "description" : "Shows more detailed settings (Only last, Channels to process, Automatic depthRange, Start depth, End depth)",
+      "defaultValue" : false
+    }, {
+      "id" : "OnlyLast",
+      "description" : "When true, only last channel is processed, if false all channels are processed",
+      "defaultValue" : false
+    }, {
+      "id" : "ChannelsToProcess",
+      "description" : "Process the n last channels (-1 for all channels)",
+      "unit" : "1",
+      "defaultValue" : -1
+    }, {
+      "id" : "AutomaticDepthRange",
+      "description" : "If true and Bottom detection module is used then the range goes to the detected seabed",
+      "defaultValue" : true
+    }, {
+      "id" : "StartDepth",
+      "description" : "Start depth (or range) for filter",
+      "unit" : "m",
+      "defaultValue" : 10.0
+    }, {
+      "id" : "EndDepth",
+      "description" : "End depth (or range) in meter for filter",
+      "unit" : "m",
+      "defaultValue" : 1000.0
+    }, {
+      "id" : "VertResolution",
+      "description" : "Vertical resolution of filter in samples",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 1",
+      "defaultValue" : 1
+    } ]
+  }, {
+    "id" : "ExpressionModule",
+    "description" : "Module for generating combination echograms by an expression",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "Expression",
+      "description" : "",
+      "defaultValue" : [ "C1" ]
+    } ]
+  }, {
+    "id" : "FillMissingDataModule",
+    "description" : "Creates missing pingdata",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    } ]
+  }, {
+    "id" : "Filter3X3Module",
+    "description" : "Class implementing a 3�3 filter",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "LogarithmicValues",
+      "description" : "Use log(sv)(checked) or sv (not checked)",
+      "defaultValue" : true
+    }, {
+      "id" : "ShowDetails",
+      "description" : "Shows more detailed settings (Only last, Channels to process, Automatic depthRange, Start depth, End depth)",
+      "defaultValue" : false
+    }, {
+      "id" : "OnlyLast",
+      "description" : "When true, only last channel is processed, if false all channels are processed",
+      "defaultValue" : false
+    }, {
+      "id" : "ChannelsToProcess",
+      "description" : "Process the n last channels (-1 for all channels)",
+      "unit" : "1",
+      "defaultValue" : -1
+    }, {
+      "id" : "AutomaticDepthRange",
+      "description" : "If true and Bottom detection module is used then the range goes to the detected seabed",
+      "defaultValue" : true
+    }, {
+      "id" : "StartDepth",
+      "description" : "Start depth (or range) for filter",
+      "unit" : "m",
+      "defaultValue" : 10.0
+    }, {
+      "id" : "EndDepth",
+      "description" : "End depth (or range) in meter for filter",
+      "unit" : "m",
+      "defaultValue" : 1000.0
+    }, {
+      "id" : "FilterType",
+      "description" : "Specifies what filter to use",
+      "allowedValues" : [ "User defined", "/*smooth1*/{{1,2,1},{2,1,2},{1,2,1}}", "/*smooth2*/{{1,1,1},{1,1,1},{1,1,1}}", "/*lowpass*/{{1,2,1},{2,4,2},{1,2,1}}", "/*sharpen*/{{-1,-1,-1},{-1,9,-1},{-1,-1,-1}}", "/*Laplacian edge (Deltasquared)*/{{1,-2,1},{-2,4,-2},{1,-2,1}}", "/*Laplacian edge1)*/{{1,1,1},{1,-8,1},{1,1,1}}", "/*Laplacian edge1 minus*/{{-1,-1,-1},{-1,8,-1},{-1,-1,-1}}", "/*Sobel horizontal edge -*/{{-1,-2,-1},{0,0,0},{1,2,1}}", "/*Sobel vertical edge |*/{{-1,0,1},{-2,0,2},{-1,0,1}}", "/*Sobel skew edge*/{{0,-1,-2},{1,0,-1},{2,1,0}}}", "/*Sobel skew edge  / */{{-2,-1,0},{-1,0,1},{0,1,2}}}" ],
+      "defaultValue" : "User defined"
+    }, {
+      "id" : "00",
+      "description" : "",
+      "defaultValue" : 1.0
+    }, {
+      "id" : "01",
+      "description" : "",
+      "defaultValue" : 1.0
+    }, {
+      "id" : "02",
+      "description" : "",
+      "defaultValue" : 1.0
+    }, {
+      "id" : "10",
+      "description" : "",
+      "defaultValue" : 1.0
+    }, {
+      "id" : "11",
+      "description" : "",
+      "defaultValue" : 1.0
+    }, {
+      "id" : "12",
+      "description" : "",
+      "defaultValue" : 1.0
+    }, {
+      "id" : "20",
+      "description" : "",
+      "defaultValue" : 1.0
+    }, {
+      "id" : "21",
+      "description" : "",
+      "defaultValue" : 1.0
+    }, {
+      "id" : "22",
+      "description" : "",
+      "defaultValue" : 1.0
+    } ]
+  }, {
+    "id" : "FiskViewDisplayModule",
+    "description" : "Display module",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    } ]
+  }, {
+    "id" : "GroupEndModule",
+    "description" : "End of a module group",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    } ]
+  }, {
+    "id" : "HorizontalOffsetCorrectionModule",
+    "description" : "Performs horizontal offset correction",
+    "requiredConfigFiles" : [ "HorizontalTransducerOffsets" ],
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    } ]
+  }, {
+    "id" : "IsolationModule",
+    "description" : "Isolates one category by zeroing out all pixels of different categories",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "Category",
+      "description" : "The name of the category to isolate",
+      "defaultValue" : ""
+    } ]
+  }, {
+    "id" : "MedianModule",
+    "description" : "Sets the pixel value to median of its 8 neighbors and itself",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "LogarithmicValues",
+      "description" : "Use log(sv)(checked) or sv (not checked)",
+      "defaultValue" : true
+    }, {
+      "id" : "ShowDetails",
+      "description" : "Shows more detailed settings (Only last, Channels to process, Automatic depthRange, Start depth, End depth)",
+      "defaultValue" : false
+    }, {
+      "id" : "OnlyLast",
+      "description" : "When true, only last channel is processed, if false all channels are processed",
+      "defaultValue" : false
+    }, {
+      "id" : "ChannelsToProcess",
+      "description" : "Process the n last channels (-1 for all channels)",
+      "unit" : "1",
+      "defaultValue" : -1
+    }, {
+      "id" : "AutomaticDepthRange",
+      "description" : "If true and Bottom detection module is used then the range goes to the detected seabed",
+      "defaultValue" : true
+    }, {
+      "id" : "StartDepth",
+      "description" : "Start depth (or range) for filter",
+      "unit" : "m",
+      "defaultValue" : 10.0
+    }, {
+      "id" : "EndDepth",
+      "description" : "End depth (or range) in meter for filter",
+      "unit" : "m",
+      "defaultValue" : 1000.0
+    } ]
+  }, {
+    "id" : "NoiseAcceptanceModule",
+    "description" : "Median noise acceptance",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "NoiseFraction",
+      "description" : "The fraction of detected noise to noise on file should lie within this range",
+      "defaultValue" : {
+        "min" : 0.25,
+        "max" : 4.0
+      }
+    }, {
+      "id" : "UseFileNoiseFile",
+      "description" : "Check the noise against file noise file, if available",
+      "defaultValue" : true
+    }, {
+      "id" : "UseDayNoiseFile",
+      "description" : "Check the noise against day noise file, if available",
+      "defaultValue" : true
+    }, {
+      "id" : "UseSurveyNoiseFile",
+      "description" : "Check the noise against survey noise file, if available",
+      "defaultValue" : true
+    }, {
+      "id" : "UseSurveyLowNoiseFile",
+      "description" : "Check the noise against survey low-median noise file, if available",
+      "defaultValue" : true
+    } ]
+  }, {
+    "id" : "NoiseMedianQuantificationModule",
+    "description" : "Median noise quantification",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "PingHistory",
+      "description" : "Number of historical pings to use when computing new noise values",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 10
+    }, {
+      "id" : "NoiseSamplesPerBeam",
+      "description" : "Number of samples to extract per beam for noise calculation (median)",
+      "unit" : "1",
+      "allowedValuesDescription" : "> 0",
+      "defaultValue" : 100
+    }, {
+      "id" : "DetectionDistance",
+      "description" : "The distance for each beam used for noise detection",
+      "unit" : "m",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 50.0
+    }, {
+      "id" : "InnermostDistance",
+      "description" : "Whether to use the innermost or outermost part of the beam",
+      "defaultValue" : false
+    } ]
+  }, {
+    "id" : "NoiseQuantificationModule",
+    "description" : "Produces noise quantification datagrams",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "Smooth",
+      "description" : "Type of smoothing",
+      "allowedValues" : [ "none", "running averager", "averager" ],
+      "defaultValue" : "running averager"
+    }, {
+      "id" : "SmoothInterval",
+      "description" : "Number of samples to smooth vertically before making histogram",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 5
+    }, {
+      "id" : "Mask",
+      "description" : "Type of masking",
+      "allowedValues" : [ "none", "dynamic" ],
+      "defaultValue" : "dynamic"
+    }, {
+      "id" : "MinimumQuality",
+      "description" : "Minimum quality of sample-location used as input to histogram to estimate noise. Quality below: bottom=100, long_range=100, range(no_bottom)=90, bottom(2)=75, range(2)=75, between_range_and_bottom=50, range(3)=25, all_data=0.",
+      "allowedValuesDescription" : "[0, 100]",
+      "defaultValue" : 60.0
+    }, {
+      "id" : "ThresholdMasking",
+      "description" : "Do not use samples with Sv values, including reflections below bottom, above the given threshold",
+      "defaultValue" : false
+    }, {
+      "id" : "Threshold",
+      "description" : "The threshold to use for threshold masking",
+      "unit" : "dB",
+      "defaultValue" : -80.0
+    }, {
+      "id" : "Histogram",
+      "description" : "Type of histogram",
+      "allowedValues" : [ "geometric", "linear", "constant" ],
+      "defaultValue" : "geometric"
+    }, {
+      "id" : "UseTimeStepBuffer",
+      "description" : "Try to center noise parameters",
+      "defaultValue" : true
+    }, {
+      "id" : "TimeStepBufferMaxSize",
+      "description" : "Maximum number of pings in buffer",
+      "unit" : "1",
+      "defaultValue" : 50
+    }, {
+      "id" : "HistogramInitializationCellCount",
+      "description" : "Number of cells in the histograms at initialization",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 1",
+      "defaultValue" : 500
+    }, {
+      "id" : "HistogramMaximumCellCount",
+      "description" : "Maximum number of cells in the histograms",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 1",
+      "defaultValue" : 2000
+    }, {
+      "id" : "HistogramInitializationSampleCount",
+      "description" : "Minimum count of noise samples at initialization of the histograms",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 1",
+      "defaultValue" : 1000
+    }, {
+      "id" : "HistogramMinimumSampleCount",
+      "description" : "Minimum number of noise samples in the histograms",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 1",
+      "defaultValue" : 25000
+    }, {
+      "id" : "HistogramSmooth",
+      "description" : "Whether or not to smooth the probability distribution",
+      "defaultValue" : true
+    }, {
+      "id" : "HistogramSmoothFactor",
+      "description" : "Diffusion time step = HistogramSmoothFactor � dx^2",
+      "allowedValuesDescription" : "> 0",
+      "defaultValue" : 100.0
+    }, {
+      "id" : "SdevMasking",
+      "description" : "Use specified number of standard deviations as high noise limit (NH) instead of system decided standard (approx 2 stdev). Minimum is system decided standard.",
+      "defaultValue" : false
+    }, {
+      "id" : "Sdev",
+      "description" : "No stdev left of noise-pdf top (NT) to be used as high noise (NH). NB! Not used to estimate average noise NE.",
+      "allowedValuesDescription" : "> 0",
+      "defaultValue" : 10.0
+    }, {
+      "id" : "SNMasking",
+      "description" : "Remove all values less than S/N ratio less than estimated noise",
+      "defaultValue" : false
+    }, {
+      "id" : "SNRatio",
+      "description" : "Minimum ratio of signal to top of noise pdf-histogram, i.e. signal/NT",
+      "allowedValuesDescription" : "> 0",
+      "defaultValue" : 10.0
+    }, {
+      "id" : "UseFallbackNoiseQuantile",
+      "description" : "Use lower quantile of fallback noise on file instead of calculated noise",
+      "defaultValue" : false
+    }, {
+      "id" : "FallbackNoiseQuantile",
+      "description" : "Lower quantile of fallback noise on file",
+      "unit" : "%",
+      "allowedValuesDescription" : "[0, 100]",
+      "defaultValue" : 5.0
+    }, {
+      "id" : "FallbackNoiseChannels",
+      "description" : "Boolean expression using f = frequency in kHz, c = channel number, n = channel count",
+      "defaultValue" : "true"
+    }, {
+      "id" : "WritePlotParameters",
+      "description" : "Incubating feature: Writes some parameter values for use in echogram plot",
+      "defaultValue" : false
+    } ]
+  }, {
+    "id" : "NoiseRemoverModule",
+    "description" : "Removes noise based on parameters in noise quantification datagrams",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "RemoveNoiseFromStart",
+      "description" : "Search for noise parameter datagram and use it for the first datagrams",
+      "defaultValue" : true
+    }, {
+      "id" : "MaxBufferSize",
+      "description" : "Maximum number of pings in buffer when searching for first noise parameter datagram",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 10
+    } ]
+  }, {
+    "id" : "NoiseVisualizationModule",
+    "description" : "Visualizes noise parameters in a separate window",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "UpdatePeriod",
+      "description" : "Number of pings between each graph update",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 1",
+      "defaultValue" : 20
+    }, {
+      "id" : "TimeSeriesLength",
+      "description" : "Number of seconds in the time series",
+      "unit" : "s",
+      "allowedValuesDescription" : "? 1",
+      "defaultValue" : 200
+    }, {
+      "id" : "HistogramSpan",
+      "description" : "Upper limit of plotted histogram domain in multiples of N_H",
+      "allowedValuesDescription" : "> 0",
+      "defaultValue" : 3.0
+    }, {
+      "id" : "MedianSampleCount",
+      "description" : "Number of equidistant samples used for finding median noise",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 500
+    } ]
+  }, {
+    "id" : "PingCollapsingModule",
+    "description" : "Collapses sequential pinging",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    } ]
+  }, {
+    "id" : "PingThinningModule",
+    "description" : "Deletes pings",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "PingsToSkipInitially",
+      "description" : "Number of pings to skip initially",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 0
+    }, {
+      "id" : "PingsToSkip",
+      "description" : "Number of pings to skip periodically",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 0
+    } ]
+  }, {
+    "id" : "PlanktonInversionModule",
+    "description" : "Performs plankton inversion",
+    "requiredConfigFiles" : [ "Plankton", "Categorization" ],
+    "optionalConfigFiles" : [ "TransducerRanges" ],
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "VerticalUnit",
+      "description" : "Unit for the height of the search window and the search columns",
+      "allowedValues" : [ "SAMPLES", "DURATION", "DISTANCE" ],
+      "defaultValue" : "SAMPLES"
+    }, {
+      "id" : "PingsPerBin",
+      "description" : "Pings per bin",
+      "unit" : "1",
+      "allowedValuesDescription" : "> 0",
+      "defaultValue" : 7
+    }, {
+      "id" : "DepthSamplesPerBin",
+      "description" : "Bin height in number of samples",
+      "unit" : "1",
+      "allowedValuesDescription" : "> 0",
+      "defaultValue" : 30
+    }, {
+      "id" : "DepthDurationPerBin",
+      "description" : "Bin height in milliseconds",
+      "unit" : "ms",
+      "allowedValuesDescription" : "> 0",
+      "defaultValue" : 4.0
+    }, {
+      "id" : "DepthDistancePerBin",
+      "description" : "Bin height in meters",
+      "unit" : "m",
+      "allowedValuesDescription" : "> 0",
+      "defaultValue" : 6.0
+    }, {
+      "id" : "Use global noise threshold",
+      "description" : "Check this if a global noise threshold should be used",
+      "defaultValue" : true
+    }, {
+      "id" : "Noise threshold",
+      "description" : "Global noise threshold",
+      "unit" : "dB",
+      "defaultValue" : -90.0
+    }, {
+      "id" : "Use min depth",
+      "description" : "Check this if min depth should be used",
+      "defaultValue" : false
+    }, {
+      "id" : "Min depth",
+      "description" : "Min depth used in the processing",
+      "unit" : "m",
+      "defaultValue" : 20.0
+    }, {
+      "id" : "Use max depth",
+      "description" : "Check this if max depth should be used",
+      "defaultValue" : false
+    }, {
+      "id" : "Max depth",
+      "description" : "Max depth used in the processing",
+      "unit" : "m",
+      "defaultValue" : 110.0
+    }, {
+      "id" : "CategoriesUsedForInversion",
+      "description" : "Which categories to perform inversion for",
+      "parameters" : [ ]
+    }, {
+      "id" : "UseAllFrequencies",
+      "description" : "If checked, all frequencies are used in the inversion",
+      "defaultValue" : true
+    }, {
+      "id" : "ActiveFrequencies",
+      "description" : "Which frequencies to use",
+      "parameters" : [ ]
+    }, {
+      "id" : "MinResidualErrorThreshold",
+      "description" : "Threshold for stopping iteration",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 0.01
+    }, {
+      "id" : "MaxResidualErrorThreshold",
+      "description" : "Threshold for accepting solution",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 0.2
+    }, {
+      "id" : "LevenbergMarquardtFactor",
+      "description" : "Trade-off between residual error and solution norm",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 5.0E-4
+    }, {
+      "id" : "MaxIter",
+      "description" : "Maximum iteration count for each model",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 1",
+      "defaultValue" : 4
+    }, {
+      "id" : "HardShelled",
+      "description" : "Use hard shelled sphere model",
+      "defaultValue" : true
+    }, {
+      "id" : "HardShelledR",
+      "description" : "Reflection coefficient parameter",
+      "defaultValue" : 0.5
+    }, {
+      "id" : "GaseousSphere",
+      "description" : "Use gaseous sphere model",
+      "defaultValue" : true
+    }, {
+      "id" : "GasSphereG",
+      "description" : "g parameter (relative mass density)",
+      "defaultValue" : 0.0012
+    }, {
+      "id" : "GasSphereH",
+      "description" : "h parameter (relative sound speed)",
+      "defaultValue" : 0.22
+    }, {
+      "id" : "FluidSpheriod",
+      "description" : "Use fluid prolate spheroid model",
+      "defaultValue" : true
+    }, {
+      "id" : "FluidSpheriodG",
+      "description" : "g parameter",
+      "defaultValue" : 1.043
+    }, {
+      "id" : "FluidSpheriodH",
+      "description" : "h parameter",
+      "defaultValue" : 1.052
+    }, {
+      "id" : "FluidSpheriodBeta",
+      "description" : "Length to width ratio (preferably not less than 5)",
+      "defaultValue" : 5.0
+    }, {
+      "id" : "FluidBent",
+      "description" : "Use fluid bent cylinder model",
+      "defaultValue" : true
+    }, {
+      "id" : "FluidBentR",
+      "description" : "Reflection coefficient parameter",
+      "defaultValue" : 0.058
+    }, {
+      "id" : "FluidBentS",
+      "description" : "Standard deviation of length",
+      "defaultValue" : 0.1
+    }, {
+      "id" : "FluidBentBeta",
+      "description" : "Length to width ratio",
+      "defaultValue" : 11.0
+    }, {
+      "id" : "FluidBent2",
+      "description" : "Use fluid bent cylinder model",
+      "defaultValue" : false
+    }, {
+      "id" : "FluidBentR2",
+      "description" : "Reflection coefficient parameter",
+      "defaultValue" : 0.058
+    }, {
+      "id" : "FluidBentS2",
+      "description" : "Standard deviation of length",
+      "defaultValue" : 0.1
+    }, {
+      "id" : "FluidBentBeta 2",
+      "description" : "Length to width ratio",
+      "defaultValue" : 11.0
+    }, {
+      "id" : "SDWBA",
+      "description" : "Use simplified SDWBA model (Renfree parametrisation)",
+      "defaultValue" : false
+    }, {
+      "id" : "SDWBA coeff",
+      "description" : "SDWBA coefficient set",
+      "allowedValues" : [ "N(0, 1)", "N(0, 5)", "N(0, 10)", "N(0, 15)", "N(0, 20)", "N(0, 25)", "N(0, 30)", "N(0, 35)", "N(3, 1)", "N(4, 2)", "N(4, 5)", "N(4, 10)", "N(4, 15)", "N(4, 30)", "N(5, 5)", "N(5, 10)", "N(5, 15)", "N(5, 20)", "N(5, 25)", "N(5, 30)", "N(5, 35)", "N(9, 1)", "N(11, 4)", "N(11, 10)", "N(11, 15)", "N(11, 20)", "N(11, 25)", "N(11, 30)", "N(11, 35)", "N(15, 5)", "N(15, 10)", "N(15, 15)", "N(15, 20)", "N(15, 25)", "N(15, 30)", "N(15, 35)", "N(30, 5)", "N(30, 10)", "N(30, 15)", "N(30, 30)" ],
+      "defaultValue" : "N(0, 30)"
+    }, {
+      "id" : "SDWBA2",
+      "description" : "Use simplified SDWBA model (Renfree parametrisation)",
+      "defaultValue" : false
+    }, {
+      "id" : "SDWBA 2 coeff",
+      "description" : "SDWBA coefficient set",
+      "allowedValues" : [ "N(0, 1)", "N(0, 5)", "N(0, 10)", "N(0, 15)", "N(0, 20)", "N(0, 25)", "N(0, 30)", "N(0, 35)", "N(3, 1)", "N(4, 2)", "N(4, 5)", "N(4, 10)", "N(4, 15)", "N(4, 30)", "N(5, 5)", "N(5, 10)", "N(5, 15)", "N(5, 20)", "N(5, 25)", "N(5, 30)", "N(5, 35)", "N(9, 1)", "N(11, 4)", "N(11, 10)", "N(11, 15)", "N(11, 20)", "N(11, 25)", "N(11, 30)", "N(11, 35)", "N(15, 5)", "N(15, 10)", "N(15, 15)", "N(15, 20)", "N(15, 25)", "N(15, 30)", "N(15, 35)", "N(30, 5)", "N(30, 10)", "N(30, 15)", "N(30, 30)" ],
+      "defaultValue" : "N(0, 30)"
+    }, {
+      "id" : "SDWBA3",
+      "description" : "Use simplified SDWBA model (Renfree parametrisation)",
+      "defaultValue" : false
+    }, {
+      "id" : "SDWBA 3 coeff",
+      "description" : "SDWBA coefficient set",
+      "allowedValues" : [ "N(0, 1)", "N(0, 5)", "N(0, 10)", "N(0, 15)", "N(0, 20)", "N(0, 25)", "N(0, 30)", "N(0, 35)", "N(3, 1)", "N(4, 2)", "N(4, 5)", "N(4, 10)", "N(4, 15)", "N(4, 30)", "N(5, 5)", "N(5, 10)", "N(5, 15)", "N(5, 20)", "N(5, 25)", "N(5, 30)", "N(5, 35)", "N(9, 1)", "N(11, 4)", "N(11, 10)", "N(11, 15)", "N(11, 20)", "N(11, 25)", "N(11, 30)", "N(11, 35)", "N(15, 5)", "N(15, 10)", "N(15, 15)", "N(15, 20)", "N(15, 25)", "N(15, 30)", "N(15, 35)", "N(30, 5)", "N(30, 10)", "N(30, 15)", "N(30, 30)" ],
+      "defaultValue" : "N(0, 30)"
+    }, {
+      "id" : "SDWBA4",
+      "description" : "Use simplified SDWBA model (Renfree parametrisation)",
+      "defaultValue" : false
+    }, {
+      "id" : "SDWBA 4 coeff",
+      "description" : "SDWBA coefficient set",
+      "allowedValues" : [ "N(0, 1)", "N(0, 5)", "N(0, 10)", "N(0, 15)", "N(0, 20)", "N(0, 25)", "N(0, 30)", "N(0, 35)", "N(3, 1)", "N(4, 2)", "N(4, 5)", "N(4, 10)", "N(4, 15)", "N(4, 30)", "N(5, 5)", "N(5, 10)", "N(5, 15)", "N(5, 20)", "N(5, 25)", "N(5, 30)", "N(5, 35)", "N(9, 1)", "N(11, 4)", "N(11, 10)", "N(11, 15)", "N(11, 20)", "N(11, 25)", "N(11, 30)", "N(11, 35)", "N(15, 5)", "N(15, 10)", "N(15, 15)", "N(15, 20)", "N(15, 25)", "N(15, 30)", "N(15, 35)", "N(30, 5)", "N(30, 10)", "N(30, 15)", "N(30, 30)" ],
+      "defaultValue" : "N(0, 30)"
+    }, {
+      "id" : "SDWBA5",
+      "description" : "Use simplified SDWBA model (Renfree parametrisation)",
+      "defaultValue" : false
+    }, {
+      "id" : "SDWBA 5 coeff",
+      "description" : "SDWBA coefficient set",
+      "allowedValues" : [ "N(0, 1)", "N(0, 5)", "N(0, 10)", "N(0, 15)", "N(0, 20)", "N(0, 25)", "N(0, 30)", "N(0, 35)", "N(3, 1)", "N(4, 2)", "N(4, 5)", "N(4, 10)", "N(4, 15)", "N(4, 30)", "N(5, 5)", "N(5, 10)", "N(5, 15)", "N(5, 20)", "N(5, 25)", "N(5, 30)", "N(5, 35)", "N(9, 1)", "N(11, 4)", "N(11, 10)", "N(11, 15)", "N(11, 20)", "N(11, 25)", "N(11, 30)", "N(11, 35)", "N(15, 5)", "N(15, 10)", "N(15, 15)", "N(15, 20)", "N(15, 25)", "N(15, 30)", "N(15, 35)", "N(30, 5)", "N(30, 10)", "N(30, 15)", "N(30, 30)" ],
+      "defaultValue" : "N(0, 30)"
+    }, {
+      "id" : "SDWBAS",
+      "description" : "Use simplified SDWBA model (Conti parametrisation)",
+      "defaultValue" : false
+    }, {
+      "id" : "SDWBA smooth coeff",
+      "description" : "SDWBA coefficient set",
+      "allowedValues" : [ "N(11, 4)", "N(9, 1)", "N(4, 2)", "N(3, 1)", "N(15, 5)", "N(30, 15)", "N(30, 5)", "N(15, 10)", "N(11, 10)", "N(0, 1)", "N(15, 15)" ],
+      "defaultValue" : "N(4, 2)"
+    }, {
+      "id" : "PlotResolution",
+      "description" : "kA resolution of curves",
+      "allowedValuesDescription" : "> 0",
+      "defaultValue" : 0.01
+    }, {
+      "id" : "PlotMaxRange",
+      "description" : "Max range in plot",
+      "allowedValuesDescription" : "> 0",
+      "defaultValue" : 5.0
+    } ]
+  }, {
+    "id" : "PluginModule",
+    "description" : "Plugin (beta)",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "Example",
+      "description" : "",
+      "allowedValues" : [ "", "Empty implementation", "Logical and over all channels", "Threshold", "Buffering" ],
+      "defaultValue" : ""
+    }, {
+      "id" : "Implementation",
+      "description" : "",
+      "defaultValue" : ""
+    } ]
+  }, {
+    "id" : "PulseCompressionFilterModule",
+    "description" : "Applies pulse compression filter(s) to broadband data",
+    "requiredConfigFiles" : [ "PulseCompressionFilters" ],
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    } ]
+  }, {
+    "id" : "RemoveBottomModule",
+    "description" : "Removes bottom data",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "LogarithmicValues",
+      "description" : "Use log(sv)(checked) or sv (not checked)",
+      "defaultValue" : true
+    }, {
+      "id" : "ShowDetails",
+      "description" : "Shows more detailed settings (Only last, Channels to process, Automatic depthRange, Start depth, End depth)",
+      "defaultValue" : false
+    }, {
+      "id" : "OnlyLast",
+      "description" : "When true, only last channel is processed, if false all channels are processed",
+      "defaultValue" : false
+    }, {
+      "id" : "ChannelsToProcess",
+      "description" : "Process the n last channels (-1 for all channels)",
+      "unit" : "1",
+      "defaultValue" : -1
+    }, {
+      "id" : "AutomaticDepthRange",
+      "description" : "If true and Bottom detection module is used then the range goes to the detected seabed",
+      "defaultValue" : true
+    }, {
+      "id" : "StartDepth",
+      "description" : "Start depth (or range) for filter",
+      "unit" : "m",
+      "defaultValue" : 10.0
+    }, {
+      "id" : "EndDepth",
+      "description" : "End depth (or range) in meter for filter",
+      "unit" : "m",
+      "defaultValue" : 1000.0
+    }, {
+      "id" : "UseNeighbours",
+      "description" : "Use minimum depth from current ping and neighbours",
+      "defaultValue" : false
+    }, {
+      "id" : "Above",
+      "description" : "Upper bottom limit is this many samples above bottom",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 0
+    }, {
+      "id" : "Below",
+      "description" : "Lower bottom limit is this many samples below bottom",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 100
+    }, {
+      "id" : "RemoveAboveBottom",
+      "description" : "Remove values above upper bottom limit",
+      "defaultValue" : false
+    }, {
+      "id" : "RemoveBottom",
+      "description" : "Remove values between upper and lower bottom limits",
+      "defaultValue" : true
+    }, {
+      "id" : "RemoveBelowBottom",
+      "description" : "Remove values below lower bottom limit",
+      "defaultValue" : false
+    }, {
+      "id" : "PixelValue",
+      "description" : "Value to set pixels to",
+      "unit" : "dB",
+      "defaultValue" : -120.0
+    } ]
+  }, {
+    "id" : "RescaleModule",
+    "description" : "Rescales some channels to fit into the logarithmic Sv range",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "RescaleChannels",
+      "description" : "Which channels to rescale",
+      "allowedValues" : [ "all", "half", "last", "none" ],
+      "defaultValue" : "all"
+    }, {
+      "id" : "DesiredMinimum",
+      "description" : "Desired minimum",
+      "unit" : "dB",
+      "defaultValue" : -85.0
+    }, {
+      "id" : "DesiredMaximum",
+      "description" : "Desired maximum",
+      "unit" : "dB",
+      "defaultValue" : -30.0
+    }, {
+      "id" : "MinMaxFraction",
+      "description" : "Discard this fraction of lower and upper values when deciding the rescaling",
+      "allowedValuesDescription" : "[0, 1]",
+      "defaultValue" : 0.05
+    }, {
+      "id" : "InitializationDatagramCount",
+      "description" : "Number of datagrams from each channel used to determine rescaling factors",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 1",
+      "defaultValue" : 10
+    }, {
+      "id" : "InitializationMaxPingCount",
+      "description" : "Maximum number of pings to buffer up when finding rescaling factors",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 1",
+      "defaultValue" : 100
+    } ]
+  }, {
+    "id" : "SchoolCategorizationModule",
+    "description" : "Determines whether a school consists of one or more species, and categorizes the whole school<br>if the schools is a single species school",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "UseCellCategorization",
+      "description" : "If enabled, use cell as input to school categorization",
+      "defaultValue" : true
+    }, {
+      "id" : "Horizontal cell size",
+      "description" : "Cell size in number of pings",
+      "unit" : "1",
+      "allowedValuesDescription" : "> 0",
+      "defaultValue" : 16
+    }, {
+      "id" : "Vertical cell size",
+      "description" : "Cell size in number of samples",
+      "unit" : "1",
+      "allowedValuesDescription" : "> 0",
+      "defaultValue" : 50
+    }, {
+      "id" : "Upper sample offset",
+      "description" : "Number of samples excluded at top of region",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 5
+    }, {
+      "id" : "Lower sample offset",
+      "description" : "Number of samples excluded at bottom of region",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 5
+    }, {
+      "id" : "HorizontalOffset",
+      "description" : "Number of pings excluded at the left and right edges of region",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 0
+    }, {
+      "id" : "SecondaryCategoryFraction",
+      "description" : "Fraction of cells in region that can be allowed to be different from dominant category",
+      "allowedValuesDescription" : "[0, 0.5]",
+      "defaultValue" : 0.1
+    }, {
+      "id" : "Fill factor for cells",
+      "description" : "The fill factor of cells must be above this value for cells to be used in the analysis of schools",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 0.5
+    }, {
+      "id" : "MinFractionCategorizedCells",
+      "description" : "The fraction of categorized cells has to be above this factor for the school to be categorized",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 0.5
+    }, {
+      "id" : "MinCells",
+      "description" : "If the number of cells are less than this the data will be merged",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 1",
+      "defaultValue" : 3
+    }, {
+      "id" : "SchoolCategorizationDistribution",
+      "description" : "Distribution to use when categorizing whole schools",
+      "allowedValues" : [ "PIXEL", "CELL", "SCHOOL" ],
+      "defaultValue" : "CELL"
+    }, {
+      "id" : "EnableUncategorizedCategory",
+      "description" : "If enabled, the schools where it cannot be determined if they are single og multi species are set to this category. Otherwise no region category is given.",
+      "defaultValue" : false
+    }, {
+      "id" : "EnableUnknownCategory",
+      "description" : "If enabled, the unknown category can be used as a valid school category for schools determined to be single species. Otherwise no region category is given.",
+      "defaultValue" : false
+    } ]
+  }, {
+    "id" : "SchoolDetectionModule",
+    "description" : "Detects schools on a specified channel",
+    "requiredConfigFiles" : [ "TransducerRanges" ],
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "ProcessLast",
+      "description" : "If selected, the last channel will be used for school detection",
+      "defaultValue" : true
+    }, {
+      "id" : "Channel",
+      "description" : "Which channel to work on, starting at 1",
+      "defaultValue" : 1
+    }, {
+      "id" : "MinDepth",
+      "description" : "Minimum depth for school detection",
+      "unit" : "m",
+      "allowedValuesDescription" : "Empty or ? 0",
+      "defaultValue" : ""
+    }, {
+      "id" : "MaxDepth",
+      "description" : "Maximum depth for school detection",
+      "unit" : "m",
+      "allowedValuesDescription" : "Empty or ? 0",
+      "defaultValue" : ""
+    }, {
+      "id" : "Threshold",
+      "description" : "Minimum value of all samples inside a school",
+      "unit" : "dB",
+      "defaultValue" : -62.0
+    }, {
+      "id" : "Density",
+      "description" : "Average Sv in school",
+      "unit" : "dB",
+      "defaultValue" : {
+        "min" : -120.0,
+        "max" : -20.0
+      }
+    }, {
+      "id" : "MaxSv",
+      "description" : "Maximum Sv in school",
+      "unit" : "dB",
+      "defaultValue" : {
+        "min" : "-Infinity",
+        "max" : "Infinity"
+      }
+    }, {
+      "id" : "Length",
+      "description" : "Length of school",
+      "unit" : "m",
+      "defaultValue" : {
+        "min" : 25.0,
+        "max" : 1000000.0
+      }
+    }, {
+      "id" : "Thickness",
+      "description" : "Thickness of school",
+      "unit" : "m",
+      "defaultValue" : {
+        "min" : 10.0,
+        "max" : 1000000.0
+      }
+    }, {
+      "id" : "Area",
+      "description" : "Area of school",
+      "unit" : "m^2",
+      "defaultValue" : {
+        "min" : 75.0,
+        "max" : 1000000.0
+      }
+    }, {
+      "id" : "Compactness",
+      "description" : "Perimeter of circle with same area / Perimeter",
+      "defaultValue" : {
+        "min" : "-Infinity",
+        "max" : "Infinity"
+      }
+    }, {
+      "id" : "FillHoles",
+      "description" : "If selected, then holes in detected schools will be filled",
+      "defaultValue" : true
+    } ]
+  }, {
+    "id" : "SmootherModule",
+    "description" : "Performs smoothing by convolution",
+    "requiredConfigFiles" : [ "TransducerRanges" ],
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "OnlyLastChannel",
+      "description" : "If selected only the last channel is processed, otherwise all channels are processed",
+      "defaultValue" : false
+    }, {
+      "id" : "MaskPelagic",
+      "description" : "Exclude samples above bottom",
+      "defaultValue" : false
+    }, {
+      "id" : "MaskBottom",
+      "description" : "Exclude samples below bottom",
+      "defaultValue" : true
+    }, {
+      "id" : "MaskSecondBottom",
+      "description" : "Exclude samples below 10m above second bottom echo",
+      "defaultValue" : true
+    }, {
+      "id" : "MaskNoise",
+      "description" : "Exclude samples below noise threshold",
+      "defaultValue" : false
+    }, {
+      "id" : "MaskRegion",
+      "description" : "Exclude samples in connection with regions",
+      "allowedValues" : [ "none", "inside", "outside" ],
+      "defaultValue" : "none"
+    }, {
+      "id" : "MaskTrack",
+      "description" : "Exclude samples in connection with tracks",
+      "allowedValues" : [ "none", "inside", "outside" ],
+      "defaultValue" : "none"
+    }, {
+      "id" : "MinPing",
+      "description" : "Number of pings used ? 2 � Min Ping + 1",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 0
+    }, {
+      "id" : "MaxPing",
+      "description" : "Number of pings used ? 2 � Max Ping + 1",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 10
+    }, {
+      "id" : "HorizontalKernelType",
+      "description" : "Convolution kernel type horizontally",
+      "allowedValues" : [ "gaussian", "tophat" ],
+      "defaultValue" : "gaussian"
+    }, {
+      "id" : "VerticalKernelType",
+      "description" : "Convolution kernel type vertically",
+      "allowedValues" : [ "gaussian", "tophat" ],
+      "defaultValue" : "gaussian"
+    }, {
+      "id" : "HorizontalWidth",
+      "description" : "Convolution kernel width",
+      "unit" : "m",
+      "allowedValuesDescription" : "> 0",
+      "defaultValue" : 8.0
+    }, {
+      "id" : "VerticalWidth",
+      "description" : "Convolution kernel height",
+      "unit" : "m",
+      "allowedValuesDescription" : "> 0",
+      "defaultValue" : 0.5
+    }, {
+      "id" : "LogarithmicValues",
+      "description" : "If checked use log(sv), otherwise use (linear) sv",
+      "defaultValue" : false
+    } ]
+  }, {
+    "id" : "SpikeFilterModule",
+    "description" : "Filters spikes",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "LogarithmicValues",
+      "description" : "Use log(sv)(checked) or sv (not checked)",
+      "defaultValue" : true
+    }, {
+      "id" : "ShowDetails",
+      "description" : "Shows more detailed settings (Only last, Channels to process, Automatic depthRange, Start depth, End depth)",
+      "defaultValue" : false
+    }, {
+      "id" : "OnlyLast",
+      "description" : "When true, only last channel is processed, if false all channels are processed",
+      "defaultValue" : false
+    }, {
+      "id" : "ChannelsToProcess",
+      "description" : "Process the n last channels (-1 for all channels)",
+      "unit" : "1",
+      "defaultValue" : -1
+    }, {
+      "id" : "AutomaticDepthRange",
+      "description" : "If true and Bottom detection module is used then the range goes to the detected seabed",
+      "defaultValue" : false
+    }, {
+      "id" : "StartDepth",
+      "description" : "Start depth (or range) for filter",
+      "unit" : "m",
+      "defaultValue" : 10.0
+    }, {
+      "id" : "EndDepth",
+      "description" : "End depth (or range) in meter for filter",
+      "unit" : "m",
+      "defaultValue" : 2500.0
+    }, {
+      "id" : "TotalDelta",
+      "description" : "Minimum difference of current sample to search window median to be spike candidate",
+      "unit" : "dB",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 15.0
+    }, {
+      "id" : "VerticalDelta",
+      "description" : "Minimum difference of search column median to (most) neighbouring pings to be spike candidate",
+      "unit" : "dB",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 15.0
+    }, {
+      "id" : "Debug",
+      "description" : "Sets value to 0 where spikes are detected",
+      "defaultValue" : false
+    }, {
+      "id" : "VerticalUnit",
+      "description" : "Unit for the height of the search window and the search columns",
+      "allowedValues" : [ "SAMPLES", "DURATION", "DISTANCE" ],
+      "defaultValue" : "DURATION"
+    }, {
+      "id" : "VerticalMedianSearchHeight",
+      "description" : "Half the height of the search column in number of samples",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 7
+    }, {
+      "id" : "WindowMedianSearchHeight",
+      "description" : "Half the height of the search window in number of samples",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 35
+    }, {
+      "id" : "VerticalMedianSearchDuration",
+      "description" : "Half the height of the search column in milliseconds",
+      "unit" : "ms",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 0.9
+    }, {
+      "id" : "WindowMedianSearchDuration",
+      "description" : "Half the height of the search window in milliseconds",
+      "unit" : "ms",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 4.4
+    }, {
+      "id" : "VerticalMedianSearchDistance",
+      "description" : "Half the height of the search column in meters",
+      "unit" : "m",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 1.3
+    }, {
+      "id" : "WindowMedianSearchDistance",
+      "description" : "Half the height of the search window in meters",
+      "unit" : "m",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 6.6
+    } ]
+  }, {
+    "id" : "SpotNoiseModule",
+    "description" : "Sets the pixel value to median of its 14 neighbors and itself provided original value is large compared to most neighbours",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "LogarithmicValues",
+      "description" : "Use log(sv)(checked) or sv (not checked)",
+      "defaultValue" : true
+    }, {
+      "id" : "ShowDetails",
+      "description" : "Shows more detailed settings (Only last, Channels to process, Automatic depthRange, Start depth, End depth)",
+      "defaultValue" : false
+    }, {
+      "id" : "OnlyLast",
+      "description" : "When true, only last channel is processed, if false all channels are processed",
+      "defaultValue" : false
+    }, {
+      "id" : "ChannelsToProcess",
+      "description" : "Process the n last channels (-1 for all channels)",
+      "unit" : "1",
+      "defaultValue" : -1
+    }, {
+      "id" : "AutomaticDepthRange",
+      "description" : "If true and Bottom detection module is used then the range goes to the detected seabed",
+      "defaultValue" : false
+    }, {
+      "id" : "StartDepth",
+      "description" : "Start depth (or range) for filter",
+      "unit" : "m",
+      "defaultValue" : 10.0
+    }, {
+      "id" : "EndDepth",
+      "description" : "End depth (or range) in meter for filter",
+      "unit" : "m",
+      "defaultValue" : 2500.0
+    }, {
+      "id" : "Delta",
+      "description" : "Spot-noise candidate if center value > 93% percentile + Delta",
+      "unit" : "dB",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 20.0
+    }, {
+      "id" : "Debug",
+      "description" : "Sets value to 0 where spikes are detected",
+      "defaultValue" : false
+    } ]
+  }, {
+    "id" : "TemporaryComputationsBeginModule",
+    "description" : "Start of temporary computations",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    } ]
+  }, {
+    "id" : "TemporaryComputationsEndModule",
+    "description" : "End of temporary computations",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    } ]
+  }, {
+    "id" : "ThresholdAllChannelsModule",
+    "description" : "Masks out values on all channels if some channels are too weak or too strong",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "Criterion",
+      "description" : "How to test values",
+      "allowedValues" : [ "ABOVE_OR_EQUAL", "ABOVE", "BELOW", "BELOW_OR_EQUAL" ],
+      "defaultValue" : "BELOW"
+    }, {
+      "id" : "Threshold",
+      "description" : "Threshold value",
+      "unit" : "dB",
+      "defaultValue" : -70.0
+    }, {
+      "id" : "Replacement",
+      "description" : "Replacement value",
+      "unit" : "dB",
+      "defaultValue" : -120.0
+    }, {
+      "id" : "MinFrequency",
+      "description" : "Minimum frequency for testing against threshold",
+      "unit" : "kHz",
+      "defaultValue" : ""
+    }, {
+      "id" : "MaxFrequency",
+      "description" : "Maximum frequency for testing against threshold",
+      "unit" : "kHz",
+      "defaultValue" : ""
+    } ]
+  }, {
+    "id" : "ThresholdModule",
+    "description" : "Masks out values in specific range on individual channels",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "LogarithmicValues",
+      "description" : "Use log(sv)(checked) or sv (not checked)",
+      "defaultValue" : true
+    }, {
+      "id" : "ShowDetails",
+      "description" : "Shows more detailed settings (Only last, Channels to process, Automatic depthRange, Start depth, End depth)",
+      "defaultValue" : false
+    }, {
+      "id" : "OnlyLast",
+      "description" : "When true, only last channel is processed, if false all channels are processed",
+      "defaultValue" : false
+    }, {
+      "id" : "ChannelsToProcess",
+      "description" : "Process the n last channels (-1 for all channels)",
+      "unit" : "1",
+      "defaultValue" : -1
+    }, {
+      "id" : "AutomaticDepthRange",
+      "description" : "If true and Bottom detection module is used then the range goes to the detected seabed",
+      "defaultValue" : true
+    }, {
+      "id" : "StartDepth",
+      "description" : "Start depth (or range) for filter",
+      "unit" : "m",
+      "defaultValue" : 10.0
+    }, {
+      "id" : "EndDepth",
+      "description" : "End depth (or range) in meter for filter",
+      "unit" : "m",
+      "defaultValue" : 1000.0
+    }, {
+      "id" : "Threshold",
+      "description" : "Threshold value",
+      "unit" : "dB",
+      "defaultValue" : -70.0
+    }, {
+      "id" : "CutBelow",
+      "description" : "If selected, all samples with value < 'Threshold' will become 'Value below'",
+      "defaultValue" : false
+    }, {
+      "id" : "CutAbove",
+      "description" : "If selected, all samples with value ? 'Threshold' will become 'Value above'",
+      "defaultValue" : false
+    }, {
+      "id" : "BelowVal",
+      "description" : "Value assigned to samples with value < 'Threshold'",
+      "unit" : "dB",
+      "defaultValue" : -120.0
+    }, {
+      "id" : "AboveVal",
+      "description" : "Value assigned to samples with value ? 'Threshold'",
+      "unit" : "dB",
+      "defaultValue" : 0.0
+    } ]
+  }, {
+    "id" : "TimeIntervalModule",
+    "description" : "Module for processing only the pings in a specified time interval",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "StartDateString",
+      "description" : "The minimum date and time",
+      "unit" : "dd.MM.yyyy HH:mm:ss",
+      "allowedValuesDescription" : "dd.MM.yyyy HH:mm:ss",
+      "defaultValue" : ""
+    }, {
+      "id" : "EndDateString",
+      "description" : "The maximum date and time",
+      "unit" : "dd.MM.yyyy HH:mm:ss",
+      "allowedValuesDescription" : "dd.MM.yyyy HH:mm:ss",
+      "defaultValue" : ""
+    }, {
+      "id" : "StartRelativePingNumber",
+      "description" : "The minimum relative ping number within a file, starting at 1",
+      "unit" : "1",
+      "defaultValue" : ""
+    }, {
+      "id" : "EndRelativePingNumber",
+      "description" : "The maximum relative ping number within a file, starting at 1",
+      "unit" : "1",
+      "defaultValue" : ""
+    } ]
+  }, {
+    "id" : "TowfishModule",
+    "description" : "Merges towfish data with main echosounder data",
+    "requiredConfigFiles" : [ "Towfish" ],
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "TowfishBlindZone",
+      "description" : "The length of the towfish blind zone. The samples in the blind zone are excluded when merging the towfish data with input data",
+      "unit" : "m",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 0.0
+    }, {
+      "id" : "TowfishEchosounderTimeAddition",
+      "description" : "Time to add to the towfish echosounder data to get at match with the meta data and ship data",
+      "unit" : "s",
+      "defaultValue" : 0.0
+    }, {
+      "id" : "DistBehindFunction",
+      "description" : "Relationship between line length and depth to towfish distance behind ship",
+      "allowedValues" : [ "PYTAGORAS", "STRAIGHT_DOWN" ],
+      "defaultValue" : "PYTAGORAS"
+    } ]
+  }, {
+    "id" : "TrackFilterModule",
+    "description" : "Filters rejected tracks",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "MaxBufferSize",
+      "description" : "Maximum number of pings in buffer in search for first track info datagrams",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 50
+    }, {
+      "id" : "KeepValid",
+      "description" : "If checked, then remove invalid tracks",
+      "defaultValue" : true
+    } ]
+  }, {
+    "id" : "TrackingModule",
+    "description" : "Tracks single targets",
+    "requiredConfigFiles" : [ "TransducerRanges" ],
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "TrackerType",
+      "description" : "Type of tracker",
+      "allowedValues" : [ "Aggregation", "SED", "Peak", "TSModule" ],
+      "defaultValue" : "Aggregation"
+    }, {
+      "id" : "kHz",
+      "description" : "",
+      "unit" : "kHz",
+      "defaultValue" : 38
+    }, {
+      "id" : "PlatformMotionType",
+      "description" : "Type of platform motion",
+      "allowedValues" : [ "Stationary", "Floating", "Moving" ],
+      "defaultValue" : "Floating"
+    }, {
+      "id" : "MinTS",
+      "description" : "Minimum TS value to be detected (i.e. minimum corrected TS)",
+      "unit" : "dB",
+      "defaultValue" : -66.0
+    }, {
+      "id" : "PulseLengthDeterminationLevel",
+      "description" : "Pulse length determination level",
+      "unit" : "dB",
+      "defaultValue" : 6.0
+    }, {
+      "id" : "MinEchoLength",
+      "description" : "Minimum echo length (relative to nominal length).   NB: may be << 1 for pulse compressed data!",
+      "defaultValue" : 0.01
+    }, {
+      "id" : "MaxEchoLength",
+      "description" : "Maximum echo length (relative to nominal length).   NB: may be << 1 for pulse compressed data!",
+      "defaultValue" : 1.8
+    }, {
+      "id" : "MaxGainCompensation",
+      "description" : "Maximum (one way) gain compensation",
+      "unit" : "dB",
+      "defaultValue" : 6.0
+    }, {
+      "id" : "DoPhaseDeviationCheck",
+      "description" : "Check this if phase deviation check should be performed",
+      "defaultValue" : true
+    }, {
+      "id" : "MaxPhaseDevSteps",
+      "description" : "Max phase deviation",
+      "unit" : "phase steps",
+      "defaultValue" : 8.0
+    }, {
+      "id" : "MaxTS",
+      "description" : "Maximum TS value to be tracked (i.e. maximum corrected TS)",
+      "unit" : "dB",
+      "defaultValue" : 0.0
+    }, {
+      "id" : "MaxDepth",
+      "description" : "Maximal depth of targets to detect",
+      "unit" : "m",
+      "defaultValue" : ""
+    }, {
+      "id" : "MaxAlongshipAngle",
+      "description" : "Maximum alongship angle for tracked targets",
+      "unit" : "degree",
+      "defaultValue" : 10.0
+    }, {
+      "id" : "MaxAthwartshipAngle",
+      "description" : "Maximum athwartship angle for tracked targets",
+      "unit" : "degree",
+      "defaultValue" : 10.0
+    }, {
+      "id" : "InitiationGateFunction",
+      "description" : "",
+      "parameters" : [ {
+        "id" : "Alpha",
+        "description" : "",
+        "unit" : "degree",
+        "defaultValue" : 2.8
+      }, {
+        "id" : "Beta",
+        "description" : "",
+        "unit" : "degree",
+        "defaultValue" : 2.8
+      }, {
+        "id" : "Range",
+        "description" : "",
+        "unit" : "m",
+        "defaultValue" : 0.1
+      }, {
+        "id" : "TS",
+        "description" : "dB",
+        "unit" : "dB",
+        "defaultValue" : 20.0
+      } ]
+    }, {
+      "id" : "InitiationMinLength",
+      "description" : "<html>N<sub>0</sub> - Minimum number of samples for starting a new track",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 1",
+      "defaultValue" : 1
+    }, {
+      "id" : "GateFunction",
+      "description" : "",
+      "parameters" : [ {
+        "id" : "Alpha",
+        "description" : "",
+        "unit" : "degree",
+        "defaultValue" : 2.8
+      }, {
+        "id" : "Beta",
+        "description" : "",
+        "unit" : "degree",
+        "defaultValue" : 2.8
+      }, {
+        "id" : "Range",
+        "description" : "",
+        "unit" : "m",
+        "defaultValue" : 0.1
+      }, {
+        "id" : "TS",
+        "description" : "dB",
+        "unit" : "dB",
+        "defaultValue" : 20.0
+      } ]
+    }, {
+      "id" : "AlphaBetaEstimator",
+      "description" : "",
+      "parameters" : [ {
+        "id" : "Alpha",
+        "description" : "",
+        "allowedValuesDescription" : "[0, 1]",
+        "defaultValue" : 0.5
+      }, {
+        "id" : "Beta",
+        "description" : "",
+        "allowedValuesDescription" : "[0, 1]",
+        "defaultValue" : 0.5
+      } ]
+    }, {
+      "id" : "MaxMissingPings",
+      "description" : "<html>N<sub>m</sub> - Maximum number of subsequent missing pings in a track",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 4
+    }, {
+      "id" : "MaxMissingSamples",
+      "description" : "<html>N<sub>e</sub> - Maximum number of missing samples in one ping of a track",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 2
+    }, {
+      "id" : "MaxMissingPingsFraction",
+      "description" : "MN - Maximum acceptable ratio of missing pings to number of pings in track",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 0.5
+    }, {
+      "id" : "MinTrackLength",
+      "description" : "TL - Minimum acceptable total number of pings in track",
+      "unit" : "1",
+      "allowedValuesDescription" : "? 1",
+      "defaultValue" : 8
+    }, {
+      "id" : "MinSampleToLengthFraction",
+      "description" : "NL - Minimum acceptable ratio of total number of samples to number of pings in track",
+      "allowedValuesDescription" : "? 0",
+      "defaultValue" : 2.0
+    } ]
+  }, {
+    "id" : "TsDetectionModule",
+    "description" : "Detects single targets",
+    "optionalConfigFiles" : [ "TransducerRanges" ],
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "DetectorType",
+      "description" : "Type of TS detector",
+      "allowedValues" : [ "SED", "PEAK" ],
+      "defaultValue" : "SED"
+    }, {
+      "id" : "MinTS",
+      "description" : "Minimum TS value to be detected",
+      "unit" : "dB",
+      "defaultValue" : -66.0
+    }, {
+      "id" : "PulseLengthDeterminationLevel",
+      "description" : "Pulse length determination level",
+      "unit" : "dB",
+      "defaultValue" : 6.0
+    }, {
+      "id" : "MinEchoLength",
+      "description" : "Minimum echo length (relative to pulse length).   NB: may be << 1 for pulse compressed data!",
+      "defaultValue" : 0.01
+    }, {
+      "id" : "MaxEchoLength",
+      "description" : "Maximum echo length (relative to pulse length).   NB: may be << 1 for pulse compressed data!",
+      "defaultValue" : 1.8
+    }, {
+      "id" : "MaxGainCompensation",
+      "description" : "Maximum (one way) gain compensation",
+      "unit" : "dB",
+      "defaultValue" : 6.0
+    }, {
+      "id" : "DoPhaseDeviationCheck",
+      "description" : "Check this if phase deviation check should be performed",
+      "defaultValue" : true
+    }, {
+      "id" : "MaxPhaseDevSteps",
+      "description" : "Max phase deviation",
+      "unit" : "phase steps",
+      "defaultValue" : 8.0
+    }, {
+      "id" : "MaxDepth",
+      "description" : "Maximal depth of targets to detect",
+      "unit" : "m",
+      "defaultValue" : ""
+    } ]
+  }, {
+    "id" : "VerticalOffsetCorrectionModule",
+    "description" : "Performs vertical offset correction",
+    "requiredConfigFiles" : [ "VerticalTransducerOffsets" ],
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    } ]
+  }, {
+    "id" : "WriterModule",
+    "description" : "Writes to a .raw file",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "FileName",
+      "description" : "Output file name. If blank, the input file name is used.",
+      "defaultValue" : ""
+    }, {
+      "id" : "UseRelativeDirectory",
+      "description" : "Whether to specify a relative or an absolute output directory",
+      "defaultValue" : false
+    }, {
+      "id" : "RelativeDirectory",
+      "description" : "Output directory relative to the destination directory",
+      "defaultValue" : ""
+    }, {
+      "id" : "DirectoryName",
+      "description" : "Output directory",
+      "defaultValue" : ""
+    } ]
+  }, {
+    "id" : "NetcdfWriterModule",
+    "description" : "Writes to a .nc file",
+    "plugin" : "KoronaIncubator",
+    "parameters" : [ {
+      "id" : "Active",
+      "description" : "If the module is not active then all datagrams pass unaltered through it",
+      "defaultValue" : true
+    }, {
+      "id" : "Comment",
+      "description" : "",
+      "defaultValue" : ""
+    }, {
+      "id" : "DirName",
+      "description" : "The netCDF files are written to this sub folder in the destination directory",
+      "defaultValue" : "netcdf"
+    }, {
+      "id" : "MainFrequency",
+      "description" : "The channel with the main frequency is placed first in the output file",
+      "unit" : "kHz",
+      "allowedValuesDescription" : "> 0",
+      "defaultValue" : 38
+    }, {
+      "id" : "WriterType",
+      "description" : "How to structure the output data",
+      "allowedValues" : [ "GRIDDED", "CHANNEL_GROUPS" ],
+      "defaultValue" : "GRIDDED"
+    }, {
+      "id" : "DeltaRange",
+      "description" : "Leave blank to use the sample distance of the main frequency in the first ping",
+      "unit" : "m",
+      "allowedValuesDescription" : "Empty or > 0",
+      "defaultValue" : ""
+    }, {
+      "id" : "MaxRange",
+      "description" : "Leave blank to use the max range of the main frequency in the first ping",
+      "unit" : "m",
+      "allowedValuesDescription" : "Empty or > 0",
+      "defaultValue" : ""
+    }, {
+      "id" : "GriddedOutputType",
+      "description" : "Output data in addition to the basic information",
+      "allowedValues" : [ "EMPTY", "SV_AND_ANGLES", "PULSE_COMPRESSION", "BROADBAND_SV" ],
+      "defaultValue" : "SV_AND_ANGLES"
+    }, {
+      "id" : "WriteAngels",
+      "description" : "If selected, then the output data will include arrays for alongship and athwartship angles",
+      "defaultValue" : true
+    }, {
+      "id" : "FftWindowSize",
+      "description" : "Size of the FFT window in units of pulse length",
+      "allowedValuesDescription" : "> 0",
+      "defaultValue" : 2.0
+    }, {
+      "id" : "DeltaFrequency",
+      "description" : "Resolution of the broadband frequency array",
+      "unit" : "kHz",
+      "allowedValuesDescription" : "> 0",
+      "defaultValue" : 1.0
+    }, {
+      "id" : "ChannelGroupOutputType",
+      "description" : "Output data in addition to the basic information",
+      "allowedValues" : [ "EMPTY", "PULSE_COMPRESSION" ],
+      "defaultValue" : "PULSE_COMPRESSION"
+    } ]
+  } ]
+}
