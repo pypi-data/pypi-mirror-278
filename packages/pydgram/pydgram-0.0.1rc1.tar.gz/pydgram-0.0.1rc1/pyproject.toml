@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "pydgram"
+version = "0.0.1rc1"
+description = ""
+authors = ["DesKaOne <DesKaOne@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "pydgram"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pyrogram = "^2.0.106"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
