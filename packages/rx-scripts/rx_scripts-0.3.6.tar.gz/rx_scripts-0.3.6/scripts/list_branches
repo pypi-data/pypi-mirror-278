@@ -1,0 +1,62 @@
+#!/usr/bin/env python3
+
+from log_store import log_store
+
+import argparse
+import utils
+import ROOT
+import glob
+import os
+import re
+
+log=log_store.add_logger('rx_scripts:list_branches')
+#-------------------------------
+class data:
+    wc_pth = None
+    rgx_br = None
+#-------------------------------
+def get_args():
+    parser = argparse.ArgumentParser(description='Used to check branches that match a regex for a set of files')
+    parser.add_argument('-p', '--paths' , type=str, help='Wildcard to paths to ROOT files')
+    parser.add_argument('-b', '--branch', type=str, help='Regex to branches')
+    args = parser.parse_args()
+
+    data.wc_pth = args.paths
+    data.rgx_br = args.branch
+#-------------------------------
+def list_branches(file_path):
+    ifile = ROOT.TFile(file_path)
+    d_tree= utils.getTrees(ifile, rtype='dict') 
+
+    if len(d_tree) == 0:
+        log.error(f'No tree found in: {file_path}')
+        ifile.ls()
+        ifile.Close()
+        raise
+
+    for path, tree in d_tree.items():
+        rdf = ROOT.RDataFrame(tree)
+        log.info(f'{file_path}:{path}')
+        v_col = rdf.GetColumnNames()
+        l_col = [ col.c_str() for col in v_col ]
+        l_col = [ col         for col in l_col if re.match(data.rgx_br, col) ]
+        for col in l_col:
+            log.info(f'    {col}')
+
+    log.info('---------------------')
+
+    ifile.Close()
+#-------------------------------
+def main():
+    get_args()
+    l_file_path = glob.glob(data.wc_pth)
+    if len(l_file_path) == 0:
+        log.error(f'No files found in: {data.wc_pth}')
+        raise
+
+    l_file_path.sort()
+    for file_path in l_file_path:
+        list_branches(file_path)
+#-------------------------------
+if __name__ == '__main__':
+    main()
