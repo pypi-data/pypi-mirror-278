@@ -1,0 +1,13 @@
+import enum 
+
+class SyncSourceStatus(str, enum.Enum):
+    synchronized = "synchronized"
+    synchronizing = "synchronizing"
+    pending = "pending"    
+    
+class SyncSourceTypes(str, enum.Enum):
+    native = "native"
+    coretools = "Core-tools"
+    qcodes = "qCoDeS"
+    quantify = "quantify"
+    
