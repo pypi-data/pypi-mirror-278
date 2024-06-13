@@ -1,0 +1,13 @@
+pillow
+numpy
+matplotlib
+marshmallow_dataclass
+pyyaml
+tensorboard
+tabulate
+tqdm
+
+[all]
+
+[test]
+coverage

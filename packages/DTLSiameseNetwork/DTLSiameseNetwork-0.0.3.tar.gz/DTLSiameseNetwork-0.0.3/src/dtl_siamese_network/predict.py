@@ -1,0 +1,4 @@
+
+
+def predict(img):
+    pass
