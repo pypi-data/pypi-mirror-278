@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+setup.py
+livekit/plugins/openai/__init__.py
+livekit/plugins/openai/llm.py
+livekit/plugins/openai/log.py
+livekit/plugins/openai/models.py
+livekit/plugins/openai/py.typed
+livekit/plugins/openai/stt.py
+livekit/plugins/openai/tts.py
+livekit/plugins/openai/utils.py
+livekit/plugins/openai/version.py
+livekit_plugins_openai.egg-info/PKG-INFO
+livekit_plugins_openai.egg-info/SOURCES.txt
+livekit_plugins_openai.egg-info/dependency_links.txt
+livekit_plugins_openai.egg-info/requires.txt
+livekit_plugins_openai.egg-info/top_level.txt
