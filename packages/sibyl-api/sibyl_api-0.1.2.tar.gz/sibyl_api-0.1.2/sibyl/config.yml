@@ -1,0 +1,30 @@
+# MongoDB params
+#===================================
+mongodb:
+  host: "localhost" # mongodb server address
+  port: 27017 # mongodb server port
+  db: "" # database name
+  username: # for auth
+  password: # for auth
+
+# docker
+docker:
+  mongodb:
+    host: "db" # mongodb server address
+    port: 27017 # mongodb server port
+    db: "sibyl" # database name
+    username: # for auth
+    password: # for auth
+
+# FLASK
+#===================================
+flask:
+  PORT: 3000
+  ENV: "production" # development, production, test
+  DEBUG: False
+  TESTING: False
+  BUNDLE_ERRORS: True
+
+# LOGGING
+#===================================
+log_filename: "log.csv"
