@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: queue-http
+Version: 0.1.2
+Summary: HTTP Client-Server Read-Write Queue implementation
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Project-URL: repo, https://github.com/moveread/REPO.git
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: queue-api
+Requires-Dist: haskellian
+Provides-Extra: client
+Requires-Dist: httpx ; extra == 'client'
+Provides-Extra: server
+Requires-Dist: fastapi ; extra == 'server'
+
+# Queue Http
+
+> HTTP Client-Server Read-Write Queue implementation
