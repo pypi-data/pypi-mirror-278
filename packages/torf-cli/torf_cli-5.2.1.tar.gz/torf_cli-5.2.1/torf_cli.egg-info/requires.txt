@@ -1,0 +1,11 @@
+torf==4.*,>=4.1.2
+pyxdg
+
+[dev]
+pytest
+tox
+coverage
+pytest-cov
+ruff
+flake8
+isort
