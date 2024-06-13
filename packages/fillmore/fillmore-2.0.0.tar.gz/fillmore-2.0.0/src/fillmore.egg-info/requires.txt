@@ -1,0 +1,20 @@
+attrs>=21.2.0
+sentry-sdk>2
+
+[dev]
+build
+cogapp
+mypy
+pytest
+ruff
+sphinx_rtd_theme
+tox
+tox-gh-actions
+twine
+Werkzeug
+
+[dev:python_version < "3.11"]
+tomli
+
+[dev:python_version > "3.8"]
+Sphinx
