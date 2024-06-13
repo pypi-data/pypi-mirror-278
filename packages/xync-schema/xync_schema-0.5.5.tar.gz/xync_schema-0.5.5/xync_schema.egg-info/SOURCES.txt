@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+tests/test_db.py
+xync_schema/__init__.py
+xync_schema/models.py
+xync_schema.egg-info/PKG-INFO
+xync_schema.egg-info/SOURCES.txt
+xync_schema.egg-info/dependency_links.txt
+xync_schema.egg-info/requires.txt
+xync_schema.egg-info/top_level.txt

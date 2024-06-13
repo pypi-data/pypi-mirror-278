@@ -1,0 +1,15 @@
+[project]
+name = "xync-schema"
+requires-python = ">=3.11"
+authors = [
+    {name = "Mike Artemiev", email = "mixartemev@gmail.com"},
+]
+dependencies = [
+    "tortoise-api-model",
+    "aiogram"
+]
+version = "0.5.5"
+
+[project.urls]
+Homepage = "https://gitlab.com/xync/back/schema"
+Repository = "https://gitlab.com/xync/back/schema"
