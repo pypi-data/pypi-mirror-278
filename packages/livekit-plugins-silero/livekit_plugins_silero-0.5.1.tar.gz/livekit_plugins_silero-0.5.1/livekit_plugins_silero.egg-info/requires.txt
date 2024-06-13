@@ -1,0 +1,5 @@
+livekit-agents~=0.7
+torch<3,>=2
+torchaudio>=2
+numpy<2,>=1
+onnxruntime~=1.17.0
