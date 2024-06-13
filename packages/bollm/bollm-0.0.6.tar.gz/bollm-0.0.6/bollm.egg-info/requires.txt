@@ -1,0 +1,6 @@
+streamlit==1.31.0
+python-dotenv==1.0.1
+requests==2.31.0
+langchain==0.1.17
+unstructured==0.13.2
+openai==1.30.3
