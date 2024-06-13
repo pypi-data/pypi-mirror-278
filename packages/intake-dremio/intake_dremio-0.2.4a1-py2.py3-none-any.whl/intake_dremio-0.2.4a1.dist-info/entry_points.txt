@@ -1,0 +1,2 @@
+[intake.drivers]
+dremio = intake_dremio.intake_dremio:DremioSource
