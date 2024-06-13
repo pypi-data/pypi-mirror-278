@@ -1,0 +1,24 @@
+astropy>=5.0.4
+scipy>=1.7.2
+numpy>=1.21.2
+opencv-python-headless>=4.6.0.66
+asdf>=2.15.0
+gwcs>=0.18.1
+
+[docs]
+numpydoc
+packaging>=17
+sphinx<7.0.0
+sphinx-asdf
+sphinx-astropy
+sphinx-rtd-theme
+stsci-rtd-theme
+
+[docs:python_version <= "3.11"]
+tomli
+
+[test]
+psutil
+pytest>=6
+pytest-cov
+pytest-doctestplus
