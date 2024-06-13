@@ -1,0 +1,8 @@
+include *.rst
+include LICENSE
+include open_api_framework/py.typed
+recursive-include open_api_framework *.html
+recursive-include open_api_framework *.txt
+recursive-include open_api_framework *.po
+global-exclude __pycache__
+global-exclude *.py[co]
