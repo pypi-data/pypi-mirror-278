@@ -1,0 +1,20 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{json,yaml,yml}]
+indent_size = 2
+
+[*.ambr]
+indent_size = unset
+trim_trailing_whitespace = unset
+insert_final_newline = unset
+
+[py.typed]
+insert_final_newline = false

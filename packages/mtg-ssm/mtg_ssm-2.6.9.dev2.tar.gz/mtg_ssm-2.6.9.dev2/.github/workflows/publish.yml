@@ -1,0 +1,48 @@
+name: publish
+concurrency: publish
+
+on:
+  push:
+    branches:
+      - trunk
+    tags:
+      - "**"
+
+jobs:
+  pypi-publish:
+    runs-on: ubuntu-latest
+    name: Build and publish Python 🐍 distributions 📦 to PyPI and TestPyPI
+    permissions:
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # setuptools_scm needs the git history
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.8"
+
+      - name: Install pypa/build
+        run: >-
+          pip install --user
+          build
+
+      - name: Build a binary wheel and a source tarball
+        run: >-
+          python -m build
+          --sdist
+          --wheel
+          --outdir dist/
+
+      - name: Publish distribution 📦 to Test PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1.8
+        with:
+          repository-url: https://test.pypi.org/legacy/
+
+      - name: Publish distribution 📦 to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1.8
+        with:
+          password: ${{ secrets.PYPI_API_TOKEN }}

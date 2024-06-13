@@ -1,0 +1,175 @@
+[build-system]
+requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mtg_ssm"
+description = "A tool to manage Magic: the Gathering collection spreadsheets"
+readme = "README.rst"
+authors = [{ name = "George Leslie-Waksman", email = "waksman@gmail.com" }]
+requires-python = ">=3.8"
+keywords = ["mtg", "magic", "collection", "tracking", "spreadsheet"]
+license = { text = "MIT" }
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: OS Independent",
+    "Operating System :: POSIX",
+    "Operating System :: Unix",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Games/Entertainment",
+]
+
+dependencies = [
+    "appdirs~=1.4",
+    "msgspec~=0.15",
+    "openpyxl~=3.0",
+    "requests~=2.27",
+    "requests-cache~=0.9.8",
+    "typing_extensions~=4.8.0",
+]
+dynamic = ["version"]
+
+[project.urls]
+"Homepage" = "https://github.com/gwax/mtg_ssm"
+"Bug Tracker" = "https://github.com/gwax/mtg_ssm/issues"
+
+[project.scripts]
+mtg-ssm = "mtg_ssm.ssm:main"
+
+[project.optional-dependencies]
+lxml = ["lxml>=3.7.2"]
+dev = [
+    "black",
+    "coverage[toml]",
+    "doc8",
+    "exceptiongroup",
+    "freezegun",
+    "lxml",
+    "mypy",
+    "openpyxl-stubs",
+    "pip",
+    "Pygments",
+    "pytest>=6.0",
+    "pytest-cov",
+    "responses",
+    "ruff",
+    "setuptools>=45",
+    "setuptools-scm[toml]>=6.2",
+    "syrupy>=4.0",
+    "types-appdirs",
+    "types-freezegun",
+    "types-requests",
+    "wheel",
+]
+
+[tool.setuptools]
+packages = [
+    "mtg_ssm",
+    "mtg_ssm.containers",
+    "mtg_ssm.mtg",
+    "mtg_ssm.scryfall",
+    "mtg_ssm.serialization",
+]
+
+[tool.setuptools_scm]
+write_to = "mtg_ssm/_version.py"
+local_scheme = "no-local-version"
+
+[tool.pytest.ini_options]
+xfail_strict = true
+addopts = "--cov mtg_ssm --cov-report term-missing"
+testpaths = ["tests"]
+
+[tool.mypy]
+python_version = "3.8"
+
+follow_imports = "normal"
+disallow_untyped_defs = true
+allow_untyped_globals = false
+
+[tool.black]
+line-length = 99
+target-version = ["py38"]
+
+[tool.ruff]
+target-version = "py38"
+line-length = 99
+
+[tool.ruff.lint]
+select = [
+    "F",
+    "E",
+    "W",
+    "C90",
+    "I",
+    "N",
+    "D",
+    "UP",
+    "YTT",
+    "S",
+    "BLE",
+    # "FBT",  # fix later: https://pypi.org/project/flake8-boolean-trap/
+    "B",
+    "A",
+    "C4",
+    "DTZ",
+    "EM",
+    "ISC",
+    "ICN",
+    "G",
+    "INP",
+    "PIE",
+    "T20",
+    "PYI",
+    "PT",
+    "RSE",
+    "RET",
+    "SLF",
+    "SIM",
+    "TID",
+    "ARG",
+    "PTH",
+    "ERA",
+    "PL",
+    "TRY",
+    "RUF",
+]
+ignore = [
+    "D105", # Missing docstring in magic method
+    "D107", # Prefer class docstring on class, not __init__()
+    "D203", # 1 blank line required before class docstring
+    "D213", # Multi-line docstring summary should start at the second line
+    "E501", # line too long, handled by black
+    "T201", # `print` found; ignoring for now because I don't want to set up logging
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = [
+    "D104", # missing docstring in public package
+]
+# Tests can use relative imports and assertions
+"tests/**/*" = [
+    "D101", # test classes may have missing docstrings
+    "D102", # test methods may have missing docstrings
+    "D103", # test functions may have missing docstrings
+    "S101", # tests should use assert
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["mtg_ssm"]
+
+[tool.ruff.lint.pylint]
+max-args = 7
+max-returns = 8
