@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: netclop
+Version: 1.0.0
+Summary: Network clustering operations for geophysical fluid transport
+Author: KarstenEconomou
+Author-email: economoukarsten@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: geopandas (>=0.14.2,<0.15.0)
+Requires-Dist: h3 (==4.0.0b2)
+Requires-Dist: infomap (>=2.7.1,<3.0.0)
+Requires-Dist: kaleido (==0.2.1)
+Requires-Dist: networkx (>=3.2.1,<4.0.0)
+Requires-Dist: numpy (>=1.26.3,<2.0.0)
+Requires-Dist: pandas (>=2.1.4,<3.0.0)
+Requires-Dist: plotly (>=5.18.0,<6.0.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Requires-Dist: seaborn (>=0.13.2,<0.14.0)
+Description-Content-Type: text/markdown
+
+# Network clustering operations
+**Net**work **cl**ustering **op**erations (netclop) is a command line interface for geophysical fluid transport network construction and associated clustering operations (e.g., community detection, significance clustering).
+
+## Installation
+Use [pipx](https://github.com/pypa/pipx) to install and run in an isolated environment.
+```
+brew install pipx
+pipx ensurepath
+```
+
+To install:
+```
+pipx install netclop
+```
+
+To upgrade:
+```
+pipx upgrade netclop
+```
+
+## Use
+Particle trajectories must be decomposed into initial and final latitude and longitude coordinates and stored in a positions file in the form `initial_latitude,initial_longitude,final_latitude,final_longitude`. Positions are binned with [H3](https://github.com/uber/h3-py). Community detection uses [Infomap](https://github.com/mapequation/infomap).
+
+```
+netclop [GLOBAL OPTIONS] COMMAND [ARGS] [OPTIONS]
+```
+
+Run `netclop --help` to see all available global options and commands and `netclop COMMAND --help` for the arguments and options of a command.
