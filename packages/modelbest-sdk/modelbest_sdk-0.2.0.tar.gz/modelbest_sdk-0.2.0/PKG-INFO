@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: modelbest_sdk
+Version: 0.2.0
+Summary: Everything about modelbest data include data format mbtable, dataset, dataloader, and tools
+Home-page: https://codeup.aliyun.com/64ddb0a87f62ff9b3d23ca15/modelbest_sdk
+Author: HankyZhao
+Author-email: zhq980115@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+## 项目名称
+> 设计文档: https://www.kdocs.cn/l/cvKBY8SqJoCC  
+> Release Note: https://www.kdocs.cn/l/cvR7iKFqYQqY  
+> 快速上手: https://www.kdocs.cn/l/caTTLzF7yoWF  
+> 使用样例: example/*.py  
