@@ -1,0 +1,2 @@
+[console_scripts]
+nimbletl = nimbletl.log_drive.init.cli:main
