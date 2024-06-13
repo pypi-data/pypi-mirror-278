@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: diffipy
+Version: 0.0.1
+Summary: DiffiPy offers a versatile interface to multiple automatic (adjoint) differentiation (AAD) backends in Python. It utilizes a syntax inspired by numpy, ensuring straightforward integration and enhanced computational graph analysis.
+Home-page: https://github.com/da-roth/DiffiPy/src/
+Author: Daniel Roth
+Author-email: danielroth@posteo.eu
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
