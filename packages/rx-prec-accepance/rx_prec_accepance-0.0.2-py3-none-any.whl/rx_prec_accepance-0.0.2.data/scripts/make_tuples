@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+#------------------------------------
+generate()
+{
+    ENERGY=$1
+    SAMPLE=$2
+    echo "$SAMPLE; $ENERGY"
+     $RAPIDSIM_ROOT/bin/RapidSim.exe /publicfs/ucas/user/campoverde/Packages/RK/prec_acceptances/config/$ENERGY/$SAMPLE 100000 1
+}
+#------------------------------------
+generate_all()
+{
+    ENERGY=$1
+    mkdir -p $ENERGY
+    cd $ENERGY
+
+    generate $ENERGY B2Kee
+    generate $ENERGY bdkskpiee
+    generate $ENERGY bpk1kpipiee
+    generate $ENERGY bpk2kpipiee
+    generate $ENERGY bpkskpiee
+    generate $ENERGY bsphiee
+
+    cd -
+}
+#------------------------------------
+#generate_all  7TeV
+#generate_all  8TeV
+generate_all 13TeV

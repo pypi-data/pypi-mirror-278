@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+#------------------------------------------------
+add_proc_energy()
+{
+    PROC=$1
+    ENERGY=$2
+
+    DIR=$ENERGY"TeV"
+    mkdir -p $DIR 
+
+    cp $PROC".decay" $DIR
+
+    echo "energy: $ENERGY" > $DIR/$PROC".config"
+    cat $PROC".config"    >> $DIR/$PROC".config"
+}
+#------------------------------------------------
+add_energy()
+{
+    ENERGY=$1
+
+    add_proc_energy B2Kee       $ENERGY
+    add_proc_energy bdkskpiee   $ENERGY
+    add_proc_energy bpk1kpipiee $ENERGY
+    add_proc_energy bpk2kpipiee $ENERGY
+    add_proc_energy bpkskpiee   $ENERGY
+    add_proc_energy bsphiee     $ENERGY
+}
+#------------------------------------------------
+add_energy  7
+add_energy  8
+add_energy 11 
+
