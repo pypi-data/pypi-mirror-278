@@ -1,0 +1,103 @@
+{
+    "hello": "aa",
+    "start_source": "00",
+    "stop_source": "01",
+    "trigger": [
+        {
+            "GUI": "00"
+        },
+        {
+            "Button1": "01"
+        },
+        {
+            "Button2": "02"
+        },
+        {
+            "MD5": "04"
+        },
+        {
+            "MD6": "05"
+        }
+    ],
+    "event_sync_signal": [
+      {
+        "Falling Edge": "02"
+      },
+      {
+        "Rising Edge": "03"
+      },
+      {
+        "Any Edge": "04"
+      }
+    ],
+    "event": "02",
+    "output": "03",
+    "connection": [
+        {
+            "md1": "00"
+        },
+        {
+            "md2": "01"
+        },
+        {
+            "md3": "02"
+        },
+        {
+            "md4": "03"
+        },
+        {
+            "md5": "04"
+        },
+        {
+            "md6": "05"
+        },
+        {
+            "md7": "06"
+        },
+        {
+            "md8": "07"
+        },
+        {
+            "md9": "08"
+        }
+    ],
+    "activity": [
+        {
+            "0": "00"
+        },
+        {
+            "1": "01"
+        }
+    ],
+    "sync_signal": [
+        {
+            "Falling Trigger": "00"
+        },
+        {
+            "Rising Trigger": "01"
+        },
+        {
+            "Falling Edge": "02"
+        },
+        {
+            "Rising Edge": "03"
+        },
+        {
+            "Falling Clock": "05"
+        },
+        {
+            "Rising Clock": "06"
+        },
+        {
+            "M-Sequence": "07"
+        }
+    ],
+    "stop_trigger": {
+        "no_stop_trigger": "00",
+        "stop_trigger": "01"
+    },
+    "start": "04",
+    "stop": "05",
+    "reset_error_state": "0a",
+    "who_am_i": "ff"
+}

@@ -1,0 +1,21 @@
+<RCC>
+  <qresource prefix="/">
+    <file>icons/import-config.png</file>
+    <file>icons/SyncBoard_PCB_V3_resized.png</file>
+    <file>icons/export-config.png</file>
+    <file>icons/download.png</file>
+    <file>icons/save.png</file>
+    <file>icons/download.svg</file>
+    <file>icons/start.png</file>
+    <file>icons/stop.png</file>
+    <file>icons/upload.png</file>
+    <file>icons/settings.png</file>
+    <file>icons/folder.png</file>
+    <file>icons/folder.svg</file>
+    <file>icons/upload.svg</file>
+    <file>icons/stop.svg</file>
+    <file>icons/start.svg</file>
+    <file>icons/settings.svg</file>
+    <file>icons/save.svg</file>
+  </qresource>
+</RCC>

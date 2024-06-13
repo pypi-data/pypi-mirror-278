@@ -1,0 +1,38 @@
+{
+  "hello": 170,
+  "error": 0,
+  "event": 1,
+  "status": 2,
+  "start_code": "187",
+  "stop_code": "204",
+  "error_list": [
+    "Undefined",
+    "Unknown",
+    "Source not used",
+    "No such stop source",
+    "No such start source",
+    "Invalid data received",
+    "No such message",
+    "No such device",
+    "No such input",
+    "Allocation failed",
+    "No such color",
+    "No such signal form"
+  ],
+  "status_list": [
+    187,
+    204
+  ],
+  "event_list": [
+    1,
+    2,
+    4,
+    5
+  ],
+  "01": "Button1",
+  "02": "Button2",
+  "04": "MD5",
+  "05": "MD6",
+  "187": "start",
+  "204": "stop"
+}

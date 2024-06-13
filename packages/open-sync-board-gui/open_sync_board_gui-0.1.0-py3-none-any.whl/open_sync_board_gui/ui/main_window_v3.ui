@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindowV3</class>
+ <widget class="QWidget" name="MainWindowV3">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1027</width>
+    <height>898</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Configuration Window</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+  </property>
+  <widget class="QLabel" name="board_connections">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>30</y>
+     <width>587</width>
+     <height>771</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="resources.qrc">:/icons/SyncBoard_PCB_V3_resized.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="md1_button">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>108</y>
+     <width>156</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(251, 217, 221);
+color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>MD1</string>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="md2_button">
+   <property name="geometry">
+    <rect>
+     <x>432</x>
+     <y>46</y>
+     <width>181</width>
+     <height>155</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(251, 217, 221);
+color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>MD2</string>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="md3_button">
+   <property name="geometry">
+    <rect>
+     <x>643</x>
+     <y>108</y>
+     <width>156</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(251, 217, 221);
+color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>MD3</string>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="md4_button">
+   <property name="geometry">
+    <rect>
+     <x>643</x>
+     <y>300</y>
+     <width>156</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(251, 217, 221);
+color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>MD4</string>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="md7_button">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>300</y>
+     <width>156</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(251, 217, 221);
+color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>MD7</string>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="md6_button">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>492</y>
+     <width>156</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(251, 217, 221);
+color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>MD6</string>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="md5_button">
+   <property name="geometry">
+    <rect>
+     <x>643</x>
+     <y>492</y>
+     <width>156</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(251, 217, 221);
+color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>MD5</string>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="md1_settings">
+   <property name="geometry">
+    <rect>
+     <x>307</x>
+     <y>222</y>
+     <width>41</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>...</string>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/settings.png</normaloff>:/icons/settings.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>30</width>
+     <height>30</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="md2_settings">
+   <property name="geometry">
+    <rect>
+     <x>502</x>
+     <y>140</y>
+     <width>41</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>...</string>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/settings.png</normaloff>:/icons/settings.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>30</width>
+     <height>30</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="md3_settings">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>222</y>
+     <width>41</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>...</string>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/settings.png</normaloff>:/icons/settings.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>30</width>
+     <height>30</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="md4_settings">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>413</y>
+     <width>41</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>...</string>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/settings.png</normaloff>:/icons/settings.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>30</width>
+     <height>30</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="md5_settings">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>602</y>
+     <width>41</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>...</string>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/settings.png</normaloff>:/icons/settings.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>30</width>
+     <height>30</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="md6_settings">
+   <property name="geometry">
+    <rect>
+     <x>307</x>
+     <y>602</y>
+     <width>41</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>...</string>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/settings.png</normaloff>:/icons/settings.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>30</width>
+     <height>30</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="md7_settings">
+   <property name="geometry">
+    <rect>
+     <x>307</x>
+     <y>413</y>
+     <width>41</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>...</string>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/settings.png</normaloff>:/icons/settings.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>30</width>
+     <height>30</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>830</y>
+     <width>1001</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="3" column="1">
+     <widget class="QLabel" name="start_source_label_text">
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Start Source:</string>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="16">
+     <widget class="QToolButton" name="stop_settings">
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/settings.png</normaloff>:/icons/settings.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="9">
+     <widget class="QToolButton" name="config_export_button">
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Save the current board configuration&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(121, 195, 169);</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/export-config.png</normaloff>:/icons/export-config.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="10">
+     <widget class="QLabel" name="stop_source_label_icon">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../../../../.designer/backup/icons/stop.svg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="15">
+     <widget class="QComboBox" name="stop_source">
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configure how measurement will be stopped&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">selection-color:rgb(0, 0, 0);
+color: rgb(0, 0, 0);</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>GUI</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Button1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Button2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>MD5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>MD6</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="3" column="5">
+     <widget class="QToolButton" name="start_settings">
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/settings.png</normaloff>:/icons/settings.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="8">
+     <widget class="QToolButton" name="play_button">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Start Measurement&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(185, 212, 125);</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/start.png</normaloff>:/icons/start.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="4">
+     <widget class="QComboBox" name="start_source">
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configure how measurement will be started&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">selection-color:rgb(0, 0, 0);
+color: rgb(0, 0, 0);</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>GUI</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Button1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Button2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>MD5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>MD6</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="3" column="6">
+     <widget class="QLabel" name="start_source_label_icon">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../../../../.designer/backup/icons/start.svg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="12">
+     <widget class="QLabel" name="stop_source_label_text">
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Stop Source:</string>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="7">
+     <widget class="QToolButton" name="config_import_button">
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Import board configuration from file&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(121, 195, 169);</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/import-config.png</normaloff>:/icons/import-config.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="status_led_label">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>425</y>
+     <width>16</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgba(255, 255, 255, 0);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::WinPanel</enum>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>config_import_button</tabstop>
+  <tabstop>start_source</tabstop>
+  <tabstop>stop_source</tabstop>
+  <tabstop>md1_button</tabstop>
+  <tabstop>md1_settings</tabstop>
+  <tabstop>md2_button</tabstop>
+  <tabstop>md2_settings</tabstop>
+  <tabstop>md3_button</tabstop>
+  <tabstop>md3_settings</tabstop>
+  <tabstop>md4_button</tabstop>
+  <tabstop>md4_settings</tabstop>
+  <tabstop>md5_button</tabstop>
+  <tabstop>md5_settings</tabstop>
+  <tabstop>md6_button</tabstop>
+  <tabstop>md6_settings</tabstop>
+  <tabstop>md7_button</tabstop>
+  <tabstop>md7_settings</tabstop>
+  <tabstop>play_button</tabstop>
+ </tabstops>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

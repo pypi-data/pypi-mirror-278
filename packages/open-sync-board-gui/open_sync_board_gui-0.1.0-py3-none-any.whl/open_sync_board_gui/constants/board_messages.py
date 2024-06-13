@@ -1,0 +1,16 @@
+"""Constants for identifying the messages sent by the sync board."""
+
+BOARD_ERROR_LIST = "error_list"
+BOARD_STATUS_LIST = "status_list"
+BOARD_EVENT_LIST = "event_list"
+MEASUREMENT_START = "start_code"
+MEASUREMENT_STOP = "stop_code"
+MESSAGE_HELLO = "hello"
+MESSAGE_ERROR = "error"
+MESSAGE_EVENT = "event"
+MESSAGE_STATUS = "status"
+MESSAGE_START = "start"
+MESSAGE_STOP = "stop"
+
+MESSAGE_CONFIG = "messages"
+MESSAGE_SIZE = "message_size"

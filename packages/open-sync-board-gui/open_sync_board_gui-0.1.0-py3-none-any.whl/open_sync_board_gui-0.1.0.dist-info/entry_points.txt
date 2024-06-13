@@ -1,0 +1,3 @@
+[console_scripts]
+run-sync-board=open_sync_board_gui.scripts.start_gui:run
+
