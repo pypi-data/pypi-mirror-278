@@ -1,0 +1,14 @@
+fastcore>=1.5.45
+python-dateutil
+starlette
+oauthlib
+itsdangerous
+uvicorn[standard]
+httpx
+fastlite>=0.0.6
+python-multipart
+beautifulsoup4
+
+[dev]
+ipython
+lxml
