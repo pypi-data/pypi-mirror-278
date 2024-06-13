@@ -1,0 +1,2 @@
+[console_scripts]
+axiot_postgres_truncation = backend.main:__name__

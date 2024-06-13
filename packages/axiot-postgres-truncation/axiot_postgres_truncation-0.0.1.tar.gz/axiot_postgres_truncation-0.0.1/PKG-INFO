@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: axiot_postgres_truncation
+Version: 0.0.1
+Summary: Truncating the Data stored in Postgres DB and moving into history for Performance Improvement
+Home-page: https://dev.azure.com/PITPL/AXIoT-Product-PSEUDOCODE/_git/axiot_postgres_truncation
+Author: Arjun Sigadam
+Author-email: arjun@pseudocode.co
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0, <4
+Description-Content-Type: text/markdown
+Requires-Dist: flask
+Requires-Dist: pymongo
+
+# Introduction 
+TODO: Truncating the Data stored in Postgres DB and moving into history for Performance Improvement 
+
+# Migration
+This python repository helps to Truncating the Data stored in Postgres DB and moving into history for Performance Improvement .
+
+## Running locally
+- run setup .py
+- Run script `python filename enviornment projectname` or `python3 filename enviornment projectname `
+- filename
+  - main.py starting file of the program
+- environment 
+  - dev  (Development server for Dev team)
+  - qa   (QA server once Dev team unit tested and released to QA team)
+  - prod (Prod server once QA team unit tested and released to Production for Client)
+- projectname
+  - alteem
+  - jjm
+  - arion etc...
+- Sample Run script `python main.py dev alteem` or `python3 main.py dev alteem `
+- To Help `python migrate.py -h`
