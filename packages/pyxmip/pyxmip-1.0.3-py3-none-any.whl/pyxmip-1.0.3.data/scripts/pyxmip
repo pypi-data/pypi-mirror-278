@@ -1,0 +1,48 @@
+#!python
+import os
+
+import yaml
+
+from pyXMIP._script_commands import CLI_FUNCTIONS, CLIParser
+from pyXMIP.utilities.core import bin_directory
+from pyXMIP.utilities.logging import mainlog
+
+# ================================================================================= #
+# Reading the yaml file
+# ================================================================================= #
+
+
+scripts_path = os.path.join(bin_directory, "scripts.yaml")
+
+with open(scripts_path, "r") as file:
+    _yaml_cli = yaml.load(file, yaml.FullLoader)
+
+
+# ================================================================================= #
+# CLI Configuration
+# ================================================================================= #
+# Setup the main parser and add the commands subparser.
+_main_parser = CLIParser.build_recursive(_yaml_cli)
+
+# ================================================================================ #
+# RUN
+# ================================================================================ #
+args = dict(_main_parser.parse_args().__dict__)
+
+operation = args.pop("operation", None)
+if operation is None:
+    from pyXMIP.utilities.text import print_cli_header
+
+    print_cli_header()
+    mainlog.error("Please enter a sub-command.")
+    exit(1)
+elif operation == "unimplemented":
+    from pyXMIP.utilities.text import print_cli_header
+
+    print_cli_header()
+    mainlog.error("This is not yet implemented.")
+    exit(1)
+
+else:
+    CLI_FUNCTIONS[operation](**args)
+    exit(0)

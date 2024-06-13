@@ -1,0 +1,57 @@
+#======================================================================================================================#
+#                                            pyXMIP Configuration File                                                 #
+#                                     +--------------------------------------+                                         #
+#                                                                                                                      #
+# This file contains the basic configuration settings for pyXMIP. See the line comments for details on                 #
+#   specific settings. Users are encouraged to edit settings and / or change settings as necessary.                    #
+#                                                                                                                      #
+# --- These settings are accessed using the pxconfig variable    ------------------------------------------------------#
+#======================================================================================================================#
+system:
+  # -- These are system-wide settings for basic usage. -- #
+  preferences:
+    # General user preferences.
+    disable_progress_bars: false   # Change to true to disable all progress bars in the module.
+logging:
+  # -- Settings pertaining to the logging system in pyXMIP -- #
+  # There are 2 loggers in the pyXMIP module: mainlog and devlog.
+  mainlog:
+    # Settings for the mainlog. This is the log which displays to stdout for most processes.
+    format: '%(name)-3s : [%(levelname)-9s] %(asctime)s %(message)s' # Logger's string format for output
+    level: INFO      # Only logging passed to this level or higher are displayed.
+    stream: stderr   # Can be STDERR or STDOUT.
+  devlog:
+    # The developer log. This will increase the ammount of technical detail printed to stdout.
+    enabled: false
+    format: '%(name)-3s : [%(levelname)-9s] %(asctime)s %(message)s' # Logger's string format for output
+    level: DEBUG    # Only logging passed to this level or higher are displayed.
+    stream: stderr   # Can be STDERR or STDOUT.
+
+#======================================================================================================================#
+plotting:
+  # These are options for any of the default plots generated in cluster generator.
+  defaults:
+    # -- Latex settings -- #
+    text.usetex: true
+    # -- Tick Settings -- #
+    xtick.major.size: 8
+    ytick.major.size: 8
+    xtick.minor.size: 5
+    ytick.minor.size: 5
+    xtick.top: true
+    xtick.bottom: true
+    xtick.labeltop: false
+    xtick.labelbottom: true
+    xtick.minor.visible: true
+    ytick.left: true
+    ytick.right: true
+    ytick.labelleft: true
+    ytick.labelright: false
+    ytick.minor.visible: true
+    xtick.direction: in
+    ytick.direction: in
+    # -- Font Settings -- #
+    font.style: normal
+    font.size: 12
+    # -- Image -- #
+    image.cmap: inferno
