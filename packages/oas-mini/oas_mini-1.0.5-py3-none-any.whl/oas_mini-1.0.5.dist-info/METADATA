@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: oas-mini
+Version: 1.0.5
+Summary: Utilitário para realizar atividades básicas do portal OAS
+Home-page: https://fontes.intranet.bb.com.br/oas/oas-mini
+Author: Banco do Brasil S.A.
+Author-email: f8711369 <rodrigo.siqueira@bb.com.br>
+Project-URL: home, https://fontes.intranet.bb.com.br/oas/oas-mini
+Classifier: Intended Audience :: Information Technology
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: argparse
+Requires-Dist: urllib3
+Requires-Dist: requests
+Requires-Dist: playwright
+Requires-Dist: survey
+Requires-Dist: tabulate
+Provides-Extra: dev
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Provides-Extra: integration
+Requires-Dist: pytest ; extra == 'integration'
+Provides-Extra: unit
+Requires-Dist: pytest ; extra == 'unit'
+
+<h2>oas-mini</h2>
+
+Utilitário de linha de comando para chamar endpoints relacionados ao Portal OAS.
+<a href="https://fontes.intranet.bb.com.br/oas/oas-mini/-/wikis/home">Acesse aqui a documentação</a>.

@@ -1,0 +1,2 @@
+[console_scripts]
+oas-mini = oas_mini.__main__:facade
