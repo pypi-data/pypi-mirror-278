@@ -1,0 +1,133 @@
+#!python
+
+import argparse
+import logging
+import shutil
+import ROOT
+import tqdm
+import os
+import re
+
+import utils_noroot as utnr
+import utils
+
+from log_store import log_store
+
+log=log_store.add_logger('scripts:copy_tstruc')
+#--------------------------------
+class data:
+    root_dir = None
+    targ_dir = None
+    dry_run  = None
+    debug    = None
+    ext      = None
+#--------------------------------
+def get_args():
+    parser = argparse.ArgumentParser(description='Used to copy files of a given extension alongside the tree structure')
+    parser.add_argument('-d','--directory', type=str  , help='Directory path where tree structure begins'    , required=True)
+    parser.add_argument('-t','--target'   , type=str  , help='Destination of ntuple tree'                    , required=False, default=os.getcwd())
+    parser.add_argument('-e','--extension', type=str  , help='Extension of files to copy'                    , required=False, default='png')
+    parser.add_argument('-s','--skip'     , type=str  , help='Will skip paths containing this regex'         , required=False)
+    parser.add_argument('-x','--dry_run'  , type=int  , help='Will copy the files if set to 0'               , choices=[0, 1], default=0)
+    parser.add_argument('-m','--debug'    , type=int  , help='1 will turn on debugging messages'             , choices=[0, 1], default=0)
+    args = parser.parse_args()
+
+    data.root_dir = args.directory
+    data.targ_dir = args.target
+    data.dry_run  = args.dry_run
+    data.skip     = args.skip
+    data.ext      = args.extension
+    data.debug    = args.debug
+#--------------------------------
+def skip_path(file_path):
+    if not file_path.endswith(data.ext):
+        return True 
+
+    if data.skip is None:
+        return False
+
+    regex = f'.*{data.skip}.*'
+    mtch  = re.match(regex, file_path)
+
+    return mtch is not None
+#--------------------------------
+def copy_files():
+    l_path = []
+    for root, dirs, l_file in os.walk(data.root_dir):
+        for file in l_file:
+            file_path = os.path.join(root, file)
+            if skip_copy(file_path):
+                continue
+
+            l_path.append(file_path)
+
+    log.info(f'Copying {len(l_path)} files')
+    for path in tqdm.tqdm(l_path, ascii=' -'):
+        copy_file(path)
+#--------------------------------
+def skip_copy(org_path):
+    new_path = org_path.replace(data.root_dir, data.targ_dir)
+    if not os.path.isfile(new_path):
+        return False 
+
+    org_time = os.path.getctime(org_path)
+    new_time = os.path.getctime(new_path)
+    if new_time < org_time:
+        return False
+
+    org_size = os.path.getsize(org_path)
+    new_size = os.path.getsize(new_path)
+    if org_size != new_size:
+        return False
+
+    return True
+#--------------------------------
+def copy_file(org_path):
+    if skip_copy(org_path):
+        log.debug(f'Skipping: {org_path}')
+        return
+    else:
+        log.debug(f'Not skipping: {org_path}')
+
+    new_path = org_path.replace(data.root_dir, data.targ_dir)
+    if os.path.exists(new_path):
+        os.remove(new_path)
+
+    log.debug('-' * 30)
+    log.debug(org_path)
+    log.debug('--->')
+    log.debug(new_path)
+    log.debug('-' * 30)
+
+    new_dir   = os.path.dirname(new_path)
+    os.makedirs(new_dir, exist_ok=True)
+
+    if not data.dry_run:
+        shutil.copy(org_path, new_path)
+#--------------------------------
+def check_args():
+    if data.dry_run:
+        log.warning('Running a dry run')
+
+    try:
+        os.makedirs(data.targ_dir, exist_ok=True)
+    except:
+        log.error(f'Cannot make target directory: {data.targ_dir}')
+        raise
+
+    if not os.path.isdir(data.root_dir):
+        log.error(f'Root of directory tree not found: {data.root_dir}')
+        raise
+
+    if data.debug == 1:
+        log.setLevel(logging.DEBUG)
+#--------------------------------
+def main():
+    get_args()
+    check_args()
+    copy_files()
+#--------------------------------
+if __name__ == '__main__':
+    main()
+#--------------------------------
+

@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+ILINE=$1
+FILENAME=$2
+ENVIRONMENT=$3
+
+echo "Running with:"
+echo "ILINE=$ILINE"
+echo "FILENAME=$FILENAME"
+echo "ENVIRONMENT=$ENVIRONMENT"
+
+
+source ~/.bashrc
+
+conda activate $ENVIRONMENT
+
+let 'ILINE=ILINE+1'
+
+sed -n $ILINE"p" $FILENAME > executable_$ILINE.sh 
+
+echo "Running:"
+cat executable_$ILINE.sh
+
+source executable_$ILINE.sh
+
