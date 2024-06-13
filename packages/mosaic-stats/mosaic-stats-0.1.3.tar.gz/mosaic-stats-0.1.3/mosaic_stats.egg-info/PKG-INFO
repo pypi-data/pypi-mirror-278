@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: mosaic-stats
+Version: 0.1.3
+Summary: Statistics generation script for astrophotography mosaic projects
+Home-page: https://github.com/kdzuin/mosaic-stats
+Author: Konstantin Dziuin
+Author-email: kdzuin@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Mosaic Stats
+
+This project contains scripts for generating statistics from FITS files for astrophotography projects. The scripts can generate overall statistics, detailed panel statistics, and session statistics.
+
+## Features
+
+-   **Overall Statistics**: Generate overall exposure statistics across multiple panels and sessions.
+-   **Detailed Panel Statistics**: Generate detailed statistics for each panel, including session details.
+-   **Session Statistics**: Generate statistics per session, optionally filtered by panel.
+
+## Requirements
+
+-   Python 3.6+
+-   Astropy library for reading FITS files
+
+## Installation
+
+You can install the package via pip:
+
+```bash
+pip install mosaic-stats
+```
+
+## Usage
+
+You can run the statistics generator and follow the prompts in the application.
+
+```bash
+mosaic-stats [dir_for_lights]
+```
+
+

@@ -1,0 +1,3 @@
+[console_scripts]
+mosaic-stats = stats.stats:main
+
