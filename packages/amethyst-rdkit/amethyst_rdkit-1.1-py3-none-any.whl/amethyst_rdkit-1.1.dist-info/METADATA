@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: amethyst-rdkit
+Version: 1.1
+Summary: An analogue generator.
+Home-page: https://github.com/mogadishu000/amethyst
+License: LGPL-3.0-only
+Keywords: chemistry,analogues,combinatorial chemistry,rdkit
+Author: Bernard Kamiński
+Requires-Python: >=3.9,<4.0
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: Typing :: Typed
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: loguru (>=0.7.2,<0.8.0)
+Requires-Dist: rdkit (>=2023.9.6,<2024.0.0)
+Project-URL: Repository, https://github.com/mogadishu000/amethyst
+Description-Content-Type: text/markdown
+
+# amethyst - an analogue generator
+---
+
+It takes core molecule and list of R-groups and returns all possible combinations. For now documentation is available in the code via docstrings with more in-depth one being planned for the future.
+
+Requires rdkit for core functionality and click for CLI access.
