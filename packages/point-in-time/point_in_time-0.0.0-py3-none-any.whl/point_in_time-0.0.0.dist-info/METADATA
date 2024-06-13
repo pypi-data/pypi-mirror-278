@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: point-in-time
+Version: 0.0.0
+Summary: Lightweight tooling for tracking experiment state in git based repositories.
+Author: Carter Fendley
+Requires-Python: >=3.7
+Requires-Dist: click
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+
