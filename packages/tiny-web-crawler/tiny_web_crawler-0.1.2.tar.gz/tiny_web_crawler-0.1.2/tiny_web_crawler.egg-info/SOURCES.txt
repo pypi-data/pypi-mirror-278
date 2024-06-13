@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.py
+tests/test_crawler.py
+tiny_web_crawler/__init__.py
+tiny_web_crawler/crawler.py
+tiny_web_crawler.egg-info/PKG-INFO
+tiny_web_crawler.egg-info/SOURCES.txt
+tiny_web_crawler.egg-info/dependency_links.txt
+tiny_web_crawler.egg-info/entry_points.txt
+tiny_web_crawler.egg-info/requires.txt
+tiny_web_crawler.egg-info/top_level.txt
