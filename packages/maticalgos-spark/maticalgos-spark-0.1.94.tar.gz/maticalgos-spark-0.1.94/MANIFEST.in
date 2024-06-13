@@ -1,0 +1,11 @@
+exclude .gitignore
+
+# Include all Python files and the README
+include *.py
+include readme.md
+include *.md
+include *.txt
+
+# Include other necessary files and directories
+recursive-include sparkLib *
+ recursive-include sparkLib *.pyc
