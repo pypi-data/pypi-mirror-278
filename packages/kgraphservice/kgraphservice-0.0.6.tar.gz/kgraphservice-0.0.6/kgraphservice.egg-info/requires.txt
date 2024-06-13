@@ -1,0 +1,9 @@
+vital-ai-vitalsigns>=0.1.19
+vital-ai-domain>=0.1.4
+six
+pyyaml
+vital-ai-haley-kg>=0.1.9
+rdflib==7.0.0
+SPARQLWrapper==2.0.0
+networkx
+matplotlib
