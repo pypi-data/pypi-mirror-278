@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: deezvoice
+Version: 0.1
+Summary: An API to clone voice and read text in the copied voice.
+Author: Your Name Here
+Requires-Dist: librosa
+Requires-Dist: scipy
+Requires-Dist: numpy
+
