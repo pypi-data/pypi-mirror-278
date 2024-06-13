@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="121348b3-76b1-47fd-8bbc-4ffb0e59b5c4" name="Changes" comment="added images and more text">
+      <change afterPath="$PROJECT_DIR$/docs/_templates/class.rst" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="revert-32-bugfix/thread_to_process" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="KEEP" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;simonmichel1996&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="1a31515f-4c81-478a-b16f-019359335a75" />
+        <option name="url" value="https://github.com/TrafoToolkit/camera-threading/" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2Z4zYW4oDD55q8LzEjkinI3F9CT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "true",
+    "git-widget-placeholder": "feature/sphinx-documentation",
+    "last_opened_file_path": "/Users/simonmichel/PycharmProjects/camera-management/docs/_templates",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "PyScientificConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/_templates" />
+      <recent name="$PROJECT_DIR$/docs/images" />
+      <recent name="$PROJECT_DIR$/docs" />
+      <recent name="$PROJECT_DIR$/examples" />
+      <recent name="$PROJECT_DIR$/src/camera_management/measurement_operators" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/images" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/docs" />
+      <recent name="$PROJECT_DIR$/docs/_static" />
+      <recent name="$PROJECT_DIR$/docs/_build/html" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.complete_example">
+    <configuration name="basic_viewer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="camera-management" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/camera_management" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/camera_management/basic_viewer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="camera_settings" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="camera-management" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/examples" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/camera_settings.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="complete_example" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="camera-management" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/examples" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/complete_example.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="camera-management" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/examples" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="viewer_examples" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="camera-management" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/examples" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/viewer_examples.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.camera_settings" />
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.complete_example" />
+      <item itemvalue="Python.viewer_examples" />
+      <item itemvalue="Python.basic_viewer" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.basic_viewer" />
+        <item itemvalue="Python.viewer_examples" />
+        <item itemvalue="Python.complete_example" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.camera_settings" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="121348b3-76b1-47fd-8bbc-4ffb0e59b5c4" name="Changes" comment="" />
+      <created>1701696186581</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701696186581</updated>
+      <workItem from="1701696187608" duration="17071000" />
+      <workItem from="1702900639560" duration="13000" />
+      <workItem from="1702900671605" duration="115576000" />
+      <workItem from="1704359133094" duration="43256000" />
+      <workItem from="1704712937588" duration="14018000" />
+      <workItem from="1704789624017" duration="12937000" />
+      <workItem from="1704806408998" duration="171959000" />
+      <workItem from="1705929315390" duration="89286000" />
+      <workItem from="1706541615400" duration="1305000" />
+      <workItem from="1706776645905" duration="127269000" />
+      <workItem from="1708676410749" duration="598000" />
+      <workItem from="1708684599797" duration="1214000" />
+      <workItem from="1708961396836" duration="597000" />
+      <workItem from="1709108126888" duration="598000" />
+      <workItem from="1709280377067" duration="598000" />
+      <workItem from="1709324590743" duration="599000" />
+      <workItem from="1709539531047" duration="599000" />
+      <workItem from="1713342022558" duration="16326000" />
+      <workItem from="1714725947940" duration="1521000" />
+      <workItem from="1715585378643" duration="6006000" />
+      <workItem from="1715611257149" duration="1892000" />
+      <workItem from="1715672722835" duration="675000" />
+      <workItem from="1715845731392" duration="13656000" />
+      <workItem from="1716360565457" duration="23435000" />
+      <workItem from="1716905866313" duration="16103000" />
+    </task>
+    <task id="LOCAL-00125" summary="added init">
+      <option name="closed" value="true" />
+      <created>1707217404455</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1707217404455</updated>
+    </task>
+    <task id="LOCAL-00126" summary="added documentation&#10;&#10;renaming&#10;&#10;timeout to function argument">
+      <option name="closed" value="true" />
+      <created>1707223030776</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1707223030776</updated>
+    </task>
+    <task id="LOCAL-00127" summary="added return types">
+      <option name="closed" value="true" />
+      <created>1707225768737</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1707225768737</updated>
+    </task>
+    <task id="LOCAL-00128" summary="added return types (II)">
+      <option name="closed" value="true" />
+      <created>1707226308668</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1707226308668</updated>
+    </task>
+    <task id="LOCAL-00129" summary="added support for pre-processing settings in camera description (not functional yet)">
+      <option name="closed" value="true" />
+      <created>1707229765118</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1707229765118</updated>
+    </task>
+    <task id="LOCAL-00130" summary="added support for pre-processing settings in camera description (not functional yet)">
+      <option name="closed" value="true" />
+      <created>1707229775394</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1707229775394</updated>
+    </task>
+    <task id="LOCAL-00131" summary="added logging strings together">
+      <option name="closed" value="true" />
+      <created>1707230537462</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1707230537462</updated>
+    </task>
+    <task id="LOCAL-00132" summary="version 1.0.0 -&gt; 1.0.1">
+      <option name="closed" value="true" />
+      <created>1707231773400</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1707231773400</updated>
+    </task>
+    <task id="LOCAL-00133" summary="added manual setting of config &#10;&#10;added waiting for preprocessor">
+      <option name="closed" value="true" />
+      <created>1707488810631</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1707488810631</updated>
+    </task>
+    <task id="LOCAL-00134" summary="added waiting until the backend is online">
+      <option name="closed" value="true" />
+      <created>1707488847433</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1707488847433</updated>
+    </task>
+    <task id="LOCAL-00135" summary="fixed resolution not setting on basler bug&#10;&#10;added waiting time while interfaces are not online&#10;&#10;fixing basler segfaults">
+      <option name="closed" value="true" />
+      <created>1707737634288</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1707737634288</updated>
+    </task>
+    <task id="LOCAL-00136" summary="added support for pre-processing settings in camera description">
+      <option name="closed" value="true" />
+      <created>1707740060152</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1707740060152</updated>
+    </task>
+    <task id="LOCAL-00137" summary="made the image_processor not restart when there are new settings applied">
+      <option name="closed" value="true" />
+      <created>1707742687263</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1707742687263</updated>
+    </task>
+    <task id="LOCAL-00138" summary="removed mysterious line in basic_Interface&#10;&#10;changed config to description&#10;&#10;added a viewer example">
+      <option name="closed" value="true" />
+      <created>1707823512741</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1707823512741</updated>
+    </task>
+    <task id="LOCAL-00139" summary="added .rst files for sphinx">
+      <option name="closed" value="true" />
+      <created>1707823564349</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1707823564349</updated>
+    </task>
+    <task id="LOCAL-00140" summary="added documentation">
+      <option name="closed" value="true" />
+      <created>1707832202565</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1707832202565</updated>
+    </task>
+    <task id="LOCAL-00141" summary="added waiting in frontend (mysterious line had a use :(&#10;&#10;fixed create_description.py">
+      <option name="closed" value="true" />
+      <created>1707832786855</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1707832786855</updated>
+    </task>
+    <task id="LOCAL-00142" summary="adjusted temp file handling so that standalone usage of CameraApplication results in correct temp file creation">
+      <option name="closed" value="true" />
+      <created>1707838610337</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1707838610337</updated>
+    </task>
+    <task id="LOCAL-00143" summary="added examples to usage.rst&#10;&#10;hotfixed bug in CameraApplication">
+      <option name="closed" value="true" />
+      <created>1707902210194</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1707902210194</updated>
+    </task>
+    <task id="LOCAL-00144" summary="added examples to usage.rst&#10;&#10;added documentation uon usage">
+      <option name="closed" value="true" />
+      <created>1707906676370</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1707906676370</updated>
+    </task>
+    <task id="LOCAL-00145" summary="added missing dependency in pyproject.toml&#10;&#10;changed config -&gt; description">
+      <option name="closed" value="true" />
+      <created>1707906726560</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1707906726560</updated>
+    </task>
+    <task id="LOCAL-00146" summary="added documentation on description files">
+      <option name="closed" value="true" />
+      <created>1707909568658</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1707909568658</updated>
+    </task>
+    <task id="LOCAL-00147" summary="small bugfix in basler_handler.py">
+      <option name="closed" value="true" />
+      <created>1707909595148</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1707909595148</updated>
+    </task>
+    <task id="LOCAL-00148" summary="added with-statement to thread locks&#10;&#10;changed function names&#10;&#10;housekeeping">
+      <option name="closed" value="true" />
+      <created>1707922604272</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1707922604272</updated>
+    </task>
+    <task id="LOCAL-00149" summary="bundled pre_processing settings into function">
+      <option name="closed" value="true" />
+      <created>1707923397037</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1707923397037</updated>
+    </task>
+    <task id="LOCAL-00150" summary="adjusted documentation">
+      <option name="closed" value="true" />
+      <created>1707923471377</created>
+      <option name="number" value="00150" />
+      <option name="presentableId" value="LOCAL-00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1707923471377</updated>
+    </task>
+    <task id="LOCAL-00151" summary="version 1.0.1 -&gt; 1.0.2">
+      <option name="closed" value="true" />
+      <created>1707924891838</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1707924891838</updated>
+    </task>
+    <task id="LOCAL-00152" summary="added missing package in pyproject.toml">
+      <option name="closed" value="true" />
+      <created>1707925342097</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1707925342097</updated>
+    </task>
+    <task id="LOCAL-00153" summary="v1.0.2.1 -&gt; v.1.0.2.2">
+      <option name="closed" value="true" />
+      <created>1707925507163</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1707925507163</updated>
+    </task>
+    <task id="LOCAL-00154" summary="added documentation">
+      <option name="closed" value="true" />
+      <created>1713357240034</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1713357240042</updated>
+    </task>
+    <task id="LOCAL-00155" summary="removed type calibration flag">
+      <option name="closed" value="true" />
+      <created>1713357414752</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1713357414752</updated>
+    </task>
+    <task id="LOCAL-00156" summary="adjusted README.md">
+      <option name="closed" value="true" />
+      <created>1713358413493</created>
+      <option name="number" value="00156" />
+      <option name="presentableId" value="LOCAL-00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1713358413493</updated>
+    </task>
+    <task id="LOCAL-00157" summary="removed unused stuff">
+      <option name="closed" value="true" />
+      <created>1713358835394</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1713358835394</updated>
+    </task>
+    <task id="LOCAL-00158" summary="removed even more unused stuff">
+      <option name="closed" value="true" />
+      <created>1713358964465</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1713358964465</updated>
+    </task>
+    <task id="LOCAL-00159" summary="added match case statement in avt_handler.py&#10;split roi setting into separate functions&#10;added function to calculate roi offset&#10;style adjustments">
+      <option name="closed" value="true" />
+      <created>1714378566703</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1714378566703</updated>
+    </task>
+    <task id="LOCAL-00160" summary="added status dataclass">
+      <option name="closed" value="true" />
+      <created>1715586803153</created>
+      <option name="number" value="00160" />
+      <option name="presentableId" value="LOCAL-00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1715586803154</updated>
+    </task>
+    <task id="LOCAL-00161" summary="fixed CameraApplication trying to find an uncreated path">
+      <option name="closed" value="true" />
+      <created>1716292798625</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1716292798626</updated>
+    </task>
+    <task id="LOCAL-00162" summary="fixed bug">
+      <option name="closed" value="true" />
+      <created>1716293429265</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1716293429265</updated>
+    </task>
+    <task id="LOCAL-00163" summary="slowly but steadily">
+      <option name="closed" value="true" />
+      <created>1716294391990</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1716294391990</updated>
+    </task>
+    <task id="LOCAL-00164" summary="nevermind">
+      <option name="closed" value="true" />
+      <created>1716294522730</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1716294522730</updated>
+    </task>
+    <task id="LOCAL-00165" summary="added temperature measurement feature for basler cameras">
+      <option name="closed" value="true" />
+      <created>1716460098077</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1716460098079</updated>
+    </task>
+    <task id="LOCAL-00166" summary="temporary fix to the selector problem">
+      <option name="closed" value="true" />
+      <created>1716467729361</created>
+      <option name="number" value="00166" />
+      <option name="presentableId" value="LOCAL-00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1716467729361</updated>
+    </task>
+    <task id="LOCAL-00167" summary="removed example">
+      <option name="closed" value="true" />
+      <created>1716467783060</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1716467783060</updated>
+    </task>
+    <task id="LOCAL-00168" summary="added default temperature to acA5472_17uc basler device as well">
+      <option name="closed" value="true" />
+      <created>1716470676103</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1716470676103</updated>
+    </task>
+    <task id="LOCAL-00169" summary="adjusted return type">
+      <option name="closed" value="true" />
+      <created>1716472855407</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1716472855407</updated>
+    </task>
+    <task id="LOCAL-00170" summary="removed stop/start of grabbing">
+      <option name="closed" value="true" />
+      <created>1716472978840</created>
+      <option name="number" value="00170" />
+      <option name="presentableId" value="LOCAL-00170" />
+      <option name="project" value="LOCAL" />
+      <updated>1716472978840</updated>
+    </task>
+    <task id="LOCAL-00171" summary="wip">
+      <option name="closed" value="true" />
+      <created>1717495773315</created>
+      <option name="number" value="00171" />
+      <option name="presentableId" value="LOCAL-00171" />
+      <option name="project" value="LOCAL" />
+      <updated>1717495773315</updated>
+    </task>
+    <task id="LOCAL-00172" summary="added comment">
+      <option name="closed" value="true" />
+      <created>1717495829062</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1717495829062</updated>
+    </task>
+    <task id="LOCAL-00173" summary="added images and more text">
+      <option name="closed" value="true" />
+      <created>1717502878798</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1717502878798</updated>
+    </task>
+    <option name="localTasksCounter" value="174" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="main" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="feature/oak_integration" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="feature/latency_testing" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="feature/sphinx-documentation" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="bugfixes/user_experience_2" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="bugfixes/pre_processing_in_description" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/main" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="feature/webcam_cross_platform_adjustment" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="feature/new_basler_cam" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="feature/clean_process_kill" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="feature/sphinx-documentation" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="adjusted documentation" />
+    <MESSAGE value="version 1.0.1 -&gt; 1.0.2" />
+    <MESSAGE value="added missing package in pyproject.toml" />
+    <MESSAGE value="v1.0.2.1 -&gt; v.1.0.2.2" />
+    <MESSAGE value="added documentation" />
+    <MESSAGE value="removed type calibration flag" />
+    <MESSAGE value="adjusted README.md" />
+    <MESSAGE value="removed unused stuff" />
+    <MESSAGE value="removed even more unused stuff" />
+    <MESSAGE value="added match case statement in avt_handler.py&#10;split roi setting into separate functions&#10;style adjustments" />
+    <MESSAGE value="added match case statement in avt_handler.py&#10;split roi setting into separate functions&#10;added function to calculate roi offset&#10;style adjustments" />
+    <MESSAGE value="added status dataclass" />
+    <MESSAGE value="fixed CameraApplication trying to find an uncreated path" />
+    <MESSAGE value="fixed bug" />
+    <MESSAGE value="slowly but steadily" />
+    <MESSAGE value="nevermind" />
+    <MESSAGE value="added temperature measurement feature for basler cameras" />
+    <MESSAGE value="temporary fix to the selector problem" />
+    <MESSAGE value="removed example" />
+    <MESSAGE value="added default temperature to acA5472_17uc basler device as well" />
+    <MESSAGE value="adjusted return type" />
+    <MESSAGE value="removed stop/start of grabbing" />
+    <MESSAGE value="wip" />
+    <MESSAGE value="added comment" />
+    <MESSAGE value="added images and more text" />
+    <option name="LAST_COMMIT_MESSAGE" value="added images and more text" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/camera_management$camera_settings.coverage" NAME="camera_settings Coverage Results" MODIFIED="1707900378851" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
+    <SUITE FILE_PATH="coverage/camera_management$create_config.coverage" NAME="create_config Coverage Results" MODIFIED="1705937746999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/camera_management/tools" />
+    <SUITE FILE_PATH="coverage/camera_management$aruco_example.coverage" NAME="aruco_example Coverage Results" MODIFIED="1707737882922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
+    <SUITE FILE_PATH="coverage/camera_management$plotting.coverage" NAME="plotting Coverage Results" MODIFIED="1714726194688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/camera_management/tools" />
+    <SUITE FILE_PATH="coverage/camera_management$complete_example.coverage" NAME="complete_example Coverage Results" MODIFIED="1717487144061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
+    <SUITE FILE_PATH="coverage/camera_threading$create_config.coverage" NAME="create_config Coverage Results" MODIFIED="1703080302895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/camera_management$camera_dataclasses.coverage" NAME="camera_dataclasses Coverage Results" MODIFIED="1705912717359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/camera_management/tools" />
+    <SUITE FILE_PATH="coverage/camera_threading$project_definitions.coverage" NAME="project_definitions Coverage Results" MODIFIED="1701767575374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/statics" />
+    <SUITE FILE_PATH="coverage/camera_threading$stream_threader.coverage" NAME="stream_threader Coverage Results" MODIFIED="1703152187624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/camera_management$basler_test.coverage" NAME="basler_test Coverage Results" MODIFIED="1716470299261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
+    <SUITE FILE_PATH="coverage/camera_threading$manager_interface.coverage" NAME="manager_interface Coverage Results" MODIFIED="1704185035177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backends" />
+    <SUITE FILE_PATH="coverage/camera_management$manager_interface__2_.coverage" NAME="manager_interface Coverage Results" MODIFIED="1704358691211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/camera_management/backends" />
+    <SUITE FILE_PATH="coverage/camera_management$test.coverage" NAME="test Coverage Results" MODIFIED="1716533377655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
+    <SUITE FILE_PATH="coverage/camera_threading$system_analyzer.coverage" NAME="system_analyzer Coverage Results" MODIFIED="1701767664094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/camera_threading$backend.coverage" NAME="backend Coverage Results" MODIFIED="1702901777811" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backends" />
+    <SUITE FILE_PATH="coverage/camera_threading$test.coverage" NAME="test Coverage Results" MODIFIED="1703069028677" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/camera_threading$camera_utils.coverage" NAME="camera_utils Coverage Results" MODIFIED="1701766035929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/camera_management$system_analyzer.coverage" NAME="system_analyzer Coverage Results" MODIFIED="1705498538574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/camera_management/tools" />
+    <SUITE FILE_PATH="coverage/camera_management$bug.coverage" NAME="bug Coverage Results" MODIFIED="1708527255365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
+    <SUITE FILE_PATH="coverage/camera_threading$interface.coverage" NAME="camera_interface_args Coverage Results" MODIFIED="1703169794293" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backends" />
+    <SUITE FILE_PATH="coverage/camera_management$basic_viewer.coverage" NAME="basic_viewer Coverage Results" MODIFIED="1705401027277" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/camera_management" />
+    <SUITE FILE_PATH="coverage/camera_management$viewer_examples.coverage" NAME="viewer_examples Coverage Results" MODIFIED="1707899566223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
+    <SUITE FILE_PATH="coverage/camera_management$camera_interface__1_.coverage" NAME="camera_interface (1) Coverage Results" MODIFIED="1703160035339" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backends" />
+    <SUITE FILE_PATH="coverage/camera_management$aruco_settings.coverage" NAME="aruco_example Coverage Results" MODIFIED="1706518141891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
+    <SUITE FILE_PATH="coverage/camera_threading$image_processor.coverage" NAME="image_processor Coverage Results" MODIFIED="1702990304099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/camera_management$manager_interface__1_.coverage" NAME="manager_interface (1) Coverage Results" MODIFIED="1705400331688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/camera_management/camera_management_app" />
+    <SUITE FILE_PATH="coverage/camera_management$basler_handler.coverage" NAME="basler_handler Coverage Results" MODIFIED="1716469637743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/camera_management/_camera_backends" />
+    <SUITE FILE_PATH="coverage/camera_management$manager_interface.coverage" NAME="manager_interface Coverage Results" MODIFIED="1705413902571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/camera_management/camera_management_app" />
+  </component>
+</project>
