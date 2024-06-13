@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: event-subscriber
+Version: 0.1.0
+Summary: A tool to subscribe and handle Ethereum events
+Author: Stephen Ajayi
+Author-email: 5m477code@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: web3
+Requires-Dist: asyncio
+Requires-Dist: colorama
+Requires-Dist: pyfiglet
+Requires-Dist: argparse
+Requires-Dist: logging
+
+# Event Subscriber
+
+A tool to subscribe and handle Ethereum events.
+
+## Installation
+
+```bash
+pip install event_subscriber
+
+Usage
+event_subscriber
