@@ -1,0 +1,4 @@
+include LICENCE
+include pyproject.toml
+graft src/gaiaxpy
+global-exclude __pycache__

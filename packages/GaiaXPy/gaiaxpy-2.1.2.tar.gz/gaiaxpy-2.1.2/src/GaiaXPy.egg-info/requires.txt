@@ -1,0 +1,15 @@
+aenum
+astropy
+astroquery
+fastavro
+hdfs
+matplotlib
+numpy>1.23
+packaging
+pandas>=1.5.0
+scipy
+tqdm>=4.64.0
+
+[tests]
+pytest
+pytest-mock
