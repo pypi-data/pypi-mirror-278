@@ -1,0 +1,2 @@
+[console_scripts]
+devsecops-engine-tools = devsecops_engine_tools.engine_core.src.applications.runner_engine_core:application_core
