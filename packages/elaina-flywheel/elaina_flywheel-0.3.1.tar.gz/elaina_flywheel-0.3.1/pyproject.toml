@@ -1,0 +1,37 @@
+[project]
+name = "elaina-flywheel"
+version = "0.3.1"
+description = ""
+authors = [
+    { name = "Elaina", email = "GreyElaina@outlook.com" },
+]
+dependencies = [
+    "typing-extensions>=4.10.0",
+]
+requires-python = ">=3.9"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.ruff]
+line-length = 135
+
+[tool.ruff.lint]
+extend-select = [
+    "I001",
+]
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "viztracer>=0.16.2",
+]
+
+[tool.pyright]
+pythonVersion = "3.9"
