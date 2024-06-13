@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: flowbyte
+Version: 0.2.4
+Summary: ETL tool for data processing
+Author-email: Kevork Keheian <flowbyte@optiret.com>
+Project-URL: Homepage, https://github.com/optiret/flowbyte
+Project-URL: Issues, https://github.com/optiret/flowbyte/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: msal
+Requires-Dist: pydantic
+Requires-Dist: pyodbc
+Requires-Dist: sqlalchemy
+Requires-Dist: numpy
+
+# FLOWBYTE
+Simplify your integration and ETL
+
+
+### SQL
+
+
+
+
+### LOG
+
+
+
+
+
+### PBI
