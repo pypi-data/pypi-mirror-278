@@ -1,0 +1,4 @@
+dask[array,distributed]==2024.5.2
+xarray
+numpy
+git+https://github.com/OceanStreamIO/echopype-dev.git@oceanstream#egg=echopype
