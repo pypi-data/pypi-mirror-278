@@ -1,0 +1,66 @@
+from typing import overload
+import ghidra.framework.cmd
+import ghidra.framework.model
+import ghidra.program.model.listing
+import java.lang
+
+
+class CreateFunctionDefinitionCmd(object, ghidra.framework.cmd.Command):
+    """
+    Command for creating a function definition data type based on the
+     function signature for a function at an address.
+    """
+
+
+
+
+
+    def __init__(self, entry: ghidra.program.model.address.Address, serviceProvider: ghidra.framework.plugintool.ServiceProvider):
+        """
+        Constructs a new command for creating a function definition.
+        @param entry entry point address for the function whose signature is to 
+         be used to create the function defintion data type.
+        @param serviceProvider optional service provider (may be null).  If specified and the 
+         {@link DataTypeManagerService} is found, the newly created function definition
+         will be selected within the GUI.
+        """
+        ...
+
+
+
+    @overload
+    def applyTo(self, program: ghidra.program.model.listing.Program) -> bool: ...
+
+    @overload
+    def applyTo(self, __a0: ghidra.framework.model.DomainObject) -> bool: ...
+
+    def equals(self, __a0: object) -> bool: ...
+
+    def getClass(self) -> java.lang.Class: ...
+
+    def getName(self) -> unicode: ...
+
+    def getStatusMsg(self) -> unicode: ...
+
+    def hashCode(self) -> int: ...
+
+    def notify(self) -> None: ...
+
+    def notifyAll(self) -> None: ...
+
+    def toString(self) -> unicode: ...
+
+    @overload
+    def wait(self) -> None: ...
+
+    @overload
+    def wait(self, __a0: long) -> None: ...
+
+    @overload
+    def wait(self, __a0: long, __a1: int) -> None: ...
+
+    @property
+    def name(self) -> unicode: ...
+
+    @property
+    def statusMsg(self) -> unicode: ...

@@ -1,0 +1,76 @@
+from typing import overload
+import ghidra.program.model.address
+import ghidra.program.model.pcode
+import java.io
+import java.lang
+
+
+class PackedEncode(object, ghidra.program.model.pcode.Encoder):
+    """
+    A byte-based encoder designed to marshal to the decompiler efficiently
+     See  for details of the encoding format
+    """
+
+
+
+
+
+    @overload
+    def __init__(self): ...
+
+    @overload
+    def __init__(self, stream: java.io.OutputStream): ...
+
+
+
+    def closeElement(self, elemId: ghidra.program.model.pcode.ElementId) -> None: ...
+
+    def equals(self, __a0: object) -> bool: ...
+
+    def getClass(self) -> java.lang.Class: ...
+
+    def getOutputStream(self) -> java.io.OutputStream:
+        """
+        @return the underlying stream
+        """
+        ...
+
+    def hashCode(self) -> int: ...
+
+    def notify(self) -> None: ...
+
+    def notifyAll(self) -> None: ...
+
+    def openElement(self, elemId: ghidra.program.model.pcode.ElementId) -> None: ...
+
+    def toString(self) -> unicode: ...
+
+    @overload
+    def wait(self) -> None: ...
+
+    @overload
+    def wait(self, __a0: long) -> None: ...
+
+    @overload
+    def wait(self, __a0: long, __a1: int) -> None: ...
+
+    def writeBool(self, attribId: ghidra.program.model.pcode.AttributeId, val: bool) -> None: ...
+
+    def writeOpcode(self, attribId: ghidra.program.model.pcode.AttributeId, opcode: int) -> None: ...
+
+    def writeSignedInteger(self, attribId: ghidra.program.model.pcode.AttributeId, val: long) -> None: ...
+
+    @overload
+    def writeSpace(self, attribId: ghidra.program.model.pcode.AttributeId, spc: ghidra.program.model.address.AddressSpace) -> None: ...
+
+    @overload
+    def writeSpace(self, attribId: ghidra.program.model.pcode.AttributeId, index: int, name: unicode) -> None: ...
+
+    def writeString(self, attribId: ghidra.program.model.pcode.AttributeId, val: unicode) -> None: ...
+
+    def writeStringIndexed(self, attribId: ghidra.program.model.pcode.AttributeId, index: int, val: unicode) -> None: ...
+
+    def writeUnsignedInteger(self, attribId: ghidra.program.model.pcode.AttributeId, val: long) -> None: ...
+
+    @property
+    def outputStream(self) -> java.io.OutputStream: ...

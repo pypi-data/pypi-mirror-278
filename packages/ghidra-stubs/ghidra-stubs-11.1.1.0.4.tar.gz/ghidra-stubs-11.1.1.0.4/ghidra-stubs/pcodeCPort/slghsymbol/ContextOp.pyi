@@ -1,0 +1,46 @@
+from typing import overload
+import ghidra.pcodeCPort.slghsymbol
+import ghidra.program.model.pcode
+import java.lang
+
+
+class ContextOp(ghidra.pcodeCPort.slghsymbol.ContextChange):
+    location: ghidra.sleigh.grammar.Location
+
+
+
+    @overload
+    def __init__(self, __a0: ghidra.sleigh.grammar.Location): ...
+
+    @overload
+    def __init__(self, __a0: ghidra.sleigh.grammar.Location, __a1: int, __a2: int, __a3: ghidra.pcodeCPort.slghpatexpress.PatternExpression): ...
+
+
+
+    def dispose(self) -> None: ...
+
+    def encode(self, __a0: ghidra.program.model.pcode.Encoder) -> None: ...
+
+    def equals(self, __a0: object) -> bool: ...
+
+    def getClass(self) -> java.lang.Class: ...
+
+    def hashCode(self) -> int: ...
+
+    def notify(self) -> None: ...
+
+    def notifyAll(self) -> None: ...
+
+    def toString(self) -> unicode: ...
+
+    def validate(self) -> None: ...
+
+    @overload
+    def wait(self) -> None: ...
+
+    @overload
+    def wait(self, __a0: long) -> None: ...
+
+    @overload
+    def wait(self, __a0: long, __a1: int) -> None: ...
+
