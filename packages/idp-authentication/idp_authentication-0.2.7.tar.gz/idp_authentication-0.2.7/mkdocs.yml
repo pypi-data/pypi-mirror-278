@@ -1,0 +1,38 @@
+site_name: IDP Authentication
+site_description: IDP Authentication hexagonal architecture implementation
+site_url: https://github.com/CardoAI/idp-authentication
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: orange
+      accent: yellow
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+    - scheme: slate
+      accent: yellow
+      primary: orange
+      toggle:
+          icon: material/lightbulb-outline
+          name: Switch to light mode
+  features:
+  - navigation.footer
+  - search.suggest
+  - search.highlight
+  - content.tabs.link
+  icon:
+    repo: fontawesome/brands/github-alt
+  language: en
+plugins:
+- search
+- mkdocstrings
+repo_name: cardoai/idp-authentication
+repo_url: https://github.com/CardoAI/idp-authentication
+edit_uri: ""
+nav:
+- IDP Authentication: index.md
+- Users: pages/getting_started.md
+- Authentication: pages/authentication.md
+- Authorization: pages/authorization.md
+- API: pages/api.md
