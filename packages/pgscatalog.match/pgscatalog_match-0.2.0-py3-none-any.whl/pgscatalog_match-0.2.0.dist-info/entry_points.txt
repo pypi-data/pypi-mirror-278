@@ -1,0 +1,5 @@
+[console_scripts]
+pgscatalog-intersect=pgscatalog.match.cli.intersect_cli:run_intersect
+pgscatalog-match=pgscatalog.match.cli.match_cli:run_match
+pgscatalog-matchmerge=pgscatalog.match.cli.merge_cli:run_merge
+
