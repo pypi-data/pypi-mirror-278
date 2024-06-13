@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: lotterybr
+Version: 0.2.0
+Summary: A collection of functions designed to streamline the retrieval of data from Brazilian lottery games operated by Caixa Econômica Federal, accessible through the official website at <https://loterias.caixa.gov.br/Paginas/default.aspx/>.
+Home-page: https://github.com/salvnetto/lotterybr-py
+Author: Salvador Netto, Tomas Bernardes, Fabio Demarqui
+Author-email: salvnetto@ufmg.br, tomasbp@ufmg.br, fndemarqui@est.ufmg.br
+License: MIT
+Project-URL: Bug Tracker, https://github.com/salvnetto/lotterybr-py/issues
+Project-URL: Documentation, https://salvnetto.github.io/lotterybr-py
+Project-URL: Source Code, https://github.com/salvnetto/lotterybr-py
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Database
+Classifier: Topic :: Internet
+Requires-Python: >3.5
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: pyreadr
+Requires-Dist: shiny
+Requires-Dist: shinywidgets
+Requires-Dist: plotly
+Requires-Dist: numpy
+
+# lotterybr
+
+<!-- badges: start -->
+
+
+<!-- badges: end -->
+
+The goal of the package is to provide a function to automatically import
+data from the lotteries of Caixa Economica Federal into the Python
+environment. Data from the lotteries of Caixa Economica Federal includes
+information on various games such as Mega-Sena, Lotofacil, Quina, among
+others. They are downloaded from the official website of the Federal
+Savings Bank at <https://loterias.caixa.gov.br/>.
+
+## Installation
+
+You can install the development version of lotterybr like so:
+
+``` python
+pip install lotterybr
+```
+
+## Example
+
+Downloading Lotofacil winners data:
+
+``` python
+
+from lotterybr import get_data
+
+lotofacil = get_data(game= "lotofacil", type= "winners")
+```
