@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OutputConnectionConfigDialog</class>
+ <widget class="QDialog" name="OutputConnectionConfigDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>361</width>
+    <height>464</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Output Connection Configuration</string>
+  </property>
+  <widget class="QDialogButtonBox" name="buttonBox">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>420</y>
+     <width>291</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="manual_config">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>140</y>
+     <width>341</width>
+     <height>271</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <widget class="QSpinBox" name="frequency">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>190</y>
+      <width>161</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="suffix">
+     <string>Hz</string>
+    </property>
+    <property name="maximum">
+     <number>5100</number>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="sync_signal">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>70</y>
+      <width>161</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <item>
+     <property name="text">
+      <string>Falling Trigger</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Rising Trigger</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Falling Edge</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Rising Edge</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Falling Clock</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Rising Clock</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>M-Sequence</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="delay_label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>141</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Delay:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="sync_signal_label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>121</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sync Signal:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="frequency_label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>190</y>
+      <width>121</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Frequency:</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="delay">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>30</y>
+      <width>161</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="suffix">
+     <string>ms</string>
+    </property>
+    <property name="maximum">
+     <number>65535</number>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="stop_trigger">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>230</y>
+      <width>121</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Stop Trigger</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="degree">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>150</y>
+      <width>161</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="suffix">
+     <string/>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>11</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="degree_label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>150</y>
+      <width>121</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Degree:</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="pulse_length">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>110</y>
+      <width>161</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="suffix">
+     <string>ms</string>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>65535</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="pulse_length_label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>110</y>
+      <width>121</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Pulse Length:</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="default_config">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>30</y>
+     <width>341</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <widget class="QLabel" name="sensor_label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>121</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Select Device:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="sensor">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>30</y>
+      <width>161</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QRadioButton" name="manual_config_radio">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>120</y>
+     <width>161</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Manual Configuration</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="default_config_radio">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>161</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Default Configuration</string>
+   </property>
+  </widget>
+  <zorder>manual_config</zorder>
+  <zorder>buttonBox</zorder>
+  <zorder>default_config</zorder>
+  <zorder>manual_config_radio</zorder>
+  <zorder>default_config_radio</zorder>
+ </widget>
+ <tabstops>
+  <tabstop>default_config</tabstop>
+  <tabstop>sensor</tabstop>
+  <tabstop>manual_config</tabstop>
+  <tabstop>delay</tabstop>
+  <tabstop>sync_signal</tabstop>
+  <tabstop>frequency</tabstop>
+  <tabstop>stop_trigger</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>OutputConnectionConfigDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>OutputConnectionConfigDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
