@@ -1,0 +1,30 @@
+[project]
+name = "mhhs-validate"
+version = "0.0.1"
+description = "MHHS validator"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {file = "LICENSE"}
+keywords = []
+authors = [
+  {name = "Oliver Russell", email = "ojhrussell@gmail.com"},
+]
+maintainers = [
+  {name = "Oliver Russell", email = "ojhrussell@gmail.com"},
+]
+classifiers = [
+  "Programming Language :: Python",
+]
+
+dependencies = [
+  "jsonschema==4.*",
+  "requests==2.*",
+]
+
+[project.urls]
+homepage = "https://github.com/leontrolski/mhhs-validate"
+documentation = "https://github.com/leontrolski/mhhs-validate"
+repository = "https://github.com/leontrolski/mhhs-validate.git"
+
+[project.scripts]
+mhhs-validate = "mhhs_validate.cli:validate"

@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/mhhs_validate/__init__.py
+src/mhhs_validate/cli.py
+src/mhhs_validate/py.typed
+src/mhhs_validate.egg-info/PKG-INFO
+src/mhhs_validate.egg-info/SOURCES.txt
+src/mhhs_validate.egg-info/dependency_links.txt
+src/mhhs_validate.egg-info/entry_points.txt
+src/mhhs_validate.egg-info/requires.txt
+src/mhhs_validate.egg-info/top_level.txt
