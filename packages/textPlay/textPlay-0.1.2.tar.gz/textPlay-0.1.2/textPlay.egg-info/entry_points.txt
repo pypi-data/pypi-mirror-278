@@ -1,0 +1,2 @@
+[console_scripts]
+textplay = textPlay.cli:textPlay_cli

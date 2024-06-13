@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[metadata]
+name = "textPlay"
+version = "0.1.2"
+author = "Rakesh Kanna S"
+author_email = "rakeshkanna0108@gmail.com"
+description = "A package for many unique text tools to make your text beautiful."
+url = "https://github.com/rakeshkanna-rk/textPlay"
+license = "Apache License 2.0"
+keywords = ["text tools", "cli", "terminal", "google search", "web search", "morse code", "decode", "encode", "box", "colors", "options", "password generator", "progress bar", "encryption animation"]
+
+[options]
+packages = ["textPlay"]
+python_requires = ">=3.6"
+install_requires = [
+    "click>=8.1.7",
+    "beautifulsoup4>=4.12.3",
+    "requests>=2.31.0",
+    "keyboard>=0.13.5",
+]
+
+[options.entry_points]
+console_scripts = [
+    "textplay = textPlay.cli:textPlay_cli"
+]
+
+[project_urls]
+GitHub = "https://github.com/rakeshkanna-rk/textPlay"
+Python_Package_Index = "https://pypi.org/project/textPlay/"
