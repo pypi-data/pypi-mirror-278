@@ -1,0 +1,12 @@
+attrs>=17.4.0
+PyYAML>=3.13
+python-dateutil>=2.7.5
+requests>=2.20.0
+zhmcclient>=1.16.0
+jsonschema>=3.0.0
+
+[:python_version <= "3.9"]
+six>=1.14.0
+
+[:python_version >= "3.10"]
+six>=1.16.0
