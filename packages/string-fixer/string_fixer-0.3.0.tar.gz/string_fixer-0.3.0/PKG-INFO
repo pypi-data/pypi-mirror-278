@@ -1,0 +1,103 @@
+Metadata-Version: 2.1
+Name: string_fixer
+Version: 0.3.0
+Summary: Change quote style in Python files
+Author-email: Crozzers <captaincrozzers@gmail.com>
+License: MIT
+Project-URL: Source, https://github.com/Crozzers/string-fixer
+Project-URL: Issues, https://github.com/Crozzers/string-fixer/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: Microsoft :: Windows :: Windows 11
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: libcst
+Requires-Dist: tomli
+Provides-Extra: dev
+Requires-Dist: ruff; extra == "dev"
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-snapshot; extra == "test"
+Provides-Extra: dist
+Requires-Dist: build; extra == "dist"
+Requires-Dist: setuptools; extra == "dist"
+Requires-Dist: wheel; extra == "dist"
+Requires-Dist: twine; extra == "dist"
+Provides-Extra: all
+Requires-Dist: string_fixer[dev,test]; extra == "all"
+
+# String Fixer
+
+Simple tool to replace "double quotes" with 'single quotes' in Python files.
+
+There are many tools out there to lint and format Python code. The most popular formatter, Black,
+[prefers double quotes to single quotes](https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html#strings).
+Ruff is a bit more flexible, but doesn't format docstrings with single quotes
+(it [lets you skip formatting them](https://github.com/astral-sh/ruff/issues/7615#issuecomment-1831179705) to preserve your own quotation style).
+
+Neither project seems likely to add the option for entirely single-quoted code, so this tool can work as a post-processor to fix that.
+
+## Usage
+
+### CLI
+
+```bash
+# run against single file
+python -m string_fixer --target my_file.py
+# run against directory
+python -m string_fixer --target lib/src/
+# run against working dir
+python -m string_fixer
+```
+
+### IDE Plugins
+
+This project has an accompanying [VSCode extension](https://github.com/Crozzers/string-fixer/tree/main/extensions/vscode).
+
+
+## Configuration
+
+Configuration is done via the `pyproject.toml` file and the default settings are as follows:
+```toml
+[tool.string-fixer]
+# file or folder to format
+target = "./"
+# set to true to print planned changes but not modify any files (overrides `output` config)
+dry_run = false
+# write a copy of the files to this directory, rather than modifying them inplace
+output = "./"
+# list of glob patterns for files to ignore. this value is autopopulated from `.gitignore` files as well
+# as a few default values. anything you put in this list will be added to this set, rather than replacing
+# it. Use the `include` option to override
+ignore = [
+    # these are the defaults
+    "./**/.*",
+    "./**/site-packages",
+    "./**/node_modules",
+    "./**/build",
+    "./**/dist",
+    "./**/__pycache__",
+    "./**/venv"
+]
+# list of glob patterns for files to include. This setting overrides `ignore`
+include = []
+# extend and override options in another pyproject.toml file
+extends = ""
+# python version to target for compatibility (defaults to current python version)
+# this must be a string because `float("3.10") == 3.1`
+target_version = "3.12"
+# try to produce strings with the least number of escapes, even if that means deviating from the quote style
+# this is false by default to match previous behaviour, but will be true by default from `0.4.0` onwards
+prefer_least_escapes = false
+```
+
+All file paths are resolved relative to the `pyproject.toml`'s location.
+
+
+## See Also
+
+- [VSCode Extension](https://marketplace.visualstudio.com/items?itemName=Crozzers.string-fixer) ([source](https://github.com/Crozzers/string-fixer/tree/main/extensions/vscode))
+- [PyPI package](https://pypi.org/project/string-fixer/) ([source](https://github.com/Crozzers/string-fixer/tree/main/lib))
