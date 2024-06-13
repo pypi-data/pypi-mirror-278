@@ -1,0 +1,118 @@
+#!/usr/bin/env bash
+
+#--------------------------------------
+set_vars()
+{
+    echo "Turning off multithreading"
+    export MKL_NUM_THREADS=1
+    export NUMEXPR_NUM_THREADS=1
+    export OMP_NUM_THREADS=1
+    export OPENBLAS_NUM_THREADS=1
+}
+#--------------------------------------
+set_paths()
+{
+    if   [[   -z $RK_TOY ]];then
+	echo "No toy path found"
+        VENV=$PWD/RK_TOY
+	INSTALL=1
+    elif [[ ! -d $RK_TOY ]];then
+	echo "No toy directory found"
+        VENV=$RK_TOY
+	INSTALL=1
+    elif [[   -d $RK_TOY ]];then
+	echo "Installation found"
+        VENV=$RK_TOY
+	INSTALL=0
+    fi
+   
+    echo "Using VENV: $VENV"
+}
+#--------------------------------------
+mamba_init()
+{
+    __conda_setup="$('$VENV/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+    if [ $? -eq 0 ]; then
+	eval "$__conda_setup"
+    else
+	if [ -f "$VENV/etc/profile.d/conda.sh" ]; then
+	    . "$VENV/etc/profile.d/conda.sh"
+	else
+	    export PATH="$VENV/bin:$PATH"
+	fi
+    fi
+    unset __conda_setup
+
+    if [ -f "$VENV/etc/profile.d/mamba.sh" ]; then
+	. "$VENV/etc/profile.d/mamba.sh"
+    fi
+
+    PATH=$VENV/bin:$PATH
+}
+#--------------------------------------
+install_sft()
+{
+    if [[ $INSTALL -eq 0 ]];then
+        mamba_init
+	echo "Installation found, using mamba from: $(which mamba)"
+	return
+    fi
+
+    curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+    bash Miniforge3-$(uname)-$(uname -m).sh -b -p $VENV 
+
+    mamba_init
+    mamba activate
+    mamba install -y python=3.11
+    mamba install -y root root_base
+
+    pip install zfit==0.20.1
+    pip install rx_selection
+    pip install rx-differential-crosscheck-fits
+    pip install rk-hadmisid-study
+    pip install rx_monitor
+    pip install rx_hqm
+    pip install rx_combinatorial 
+    pip install rx_scripts
+    pip install rx_tools
+    pip install rk_extractor
+}
+#--------------------------------------
+upgrade()
+{
+    if [[ $UPGR -eq 0 ]];then
+	return
+    fi
+
+    echo "Upgrading"
+
+    pip install --upgrade rx_selection
+    pip install --upgrade rx-differential-crosscheck-fits
+    pip install --upgrade rk-hadmisid-study
+    pip install --upgrade rx_monitor
+    pip install --upgrade rx_hqm
+    pip install --upgrade rx_combinatorial 
+    pip install --upgrade rx_scripts
+    pip install --upgrade rx_tools
+    pip install --upgrade rk_extractor
+}
+#--------------------------------------
+run()
+{
+    echo "--------------------"
+    PYPATH=$(which python)
+    echo "Using python $PYPATH"
+    echo "Running: ./rxe_toys -v $VERS"
+    ./rxe_toys -v $VERS 
+    echo "--------------------"
+}
+#--------------------------------------
+VERS=$1
+UPGR=$2
+
+set_paths
+set_vars
+install_sft
+upgrade
+run
+
