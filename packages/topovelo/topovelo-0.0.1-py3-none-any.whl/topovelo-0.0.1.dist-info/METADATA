@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: topovelo
+Version: 0.0.1
+Summary: topological velocity inference from single-cell spatial transcriptomic data
+Home-page: https://github.com/welch-lab/TopoVelo.git
+Author: Yichen Gu
+Author-email: gyichen@umich.edu
+License: BSD 3-Clause License
+Keywords: spatial transcriptomics,RNA velocity,single-cell RNA,graph neural network
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Dist: anndata >=0.8.0
+Requires-Dist: hnswlib >=0.6.2
+Requires-Dist: igraph >=0.10.4
+Requires-Dist: ipywidgets
+Requires-Dist: jupyter
+Requires-Dist: loess >=2.1.2
+Requires-Dist: matplotlib <=3.7.3,>=3.3.0
+Requires-Dist: memory-profiler >=0.61.0
+Requires-Dist: numba >=0.41.0
+Requires-Dist: numpy <=1.23.5,>=1.17.0
+Requires-Dist: pandas <=1.5.3,>=0.23.0
+Requires-Dist: pynndescent >=0.5.7
+Requires-Dist: scanpy >=1.5.0
+Requires-Dist: scikit-learn >=0.20.0
+Requires-Dist: scipy >=1.13.0
+Requires-Dist: scvelo <=0.2.5,>=0.2.3
+Requires-Dist: seaborn >=0.10.0
+Requires-Dist: torch >=1.8.0
+Requires-Dist: torch-geometric >=2.0.4
+Requires-Dist: tqdm <=4.62.3
+Requires-Dist: umap-learn >=0.3.10
+Provides-Extra: default
+Requires-Dist: torch ==1.13.1+cu117 ; extra == 'default'
+Requires-Dist: torch-geometric ==2.3.0 ; extra == 'default'
+Requires-Dist: anndata ==0.8.0 ; extra == 'default'
+Requires-Dist: matplotlib ==3.5.2 ; extra == 'default'
+Requires-Dist: numba ==0.56.4 ; extra == 'default'
+Requires-Dist: pandas ==1.5.3 ; extra == 'default'
+Requires-Dist: scipy ==1.11.4 ; extra == 'default'
+Requires-Dist: scikit-learn ==1.4.0 ; extra == 'default'
+Requires-Dist: scvelo ==0.2.5 ; extra == 'default'
+
