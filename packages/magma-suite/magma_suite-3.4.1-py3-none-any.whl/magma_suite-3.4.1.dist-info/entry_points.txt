@@ -1,0 +1,5 @@
+[console_scripts]
+create-mwfr-smaht=magma_smaht.commands.create_meta_workflow_run:cli
+publish-to-pypi=dcicutils.scripts.publish_to_pypi:main
+wrangler-utils-smaht=magma_smaht.commands.wrangler_utils:cli
+
