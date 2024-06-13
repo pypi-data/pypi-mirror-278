@@ -1,0 +1,20 @@
+{
+    "_checkout": null,
+    "_output_dir": "C:\\Users\\sgraaf\\Documents\\Git",
+    "_repo_dir": "C:\\Users\\sgraaf\\.cookiecutters\\cookiecutter-python-cli-app",
+    "_template": "gh:sgraaf/cookiecutter-python-cli-app",
+    "app_name": "nrc-to-jpg",
+    "author": "Steven van de Graaf",
+    "copyright_year": "2024",
+    "development_status": "Development Status :: 4 - Beta",
+    "email": "steven@vandegraaf.xyz",
+    "friendly_name": "nrc-to-jpg",
+    "github_username": "sgraaf",
+    "init_git": true,
+    "init_venv": true,
+    "license": "mit",
+    "package_name": "nrc_to_jpg",
+    "short_description": "Save the NRC front page to a JPG image.",
+    "use_rich": false,
+    "version": "2024.6.0"
+}
