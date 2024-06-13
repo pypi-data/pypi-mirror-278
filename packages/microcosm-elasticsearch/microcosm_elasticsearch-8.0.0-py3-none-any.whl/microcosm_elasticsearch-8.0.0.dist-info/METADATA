@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: microcosm-elasticsearch
+Version: 8.0.0
+Summary: Elasticsearch client configuration
+Home-page: https://github.com/globality-corp/microcosm-elasticsearch
+Author: Globality Engineering
+Author-email: engineering@globality.com
+Keywords: microcosm
+Requires-Python: >=3.11
+License-File: LICENSE
+Requires-Dist: boto3 >=1.7.33
+Requires-Dist: elasticsearch <8,>=7.0.0
+Requires-Dist: elasticsearch-dsl <8,>=7.0.0
+Requires-Dist: microcosm >=4.0.0
+Requires-Dist: microcosm-flask >=6.0.0
+Requires-Dist: microcosm-metrics >=3.0.0
+Requires-Dist: requests[security] >=2.18.4
+Requires-Dist: urllib3 >=1.25.10
+Provides-Extra: lint
+Requires-Dist: flake8 ; extra == 'lint'
+Requires-Dist: flake8-print ; extra == 'lint'
+Requires-Dist: flake8-isort ; extra == 'lint'
+Provides-Extra: test
+Requires-Dist: coverage >=3.7.1 ; extra == 'test'
+Requires-Dist: PyHamcrest >=1.8.5 ; extra == 'test'
+Requires-Dist: pytest-cov >=5.0.0 ; extra == 'test'
+Requires-Dist: pytest >=6.2.5 ; extra == 'test'
+Provides-Extra: typehinting
+Requires-Dist: mypy ; extra == 'typehinting'
+
