@@ -1,0 +1,15 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="rer.newsletterplugin.flask">
+
+    <!-- view for send message -->
+    <browser:page
+        for="rer.newsletter.behaviors.ships.IShippableMarker"
+        name="send_message_view"
+        class=".sendmessageview.message_sending_view"
+        permission="rer.newsletter.SendMessage"
+        layer="rer.newsletterplugin.flask.interfaces.IRerNewsletterpluginFlaskLayer"
+        />
+</configure>

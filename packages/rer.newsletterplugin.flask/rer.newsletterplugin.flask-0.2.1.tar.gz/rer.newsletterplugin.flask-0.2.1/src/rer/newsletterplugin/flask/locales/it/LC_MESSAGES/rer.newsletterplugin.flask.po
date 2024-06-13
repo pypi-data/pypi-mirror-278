@@ -1,0 +1,56 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-05-14 09:11+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: rer/newsletterplugin/flask/configure.zcml:29
+msgid "Installs the rer.newsletterplugin.flask add-on."
+msgstr ""
+
+#: rer/newsletterplugin/flask/configure.zcml:38
+msgid "Uninstalls the rer.newsletterplugin.flask add-on."
+msgstr ""
+
+#. Default: "Queue endpoint not set. Please set it in site controlpanel."
+#: rer/newsletterplugin/flask/adapter/flask_adapter.py:49
+msgid "endpoint_not_set"
+msgstr "Servizio di spedizione esterno non impostato. Per favore impostalo nel pannello di controllo del sito."
+
+#. Default: "Message correctly enqueued to be sent to ${subscribers} subscribers. Please check Channel history to know when the task ends or wait the confirm email."
+#: rer/newsletterplugin/flask/browser/sendmessageview.py:11
+msgid "message_send"
+msgstr "Messaggio accodato correttamente per essere spedito a ${subscribers} iscritti. A conclusione della procedura, nella casella di posta mittente del canale arriverà una notifica con l'esito dell'invio."
+
+#. Default: "Insert the url of the Flask server that will handle the queue (for example: http://127.0.0.1:5000/add-to-queue)."
+#: rer/newsletterplugin/flask/interfaces.py:17
+msgid "queue_endpoint_help"
+msgstr "Inserisci l'url del server Flask che si occuperà della gestione della coda (per esempio http://127.0.0.1:5000/add-to-queue)."
+
+#. Default: "Queue endpoint"
+#: rer/newsletterplugin/flask/interfaces.py:16
+msgid "queue_endpoint_label"
+msgstr "Servizio di invio esterno"
+
+#. Default: "There are 0 subscribers to this channel."
+#: rer/newsletterplugin/flask/adapter/flask_adapter.py:66
+msgid "recipients_empty"
+msgstr "Ci sono 0 iscritti in questo canale."
+
+#: rer/newsletterplugin/flask/configure.zcml:29
+msgid "rer.newsletterplugin.flask"
+msgstr ""
+
+#: rer/newsletterplugin/flask/configure.zcml:38
+msgid "rer.newsletterplugin.flask (uninstall)"
+msgstr ""
