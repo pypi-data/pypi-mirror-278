@@ -1,0 +1,56 @@
+[tool.poetry]
+name = "understand-sdk"
+version = "0.1.5"
+description = "Python client for UnderstandLabs"
+authors = ["Understandlabs.com Team <it@understandlabs.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "understand_sdk"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.31.0"
+pydantic = "^2.6.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.2"
+mypy = "^1.8.0"
+syrupy = "^4.6.1"
+types-requests = "^2.31.0.20240218"
+black = "^23.12.1"
+pyproject-flake8 = "^6.0.1"
+isort = "^5.13.2"
+bandit = "^1.7.6"
+safety = "^2.3.5"
+autoflake = "^2.2.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+plugins = [
+    "pydantic.mypy"
+]
+
+[tool.black]
+line-length = 120
+target_version = ['py310']
+
+[tool.isort]
+line_length = 120
+include_trailing_comma = true
+multi_line_output = 3
+use_parentheses = true
+balanced_wrapping = "1"
+force_grid_wrap = "0"
+default_section = "THIRDPARTY"
+known_first_party = "ul"
+known_third_party = "tests"
+sections = "FUTURE,STDLIB,THIRDPARTY,FIRSTPARTY,LOCALFOLDER"
+
+[tool.flake8]
+max-line-length = 120
+exclude = [
+    ".venv/"
+]
