@@ -1,0 +1,9 @@
+reframed>=1.5.2
+pandas
+numpy
+
+[dev]
+coverage
+mypy
+pytest
+ruff
