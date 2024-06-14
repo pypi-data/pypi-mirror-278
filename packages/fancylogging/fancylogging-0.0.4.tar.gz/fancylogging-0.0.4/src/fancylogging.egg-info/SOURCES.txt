@@ -1,0 +1,12 @@
+.gitignore
+CONTRIBUTING
+README.rst
+pyproject.toml
+.github/dependabot.yml
+src/fancylogging/__init__.py
+src/fancylogging/_version.py
+src/fancylogging.egg-info/PKG-INFO
+src/fancylogging.egg-info/SOURCES.txt
+src/fancylogging.egg-info/dependency_links.txt
+src/fancylogging.egg-info/requires.txt
+src/fancylogging.egg-info/top_level.txt

@@ -1,0 +1,16 @@
+.vscode/
+__pycache__/
+dist/
+venv/
+test.py
+logs/*
+*.egg-info/
+
+
+.buildtools/
+_version.py
+
+Makefile
+conf.py
+index.rst
+make.batrstcheck

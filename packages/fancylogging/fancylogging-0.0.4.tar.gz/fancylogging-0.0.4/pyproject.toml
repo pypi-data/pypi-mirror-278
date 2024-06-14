@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fancylogging"
+description = "hassle-free nicely-formatted console and file logging in Python"
+readme = "README.rst"
+requires-python = ">=3.8"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "python_json_logger>=2.0.7,<3.0.0",
+  "rich>=13.7.0,<14.0.0",
+  "fancylogging",
+]
+authors = [{ name = "tempookian", email = "tempookian@gmail.com" }]
+dynamic = ["version"]
+
+[project.urls]
+"Homepage" = "https://github.com/tempookian/fancylogging"
+"Bug Tracker" = "https://github.com/tempookian/fancylogging/issues"
+
+[tool.setuptools_scm]
+version_file = "src/fancylogging/_version.py"

@@ -1,0 +1,30 @@
+Commit Message Guidelines
+=========================
+
+When contributing to this repository, please use the following types for your commit messages:
+
+1. **feat**: New feature addition.
+2. **fix**: Bug fixes.
+3. **docs**: Documentation changes.
+4. **style**: Code style changes (formatting, missing semi-colons, etc.).
+5. **refactor**: Code refactoring (no new features or bug fixes).
+6. **perf**: Performance improvements.
+7. **test**: Adding missing tests or correcting existing ones.
+8. **chore**: Maintenance tasks, no production code change.
+
+
+Guidelines
+----------
+
+- Begin with type: ``type: Subject``.
+- Capitalize the Subject.
+- No period at the end.
+- Use imperative mood in the Subject.
+
+Examples
+-------
+
+.. code-block:: none
+
+    fix: Correct typo in algorithm function
+    chore: Update dependencies to latest versions
