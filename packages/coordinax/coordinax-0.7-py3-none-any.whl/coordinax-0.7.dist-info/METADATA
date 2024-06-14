@@ -1,0 +1,117 @@
+Metadata-Version: 2.3
+Name: coordinax
+Version: 0.7
+Summary: Vectors in JAX
+Project-URL: Bug Tracker, https://github.com/GalacticDynamics/coordinax/issues
+Project-URL: Changelog, https://github.com/GalacticDynamics/coordinax/releases
+Project-URL: Discussions, https://github.com/GalacticDynamics/coordinax/discussions
+Project-URL: Homepage, https://github.com/GalacticDynamics/coordinax
+Author-email: Nathaniel Starkman <nstarman@users.noreply.github.com>
+License: Copyright 2024 Galactic Dynamics maintainers
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of
+        this software and associated documentation files (the "Software"), to deal in
+        the Software without restriction, including without limitation the rights to
+        use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+        of the Software, and to permit persons to whom the Software is furnished to do
+        so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Classifier: Typing :: Typed
+Requires-Python: >=3.10
+Requires-Dist: astropy
+Requires-Dist: equinox
+Requires-Dist: jax
+Requires-Dist: jaxlib
+Requires-Dist: jaxtyping
+Requires-Dist: plum-dispatch>=2.3.3
+Requires-Dist: quax>=0.0.3
+Requires-Dist: quaxed>=0.4
+Requires-Dist: unxt>=0.10
+Provides-Extra: all
+Requires-Dist: furo>=2023.08.17; extra == 'all'
+Requires-Dist: hypothesis[numpy]; extra == 'all'
+Requires-Dist: myst-parser>=0.13; extra == 'all'
+Requires-Dist: nox; extra == 'all'
+Requires-Dist: pytest-arraydiff; extra == 'all'
+Requires-Dist: pytest-cov>=3; extra == 'all'
+Requires-Dist: pytest>=6; extra == 'all'
+Requires-Dist: sphinx-autodoc-typehints; extra == 'all'
+Requires-Dist: sphinx-copybutton; extra == 'all'
+Requires-Dist: sphinx>=7.0; extra == 'all'
+Requires-Dist: sybil; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: hypothesis[numpy]; extra == 'dev'
+Requires-Dist: nox; extra == 'dev'
+Requires-Dist: pytest-arraydiff; extra == 'dev'
+Requires-Dist: pytest-cov>=3; extra == 'dev'
+Requires-Dist: pytest>=6; extra == 'dev'
+Requires-Dist: sybil; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: furo>=2023.08.17; extra == 'docs'
+Requires-Dist: myst-parser>=0.13; extra == 'docs'
+Requires-Dist: sphinx-autodoc-typehints; extra == 'docs'
+Requires-Dist: sphinx-copybutton; extra == 'docs'
+Requires-Dist: sphinx>=7.0; extra == 'docs'
+Provides-Extra: test
+Requires-Dist: hypothesis[numpy]; extra == 'test'
+Requires-Dist: nox; extra == 'test'
+Requires-Dist: pytest-arraydiff; extra == 'test'
+Requires-Dist: pytest-cov>=3; extra == 'test'
+Requires-Dist: pytest>=6; extra == 'test'
+Requires-Dist: sybil; extra == 'test'
+Description-Content-Type: text/markdown
+
+# coordinax
+
+[![Actions Status][actions-badge]][actions-link]
+[![Documentation Status][rtd-badge]][rtd-link]
+
+[![PyPI version][pypi-version]][pypi-link]
+[![Conda-Forge][conda-badge]][conda-link]
+[![PyPI platforms][pypi-platforms]][pypi-link]
+
+[![DOI][zenodo-badge]][zenodo-link]
+
+<!-- [![GitHub Discussion][github-discussions-badge]][github-discussions-link] -->
+
+<!-- SPHINX-START -->
+
+<!-- prettier-ignore-start -->
+[actions-badge]:            https://github.com/GalacticDynamics/coordinax/workflows/CI/badge.svg
+[actions-link]:             https://github.com/GalacticDynamics/coordinax/actions
+[conda-badge]:              https://img.shields.io/conda/vn/conda-forge/coordinax
+[conda-link]:               https://github.com/conda-forge/coordinax-feedstock
+<!-- [github-discussions-badge]: https://img.shields.io/static/v1?label=Discussions&message=Ask&color=blue&logo=github
+[github-discussions-link]:  https://github.com/GalacticDynamics/coordinax/discussions -->
+[pypi-link]:                https://pypi.org/project/coordinax/
+[pypi-platforms]:           https://img.shields.io/pypi/pyversions/coordinax
+[pypi-version]:             https://img.shields.io/pypi/v/coordinax
+[rtd-badge]:                https://readthedocs.org/projects/coordinax/badge/?version=latest
+[rtd-link]:                 https://coordinax.readthedocs.io/en/latest/?badge=latest
+[zenodo-badge]:             https://zenodo.org/badge/755708966.svg
+[zenodo-link]:              https://zenodo.org/doi/10.5281/zenodo.10850557
+
+<!-- prettier-ignore-end -->
