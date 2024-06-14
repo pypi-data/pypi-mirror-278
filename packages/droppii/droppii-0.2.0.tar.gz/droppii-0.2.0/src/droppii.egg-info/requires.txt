@@ -1,0 +1,13 @@
+boto3
+polars
+
+[dev]
+autopep8
+bandit
+flake8
+mkdocs
+moto
+safety
+pytest
+pytest-cov
+Faker
