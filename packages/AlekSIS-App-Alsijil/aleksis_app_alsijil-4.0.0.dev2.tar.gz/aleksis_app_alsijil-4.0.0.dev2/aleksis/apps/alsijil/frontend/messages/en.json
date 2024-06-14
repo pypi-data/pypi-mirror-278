@@ -1,0 +1,85 @@
+{
+  "alsijil": {
+    "lesson": {
+      "menu_title": "Current lesson"
+    },
+    "week": {
+      "menu_title": "Current week"
+    },
+    "groups": {
+      "menu_title": "My groups"
+    },
+    "persons": {
+      "menu_title": "My students"
+    },
+    "absence": {
+      "menu_title": "Register absence"
+    },
+    "my_overview": {
+      "menu_title": "My overview"
+    },
+    "extra_marks": {
+      "menu_title": "Extra marks"
+    },
+    "excuse_types": {
+      "menu_title": "Excuse types"
+    },
+    "group_roles": {
+      "menu_title_manage": "Manage group roles",
+      "menu_title_assign": "Assign group roles"
+    },
+    "all_lessons": {
+      "menu_title": "All lessons"
+    },
+    "menu_title": "Class register",
+    "coursebook": {
+      "menu_title": "Coursebook",
+      "page_title": "Coursebook for {name}",
+      "title_plural": "Coursebook",
+      "status": {
+        "available": "Documentation available",
+        "missing": "Documentation missing",
+        "running": "Lesson running",
+        "substitution": "Substitution lesson",
+        "cancelled": "Lesson cancelled",
+        "pending": "Lesson pending"
+      },
+      "summary": {
+        "topic": {
+          "label": "Topic",
+          "status": {
+            "success": "Topic saved successfully",
+            "error": "There has been an error while saving the topic: {error}"
+          }
+        },
+        "homework": {
+          "label": "Homework",
+          "value": "HW: {homework}",
+          "empty": "No homework"
+        },
+        "group_note": {
+          "label": "Group note",
+          "value": "GN: {groupNote}",
+          "empty": "No group note"
+        }
+      },
+      "notices": {
+        "future": "Editing this lesson isn't allowed as this lesson is in the future.",
+        "no_entry": "There is no entry for this lesson yet."
+      },
+      "filter": {
+        "own": "Only show own lessons",
+        "missing": "Only show incomplete lessons",
+        "groups": "Groups",
+        "courses": "Courses",
+        "filter_for_obj": "Filter for group and course"
+      },
+      "present_number": "{present}/{total} present",
+      "no_data": "No lessons for the selected groups and courses in this period",
+      "no_results": "No search results for {search}"
+    }
+  },
+  "actions": {
+    "back_to_overview": "Back to overview"
+  }
+}
