@@ -1,0 +1,11 @@
+--{% if similarity_using_vector_db and anchor_media_id and "IMAGES" in entity_type_filter %}
+join {{ query_vector_table }} anchor ON anchor.media_id = :anchor_media_id and anchor.dataset_id = :dataset_id
+join image_vector ON image_vector.media_id = flat_similarity_clusters.image_or_object_id and image_vector.dataset_id = :dataset_id AND image_vector.is_image
+--{% elif similarity_using_vector_db and anchor_media_id and "OBJECTS" in entity_type_filter %}
+join {{ query_vector_table }} anchor ON anchor.media_id = :anchor_media_id and anchor.dataset_id = :dataset_id
+join image_vector ON image_vector.media_id = flat_similarity_clusters.image_or_object_id and image_vector.dataset_id = :dataset_id AND NOT image_vector.is_image
+--{% elif anchor_media_id and "IMAGES" in entity_type_filter %}
+join image_similarity_mapping on flat_similarity_clusters.image_or_object_id = image_similarity_mapping.similar_image_id AND (image_similarity_mapping.image_id = :anchor_media_id)
+--{% elif anchor_media_id and "OBJECTS" in entity_type_filter %}
+join object_similarity_mapping on flat_similarity_clusters.image_or_object_id = object_similarity_mapping.similar_object_id AND object_similarity_mapping.object_id = :anchor_media_id
+--{% endif %}
