@@ -1,0 +1,13 @@
+PyQt6>=6.4.2
+ibridges==0.2.1
+setproctitle==1.3.3
+
+[:python_version <= "3.10"]
+importlib-resources
+
+[test]
+pylint
+pytest
+pytest-cov
+ruff
+mypy
