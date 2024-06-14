@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyGATs"
+version = "0.1.0"
+authors = [
+  { name="vsysoev" },
+]
+description = "Automate end-to-end and exploratory testing"
+keywords = ["gui", "testing", "automatic"]
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
+dependencies = [
+    'pyautogui',
+    'Pillow',
+    'pytesseract',
+    'Levenshtein',
+    'opencv-python',
+    'numpy',
+    'colorama',
+    'mss'
+]
+license = {file = "LICENSE"}
+
+[project.urls]
+repository = "https://github.com/IntegraSDL/pymagic-autogui.git"
+
+[project.optional-dependencies]
+test = [
+  "pytest > 5.0.0",
+]

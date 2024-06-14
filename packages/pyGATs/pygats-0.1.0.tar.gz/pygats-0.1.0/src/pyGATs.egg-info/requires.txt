@@ -1,0 +1,11 @@
+pyautogui
+Pillow
+pytesseract
+Levenshtein
+opencv-python
+numpy
+colorama
+mss
+
+[test]
+pytest>5.0.0
