@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: gsctl
+Version: 0.27.0
+Summary: Command line tool for GraphScope
+Home-page: 
+Author: GraphScope
+Author-email: graphscope@alibaba-inc.com
+License: Apache 2.0
+Keywords: GraphScope,Command-line tool
+Description-Content-Type: text/markdown
+Requires-Dist: click (>=8.1.6)
+Requires-Dist: graphscope-flex (>=0.27.0)
+
+    gsctl is a command-line utility for GraphScope. It provides a set of functionalities to make it easy to use GraphScope. These functionalities include building and testing binaries, managing sessions and resources, and more.
+    
