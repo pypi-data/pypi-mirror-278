@@ -1,0 +1,2 @@
+[console_scripts]
+ghfc-reannotate = ghfc_utils:slivar_reannotator.main
