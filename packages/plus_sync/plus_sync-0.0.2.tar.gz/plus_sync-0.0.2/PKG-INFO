@@ -1,0 +1,17 @@
+Metadata-Version: 2.3
+Name: plus_sync
+Version: 0.0.2
+Summary: Add a short description here
+Author-email: Thomas Hartmann <thomas.hartmann@th-ht.de>
+License: GPL-3.0
+Requires-Python: >=3.9
+Requires-Dist: attrs
+Requires-Dist: attrs-strict
+Requires-Dist: cattrs
+Requires-Dist: joblib
+Requires-Dist: paramiko
+Requires-Dist: python-gitlab
+Requires-Dist: quickxorhash
+Requires-Dist: tomlkit
+Requires-Dist: tqdm
+Requires-Dist: typer
