@@ -1,0 +1,36 @@
+# this file is *not* meant to cover or endorse the use of GitHub Actions, but rather to
+# help test this project
+
+name: Test
+
+#on: [push, pull_request]
+on:
+  push:
+    branches:
+      - _main
+      - _test
+  pull_request:
+    branches:
+      - main
+
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        python: ['3.11', '3.12']
+        platform: [windows-latest]
+    runs-on: ${{ matrix.platform }}
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Set up Python ${{ matrix.python }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python }}
+    - name: Install the latest version of rye
+      uses: eifinger/setup-rye@v2
+    - name: Install test dependencies
+      run: rye sync --no-lock
+    - name: Test
+      run: rye run pytest
