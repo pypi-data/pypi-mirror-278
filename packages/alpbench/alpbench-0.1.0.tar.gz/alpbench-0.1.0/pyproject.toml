@@ -1,0 +1,66 @@
+# For TOML reference
+# https://learnxinyminutes.com/docs/toml/
+
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]             # path to the test directory
+minversion = "3.10"
+
+[tool.coverage.run]
+branch = true
+context = "ALP" # Should be package name
+omit = [
+    "ALP/__init__.py", # Has variables only needed for setup.py
+    "transformer.py",
+    "transformer_prediction_interface.py",
+    "transformer_prediction_interface_ens.py",
+    "TorchUtil.py",
+    "tab_model.py",
+    "plot_functions.py"
+]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+exclude_lines = [
+    "pragma: no cover",
+    '\.\.\.',
+    "raise NotImplementedError",
+    "if TYPE_CHECKING",
+    "pass"
+] # These are lines to exclude from coverage
+
+[tool.black]
+line-length = 120
+target-version = ['py310', 'py311']
+
+[tool.ruff]
+lint.select = ["E", "F", "I", "UP"]  # https://beta.ruff.rs/docs/rules/
+lint.ignore = ["E501", "UP008", "F405", "F403"]
+line-length = 120
+target-version = "py310"
+
+
+[tool.pydocstyle]
+convention = "numpy"
+add-ignore = [ # http://www.pydocstyle.org/en/stable/error_codes.html
+    "D100", # Missing docstring in public module
+    "D101", # Missing docstring in public class
+    "D104", # Missing docstring in public package
+    "D105", # Missing docstring in magic method
+    "D203", # 1 blank line required before class docstring
+    "D205", # 1 blank line required between summary and description
+    "D210", # No whitespaces allowed surrounding docstring text
+    "D212", # Multi-line docstring summary should start at the first line
+    "D213", # Multi-line docstring summary should start at the second line
+    "D400", # First line should end with a period
+    "D401", # First line should be in imperative mood
+    "D404", # First word of docstring should not be this
+    "D413", # Missing blank line after last section
+    "D415", # First line should end with a period, question mark, or exclamation point
+]
+
