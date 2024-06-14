@@ -1,0 +1,12 @@
+CHANGES.rst
+LICENSE
+README.rst
+setup.py
+kleides_dssoclient/__init__.py
+kleides_dssoclient/backends.py
+kleides_dssoclient/dssoclient.py
+kleides_dssoclient/middleware.py
+kleides_dssoclient.egg-info/PKG-INFO
+kleides_dssoclient.egg-info/SOURCES.txt
+kleides_dssoclient.egg-info/dependency_links.txt
+kleides_dssoclient.egg-info/top_level.txt
