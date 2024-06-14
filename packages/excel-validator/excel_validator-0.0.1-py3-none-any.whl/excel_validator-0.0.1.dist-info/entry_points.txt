@@ -1,0 +1,2 @@
+[console_scripts]
+excel_validator = excel_validator.script.service:service
