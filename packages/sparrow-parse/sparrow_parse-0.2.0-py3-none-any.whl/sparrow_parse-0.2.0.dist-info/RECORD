@@ -1,0 +1,13 @@
+sparrow_parse/__init__.py,sha256=clN3TnyYyt5T_wUJLVBmutS2kYLLBET4JFB2QXnRm2Q,21
+sparrow_parse/__main__.py,sha256=Xs1bpJV0n08KWOoQE34FBYn6EBXZA9HIYJKrE4ZdG78,153
+sparrow_parse/data/invoice_1_table.txt,sha256=dsWEASxlVNidpTCQDowCM7SjaUzSqwx7DuydTfaQ7xI,1115
+sparrow_parse/extractor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sparrow_parse/extractor/extractor_helper.py,sha256=fvA7iuGdpW_WFc4jkALBzQbACqlE5x_K9ScW-E6RCoY,13357
+sparrow_parse/extractor/html_extractor.py,sha256=XGmaceTuny185iGiLVikEZ8ksLex6mRvQhw-McB84CU,9381
+sparrow_parse/extractor/markdown_processor.py,sha256=dC2WUdA-v2psh7oytruftxYkXdQi72FoEYxF30ROuO0,4506
+sparrow_parse/extractor/unstructured_processor.py,sha256=7eFIZ6VeEkIslcJyibyix1qFPHGtIwnvNxdRItGz7V8,6755
+sparrow_parse/temp.py,sha256=xiRDPkv_fsM9xCcW29TU0LushgYjMaN9_Cwur6RvY1A,859
+sparrow_parse-0.2.0.dist-info/METADATA,sha256=jH_xt6142QixaARXk5EMp01133YRg8tPvKzAfsjQVGE,5582
+sparrow_parse-0.2.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+sparrow_parse-0.2.0.dist-info/entry_points.txt,sha256=H507qotwq3VX4lv5pY9MZYtupKNE1RRb8gEQucPiGi0,52
+sparrow_parse-0.2.0.dist-info/RECORD,,
