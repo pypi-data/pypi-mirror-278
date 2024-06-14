@@ -1,0 +1,36 @@
+[project]
+name = "plus_sync"
+dynamic = ["version"]
+description = "Convenient command line tool to sync all kind of data."
+readme = "README.md"
+authors = [{name = "Thomas Hartmann", email = "thomas.hartmann@th-ht.de"}]
+requires-python = ">= 3.9"
+dependencies = ['paramiko', 'attrs', 'cattrs', 'attrs-strict', 'tomlkit', 'typer', 'python-gitlab', 'tqdm', 'joblib', 'quickxorhash']
+license = { text = "GPL-3.0" }
+
+[project.scripts]
+plus_sync = "plus_sync.cmd:app"
+
+
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[tool.pixi.project]
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[tool.pixi.pypi-dependencies]
+plus_sync = { path = ".", editable = true }
+
+[tool.pixi.tasks]
+
+[tool.pixi.dependencies]
+hatch = ">=1.12.0,<1.13"
+hatch-vcs = ">=0.4.0,<0.5"
+ipython = ">=8.25.0,<8.26"
+ipykernel = ">=6.29.3,<6.30"
+
+[tool.hatch.version]
+source = "vcs"
+
