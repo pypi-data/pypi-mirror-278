@@ -1,0 +1,229 @@
+[build-system]
+  build-backend = "hatchling.build"
+  requires = ["hatchling", "hatch-vcs"]
+
+
+[project]
+  authors = [
+    { name = "Nathaniel Starkman", email = "nstarman@users.noreply.github.com" },
+  ]
+  classifiers = [
+    "Development Status :: 1 - Planning",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+    "Typing :: Typed",
+  ]
+  dependencies = [
+    "astropy",
+    "equinox",
+    "jax",
+    "jaxlib",
+    "jaxtyping",
+    "plum-dispatch>=2.3.3",
+    "quax>=0.0.3",
+    "quaxed >= 0.4",
+    "unxt >= 0.10",
+  ]
+  description = "Vectors in JAX"
+  dynamic = ["version"]
+  license.file = "LICENSE"
+  name = "coordinax"
+  readme = "README.md"
+  requires-python = ">=3.10"
+
+  [project.optional-dependencies]
+    all = ["coordinax[docs]", "coordinax[dev]", "coordinax[test]"]
+    dev = ["coordinax[test]"]
+    docs = [
+      "furo>=2023.08.17",
+      "myst_parser>=0.13",
+      "sphinx>=7.0",
+      "sphinx_copybutton",
+      "sphinx_autodoc_typehints",
+    ]
+    test = [
+      "hypothesis[numpy]",
+      "nox",
+      "pytest >=6",
+      "pytest-cov >=3",
+      "pytest-arraydiff",
+      "sybil",
+    ]
+
+  [project.urls]
+    "Bug Tracker" = "https://github.com/GalacticDynamics/coordinax/issues"
+    Changelog = "https://github.com/GalacticDynamics/coordinax/releases"
+    Discussions = "https://github.com/GalacticDynamics/coordinax/discussions"
+    Homepage = "https://github.com/GalacticDynamics/coordinax"
+
+
+[tool.hatch]
+  build.hooks.vcs.version-file = "src/coordinax/_version.py"
+  metadata.allow-direct-references = true
+  version.source = "vcs"
+
+
+  [tool.hatch.env.default]
+    features = ["test"]
+    scripts.test = "pytest {args}"
+
+
+[tool.pytest.ini_options]
+  addopts = [
+    "-ra",
+    "--arraydiff",
+    "--showlocals",
+    "--strict-markers",
+    "--strict-config",
+    "--doctest-glob='*.rst | *.py'",
+  ]
+  filterwarnings = [
+    "error",
+    "ignore:ast\\.Str is deprecated and will be removed in Python 3\\.14:DeprecationWarning",
+    "ignore:Explicitly requested dtype <class 'jax.numpy\\.float64'> requested in astype is not available"
+  ]
+  log_cli_level = "INFO"
+  minversion = "6.0"
+  testpaths = ["tests"]
+  xfail_strict = true
+
+
+[tool.coverage]
+  run.source = ["coordinax"]
+
+  [tool.coverage.report]
+    exclude_also = [
+      # Have to re-enable the standard pragma
+      'pragma: no cover',
+      # Ignore type-checking stuff
+      'if typing.TYPE_CHECKING:',
+      'if TYPE_CHECKING:',
+      '\.\.\.',
+      # Ignore contents of abstract methods
+      '@abc.abstractmethod',
+      '@abstractmethod',
+    ]
+
+[tool.mypy]
+  disable_error_code = [
+    "no-redef",     # for plum-dispatch
+    "name-defined", # for jaxtyping
+  ]
+  disallow_incomplete_defs = false
+  disallow_untyped_defs = false
+  enable_error_code = ["ignore-without-code", "redundant-expr", "truthy-bool"]
+  files = ["src", "tests"]
+  python_version = "3.10"
+  strict = true
+  warn_return_any = false
+  warn_unreachable = true
+  warn_unused_configs = true
+
+  [[tool.mypy.overrides]]
+    disallow_incomplete_defs = true
+    disallow_untyped_defs = true
+    module = "coordinax.*"
+
+  [[tool.mypy.overrides]]
+    ignore_missing_imports = true
+    module = [
+      "array_api.*",
+      "quaxed.*",
+      "astropy.*",
+      "equinox.*",
+      "hypothesis.*",
+      "jax.*",
+      "coordinax.*",
+      "jaxtyping.*",
+      "numpy.*",
+      "quax.*",
+    ]
+
+
+[tool.ruff]
+  src = ["src"]
+
+  [tool.ruff.lint]
+    extend-select = ["ALL"]
+    ignore = [
+      "A002",    # Argument is shadowing a Python builtin
+      "ANN001",  # Missing type annotation for `cls` in method
+      "ANN101",  # Missing type annotation for `self` in method
+      "ANN102",  # Missing type annotation for `cls` in method
+      "ANN401",  # Dynamically typed expressions (typing.Any) are disallowed
+      "ARG001",  # Unused function argument  # TODO: resolve
+      "B008",    # Do not perform function calls in argument defaults
+      "COM812",  # <- for ruff.format
+      "D103",    # Missing docstring in public function  # TODO: resolve
+      "D105",    # Missing docstring in magic method
+      "D203",    # 1 blank line required before class docstring
+      "D213",    # Multi-line docstring summary should start at the second line
+      "ERA001",  # Commented out code
+      "F722",    # Syntax error in forward annotation  <- jaxtyping
+      "F811",    # redefinition of unused '...'  <- plum-dispatch
+      "F821",    # undefined name '...'  <- jaxtyping
+      "FIX002",  # Line contains TODO
+      "ISC001",  # Conflicts with formatter
+      "PD",      # Pandas
+      "PLR09",   # Too many <...>
+      "PLR2004", # Magic value used in comparison
+      "PYI041",  # Use `complex` instead of `int | complex` <- plum is more strict
+      "TD002",   # Missing author in TODO
+      "TD003",   # Missing issue link on the line following this TODO
+    ]
+    # Uncomment if using a _compat.typing backport
+    # typing-modules = ["coordinax._compat.typing"]
+
+    [tool.ruff.lint.per-file-ignores]
+      "__init__.py" = ["F403"]
+      "docs/conf.py" = ["A001", "INP001"]
+      "noxfile.py" = ["T20"]
+      "tests/**" = ["ANN", "S101", "T20"]
+
+    [tool.ruff.lint.isort]
+      combine-as-imports = true
+      known-first-party = ["quaxed", "unxt"]
+      known-local-folder = ["coordinax"]
+
+
+[tool.pylint]
+  ignore-paths = [".*/_version.py"]
+  messages_control.disable = [
+    "abstract-method",            # pylint doesn't like ABC hierarchies
+    "cyclic-import",              # broken?
+    "design",
+    "duplicate-code",
+    "import-outside-toplevel",    # handled by ruff
+    "fixme",
+    "function-redefined",         # plum-dispatch
+    "invalid-name",               # handled by ruff
+    "invalid-unary-operand-type", # pylint doesn't understand dataclass fields
+    "isinstance-second-argument-not-valid-type", # pylint doesn't understand _cartesian_cls
+    "line-too-long",
+    "missing-function-docstring", # TODO: resolve
+    "missing-kwoa",               # plum-dispatch
+    "missing-module-docstring",
+    "no-member",                  # handled by mypy
+    "no-value-for-parameter",     # pylint doesn't understand multiple dispatch
+    "not-a-mapping",              # pylint doesn't understand dataclass fields
+    "protected-access",           # handled by ruff
+    "redefined-builtin",          # handled by ruff
+    "too-many-function-args",     # plum-dispatch
+    "unnecessary-ellipsis",       # I like my ellipses in ABCs and Protocols
+    "unsubscriptable-object",     # handled by mypy
+    "unused-argument",            # handled by ruff
+    "wrong-import-position",
+    "wrong-import-order",         # handled by ruff
+  ]
+  py-version = "3.10"
+  reports.output-format = "colorized"
+  similarities.ignore-imports = "yes"
