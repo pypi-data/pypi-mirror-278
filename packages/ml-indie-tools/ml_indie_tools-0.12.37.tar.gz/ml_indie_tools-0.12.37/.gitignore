@@ -1,0 +1,15 @@
+dist/
+__pycache__/
+.ipynb_checkpoints/
+gutenberg/
+*.egg-info
+.vscode/
+.DS_Store
+.virtual_documents/
+bin/
+lib/
+include/
+share/
+lib64/
+etc/
+pyvenv.cfg
