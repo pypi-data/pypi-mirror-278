@@ -1,0 +1,73 @@
+#!python
+
+# Copyright 2015 Earth Sciences Department, BSC-CNS
+
+# This file is part of Autosubmit.
+
+# Autosubmit is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# Autosubmit is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with Autosubmit.  If not, see <http://www.gnu.org/licenses/>.
+
+"""Script for handling experiment monitoring"""
+import os
+import sys
+import traceback
+from contextlib import suppress
+
+scriptdir = os.path.abspath(os.path.dirname(sys.argv[0]))
+sys.path.append(scriptdir)
+sys.path.append(os.path.normpath(os.path.join(scriptdir, os.pardir)))
+# noinspection PyUnresolvedReferences
+from log.log import Log, AutosubmitCritical , AutosubmitError
+from autosubmit.autosubmit import Autosubmit
+from typing import Union
+
+
+
+def exit_from_error(e: BaseException):
+    trace = traceback.format_exc()
+    try:
+        Log.debug(trace)
+    except:
+        print(trace)
+    with suppress(FileNotFoundError, PermissionError):
+        os.remove(os.path.join(Log.file_path, "autosubmit.lock"))
+    if isinstance(e, (AutosubmitCritical, AutosubmitError)):
+        e: Union[AutosubmitError, AutosubmitCritical] = e
+        if e.trace:
+            Log.debug("Trace: {0}", str(e.trace))
+        Log.critical("{1} [eCode={0}]", e.code, e.message)
+    else:
+        msg = "A not admitted configuration or error in the code has happened: {0}.\n Please report it to Autosubmit Developers through Git"
+        args = [str(e)]
+        Log.critical(msg.format(*args))
+    Log.info("More info at https://autosubmit.readthedocs.io/en/master/troubleshooting/error-codes.html")
+    os._exit(1)
+
+# noinspection PyProtectedMember
+def main():
+    try:
+        return_value = Autosubmit.parse_args()
+        if os.path.exists(os.path.join(Log.file_path, "autosubmit.lock")):
+            os.remove(os.path.join(Log.file_path, "autosubmit.lock"))
+        if type(return_value) is int:
+            os._exit(return_value)
+        os._exit(0)
+    except AutosubmitError as e:
+        exit_from_error(e)
+    except AutosubmitCritical as e:
+        exit_from_error(e)
+    except BaseException as e:
+        exit_from_error(e)
+
+if __name__ == "__main__":
+    main()
