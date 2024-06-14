@@ -1,0 +1,259 @@
+This is a collection of tools to perform common functions that are
+either missing or the author prefers a different functionality or an
+extra level of control. It is split into the following categories:
+
+- Reading and writing to files
+	- save_to_path
+	- read_from_path
+	- combine_files
+	- save_combined_files
+	
+- Encoding and Decoding metadata stored in file names
+	- get_file_name
+	- read_file_name
+	
+- Printing iterables in a similar fashion to json.dumps
+	- get_iterable_string
+	- print_iterable
+	
+- Processing file paths
+	- make_file
+	- make_folder
+	- load_json
+	- get_file_name_from_path
+	- remove_extension
+	
+- Handling dictionaries and lists
+	- remove_none_values
+	- transpose_list
+	- print_dict_aligned
+
+
+Reading and writing to files
+
+	save_to_path
+	inputs:
+		Path to target location
+		Dictionary with data to be saved
+		separator (optional kwarg) - the string used to
+			separate columns
+	outputs:
+		None
+		
+	Saves the content of a dictionary to a text file. Standard
+	separator is a comma so it can also be saved as a csv.
+	
+	
+	read_from_path
+	inputs:
+		Path to file to be read from
+		separator (optional kwarg) - the string expected
+			between columns. Default is ","
+		skip_first_n (optional kwarg)- how many lines are present
+			before the header. Default is 0
+		data_type (optional kwarg) - the type to convert the values
+			in the file to. Default is float
+		enforce_type (optional kwarg) - how to handle data type
+			errors. Default is True.
+	outputs:
+		Dictionary with content from path
+	
+	This is a tool used to extract data from files, where all
+	delimiters are the same and all columns are the same length,
+	such as a csv. skip_first_n is used for when metadata is given
+	at the start of the file and would not fit into the expected
+	rectangular structure. If enforce_type is True then the program
+	crash if it cannot convert some data to a particular type, and
+	will return the data as an array of strings otherwise. The default
+	for enforce_type is True because it is assumed that any data that
+	cannot be converted is an error that the user does not know about,
+	and is unintended behaviour.
+	
+	
+	combine_files
+	inputs:
+		Path to a folder to be read from
+		blacklist (optional kwarg) - a list of strings that
+			should not appear as a substring in any of the
+			desired file names. Default is []
+	outputs:
+		A dictionary of the collated data
+	
+	The use case for this tool is where a program such as a
+	data-logger saves a series of small files with the same 
+	format to avoid losing data by storing it all in memory and
+	saving it all at once. This tool takes in the folder where
+	those files are stored and produces the same content as
+	read_to_path would if all the data was saved in one file. The
+	blacklist kwarg is a tool for applying a simple filter on
+	what files are read from.
+	
+	
+	save_combined_files
+	
+	inputs:
+		Path to a folder to be read from
+		blacklist (optional kwarg) - a list of strings that
+			should not appear as a substring in any of the
+			desired file names. Default is []
+		name (optional kwarg) - the name of the file to save
+			the results to
+	outputs:
+		A dictionary of the collated data
+	
+	This does the same thing as getting data from combine_files
+	and then saving it using save_to_path.
+
+
+Encoding and decoding metadata stored in file names
+
+	get_file_name
+	inputs:
+		Input dictionary to be encoded as a file name
+	outputs:
+		A string to be used as a file name
+	
+	The use case for this is where you have data in a file and want
+	to store additional data that applies to all the data in that
+	file. The information about the file name is described with a
+	dictionary. The name of the piece of information to be stored is
+	given as the key, and the value of that information is given as
+	the value. If the unit of the value is to be stored in the file
+	name as well, the value and unit should be given as a dictionary
+	instead with key names "value" and "unit" respectively.
+	
+	
+	read_file_name
+	inputs:
+		A string giving the name of a file
+	outputs:
+		A dictionary with the file name data
+
+	This is intended to be used with get_file_name. The keys are the
+	names of the properties stored in the file name and the values
+	are the corresponding values. When extracting data from file
+	names, units are ignored and the values are assumed to be
+	numbers and so are converted to floats. The program will crash
+	if the values are not convertible to floats.
+
+
+Printing iterables in a similar fashion to json.dumps
+
+	get_iterable_string
+		inputs:
+			An iterable object
+			indent (optional kwarg) - how many spaces of indentation
+				there should be between each level. Default is 2
+		outputs:
+			A string
+		
+		When attempting to print some data in a more organised
+		fashion, one is tempted to use json.dumps. This does not
+		work with some data formats however, and this is meant to do
+		the same thing but more generally. Works with any
+		combination of nested lists and dictionaries
+	
+	print_iterable
+		inputs:
+			An iterable object
+			indent (optional kwarg) - how many spaces of indentation
+				there should be between each level. Default is 2
+		outputs:
+			A string
+		
+		This does exactly the same thing as get_iterable_string, but
+		it prints the output as well as returning it.
+	
+	
+Processing file paths
+
+	make_file
+		inputs:
+			Path to target destination
+		outputs:
+			None
+		
+		This ensures that a file is created at the given path. The
+		standard file creation functions require the destination
+		folder to exist, but this function makes any necessary
+		parent folders if they do not already exist.
+	
+	make_folder
+		inputs:
+			Path to target destination
+			force (optional kwarg) - if True then make the folder
+				even if it is the path to a file.
+		outputs:
+		None
+		
+		This creates a folder at a given location, and also creates
+		any necessary parent folders if they do not exist. If the
+		force kwarg is True then it will check if there is a dot in
+		the name, and this is how it determines whether or not it is
+		the path to a file or not. If it is the path to a file then
+		it removes the file name and makes the folder at the
+		remaining path.
+	
+	
+	load_json
+		inputs:
+			Path of target json file
+		outputs:
+			Contents of the json file
+		
+		If a file is empty then the standard json.load function will
+		crash. This function checks for that, and if it is the case
+		it returns an empty dictionary. If it is non-empty then
+		json.load is called.
+	
+	get_file_name_from_path
+		inputs:
+			Full path to folder or full file name
+		outputs:
+			Name of a file with no extension
+		
+		The purpose of this is to avoid needing to manually check
+		whether a the path is to a folder or a file. It also handles
+		any unwanted extensions.
+	
+	
+	remove_extension
+		inputs:
+			Path to a file or file name with an extension
+		outputs:
+			File name without the extension
+		
+		This does exactly the same thing as
+		os.path.splitext(path)[0], but it is more readable.
+	
+	
+Handling dictionaries and lists
+	
+	remove_none_values
+		inputs:
+			A dictionary
+		outputs:
+			A dictionary
+		
+		Removes any key-value pairs of a dictionary where the value
+		is None.
+		
+	transpose_list
+		inputs:
+			A list of lists
+		outputs:
+			A list of lists
+		
+		This does the same thing as the numpy transpose function
+		with two dimensional arrays, but for python lists. The rows
+		and columns are swapped around.
+	
+	print_dict_aligned
+		inputs:
+			A dictionary
+		outputs:
+			Printed entries of dictionary
+		
+		This takes each entry and pastes it on a line where all the
+		values are vertically aligned. Good for printing attributes
+		of an object or class.
