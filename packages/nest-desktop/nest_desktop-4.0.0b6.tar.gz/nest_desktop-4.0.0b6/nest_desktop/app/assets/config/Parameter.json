@@ -1,0 +1,122 @@
+{
+  "types": [
+    {
+      "icon": "mdi:mdi-numeric",
+      "id": "constant",
+      "label": "constant"
+    },
+    {
+      "icon": "mdi:mdi-code-brackets",
+      "id": "numpy.arange",
+      "label": "ranged array",
+      "specs": [
+        {
+          "default": 0,
+          "id": "start",
+          "optional": true,
+          "label": "start",
+          "value": 0
+        },
+        {
+          "id": "stop",
+          "label": "stop",
+          "value": 1
+        },
+        {
+          "default": 1,
+          "id": "step",
+          "optional": true,
+          "label": "step",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "icon": "mdi:mdi-code-brackets",
+      "id": "numpy.linspace",
+      "label": "linear spaced array",
+      "specs": [
+        {
+          "id": "start",
+          "label": "start",
+          "value": 0
+        },
+        {
+          "id": "stop",
+          "label": "stop",
+          "value": 1
+        },
+        {
+          "default": 50,
+          "id": "num",
+          "optional": true,
+          "label": "num",
+          "value": 50
+        }
+      ]
+    },
+    {
+      "icon": "custom:dice-multiple-outline",
+      "id": "random.exponential",
+      "label": "exponential distribution",
+      "specs": [
+        {
+          "id": "beta",
+          "label": "scale",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "icon": "custom:dice-multiple-outline",
+      "id": "random.lognormal",
+      "label": "logarithm normal distribution",
+      "specs": [
+        {
+          "id": "mean",
+          "label": "mean",
+          "value": 0
+        },
+        {
+          "id": "std",
+          "label": "standard deviation",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "icon": "custom:dice-multiple-outline",
+      "id": "random.normal",
+      "label": "normal distribution",
+      "specs": [
+        {
+          "id": "mean",
+          "label": "mean",
+          "value": 0
+        },
+        {
+          "id": "std",
+          "label": "standard deviation",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "icon": "custom:dice-multiple-outline",
+      "id": "random.uniform",
+      "label": "uniform distribution",
+      "specs": [
+        {
+          "id": "min",
+          "label": "lower boundary",
+          "value": 0
+        },
+        {
+          "id": "max",
+          "label": "upper boundary",
+          "value": 1
+        }
+      ]
+    }
+  ]
+}
