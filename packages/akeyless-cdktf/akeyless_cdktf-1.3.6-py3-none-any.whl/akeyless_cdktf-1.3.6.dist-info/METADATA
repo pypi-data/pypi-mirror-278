@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: akeyless-cdktf
+Version: 1.3.6
+Summary: 
+Author: Akeyless
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: cdktf (>=0.20.7,<0.21.0)
+Requires-Dist: jsii (>=1.99.0,<2.0.0)
+Description-Content-Type: text/markdown
+
+# Akeyless CDKTF
+
