@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: flarenet
+Version: 0.3.5
+Summary: Common neural network modules and utilities based on flarejax.
+Home-page: https://github.com/pwolle/flarenet
+Author: Paul Wollenhaupt
+Author-email: paul.wollenhaupt@gmail.com
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: flarejax
+Requires-Dist: jaxtyping
+
+# Flarenet
