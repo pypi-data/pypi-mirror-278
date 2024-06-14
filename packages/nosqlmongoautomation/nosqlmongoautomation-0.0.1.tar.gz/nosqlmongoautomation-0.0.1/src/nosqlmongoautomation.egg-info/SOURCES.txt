@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/mongodb_connect/__init__.py
+src/mongodb_connect/mongo_crud.py
+src/nosqlmongoautomation/__init__.py
+src/nosqlmongoautomation/mongo_crud.py
+src/nosqlmongoautomation.egg-info/PKG-INFO
+src/nosqlmongoautomation.egg-info/SOURCES.txt
+src/nosqlmongoautomation.egg-info/dependency_links.txt
+src/nosqlmongoautomation.egg-info/requires.txt
+src/nosqlmongoautomation.egg-info/top_level.txt
