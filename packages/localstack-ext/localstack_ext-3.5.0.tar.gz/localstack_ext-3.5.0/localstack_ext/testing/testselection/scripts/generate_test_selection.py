@@ -1,0 +1,4 @@
+from localstack.testing.testselection.scripts.generate_test_selection import generate_test_selection
+from localstack_ext.testing.testselection.matching import MATCHING_RULES_EXT
+from localstack_ext.testing.testselection.opt_in import OPT_IN
+if __name__=='__main__':generate_test_selection(opt_in_rules=OPT_IN,matching_rules=MATCHING_RULES_EXT,repo_name='localstack_ext')
