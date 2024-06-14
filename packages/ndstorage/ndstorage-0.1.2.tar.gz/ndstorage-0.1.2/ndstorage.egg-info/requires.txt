@@ -1,0 +1,6 @@
+numpy
+sortedcontainers
+dask[array]>=2022.2.0
+
+[test]
+pytest
