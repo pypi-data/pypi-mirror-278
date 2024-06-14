@@ -1,0 +1,11 @@
+License
+README.md
+pyproject.toml
+setup.py
+lingvanex.egg-info/PKG-INFO
+lingvanex.egg-info/SOURCES.txt
+lingvanex.egg-info/dependency_links.txt
+lingvanex.egg-info/top_level.txt
+lingvanex_API/__init__.py
+lingvanex_API/get_languages.py
+lingvanex_API/translate.py
