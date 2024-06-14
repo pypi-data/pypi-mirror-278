@@ -1,0 +1,130 @@
+Metadata-Version: 2.1
+Name: alpbench
+Version: 0.1.0
+Summary: Active Learning Pipelines Benchmark
+Home-page: https://github.com/ValentinMargraf/ActiveLearningPipelines
+Author: Valentin Margraf et al.
+Author-email: valentin.margraf@ifi.lmu.de
+License: MIT
+Project-URL: Tracker, https://github.com/ValentinMargraf/ActiveLearningPipelines/issues
+Project-URL: Source, https://github.com/ValentinMargraf/ActiveLearningPipelines
+Project-URL: Documentation, https://activelearningpipelines.readthedocs.io/
+Keywords: python,machine learning,active learning,benchmark,tabular data,classification
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.10.0
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+Requires-Dist: py-experimenter
+Requires-Dist: mysql-connector-python
+Requires-Dist: openml
+Requires-Dist: scikit-learn
+Requires-Dist: scikit-activeml
+Requires-Dist: catboost
+Requires-Dist: xgboost
+Provides-Extra: full
+Requires-Dist: numpy ; extra == 'full'
+Requires-Dist: scipy ; extra == 'full'
+Requires-Dist: matplotlib ; extra == 'full'
+Requires-Dist: pandas ; extra == 'full'
+Requires-Dist: py-experimenter ; extra == 'full'
+Requires-Dist: mysql-connector-python ; extra == 'full'
+Requires-Dist: openml ; extra == 'full'
+Requires-Dist: scikit-learn ; extra == 'full'
+Requires-Dist: scikit-activeml ; extra == 'full'
+Requires-Dist: catboost ; extra == 'full'
+Requires-Dist: xgboost ; extra == 'full'
+Requires-Dist: pytorch-tabnet ; extra == 'full'
+Requires-Dist: tabpfn ; extra == 'full'
+
+[![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
+[![Coverage Status](https://coveralls.io/repos/github/ValentinMargraf/ActiveLearningPipelines/badge.svg)](https://coveralls.io/github/ValentinMargraf/ActiveLearningPipelines)
+[![Tests](https://github.com/ValentinMargraf/ActiveLearningPipelines/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/ValentinMargraf/ActiveLearningPipelines/actions/workflows/unit-tests.yml)
+[![Read the Docs](https://readthedocs.org/projects/shapiq/badge/?version=latest)](https://activelearningpipelines.readthedocs.io/en/latest/?badge=latest)
+
+[![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+# ALPBench: A Benchmark for Active Learning Pipelines on Tabular Data
+`ALPBench` is a Python package for the specification, execution, and performance monitoring of **active learning pipelines (ALP)** consisting of a **learning algorithm** and a **query strategy** for real-world tabular classification tasks. It has built-in measures to ensure evaluations are done reproducibly, saving exact dataset splits and hyperparameter settings of used algorithms. In total, `ALPBench` consists of 86 real-world tabular classification datasets and 5 active learning settings, yielding 430 active learning problems. However, the benchmark allows for easy extension such as implementing your own learning algorithm and/or query strategy and benchmark it against existing approaches.
+
+
+# 🛠️ Install
+`ALPBench` is intended to work with **Python 3.10 and above**.
+```
+git clone https://github.com/ValentinMargraf/ActiveLearningPipelines.git
+cd ActiveLearningPipelines
+conda create --name ALP python=3.10
+conda activate ALP
+
+# Install for usage (without TabNet and TabPFN)
+pip install -r requirements.txt
+
+# OR
+# Install for usage (with TabNet and TabPFN)
+pip install -r requirements_full.txt
+
+# Install for development
+make install-dev
+```
+
+Documentation at https://activelearningpipelines.readthedocs.io/en/latest/
+
+
+# ⭐ Quickstart
+You can use `ALPBench` in different ways. There already exist quite some learners and query strategies that can be
+run through accessing them with their name, as can be seen in the minimal example below. In the ALP.pipeline module you
+can also implement your own (new) query strategies.
+
+
+## 📈 Fit an Active Learning Pipeline
+
+Fit an ALP on dataset with openmlid 31, using a random forest and margin sampling. You can find similar example code snippets in
+**examples/**.
+
+```python
+from sklearn.metrics import accuracy_score
+
+from alpbench.benchmark.BenchmarkConnector import DataFileBenchmarkConnector
+from alpbench.evaluation.experimenter.DefaultSetup import ensure_default_setup
+from alpbench.pipeline.ALPEvaluator import ALPEvaluator
+
+# create benchmark connector and establish database connection
+benchmark_connector = DataFileBenchmarkConnector()
+
+# load some default settings and algorithm choices
+ensure_default_setup(benchmark_connector)
+
+evaluator = ALPEvaluator(benchmark_connector=benchmark_connector,
+                         setting_name="small", openml_id=31, sampling_strategy_name="margin", learner_name="rf_gini")
+alp = evaluator.fit()
+
+# fit / predict and evaluate predictions
+X_test, y_test = evaluator.get_test_data()
+y_hat = alp.predict(X=X_test)
+print("final test acc", accuracy_score(y_test, y_hat))
+
+>> final
+test
+acc
+0.7181818181818181
+
+```
+
+
+## Changelog 
+### v0.1.0 (2024-06-13)
+Initial release
+
+- `pipeline` can be used to combine learning algorithms and query strategies into active learning pipelines
+- `evaluation` provides tools to evaluate active learning pipelines
+- `benchmark` monitors the performance of active learning pipelines over time and store results in a database
