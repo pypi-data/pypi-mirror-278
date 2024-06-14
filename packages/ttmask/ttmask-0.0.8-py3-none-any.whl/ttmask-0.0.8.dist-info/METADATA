@@ -1,0 +1,47 @@
+Metadata-Version: 2.3
+Name: ttmask
+Version: 0.0.8
+Summary: CLI tool for mask creation in cryo-EM/ET
+Project-URL: homepage, https://github.com/teamtomo/ttmask
+Project-URL: repository, https://github.com/teamtomo/ttmask
+Author-email: Miles Graham <miles.graham@balliol.ox.ac.uk>
+License: BSD-3-Clause
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Typing :: Typed
+Requires-Python: >=3.8
+Requires-Dist: einops
+Requires-Dist: mrcfile
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: typer
+Provides-Extra: dev
+Requires-Dist: ipython; extra == 'dev'
+Requires-Dist: mkdocs-material; extra == 'dev'
+Requires-Dist: mkdocs-video; extra == 'dev'
+Requires-Dist: mypy; extra == 'dev'
+Requires-Dist: pdbpp; extra == 'dev'
+Requires-Dist: pre-commit; extra == 'dev'
+Requires-Dist: rich; extra == 'dev'
+Requires-Dist: ruff; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: pytest; extra == 'test'
+Requires-Dist: pytest-cov; extra == 'test'
+Description-Content-Type: text/markdown
+
+# ttmask
+
+[![License](https://img.shields.io/pypi/l/ttmask.svg?color=green)](https://github.com/teamtomo/ttmask/raw/main/LICENSE)
+[![PyPI](https://img.shields.io/pypi/v/ttmask.svg?color=green)](https://pypi.org/project/ttmask)
+[![Python Version](https://img.shields.io/pypi/pyversions/ttmask.svg?color=green)](https://python.org)
+[![CI](https://github.com/teamtomo/ttmask/actions/workflows/ci.yml/badge.svg)](https://github.com/teamtomo/ttmask/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/teamtomo/ttmask/branch/main/graph/badge.svg)](https://codecov.io/gh/teamtomo/ttmask)
+
+CLI tool for mask creation in cryo-EM/ET
