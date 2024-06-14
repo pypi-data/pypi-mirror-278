@@ -1,0 +1,38 @@
+[project]
+name = "mainframe-paxo"
+version = "0.1.23"
+description = "A simple CLI for paxing"
+authors = [
+    { name = "Kristján Valur Jónsson", email = "sweskman@gmail.com" }
+]
+dependencies = [
+    "click>=8.1.7",
+    "requests>=2.31.0",
+]
+readme = "doreadme.md"
+requires-python = ">= 3.12"
+include = ["*.ico"]
+
+[project.scripts]
+paxo = "mainframe_paxo.paxo:paxo"
+ue-version-selector = "mainframe_paxo.uvs:main"
+paxo-uvs = "mainframe_paxo.uvs:main"
+#paxo-uvs = {reference = "mainframe_paxo.uvs:main", type = "console"}
+#paxo-uvs-gui = {reference = "mainframe_paxo.uvs:main", type = "gui"}
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "pytest>=8.0.2",
+    "mypy>=1.8.0",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mainframe_paxo"]
