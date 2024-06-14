@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: skaff-telemetry
+Version: 0.1.1
+Summary: Decorator for adding telemetry sending capability to functions.
+Author: Alexis VIALARET
+Author-email: alexis.vialaret@artefact.com
+Requires-Python: >=3.10,<3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: requests (>=2.25,<3)
+Description-Content-Type: text/markdown
+
+# Skaff Telemetry
+
+## Description 
+
+The skaff_telemetry module is designed to enhance accelerator monitoring by sending HTTPS 
+requests to a specified backend each time a function is invoked with the decorator. 
+This capability is particularly useful for applications that require real-time monitoring 
+or logging of function usage.
+
+## Installation
+
+To get started with the module, install it using pip, the Python package installer. 
+This will download and install the module along with any necessary dependencies automatically.
+
+```
+pip install skaff-telemetry
+```
+*Python 3.10 or 3.11 is needed*
+
+## Usage
+
+Integrating sonde into your accelerator is straightforward. First, import the decorator 
+from the module. Then, apply the sonde decorator above any function you wish to monitor.
+ Each time the decorated function is called, sonde will send an HTTPS request 
+ to your configured backend, allowing you to track when and how often the function is used.
+
+The following arguments must passed to the decorator:
+- `accelerator_name`: name of the accelerator
+- `version_number`: version of the accelerator
+- `project_name`: if accessible, pass the name of the project in which the accelator will
+be used.
+
+## Example
+
+```python
+from skaff_telemetry import skaff_telemetry
+
+@skaff_telemetry(
+    accelerator_name="test_python",
+    version_number="0.0.1",
+    project_name="xxx",
+)
+def example_func():
+    print("hello")
+
+
+example_func()
+```
+
