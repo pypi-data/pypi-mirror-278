@@ -1,0 +1,6 @@
+-r requirements.txt
+pyjpt
+pandas
+graphviz
+scikit-learn
+matplotlib
