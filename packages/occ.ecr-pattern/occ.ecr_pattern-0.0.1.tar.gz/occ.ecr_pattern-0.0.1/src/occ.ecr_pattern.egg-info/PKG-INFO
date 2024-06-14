@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: occ.ecr-pattern
+Version: 0.0.1
+Summary: OCC Pattern to create an AWS ECR based on OCC way
+Home-page: https://github.com/occmundial/occ-ecr-pattern.git
+Author: Alex Parra<jparra@occ.com.mx>
+License: MIT
+Project-URL: Source, https://github.com/occmundial/occ-ecr-pattern.git
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: JavaScript
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Typing :: Typed
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved
+Requires-Python: ~=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+occ.ecr_pattern
+===============

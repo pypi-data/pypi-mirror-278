@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/occ.ecr_pattern.egg-info/PKG-INFO
+src/occ.ecr_pattern.egg-info/SOURCES.txt
+src/occ.ecr_pattern.egg-info/dependency_links.txt
+src/occ.ecr_pattern.egg-info/requires.txt
+src/occ.ecr_pattern.egg-info/top_level.txt
+src/occ/ecr_pattern/__init__.py
+src/occ/ecr_pattern/py.typed
+src/occ/ecr_pattern/_jsii/__init__.py
+src/occ/ecr_pattern/_jsii/occ-ecr-pattern@0.0.1.jsii.tgz
