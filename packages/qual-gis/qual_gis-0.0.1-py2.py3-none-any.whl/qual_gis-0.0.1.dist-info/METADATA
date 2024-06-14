@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: qual-gis
+Version: 0.0.1
+Summary: Qualitative GIS tools
+Author-email: Fernando Schrupp Rivero <schrupp@gmail.com>
+License: MIT License
+Project-URL: Homepage, https://github.com/fschrupprivero/qual-gis
+Keywords: qual-gis
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Provides-Extra: all
+Requires-Dist: qual-gis[extra] ; extra == 'all'
+Provides-Extra: extra
+Requires-Dist: pandas ; extra == 'extra'
+
+# qual-gis
+
+
+[![image](https://img.shields.io/pypi/v/qual-gis.svg)](https://pypi.python.org/pypi/qual-gis)
+[![image](https://img.shields.io/conda/vn/conda-forge/qual-gis.svg)](https://anaconda.org/conda-forge/qual-gis)
+
+
+**Qualitative GIS tools**
+
+
+-   Free software: MIT License
+-   Documentation: https://fschrupprivero.github.io/qual-gis
+    
+
+## Features
+
+-   TODO
