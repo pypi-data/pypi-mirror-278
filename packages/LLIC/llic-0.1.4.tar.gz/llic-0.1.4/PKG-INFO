@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: LLIC
+Version: 0.1.4
+Summary: Lightweight Learned Image Compression
+Author-email: Dan Jacobellis <danjacobellis@utexas.edu>
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: torch
+Requires-Dist: compressai
+Requires-Dist: numpy
+
+# LLIC
+Lightweight Learned Image Compression
