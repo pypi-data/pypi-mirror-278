@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: mobly-wifi
+Version: 1.0.0
+Summary: Mobly WiFi controller module for using Python code to operate network devices in Mobly tests.
+Home-page: https://github.com/google/mobly-wifi
+Author: Minghao Li
+Author-email: minghaoli@google.com
+License: Apache2.0
+Requires-Python: >=3.11
+License-File: LICENSE
