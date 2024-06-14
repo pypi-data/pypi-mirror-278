@@ -1,0 +1,12 @@
+aiohttp>=3.7.4
+async-timeout>=4.0.3
+
+[test]
+pytest
+multidict
+yarl
+pytest-aiohttp
+pytest-mock
+pytest-timeout
+cykooz.testing
+aiohttp_cors

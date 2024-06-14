@@ -1,0 +1,9 @@
+include LICENSE
+include CHANGES.rst
+include README.rst
+include Makefile
+include sockjs-testsrv.py
+graft sockjs
+graft examples
+graft tests
+global-exclude *.pyc
