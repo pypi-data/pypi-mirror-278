@@ -1,0 +1,14 @@
+.flake8
+.gitignore
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+lambdalib/__init__.py
+lambdalib.egg-info/PKG-INFO
+lambdalib.egg-info/SOURCES.txt
+lambdalib.egg-info/dependency_links.txt
+lambdalib.egg-info/requires.txt
+lambdalib.egg-info/top_level.txt
+lambdalib/utils/__init__.py
+lambdalib/utils/templates/la_spmemory.v

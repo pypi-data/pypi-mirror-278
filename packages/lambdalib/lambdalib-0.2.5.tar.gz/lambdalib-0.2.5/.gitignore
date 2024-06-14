@@ -1,0 +1,14 @@
+
+#Editor files
+*~
+*~
+*.log
+tmp*
+a.out
+*.vcd
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+lambdalib.egg-info/
+build/
+dist/
