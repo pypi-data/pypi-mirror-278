@@ -1,0 +1,14 @@
+numpy
+
+[dev]
+copier
+mypy
+pipdeptree
+pre-commit
+pytest
+pytest-cov
+ruff
+tox-direct
+types-mock
+scanspec
+pydantic<2.0
