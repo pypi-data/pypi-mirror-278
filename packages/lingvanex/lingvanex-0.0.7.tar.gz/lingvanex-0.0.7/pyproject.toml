@@ -1,0 +1,18 @@
+[project]
+name = "lingvanex"
+version = "0.0.7"
+authors = [
+  { name="Lingvanex", email="tech@lingvanex.com" },
+]
+description = "Lingvanex API instructions"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/lingvanex-mt"
+Issues = "https://github.com/lingvanex-mt"
