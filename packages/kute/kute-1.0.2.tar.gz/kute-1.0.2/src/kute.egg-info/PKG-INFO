@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: kute
+Version: 1.0.2
+Summary: green Kubo Uncertainty-based Transport Estimator
+Author-email: Martín Otero-Lema <martin.oterolema@usc.es>, Raúl Lois-Cuns <raul.lois.cuns@usc.es>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: MDAnalysis
+Requires-Dist: Openmm
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: h5py
+
+![logo](kute.png){width=50%}
+# KUTE: green-Kubo Uncertainty-weighted Transport properties Estimator
+[![pipeline status](https://gitlab.com/nafomat/kute/badges/main/pipeline.svg)](https://gitlab.com/nafomat/kute/-/commits/main)
+[![coverage report](https://gitlab.com/nafomat/kute/badges/main/coverage.svg)](https://gitlab.com/nafomat/kute/-/commits/main)
+
+
+This repository contains a variety of tools to calculate transport properties from molecular dynamics simulations.
+
+
+## Installation
+To install KUTE, just clone this repository and run the following command 
+
+```
+python -m pip install -e .
+```
+
+with that, KUTE will be available both as a python module and as commandline functions that can be invoked.
+
+
+## Documentation and quick start guide
+
+The documentation, as well a a quick tutorial can be seen [here](https://nafomat.gitlab.io/kute)
+
+## Cite us
+
+
+
+
