@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: osbot_github
+Version: 0.5.0
+Summary: OWASP Security Bot - GitHub
+Home-page: https://github.com/owasp-sbot/OSBot-GitHub
+License: MIT
+Author: Dinis Cruz
+Author-email: dinis.cruz@owasp.org
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: PyGithub
+Requires-Dist: osbot-utils
+Requires-Dist: python-dotenv
+Project-URL: Repository, https://github.com/owasp-sbot/OSBot-GitHub
+Description-Content-Type: text/markdown
+
+# OSBot-GitHub
