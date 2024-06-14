@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+rimetool/__init__.py
+rimetool/main.py
+rimetool.egg-info/PKG-INFO
+rimetool.egg-info/SOURCES.txt
+rimetool.egg-info/dependency_links.txt
+rimetool.egg-info/entry_points.txt
+rimetool.egg-info/requires.txt
+rimetool.egg-info/top_level.txt
+rimetool/utils/__init__.py
+rimetool/utils/singleword.py
+rimetool/utils/vcf.py
