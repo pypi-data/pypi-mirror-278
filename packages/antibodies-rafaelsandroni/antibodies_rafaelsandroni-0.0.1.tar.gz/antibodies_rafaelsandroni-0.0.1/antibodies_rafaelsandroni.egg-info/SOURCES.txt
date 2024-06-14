@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+antibodies/__init__.py
+antibodies/detect.py
+antibodies_rafaelsandroni.egg-info/PKG-INFO
+antibodies_rafaelsandroni.egg-info/SOURCES.txt
+antibodies_rafaelsandroni.egg-info/dependency_links.txt
+antibodies_rafaelsandroni.egg-info/top_level.txt
+tests/test_detect.py
