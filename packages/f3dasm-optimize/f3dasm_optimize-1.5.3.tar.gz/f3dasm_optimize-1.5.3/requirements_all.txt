@@ -1,0 +1,6 @@
+tensorflow
+pygmo; platform_system == "Linux"
+nevergrad
+evosax
+optuna
+optax==0.1.7
