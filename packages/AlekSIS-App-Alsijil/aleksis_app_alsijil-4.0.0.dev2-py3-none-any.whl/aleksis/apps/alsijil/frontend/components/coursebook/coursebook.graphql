@@ -1,0 +1,123 @@
+query groupsByPerson {
+  groups: groupsByPerson {
+    id
+    name
+  }
+}
+
+query coursesOfPerson {
+  courses: coursesOfPerson {
+    id
+    name
+  }
+}
+
+query documentationsForCoursebook(
+  $own: Boolean!
+  $objId: ID
+  $objType: String
+  $dateStart: Date!
+  $dateEnd: Date!
+  $incomplete: Boolean
+) {
+  items: documentationsForCoursebook(
+    own: $own
+    objId: $objId
+    objType: $objType
+    dateStart: $dateStart
+    dateEnd: $dateEnd
+    incomplete: $incomplete
+  ) {
+    id
+    course {
+      id
+      name
+    }
+    amends {
+      id
+      amends {
+        id
+        teachers {
+          id
+          shortName
+          fullName
+          avatarContentUrl
+        }
+        subject {
+          id
+          name
+          shortName
+          colourFg
+          colourBg
+        }
+      }
+      cancelled
+    }
+    teachers {
+      id
+      shortName
+      fullName
+      avatarContentUrl
+    }
+    subject {
+      id
+      name
+      shortName
+      colourFg
+      colourBg
+    }
+    participations {
+      id
+      person {
+        id
+        firstName
+        fullName
+      }
+      absenceReason {
+        id
+        name
+        shortName
+        colour
+      }
+      isOptimistic
+    }
+    topic
+    homework
+    groupNote
+    datetimeStart
+    datetimeEnd
+    dateStart
+    dateEnd
+    oldId
+    canEdit
+    futureNotice
+    canDelete
+  }
+}
+
+mutation createOrUpdateDocumentations($input: [DocumentationInputType]!) {
+  createOrUpdateDocumentations(input: $input) {
+    items: documentations {
+      id
+      topic
+      homework
+      groupNote
+      oldId
+      participations {
+        id
+        person {
+          id
+          firstName
+          fullName
+        }
+        absenceReason {
+          id
+          name
+          shortName
+          colour
+        }
+        isOptimistic
+      }
+    }
+  }
+}

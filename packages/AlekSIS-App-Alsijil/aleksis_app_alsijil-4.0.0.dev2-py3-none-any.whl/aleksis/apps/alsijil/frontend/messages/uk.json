@@ -1,0 +1,44 @@
+{
+  "actions": {
+    "back_to_overview": "Назад до огляду"
+  },
+  "alsijil": {
+    "absence": {
+      "menu_title": "Реєстрація відсутності"
+    },
+    "all_lessons": {
+      "menu_title": "Усі уроки"
+    },
+    "coursebook": {
+      "filter": {
+        "groups": "Групи"
+      }
+    },
+    "excuse_types": {
+      "menu_title": "Типи пояснень"
+    },
+    "extra_marks": {
+      "menu_title": "Додаткові відмітки"
+    },
+    "group_roles": {
+      "menu_title_assign": "Призначити роль групи",
+      "menu_title_manage": "Керування ролями групи"
+    },
+    "groups": {
+      "menu_title": "Мої групи"
+    },
+    "lesson": {
+      "menu_title": "Поточний урок"
+    },
+    "menu_title": "Класний журнал",
+    "my_overview": {
+      "menu_title": "Мій огляд"
+    },
+    "persons": {
+      "menu_title": "Мої студенти"
+    },
+    "week": {
+      "menu_title": "Поточний тиждень"
+    }
+  }
+}
