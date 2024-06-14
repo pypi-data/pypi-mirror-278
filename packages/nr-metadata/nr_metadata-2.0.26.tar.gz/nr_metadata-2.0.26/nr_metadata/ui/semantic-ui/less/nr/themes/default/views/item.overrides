@@ -1,0 +1,5 @@
+.ui.items {
+  .license-item-content {
+    cursor: pointer;
+  }
+}
