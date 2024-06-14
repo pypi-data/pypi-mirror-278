@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+ahp_gaussiano/__init__.py
+ahp_gaussiano/ahp.py
+ahp_gaussiano.egg-info/PKG-INFO
+ahp_gaussiano.egg-info/SOURCES.txt
+ahp_gaussiano.egg-info/dependency_links.txt
+ahp_gaussiano.egg-info/requires.txt
+ahp_gaussiano.egg-info/top_level.txt
+tests/__init__.py
+tests/test_ahp.p.py
