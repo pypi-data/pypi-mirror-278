@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+torch_vggish_yamnet/__init__.py
+torch_vggish_yamnet/params.py
+torch_vggish_yamnet.egg-info/PKG-INFO
+torch_vggish_yamnet.egg-info/SOURCES.txt
+torch_vggish_yamnet.egg-info/dependency_links.txt
+torch_vggish_yamnet.egg-info/requires.txt
+torch_vggish_yamnet.egg-info/top_level.txt
+torch_vggish_yamnet/vggish/__init__.py
+torch_vggish_yamnet/vggish/model.py
+torch_vggish_yamnet/yamnet/__init__.py
+torch_vggish_yamnet/yamnet/model.py
