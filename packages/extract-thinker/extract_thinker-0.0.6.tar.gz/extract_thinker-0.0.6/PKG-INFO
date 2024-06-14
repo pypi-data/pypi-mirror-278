@@ -1,0 +1,163 @@
+Metadata-Version: 2.1
+Name: extract_thinker
+Version: 0.0.6
+Summary: Library to extract data from files and documents agnositicaly using LLMs
+Author: Júlio Almeida
+Author-email: enoch3712@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: azure-ai-formrecognizer (>=3.3.3,<4.0.0)
+Requires-Dist: cachetools (>=5.3.3,<6.0.0)
+Requires-Dist: instructor (>=1.2.2,<2.0.0)
+Requires-Dist: litellm (>=1.35.20,<2.0.0)
+Requires-Dist: openpyxl (>=3.1.2,<4.0.0)
+Requires-Dist: pillow (>=10.3.0,<11.0.0)
+Requires-Dist: pydantic (>=2.7.0,<3.0.0)
+Requires-Dist: pypdf2 (>=3.0.1,<4.0.0)
+Requires-Dist: pypdfium2 (>=4.29.0,<5.0.0)
+Requires-Dist: pytesseract (>=0.3.10,<0.4.0)
+Requires-Dist: python-docx (>=1.1.0,<2.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Requires-Dist: tiktoken (>=0.6.0,<0.7.0)
+Requires-Dist: xlrd (>=2.0.1,<3.0.0)
+Description-Content-Type: text/markdown
+
+<p align="center">
+  <img src="https://github.com/enoch3712/Open-DocLLM/assets/9283394/41d9d151-acb5-44da-9c10-0058f76c2512" alt="Extract Thinker Logo" width="200"/>
+</p>
+<p align="center">
+<a href="https://medium.com/@enoch3712">
+    <img alt="Medium" src="https://img.shields.io/badge/Medium-12100E?style=flat&logo=medium&logoColor=white" />
+</a>
+<img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/enoch3712/Open-DocLLM" />
+<img alt="Github License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" />
+</p>
+
+# ExtractThinker
+
+Library to extract data from files and documents agnostically using LLMs. `extract_thinker` provides ORM-style interaction between files and LLMs, allowing for flexible and powerful document extraction workflows.
+
+## Features
+
+- Supports multiple document loaders including Tesseract OCR, Azure Form Recognizer, AWS TextExtract, Google Document AI.
+- Customizable extraction using contract definitions.
+- Asynchronous processing for efficient document handling.
+- Built-in support for various document formats.
+- ORM-style interaction between files and LLMs.
+
+<p align="center">
+  <img src="https://github.com/enoch3712/Open-DocLLM/assets/9283394/b1b8800c-3c55-4ee5-92fe-b8b663c7a81f" alt="Extract Thinker Features Diagram" width="300"/>
+</p>
+
+## Installation
+
+To install `extract_thinker`, you can use `pip`:
+
+```bash
+pip install extract_thinker
+```
+
+## Usage
+Here's a quick example to get you started with extract_thinker. This example demonstrates how to load a document using Tesseract OCR and extract specific fields defined in a contract.
+
+```python
+import os
+from dotenv import load_dotenv
+from extract_thinker import DocumentLoaderTesseract, Extractor, Contract
+
+load_dotenv()
+cwd = os.getcwd()
+
+class InvoiceContract(Contract):
+    invoice_number: str
+    invoice_date: str
+
+tesseract_path = os.getenv("TESSERACT_PATH")
+test_file_path = os.path.join(cwd, "test_images", "invoice.png")
+
+extractor = Extractor()
+extractor.load_document_loader(
+    DocumentLoaderTesseract(tesseract_path)
+)
+extractor.load_llm("claude-3-haiku-20240307")
+
+result = extractor.extract(test_file_path, InvoiceContract)
+
+print("Invoice Number: ", result.invoice_number)
+print("Invoice Date: ", result.invoice_date)
+```
+
+## Splitting Files Example
+You can also split and process documents using extract_thinker. Here's how you can do it:
+
+```python
+import os
+from dotenv import load_dotenv
+from extract_thinker import DocumentLoaderTesseract, Extractor, Process, Classification, ImageSplitter
+
+load_dotenv()
+
+class DriverLicense(Contract):
+    # Define your DriverLicense contract fields here
+    pass
+
+class InvoiceContract(Contract):
+    invoice_number: str
+    invoice_date: str
+
+extractor = Extractor()
+extractor.load_document_loader(DocumentLoaderTesseract(os.getenv("TESSERACT_PATH")))
+extractor.load_llm("gpt-3.5-turbo")
+
+classifications = [
+    Classification(name="Driver License", description="This is a driver license", contract=DriverLicense, extractor=extractor),
+    Classification(name="Invoice", description="This is an invoice", contract=InvoiceContract, extractor=extractor)
+]
+
+process = Process()
+process.load_document_loader(DocumentLoaderTesseract(os.getenv("TESSERACT_PATH")))
+process.load_splitter(ImageSplitter())
+
+path = "..."
+
+split_content = process.load_file(path)\
+    .split(classifications)\
+    .extract()
+
+# Process the split_content as needed
+```
+
+## Infrastructure
+
+The `extract_thinker` project is inspired by the LangChain ecosystem, featuring a modular infrastructure with templates, components, and core functions to facilitate robust document extraction and processing. 
+
+<p align="center">
+  <img src="https://github.com/enoch3712/Open-DocLLM/assets/9283394/996fb2de-0558-4f13-ab3d-7ea56a593951" alt="Extract Thinker Logo" width="400"/>
+</p>
+
+## Why Just Not LangChain?
+While LangChain is a generalized framework designed for a wide array of use cases, extract_thinker is specifically focused on Intelligent Document Processing (IDP). Although achieving 100% accuracy in IDP remains a challenge, leveraging LLMs brings us significantly closer to this goal.
+
+## Additional Examples
+You can find more examples in the repository. These examples cover various use cases and demonstrate the flexibility of extract_thinker. Also check my the medium of the author that contains several examples about the library
+
+## Contributing
+We welcome contributions from the community! If you would like to contribute, please follow these steps:
+
+Fork the repository.
+Create a new branch for your feature or bugfix.
+Write tests for your changes.
+Run tests to ensure everything is working correctly.
+Submit a pull request with a description of your changes.
+
+## License
+This project is licensed under the Apache License 2.0. See the LICENSE file for more details.
+
+## Contact
+For any questions or issues, please open an issue on the GitHub repository.
+
