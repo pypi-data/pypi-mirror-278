@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: steammarkethelper
+Version: 1.0
+Summary: A helper tool for Steam Market that enables users to generate detailed tables from their Steam Market transaction history, making it easier to track and analyze their market activity.
+Home-page: https://github.com/Zavintyshka/SteamMarketHelper
+Author: Vadim Sosnin
+Author-email: VadimSosnin02@yandex.ru
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: annotated-types
+Requires-Dist: beautifulsoup4
+Requires-Dist: certifi
+Requires-Dist: charset-normalizer
+Requires-Dist: click
+Requires-Dist: idna
+Requires-Dist: lxml
+Requires-Dist: prettytable
+Requires-Dist: pydantic
+Requires-Dist: pydantic_core
+Requires-Dist: pydantic-settings
+Requires-Dist: python-dotenv
+Requires-Dist: requests
+Requires-Dist: soupsieve
+Requires-Dist: typing_extensions
+Requires-Dist: urllib3
+Requires-Dist: wcwidth

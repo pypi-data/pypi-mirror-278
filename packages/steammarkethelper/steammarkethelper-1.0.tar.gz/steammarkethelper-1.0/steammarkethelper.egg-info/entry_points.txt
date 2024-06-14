@@ -1,0 +1,2 @@
+[console_scripts]
+smh = steam_market_helper.smh:smh_commands
