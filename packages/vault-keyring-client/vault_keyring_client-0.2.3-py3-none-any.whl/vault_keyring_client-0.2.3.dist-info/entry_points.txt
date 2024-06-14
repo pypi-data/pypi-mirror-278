@@ -1,0 +1,3 @@
+[console_scripts]
+vault-keyring-client=vault_keyring_client.main:app
+
