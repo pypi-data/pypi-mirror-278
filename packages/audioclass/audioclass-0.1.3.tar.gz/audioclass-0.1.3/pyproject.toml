@@ -1,0 +1,74 @@
+[project]
+name = "audioclass"
+version = "0.1.3"
+description = "A Python package providing a common interface for running machine learning models for audio classification tasks."
+authors = [
+    { name = "Santiago Martinez Balvanera", email = "santiago.mbal@gmail.com" },
+]
+dependencies = [
+    "pandas>=2.0",
+    "netcdf4>=1.6.5",
+    "soundevent[audio]>=2.0.1",
+    "tqdm>=4.66.4",
+    "pyarrow>=14.0",
+    "requests>=2.0",
+]
+readme = "README.md"
+requires-python = ">= 3.9"
+license = { text = "MIT" }
+
+[project.optional-dependencies]
+tensorflow = ["tensorflow>=2.0", "tensorflow-hub>=0.16.1"]
+tflite = ["tflite>=2.0", "tflite-runtime>=2.14.0"]
+birdnet = ["audioclass[tflite]"]
+perch = ["audioclass[tensorflow]"]
+all = ["audioclass[birdnet]", "audioclass[perch]"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/audioclass"]
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "pytest>=8.2.1",
+    "coverage>=7.5.3",
+    "pytest-coverage>=0.0",
+    "pytest-mock>=3.14.0",
+    "ruff>=0.4.6",
+    "pyright>=1.1.367",
+    "mkdocs>=1.6.0",
+    "mkdocstrings[python]>=0.25.1",
+    "mkdocs-material>=9.5.25",
+]
+
+[tool.ruff]
+line-length = 79
+target-version = "py39"
+
+[tool.ruff.format]
+docstring-code-format = true
+docstring-code-line-length = 79
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "B", "Q", "I", "D"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+exclude = [".venv"]
+pythonVersion = "3.9"
+
+[tool.coverage.run]
+branch = true
+source = ["src/audioclass"]
+command_line = "-m pytest"
