@@ -1,0 +1,123 @@
+#!/usr/bin/env python3
+
+from log_store import log_store
+
+import subprocess
+import argparse
+import os
+import re
+
+log=log_store.add_logger('rx_scripts:download_from_jobid')
+#-------------------------------
+class FailedCommand(Exception):
+    def __init__(self, message):
+        super().__init__(message)
+#-------------------------------
+class data:
+    l_jobid=None
+    nfiles =None
+    gan_dir=None
+    log_rgx='.*(\/lhcb\/user\/\w\/\w+\/\d{4}_\d{2}\/\d+\/\d+\/(\d{4})_Mag(Up|Down)\.root).*'
+#-------------------------------
+def get_args():
+    parser = argparse.ArgumentParser(description='Used to download files from Ganga jobs')
+    parser.add_argument('-j', '--jobid' , nargs='+', help='List of ganga job IDs.')
+    parser.add_argument('-f', '--nfiles', type =int, help='Number of files to download for each ID')
+    args = parser.parse_args()
+
+    data.l_jobid = args.jobid
+    data.nfiles  = args.nfiles
+#-------------------------------
+def initialize():
+    try:
+        data.gan_dir = os.environ['GANBOX']
+    except:
+        log.error(f'Cannot find GANBOX in environment')
+        raise
+
+    if not os.path.isdir(data.gan_dir):
+        log.error(f'Cannot find {data.gan_dir}')
+        raise
+
+    check_dirac()
+    check_proxy()
+#-------------------------------
+def check_dirac():
+    try:
+        run_command('which', ['lb-dirac'])
+    except FailedCommand:
+        log.error(f'Dirac not setup')
+        raise
+#-------------------------------
+def check_proxy():
+    try:
+        run_command('lhcb-proxy-info', [])
+    except FailedCommand:
+        log.error(f'Certificate not found')
+        raise
+#-------------------------------
+def get_lfn(jobid, sjob):
+    log_path = f'{data.gan_dir}/{jobid}/{sjob}/output/std.out'
+    if not os.path.isfile(log_path):
+        log.warning(f'File not found: {log_path}')
+        return None
+
+    with open(log_path) as ifile:
+        l_line = ifile.read().splitlines()
+        l_line = [line for line in l_line if 'putAndRegister' in line]
+        try:
+            [line] = [line for line in l_line if '/lhcb/'         in line]
+        except:
+            log.warning(f'Cannot extract LFN from: {log_path}')
+            return None
+
+    mtch = re.match(data.log_rgx, line)
+    if not mtch:
+        log.error(f'Cannot extract LFN from: {log_path}')
+        return None
+
+    return mtch.group(1)
+#-------------------------------
+def get_single_lfn(jobid):
+    for sjob in range(10):
+        lfn = get_lfn(jobid, sjob)
+        if lfn is not None:
+            break
+
+    if lfn is None:
+        log.error(f'Could not find any LFN for: {jobid}')
+        raise
+
+    return lfn
+#-------------------------------
+def run_command(cmd, options=None):
+    if not isinstance(options, list):
+        log.error(f'Invalid options argument: {options}')
+        raise ValueError
+
+    log.info('-' * 30)
+    log.info('-' * 30)
+    log.info(f'{cmd:<10}{str(options):<50}')
+    log.info('-' * 30)
+    log.info('-' * 30)
+
+    stat = subprocess.run([cmd] + options)
+
+    if stat.returncode != 0:
+        raise FailedCommand(f'Process returned exit status: {stat.returncode}')
+#-------------------------------
+def main():
+    get_args()
+    initialize()
+
+    for jobid in data.l_jobid:
+        lfn = get_single_lfn(jobid)
+
+        filename = os.path.basename(lfn)
+        if os.path.isfile(filename):
+            continue
+
+        run_command( 'lb-dirac', ['dirac-dms-get-file', lfn]) 
+#-------------------------------
+if __name__ == '__main__':
+    main()
