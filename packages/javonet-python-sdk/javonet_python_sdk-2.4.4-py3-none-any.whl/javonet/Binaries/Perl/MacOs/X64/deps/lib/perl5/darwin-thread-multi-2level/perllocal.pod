@@ -1,0 +1,990 @@
+=head2 Thu Jun 13 08:42:19 2024: C<Module> L<Capture::Tiny|Capture::Tiny>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.48>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:42:22 2024: C<Module> L<File::Which|File::Which>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.27>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:42:23 2024: C<Module> L<FFI::CheckLib|FFI::CheckLib>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.31>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:43:02 2024: C<Module> L<FFI::Platypus|FFI::Platypus>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.08>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:43:04 2024: C<Module> L<Path::Tiny|Path::Tiny>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.146>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:43:08 2024: C<Module> L<Clone|Clone>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.46>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:43:10 2024: C<Module> L<Task::Weaken|Task::Weaken>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.06>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:43:12 2024: C<Module> L<Params::Util|Params::Util>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.102>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:43:14 2024: C<Module> L<PPI|PPI>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.278>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:43:16 2024: C<Module> L<PPI::XS|PPI::XS>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.910>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:43:19 2024: C<Module> L<Want|Want>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.29>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:43:20 2024: C<Module> L<Nice::Try|Nice::Try>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: v1.3.10>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:43:21 2024: C<Module> L<Data::Cmp|Data::Cmp>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.010>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:43:23 2024: C<Module> L<Scope::Guard|Scope::Guard>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.21>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:43:25 2024: C<Module> L<Try::Tiny|Try::Tiny>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.31>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:43:26 2024: C<Module> L<Test::Fatal|Test::Fatal>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.017>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:43:28 2024: C<Module> L<IPC::System::Simple|IPC::System::Simple>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.30>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:43:29 2024: C<Module> L<autobox|autobox>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: v3.0.1>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:43:35 2024: C<Module> L<Dist::CheckConflicts|Dist::CheckConflicts>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.11>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:43:38 2024: C<Module> L<Sub::Exporter::Progressive|Sub::Exporter::Progressive>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.001013>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:43:39 2024: C<Module> L<Devel::GlobalDestruction|Devel::GlobalDestruction>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.14>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:43:41 2024: C<Module> L<Sub::Install|Sub::Install>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.929>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:43:42 2024: C<Module> L<Data::OptList|Data::OptList>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.114>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:43:43 2024: C<Module> L<Sub::Exporter|Sub::Exporter>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.991>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:43:45 2024: C<Module> L<Module::Runtime::Conflicts|Module::Runtime::Conflicts>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.003>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:43:48 2024: C<Module> L<Module::Implementation|Module::Implementation>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.09>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:43:51 2024: C<Module> L<Package::Stash::XS|Package::Stash::XS>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.30>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:43:52 2024: C<Module> L<Package::Stash|Package::Stash>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.40>
+
+=item *
+
+C<EXE_FILES: bin/package-stash-conflicts>
+
+=back
+
+=head2 Thu Jun 13 08:43:53 2024: C<Module> L<Eval::Closure|Eval::Closure>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.14>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:43:55 2024: C<Module> L<Class::Load|Class::Load>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.25>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:43:57 2024: C<Module> L<Class::Load::XS|Class::Load::XS>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.10>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:43:59 2024: C<Module> L<MRO::Compat|MRO::Compat>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.15>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:44:01 2024: C<Module> L<Devel::OverloadInfo|Devel::OverloadInfo>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.007>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:44:02 2024: C<Module> L<Package::DeprecationManager|Package::DeprecationManager>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.18>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:44:04 2024: C<Module> L<Devel::StackTrace|Devel::StackTrace>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.05>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:44:15 2024: C<Module> L<Moose|Moose>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.2207>
+
+=item *
+
+C<EXE_FILES: bin/moose-outdated>
+
+=back
+
+=head2 Thu Jun 13 08:44:18 2024: C<Module> L<Data::UUID|Data::UUID>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.227>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:44:20 2024: C<Module> L<ExtUtils::HasCompiler|ExtUtils::HasCompiler>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.025>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:44:22 2024: C<Module> L<ExtUtils::Config|ExtUtils::Config>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.009>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:44:23 2024: C<Module> L<CPAN::Meta::Requirements|CPAN::Meta::Requirements>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.143>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:44:24 2024: C<Module> L<CPAN::Requirements::Dynamic|CPAN::Requirements::Dynamic>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.001>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:44:26 2024: C<Module> L<ExtUtils::InstallPaths|ExtUtils::InstallPaths>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.013>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:44:27 2024: C<Module> L<ExtUtils::Helpers|ExtUtils::Helpers>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.026>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:44:31 2024: C<Module> L<Scalar::Util::Numeric|Scalar::Util::Numeric>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.40>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jun 13 08:44:32 2024: C<Module> L<Attribute::Util|Attribute::Util>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/runner/work/1/s/src/perl/deps/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.07>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
