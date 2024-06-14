@@ -1,0 +1,10 @@
+firebase_admin
+fastapi
+google-auth
+python-dotenv
+
+[all]
+kal-middleware[extra]
+
+[extra]
+pandas
