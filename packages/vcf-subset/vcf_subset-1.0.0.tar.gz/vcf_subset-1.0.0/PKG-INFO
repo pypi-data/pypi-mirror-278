@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: vcf_subset
+Version: 1.0.0
+Summary: Efficient VCF subsetting by genome position.
+Home-page: https://github.com/GlobalPathogenAnalysisService/vcf_subset
+Author: Jeremy Westhead
+Author-email: jeremy.westhead@ndm.ox.ac.uk
+License: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+Efficient VCF subsetting by genome position.
