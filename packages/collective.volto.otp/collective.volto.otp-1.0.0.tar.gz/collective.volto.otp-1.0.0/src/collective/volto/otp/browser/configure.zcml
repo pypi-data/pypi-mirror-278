@@ -1,0 +1,30 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="collective.volto.otp">
+
+  <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
+  <include package="z3c.jbot" file="meta.zcml" />
+  <browser:jbot
+      directory="overrides"
+      layer="collective.volto.otp.interfaces.ICollectiveVoltoOtpLayer"
+      />
+
+  <!-- Publish static files -->
+  <plone:static
+      name="collective.volto.otp"
+      type="plone"
+      directory="static"
+      />
+
+  <browser:page
+      name="email-confirm-view"
+      for="*"
+      class=".email_confirm_view.EmailConfirmView"
+      template="templates/email_confirm_view.pt"
+      permission="zope2.View"
+      layer="collective.volto.otp.interfaces.ICollectiveVoltoOtpLayer"
+      />
+
+</configure>

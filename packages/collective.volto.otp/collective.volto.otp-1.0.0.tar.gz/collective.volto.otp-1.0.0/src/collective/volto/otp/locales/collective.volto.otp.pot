@@ -1,0 +1,66 @@
+#--- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+#SOME DESCRIPTIVE TITLE.
+#FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2024-06-13 13:02+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: collective.volto.otp\n"
+
+#: collective/volto/otp/restapi/services/validation/email.py:55
+msgid "Email confirmation code"
+msgstr ""
+
+#: collective/volto/otp/configure.zcml:29
+msgid "Installs the collective.volto.otp add-on."
+msgstr ""
+
+#: collective/volto/otp/restapi/services/validation/email.py:98
+msgid "OTP is wrong"
+msgstr ""
+
+#: collective/volto/otp/restapi/services/validation/email.py:68
+msgid "The email field is missing"
+msgstr ""
+
+#: collective/volto/otp/browser/templates/email_confirm_view.pt:366
+msgid "The form on ${page} was compiled with this email address, if it was not you, ignore the message."
+msgstr ""
+
+#: collective/volto/otp/restapi/services/validation/email.py:92
+msgid "The otp field is missing"
+msgstr ""
+
+#: collective/volto/otp/restapi/services/validation/email.py:71
+msgid "The provided email address is not valid"
+msgstr ""
+
+#: collective/volto/otp/restapi/services/validation/email.py:74
+msgid "The uid field is missing"
+msgstr ""
+
+#: collective/volto/otp/configure.zcml:38
+msgid "Uninstalls the collective.volto.otp add-on."
+msgstr ""
+
+#: collective/volto/otp/browser/templates/email_confirm_view.pt:352
+msgid "Your code to validate the email address:"
+msgstr ""
+
+#: collective/volto/otp/configure.zcml:29
+msgid "collective.volto.otp"
+msgstr ""
+
+#: collective/volto/otp/configure.zcml:38
+msgid "collective.volto.otp (uninstall)"
+msgstr ""
