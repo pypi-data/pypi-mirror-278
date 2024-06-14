@@ -1,0 +1,10 @@
+README.md
+setup.py
+TScript/__init__.py
+TScript.egg-info/PKG-INFO
+TScript.egg-info/SOURCES.txt
+TScript.egg-info/dependency_links.txt
+TScript.egg-info/top_level.txt
+TScript/src/console.py
+TScript/src/math.py
+TScript/src/str.py
