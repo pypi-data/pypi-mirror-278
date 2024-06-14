@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: find-and-replace-check
+Version: 0.1.0
+Summary: Python package and pre-commit-hook for finding and replacing string(s) in file(s).
+Home-page: https://github.com/opencepk/find-and-replace
+Author: OpenCEPK Open Cloud Engineering Platform Kit
+Author-email: opencepk@gmail.com
+License: GPLv3
+Keywords: find,replace,string,file,pre-commit,hook,git,tool,utility,opencepk
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Topic :: File Formats :: JSON
+Classifier: Topic :: Software Development :: Pre-processors
+Classifier: Topic :: Software Development :: Version Control :: Git
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Text Processing :: Filters
+Classifier: Topic :: Text Processing :: General
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+License-File: LICENSE
