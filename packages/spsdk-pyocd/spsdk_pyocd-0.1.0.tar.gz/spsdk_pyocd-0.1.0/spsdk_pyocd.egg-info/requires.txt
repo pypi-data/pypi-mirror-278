@@ -1,0 +1,5 @@
+spsdk>=2.2.0
+pyocd<0.37,>=0.35.1
+
+[pemicro]
+pyocd-pemicro<1.2,>=1.1.5
