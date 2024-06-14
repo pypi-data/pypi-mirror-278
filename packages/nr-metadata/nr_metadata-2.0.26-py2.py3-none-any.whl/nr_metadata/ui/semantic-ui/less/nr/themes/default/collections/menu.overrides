@@ -1,0 +1,8 @@
+// to solve issue with low contrast in the menu items. For now it seems to be the only place with this issue.
+.ui.menu {
+  &.license-toggler {
+    a.active {
+      color: black !important;
+    }
+  }
+}
