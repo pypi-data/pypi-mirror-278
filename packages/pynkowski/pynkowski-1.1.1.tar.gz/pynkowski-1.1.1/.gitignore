@@ -1,0 +1,17 @@
+
+.ipynb_checkpoints/*
+
+pynkowski/__pycache__/
+pynkowski/data/__pycache__/
+pynkowski/theory/__pycache__/
+pynkowski/pynkowski.egg-info/
+sphinx/
+dist/
+.ipynb_checkpoints/
+Pynkowski_test.ipynb
+bak/
+.vscode/
+
+*.egg-info
+*.kate-swp
+*.pyc
