@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "vault-keyring-client"
+version = "0.2.3"
+description = ""
+authors = ["Jakob Guldberg Aaes <jakob1379@gmail.com>"]
+readme = "README.md"
+license = "GPL-3.0-or-later"
+repository = "https://git@github.com/jakob1379/vault-keyring-client"
+
+[tool.poetry.scripts]
+vault-keyring-client = "vault_keyring_client.main:app"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+typer = ">=0.12.3"
+keyring = ">=25.2.1"
+ansible = ">=9.6.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.7.1"
+ruff = "^0.4.7"
+commitizen = "^3.27.0"
+
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "$version"
+version_scheme = "semver2"
+version_provider = "poetry"
+update_changelog_on_bump = true
+major_version_zero = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "W", "I", "F", "B", "N"]
