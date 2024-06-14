@@ -1,0 +1,9 @@
+(SELECT
+    'issues' as category,
+    it.name element_name,
+    SUM(tmp.count_) as element_count
+FROM
+    (select unnest(issue_type_ids) issue_type_id, count(*) count_ from cluster_media_ids group by issue_type_id) tmp
+    join issue_type it on tmp.issue_type_id = it.id
+GROUP BY category, element_name
+)
