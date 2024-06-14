@@ -1,0 +1,43 @@
+NRDataMetadata:
+  $id: DataMetadata
+  extend: ['nr-common-metadata#CommonMetadata']
+  marshmallow:
+    class: nr_metadata.data.services.records.schema.NRDataMetadataSchema
+  ui:
+    marshmallow:
+      class: nr_metadata.data.services.records.ui_schema.NRDataMetadataUISchema
+  properties:
+    dateCollected:
+      use: 'nr-datatypes#NRDateOrRange'
+    dateCreated:
+      use: 'nr-datatypes#NRDateOrRange'
+    dateValidTo:
+      type: date
+    dateWithdrawn:
+      type: object
+      properties:
+        dateInformation:
+          type: keyword
+        type:
+          type: date
+    abstract:
+      required: true
+    publishers[]:
+      #^uniqueItems: true
+      ^minItems: 1
+      type: taxonomy
+      vocabulary-type: institutions
+      keys: [ id, title, props.ror ]
+
+
+DataModel:
+  $id: DataModel
+  marshmallow:
+    class: nr_metadata.data.services.records.schema.NRDataRecordSchema
+  ui:
+    marshmallow:
+      class: nr_metadata.data.services.records.ui_schema.NRDataRecordUISchema
+  use: [invenio]
+  properties:
+    metadata:
+      use: ['nr-data#DataMetadata']
