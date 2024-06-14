@@ -1,0 +1,59 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - "*"
+  pull_request:
+  schedule:
+    # Run every Monday at 6am UTC
+    - cron: '0 6 * * 1'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    uses: OpenAstronomy/github-actions-workflows/.github/workflows/tox.yml@v1
+    secrets:
+      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+    with:
+      submodules: false
+      coverage: ''
+      envs: |
+        # Make sure that packaging will work
+        - name: pep517 build
+          linux: twine
+
+        - name: Security audit
+          linux: bandit
+
+        - name: PEP 8
+          linux: codestyle
+
+        - name: Python 3.9 (OSX)
+          macos: py39-test
+          posargs: -v
+
+        - name: Python 3.10 (Windows)
+          windows: py310-test
+          posargs: -v
+
+        - name: Python 3.11 with coverage
+          linux: py311-test-cov
+          posargs: -v
+          coverage: codecov
+
+        - name: Python 3.12 with dev version of dependencies
+          linux: py312-test-devdeps
+          posargs: -v
+
+        - name: Python 3.12 with dev version of dependencies (numpy 2.x)
+          linux: py312-test-devdeps-numpy2x
+          posargs: -v

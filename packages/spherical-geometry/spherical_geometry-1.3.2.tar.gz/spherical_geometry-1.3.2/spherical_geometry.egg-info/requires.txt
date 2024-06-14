@@ -1,0 +1,10 @@
+numpy>=1.23
+astropy>=5.0.4
+
+[docs]
+sphinx-automodapi
+numpydoc
+
+[test]
+pytest
+pytest-astropy-header

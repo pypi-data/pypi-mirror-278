@@ -1,0 +1,16 @@
+include README.rst
+include CHANGES.rst
+include pyproject.toml
+
+exclude benchmarks.py
+exclude inside.png
+
+recursive-include src *.c *.h
+recursive-include docs *
+recursive-include licenses *
+
+prune build
+prune docs/_build
+prune docs/api
+
+global-exclude *.pyc *.o
