@@ -1,0 +1,13 @@
+.idea
+.venv
+venv
+virtualenv
+.vscode
+.py*
+!.pylintrc
+.DS_Store
+*__py*
+*pytest_*
+**/__pycache__
+my_*
+dist
