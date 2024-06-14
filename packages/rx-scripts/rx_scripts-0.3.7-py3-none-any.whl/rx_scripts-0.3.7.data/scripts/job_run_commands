@@ -1,0 +1,93 @@
+#!/usr/bin/env bash
+
+#------------------------------------------
+display_help()
+{
+    echo "Script used to send jobs to the cluster such that each job runs one line in input text file"
+    echo ""
+    echo "-f: Path to the textfile with commands"
+    echo "-e: Virtual environment where to run"
+    echo "-j: Line number in text file for single job to submit, if not passed, will do all jobs" 
+    echo "-q: Queue, mid by default"
+    echo "-m: Memory, 4000 by default"
+}
+#------------------------------------------
+get_opts()
+{
+    if [[ $# -eq 0 ]]; then
+        display_help
+        exit 1
+    fi  
+
+    QUEUE=mid
+    MEMO=4000
+    while getopts :hf:f:e:m:q:j: option; do 
+        case "${option}" in
+            h)  
+                display_help
+                exit 0
+                ;;  
+            f)  FILENAME=${OPTARG};;
+            e)  ENVIRONMENT=${OPTARG};;
+            j)  JOBID=${OPTARG};;
+            m)  MEMO=${OPTARG};;
+            q)  QUEUE=${OPTARG};;
+           \?)  echo "Invalid option: -${OPTARG}"
+                display_help
+                exit 1
+                ;;  
+            :)  echo "$0: Arguments needed"
+                display_help
+                exit 1
+                ;;  
+        esac
+    done
+}
+#------------------------------------------
+prepare()
+{
+    if [[ ! -f $FILENAME ]];then
+	echo "File not found: $FILENAME"
+	kill -INT $$
+    fi
+
+    NJOB=$(cat $FILENAME | wc -l)
+
+    if [[ $NJOB -lt 1 ]];then
+	echo "Cannot send fewer than 1 job"
+	kill -INT $$
+    fi
+
+    JOBDIR=/publicfs/ucas/user/campoverde/Jobs/run_commands
+    DATE=$(date | sed "s|\s|_|g" | sed "s|:|_|g")
+    JOBDIR=$JOBDIR"_"$DATE
+    OFILE=run_commands_%{ClusterId}_%{ProcId}
+
+    mkdir -p $JOBDIR
+    rm    -f $JOBDIR/*.out
+    rm    -f $JOBDIR/*.err
+
+    SUBMIT=$(which submit_run_commands)
+    cp $SUBMIT   $JOBDIR
+    cp $FILENAME $JOBDIR
+
+    cd $JOBDIR
+}
+#------------------------------------------
+submit()
+{
+    echo "Submitting with:"
+    echo "FILENAME=$FILENAME"
+    echo "ENVIRONMENT=$ENVIRONMENT"
+    echo "JOBID=$JOBID"
+
+    if [[ -z $JOBID ]];then
+	hep_sub -n $NJOB -g lhcb -e $OFILE".err" -o $OFILE".out" -argu %{ProcId} $FILENAME $ENVIRONMENT -mem $MEMO submit_run_commands -wt $QUEUE
+    else
+	hep_sub -n 1     -g lhcb -e $OFILE".err" -o $OFILE".out" -argu    $JOBID $FILENAME $ENVIRONMENT -mem $MEMO submit_run_commands -wt $QUEUE
+    fi
+}
+#------------------------------------------
+get_opts "$@"
+prepare
+submit
