@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+var_processor/__init__.py
+var_processor.egg-info/PKG-INFO
+var_processor.egg-info/SOURCES.txt
+var_processor.egg-info/dependency_links.txt
+var_processor.egg-info/requires.txt
+var_processor.egg-info/top_level.txt
+var_processor/collector/__init__.py
+var_processor/collector/var_collector.py
+var_processor/functional/__init__.py
+var_processor/functional/on_error.py
+var_processor/saver/__init__.py
+var_processor/saver/var_saver.py
+var_processor/utils/__init__.py
+var_processor/utils/save_policy.py
