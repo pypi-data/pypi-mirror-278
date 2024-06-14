@@ -1,0 +1,17 @@
+README.md
+setup.py
+huscy.project_design.egg-info/PKG-INFO
+huscy.project_design.egg-info/SOURCES.txt
+huscy.project_design.egg-info/dependency_links.txt
+huscy.project_design.egg-info/requires.txt
+huscy.project_design.egg-info/top_level.txt
+huscy/project_design/__init__.py
+huscy/project_design/admin.py
+huscy/project_design/apps.py
+huscy/project_design/models.py
+huscy/project_design/serializer.py
+huscy/project_design/services.py
+huscy/project_design/urls.py
+huscy/project_design/views.py
+huscy/project_design/migrations/0001_initial.py
+huscy/project_design/migrations/__init__.py
