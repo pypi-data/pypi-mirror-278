@@ -1,0 +1,35 @@
+# config for Snakefile_v1
+config_split: config/single_dev_dataset/proteinGroups_N50/split.yaml
+config_train: config/single_dev_dataset/proteinGroups_N50/train_{model}.yaml
+folder_experiment: runs/dev_dataset_small/proteinGroups_N50
+fn_rawfile_metadata: data/dev_datasets/HeLa_6070/files_selected_metadata_N50.csv
+file_format: csv
+models:
+  - Median # maps to median on file system?
+  - CF
+  - DAE
+  - VAE
+  - KNN
+NAGuideR_methods:
+ - BPCA
+ - COLMEDIAN
+ - IMPSEQ
+ - IMPSEQROB
+ - IRM
+ - KNN_IMPUTE
+ - LLS
+ - MICE-CART
+ - MICE-NORM
+ - MINDET
+ - MINIMUM
+ - MINPROB
+ - MLE
+ - MSIMPUTE
+ - PI
+ - QRILC
+ - RF
+ - ROWMEDIAN
+ - SEQKNN
+ - SVDMETHOD
+ - TRKNN
+ - ZERO

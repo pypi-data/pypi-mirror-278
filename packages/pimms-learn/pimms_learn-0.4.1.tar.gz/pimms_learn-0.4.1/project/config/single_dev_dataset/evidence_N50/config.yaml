@@ -1,0 +1,34 @@
+# config for Snakefile_v1
+config_split: config/single_dev_dataset/evidence_N50/split.yaml
+config_train: config/single_dev_dataset/evidence_N50/train_{model}.yaml
+folder_experiment: runs/dev_dataset_small/evidence_N50
+fn_rawfile_metadata: data/dev_datasets/df_intensities_evidence_long/metadata.csv
+file_format: csv
+models:
+  - Median
+  - CF  # 1min29s
+  - DAE # 2min36s
+  - VAE # 4min05s
+  - KNN
+  NAGuideR_methods:
+  - BPCA #27min
+  - COLMEDIAN
+  - IMPSEQ # 1min
+  - IMPSEQROB
+  - IRM # 12h00min
+  - KNN_IMPUTE
+  # - LLS # error: out of memory
+  - MICE-CART # 2h39min
+  - MICE-NORM # 5min
+  - MINDET
+  - MINIMUM
+  - MINPROB
+  - MLE
+  - MSIMPUTE
+  - PI
+  - QRILC
+  - RF # 3h44min
+  - ROWMEDIAN
+  - SEQKNN # 24min
+  - SVDMETHOD # 1min
+  - TRKNN # 5h26min

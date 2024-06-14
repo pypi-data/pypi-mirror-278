@@ -1,0 +1,22 @@
+# # config for Snakefile_best_across_datasets
+epochs_max:
+- 100
+batch_size: 64
+datasets:
+- Q_Exactive_HF_X_Orbitrap_6070
+- Q_Exactive_HF_X_Orbitrap_6071
+- Q_Exactive_HF_X_Orbitrap_6075
+- Q_Exactive_HF_X_Orbitrap_6078
+- Q_Exactive_HF_X_Orbitrap_6096
+- Q_Exactive_HF_X_Orbitrap_6101
+folder: "runs/across_datasets"
+levels:
+- proteinGroups
+- aggPeptides
+- evidence 
+config_split: 'shared_splits.yaml'
+data_folders:
+    evidence: df_intensities_evidence_long
+    aggPeptides: df_intensities_peptides_long
+    proteinGroups: df_intensities_proteinGroups_long
+repitition_name: dataset

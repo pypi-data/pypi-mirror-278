@@ -1,0 +1,90 @@
+# Dev Environment
+name: vaep
+channels:
+  - conda-forge
+  - pytorch
+  - nvidia
+  - fastai # fastchan
+  - bioconda
+  - plotly
+  # - defaults
+dependencies:
+  - python>=3.8,<=3.12
+  - numpy
+  - pandas>=1
+  - scipy>=1.6
+  # plotting
+  - matplotlib
+  - python-kaleido
+  - plotly
+  - seaborn<0.13
+  - pip
+  # ML
+  - pytorch #=1.13.1=py3.8_cuda11.7_cudnn8_0
+  # - pytorch-cuda
+  - scikit-learn
+  - fastai
+  - torchvision
+  # - cudatoolkit #=11.7
+  # - tensorboard
+  - umap-learn
+  # stats
+  - pingouin
+  - statsmodels
+  # other
+  - tqdm # progress bars
+  - xmltodict # configs
+  - openpyxl # xml
+  - omegaconf
+  - plac>=1.0
+  # snakemake
+  - snakemake-minimal #<7.26
+  # jupyter
+  - ipykernel
+  - ipython
+  - ipywidgets
+  - jupyterlab # standalone jupyter installation
+  # - jupyter_contrib_nbextensions # delete configuration file if you see an error: https://github.com/jupyter/nbconvert/issues/526#issuecomment-277552771
+  - jupyter-dash
+  - papermill # execute ipynb's
+  # R packages (listed in NAGuideR)
+  - r-base
+  - r-devtools # is it needed for source installs on windows server?
+  - r-irkernel
+  - r-reshape2
+  - r-stringi # + rmarkdown hack for reshape2
+  - r-stringr # reshape2
+  - r-tidyverse
+  - r-gdata
+  - r-glmnet
+  - r-e1071
+  - r-norm
+  - r-missforest
+  - r-vim
+  - r-mice
+  - r-cluster
+  - r-mvtnorm
+  - r-rrcov
+  - r-gmm
+  - r-tmvtnorm
+  - r-igraph
+  # - bioconductor-biocinstaller
+  # - r-imputelcmd # bioconda
+  # - bioconductor-impute
+  # - bioconductor-pcamethods
+  # - rrcovNA, GMSimpute
+  # SeqKnn, pcaMethods, DreamAI # bioconductor
+  # dev
+  - pytest
+  - pytest-cov
+  # - jupytext
+  # - flake8
+  # - flake8-bugbear
+  # - build
+  # - pre-commit
+  # - jupyterlab_code_formatter
+  # - jupyterlab-git
+  - pip:
+      - -e .
+      - mrmr-selection
+      - njab
