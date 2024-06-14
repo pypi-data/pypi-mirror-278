@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: paramlogger
+Version: 0.0.2
+Summary: This library helps logging the inputs and outputs of a method just by adding a decorator on that method.
+Home-page: https://github.com/vivek-dani/paramlogger
+Author: Vivek Dani
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: wheel ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+
+# paramlogger
+
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+This library helps logging to file, the inputs parameters and output return values of a method just by adding a decorator on that method.
+
+### Usage
+Refer to [./demo.ipynb](./demo.ipynb) for examples on everything that's possible via this library.
+
+### Official source code repo: 
+```
+git clone https://github.com/vivek-dani/paramlogger.git
+```
+
+
+### Citation
+
+Please cite this software in your work as:
+
+```
+@misc{paramlogger-github,
+   author = {Vivek Dani},
+   title = {paramlogger: Library that helps logging to file, the inputs parameters and output return values of a method just by adding a decorator on that method.},
+   url = {https://github.com/vivek-dani/paramlogger},
+   version = {0.0.2},
+   year = {2024}
+}
+```
